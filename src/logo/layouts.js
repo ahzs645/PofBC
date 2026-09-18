@@ -41,6 +41,9 @@ const COLUMN_MEASURE = 2 * MARK_BOX.width
  *                                   horizontal for 'beside' and 'columns' (mark's right edge to
  *                                   the text's ink).
  * @property {number} [gutter]        Between text columns, for 'columns'.
+ * @property {string} [markAlignByDefault]  Where the mark sits against the type when nobody has
+ *                                          said otherwise. Only meaningful for 'beside' and
+ *                                          'columns'.
  * @property {(options: {hasWordmark: boolean}) => number} measure  Wrap width, in artwork units.
  */
 
@@ -93,6 +96,9 @@ export const LAYOUTS = {
     markPlacement: 'beside',
     gap: 86.07,
     wordmarkByDefault: true,
+    // artwork/lockup-horizontal.svg centres the mark on the type, and the test pinning this
+    // lockup against its source says so. It opens the way it was drawn.
+    markAlignByDefault: 'centre',
     // The wordmark sets the column width here, so a long ministry name wraps beneath it rather
     // than running the lockup off the page. Without the wordmark there is nothing to measure
     // against, so the width it would have occupied is used instead and the geometry stays put.
@@ -123,6 +129,9 @@ export const LAYOUTS = {
     // a word space, which is the point where the eye stops trying to join them up.
     gutter: 0.5 * MARK_BOX.width,
     wordmarkByDefault: true,
+    // Top, not centre: the signage this lockup was reconstructed from hangs the mark from the cap
+    // height of the first line. It has no vector original to contradict that.
+    markAlignByDefault: 'top',
     // Each column is set to the same measure as the stacked lockup's single column, which is what
     // breaks the wordmark after "of" and keeps both columns to a similar width.
     measure: () => COLUMN_MEASURE
@@ -154,7 +163,14 @@ export const MARK_ALIGNMENTS = {
 
 export const MARK_ALIGNMENT_ORDER = ['top', 'centre', 'bottom']
 
+// The library-level fallback, used when a caller names no alignment at all. Centre, because that
+// is what the one lockup with a measured original draws — resolveLockup stays faithful to the
+// artwork by default, and the UI layers each lockup's own preference on top via
+// markAlignByDefault.
 export const DEFAULT_MARK_ALIGNMENT = 'centre'
+
+/** Where a given lockup puts the mark when nobody has said otherwise. */
+export const defaultMarkAlignment = (id) => getLayout(id).markAlignByDefault ?? DEFAULT_MARK_ALIGNMENT
 
 /** True when a lockup sets the mark beside the type, so vertical alignment means something. */
 export const alignsVertically = (layout) => getLayout(layout?.id ?? layout).markPlacement !== 'below'

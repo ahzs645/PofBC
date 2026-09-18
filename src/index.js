@@ -33,7 +33,8 @@ export {
   MARK_ALIGNMENT_ORDER,
   DEFAULT_MARK_ALIGNMENT,
   alignsVertically,
-  alignMark
+  alignMark,
+  defaultMarkAlignment
 } from './logo/layouts.js'
 
 // ── Text layout: the measuring and wrapping rules the lockups obey ────────────────────────────────

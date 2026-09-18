@@ -27,6 +27,9 @@ export const DEFAULTS = {
   // Only the lockups that set the mark beside the type use this; the others ignore it, but it is
   // kept across a switch so going away and coming back does not lose the choice.
   markAlign: DEFAULT_MARK_ALIGNMENT,
+  // As with the wordmark: each lockup opens the way its own artwork sits until this is set by
+  // hand, after which the choice travels with you. See lockupReducer.
+  markAlignTouched: false,
   // Preview only — the surface the lockup is shown against, never part of the export, and not
   // carried in a share link.
   backdrop: 'auto'

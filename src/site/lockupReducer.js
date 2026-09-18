@@ -4,7 +4,7 @@
 // when one field should drag another along, and when it should stop — can be tested directly
 // rather than through a rendered component.
 
-import { getLayout } from '../logo/layouts.js'
+import { defaultMarkAlignment, getLayout } from '../logo/layouts.js'
 import { BRAND_COLORS, TRANSPARENT, resolveColor } from '../logo/logoColors.js'
 
 /**
@@ -33,6 +33,14 @@ export const applyUpdate = (current, patch) => {
     next.wordmark = getLayout(patch.layout).wordmarkByDefault
   }
 
+  // The same rule for where the mark sits against the type. Side by side hangs it from the first
+  // cap height, as the signage it came from does; the horizontal lockup centres it, as its source
+  // artwork draws it. Once set by hand the choice is yours and follows you between lockups.
+  if (patch.markAlign !== undefined) next.markAlignTouched = true
+  else if (patch.layout !== undefined && !next.markAlignTouched) {
+    next.markAlign = defaultMarkAlignment(patch.layout)
+  }
+
   return next
 }
 
@@ -56,5 +64,10 @@ export const swapColours = (current) => {
   }
 }
 
-/** A restored share link states its fields deliberately, so the wordmark counts as chosen. */
-export const applyShare = (current, patch) => ({ ...current, ...patch, wordmarkTouched: true })
+/** A restored share link states its fields deliberately, so they all count as chosen. */
+export const applyShare = (current, patch) => ({
+  ...current,
+  ...patch,
+  wordmarkTouched: true,
+  markAlignTouched: true
+})
