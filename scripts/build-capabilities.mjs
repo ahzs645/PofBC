@@ -10,7 +10,7 @@
 //
 // Run: npm run build:capabilities
 
-import { readFileSync, writeFileSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -124,6 +124,10 @@ const manifest = {
 }
 
 const target = resolve(root, 'public/capabilities.json')
+
+// public/ holds nothing but generated files, and git does not track an empty directory — so on a
+// fresh checkout it does not exist at all and the write would fail.
+mkdirSync(dirname(target), { recursive: true })
 writeFileSync(target, `${JSON.stringify(manifest, null, 2)}\n`)
 
 const bytes = JSON.stringify(manifest).length
