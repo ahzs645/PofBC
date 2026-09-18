@@ -2,7 +2,7 @@
   "name": "pofbc-logo",
   "private": true,
   "version": "0.1.0",
-  "description": "Province of British Columbia logo generator \u2014 three lockups, colour variants, and SVG/PNG/WebP/JPEG/PDF export.",
+  "description": "Province of British Columbia logo generator \u2014 four lockups, colour variants, and SVG/PDF/PNG/WebP/JPEG export.",
   "type": "module",
   "license": "UNLICENSED",
   "engines": {
@@ -27,13 +27,14 @@
     "build": "npm run build:assets --silent && vite build",
     "preview": "vite preview",
     "test": "node --test \"src/**/*.test.js\" \"scripts/**/*.test.mjs\"",
-    "build:assets": "npm run vendor:build --silent && node scripts/build-mark.mjs && node scripts/build-fonts.mjs",
+    "build:assets": "npm run vendor:build --silent && node scripts/build-mark.mjs && node scripts/build-fonts.mjs && node scripts/build-capabilities.mjs",
     "build:mark": "node scripts/build-mark.mjs",
     "build:fonts": "node scripts/build-fonts.mjs",
     "compare": "node scripts/compare-artwork.mjs",
     "deploy": "npm run build && npx gh-pages -d dist",
     "vendor:build": "node scripts/build-vendor-json-url.mjs",
-    "prepare": "npm run vendor:build --silent"
+    "prepare": "npm run vendor:build --silent",
+    "build:capabilities": "node scripts/build-capabilities.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

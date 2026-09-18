@@ -52,7 +52,7 @@ export const LAYOUTS = {
   stacked: {
     id: 'stacked',
     label: 'Stacked',
-    description: 'Mark above a left-aligned text column. The tallest of the three.',
+    description: 'Mark above a left-aligned text column. The tallest of the four.',
     source: 'artwork/lockup-stacked.svg',
     fontSize: 122.2,
     leading: 146.64,        // 1.2 em
@@ -86,7 +86,7 @@ export const LAYOUTS = {
   horizontal: {
     id: 'horizontal',
     label: 'Horizontal',
-    description: 'Mark to the left of the text. The widest of the three, for narrow headers and letterheads.',
+    description: 'Mark to the left of the text, on one line each. For narrow headers and letterheads.',
     source: 'artwork/lockup-horizontal.svg',
     fontSize: 121.64,
     leading: 145.968,       // 1.2 em
@@ -110,7 +110,7 @@ export const LAYOUTS = {
   columns: {
     id: 'columns',
     label: 'Side by side',
-    description: 'Mark, then the wordmark, then the ministry — three columns in a row. The shortest of the four.',
+    description: 'Mark, then the wordmark, then the ministry — three columns in a row. The widest of the four.',
     // The one lockup with no vector original: it is reconstructed from a photograph of signage,
     // so its type size and leading are borrowed from the horizontal lockup (the closest relative,
     // and the only other one that sets the mark beside the type) rather than measured. The two

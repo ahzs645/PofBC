@@ -581,6 +581,10 @@ textarea {
   white-space: nowrap;
 }
 
+.footnote + .footnote { margin-top: 8px; }
+
+.footnote a { color: inherit; }
+
 .footnote {
   margin: 24px 2px 0;
   font-size: 12px;

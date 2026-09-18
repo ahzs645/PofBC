@@ -8,6 +8,7 @@ import { LayoutPicker } from './LayoutPicker.jsx'
 import { MinistryField } from './MinistryField.jsx'
 import { Segmented } from './Segmented.jsx'
 import { ShareLink } from './ShareLink.jsx'
+import { useAgentTools } from './useAgentTools.js'
 import { useLockupState } from './useLockupState.js'
 
 const CLEAR_SPACE_OPTIONS = CLEAR_SPACE_ORDER.map((value) => ({
@@ -31,6 +32,10 @@ const BACKDROP_OPTIONS = [
 export const App = () => {
   const { state, update, reset, lockup, contrast, backdrop, isTransparent, swapColors } = useLockupState()
   const layout = LAYOUTS[state.layout]
+
+  // Registers this page's tools with an agent driving the browser, where the browser supports it.
+  // A no-op everywhere else.
+  useAgentTools({ state, lockup, update, reset })
 
   return (
     <div className="app">
@@ -179,6 +184,13 @@ export const App = () => {
         The mark is reproduced from the supplied artwork and is a provincial symbol; use of it is
         governed by the Government of British Columbia. The typeface is embedded in exports under
         whatever licence covers the copy this site was built with.
+      </p>
+
+      {/* Linked rather than only sitting at a path, so it is reachable from the page itself —
+          by a person wondering what the generator can do, and by an agent reading the document. */}
+      <p className="footnote">
+        Every option this generator offers is listed in{' '}
+        <a href={`${import.meta.env.BASE_URL}capabilities.json`}>capabilities.json</a>.
       </p>
     </div>
   )
