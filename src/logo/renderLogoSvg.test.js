@@ -238,3 +238,62 @@ test('a colour cannot break out of the attribute it is written into', () => {
     assert.ok(svg.includes('&quot;'), `${key}: the quote should be escaped, not dropped`)
   }
 })
+
+test('side by side: the wordmark and the ministry are separate columns', () => {
+  const { lines, mark, viewBox } = resolveLockup({ layout: 'columns', ministry: 'Ministry of Environment' })
+
+  assert.deepEqual(
+    lines.map((line) => line.text),
+    ['Province of', 'British Columbia', 'Ministry of', 'Environment']
+  )
+
+  const [wordmark, ministry] = [lines.slice(0, 2), lines.slice(2)]
+
+  // Each column is left-aligned within itself...
+  assert.ok(wordmark.every((line) => line.x === wordmark[0].x), 'wordmark column shares an x')
+  assert.ok(ministry.every((line) => line.x === ministry[0].x), 'ministry column shares an x')
+  // ...and the ministry starts to the right of the wordmark, not beneath it.
+  assert.ok(ministry[0].x > wordmark[0].x, 'the ministry is a second column')
+
+  // Both columns start on the same baseline.
+  assert.equal(wordmark[0].y, ministry[0].y)
+  assert.equal(wordmark[0].y, 0)
+
+  // The mark is the tallest thing, as in the horizontal lockup.
+  assert.equal(mark.x, 0)
+  closeTo(viewBox.height, MARK_BOX.height, 0.01)
+})
+
+test('side by side: the gutter separates the columns by the layout constant', () => {
+  const { lines } = resolveLockup({ layout: 'columns', ministry: 'Ministry of Environment' })
+  const wordmarkInk = lines.slice(0, 2).map((line) => line.x + measureLine(line.text, line.style).inkRight)
+  const ministryLeft = lines[2].x + measureLine(lines[2].text, lines[2].style).inkLeft
+
+  closeTo(ministryLeft - Math.max(...wordmarkInk), LAYOUTS.columns.gutter, 0.01, 'gutter')
+})
+
+test('side by side: dropping the wordmark leaves one column against the mark', () => {
+  const { lines } = resolveLockup({ layout: 'columns', wordmark: false, ministry: 'Ministry of Environment' })
+
+  assert.deepEqual(lines.map((line) => line.text), ['Ministry of', 'Environment'])
+  // With nothing before it, the ministry takes the first column's place rather than leaving a hole.
+  closeTo(lines[0].x, MARK_BOX.width + LAYOUTS.columns.gap - measureLine(lines[0].text, lines[0].style).inkLeft, 0.01)
+})
+
+test('side by side: a long ministry grows downwards in its own column', () => {
+  const short = resolveLockup({ layout: 'columns', ministry: 'Ministry of Health' })
+  const long = resolveLockup({ layout: 'columns', ministry: 'Ministry of Post-Secondary Education and Future Skills' })
+
+  // The wordmark is fixed text, so neither column may move when the ministry changes.
+  assert.equal(short.lines[0].x, long.lines[0].x, 'wordmark column')
+  assert.equal(short.lines[2].x, long.lines[2].x, 'ministry column')
+
+  // A long name wraps rather than running on, so it gains lines. It does not necessarily grow
+  // *wider*: "Ministry of Health" fits on one line and is wider than any single wrapped line of
+  // the longer name. What must hold is that no line exceeds the measure.
+  assert.ok(long.lines.length > short.lines.length, 'the long name wraps onto more lines')
+  const measure = LAYOUTS.columns.measure({ hasWordmark: true })
+  for (const line of long.lines) {
+    assert.ok(measureLine(line.text, line.style).advance <= measure, `"${line.text}" fits the measure`)
+  }
+})

@@ -312,9 +312,11 @@ textarea {
 
 /* ── Layout picker ─────────────────────────────────────────────────────────────────────────── */
 
+/* Two by two rather than a single row: at four lockups a row leaves each button about 85px, which
+   is not enough for "Horizontal" or "Side by side" to sit on one line. */
 .layouts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px;
 }
 

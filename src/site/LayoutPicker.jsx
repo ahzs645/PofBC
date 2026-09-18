@@ -27,10 +27,24 @@ const DIAGRAMS = {
       <rect x="25" y="13" width="40" height="4" rx="2" opacity="0.85" />
       <rect x="25" y="21" width="30" height="3" rx="1.5" opacity="0.55" />
     </>
+  ),
+  columns: (
+    <>
+      <rect x="4" y="11" width="16" height="16" rx="4" />
+      <rect x="25" y="13" width="26" height="4" rx="2" opacity="0.85" />
+      <rect x="25" y="21" width="21" height="4" rx="2" opacity="0.85" />
+      <rect x="58" y="13" width="22" height="3" rx="1.5" opacity="0.55" />
+      <rect x="58" y="21" width="17" height="3" rx="1.5" opacity="0.55" />
+    </>
   )
 }
 
-const VIEWBOXES = { stacked: '0 0 50 42', centred: '0 0 68 38', horizontal: '0 0 68 38' }
+const VIEWBOXES = {
+  stacked: '0 0 50 42',
+  centred: '0 0 68 38',
+  horizontal: '0 0 68 38',
+  columns: '0 0 84 38'
+}
 
 export const LayoutPicker = ({ value, onChange }) => (
   <div className="layouts" role="group" aria-label="Lockup">

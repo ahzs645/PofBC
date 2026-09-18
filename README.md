@@ -14,22 +14,30 @@ Already cloned without `--recurse-submodules`? `git submodule update --init --re
 
 ---
 
-## The three lockups
+## The four lockups
 
-Each one is reconstructed from a supplied Illustrator export in [`artwork/`](artwork), and keeps
-that file's own type size, leading and tracking — the three were set individually and they do not
-agree with each other, so the differences are preserved rather than averaged away.
+The first three are reconstructed from the supplied Illustrator exports in [`artwork/`](artwork),
+and each keeps that file's own type size, leading and tracking — they were set individually and do
+not agree with each other, so the differences are preserved rather than averaged away.
 
 | | Layout | Set from | Notes |
 |---|---|---|---|
 | **Stacked** | Mark above a left-aligned text column | `artwork/lockup-stacked.svg` | 122.2 units, 1.2 em leading |
 | **Centred** | Mark centred above centred text | `artwork/lockup-centred.svg` | 121 units, 1.04 em leading, tracked −0.02 em |
 | **Horizontal** | Mark left, text right, vertically centred | `artwork/lockup-horizontal.svg` | 121.64 units, 1.2 em leading |
+| **Side by side** | Mark, wordmark and ministry as three columns | *no vector original* | 121.64 units, 1.2 em leading |
 
-The three artworks disagree about the province wordmark: the centred one is drawn without it, so
-that lockup is just the ministry and its second line under the mark. Picking a lockup therefore
-adopts what its artwork does — until you set the wordmark yourself, after which it is your decision
-and switching lockup leaves it alone. A restored share link counts as having set it.
+**Side by side is the one without a source file.** It was reconstructed from a photograph of
+signage, so it borrows its type size and leading from the horizontal lockup — its closest relative,
+and the only other one that sets the mark beside the type. Its two original numbers are the gap
+from the mark (shared with the horizontal lockup) and the gutter between the columns, set to half
+the mark's width. Those are the only invented constants in `src/logo/layouts.js`; everything else
+there was measured. `npm run compare` covers the three that have originals.
+
+The lockups disagree about the province wordmark: the centred one is drawn without it, so that
+lockup is just the ministry and its second line under the mark. Picking a lockup therefore adopts
+what its artwork does — until you set the wordmark yourself, after which it is your decision and
+switching lockup leaves it alone. A restored share link counts as having set it.
 
 All three take a ministry from a list or typed in free-hand, an optional second line, separate
 colours for the mark and the type, a background colour or transparency, and a clear-space margin.
@@ -243,15 +251,16 @@ you tick, and zips it:
 
 ```
 bc-ministry-of-forests/
-  stacked/     …-stacked-ffffff.svg  .pdf  -1024.png  -2048.png
-  centred/     …
-  horizontal/  …
-  README.txt   what is in the box, and which file to hand a printer
+  stacked/       …-stacked-ffffff.svg  .pdf  -1024.png  -2048.png
+  centred/       …
+  horizontal/    …
+  columns/       …
+  README.txt     what is in the box, and which file to hand a printer
 ```
 
 Everything goes through the same `renderLogoBlob()` as a single download, so a bundled asset is
-byte-for-byte the one you would have got on your own. The default selection is 12 files; ticking
-everything is 42, and the button says so before you commit to the work. Already-compressed formats
+byte-for-byte the one you would have got on your own. The default selection is 16 files; ticking
+everything is 56, and the button says so before you commit to the work. Already-compressed formats
 are stored rather than deflated, which costs nothing and saves the time.
 
 ---

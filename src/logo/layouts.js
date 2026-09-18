@@ -33,12 +33,14 @@ const COLUMN_MEASURE = 2 * MARK_BOX.width
  * @property {number} letterSpacing  In em.
  * @property {number} wordSpacing    Extra space at each word gap, in em.
  * @property {'left'|'centre'} align
- * @property {'below'|'beside'} markPlacement
+ * @property {'below'|'beside'|'columns'} markPlacement
  * @property {boolean} wordmarkByDefault  Whether the source artwork for this lockup carries the
  *                                        province wordmark. The centred one does not.
  * @property {number} gap            Mark to text, in artwork units. Vertical for 'below'
  *                                   (mark's bottom edge to the cap height of the first line),
- *                                   horizontal for 'beside' (mark's right edge to the text's ink).
+ *                                   horizontal for 'beside' and 'columns' (mark's right edge to
+ *                                   the text's ink).
+ * @property {number} [gutter]        Between text columns, for 'columns'.
  * @property {(options: {hasWordmark: boolean}) => number} measure  Wrap width, in artwork units.
  */
 
@@ -97,13 +99,40 @@ export const LAYOUTS = {
     measure: ({ hasWordmark }) => (hasWordmark
       ? measureWidth(PROVINCE_WORDMARK, horizontalWordmarkStyle)
       : HORIZONTAL_FALLBACK_MEASURE)
+  },
+
+  columns: {
+    id: 'columns',
+    label: 'Side by side',
+    description: 'Mark, then the wordmark, then the ministry — three columns in a row. The shortest of the four.',
+    // The one lockup with no vector original: it is reconstructed from a photograph of signage,
+    // so its type size and leading are borrowed from the horizontal lockup (the closest relative,
+    // and the only other one that sets the mark beside the type) rather than measured. The two
+    // numbers below are the only invented ones in this file, and they are what to adjust if the
+    // proportions need to change.
+    source: null,
+    fontSize: 121.64,
+    leading: 145.968,       // 1.2 em, as the horizontal lockup
+    letterSpacing: 0,
+    wordSpacing: 0.027,
+    align: 'left',
+    markPlacement: 'columns',
+    gap: 86.07,             // mark to the first column, as the horizontal lockup
+    // Between the columns. Wide enough that the wordmark and the ministry read as two separate
+    // things rather than one ragged paragraph — at half the mark's width it is roughly five times
+    // a word space, which is the point where the eye stops trying to join them up.
+    gutter: 0.5 * MARK_BOX.width,
+    wordmarkByDefault: true,
+    // Each column is set to the same measure as the stacked lockup's single column, which is what
+    // breaks the wordmark after "of" and keeps both columns to a similar width.
+    measure: () => COLUMN_MEASURE
   }
 }
 
 const horizontalWordmarkStyle = { fontSize: 121.64, weight: 'bold', wordSpacing: 0.027 }
 const HORIZONTAL_FALLBACK_MEASURE = measureWidth(PROVINCE_WORDMARK, horizontalWordmarkStyle)
 
-export const LAYOUT_ORDER = ['stacked', 'centred', 'horizontal']
+export const LAYOUT_ORDER = ['stacked', 'centred', 'horizontal', 'columns']
 
 export const getLayout = (id) => LAYOUTS[id] || LAYOUTS.stacked
 

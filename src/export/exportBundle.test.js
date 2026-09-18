@@ -3,6 +3,7 @@
 
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
+import { LAYOUT_ORDER } from '../logo/layouts.js'
 import { BUNDLE_DEFAULTS, bundleName, planBundle } from './exportBundle.js'
 
 const FORESTS = { ministry: 'Ministry of Forests', markColor: '#ffffff', textColor: '#ffffff' }
@@ -10,9 +11,11 @@ const FORESTS = { ministry: 'Ministry of Forests', markColor: '#ffffff', textCol
 test('the default bundle is every lockup in vector plus two PNG sizes', () => {
   const plan = planBundle(FORESTS)
 
-  // 3 layouts × (svg + pdf + png at two widths).
-  assert.equal(plan.length, 12)
-  assert.deepEqual([...new Set(plan.map((entry) => entry.layout))], ['stacked', 'centred', 'horizontal'])
+  // Derived rather than hardcoded, so adding a lockup does not silently leave it out of bundles:
+  // every layout × (svg + pdf + png at each default width).
+  const perLayout = 2 + BUNDLE_DEFAULTS.sizes.length
+  assert.equal(plan.length, LAYOUT_ORDER.length * perLayout)
+  assert.deepEqual([...new Set(plan.map((entry) => entry.layout))], LAYOUT_ORDER)
   assert.deepEqual([...new Set(plan.map((entry) => entry.format))], ['svg', 'pdf', 'png'])
 })
 
@@ -59,8 +62,8 @@ test('no widths selected still produces the default raster sizes', () => {
 })
 
 test('layouts come out in the canonical order however they are asked for', () => {
-  const plan = planBundle({ ...FORESTS, layouts: ['horizontal', 'stacked'], formats: ['svg'] })
-  assert.deepEqual(plan.map((entry) => entry.layout), ['stacked', 'horizontal'])
+  const plan = planBundle({ ...FORESTS, layouts: ['columns', 'horizontal', 'stacked'], formats: ['svg'] })
+  assert.deepEqual(plan.map((entry) => entry.layout), ['stacked', 'horizontal', 'columns'])
 })
 
 test('the bundle is named after the ministry, or the wordmark without one', () => {

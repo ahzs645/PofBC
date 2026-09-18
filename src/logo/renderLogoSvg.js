@@ -70,27 +70,35 @@ export const resolveLockup = ({
   const hasWordmark = Boolean(wordmark)
   const measure = layout.measure({ hasWordmark })
 
-  // The wordmark and the ministry wrap independently but share one continuous leading, so the
-  // whole lockup reads as a single block of type rather than two stacked paragraphs.
-  const entries = [
-    ...(hasWordmark ? wrapText(PROVINCE_WORDMARK, measure, boldStyle).map((text) => ({ text, style: boldStyle })) : []),
+  const wordmarkLines = hasWordmark
+    ? wrapText(PROVINCE_WORDMARK, measure, boldStyle).map((text) => ({ text, style: boldStyle }))
+    : []
+  const ministryLines = [
     ...wrapText(ministry, measure, regularStyle).map((text) => ({ text, style: regularStyle })),
     ...wrapText(program, measure, regularStyle).map((text) => ({ text, style: regularStyle }))
   ]
 
-  const block = layoutBlock(entries, leading)
-  const hasText = entries.length > 0
+  // Most lockups set the wordmark and the ministry as one block of type with a single continuous
+  // leading, so they read as one thing rather than two stacked paragraphs. The side-by-side lockup
+  // is the exception: there they are separate columns standing next to each other.
+  const columns = (layout.markPlacement === 'columns'
+    ? [wordmarkLines, ministryLines]
+    : [[...wordmarkLines, ...ministryLines]]
+  ).filter((entries) => entries.length > 0)
+
+  const blocks = columns.map((entries) => layoutBlock(entries, leading))
+  const hasText = blocks.length > 0
 
   const placement = hasText
-    ? place(layout, block)
+    ? place(layout, blocks)
     // With no text at all the lockup is just the mark, sitting at the origin.
-    : { markX: 0, markY: 0, textOrigin: { x: 0, y: 0 }, bounds: { minX: 0, minY: 0, maxX: MARK_BOX.width, maxY: MARK_BOX.height } }
+    : { markX: 0, markY: 0, origins: [], bounds: { minX: 0, minY: 0, maxX: MARK_BOX.width, maxY: MARK_BOX.height } }
 
-  const { markX, markY, textOrigin, bounds } = placement
+  const { markX, markY, origins, bounds } = placement
 
   // Each line is positioned explicitly rather than leaning on text-anchor, so centring is computed
   // from the ink the glyphs actually cover and comes out identical in every renderer.
-  const lines = block.lines.map((line) => {
+  const lines = blocks.flatMap((block, column) => block.lines.map((line) => {
     const offset = layout.align === 'centre'
       ? (block.inkRight - block.inkLeft) / 2 - (line.inkLeft + line.inkRight) / 2 + block.inkLeft
       : 0
@@ -98,11 +106,11 @@ export const resolveLockup = ({
     return {
       text: line.text,
       style: line.style,
-      x: round(textOrigin.x + offset),
-      y: round(textOrigin.y + line.baseline),
+      x: round(origins[column].x + offset),
+      y: round(origins[column].y + line.baseline),
       words: positionWords(line.text, line.style)
     }
-  })
+  }))
 
   return {
     layout,
@@ -129,15 +137,47 @@ export const resolveLockup = ({
 }
 
 /**
- * Positions the mark against the text block and returns the union of their bounds.
+ * Positions the mark against the text and returns an origin per column, plus the union of bounds.
  *
- * Both placements align on ink rather than on the type's origin: the mark's left edge lines up
- * with where the letterforms start, not with the invisible point the text is anchored at. That
- * is how the source artwork is drawn, and the difference is visible — a capital P carries about
- * 0.08 em of side bearing.
+ * Every placement aligns on ink rather than on the type's origin: the mark's edge lines up with
+ * where the letterforms start, not with the invisible point the text is anchored at. That is how
+ * the source artwork is drawn, and the difference is visible — a capital P carries about 0.08 em
+ * of side bearing.
  */
-const place = (layout, block) => {
+const place = (layout, blocks) => {
+  const [block] = blocks
   const blockWidth = block.inkRight - block.inkLeft
+
+  if (layout.markPlacement === 'columns') {
+    // Mark, then the wordmark, then the ministry — three things in a row. The columns share a
+    // first baseline, and the mark is centred on the tallest of them.
+    const capHeight = capHeightOf(block.lines[0])
+    const textTop = -capHeight
+    const textBottom = Math.max(...blocks.map((entry) => entry.lines.at(-1).baseline))
+    const markY = (textTop + textBottom) / 2 - MARK_BOX.height / 2
+
+    let pen = MARK_BOX.width + layout.gap
+    const origins = blocks.map((entry) => {
+      const origin = { x: pen - entry.inkLeft, y: 0 }
+      pen += (entry.inkRight - entry.inkLeft) + layout.gutter
+      return origin
+    })
+
+    // The last column added a trailing gutter it does not need.
+    const right = pen - layout.gutter
+
+    return {
+      markX: 0,
+      markY,
+      origins,
+      bounds: {
+        minX: 0,
+        maxX: right,
+        minY: Math.min(markY, ...blocks.map((entry) => entry.inkTop)),
+        maxY: Math.max(markY + MARK_BOX.height, ...blocks.map((entry) => entry.inkBottom))
+      }
+    }
+  }
 
   if (layout.markPlacement === 'beside') {
     // Mark on the left, text to its right, the two centred on each other. The text's optical
@@ -154,7 +194,7 @@ const place = (layout, block) => {
     return {
       markX: 0,
       markY,
-      textOrigin: { x: textX, y: 0 },
+      origins: [{ x: textX, y: 0 }],
       bounds: {
         minX: 0,
         maxX: textX + block.inkRight,
@@ -180,7 +220,7 @@ const place = (layout, block) => {
   return {
     markX,
     markY: 0,
-    textOrigin: { x: textX, y: firstBaseline },
+    origins: [{ x: textX, y: firstBaseline }],
     bounds: {
       minX: left,
       maxX: right,
