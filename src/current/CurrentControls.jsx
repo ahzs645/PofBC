@@ -6,9 +6,10 @@
 // say so.
 
 import { useId } from 'react'
+import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
 import {
-  CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, recommendedVariant
+  BCID_PALETTE, CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, recommendedVariant
 } from './currentMarks.js'
 import { useCurrentCatalogue } from './CurrentLockup.jsx'
 
@@ -26,7 +27,7 @@ export const CurrentControls = ({ state, update }) => {
 
   // The guidance pairs a colourway with each background; saying so beats making someone
   // cross-reference the table, without taking the choice away.
-  const suggested = recommendedVariant(state.background)
+  const suggested = recommendedVariant(state.currentBackground)
   const mismatched = suggested && suggested !== state.currentVariant
 
   return (
@@ -67,6 +68,15 @@ export const CurrentControls = ({ state, update }) => {
             : ''}
         </p>
       </div>
+
+      <ColourField
+        label="Background"
+        value={state.currentBackground}
+        onChange={(value) => update({ currentBackground: value })}
+        allowTransparent
+        palette={BCID_PALETTE}
+        hint="The BC identity colours. Changing this moves the colourway to the one the guidance pairs with it."
+      />
 
       <Segmented
         label="Colourway"

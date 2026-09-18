@@ -4,6 +4,7 @@
 // when one field should drag another along, and when it should stop — can be tested directly
 // rather than through a rendered component.
 
+import { recommendedVariant } from '../current/currentMarks.js'
 import { defaultMarkAlignment, getLayout } from '../logo/layouts.js'
 import { BRAND_COLORS, TRANSPARENT, resolveColor } from '../logo/logoColors.js'
 
@@ -39,6 +40,14 @@ export const applyUpdate = (current, patch) => {
   if (patch.markAlign !== undefined) next.markAlignTouched = true
   else if (patch.layout !== undefined && !next.markAlignTouched) {
     next.markAlign = defaultMarkAlignment(patch.layout)
+  }
+
+  // The Province pairs a colourway with each background it sanctions, so changing the background
+  // moves the colourway to match rather than leaving an unreadable combination on screen. Once the
+  // colourway is chosen by hand it stays put, as the wordmark and the alignment do.
+  if (patch.currentVariant !== undefined) next.currentVariantTouched = true
+  else if (patch.currentBackground !== undefined && !next.currentVariantTouched) {
+    next.currentVariant = recommendedVariant(patch.currentBackground) ?? next.currentVariant
   }
 
   return next

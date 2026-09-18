@@ -86,6 +86,21 @@ export const CURRENT_VARIANTS = {
 
 export const CURRENT_VARIANT_ORDER = ['colour', 'reverse', 'black', 'white']
 
+/**
+ * The backgrounds the Province's guidance actually sanctions the mark on, light to dark.
+ *
+ * Offered instead of the crest era's palette, whose forest green is not a BC identity colour at
+ * all — and which, left in place when the era changed, put blue type on green.
+ */
+export const BCID_PALETTE = [
+  { name: 'white', value: BCID.white },
+  { name: 'gold 60%', value: BCID.goldTint },
+  { name: 'gold', value: BCID.gold },
+  { name: 'blue 60%', value: BCID.blueTint },
+  { name: 'blue', value: BCID.blue },
+  { name: 'black', value: BCID.black }
+]
+
 export const LANGUAGES = { en: 'English', fr: 'Français' }
 export const LANGUAGE_ORDER = ['en', 'fr']
 

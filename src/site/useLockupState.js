@@ -54,11 +54,16 @@ export const useLockupState = () => {
   }), [state])
 
   // Everything an export needs, both eras.
+  // Each era draws on its own background, so everything downstream — preview, export, backdrop,
+  // contrast — reads it from here rather than reaching for state.background directly.
+  const background = state.era === 'current' ? state.currentBackground : state.background
+
   const lockup = useMemo(() => ({
     era: state.era,
     language: state.language,
     currentMinistry: state.currentMinistry,
     currentVariant: state.currentVariant,
+    currentBackground: state.currentBackground,
     // The key rather than a distance: the two eras measure their marks in different units, so each
     // turns it into a margin against its own artwork.
     clearSpace: state.clearSpace,
@@ -69,12 +74,12 @@ export const useLockupState = () => {
     program: state.program.trim(),
     markColor: state.markColor,
     textColor: state.textColor,
-    background: state.background,
+    background,
     padding: clearSpacePadding(state.clearSpace),
     markAlign: state.markAlign
-  }), [state])
+  }), [state, background])
 
-  const isTransparent = resolveColor(state.background, TRANSPARENT) === TRANSPARENT
+  const isTransparent = resolveColor(background, TRANSPARENT) === TRANSPARENT
 
   /**
    * How the lockup reads.
@@ -97,8 +102,8 @@ export const useLockupState = () => {
           { surface: 'On white', ...against(BRAND_COLORS.white) },
           { surface: 'On black', ...against(BRAND_COLORS.black) }
         ]
-      : [{ surface: 'Against the background', ...against(state.background) }]
-  }, [state.markColor, state.textColor, state.background, isTransparent])
+      : [{ surface: 'Against the background', ...against(background) }]
+  }, [state.markColor, state.textColor, background, isTransparent])
 
   /**
    * The preview surface.
@@ -110,13 +115,19 @@ export const useLockupState = () => {
    */
   const backdrop = useMemo(() => {
     if (state.backdrop !== 'auto') return state.backdrop
-    const inkIsLight = isLightColor(state.markColor) || isLightColor(state.textColor)
+
+    // The current era's ink is decided by the colourway, not by a colour field: reverse and solid
+    // white are the two drawn for dark surfaces, so they are the ones that vanish on a light page.
+    const inkIsLight = state.era === 'current'
+      ? ['reverse', 'white'].includes(state.currentVariant)
+      : isLightColor(state.markColor) || isLightColor(state.textColor)
+
     return isTransparent && inkIsLight ? 'dark' : 'light'
-  }, [state.backdrop, state.markColor, state.textColor, isTransparent])
+  }, [state.backdrop, state.era, state.currentVariant, state.markColor, state.textColor, isTransparent])
 
   const swapColors = useCallback(() => setState(swapColours), [])
 
-  return { state, update, reset, lockup, artwork, contrast, backdrop, isTransparent, swapColors }
+  return { state, update, reset, lockup, artwork, background, contrast, backdrop, isTransparent, swapColors }
 }
 
 export { DEFAULTS }

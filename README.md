@@ -41,6 +41,13 @@ artwork. That is why the extraction labels every shape with a `data-role` rather
 fill. The solid colourways drop the sun's rays entirely so the background shows through them;
 painting them white would ring the mark with a halo on anything but a white page.
 
+The two eras keep **separate backgrounds and colours**, because their palettes have nothing to do
+with each other — the crest era's forest green is not a BC identity colour, and carrying it across
+put blue type on green. Switching era therefore leaves each side as you had it. In the current era
+the background swatches are the BC identity colours, and choosing one moves the colourway to the
+one the guidance pairs with it: BC Blue and black get Reverse, the golds and the 60% tints get Solid
+black. Choose a colourway by hand and it stops following, as the wordmark and the alignment do.
+
 Each mark is also a plain file — `current-marks/for-en.svg` and so on, listed in
 [`current-marks/index.json`](https://ahzs645.github.io/PofBC/current-marks/index.json) — so current-era
 artwork can be fetched directly without running the page.

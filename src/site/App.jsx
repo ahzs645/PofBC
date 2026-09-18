@@ -45,7 +45,7 @@ const BACKDROP_OPTIONS = [
 ]
 
 export const App = () => {
-  const { state, update, reset, lockup, artwork, contrast, backdrop, isTransparent, swapColors } = useLockupState()
+  const { state, update, reset, lockup, artwork, background, contrast, backdrop, isTransparent, swapColors } = useLockupState()
   const layout = LAYOUTS[state.layout]
   const isCurrent = state.era === 'current'
 
@@ -71,7 +71,7 @@ export const App = () => {
                 code={state.currentMinistry}
                 language={state.language}
                 variant={state.currentVariant}
-                background={state.background}
+                background={state.currentBackground}
                 clearSpaceFactor={lockup.clearSpaceFactor}
                 title="Province of British Columbia ministry mark"
               />
@@ -128,12 +128,6 @@ export const App = () => {
                 value={state.clearSpace}
                 onChange={(value) => update({ clearSpace: value })}
                 hint="Margin around the mark. The background colour fills it."
-              />
-              <ColourField
-                label="Background"
-                value={state.background}
-                onChange={(value) => update({ background: value })}
-                allowTransparent
               />
             </section>
           )}

@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
+import { BCID } from '../current/currentMarks.js'
 import { DEFAULT_MARK_ALIGNMENT, LAYOUTS, defaultMarkAlignment } from '../logo/layouts.js'
 import { DEFAULTS } from './lockupDefaults.js'
 import { applyShare, applyUpdate, swapColours } from './lockupReducer.js'
@@ -144,4 +145,42 @@ test('the library default stays centre, whatever the UI prefers', () => {
   assert.equal(DEFAULT_MARK_ALIGNMENT, 'centre')
   assert.equal(defaultMarkAlignment('columns'), 'top')
   assert.equal(defaultMarkAlignment('stacked'), 'centre', 'lockups that ignore it fall back')
+})
+
+// ── Colour across the eras ────────────────────────────────────────────────────────────────────────
+
+test('each era keeps its own background', () => {
+  // The crest era's forest green is not a BC identity colour. Carrying it into the current era put
+  // blue type on green, which is how this came to light.
+  const state = run([{ background: '#006837' }, { era: 'current' }])
+
+  assert.equal(state.background, '#006837', 'the historical one is untouched')
+  assert.equal(state.currentBackground, DEFAULTS.currentBackground, 'and the current one is its own')
+  assert.equal(state.currentBackground, BCID.white)
+})
+
+test('setting one era’s background leaves the other alone', () => {
+  const state = run([{ era: 'current' }, { currentBackground: BCID.blue }, { era: 'historical' }])
+
+  assert.equal(state.background, DEFAULTS.background)
+  assert.equal(state.currentBackground, BCID.blue, 'still there when you go back')
+})
+
+test('the colourway follows the background the guidance pairs it with', () => {
+  assert.equal(run([{ currentBackground: BCID.blue }]).currentVariant, 'reverse')
+  assert.equal(run([{ currentBackground: BCID.gold }]).currentVariant, 'black')
+  assert.equal(run([{ currentBackground: BCID.blueTint }]).currentVariant, 'black')
+  assert.equal(run([{ currentBackground: 'none' }]).currentVariant, 'colour')
+})
+
+test('a background the guidance says nothing about leaves the colourway alone', () => {
+  const state = run([{ currentVariant: 'reverse' }, { currentBackground: '#123456' }])
+  assert.equal(state.currentVariant, 'reverse')
+})
+
+test('choosing a colourway by hand stops it following', () => {
+  const pinned = run([{ currentVariant: 'white' }])
+
+  assert.equal(pinned.currentVariantTouched, true)
+  assert.equal(applyUpdate(pinned, { currentBackground: BCID.gold }).currentVariant, 'white')
 })

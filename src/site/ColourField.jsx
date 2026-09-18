@@ -7,9 +7,18 @@ import { BRAND_COLORS, TRANSPARENT, parseHex, resolveColor } from '../logo/logoC
 
 // Roughly light to dark, so the row reads as a ramp rather than a jumble. One palette serves the
 // mark, the type and the background — a brand colour is a brand colour wherever it lands.
+/** The crest era's palette, in a light-to-dark ramp. */
 const SWATCH_ORDER = ['white', 'silver', 'gold', 'red', 'green', 'blue', 'grey', 'black']
 
-export const ColourField = ({ label, value, onChange, allowTransparent = false }) => {
+const DEFAULT_PALETTE = SWATCH_ORDER.map((name) => ({ name, value: BRAND_COLORS[name] }))
+
+/**
+ * @param {object} props
+ * @param {Array<{name: string, value: string}>} [props.palette]  Swatches to offer. Defaults to the
+ *   crest era's; the current era passes the BC identity colours instead, because its own guidance
+ *   only sanctions the mark on those.
+ */
+export const ColourField = ({ label, value, onChange, allowTransparent = false, palette = DEFAULT_PALETTE, hint }) => {
   const inputId = useId()
   const isTransparent = value === TRANSPARENT
   const hex = parseHex(value) ? value.toLowerCase() : '#006837'
@@ -29,16 +38,16 @@ export const ColourField = ({ label, value, onChange, allowTransparent = false }
             onClick={() => onChange(TRANSPARENT)}
           />
         )}
-        {SWATCH_ORDER.map((name) => (
+        {palette.map(({ name, value: swatch }) => (
           <button
             key={name}
             type="button"
             className="swatch"
-            style={{ backgroundColor: BRAND_COLORS[name] }}
-            aria-pressed={!isTransparent && resolveColor(value).toLowerCase() === BRAND_COLORS[name]}
+            style={{ backgroundColor: swatch }}
+            aria-pressed={!isTransparent && resolveColor(value).toLowerCase() === swatch.toLowerCase()}
             aria-label={name}
-            title={`${name} ${BRAND_COLORS[name]}`}
-            onClick={() => onChange(BRAND_COLORS[name])}
+            title={`${name} ${swatch}`}
+            onClick={() => onChange(swatch)}
           />
         ))}
       </div>
@@ -65,6 +74,7 @@ export const ColourField = ({ label, value, onChange, allowTransparent = false }
           }}
         />
       </div>
+      {hint ? <p className="field__note">{hint}</p> : null}
     </div>
   )
 }

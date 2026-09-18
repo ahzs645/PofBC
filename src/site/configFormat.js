@@ -67,7 +67,7 @@ export const toConfig = (state) => (state.era === 'current'
       ministryCode: state.currentMinistry,
       language: state.language,
       variant: state.currentVariant,
-      background: backgroundOf(state),
+      background: state.currentBackground === TRANSPARENT ? 'transparent' : state.currentBackground,
       clearSpace: state.clearSpace
     }
   : {
@@ -109,8 +109,15 @@ export const fromConfig = (config) => {
     patch.linkColors = false
   }
   if ('background' in config) {
-    const value = cleanColour(config.background, DEFAULTS.background)
-    patch.background = /^transparent$/i.test(value) ? TRANSPARENT : value
+    // The eras keep separate backgrounds, so which one this sets depends on the era the
+    // configuration declares — otherwise a current-era object would quietly recolour the crest.
+    const forCurrent = (config.era ?? DEFAULTS.era) === 'current'
+    const fallback = forCurrent ? DEFAULTS.currentBackground : DEFAULTS.background
+    const value = cleanColour(config.background, fallback)
+    const colour = /^transparent$/i.test(value) ? TRANSPARENT : value
+
+    if (forCurrent) patch.currentBackground = colour
+    else patch.background = colour
   }
   if ('clearSpace' in config) patch.clearSpace = cleanOneOf(config.clearSpace, CLEAR_SPACE_ORDER, DEFAULTS.clearSpace)
   if ('markAlignment' in config) patch.markAlign = cleanOneOf(config.markAlignment, MARK_ALIGNMENT_ORDER, DEFAULTS.markAlign)
