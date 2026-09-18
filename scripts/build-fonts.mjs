@@ -1,0 +1,306 @@
+// Generates the embeddable font payloads and the advance-width table the layout engine needs.
+//
+// Two artefacts come out of this, and they are deliberately treated differently:
+//
+//   src/fonts/generated/*.ttf  the subset faces themselves. Helvetica is licensed, so these are
+//                              gitignored and rebuilt from the system font on each machine.
+//   src/fonts/generated/outlines.js
+//                              every glyph as SVG path data, for exports that convert type to
+//                              outlines. Derived from the same subset, so an outlined export and a
+//                              live-text one are the same drawing. Gitignored for the same reason
+//                              as the fonts: this *is* the typeface, in another form.
+//   src/logo/fontMetrics.js    advance widths only. This is committed: it is what lets the core
+//                              renderer measure and wrap text in Node, in a worker, or in the
+//                              browser before any font has loaded — no canvas, no DOM.
+//
+// Run: npm run build:fonts
+
+import * as fontkit from 'fontkit'
+import subsetFont from 'subset-font'
+import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { extractFace, readName, withNames } from './sfnt.mjs'
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
+
+// Where to find Helvetica. The macOS system collection is the default; FONT_SOURCE lets a
+// different licensed copy be substituted without editing this file.
+const SOURCE = process.env.FONT_SOURCE || '/System/Library/Fonts/Helvetica.ttc'
+
+const FACES = [
+  { key: 'regular', postscriptName: 'Helvetica', weight: 400, style: 'Regular' },
+  { key: 'bold', postscriptName: 'Helvetica-Bold', weight: 700, style: 'Bold' }
+]
+
+// The family is renamed so a browser can never quietly satisfy it with whatever "Helvetica" the
+// host machine happens to have. An export has to look the same on a Mac, on Windows and in a PDF
+// viewer, which means using the face this build actually embedded and no other.
+const EMBEDDED_FAMILY = 'HelveticaPofBC'
+
+// The glyphs to keep. Ministry names are plain English, but the department line is free text, so
+// the subset covers Latin-1 and Latin Extended-A plus the punctuation a word processor produces.
+const charset = [
+  range(0x20, 0x7e),   // ASCII printable
+  range(0xa0, 0xff),   // Latin-1 Supplement — accented letters, ©, °, ×
+  range(0x100, 0x17f), // Latin Extended-A
+  '‐‑‒–—‘’‚“”„†‡•…‰‹›€™'
+].join('')
+
+function range (from, to) {
+  return Array.from({ length: to - from + 1 }, (_, i) => String.fromCodePoint(from + i)).join('')
+}
+
+if (!existsSync(SOURCE)) {
+  console.error(
+    `\nCould not find Helvetica at ${SOURCE}.\n` +
+    'This project embeds the real Helvetica the source artwork was set in. On macOS it ships at\n' +
+    '/System/Library/Fonts/Helvetica.ttc. Elsewhere, point FONT_SOURCE at a licensed copy:\n\n' +
+    '    FONT_SOURCE=/path/to/Helvetica.ttc npm run build:fonts\n'
+  )
+  process.exit(1)
+}
+
+const source = readFileSync(SOURCE)
+const generatedDir = resolve(root, 'src/fonts/generated')
+mkdirSync(generatedDir, { recursive: true })
+
+const metrics = {}
+const outlines = {}
+
+for (const face of FACES) {
+  const standalone = extractFace(source, face.postscriptName)
+  const subsetted = await subsetFont(standalone, charset, { targetFormat: 'truetype' })
+
+  // Subsetting strips the name table down to a single record. Putting a full one back is what
+  // makes the face usable by jsPDF, and it is also the honest thing to do: this is a derived,
+  // cut-down font and should say so rather than claim to be the system Helvetica. The original
+  // copyright and trademark travel with it.
+  const named = `${EMBEDDED_FAMILY}${face.style === 'Regular' ? '' : ` ${face.style}`}`
+  const subset = withNames(subsetted, {
+    0: readName(standalone, 0),
+    1: EMBEDDED_FAMILY,
+    2: face.style,
+    3: `${EMBEDDED_FAMILY}-${face.style}; subset of ${face.postscriptName}`,
+    4: named,
+    5: 'Version 1.000; subset',
+    6: named.replace(/\s+/g, ''),
+    7: readName(standalone, 7)
+  })
+
+  const font = fontkit.create(subset)
+
+  writeFileSync(resolve(generatedDir, `${face.key}.ttf`), subset)
+
+  metrics[face.key] = measureFace(font)
+  outlines[face.key] = outlineFace(font)
+
+  const kb = (subset.length / 1024).toFixed(1)
+  console.log(`  ${face.postscriptName.padEnd(16)} ${String(font.numGlyphs).padStart(4)} glyphs  ${kb.padStart(6)} KB`)
+}
+
+writeFileSync(resolve(root, 'src/logo/fontMetrics.js'), renderMetricsModule(metrics))
+writeFileSync(resolve(generatedDir, 'outlines.js'), renderOutlinesModule(outlines))
+
+// The stylesheet lives beside the faces it points at, so importing '@pofbc/logo/fonts.css' is all
+// an app needs to do to make the live preview match what the exporter will produce.
+writeFileSync(resolve(root, 'src/fonts.css'), `/* Generated by scripts/build-fonts.mjs — do not edit. */
+/*                                                                                                */
+/* The brand face, subset to the glyphs the lockups can use. The family is renamed so that neither */
+/* the page nor an exported SVG can fall back to a system "Helvetica" that differs from the one    */
+/* this build embedded.                                                                           */
+
+${FACES.map((face) => `@font-face {
+  font-family: '${EMBEDDED_FAMILY}';
+  src: url('./fonts/generated/${face.key}.ttf') format('truetype');
+  font-weight: ${face.weight};
+  font-style: normal;
+  font-display: block;
+}`).join('\n\n')}
+`)
+
+const outlineBytes = Object.values(outlines)
+  .reduce((total, face) => total + Object.values(face.glyphs).join('').length, 0)
+
+console.log(`  outlines          ${String(Object.values(outlines).reduce((n, f) => n + Object.keys(f.glyphs).length, 0)).padStart(4)} glyphs  ${(outlineBytes / 1024).toFixed(1).padStart(6)} KB`)
+console.log('  → src/fonts/generated/*.{ttf,js}, src/fonts.css, src/logo/fontMetrics.js')
+
+// Advance widths are normalised to a 1000-unit em so the layout constants read as round numbers
+// and stay comparable to the values measured off the source artwork.
+function round (value) { return Math.round(value * 1000) / 1000 }
+
+/**
+ * Every glyph's outline as SVG path data.
+ *
+ * Kept in the font's own units rather than normalised to a 1000-unit em: TrueType coordinates are
+ * integers, so leaving them alone avoids both a rounding error and the decimal places that would
+ * come with it — about a third smaller for exactly the same shapes. The y axis is flipped, because
+ * fonts measure up from the baseline and SVG measures down.
+ */
+function outlineFace (font) {
+  const glyphs = {}
+
+  for (const character of charset) {
+    const [glyph] = font.layout(character).glyphs
+    // Blank glyphs (space and friends) have an advance but nothing to draw.
+    if (!glyph?.path?.commands?.length) continue
+    glyphs[character.codePointAt(0)] = glyph.path.scale(1, -1).toSVG()
+  }
+
+  return { unitsPerEm: font.unitsPerEm, glyphs }
+}
+
+function renderOutlinesModule (data) {
+  const faces = Object.entries(data).map(([key, face]) => {
+    const entries = Object.entries(face.glyphs)
+      .map(([point, path]) => `${point}:'${path}'`)
+      .join(',')
+
+    return `  ${key}: { unitsPerEm: ${face.unitsPerEm}, glyphs: {${entries}} }`
+  })
+
+  return `// Generated by scripts/build-fonts.mjs — do not edit, and do not commit.
+//
+// Glyph outlines for exports that convert type to paths, keyed by code point, in each face's own
+// units with the y axis flipped into SVG's direction. Loaded on demand: most exports keep their
+// text live and never need this.
+
+export default {
+${faces.join(',\n')}
+}
+`
+}
+
+function measureFace (font) {
+  const scale = 1000 / font.unitsPerEm
+  const widths = {}
+  const bearings = {}
+  const rights = {}
+  const tops = {}
+  const bottoms = {}
+
+  for (const character of charset) {
+    const [glyph] = font.layout(character).glyphs
+    if (!glyph) continue
+    const point = character.codePointAt(0)
+    const box = glyph.bbox
+
+    widths[point] = round(glyph.advanceWidth * scale)
+    // Left side bearing: the gap between a glyph's origin and where its ink actually starts. The
+    // stacked lockup aligns the mark's left edge to the ink of the first letter rather than to the
+    // text origin, so reproducing that alignment for arbitrary text needs this, per glyph.
+    bearings[point] = round((box?.minX ?? 0) * scale)
+    // Ink extents above and below the baseline. These give the exported lockup a bounding box that
+    // hugs the actual letterforms, instead of padding every logo out to the font's full
+    // ascender/descender whether or not any glyph reaches them.
+    // Blank glyphs (space and friends) report an inverted, infinite box; they contribute no ink.
+    const blank = !box || !Number.isFinite(box.minY) || !Number.isFinite(box.maxY) || box.minY === box.maxY
+    tops[point] = blank ? 0 : round(box.maxY * scale)
+    bottoms[point] = blank ? 0 : round(box.minY * scale)
+    // Where the ink actually ends, as opposed to where the pen moves on to. Using the advance here
+    // instead pads the right of every lockup by the last glyph's side bearing, while the other
+    // three sides hug the letterforms.
+    rights[point] = blank ? 0 : round(box.maxX * scale)
+  }
+
+  return {
+    widths,
+    bearings,
+    rights,
+    tops,
+    bottoms,
+    capHeight: round(font.capHeight * scale),
+    xHeight: round(font.xHeight * scale),
+    ascent: round(font.ascent * scale),
+    descent: round(font.descent * scale)
+  }
+}
+
+function renderMetricsModule (data) {
+  const faces = Object.entries(data).map(([key, face]) => {
+    // Runs of identical widths are common (the digits, most lowercase), so the table is stored as
+    // "startCodePoint:width,width,…" runs rather than one entry per character. It cuts the module
+    // to roughly a third with no cost at load: expandWidths() rebuilds the map in one pass.
+    const pack = (table) => {
+      const points = Object.keys(table).map(Number).sort((a, b) => a - b)
+      const runs = []
+
+      for (const point of points) {
+        const last = runs.at(-1)
+        if (last && point === last.start + last.values.length) last.values.push(table[point])
+        else runs.push({ start: point, values: [table[point]] })
+      }
+
+      return runs.map((run) => `'${run.start}:${run.values.join(',')}'`).join(',\n      ')
+    }
+
+    return `  ${key}: {\n` +
+      `    capHeight: ${face.capHeight},\n` +
+      `    xHeight: ${face.xHeight},\n` +
+      `    ascent: ${face.ascent},\n` +
+      `    descent: ${face.descent},\n` +
+      `    widthRuns: [\n      ${pack(face.widths)}\n    ],\n` +
+      `    bearingRuns: [\n      ${pack(face.bearings)}\n    ],\n` +
+      `    rightRuns: [\n      ${pack(face.rights)}\n    ],\n` +
+      `    topRuns: [\n      ${pack(face.tops)}\n    ],\n` +
+      `    bottomRuns: [\n      ${pack(face.bottoms)}\n    ]\n` +
+      `  }`
+  })
+
+  return `// Generated by scripts/build-fonts.mjs — do not edit.
+//
+// Advance widths for Helvetica and Helvetica-Bold, in units of 1/1000 em, together with the
+// vertical metrics the lockups position against. This table is what makes the renderer
+// framework-free: text can be measured and wrapped identically in Node and in the browser,
+// before any webfont has loaded, without touching a canvas.
+//
+// Every table is stored as runs of consecutive code points; unpack() rebuilds them into Maps on
+// first use.
+
+const FACES = {
+${faces.join(',\n')}
+}
+
+const unpack = (runs) => {
+  const table = new Map()
+  for (const run of runs) {
+    const [start, values] = run.split(':')
+    values.split(',').forEach((value, index) => {
+      table.set(Number(start) + index, Number(value))
+    })
+  }
+  return table
+}
+
+const cache = new Map()
+
+/**
+ * Metrics for 'regular' or 'bold'.
+ *
+ * Each of \`widths\`, \`bearings\`, \`rights\`, \`tops\` and \`bottoms\` is a Map of code point →
+ * advance width, left side bearing, right ink edge, ink top and ink bottom. Every value, including
+ * the face-level vertical metrics, is in units of 1/1000 em.
+ */
+export const getFaceMetrics = (weight) => {
+  const key = weight === 'bold' || Number(weight) >= 600 ? 'bold' : 'regular'
+  if (!cache.has(key)) {
+    const face = FACES[key]
+    cache.set(key, {
+      capHeight: face.capHeight,
+      xHeight: face.xHeight,
+      ascent: face.ascent,
+      descent: face.descent,
+      widths: unpack(face.widthRuns),
+      bearings: unpack(face.bearingRuns),
+      rights: unpack(face.rightRuns),
+      tops: unpack(face.topRuns),
+      bottoms: unpack(face.bottomRuns)
+    })
+  }
+  return cache.get(key)
+}
+
+/** Advance width of a missing glyph, in 1/1000 em. Helvetica's .notdef matches its space. */
+export const FALLBACK_WIDTH = 278
+`
+}

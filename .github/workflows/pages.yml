@@ -1,0 +1,76 @@
+name: Deploy generator site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # macOS, not Ubuntu. The build subsets the real Helvetica the source artwork is set in, and the
+    # only copy it can legally reach is the one macOS itself ships — the font is not committed to
+    # this repository. On a Linux runner there is nothing to subset and the build stops.
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # vendor/json-url compresses a lockup into a share link, and its dist/ is built rather
+          # than committed, so the submodule has to be here before npm can resolve the dependency.
+          submodules: recursive
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Check Helvetica is present
+        run: |
+          if [ ! -f /System/Library/Fonts/Helvetica.ttc ]; then
+            echo "::error::Helvetica.ttc is missing from this runner."
+            echo "The lockups are set in Helvetica and the font is not committed."
+            echo "Either restore a macOS runner, or point FONT_SOURCE at a licensed copy."
+            exit 1
+          fi
+
+      - run: npm ci
+
+      # Explicit rather than relying on the `prepare` lifecycle: builds the json-url submodule,
+      # consolidates the mark, and subsets the fonts. Everything below needs the output.
+      - run: npm run build:assets
+
+      # Guards the reconstruction against the source artwork, the share-link validation, and the
+      # outline geometry. Run after the assets exist so nothing is skipped for want of them.
+      - run: npm test
+
+      - name: Build the site
+        run: npm run build
+        env:
+          # The repository's own name, so renaming it cannot leave the asset URLs pointing at a
+          # path that no longer exists.
+          BASE_PATH: /${{ github.event.repository.name }}/
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
