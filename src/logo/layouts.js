@@ -136,6 +136,43 @@ export const LAYOUT_ORDER = ['stacked', 'centred', 'horizontal', 'columns']
 
 export const getLayout = (id) => LAYOUTS[id] || LAYOUTS.stacked
 
+// ── Vertical alignment ───────────────────────────────────────────────────────────────────────────
+
+/**
+ * How the mark lines up with the type, for the lockups that set the two beside each other.
+ *
+ * Measured against the type's cap band — the cap height of the first line down to the baseline of
+ * the last — rather than its full ascent and descent. That is the mass the eye actually reads, and
+ * aligning to the em box instead leaves the mark looking high on a line with no descenders and low
+ * on one with them, for no visible reason.
+ */
+export const MARK_ALIGNMENTS = {
+  top: { label: 'Top', description: 'The mark’s top edge meets the cap height of the first line.' },
+  centre: { label: 'Centre', description: 'The mark is centred on the type, as the source artwork draws it.' },
+  bottom: { label: 'Bottom', description: 'The mark’s foot meets the baseline of the last line.' }
+}
+
+export const MARK_ALIGNMENT_ORDER = ['top', 'centre', 'bottom']
+
+export const DEFAULT_MARK_ALIGNMENT = 'centre'
+
+/** True when a lockup sets the mark beside the type, so vertical alignment means something. */
+export const alignsVertically = (layout) => getLayout(layout?.id ?? layout).markPlacement !== 'below'
+
+/**
+ * The mark's y position for a given alignment.
+ *
+ * @param {string} alignment  'top' | 'centre' | 'bottom'
+ * @param {number} capTop     Top of the first line's cap, relative to its baseline (negative).
+ * @param {number} baseline   Baseline of the last line.
+ * @param {number} markHeight
+ */
+export const alignMark = (alignment, capTop, baseline, markHeight) => {
+  if (alignment === 'top') return capTop
+  if (alignment === 'bottom') return baseline - markHeight
+  return (capTop + baseline) / 2 - markHeight / 2
+}
+
 // ── Clear space ──────────────────────────────────────────────────────────────────────────────────
 
 /**

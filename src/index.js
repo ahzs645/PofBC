@@ -28,7 +28,12 @@ export {
   CLEAR_SPACE,
   CLEAR_SPACE_ORDER,
   DEFAULT_CLEAR_SPACE,
-  clearSpacePadding
+  clearSpacePadding,
+  MARK_ALIGNMENTS,
+  MARK_ALIGNMENT_ORDER,
+  DEFAULT_MARK_ALIGNMENT,
+  alignsVertically,
+  alignMark
 } from './logo/layouts.js'
 
 // ── Text layout: the measuring and wrapping rules the lockups obey ────────────────────────────────

@@ -1,5 +1,7 @@
 import { BcLockup } from '../logo/BcLockup.jsx'
-import { CLEAR_SPACE, CLEAR_SPACE_ORDER, LAYOUTS } from '../logo/layouts.js'
+import {
+  alignsVertically, CLEAR_SPACE, CLEAR_SPACE_ORDER, LAYOUTS, MARK_ALIGNMENTS, MARK_ALIGNMENT_ORDER
+} from '../logo/layouts.js'
 import { ColourField } from './ColourField.jsx'
 import { ExportPanel } from './ExportPanel.jsx'
 import { LayoutPicker } from './LayoutPicker.jsx'
@@ -12,6 +14,12 @@ const CLEAR_SPACE_OPTIONS = CLEAR_SPACE_ORDER.map((value) => ({
   value,
   label: CLEAR_SPACE[value].label,
   title: `${CLEAR_SPACE[value].factor}× the width of the mark`
+}))
+
+const MARK_ALIGNMENT_OPTIONS = MARK_ALIGNMENT_ORDER.map((value) => ({
+  value,
+  label: MARK_ALIGNMENTS[value].label,
+  title: MARK_ALIGNMENTS[value].description
 }))
 
 const BACKDROP_OPTIONS = [
@@ -68,6 +76,16 @@ export const App = () => {
               <span>Show “Province of British Columbia”</span>
             </label>
             <p className="field__note">The centred lockup is drawn without it in the source artwork.</p>
+
+            {alignsVertically(layout) && (
+              <Segmented
+                label="Mark alignment"
+                options={MARK_ALIGNMENT_OPTIONS}
+                value={state.markAlign}
+                onChange={(value) => update({ markAlign: value })}
+                hint="Where the mark sits against the type, measured from the cap height of the first line to the baseline of the last."
+              />
+            )}
 
             <Segmented
               label="Clear space"

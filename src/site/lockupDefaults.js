@@ -3,7 +3,7 @@
 // In a module of its own because both useLockupState and shareLink need it, and a share link is
 // defined relative to these values — it carries only the fields that differ from them.
 
-import { DEFAULT_CLEAR_SPACE } from '../logo/layouts.js'
+import { DEFAULT_CLEAR_SPACE, DEFAULT_MARK_ALIGNMENT } from '../logo/layouts.js'
 import { BRAND_COLORS } from '../logo/logoColors.js'
 
 export const DEFAULTS = {
@@ -24,6 +24,9 @@ export const DEFAULTS = {
   linkColors: true,
   background: BRAND_COLORS.green,
   clearSpace: DEFAULT_CLEAR_SPACE,
+  // Only the lockups that set the mark beside the type use this; the others ignore it, but it is
+  // kept across a switch so going away and coming back does not lose the choice.
+  markAlign: DEFAULT_MARK_ALIGNMENT,
   // Preview only — the surface the lockup is shown against, never part of the export, and not
   // carried in a share link.
   backdrop: 'auto'

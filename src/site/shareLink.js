@@ -12,7 +12,7 @@
 //
 // Between them, a near-default lockup fits in a token shorter than the word "configuration".
 
-import { CLEAR_SPACE_ORDER, LAYOUT_ORDER } from '../logo/layouts.js'
+import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
 import { DEFAULTS } from './lockupDefaults.js'
 
 export const SHARE_PARAM = 's'
@@ -20,7 +20,7 @@ export const SHARE_PARAM = 's'
 /** The fields a link carries. `backdrop` is left out: it is how you are viewing, not what you made. */
 const SHARED_FIELDS = [
   'layout', 'wordmark', 'source', 'ministry', 'manualMinistry', 'program',
-  'markColor', 'textColor', 'linkColors', 'background', 'clearSpace'
+  'markColor', 'textColor', 'linkColors', 'background', 'clearSpace', 'markAlign'
 ]
 
 const KEY_MAP = {
@@ -34,7 +34,8 @@ const KEY_MAP = {
   textColor: 't',
   linkColors: 'k',
   background: 'b',
-  clearSpace: 'g'
+  clearSpace: 'g',
+  markAlign: 'a'
 }
 
 // json-url and its codecs are a few tens of kilobytes, and most visits neither arrive with a link
@@ -117,7 +118,8 @@ export const sanitizeShare = (raw) => {
     textColor: colour(raw.textColor, DEFAULTS.textColor),
     linkColors: boolean(raw.linkColors, DEFAULTS.linkColors),
     background: colour(raw.background, DEFAULTS.background),
-    clearSpace: oneOf(raw.clearSpace, CLEAR_SPACE_ORDER, DEFAULTS.clearSpace)
+    clearSpace: oneOf(raw.clearSpace, CLEAR_SPACE_ORDER, DEFAULTS.clearSpace),
+    markAlign: oneOf(raw.markAlign, MARK_ALIGNMENT_ORDER, DEFAULTS.markAlign)
   }
 }
 

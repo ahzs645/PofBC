@@ -10,6 +10,7 @@ import { test } from 'node:test'
 import { MARK_BOX, renderLockupSvg, resolveLockup } from './renderLogoSvg.js'
 import { LAYOUTS } from './layouts.js'
 import { measureLine } from './logoText.js'
+import { getFaceMetrics } from './fontMetrics.js'
 
 const FORESTS = { ministry: 'Ministry of Forests' }
 
@@ -296,4 +297,64 @@ test('side by side: a long ministry grows downwards in its own column', () => {
   for (const line of long.lines) {
     assert.ok(measureLine(line.text, line.style).advance <= measure, `"${line.text}" fits the measure`)
   }
+})
+
+test('mark alignment moves the mark against the type, not the type', () => {
+  const base = { layout: 'columns', ministry: 'Ministry of Environment' }
+  const placed = Object.fromEntries(
+    ['top', 'centre', 'bottom'].map((markAlign) => [markAlign, resolveLockup({ ...base, markAlign })])
+  )
+
+  // The type stays exactly where it is; only the mark moves.
+  for (const alignment of ['top', 'bottom']) {
+    assert.deepEqual(
+      placed[alignment].lines.map((line) => [line.x, line.y]),
+      placed.centre.lines.map((line) => [line.x, line.y]),
+      `${alignment}: the type does not move`
+    )
+  }
+
+  assert.ok(placed.top.mark.y > placed.centre.mark.y, 'top sits the mark lower in the box')
+  assert.ok(placed.bottom.mark.y < placed.centre.mark.y, 'bottom sits it higher')
+})
+
+test('top alignment puts the mark’s top edge at the first cap height', () => {
+  const { mark, lines } = resolveLockup({ layout: 'columns', ministry: 'Ministry of Environment', markAlign: 'top' })
+  const capHeight = getFaceMetrics(lines[0].style.weight).capHeight * lines[0].style.fontSize / 1000
+
+  closeTo(mark.y, lines[0].y - capHeight, 0.01, 'mark top = cap top of the first line')
+})
+
+test('bottom alignment puts the mark’s foot on the last baseline', () => {
+  const { mark, lines } = resolveLockup({ layout: 'columns', ministry: 'Ministry of Environment', markAlign: 'bottom' })
+  const lastBaseline = Math.max(...lines.map((line) => line.y))
+
+  closeTo(mark.y + MARK_BOX.height, lastBaseline, 0.01, 'mark foot = last baseline')
+})
+
+test('alignment applies to both lockups that set the mark beside the type', () => {
+  for (const layout of ['horizontal', 'columns']) {
+    const top = resolveLockup({ layout, ministry: 'Ministry of Forests', markAlign: 'top' })
+    const centre = resolveLockup({ layout, ministry: 'Ministry of Forests', markAlign: 'centre' })
+    assert.notEqual(top.mark.y, centre.mark.y, layout)
+  }
+})
+
+test('the stacked and centred lockups ignore it', () => {
+  // The mark is above the type there, so there is no vertical relationship to set.
+  for (const layout of ['stacked', 'centred']) {
+    const top = resolveLockup({ layout, ministry: 'Ministry of Forests', markAlign: 'top' })
+    const bottom = resolveLockup({ layout, ministry: 'Ministry of Forests', markAlign: 'bottom' })
+    assert.deepEqual(top.mark, bottom.mark, layout)
+    assert.deepEqual(top.viewBox, bottom.viewBox, layout)
+  }
+})
+
+test('centre remains the default, so the measured artwork is unchanged', () => {
+  const explicit = resolveLockup({ layout: 'horizontal', ...FORESTS, markAlign: 'centre' })
+  const implicit = resolveLockup({ layout: 'horizontal', ...FORESTS })
+
+  assert.deepEqual(implicit.mark, explicit.mark)
+  // The value verified against artwork/lockup-horizontal.svg.
+  closeTo(implicit.mark.y, -227.21 + 7.83, 0.05, 'still matches the source artwork')
 })

@@ -22,6 +22,8 @@ import { TRANSPARENT } from './logoColors.js'
  * @param {string} [props.textColor]     The type on its own.
  * @param {string} [props.background]    'none' for transparent, or any colour.
  * @param {number} [props.padding]       Margin around the lockup, in artwork units.
+ * @param {string} [props.markAlign]     'top' | 'centre' | 'bottom', where the lockup sets the
+ *                                       mark beside the type.
  * @param {string} [props.title]         Accessible name; pass null for a decorative lockup.
  */
 export const BcLockup = ({
@@ -34,10 +36,15 @@ export const BcLockup = ({
   textColor,
   background,
   padding,
+  markAlign,
   title,
+  // Anything left over is passed to the <svg>, so every option this component understands has to
+  // be named above — an unlisted one would end up as a stray DOM attribute.
   ...rest
 }) => {
-  const options = { layout, wordmark, ministry, program, color, markColor, textColor, background, padding }
+  const options = {
+    layout, wordmark, ministry, program, color, markColor, textColor, background, padding, markAlign
+  }
   const resolved = resolveLockup(options)
   const { viewBox } = resolved
 

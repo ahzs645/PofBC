@@ -40,7 +40,8 @@ export const useLockupState = () => {
     markColor: state.markColor,
     textColor: state.textColor,
     background: state.background,
-    padding: clearSpacePadding(state.clearSpace)
+    padding: clearSpacePadding(state.clearSpace),
+    markAlign: state.markAlign
   }), [state])
 
   const isTransparent = resolveColor(state.background, TRANSPARENT) === TRANSPARENT

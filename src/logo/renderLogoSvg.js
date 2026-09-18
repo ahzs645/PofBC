@@ -7,7 +7,9 @@
 // lets `npm run compare` check the output against the original artwork.
 
 import { PROVINCIAL_MARK } from '../assets/markup.js'
-import { getLayout, LAYOUT_ORDER, LAYOUTS, MARK_BOX, PROVINCE_WORDMARK } from './layouts.js'
+import {
+  alignMark, DEFAULT_MARK_ALIGNMENT, getLayout, LAYOUT_ORDER, LAYOUTS, MARK_BOX, PROVINCE_WORDMARK
+} from './layouts.js'
 import { layoutBlock, positionWords, wrapText } from './logoText.js'
 import { outlineTextMarkup } from './textOutline.js'
 import { BRAND_COLORS, resolveColor, TRANSPARENT } from './logoColors.js'
@@ -48,6 +50,8 @@ const round = (value) => Math.round(value * 1000) / 1000
  * @param {string} [options.background]  'none' for transparent, or any colour.
  * @param {number} [options.padding]     Clear space around the lockup, in artwork units. The
  *                                       background, where there is one, extends to cover it.
+ * @param {string} [options.markAlign]   'top' | 'centre' | 'bottom', for the lockups that set the
+ *                                       mark beside the type. Ignored by the others.
  */
 export const resolveLockup = ({
   layout: layoutId = 'stacked',
@@ -58,7 +62,8 @@ export const resolveLockup = ({
   markColor,
   textColor,
   background = TRANSPARENT,
-  padding = 0
+  padding = 0,
+  markAlign = DEFAULT_MARK_ALIGNMENT
 } = {}) => {
   const layout = getLayout(layoutId)
   const { fontSize, leading, letterSpacing, wordSpacing } = layout
@@ -90,7 +95,7 @@ export const resolveLockup = ({
   const hasText = blocks.length > 0
 
   const placement = hasText
-    ? place(layout, blocks)
+    ? place(layout, blocks, markAlign)
     // With no text at all the lockup is just the mark, sitting at the origin.
     : { markX: 0, markY: 0, origins: [], bounds: { minX: 0, minY: 0, maxX: MARK_BOX.width, maxY: MARK_BOX.height } }
 
@@ -144,17 +149,16 @@ export const resolveLockup = ({
  * the source artwork is drawn, and the difference is visible — a capital P carries about 0.08 em
  * of side bearing.
  */
-const place = (layout, blocks) => {
+const place = (layout, blocks, markAlign) => {
   const [block] = blocks
   const blockWidth = block.inkRight - block.inkLeft
 
   if (layout.markPlacement === 'columns') {
     // Mark, then the wordmark, then the ministry — three things in a row. The columns share a
-    // first baseline, and the mark is centred on the tallest of them.
-    const capHeight = capHeightOf(block.lines[0])
-    const textTop = -capHeight
+    // first baseline, and the mark aligns against the tallest of them.
+    const textTop = -capHeightOf(block.lines[0])
     const textBottom = Math.max(...blocks.map((entry) => entry.lines.at(-1).baseline))
-    const markY = (textTop + textBottom) / 2 - MARK_BOX.height / 2
+    const markY = alignMark(markAlign, textTop, textBottom, MARK_BOX.height)
 
     let pen = MARK_BOX.width + layout.gap
     const origins = blocks.map((entry) => {
@@ -180,14 +184,12 @@ const place = (layout, blocks) => {
   }
 
   if (layout.markPlacement === 'beside') {
-    // Mark on the left, text to its right, the two centred on each other. The text's optical
-    // centre is taken from the cap height of the first line down to the last baseline, which is
-    // the mass the eye actually balances — counting the full ascent and descent of the face
-    // instead would sit the mark noticeably high.
-    const capHeight = capHeightOf(block.lines[0])
-    const textTop = -capHeight
+    // Mark on the left, text to its right. The type's extent is taken from the cap height of the
+    // first line down to the last baseline — the mass the eye actually balances against. Counting
+    // the full ascent and descent of the face instead would sit the mark noticeably high.
+    const textTop = -capHeightOf(block.lines[0])
     const textBottom = block.lines.at(-1).baseline
-    const markY = (textTop + textBottom) / 2 - MARK_BOX.height / 2
+    const markY = alignMark(markAlign, textTop, textBottom, MARK_BOX.height)
 
     const textX = MARK_BOX.width + layout.gap - block.inkLeft
 
