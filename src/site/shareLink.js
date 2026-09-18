@@ -13,6 +13,7 @@
 // Between them, a near-default lockup fits in a token shorter than the word "configuration".
 
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
+import { cleanBoolean, cleanColour, cleanOneOf, cleanText } from './configFormat.js'
 import { DEFAULTS } from './lockupDefaults.js'
 
 export const SHARE_PARAM = 's'
@@ -76,50 +77,27 @@ export const encodeShare = async (state) => (await getEngine()).compress(pick(st
 
 // ── Validation ───────────────────────────────────────────────────────────────────────────────────
 //
-// Everything below treats the decoded object as hostile. It arrives from a URL, which means it
-// arrives from whoever wrote the URL — not necessarily the person opening it. The renderer escapes
-// what it interpolates, but a value that survives as far as the DOM should also be one this app
-// could have produced in the first place.
-
-const MAX_TEXT = 200
-
-// Newlines are meaningful here (they force a line break in the lockup); other control characters
-// are not, and have no business reaching the renderer.
-const CONTROL_CHARACTERS = new RegExp('[\\u0000-\\u0009\\u000b-\\u001f\\u007f]', 'g')
-
-const text = (value, fallback) => (
-  typeof value === 'string' ? value.replace(CONTROL_CHARACTERS, '').slice(0, MAX_TEXT) : fallback
-)
-
-// Hex, a palette name, or a functional notation — but nothing containing a quote or an angle
-// bracket, so a value can never close the attribute it is interpolated into.
-const COLOUR_PATTERN = /^[a-zA-Z0-9#(),.%\s/-]{1,64}$/
-
-const colour = (value, fallback) => (
-  typeof value === 'string' && COLOUR_PATTERN.test(value) ? value : fallback
-)
-
-const boolean = (value, fallback) => (typeof value === 'boolean' ? value : fallback)
-
-const oneOf = (value, allowed, fallback) => (allowed.includes(value) ? value : fallback)
+// A decoded token is treated as hostile: it arrives from a URL, which means from whoever wrote the
+// URL, not necessarily whoever opens it. The primitives are shared with configFormat.js, which
+// validates the same values arriving as plain JSON.
 
 /** Coerces a decoded payload into a state patch, discarding anything unrecognised. */
 export const sanitizeShare = (raw) => {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null
 
   return {
-    layout: oneOf(raw.layout, LAYOUT_ORDER, DEFAULTS.layout),
-    wordmark: boolean(raw.wordmark, DEFAULTS.wordmark),
-    source: oneOf(raw.source, ['list', 'manual'], DEFAULTS.source),
-    ministry: text(raw.ministry, DEFAULTS.ministry),
-    manualMinistry: text(raw.manualMinistry, DEFAULTS.manualMinistry),
-    program: text(raw.program, DEFAULTS.program),
-    markColor: colour(raw.markColor, DEFAULTS.markColor),
-    textColor: colour(raw.textColor, DEFAULTS.textColor),
-    linkColors: boolean(raw.linkColors, DEFAULTS.linkColors),
-    background: colour(raw.background, DEFAULTS.background),
-    clearSpace: oneOf(raw.clearSpace, CLEAR_SPACE_ORDER, DEFAULTS.clearSpace),
-    markAlign: oneOf(raw.markAlign, MARK_ALIGNMENT_ORDER, DEFAULTS.markAlign)
+    layout: cleanOneOf(raw.layout, LAYOUT_ORDER, DEFAULTS.layout),
+    wordmark: cleanBoolean(raw.wordmark, DEFAULTS.wordmark),
+    source: cleanOneOf(raw.source, ['list', 'manual'], DEFAULTS.source),
+    ministry: cleanText(raw.ministry, DEFAULTS.ministry),
+    manualMinistry: cleanText(raw.manualMinistry, DEFAULTS.manualMinistry),
+    program: cleanText(raw.program, DEFAULTS.program),
+    markColor: cleanColour(raw.markColor, DEFAULTS.markColor),
+    textColor: cleanColour(raw.textColor, DEFAULTS.textColor),
+    linkColors: cleanBoolean(raw.linkColors, DEFAULTS.linkColors),
+    background: cleanColour(raw.background, DEFAULTS.background),
+    clearSpace: cleanOneOf(raw.clearSpace, CLEAR_SPACE_ORDER, DEFAULTS.clearSpace),
+    markAlign: cleanOneOf(raw.markAlign, MARK_ALIGNMENT_ORDER, DEFAULTS.markAlign)
   }
 }
 

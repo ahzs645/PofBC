@@ -22,6 +22,8 @@ import { BRAND_COLORS, TRANSPARENT } from '../src/logo/logoColors.js'
 import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS } from '../src/export/exportLogo.js'
 import { MINISTRY_GROUPS, MINISTRY_LIST_REVIEWED } from '../src/ministries/ministries.js'
 import { SHARE_PARAM } from '../src/site/shareLink.js'
+import { CONFIG_PARAM, toConfig } from '../src/site/configFormat.js'
+import { DEFAULTS } from '../src/site/lockupDefaults.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const { name, version, description } = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8'))
@@ -104,10 +106,26 @@ const manifest = {
     groups: MINISTRY_GROUPS
   },
 
+  // Two ways in. The compressed one is for handing a person a short link; the readable one is for
+  // anything writing a configuration itself, which cannot compress but can certainly write JSON.
+  configuration: {
+    description: 'The lockup as a plain object. Pass it as the ' + CONFIG_PARAM + ' query ' +
+      'parameter, URL-encoded, and the generator opens with those settings already applied — or ' +
+      'paste it into the Configuration box on the page. Absent fields keep their current value, ' +
+      'so a partial object changes only what it names.',
+    parameter: CONFIG_PARAM,
+    fields: Object.keys(toConfig(DEFAULTS)),
+    example: toConfig(DEFAULTS),
+    exampleUrl: `?${CONFIG_PARAM}=${encodeURIComponent(JSON.stringify({ lockup: 'columns', ministry: 'Ministry of Environment', markAlignment: 'top' }))}`,
+    note: 'This is how to hand a lockup to someone (or something) else without describing it in ' +
+      'prose. An agent that cannot run the page can still produce a link that opens it ready to ' +
+      'export.'
+  },
+
   shareLinks: {
     parameter: SHARE_PARAM,
-    description: 'The whole configuration compressed into one query parameter. Opening a URL ' +
-      'carrying it restores that lockup exactly. Nothing is stored server-side.',
+    description: 'The same configuration compressed into one short, opaque parameter. Better for ' +
+      'sending to a person; use the readable form above if you are generating it.',
     example: `?${SHARE_PARAM}=1.lz.N4IgNiBcIBYPYCcCWAvOA7ALgQwgGhAA`
   },
 

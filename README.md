@@ -306,6 +306,24 @@ downloads it.
 
 Two things here are aimed at software rather than people.
 
+### Handing over a configuration
+
+An agent that has read the manifest can describe exactly the lockup it wants — and then needs a way
+to hand it over. `capabilities.json` describes the generator's *browser* exports; it is not itself
+an export, so without this the only route was writing the settings out as instructions for a person
+to re-enter by hand.
+
+So the configuration is a documented object, in the same vocabulary as the manifest and the tools:
+
+```json
+{ "lockup": "columns", "ministry": "Ministry of\nEnvironment", "markAlignment": "top",
+  "markColor": "#eee3c0", "background": "transparent", "clearSpace": "none" }
+```
+
+Pass it URL-encoded as `?c=…` and the generator opens with those settings already applied, ready to
+export — or paste it into the **Configuration** box on the page. Absent fields keep their current
+value, so a partial object changes only what it names. **Copy readable link** goes the other way.
+
 ### capabilities.json
 
 [`/capabilities.json`](https://ahzs645.github.io/PofBC/capabilities.json) states the whole option

@@ -176,7 +176,7 @@ export const App = () => {
 
           <ExportPanel lockup={lockup} />
 
-          <ShareLink state={state} />
+          <ShareLink state={state} update={update} />
         </div>
       </div>
 

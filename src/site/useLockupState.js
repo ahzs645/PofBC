@@ -5,6 +5,7 @@ import { clearSpacePadding } from '../logo/layouts.js'
 import { BRAND_COLORS, TRANSPARENT, describeContrast, isLightColor, resolveColor } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
 import { applyShare, applyUpdate, swapColours } from './lockupReducer.js'
+import { readConfigParam } from './configFormat.js'
 import { decodeShare, readShareToken } from './shareLink.js'
 
 export const useLockupState = () => {
@@ -14,6 +15,11 @@ export const useLockupState = () => {
   // paints the defaults for a frame first; the alternative is holding the whole UI back behind a
   // decompression, which is worse for the overwhelmingly common case of no link at all.
   useEffect(() => {
+    // A plain-JSON configuration is applied immediately — it needs no decompression, and it is the
+    // form an agent can write by hand into a link.
+    const config = readConfigParam()
+    if (config) setState((current) => applyShare(current, config))
+
     const token = readShareToken()
     if (!token) return
 
