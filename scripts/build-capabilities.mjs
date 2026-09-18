@@ -21,6 +21,7 @@ import {
 import { BRAND_COLORS, TRANSPARENT } from '../src/logo/logoColors.js'
 import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS } from '../src/export/exportLogo.js'
 import { MINISTRY_GROUPS, MINISTRY_LIST_REVIEWED } from '../src/ministries/ministries.js'
+import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, BCID } from '../src/current/currentMarks.js'
 import { SHARE_PARAM } from '../src/site/shareLink.js'
 import { CONFIG_PARAM, toConfig } from '../src/site/configFormat.js'
 import { DEFAULTS } from '../src/site/lockupDefaults.js'
@@ -33,6 +34,32 @@ const manifest = {
   version,
   description,
   documentation: 'https://github.com/ahzs645/PofBC#readme',
+
+  // Two identities, and almost nothing carries between them. Everything below this describes the
+  // historical era unless it says otherwise.
+  eras: {
+    historical: {
+      description: 'The crest identity, rebuilt from supplied artwork. Any ministry, any wording, ' +
+        'any colour, four lockups. Everything else in this manifest describes this era.',
+      generated: true
+    },
+    current: {
+      description: 'The Province’s published ministry marks, served exactly as provided. The ' +
+        'wording is part of the artwork and cannot be changed, so this era is a picker rather ' +
+        'than a generator — which is what the Province’s guidelines require.',
+      generated: false,
+      artwork: 'current-marks/index.json',
+      note: 'The SVGs are fetchable directly, e.g. current-marks/for-en.svg, so artwork can be ' +
+        'had without running the page at all.',
+      languages: LANGUAGE_ORDER.map((id) => ({ id, label: LANGUAGES[id] })),
+      variants: CURRENT_VARIANT_ORDER.map((id) => ({
+        id,
+        label: CURRENT_VARIANTS[id].label,
+        description: CURRENT_VARIANTS[id].description
+      })),
+      palette: BCID
+    }
+  },
 
   // The drawing every lockup shares, in the units every measurement below is expressed in.
   mark: {
@@ -136,7 +163,8 @@ const manifest = {
       'for reading and setting the lockup and for exporting it, so an agent need not drive the ' +
       'controls by hand. Absent that API the page behaves normally.',
     tools: [
-      'get_lockup_state', 'set_lockup', 'set_colours', 'export_lockup', 'get_share_link', 'find_ministry'
+      'get_lockup_state', 'set_lockup', 'set_colours', 'export_lockup', 'get_share_link',
+      'list_current_marks', 'find_ministry'
     ]
   }
 }

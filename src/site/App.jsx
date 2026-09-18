@@ -1,4 +1,6 @@
 import { BcLockup } from '../logo/BcLockup.jsx'
+import { CurrentControls } from '../current/CurrentControls.jsx'
+import { CurrentLockup } from '../current/CurrentLockup.jsx'
 import {
   alignsVertically, CLEAR_SPACE, CLEAR_SPACE_ORDER, LAYOUTS, MARK_ALIGNMENTS, MARK_ALIGNMENT_ORDER
 } from '../logo/layouts.js'
@@ -23,6 +25,19 @@ const MARK_ALIGNMENT_OPTIONS = MARK_ALIGNMENT_ORDER.map((value) => ({
   title: MARK_ALIGNMENTS[value].description
 }))
 
+const ERA_OPTIONS = [
+  {
+    value: 'historical',
+    label: 'Historical',
+    title: 'The crest lockups, built from the supplied artwork. Any ministry, any colour.'
+  },
+  {
+    value: 'current',
+    label: 'Current',
+    title: 'The Province’s official ministry marks, used exactly as published.'
+  }
+]
+
 const BACKDROP_OPTIONS = [
   { value: 'auto', label: 'Auto', title: 'Dark when the lockup would otherwise vanish' },
   { value: 'light', label: 'Light' },
@@ -30,8 +45,9 @@ const BACKDROP_OPTIONS = [
 ]
 
 export const App = () => {
-  const { state, update, reset, lockup, contrast, backdrop, isTransparent, swapColors } = useLockupState()
+  const { state, update, reset, lockup, artwork, contrast, backdrop, isTransparent, swapColors } = useLockupState()
   const layout = LAYOUTS[state.layout]
+  const isCurrent = state.era === 'current'
 
   // Registers this page's tools with an agent driving the browser, where the browser supports it.
   // A no-op everywhere else.
@@ -50,12 +66,30 @@ export const App = () => {
       <div className="layout">
         <section className="stage" aria-label="Preview">
           <div className="stage__frame" data-backdrop={backdrop} data-transparent={isTransparent || undefined}>
-            <BcLockup {...lockup} />
+            {isCurrent ? (
+              <CurrentLockup
+                code={state.currentMinistry}
+                language={state.language}
+                variant={state.currentVariant}
+                background={state.background}
+                clearSpaceFactor={lockup.clearSpaceFactor}
+                title="Province of British Columbia ministry mark"
+              />
+            ) : (
+              <BcLockup {...artwork} />
+            )}
           </div>
 
           <div className="stage__bar">
             <p className="stage__caption">
-              <span>{layout.label}<span className="stage__detail"> — {layout.description}</span></span>
+              {isCurrent ? (
+                <span>
+                  Official mark
+                  <span className="stage__detail"> — published artwork, used as provided</span>
+                </span>
+              ) : (
+                <span>{layout.label}<span className="stage__detail"> — {layout.description}</span></span>
+              )}
             </p>
             <Segmented
               compact
@@ -68,6 +102,43 @@ export const App = () => {
         </section>
 
         <div className="controls">
+          <section className="panel">
+            <h2>Identity</h2>
+            <Segmented
+              ariaLabel="Identity"
+              options={ERA_OPTIONS}
+              value={state.era}
+              onChange={(value) => update({ era: value })}
+              hint={
+                isCurrent
+                  ? 'The Province’s current marks, served exactly as published. The wording is part of the artwork.'
+                  : 'The crest identity, rebuilt from the supplied artwork. Any ministry, any colourway.'
+              }
+            />
+          </section>
+
+          {isCurrent && <CurrentControls state={state} update={update} />}
+
+          {isCurrent && (
+            <section className="panel">
+              <h2>Placement</h2>
+              <Segmented
+                label="Clear space"
+                options={CLEAR_SPACE_OPTIONS}
+                value={state.clearSpace}
+                onChange={(value) => update({ clearSpace: value })}
+                hint="Margin around the mark. The background colour fills it."
+              />
+              <ColourField
+                label="Background"
+                value={state.background}
+                onChange={(value) => update({ background: value })}
+                allowTransparent
+              />
+            </section>
+          )}
+
+          {!isCurrent && (
           <section className="panel">
             <h2>Lockup</h2>
             <LayoutPicker value={state.layout} onChange={(value) => update({ layout: value })} />
@@ -105,6 +176,9 @@ export const App = () => {
             />
           </section>
 
+          )}
+
+          {!isCurrent && (
           <section className="panel">
             <h2>Wording</h2>
             <MinistryField
@@ -116,6 +190,9 @@ export const App = () => {
             />
           </section>
 
+          )}
+
+          {!isCurrent && (
           <section className="panel">
             <h2>Colour</h2>
 
@@ -174,7 +251,9 @@ export const App = () => {
             )}
           </section>
 
-          <ExportPanel lockup={lockup} />
+          )}
+
+          <ExportPanel lockup={lockup} era={state.era} />
 
           <ShareLink state={state} update={update} />
         </div>

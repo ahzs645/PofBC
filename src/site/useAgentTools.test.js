@@ -41,7 +41,8 @@ test('every tool is describable and has an object schema', () => {
   const { tools } = harness()
 
   assert.deepEqual(tools.map((tool) => tool.name), [
-    'get_lockup_state', 'set_lockup', 'set_colours', 'export_lockup', 'get_share_link', 'find_ministry'
+    'get_lockup_state', 'set_lockup', 'set_colours', 'export_lockup', 'get_share_link',
+    'list_current_marks', 'find_ministry'
   ])
 
   for (const tool of tools) {
@@ -81,6 +82,32 @@ test('alignment is reported as null where the lockup ignores it', () => {
   // Saying "centre" for a stacked lockup would invite an agent to set something with no effect.
   const { call } = harness({ layout: 'stacked' })
   assert.equal(call('get_lockup_state').structuredContent.markAlignment, null)
+})
+
+test('the era can be switched, and its own fields set', () => {
+  const { call, patches } = harness()
+
+  call('set_lockup', { era: 'current', ministryCode: 'env', language: 'fr', variant: 'reverse' })
+
+  assert.deepEqual(patches[0], {
+    era: 'current',
+    // Upper-cased, so an agent need not know which way the codes are written.
+    currentMinistry: 'ENV',
+    language: 'fr',
+    currentVariant: 'reverse'
+  })
+})
+
+test('the current era reports itself rather than pretending to be a drawing', () => {
+  const { call } = harness({ era: 'current', currentMinistry: 'FOR', currentVariant: 'reverse' })
+  const { structuredContent, content } = call('get_lockup_state')
+
+  assert.equal(structuredContent.era, 'current')
+  assert.equal(structuredContent.ministryCode, 'FOR')
+  // None of the historical era's drawing fields, which do not apply and would only mislead.
+  assert.ok(!('size' in structuredContent))
+  assert.ok(!('markColor' in structuredContent))
+  assert.match(content[0].text, /Official FOR mark/)
 })
 
 test('set_lockup applies only what it was given', () => {

@@ -11,6 +11,9 @@
 import { renderLockupMarkup, resolveLockup } from './renderLogoSvg.js'
 import { TRANSPARENT } from './logoColors.js'
 
+/** The attributes a caller may reasonably want to put on the <svg> itself. */
+const DOM_PROPS = new Set(['className', 'style', 'id', 'width', 'height', 'onClick', 'tabIndex', 'role'])
+
 /**
  * @param {object} props
  * @param {'stacked'|'centred'|'horizontal'} [props.layout]
@@ -38,10 +41,15 @@ export const BcLockup = ({
   padding,
   markAlign,
   title,
-  // Anything left over is passed to the <svg>, so every option this component understands has to
-  // be named above — an unlisted one would end up as a stray DOM attribute.
   ...rest
 }) => {
+  // Only genuine DOM attributes reach the element. Callers pass this component a state object, and
+  // twice now a field added to that object has ended up as a stray attribute on the <svg> — so
+  // unrecognised props are dropped here rather than forwarded on trust.
+  const passthrough = Object.fromEntries(
+    Object.entries(rest).filter(([key]) => DOM_PROPS.has(key) || key.startsWith('aria-') || key.startsWith('data-'))
+  )
+
   const options = {
     layout, wordmark, ministry, program, color, markColor, textColor, background, padding, markAlign
   }
@@ -61,7 +69,7 @@ export const BcLockup = ({
       viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`}
       role={label ? 'img' : 'presentation'}
       aria-hidden={label ? undefined : 'true'}
-      {...rest}
+      {...passthrough}
     >
       {label ? <title>{label}</title> : null}
       {hasBackground

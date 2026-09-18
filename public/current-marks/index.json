@@ -3,10 +3,26 @@
   "note": "Official artwork, lifted from the published PDF unchanged. The guidelines require these be used exactly as provided rather than recreated, so the ministry names are the original outlines and nothing here is typeset.",
   "units": "PDF points",
   "colours": {
-    "mark": "#053673",
-    "sun": "#fdb913",
-    "rule": "#fdb913",
-    "note": "As drawn in the print artwork. The Province's colour-accessibility guidance specifies #234075 and #e3a82b for screen; the generator recolours to those."
+    "screen": {
+      "blue": "#234075",
+      "gold": "#e3a82b"
+    },
+    "print": {
+      "blue": "#053673",
+      "gold": "#fdb913"
+    },
+    "note": "These files use the Province's stated screen values. The print artwork they came from is drawn in the CMYK-native equivalents listed under `print`."
+  },
+  "roles": {
+    "note": "Every shape carries a data-role, so the official colourways can be applied without guessing which blue is which.",
+    "values": [
+      "sun",
+      "mountains",
+      "knockout",
+      "wordmark",
+      "divider",
+      "name"
+    ]
   },
   "ministries": [
     {
@@ -16,13 +32,13 @@
         "file": "af-en.svg",
         "width": 82.22,
         "height": 31.08,
-        "bytes": 36149
+        "bytes": 37035
       },
       "fr": {
         "file": "af-fr.svg",
         "width": 110.54,
         "height": 31.65,
-        "bytes": 49823
+        "bytes": 51052
       }
     },
     {
@@ -32,13 +48,13 @@
         "file": "ag-en.svg",
         "width": 99.49,
         "height": 32.91,
-        "bytes": 33886
+        "bytes": 34721
       },
       "fr": {
         "file": "ag-fr.svg",
         "width": 109.65,
         "height": 33.1,
-        "bytes": 40405
+        "bytes": 41379
       }
     },
     {
@@ -48,13 +64,13 @@
         "file": "cfd-en.svg",
         "width": 110.13,
         "height": 32.86,
-        "bytes": 45115
+        "bytes": 46171
       },
       "fr": {
         "file": "cfd-fr.svg",
         "width": 142.58,
         "height": 31.65,
-        "bytes": 55751
+        "bytes": 57082
       }
     },
     {
@@ -64,13 +80,13 @@
         "file": "citz-en.svg",
         "width": 98.48,
         "height": 31.03,
-        "bytes": 33584
+        "bytes": 34453
       },
       "fr": {
         "file": "citz-fr.svg",
         "width": 118.88,
         "height": 32.93,
-        "bytes": 42373
+        "bytes": 43415
       }
     },
     {
@@ -80,13 +96,13 @@
         "file": "ecc-en.svg",
         "width": 91.47,
         "height": 31.08,
-        "bytes": 38884
+        "bytes": 39821
       },
       "fr": {
         "file": "ecc-fr.svg",
         "width": 136.25,
         "height": 32.88,
-        "bytes": 56720
+        "bytes": 58102
       }
     },
     {
@@ -96,13 +112,13 @@
         "file": "emcr-en.svg",
         "width": 123.03,
         "height": 31.08,
-        "bytes": 55765
+        "bytes": 56991
       },
       "fr": {
         "file": "emcr-fr.svg",
         "width": 144.96,
         "height": 32.88,
-        "bytes": 61755
+        "bytes": 63222
       }
     },
     {
@@ -112,13 +128,13 @@
         "file": "ecs-en.svg",
         "width": 293.82,
         "height": 32.79,
-        "bytes": 99918
+        "bytes": 102096
       },
       "fr": {
         "file": "ecs-fr.svg",
         "width": 120.99,
         "height": 32.88,
-        "bytes": 51963
+        "bytes": 53243
       }
     },
     {
@@ -128,13 +144,13 @@
         "file": "env-en.svg",
         "width": 87.43,
         "height": 31.08,
-        "bytes": 38954
+        "bytes": 39857
       },
       "fr": {
         "file": "env-fr.svg",
         "width": 107.77,
         "height": 31.65,
-        "bytes": 46485
+        "bytes": 47612
       }
     },
     {
@@ -144,13 +160,13 @@
         "file": "fin-en.svg",
         "width": 82.22,
         "height": 30.98,
-        "bytes": 28310
+        "bytes": 29009
       },
       "fr": {
         "file": "fin-fr.svg",
         "width": 96.63,
         "height": 31.65,
-        "bytes": 34874
+        "bytes": 35729
       }
     },
     {
@@ -160,13 +176,13 @@
         "file": "for-en.svg",
         "width": 81.41,
         "height": 31.06,
-        "bytes": 27159
+        "bytes": 27858
       },
       "fr": {
         "file": "for-fr.svg",
         "width": 96.6,
         "height": 31.65,
-        "bytes": 32730
+        "bytes": 33551
       }
     },
     {
@@ -176,13 +192,13 @@
         "file": "hlth-en.svg",
         "width": 82.22,
         "height": 30.98,
-        "bytes": 27476
+        "bytes": 28158
       },
       "fr": {
         "file": "hlth-fr.svg",
         "width": 94.2,
         "height": 31.65,
-        "bytes": 33604
+        "bytes": 34425
       }
     },
     {
@@ -192,13 +208,13 @@
         "file": "hma-en.svg",
         "width": 289.86,
         "height": 32.97,
-        "bytes": 103347
+        "bytes": 105474
       },
       "fr": {
         "file": "hma-fr.svg",
         "width": 117.03,
         "height": 32.88,
-        "bytes": 52781
+        "bytes": 54010
       }
     },
     {
@@ -208,13 +224,13 @@
         "file": "irr-en.svg",
         "width": 110.65,
         "height": 31.08,
-        "bytes": 48427
+        "bytes": 49619
       },
       "fr": {
         "file": "irr-fr.svg",
         "width": 148.79,
         "height": 31.65,
-        "bytes": 60755
+        "bytes": 62273
       }
     },
     {
@@ -224,13 +240,13 @@
         "file": "inf-en.svg",
         "width": 91.94,
         "height": 31.14,
-        "bytes": 34448
+        "bytes": 35317
       },
       "fr": {
         "file": "inf-fr.svg",
         "width": 104.57,
         "height": 32.77,
-        "bytes": 39000
+        "bytes": 39974
       }
     },
     {
@@ -240,13 +256,13 @@
         "file": "jeg-en.svg",
         "width": 104.6,
         "height": 31.53,
-        "bytes": 38581
+        "bytes": 39518
       },
       "fr": {
         "file": "jeg-fr.svg",
         "width": 128.56,
         "height": 33.29,
-        "bytes": 52287
+        "bytes": 53567
       }
     },
     {
@@ -256,13 +272,13 @@
         "file": "lbr-en.svg",
         "width": 82.22,
         "height": 31.1,
-        "bytes": 27007
+        "bytes": 27689
       },
       "fr": {
         "file": "lbr-fr.svg",
         "width": 95.21,
         "height": 31.65,
-        "bytes": 33727
+        "bytes": 34548
       }
     },
     {
@@ -272,13 +288,13 @@
         "file": "mcm-en.svg",
         "width": 97.92,
         "height": 31.01,
-        "bytes": 42811
+        "bytes": 43816
       },
       "fr": {
         "file": "mcm-fr.svg",
         "width": 113.4,
         "height": 32.88,
-        "bytes": 49965
+        "bytes": 51143
       }
     },
     {
@@ -288,13 +304,13 @@
         "file": "psfs-en.svg",
         "width": 126.6,
         "height": 31.08,
-        "bytes": 50427
+        "bytes": 51653
       },
       "fr": {
         "file": "psfs-fr.svg",
         "width": 139.22,
         "height": 32.88,
-        "bytes": 61915
+        "bytes": 63433
       }
     },
     {
@@ -304,13 +320,13 @@
         "file": "pssg-en.svg",
         "width": 99.39,
         "height": 31.01,
-        "bytes": 44386
+        "bytes": 45493
       },
       "fr": {
         "file": "pssg-fr.svg",
         "width": 127.93,
         "height": 33.06,
-        "bytes": 56870
+        "bytes": 58252
       }
     },
     {
@@ -320,13 +336,13 @@
         "file": "sdpr-en.svg",
         "width": 116.34,
         "height": 32.9,
-        "bytes": 48540
+        "bytes": 49732
       },
       "fr": {
         "file": "sdpr-fr.svg",
         "width": 155.39,
         "height": 32.95,
-        "bytes": 62183
+        "bytes": 63667
       }
     },
     {
@@ -336,13 +352,13 @@
         "file": "tacs-en.svg",
         "width": 102.09,
         "height": 32.97,
-        "bytes": 42539
+        "bytes": 43595
       },
       "fr": {
         "file": "tacs-fr.svg",
         "width": 123.88,
         "height": 32.99,
-        "bytes": 54096
+        "bytes": 55427
       }
     },
     {
@@ -352,13 +368,13 @@
         "file": "tt-en.svg",
         "width": 91.83,
         "height": 31.08,
-        "bytes": 40935
+        "bytes": 41923
       },
       "fr": {
         "file": "tt-fr.svg",
         "width": 124.6,
         "height": 32.88,
-        "bytes": 52604
+        "bytes": 53850
       }
     },
     {
@@ -368,13 +384,13 @@
         "file": "wlrs-en.svg",
         "width": 323.3,
         "height": 32.97,
-        "bytes": 112468
+        "bytes": 114935
       },
       "fr": {
         "file": "wlrs-fr.svg",
         "width": 150.47,
         "height": 31.65,
-        "bytes": 57167
+        "bytes": 58617
       }
     }
   ]

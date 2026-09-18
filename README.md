@@ -14,6 +14,45 @@ Already cloned without `--recurse-submodules`? `git submodule update --init --re
 
 ---
 
+## Two identities
+
+An **Identity** switch at the top of the controls chooses between them. They have almost nothing in
+common, so most of the panel changes with it.
+
+| | Historical | Current |
+|---|---|---|
+| What it is | The crest identity, rebuilt from the supplied artwork | The Province's published ministry marks |
+| Wording | Any ministry, any second line, any wrapping | Fixed — it is part of the artwork |
+| Lockups | Four | One per ministry |
+| Colour | Anything, mark and type independently | Four official colourways |
+| Language | — | English and French |
+| How it is made | Drawn from parts on every render | Served whole |
+
+The current era is a picker rather than a generator, deliberately. Both of the Province's guideline
+documents say in bold that the marks must be used **exactly as provided** and not recreated, so this
+does not recreate them: `scripts/extract_current_marks.py` lifts the drawn vectors out of the
+published PDF and packages them unchanged. The ministry names are outlines, which is what makes that
+work — the serif they are set in is not one we have, and it is never needed.
+
+The four colourways are the Province's own, from its colour-accessibility guidance: **Colour**,
+**Reverse**, **Solid black**, **Solid white**. Reverse is the interesting one — the mountains
+lighten to BC Blue at 60% while the wordmark turns white, and both are the same blue in the source
+artwork. That is why the extraction labels every shape with a `data-role` rather than recolouring by
+fill. The solid colourways drop the sun's rays entirely so the background shows through them;
+painting them white would ring the mark with a halo on anything but a white page.
+
+Each mark is also a plain file — `current-marks/for-en.svg` and so on, listed in
+[`current-marks/index.json`](https://ahzs645.github.io/PofBC/current-marks/index.json) — so current-era
+artwork can be fetched directly without running the page.
+
+Two things worth knowing about the source PDF: it draws the marks in CMYK-native `#053673` and
+`#fdb913`, while the Province's colour-accessibility guidance specifies `#234075` and `#e3a82b` for
+screen. The extracted files carry the screen values and record the print ones. And three rows of the
+PDF are inconsistent — one has its divider drawn twice, and two use a different vector export of the
+same logo — all handled by the extraction rather than papered over.
+
+---
+
 ## The four lockups
 
 The first three are reconstructed from the supplied Illustrator exports in [`artwork/`](artwork),

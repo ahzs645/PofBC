@@ -214,5 +214,14 @@ export const CLEAR_SPACE_ORDER = ['none', 'snug', 'standard', 'generous']
 
 export const DEFAULT_CLEAR_SPACE = 'snug'
 
-/** A clear-space key as padding in artwork units, for `resolveLockup({ padding })`. */
-export const clearSpacePadding = (key) => (CLEAR_SPACE[key]?.factor ?? 0) * MARK_BOX.width
+/** The bare factor, for artwork measured in some other unit than the crest's. */
+export const clearSpaceFactor = (key) => CLEAR_SPACE[key]?.factor ?? 0
+
+/**
+ * A clear-space key as padding in artwork units, for `resolveLockup({ padding })`.
+ *
+ * `width` defaults to the crest's, which is what the historical lockups are measured against. The
+ * current era's marks are a fraction of that size in their own units, so they pass their own —
+ * otherwise the same preset would put a margin around them several times wider than the mark.
+ */
+export const clearSpacePadding = (key, width = MARK_BOX.width) => clearSpaceFactor(key) * width

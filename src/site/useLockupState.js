@@ -1,7 +1,7 @@
 // The generator's single piece of state, plus the small amount of logic that keeps it coherent.
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { clearSpacePadding } from '../logo/layouts.js'
+import { clearSpaceFactor, clearSpacePadding } from '../logo/layouts.js'
 import { BRAND_COLORS, TRANSPARENT, describeContrast, isLightColor, resolveColor } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
 import { applyShare, applyUpdate, swapColours } from './lockupReducer.js'
@@ -38,7 +38,31 @@ export const useLockupState = () => {
   const reset = useCallback(() => setState(DEFAULTS), [])
 
   // What the renderer is handed, as opposed to what the form is holding.
+  // What the historical renderer draws. Kept apart from `lockup` below because BcLockup forwards
+  // anything it does not recognise to the <svg> element, and the current era's fields are not
+  // drawing options — handing it the whole object put them in the DOM.
+  const artwork = useMemo(() => ({
+    layout: state.layout,
+    wordmark: state.wordmark,
+    ministry: (state.source === 'manual' ? state.manualMinistry : state.ministry).trim(),
+    program: state.program.trim(),
+    markColor: state.markColor,
+    textColor: state.textColor,
+    background: state.background,
+    padding: clearSpacePadding(state.clearSpace),
+    markAlign: state.markAlign
+  }), [state])
+
+  // Everything an export needs, both eras.
   const lockup = useMemo(() => ({
+    era: state.era,
+    language: state.language,
+    currentMinistry: state.currentMinistry,
+    currentVariant: state.currentVariant,
+    // The key rather than a distance: the two eras measure their marks in different units, so each
+    // turns it into a margin against its own artwork.
+    clearSpace: state.clearSpace,
+    clearSpaceFactor: clearSpaceFactor(state.clearSpace),
     layout: state.layout,
     wordmark: state.wordmark,
     ministry: (state.source === 'manual' ? state.manualMinistry : state.ministry).trim(),
@@ -92,7 +116,7 @@ export const useLockupState = () => {
 
   const swapColors = useCallback(() => setState(swapColours), [])
 
-  return { state, update, reset, lockup, contrast, backdrop, isTransparent, swapColors }
+  return { state, update, reset, lockup, artwork, contrast, backdrop, isTransparent, swapColors }
 }
 
 export { DEFAULTS }

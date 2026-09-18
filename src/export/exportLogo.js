@@ -5,6 +5,7 @@
 // any size because the vector is rasterised at the target resolution rather than upscaled.
 
 import { renderLockupSvg, resolveLockup } from '../logo/renderLogoSvg.js'
+import { loadMark, markSize, renderCurrentSvg } from '../current/currentMarks.js'
 import { BRAND_FONT_FAMILY, getEmbeddedFaces, getEmbeddedFontCss } from './fontEmbed.js'
 import { getGlyphOutlines } from './fontOutlines.js'
 
@@ -48,7 +49,18 @@ const slugify = (value) => (value == null ? '' : String(value))
   .replace(/^-+|-+$/g, '')
   .slice(0, 60)
 
-export const buildFileName = ({ layout = 'stacked', ministry, color, markColor, textColor, outlineText, format }) => {
+export const buildFileName = ({
+  era = 'historical', language, currentMinistry, currentVariant,
+  layout = 'stacked', ministry, color, markColor, textColor, outlineText, format
+}) => {
+  const extension = EXPORT_FORMATS[format]?.extension || format
+
+  // The current era names what it actually is: an official mark, in a language, in one of the
+  // Province's colourways. None of the historical era's colour or lockup choices apply.
+  if (era === 'current') {
+    return `bc-${slugify(currentMinistry)}-${language}-${slugify(currentVariant)}.${extension}`
+  }
+
   const mark = markColor ?? color
   const text = textColor ?? color
   const parts = [
@@ -61,7 +73,7 @@ export const buildFileName = ({ layout = 'stacked', ministry, color, markColor, 
     outlineText ? 'outlined' : ''
   ].filter(Boolean)
 
-  return `${parts.join('-')}.${EXPORT_FORMATS[format]?.extension || format}`
+  return `${parts.join('-')}.${extension}`
 }
 
 /**
@@ -76,11 +88,37 @@ export const buildFileName = ({ layout = 'stacked', ministry, color, markColor, 
  * third copy of the payload for svg2pdf to parse.
  */
 export const buildSvgSource = async ({ embedFont = true, outlineText = false, ...options } = {}) => {
+  if (options.era === 'current') {
+    const { svg } = await buildCurrentArtwork(options)
+    return svg
+  }
+
   const glyphs = outlineText ? await getGlyphOutlines() : null
   // If the outlines could not be loaded, fall back to live text rather than exporting nothing.
   const fontCss = glyphs || !embedFont ? undefined : await getEmbeddedFontCss()
 
   return renderLockupSvg({ ...options, glyphs, fontCss })
+}
+
+/**
+ * The current era's artwork, fetched and coloured.
+ *
+ * It arrives already outlined, so there is no font to embed and nothing to convert — which is why
+ * the outline option does not apply to this era and the PDF path needs no faces registered.
+ */
+const buildCurrentArtwork = async ({
+  currentMinistry, language = 'en', currentVariant = 'colour',
+  background, clearSpaceFactor = 0, pixelWidth, title
+}) => {
+  const source = await loadMark(currentMinistry, language)
+  const { width, height } = markSize(source)
+  // Measured against this artwork, not the crest's — they are nothing like the same size.
+  const padding = clearSpaceFactor * width
+
+  return {
+    svg: renderCurrentSvg({ source, variant: currentVariant, background, padding, pixelWidth, title }),
+    viewBox: { x: -padding, y: -padding, width: width + padding * 2, height: height + padding * 2 }
+  }
 }
 
 /**
@@ -195,13 +233,12 @@ export const renderLogoBlob = async ({
   const spec = EXPORT_FORMATS[format]
   if (!spec) throw new Error(`Unsupported export format: ${format}`)
 
-  const resolved = resolveLockup(options)
-  const svgSource = await buildSvgSource({
-    ...options,
-    resolved,
-    pixelWidth,
-    embedFont: format !== 'pdf'
-  })
+  // The current era's geometry comes from the artwork itself; the historical era's is computed.
+  const current = options.era === 'current' ? await buildCurrentArtwork({ ...options, pixelWidth }) : null
+  const resolved = current ?? resolveLockup(options)
+  const svgSource = current
+    ? current.svg
+    : await buildSvgSource({ ...options, resolved, pixelWidth, embedFont: format !== 'pdf' })
 
   // The source is the authority on whether anything still needs a font, rather than the request:
   // an outline load that quietly failed has to leave live text behind, and the PDF writer needs to

@@ -164,9 +164,48 @@ def shapes(drawings, origin):
     return out
 
 
+# The print artwork's colours, and the Province's stated equivalents for screen. The files this
+# writes use the screen values, because that is what anything fetching an SVG is going to put on a
+# screen; the originals are recorded in the catalogue.
+PRINT_TO_SCREEN = {"#053673": "#234075", "#fdb913": "#e3a82b"}
+
+
+def roles_for(shapes):
+    """Labels each shape sun / mountains / wordmark / knockout.
+
+    The reverse colourway needs the mountains and the wordmark to go different ways — one to a
+    lighter blue, the other to white — and in the artwork they are the same fill, so they cannot be
+    told apart by colour. They can be told apart by position: the wordmark sits below the mark with
+    a clear gap, far wider than any gap within either part.
+    """
+    blues = [s for s in shapes if s["fill"] == "#053673"]
+    tops = sorted(shape_top(s) for s in blues)
+    gaps = [(tops[i + 1] - tops[i], tops[i + 1]) for i in range(len(tops) - 1)]
+    split = max(gaps)[1] if gaps else 0
+
+    labelled = []
+    for shape in shapes:
+        if shape["fill"] == "#ffffff":
+            role = "knockout"
+        elif shape["fill"] == "#053673":
+            role = "wordmark" if shape_top(shape) >= split else "mountains"
+        else:
+            role = "sun"
+        labelled.append({**shape, "role": role})
+
+    return labelled
+
+
+def shape_top(shape):
+    values = [float(v) for v in NUMBER.findall(shape["d"])]
+    return min(values[1::2]) if values else 0
+
+
 def shape_markup(shape):
     rule = ' fill-rule="evenodd"' if shape.get("evenOdd") else ""
-    return f'<path fill="{shape["fill"]}"{rule} d="{shape["d"]}"/>'
+    fill = PRINT_TO_SCREEN.get(shape["fill"], shape["fill"])
+    role = f' data-role="{shape["role"]}"' if shape.get("role") else ""
+    return f'<path{role} fill="{fill}"{rule} d="{shape["d"]}"/>'
 
 
 def bounds(drawings):
@@ -383,15 +422,17 @@ def main():
         if scale != 1:
             mark_transform += f" scale({scale})"
 
+        mark_shapes = roles_for(variant["shapes"])
+
         rule = lockup["rule"]
         parts = [
             f'<g transform="{mark_transform}">',
-            *(shape_markup(shape) for shape in variant["shapes"]),
+            *(shape_markup(shape) for shape in mark_shapes),
             "</g>",
-            f'<rect x="{rule["x"]}" y="{rule["y"]}" width="{rule["width"]}" '
-            f'height="{rule["height"]}" fill="{rule["fill"]}"/>',
+            f'<rect data-role="divider" x="{rule["x"]}" y="{rule["y"]}" width="{rule["width"]}" '
+            f'height="{rule["height"]}" fill="{PRINT_TO_SCREEN.get(rule["fill"], rule["fill"])}"/>',
             f'<g transform="translate({lockup["name"]["x"]} {lockup["name"]["y"]})">',
-            *(shape_markup(shape) for shape in lockup["name"]["shapes"]),
+            *(shape_markup({**shape, "role": "name"}) for shape in lockup["name"]["shapes"]),
             "</g>",
         ]
 
@@ -428,13 +469,19 @@ def main():
         ),
         "units": "PDF points",
         "colours": {
-            "mark": "#053673",
-            "sun": "#fdb913",
-            "rule": "#fdb913",
+            "screen": {"blue": "#234075", "gold": "#e3a82b"},
+            "print": {"blue": "#053673", "gold": "#fdb913"},
             "note": (
-                "As drawn in the print artwork. The Province's colour-accessibility guidance "
-                "specifies #234075 and #e3a82b for screen; the generator recolours to those."
+                "These files use the Province's stated screen values. The print artwork they came "
+                "from is drawn in the CMYK-native equivalents listed under `print`."
             ),
+        },
+        "roles": {
+            "note": (
+                "Every shape carries a data-role, so the official colourways can be applied "
+                "without guessing which blue is which."
+            ),
+            "values": ["sun", "mountains", "knockout", "wordmark", "divider", "name"],
         },
         "ministries": catalogue,
     }

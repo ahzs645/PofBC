@@ -20,6 +20,7 @@ import {
 import { BRAND_COLORS, TRANSPARENT, describeContrast } from '../logo/logoColors.js'
 import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS, exportLogo, isFormatSupported } from '../export/exportLogo.js'
 import { resolveLockup } from '../logo/renderLogoSvg.js'
+import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGE_ORDER, loadCatalogue } from '../current/currentMarks.js'
 import { MINISTRIES, searchMinistries } from '../ministries/ministries.js'
 import { buildShareUrl } from './shareLink.js'
 
@@ -41,11 +42,26 @@ const colourSchema = (what) => ({
  * export.
  */
 const describeState = ({ state, lockup }) => {
+  if (state.era === 'current') {
+    // A finished file rather than a drawing, so most of what follows does not apply to it.
+    return {
+      era: 'current',
+      ministryCode: state.currentMinistry,
+      language: state.language,
+      variant: state.currentVariant,
+      variantLabel: CURRENT_VARIANTS[state.currentVariant]?.label,
+      background: state.background === TRANSPARENT ? 'transparent' : state.background,
+      clearSpace: state.clearSpace,
+      note: 'Official artwork. The wording is part of the file and cannot be changed.'
+    }
+  }
+
   // Resolved here rather than passed in: the geometry is only wanted when an agent asks for it,
   // and recomputing it is cheaper than keeping a second copy in sync with the preview.
   const resolved = resolveLockup(lockup)
 
   return {
+    era: 'historical',
     lockup: state.layout,
     lockupLabel: LAYOUTS[state.layout].label,
     showWordmark: state.wordmark,
@@ -66,29 +82,52 @@ const buildTools = (latest) => [
   {
     name: 'get_lockup_state',
     description:
-      'Read the lockup currently on screen: which of the four lockups, its wording, colours, ' +
-      'clear space, alignment, the size it would export at, and how well it contrasts. Call this ' +
-      'before changing anything, to see what is already set.',
+      'Read what is currently on screen. There are two identities: the historical era builds crest ' +
+      'lockups from parts and reports wording, colours, alignment and size; the current era serves ' +
+      'the Province’s official ministry marks and reports which one. Call this before changing ' +
+      'anything.',
     inputSchema: { type: 'object', properties: {} },
     execute: () => {
       const state = describeState(latest.current)
-      return reply(
-        `${state.lockupLabel} lockup, ${state.ministry || 'wordmark only'}, ` +
-        `${state.markColor} on ${state.background}.`,
-        state
-      )
+      const summary = state.era === 'current'
+        ? `Official ${state.ministryCode} mark (${state.language}), ${state.variantLabel} on ${state.background}.`
+        : `${state.lockupLabel} lockup, ${state.ministry || 'wordmark only'}, ${state.markColor} on ${state.background}.`
+
+      return reply(summary, state)
     }
   },
 
   {
     name: 'set_lockup',
     description:
-      'Change the lockup and its wording. Every field is optional — pass only what should change, ' +
-      'and the rest is left alone. The ministry may be any text, not only a listed one; a newline ' +
-      'in it forces a line break.',
+      'Change what is shown. Every field is optional — pass only what should change. In the ' +
+      'historical era the ministry may be any text, listed or not, and a newline in it forces a ' +
+      'line break. In the current era the wording is fixed artwork: choose a ministry by its code ' +
+      '(see list_current_marks), a language, and one of the four official colourways.',
     inputSchema: {
       type: 'object',
       properties: {
+        era: {
+          type: 'string',
+          enum: ['historical', 'current'],
+          description: 'historical: crest lockups built from parts, any wording and colour. ' +
+            'current: the Province’s official ministry marks, used exactly as published.'
+        },
+        ministryCode: {
+          type: 'string',
+          description: 'Current era. A ministry abbreviation such as FOR or ENV.'
+        },
+        language: {
+          type: 'string',
+          enum: [...LANGUAGE_ORDER],
+          description: 'Current era. The official marks exist in English and French.'
+        },
+        variant: {
+          type: 'string',
+          enum: [...CURRENT_VARIANT_ORDER],
+          description: 'Current era. ' + CURRENT_VARIANT_ORDER
+            .map((id) => `${id}: ${CURRENT_VARIANTS[id].description}`).join(' ')
+        },
         lockup: {
           type: 'string',
           enum: [...LAYOUT_ORDER],
@@ -113,6 +152,10 @@ const buildTools = (latest) => [
       const { update } = latest.current
       const patch = {}
 
+      if (input.era !== undefined) patch.era = input.era
+      if (input.ministryCode !== undefined) patch.currentMinistry = String(input.ministryCode).toUpperCase()
+      if (input.language !== undefined) patch.language = input.language
+      if (input.variant !== undefined) patch.currentVariant = input.variant
       if (input.lockup !== undefined) patch.layout = input.lockup
       if (input.showWordmark !== undefined) patch.wordmark = input.showWordmark
       if (input.markAlignment !== undefined) patch.markAlign = input.markAlignment
@@ -229,11 +272,35 @@ const buildTools = (latest) => [
   },
 
   {
+    name: 'list_current_marks',
+    description:
+      'The Province’s official ministry marks, with the code to pass to set_lockup. These are ' +
+      'finished artwork in English and French; a ministry not listed here has no published mark. ' +
+      'Each is also fetchable directly as an SVG, so artwork can be had without the page.',
+    inputSchema: { type: 'object', properties: {} },
+    execute: async () => {
+      try {
+        const catalogue = await loadCatalogue()
+        const lines = catalogue.ministries.map((entry) => `${entry.code} — ${entry.name}`)
+        return reply(lines.join('\n'), {
+          artwork: 'current-marks/index.json',
+          ministries: catalogue.ministries.map(({ code, name, en, fr }) => ({
+            code, name, files: { en: en.file, fr: fr.file }
+          }))
+        })
+      } catch (error) {
+        return reply(`Could not load the official marks. ${error.message}`)
+      }
+    }
+  },
+
+  {
     name: 'find_ministry',
     description:
       `Search the ${MINISTRIES.length} listed ministries and agencies. The search ignores case and ` +
       'punctuation, so "citizens services" finds "Ministry of Citizens’ Services". The list is a ' +
-      'convenience only — set_lockup accepts any name, listed or not.',
+      'convenience only — in the historical era set_lockup accepts any name, listed or not. For ' +
+      'the current era use list_current_marks instead; its marks are fixed artwork.',
     inputSchema: {
       type: 'object',
       properties: {

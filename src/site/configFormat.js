@@ -13,6 +13,7 @@
 // are what this code has always called them; `lockup`/`secondLine`/`markAlignment` are what the
 // manifest and the tools say. One outward vocabulary is worth a mapping layer.
 
+import { CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
@@ -47,18 +48,40 @@ export const cleanOneOf = (value, allowed, fallback) => (allowed.includes(value)
 
 // ── Public shape ─────────────────────────────────────────────────────────────────────────────────
 
-/** The current state as the object an agent or a person would write. */
-export const toConfig = (state) => ({
-  lockup: state.layout,
-  showWordmark: state.wordmark,
-  ministry: (state.source === 'manual' ? state.manualMinistry : state.ministry).trim(),
-  ...(state.program.trim() ? { secondLine: state.program.trim() } : {}),
-  markColor: state.markColor,
-  textColor: state.textColor,
-  background: state.background === TRANSPARENT ? 'transparent' : state.background,
-  clearSpace: state.clearSpace,
-  markAlignment: state.markAlign
-})
+export const ERAS = ['historical', 'current']
+
+const backgroundOf = (state) => (
+  state.background === TRANSPARENT ? 'transparent' : state.background
+)
+
+/**
+ * The current state as the object an agent or a person would write.
+ *
+ * The two eras share almost nothing — one is built from parts and takes any wording and colour, the
+ * other is a finished file in one of four colourways — so a configuration describes whichever era
+ * is in play rather than carrying a pile of fields that do not apply to it.
+ */
+export const toConfig = (state) => (state.era === 'current'
+  ? {
+      era: 'current',
+      ministryCode: state.currentMinistry,
+      language: state.language,
+      variant: state.currentVariant,
+      background: backgroundOf(state),
+      clearSpace: state.clearSpace
+    }
+  : {
+      era: 'historical',
+      lockup: state.layout,
+      showWordmark: state.wordmark,
+      ministry: (state.source === 'manual' ? state.manualMinistry : state.ministry).trim(),
+      ...(state.program.trim() ? { secondLine: state.program.trim() } : {}),
+      markColor: state.markColor,
+      textColor: state.textColor,
+      background: backgroundOf(state),
+      clearSpace: state.clearSpace,
+      markAlignment: state.markAlign
+    })
 
 /**
  * A configuration object as a state patch, with everything unrecognised discarded.
@@ -70,6 +93,11 @@ export const fromConfig = (config) => {
   if (!config || typeof config !== 'object' || Array.isArray(config)) return null
 
   const patch = {}
+
+  if ('era' in config) patch.era = cleanOneOf(config.era, ERAS, DEFAULTS.era)
+  if ('ministryCode' in config) patch.currentMinistry = cleanText(config.ministryCode, DEFAULTS.currentMinistry).toUpperCase()
+  if ('language' in config) patch.language = cleanOneOf(config.language, LANGUAGE_ORDER, DEFAULTS.language)
+  if ('variant' in config) patch.currentVariant = cleanOneOf(config.variant, CURRENT_VARIANT_ORDER, DEFAULTS.currentVariant)
 
   if ('lockup' in config) patch.layout = cleanOneOf(config.lockup, LAYOUT_ORDER, DEFAULTS.layout)
   if ('showWordmark' in config) patch.wordmark = cleanBoolean(config.showWordmark, DEFAULTS.wordmark)

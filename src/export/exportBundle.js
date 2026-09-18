@@ -40,7 +40,13 @@ export const planBundle = ({
   const entries = []
   const folder = bundleName(lockup)
 
-  for (const layout of LAYOUT_ORDER.filter((id) => layouts.includes(id))) {
+  // The current era has one mark per ministry, not a choice of lockups, so it bundles formats and
+  // sizes only and everything lands in one folder.
+  const chosen = lockup.era === 'current'
+    ? [null]
+    : LAYOUT_ORDER.filter((id) => layouts.includes(id))
+
+  for (const layout of chosen) {
     for (const format of Object.keys(EXPORT_FORMATS).filter((id) => formats.includes(id))) {
       const spec = EXPORT_FORMATS[format]
       // A vector file has no size; a raster one is rendered once per requested width.
@@ -52,7 +58,8 @@ export const planBundle = ({
           ? name.replace(/\.(\w+)$/, `-${pixelWidth}.$1`)
           : name
 
-        entries.push({ layout, format, pixelWidth, path: `${folder}/${layout}/${sized}` })
+        const where = layout ? `${folder}/${layout}/${sized}` : `${folder}/${sized}`
+        entries.push({ layout, format, pixelWidth, path: where })
       }
     }
   }
@@ -62,7 +69,9 @@ export const planBundle = ({
 
 /** The folder everything sits under, so unzipping leaves one thing behind rather than three. */
 export const bundleName = (lockup = {}) => (
-  ['bc', slugify(lockup.ministry) || 'wordmark'].filter(Boolean).join('-')
+  lockup.era === 'current'
+    ? ['bc', slugify(lockup.currentMinistry), lockup.language].filter(Boolean).join('-')
+    : ['bc', slugify(lockup.ministry) || 'wordmark'].filter(Boolean).join('-')
 )
 
 const FORMAT_NOTES = {
@@ -92,10 +101,9 @@ const readme = (lockup, entries) => {
     `Background:  ${lockup.background === 'none' ? 'transparent' : lockup.background}`,
     lockup.outlineText ? 'Type:        converted to outlines' : 'Type:        live text, font embedded',
     '',
-    'Lockups',
-    '-------',
-    ...layouts.map((id) => `  ${id.padEnd(12)} ${LAYOUTS[id].description}`),
-    '',
+    ...(layouts.filter(Boolean).length
+      ? ['Lockups', '-------', ...layouts.filter(Boolean).map((id) => `  ${id.padEnd(12)} ${LAYOUTS[id].description}`), '']
+      : ['This is the Province\'s official ministry mark, used exactly as published.', '']),
     'Formats',
     '-------',
     ...formats.map((id) => `  .${EXPORT_FORMATS[id].extension.padEnd(5)} ${FORMAT_NOTES[id]}`),
@@ -128,7 +136,7 @@ export const renderBundle = async ({ signal, ...options } = {}, onProgress) => {
 
     const blob = await renderLogoBlob({
       ...options,
-      layout: entry.layout,
+      ...(entry.layout ? { layout: entry.layout } : {}),
       format: entry.format,
       pixelWidth: entry.pixelWidth
     })

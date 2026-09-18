@@ -30,7 +30,7 @@ const LAYOUT_OPTIONS = LAYOUT_ORDER.map((value) => ({
 
 const SIZE_OPTIONS = SIZE_PRESETS.map((value) => ({ value, label: `${value}px` }))
 
-export const ExportPanel = ({ lockup }) => {
+export const ExportPanel = ({ lockup, era = 'historical' }) => {
   const [mode, setMode] = useState('single')
   const [format, setFormat] = useState('svg')
   const [pixelWidth, setPixelWidth] = useState(2048)
@@ -66,6 +66,9 @@ export const ExportPanel = ({ lockup }) => {
   const spec = EXPORT_FORMATS[format]
   const isRaster = !spec.vector
   const bundling = mode === 'bundle'
+  // The current era's artwork is already outlined — the wording is drawn, not set — so there is
+  // nothing to convert and no font to embed.
+  const canOutline = era !== 'current'
 
   const bundleHasRaster = formats.some((id) => !EXPORT_FORMATS[id].vector)
   const bundleHasVector = formats.some((id) => EXPORT_FORMATS[id].vector)
@@ -73,8 +76,8 @@ export const ExportPanel = ({ lockup }) => {
   // Clear space travels with the lockup, so the export is whatever the preview is showing.
   // Outlining only changes how a vector file draws its type; a raster export has been through a
   // rasteriser either way, so the request is dropped rather than quietly named in the filename.
-  const singleOptions = { ...lockup, format, pixelWidth, outlineText: outlineText && spec.vector }
-  const bundleOptions = { ...lockup, layouts, formats, sizes, outlineText: outlineText && bundleHasVector }
+  const singleOptions = { ...lockup, format, pixelWidth, outlineText: canOutline && outlineText && spec.vector }
+  const bundleOptions = { ...lockup, layouts, formats, sizes, outlineText: canOutline && outlineText && bundleHasVector }
 
   const plan = useMemo(() => (bundling ? planBundle(bundleOptions) : []), [
     bundling, layouts, formats, sizes, lockup
@@ -130,7 +133,9 @@ export const ExportPanel = ({ lockup }) => {
 
       {bundling ? (
         <>
-          <MultiToggle label="Lockups" options={LAYOUT_OPTIONS} value={layouts} onChange={setLayouts} />
+          {canOutline && (
+            <MultiToggle label="Lockups" options={LAYOUT_OPTIONS} value={layouts} onChange={setLayouts} />
+          )}
           <MultiToggle label="Formats" options={formatOptions} value={formats} onChange={setFormats} />
           {bundleHasRaster && (
             <MultiToggle
@@ -141,7 +146,7 @@ export const ExportPanel = ({ lockup }) => {
               hint="Each raster format is rendered once per width."
             />
           )}
-          {bundleHasVector && outlineControl}
+          {canOutline && bundleHasVector && outlineControl}
         </>
       ) : (
         <>
@@ -175,7 +180,12 @@ export const ExportPanel = ({ lockup }) => {
                 {SIZE_PRESETS.map((size) => <option key={size} value={size}>{size} px wide</option>)}
               </select>
             </div>
-          ) : outlineControl}
+          ) : canOutline ? outlineControl : (
+            <p className="field__note">
+              The official artwork is already outlined — the wording is drawn, not set — so it needs
+              no font and nothing to convert.
+            </p>
+          )}
         </>
       )}
 
