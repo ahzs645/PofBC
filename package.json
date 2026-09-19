@@ -27,7 +27,7 @@
     "build": "npm run build:assets --silent && vite build",
     "preview": "vite preview",
     "test": "node --test \"src/**/*.test.js\" \"scripts/**/*.test.mjs\"",
-    "build:assets": "npm run vendor:build --silent && node scripts/build-mark.mjs && node scripts/build-fonts.mjs && node scripts/build-capabilities.mjs",
+    "build:assets": "npm run vendor:build --silent && node scripts/build-mark.mjs && node scripts/build-fonts.mjs && node scripts/build-current-extras.mjs && node scripts/build-capabilities.mjs",
     "build:mark": "node scripts/build-mark.mjs",
     "build:fonts": "node scripts/build-fonts.mjs",
     "compare": "node scripts/compare-artwork.mjs",
@@ -35,7 +35,15 @@
     "vendor:build": "node scripts/build-vendor-json-url.mjs",
     "prepare": "npm run vendor:build --silent",
     "build:capabilities": "node scripts/build-capabilities.mjs",
-    "extract:current-marks": "python3 scripts/extract_current_marks.py"
+    "extract:current-marks": "python3 scripts/extract_current_marks.py",
+    "recover:current-names": "python3 scripts/recover_current_names.py",
+    "verify:current-names": "node scripts/verify-current-names.mjs",
+    "build:current-glyphs": "node scripts/build-current-glyphs.mjs",
+    "build:current-mark": "node scripts/build-current-mark.mjs",
+    "build:current-catalogue": "node scripts/build-current-catalogue.mjs",
+    "compare:current": "node scripts/compare-current-lockups.mjs",
+    "build:current": "npm run extract:current-marks && npm run recover:current-names && npm run verify:current-names && npm run build:current-glyphs && npm run build:current-mark && npm run build:current-catalogue && npm run compare:current",
+    "build:current-extras": "node scripts/build-current-extras.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

@@ -107,7 +107,9 @@ test('the current era reports itself rather than pretending to be a drawing', ()
   // None of the historical era's drawing fields, which do not apply and would only mislead.
   assert.ok(!('size' in structuredContent))
   assert.ok(!('markColor' in structuredContent))
-  assert.match(content[0].text, /Official FOR mark/)
+  assert.match(content[0].text, /FOR mark \(en\)/)
+  // The wording is reported, because it is now something an agent can change.
+  assert.match(content[0].text, /Ministry of \/ Forests/)
 })
 
 test('set_lockup applies only what it was given', () => {

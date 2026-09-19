@@ -5,6 +5,7 @@
 // rather than through a rendered component.
 
 import { recommendedVariant } from '../current/currentMarks.js'
+import { findMinistry } from '../current/ministries.js'
 import { defaultMarkAlignment, getLayout } from '../logo/layouts.js'
 import { BRAND_COLORS, TRANSPARENT, resolveColor } from '../logo/logoColors.js'
 
@@ -50,6 +51,18 @@ export const applyUpdate = (current, patch) => {
     next.currentVariant = recommendedVariant(patch.currentBackground) ?? next.currentVariant
   }
 
+  // Choosing a ministry, or switching language, loads that mark's official wording — but only
+  // until the wording has been edited. After that it is the person's text, and picking a different
+  // ministry must not silently throw it away. Restoring the official wording clears the flag and
+  // puts the link back.
+  if (patch.currentName !== undefined && patch.currentNameTouched === undefined) {
+    next.currentNameTouched = true
+  } else if ((patch.currentMinistry !== undefined || patch.language !== undefined) &&
+             !next.currentNameTouched) {
+    const official = findMinistry(next.currentMinistry)?.[next.language]
+    if (official) next.currentName = official
+  }
+
   return next
 }
 
@@ -78,5 +91,8 @@ export const applyShare = (current, patch) => ({
   ...current,
   ...patch,
   wordmarkTouched: true,
-  markAlignTouched: true
+  markAlignTouched: true,
+  // A share that carries wording carries it deliberately, so the ministry list must not overwrite
+  // it on arrival. One that does not should keep following the list.
+  currentNameTouched: patch.currentName !== undefined
 })

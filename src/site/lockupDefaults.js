@@ -4,6 +4,7 @@
 // defined relative to these values — it carries only the fields that differ from them.
 
 import { BCID } from '../current/currentMarks.js'
+import { findMinistry } from '../current/ministries.js'
 import { DEFAULT_CLEAR_SPACE, DEFAULT_MARK_ALIGNMENT } from '../logo/layouts.js'
 import { BRAND_COLORS } from '../logo/logoColors.js'
 
@@ -16,6 +17,10 @@ export const DEFAULTS = {
   // dragging it across produced blue type on green the moment you switched.
   language: 'en',
   currentMinistry: 'FOR',
+  // The mark's wording. Newlines are line breaks, and the official names carry the ones the
+  // Province set them with. It follows the ministry and language until edited.
+  currentName: findMinistry('FOR').en,
+  currentNameTouched: false,
   currentVariant: 'colour',
   currentVariantTouched: false,
   currentBackground: BCID.white,

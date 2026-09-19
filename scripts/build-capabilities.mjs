@@ -22,6 +22,7 @@ import { BRAND_COLORS, TRANSPARENT } from '../src/logo/logoColors.js'
 import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS } from '../src/export/exportLogo.js'
 import { MINISTRY_GROUPS, MINISTRY_LIST_REVIEWED } from '../src/ministries/ministries.js'
 import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, BCID } from '../src/current/currentMarks.js'
+import { MINISTRIES as CURRENT_MINISTRIES } from '../src/current/ministries.js'
 import { SHARE_PARAM } from '../src/site/shareLink.js'
 import { CONFIG_PARAM, toConfig } from '../src/site/configFormat.js'
 import { DEFAULTS } from '../src/site/lockupDefaults.js'
@@ -44,13 +45,15 @@ const manifest = {
       generated: true
     },
     current: {
-      description: 'The Province’s published ministry marks, served exactly as provided. The ' +
-        'wording is part of the artwork and cannot be changed, so this era is a picker rather ' +
-        'than a generator — which is what the Province’s guidelines require.',
-      generated: false,
-      artwork: 'current-marks/index.json',
-      note: 'The SVGs are fetchable directly, e.g. current-marks/for-en.svg, so artwork can be ' +
-        'had without running the page at all.',
+      description: 'The Province’s BC mark, used exactly as published, with the ministry wording ' +
+        'set beside it in the same alphabet the published marks are lettered with. Pick a ' +
+        'ministry for its official wording, or supply your own for one that has been renamed or ' +
+        'never had a mark published.',
+      generated: true,
+      ministries: CURRENT_MINISTRIES.map(({ code, en, fr }) => ({ code, en, fr })),
+      note: 'A newline in the wording is a line break, as in the published artwork: the ' +
+        'Province’s marks are broken by hand rather than wrapped to a measure, so the official ' +
+        'wording carries the breaks it was published with.',
       languages: LANGUAGE_ORDER.map((id) => ({ id, label: LANGUAGES[id] })),
       variants: CURRENT_VARIANT_ORDER.map((id) => ({
         id,

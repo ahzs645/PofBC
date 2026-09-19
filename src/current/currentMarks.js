@@ -1,16 +1,17 @@
 // The Province's current ministry marks.
 //
-// Unlike the historical lockups, nothing here is drawn from parts: these are the official files,
-// extracted from the published PDF and served whole. The guidelines are explicit that the marks
-// must be used exactly as provided, so the only thing this module does to them is apply one of the
-// Province's own four colourways and put them on a background.
+// The BC mark itself — the sun, the mountains and the wordmark — is the Province's own drawing,
+// used exactly as published. The ministry wording beside it is set, in the same alphabet, to the
+// measurements taken off that artwork; the official names ship with the line breaks the Province
+// gave them, and match their published files to a hundredth of a point.
 //
-// The artwork lives in public/current-marks/ and is fetched on demand — 23 ministries in two
-// languages is a couple of megabytes, and a visit uses one of them.
+// The artwork used to be 46 finished files, one per ministry per language, each carrying its own
+// copy of the mark and its name as outlines. It is now the mark once per language plus the
+// alphabet those names were lettered with, so a name can be set rather than only chosen — and the
+// whole era fits in the bundle instead of being fetched.
 
 import { TRANSPARENT, resolveColor } from '../logo/logoColors.js'
-
-const BASE = `${import.meta.env?.BASE_URL ?? '/'}current-marks/`
+import { layoutLockup, lockupMarkup } from './currentLayout.js'
 
 /** The BC identity palette, as the colour-accessibility guidance states it for screen. */
 export const BCID = {
@@ -118,127 +119,67 @@ export const recommendedVariant = (background) => {
   return RECOMMENDED.find((rule) => rule.match(resolved))?.variant ?? null
 }
 
-// ── Loading ──────────────────────────────────────────────────────────────────────────────────────
-
-let cataloguePromise
-const markCache = new Map()
-
-/** The list of ministries, with the size of each mark. Fetched once. */
-export const loadCatalogue = () => {
-  cataloguePromise ??= fetch(`${BASE}index.json`)
-    .then((response) => {
-      if (!response.ok) throw new Error(`HTTP ${response.status}`)
-      return response.json()
-    })
-    .catch((error) => {
-      cataloguePromise = undefined
-      throw new Error(`Could not load the current ministry marks. ${error.message}`)
-    })
-
-  return cataloguePromise
-}
-
-/** One ministry's mark, as the SVG source. Cached, since switching back and forth is cheap. */
-export const loadMark = (code, language) => {
-  const key = `${code}-${language}`.toLowerCase()
-
-  if (!markCache.has(key)) {
-    markCache.set(
-      key,
-      fetch(`${BASE}${key}.svg`)
-        .then((response) => {
-          if (!response.ok) throw new Error(`HTTP ${response.status}`)
-          return response.text()
-        })
-        .catch((error) => {
-          markCache.delete(key)
-          throw new Error(`Could not load the ${code} mark. ${error.message}`)
-        })
-    )
-  }
-
-  return markCache.get(key)
-}
-
 // ── Rendering ────────────────────────────────────────────────────────────────────────────────────
 
-const VIEWBOX = /viewBox="([\d.\s-]+)"/
-const ROLED_ELEMENT = /<(path|rect)([^>]*?)data-role="(\w+)"([^>]*?)\/>/g
-const FILL = /\sfill="[^"]*"/
-
-/** Applies a colourway to the official artwork, leaving the geometry untouched. */
-export const recolour = (source, variant) => {
-  const { fills } = CURRENT_VARIANTS[variant] ?? CURRENT_VARIANTS.colour
-
-  return source.replace(ROLED_ELEMENT, (element, tag, before, role, after) => {
-    if (!(role in fills)) return element
-
-    const colour = fills[role]
-    // A role with no colour is dropped rather than painted, so the background shows through.
-    if (colour === null) return ''
-
-    // The role is re-emitted, not consumed: it has to survive so a colourway can be applied again
-    // over the top, and so a file served from here still carries its labels.
-    const attributes = `${before}${after}`.replace(FILL, '').trimEnd()
-    return `<${tag} data-role="${role}"${attributes} fill="${colour}"/>`
-  })
-}
-
-/** The artwork's own dimensions, in PDF points. */
-export const markSize = (source) => {
-  const [, box] = VIEWBOX.exec(source) ?? []
-  const [, , width, height] = (box ?? '0 0 0 0').split(/\s+/).map(Number)
-  return { width, height }
-}
-
-const escapeXml = (value) => String(value)
-  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
-
 /**
- * A ministry mark as a complete SVG, in the requested colourway.
+ * A ministry mark as a complete SVG.
+ *
+ * The mark itself is the Province's own drawing, stored once; the wording is set from the same
+ * alphabet that drawing was lettered with. Nothing is fetched — both live in the bundle — so this
+ * is synchronous and works in Node, in the browser and in an exporter alike.
  *
  * @param {object} options
- * @param {string} options.source        The fetched artwork.
- * @param {string} [options.variant]     One of CURRENT_VARIANT_ORDER.
- * @param {string} [options.background]  'none' for transparent, or any colour.
- * @param {number} [options.padding]     Clear space, in the artwork's own units.
- * @param {number} [options.pixelWidth]  Sets width/height attributes at this pixel width.
- * @param {string} [options.title]       Accessible name.
+ * @param {string} options.text        The ministry name. A newline is a line break.
+ * @param {string} [options.language]  'en' | 'fr' — picks the wordmark and its measurements.
+ * @param {string} [options.variant]   One of CURRENT_VARIANT_ORDER.
+ * @param {string} [options.background]
+ * @param {number} [options.clearSpaceFactor]  Margin as a fraction of the mark's own width.
+ * @param {number} [options.pixelWidth]        Sets width/height attributes at this pixel width.
+ * @param {string} [options.title]     Accessible name.
  */
 export const renderCurrentSvg = ({
-  source,
+  text,
+  language = 'en',
   variant = 'colour',
   background = TRANSPARENT,
-  padding = 0,
+  clearSpaceFactor = 0,
   pixelWidth,
   title
 }) => {
-  const { width, height } = markSize(source)
-  const inner = recolour(source, variant)
-    // Take the artwork's own contents; the wrapper is rebuilt with the margin and background.
-    .replace(/^[\s\S]*?<svg[^>]*>/, '')
-    .replace(/<\/svg>\s*$/, '')
-    .replace(/<title>[\s\S]*?<\/title>/, '')
+  const { fills } = CURRENT_VARIANTS[variant] ?? CURRENT_VARIANTS.colour
+  const { markup, box } = lockupMarkup({ text, language, fills })
 
-  const box = {
-    x: -padding,
-    y: -padding,
-    width: width + padding * 2,
-    height: height + padding * 2
+  const padding = clearSpaceFactor * box.width
+  const frame = {
+    x: box.x - padding,
+    y: box.y - padding,
+    width: box.width + padding * 2,
+    height: box.height + padding * 2
   }
 
   const dimensions = pixelWidth
-    ? ` width="${pixelWidth}" height="${Math.round(pixelWidth * box.height / box.width)}"`
+    ? ` width="${pixelWidth}" height="${Math.round(pixelWidth * frame.height / frame.width)}"`
     : ''
 
   const fill = resolveColor(background, TRANSPARENT)
   const backdrop = fill && fill !== TRANSPARENT
-    ? `<rect x="${box.x}" y="${box.y}" width="${box.width}" height="${box.height}" fill="${escapeXml(fill)}"/>`
+    ? `<rect x="${round(frame.x)}" y="${round(frame.y)}" width="${round(frame.width)}" height="${round(frame.height)}" fill="${escapeXml(fill)}"/>`
     : ''
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${box.x} ${box.y} ${box.width} ${box.height}"${dimensions}>` +
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${round(frame.x)} ${round(frame.y)} ${round(frame.width)} ${round(frame.height)}"${dimensions}>` +
     (title ? `<title>${escapeXml(title)}</title>` : '') +
     backdrop +
-    inner +
+    markup +
     '</svg>'
 }
+
+/** The lockup's size in points, before any clear space. */
+export const markSize = ({ text, language = 'en' }) => {
+  const { box } = layoutLockup({ text, language })
+  return { width: box.width, height: box.height }
+}
+
+const round = (value) => Math.round(value * 1000) / 1000
+
+const escapeXml = (value) => String(value)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')

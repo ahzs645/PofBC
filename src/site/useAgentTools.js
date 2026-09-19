@@ -20,7 +20,8 @@ import {
 import { BRAND_COLORS, TRANSPARENT, describeContrast } from '../logo/logoColors.js'
 import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS, exportLogo, isFormatSupported } from '../export/exportLogo.js'
 import { resolveLockup } from '../logo/renderLogoSvg.js'
-import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGE_ORDER, loadCatalogue } from '../current/currentMarks.js'
+import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
+import { MINISTRIES as CURRENT_MINISTRIES, findMinistry } from '../current/ministries.js'
 import { MINISTRIES, searchMinistries } from '../ministries/ministries.js'
 import { buildShareUrl } from './shareLink.js'
 
@@ -47,6 +48,7 @@ const describeState = ({ state, lockup }) => {
     return {
       era: 'current',
       ministryCode: state.currentMinistry,
+      wording: state.currentName,
       language: state.language,
       variant: state.currentVariant,
       variantLabel: CURRENT_VARIANTS[state.currentVariant]?.label,
@@ -90,7 +92,8 @@ const buildTools = (latest) => [
     execute: () => {
       const state = describeState(latest.current)
       const summary = state.era === 'current'
-        ? `Official ${state.ministryCode} mark (${state.language}), ${state.variantLabel} on ${state.background}.`
+        ? `${state.ministryCode} mark (${state.language}): “${String(state.wording).replace(/\n/g, ' / ')}”, ` +
+          `${state.variantLabel} on ${state.background}.`
         : `${state.lockupLabel} lockup, ${state.ministry || 'wordmark only'}, ${state.markColor} on ${state.background}.`
 
       return reply(summary, state)
@@ -116,6 +119,13 @@ const buildTools = (latest) => [
         ministryCode: {
           type: 'string',
           description: 'Current era. A ministry abbreviation such as FOR or ENV.'
+        },
+        wording: {
+          type: 'string',
+          description:
+            'The wording of a current-era mark, overriding the ministry’s official text. A ' +
+            'newline is a line break, as in the published artwork. Use this for a ministry that ' +
+            'has been renamed or never had a mark published.'
         },
         language: {
           type: 'string',
@@ -154,6 +164,7 @@ const buildTools = (latest) => [
 
       if (input.era !== undefined) patch.era = input.era
       if (input.ministryCode !== undefined) patch.currentMinistry = String(input.ministryCode).toUpperCase()
+      if (input.wording !== undefined) patch.currentName = String(input.wording)
       if (input.language !== undefined) patch.language = input.language
       if (input.variant !== undefined) patch.currentVariant = input.variant
       if (input.lockup !== undefined) patch.layout = input.lockup
@@ -274,23 +285,17 @@ const buildTools = (latest) => [
   {
     name: 'list_current_marks',
     description:
-      'The Province’s official ministry marks, with the code to pass to set_lockup. These are ' +
-      'finished artwork in English and French; a ministry not listed here has no published mark. ' +
-      'Each is also fetchable directly as an SVG, so artwork can be had without the page.',
+      'The Province’s ministries and the official wording of their marks, in English and French, ' +
+      'with the code to pass to set_lockup. Newlines in the wording are the line breaks the ' +
+      'published artwork uses. A ministry not listed has no published mark, but set_lockup takes ' +
+      'any wording, so one can still be set.',
     inputSchema: { type: 'object', properties: {} },
-    execute: async () => {
-      try {
-        const catalogue = await loadCatalogue()
-        const lines = catalogue.ministries.map((entry) => `${entry.code} — ${entry.name}`)
-        return reply(lines.join('\n'), {
-          artwork: 'current-marks/index.json',
-          ministries: catalogue.ministries.map(({ code, name, en, fr }) => ({
-            code, name, files: { en: en.file, fr: fr.file }
-          }))
-        })
-      } catch (error) {
-        return reply(`Could not load the official marks. ${error.message}`)
-      }
+    execute: () => {
+      const lines = CURRENT_MINISTRIES
+        .map((entry) => `${entry.code} — ${entry.en.replace(/\n/g, ' ')}`)
+      return reply(lines.join('\n'), {
+        ministries: CURRENT_MINISTRIES.map(({ code, en, fr }) => ({ code, en, fr }))
+      })
     }
   },
 

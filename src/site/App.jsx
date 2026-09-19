@@ -68,7 +68,7 @@ export const App = () => {
           <div className="stage__frame" data-backdrop={backdrop} data-transparent={isTransparent || undefined}>
             {isCurrent ? (
               <CurrentLockup
-                code={state.currentMinistry}
+                text={state.currentName}
                 language={state.language}
                 variant={state.currentVariant}
                 background={state.currentBackground}

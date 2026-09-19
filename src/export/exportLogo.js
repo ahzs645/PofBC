@@ -5,7 +5,7 @@
 // any size because the vector is rasterised at the target resolution rather than upscaled.
 
 import { renderLockupSvg, resolveLockup } from '../logo/renderLogoSvg.js'
-import { loadMark, markSize, renderCurrentSvg } from '../current/currentMarks.js'
+import { markSize, renderCurrentSvg } from '../current/currentMarks.js'
 import { BRAND_FONT_FAMILY, getEmbeddedFaces, getEmbeddedFontCss } from './fontEmbed.js'
 import { getGlyphOutlines } from './fontOutlines.js'
 
@@ -101,22 +101,24 @@ export const buildSvgSource = async ({ embedFont = true, outlineText = false, ..
 }
 
 /**
- * The current era's artwork, fetched and coloured.
+ * The current era's artwork, composed and coloured.
  *
- * It arrives already outlined, so there is no font to embed and nothing to convert — which is why
+ * It comes out as outlines — the mark is the Province's drawing and the wording is set from their
+ * alphabet, both already paths — so there is no font to embed and nothing to convert. That is why
  * the outline option does not apply to this era and the PDF path needs no faces registered.
  */
-const buildCurrentArtwork = async ({
-  currentMinistry, language = 'en', currentVariant = 'colour',
+const buildCurrentArtwork = ({
+  currentName, language = 'en', currentVariant = 'colour',
   background, clearSpaceFactor = 0, pixelWidth, title
 }) => {
-  const source = await loadMark(currentMinistry, language)
-  const { width, height } = markSize(source)
+  const { width, height } = markSize({ text: currentName, language })
   // Measured against this artwork, not the crest's — they are nothing like the same size.
   const padding = clearSpaceFactor * width
 
   return {
-    svg: renderCurrentSvg({ source, variant: currentVariant, background, padding, pixelWidth, title }),
+    svg: renderCurrentSvg({
+      text: currentName, language, variant: currentVariant, background, clearSpaceFactor, pixelWidth, title
+    }),
     viewBox: { x: -padding, y: -padding, width: width + padding * 2, height: height + padding * 2 }
   }
 }
@@ -234,7 +236,7 @@ export const renderLogoBlob = async ({
   if (!spec) throw new Error(`Unsupported export format: ${format}`)
 
   // The current era's geometry comes from the artwork itself; the historical era's is computed.
-  const current = options.era === 'current' ? await buildCurrentArtwork({ ...options, pixelWidth }) : null
+  const current = options.era === 'current' ? buildCurrentArtwork({ ...options, pixelWidth }) : null
   const resolved = current ?? resolveLockup(options)
   const svgSource = current
     ? current.svg

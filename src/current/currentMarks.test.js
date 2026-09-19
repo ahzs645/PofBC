@@ -1,30 +1,24 @@
-// The current era serves finished artwork rather than drawing it, so what needs testing is the one
-// thing the app does to it: apply a colourway. The extraction that produced the files is checked
-// by scripts/current-marks.test.mjs.
+// The current era composes a lockup rather than serving a finished file, so what needs testing is
+// the composition: that every colourway reaches every role, that the roles it drops really are
+// dropped, and that the wrapper honours background, clear space and size. The typesetting itself is
+// covered by currentLayout.test.js.
 
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import {
-  BCID, CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, markSize, recolour, recommendedVariant, renderCurrentSvg
+  BCID, CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, markSize, recommendedVariant, renderCurrentSvg
 } from './currentMarks.js'
 
-// A miniature of the real artwork's shape: every role, one of each.
-const ARTWORK = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 30"><title>x</title>' +
-  '<path data-role="sun" fill="#e3a82b" d="M0 0"/>' +
-  '<path data-role="knockout" fill="#ffffff" d="M1 1"/>' +
-  '<path data-role="mountains" fill="#234075" d="M2 2"/>' +
-  '<path data-role="wordmark" fill="#234075" d="M3 3"/>' +
-  '<rect data-role="divider" x="1" y="1" width="1" height="1" fill="#e3a82b"/>' +
-  '<path data-role="name" fill="#234075" d="M4 4"/></svg>'
+const ROLES = ['sun', 'mountains', 'knockout', 'wordmark', 'divider', 'name']
+
+const TEXT = 'Ministry of\nForests'
 
 const fillsIn = (svg) => [...svg.matchAll(/data-role="(\w+)"[^>]*fill="([^"]+)"/g)]
   .reduce((all, [, role, fill]) => ({ ...all, [role]: fill }), {})
 
 test('every colourway covers every role', () => {
-  const roles = ['sun', 'mountains', 'knockout', 'wordmark', 'divider', 'name']
-
   for (const id of CURRENT_VARIANT_ORDER) {
-    for (const role of roles) {
+    for (const role of ROLES) {
       assert.ok(role in CURRENT_VARIANTS[id].fills, `${id} says nothing about ${role}`)
     }
   }
@@ -32,7 +26,7 @@ test('every colourway covers every role', () => {
 
 test('the reverse colourway parts the mountains from the wordmark', () => {
   // They are the same blue in the artwork; reverse lightens one and whitens the other. This is the
-  // whole reason the extraction labels shapes rather than going by fill.
+  // whole reason every shape carries a role rather than being identified by its fill.
   const { fills } = CURRENT_VARIANTS.reverse
 
   assert.equal(fills.mountains, BCID.blueTint)
@@ -40,55 +34,86 @@ test('the reverse colourway parts the mountains from the wordmark', () => {
   assert.notEqual(fills.mountains, fills.wordmark)
 })
 
-test('recolouring rewrites by role and leaves the geometry alone', () => {
-  const reversed = recolour(ARTWORK, 'reverse')
-  const fills = fillsIn(reversed)
+test('a colourway reaches every role in the composed lockup', () => {
+  const fills = fillsIn(renderCurrentSvg({ text: TEXT, variant: 'reverse' }))
 
   assert.equal(fills.sun, BCID.gold)
   assert.equal(fills.mountains, BCID.blueTint)
   assert.equal(fills.wordmark, BCID.white)
+  assert.equal(fills.divider, BCID.gold)
   assert.equal(fills.name, BCID.white)
-  // The path data is untouched — this is official artwork, not something to redraw.
-  for (const d of ['M0 0', 'M2 2', 'M4 4']) assert.ok(reversed.includes(d), d)
 })
 
 test('the solid colourways drop the knockout so the background shows through', () => {
   // Painting it white instead would ring the mark with a white halo on anything but a white page.
   for (const id of ['black', 'white']) {
-    const out = recolour(ARTWORK, id)
-    assert.ok(!out.includes('data-role="knockout"'), `${id} kept the knockout`)
-    assert.equal(fillsIn(out).sun, id === 'black' ? BCID.black : BCID.white)
+    const svg = renderCurrentSvg({ text: TEXT, variant: id })
+    assert.ok(!svg.includes('data-role="knockout"'), `${id} kept the knockout`)
+    assert.equal(fillsIn(svg).sun, id === 'black' ? BCID.black : BCID.white)
   }
 
-  assert.ok(recolour(ARTWORK, 'colour').includes('data-role="knockout"'), 'colour keeps it')
+  assert.ok(renderCurrentSvg({ text: TEXT, variant: 'colour' }).includes('data-role="knockout"'))
 })
 
 test('an unknown colourway falls back rather than producing nothing', () => {
-  assert.deepEqual(fillsIn(recolour(ARTWORK, 'chartreuse')), fillsIn(recolour(ARTWORK, 'colour')))
+  assert.deepEqual(
+    fillsIn(renderCurrentSvg({ text: TEXT, variant: 'chartreuse' })),
+    fillsIn(renderCurrentSvg({ text: TEXT, variant: 'colour' }))
+  )
 })
 
-test('the artwork reports its own size', () => {
-  assert.deepEqual(markSize(ARTWORK), { width: 40, height: 30 })
+test('the French wordmark is a different drawing, and a wider one', () => {
+  const english = markSize({ text: 'Ministry of\nForests', language: 'en' })
+  const french = markSize({ text: 'Ministère des\nForêts', language: 'fr' })
+
+  assert.ok(french.width > english.width, `${french.width} should exceed ${english.width}`)
 })
 
-test('clear space and background wrap the artwork without moving it', () => {
-  const svg = renderCurrentSvg({ source: ARTWORK, background: '#006837', padding: 5 })
+test('clear space grows the frame without moving the artwork', () => {
+  const plain = renderCurrentSvg({ text: TEXT })
+  const padded = renderCurrentSvg({ text: TEXT, clearSpaceFactor: 0.25 })
 
-  assert.ok(svg.includes('viewBox="-5 -5 50 40"'), svg.slice(0, 160))
-  assert.ok(svg.includes('<rect x="-5" y="-5" width="50" height="40" fill="#006837"/>'))
-  // The original wrapper and title are replaced, not nested.
-  assert.equal((svg.match(/<svg/g) || []).length, 1)
-  assert.ok(!svg.includes('<title>x</title>'))
+  const box = (svg) => svg.match(/viewBox="([-\d. ]+)"/)[1].split(' ').map(Number)
+  const [, , width] = box(plain)
+  const [x, , paddedWidth] = box(padded)
+
+  assert.ok(x < 0, 'the frame opens to the left of the mark')
+  assert.ok(Math.abs(paddedWidth - (width + 2 * 0.25 * width)) < 0.01)
+  // Only one wrapper, and the mark's own path data is unchanged by the padding.
+  assert.equal((padded.match(/<svg/g) || []).length, 1)
+  assert.equal(
+    (plain.match(/data-role="wordmark" d="([^"]+)"/) || [])[1],
+    (padded.match(/data-role="wordmark" d="([^"]+)"/) || [])[1]
+  )
 })
 
-test('a transparent background paints nothing', () => {
-  const svg = renderCurrentSvg({ source: ARTWORK, background: 'none', padding: 0 })
-  assert.ok(!svg.includes('<rect x="0"'), 'no backdrop rectangle')
+test('a background paints the whole frame, and transparent paints nothing', () => {
+  const filled = renderCurrentSvg({ text: TEXT, background: '#006837', clearSpaceFactor: 0.25 })
+  const [x, y, width, height] = filled.match(/viewBox="([-\d. ]+)"/)[1].split(' ').map(Number)
+
+  assert.ok(filled.includes(`<rect x="${x}" y="${y}" width="${width}" height="${height}" fill="#006837"/>`))
+  assert.ok(!renderCurrentSvg({ text: TEXT, background: 'none' }).includes('<rect x="0" y="0"'))
 })
 
-test('a pixel width sets both dimensions to the artwork’s ratio', () => {
-  const svg = renderCurrentSvg({ source: ARTWORK, pixelWidth: 800 })
-  assert.ok(svg.includes('width="800" height="600"'), svg.slice(0, 200))
+test('a pixel width sets both dimensions to the lockup’s own ratio', () => {
+  const svg = renderCurrentSvg({ text: TEXT, pixelWidth: 800 })
+  const { width, height } = markSize({ text: TEXT })
+  const expected = Math.round(800 * height / width)
+
+  assert.ok(svg.includes(`width="800" height="${expected}"`), svg.slice(0, 200))
+})
+
+test('a colour cannot break out of the attribute it is written into', () => {
+  // Backgrounds arrive from share links, which arrive from anyone.
+  const svg = renderCurrentSvg({ text: TEXT, background: '"/><script>alert(1)</script>' })
+
+  assert.ok(!svg.includes('<script>'), svg.slice(0, 240))
+  assert.ok(svg.includes('&quot;/&gt;&lt;script&gt;'))
+})
+
+test('the title is escaped too', () => {
+  const svg = renderCurrentSvg({ text: TEXT, title: 'Forests & <Parks>' })
+  assert.ok(svg.includes('<title>Forests &amp; &lt;Parks&gt;</title>'))
 })
 
 test('the guidance’s background pairings are offered', () => {

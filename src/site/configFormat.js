@@ -14,6 +14,7 @@
 // manifest and the tools say. One outward vocabulary is worth a mapping layer.
 
 import { CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
+import { findMinistry } from '../current/ministries.js'
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
@@ -65,6 +66,11 @@ export const toConfig = (state) => (state.era === 'current'
   ? {
       era: 'current',
       ministryCode: state.currentMinistry,
+      // Only when it differs from the official text; a configuration should say what was chosen,
+      // not restate what picking the ministry would have given anyway.
+      ...(state.currentName !== (findMinistry(state.currentMinistry)?.[state.language] ?? '')
+        ? { wording: state.currentName }
+        : {}),
       language: state.language,
       variant: state.currentVariant,
       background: state.currentBackground === TRANSPARENT ? 'transparent' : state.currentBackground,
@@ -96,6 +102,11 @@ export const fromConfig = (config) => {
 
   if ('era' in config) patch.era = cleanOneOf(config.era, ERAS, DEFAULTS.era)
   if ('ministryCode' in config) patch.currentMinistry = cleanText(config.ministryCode, DEFAULTS.currentMinistry).toUpperCase()
+  if ('wording' in config) {
+    patch.currentName = cleanText(config.wording, DEFAULTS.currentName)
+    // Stated wording is deliberate, so the ministry list must not overwrite it.
+    patch.currentNameTouched = true
+  }
   if ('language' in config) patch.language = cleanOneOf(config.language, LANGUAGE_ORDER, DEFAULTS.language)
   if ('variant' in config) patch.currentVariant = cleanOneOf(config.variant, CURRENT_VARIANT_ORDER, DEFAULTS.currentVariant)
 
