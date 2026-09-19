@@ -46,11 +46,17 @@ function readMark (key) {
   const shapes = []
   const feet = []
   let right = 0
-  for (const element of group[3].matchAll(/<path[^>]*data-role="(\w+)"[^>]*\sd="([^"]+)"[^>]*\/>/g)) {
-    const [, role, d] = element
-    if (!MARK_ROLES.includes(role)) continue
+  for (const element of group[3].matchAll(/<path([^>]*)\/>/g)) {
+    const attributes = element[1]
+    const role = /data-role="(\w+)"/.exec(attributes)?.[1]
+    const d = /\sd="([^"]+)"/.exec(attributes)?.[1]
+    if (!role || !d || !MARK_ROLES.includes(role)) continue
+    // Some letters are drawn with their counter wound the same way as their outline, so they need
+    // an even-odd fill or the hole fills in. Two of the French wordmark's letters are, and dropping
+    // the rule was enough to turn COLOMBIE-BRITANNIQUE into solid shapes.
+    const rule = /fill-rule="([\w-]+)"/.exec(attributes)?.[1]
     const box = pathBounds(d)
-    shapes.push({ role, d, tx, ty })
+    shapes.push({ role, d, rule, tx, ty })
     right = Math.max(right, box.maxX + tx)
     if (role === 'wordmark') feet.push(box.maxY + ty)
   }
@@ -78,7 +84,7 @@ function sameDrawing (a, b) {
   if (a.shapes.length !== b.shapes.length) return false
   return a.shapes.every((shape, i) => {
     const other = b.shapes[i]
-    if (shape.role !== other.role) return false
+    if (shape.role !== other.role || shape.rule !== other.rule) return false
     const one = shape.d.match(/-?\d+\.?\d*/g).map(Number)
     const two = other.d.match(/-?\d+\.?\d*/g).map(Number)
     return one.length === two.length && one.every((value, n) => Math.abs(value - two[n]) <= 0.02)
@@ -113,10 +119,11 @@ for (const language of ['en', 'fr']) {
   out[language] = {
     width: Number(canonical.right.toFixed(3)),
     height: Number(median(agreed.map((m) => m.divider.height)).toFixed(3)),
-    shapes: canonical.shapes.map(({ role, d, tx, ty }) => ({
+    shapes: canonical.shapes.map(({ role, d, rule, tx, ty }) => ({
       role,
       // Baked into the mark's own space so nothing downstream needs a transform.
-      d: shift(d, tx, ty)
+      d: shift(d, tx, ty),
+      ...(rule ? { rule } : {})
     })),
     divider: {
       x: Number(dividerX.toFixed(3)),

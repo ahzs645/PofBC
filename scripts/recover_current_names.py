@@ -31,6 +31,7 @@ from matplotlib.path import Path as MplPath
 
 ROOT = Path(__file__).resolve().parent.parent
 MARKS = ROOT / "public" / "current-marks"
+SOURCE_PDF = ROOT / "artwork" / "current" / "ministry-marks.pdf"
 # Stated, never guessed: see scripts/build-current-extras.mjs for why.
 DEFAULT_FONT = os.environ.get("GARAMOND_SOURCE")
 
@@ -229,6 +230,35 @@ def recover(svg, library, leading):
                 scale=float(np.median(scales)), scale_sd=float(np.std(scales)))
 
 
+def labelled_names():
+    """The English ministry names as the PDF's own text layer gives them, line breaks included.
+
+    The document lists each ministry in a left-hand column as live text, not outlines, and breaks
+    those names exactly where the artwork beside them breaks. It is the only reachable source of
+    the line breaks for the three marks whose artwork this project cannot read, and a free check on
+    the twenty it can.
+    """
+    try:
+        import pymupdf
+    except ImportError:
+        return {}
+    if not SOURCE_PDF.exists():
+        return {}
+
+    names = {}
+    for page in pymupdf.open(SOURCE_PDF):
+        for block in page.get_text("dict")["blocks"]:
+            # The name column, and nothing else on the page, starts at this margin.
+            if block["type"] != 0 or not (40 < block["bbox"][0] < 50):
+                continue
+            lines = ["".join(span["text"] for span in line["spans"]).strip() for line in block["lines"]]
+            lines = [line for line in lines if line]
+            code = re.fullmatch(r"\((\w+)\)", lines[-1]) if lines else None
+            if code:
+                names[code.group(1)] = [line.replace("\u00a0", " ") for line in lines[:-1]]
+    return names
+
+
 def main():
     font_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(DEFAULT_FONT or '')
     if not DEFAULT_FONT and len(sys.argv) <= 1 or not font_path.exists():
@@ -281,10 +311,16 @@ def main():
         for code, expected, found in mismatched:
             print(f"  {code}\n      catalogue: {expected}\n      artwork  : {found}")
 
+    labelled = labelled_names()
+    if labelled:
+        print(f"\n{len(labelled)} English names also read from the PDF's own text layer")
+
     out = ROOT / "scripts" / "current-names.json"
-    out.write_text(json.dumps(
-        {k: {"lines": v["lines"], "size": round(1000 * v["scale"], 3)}
-         for k, v in sorted(results.items())}, ensure_ascii=False, indent=2) + "\n")
+    out.write_text(json.dumps({
+        "marks": {k: {"lines": v["lines"], "size": round(1000 * v["scale"], 3)}
+                  for k, v in sorted(results.items())},
+        "labelled": labelled
+    }, ensure_ascii=False, indent=2) + "\n")
     print(f"\n→ {out.relative_to(ROOT)}")
 
 

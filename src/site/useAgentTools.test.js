@@ -109,7 +109,7 @@ test('the current era reports itself rather than pretending to be a drawing', ()
   assert.ok(!('markColor' in structuredContent))
   assert.match(content[0].text, /FOR mark \(en\)/)
   // The wording is reported, because it is now something an agent can change.
-  assert.match(content[0].text, /Ministry of \/ Forests/)
+  assert.match(content[0].text, /Ministry of Forests/)
 })
 
 test('set_lockup applies only what it was given', () => {

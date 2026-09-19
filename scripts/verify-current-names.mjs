@@ -37,7 +37,8 @@ if (!SOURCE || !existsSync(SOURCE)) {
 }
 
 const font = fontkit.openSync(SOURCE)
-const names = JSON.parse(readFileSync(resolve(root, 'scripts/current-names.json'), 'utf8'))
+const recovered = JSON.parse(readFileSync(resolve(root, 'scripts/current-names.json'), 'utf8'))
+const names = recovered.marks
 
 /** Every glyph of a mark's name, grouped into lines and ordered left to right. */
 function artworkLines (file) {
@@ -312,6 +313,7 @@ writeFileSync(resolve(root, 'scripts/current-fit.json'), JSON.stringify(
     tracking: TRACKING,
     wordSpace: WORD_SPACE,
     leading: LEADING,
+    labelled: recovered.labelled,
     marks: Object.fromEntries(refitted.map((r) => [r.key, {
       lines: names[r.key].lines,
       size: Number(r.size.toFixed(4)),

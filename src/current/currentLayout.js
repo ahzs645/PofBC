@@ -108,12 +108,10 @@ export const inkOf = (text) => {
  * lines. Reproducing that is the difference between a typeset name that matches the published ones
  * and one that merely says the same words.
  */
-// "de la" is taken as part of the opening, but a bare elision is not: the published French marks
-// read "Ministère de" then "l’Agriculture et de", keeping l’ with the word it elides.
-const OPENINGS = [
-  /^Minist(?:ry|ère)\s+de\s+la\b/i,
-  /^Minist(?:ry|ère)\s+(?:of|des|du|de)\b/i
-]
+// The opening is the word "Ministry"/"Ministère" and its following preposition, and no more. Not
+// "de la" — the Province sets "Ministère de" then "la Santé" — and not a bare elision either, since
+// l’ stays with the word it elides: "Ministère de" then "l’Agriculture et de".
+const OPENINGS = [/^Minist(?:ry|ère)\s+(?:of|des|du|de)\b/i]
 
 export const splitOpening = (text) => {
   const trimmed = String(text).trim().replace(/\s+/g, ' ')
@@ -125,10 +123,8 @@ export const splitOpening = (text) => {
 }
 
 /**
- * Greedy line breaking on a measure, in 1/1000 em.
- *
- * Greedy rather than balanced because that is what the published marks do: their lines run long
- * then break, rather than evening out.
+ * Greedy line breaking on a measure, in 1/1000 em. Used only for wording that overruns the
+ * Province's own three-line shape, which their own names never do.
  */
 export const wrapText = (text, measure) => {
   const words = String(text).split(/\s+/).filter(Boolean)
@@ -147,33 +143,91 @@ export const wrapText = (text, measure) => {
 }
 
 /**
- * Default measure for text that does not say where to break, in 1/1000 em.
+ * The width, in 1/1000 em, above which the ministry proper takes two lines instead of one.
  *
- * The published marks do not share one: their widest body line runs from 2.3 em to 12.3 em, which
- * is to say a designer broke each of them by hand, by sense. No single measure reproduces more
- * than about half of them, so the official wording carries its own breaks and this is only the
- * fallback for wording that has none.
+ * Measured, not chosen. Across the Province's 46 marks the two cases do not overlap at all: every
+ * name that stays on one line measures at most 7793, and every name that is split measures at
+ * least 8085. Anything in between would do; 8000 is the round number in the gap.
  */
-export const MEASURE = 8500
+export const MEASURE = 8000
 
 /**
- * A name broken into lines.
+ * How even the two halves must be for the conjunction rule below to apply.
  *
- * A newline in the text is a break, and is obeyed — that is how the official wording keeps the
- * line breaks the Province gave it, and how anyone editing a name can set their own. Wording with
- * no newlines gets its opening on a line of its own and the rest wrapped to the measure.
+ * Half is a natural floor — below it one line is a stub beside the other — and it is not a fitted
+ * number: anything from 0.4 to 0.5 reproduces the same marks.
  */
-export const nameLines = (text, measure = MEASURE) => {
+const MIN_EVENNESS = 0.5
+
+// French does not leave "et" hanging at the end of a line, and breaks before it where it can.
+// English is happy to stand "and" at a line end — "Education and", "Jobs and", "Mining and" are
+// all the Province's own — so this applies to French only.
+const CONJUNCTION = { fr: 'et' }
+
+/**
+ * Splits the ministry proper across two lines the way the Province's own marks do.
+ *
+ * The base rule is to even the two lines up, which by itself reproduces every English mark. French
+ * needs two more: never end a line on "et", and prefer to begin the second line with it, so long
+ * as that does not leave one line less than half the other.
+ */
+const splitBody = (body, language) => {
+  const words = body.split(' ')
+  if (words.length < 2) return [body]
+
+  const conjunction = CONJUNCTION[language]
+  const candidates = []
+
+  for (let i = 1; i < words.length; i += 1) {
+    if (conjunction && words[i - 1].toLowerCase() === conjunction) continue
+    const first = words.slice(0, i).join(' ')
+    const second = words.slice(i).join(' ')
+    const one = measureLine(first)
+    const two = measureLine(second)
+    candidates.push({
+      lines: [first, second],
+      widest: Math.max(one, two),
+      evenness: Math.min(one, two) / Math.max(one, two),
+      opensWithConjunction: Boolean(conjunction) && words[i].toLowerCase() === conjunction
+    })
+  }
+
+  // Every break was forbidden — a two-word body joined by "et" — so the rule has to yield.
+  if (!candidates.length) return [body]
+
+  const preferred = candidates
+    .filter((c) => c.opensWithConjunction && c.evenness >= MIN_EVENNESS)
+    .sort((a, b) => b.evenness - a.evenness)[0]
+
+  return (preferred ?? candidates.reduce((best, c) => (c.widest < best.widest ? c : best))).lines
+}
+
+/**
+ * A name broken into lines, by the rules the Province's own marks follow.
+ *
+ * Those rules, read off all 46 published marks:
+ *
+ *   1. the opening — "Ministry of", "Ministère de/des/du" — takes a line of its own, however
+ *      short what follows is. "Ministry of Health" is two lines.
+ *   2. the mark is never more than three lines.
+ *   3. the ministry proper stays on one line up to MEASURE, and splits in two above it.
+ *   4. the split evens the two lines up, with the French conjunction rules in splitBody.
+ *
+ * Together they reproduce 44 of the 46 published marks exactly — every English one, and all but
+ * two French. A newline in the text overrides the lot, which is how those two are carried and how
+ * anyone setting their own wording gets the breaks they want.
+ */
+export const nameLines = (text, { language = 'en', measure = MEASURE } = {}) => {
   const forced = String(text).split(/\r?\n/).map((line) => line.trim()).filter(Boolean)
-  // Breaks that were asked for are obeyed as given, never re-wrapped. Several of the Province's own
-  // lines run wider than any sensible measure, and re-wrapping them would quietly overrule the
-  // artwork — and, for anyone editing a name, quietly overrule them too.
   if (forced.length > 1) return forced
 
   const [opening, ...rest] = splitOpening(forced[0] ?? '')
   if (!opening) return []
-  if (!rest.length) return wrapText(opening, measure)
-  return [opening, ...wrapText(rest.join(' '), measure)]
+
+  const body = rest.join(' ')
+  if (!body) return wrapText(opening, measure)
+  if (measureLine(body) <= measure) return [opening, body]
+  return [opening, ...splitBody(body, language)]
 }
 
 /**
@@ -186,11 +240,11 @@ export const nameLines = (text, measure = MEASURE) => {
  * @param {object} options
  * @param {string} options.text        The ministry name, "Ministry of …" included.
  * @param {string} [options.language]  'en' | 'fr' — picks the wordmark and its measurements.
- * @param {number} [options.measure]   Wrap measure, in 1/1000 em.
+ * @param {number} [options.measure]   Width above which the ministry proper takes two lines.
  */
 export const layoutLockup = ({ text, language = 'en', measure = MEASURE }) => {
   const mark = CURRENT_MARK[language] ?? CURRENT_MARK.en
-  const lines = nameLines(text, measure)
+  const lines = nameLines(text, { language, measure })
   const size = mark.size
   const em = size / 1000
 
@@ -260,7 +314,10 @@ export const lockupMarkup = ({ text, language = 'en', fills }) => {
     const fill = fills[shape.role]
     // A role with no colour is dropped rather than painted, so the background shows through.
     if (fill === null || fill === undefined) continue
-    parts.push(`<path data-role="${shape.role}" d="${shape.d}" fill="${escapeXml(fill)}"/>`)
+    // A letter whose counter is wound the same way as its outline needs an even-odd fill, or the
+    // hole fills in. Two of the French wordmark's letters are drawn that way.
+    const rule = shape.rule ? ` fill-rule="${escapeXml(shape.rule)}"` : ''
+    parts.push(`<path data-role="${shape.role}"${rule} d="${shape.d}" fill="${escapeXml(fill)}"/>`)
   }
 
   if (fills.divider !== null && fills.divider !== undefined) {

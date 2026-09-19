@@ -15,7 +15,7 @@ import {
   BCID_PALETTE, CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, recommendedVariant
 } from './currentMarks.js'
 import { unsupported } from './currentLayout.js'
-import { MINISTRIES, WRAPPED_BY_US, findMinistry } from './ministries.js'
+import { BREAKS_STATED, MINISTRIES, findMinistry } from './ministries.js'
 
 const LANGUAGE_OPTIONS = LANGUAGE_ORDER.map((value) => ({ value, label: LANGUAGES[value] }))
 
@@ -34,9 +34,8 @@ export const CurrentControls = ({ state, update }) => {
 
   const official = officialName(state.currentMinistry, state.language)
   const edited = state.currentName !== official
-  // Three marks were published in a way this project could not read the line breaks back out of,
-  // so their wording is right but their breaks are this project's. Worth saying, quietly.
-  const ourBreaks = WRAPPED_BY_US.includes(`${state.currentMinistry.toLowerCase()}-${state.language}`)
+  // Two marks break against the rules their siblings follow, so their wording states its breaks.
+  const stated = BREAKS_STATED.includes(`${state.currentMinistry.toLowerCase()}-${state.language}`)
 
   // The committed alphabet is the letters the Province's own marks are drawn with. Anything else
   // needs the local build against a licensed Adobe Garamond Pro, and saying so beats drawing a
@@ -51,7 +50,8 @@ export const CurrentControls = ({ state, update }) => {
       <h2>Ministry mark</h2>
       <p className="panel__hint">
         The Province’s mark, used exactly as published, with the wording set in the same alphabet
-        its own marks are lettered with.
+        its own marks are lettered with and broken by the same rules — which reproduce 44 of their
+        46 marks exactly.
       </p>
 
       <Segmented
@@ -92,10 +92,10 @@ export const CurrentControls = ({ state, update }) => {
         <p className="field__note">
           {edited
             ? 'Edited. '
-            : ourBreaks
-              ? 'Official wording. Its published line breaks could not be recovered, so these are ours. '
-              : 'Official wording, with the line breaks the Province uses. '}
-          Press Enter to break a line.
+            : stated
+              ? 'Official wording. This mark breaks against the Province’s own pattern, so its breaks are written in. '
+              : 'Official wording. Lines break by the Province’s own rules — the opening on its own line, the rest on one line or two. '}
+          Press Enter to override.
           {edited && (
             <>
               {' '}

@@ -9,10 +9,10 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { CURRENT_MARK, NAME_LEADING } from '../assets/currentMark.js'
 import {
-  foldLigatures, inkOf, layoutLockup, lettersOf, lockupMarkup, measureLine, nameLines, splitOpening,
-  unsupported, wrapText
+  MEASURE, foldLigatures, inkOf, layoutLockup, lettersOf, lockupMarkup, measureLine, nameLines,
+  splitOpening, unsupported, wrapText
 } from './currentLayout.js'
-import { MINISTRIES, findMinistry } from './ministries.js'
+import { BREAKS_STATED, MINISTRIES, findMinistry } from './ministries.js'
 import { EXTENTS, KERNING, TRACKING, WIDTHS } from './nameMetrics.js'
 import glyphs from './nameGlyphs.js'
 
@@ -82,15 +82,57 @@ test('ink is measured from the letterforms, not the advances', () => {
 })
 
 test('the opening goes on a line of its own, in both languages', () => {
-  // Every published mark reads "Ministry of …" or "Ministère de/des/du/de la …" on its first line,
+  // Every published mark reads "Ministry of …" or "Ministère de/des/du …" on its first line,
   // however short the rest is — "Ministry of Health" is two lines.
   assert.deepEqual(splitOpening('Ministry of Health'), ['Ministry of', 'Health'])
   assert.deepEqual(splitOpening('Ministère des Forêts'), ['Ministère des', 'Forêts'])
   assert.deepEqual(splitOpening('Ministère du Travail'), ['Ministère du', 'Travail'])
-  assert.deepEqual(splitOpening('Ministère de la Santé'), ['Ministère de la', 'Santé'])
-  // A bare elision stays with the word it elides, as the published French marks do.
+  // The opening ends at the preposition. "de la" is not part of it — the Province sets
+  // "Ministère de" then "la Santé" — and neither is a bare elision.
+  assert.deepEqual(splitOpening('Ministère de la Santé'), ['Ministère de', 'la Santé'])
   assert.deepEqual(splitOpening('Ministère de l’Infrastructure'), ['Ministère de', 'l’Infrastructure'])
   assert.deepEqual(splitOpening('Anything else'), ['Anything else'])
+})
+
+test('the ministry proper takes one line or two, on a measured threshold', () => {
+  // Not a chosen number: across the 46 marks, every name kept on one line measures at most 7793
+  // and every name split measures at least 8085. MEASURE sits in that gap.
+  const short = 'Ministry of Forests'
+  const long = 'Ministry of Water, Land and Resource Stewardship'
+
+  assert.equal(nameLines(short).length, 2)
+  assert.equal(nameLines(long).length, 3)
+  assert.ok(measureLine('Forests') <= MEASURE)
+  assert.ok(measureLine('Water, Land and Resource Stewardship') > MEASURE)
+  // Never four, however long the wording — the Province's marks never are.
+  assert.equal(nameLines('Ministry of ' + 'Stewardship '.repeat(8)).length, 3)
+})
+
+test('a split evens the two lines up', () => {
+  const [, first, second] = nameLines('Ministry of Water, Land and Resource Stewardship')
+  const ratio = Math.min(measureLine(first), measureLine(second)) /
+    Math.max(measureLine(first), measureLine(second))
+
+  assert.ok(ratio > 0.6, `lines are lopsided at ${ratio.toFixed(2)}`)
+  assert.equal(`${first} ${second}`, 'Water, Land and Resource Stewardship')
+})
+
+test('French does not leave "et" at a line end, and English is happy to', () => {
+  // Both are the Province's own practice: "Public Safety and / Solicitor General" in English,
+  // "la Sécurité publique / et du Solliciteur général" in French.
+  const french = nameLines('Ministère de la Sécurité publique et du Solliciteur général', { language: 'fr' })
+  assert.deepEqual(french, ['Ministère de', 'la Sécurité publique', 'et du Solliciteur général'])
+
+  const english = nameLines('Ministry of Public Safety and Solicitor General', { language: 'en' })
+  assert.deepEqual(english, ['Ministry of', 'Public Safety and', 'Solicitor General'])
+})
+
+test('French prefers to open a line with "et", but not at the cost of a stub', () => {
+  // Breaking before "et" here would leave "l’Éducation" alone against a line four times its
+  // length, so the Province does not, and neither does this.
+  const lines = nameLines('Ministère de l’Éducation et des Services à la petite enfance', { language: 'fr' })
+  assert.notEqual(lines[1], 'l’Éducation')
+  assert.equal(lines.length, 3)
 })
 
 test('explicit line breaks are obeyed exactly and never re-wrapped', () => {
@@ -166,6 +208,29 @@ test('markup carries a role on every shape, as the published files do', () => {
   assert.deepEqual([...roles].sort(), ['divider', 'knockout', 'mountains', 'name', 'sun', 'wordmark'])
 })
 
+test('letters whose counters need an even-odd fill keep it', () => {
+  // Two of the French wordmark's letters are drawn with the counter wound the same way as the
+  // outline. Without the rule, R's bowl and A's counter fill in solid — which is what shipped
+  // before this was caught.
+  const french = CURRENT_MARK.fr.shapes.filter((shape) => shape.rule)
+  assert.equal(french.length, 2, 'the French wordmark has two such letters')
+  assert.ok(french.every((shape) => shape.rule === 'evenodd'))
+  assert.equal(CURRENT_MARK.en.shapes.filter((shape) => shape.rule).length, 0, 'English needs none')
+
+  const { markup } = lockupMarkup({
+    text: 'Ministère des\nForêts',
+    language: 'fr',
+    fills: { sun: '#000', mountains: '#000', knockout: '#fff', wordmark: '#000', divider: '#000', name: '#000' }
+  })
+  assert.equal((markup.match(/fill-rule="evenodd"/g) || []).length, 2)
+  // And English emits none, rather than applying it everywhere for safety: even-odd on a letter
+  // drawn the ordinary way would eat parts of it.
+  assert.ok(!lockupMarkup({
+    text: 'Ministry of\nForests',
+    fills: { sun: '#000', mountains: '#000', knockout: '#fff', wordmark: '#000', divider: '#000', name: '#000' }
+  }).markup.includes('fill-rule'))
+})
+
 test('a role with no colour is dropped, not painted', () => {
   const { markup } = lockupMarkup({
     text: 'Ministry of\nForests',
@@ -177,11 +242,21 @@ test('a role with no colour is dropped, not painted', () => {
   assert.ok(markup.includes('data-role="name"'))
 })
 
-test('the official wording is what the catalogue holds, breaks and all', () => {
+test('the catalogue holds plain wording and lets the rules break it', () => {
   const forests = findMinistry('for')
-  assert.equal(forests.en, 'Ministry of\nForests')
-  assert.equal(forests.fr, 'Ministère des\nForêts')
+  assert.equal(forests.en, 'Ministry of Forests')
+  assert.equal(forests.fr, 'Ministère des Forêts')
+  assert.deepEqual(nameLines(forests.en), ['Ministry of', 'Forests'])
   assert.equal(findMinistry('nope'), undefined)
+
+  // Only the marks that break against their own rules state their breaks, and there are two.
+  assert.deepEqual(BREAKS_STATED, ['af-fr', 'ecc-fr'])
+  for (const ministry of MINISTRIES) {
+    for (const language of ['en', 'fr']) {
+      const stated = BREAKS_STATED.includes(`${ministry.code.toLowerCase()}-${language}`)
+      assert.equal(ministry[language].includes('\n'), stated, `${ministry.code} ${language}`)
+    }
+  }
 
   for (const ministry of MINISTRIES) {
     assert.ok(ministry.en.startsWith('Ministry'), `${ministry.code}: ${ministry.en}`)
