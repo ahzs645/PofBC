@@ -184,3 +184,65 @@ test('choosing a colourway by hand stops it following', () => {
   assert.equal(pinned.currentVariantTouched, true)
   assert.equal(applyUpdate(pinned, { currentBackground: BCID.gold }).currentVariant, 'white')
 })
+
+test('the ministry is one choice, and a typed name reaches the current era too', () => {
+  // It used to be two: a name for the drawn eras and a code for the current one. Switching
+  // identity therefore changed the name on the lockup, and a typed name was lost on the way.
+  let state = applyUpdate(DEFAULTS, { source: 'manual' })
+  state = applyUpdate(state, { manualMinistry: 'Ministry of Widgets' })
+
+  assert.equal(state.currentName, 'Ministry of Widgets', 'the current era shows what was typed')
+  assert.equal(applyUpdate(state, { era: 'current' }).currentName, 'Ministry of Widgets')
+})
+
+test('picking from the list loads the published wording, in either language', () => {
+  const picked = applyUpdate(DEFAULTS, { ministry: 'Ministry of Health' })
+  assert.equal(picked.currentMinistry, 'HLTH', 'the code follows the name')
+  assert.equal(picked.currentName, 'Ministry of Health')
+
+  const french = applyUpdate(picked, { language: 'fr' })
+  assert.equal(french.currentName, 'Ministère de la Santé')
+})
+
+test('a name no published mark answers to is simply typeset', () => {
+  // The two lists are maintained separately and will drift. A name only the generator's list has
+  // must still work — it just has no official wording to load.
+  const picked = applyUpdate(DEFAULTS, { ministry: 'Ministry of Jobs, Economic Development and Innovation' })
+  assert.equal(picked.currentName, 'Ministry of Jobs, Economic Development and Innovation')
+})
+
+test('editing the wording by hand makes it the name every era sets', () => {
+  const edited = applyUpdate(DEFAULTS, { currentName: 'Ministry of Widgets' })
+
+  assert.equal(edited.currentNameTouched, true)
+  assert.equal(edited.source, 'manual')
+  assert.equal(edited.manualMinistry, 'Ministry of Widgets')
+  // And the list stops overwriting it, as it did before.
+  assert.equal(applyUpdate(edited, { ministry: 'Ministry of Health' }).currentName, 'Ministry of Widgets')
+})
+
+test('restoring the official wording puts the link back', () => {
+  const edited = applyUpdate(DEFAULTS, { currentName: 'Ministry of Widgets' })
+  const restored = applyUpdate(edited, { currentName: 'Ministry of Forests', currentNameTouched: false })
+
+  assert.equal(restored.currentNameTouched, false)
+  assert.equal(applyUpdate(restored, { ministry: 'Ministry of Health' }).currentName, 'Ministry of Health')
+})
+
+test('the current era’s own list moves the shared choice too', () => {
+  const picked = applyUpdate(DEFAULTS, { currentMinistry: 'ENV' })
+
+  assert.equal(picked.source, 'list')
+  assert.equal(picked.ministry, 'Ministry of Environment and Parks', 'the drawn eras follow it')
+  assert.equal(picked.currentName, 'Ministry of Environment and Parks')
+})
+
+test('a restored share puts its wording on every identity', () => {
+  // A current-era link carries a code and, when it differs, the wording. Restoring it used to
+  // leave the other three showing whatever the defaults had.
+  const restored = applyShare(DEFAULTS, { era: 'current', currentName: 'Ministry of Widgets' })
+
+  assert.equal(restored.source, 'manual')
+  assert.equal(restored.manualMinistry, 'Ministry of Widgets')
+  assert.equal(restored.currentNameTouched, true)
+})

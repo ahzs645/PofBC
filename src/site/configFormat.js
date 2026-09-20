@@ -14,7 +14,6 @@
 // manifest and the tools say. One outward vocabulary is worth a mapping layer.
 
 import { CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
-import { findMinistry } from '../current/ministries.js'
 import { FLAG_PALETTE_ORDER } from '../flag/flagPalettes.js'
 import { ALL_FLAG_SYMBOLS, NAME_PLACEMENTS } from '../flag/flagLayout.js'
 import {
@@ -23,6 +22,7 @@ import {
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
+import { wordingFor } from './ministryLink.js'
 
 // ── Validation ───────────────────────────────────────────────────────────────────────────────────
 //
@@ -101,11 +101,10 @@ export const toConfig = (state) => (state.era === 'crest'
   ? {
       era: 'current',
       ministryCode: state.currentMinistry,
-      // Only when it differs from the official text; a configuration should say what was chosen,
-      // not restate what picking the ministry would have given anyway.
-      ...(state.currentName !== (findMinistry(state.currentMinistry)?.[state.language] ?? '')
-        ? { wording: state.currentName }
-        : {}),
+      // Only when it differs from what the ministry choice would have given anyway; a
+      // configuration should say what was chosen, not restate the obvious. Measured against the
+      // shared choice rather than the code, since a name of your own has no code.
+      ...(state.currentName !== wordingFor(state) ? { wording: state.currentName } : {}),
       language: state.language,
       variant: state.currentVariant,
       background: state.currentBackground === TRANSPARENT ? 'transparent' : state.currentBackground,

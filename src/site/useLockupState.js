@@ -5,6 +5,7 @@ import { clearSpaceFactor, clearSpacePadding } from '../logo/layouts.js'
 import { BRAND_COLORS, TRANSPARENT, describeContrast, isLightColor, resolveColor } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
 import { applyShare, applyUpdate, swapColours } from './lockupReducer.js'
+import { codeForName } from './ministryLink.js'
 import { readConfigParam } from './configFormat.js'
 import { decodeShare, readShareToken } from './shareLink.js'
 
@@ -67,7 +68,14 @@ export const useLockupState = () => {
   const lockup = useMemo(() => ({
     era: state.era,
     language: state.language,
-    currentMinistry: state.currentMinistry,
+    // Only while the chosen name is still one of the published marks. A name typed by hand has no
+    // code, and an export named after a stale one would be a lie about what is inside it.
+    currentMinistry: codeForName(state.source === 'manual' ? state.manualMinistry : state.ministry)
+      ? state.currentMinistry
+      : '',
+    // The wording the mark is set with. It was missing here, so every current-era download came
+    // out as the mark alone while the preview beside it showed the name.
+    currentName: state.currentName,
     currentVariant: state.currentVariant,
     currentBackground: state.currentBackground,
     // The key rather than a distance: the two eras measure their marks in different units, so each

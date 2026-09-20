@@ -15,7 +15,8 @@ import {
   BCID_PALETTE, CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, recommendedVariant
 } from './currentMarks.js'
 import { unsupported } from './currentLayout.js'
-import { BREAKS_STATED, MINISTRIES, findMinistry } from './ministries.js'
+import { BREAKS_STATED, MINISTRIES } from './ministries.js'
+import { chosenName, codeForName } from '../site/ministryLink.js'
 
 const LANGUAGE_OPTIONS = LANGUAGE_ORDER.map((value) => ({ value, label: LANGUAGES[value] }))
 
@@ -25,17 +26,15 @@ const VARIANT_OPTIONS = CURRENT_VARIANT_ORDER.map((value) => ({
   title: CURRENT_VARIANTS[value].description
 }))
 
-/** The official wording for a ministry in a language, or '' if there is none. */
-export const officialName = (code, language) => findMinistry(code)?.[language] ?? ''
-
 export const CurrentControls = ({ state, update }) => {
   const selectId = useId()
   const nameId = `${selectId}-name`
 
-  const official = officialName(state.currentMinistry, state.language)
-  const edited = state.currentName !== official
+  const edited = state.currentNameTouched
   // Two marks break against the rules their siblings follow, so their wording states its breaks.
   const stated = BREAKS_STATED.includes(`${state.currentMinistry.toLowerCase()}-${state.language}`)
+  const chosen = chosenName(state)
+  const custom = state.source === 'manual' || !codeForName(state.ministry)
 
   // The committed alphabet is the letters the Province's own marks are drawn with. Anything else
   // needs the local build against a licensed Adobe Garamond Pro, and saying so beats drawing a
@@ -61,13 +60,19 @@ export const CurrentControls = ({ state, update }) => {
         onChange={(value) => update({ language: value })}
       />
 
+      {/* This era picks from the published marks; the Wording box below is where a name that is
+          not one of them gets typed. Both write the same shared choice, so whatever ends up here
+          is what the crest, flag and arms lockups set too. */}
       <div className="field">
         <label htmlFor={selectId}>Ministry</label>
         <select
           id={selectId}
-          value={state.currentMinistry}
+          value={custom ? '' : state.currentMinistry}
           onChange={(event) => update({ currentMinistry: event.target.value })}
         >
+          {/* A name of your own is not in the Province's list, and pretending one of them is
+              selected would misreport what is on the mark. */}
+          {custom && <option value="">{chosen || 'A name of your own'}</option>}
           {MINISTRIES.map((ministry) => (
             <option key={ministry.code} value={ministry.code}>
               {ministry[state.language].replace(/\n/g, ' ')}
@@ -92,9 +97,14 @@ export const CurrentControls = ({ state, update }) => {
         <p className="field__note">
           {edited
             ? 'Edited. '
-            : stated
-              ? 'Official wording. This mark breaks against the Province’s own pattern, so its breaks are written in. '
-              : 'Official wording. Lines break by the Province’s own rules — the opening on its own line, the rest on one line or two. '}
+            : custom
+              // No published mark answers to this name, so there is no official wording to be
+              // faithful to — the rules still set it, but they are the Province's rules applied to
+              // your name rather than a reproduction of its artwork.
+              ? 'A name of your own, set by the Province’s own rules rather than copied from a mark. '
+              : stated
+                ? 'Official wording. This mark breaks against the Province’s own pattern, so its breaks are written in. '
+                : 'Official wording. Lines break by the Province’s own rules — the opening on its own line, the rest on one line or two. '}
           Press Enter to override.
           {edited && (
             <>
@@ -102,7 +112,7 @@ export const CurrentControls = ({ state, update }) => {
               <button
                 type="button"
                 className="button button--ghost button--inline"
-                onClick={() => update({ currentName: official, currentNameTouched: false })}
+                onClick={() => update({ currentNameTouched: false })}
               >
                 Restore the official wording
               </button>

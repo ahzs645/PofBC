@@ -70,7 +70,8 @@ export const planBundle = ({
 /** The folder everything sits under, so unzipping leaves one thing behind rather than three. */
 export const bundleName = (lockup = {}) => (
   lockup.era === 'current'
-    ? ['bc', slugify(lockup.currentMinistry), lockup.language].filter(Boolean).join('-')
+    ? ['bc', slugify(lockup.currentMinistry) || slugify(lockup.ministry), lockup.language]
+        .filter(Boolean).join('-')
     : ['bc', slugify(lockup.ministry) || 'wordmark'].filter(Boolean).join('-')
 )
 

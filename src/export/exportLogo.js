@@ -68,7 +68,10 @@ export const buildFileName = ({
   }
 
   if (era === 'current') {
-    return `bc-${slugify(currentMinistry)}-${language}-${slugify(currentVariant)}.${extension}`
+    // The mark's own code where the ministry is one the Province publishes; the name itself where
+    // it is not, since there is no code to name it after.
+    const named = slugify(currentMinistry) || slugify(ministry) || 'mark'
+    return `bc-${named}-${language}-${slugify(currentVariant)}.${extension}`
   }
 
   const mark = markColor ?? color

@@ -9,6 +9,7 @@ import { findMinistry } from '../current/ministries.js'
 import { recommendedPalette } from '../flag/flagPalettes.js'
 import { defaultMarkAlignment, getLayout } from '../logo/layouts.js'
 import { BRAND_COLORS, TRANSPARENT, resolveColor } from '../logo/logoColors.js'
+import { codeForName, wordingFor } from './ministryLink.js'
 
 /**
  * Applies a patch, then the rules that follow from it.
@@ -63,16 +64,44 @@ export const applyUpdate = (current, patch) => {
     next.flagPalette = recommendedPalette(patch.flagBackground) ?? next.flagPalette
   }
 
+  // The ministry is one choice across all four identities. Picking from the list, typing a name,
+  // or switching between the two modes therefore reaches the current era's wording as well — it
+  // was the one era holding its own copy, so switching into it lost whatever had been typed.
+  //
   // Choosing a ministry, or switching language, loads that mark's official wording — but only
   // until the wording has been edited. After that it is the person's text, and picking a different
   // ministry must not silently throw it away. Restoring the official wording clears the flag and
   // puts the link back.
-  if (patch.currentName !== undefined && patch.currentNameTouched === undefined) {
+  const nameMoved = patch.ministry !== undefined || patch.manualMinistry !== undefined ||
+    patch.source !== undefined
+  const markMoved = patch.currentMinistry !== undefined || patch.language !== undefined
+
+  if (patch.currentNameTouched === false) {
+    // Clearing the override puts the choice back on the list and lets the wording recompute,
+    // rather than writing a value back — after a hand edit the "official" wording *was* the edit.
+    next.source = 'list'
+    next.currentName = wordingFor(next)
+  } else if (patch.currentName !== undefined && patch.currentNameTouched === undefined) {
+    // Editing the wording by hand makes it this person's name for the ministry rather than the
+    // Province's, so every era shows it — which is the whole point of holding one choice.
     next.currentNameTouched = true
-  } else if ((patch.currentMinistry !== undefined || patch.language !== undefined) &&
-             !next.currentNameTouched) {
-    const official = findMinistry(next.currentMinistry)?.[next.language]
-    if (official) next.currentName = official
+    next.source = 'manual'
+    next.manualMinistry = patch.currentName
+  } else if (nameMoved || markMoved) {
+    // The current era's code follows the chosen name, where a published mark answers to it. Where
+    // none does the code is left alone and the name is simply typeset.
+    if (nameMoved && next.source === 'list') {
+      next.currentMinistry = codeForName(next.ministry) ?? next.currentMinistry
+    }
+    // Its own list, if it is still on screen, moves the shared choice the same way.
+    if (patch.currentMinistry !== undefined) {
+      const named = findMinistry(next.currentMinistry)?.en
+      if (named) {
+        next.source = 'list'
+        next.ministry = named
+      }
+    }
+    if (!next.currentNameTouched) next.currentName = wordingFor(next)
   }
 
   return next
@@ -106,5 +135,10 @@ export const applyShare = (current, patch) => ({
   markAlignTouched: true,
   // A share that carries wording carries it deliberately, so the ministry list must not overwrite
   // it on arrival. One that does not should keep following the list.
-  currentNameTouched: patch.currentName !== undefined
+  currentNameTouched: patch.currentName !== undefined,
+  // And it is a name, not a current-era setting: a link restored into one identity has to put the
+  // same name on the other three, which is the whole point of holding one choice.
+  ...(patch.currentName !== undefined && patch.manualMinistry === undefined
+    ? { source: 'manual', manualMinistry: patch.currentName }
+    : {})
 })
