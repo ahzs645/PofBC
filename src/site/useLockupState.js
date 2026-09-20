@@ -88,6 +88,8 @@ export const useLockupState = () => {
     crestPlacement: state.crestPlacement,
     crestBold: state.crestBold,
     crestAlign: state.crestAlign,
+    crestMinistrySize: state.crestMinistrySize,
+    crestExtraStep: state.crestExtraStep,
     crestExtra: state.crestExtra.trim(),
     crestMarkColor: state.crestMarkColor,
     crestTextColor: state.linkColors ? state.crestMarkColor : state.crestTextColor,

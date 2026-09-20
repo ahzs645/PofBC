@@ -3,6 +3,7 @@
 // In a module of its own because both useLockupState and shareLink need it, and a share link is
 // defined relative to these values — it carries only the fields that differ from them.
 
+import { DEFAULT_MINISTRY_SIZE } from '../crest/crestLayout.js'
 import { BCID } from '../current/currentMarks.js'
 import { findMinistry } from '../current/ministries.js'
 import { DEFAULT_CLEAR_SPACE, DEFAULT_MARK_ALIGNMENT } from '../logo/layouts.js'
@@ -51,6 +52,10 @@ export const DEFAULTS = {
   crestPlacement: 'beside',
   crestBold: false,
   crestAlign: 'centre',
+  // The documents set the ministry at three different sizes, and two of them drop the
+  // trailing line a step below it. Neither is a house rule, so both are choices.
+  crestMinistrySize: DEFAULT_MINISTRY_SIZE,
+  crestExtraStep: 'match',
   crestExtra: '',
   crestMarkColor: BRAND_COLORS.black,
   crestTextColor: BRAND_COLORS.black,

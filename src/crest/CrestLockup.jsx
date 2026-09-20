@@ -6,11 +6,11 @@
 import { renderCrestSvg } from './renderCrestSvg.js'
 
 export const CrestLockup = ({
-  arrangement, placement, ministry, extra, bold, align,
+  arrangement, placement, ministry, extra, bold, align, ministrySize, extraStep,
   markColor, textColor, background, clearSpaceFactor = 0, title, ...rest
 }) => {
   const { svg, box } = renderCrestSvg({
-    arrangement, placement, ministry, extra, bold, align,
+    arrangement, placement, ministry, extra, bold, align, ministrySize, extraStep,
     markColor, textColor, background, clearSpaceFactor, title
   })
 

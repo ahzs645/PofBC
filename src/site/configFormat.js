@@ -17,7 +17,9 @@ import { CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.j
 import { findMinistry } from '../current/ministries.js'
 import { FLAG_PALETTE_ORDER } from '../flag/flagPalettes.js'
 import { ALL_FLAG_SYMBOLS, NAME_PLACEMENTS } from '../flag/flagLayout.js'
-import { CREST_ALIGNMENTS, CREST_ARRANGEMENTS, CREST_PLACEMENTS } from '../crest/crestLayout.js'
+import {
+  CREST_ALIGNMENTS, CREST_ARRANGEMENTS, CREST_PLACEMENTS, MINISTRY_SIZE_ORDER, MINISTRY_STEPS
+} from '../crest/crestLayout.js'
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
@@ -73,6 +75,8 @@ export const toConfig = (state) => (state.era === 'crest'
       ministryPlacement: state.crestPlacement,
       ...(state.crestBold ? { bold: true } : {}),
       ministryLines: state.crestAlign,
+      ministrySize: state.crestMinistrySize,
+      ...(state.crestExtraStep === 'match' ? {} : { secondLineSize: state.crestExtraStep }),
       ...(state.crestExtra.trim() ? { secondLine: state.crestExtra.trim() } : {}),
       markColor: state.crestMarkColor,
       textColor: state.crestTextColor,
@@ -171,6 +175,8 @@ export const fromConfig = (config) => {
   if ('ministryPlacement' in config) patch.crestPlacement = cleanOneOf(config.ministryPlacement, CREST_PLACEMENTS, DEFAULTS.crestPlacement)
   if ('bold' in config) patch.crestBold = cleanBoolean(config.bold, DEFAULTS.crestBold)
   if ('ministryLines' in config) patch.crestAlign = cleanOneOf(config.ministryLines, CREST_ALIGNMENTS, DEFAULTS.crestAlign)
+  if ('ministrySize' in config) patch.crestMinistrySize = cleanOneOf(config.ministrySize, MINISTRY_SIZE_ORDER, DEFAULTS.crestMinistrySize)
+  if ('secondLineSize' in config) patch.crestExtraStep = cleanOneOf(config.secondLineSize, MINISTRY_STEPS, DEFAULTS.crestExtraStep)
   if ('symbol' in config) patch.flagSymbol = cleanOneOf(config.symbol, ALL_FLAG_SYMBOLS, DEFAULTS.flagSymbol)
   if ('namePlacement' in config) patch.flagPlacement = cleanOneOf(config.namePlacement, NAME_PLACEMENTS, DEFAULTS.flagPlacement)
   if ('provinceLine' in config) patch.flagProvince = cleanBoolean(config.provinceLine, DEFAULTS.flagProvince)

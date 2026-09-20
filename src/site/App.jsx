@@ -15,7 +15,9 @@ import {
 import {
   CREST_ARRANGEMENTS, CREST_ARRANGEMENT_HINTS, CREST_ARRANGEMENT_LABELS,
   CREST_PLACEMENTS, CREST_PLACEMENT_LABELS,
-  CREST_ALIGNMENTS, CREST_ALIGNMENT_LABELS, CREST_LAYOUTS
+  CREST_ALIGNMENTS, CREST_ALIGNMENT_LABELS, CREST_LAYOUTS,
+  MINISTRY_SIZE_ORDER, MINISTRY_SIZE_LABELS, MINISTRY_SIZE_HINTS,
+  MINISTRY_STEPS, MINISTRY_STEP_LABELS
 } from '../crest/crestLayout.js'
 import {
   alignsVertically, CLEAR_SPACE, CLEAR_SPACE_ORDER, LAYOUTS, MARK_ALIGNMENTS, MARK_ALIGNMENT_ORDER
@@ -51,6 +53,14 @@ const CREST_PLACEMENT_OPTIONS = CREST_PLACEMENTS.map((value) => ({
 
 const CREST_ALIGNMENT_OPTIONS = CREST_ALIGNMENTS.map((value) => ({
   value, label: CREST_ALIGNMENT_LABELS[value]
+}))
+
+const MINISTRY_SIZE_OPTIONS = MINISTRY_SIZE_ORDER.map((value) => ({
+  value, label: MINISTRY_SIZE_LABELS[value], title: MINISTRY_SIZE_HINTS[value]
+}))
+
+const MINISTRY_STEP_OPTIONS = MINISTRY_STEPS.map((value) => ({
+  value, label: MINISTRY_STEP_LABELS[value]
 }))
 
 const FLAG_SYMBOL_OPTIONS = FLAG_SYMBOLS.map((value) => ({
@@ -244,6 +254,22 @@ export const App = () => {
                 value={state.crestPlacement}
                 onChange={(value) => update({ crestPlacement: value })}
               />
+              <Segmented
+                label="Ministry size"
+                options={MINISTRY_SIZE_OPTIONS}
+                value={state.crestMinistrySize}
+                onChange={(value) => update({ crestMinistrySize: value })}
+                hint={MINISTRY_SIZE_HINTS[state.crestMinistrySize]}
+              />
+              {state.crestExtra.trim() && (
+                <Segmented
+                  label="Second line"
+                  options={MINISTRY_STEP_OPTIONS}
+                  value={state.crestExtraStep}
+                  onChange={(value) => update({ crestExtraStep: value })}
+                  hint="Two documents set the line under the ministry one size smaller than it."
+                />
+              )}
               {CREST_LAYOUTS[state.crestArrangement]?.centred && state.crestPlacement === 'below' && (
                 <Segmented
                   label="Ministry lines"

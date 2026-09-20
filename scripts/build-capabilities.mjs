@@ -25,7 +25,9 @@ import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, BCI
 import { MINISTRIES as CURRENT_MINISTRIES } from '../src/current/ministries.js'
 import { FLAG_PALETTE_ORDER } from '../src/flag/flagPalettes.js'
 import { ALL_FLAG_SYMBOLS, FLAG_SYMBOLS, NAME_PLACEMENTS } from '../src/flag/flagLayout.js'
-import { CREST_ARRANGEMENTS, CREST_PLACEMENTS } from '../src/crest/crestLayout.js'
+import {
+  CREST_ARRANGEMENTS, CREST_PLACEMENTS, MINISTRY_SIZES, MINISTRY_SIZE_ORDER, MINISTRY_STEPS
+} from '../src/crest/crestLayout.js'
 import { FLAG_PALETTE } from '../src/assets/flagMark.js'
 import { SHARE_PARAM } from '../src/site/shareLink.js'
 import { CONFIG_PARAM, toConfig } from '../src/site/configFormat.js'
@@ -73,9 +75,13 @@ const manifest = {
       generated: true,
       arrangements: CREST_ARRANGEMENTS,
       ministryPlacements: CREST_PLACEMENTS,
-      note: 'Proportions are measured from two independent sources — a vector page for the ' +
-        'side-by-side arrangement and a raster for the stacked one — which agree on the ' +
-        'drawings’ aspects to within a hundredth.'
+      ministrySizes: MINISTRY_SIZE_ORDER.map((id) => ({ id, ofWordmark: MINISTRY_SIZES[id] })),
+      secondLineSizes: MINISTRY_STEPS,
+      note: 'Proportions are measured off twelve printed documents, each reading checked by ' +
+        'aspect first so it is known to be of the same two drawings. They disagree in two ' +
+        'places, so both readings are offered rather than averaged: the stacked lockup comes ' +
+        'in two proportions, and the ministry in three sizes, a trailing line optionally a ' +
+        'step below the ministry above it.'
     },
     current: {
       description: 'The Province’s BC mark, used exactly as published, with the ministry wording ' +

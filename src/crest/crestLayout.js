@@ -90,8 +90,49 @@ export const CREST_LAYOUTS = {
   }
 }
 
-/** Ministry cap height, as a share of the arms'. Both sources agree: 0.163 and 0.164. */
-export const MINISTRY_CAP = 0.1635
+/**
+ * Ministry cap height, as a share of the wordmark's height.
+ *
+ * Against the wordmark rather than the arms, for the reason `belowGap` gives: the wordmark is the
+ * one drawing whose size holds across the arrangements, so a share of it means the same thing in
+ * all three.
+ *
+ * It is a choice rather than a constant, because the documents disagree. Converting each reading
+ * from a band height to a cap height — in Helvetica the ascenders reach 0.718 em against the cap
+ * line's 0.717, so a line with ascenders and no descenders bands at exactly its cap height, and
+ * one with descenders bands at cap plus 0.208 — gives three settings:
+ *
+ *   0.212   `selection-1 (6)`, `12.32.35`, and the side-by-side `12.33.18`
+ *   0.263   `12.33.36`
+ *   0.294   `selection-1 (2)`
+ *
+ * The fourth, below all of them, is where a trailing line lands when a document sets one smaller
+ * than the ministry above it — see `MINISTRY_STEPS`.
+ */
+export const MINISTRY_SIZES = { xsmall: 0.138, small: 0.212, medium: 0.263, large: 0.294 }
+
+export const MINISTRY_SIZE_ORDER = ['xsmall', 'small', 'medium', 'large']
+
+export const MINISTRY_SIZE_LABELS = { xsmall: 'XS', small: 'S', medium: 'M', large: 'L' }
+
+export const MINISTRY_SIZE_HINTS = {
+  xsmall: 'The size a trailing line drops to in ‘12.32.35’.',
+  small: 'Three documents: ‘(6)’, ‘12.32.35’ and ‘12.33.18’.',
+  medium: 'As ‘12.33.36’ sets it.',
+  large: 'As ‘selection-1 (2)’ sets it.'
+}
+
+export const DEFAULT_MINISTRY_SIZE = 'small'
+
+/**
+ * Whether a trailing line matches the ministry or drops a step below it.
+ *
+ * Two documents set it smaller, and both drop exactly one step on the scale above: `12.33.36`
+ * goes 0.263 to 0.212, and `12.32.35` goes 0.212 to 0.138. The others set the two alike.
+ */
+export const MINISTRY_STEPS = ['match', 'smaller']
+
+export const MINISTRY_STEP_LABELS = { match: 'Same size', smaller: 'A step smaller' }
 
 /** Ministry leading, as a multiple of the type size. 1.222 em on the vector page. */
 const LEADING = 1.222
@@ -107,17 +148,21 @@ const LEADING = 1.222
 const BESIDE_GAP = 1.407
 
 /**
- * What the ministry wraps to, in multiples of the arms' height.
+ * What the ministry wraps to, in cap heights of its own type.
  *
- * Measured rather than chosen: the widest ministry line any of these documents prints is
- * "Ministry of Employment and Investment", 563 units against arms 112 tall — 5.03. An earlier
- * value of 3.6 was narrower than something actually printed, so it broke that line in two and no
- * typing could put it back.
+ * In the type's unit rather than the mark's, so that changing the ministry's size cannot make the
+ * backstop cut a line it used to fit. An earlier value in arms heights did exactly that the moment
+ * the size became a choice.
+ *
+ * The widest ministry line any of these documents prints is "Ministry of Employment and
+ * Investment" — 563 units against a cap of 22.4, so 25.1 caps. This project sets the same line at
+ * 26.2, about four hundredths wider in the face, so the backstop is put just above what we
+ * produce: one that cuts a line the Province printed whole would be worse than one a shade wide.
  *
  * It is a backstop, not a rule. The documents break their ministries by hand and disagree with
  * each other about where, so a typed break wins over this — the same rule the current era follows.
  */
-export const MINISTRY_MEASURE = 5.05
+export const MINISTRY_MEASURE = 26.5
 
 const sizeForCap = (cap, face) => cap * 1000 / face.capHeight
 
@@ -133,6 +178,8 @@ const sizeForCap = (cap, face) => cap * 1000 / face.capHeight
  * @param {string} [options.extra]        A further line — a branch, a division, a region.
  * @param {boolean} [options.bold]        Set the ministry bold, as many of the documents do.
  * @param {string} [options.align]        'centre' | 'left' — how a stacked lockup's ministry sits.
+ * @param {string} [options.ministrySize] A key of `MINISTRY_SIZES`. The documents disagree.
+ * @param {string} [options.extraStep]    'match' | 'smaller' — the trailing line's size.
  * @param {number} [options.size]         The arms' height.
  * @param {number} [options.measure]      Width to wrap to.
  */
@@ -143,6 +190,8 @@ export const layoutCrestLockup = ({
   extra = '',
   bold = false,
   align = 'centre',
+  ministrySize = DEFAULT_MINISTRY_SIZE,
+  extraStep = 'match',
   size = 100,
   measure
 } = {}) => {
@@ -181,37 +230,46 @@ export const layoutCrestLockup = ({
   const markBottom = Math.max(arms.y + arms.height, wordmark.y + wordmark.height)
 
   // ── The ministry ───────────────────────────────────────────────────────────────────────────
-  const cap = MINISTRY_CAP * size
-  const style = bold
+  const index = Math.max(0, MINISTRY_SIZE_ORDER.indexOf(ministrySize))
+  const step = extraStep === 'smaller' ? Math.max(0, index - 1) : index
+  const capOf = (i) => MINISTRY_SIZES[MINISTRY_SIZE_ORDER[i]] * wordmarkHeight
+  const styleOf = (cap) => bold
     ? { fontSize: sizeForCap(cap, BOLD), weight: 'bold' }
     : { fontSize: sizeForCap(cap, REGULAR) }
-  const wrapTo = measure ?? MINISTRY_MEASURE * size
+
+  // One column for both blocks, off the ministry's own cap height — a trailing line set smaller
+  // still wraps to the same width rather than to a narrower one of its own.
+  const wrapTo = measure ?? MINISTRY_MEASURE * capOf(index)
 
   // A block the user broke by hand is set as typed; one they did not is wrapped to the measure.
   // The documents were set line by line and disagree about where to break, so there is no rule to
   // infer — only a backstop for text nobody has broken yet.
-  const setBlock = (text) => {
+  const setBlock = (text, style) => {
     const typed = String(text).split(/\r?\n/).map((line) => line.trim()).filter(Boolean)
     return typed.length > 1 ? typed : wrapText(text, wrapTo, style)
   }
 
+  // The ministry and the line under it are sized separately, because two of the documents set the
+  // second smaller. Each block therefore carries its own style and its own leading.
   const blocks = []
-  if (String(ministry).trim()) blocks.push(setBlock(ministry))
-  if (String(extra).trim()) blocks.push(setBlock(extra))
+  if (String(ministry).trim()) blocks.push({ text: ministry, cap: capOf(index) })
+  if (String(extra).trim()) blocks.push({ text: extra, cap: capOf(step) })
 
-  const leading = style.fontSize * LEADING
   const entries = []
   let pen = 0
-  blocks.forEach((block, index) => {
-    if (index) pen += leading * 0.5
-    for (const text of block) {
-      entries.push({ text, offset: pen, ink: measureLine(text, style) })
+  blocks.forEach((block, position) => {
+    const style = styleOf(block.cap)
+    const leading = style.fontSize * LEADING
+    if (position) pen += leading * 0.5
+    for (const text of setBlock(block.text, style)) {
+      entries.push({ text, style, cap: block.cap, offset: pen, ink: measureLine(text, style) })
       pen += leading
     }
   })
 
   const gap = placement === 'below' ? plan.belowGap * wordmarkHeight : BESIDE_GAP * size
-  const blockHeight = entries.length ? entries.at(-1).offset + cap : 0
+  const firstCap = entries.length ? entries[0].cap : 0
+  const blockHeight = entries.length ? entries.at(-1).offset + entries.at(-1).cap : 0
 
   // Under a stacked lockup the ministry either centres on the mark's axis or sits flush with the
   // wordmark's left edge; beside it, it simply follows the mark.
@@ -223,21 +281,21 @@ export const layoutCrestLockup = ({
   if (placement === 'beside') {
     originX = markRight + gap
     // Centred against the mark, which is what the documents do when it stands beside them.
-    firstBaseline = (markBottom - blockHeight) / 2 + cap
+    firstBaseline = (markBottom - blockHeight) / 2 + firstCap
   } else {
     originX = flushLeft ? wordmark.x : 0
-    firstBaseline = markBottom + gap + cap
+    firstBaseline = markBottom + gap + firstCap
   }
 
   const lines = entries.map((entry) => ({
     text: entry.text,
-    style,
+    style: entry.style,
     x: centreLines
       // Each line centred in its own right, on the mark's own axis.
       ? (markRight - (entry.ink.inkRight - entry.ink.inkLeft)) / 2 - entry.ink.inkLeft
       : originX - entry.ink.inkLeft,
     y: firstBaseline + entry.offset,
-    words: positionWords(entry.text, style),
+    words: positionWords(entry.text, entry.style),
     ink: entry.ink
   }))
 

@@ -21,6 +21,8 @@ const round = (value) => Math.round(value * 1000) / 1000
  * @param {string} [options.ministry]     The ministry. Newlines break lines.
  * @param {string} [options.extra]        A further line — a branch, a division, a region.
  * @param {string} [options.align]        'centre' | 'left', for a stacked lockup's ministry.
+ * @param {string} [options.ministrySize] A key of `MINISTRY_SIZES`.
+ * @param {string} [options.extraStep]    'match' | 'smaller', for the trailing line.
  * @param {boolean} [options.bold]
  * @param {string} [options.markColor]    The arms and the wordmark.
  * @param {string} [options.textColor]    The ministry. Falls back to the mark's colour.
@@ -38,6 +40,8 @@ export const renderCrestSvg = ({
   extra = '',
   bold = false,
   align = 'centre',
+  ministrySize,
+  extraStep,
   markColor = '#000000',
   textColor,
   background = TRANSPARENT,
@@ -47,7 +51,9 @@ export const renderCrestSvg = ({
   glyphs,
   fontCss
 } = {}) => {
-  const layout = layoutCrestLockup({ arrangement, placement, ministry, extra, bold, align, size: CREST_SIZE })
+  const layout = layoutCrestLockup({
+    arrangement, placement, ministry, extra, bold, align, ministrySize, extraStep, size: CREST_SIZE
+  })
   const ink = resolveColor(markColor)
   const type = resolveColor(textColor ?? markColor)
 

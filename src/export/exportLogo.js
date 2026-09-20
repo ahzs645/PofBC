@@ -117,6 +117,7 @@ export const buildSvgSource = async ({ embedFont = true, outlineText = false, ..
  * other generated eras. */
 const buildCrestArtwork = ({
   ministry, crestArrangement, crestPlacement, crestBold, crestAlign, crestExtra,
+  crestMinistrySize, crestExtraStep,
   crestMarkColor, crestTextColor, crestBackground, clearSpaceFactor = 0, pixelWidth, title,
   glyphs, fontCss
 }) => {
@@ -127,6 +128,8 @@ const buildCrestArtwork = ({
     extra: crestExtra,
     bold: crestBold,
     align: crestAlign,
+    ministrySize: crestMinistrySize,
+    extraStep: crestExtraStep,
     markColor: crestMarkColor,
     textColor: crestTextColor,
     background: crestBackground,
@@ -140,10 +143,14 @@ const buildCrestArtwork = ({
 }
 
 /** The crest lockup's box, before any font has loaded. */
-const crestViewBox = ({ ministry, crestArrangement, crestPlacement, crestBold, crestAlign, crestExtra, clearSpaceFactor = 0 }) => {
+const crestViewBox = ({
+  ministry, crestArrangement, crestPlacement, crestBold, crestAlign, crestExtra,
+  crestMinistrySize, crestExtraStep, clearSpaceFactor = 0
+}) => {
   const { width, height } = crestSize({
     ministry, arrangement: crestArrangement, placement: crestPlacement,
-    bold: crestBold, align: crestAlign, extra: crestExtra
+    bold: crestBold, align: crestAlign, extra: crestExtra,
+    ministrySize: crestMinistrySize, extraStep: crestExtraStep
   })
   const padding = clearSpaceFactor * width
   return { x: -padding, y: -padding, width: width + padding * 2, height: height + padding * 2 }

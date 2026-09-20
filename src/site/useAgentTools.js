@@ -72,7 +72,9 @@ const describeState = ({ state, lockup }) => {
       arrangement: state.crestArrangement,
       placement: state.crestPlacement,
       bold: state.crestBold,
-      extra: state.crestExtra
+      extra: state.crestExtra,
+      ministrySize: state.crestMinistrySize,
+      extraStep: state.crestExtraStep
     })
     return {
       era: 'crest',
@@ -80,6 +82,8 @@ const describeState = ({ state, lockup }) => {
       arrangement: state.crestArrangement,
       ministryPlacement: state.crestPlacement,
       bold: state.crestBold,
+      ministrySize: state.crestMinistrySize,
+      ...(state.crestExtraStep === 'match' ? {} : { secondLineSize: state.crestExtraStep }),
       ...(state.crestExtra.trim() ? { secondLine: state.crestExtra.trim() } : {}),
       markColor: state.crestMarkColor,
       textColor: state.crestTextColor,
@@ -265,6 +269,8 @@ const buildTools = (latest) => [
       if (input.symbol !== undefined) patch.flagSymbol = input.symbol
       if (input.arrangement !== undefined) patch.crestArrangement = input.arrangement
       if (input.ministryPlacement !== undefined) patch.crestPlacement = input.ministryPlacement
+      if (input.ministrySize !== undefined) patch.crestMinistrySize = input.ministrySize
+      if (input.secondLineSize !== undefined) patch.crestExtraStep = input.secondLineSize
       if (input.namePlacement !== undefined) patch.flagPlacement = input.namePlacement
       if (input.provinceLine !== undefined) patch.flagProvince = Boolean(input.provinceLine)
       if (input.thirdLine !== undefined) patch.flagExtra = String(input.thirdLine)

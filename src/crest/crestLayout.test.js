@@ -9,8 +9,8 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { ARMS, WORDMARK } from '../assets/crestMark.js'
 import {
-  ARMS_ASPECT, CREST_ARRANGEMENTS, CREST_LAYOUTS, CREST_PLACEMENTS, MINISTRY_CAP,
-  MINISTRY_MEASURE, WORDMARK_ASPECT, crestLockupMarkup, layoutCrestLockup
+  ARMS_ASPECT, CREST_ARRANGEMENTS, CREST_LAYOUTS, CREST_PLACEMENTS, MINISTRY_MEASURE,
+  MINISTRY_SIZES, MINISTRY_SIZE_ORDER, WORDMARK_ASPECT, crestLockupMarkup, layoutCrestLockup
 } from './crestLayout.js'
 import { crestSize, renderCrestSvg } from './renderCrestSvg.js'
 
@@ -115,9 +115,46 @@ test('the ministry can be set bold, as many of the documents do', () => {
   assert.equal(heavy.lines[0].style.weight, 'bold')
 })
 
-test('the ministry is set at the height both sources measured', () => {
-  // 0.163 of the arms on the vector page, 0.164 on the raster.
-  assert.ok(MINISTRY_CAP > 0.16 && MINISTRY_CAP < 0.167)
+test('the ministry is sized against the wordmark, at one of the heights printed', () => {
+  // Three settings, converted from band heights to cap heights: 0.212 in three documents, 0.263
+  // in one, 0.294 in another. Against the wordmark, not the arms — it is the one drawing whose
+  // size holds across the arrangements, so a share of it means the same in all three.
+  assert.deepEqual(MINISTRY_SIZE_ORDER.map((key) => MINISTRY_SIZES[key]),
+    [0.138, 0.212, 0.263, 0.294])
+
+  const { lines, wordmark } = layoutCrestLockup({
+    arrangement: 'vertical', ministry: 'M', ministrySize: 'medium', size: 100
+  })
+  assert.ok(Math.abs(lines[0].ink.inkTop / wordmark.height - 0.263) < 0.002)
+})
+
+test('every size holds its proportion whichever way the lockup is arranged', () => {
+  // The point of measuring against the wordmark: the arms change size between the arrangements
+  // and the wordmark does not, so one key means one size throughout.
+  for (const arrangement of CREST_ARRANGEMENTS) {
+    const { lines, wordmark } = layoutCrestLockup({ arrangement, ministry: 'M', size: 100 })
+    assert.ok(Math.abs(lines[0].ink.inkTop / wordmark.height - MINISTRY_SIZES.small) < 0.002,
+      arrangement)
+  }
+})
+
+test('a trailing line can drop a step below the ministry, as two documents set it', () => {
+  // 12.33.36 goes 0.263 to 0.212 and 12.32.35 goes 0.212 to 0.138 — one step each time.
+  const same = layoutCrestLockup({ ministry: 'Ministry of Forests', extra: 'Research Branch', size: 100 })
+  const dropped = layoutCrestLockup({
+    ministry: 'Ministry of Forests', extra: 'Research Branch',
+    ministrySize: 'medium', extraStep: 'smaller', size: 100
+  })
+
+  assert.equal(same.lines[0].style.fontSize, same.lines.at(-1).style.fontSize)
+  const ratio = dropped.lines.at(-1).style.fontSize / dropped.lines[0].style.fontSize
+  assert.ok(Math.abs(ratio - 0.212 / 0.263) < 0.005, `ratio ${ratio.toFixed(3)}`)
+
+  // The smallest size has nothing below it to drop to.
+  const floor = layoutCrestLockup({
+    ministry: 'a', extra: 'b', ministrySize: 'xsmall', extraStep: 'smaller', size: 100
+  })
+  assert.equal(floor.lines[0].style.fontSize, floor.lines.at(-1).style.fontSize)
 })
 
 test('the lockup scales as one drawing', () => {
@@ -173,9 +210,10 @@ test('a ministry broken by hand is set as typed, not re-wrapped', () => {
 })
 
 test('the measure is the widest line these documents print, not a narrower guess', () => {
-  // "Ministry of Employment and Investment" is printed whole, 563 units against arms 112 tall.
-  // An earlier 3.6 broke it in two and nothing the user typed could put it back.
-  assert.ok(MINISTRY_MEASURE > 5.02, `measure ${MINISTRY_MEASURE}`)
+  // "Ministry of Employment and Investment" is printed whole, 25.1 cap heights in its document
+  // and 26.2 as this project sets it. Earlier values broke it in two — first because 3.6 arms
+  // heights was too narrow, then because a measure in arms heights stopped tracking the type.
+  assert.ok(MINISTRY_MEASURE > 26.2, `measure ${MINISTRY_MEASURE}`)
 
   const { lines } = layoutCrestLockup({
     ministry: 'Ministry of Employment and Investment', extra: 'Energy and Minerals Division',
@@ -183,4 +221,15 @@ test('the measure is the widest line these documents print, not a narrower guess
   })
   assert.deepEqual(lines.map((line) => line.text),
     ['Ministry of Employment and Investment', 'Energy and Minerals Division'])
+})
+
+test('the measure follows the type, so no size can make it cut a printed line', () => {
+  // It was in arms heights once. Making the ministry's size a choice broke that immediately: the
+  // largest setting overran a backstop that could not grow with it.
+  for (const ministrySize of MINISTRY_SIZE_ORDER) {
+    const { lines } = layoutCrestLockup({
+      ministry: 'Ministry of Employment and Investment', bold: true, ministrySize, size: 100
+    })
+    assert.equal(lines.length, 1, `${ministrySize} keeps the longest printed line whole`)
+  }
 })
