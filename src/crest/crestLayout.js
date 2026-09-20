@@ -24,13 +24,18 @@ const BOLD = getFaceMetrics('bold')
 export const ARMS_ASPECT = ARMS.width / ARMS.height
 export const WORDMARK_ASPECT = WORDMARK.width / WORDMARK.height
 
-export const CREST_ARRANGEMENTS = ['horizontal', 'vertical']
+export const CREST_ARRANGEMENTS = ['horizontal', 'vertical', 'vertical-arms']
 
-export const CREST_ARRANGEMENT_LABELS = { horizontal: 'Side by side', vertical: 'Stacked' }
+export const CREST_ARRANGEMENT_LABELS = {
+  horizontal: 'Side by side',
+  vertical: 'Stacked',
+  'vertical-arms': 'Stacked, large arms'
+}
 
 export const CREST_ARRANGEMENT_HINTS = {
   horizontal: 'The arms, then the wordmark beside them.',
-  vertical: 'The arms above the wordmark, both centred.'
+  vertical: 'The arms above the wordmark, both centred, at much the same height.',
+  'vertical-arms': 'Stacked, with the arms drawn more than twice the wordmark’s height.'
 }
 
 export const CREST_PLACEMENTS = ['beside', 'below']
@@ -61,14 +66,27 @@ export const CREST_LAYOUTS = {
     // within four hundredths of each other.
     wordmarkHeight: 0.945,
     gap: 0.21,
-    centred: false
+    centred: false,
+    belowGap: 0.132
   },
   vertical: {
-    // Stacked, the arms are drawn much larger against the wordmark — 2.3 times its height rather
-    // than a little over one — and everything centres on a common axis.
-    wordmarkHeight: 0.433,
-    gap: 0.09,
-    centred: true
+    // Stacked, on a common axis, the two drawn at much the same height. Three documents agree:
+    // 0.878, 0.899, 0.891. Each was checked by aspect first — the arms come out at 0.818–0.833
+    // against this project's 0.831, and the wordmark at 2.483–2.511 against its 2.523 — so these
+    // are readings of the same two drawings and not of something rescaled.
+    wordmarkHeight: 0.889,
+    gap: 0.05,
+    centred: true,
+    belowGap: 0.44
+  },
+  'vertical-arms': {
+    // The same stack with the arms drawn about twice as large. Three documents: 0.493, 0.493 and
+    // 0.433, the odd one out being the smallest image of the three and so the least certain.
+    // 0.433 was the only stacked proportion the system had, which left the commoner form out.
+    wordmarkHeight: 0.49,
+    gap: 0.085,
+    centred: true,
+    belowGap: 0.44
   }
 }
 
@@ -78,11 +96,28 @@ export const MINISTRY_CAP = 0.1635
 /** Ministry leading, as a multiple of the type size. 1.222 em on the vector page. */
 const LEADING = 1.222
 
-/** Gap from the lockup to the ministry, per placement. */
-const PLACEMENT_GAP = { beside: 1.407, below: 0.179 }
+/**
+ * Gap from the lockup to the ministry when it stands beside it, in arms heights.
+ *
+ * Below the lockup the gap is measured against the wordmark instead — `belowGap` above — because
+ * the wordmark is the one drawing whose size holds across the arrangements. Against the arms the
+ * four documents spread 0.125 to 0.397; against the wordmark the three stacked ones land on 0.453,
+ * 0.427 and 0.448, with the side-by-side ones at 0.132. The unit was the whole difference.
+ */
+const BESIDE_GAP = 1.407
 
-/** What the ministry wraps to, in multiples of the arms' height. */
-export const MINISTRY_MEASURE = 3.6
+/**
+ * What the ministry wraps to, in multiples of the arms' height.
+ *
+ * Measured rather than chosen: the widest ministry line any of these documents prints is
+ * "Ministry of Employment and Investment", 563 units against arms 112 tall — 5.03. An earlier
+ * value of 3.6 was narrower than something actually printed, so it broke that line in two and no
+ * typing could put it back.
+ *
+ * It is a backstop, not a rule. The documents break their ministries by hand and disagree with
+ * each other about where, so a typed break wins over this — the same rule the current era follows.
+ */
+export const MINISTRY_MEASURE = 5.05
 
 const sizeForCap = (cap, face) => cap * 1000 / face.capHeight
 
@@ -152,9 +187,17 @@ export const layoutCrestLockup = ({
     : { fontSize: sizeForCap(cap, REGULAR) }
   const wrapTo = measure ?? MINISTRY_MEASURE * size
 
+  // A block the user broke by hand is set as typed; one they did not is wrapped to the measure.
+  // The documents were set line by line and disagree about where to break, so there is no rule to
+  // infer — only a backstop for text nobody has broken yet.
+  const setBlock = (text) => {
+    const typed = String(text).split(/\r?\n/).map((line) => line.trim()).filter(Boolean)
+    return typed.length > 1 ? typed : wrapText(text, wrapTo, style)
+  }
+
   const blocks = []
-  if (String(ministry).trim()) blocks.push(wrapText(ministry, wrapTo, style))
-  if (String(extra).trim()) blocks.push(wrapText(extra, wrapTo, style))
+  if (String(ministry).trim()) blocks.push(setBlock(ministry))
+  if (String(extra).trim()) blocks.push(setBlock(extra))
 
   const leading = style.fontSize * LEADING
   const entries = []
@@ -167,7 +210,7 @@ export const layoutCrestLockup = ({
     }
   })
 
-  const gap = (PLACEMENT_GAP[placement] ?? PLACEMENT_GAP.beside) * size
+  const gap = placement === 'below' ? plan.belowGap * wordmarkHeight : BESIDE_GAP * size
   const blockHeight = entries.length ? entries.at(-1).offset + cap : 0
 
   // Under a stacked lockup the ministry either centres on the mark's axis or sits flush with the

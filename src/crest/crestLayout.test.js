@@ -9,8 +9,8 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { ARMS, WORDMARK } from '../assets/crestMark.js'
 import {
-  ARMS_ASPECT, CREST_ARRANGEMENTS, CREST_LAYOUTS, CREST_PLACEMENTS, MINISTRY_CAP, WORDMARK_ASPECT,
-  crestLockupMarkup, layoutCrestLockup
+  ARMS_ASPECT, CREST_ARRANGEMENTS, CREST_LAYOUTS, CREST_PLACEMENTS, MINISTRY_CAP,
+  MINISTRY_MEASURE, WORDMARK_ASPECT, crestLockupMarkup, layoutCrestLockup
 } from './crestLayout.js'
 import { crestSize, renderCrestSvg } from './renderCrestSvg.js'
 
@@ -58,15 +58,35 @@ test('side by side puts the wordmark beside the arms, feet aligned', () => {
   assert.ok(Math.abs(wordmark.height / arms.height - CREST_LAYOUTS.horizontal.wordmarkHeight) < 1e-9)
 })
 
-test('stacked centres both on one axis, and draws the arms much larger', () => {
-  const { arms, wordmark } = layoutCrestLockup({ arrangement: 'vertical', size: 100 })
+test('both stacked forms centre on one axis, and differ only in how large the arms are drawn', () => {
+  // Two proportions are printed. Three documents draw the two at much the same height (0.878,
+  // 0.899, 0.891); a fourth draws the arms twice as large (0.433). Each was checked by aspect
+  // first, so both are readings of the same two drawings.
+  for (const arrangement of ['vertical', 'vertical-arms']) {
+    const { arms, wordmark } = layoutCrestLockup({ arrangement, size: 100 })
+    const armsCentre = arms.x + arms.width / 2
+    const wordmarkCentre = wordmark.x + wordmark.width / 2
+    assert.ok(Math.abs(armsCentre - wordmarkCentre) < 0.01, `${arrangement} centres on one axis`)
+    assert.ok(wordmark.y > arms.y + arms.height, `${arrangement} puts the wordmark below`)
+  }
 
-  const armsCentre = arms.x + arms.width / 2
-  const wordmarkCentre = wordmark.x + wordmark.width / 2
-  assert.ok(Math.abs(armsCentre - wordmarkCentre) < 0.01, 'centred on a common axis')
-  assert.ok(wordmark.y > arms.y + arms.height, 'the wordmark sits below')
-  // 2.3 times its height stacked, against a little over one side by side.
-  assert.ok(arms.height / wordmark.height > 2, `ratio ${(arms.height / wordmark.height).toFixed(2)}`)
+  const common = layoutCrestLockup({ arrangement: 'vertical', size: 100 })
+  const large = layoutCrestLockup({ arrangement: 'vertical-arms', size: 100 })
+  assert.ok(Math.abs(common.arms.height / common.wordmark.height - 1.125) < 0.02)
+  assert.ok(large.arms.height / large.wordmark.height > 2)
+})
+
+test('below the mark the ministry is set off the wordmark, not the arms', () => {
+  // Against the arms the documents spread 0.125 to 0.397 and no constant fits. Against the
+  // wordmark — the one drawing whose size holds across the arrangements — the stacked ones land
+  // together, which is how the two stacked forms can share a gap.
+  const common = layoutCrestLockup({ arrangement: 'vertical', placement: 'below', ministry: 'M', size: 100 })
+  const large = layoutCrestLockup({ arrangement: 'vertical-arms', placement: 'below', ministry: 'M', size: 100 })
+
+  // 'M' rises exactly a cap height, so its ink top is the gap's far edge.
+  const drop = (l) => (l.lines[0].y - l.lines[0].ink.inkTop) - (l.wordmark.y + l.wordmark.height)
+  assert.ok(Math.abs(drop(common) / common.wordmark.height - 0.44) < 0.01)
+  assert.ok(Math.abs(drop(large) / large.wordmark.height - 0.44) < 0.01)
 })
 
 test('the ministry sits beside the mark or below it', () => {
@@ -141,4 +161,26 @@ test('an empty ministry still draws the mark', () => {
   const { lines, box } = layoutCrestLockup({ ministry: '', size: 100 })
   assert.deepEqual(lines, [])
   assert.ok(box.width > 0 && box.height > 0)
+})
+
+test('a ministry broken by hand is set as typed, not re-wrapped', () => {
+  // The documents break their ministries by hand and disagree about where, so the field has to
+  // win over the measure. The same rule the current era follows.
+  const { lines } = layoutCrestLockup({
+    ministry: 'Ministry of Environment,\nLands and Parks', size: 100
+  })
+  assert.deepEqual(lines.map((line) => line.text), ['Ministry of Environment,', 'Lands and Parks'])
+})
+
+test('the measure is the widest line these documents print, not a narrower guess', () => {
+  // "Ministry of Employment and Investment" is printed whole, 563 units against arms 112 tall.
+  // An earlier 3.6 broke it in two and nothing the user typed could put it back.
+  assert.ok(MINISTRY_MEASURE > 5.02, `measure ${MINISTRY_MEASURE}`)
+
+  const { lines } = layoutCrestLockup({
+    ministry: 'Ministry of Employment and Investment', extra: 'Energy and Minerals Division',
+    bold: true, size: 100
+  })
+  assert.deepEqual(lines.map((line) => line.text),
+    ['Ministry of Employment and Investment', 'Energy and Minerals Division'])
 })

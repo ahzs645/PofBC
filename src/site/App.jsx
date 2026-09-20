@@ -15,7 +15,7 @@ import {
 import {
   CREST_ARRANGEMENTS, CREST_ARRANGEMENT_HINTS, CREST_ARRANGEMENT_LABELS,
   CREST_PLACEMENTS, CREST_PLACEMENT_LABELS,
-  CREST_ALIGNMENTS, CREST_ALIGNMENT_LABELS
+  CREST_ALIGNMENTS, CREST_ALIGNMENT_LABELS, CREST_LAYOUTS
 } from '../crest/crestLayout.js'
 import {
   alignsVertically, CLEAR_SPACE, CLEAR_SPACE_ORDER, LAYOUTS, MARK_ALIGNMENTS, MARK_ALIGNMENT_ORDER
@@ -244,7 +244,7 @@ export const App = () => {
                 value={state.crestPlacement}
                 onChange={(value) => update({ crestPlacement: value })}
               />
-              {state.crestArrangement === 'vertical' && state.crestPlacement === 'below' && (
+              {CREST_LAYOUTS[state.crestArrangement]?.centred && state.crestPlacement === 'below' && (
                 <Segmented
                   label="Ministry lines"
                   options={CREST_ALIGNMENT_OPTIONS}
