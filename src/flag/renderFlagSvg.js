@@ -4,7 +4,10 @@
 // so the preview, the exporter and a Node script all produce the same drawing.
 
 import { TRANSPARENT, resolveColor } from '../logo/logoColors.js'
-import { flagLockupMarkup, layoutFlagLockup } from './flagLayout.js'
+import { flagLockupMarkup, flagMarkup, layoutFlagLockup } from './flagLayout.js'
+import { badgeLines, frameMarkup, layoutBadge } from './parksBadge.js'
+import { outlineTextMarkup } from '../logo/textOutline.js'
+import { LOGO_FONT_FAMILY } from '../logo/renderLogoSvg.js'
 
 /** The BC cap height the lockup is laid out at. Everything else is proportional to it. */
 export const FLAG_CAP = 100
@@ -16,10 +19,14 @@ const round = (value) => Math.round(value * 1000) / 1000
 
 /**
  * @param {object} options
- * @param {string} options.ministry      The wording beneath the letters.
+ * @param {string} options.ministry      The ministry. Newlines break lines.
+ * @param {string} [options.symbol]      'horizontal' | 'vertical' | 'flag'
+ * @param {string} [options.placement]   'below' | 'beside'
+ * @param {boolean} [options.province]   Set "Province of British Columbia" above the ministry.
+ * @param {string} [options.extra]       A third line.
  * @param {string} [options.letterColor] The BC letters. Also the flag, when it is set in one ink.
  * @param {string} [options.textColor]   The wording. Falls back to the letters' colour.
- * @param {string} [options.flagColour]  'colour' for the flag's own three, 'ink' for one.
+ * @param {string} [options.flagPalette]  'official', 'modern' or 'ink'.
  * @param {string} [options.background]
  * @param {number} [options.clearSpaceFactor]  Margin as a fraction of the lockup's own width.
  * @param {number} [options.pixelWidth]
@@ -29,9 +36,14 @@ const round = (value) => Math.round(value * 1000) / 1000
  */
 export const renderFlagSvg = ({
   ministry = '',
+  symbol = 'horizontal',
+  placement = 'below',
+  province = false,
+  extra = '',
+  bold = false,
   letterColor = '#000000',
   textColor,
-  flagColour = 'colour',
+  flagPalette = 'official',
   background = TRANSPARENT,
   clearSpaceFactor = 0,
   pixelWidth,
@@ -39,7 +51,12 @@ export const renderFlagSvg = ({
   glyphs,
   fontCss
 } = {}) => {
-  const layout = layoutFlagLockup({ ministry, cap: FLAG_CAP })
+  // The badge is its own composition — a frame, and two words set alike inside it — so it does not
+  // go through the lockup layout at all. The ministry field supplies the second word.
+  const badge = symbol === 'badge'
+    ? layoutBadge({ second: String(ministry).replace(/\s+/g, ' ').trim() || 'Parks', cap: FLAG_CAP })
+    : null
+  const layout = badge ?? layoutFlagLockup({ ministry, symbol, placement, province, extra, bold, cap: FLAG_CAP })
   const ink = resolveColor(letterColor)
   const type = resolveColor(textColor ?? letterColor)
 
@@ -64,21 +81,27 @@ export const renderFlagSvg = ({
     (title ? `<title>${escapeXml(title)}</title>` : '') +
     (fontCss ? `<defs><style>${fontCss}</style></defs>` : '') +
     backdrop +
-    flagLockupMarkup({
-      layout,
-      letterColor: ink,
-      textColor: type,
-      // One ink means the flag is painted in the letters' colour rather than its own three.
-      flagInk: flagColour === 'ink' ? ink : undefined,
-      glyphs
-    }) +
+    (badge
+      ? frameMarkup(badge, ink) +
+        flagMarkup(badge.flag, flagPalette, ink) +
+        (glyphs
+          ? outlineTextMarkup(badgeLines(badge), glyphs, type)
+          : badgeLines(badge).map((line) =>
+            `<text data-role="name" x="${round(line.x)}" y="${round(line.y)}" fill="${escapeXml(type)}"` +
+            ` font-family="${escapeXml(LOGO_FONT_FAMILY)}" font-size="${round(line.style.fontSize)}"` +
+            ' font-weight="700">' + escapeXml(line.text) + '</text>').join(''))
+      : flagLockupMarkup({ layout, letterColor: ink, textColor: type, flagPalette, glyphs })) +
     '</svg>'
 
   return { svg, box, layout }
 }
 
 /** The lockup's size in layout units, before any clear space. */
-export const flagSize = (ministry) => {
-  const { box } = layoutFlagLockup({ ministry, cap: FLAG_CAP })
+export const flagSize = (options = {}) => {
+  // The badge has its own layout, and an export asks for the box before anything is drawn — so
+  // this has to branch the same way the renderer does or a badge exports at the wrong size.
+  const { box } = options.symbol === 'badge'
+    ? layoutBadge({ second: String(options.ministry ?? '').replace(/\s+/g, ' ').trim() || 'Parks', cap: FLAG_CAP })
+    : layoutFlagLockup({ ...options, cap: FLAG_CAP })
   return { width: box.width, height: box.height }
 }

@@ -23,7 +23,9 @@ import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS } from '../src/export
 import { MINISTRY_GROUPS, MINISTRY_LIST_REVIEWED } from '../src/ministries/ministries.js'
 import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, BCID } from '../src/current/currentMarks.js'
 import { MINISTRIES as CURRENT_MINISTRIES } from '../src/current/ministries.js'
-import { FLAG_COLOURS } from '../src/flag/flagColours.js'
+import { FLAG_PALETTE_ORDER } from '../src/flag/flagPalettes.js'
+import { ALL_FLAG_SYMBOLS, FLAG_SYMBOLS, NAME_PLACEMENTS } from '../src/flag/flagLayout.js'
+import { CREST_ARRANGEMENTS, CREST_PLACEMENTS } from '../src/crest/crestLayout.js'
 import { FLAG_PALETTE } from '../src/assets/flagMark.js'
 import { SHARE_PARAM } from '../src/site/shareLink.js'
 import { CONFIG_PARAM, toConfig } from '../src/site/configFormat.js'
@@ -47,13 +49,33 @@ const manifest = {
       generated: true
     },
     flag: {
-      description: 'BC beside the waving provincial flag, with the ministry name beneath. Built ' +
-        'from parts like the crest era, so it takes any wording and any colour.',
+      description: 'The B.C. Flag Symbol with a ministry set against it. Five arrangements, all ' +
+        'of them printed: BC beside the flag or the flag above BC — the two the standards page ' +
+        'sanctions — plus the flag alone, each with the wording below the symbol or beside it.',
       generated: true,
-      flagColours: FLAG_COLOURS,
-      note: 'The flag is the Province’s own artwork; its proportions against the letters are ' +
-        'measured from a photograph of the logo, which is the only reference available.',
-      palette: FLAG_PALETTE
+      symbols: FLAG_SYMBOLS,
+      oneOffs: ALL_FLAG_SYMBOLS.filter((id) => !FLAG_SYMBOLS.includes(id)),
+      namePlacements: NAME_PLACEMENTS,
+      flagPalettes: FLAG_PALETTE_ORDER,
+      colours: {
+        official: 'Pantone Blue 072C, Red 032C, Yellow 109C, per the identity’s standards page.',
+        supplied: FLAG_PALETTE
+      },
+      note: 'The standards page gives the symbol and its colours but never a ministry name, so ' +
+        'the proportions are measured off printed documents — which disagree with each other. ' +
+        'The flag’s white is the page showing through it, so on a coloured ground the whole ' +
+        'lockup is set in one ink, as the documents do.'
+    },
+    crest: {
+      description: 'The coat of arms with the BRITISH COLUMBIA wordmark — the identity that ' +
+        'followed the flag one. Both are artwork: the arms as drawn, and the wordmark as ' +
+        'outlines rather than text, so only the ministry is typeset.',
+      generated: true,
+      arrangements: CREST_ARRANGEMENTS,
+      ministryPlacements: CREST_PLACEMENTS,
+      note: 'Proportions are measured from two independent sources — a vector page for the ' +
+        'side-by-side arrangement and a raster for the stacked one — which agree on the ' +
+        'drawings’ aspects to within a hundredth.'
     },
     current: {
       description: 'The Province’s BC mark, used exactly as published, with the ministry wording ' +

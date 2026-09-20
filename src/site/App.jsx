@@ -1,8 +1,22 @@
+import { useState } from 'react'
 import { BcLockup } from '../logo/BcLockup.jsx'
 import { CurrentControls } from '../current/CurrentControls.jsx'
 import { CurrentLockup } from '../current/CurrentLockup.jsx'
+import { CrestLockup } from '../crest/CrestLockup.jsx'
 import { FlagLockup } from '../flag/FlagLockup.jsx'
-import { FLAG_COLOURS, FLAG_COLOUR_HINTS, FLAG_COLOUR_LABELS } from '../flag/flagColours.js'
+import { GalleryView } from '../gallery/GalleryView.jsx'
+import {
+  FLAG_PALETTE_ORDER, FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_SWATCHES
+} from '../flag/flagPalettes.js'
+import {
+  FLAG_SYMBOLS, FLAG_SYMBOL_HINTS, FLAG_SYMBOL_LABELS,
+  NAME_PLACEMENTS, NAME_PLACEMENT_HINTS, NAME_PLACEMENT_LABELS
+} from '../flag/flagLayout.js'
+import {
+  CREST_ARRANGEMENTS, CREST_ARRANGEMENT_HINTS, CREST_ARRANGEMENT_LABELS,
+  CREST_PLACEMENTS, CREST_PLACEMENT_LABELS,
+  CREST_ALIGNMENTS, CREST_ALIGNMENT_LABELS
+} from '../crest/crestLayout.js'
 import {
   alignsVertically, CLEAR_SPACE, CLEAR_SPACE_ORDER, LAYOUTS, MARK_ALIGNMENTS, MARK_ALIGNMENT_ORDER
 } from '../logo/layouts.js'
@@ -27,10 +41,30 @@ const MARK_ALIGNMENT_OPTIONS = MARK_ALIGNMENT_ORDER.map((value) => ({
   title: MARK_ALIGNMENTS[value].description
 }))
 
-const FLAG_COLOUR_OPTIONS = FLAG_COLOURS.map((value) => ({
+const CREST_ARRANGEMENT_OPTIONS = CREST_ARRANGEMENTS.map((value) => ({
+  value, label: CREST_ARRANGEMENT_LABELS[value], title: CREST_ARRANGEMENT_HINTS[value]
+}))
+
+const CREST_PLACEMENT_OPTIONS = CREST_PLACEMENTS.map((value) => ({
+  value, label: CREST_PLACEMENT_LABELS[value]
+}))
+
+const CREST_ALIGNMENT_OPTIONS = CREST_ALIGNMENTS.map((value) => ({
+  value, label: CREST_ALIGNMENT_LABELS[value]
+}))
+
+const FLAG_SYMBOL_OPTIONS = FLAG_SYMBOLS.map((value) => ({
+  value, label: FLAG_SYMBOL_LABELS[value], title: FLAG_SYMBOL_HINTS[value]
+}))
+
+const NAME_PLACEMENT_OPTIONS = NAME_PLACEMENTS.map((value) => ({
+  value, label: NAME_PLACEMENT_LABELS[value], title: NAME_PLACEMENT_HINTS[value]
+}))
+
+const FLAG_PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value,
-  label: FLAG_COLOUR_LABELS[value],
-  title: FLAG_COLOUR_HINTS[value]
+  label: FLAG_PALETTE_LABELS[value],
+  title: FLAG_PALETTE_HINTS[value]
 }))
 
 const ERA_OPTIONS = [
@@ -43,6 +77,11 @@ const ERA_OPTIONS = [
     value: 'flag',
     label: 'Flag',
     title: 'BC beside the waving provincial flag, with the ministry beneath.'
+  },
+  {
+    value: 'crest',
+    label: 'Arms',
+    title: 'The coat of arms with the BRITISH COLUMBIA wordmark.'
   },
   {
     value: 'current',
@@ -59,12 +98,17 @@ const BACKDROP_OPTIONS = [
 
 export const App = () => {
   const { state, update, reset, lockup, artwork, background, contrast, backdrop, isTransparent, swapColors } = useLockupState()
+  // Two views, not two modes of one: the gallery has nothing to do with the generator's state.
+  const [view, setView] = useState('generator')
   const layout = LAYOUTS[state.layout]
   const isCurrent = state.era === 'current'
   const isFlag = state.era === 'flag'
+  const isCrest = state.era === 'crest'
+  // A one-off from the gallery: its arrangement is the mark, not a choice.
+  const isBadge = isFlag && state.flagSymbol === 'badge'
   // The crest era is the only one with lockups to choose between, a province wordmark to show or
   // hide, and a mark to align.
-  const isCrest = !isCurrent && !isFlag
+  const isOldCrest = !isCurrent && !isFlag && !isCrest
 
   // Registers this page's tools with an agent driving the browser, where the browser supports it.
   // A no-op everywhere else.
@@ -74,12 +118,27 @@ export const App = () => {
     <div className="app">
       <header className="masthead">
         <h1>Province of British Columbia — logo generator</h1>
-        <p>
-          Three official lockups, any ministry, any colourway. Everything is drawn from the source
-          artwork, so what you see here is exactly what downloads.
-        </p>
+        <nav className="masthead__views" aria-label="View">
+          <button
+            type="button"
+            aria-pressed={view === 'generator'}
+            onClick={() => setView('generator')}
+          >
+            Generator
+          </button>
+          <button
+            type="button"
+            aria-pressed={view === 'gallery'}
+            onClick={() => setView('gallery')}
+          >
+            One-off marks
+          </button>
+        </nav>
       </header>
 
+      {view === 'gallery' && <GalleryView />}
+
+      {view === 'generator' && (
       <div className="layout">
         <section className="stage" aria-label="Preview">
           <div className="stage__frame" data-backdrop={backdrop} data-transparent={isTransparent || undefined}>
@@ -92,13 +151,31 @@ export const App = () => {
                 clearSpaceFactor={lockup.clearSpaceFactor}
                 title="Province of British Columbia ministry mark"
               />
+            ) : isCrest ? (
+              <CrestLockup
+                arrangement={state.crestArrangement}
+                placement={state.crestPlacement}
+                ministry={lockup.ministry}
+                extra={state.crestExtra}
+                bold={state.crestBold}
+                align={state.crestAlign}
+                markColor={state.crestMarkColor}
+                textColor={state.linkColors ? state.crestMarkColor : state.crestTextColor}
+                background={state.crestBackground}
+                clearSpaceFactor={lockup.clearSpaceFactor}
+                title="British Columbia coat of arms lockup"
+              />
             ) : isFlag ? (
               <FlagLockup
                 ministry={lockup.ministry}
-                letterColor={state.markColor}
-                textColor={state.linkColors ? state.markColor : state.textColor}
-                flagColour={state.flagColour}
-                background={state.background}
+                letterColor={state.flagMarkColor}
+                textColor={state.linkColors ? state.flagMarkColor : state.flagTextColor}
+                symbol={state.flagSymbol}
+                placement={state.flagPlacement}
+                province={state.flagProvince}
+                extra={state.flagExtra}
+                flagPalette={state.flagPalette}
+                background={state.flagBackground}
                 clearSpaceFactor={lockup.clearSpaceFactor}
                 title="British Columbia flag lockup"
               />
@@ -108,21 +185,6 @@ export const App = () => {
           </div>
 
           <div className="stage__bar">
-            <p className="stage__caption">
-              {isCurrent ? (
-                <span>
-                  Official mark
-                  <span className="stage__detail"> — published artwork, used as provided</span>
-                </span>
-              ) : isFlag ? (
-                <span>
-                  Flag lockup
-                  <span className="stage__detail"> — BC and the provincial flag, wording beneath</span>
-                </span>
-              ) : (
-                <span>{layout.label}<span className="stage__detail"> — {layout.description}</span></span>
-              )}
-            </p>
             <Segmented
               compact
               label="Preview on"
@@ -166,15 +228,99 @@ export const App = () => {
             </section>
           )}
 
+          {isCrest && (
+            <section className="panel">
+              <h2>Arms</h2>
+              <Segmented
+                label="Arrangement"
+                options={CREST_ARRANGEMENT_OPTIONS}
+                value={state.crestArrangement}
+                onChange={(value) => update({ crestArrangement: value })}
+                hint={CREST_ARRANGEMENT_HINTS[state.crestArrangement]}
+              />
+              <Segmented
+                label="Ministry"
+                options={CREST_PLACEMENT_OPTIONS}
+                value={state.crestPlacement}
+                onChange={(value) => update({ crestPlacement: value })}
+              />
+              {state.crestArrangement === 'vertical' && state.crestPlacement === 'below' && (
+                <Segmented
+                  label="Ministry lines"
+                  options={CREST_ALIGNMENT_OPTIONS}
+                  value={state.crestAlign}
+                  onChange={(value) => update({ crestAlign: value })}
+                  hint="Centred on the mark, or flush with the wordmark’s left edge. The documents do both."
+                />
+              )}
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  checked={state.crestBold}
+                  onChange={(event) => update({ crestBold: event.target.checked })}
+                />
+                <span>Set the ministry bold</span>
+              </label>
+              <Segmented
+                label="Clear space"
+                options={CLEAR_SPACE_OPTIONS}
+                value={state.clearSpace}
+                onChange={(value) => update({ clearSpace: value })}
+                hint="Margin around the lockup. The background colour fills it."
+              />
+            </section>
+          )}
+
           {isFlag && (
             <section className="panel">
               <h2>Flag</h2>
+              {isBadge && (
+                <p className="field__note" style={{ marginTop: 0 }}>
+                  A one-off mark from the gallery. Its arrangement is fixed; its colours and
+                  wording are not.{' '}
+                  <button
+                    type="button"
+                    className="button button--ghost button--inline"
+                    onClick={() => update({ flagSymbol: 'horizontal' })}
+                  >
+                    Back to the arrangements
+                  </button>
+                </p>
+              )}
+              {!isBadge && (
+              <Segmented
+                label="Symbol"
+                options={FLAG_SYMBOL_OPTIONS}
+                value={state.flagSymbol}
+                onChange={(value) => update({ flagSymbol: value })}
+                hint={FLAG_SYMBOL_HINTS[state.flagSymbol]}
+              />
+              )}
+              {!isBadge && (
+              <Segmented
+                label="Wording"
+                options={NAME_PLACEMENT_OPTIONS}
+                value={state.flagPlacement}
+                onChange={(value) => update({ flagPlacement: value })}
+                hint={NAME_PLACEMENT_HINTS[state.flagPlacement]}
+              />
+              )}
+              {!isBadge && (
+              <label className="checkbox">
+                <input
+                  type="checkbox"
+                  checked={state.flagProvince}
+                  onChange={(event) => update({ flagProvince: event.target.checked })}
+                />
+                <span>Set “Province of British Columbia” above</span>
+              </label>
+              )}
               <Segmented
                 label="Colour"
-                options={FLAG_COLOUR_OPTIONS}
-                value={state.flagColour}
-                onChange={(value) => update({ flagColour: value })}
-                hint={FLAG_COLOUR_HINTS[state.flagColour]}
+                options={FLAG_PALETTE_OPTIONS}
+                value={state.flagPalette}
+                onChange={(value) => update({ flagPalette: value })}
+                hint={FLAG_PALETTE_HINTS[state.flagPalette]}
               />
               <Segmented
                 label="Clear space"
@@ -186,7 +332,7 @@ export const App = () => {
             </section>
           )}
 
-          {isCrest && (
+          {isOldCrest && (
           <section className="panel">
             <h2>Lockup</h2>
             <LayoutPicker value={state.layout} onChange={(value) => update({ layout: value })} />
@@ -229,6 +375,24 @@ export const App = () => {
           {!isCurrent && (
           <section className="panel">
             <h2>Wording</h2>
+            {(isFlag || isCrest) && (
+              <div className="field">
+                <label htmlFor="flag-extra">
+                  Third line <span className="field__note" style={{ display: 'inline' }}>(optional)</span>
+                </label>
+                <input
+                  id="flag-extra"
+                  type="text"
+                  value={isCrest ? state.crestExtra : state.flagExtra}
+                  placeholder={isCrest ? 'Research Branch' : 'Honourable Anthony J. Brummet, Minister'}
+                  autoComplete="off"
+                  onChange={(event) => update(
+                    isCrest ? { crestExtra: event.target.value } : { flagExtra: event.target.value }
+                  )}
+                />
+                <p className="field__note">A minister, a place, a bulletin number — as the documents do.</p>
+              </div>
+            )}
             <MinistryField
               source={state.source}
               ministry={state.ministry}
@@ -245,9 +409,14 @@ export const App = () => {
             <h2>Colour</h2>
 
             <ColourField
-              label={state.linkColors ? 'Mark and text' : 'Mark'}
-              value={state.markColor}
-              onChange={(value) => update({ markColor: value })}
+              label={state.linkColors
+                ? (isFlag ? 'Letters and text' : 'Mark and text')
+                : (isFlag ? 'Letters' : 'Mark')}
+              value={isFlag ? state.flagMarkColor : isCrest ? state.crestMarkColor : state.markColor}
+              onChange={(value) => update(
+                isFlag ? { flagMarkColor: value } : isCrest ? { crestMarkColor: value } : { markColor: value }
+              )}
+              palette={isFlag ? FLAG_SWATCHES : undefined}
             />
 
             <label className="checkbox">
@@ -256,22 +425,30 @@ export const App = () => {
                 checked={state.linkColors}
                 onChange={(event) => update({ linkColors: event.target.checked })}
               />
-              <span>Text matches the mark</span>
+              <span>{isFlag ? 'Text matches the letters' : 'Text matches the mark'}</span>
             </label>
 
             {!state.linkColors && (
               <ColourField
                 label="Text"
-                value={state.textColor}
-                onChange={(value) => update({ textColor: value })}
+                value={isFlag ? state.flagTextColor : isCrest ? state.crestTextColor : state.textColor}
+                onChange={(value) => update(
+                  isFlag ? { flagTextColor: value } : isCrest ? { crestTextColor: value } : { textColor: value }
+                )}
               />
             )}
 
             <ColourField
               label="Background"
-              value={state.background}
-              onChange={(value) => update({ background: value })}
+              value={isFlag ? state.flagBackground : isCrest ? state.crestBackground : state.background}
+              onChange={(value) => update(
+                isFlag ? { flagBackground: value } : isCrest ? { crestBackground: value } : { background: value }
+              )}
+              palette={isFlag ? FLAG_SWATCHES : undefined}
               allowTransparent
+              hint={isFlag
+                ? 'The flag’s white is the page showing through it, so on anything but white it is set in one ink.'
+                : undefined}
             />
 
             <div className="row" style={{ marginTop: 12 }}>
@@ -306,6 +483,7 @@ export const App = () => {
           <ShareLink state={state} update={update} />
         </div>
       </div>
+      )}
 
       <p className="footnote">
         The mark is reproduced from the supplied artwork and is a provincial symbol; use of it is

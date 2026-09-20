@@ -6,6 +6,7 @@
 
 import { recommendedVariant } from '../current/currentMarks.js'
 import { findMinistry } from '../current/ministries.js'
+import { recommendedPalette } from '../flag/flagPalettes.js'
 import { defaultMarkAlignment, getLayout } from '../logo/layouts.js'
 import { BRAND_COLORS, TRANSPARENT, resolveColor } from '../logo/logoColors.js'
 
@@ -21,9 +22,11 @@ export const applyUpdate = (current, patch) => {
 
   // Linking is a one-way pull from the mark, so setting the mark colour carries the type with it,
   // and re-linking after a divergence resolves to the mark rather than to whichever field happened
-  // to be edited last.
-  if (next.linkColors && (patch.markColor !== undefined || patch.linkColors)) {
-    next.textColor = next.markColor
+  // to be edited last. Each era has its own pair, so the link applies to whichever is in play.
+  if (next.linkColors) {
+    if (patch.markColor !== undefined || patch.linkColors) next.textColor = next.markColor
+    if (patch.flagMarkColor !== undefined || patch.linkColors) next.flagTextColor = next.flagMarkColor
+    if (patch.crestMarkColor !== undefined || patch.linkColors) next.crestTextColor = next.crestMarkColor
   }
 
   // The three lockups disagree about the province wordmark — the centred one is drawn without it —
@@ -49,6 +52,15 @@ export const applyUpdate = (current, patch) => {
   if (patch.currentVariant !== undefined) next.currentVariantTouched = true
   else if (patch.currentBackground !== undefined && !next.currentVariantTouched) {
     next.currentVariant = recommendedVariant(patch.currentBackground) ?? next.currentVariant
+  }
+
+  // The flag's white is the page showing through it, so on anything but a white or transparent
+  // ground the full-colour flag shows the background through its every gap. That is what the
+  // documents do too: on colour they set the whole thing in one ink. So the palette follows the
+  // background until it is chosen by hand, as the current era's colourway does.
+  if (patch.flagPalette !== undefined) next.flagPaletteTouched = true
+  else if (patch.flagBackground !== undefined && !next.flagPaletteTouched) {
+    next.flagPalette = recommendedPalette(patch.flagBackground) ?? next.flagPalette
   }
 
   // Choosing a ministry, or switching language, loads that mark's official wording — but only

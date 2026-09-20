@@ -15,7 +15,9 @@
 
 import { CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
 import { findMinistry } from '../current/ministries.js'
-import { FLAG_COLOURS } from '../flag/flagColours.js'
+import { FLAG_PALETTE_ORDER } from '../flag/flagPalettes.js'
+import { ALL_FLAG_SYMBOLS, NAME_PLACEMENTS } from '../flag/flagLayout.js'
+import { CREST_ALIGNMENTS, CREST_ARRANGEMENTS, CREST_PLACEMENTS } from '../crest/crestLayout.js'
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
@@ -50,7 +52,7 @@ export const cleanOneOf = (value, allowed, fallback) => (allowed.includes(value)
 
 // ── Public shape ─────────────────────────────────────────────────────────────────────────────────
 
-export const ERAS = ['historical', 'flag', 'current']
+export const ERAS = ['historical', 'flag', 'crest', 'current']
 
 const backgroundOf = (state) => (
   state.background === TRANSPARENT ? 'transparent' : state.background
@@ -63,14 +65,32 @@ const backgroundOf = (state) => (
  * other is a finished file in one of four colourways — so a configuration describes whichever era
  * is in play rather than carrying a pile of fields that do not apply to it.
  */
-export const toConfig = (state) => (state.era === 'flag'
+export const toConfig = (state) => (state.era === 'crest'
+  ? {
+      era: 'crest',
+      ministry: (state.source === 'manual' ? state.manualMinistry : state.ministry).trim(),
+      arrangement: state.crestArrangement,
+      ministryPlacement: state.crestPlacement,
+      ...(state.crestBold ? { bold: true } : {}),
+      ministryLines: state.crestAlign,
+      ...(state.crestExtra.trim() ? { secondLine: state.crestExtra.trim() } : {}),
+      markColor: state.crestMarkColor,
+      textColor: state.crestTextColor,
+      background: state.crestBackground === TRANSPARENT ? 'transparent' : state.crestBackground,
+      clearSpace: state.clearSpace
+    }
+  : state.era === 'flag'
   ? {
       era: 'flag',
       ministry: (state.source === 'manual' ? state.manualMinistry : state.ministry).trim(),
-      flagColour: state.flagColour,
-      markColor: state.markColor,
-      textColor: state.textColor,
-      background: backgroundOf(state),
+      symbol: state.flagSymbol,
+      namePlacement: state.flagPlacement,
+      ...(state.flagProvince ? { provinceLine: true } : {}),
+      ...(state.flagExtra.trim() ? { thirdLine: state.flagExtra.trim() } : {}),
+      flagPalette: state.flagPalette,
+      markColor: state.flagMarkColor,
+      textColor: state.flagTextColor,
+      background: state.flagBackground === TRANSPARENT ? 'transparent' : state.flagBackground,
       clearSpace: state.clearSpace
     }
   : state.era === 'current'
@@ -124,24 +144,42 @@ export const fromConfig = (config) => {
   if ('lockup' in config) patch.layout = cleanOneOf(config.lockup, LAYOUT_ORDER, DEFAULTS.layout)
   if ('showWordmark' in config) patch.wordmark = cleanBoolean(config.showWordmark, DEFAULTS.wordmark)
   if ('secondLine' in config) patch.program = cleanText(config.secondLine, '')
-  if ('markColor' in config) patch.markColor = cleanColour(config.markColor, DEFAULTS.markColor)
+  // Each era keeps its own ink, so a configuration's colours land on the era it declares.
+  const era = config.era ?? DEFAULTS.era
+  const forFlag = era === 'flag'
+  const forCrest = era === 'crest'
+  if ('markColor' in config) {
+    const field = forFlag ? 'flagMarkColor' : forCrest ? 'crestMarkColor' : 'markColor'
+    patch[field] = cleanColour(config.markColor, DEFAULTS[field])
+  }
   if ('textColor' in config) {
-    patch.textColor = cleanColour(config.textColor, DEFAULTS.textColor)
+    const field = forFlag ? 'flagTextColor' : forCrest ? 'crestTextColor' : 'textColor'
+    patch[field] = cleanColour(config.textColor, DEFAULTS[field])
     // Naming the type's colour separately means the two are no longer meant to move together.
     patch.linkColors = false
   }
   if ('background' in config) {
-    // The eras keep separate backgrounds, so which one this sets depends on the era the
+    // Each era keeps its own background, so which one this sets depends on the era the
     // configuration declares — otherwise a current-era object would quietly recolour the crest.
-    const forCurrent = (config.era ?? DEFAULTS.era) === 'current'
-    const fallback = forCurrent ? DEFAULTS.currentBackground : DEFAULTS.background
-    const value = cleanColour(config.background, fallback)
-    const colour = /^transparent$/i.test(value) ? TRANSPARENT : value
-
-    if (forCurrent) patch.currentBackground = colour
-    else patch.background = colour
+    const field = era === 'current'
+      ? 'currentBackground'
+      : era === 'flag' ? 'flagBackground' : era === 'crest' ? 'crestBackground' : 'background'
+    const value = cleanColour(config.background, DEFAULTS[field])
+    patch[field] = /^transparent$/i.test(value) ? TRANSPARENT : value
   }
-  if ('flagColour' in config) patch.flagColour = cleanOneOf(config.flagColour, FLAG_COLOURS, DEFAULTS.flagColour)
+  if ('arrangement' in config) patch.crestArrangement = cleanOneOf(config.arrangement, CREST_ARRANGEMENTS, DEFAULTS.crestArrangement)
+  if ('ministryPlacement' in config) patch.crestPlacement = cleanOneOf(config.ministryPlacement, CREST_PLACEMENTS, DEFAULTS.crestPlacement)
+  if ('bold' in config) patch.crestBold = cleanBoolean(config.bold, DEFAULTS.crestBold)
+  if ('ministryLines' in config) patch.crestAlign = cleanOneOf(config.ministryLines, CREST_ALIGNMENTS, DEFAULTS.crestAlign)
+  if ('symbol' in config) patch.flagSymbol = cleanOneOf(config.symbol, ALL_FLAG_SYMBOLS, DEFAULTS.flagSymbol)
+  if ('namePlacement' in config) patch.flagPlacement = cleanOneOf(config.namePlacement, NAME_PLACEMENTS, DEFAULTS.flagPlacement)
+  if ('provinceLine' in config) patch.flagProvince = cleanBoolean(config.provinceLine, DEFAULTS.flagProvince)
+  if ('thirdLine' in config) patch.flagExtra = cleanText(config.thirdLine, '')
+  if ('flagPalette' in config) {
+    patch.flagPalette = cleanOneOf(config.flagPalette, FLAG_PALETTE_ORDER, DEFAULTS.flagPalette)
+    // Stated deliberately, so the background must not move it.
+    patch.flagPaletteTouched = true
+  }
   if ('clearSpace' in config) patch.clearSpace = cleanOneOf(config.clearSpace, CLEAR_SPACE_ORDER, DEFAULTS.clearSpace)
   if ('markAlignment' in config) patch.markAlign = cleanOneOf(config.markAlignment, MARK_ALIGNMENT_ORDER, DEFAULTS.markAlign)
 

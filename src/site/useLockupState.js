@@ -56,7 +56,13 @@ export const useLockupState = () => {
   // Everything an export needs, both eras.
   // Each era draws on its own background, so everything downstream — preview, export, backdrop,
   // contrast — reads it from here rather than reaching for state.background directly.
-  const background = state.era === 'current' ? state.currentBackground : state.background
+  const background = state.era === 'current'
+    ? state.currentBackground
+    : state.era === 'flag'
+      ? state.flagBackground
+      : state.era === 'crest'
+        ? state.crestBackground
+        : state.background
 
   const lockup = useMemo(() => ({
     era: state.era,
@@ -74,7 +80,22 @@ export const useLockupState = () => {
     program: state.program.trim(),
     markColor: state.markColor,
     textColor: state.textColor,
-    flagColour: state.flagColour,
+    flagPalette: state.flagPalette,
+    flagBackground: state.flagBackground,
+    flagMarkColor: state.flagMarkColor,
+    flagTextColor: state.linkColors ? state.flagMarkColor : state.flagTextColor,
+    crestArrangement: state.crestArrangement,
+    crestPlacement: state.crestPlacement,
+    crestBold: state.crestBold,
+    crestAlign: state.crestAlign,
+    crestExtra: state.crestExtra.trim(),
+    crestMarkColor: state.crestMarkColor,
+    crestTextColor: state.linkColors ? state.crestMarkColor : state.crestTextColor,
+    crestBackground: state.crestBackground,
+    flagSymbol: state.flagSymbol,
+    flagPlacement: state.flagPlacement,
+    flagProvince: state.flagProvince,
+    flagExtra: state.flagExtra.trim(),
     background,
     padding: clearSpacePadding(state.clearSpace),
     markAlign: state.markAlign
@@ -90,10 +111,17 @@ export const useLockupState = () => {
    * worse of the mark and the type is reported for each, since a lockup is only as legible as its
    * least legible half.
    */
+  // Each era has its own pair, so the readout has to measure the one on screen.
+  const ink = state.era === 'flag'
+    ? { mark: state.flagMarkColor, text: state.linkColors ? state.flagMarkColor : state.flagTextColor }
+    : state.era === 'crest'
+      ? { mark: state.crestMarkColor, text: state.linkColors ? state.crestMarkColor : state.crestTextColor }
+      : { mark: state.markColor, text: state.textColor }
+
   const contrast = useMemo(() => {
     const against = (surface) => {
-      const mark = describeContrast(state.markColor, surface)
-      const text = describeContrast(state.textColor, surface)
+      const mark = describeContrast(ink.mark, surface)
+      const text = describeContrast(ink.text, surface)
       const worst = (mark.ratio ?? Infinity) <= (text.ratio ?? Infinity) ? mark : text
       return { ...worst, part: worst === mark ? 'mark' : 'text', differs: mark.ratio !== text.ratio }
     }
@@ -104,7 +132,7 @@ export const useLockupState = () => {
           { surface: 'On black', ...against(BRAND_COLORS.black) }
         ]
       : [{ surface: 'Against the background', ...against(background) }]
-  }, [state.markColor, state.textColor, background, isTransparent])
+  }, [ink.mark, ink.text, background, isTransparent])
 
   /**
    * The preview surface.
@@ -121,10 +149,10 @@ export const useLockupState = () => {
     // white are the two drawn for dark surfaces, so they are the ones that vanish on a light page.
     const inkIsLight = state.era === 'current'
       ? ['reverse', 'white'].includes(state.currentVariant)
-      : isLightColor(state.markColor) || isLightColor(state.textColor)
+      : isLightColor(ink.mark) || isLightColor(ink.text)
 
     return isTransparent && inkIsLight ? 'dark' : 'light'
-  }, [state.backdrop, state.era, state.currentVariant, state.markColor, state.textColor, isTransparent])
+  }, [state.backdrop, state.era, state.currentVariant, ink.mark, ink.text, isTransparent])
 
   const swapColors = useCallback(() => setState(swapColours), [])
 

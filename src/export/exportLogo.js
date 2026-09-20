@@ -7,6 +7,7 @@
 import { renderLockupSvg, resolveLockup } from '../logo/renderLogoSvg.js'
 import { markSize, renderCurrentSvg } from '../current/currentMarks.js'
 import { flagSize, renderFlagSvg } from '../flag/renderFlagSvg.js'
+import { crestSize, renderCrestSvg } from '../crest/renderCrestSvg.js'
 import { BRAND_FONT_FAMILY, getEmbeddedFaces, getEmbeddedFontCss } from './fontEmbed.js'
 import { getGlyphOutlines } from './fontOutlines.js'
 
@@ -62,6 +63,10 @@ export const buildFileName = ({
     return `bc-flag-${slugify(ministry) || 'lockup'}.${extension}`
   }
 
+  if (era === 'crest') {
+    return `bc-arms-${slugify(ministry) || 'lockup'}.${extension}`
+  }
+
   if (era === 'current') {
     return `bc-${slugify(currentMinistry)}-${language}-${slugify(currentVariant)}.${extension}`
   }
@@ -103,13 +108,52 @@ export const buildSvgSource = async ({ embedFont = true, outlineText = false, ..
   const fontCss = glyphs || !embedFont ? undefined : await getEmbeddedFontCss()
 
   if (options.era === 'flag') return buildFlagArtwork({ ...options, glyphs, fontCss }).svg
+  if (options.era === 'crest') return buildCrestArtwork({ ...options, glyphs, fontCss }).svg
 
   return renderLockupSvg({ ...options, glyphs, fontCss })
 }
 
+/** The crest lockup's artwork. Drawn from parts, so the outline option applies as it does to the
+ * other generated eras. */
+const buildCrestArtwork = ({
+  ministry, crestArrangement, crestPlacement, crestBold, crestAlign, crestExtra,
+  crestMarkColor, crestTextColor, crestBackground, clearSpaceFactor = 0, pixelWidth, title,
+  glyphs, fontCss
+}) => {
+  const { svg, box } = renderCrestSvg({
+    arrangement: crestArrangement,
+    placement: crestPlacement,
+    ministry,
+    extra: crestExtra,
+    bold: crestBold,
+    align: crestAlign,
+    markColor: crestMarkColor,
+    textColor: crestTextColor,
+    background: crestBackground,
+    clearSpaceFactor,
+    pixelWidth,
+    title,
+    glyphs,
+    fontCss
+  })
+  return { svg, viewBox: box }
+}
+
+/** The crest lockup's box, before any font has loaded. */
+const crestViewBox = ({ ministry, crestArrangement, crestPlacement, crestBold, crestAlign, crestExtra, clearSpaceFactor = 0 }) => {
+  const { width, height } = crestSize({
+    ministry, arrangement: crestArrangement, placement: crestPlacement,
+    bold: crestBold, align: crestAlign, extra: crestExtra
+  })
+  const padding = clearSpaceFactor * width
+  return { x: -padding, y: -padding, width: width + padding * 2, height: height + padding * 2 }
+}
+
 /** The flag lockup's box, clear space included. Needed before the type has a font to draw with. */
-const flagViewBox = ({ ministry, clearSpaceFactor = 0 }) => {
-  const { width, height } = flagSize(ministry)
+const flagViewBox = ({ ministry, flagSymbol, flagPlacement, flagProvince, flagExtra, clearSpaceFactor = 0 }) => {
+  const { width, height } = flagSize({
+    ministry, symbol: flagSymbol, placement: flagPlacement, province: flagProvince, extra: flagExtra
+  })
   const padding = clearSpaceFactor * width
   return { x: -padding, y: -padding, width: width + padding * 2, height: height + padding * 2 }
 }
@@ -121,15 +165,20 @@ const flagViewBox = ({ ministry, clearSpaceFactor = 0 }) => {
  * and the type becomes paths, leave it out and the file carries live text and an embedded face.
  */
 const buildFlagArtwork = ({
-  ministry, markColor, textColor, flagColour, background, clearSpaceFactor = 0, pixelWidth, title,
-  glyphs, fontCss
+  ministry, flagSymbol, flagPlacement, flagProvince, flagExtra,
+  flagMarkColor, flagTextColor, flagPalette, flagBackground, clearSpaceFactor = 0, pixelWidth,
+  title, glyphs, fontCss
 }) => {
   const { svg, box } = renderFlagSvg({
     ministry,
-    letterColor: markColor,
-    textColor,
-    flagColour,
-    background,
+    symbol: flagSymbol,
+    placement: flagPlacement,
+    province: flagProvince,
+    extra: flagExtra,
+    letterColor: flagMarkColor,
+    textColor: flagTextColor,
+    flagPalette,
+    background: flagBackground,
     clearSpaceFactor,
     pixelWidth,
     title,
@@ -278,7 +327,11 @@ export const renderLogoBlob = async ({
   // flag era's layout needs no font, so its box can be had before any outline has been loaded.
   const current = options.era === 'current' ? buildCurrentArtwork({ ...options, pixelWidth }) : null
   const resolved = current ??
-    (options.era === 'flag' ? { viewBox: flagViewBox(options) } : resolveLockup(options))
+    (options.era === 'flag'
+      ? { viewBox: flagViewBox(options) }
+      : options.era === 'crest'
+        ? { viewBox: crestViewBox(options) }
+        : resolveLockup(options))
   const svgSource = current
     ? current.svg
     : await buildSvgSource({ ...options, resolved, pixelWidth, embedFont: format !== 'pdf' })

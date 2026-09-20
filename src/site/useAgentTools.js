@@ -22,8 +22,11 @@ import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS, exportLogo, isFormat
 import { resolveLockup } from '../logo/renderLogoSvg.js'
 import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
 import { MINISTRIES as CURRENT_MINISTRIES, findMinistry } from '../current/ministries.js'
-import { FLAG_COLOURS } from '../flag/flagColours.js'
+import { FLAG_PALETTE_ORDER } from '../flag/flagPalettes.js'
+import { ALL_FLAG_SYMBOLS, NAME_PLACEMENTS } from '../flag/flagLayout.js'
 import { flagSize } from '../flag/renderFlagSvg.js'
+import { CREST_ARRANGEMENTS, CREST_PLACEMENTS } from '../crest/crestLayout.js'
+import { crestSize } from '../crest/renderCrestSvg.js'
 import { MINISTRIES, searchMinistries } from '../ministries/ministries.js'
 import { buildShareUrl } from './shareLink.js'
 
@@ -63,18 +66,53 @@ const describeState = ({ state, lockup }) => {
     }
   }
 
+  if (state.era === 'crest') {
+    const { width, height } = crestSize({
+      ministry: lockup.ministry,
+      arrangement: state.crestArrangement,
+      placement: state.crestPlacement,
+      bold: state.crestBold,
+      extra: state.crestExtra
+    })
+    return {
+      era: 'crest',
+      ministry: lockup.ministry,
+      arrangement: state.crestArrangement,
+      ministryPlacement: state.crestPlacement,
+      bold: state.crestBold,
+      ...(state.crestExtra.trim() ? { secondLine: state.crestExtra.trim() } : {}),
+      markColor: state.crestMarkColor,
+      textColor: state.crestTextColor,
+      background: state.crestBackground === TRANSPARENT ? 'transparent' : state.crestBackground,
+      clearSpace: state.clearSpace,
+      size: { width: Math.round(width), height: Math.round(height) },
+      note: 'The coat of arms with the BRITISH COLUMBIA wordmark. Both are artwork; only the ' +
+        'ministry is typeset.'
+    }
+  }
+
   if (state.era === 'flag') {
-    const { width, height } = flagSize(lockup.ministry)
+    const { width, height } = flagSize({
+      ministry: lockup.ministry,
+      symbol: state.flagSymbol,
+      placement: state.flagPlacement,
+      province: state.flagProvince,
+      extra: state.flagExtra
+    })
     return {
       era: 'flag',
       ministry: lockup.ministry,
-      flagColour: state.flagColour,
-      markColor: state.markColor,
-      textColor: state.textColor,
-      background: state.background === TRANSPARENT ? 'transparent' : state.background,
+      symbol: state.flagSymbol,
+      namePlacement: state.flagPlacement,
+      provinceLine: state.flagProvince,
+      ...(state.flagExtra.trim() ? { thirdLine: state.flagExtra.trim() } : {}),
+      flagPalette: state.flagPalette,
+      markColor: state.flagMarkColor,
+      textColor: state.flagTextColor,
+      background: state.flagBackground === TRANSPARENT ? 'transparent' : state.flagBackground,
       clearSpace: state.clearSpace,
       size: { width: Math.round(width), height: Math.round(height) },
-      note: 'BC beside the provincial flag, the ministry beneath. Any wording, any colour.'
+      note: 'The BC Flag Symbol with a ministry set against it. Any wording, any colour.'
     }
   }
 
@@ -132,18 +170,49 @@ const buildTools = (latest) => [
       properties: {
         era: {
           type: 'string',
-          enum: ['historical', 'flag', 'current'],
-          description: 'historical: crest lockups built from parts, any wording and colour. ' +
-            'flag: BC beside the waving provincial flag, the ministry beneath. ' +
+          enum: ['historical', 'flag', 'crest', 'current'],
+          description: 'historical: the older crest lockups built from parts. ' +
+            'flag: BC beside the waving provincial flag. ' +
+            'crest: the coat of arms with the BRITISH COLUMBIA wordmark. ' +
             'current: the Province’s mark with the ministry wording set beside it.'
         },
         ministryCode: {
           type: 'string',
           description: 'Current era. A ministry abbreviation such as FOR or ENV.'
         },
-        flagColour: {
+        arrangement: {
           type: 'string',
-          enum: FLAG_COLOURS,
+          enum: CREST_ARRANGEMENTS,
+          description: 'Crest era. horizontal: the arms then the wordmark beside them. ' +
+            'vertical: the arms above it, both centred.'
+        },
+        ministryPlacement: {
+          type: 'string',
+          enum: CREST_PLACEMENTS,
+          description: 'Crest era. Whether the ministry sits beside the lockup or below it.'
+        },
+        symbol: {
+          type: 'string',
+          enum: ALL_FLAG_SYMBOLS,
+          description: 'Flag era. horizontal: BC then the flag. vertical: the flag above BC. ' +
+            'flag: the flag alone. The first two are what the standards page sanctions.'
+        },
+        namePlacement: {
+          type: 'string',
+          enum: NAME_PLACEMENTS,
+          description: 'Flag era. Whether the wording sits below the symbol or beside it.'
+        },
+        provinceLine: {
+          type: 'boolean',
+          description: 'Flag era. Sets "Province of British Columbia" in bold above the ministry.'
+        },
+        thirdLine: {
+          type: 'string',
+          description: 'Flag era. A line after the ministry — a minister, a place, a bulletin number.'
+        },
+        flagPalette: {
+          type: 'string',
+          enum: FLAG_PALETTE_ORDER,
           description: 'Flag era. Whether the flag keeps its own navy, red and gold, or is set ' +
             'in one ink with the letters.'
         },
@@ -192,7 +261,13 @@ const buildTools = (latest) => [
       if (input.era !== undefined) patch.era = input.era
       if (input.ministryCode !== undefined) patch.currentMinistry = String(input.ministryCode).toUpperCase()
       if (input.wording !== undefined) patch.currentName = String(input.wording)
-      if (input.flagColour !== undefined) patch.flagColour = input.flagColour
+      if (input.flagPalette !== undefined) patch.flagPalette = input.flagPalette
+      if (input.symbol !== undefined) patch.flagSymbol = input.symbol
+      if (input.arrangement !== undefined) patch.crestArrangement = input.arrangement
+      if (input.ministryPlacement !== undefined) patch.crestPlacement = input.ministryPlacement
+      if (input.namePlacement !== undefined) patch.flagPlacement = input.namePlacement
+      if (input.provinceLine !== undefined) patch.flagProvince = Boolean(input.provinceLine)
+      if (input.thirdLine !== undefined) patch.flagExtra = String(input.thirdLine)
       if (input.language !== undefined) patch.language = input.language
       if (input.variant !== undefined) patch.currentVariant = input.variant
       if (input.lockup !== undefined) patch.layout = input.lockup

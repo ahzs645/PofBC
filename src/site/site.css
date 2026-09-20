@@ -107,15 +107,14 @@ body {
 /* ── Preview stage ─────────────────────────────────────────────────────────────────────────── */
 
 .stage {
-  position: sticky;
-  top: 0;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
   padding: 12px 0;
   background: var(--surface-sunken);
 }
 
 @media (min-width: 900px) {
-  .stage { top: var(--gap); padding: 0; }
+  .stage { padding: 0; }
 }
 
 /* The preview surface.
@@ -160,20 +159,11 @@ body {
   .stage__frame { min-height: min(70vh, 620px); }
 }
 
-/* The layout's description is useful context on a wide screen and an obstacle on a narrow one,
-   where every line above the controls pushes them further out of reach. */
-.stage__caption .stage__detail { display: none; }
-
-@media (min-width: 640px) {
-  .stage__caption .stage__detail { display: inline; }
-}
-
 /* The lockup is capped in both axes so a wide horizontal and a tall stacked one both sit inside
    the frame without it resizing as the layout changes.
  *
- * On a phone the cap is deliberately tight. The stage is sticky, and an element taller than the
- * viewport cannot stick usefully — it would simply scroll away, taking the preview with it just as
- * the person starts changing the controls that drive it. */
+ * On a phone the cap is deliberately tight: the controls that drive the preview are below it, and
+ * a preview that fills the screen puts every one of them out of reach. */
 .stage__frame svg {
   max-width: 100%;
   max-height: 36vh;
@@ -185,20 +175,24 @@ body {
   .stage__frame svg { max-height: min(58vh, 520px); }
 }
 
+/* On a phone the preview control sits above the artwork and hard right, out of the way of the
+   lockup and within thumb's reach. On a wide screen there is room for it under the preview, which
+   is where it reads as a caption to what is above it. */
 .stage__bar {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 16px;
   align-items: center;
-  justify-content: space-between;
-  margin: 10px 2px 0;
+  justify-content: flex-end;
+  order: -1;
+  margin: 0 2px 10px;
 }
 
-.stage__caption {
-  margin: 0;
-  flex: 1 1 200px;
-  font-size: 13px;
-  color: var(--ink-muted);
+@media (min-width: 900px) {
+  .stage__bar {
+    order: 0;
+    margin: 10px 2px 0;
+  }
 }
 
 
@@ -644,3 +638,128 @@ textarea {
 @media (prefers-reduced-motion: no-preference) {
   .segmented button, .layouts button, .swatch, .button { transition: box-shadow 120ms, border-color 120ms, background-color 120ms; }
 }
+
+/* ── The view switch ───────────────────────────────────────────────────────────────────────── */
+
+.masthead__views {
+  display: flex;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.masthead__views button {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-raised);
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.masthead__views button[aria-pressed='true'] {
+  border-color: transparent;
+  background: var(--ink);
+  color: var(--surface-raised);
+}
+
+/* ── The gallery view ──────────────────────────────────────────────────────────────────────── */
+
+.gallery { display: grid; gap: var(--gap); }
+
+.gallery__intro {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+
+.gallery__entry { margin: 0; }
+
+.gallery__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gallery__head h2 { margin: 0; }
+
+.gallery__years { font-size: 13px; color: var(--ink-muted); }
+
+.gallery__note {
+  margin: 8px 0 0;
+  max-width: 62ch;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+.gallery__caveat {
+  margin: 14px 0 0;
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.gallery__art {
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  border-radius: 8px;
+  background: var(--surface-sunken);
+}
+
+.gallery__art svg { max-width: 100%; max-height: 140px; height: auto; }
+
+.gallery__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.gallery__label {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+/* One card per mark, capped so a single entry does not stretch the width of the page. */
+.gallery__pick {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin-top: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  background: var(--surface-raised);
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.gallery__pick:hover,
+.gallery__pick:focus-visible { border-color: var(--ink-muted); }
+
+/* Opened, the mark sits beside its controls on a wide screen and above them on a narrow one. */
+.gallery__editor {
+  display: grid;
+  gap: var(--gap);
+  margin-top: 16px;
+}
+
+@media (min-width: 760px) {
+  .gallery__editor { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
+}
+
+.gallery__art--large { min-height: 260px; padding: 16px; }
+.gallery__art--large svg { max-height: 300px; }
+
+.gallery__controls { display: grid; gap: 4px; align-content: start; }

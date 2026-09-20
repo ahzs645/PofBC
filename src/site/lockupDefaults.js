@@ -9,9 +9,10 @@ import { DEFAULT_CLEAR_SPACE, DEFAULT_MARK_ALIGNMENT } from '../logo/layouts.js'
 import { BRAND_COLORS } from '../logo/logoColors.js'
 
 export const DEFAULTS = {
-  // Which identity. 'historical' builds the crest lockups from parts, 'flag' the BC-and-flag
-  // lockup from the same wording and colours, and 'current' serves the Province's own ministry
-  // marks unchanged — so almost nothing else on this list applies to that one.
+  // Which identity. 'historical' builds the older crest lockups from parts, 'flag' the
+  // BC-and-flag lockup, 'crest' the coat of arms with the BRITISH COLUMBIA wordmark, and
+  // 'current' serves the Province's own ministry marks. Each keeps its own colours, because each
+  // was drawn for a different ground.
   era: 'historical',
   // Current era only. Its background is kept apart from the historical one because the two eras
   // have different palettes — the crest era's forest green is not a BC identity colour, and
@@ -26,8 +27,34 @@ export const DEFAULTS = {
   currentVariantTouched: false,
   currentBackground: BCID.white,
 
-  // Flag era only. The flag is drawn in its own three colours, or in one ink with the letters.
-  flagColour: 'colour',
+  // Flag era only. Its own colours, kept apart from the crest era's — the crest is set white on
+  // forest green, and neither half of that suits this identity. Carrying the green across showed
+  // it through every white gap in the flag; carrying the white across left the letters invisible
+  // on the white ground this identity uses.
+  flagBackground: BRAND_COLORS.white,
+  flagMarkColor: BRAND_COLORS.black,
+  flagTextColor: BRAND_COLORS.black,
+  // The flag in its own colours, or in one ink with the letters.
+  flagPalette: 'official',
+  flagPaletteTouched: false,
+  // How the symbol is built, and where the wording sits against it.
+  flagSymbol: 'horizontal',
+  flagPlacement: 'below',
+  // "Province of British Columbia" above the ministry, as many of the documents set it.
+  flagProvince: false,
+  // A third line: a minister, a place, a bulletin number.
+  flagExtra: '',
+
+  // Crest era only. Its own colours again, for the same reason every other era has them: the
+  // crest wordmark is set dark on light in every document it appears in.
+  crestArrangement: 'horizontal',
+  crestPlacement: 'beside',
+  crestBold: false,
+  crestAlign: 'centre',
+  crestExtra: '',
+  crestMarkColor: BRAND_COLORS.black,
+  crestTextColor: BRAND_COLORS.black,
+  crestBackground: BRAND_COLORS.white,
 
   layout: 'stacked',
   wordmark: true,

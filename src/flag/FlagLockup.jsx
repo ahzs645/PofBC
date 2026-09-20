@@ -11,16 +11,18 @@ import { renderFlagSvg } from './renderFlagSvg.js'
  * @param {string} props.ministry      The wording beneath the letters. Newlines break lines.
  * @param {string} props.letterColor   The BC letters.
  * @param {string} props.textColor     The wording.
- * @param {string} [props.flagColour]  'colour' for the flag's own three, 'ink' for one.
+ * @param {string} [props.flagPalette]  'official', 'modern' or 'ink'.
  * @param {string} [props.background]
  * @param {number} [props.clearSpaceFactor]
  * @param {string} [props.title]
  */
 export const FlagLockup = ({
-  ministry, letterColor, textColor, flagColour, background, clearSpaceFactor = 0, title, ...rest
+  ministry, symbol, placement, province, extra,
+  letterColor, textColor, flagPalette, background, clearSpaceFactor = 0, title, ...rest
 }) => {
   const { svg, box } = renderFlagSvg({
-    ministry, letterColor, textColor, flagColour, background, clearSpaceFactor, title
+    ministry, symbol, placement, province, extra,
+    letterColor, textColor, flagPalette, background, clearSpaceFactor, title
   })
 
   return (
