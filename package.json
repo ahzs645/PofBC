@@ -45,7 +45,8 @@
     "build:current": "npm run extract:current-marks && npm run recover:current-names && npm run verify:current-names && npm run build:current-glyphs && npm run build:current-mark && npm run build:current-catalogue && npm run compare:current",
     "build:current-extras": "node scripts/build-current-extras.mjs",
     "build:flag": "node scripts/build-flag.mjs",
-    "build:crest": "python3 scripts/build_crest.py"
+    "build:crest": "python3 scripts/build_crest.py",
+    "build:ministry-history": "node scripts/build-ministry-history.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

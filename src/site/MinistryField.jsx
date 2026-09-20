@@ -4,8 +4,35 @@
 // cabinet shuffle, and a stale list must never be the reason someone cannot make their logo. The
 // two modes keep separate values, so switching between them is non-destructive.
 
-import { useId } from 'react'
+import { useId, useMemo } from 'react'
 import { MINISTRY_GROUPS, MINISTRY_LIST_REVIEWED } from '../ministries/ministries.js'
+import { describeMinistry, historicalGroups } from '../ministries/ministryHistory.js'
+
+/**
+ * Today's ministries, then every ministry there has been.
+ *
+ * Three of the four identities here are historical, and a list of the ministries that exist now
+ * could not name any of them: there was no way to put the right name on a 1986 lockup. The older
+ * names carry the years they ran, which is what says which lockup they belong on.
+ */
+const ALL_GROUPS = [
+  ...MINISTRY_GROUPS,
+  ...historicalGroups(MINISTRY_GROUPS.flatMap((group) => group.options))
+]
+
+/** What is known about a chosen name: when it ran, and what it became. */
+const History = ({ name }) => {
+  const known = useMemo(() => describeMinistry(name), [name])
+  if (!known) return null
+
+  return (
+    <p className="field__note">
+      {known.ended ? `Ran ${known.years}.` : `In use since ${known.years.replace('–', '')}.`}
+      {known.earlier.length > 0 && ` The name was also used ${known.earlier.join(' and ')}.`}
+      {known.became.length > 0 && ` It became ${known.became.join(', and ')}.`}
+    </p>
+  )
+}
 
 export const MinistryField = ({ source, ministry, manualMinistry, program, onChange }) => {
   const selectId = useId()
@@ -34,13 +61,19 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
             value={ministry}
             onChange={(event) => onChange({ ministry: event.target.value })}
           >
-            {MINISTRY_GROUPS.map((group) => (
+            {ALL_GROUPS.map((group) => (
               <optgroup key={group.label} label={group.label}>
-                {group.options.map((name) => <option key={name} value={name}>{name}</option>)}
+                {group.options.map((option) => (typeof option === 'string'
+                  ? <option key={option} value={option}>{option}</option>
+                  : <option key={option.value} value={option.value}>{option.label}</option>))}
               </optgroup>
             ))}
           </select>
-          <p className="field__note">List last reviewed {MINISTRY_LIST_REVIEWED}. Not there? Switch to “Type it in”.</p>
+          <History name={ministry} />
+          <p className="field__note">
+            Today’s list last reviewed {MINISTRY_LIST_REVIEWED}; the dated ones are every ministry
+            since 1976. Not there? Switch to “Type it in”.
+          </p>
         </div>
       ) : (
         <div className="field">
@@ -55,6 +88,7 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
             autoComplete="off"
             onChange={(event) => onChange({ manualMinistry: event.target.value })}
           />
+          <History name={manualMinistry} />
           <p className="field__note">Long names wrap to the lockup’s measure on their own. Press Enter to force a break.</p>
         </div>
       )}
