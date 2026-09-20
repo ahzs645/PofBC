@@ -1,6 +1,8 @@
 import { BcLockup } from '../logo/BcLockup.jsx'
 import { CurrentControls } from '../current/CurrentControls.jsx'
 import { CurrentLockup } from '../current/CurrentLockup.jsx'
+import { FlagLockup } from '../flag/FlagLockup.jsx'
+import { FLAG_COLOURS, FLAG_COLOUR_HINTS, FLAG_COLOUR_LABELS } from '../flag/flagColours.js'
 import {
   alignsVertically, CLEAR_SPACE, CLEAR_SPACE_ORDER, LAYOUTS, MARK_ALIGNMENTS, MARK_ALIGNMENT_ORDER
 } from '../logo/layouts.js'
@@ -25,11 +27,22 @@ const MARK_ALIGNMENT_OPTIONS = MARK_ALIGNMENT_ORDER.map((value) => ({
   title: MARK_ALIGNMENTS[value].description
 }))
 
+const FLAG_COLOUR_OPTIONS = FLAG_COLOURS.map((value) => ({
+  value,
+  label: FLAG_COLOUR_LABELS[value],
+  title: FLAG_COLOUR_HINTS[value]
+}))
+
 const ERA_OPTIONS = [
   {
     value: 'historical',
-    label: 'Historical',
+    label: 'Crest',
     title: 'The crest lockups, built from the supplied artwork. Any ministry, any colour.'
+  },
+  {
+    value: 'flag',
+    label: 'Flag',
+    title: 'BC beside the waving provincial flag, with the ministry beneath.'
   },
   {
     value: 'current',
@@ -48,6 +61,10 @@ export const App = () => {
   const { state, update, reset, lockup, artwork, background, contrast, backdrop, isTransparent, swapColors } = useLockupState()
   const layout = LAYOUTS[state.layout]
   const isCurrent = state.era === 'current'
+  const isFlag = state.era === 'flag'
+  // The crest era is the only one with lockups to choose between, a province wordmark to show or
+  // hide, and a mark to align.
+  const isCrest = !isCurrent && !isFlag
 
   // Registers this page's tools with an agent driving the browser, where the browser supports it.
   // A no-op everywhere else.
@@ -75,6 +92,16 @@ export const App = () => {
                 clearSpaceFactor={lockup.clearSpaceFactor}
                 title="Province of British Columbia ministry mark"
               />
+            ) : isFlag ? (
+              <FlagLockup
+                ministry={lockup.ministry}
+                letterColor={state.markColor}
+                textColor={state.linkColors ? state.markColor : state.textColor}
+                flagColour={state.flagColour}
+                background={state.background}
+                clearSpaceFactor={lockup.clearSpaceFactor}
+                title="British Columbia flag lockup"
+              />
             ) : (
               <BcLockup {...artwork} />
             )}
@@ -86,6 +113,11 @@ export const App = () => {
                 <span>
                   Official mark
                   <span className="stage__detail"> — published artwork, used as provided</span>
+                </span>
+              ) : isFlag ? (
+                <span>
+                  Flag lockup
+                  <span className="stage__detail"> — BC and the provincial flag, wording beneath</span>
                 </span>
               ) : (
                 <span>{layout.label}<span className="stage__detail"> — {layout.description}</span></span>
@@ -111,8 +143,10 @@ export const App = () => {
               onChange={(value) => update({ era: value })}
               hint={
                 isCurrent
-                  ? 'The Province’s current marks, served exactly as published. The wording is part of the artwork.'
-                  : 'The crest identity, rebuilt from the supplied artwork. Any ministry, any colourway.'
+                  ? 'The Province’s current marks, used exactly as published, with the wording set to match.'
+                  : isFlag
+                    ? 'BC beside the waving provincial flag. Any ministry, any colour.'
+                    : 'The crest identity, rebuilt from the supplied artwork. Any ministry, any colourway.'
               }
             />
           </section>
@@ -132,7 +166,27 @@ export const App = () => {
             </section>
           )}
 
-          {!isCurrent && (
+          {isFlag && (
+            <section className="panel">
+              <h2>Flag</h2>
+              <Segmented
+                label="Colour"
+                options={FLAG_COLOUR_OPTIONS}
+                value={state.flagColour}
+                onChange={(value) => update({ flagColour: value })}
+                hint={FLAG_COLOUR_HINTS[state.flagColour]}
+              />
+              <Segmented
+                label="Clear space"
+                options={CLEAR_SPACE_OPTIONS}
+                value={state.clearSpace}
+                onChange={(value) => update({ clearSpace: value })}
+                hint="Margin around the lockup. The background colour fills it."
+              />
+            </section>
+          )}
+
+          {isCrest && (
           <section className="panel">
             <h2>Lockup</h2>
             <LayoutPicker value={state.layout} onChange={(value) => update({ layout: value })} />

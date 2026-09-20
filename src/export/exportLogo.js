@@ -6,6 +6,7 @@
 
 import { renderLockupSvg, resolveLockup } from '../logo/renderLogoSvg.js'
 import { markSize, renderCurrentSvg } from '../current/currentMarks.js'
+import { flagSize, renderFlagSvg } from '../flag/renderFlagSvg.js'
 import { BRAND_FONT_FAMILY, getEmbeddedFaces, getEmbeddedFontCss } from './fontEmbed.js'
 import { getGlyphOutlines } from './fontOutlines.js'
 
@@ -57,6 +58,10 @@ export const buildFileName = ({
 
   // The current era names what it actually is: an official mark, in a language, in one of the
   // Province's colourways. None of the historical era's colour or lockup choices apply.
+  if (era === 'flag') {
+    return `bc-flag-${slugify(ministry) || 'lockup'}.${extension}`
+  }
+
   if (era === 'current') {
     return `bc-${slugify(currentMinistry)}-${language}-${slugify(currentVariant)}.${extension}`
   }
@@ -97,7 +102,41 @@ export const buildSvgSource = async ({ embedFont = true, outlineText = false, ..
   // If the outlines could not be loaded, fall back to live text rather than exporting nothing.
   const fontCss = glyphs || !embedFont ? undefined : await getEmbeddedFontCss()
 
+  if (options.era === 'flag') return buildFlagArtwork({ ...options, glyphs, fontCss }).svg
+
   return renderLockupSvg({ ...options, glyphs, fontCss })
+}
+
+/** The flag lockup's box, clear space included. Needed before the type has a font to draw with. */
+const flagViewBox = ({ ministry, clearSpaceFactor = 0 }) => {
+  const { width, height } = flagSize(ministry)
+  const padding = clearSpaceFactor * width
+  return { x: -padding, y: -padding, width: width + padding * 2, height: height + padding * 2 }
+}
+
+/**
+ * The flag era's artwork.
+ *
+ * Drawn from parts like the crest era, so the same outline option applies: pass the glyph table
+ * and the type becomes paths, leave it out and the file carries live text and an embedded face.
+ */
+const buildFlagArtwork = ({
+  ministry, markColor, textColor, flagColour, background, clearSpaceFactor = 0, pixelWidth, title,
+  glyphs, fontCss
+}) => {
+  const { svg, box } = renderFlagSvg({
+    ministry,
+    letterColor: markColor,
+    textColor,
+    flagColour,
+    background,
+    clearSpaceFactor,
+    pixelWidth,
+    title,
+    glyphs,
+    fontCss
+  })
+  return { svg, viewBox: box }
 }
 
 /**
@@ -235,9 +274,11 @@ export const renderLogoBlob = async ({
   const spec = EXPORT_FORMATS[format]
   if (!spec) throw new Error(`Unsupported export format: ${format}`)
 
-  // The current era's geometry comes from the artwork itself; the historical era's is computed.
+  // The current era's geometry comes from the artwork itself; the other two compute theirs. The
+  // flag era's layout needs no font, so its box can be had before any outline has been loaded.
   const current = options.era === 'current' ? buildCurrentArtwork({ ...options, pixelWidth }) : null
-  const resolved = current ?? resolveLockup(options)
+  const resolved = current ??
+    (options.era === 'flag' ? { viewBox: flagViewBox(options) } : resolveLockup(options))
   const svgSource = current
     ? current.svg
     : await buildSvgSource({ ...options, resolved, pixelWidth, embedFont: format !== 'pdf' })

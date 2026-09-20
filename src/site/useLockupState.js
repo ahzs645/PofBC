@@ -74,6 +74,7 @@ export const useLockupState = () => {
     program: state.program.trim(),
     markColor: state.markColor,
     textColor: state.textColor,
+    flagColour: state.flagColour,
     background,
     padding: clearSpacePadding(state.clearSpace),
     markAlign: state.markAlign

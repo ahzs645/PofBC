@@ -22,6 +22,8 @@ import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS, exportLogo, isFormat
 import { resolveLockup } from '../logo/renderLogoSvg.js'
 import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
 import { MINISTRIES as CURRENT_MINISTRIES, findMinistry } from '../current/ministries.js'
+import { FLAG_COLOURS } from '../flag/flagColours.js'
+import { flagSize } from '../flag/renderFlagSvg.js'
 import { MINISTRIES, searchMinistries } from '../ministries/ministries.js'
 import { buildShareUrl } from './shareLink.js'
 
@@ -52,9 +54,27 @@ const describeState = ({ state, lockup }) => {
       language: state.language,
       variant: state.currentVariant,
       variantLabel: CURRENT_VARIANTS[state.currentVariant]?.label,
+      // Its own background, not the crest era's — the two are kept apart in state and reporting
+      // the wrong one had an agent setting a colour it could not see.
+      background: state.currentBackground === TRANSPARENT ? 'transparent' : state.currentBackground,
+      clearSpace: state.clearSpace,
+      note: 'The Province’s mark, used as published, with the wording set beside it. ' +
+        'Pass `wording` to set_lockup to change it.'
+    }
+  }
+
+  if (state.era === 'flag') {
+    const { width, height } = flagSize(lockup.ministry)
+    return {
+      era: 'flag',
+      ministry: lockup.ministry,
+      flagColour: state.flagColour,
+      markColor: state.markColor,
+      textColor: state.textColor,
       background: state.background === TRANSPARENT ? 'transparent' : state.background,
       clearSpace: state.clearSpace,
-      note: 'Official artwork. The wording is part of the file and cannot be changed.'
+      size: { width: Math.round(width), height: Math.round(height) },
+      note: 'BC beside the provincial flag, the ministry beneath. Any wording, any colour.'
     }
   }
 
@@ -112,13 +132,20 @@ const buildTools = (latest) => [
       properties: {
         era: {
           type: 'string',
-          enum: ['historical', 'current'],
+          enum: ['historical', 'flag', 'current'],
           description: 'historical: crest lockups built from parts, any wording and colour. ' +
-            'current: the Province’s official ministry marks, used exactly as published.'
+            'flag: BC beside the waving provincial flag, the ministry beneath. ' +
+            'current: the Province’s mark with the ministry wording set beside it.'
         },
         ministryCode: {
           type: 'string',
           description: 'Current era. A ministry abbreviation such as FOR or ENV.'
+        },
+        flagColour: {
+          type: 'string',
+          enum: FLAG_COLOURS,
+          description: 'Flag era. Whether the flag keeps its own navy, red and gold, or is set ' +
+            'in one ink with the letters.'
         },
         wording: {
           type: 'string',
@@ -165,6 +192,7 @@ const buildTools = (latest) => [
       if (input.era !== undefined) patch.era = input.era
       if (input.ministryCode !== undefined) patch.currentMinistry = String(input.ministryCode).toUpperCase()
       if (input.wording !== undefined) patch.currentName = String(input.wording)
+      if (input.flagColour !== undefined) patch.flagColour = input.flagColour
       if (input.language !== undefined) patch.language = input.language
       if (input.variant !== undefined) patch.currentVariant = input.variant
       if (input.lockup !== undefined) patch.layout = input.lockup

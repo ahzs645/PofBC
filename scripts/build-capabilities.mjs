@@ -23,6 +23,8 @@ import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS } from '../src/export
 import { MINISTRY_GROUPS, MINISTRY_LIST_REVIEWED } from '../src/ministries/ministries.js'
 import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, BCID } from '../src/current/currentMarks.js'
 import { MINISTRIES as CURRENT_MINISTRIES } from '../src/current/ministries.js'
+import { FLAG_COLOURS } from '../src/flag/flagColours.js'
+import { FLAG_PALETTE } from '../src/assets/flagMark.js'
 import { SHARE_PARAM } from '../src/site/shareLink.js'
 import { CONFIG_PARAM, toConfig } from '../src/site/configFormat.js'
 import { DEFAULTS } from '../src/site/lockupDefaults.js'
@@ -43,6 +45,15 @@ const manifest = {
       description: 'The crest identity, rebuilt from supplied artwork. Any ministry, any wording, ' +
         'any colour, four lockups. Everything else in this manifest describes this era.',
       generated: true
+    },
+    flag: {
+      description: 'BC beside the waving provincial flag, with the ministry name beneath. Built ' +
+        'from parts like the crest era, so it takes any wording and any colour.',
+      generated: true,
+      flagColours: FLAG_COLOURS,
+      note: 'The flag is the Province’s own artwork; its proportions against the letters are ' +
+        'measured from a photograph of the logo, which is the only reference available.',
+      palette: FLAG_PALETTE
     },
     current: {
       description: 'The Province’s BC mark, used exactly as published, with the ministry wording ' +

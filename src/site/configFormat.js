@@ -15,6 +15,7 @@
 
 import { CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
 import { findMinistry } from '../current/ministries.js'
+import { FLAG_COLOURS } from '../flag/flagColours.js'
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
@@ -49,7 +50,7 @@ export const cleanOneOf = (value, allowed, fallback) => (allowed.includes(value)
 
 // ── Public shape ─────────────────────────────────────────────────────────────────────────────────
 
-export const ERAS = ['historical', 'current']
+export const ERAS = ['historical', 'flag', 'current']
 
 const backgroundOf = (state) => (
   state.background === TRANSPARENT ? 'transparent' : state.background
@@ -62,7 +63,17 @@ const backgroundOf = (state) => (
  * other is a finished file in one of four colourways — so a configuration describes whichever era
  * is in play rather than carrying a pile of fields that do not apply to it.
  */
-export const toConfig = (state) => (state.era === 'current'
+export const toConfig = (state) => (state.era === 'flag'
+  ? {
+      era: 'flag',
+      ministry: (state.source === 'manual' ? state.manualMinistry : state.ministry).trim(),
+      flagColour: state.flagColour,
+      markColor: state.markColor,
+      textColor: state.textColor,
+      background: backgroundOf(state),
+      clearSpace: state.clearSpace
+    }
+  : state.era === 'current'
   ? {
       era: 'current',
       ministryCode: state.currentMinistry,
@@ -130,6 +141,7 @@ export const fromConfig = (config) => {
     if (forCurrent) patch.currentBackground = colour
     else patch.background = colour
   }
+  if ('flagColour' in config) patch.flagColour = cleanOneOf(config.flagColour, FLAG_COLOURS, DEFAULTS.flagColour)
   if ('clearSpace' in config) patch.clearSpace = cleanOneOf(config.clearSpace, CLEAR_SPACE_ORDER, DEFAULTS.clearSpace)
   if ('markAlignment' in config) patch.markAlign = cleanOneOf(config.markAlignment, MARK_ALIGNMENT_ORDER, DEFAULTS.markAlign)
 
