@@ -1,8 +1,9 @@
 # Province of British Columbia — logo generator
 
-A Vite app that builds the three provincial lockups for any ministry, in any colourway, and
-exports them as SVG, PDF, PNG, WebP or JPEG. The rendering core underneath it is plain JavaScript
-with no framework dependency, so it can be reused from another app, a build script or a server.
+A Vite app that builds the Province's lockups — four identities' worth, spanning the crest era to
+the marks in use today — for any ministry, in any colourway, and exports them as SVG, PDF, PNG,
+WebP or JPEG. The rendering core underneath it is plain JavaScript with no framework dependency, so
+it can be reused from another app, a build script or a server.
 
 ```
 git clone --recurse-submodules <this repo>
@@ -14,25 +15,60 @@ Already cloned without `--recurse-submodules`? `git submodule update --init --re
 
 ---
 
-## Two identities
+## Four identities
 
 An **Identity** switch at the top of the controls chooses between them. They have almost nothing in
 common, so most of the panel changes with it.
 
-| | Historical | Current |
-|---|---|---|
-| What it is | The crest identity, rebuilt from the supplied artwork | The Province's published ministry marks |
-| Wording | Any ministry, any second line, any wrapping | Fixed — it is part of the artwork |
-| Lockups | Four | One per ministry |
-| Colour | Anything, mark and type independently | Four official colourways |
-| Language | — | English and French |
-| How it is made | Drawn from parts on every render | Served whole |
+| | Crest | Flag | Arms | Current |
+|---|---|---|---|---|
+| What it is | The crest lockups, from the supplied artwork | BC beside the waving provincial flag | The coat of arms with the BRITISH COLUMBIA wordmark | The Province's published ministry marks |
+| Wording | Any ministry, any second line, any wrapping | Any, plus an optional province line and a third line | Any, plus a trailing line | Any, typeset in the marks' own alphabet |
+| Lockups | Four | Three symbols × two placements | Three arrangements × two placements | One per ministry |
+| Colour | Anything, mark and type independently | Three flag palettes, plus ink | Anything | Four official colourways |
+| Language | — | — | — | English and French |
+| How it is made | Drawn from parts on every render | Drawn from parts | Drawn from parts | Published mark, typeset wording |
 
-The current era is a picker rather than a generator, deliberately. Both of the Province's guideline
-documents say in bold that the marks must be used **exactly as provided** and not recreated, so this
-does not recreate them: `scripts/extract_current_marks.py` lifts the drawn vectors out of the
-published PDF and packages them unchanged. The ministry names are outlines, which is what makes that
-work — the serif they are set in is not one we have, and it is never needed.
+Every era keeps its **own background and ink**, because their palettes have nothing to do with each
+other. Switching identity leaves each side as you had it. Sharing them was a bug twice over: the
+crest era's forest green showed through the flag's gaps, and the arms' white type once landed on a
+white ground.
+
+A **Gallery** button opens the one-off marks — BC Parks and its like — which follow no pattern the
+generator can offer and so have nothing to be loaded into. Each still opens for recolouring, and
+each draws itself from the same renderer as everything else, so a card cannot drift from what it
+gives you.
+
+### The current era: a published mark, typeset wording
+
+**The mark itself is never recreated.** Both of the Province's guideline documents say in bold that
+the marks must be used *exactly as provided*, so `scripts/extract_current_marks.py` lifts the drawn
+vectors out of the published PDF and packages them unchanged.
+
+The *wording* is a different matter, and it is now set rather than stored. The published artwork
+draws each ministry name as outlines, which meant a ministry that had been renamed — or one that
+never had a mark published — had nothing to use. So the serif was identified, and the alphabet
+recovered from the artwork itself:
+
+- **It is Adobe Garamond Pro.** Confirmed by overlaying outlines glyph for glyph: 1.3% worst case,
+  0.5% median. BC Sans, the Province's screen face, is not the serif on these marks.
+- **The marks are kerned, and tracked at −10/1000 em.** Kerned rather than merely letter-spaced:
+  fitting with the pairs gives a residual of 0.005 pt against 0.150 without them.
+- **Letterforms are combined by coordinate-wise median, not mean.** Forty-six published marks
+  contain many copies of each letter, and a handful of the files are off-standard; the mean was
+  pulled 70/1000 em by them, the median 7.8.
+- **`W` appears in only one file, and that file is corrupt.** It was recovered by rasterising
+  candidate outlines and matching on overlap — an index-based resampling scored 0.44, rasterising
+  scored 0.054.
+- **Four English files are unusable**: three merge two lockups into one, and a fourth holds French
+  text. Typesetting sidesteps all four.
+- **The PDF has a text layer.** Finding it removed every remaining guess about line breaks, which
+  had until then been inferred from a baseline grid — heads break on commas and feet break on
+  apostrophes, so neither alone clusters the lines correctly, but a grid survives both.
+
+What is committed is the alphabet the published marks are *themselves* drawn with, plus advance
+widths and kerning pairs. The rest of the alphabet is built from a licensed font and gitignored —
+see [Requirements](#requirements).
 
 The four colourways are the Province's own, from its colour-accessibility guidance: **Colour**,
 **Reverse**, **Solid black**, **Solid white**. Reverse is the interesting one — the mountains
@@ -41,12 +77,10 @@ artwork. That is why the extraction labels every shape with a `data-role` rather
 fill. The solid colourways drop the sun's rays entirely so the background shows through them;
 painting them white would ring the mark with a halo on anything but a white page.
 
-The two eras keep **separate backgrounds and colours**, because their palettes have nothing to do
-with each other — the crest era's forest green is not a BC identity colour, and carrying it across
-put blue type on green. Switching era therefore leaves each side as you had it. In the current era
-the background swatches are the BC identity colours, and choosing one moves the colourway to the
-one the guidance pairs with it: BC Blue and black get Reverse, the golds and the 60% tints get Solid
-black. Choose a colourway by hand and it stops following, as the wordmark and the alignment do.
+In the current era the background swatches are the BC identity colours, and choosing one moves the
+colourway to the one the guidance pairs with it: BC Blue and black get Reverse, the golds and the
+60% tints get Solid black. Choose a colourway by hand and it stops following, as the wordmark and
+the alignment do.
 
 Each mark is also a plain file — `current-marks/for-en.svg` and so on, listed in
 [`current-marks/index.json`](https://ahzs645.github.io/PofBC/current-marks/index.json) — so current-era
@@ -62,7 +96,8 @@ same logo — all handled by the extraction rather than papered over.
 
 ## The four lockups
 
-The first three are reconstructed from the supplied Illustrator exports in [`artwork/`](artwork),
+These are the **Crest** identity's, the first of the four. The first three are reconstructed from
+the supplied Illustrator exports in [`artwork/`](artwork),
 and each keeps that file's own type size, leading and tracking — they were set individually and do
 not agree with each other, so the differences are preserved rather than averaged away.
 
@@ -91,9 +126,114 @@ Explicit line breaks are honoured.
 
 ---
 
+## The flag identity
+
+BC beside the waving provincial flag, from [`artwork/flag/spirit-of-bc-flag.svg`](artwork/flag) —
+twelve shapes, kept as drawn. Three symbols (the letters beside the flag, the flag above them, the
+flag alone) each take the wording below or beside them.
+
+**There are three palettes, and the supplied file is not the official one.** The standards page
+specifies Pantone Blue 072C, Red 032C and Yellow 109C — `#10069f`, `#ef3340`, `#ffd100`. The SVG
+supplied for this project carries `#013366`, `#ad0000`, `#fcba19`, a later recolouring. Both are
+offered rather than one being corrected into the other, alongside a third that sets the whole
+symbol in a single ink.
+
+That third one exists because **the flag's white is the page showing through it**, not a white
+shape. Full colour on a green ground therefore shows green through every gap in the flag, which is
+what the printed documents avoid by setting the whole lockup in one ink. The palette picker
+recommends it whenever the background is dark enough to matter.
+
+The proportions come from seventeen printed references, because the standards page gives the symbol
+and its colours but never shows a ministry name against it. All seventeen reproduce. The documents
+disagree with each other, and where they do the reading is kept rather than averaged.
+
+The measure the wording wraps to was wrong for a while, and wrong in a way worth recording: it had
+been arrived at by dividing a flag's *width* by its height ratio, which is not a quantity. It broke
+"Province of British Columbia" in two — a line nearly every document keeps whole, which is what
+made it visible. There is now a test that pins exactly that.
+
+The **BC Parks badge** is built from this flag and its frame, but it belongs to the gallery rather
+than to the generator: both of its words are the wordmark, set alike, rather than a ministry name
+under a symbol. The frame is the real artwork and not a shape fitted to it — it was a superellipse
+until the drawing turned up, and the drawing is not symmetrical, running 30.3 units of wall on the
+left against 30.5 on the right and 29.6 at the top against 30.7 at the bottom. It was drawn by
+hand, and no fitted curve was going to find that.
+
+---
+
+## The coat of arms
+
+The full achievement of arms with the BRITISH COLUMBIA wordmark, and a ministry set against it.
+Both pieces are artwork — the arms as drawn, the wordmark as outlines rather than as text — so the
+ministry is the only thing typeset. `scripts/build_crest.py` does the extraction in Python rather
+than in this project's own path reader, because the source uses relative arcs and the reader does
+not implement them.
+
+Everything else here was measured off twelve printed documents, and the measuring taught more than
+the numbers did.
+
+### Check the aspect before believing the reading
+
+Every proportion below was taken by finding the arms and the wordmark in a rasterised reference and
+reading their heights. The check that makes those readings trustworthy is to compute each drawing's
+own aspect first: across all twelve the arms come out at 0.818–0.833 against this project's 0.831,
+and the wordmark at 2.483–2.511 against its 2.523. That is what rules out having measured something
+rescaled, cropped or simply misidentified — and it caught two documents that had been read as side
+by side when they in fact stack.
+
+### The documents disagree, so several constants are choices
+
+Three of them draw the arms and the wordmark at much the same height (0.878, 0.899, 0.891); three
+draw the arms about twice as large (0.493, 0.493, 0.433). Both are printed, so both exist:
+**Stacked** and **Stacked, large arms**. A single averaged value would have matched neither.
+
+The same is true of the ministry's size, which runs from 0.212 to 0.294 of the wordmark, and of
+where the ministry's lines break, and of whether a trailing line is set smaller than the ministry
+above it. Each became a control rather than a number.
+
+### Band height is not cap height
+
+Reading type size off a rasterised reference means reading the height of a band of ink, which
+includes any descender in the line. In Helvetica the ascenders reach 0.718 em against the cap
+line's 0.717, so a line with ascenders and no descenders bands at exactly its cap height, and one
+with descenders bands at cap plus 0.208. Converting each reading that way turned a spread that
+looked continuous into three clean settings.
+
+### The unit is usually the bug
+
+Two constants were wrong not in value but in what they were a share of.
+
+The gap from the mark to a ministry set beneath it was measured against the arms, where the twelve
+documents spread 0.125 to 0.397 and no constant fits. Against the wordmark the stacked ones land on
+0.453, 0.427 and 0.448. The wordmark is the one drawing whose size holds across the arrangements,
+so a share of it means the same thing in all three; a share of the arms does not. The ministry's
+size moved to the same unit for the same reason.
+
+The measure the ministry wraps to was in arms heights, which was fine until the ministry's size
+became a choice — then the largest setting overran a backstop that could not grow with it. It is
+now in cap heights of the ministry's own type, pinned just above the widest line these documents
+print whole ("Ministry of Employment and Investment", 25.1 caps in its document and 26.2 as this
+project sets it).
+
+### A typed break wins over the measure
+
+The documents were set line by line and disagree about where to break, so there is no rule to
+infer. The measure is a backstop for text nobody has broken yet; a line broken by hand is set as
+typed. This is the rule the current era already followed.
+
+### What still differs
+
+`selection-1 (2)` reads 0.433 for wordmark-to-arms where the large-arms form uses 0.49, the median
+of its three readings — it is the smallest, lowest-resolution image of the set. `selection-1 (5)`
+cannot be compared at all: its arms are an embedded raster in the source file. And `selection-1
+(7)`'s vertical rule is a page margin, not part of the lockup.
+
+---
+
 ## Requirements
 
-**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and one git submodule.
+**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and one git submodule. A copy of **Adobe
+Garamond Pro** is optional and widens the current era's alphabet.
 
 ### The submodule
 
@@ -121,22 +261,47 @@ each machine. `npm run dev` and `npm run build` do that for you.
 and it is what lets the layout engine measure text in Node — including in CI, on a machine with no
 Helvetica at all.
 
+### Adobe Garamond Pro, optionally
+
+The current era's wording is set in the serif its marks are drawn with, which is Adobe Garamond Pro.
+The letters the published artwork *itself* contains were recovered from that artwork and are
+committed, so every official ministry name works out of the box. The rest of the alphabet — the
+letters that happen not to appear anywhere in forty-six marks — has to come from the font:
+
+```sh
+GARAMOND_SOURCE=/path/to/adobe-garamond-pro npm run build:current-extras
+```
+
+**`GARAMOND_SOURCE` has no default, deliberately.** Picking a licensed font up off the machine
+automatically would mean an ordinary `npm run build` quietly bundled it, and a deploy published it.
+Without the variable the build simply produces a smaller alphabet, and the app names any letters it
+cannot set rather than dropping them silently.
+
 ---
 
 ## How it fits together
 
 ```
-artwork/                     the three supplied Illustrator exports — the source of truth
+artwork/                     the supplied artwork — the source of truth for every era
+  crest/, current/, flag/    the arms' wordmark, the ministry-marks PDF, the flag SVG
 scripts/
   build-mark.mjs             extracts the mark, proves all three copies are identical
   build-fonts.mjs            subsets Helvetica, emits the metrics table and the glyph outlines
+  build_crest.py             extracts the arms and their wordmark (relative arcs, hence Python)
+  extract_current_marks.py   lifts the published ministry marks out of the PDF, unchanged
+  recover_current_names.py   reads their wording back, from the outlines and the PDF's text layer
+  build-current-glyphs.mjs   the alphabet and metrics the current era typesets from
   build-vendor-json-url.mjs  builds the share-link submodule
-  sfnt.mjs, svgPath.mjs      the font and path surgery those two need
+  sfnt.mjs, svgPath.mjs      the font and path surgery those need
   compare-artwork.mjs        re-renders each lockup over its original and diffs them
 vendor/json-url/             submodule — compresses a configuration into a share link
 src/
-  assets/markup.js           generated — the mark, once
+  assets/                    generated artwork: the mark, the flag, the arms, the Parks frame
   logo/                      the framework-free core: layouts, measurement, colour, rendering
+  flag/                      the flag identity, its palettes, and the BC Parks badge
+  crest/                     the coat-of-arms identity
+  current/                   the published marks, and the alphabet their wording is set in
+  gallery/                   the one-off marks, which follow no pattern the generator offers
   export/                    SVG/PDF/PNG/WebP/JPEG, single files or a zipped bundle
   ministries/                the ministry list and its search
   site/                      the React generator UI
@@ -227,6 +392,24 @@ placed by hand.
 
 These numbers are pinned by the tests in `src/logo/renderLogoSvg.test.js`, so they cannot drift
 without a test failing.
+
+### The other three eras
+
+They have no Illustrator source to diff against, so they are checked against printed references
+instead — seventeen documents for the flag identity and twelve for the arms, rasterised and
+measured rather than eyeballed. All of them reproduce.
+
+The method that matters is measuring each drawing's **own aspect** before trusting any reading
+taken from it. A height read off a reference is only meaningful once you know you have found the
+right drawing at its true scale, and that check caught both a misidentified arrangement and a
+proportion that turned out to have two printed values rather than one. Every constant in
+`src/flag/flagLayout.js` and `src/crest/crestLayout.js` carries the readings it came from in a
+comment, including the ones that disagree.
+
+Where the documents genuinely disagree the readings are kept as choices rather than averaged into a
+value that matches none of them. Averaging was the failure mode throughout this project: a mean
+across off-standard published marks, a single stacked proportion standing in for two, one ministry
+size standing in for three.
 
 ---
 
@@ -446,7 +629,13 @@ still works for a one-off publish from your own machine.
 
 ## Licence and use
 
-The mark is a provincial symbol reproduced from the supplied artwork; its use is governed by the
-Government of British Columbia. Helvetica is a licensed typeface — the build subsets it from a copy
-already on the machine and never commits the result, but distributing a built site distributes the
-embedded subset, which is your call to make under whatever licence covers your copy.
+The marks are provincial symbols reproduced from the supplied artwork; their use is governed by the
+Government of British Columbia. The Province's guideline documents say in bold that the current
+ministry marks must not be altered and must be used exactly as provided, which is why that era
+serves them unchanged.
+
+Helvetica and Adobe Garamond Pro are licensed typefaces. The build subsets each from a copy already
+on the machine and commits neither — only advance widths and kerning, which are not letterforms.
+Distributing a built site distributes the embedded subsets, which is your call to make under
+whatever licence covers your copies. `GARAMOND_SOURCE` has no default path so that this cannot
+happen by accident.
