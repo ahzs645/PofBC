@@ -70,6 +70,29 @@ What is committed is the alphabet the published marks are *themselves* drawn wit
 widths and kerning pairs. The rest of the alphabet is built from a licensed font and gitignored —
 see [Requirements](#requirements).
 
+**Forty-six marks have no capital N or O.** No current ministry name starts a word with either, so
+until the list offered historical ministries nobody noticed. Then "Forests, Lands, Natural Resource
+Operations and Rural Development" was drawn as "atural Resource perations". The fix is the
+Province's own drawing again, not a font: older marks were drawn in the same alphabet, and
+`scripts/lift-current-letters.mjs` takes the letters the alphabet lacks out of any mark listed in
+[`artwork/current/lifted/`](artwork/current/lifted).
+
+- **It fits before it lifts.** Each line's size and origin are fitted against the letters the
+  alphabet already has. On the FLNRORD mark every known letter lands within 0.6/1000 em of where the
+  metrics put it, and a file that misses by more than 0.02 pt is refused.
+- **It also settled a line-break rule.** The rules below used to cap a mark at three lines,
+  because no current mark has four. FLNRORD has four: an even two-line split of its name would make
+  a line 13579 wide, where the widest any current mark sets is 12296. So above 13000 the ministry
+  proper takes three lines, evened the same way, and the published mark comes out exactly.
+- **Still missing: `B`, `U`, `V` and the full stop**, which 16 historical names use. A published mark
+  containing them, added to the lifted folder's `index.json`, closes that gap.
+- **A typewriter `'` is set as `’`**, which is what the marks use, so "Women's Equality" needs no
+  letter the marks never drew.
+
+The current era's ministry list is the published marks first, then every other name the other three
+identities offer, including every ministry since 1976. Those have no official wording, so they are
+set by the rules.
+
 The four colourways are the Province's own, from its colour-accessibility guidance: **Colour**,
 **Reverse**, **Solid black**, **Solid white**. Reverse is the interesting one — the mountains
 lighten to BC Blue at 60% while the wordmark turns white, and both are the same blue in the source
@@ -265,8 +288,9 @@ Helvetica at all.
 
 The current era's wording is set in the serif its marks are drawn with, which is Adobe Garamond Pro.
 The letters the published artwork *itself* contains were recovered from that artwork and are
-committed, so every official ministry name works out of the box. The rest of the alphabet — the
-letters that happen not to appear anywhere in forty-six marks — has to come from the font:
+committed, so every official ministry name works out of the box, as do the capitals lifted from
+older marks. The rest of the alphabet — the letters that appear in none of them — has to come from
+the font:
 
 ```sh
 GARAMOND_SOURCE=/path/to/adobe-garamond-pro npm run build:current-extras
@@ -283,7 +307,8 @@ cannot set rather than dropping them silently.
 
 ```
 artwork/                     the supplied artwork — the source of truth for every era
-  crest/, current/, flag/    the arms' wordmark, the ministry-marks PDF, the flag SVG
+  crest/, current/, flag/    the arms' wordmark, the ministry-marks PDF (and older marks, in
+                             current/lifted/), the flag SVG
 scripts/
   build-mark.mjs             extracts the mark, proves all three copies are identical
   build-fonts.mjs            subsets Helvetica, emits the metrics table and the glyph outlines
@@ -291,6 +316,7 @@ scripts/
   extract_current_marks.py   lifts the published ministry marks out of the PDF, unchanged
   recover_current_names.py   reads their wording back, from the outlines and the PDF's text layer
   build-current-glyphs.mjs   the alphabet and metrics the current era typesets from
+  lift-current-letters.mjs   the capitals that alphabet lacks, from older published marks
   build-vendor-json-url.mjs  builds the share-link submodule
   sfnt.mjs, svgPath.mjs      the font and path surgery those need
   compare-artwork.mjs        re-renders each lockup over its original and diffs them

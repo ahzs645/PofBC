@@ -12,6 +12,7 @@
 
 import { CURRENT_MARK, NAME_LEADING } from '../assets/currentMark.js'
 import published from './nameGlyphs.js'
+import lifted from './liftedGlyphs.js'
 import extra from './generated/nameGlyphsExtra.js'
 import { EXTENTS, KERNING, LIGATURES, TRACKING, WIDTHS } from './nameMetrics.js'
 
@@ -19,12 +20,14 @@ import { EXTENTS, KERNING, LIGATURES, TRACKING, WIDTHS } from './nameMetrics.js'
  * The letterforms available to set a name with.
  *
  * `nameGlyphs.js` holds the letters the Province's own published marks are drawn with, recovered
- * from that artwork and committed, so the official wording always works. `generated/` holds the
+ * from that artwork and committed, so the official wording always works. `liftedGlyphs.js` adds the
+ * capitals those marks never happen to use, taken from older marks the Province drew in the same
+ * alphabet — committed too, for the same reason. `generated/` holds the
  * rest of the alphabet, built from a licensed Adobe Garamond Pro and gitignored — a full alphabet
  * of outlines is the typeface however it is stored. Without it this is simply a smaller alphabet,
  * and `unsupported()` says which letters are missing rather than dropping them silently.
  */
-const glyphs = { ...extra, ...published }
+const glyphs = { ...extra, ...lifted, ...published }
 
 /** Width of a missing glyph. A name should not contain one, but it should not collapse either. */
 const FALLBACK_WIDTH = 500
@@ -34,9 +37,13 @@ const FALLBACK_WIDTH = 500
  *
  * Not cosmetic: the published marks are set with them, so "Affairs" is four letterforms wide and
  * not six. Leaving them out puts every following letter in the wrong place.
+ *
+ * A typewriter apostrophe becomes a typographer's one on the way, as it would in any typesetting:
+ * every mark the Province published sets ’, and names typed or listed with ' — "Women's Equality"
+ * — would otherwise ask for a letterform the marks never drew.
  */
 export const foldLigatures = (text) => LIGATURES
-  .reduce((out, [from, to]) => out.split(from).join(to), String(text))
+  .reduce((out, [from, to]) => out.split(from).join(to), String(text).replace(/'/g, '’'))
 
 /** The characters of a string as the alphabet sees them — ligatures counted once. */
 export const lettersOf = (text) => [...foldLigatures(text)]
@@ -152,6 +159,18 @@ export const wrapText = (text, measure) => {
 export const MEASURE = 8000
 
 /**
+ * The width, in 1/1000 em, above which a two-line split is still too wide, so the ministry proper
+ * takes three lines.
+ *
+ * The current marks never need it: the widest line any of them sets after an even split measures
+ * 12296. The mark for Forests, Lands, Natural Resource Operations and Rural Development does — an
+ * even split of its name would make a line of 13579, and the Province set it on three lines of at
+ * most 9113 instead. 13000 is the round number in the gap. One mark is thin evidence, so this is
+ * the least that reproduces it rather than a rule the artwork proves.
+ */
+export const THREE_LINE_MEASURE = 13000
+
+/**
  * How even the two halves must be for the conjunction rule below to apply.
  *
  * Half is a natural floor — below it one line is a stub beside the other — and it is not a fitted
@@ -203,15 +222,44 @@ const splitBody = (body, language) => {
 }
 
 /**
+ * Splits the ministry proper across three lines, for the names too long for two.
+ *
+ * The same aim as the two-line split — even the lines up, which is to say make the widest as
+ * narrow as it can be — and the same French rule against ending a line on "et".
+ */
+const splitBodyThree = (body, language) => {
+  const words = body.split(' ')
+  if (words.length < 3) return splitBody(body, language)
+
+  const conjunction = CONJUNCTION[language]
+  const endsOnConjunction = (index) => Boolean(conjunction) && words[index - 1].toLowerCase() === conjunction
+  let best = null
+
+  for (let i = 1; i < words.length - 1; i += 1) {
+    if (endsOnConjunction(i)) continue
+    for (let j = i + 1; j < words.length; j += 1) {
+      if (endsOnConjunction(j)) continue
+      const lines = [words.slice(0, i), words.slice(i, j), words.slice(j)].map((part) => part.join(' '))
+      const widest = Math.max(...lines.map(measureLine))
+      if (!best || widest < best.widest) best = { lines, widest }
+    }
+  }
+
+  return best ? best.lines : splitBody(body, language)
+}
+
+/**
  * A name broken into lines, by the rules the Province's own marks follow.
  *
  * Those rules, read off all 46 published marks:
  *
  *   1. the opening — "Ministry of", "Ministère de/des/du" — takes a line of its own, however
  *      short what follows is. "Ministry of Health" is two lines.
- *   2. the mark is never more than three lines.
- *   3. the ministry proper stays on one line up to MEASURE, and splits in two above it.
- *   4. the split evens the two lines up, with the French conjunction rules in splitBody.
+ *   2. the ministry proper stays on one line up to MEASURE, and splits in two above it.
+ *   3. the split evens the two lines up, with the French conjunction rules in splitBody.
+ *   4. a name so long that even two lines would pass THREE_LINE_MEASURE takes three, evened the
+ *      same way. No current mark is that long; the Forests, Lands, Natural Resource Operations and
+ *      Rural Development mark was, and this reproduces it.
  *
  * Together they reproduce 44 of the 46 published marks exactly — every English one, and all but
  * two French. A newline in the text overrides the lot, which is how those two are carried and how
@@ -227,7 +275,9 @@ export const nameLines = (text, { language = 'en', measure = MEASURE } = {}) => 
   const body = rest.join(' ')
   if (!body) return wrapText(opening, measure)
   if (measureLine(body) <= measure) return [opening, body]
-  return [opening, ...splitBody(body, language)]
+  const two = splitBody(body, language)
+  if (Math.max(...two.map(measureLine)) <= THREE_LINE_MEASURE) return [opening, ...two]
+  return [opening, ...splitBodyThree(body, language)]
 }
 
 /**

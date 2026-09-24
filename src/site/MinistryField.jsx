@@ -15,13 +15,13 @@ import { describeMinistry, historicalGroups } from '../ministries/ministryHistor
  * could not name any of them: there was no way to put the right name on a 1986 lockup. The older
  * names carry the years they ran, which is what says which lockup they belong on.
  */
-const ALL_GROUPS = [
+export const ALL_GROUPS = [
   ...MINISTRY_GROUPS,
   ...historicalGroups(MINISTRY_GROUPS.flatMap((group) => group.options))
 ]
 
 /** What is known about a chosen name: when it ran, and what it became. */
-const History = ({ name }) => {
+export const History = ({ name }) => {
   const known = useMemo(() => describeMinistry(name), [name])
   if (!known) return null
 
