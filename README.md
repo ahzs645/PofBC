@@ -51,6 +51,11 @@ rays over a light disc, with no shading to sample; a grey divider; and a heavy s
 Garamond. The build tells the two kinds of sun apart by what the file contains. It finds the divider
 by its shape rather than its colour, so a grey one counts.
 
+**BC Wildfire Service** has the same flat sun, but the gold divider and the Garamond are back. It is lifted
+from the cover of the Province's 2025 prescribed-fire report. It is reversed there, so "On white"
+gives the BC-blue version. That cover sets it on one line, the only arrangement found as vector
+artwork; the two-line "BC Wildfire / Service" exists only as pictures so far.
+
 - **The glow is sampled, not guessed.** The print files shade the sun, and the converter wrote each
   shading as a small bitmap clipped to its shape. Those bitmaps are read back into radial gradients
   about the sun's centre, as a mix from the core's light to the sun's gold. The glow recolours

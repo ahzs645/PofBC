@@ -19,7 +19,7 @@ test('every mark has a sun, mountains and the wordmark, lifted from its artwork'
 })
 
 test('the marks beside a name have a divider and a name; the stacked mark has neither', () => {
-  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc', 'public-service', 'pacific-gateway']) {
+  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc', 'bc-wildfire-service', 'public-service', 'pacific-gateway']) {
     assert.ok(rolesOf(id).includes('divider'), `${id} has no divider`)
     assert.ok(rolesOf(id).includes('name'), `${id} has no name`)
   }
@@ -29,7 +29,7 @@ test('the marks beside a name have a divider and a name; the stacked mark has ne
 
 test('“BC” is picked out in gold where the published marks pick it out', () => {
   // Print gold (#fdb913), WorkBC's warmer #f6aa0d and the screen gold (#e3a82b) all count.
-  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc']) {
+  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc', 'bc-wildfire-service']) {
     assert.ok(rolesOf(id).includes('accent'), `${id} has no accent`)
     const { svg } = renderOneOffSvg({ id, idPrefix: 't' })
     const [r, g, b] = [1, 3, 5].map((i) => parseInt(roleFills(svg).accent.slice(i, i + 2), 16))
@@ -96,4 +96,19 @@ test('a mark published with a flat sun draws it flat, and offers no glow', () =>
   assert.equal(fills.core, '#ffffff')
   assert.equal(fills.sun, '#fdb913')
   assert.equal(fills.divider, '#a7a9ac', 'StrongerBC’s divider is grey')
+})
+
+test('BC Wildfire Service keeps its reversed colours, and turns to BC blue on white', () => {
+  // Lifted from a report cover, where it is reversed: white type, and mountains lightened so they
+  // read against the navy. On white it takes the blue the Province's own positive file uses.
+  assert.equal(hasGlow('bc-wildfire-service'), false)
+  const published = roleFills(renderOneOffSvg({ id: 'bc-wildfire-service' }).svg)
+  assert.equal(published.name, '#ffffff')
+  assert.equal(published.accent, '#fdb913')
+  assert.equal(published.mountains, '#4c5d91')
+
+  const entry = ONE_OFFS.find((e) => e.id === 'bc-wildfire-service')
+  const onWhite = entry.presets.find((p) => p.id === 'colour')
+  assert.ok(onWhite, 'a mark published reversed offers a version on white')
+  assert.equal(onWhite.colours.name, '#004b8d')
 })

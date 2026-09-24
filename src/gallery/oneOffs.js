@@ -128,6 +128,18 @@ export const ONE_OFFS = [
       'shading to switch on.'
   }),
   artwork({
+    id: 'bc-wildfire-service',
+    label: 'BC Wildfire Service',
+    body: 'BC Wildfire Service',
+    years: 'in use today',
+    publishedLabel: 'As published, reversed',
+    note: 'The later flat sun with a gold divider, and the whole name on one line in large ' +
+      'Garamond, “BC” in gold. The Province also sets it on two lines, “BC Wildfire” over ' +
+      '“Service”; this is the one-line arrangement, the only one found as vector artwork.',
+    caveat: 'Drawn from the cover of the 2025 Cultural and Prescribed Fire annual report, where it ' +
+      'is reversed on the cover’s navy. The navy is the page’s, not part of the mark.'
+  }),
+  artwork({
     id: 'public-service',
     label: 'BC Public Service',
     body: 'BC Public Service',
