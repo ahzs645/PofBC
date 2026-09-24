@@ -81,7 +81,7 @@ test('the historical names need only the letters listed here to be drawn', () =>
       if (letter !== ' ' && !(letter in glyphs) && !(letter in lifted)) missing.add(letter)
     }
   }
-  assert.deepEqual([...missing].sort(), ['.', 'B', 'U', 'V'])
+  assert.deepEqual([...missing].sort(), ['.', 'U', 'V'])
 })
 
 test('wording that cannot be drawn says which letters are missing', () => {

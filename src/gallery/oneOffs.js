@@ -9,6 +9,52 @@
 // They are collected here rather than bent into the generator, because adding "Badge" beside
 // "Horizontal" in a list of arrangements would say that any ministry can be set that way, and
 // none can.
+//
+// Most of them come from the Best Place on Earth years, when programs got a mark of their own:
+// the BC mark with its shaded sun, a gold divider, and a name in large Garamond with "BC" picked
+// out in gold. Those are drawn from their published artwork (src/assets/oneOffMarks.js, built by
+// scripts/build-one-offs.mjs), and only their colours are chosen here.
+
+import { ONE_OFF_MARKS } from '../assets/oneOffMarks.js'
+
+const GOLD = '#fdb913'
+const BLUE = '#004b8d'
+
+// The colourways these marks were published in. Colour on white is the BC identity's own; the
+// reversal is WelcomeBC's, whose mountains lighten so they still read against the blue.
+const COLOUR = {
+  background: '#ffffff', sun: GOLD, light: '#ffffff', mountains: BLUE, wordmark: BLUE, rule: GOLD,
+  tagline: BLUE, divider: GOLD, name: BLUE, accent: GOLD, leaf: '#d52b1e'
+}
+const REVERSED = {
+  ...COLOUR, background: '#0c68a9', mountains: '#4a6ea7', wordmark: '#ffffff', tagline: '#ffffff', name: '#ffffff'
+}
+const oneInk = (ink, paper) => ({
+  background: paper, sun: ink, light: paper, mountains: ink, wordmark: ink, rule: ink,
+  tagline: ink, divider: ink, name: ink, accent: ink, leaf: ink
+})
+
+const isWhite = (colour) => !colour || colour === 'none' || colour.toLowerCase() === '#ffffff' || colour.toLowerCase() === '#fff'
+
+/**
+ * Starting points for a mark: as published, then whichever of colour-on-white and the reversal it
+ * was not published in, then one ink each way. One ink draws the sun flat, with the rays and core
+ * cut out of it, which is how the BC mark is always reduced to a single colour.
+ */
+const presetsFor = (id, publishedLabel = 'As published') => {
+  const printed = ONE_OFF_MARKS[id].printed
+  const onWhite = isWhite(printed.background)
+  return [
+    { id: 'published', label: publishedLabel, sun: 'glow', colours: { ...printed, background: printed.background ?? '#ffffff' } },
+    onWhite
+      ? { id: 'reversed', label: 'Reversed', sun: 'glow', colours: REVERSED }
+      : { id: 'colour', label: 'On white', sun: 'glow', colours: COLOUR },
+    { id: 'mono', label: 'One ink', sun: 'flat', colours: oneInk('#000000', '#ffffff') },
+    { id: 'mono-reverse', label: 'One ink, reversed', sun: 'flat', colours: oneInk('#ffffff', BLUE) }
+  ]
+}
+
+const artwork = (entry) => ({ kind: 'artwork', mark: entry.id, presets: presetsFor(entry.id, entry.publishedLabel), ...entry })
 
 export const ONE_OFFS = [
   {
@@ -21,6 +67,7 @@ export const ONE_OFFS = [
       'superellipse, which is what gives it sides that bow where a rounded rectangle’s run ' +
       'straight.',
     caveat: 'Proportions are read off a picture of the mark, not measured from artwork.',
+    kind: 'flag',
     draw: { symbol: 'badge', ministry: 'Parks' },
     // Starting points, not separate marks. A mark gets one card in the gallery; these are offered
     // inside it, and every colour is editable from there anyway.
@@ -29,7 +76,68 @@ export const ONE_OFFS = [
       { id: 'mono', label: 'One ink', ink: '#000000', palette: 'ink', background: '#ffffff' },
       { id: 'reverse', label: 'Reversed', ink: '#ffffff', palette: 'ink', background: '#10069f' }
     ]
-  }
+  },
+  artwork({
+    id: 'welcome-bc',
+    label: 'WelcomeBC',
+    body: 'WelcomeBC',
+    years: 'Best Place on Earth years',
+    note: 'The BC mark beside one word, “WelcomeBC”, in large Garamond with “BC” in gold — ' +
+      'where a ministry mark would set a name in the same small size as its own. The wordmark ' +
+      'is tracked twice as tight as the ministry marks, at −20/1000 em.',
+    caveat: 'Drawn from the published artwork. The sun’s glow is sampled from the print file’s ' +
+      'shading into gradients, so it recolours with the rest.'
+  }),
+  artwork({
+    id: 'work-bc',
+    label: 'WorkBC',
+    body: 'WorkBC',
+    years: 'Best Place on Earth years',
+    note: 'WelcomeBC’s arrangement, with the tagline under the mark and a larger wordmark. ' +
+      'The “rk” pair is opened by hand, a little wider than the typeface’s own kerning.',
+    caveat: 'Drawn from a brochure page. The navy it was published on is the page’s, sampled ' +
+      'from the photograph behind it, and not part of the mark.'
+  }),
+  artwork({
+    id: 'bc-stats',
+    label: 'BC Stats',
+    body: 'BC Stats',
+    years: 'Best Place on Earth years',
+    publishedLabel: 'As in the screenshot',
+    note: 'WorkBC’s arrangement with “BC” leading in gold and “Stats” in blue, on white.',
+    caveat: 'No artwork was to hand, only a screenshot. The mark, tagline and divider are ' +
+      'WorkBC’s; “BCStats” is typeset on WorkBC’s own line — its size, baseline and tracking ' +
+      'fitted from WorkBC’s letters, which the same setting reproduces to 2.7/1000 em — in ' +
+      'letters taken from the Province’s marks.'
+  }),
+  artwork({
+    id: 'public-service',
+    label: 'BC Public Service',
+    body: 'BC Public Service',
+    years: 'Best Place on Earth years',
+    note: '“BC Public Service” takes the tagline’s place under the mark, and the line beside it ' +
+      'is a slogan — “Where ideas work” — rather than a name.',
+    caveat: 'Drawn from the published artwork.'
+  }),
+  artwork({
+    id: 'pacific-gateway',
+    label: 'Canada’s Pacific Gateway',
+    body: 'Canada’s Pacific Gateway',
+    years: 'Best Place on Earth years',
+    note: 'Two lines beside the mark, with a red maple leaf standing in for the apostrophe in ' +
+      '“Canada’s”.',
+    caveat: 'Drawn from the published artwork. The leaf was shaded in the print file and is ' +
+      'drawn here in its average red.'
+  }),
+  artwork({
+    id: 'best-place-on-earth',
+    label: 'The Best Place on Earth',
+    body: 'Province of British Columbia',
+    years: 'Best Place on Earth years',
+    note: 'The BC mark itself, stacked, with a gold rule and the tagline beneath it — the ' +
+      'version every mark above sets beside a name.',
+    caveat: 'Drawn from the published artwork.'
+  })
 ]
 
 export const findOneOff = (id) => ONE_OFFS.find((entry) => entry.id === id)
