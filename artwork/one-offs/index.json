@@ -10,21 +10,6 @@
     "source": "WorkBC mark, reversed, from a brochure page",
     "background": "#00244c",
     "backgroundNote": "The page behind this mark is a photograph-like pattern; this is its dominant navy, not part of the mark.",
-    "wording": [
-      {
-        "text": "Work",
-        "role": "name"
-      },
-      {
-        "text": "BC",
-        "role": "accent"
-      }
-    ],
-    "tracking": -20,
-    "respaced": [
-      "k"
-    ],
-    "respacedNote": "The k sits 5/1000 em right of where kerning puts it, on both sides: the rk pair was opened by hand. It is left out of the fit.",
     "crop": [
       10,
       10,
@@ -50,30 +35,12 @@
   },
   {
     "id": "bc-stats",
-    "composedFrom": "work-bc",
-    "reference": "bc-stats-reference.png",
-    "source": "BC Stats, from a screenshot: WorkBC’s arrangement, with “BC” in gold and “Stats” in blue",
-    "wording": [
-      {
-        "text": "BC",
-        "role": "accent"
-      },
-      {
-        "text": "Stats",
-        "role": "name"
-      }
-    ],
-    "tracking": -20,
-    "colours": {
-      "background": "#ffffff",
-      "sun": "#fdb913",
-      "mountains": "#004b8d",
-      "wordmark": "#004b8d",
-      "tagline": "#004b8d",
-      "name": "#004b8d",
-      "accent": "#fdb913",
-      "rule": "#fdb913",
-      "divider": "#fdb913"
-    }
+    "file": "bc-stats.svg",
+    "source": "BC Stats mark, as published"
+  },
+  {
+    "id": "environmental-reporting-bc",
+    "file": "environmental-reporting-bc.svg",
+    "source": "Environmental Reporting BC mark, as published, in the screen colours"
   }
 ]

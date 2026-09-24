@@ -19,7 +19,7 @@ test('every mark has a sun, mountains and the wordmark, lifted from its artwork'
 })
 
 test('the marks beside a name have a divider and a name; the stacked mark has neither', () => {
-  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'public-service', 'pacific-gateway']) {
+  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'public-service', 'pacific-gateway']) {
     assert.ok(rolesOf(id).includes('divider'), `${id} has no divider`)
     assert.ok(rolesOf(id).includes('name'), `${id} has no name`)
   }
@@ -28,22 +28,13 @@ test('the marks beside a name have a divider and a name; the stacked mark has ne
 })
 
 test('“BC” is picked out in gold where the published marks pick it out', () => {
-  for (const id of ['welcome-bc', 'work-bc', 'bc-stats']) {
+  // Print gold (#fdb913), WorkBC's warmer #f6aa0d and the screen gold (#e3a82b) all count.
+  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc']) {
     assert.ok(rolesOf(id).includes('accent'), `${id} has no accent`)
     const { svg } = renderOneOffSvg({ id, idPrefix: 't' })
     const [r, g, b] = [1, 3, 5].map((i) => parseInt(roleFills(svg).accent.slice(i, i + 2), 16))
-    assert.ok(r > 230 && g > 150 && g < 200 && b < 40, `${id}'s accent is not gold`)
+    assert.ok(r > 200 && g > 140 && g < 200 && b < 60, `${id}'s accent is not gold`)
   }
-})
-
-test('BC Stats is WorkBC’s mark with its own wording', () => {
-  const work = ONE_OFF_MARKS['work-bc']
-  const stats = ONE_OFF_MARKS['bc-stats']
-  for (const role of ['sun', 'mountains', 'wordmark', 'tagline', 'divider']) {
-    const d = (mark) => mark.shapes.find((shape) => shape.role === role).d
-    assert.equal(d(stats), d(work), `${role} differs`)
-  }
-  assert.notEqual(stats.shapes.find((s) => s.role === 'name').d, work.shapes.find((s) => s.role === 'name').d)
 })
 
 test('the published sun glows with gradients, and one ink draws it flat', () => {

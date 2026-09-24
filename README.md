@@ -39,10 +39,10 @@ generator can offer and so have nothing to be loaded into. Each still opens for 
 each draws itself from the same renderer as everything else, so a card cannot drift from what it
 gives you.
 
-Most of the gallery is the **Best Place on Earth years**: WelcomeBC, WorkBC, BC Stats, the BC
-Public Service's "Where ideas work", Canada's Pacific Gateway, and the stacked BC mark with its
-tagline. Each is the BC mark with a shaded sun, a gold divider, and a name in large Garamond.
-`scripts/build-one-offs.mjs` lifts them from the published files in
+Most of the gallery is the **Best Place on Earth years**: WelcomeBC, WorkBC, BC Stats,
+Environmental Reporting BC, the BC Public Service's "Where ideas work", Canada's Pacific Gateway,
+and the stacked BC mark with its tagline. Each is the BC mark with a shaded sun, a gold divider, and
+a name in large Garamond. `scripts/build-one-offs.mjs` lifts them from the published files in
 [`artwork/one-offs/`](artwork/one-offs) and labels every shape with its part (sun, rays, mountains,
 wordmark, tagline, name, the gold accent), so any part can be recoloured.
 
@@ -55,15 +55,12 @@ wordmark, tagline, name, the gold accent), so any part can be recoloured.
   the same kerned Adobe Garamond at −20/1000 em instead of −10. WelcomeBC is where the capital `B`
   was lifted from. WorkBC's `rk` pair was opened by hand: its `k` sits 5/1000 em right on both
   sides.
-- **BC Stats has no artwork, only a screenshot**, which shows WorkBC's arrangement. So it is
-  WorkBC's shapes with "BCStats" typeset on WorkBC's own line: size, baseline and tracking are
-  fitted from WorkBC's letters, and setting "WorkBC" the same way reproduces the drawn letters to
-  2.7/1000 em. The screenshot is kept beside the artwork for reference.
 - **One thing the lifting turned up:** the committed `W` sits 14/1000 em lower than the `W` drawn
   in both WelcomeBC and WorkBC, exactly where the licensed font puts it. It was recovered from the
   one corrupt file that has a `W`, and its height looks to have come from the font. The other
   capitals the Province drew (`B`, `N`, `O`) also sit 11–14/1000 em from the font's, so the
-  artwork's Garamond is a slightly different cut.
+  artwork's Garamond is a slightly different cut. The committed `W` is left as it is until that is
+  looked into properly.
 
 ### The current era: a published mark, typeset wording
 

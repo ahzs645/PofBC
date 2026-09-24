@@ -103,12 +103,19 @@ export const ONE_OFFS = [
     label: 'BC Stats',
     body: 'BC Stats',
     years: 'Best Place on Earth years',
-    publishedLabel: 'As in the screenshot',
-    note: 'WorkBC’s arrangement with “BC” leading in gold and “Stats” in blue, on white.',
-    caveat: 'No artwork was to hand, only a screenshot. The mark, tagline and divider are ' +
-      'WorkBC’s; “BCStats” is typeset on WorkBC’s own line — its size, baseline and tracking ' +
-      'fitted from WorkBC’s letters, which the same setting reproduces to 2.7/1000 em — in ' +
-      'letters taken from the Province’s marks.'
+    note: 'No tagline, and one word beside the mark: “BC” in gold running straight into “Stats” ' +
+      'in blue, so the S does double duty as the capital of both.',
+    caveat: 'Drawn from the published artwork.'
+  }),
+  artwork({
+    id: 'environmental-reporting-bc',
+    label: 'Environmental Reporting BC',
+    body: 'Environmental Reporting BC',
+    years: 'Best Place on Earth years',
+    note: 'Two lines beside the mark, with “BC” in gold ending the second — the one mark here ' +
+      'where the accent closes a longer name rather than making up half of one word.',
+    caveat: 'Drawn from the published artwork, which is in the screen colours (#234075 and ' +
+      '#e3a82b) rather than the print ones the others use.'
   }),
   artwork({
     id: 'public-service',

@@ -5,17 +5,11 @@
 // shape comes out of the published file, and is labelled with the part it plays so the gallery can
 // recolour it.
 //
-// Two things in these files are not plain vector artwork, and both are handled here:
-//
-//   The sun's glow. The PDF shaded the sun, its rays and its core, and the converter wrote each
-//   shading as a small bitmap clipped to the shape it fills. The bitmaps are sampled back into
-//   radial gradients about the sun's centre, as a fraction of the way from the core's light to the
-//   sun's gold, so the glow survives recolouring and stays vector.
-//
-//   A mark with no artwork. BC Stats is known only from a screenshot, which shows WorkBC's
-//   arrangement with "BCStats" in place of "WorkBC". It is composed from WorkBC's shapes, with the
-//   wording typeset on WorkBC's own line — the size, origin, baseline and tracking fitted off
-//   WorkBC's drawn letters, and checked by setting "WorkBC" on it and comparing.
+// One thing in these files is not plain vector artwork: the sun's glow. The PDF shaded the sun,
+// its rays and its core, and the converter wrote each shading as a small bitmap clipped to the
+// shape it fills. The bitmaps are sampled back into radial gradients about the sun's centre, as a
+// fraction of the way from the core's light to the sun's gold, so the glow survives recolouring
+// and stays vector.
 //
 // Writes src/assets/oneOffMarks.js. Committed: it is the Province's drawing, as the other assets are.
 //
@@ -25,29 +19,11 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { inflateSync } from 'node:zlib'
-import published from '../src/current/nameGlyphs.js'
-import lifted from '../src/current/liftedGlyphs.js'
-import { KERNING, WIDTHS } from '../src/current/nameMetrics.js'
 import { absolute, boundsOf } from './svgAbsolute.mjs'
-import { fitLine, groupLetters } from './letterFit.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const SOURCE = resolve(root, 'artwork/one-offs')
 const target = resolve(root, 'src/assets/oneOffMarks.js')
-const glyphs = { ...lifted, ...published }
-
-/** Worst disagreement, in 1/1000 em, between a typeset line and the drawn one it stands in for. */
-const TOLERANCE = 4
-
-/**
- * Letters whose height is not checked when a line is re-set, only their spacing.
- *
- * The committed W sits 14/1000 em lower than the W drawn in both WelcomeBC and WorkBC, and exactly
- * where the licensed font puts it: it was recovered from the one corrupt file that has a W, and its
- * height looks to have come from the font rather than the artwork. That is a question about the
- * ministry alphabet, not about this line, so it is reported rather than allowed to fail the check.
- */
-const HEIGHT_UNCHECKED = new Set(['W'])
 
 // ── Reading the file ─────────────────────────────────────────────────────────────────────────────
 
@@ -328,47 +304,8 @@ function extract (entry) {
     shapes,
     sun,
     gradients: { sun: discGradient, rays: rayGradient, ...(coreGradient ? { core: coreGradient } : {}) },
-    colours,
-    roles
+    colours
   }
-}
-
-// ── Typesetting on a drawn line ──────────────────────────────────────────────────────────────────
-
-/** Fits the size, origin and baseline of a mark's drawn wording. */
-function lineOf (entry, extracted) {
-  const text = entry.wording.map((part) => part.text).join('')
-  const contours = ['name', 'accent']
-    .flatMap((role) => extracted.roles.get(role)?.subpaths ?? [])
-    .map((subpath) => ({ subpath, box: boundsOf(subpath) }))
-  const letters = groupLetters(contours)
-  const skip = new Set(entry.respaced ?? [])
-  return fitLine({
-    text, letters, tracking: entry.tracking, isReference: (character) => Boolean(glyphs[character]) && !skip.has(character)
-  })
-}
-
-/** Wording set as subpaths in the mark's own coordinates, one list per role. */
-function typeset (wording, line, tracking) {
-  const text = wording.map((part) => part.text).join('')
-  const roleAt = wording.flatMap((part) => [...part.text].map(() => part.role))
-  const byRole = new Map()
-  let pen = 0
-  ;[...text].forEach((character, index) => {
-    const d = glyphs[character]
-    if (!d) throw new Error(`no letterform for ${character}`)
-    const scale = line.size / 1000
-    const x = line.origin + pen * scale
-    const subpaths = absolute(d).map((subpath) => subpath.map(([command, ...v]) =>
-      [command, ...v.map((value, i) => (i % 2 === 0 ? x + value * scale : line.baseline + value * scale))]))
-    const role = roleAt[index]
-    if (!byRole.has(role)) byRole.set(role, [])
-    byRole.get(role).push(...subpaths)
-    pen += WIDTHS[character]
-    const next = text[index + 1]
-    if (next !== undefined) pen += tracking + (KERNING[character + next] ?? 0)
-  })
-  return byRole
 }
 
 // ── Build ────────────────────────────────────────────────────────────────────────────────────────
@@ -382,45 +319,10 @@ const serialise = (subpaths, dx, dy) => subpaths.map((subpath) => subpath.map(([
   command + v.map((value, i) => round(i % 2 === 0 ? value + dx : value + dy)).join(' ')).join('')).join('').replace(/ -/g, '-')
 
 const manifest = JSON.parse(readFileSync(resolve(SOURCE, 'index.json'), 'utf8'))
-const extracted = new Map()
 const marks = {}
 
 for (const entry of manifest) {
-  let mark
-  if (entry.composedFrom) {
-    const base = extracted.get(entry.composedFrom)
-    const baseEntry = manifest.find((e) => e.id === entry.composedFrom)
-    const line = lineOf(baseEntry, base)
-
-    // The check that typesetting on this line reproduces what was drawn on it: the base mark's own
-    // wording, set by the same code, against its drawn letters.
-    const redrawn = typeset(baseEntry.wording, line, baseEntry.tracking)
-    const drawnLetters = groupLetters(['name', 'accent'].flatMap((role) => base.roles.get(role).subpaths)
-      .map((subpath) => ({ subpath, box: boundsOf(subpath) })))
-    const setLetters = groupLetters([...redrawn.values()].flat().map((subpath) => ({ subpath, box: boundsOf(subpath) })))
-    const skip = new Set(baseEntry.respaced ?? [])
-    const text = baseEntry.wording.map((part) => part.text).join('')
-    const worst = Math.max(...[...text].map((character, i) => skip.has(character) ? 0 : Math.max(
-      Math.abs(drawnLetters[i].box.left - setLetters[i].box.left),
-      Math.abs(drawnLetters[i].box.right - setLetters[i].box.right),
-      HEIGHT_UNCHECKED.has(character) ? 0 : Math.abs(drawnLetters[i].box.bottom - setLetters[i].box.bottom)
-    ))) * 1000 / line.size
-    if (worst > TOLERANCE) throw new Error(`${entry.id}: "${text}" reset on its own line misses by ${worst.toFixed(1)}/1000 em`)
-    console.log(`  ${entry.id.padEnd(20)} "${text}" reset on its line: worst ${worst.toFixed(1)}/1000 em`)
-
-    const wording = typeset(entry.wording, line, entry.tracking)
-    mark = {
-      ...base,
-      shapes: [
-        ...base.shapes.filter(({ role }) => role !== 'name' && role !== 'accent'),
-        ...['name', 'accent'].filter((role) => wording.has(role)).map((role) => ({ role, subpaths: wording.get(role) }))
-      ],
-      colours: { ...base.colours, ...entry.colours }
-    }
-  } else {
-    mark = extract(entry)
-    extracted.set(entry.id, mark)
-  }
+  const mark = extract(entry)
 
   // Onto the mark's own origin: the box of everything drawn.
   const box = union(mark.shapes.flatMap(({ subpaths }) => subpaths.map(boundsOf)))
