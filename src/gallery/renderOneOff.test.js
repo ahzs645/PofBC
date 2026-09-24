@@ -19,7 +19,7 @@ test('every mark has a sun, mountains and the wordmark, lifted from its artwork'
 })
 
 test('the marks beside a name have a divider and a name; the stacked mark has neither', () => {
-  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc', 'public-service', 'pacific-gateway']) {
+  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc', 'bc-wildfire-service', 'bc-wildfire-service-one-line', 'public-service', 'pacific-gateway']) {
     assert.ok(rolesOf(id).includes('divider'), `${id} has no divider`)
     assert.ok(rolesOf(id).includes('name'), `${id} has no name`)
   }
@@ -29,7 +29,7 @@ test('the marks beside a name have a divider and a name; the stacked mark has ne
 
 test('“BC” is picked out in gold where the published marks pick it out', () => {
   // Print gold (#fdb913), WorkBC's warmer #f6aa0d and the screen gold (#e3a82b) all count.
-  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc']) {
+  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc', 'bc-wildfire-service', 'bc-wildfire-service-one-line']) {
     assert.ok(rolesOf(id).includes('accent'), `${id} has no accent`)
     const { svg } = renderOneOffSvg({ id, idPrefix: 't' })
     const [r, g, b] = [1, 3, 5].map((i) => parseInt(roleFills(svg).accent.slice(i, i + 2), 16))
@@ -96,4 +96,23 @@ test('a mark published with a flat sun draws it flat, and offers no glow', () =>
   assert.equal(fills.core, '#ffffff')
   assert.equal(fills.sun, '#fdb913')
   assert.equal(fills.divider, '#a7a9ac', 'StrongerBC’s divider is grey')
+})
+
+test('BC Wildfire Service keeps its reversed colours, and turns to BC blue on white', () => {
+  // Both arrangements were lifted from reversed artwork: white type, and mountains lightened so
+  // they read against the dark. On white they take the blue the Province's own positive file uses.
+  for (const id of ['bc-wildfire-service', 'bc-wildfire-service-one-line']) {
+    assert.equal(hasGlow(id), false)
+    const published = roleFills(renderOneOffSvg({ id }).svg)
+    assert.equal(published.name, '#ffffff', id)
+    assert.equal(published.accent, '#fdb913', id)
+    assert.equal(published.mountains, '#4c5d91', id)
+
+    const onWhite = ONE_OFFS.find((e) => e.id === id).presets.find((p) => p.id === 'colour')
+    assert.ok(onWhite, `${id}, published reversed, offers a version on white`)
+    assert.equal(onWhite.colours.name, '#004b8d')
+  }
+  // Two lines are about half as wide for their height as one.
+  const ratio = (id) => ONE_OFF_MARKS[id].width / ONE_OFF_MARKS[id].height
+  assert.ok(ratio('bc-wildfire-service') < 0.8 * ratio('bc-wildfire-service-one-line'))
 })

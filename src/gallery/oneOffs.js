@@ -128,6 +128,27 @@ export const ONE_OFFS = [
       'shading to switch on.'
   }),
   artwork({
+    id: 'bc-wildfire-service',
+    label: 'BC Wildfire Service',
+    body: 'BC Wildfire Service',
+    years: 'in use today',
+    publishedLabel: 'As published, reversed',
+    note: 'The later flat sun with a gold divider, and the name in large Garamond on two lines, ' +
+      '“BC Wildfire” over “Service”, with “BC” in gold.',
+    caveat: 'Drawn from the published artwork, which sets it reversed over a photograph. The ' +
+      'ground here is the photograph’s dominant dark tone, not part of the mark.'
+  }),
+  artwork({
+    id: 'bc-wildfire-service-one-line',
+    label: 'BC Wildfire Service, one line',
+    body: 'BC Wildfire Service',
+    years: 'in use today',
+    publishedLabel: 'As published, reversed',
+    note: 'The same mark with the whole name on one line, for spaces too shallow for two.',
+    caveat: 'Drawn from the cover of the 2025 Cultural and Prescribed Fire annual report, where it ' +
+      'is reversed on the cover’s navy. The navy is the page’s, not part of the mark.'
+  }),
+  artwork({
     id: 'public-service',
     label: 'BC Public Service',
     body: 'BC Public Service',

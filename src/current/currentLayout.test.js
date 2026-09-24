@@ -10,9 +10,10 @@ import { test } from 'node:test'
 import { CURRENT_MARK, NAME_LEADING } from '../assets/currentMark.js'
 import {
   MEASURE, THREE_LINE_MEASURE, foldLigatures, inkOf, layoutLockup, lettersOf, lockupMarkup,
-  measureLine, nameLines, splitOpening, unsupported, wrapText
+  measureLine, nameLines, ruleLines, splitOpening, unsupported, wrapText
 } from './currentLayout.js'
 import { BREAKS_STATED, MINISTRIES, findMinistry } from './ministries.js'
+import { CONFIRMED, SOURCES, confirmedLines } from './confirmedBreaks.js'
 import { EXTENTS, KERNING, TRACKING, WIDTHS } from './nameMetrics.js'
 import glyphs from './nameGlyphs.js'
 import lifted from './liftedGlyphs.js'
@@ -137,16 +138,81 @@ test('the opening goes on a line of its own, in both languages', () => {
   assert.deepEqual(splitOpening('Anything else'), ['Anything else'])
 })
 
+test('every name a published mark confirms is set exactly as the mark draws it', () => {
+  for (const entry of CONFIRMED) {
+    assert.ok(SOURCES[entry.source], `${entry.key} cites no known source`)
+    assert.deepEqual(nameLines(entry.lines.join(' '), { language: entry.language }), entry.lines, entry.key)
+  }
+  // However it is typed: one space or several, a typewriter apostrophe or the marks' own.
+  assert.deepEqual(nameLines("Ministry of  Citizens' Services"), ['Ministry of', 'Citizens’ Services'])
+  assert.deepEqual(confirmedLines('Ministry of Health', 'fr'), undefined)
+})
+
+test('the rules reproduce every confirmed name but the known exceptions', () => {
+  // The confirmed list protects these marks either way; this is the check on the rules. An entry
+  // added to confirmedBreaks.js that the rules get wrong lands here, which is the prompt to either
+  // improve the rules or accept it as an exception — deliberately, not by accident.
+  const exceptions = CONFIRMED
+    .filter((entry) => ruleLines(entry.lines.join(' '), { language: entry.language }).join('\n') !== entry.lines.join('\n'))
+    .map((entry) => entry.key)
+  assert.deepEqual(exceptions, ['af-fr', 'ecc-fr'])
+  // They are the same two the catalogue states its own breaks for.
+  assert.deepEqual(exceptions, BREAKS_STATED)
+})
+
+test('every current ministry is confirmed in both languages', () => {
+  // So a mark added to the catalogue is not left to the rules without anyone deciding it should be.
+  for (const ministry of MINISTRIES) {
+    for (const language of ['en', 'fr']) {
+      const key = `${ministry.code.toLowerCase()}-${language}`
+      const entry = CONFIRMED.find((e) => e.key === key)
+      assert.ok(entry, `${key} is not in confirmedBreaks.js`)
+      assert.equal(entry.lines.join(' '), ministry[language].replace(/\n/g, ' '), `${key} wording differs`)
+    }
+  }
+})
+
+test('typed breaks still beat a confirmed name', () => {
+  assert.deepEqual(nameLines('Ministry of\nWater, Land\nand Resource Stewardship'),
+    ['Ministry of', 'Water, Land', 'and Resource Stewardship'])
+})
+
 test('the ministry proper takes one line or two, on a measured threshold', () => {
   // Not a chosen number: across the 46 marks, every name kept on one line measures at most 7793
   // and every name split measures at least 8085. MEASURE sits in that gap.
   const short = 'Ministry of Forests'
   const long = 'Ministry of Water, Land and Resource Stewardship'
 
-  assert.equal(nameLines(short).length, 2)
-  assert.equal(nameLines(long).length, 3)
+  assert.equal(ruleLines(short).length, 2)
+  assert.equal(ruleLines(long).length, 3)
   assert.ok(measureLine('Forests') <= MEASURE)
   assert.ok(measureLine('Water, Land and Resource Stewardship') > MEASURE)
+})
+
+test('an English list breaks between its items, as the Province’s marks do', () => {
+  // Marks the Province published for ministries since renamed (artwork/current/confirmed/). They
+  // are in confirmedBreaks.js, so nameLines sets them right regardless; this is the rules alone.
+  // Two of them are not the most even split: "Jobs, Economic / Development and Innovation" and
+  // "Energy, Mines and Low / Carbon Innovation" were, until the comma was read as marking a list.
+  const published = {
+    'Ministry of Jobs, Economic Development and Innovation': ['Jobs, Economic Development', 'and Innovation'],
+    'Ministry of Energy, Mines and Low Carbon Innovation': ['Energy, Mines and', 'Low Carbon Innovation'],
+    'Ministry of Water, Land and Resource Stewardship': ['Water, Land and', 'Resource Stewardship'],
+    'Ministry of Environment and Climate Change Strategy': ['Environment and', 'Climate Change Strategy'],
+    'Ministry of Transportation and Infrastructure': ['Transportation', 'and Infrastructure']
+  }
+  for (const [name, body] of Object.entries(published)) {
+    assert.deepEqual(ruleLines(name), ['Ministry of', ...body], name)
+  }
+
+  // With no comma an "and" can sit inside one item, and the even split stands: the Province sets
+  // "Children and Family / Development", not "Children and / Family Development".
+  assert.deepEqual(ruleLines('Ministry of Children and Family Development'),
+    ['Ministry of', 'Children and Family', 'Development'])
+
+  // French keeps its own rules: the Province breaks inside a list there.
+  assert.deepEqual(ruleLines('Ministère du Tourisme, des Arts, de la Culture et du Sport', { language: 'fr' }),
+    ['Ministère du', 'Tourisme, des Arts, de', 'la Culture et du Sport'])
 })
 
 test('a name too long for two lines takes three, as the Province set its longest', () => {
@@ -154,7 +220,7 @@ test('a name too long for two lines takes three, as the Province set its longest
   // (artwork/current/lifted/flnrord.svg). Split in two, its longer line would measure 13579 —
   // wider than any line a current mark sets — and the Province broke it in three instead.
   assert.deepEqual(
-    nameLines('Ministry of Forests, Lands, Natural Resource Operations and Rural Development'),
+    ruleLines('Ministry of Forests, Lands, Natural Resource Operations and Rural Development'),
     ['Ministry of', 'Forests, Lands, Natural', 'Resource Operations', 'and Rural Development'])
 
   // Every current mark stays within two, so none of them moves.
@@ -167,13 +233,13 @@ test('a name too long for two lines takes three, as the Province set its longest
 })
 
 test('French does not end any of three lines on "et"', () => {
-  const lines = nameLines('Ministère ' + 'de la Gestion des urgences et de la Préparation au climat et des Solutions et des Parcs', { language: 'fr' })
+  const lines = ruleLines('Ministère ' + 'de la Gestion des urgences et de la Préparation au climat et des Solutions et des Parcs', { language: 'fr' })
   assert.equal(lines.length, 4)
   for (const line of lines.slice(1, -1)) assert.ok(!/\bet$/.test(line), `"${line}" ends on et`)
 })
 
 test('a split evens the two lines up', () => {
-  const [, first, second] = nameLines('Ministry of Water, Land and Resource Stewardship')
+  const [, first, second] = ruleLines('Ministry of Water, Land and Resource Stewardship')
   const ratio = Math.min(measureLine(first), measureLine(second)) /
     Math.max(measureLine(first), measureLine(second))
 
@@ -184,17 +250,17 @@ test('a split evens the two lines up', () => {
 test('French does not leave "et" at a line end, and English is happy to', () => {
   // Both are the Province's own practice: "Public Safety and / Solicitor General" in English,
   // "la Sécurité publique / et du Solliciteur général" in French.
-  const french = nameLines('Ministère de la Sécurité publique et du Solliciteur général', { language: 'fr' })
+  const french = ruleLines('Ministère de la Sécurité publique et du Solliciteur général', { language: 'fr' })
   assert.deepEqual(french, ['Ministère de', 'la Sécurité publique', 'et du Solliciteur général'])
 
-  const english = nameLines('Ministry of Public Safety and Solicitor General', { language: 'en' })
+  const english = ruleLines('Ministry of Public Safety and Solicitor General', { language: 'en' })
   assert.deepEqual(english, ['Ministry of', 'Public Safety and', 'Solicitor General'])
 })
 
 test('French prefers to open a line with "et", but not at the cost of a stub', () => {
   // Breaking before "et" here would leave "l’Éducation" alone against a line four times its
   // length, so the Province does not, and neither does this.
-  const lines = nameLines('Ministère de l’Éducation et des Services à la petite enfance', { language: 'fr' })
+  const lines = ruleLines('Ministère de l’Éducation et des Services à la petite enfance', { language: 'fr' })
   assert.notEqual(lines[1], 'l’Éducation')
   assert.equal(lines.length, 3)
 })
@@ -208,7 +274,7 @@ test('explicit line breaks are obeyed exactly and never re-wrapped', () => {
 })
 
 test('wording with no breaks of its own gets wrapped', () => {
-  const lines = nameLines('Ministry of Social Development and Poverty Reduction')
+  const lines = ruleLines('Ministry of Social Development and Poverty Reduction')
   assert.equal(lines[0], 'Ministry of')
   assert.ok(lines.length > 2)
   assert.equal(lines.join(' '), 'Ministry of Social Development and Poverty Reduction')

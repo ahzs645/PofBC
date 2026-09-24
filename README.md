@@ -51,6 +51,13 @@ rays over a light disc, with no shading to sample; a grey divider; and a heavy s
 Garamond. The build tells the two kinds of sun apart by what the file contains. It finds the divider
 by its shape rather than its colour, so a grey one counts.
 
+**BC Wildfire Service** has the same flat sun, but the gold divider and the Garamond are back. It
+comes in two arrangements, both published reversed and both lifted as drawn: the name on two lines
+("BC Wildfire" over "Service"), from a page where it sits over a photograph, and on one line, from
+the cover of the Province's 2025 prescribed-fire report. "On white" gives the BC-blue version of
+either. The photograph is in the file as bitmaps; the build ignores any bitmap not clipped to a
+shape, so it drops out.
+
 - **The glow is sampled, not guessed.** The print files shade the sun, and the converter wrote each
   shading as a small bitmap clipped to its shape. Those bitmaps are read back into radial gradients
   about the sun's centre, as a mix from the core's light to the sun's gold. The glow recolours
@@ -112,6 +119,20 @@ Province's own drawing again, not a font: older marks were drawn in the same alp
   because no current mark has four. FLNRORD has four: an even two-line split of its name would make
   a line 13579 wide, where the widest any current mark sets is 12296. So above 13000 the ministry
   proper takes three lines, evened the same way, and the published mark comes out exactly.
+- **An English name with a comma is a list, and breaks between its items**: after a comma, or on
+  either side of the closing "and". The even split alone set "Jobs, Economic / Development and
+  Innovation" and "Energy, Mines and Low / Carbon Innovation", where the Province's marks read
+  "Jobs, Economic Development / and Innovation" and "Energy, Mines and / Low Carbon Innovation".
+  Width cannot tell these apart from "Children and Family / Development", which *is* the even split
+  and is published that way: both miss the evenest break by about 100/1000 em. The comma can, since
+  without one the "and" may sit inside a single item. None of the 46 current marks moves.
+- **A name a published mark has confirmed is set as drawn, whatever the rules say.**
+  [`src/current/confirmedBreaks.js`](src/current/confirmedBreaks.js) lists every one, with where it
+  was seen: all 46 current marks, FLNRORD, and older marks kept in
+  [`artwork/current/confirmed/`](artwork/current/confirmed). The rules only set names no mark has
+  shown, so improving them for one mark can never move another that is already known. The tests
+  still check the rules against every confirmed name. The two they miss (French Agriculture and
+  Education) are pinned as exceptions, so a new one fails a test instead of slipping through.
 - **Still missing: `U`, `V` and the full stop**, which 6 historical names use. (`B` came later, from
   the WelcomeBC wordmark: see the gallery above.) A published mark containing them, added to the
   lifted folder's `index.json` with the tracking it was set at, closes that gap.
