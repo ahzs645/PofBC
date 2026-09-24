@@ -46,6 +46,11 @@ a name in large Garamond. `scripts/build-one-offs.mjs` lifts them from the publi
 [`artwork/one-offs/`](artwork/one-offs) and labels every shape with its part (sun, rays, mountains,
 wordmark, tagline, name, the gold accent), so any part can be recoloured.
 
+**StrongerBC** (2021) is lifted the same way but belongs to a later generation: a flat sun, gold
+rays over a light disc, with no shading to sample; a grey divider; and a heavy sans in place of the
+Garamond. The build tells the two kinds of sun apart by what the file contains. It finds the divider
+by its shape rather than its colour, so a grey one counts.
+
 - **The glow is sampled, not guessed.** The print files shade the sun, and the converter wrote each
   shading as a small bitmap clipped to its shape. Those bitmaps are read back into radial gradients
   about the sun's centre, as a mix from the core's light to the sun's gold. The glow recolours

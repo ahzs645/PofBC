@@ -229,13 +229,6 @@ function extract (entry) {
   }
   const leaves = shaded.filter(({ mean }) => isRed(mean))
   const sunParts = shaded.filter((part) => !leaves.includes(part)).sort((a, b) => (b.box.right - b.box.left) - (a.box.right - a.box.left))
-  const [disc, second, ...others] = sunParts
-  const discWidth = disc.box.right - disc.box.left
-  // The core is the broad glow over the sun's middle; everything narrower is a ray.
-  const core = second && (second.box.right - second.box.left) > 0.4 * discWidth ? second : null
-  const rays = core ? others : [second, ...others].filter(Boolean)
-  const sun = { cx: (disc.box.left + disc.box.right) / 2, r: discWidth / 2 }
-  sun.cy = disc.box.top + sun.r
 
   // Everything else is flat colour, taken subpath by subpath.
   const contours = []
@@ -245,18 +238,74 @@ function extract (entry) {
     if (shapeClip(clips, item.clips)) continue
     for (const subpath of absolute(item.d)) {
       const box = boundsOf(subpath)
-      if (covers(box)) { background ??= item.fill; background = entry.background ?? item.fill; continue }
+      // The last shape to cover the whole artwork is what the mark sits on — a page, or a card
+      // on a page.
+      if (covers(box)) { background = entry.background ?? item.fill; continue }
       if (!inside(box)) continue
       contours.push({ subpath, box, fill: item.fill })
     }
   }
 
+  // The divider and the rule are told apart by shape, not colour: the Best Place marks draw them
+  // gold, and StrongerBC draws its divider grey.
   const gold = (fill) => fill && fill.startsWith('#') && fill.length === 7 && isGold(rgbOf(fill))
   const thin = (box, along) => along === 'x'
     ? box.bottom - box.top > 15 && box.right - box.left < 1.5
     : box.right - box.left > 10 && box.bottom - box.top < 1.5
-  const divider = contours.find((c) => gold(c.fill) && thin(c.box, 'x'))
-  const rule = contours.find((c) => gold(c.fill) && thin(c.box, 'y') && (!divider || c.box.right < divider.box.left))
+  const divider = contours.find((c) => thin(c.box, 'x'))
+  const rule = contours.find((c) => thin(c.box, 'y') && (!divider || c.box.right < divider.box.left))
+  const markSide = (c) => !divider || c.box.right < divider.box.left
+
+  let sun, shapes, gradients, sunColour, lightColour
+  const flatSun = new Set()
+
+  if (sunParts.length) {
+    // The shaded sun: its disc, its rays and its core, each a bitmap in a shape.
+    const [disc, second, ...others] = sunParts
+    const discWidth = disc.box.right - disc.box.left
+    // The core is the broad glow over the sun's middle; everything narrower is a ray.
+    const core = second && (second.box.right - second.box.left) > 0.4 * discWidth ? second : null
+    const rays = core ? others : [second, ...others].filter(Boolean)
+    sun = { cx: (disc.box.left + disc.box.right) / 2, r: discWidth / 2 }
+    sun.cy = disc.box.top + sun.r
+
+    sunColour = hex(disc.pixels.reduce((best, p) => {
+      const distance = (rgb) => rgb.reduce((sum, v) => sum + (255 - v) ** 2, 0)
+      return distance(p.rgb) > distance(best) ? p.rgb : best
+    }, [255, 255, 255]))
+    lightColour = '#ffffff'
+    const goldRgb = rgbOf(sunColour)
+    gradients = {
+      sun: gradientOf(disc.pixels, sun, goldRgb),
+      rays: gradientOf(rays.flatMap((ray) => ray.pixels), sun, goldRgb),
+      ...(core ? { core: gradientOf(core.pixels, sun, goldRgb) } : {})
+    }
+    shapes = [
+      { role: 'sun', subpaths: disc.subpaths },
+      { role: 'rays', subpaths: rays.flatMap((ray) => ray.subpaths) },
+      ...(core ? [{ role: 'core', subpaths: core.subpaths }] : [])
+    ]
+  } else {
+    // The flat sun of the later marks: gold rays drawn over a light disc, no shading to sample.
+    const rays = contours.filter((c) => markSide(c) && gold(c.fill) && c !== rule)
+    const raysBox = union(rays.map((c) => c.box))
+    const discs = contours.filter((c) => markSide(c) && !gold(c.fill) && c !== divider && c !== rule &&
+      c.box.left < raysBox.right && c.box.right > raysBox.left && c.box.top < raysBox.bottom && c.box.bottom > raysBox.top &&
+      c.box.top <= raysBox.top + 1)
+    for (const c of [...rays, ...discs]) flatSun.add(c)
+    const box = union([...rays, ...discs].map((c) => c.box))
+    sun = { cx: (box.left + box.right) / 2, r: (box.right - box.left) / 2 }
+    sun.cy = box.top + sun.r
+    sunColour = rays[0].fill
+    lightColour = discs[0]?.fill ?? '#ffffff'
+    gradients = {}
+    // The disc first and the rays over it, as drawn. As parts they are the light and the sun, the
+    // same as the shaded marks' flat rendering.
+    shapes = [
+      ...(discs.length ? [{ role: 'core', subpaths: discs.map((c) => c.subpath) }] : []),
+      { role: 'sun', subpaths: rays.map((c) => c.subpath) }
+    ]
+  }
 
   const roles = new Map()
   const add = (role, contour) => {
@@ -264,48 +313,31 @@ function extract (entry) {
     roles.get(role).subpaths.push(contour.subpath)
   }
   for (const contour of contours) {
+    if (flatSun.has(contour)) continue
     if (contour === divider) add('divider', contour)
     else if (contour === rule) add('rule', contour)
-    else if (divider && contour.box.left > divider.box.right) add(gold(contour.fill) ? 'accent' : 'name', contour)
+    else if (!markSide(contour)) add(gold(contour.fill) ? 'accent' : 'name', contour)
     else if (contour.box.top < sun.cy) add('mountains', contour)
     else if (rule && contour.box.top > rule.box.bottom) add('tagline', contour)
     else add('wordmark', contour)
   }
 
-  const goldOf = hex(disc.pixels.reduce((best, p) => {
-    const distance = (rgb) => rgb.reduce((sum, v) => sum + (255 - v) ** 2, 0)
-    return distance(p.rgb) > distance(best) ? p.rgb : best
-  }, [255, 255, 255]))
-  const goldRgb = rgbOf(goldOf)
-
-  const discGradient = gradientOf(disc.pixels, sun, goldRgb)
-  const rayGradient = gradientOf(rays.flatMap((ray) => ray.pixels), sun, goldRgb)
-  const coreGradient = core ? gradientOf(core.pixels, sun, goldRgb) : null
-
-  const shapes = [
-    { role: 'sun', subpaths: disc.subpaths },
-    { role: 'rays', subpaths: rays.flatMap((ray) => ray.subpaths) },
-    ...(core ? [{ role: 'core', subpaths: core.subpaths }] : []),
+  shapes.push(
     ...['mountains', 'wordmark', 'rule', 'tagline', 'divider', 'name', 'accent']
       .filter((role) => roles.has(role))
       .map((role) => ({ role, subpaths: roles.get(role).subpaths })),
     ...(leaves.length ? [{ role: 'leaf', subpaths: leaves.flatMap((leaf) => leaf.subpaths) }] : [])
-  ]
+  )
 
   const colours = {
     background: background ?? null,
-    sun: goldOf,
-    light: '#ffffff',
+    sun: sunColour,
+    light: lightColour,
     ...Object.fromEntries([...roles].map(([role, { fill }]) => [role, fill])),
     ...(leaves.length ? { leaf: hex(leaves[0].mean) } : {})
   }
 
-  return {
-    shapes,
-    sun,
-    gradients: { sun: discGradient, rays: rayGradient, ...(coreGradient ? { core: coreGradient } : {}) },
-    colours
-  }
+  return { shapes, sun, gradients, colours }
 }
 
 // ── Build ────────────────────────────────────────────────────────────────────────────────────────

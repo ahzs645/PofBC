@@ -11,7 +11,7 @@ import { Segmented } from '../site/Segmented.jsx'
 import { renderFlagSvg } from '../flag/renderFlagSvg.js'
 import { FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_PALETTE_ORDER, FLAG_SWATCHES } from '../flag/flagPalettes.js'
 import { ONE_OFFS } from './oneOffs.js'
-import { renderOneOffSvg, rolesOf } from './renderOneOff.js'
+import { hasGlow, renderOneOffSvg, rolesOf } from './renderOneOff.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -68,13 +68,15 @@ const ArtworkControls = ({ entry, colours, change }) => {
 
   return (
     <>
-      <Segmented
-        label="Shading"
-        options={SUN_OPTIONS}
-        value={colours.sun}
-        onChange={(sun) => change({ sun })}
-        hint={SUN_OPTIONS.find((option) => option.value === colours.sun)?.title}
-      />
+      {hasGlow(entry.mark) && (
+        <Segmented
+          label="Shading"
+          options={SUN_OPTIONS}
+          value={colours.sun}
+          onChange={(sun) => change({ sun })}
+          hint={SUN_OPTIONS.find((option) => option.value === colours.sun)?.title}
+        />
+      )}
       <ColourField
         label="Background"
         value={colours.colours.background}

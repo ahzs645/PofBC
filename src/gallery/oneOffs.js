@@ -118,6 +118,16 @@ export const ONE_OFFS = [
       '#e3a82b) rather than the print ones the others use.'
   }),
   artwork({
+    id: 'stronger-bc',
+    label: 'StrongerBC',
+    body: 'StrongerBC',
+    years: 'from 2021',
+    note: 'A later mark than the rest, and a different idea of one: the flat sun, a grey divider, ' +
+      'and the name in a heavy sans with “BC” in gold, “for everyone” set beneath it in italic.',
+    caveat: 'Drawn from the published artwork. Its sun was published flat, so there is no ' +
+      'shading to switch on.'
+  }),
+  artwork({
     id: 'public-service',
     label: 'BC Public Service',
     body: 'BC Public Service',

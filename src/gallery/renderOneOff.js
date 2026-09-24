@@ -57,12 +57,12 @@ export const renderOneOffSvg = ({ id, colours = {}, sun = 'glow', clearSpaceFact
   const defs = []
   const fills = {}
   for (const role of ['sun', 'rays', 'core']) {
-    if (!glowing) {
+    // A mark drawn with a flat sun, like StrongerBC, has no shading to glow with.
+    const stops = mark.gradients[role]
+    if (!glowing || !stops) {
       fills[role] = role === 'sun' ? gold : light
       continue
     }
-    const stops = mark.gradients[role]
-    if (!stops) continue
     const gradientId = `${prefix}-${role}`
     const outer = stops.at(-1)[0] || 1
     defs.push(`<radialGradient id="${gradientId}" gradientUnits="userSpaceOnUse" cx="${mark.sun.cx}" cy="${mark.sun.cy}" r="${round(mark.sun.r * outer)}">` +
@@ -98,3 +98,6 @@ export const rolesOf = (id) => {
   const present = new Set(ONE_OFF_MARKS[id].shapes.map(({ role }) => role))
   return ONE_OFF_ROLES.filter((role) => present.has(role))
 }
+
+/** Whether a mark was published with a shaded sun, so has a glow to offer at all. */
+export const hasGlow = (id) => Object.keys(ONE_OFF_MARKS[id].gradients).length > 0
