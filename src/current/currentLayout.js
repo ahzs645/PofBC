@@ -183,18 +183,37 @@ const MIN_EVENNESS = 0.5
 // all the Province's own — so this applies to French only.
 const CONJUNCTION = { fr: 'et' }
 
+// The word that closes an English list: "Water, Land and Resource Stewardship".
+const LIST_CONJUNCTION = { en: 'and' }
+
+/**
+ * Whether a name is a list of items, and so should break between them rather than inside one.
+ *
+ * A comma is what gives it away. "Jobs, Economic Development and Innovation" is three items, and
+ * the Province breaks it "Jobs, Economic Development / and Innovation" although "Jobs, Economic /
+ * Development and Innovation" is the more even of the two. With no comma the "and" can sit inside
+ * a single item: "Children and Family Development" is one thing, and its mark breaks it
+ * "Children and Family / Development", which is the even split. The two misses are the same size,
+ * about 100/1000 em, so no width rule can tell them apart; the comma can.
+ */
+const isList = (words, language) => Boolean(LIST_CONJUNCTION[language]) &&
+  words.slice(0, -1).some((word) => word.endsWith(','))
+
 /**
  * Splits the ministry proper across two lines the way the Province's own marks do.
  *
- * The base rule is to even the two lines up, which by itself reproduces every English mark. French
- * needs two more: never end a line on "et", and prefer to begin the second line with it, so long
- * as that does not leave one line less than half the other.
+ * The base rule is to even the two lines up. English lists break only between items: after a
+ * comma, or on either side of the "and" that closes the list, and the evenest of those breaks is
+ * the one taken. French needs two rules of its own: never end a line on "et", and prefer to begin
+ * the second line with it, so long as that does not leave one line less than half the other.
  */
 const splitBody = (body, language) => {
   const words = body.split(' ')
   if (words.length < 2) return [body]
 
   const conjunction = CONJUNCTION[language]
+  const listConjunction = LIST_CONJUNCTION[language]
+  const list = isList(words, language)
   const candidates = []
 
   for (let i = 1; i < words.length; i += 1) {
@@ -207,7 +226,9 @@ const splitBody = (body, language) => {
       lines: [first, second],
       widest: Math.max(one, two),
       evenness: Math.min(one, two) / Math.max(one, two),
-      opensWithConjunction: Boolean(conjunction) && words[i].toLowerCase() === conjunction
+      opensWithConjunction: Boolean(conjunction) && words[i].toLowerCase() === conjunction,
+      betweenItems: words[i - 1].endsWith(',') ||
+        [words[i - 1], words[i]].some((word) => word.toLowerCase() === listConjunction)
     })
   }
 
@@ -217,8 +238,11 @@ const splitBody = (body, language) => {
   const preferred = candidates
     .filter((c) => c.opensWithConjunction && c.evenness >= MIN_EVENNESS)
     .sort((a, b) => b.evenness - a.evenness)[0]
+  if (preferred) return preferred.lines
 
-  return (preferred ?? candidates.reduce((best, c) => (c.widest < best.widest ? c : best))).lines
+  const allowed = list ? candidates.filter((c) => c.betweenItems) : candidates
+  return (allowed.length ? allowed : candidates)
+    .reduce((best, c) => (c.widest < best.widest ? c : best)).lines
 }
 
 /**
@@ -256,7 +280,8 @@ const splitBodyThree = (body, language) => {
  *   1. the opening — "Ministry of", "Ministère de/des/du" — takes a line of its own, however
  *      short what follows is. "Ministry of Health" is two lines.
  *   2. the ministry proper stays on one line up to MEASURE, and splits in two above it.
- *   3. the split evens the two lines up, with the French conjunction rules in splitBody.
+ *   3. the split evens the two lines up, with the French conjunction rules in splitBody. An
+ *      English name with a comma is a list, and breaks only between its items.
  *   4. a name so long that even two lines would pass THREE_LINE_MEASURE takes three, evened the
  *      same way. No current mark is that long; the Forests, Lands, Natural Resource Operations and
  *      Rural Development mark was, and this reproduces it.

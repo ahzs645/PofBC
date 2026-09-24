@@ -112,6 +112,13 @@ Province's own drawing again, not a font: older marks were drawn in the same alp
   because no current mark has four. FLNRORD has four: an even two-line split of its name would make
   a line 13579 wide, where the widest any current mark sets is 12296. So above 13000 the ministry
   proper takes three lines, evened the same way, and the published mark comes out exactly.
+- **An English name with a comma is a list, and breaks between its items**: after a comma, or on
+  either side of the closing "and". The even split alone set "Jobs, Economic / Development and
+  Innovation" and "Energy, Mines and Low / Carbon Innovation", where the Province's marks read
+  "Jobs, Economic Development / and Innovation" and "Energy, Mines and / Low Carbon Innovation".
+  Width cannot tell these apart from "Children and Family / Development", which *is* the even split
+  and is published that way: both miss the evenest break by about 100/1000 em. The comma can, since
+  without one the "and" may sit inside a single item. None of the 46 current marks moves.
 - **Still missing: `U`, `V` and the full stop**, which 6 historical names use. (`B` came later, from
   the WelcomeBC wordmark: see the gallery above.) A published mark containing them, added to the
   lifted folder's `index.json` with the tracking it was set at, closes that gap.

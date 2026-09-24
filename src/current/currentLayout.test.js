@@ -149,6 +149,31 @@ test('the ministry proper takes one line or two, on a measured threshold', () =>
   assert.ok(measureLine('Water, Land and Resource Stewardship') > MEASURE)
 })
 
+test('an English list breaks between its items, as the Province’s marks do', () => {
+  // Marks the Province published for ministries since renamed. Two of them are not the most even
+  // split: "Jobs, Economic / Development and Innovation" and "Energy, Mines and Low / Carbon
+  // Innovation" were, until the comma was read as marking a list.
+  const published = {
+    'Ministry of Jobs, Economic Development and Innovation': ['Jobs, Economic Development', 'and Innovation'],
+    'Ministry of Energy, Mines and Low Carbon Innovation': ['Energy, Mines and', 'Low Carbon Innovation'],
+    'Ministry of Water, Land and Resource Stewardship': ['Water, Land and', 'Resource Stewardship'],
+    'Ministry of Environment and Climate Change Strategy': ['Environment and', 'Climate Change Strategy'],
+    'Ministry of Transportation and Infrastructure': ['Transportation', 'and Infrastructure']
+  }
+  for (const [name, body] of Object.entries(published)) {
+    assert.deepEqual(nameLines(name), ['Ministry of', ...body], name)
+  }
+
+  // With no comma an "and" can sit inside one item, and the even split stands: the Province sets
+  // "Children and Family / Development", not "Children and / Family Development".
+  assert.deepEqual(nameLines('Ministry of Children and Family Development'),
+    ['Ministry of', 'Children and Family', 'Development'])
+
+  // French keeps its own rules: the Province breaks inside a list there.
+  assert.deepEqual(nameLines('Ministère du Tourisme, des Arts, de la Culture et du Sport', { language: 'fr' }),
+    ['Ministère du', 'Tourisme, des Arts, de', 'la Culture et du Sport'])
+})
+
 test('a name too long for two lines takes three, as the Province set its longest', () => {
   // The Forests, Lands, Natural Resource Operations and Rural Development mark, as published
   // (artwork/current/lifted/flnrord.svg). Split in two, its longer line would measure 13579 —
