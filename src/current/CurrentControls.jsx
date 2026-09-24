@@ -7,6 +7,10 @@
 //
 // Picking from the list loads the official wording, line breaks and all. Editing it takes over,
 // and the list stops overwriting what has been typed until it is put back.
+//
+// The list is the published marks first, then every other name the other three identities offer —
+// today's ministries and agencies without a published mark, and every ministry since 1976. Those
+// have no official wording, so they are set by the Province's rules instead.
 
 import { useId } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
@@ -17,6 +21,7 @@ import {
 import { unsupported } from './currentLayout.js'
 import { BREAKS_STATED, MINISTRIES } from './ministries.js'
 import { chosenName, codeForName } from '../site/ministryLink.js'
+import { ALL_GROUPS, History } from '../site/MinistryField.jsx'
 
 const LANGUAGE_OPTIONS = LANGUAGE_ORDER.map((value) => ({ value, label: LANGUAGES[value] }))
 
@@ -25,6 +30,28 @@ const VARIANT_OPTIONS = CURRENT_VARIANT_ORDER.map((value) => ({
   label: CURRENT_VARIANTS[value].label,
   title: CURRENT_VARIANTS[value].description
 }))
+
+// A name without a published mark is chosen by the name itself, and a prefix keeps it apart from
+// the codes the published marks are chosen by.
+const BY_NAME = 'name:'
+
+/**
+ * Every name the other identities list that no published mark answers to.
+ *
+ * Built from the same groups, so the four identities cannot offer different ministries. Today's
+ * ministries that do have a mark are dropped here, since the published marks above already list
+ * them with their official wording.
+ */
+const UNPUBLISHED_GROUPS = ALL_GROUPS
+  .map((group) => ({
+    label: group.label === 'Ministries' ? 'Ministries without a published mark' : group.label,
+    options: group.options
+      .map((option) => (typeof option === 'string' ? { value: option, label: option } : option))
+      .filter((option) => !codeForName(option.value))
+  }))
+  .filter((group) => group.options.length > 0)
+
+const UNPUBLISHED_NAMES = new Set(UNPUBLISHED_GROUPS.flatMap((group) => group.options.map((option) => option.value)))
 
 export const CurrentControls = ({ state, update }) => {
   const selectId = useId()
@@ -35,6 +62,9 @@ export const CurrentControls = ({ state, update }) => {
   const stated = BREAKS_STATED.includes(`${state.currentMinistry.toLowerCase()}-${state.language}`)
   const chosen = chosenName(state)
   const custom = state.source === 'manual' || !codeForName(state.ministry)
+  // A name from the wider list is still a list choice, and the select should say which.
+  const listed = custom && state.source === 'list' && UNPUBLISHED_NAMES.has(state.ministry)
+  const selected = !custom ? state.currentMinistry : listed ? BY_NAME + state.ministry : ''
 
   // The committed alphabet is the letters the Province's own marks are drawn with. Anything else
   // needs the local build against a licensed Adobe Garamond Pro, and saying so beats drawing a
@@ -67,18 +97,32 @@ export const CurrentControls = ({ state, update }) => {
         <label htmlFor={selectId}>Ministry</label>
         <select
           id={selectId}
-          value={custom ? '' : state.currentMinistry}
-          onChange={(event) => update({ currentMinistry: event.target.value })}
+          value={selected}
+          onChange={(event) => {
+            const { value } = event.target
+            if (value.startsWith(BY_NAME)) update({ source: 'list', ministry: value.slice(BY_NAME.length) })
+            else update({ currentMinistry: value })
+          }}
         >
-          {/* A name of your own is not in the Province's list, and pretending one of them is
-              selected would misreport what is on the mark. */}
-          {custom && <option value="">{chosen || 'A name of your own'}</option>}
-          {MINISTRIES.map((ministry) => (
-            <option key={ministry.code} value={ministry.code}>
-              {ministry[state.language].replace(/\n/g, ' ')}
-            </option>
+          {/* A name of your own is not in any list, and pretending one of them is selected would
+              misreport what is on the mark. */}
+          {custom && !listed && <option value="">{chosen || 'A name of your own'}</option>}
+          <optgroup label="Published marks">
+            {MINISTRIES.map((ministry) => (
+              <option key={ministry.code} value={ministry.code}>
+                {ministry[state.language].replace(/\n/g, ' ')}
+              </option>
+            ))}
+          </optgroup>
+          {UNPUBLISHED_GROUPS.map((group) => (
+            <optgroup key={group.label} label={group.label}>
+              {group.options.map((option) => (
+                <option key={option.value} value={BY_NAME + option.value}>{option.label}</option>
+              ))}
+            </optgroup>
           ))}
         </select>
+        {listed && <History name={state.ministry} />}
       </div>
 
       <div className="field">
@@ -97,14 +141,16 @@ export const CurrentControls = ({ state, update }) => {
         <p className="field__note">
           {edited
             ? 'Edited. '
-            : custom
-              // No published mark answers to this name, so there is no official wording to be
-              // faithful to — the rules still set it, but they are the Province's rules applied to
-              // your name rather than a reproduction of its artwork.
-              ? 'A name of your own, set by the Province’s own rules rather than copied from a mark. '
-              : stated
-                ? 'Official wording. This mark breaks against the Province’s own pattern, so its breaks are written in. '
-                : 'Official wording. Lines break by the Province’s own rules — the opening on its own line, the rest on one line or two. '}
+            : listed
+              ? 'No published mark carries this name, so it is set by the Province’s own rules. '
+              : custom
+                // No published mark answers to this name, so there is no official wording to be
+                // faithful to — the rules still set it, but they are the Province's rules applied to
+                // your name rather than a reproduction of its artwork.
+                ? 'A name of your own, set by the Province’s own rules rather than copied from a mark. '
+                : stated
+                  ? 'Official wording. This mark breaks against the Province’s own pattern, so its breaks are written in. '
+                  : 'Official wording. Lines break by the Province’s own rules — the opening on its own line, the rest on one line or two. '}
           Press Enter to override.
           {edited && (
             <>
@@ -128,8 +174,8 @@ export const CurrentControls = ({ state, update }) => {
           <span className="contrast__message">
             so {missing.length === 1 ? 'it is' : 'they are'} left out of the drawing. The alphabet
             here is the one the Province’s published marks use; run{' '}
-            <code>npm run build:current-glyphs</code> against a licensed Adobe Garamond Pro to
-            extend it.
+            <code>npm run build:current-extras</code> with <code>GARAMOND_SOURCE</code> pointing at a
+            licensed Adobe Garamond Pro to extend it.
           </span>
         </p>
       )}

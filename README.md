@@ -39,6 +39,34 @@ generator can offer and so have nothing to be loaded into. Each still opens for 
 each draws itself from the same renderer as everything else, so a card cannot drift from what it
 gives you.
 
+Most of the gallery is the **Best Place on Earth years**: WelcomeBC, WorkBC, BC Stats,
+Environmental Reporting BC, the BC Public Service's "Where ideas work", Canada's Pacific Gateway,
+and the stacked BC mark with its tagline. Each is the BC mark with a shaded sun, a gold divider, and
+a name in large Garamond. `scripts/build-one-offs.mjs` lifts them from the published files in
+[`artwork/one-offs/`](artwork/one-offs) and labels every shape with its part (sun, rays, mountains,
+wordmark, tagline, name, the gold accent), so any part can be recoloured.
+
+**StrongerBC** (2021) is lifted the same way but belongs to a later generation: a flat sun, gold
+rays over a light disc, with no shading to sample; a grey divider; and a heavy sans in place of the
+Garamond. The build tells the two kinds of sun apart by what the file contains. It finds the divider
+by its shape rather than its colour, so a grey one counts.
+
+- **The glow is sampled, not guessed.** The print files shade the sun, and the converter wrote each
+  shading as a small bitmap clipped to its shape. Those bitmaps are read back into radial gradients
+  about the sun's centre, as a mix from the core's light to the sun's gold. The glow recolours
+  with everything else and stays vector. One ink draws the sun flat instead, with the rays and core
+  cut out of it.
+- **The wordmarks are the ministry marks' alphabet, tracked tighter.** WelcomeBC and WorkBC fit
+  the same kerned Adobe Garamond at −20/1000 em instead of −10. WelcomeBC is where the capital `B`
+  was lifted from. WorkBC's `rk` pair was opened by hand: its `k` sits 5/1000 em right on both
+  sides.
+- **One thing the lifting turned up:** the committed `W` sits 14/1000 em lower than the `W` drawn
+  in both WelcomeBC and WorkBC, exactly where the licensed font puts it. It was recovered from the
+  one corrupt file that has a `W`, and its height looks to have come from the font. The other
+  capitals the Province drew (`B`, `N`, `O`) also sit 11–14/1000 em from the font's, so the
+  artwork's Garamond is a slightly different cut. The committed `W` is left as it is until that is
+  looked into properly.
+
 ### The current era: a published mark, typeset wording
 
 **The mark itself is never recreated.** Both of the Province's guideline documents say in bold that
@@ -69,6 +97,30 @@ recovered from the artwork itself:
 What is committed is the alphabet the published marks are *themselves* drawn with, plus advance
 widths and kerning pairs. The rest of the alphabet is built from a licensed font and gitignored —
 see [Requirements](#requirements).
+
+**Forty-six marks have no capital N or O.** No current ministry name starts a word with either, so
+until the list offered historical ministries nobody noticed. Then "Forests, Lands, Natural Resource
+Operations and Rural Development" was drawn as "atural Resource perations". The fix is the
+Province's own drawing again, not a font: older marks were drawn in the same alphabet, and
+`scripts/lift-current-letters.mjs` takes the letters the alphabet lacks out of any mark listed in
+[`artwork/current/lifted/`](artwork/current/lifted).
+
+- **It fits before it lifts.** Each line's size and origin are fitted against the letters the
+  alphabet already has. On the FLNRORD mark every known letter lands within 0.6/1000 em of where the
+  metrics put it, and a file that misses by more than 0.02 pt is refused.
+- **It also settled a line-break rule.** The rules below used to cap a mark at three lines,
+  because no current mark has four. FLNRORD has four: an even two-line split of its name would make
+  a line 13579 wide, where the widest any current mark sets is 12296. So above 13000 the ministry
+  proper takes three lines, evened the same way, and the published mark comes out exactly.
+- **Still missing: `U`, `V` and the full stop**, which 6 historical names use. (`B` came later, from
+  the WelcomeBC wordmark: see the gallery above.) A published mark containing them, added to the
+  lifted folder's `index.json` with the tracking it was set at, closes that gap.
+- **A typewriter `'` is set as `’`**, which is what the marks use, so "Women's Equality" needs no
+  letter the marks never drew.
+
+The current era's ministry list is the published marks first, then every other name the other three
+identities offer, including every ministry since 1976. Those have no official wording, so they are
+set by the rules.
 
 The four colourways are the Province's own, from its colour-accessibility guidance: **Colour**,
 **Reverse**, **Solid black**, **Solid white**. Reverse is the interesting one — the mountains
@@ -265,8 +317,9 @@ Helvetica at all.
 
 The current era's wording is set in the serif its marks are drawn with, which is Adobe Garamond Pro.
 The letters the published artwork *itself* contains were recovered from that artwork and are
-committed, so every official ministry name works out of the box. The rest of the alphabet — the
-letters that happen not to appear anywhere in forty-six marks — has to come from the font:
+committed, so every official ministry name works out of the box, as do the capitals lifted from
+older marks. The rest of the alphabet — the letters that appear in none of them — has to come from
+the font:
 
 ```sh
 GARAMOND_SOURCE=/path/to/adobe-garamond-pro npm run build:current-extras
@@ -283,7 +336,9 @@ cannot set rather than dropping them silently.
 
 ```
 artwork/                     the supplied artwork — the source of truth for every era
-  crest/, current/, flag/    the arms' wordmark, the ministry-marks PDF, the flag SVG
+  crest/, current/, flag/    the arms' wordmark, the ministry-marks PDF (and older marks, in
+                             current/lifted/), the flag SVG
+  one-offs/                  the gallery's marks, as published, and what each is
 scripts/
   build-mark.mjs             extracts the mark, proves all three copies are identical
   build-fonts.mjs            subsets Helvetica, emits the metrics table and the glyph outlines
@@ -291,8 +346,12 @@ scripts/
   extract_current_marks.py   lifts the published ministry marks out of the PDF, unchanged
   recover_current_names.py   reads their wording back, from the outlines and the PDF's text layer
   build-current-glyphs.mjs   the alphabet and metrics the current era typesets from
+  lift-current-letters.mjs   the capitals that alphabet lacks, from older published marks
+  build-one-offs.mjs         the gallery's one-off marks, lifted from their artwork
+  letterFit.mjs              finds the letters in drawn type, and the line they were set on
   build-vendor-json-url.mjs  builds the share-link submodule
-  sfnt.mjs, svgPath.mjs      the font and path surgery those need
+  sfnt.mjs, svgPath.mjs,     the font and path surgery those need
+  svgAbsolute.mjs
   compare-artwork.mjs        re-renders each lockup over its original and diffs them
 vendor/json-url/             submodule — compresses a configuration into a share link
 src/

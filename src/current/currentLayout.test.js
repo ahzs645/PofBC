@@ -9,12 +9,14 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { CURRENT_MARK, NAME_LEADING } from '../assets/currentMark.js'
 import {
-  MEASURE, foldLigatures, inkOf, layoutLockup, lettersOf, lockupMarkup, measureLine, nameLines,
-  splitOpening, unsupported, wrapText
+  MEASURE, THREE_LINE_MEASURE, foldLigatures, inkOf, layoutLockup, lettersOf, lockupMarkup,
+  measureLine, nameLines, splitOpening, unsupported, wrapText
 } from './currentLayout.js'
 import { BREAKS_STATED, MINISTRIES, findMinistry } from './ministries.js'
 import { EXTENTS, KERNING, TRACKING, WIDTHS } from './nameMetrics.js'
 import glyphs from './nameGlyphs.js'
+import lifted from './liftedGlyphs.js'
+import { MINISTRY_EPISODES } from '../ministries/ministryHistory.js'
 
 test('the committed alphabet covers every letter the official wording uses', () => {
   // Against nameGlyphs.js specifically, not the merged alphabet: this is the guarantee that a
@@ -39,6 +41,47 @@ test('every drawn letter can be measured', () => {
     assert.ok(EXTENTS[letter], `${letter} has no ink extent`)
   }
   assert.ok(Object.keys(WIDTHS).length > Object.keys(glyphs).length)
+})
+
+test('the capitals the current marks never use are lifted from the Province’s older marks', () => {
+  // The historical ministries in the list need an N and an O that no current mark draws. Without
+  // these, "Natural Resource Operations" came out as "atural Resource perations".
+  assert.ok(lifted.N && lifted.O)
+  assert.deepEqual(unsupported('Ministry of Forests, Lands, Natural Resource Operations and Rural Development'), [])
+  for (const letter of Object.keys(lifted)) {
+    assert.ok(!(letter in glyphs), `${letter} is already in the published alphabet`)
+    assert.ok(WIDTHS[letter] > 0 && EXTENTS[letter], `${letter} cannot be measured`)
+  }
+})
+
+test('a lifted letter’s ink lands where the metrics say it does', () => {
+  // The lifting script fits them to the same origin and em as the rest of the alphabet; this is
+  // the check that it did, against the font's own ink extents.
+  for (const [letter, d] of Object.entries(lifted)) {
+    const xs = [...d.matchAll(/[MLC]([^MLCZ]+)/g)].flatMap(([, body]) =>
+      body.match(/-?(?:\d+\.?\d*|\.\d+)/g).map(Number).filter((_, i) => i % 2 === 0))
+    const [left, right] = EXTENTS[letter]
+    assert.ok(Math.abs(Math.min(...xs) - left) < 5, `${letter} starts at ${Math.min(...xs)}, not ${left}`)
+    assert.ok(Math.abs(Math.max(...xs) - right) < 5, `${letter} ends at ${Math.max(...xs)}, not ${right}`)
+  }
+})
+
+test('a typewriter apostrophe is set as the marks set it', () => {
+  assert.equal(foldLigatures("Women's Equality"), 'Women’s Equality')
+  assert.equal(measureLine("Women's"), measureLine('Women’s'))
+  assert.deepEqual(unsupported("Ministry of Women's Equality"), [])
+})
+
+test('the historical names need only the letters listed here to be drawn', () => {
+  // What is still missing from the committed alphabet, so a new lifted letter shows up as a change
+  // to this list. These are in no mark lifted so far; they fall back to the licensed build.
+  const missing = new Set()
+  for (const { name } of MINISTRY_EPISODES) {
+    for (const letter of lettersOf(name)) {
+      if (letter !== ' ' && !(letter in glyphs) && !(letter in lifted)) missing.add(letter)
+    }
+  }
+  assert.deepEqual([...missing].sort(), ['.', 'U', 'V'])
 })
 
 test('wording that cannot be drawn says which letters are missing', () => {
@@ -104,8 +147,29 @@ test('the ministry proper takes one line or two, on a measured threshold', () =>
   assert.equal(nameLines(long).length, 3)
   assert.ok(measureLine('Forests') <= MEASURE)
   assert.ok(measureLine('Water, Land and Resource Stewardship') > MEASURE)
-  // Never four, however long the wording — the Province's marks never are.
-  assert.equal(nameLines('Ministry of ' + 'Stewardship '.repeat(8)).length, 3)
+})
+
+test('a name too long for two lines takes three, as the Province set its longest', () => {
+  // The Forests, Lands, Natural Resource Operations and Rural Development mark, as published
+  // (artwork/current/lifted/flnrord.svg). Split in two, its longer line would measure 13579 —
+  // wider than any line a current mark sets — and the Province broke it in three instead.
+  assert.deepEqual(
+    nameLines('Ministry of Forests, Lands, Natural Resource Operations and Rural Development'),
+    ['Ministry of', 'Forests, Lands, Natural', 'Resource Operations', 'and Rural Development'])
+
+  // Every current mark stays within two, so none of them moves.
+  for (const ministry of MINISTRIES) {
+    for (const language of ['en', 'fr']) {
+      assert.ok(nameLines(ministry[language], { language }).length <= 3, `${ministry.code}-${language}`)
+    }
+  }
+  assert.ok(THREE_LINE_MEASURE < measureLine('Operations and Rural Development'))
+})
+
+test('French does not end any of three lines on "et"', () => {
+  const lines = nameLines('Ministère ' + 'de la Gestion des urgences et de la Préparation au climat et des Solutions et des Parcs', { language: 'fr' })
+  assert.equal(lines.length, 4)
+  for (const line of lines.slice(1, -1)) assert.ok(!/\bet$/.test(line), `"${line}" ends on et`)
 })
 
 test('a split evens the two lines up', () => {

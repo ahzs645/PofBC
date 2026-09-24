@@ -17,6 +17,7 @@ import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import published from '../src/current/nameGlyphs.js'
+import lifted from '../src/current/liftedGlyphs.js'
 import { LIGATURES } from '../src/current/nameMetrics.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -66,7 +67,8 @@ const CHARSET = [
 
 const extra = {}
 for (const character of CHARSET) {
-  if (character === ' ' || published[character]) continue
+  // The Province's own drawing wins wherever there is one, lifted letters included.
+  if (character === ' ' || published[character] || lifted[character]) continue
   const run = font.layout(expand(character))
   if (!run.glyphs.length || run.glyphs.some((glyph) => glyph.id === 0)) continue
   const glyph = run.glyphs[0]
@@ -87,5 +89,5 @@ ${Object.entries(extra).map(([ch, d]) => `  ${JSON.stringify(ch)}: ${JSON.string
 }
 `)
 
-console.log(`  alphabet    ${Object.keys(published).length} published letters + ` +
+console.log(`  alphabet    ${Object.keys(published).length + Object.keys(lifted).length} published letters + ` +
   `${Object.keys(extra).length} from the licensed font (gitignored)`)

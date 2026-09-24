@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { Suspense, lazy, useState } from 'react'
 import { BcLockup } from '../logo/BcLockup.jsx'
 import { CurrentControls } from '../current/CurrentControls.jsx'
 import { CurrentLockup } from '../current/CurrentLockup.jsx'
 import { CrestLockup } from '../crest/CrestLockup.jsx'
 import { FlagLockup } from '../flag/FlagLockup.jsx'
-import { GalleryView } from '../gallery/GalleryView.jsx'
+// Loaded when it is opened: the one-off marks are drawn from their own artwork, which the
+// generator never needs.
+const GalleryView = lazy(() => import('../gallery/GalleryView.jsx').then((module) => ({ default: module.GalleryView })))
 import {
   FLAG_PALETTE_ORDER, FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_SWATCHES
 } from '../flag/flagPalettes.js'
@@ -146,7 +148,11 @@ export const App = () => {
         </nav>
       </header>
 
-      {view === 'gallery' && <GalleryView />}
+      {view === 'gallery' && (
+        <Suspense fallback={<p className="gallery__intro">Loading the one-off marks…</p>}>
+          <GalleryView />
+        </Suspense>
+      )}
 
       {view === 'generator' && (
       <div className="layout">

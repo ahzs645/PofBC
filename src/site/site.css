@@ -745,6 +745,10 @@ textarea {
   text-align: left;
 }
 
+/* The drawn marks run wide — a mark beside a name — so their card is wider to match. */
+.gallery__pick--wide { max-width: 520px; }
+.gallery__pick--wide .gallery__art svg { width: 100%; }
+
 .gallery__pick:hover,
 .gallery__pick:focus-visible { border-color: var(--ink-muted); }
 
