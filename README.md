@@ -119,6 +119,13 @@ Province's own drawing again, not a font: older marks were drawn in the same alp
   Width cannot tell these apart from "Children and Family / Development", which *is* the even split
   and is published that way: both miss the evenest break by about 100/1000 em. The comma can, since
   without one the "and" may sit inside a single item. None of the 46 current marks moves.
+- **A name a published mark has confirmed is set as drawn, whatever the rules say.**
+  [`src/current/confirmedBreaks.js`](src/current/confirmedBreaks.js) lists every one, with where it
+  was seen: all 46 current marks, FLNRORD, and older marks kept in
+  [`artwork/current/confirmed/`](artwork/current/confirmed). The rules only set names no mark has
+  shown, so improving them for one mark can never move another that is already known. The tests
+  still check the rules against every confirmed name. The two they miss (French Agriculture and
+  Education) are pinned as exceptions, so a new one fails a test instead of slipping through.
 - **Still missing: `U`, `V` and the full stop**, which 6 historical names use. (`B` came later, from
   the WelcomeBC wordmark: see the gallery above.) A published mark containing them, added to the
   lifted folder's `index.json` with the tracking it was set at, closes that gap.

@@ -15,6 +15,7 @@ import published from './nameGlyphs.js'
 import lifted from './liftedGlyphs.js'
 import extra from './generated/nameGlyphsExtra.js'
 import { EXTENTS, KERNING, LIGATURES, TRACKING, WIDTHS } from './nameMetrics.js'
+import { confirmedLines } from './confirmedBreaks.js'
 
 /**
  * The letterforms available to set a name with.
@@ -287,14 +288,10 @@ const splitBodyThree = (body, language) => {
  *      Rural Development mark was, and this reproduces it.
  *
  * Together they reproduce 44 of the 46 published marks exactly — every English one, and all but
- * two French. A newline in the text overrides the lot, which is how those two are carried and how
- * anyone setting their own wording gets the breaks they want.
+ * two French. This is the rules alone; nameLines is what to call.
  */
-export const nameLines = (text, { language = 'en', measure = MEASURE } = {}) => {
-  const forced = String(text).split(/\r?\n/).map((line) => line.trim()).filter(Boolean)
-  if (forced.length > 1) return forced
-
-  const [opening, ...rest] = splitOpening(forced[0] ?? '')
+export const ruleLines = (text, { language = 'en', measure = MEASURE } = {}) => {
+  const [opening, ...rest] = splitOpening(String(text).replace(/\s+/g, ' '))
   if (!opening) return []
 
   const body = rest.join(' ')
@@ -303,6 +300,21 @@ export const nameLines = (text, { language = 'en', measure = MEASURE } = {}) => 
   const two = splitBody(body, language)
   if (Math.max(...two.map(measureLine)) <= THREE_LINE_MEASURE) return [opening, ...two]
   return [opening, ...splitBodyThree(body, language)]
+}
+
+/**
+ * A name broken into lines: as typed, else as the Province published it, else by the rules.
+ *
+ * A newline in the text overrides everything, which is how anyone setting their own wording gets
+ * the breaks they want. Next come the names a published mark has confirmed (confirmedBreaks.js),
+ * set exactly as drawn whatever the rules would do, so a change to the rules cannot move a mark
+ * that is already known. Only a name no mark has shown is left to ruleLines.
+ */
+export const nameLines = (text, { language = 'en', measure = MEASURE } = {}) => {
+  const forced = String(text).split(/\r?\n/).map((line) => line.trim()).filter(Boolean)
+  if (forced.length > 1) return forced
+  if (!forced.length) return []
+  return confirmedLines(forced[0], language) ?? ruleLines(forced[0], { language, measure })
 }
 
 /**
