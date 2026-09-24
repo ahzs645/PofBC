@@ -51,10 +51,12 @@ rays over a light disc, with no shading to sample; a grey divider; and a heavy s
 Garamond. The build tells the two kinds of sun apart by what the file contains. It finds the divider
 by its shape rather than its colour, so a grey one counts.
 
-**BC Wildfire Service** has the same flat sun, but the gold divider and the Garamond are back. It is lifted
-from the cover of the Province's 2025 prescribed-fire report. It is reversed there, so "On white"
-gives the BC-blue version. That cover sets it on one line, the only arrangement found as vector
-artwork; the two-line "BC Wildfire / Service" exists only as pictures so far.
+**BC Wildfire Service** has the same flat sun, but the gold divider and the Garamond are back. It
+comes in two arrangements, both published reversed and both lifted as drawn: the name on two lines
+("BC Wildfire" over "Service"), from a page where it sits over a photograph, and on one line, from
+the cover of the Province's 2025 prescribed-fire report. "On white" gives the BC-blue version of
+either. The photograph is in the file as bitmaps; the build ignores any bitmap not clipped to a
+shape, so it drops out.
 
 - **The glow is sampled, not guessed.** The print files shade the sun, and the converter wrote each
   shading as a small bitmap clipped to its shape. Those bitmaps are read back into radial gradients
