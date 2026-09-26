@@ -34,10 +34,12 @@ other. Switching identity leaves each side as you had it. Sharing them was a bug
 crest era's forest green showed through the flag's gaps, and the arms' white type once landed on a
 white ground.
 
-A **Gallery** button opens the one-off marks — BC Parks and its like — which follow no pattern the
-generator can offer and so have nothing to be loaded into. Each still opens for recolouring, and
+A **Gallery** button opens the marks the generator does not make, grouped by whose they are. The
+first collection is the Province's one-off marks — BC Parks and its like — which follow no pattern
+the generator can offer and so have nothing to be loaded into. Each still opens for recolouring, and
 each draws itself from the same renderer as everything else, so a card cannot drift from what it
-gives you.
+gives you. The second is **BC Hydro**, in all three of its identities (below); `src/gallery/collections.js` is where another body's
+marks would go, and an entry's `kind` decides what opening it shows.
 
 Most of the gallery is the **Best Place on Earth years**: WelcomeBC, WorkBC, BC Stats,
 Environmental Reporting BC, the BC Public Service's "Where ideas work", Canada's Pacific Gateway,
@@ -57,6 +59,25 @@ comes in two arrangements, both published reversed and both lifted as drawn: the
 the cover of the Province's 2025 prescribed-fire report. "On white" gives the BC-blue version of
 either. The photograph is in the file as bitmaps; the build ignores any bitmap not clipped to a
 shape, so it drops out.
+
+**Environmental Lab BC** is the same generation again — flat sun, gold divider, Garamond — in
+Environmental Reporting BC's two-line arrangement. The build reads rectangles and polygons for it,
+which Illustrator writes for straight-sided shapes like a divider.
+
+**PreparedBC** is the one card that is not lifted. Its own mark was the BC mark in outline, in one
+orange ink — nothing the current identity draws — so it is remade as a ministry mark is today: the
+published BC mark with "PreparedBC" set in the ministry alphabet. The card is drawn by the current
+era's renderer and opens in the generator with the wording typed, where every colourway and export
+applies to it.
+
+**BC Timber Sales** has a collection of its own, because it has several marks: "BCTS" over "BC
+Timber Sales", first on its own with the name in a slab serif, then beside the BC mark (flat sun,
+grey divider) with the name in a sans. Its initials were published in two greens: forest
+(`#016a37`) on white, and teal (`#009979`) on the reversed mark, whose type is white — so on a white
+page its picture looks like the symbol and "BCTS" alone. Every one of its marks can start from
+either green. The build lifts them the same way, with two additions: a second colour beside the
+mark is a *descriptor* line rather than more of the name, and a manifest entry marked `alone` is a
+name with no BC mark, so there is no sun or divider to find.
 
 - **The glow is sampled, not guessed.** The print files shade the sun, and the converter wrote each
   shading as a small bitmap clipped to its shape. Those bitmaps are read back into radial gradients
@@ -303,6 +324,69 @@ cannot be compared at all: its arms are an embedded raster in the source file. A
 
 ---
 
+## BC Hydro, in the gallery
+
+The gallery's second collection is BC Hydro, in its three identities, oldest first. Each opens in
+the generator's own layout: the preview stage with its backdrop control, then a column of panels
+ending in the same Download panel (SVG, PDF, PNG, WebP, JPEG).
+
+| | 1961–1990 | 1990–2016 | 2016–present |
+|---|---|---|---|
+| The mark | Jim Rimmer's ringed H beside "B.C.Hydro" | "BC hydro" in a heavy slab, the symbol squared off after it | The symbol as a circle before "BC Hydro", with "Power smart" |
+| Where it comes from | Rebuilt from five pages of its identity manual | Lifted from the supplied Illustrator file ([`artwork/hydro/bc-hydro-1990.ai`](artwork/hydro)) | Lifted from BC Hydro's February 2020 brand guidelines ([`artwork/hydro/brand-guidelines-2020-logo.pdf`](artwork/hydro), its two logo pages) |
+| What can change | Everything, with the manual's rules checked | Any part's colour | Only which of the guidelines' variations, the background and clear space |
+
+`scripts/extract_hydro_marks.py` (`npm run extract:hydro-marks`) lifts the 1990 and current marks
+into `src/assets/hydroMarks.js`, every shape labelled with its part. It checks, rather than
+assumes, that the guidelines' black, reverse and untagged logos are the colour logo's own drawing,
+and it tells the "BC Hydro" letters from the tagline by where each letter's top sits, since the
+`y` descends past the symbol.
+
+**The current logo is offered only as the guidelines give it**, for the same reason the Province's
+current marks are served unaltered: the guidelines forbid reconfiguring, recolouring, distorting
+or resetting it. That leaves six variations — Colour, Black, Reverse, Without tagline (signage and
+permanent installations only), Symbol, and Symbol with border — each described in the guidelines'
+own words, with a warning when the background is not the kind a variation is for. Clear space
+defaults to the guidelines' own unit, one symbol's width on every side. The colours are the
+guidelines' digital values (Grass `#50b848`, Sea `#10a3c8`, Granite `#3e3935`), not the slightly
+different print conversions in the PDF's artwork.
+
+The 1961 signature is the larger piece of work, because nothing of it survives as artwork:
+
+| | |
+|---|---|
+| Signatures | Corporate, Gas Operations (the flame), Rail (a division after the wordmark), the full authority name on two lines |
+| Applications | The signature alone; identification signs with a facility name; five single-colour forms on general backgrounds; positive and reverse vehicle pairs — 19 presets in all |
+| Treatments | Corporate colour, black, white, or one other ink |
+| Editable | Wording, facility names, every proportion, background, declared value, screen palette |
+| Exports | The generator's formats — SVG (outlined or live text), PDF, PNG, WebP, JPEG — plus emblem only, a specimen sheet per group or of all 19, the rules as JSON, and the settings as a file the original studio's v1 and v2 files also load into |
+
+**The manual's rules are checked as you go**, and each note names the page it comes from: a sign's
+borders are half a cap height (a full one above the Gas flame) and its facility name starts one
+x-height below the baseline; black is allowed on a background of at most 20% value and white on at
+least 80%, with nothing prescribed between; vehicles switch at 30/31% instead, and the manual says
+the two thresholds are not interchangeable; the alternative ink needs 70% value on white. A value is
+declared, never read off a hex colour — the manual's percentages describe ink on a surface, which a
+screen colour cannot establish. Where the manual gives no number (how much to enlarge a reversed
+signature), the view says so rather than inventing one.
+
+**The lettering is set in TeX Gyre Termes.** The original typeface was never recovered; the
+reconstruction was fitted against Nimbus Roman, and Termes is its free derivative, with identical
+widths. Because Termes is under the LaTeX Project Public License, its metrics, kerning and outlines
+are committed (`src/hydro/serif.js`, from `npm run build:hydro-serif`), unlike Helvetica and Adobe
+Garamond — so the layout runs in Node, and the lettering draws identically on every machine with no
+font installed. Exports outline it by default; live text asks for Termes, then Nimbus Roman, then
+Times.
+
+**"B.C.Hydro" is not typeset.** Its nine letters were fitted one at a time over the printed
+signature, each with a position and scale of its own, because the original was lettered tighter
+than any typeface's spacing allows (`src/hydro/hydroMark.js`). Any other wording is typeset at the
+wordmark's size, and flagged as not historical.
+
+The print recipes — CMYK for coated and uncoated stock, and the non-process numbers — ride along in
+each SVG's metadata. They do not change the screen colours, which are sampled from the scan and are
+approximations. None of this is current BC Hydro brand guidance.
+
 ## Requirements
 
 **Node 20.19+ or 22.12+**, **a copy of Helvetica**, and one git submodule. A copy of **Adobe
@@ -360,6 +444,7 @@ artwork/                     the supplied artwork — the source of truth for ev
   crest/, current/, flag/    the arms' wordmark, the ministry-marks PDF (and older marks, in
                              current/lifted/), the flag SVG
   one-offs/                  the gallery's marks, as published, and what each is
+  hydro/                     BC Hydro's 1990 artwork and the logo pages of its current guidelines
 scripts/
   build-mark.mjs             extracts the mark, proves all three copies are identical
   build-fonts.mjs            subsets Helvetica, emits the metrics table and the glyph outlines
@@ -369,6 +454,8 @@ scripts/
   build-current-glyphs.mjs   the alphabet and metrics the current era typesets from
   lift-current-letters.mjs   the capitals that alphabet lacks, from older published marks
   build-one-offs.mjs         the gallery's one-off marks, lifted from their artwork
+  build-hydro-serif.mjs      BC Hydro's 1961 serif (TeX Gyre Termes) as metrics, kerning and outlines
+  extract_hydro_marks.py     BC Hydro's 1990 and current marks, lifted from their artwork
   letterFit.mjs              finds the letters in drawn type, and the line they were set on
   build-vendor-json-url.mjs  builds the share-link submodule
   sfnt.mjs, svgPath.mjs,     the font and path surgery those need
@@ -381,7 +468,8 @@ src/
   flag/                      the flag identity, its palettes, and the BC Parks badge
   crest/                     the coat-of-arms identity
   current/                   the published marks, and the alphabet their wording is set in
-  gallery/                   the one-off marks, which follow no pattern the generator offers
+  gallery/                   marks the generator does not make, in collections by whose they are
+  hydro/                     BC Hydro's signatures, the manual's rules, and its view
   export/                    SVG/PDF/PNG/WebP/JPEG, single files or a zipped bundle
   ministries/                the ministry list and its search
   site/                      the React generator UI
@@ -673,6 +761,104 @@ effect, so it would have been decoration. The accessibility tree is what browser
 read today, and that is served by the ordinary ARIA and labelling the UI already uses.
 
 ---
+
+## The government, and its timeline
+
+A **Government** button opens the Province's structure as a radial graph, modelled on
+[graph.civlab.org](https://graph.civlab.org)'s diagrams of the US government: the people at the
+centre, the three branches as sectors of a disc, each tier of authority a ring further out, shape
+for the kind of body and colour for its branch. Choosing a body turns the disc until it sits at six
+o'clock, draws what it is connected to, and opens a panel with who leads it. The surfaces follow
+the model's warm stone; the branch colours are taken from the BC identity palette the generator
+already draws with, and the people are the sun.
+
+Beneath it, a **timeline** runs from Confederation in 1871 to today. Moving it carries every body
+from where it stood to where it stands in the new year, so a reorganisation can be watched rather
+than inferred. The strip shows the premiers by party, each election, how many ministries changed
+each year, and the four identities this generator draws. That last strip is the point of putting
+the two together: a ministry chosen on the timeline is shown in **the lockup of its own year**
+(the flag for 1986, the arms for 2003, the sun and mountains since 2005) and opens in the
+generator in that identity.
+
+- **A year is read at its last day** (or today, for the present), so the year of a reorganisation
+  shows the government it ended with rather than the old and new ministries side by side. A
+  ministry that began and ended within one year is shown in that year.
+- **The ministry history is corrected on the way in, not in place.** `src/ministries/history.js`
+  is a faithful record of the BC Archives diagram and stays so. `src/government/episodes.js` closes
+  the eleven episodes it leaves open although they were renamed, adds what happened after its last
+  revision (Jobs and Economic Growth, July 2025, and the November 2024 splits and merges it records
+  only as endings and beginnings), and **binds each rename to the pair of runs it joins**. Renames
+  in the source are keyed by name, and a name can run three times: bound by name, the 2022 Ministry
+  of Forests would appear to have become Forests and Lands, which the 1976 one did in 1986.
+- **Every year has its people.** Who held each ministry comes from the Legislative Library's
+  *Executive Council Appointments 1871–1986* and its cabinet lists since (1,236 terms, matched to
+  241 of the 242 ministry episodes). The Speaker, the officers of the Legislature and the three
+  chief justices are those in office that year. Crown corporations and agencies appear in the
+  years they stood, including the ones since wound up — the Provincial Police, the PGE, BCRIC,
+  Expo 86, BC Ferries as a Crown corporation — each with what it came from and became. Which
+  ministry answered for a body is shown where a source states it; otherwise it is placed beside
+  the forerunner of the ministry that answers for it today, and the panel says so. Only the
+  present has deputy ministers, chief executives and staffing (`src/government/currentData.js`,
+  checked 2026-09-25).
+- **The history is built, not typed.** `scripts/build-government-history.mjs` reads the research
+  files and writes `src/government/historyData.js`, matching each portfolio to the episode it
+  headed and keeping every record's source (`GOVERNMENT_HISTORY_SOURCE=<dir> npm run
+  build:government-history`). Portfolios that headed no ministry of their own — President of the
+  Council, Deputy Premier, the "Minister Responsible for…" roles — are left unmatched and listed.
+- **Marks are drawn for the page.** A ministry's mark sits on the panel with no ground of its own:
+  the current mark in its Colour version on light and its Reverse version on dark, the flag in its
+  three inks on light and in one ink on dark (its white is the page showing through), and the arms
+  and crest lockups in the page's own ink.
+- **The identities' dates are estimates.** The flag from about 1983, the arms from 2001, the current
+  mark from 2005; the crest lockups are dated only by naming a "Ministry", a word used from 1976.
+  Each era carries its confidence and evidence in `src/government/timelineData.js`.
+
+The view takes the whole page, as its model does. The site's views are now a menu off the title
+("Province of British Columbia / Generator ▾"), which the government view carries in its
+breadcrumb. The legend is the model's: every kind of body and every kind of line can be hidden,
+including the ministers' head circles. A **Graph | List** switch shows the same year as a list —
+each ministry with its minister and the bodies answering to it — for reading on a phone or with a
+screen reader.
+
+The diagram's outline is the government's own shape. Each branch is one territory from the
+centre to the rim, separated from the next by a seam of constant width; each ministry's family of
+Crown corporations and agencies packs beyond it, up to three deep, and a family that needs more
+room than the band gives pushes a tooth out of the rim to hold it — so the cog changes with the
+year. Beyond their parents sit **sub-agencies** as dots, as the model draws its own: 239 of them
+today, from ministries' divisions (BC Wildfire Service, BC Parks, Service BC) and the
+administrative tribunals to the Crowns' subsidiaries (Powerex, BC Cancer), researched into the same
+build as the rest of the history.
+
+**An atlas, not just an org chart.** Following the BC government atlas research package of
+2026-09-25 (its model notes and acceptance cases are what the tests in
+`src/government/atlas.test.js` check):
+
+- **Typed, dated events** (`src/government/eventsData.js`, built by
+  `npm run build:government-events` from the package's seeds and the follow-up research): a
+  function's origin, a unit's establishment, legal and operating names, logo changes, appointments,
+  transfers — each at the precision its source gives. "1957" stays 1957, never 1 January.
+  WorkSafeBC is the Workers' Compensation Board's operating name, not a second body.
+- **Typed relationships.** Only a stated ministerial responsibility draws a line. Appointments,
+  funding and reports tabled are listed but never drawn as a reporting line. FNHA is a *partner* of the
+  Ministry of Health, not a child of it. A body with no stated ministry stays visible in a lane marked
+  "no ministry established" rather than being attached to a plausible one.
+- **Unknown is not absent.** "Undated bodies" in the legend draws, faint and dashed, bodies whose start
+  no source gives.
+- **Evidence and freshness.** Every claim on a card links its source. What only the present records
+  says when it was checked.
+- **The Lieutenant Governors** follow the Legislative Library's list: commission, effective date and
+  swearing-in are separate, and the 1920 administrator is kept but marked unverified.
+- **Staffing** is FTE by fiscal year from the Public Accounts' Statements of Staff Utilization,
+  budget and actual kept apart. **The 43rd Parliament** lists each member's party at election apart from
+  every dated caucus change. **The 2026 election** is a sequence of scheduled stages with no results
+  until they are published. These come from `npm run build:government-atlas`.
+- **Compare** two years for an account of what changed. **Coverage** (under Sources) reports how much
+  is known, each figure with its denominator.
+- **Logos** carry provenance, fidelity, dating and rights status. A shelf lists the marks still being
+  sought — ICBC, BCLC, BC Ferries, BC Transit, WorkSafeBC — with no artwork drawn.
+
+The year and the chosen body are in the address bar (`?view=government&year=1986&node=…`), so a
+view can be shared. The view loads only when opened, as the gallery does.
 
 ## Updating the ministry list
 

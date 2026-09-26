@@ -2,8 +2,8 @@
 //
 // The shapes are the artwork's own (src/assets/oneOffMarks.js); only their colours are chosen
 // here. Each carries the part it plays — the sun, its rays and core, the mountains, the wordmark,
-// the rule and tagline under it, the divider, and the name and its accent beside it — so a
-// colourway is a map from part to colour.
+// the rule and tagline under it, the divider, and the name, the line describing it and its accent
+// beside it — so a colourway is a map from part to colour.
 //
 // The sun can be drawn two ways. As published, it glows: the rays and core fade from the sun's
 // colour to the light, which is how the print files shade it. Flat, it is the one-ink mark: the sun
@@ -13,7 +13,7 @@ import { ONE_OFF_MARKS } from '../assets/oneOffMarks.js'
 import { TRANSPARENT, parseHex, resolveColor } from '../logo/logoColors.js'
 
 /** The parts a mark may have, in drawing order. */
-export const ONE_OFF_ROLES = ['sun', 'rays', 'core', 'mountains', 'wordmark', 'rule', 'tagline', 'divider', 'name', 'accent', 'leaf']
+export const ONE_OFF_ROLES = ['sun', 'rays', 'core', 'mountains', 'wordmark', 'rule', 'tagline', 'divider', 'name', 'descriptor', 'accent', 'leaf']
 
 const escapeXml = (value) => String(value)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')

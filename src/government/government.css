@@ -1,0 +1,966 @@
+/* The government diagram.
+ *
+ * Its own palette, scoped to .gov so none of it leaks into the generator: warm stone surfaces,
+ * flat white cards with 12px corners, and colour kept for meaning — after the org-graph site this
+ * view is modelled on. Light or dark is the site's one theme (src/site/useTheme.js): it follows the
+ * system until a toggle is used, and .gov carries the answer as data-theme. The generator's pages
+ * take the same stone and cards from site.css, so moving between views changes nothing but content.
+ */
+
+.gov {
+  --gov-background: #eceae4;
+  --gov-surface: #ffffff;
+  --gov-ink: #1c1917;
+  --gov-ink-2: #383633;
+  --gov-ink-3: #57534e;
+  /* The model's #98938e is 3:1 on white; this is its tone at 4.6:1, since it carries text. */
+  --gov-ink-4: #736e67;
+  --gov-hover: #f4f2ef;
+  --gov-mid: #dddbd5;
+  --gov-outline: #edece9;
+  --gov-link: #084ab4;
+  --gov-legislative: #c23e1d;
+  --gov-executive: #2f5f9e;
+  --gov-judicial: #8f6508;
+  --gov-people: #e8a412;
+  --gov-shadow: 0 4px 18px rgba(28, 25, 23, 0.12);
+  --gov-menu-shadow: 0 16px 48px rgba(30, 25, 15, 0.16);
+  --gov-legend-muted: #8a8a95;
+  /* Change-type inks, dark enough for 10px text on the chips. */
+  --gov-chip-established: #25733e;
+  --gov-chip-renamed: #2a5591;
+  --gov-chip-merged: #6e53a0;
+  --gov-chip-dissolved: #a8361a;
+  --gov-chip-premier: #7a5607;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 16px;
+  background: var(--gov-background);
+  color: var(--gov-ink);
+  font-family: Inter, 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+}
+
+.gov[data-theme='dark'] {
+  --gov-background: #161310;
+  --gov-surface: #211e1a;
+  --gov-ink: #ede9e2;
+  --gov-ink-2: #cfc9c0;
+  --gov-ink-3: #a29b90;
+  --gov-ink-4: #9a9388;
+  --gov-hover: #2b2723;
+  --gov-mid: #3a342e;
+  --gov-outline: #2e2925;
+  --gov-link: #85a8ee;
+  --gov-legislative: #e2603c;
+  --gov-executive: #6d97e0;
+  --gov-judicial: #d6a52a;
+  --gov-people: #fcba19;
+  --gov-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  --gov-menu-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --gov-legend-muted: #84808a;
+  --gov-chip-established: #7fcf95;
+  --gov-chip-renamed: #9dbcf0;
+  --gov-chip-merged: #c3b2ea;
+  --gov-chip-dissolved: #f29a80;
+  --gov-chip-premier: #e8c46a;
+  color-scheme: dark;
+}
+
+@media (min-width: 1024px) {
+  .gov {
+    grid-template-columns: minmax(400px, 40%) 1fr;
+    align-items: start;
+  }
+}
+
+/* ── Panel ────────────────────────────────────────────────────────────────────────────────────── */
+
+.gov__panel {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* The diagram comes first in the document, as it does on a phone; on a wide screen the panel is
+   placed in the left column beside it. */
+@media (min-width: 1024px) {
+  .gov { grid-template-rows: auto 1fr; }
+  .gov-breadcrumb { grid-column: 1; grid-row: 1; }
+  .gov__panel { grid-column: 1; grid-row: 2; align-self: start; }
+  .gov__stage { grid-column: 2; grid-row: 1 / span 2; }
+}
+
+.gov-card {
+  background: var(--gov-surface);
+  border-radius: 12px;
+  padding: 24px 24px 28px;
+  min-width: 0;
+}
+
+.gov-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  min-height: 44px;
+  font-size: 16px;
+}
+
+.gov-eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--gov-ink-4);
+}
+
+.gov-title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.gov-description {
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--gov-ink-3);
+}
+
+.gov-muted { color: var(--gov-ink-4); }
+
+.gov-card p.gov-muted { margin: 8px 0 0; font-size: 14px; line-height: 1.4; }
+
+.gov-links { margin: 12px 0 0; font-size: 14px; }
+.gov-links a, .gov-sources a { color: inherit; }
+
+.gov-card__heading {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.gov-card__subheading {
+  margin: 20px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gov-notice {
+  margin: 16px 0 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--gov-hover);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--gov-ink-2);
+}
+
+/* People: a grid of cards, as the model shows its officials. */
+.gov-people {
+  container-type: inline-size;
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+@container (min-width: 440px) {
+  .gov-people > * { min-width: 0; }
+}
+
+@media (min-width: 560px) {
+  .gov-people { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+}
+
+.gov-person {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid var(--gov-outline);
+  border-radius: 12px;
+  min-height: 64px;
+}
+
+.gov-person > span:last-child { display: grid; min-width: 0; }
+
+.gov-person__initials {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 2px solid var(--gov-mid);
+  background: var(--gov-hover);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--gov-ink-3);
+}
+
+.gov-person__name { font-size: 14px; font-weight: 500; }
+.gov-person__role { font-size: 12px; line-height: 1.35; color: var(--gov-ink-3); }
+.gov-person__since { font-size: 12px; color: var(--gov-ink-4); }
+
+.gov-stats { margin-top: 20px; font-size: 14px; }
+.gov-stats p { margin: 0 0 10px; }
+
+.gov-seats {
+  display: flex;
+  height: 22px;
+  border-radius: 6px;
+  overflow: hidden;
+  gap: 2px;
+}
+
+.gov-seats span {
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gov-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 20px 0 0;
+}
+
+.gov-tiles div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--gov-hover);
+}
+
+.gov-tiles dt {
+  font: 500 9px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gov-ink-4);
+}
+
+.gov-tiles dd { margin: 4px 0 0; font-size: 22px; font-weight: 600; }
+
+/* Links that are cards: lineage, connections. */
+.gov-lineage ul, .gov-connections__grid, .gov-plain-list, .gov-feed {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+@media (min-width: 560px) {
+  .gov-connections__grid { grid-template-columns: 1fr 1fr; }
+}
+
+.gov-link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--gov-outline);
+  border-radius: 12px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.gov-link-card:hover { background: var(--gov-hover); }
+
+.gov-link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--gov-mid);
+  cursor: pointer;
+}
+
+.gov-link-button:hover { text-decoration-color: currentColor; }
+
+.gov-kind-dot {
+  flex: none;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  border-radius: 2px;
+  background: var(--gov-ink-4);
+}
+
+.gov-link-card .gov-kind-dot { margin-right: 0; }
+.gov-kind-dot[data-branch='legislative'] { background: var(--gov-legislative); }
+.gov-kind-dot[data-branch='executive'] { background: var(--gov-executive); }
+.gov-kind-dot[data-branch='judicial'] { background: var(--gov-judicial); }
+.gov-kind-dot[data-branch='people'] { background: var(--gov-people); border-radius: 50%; }
+.gov-link-card > span:nth-child(2) { flex: 1; }
+
+.gov-plain-list li { font-size: 14px; }
+
+/* The mark in its era. */
+/* The mark sits on the card itself: drawn without a ground, in the page's colourway. */
+.gov-mark {
+  display: grid;
+  place-items: center start;
+  padding: 8px 0 4px;
+}
+
+.gov-mark svg { width: 100%; max-height: 180px; height: auto; }
+.gov-mark[data-era='current'] svg, .gov-mark[data-era='flag'] svg { max-width: 420px; }
+
+.gov-card--mark .gov-button--primary { margin-top: 16px; }
+
+.gov-chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--gov-hover);
+  font: 600 10px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gov-ink-3);
+  white-space: nowrap;
+}
+
+.gov-chip[data-type='established'] { color: var(--gov-chip-established); }
+.gov-chip[data-type='renamed'] { color: var(--gov-chip-renamed); }
+.gov-chip[data-type='merged'], .gov-chip[data-type='split'] { color: var(--gov-chip-merged); }
+.gov-chip[data-type='dissolved'] { color: var(--gov-chip-dissolved); }
+.gov-chip[data-type='premier'] { color: var(--gov-chip-premier); }
+
+.gov-feed__item {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 10px;
+  align-items: baseline;
+  padding: 8px 0;
+  border-top: 1px solid var(--gov-outline);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.gov-feed__item:first-child { border-top: 0; }
+.gov-feed__names button + button::before { content: ', '; text-decoration: none; display: inline-block; white-space: pre; }
+.gov-feed__out { color: var(--gov-ink-3); }
+
+.gov-sources summary { cursor: pointer; font-weight: 600; font-size: 14px; }
+.gov-sources ul { margin: 12px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.5; color: var(--gov-ink-3); }
+
+/* ── Buttons ──────────────────────────────────────────────────────────────────────────────────── */
+
+.gov-button {
+  display: inline-grid;
+  place-items: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--gov-surface);
+  color: var(--gov-ink);
+  font: 500 14px/1 inherit;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gov-button:hover:not(:disabled) { background: var(--gov-hover); }
+.gov-button:disabled { color: var(--gov-ink-4); cursor: default; }
+.gov-button--icon { padding: 0; width: 36px; font-size: 16px; }
+/* A card's own action: the page's quiet grey in both themes, not an inverted block that turns
+   into a white pill on dark. */
+.gov-button--primary {
+  display: inline-flex;
+  gap: 8px;
+  padding: 0 14px;
+  background: var(--gov-hover);
+  border: 1px solid var(--gov-outline);
+  color: var(--gov-ink);
+  font-weight: 500;
+}
+.gov-button--primary:hover:not(:disabled) { background: var(--gov-mid); }
+.gov-button--primary svg { color: var(--gov-ink-3); }
+
+.gov-button-group { display: inline-flex; }
+.gov-button-group .gov-button:first-child { border-radius: 12px 0 0 12px; }
+.gov-button-group .gov-button:last-child { border-radius: 0 12px 12px 0; }
+
+/* ── Stage: the diagram and what floats over it ───────────────────────────────────────────────── */
+
+.gov__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .gov__stage {
+    position: sticky;
+    top: 16px;
+    /* The whole viewport, less the page's own margin: the view is the page. */
+    height: calc(100vh - 32px);
+    height: calc(100dvh - 32px);
+    min-height: 600px;
+  }
+}
+
+.gov__graph {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+}
+
+.gov-graph {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  user-select: none;
+}
+
+/* On a wide screen the diagram fills whatever the timeline leaves, scaled to fit; on a narrow one
+   it sets its own height from its width. */
+@media (min-width: 1024px) {
+  .gov-graph { position: absolute; inset: 0; }
+}
+
+@media (max-width: 1023px) {
+  .gov-graph { aspect-ratio: 10 / 10.5; height: auto; padding-top: 48px; }
+}
+
+.gov-graph__node { cursor: pointer; }
+.gov-graph__node:focus-visible { outline: none; }
+.gov-graph__focus { display: none; fill: none; stroke: var(--focus); stroke-width: 2; }
+.gov-graph__node:focus-visible .gov-graph__focus { display: inline; }
+.gov-graph__node[data-hidden] { opacity: 0.12; pointer-events: none; }
+.gov-graph__node { animation: gov-enter 400ms ease-out both; }
+.gov-graph__seal { cursor: pointer; }
+.gov-graph__seal:focus-visible { outline: none; }
+.gov-graph__seal:focus-visible path { stroke-width: 3; }
+
+@keyframes gov-enter { from { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .gov-graph__node, .gov-graph__edge { animation: none; }
+}
+
+.gov-graph__sector-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; fill-opacity: 0.85; }
+.gov-graph__ring-label { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; fill-opacity: 0.8; }
+/* A ring's name crosses whatever the disc has turned beneath it, so it is haloed in the canvas. */
+.gov-graph__ring-names { transition: opacity 300ms; }
+.gov-graph__ring-names[data-hidden] { opacity: 0; }
+.gov-graph__ring-label--halo { stroke-width: 4px; stroke-linejoin: round; paint-order: stroke; fill-opacity: 1; }
+.gov-graph__seal-label { font-size: 11px; font-weight: 600; text-anchor: middle; pointer-events: none; }
+.gov-graph__caption text { font-size: 14px; font-weight: 600; }
+.gov-graph__tooltip text { font-size: 12px; font-weight: 500; }
+.gov-graph__edge { animation: gov-enter 300ms ease-out 450ms both; }
+
+.gov__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.gov__overlay > * { pointer-events: auto; }
+.gov__overlay--top { top: 0; }
+.gov__overlay--bottom { bottom: 0; align-items: flex-end; }
+.gov__tools { display: flex; gap: 8px; }
+
+.gov-search { position: relative; width: min(440px, 100%); }
+
+.gov-search input {
+  width: 100%;
+  height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--gov-surface);
+  color: var(--gov-ink);
+  font: 400 14px/1 inherit;
+  font-family: inherit;
+}
+
+.gov-search__results {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 6px;
+  border-radius: 12px;
+  background: var(--gov-surface);
+  box-shadow: var(--gov-shadow);
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+}
+
+.gov-search__results li { font-size: 14px; }
+.gov-search__results li.gov-muted { padding: 8px; }
+
+.gov-search__results button {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.gov-search__results button:hover { background: var(--gov-hover); }
+.gov-search__results button span:last-child { flex: none; font-size: 12px; }
+
+/* The legend, after the model's: a 246px panel above its trigger. */
+.gov-legend { position: relative; }
+
+.gov-legend__trigger { display: inline-flex; gap: 6px; }
+.gov-legend__trigger svg { color: var(--gov-ink-3); transition: transform 140ms; }
+
+.gov-legend__panel {
+  position: absolute;
+  left: 0;
+  bottom: 42px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  width: 246px;
+  max-height: min(620px, calc(100vh - 300px));
+  overflow-y: auto;
+  padding: 12px 8px 8px;
+  border-radius: 12px;
+  background: var(--gov-surface);
+  box-shadow: var(--gov-shadow);
+}
+
+.gov-legend__heading {
+  margin: 0 0 3px;
+  padding: 0 8px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gov-legend-muted);
+}
+
+.gov-legend__heading:not(:first-child) { margin-top: 10px; }
+
+.gov-legend__row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  width: 100%;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--gov-ink);
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 140ms, background-color 100ms;
+}
+
+.gov-legend__row svg { display: block; flex: 0 0 auto; }
+.gov-legend__row span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gov-legend__row:hover { background: var(--gov-hover); }
+.gov-legend__row[aria-pressed='false'] { opacity: 0.35; }
+
+.gov-legend__reset {
+  margin-top: 8px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--gov-hover);
+  color: var(--gov-ink);
+  font: 600 10px/1.4 inherit;
+  font-family: inherit;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Graph | List, bottom right, as the model's Graph | Power map. */
+.gov-segmented {
+  display: inline-flex;
+  height: 36px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--gov-mid);
+}
+
+.gov-segmented button {
+  padding: 0 16px;
+  border: 0;
+  background: none;
+  color: var(--gov-ink-4);
+  font: 500 14px/1 inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.gov-segmented button[aria-pressed='true'] { background: var(--gov-surface); color: var(--gov-ink); border-radius: 12px; }
+
+/* The list view: the year's bodies in reading order, in the diagram's place. */
+.gov__graph[data-mode='list'] { place-items: stretch; }
+
+.gov-list {
+  position: absolute;
+  inset: 52px 0 52px;
+  overflow-y: auto;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding-right: 4px;
+}
+
+@media (max-width: 1023px) {
+  .gov-list { position: static; padding: 52px 0; }
+}
+
+.gov-list__section { background: var(--gov-surface); border-radius: 12px; padding: 16px 12px; }
+.gov-list__title { margin: 0 8px 8px; font-size: 14px; font-weight: 600; }
+.gov-list__section ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
+
+.gov-list__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 7px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--gov-ink);
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.gov-list__item[data-nested] { padding-left: 28px; }
+.gov-list__item:hover { background: var(--gov-hover); }
+.gov-list__item[aria-current='true'] { background: var(--gov-hover); font-weight: 600; }
+.gov-list__name { flex: 1; min-width: 0; display: grid; }
+.gov-list__meta { font-size: 11px; font-weight: 400; color: var(--gov-ink-4); }
+.gov-list__head { flex: none; font-size: 12px; color: var(--gov-ink-3); max-width: 40%; text-align: right; }
+
+/* The breadcrumb carries the site's view switch, in the view's own palette. */
+.gov-breadcrumb { flex-wrap: wrap; row-gap: 0; }
+.gov-breadcrumb__site { font-weight: 600; }
+.gov-breadcrumb .view-switcher {
+  --menu-surface: var(--gov-surface);
+  --menu-ink: var(--gov-ink);
+  --menu-muted: var(--gov-ink-4);
+  --menu-hover: var(--gov-hover);
+  --menu-border: var(--gov-outline);
+  --menu-shadow: var(--gov-menu-shadow);
+}
+.gov-breadcrumb__year {
+  padding: 0 4px;
+  margin: 0 -4px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--gov-ink-4);
+  font: inherit;
+  cursor: pointer;
+}
+.gov-breadcrumb__year:hover { background: var(--gov-hover); color: var(--gov-ink); }
+
+/* ── The timeline ─────────────────────────────────────────────────────────────────────────────── */
+
+.gov-timeline {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px 8px;
+  border-radius: 12px;
+  background: var(--gov-surface);
+}
+
+.gov-timeline__controls { display: flex; align-items: center; gap: 4px; }
+.gov-timeline__controls .gov-button { background: var(--gov-hover); height: 30px; min-width: 30px; }
+.gov-timeline__controls .gov-button:hover:not(:disabled) { background: var(--gov-mid); }
+
+.gov-timeline__year {
+  min-width: 64px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.gov-timeline__track { position: relative; height: 84px; }
+.gov-timeline__track svg { display: block; width: 100%; height: 64px; }
+
+.gov-timeline__tick { fill: var(--gov-ink-3); }
+.gov-timeline__churn { fill: var(--gov-executive); fill-opacity: 0.6; }
+.gov-timeline__axis { stroke: var(--gov-mid); stroke-width: 1; }
+.gov-timeline__cursor { fill: var(--gov-ink); fill-opacity: 0.85; }
+
+.gov-timeline__decades {
+  position: relative;
+  height: 16px;
+  font: 400 9px/16px ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--gov-ink-4);
+}
+
+.gov-timeline__decades span { position: absolute; transform: translateX(-50%); }
+
+/* The range input lies over the strips: the whole track is the slider. */
+.gov-timeline__range {
+  position: absolute;
+  inset: 0 0 16px;
+  width: 100%;
+  height: 64px;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+}
+
+.gov-timeline__range:focus-visible { opacity: 0.01; }
+.gov-timeline__track:has(.gov-timeline__range:focus-visible) { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+
+.gov-timeline__key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 11px;
+  color: var(--gov-ink-4);
+}
+
+.gov-timeline__key li { display: flex; align-items: center; gap: 6px; }
+.gov-timeline__swatch { width: 14px; height: 8px; border-radius: 2px; }
+.gov-timeline__swatch--tick { width: 2px; height: 10px; background: var(--gov-ink-3); }
+.gov-timeline__swatch--churn { background: var(--gov-executive); opacity: 0.6; }
+
+/* Holders of a post, newest first; the one in office on the day shown is marked. */
+.gov-holders { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; font-size: 14px; }
+.gov-holders li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 10px; border-radius: 8px; }
+.gov-holders li > span:first-child { display: grid; }
+.gov-holders li[aria-current='true'] { background: var(--gov-hover); font-weight: 500; }
+.gov-holders li > span:last-child { flex: none; font-size: 12px; font-variant-numeric: tabular-nums; }
+.gov-holders__title { font-size: 12px; font-weight: 400; color: var(--gov-ink-3); }
+.gov-sources__more { margin-top: 12px; font-size: 13px; }
+.gov-sources__more ul { max-height: 240px; overflow: auto; }
+
+/* ── A ministry's lineage, as a small chart ──────────────────────────────────────────────── */
+
+.gov-lineage-chart { position: relative; display: grid; gap: 4px; padding-top: 22px; }
+
+.gov-lineage-chart__axis {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 16px;
+  font: 400 9px/16px ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--gov-ink-4);
+}
+
+.gov-lineage-chart__axis span { position: absolute; transform: translateX(-50%); }
+
+.gov-lineage-chart__row {
+  display: grid;
+  gap: 4px;
+  padding: 6px 0;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--gov-ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.gov-lineage-chart__row:disabled { cursor: default; }
+.gov-lineage-chart__row:not(:disabled):hover .gov-lineage-chart__bar { background: var(--gov-executive); }
+.gov-lineage-chart__row:not(:disabled):hover .gov-lineage-chart__label { text-decoration: underline; text-decoration-color: var(--gov-mid); text-underline-offset: 2px; }
+.gov-lineage-chart__label { font-size: 13px; line-height: 1.3; padding: 0 2px; }
+.gov-lineage-chart__row[data-self] .gov-lineage-chart__label { font-weight: 600; }
+
+.gov-lineage-chart__track {
+  position: relative;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--gov-hover);
+}
+
+.gov-lineage-chart__bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--gov-executive) 45%, transparent);
+  transition: background-color 150ms;
+}
+
+.gov-lineage-chart__row[data-self] .gov-lineage-chart__bar { background: var(--gov-executive); }
+
+.gov-lineage-chart__ministers { position: relative; height: 6px; margin-top: 2px; }
+
+.gov-lineage-chart__minister {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px var(--gov-surface);
+}
+
+.gov-lineage-chart__cursor {
+  position: absolute;
+  top: 18px;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 1px;
+  background: var(--gov-ink);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.gov-card > .gov-lineage:first-child .gov-card__subheading { margin-top: 0; font-size: 16px; }
+
+.gov-show-more {
+  margin-top: 8px;
+  padding: 0 12px;
+  height: 32px;
+  border: 1px solid var(--gov-outline);
+  border-radius: 10px;
+  background: var(--gov-hover);
+  color: var(--gov-ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.gov-show-more:hover { background: var(--gov-mid); }
+
+/* A body whose start no source gives, drawn before today only when asked: faint and dashed, so it
+   reads as "existence unknown", never as fact. */
+.gov-graph__node[data-uncertain] { opacity: 0.45; }
+.gov-graph__node[data-uncertain] > g > :not(circle[fill='transparent']) { stroke-dasharray: 2 1.6; }
+.gov-graph__ring-label--lane { font-size: 8.5px; letter-spacing: 1.2px; }
+.gov-legend__hint { margin: 2px 8px 6px; font-size: 11px; line-height: 1.35; color: var(--gov-ink-4); }
+
+/* ── The atlas cards: events, evidence, election stages, comparison, coverage ────────────────── */
+
+.gov-events { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.gov-events__item {
+  display: grid;
+  grid-template-columns: 116px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--gov-outline);
+}
+.gov-events__item:first-child { border-top: 0; padding-top: 0; }
+.gov-events__item[data-ahead] { opacity: 0.75; }
+.gov-events__date { font: 500 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--gov-ink-3); }
+.gov-events__body { display: grid; gap: 2px; min-width: 0; }
+.gov-events__type { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gov-ink-4); }
+.gov-events__title { font-size: 14px; line-height: 1.35; }
+.gov-events__note { font-size: 12px; line-height: 1.4; color: var(--gov-ink-3); }
+.gov-events__sources { font-size: 12px; }
+.gov-source-link { color: var(--gov-ink-3); text-decoration: underline; text-decoration-color: var(--gov-mid); text-underline-offset: 2px; }
+.gov-source-link + .gov-source-link::before { content: ' · '; }
+.gov-chip[data-type='scheduled'] { color: var(--gov-chip-premier); }
+.gov-chip[data-type='event'] { color: var(--gov-chip-renamed); }
+
+.gov-evidence__toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.gov-evidence__toggle .gov-card__heading { margin: 0; }
+.gov-evidence__list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; font-size: 13px; }
+.gov-evidence__list li { display: grid; gap: 2px; }
+
+.gov-stages { margin-top: 16px; }
+.gov-stages ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.gov-stages li { display: grid; grid-template-columns: 14px 1fr auto; gap: 8px; align-items: center; font-size: 13px; }
+.gov-stages__dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--gov-ink-4); }
+.gov-stages li[data-state='done'] .gov-stages__dot { background: var(--gov-ink-3); border-color: var(--gov-ink-3); }
+.gov-stages li[data-state='next'] .gov-stages__dot { border-color: var(--gov-chip-premier); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gov-chip-premier) 25%, transparent); }
+.gov-stages li[data-state='next'] .gov-stages__label { font-weight: 600; }
+.gov-stages__note { margin: 8px 0 0; font-size: 12px; }
+
+.gov-compare { position: absolute; inset: 52px 0 52px; overflow-y: auto; display: grid; align-content: start; gap: 12px; padding-right: 4px; }
+@media (max-width: 1023px) { .gov-compare { position: static; padding: 52px 0; } }
+.gov-compare__pick { margin: 4px 8px 8px; font-size: 14px; }
+.gov-compare__pick select { height: 32px; padding: 0 8px; border: 1px solid var(--gov-outline); border-radius: 8px; background: var(--gov-hover); color: var(--gov-ink); font: inherit; }
+.gov-compare__head p.gov-muted { margin: 0 8px; font-size: 13px; }
+.gov-compare__rows, .gov-compare__names { list-style: none; margin: 0; padding: 0 8px; display: grid; gap: 6px; font-size: 14px; }
+.gov-compare__rows li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; }
+.gov-compare__pair { display: grid; gap: 12px; }
+@media (min-width: 720px) { .gov-compare__pair { grid-template-columns: 1fr 1fr; } }
+.gov-compare .gov-card { margin: 0; }
+
+.gov-coverage { margin-top: 16px; }
+.gov-coverage ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.gov-coverage li { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 8px 10px; border-radius: 8px; overflow: hidden; font-size: 13px; }
+.gov-coverage li > .gov-muted { grid-column: 1 / -1; font-size: 12px; }
+.gov-coverage__bar { position: absolute; inset: 0 auto 0 0; width: var(--share); background: var(--gov-hover); z-index: -1; }
+.gov-compare__pick label { display: inline-flex; align-items: center; gap: 6px; }
+.gov-compare__pick select { width: auto; }
+
+.gov-staffing { display: flex; align-items: flex-end; gap: 2px; height: 84px; margin-top: 4px; }
+.gov-staffing__bar { position: relative; flex: 1; height: var(--h); min-height: 2px; border-radius: 2px 2px 0 0; background: color-mix(in srgb, var(--gov-executive) 45%, transparent); }
+.gov-staffing__bar[data-current] { background: var(--gov-executive); }
+.gov-staffing__budget { position: absolute; left: -1px; right: -1px; bottom: calc(var(--r) * 100% - 1px); height: 2px; background: var(--gov-ink-3); }
+.gov-staffing__axis { display: flex; justify-content: space-between; margin: 4px 0 0; font: 400 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.gov-staffing__note { font-size: 12px; }
+.gov-standings { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.gov-standings__note { font-size: 12px; }
+.gov-seats-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: 13px; }
+.gov-seats-list li { display: grid; gap: 2px; }
+.gov-seats-list__change { font-size: 12px; color: var(--gov-ink-3); }

@@ -4,9 +4,12 @@ import { CurrentControls } from '../current/CurrentControls.jsx'
 import { CurrentLockup } from '../current/CurrentLockup.jsx'
 import { CrestLockup } from '../crest/CrestLockup.jsx'
 import { FlagLockup } from '../flag/FlagLockup.jsx'
-// Loaded when it is opened: the one-off marks are drawn from their own artwork, which the
-// generator never needs.
+// Loaded when it is opened: the gallery's marks are drawn from their own artwork and renderers,
+// which the generator never needs.
 const GalleryView = lazy(() => import('../gallery/GalleryView.jsx').then((module) => ({ default: module.GalleryView })))
+// Likewise the government diagram, which carries a century and a half of ministries with it.
+const GovernmentView = lazy(() => import('../government/GovernmentView.jsx').then((module) => ({ default: module.GovernmentView })))
+import { generatorPatchFor } from '../government/eraMark.js'
 import {
   FLAG_PALETTE_ORDER, FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_SWATCHES
 } from '../flag/flagPalettes.js'
@@ -30,6 +33,9 @@ import { LayoutPicker } from './LayoutPicker.jsx'
 import { MinistryField } from './MinistryField.jsx'
 import { Segmented } from './Segmented.jsx'
 import { ShareLink } from './ShareLink.jsx'
+import { ViewSwitcher } from './ViewSwitcher.jsx'
+import { SunGlyph, ThemeIcon } from './icons.jsx'
+import { useSiteTheme } from './useTheme.js'
 import { useAgentTools } from './useAgentTools.js'
 import { useLockupState } from './useLockupState.js'
 
@@ -108,10 +114,55 @@ const BACKDROP_OPTIONS = [
   { value: 'dark', label: 'Dark' }
 ]
 
+const VIEW_IDS = ['generator', 'gallery', 'government']
+
+/** The view in the address bar, so a link to the gallery or the diagram opens it. */
+const initialView = () => {
+  const view = new URLSearchParams(globalThis.location?.search ?? '').get('view')
+  return VIEW_IDS.includes(view) ? view : 'generator'
+}
+
+/**
+ * Moving to another view leaves the last one's place behind — the diagram's year and body, the
+ * gallery's collection — so each view's link stays its own. The generator carries no view at all.
+ */
+const writeView = (view) => {
+  if (!globalThis.history?.replaceState) return
+  const url = new URL(globalThis.location.href)
+  for (const key of ['view', 'year', 'node', 'logos', 'mark']) url.searchParams.delete(key)
+  if (view !== 'generator') url.searchParams.set('view', view)
+  globalThis.history.replaceState(null, '', url)
+}
+
 export const App = () => {
   const { state, update, reset, lockup, artwork, background, contrast, backdrop, isTransparent, swapColors } = useLockupState()
-  // Two views, not two modes of one: the gallery has nothing to do with the generator's state.
-  const [view, setView] = useState('generator')
+  // Separate views, not modes of one: neither the gallery nor the government diagram has anything
+  // to do with the generator's state. The diagram keeps its place in the address bar, so a link to
+  // it opens it.
+  const [view, setView] = useState(initialView)
+  const theme = useSiteTheme()
+  const showView = (next) => {
+    setView(next)
+    writeView(next)
+  }
+  // A mark in the gallery leads to the body it stands for in the government diagram, which reads
+  // its body from the address bar when it opens.
+  const openInGovernment = (node) => {
+    const url = new URL(globalThis.location.href)
+    url.searchParams.delete('logos')
+    url.searchParams.delete('mark')
+    url.searchParams.set('view', 'government')
+    url.searchParams.set('node', node)
+    url.searchParams.delete('year')
+    globalThis.history?.replaceState(null, '', url)
+    setView('government')
+  }
+  // The diagram hands a ministry over in the identity of the year it was looking at.
+  const openInGenerator = ({ era, name }) => {
+    update(generatorPatchFor({ era, name }))
+    showView('generator')
+    globalThis.scrollTo?.({ top: 0 })
+  }
   const layout = LAYOUTS[state.layout]
   const isCurrent = state.era === 'current'
   const isFlag = state.era === 'flag'
@@ -126,31 +177,48 @@ export const App = () => {
   // A no-op everywhere else.
   useAgentTools({ state, lockup, update, reset })
 
+  // The government diagram takes the whole page, as the site it is modelled on does, and carries
+  // the view switch in its own breadcrumb.
+  if (view === 'government') {
+    return (
+      <Suspense fallback={<p className="gallery__intro">Loading the government…</p>}>
+        <GovernmentView onOpenInGenerator={openInGenerator} onChangeView={showView} />
+      </Suspense>
+    )
+  }
+
   return (
     <div className="app">
+      {/* A breadcrumb card, as the government view has: the site, then the view, which opens the
+          menu of the others. The heading is kept so the page still has one. */}
       <header className="masthead">
-        <h1>Province of British Columbia — logo generator</h1>
-        <nav className="masthead__views" aria-label="View">
-          <button
-            type="button"
-            aria-pressed={view === 'generator'}
-            onClick={() => setView('generator')}
-          >
-            Generator
-          </button>
-          <button
-            type="button"
-            aria-pressed={view === 'gallery'}
-            onClick={() => setView('gallery')}
-          >
-            One-off marks
-          </button>
-        </nav>
+        <h1 className="masthead__crumbs">
+          <SunGlyph className="masthead__sun" />
+          <span className="masthead__site">Province of BC</span>
+          <span className="masthead__slash" aria-hidden="true">/</span>
+          <ViewSwitcher view={view} onChange={showView} />
+        </h1>
+        <button
+          type="button"
+          className="icon-button"
+          onClick={theme.toggle}
+          aria-label={`Switch to ${theme.name === 'dark' ? 'light' : 'dark'} mode`}
+          title={`Switch to ${theme.name === 'dark' ? 'light' : 'dark'} mode`}
+        >
+          <ThemeIcon name={theme.name} />
+        </button>
       </header>
 
       {view === 'gallery' && (
-        <Suspense fallback={<p className="gallery__intro">Loading the one-off marks…</p>}>
-          <GalleryView />
+        <Suspense fallback={<p className="gallery__intro">Loading the gallery…</p>}>
+          <GalleryView
+            onOpenGovernment={openInGovernment}
+            onOpenInGenerator={(patch) => {
+              update(patch)
+              showView('generator')
+              globalThis.scrollTo?.({ top: 0 })
+            }}
+          />
         </Suspense>
       )}
 
@@ -521,6 +589,10 @@ export const App = () => {
         The mark is reproduced from the supplied artwork and is a provincial symbol; use of it is
         governed by the Government of British Columbia. The typeface is embedded in exports under
         whatever licence covers the copy this site was built with.
+        {view === 'gallery' && (
+          <> The gallery also holds other public bodies’ marks, such as BC Hydro’s, which are theirs
+            and are reconstructed here from historical material, not supplied by them.</>
+        )}
       </p>
 
       {/* Linked rather than only sitting at a path, so it is reachable from the page itself —

@@ -31,7 +31,7 @@ const REVERSED = {
 }
 const oneInk = (ink, paper) => ({
   background: paper, sun: ink, light: paper, mountains: ink, wordmark: ink, rule: ink,
-  tagline: ink, divider: ink, name: ink, accent: ink, leaf: ink
+  tagline: ink, divider: ink, name: ink, descriptor: ink, accent: ink, leaf: ink
 })
 
 const isWhite = (colour) => !colour || colour === 'none' || colour.toLowerCase() === '#ffffff' || colour.toLowerCase() === '#fff'
@@ -149,6 +149,30 @@ export const ONE_OFFS = [
       'is reversed on the cover’s navy. The navy is the page’s, not part of the mark.'
   }),
   artwork({
+    id: 'environmental-lab-bc',
+    label: 'Environmental Lab BC',
+    body: 'Environmental Lab BC',
+    years: 'date unknown',
+    note: 'Environmental Reporting BC’s arrangement — two lines beside the mark, “BC” in gold closing ' +
+      'the second — but on the later flat sun, with the gold divider kept.',
+    caveat: 'Drawn from the supplied artwork, in the screen colours (#234075 and #e3a82b).'
+  }),
+  {
+    id: 'prepared-bc',
+    kind: 'current',
+    label: 'PreparedBC',
+    body: 'PreparedBC',
+    years: 'remade in the current identity',
+    // Set, not lifted: the generator's current era draws it, so it opens there.
+    text: 'PreparedBC',
+    note: 'Set as a ministry mark is today: the BC mark as published, a gold divider, and ' +
+      '“PreparedBC” in the Garamond the ministry marks are lettered in. The program’s own mark was ' +
+      'the BC mark in outline, in one orange ink — nothing the current identity draws — so it is ' +
+      'remade here rather than lifted.',
+    caveat: 'A remake, not a published mark. It opens in the generator, in the current era, with ' +
+      'the wording already typed.'
+  },
+  artwork({
     id: 'public-service',
     label: 'BC Public Service',
     body: 'BC Public Service',
@@ -179,3 +203,67 @@ export const ONE_OFFS = [
 ]
 
 export const findOneOff = (id) => ONE_OFFS.find((entry) => entry.id === id)
+
+// ── BC Timber Sales ──────────────────────────────────────────────────────────────────────────────
+
+// Its initials have been published in two greens: forest green on white, and a lighter teal where
+// the mark is reversed. Either can start any of its marks.
+export const BCTS_FOREST = '#016a37'
+export const BCTS_TEAL = '#009979'
+
+// The reversed mark, as its picture shows it: white type, the lighter mountains the Province's
+// reversed marks use, the print gold, and the initials in teal. The picture has no ground of its
+// own, so this dark is the mark's own near-black, not part of the mark.
+const BCTS_REVERSED = {
+  background: '#231f20', sun: '#fdb813', mountains: '#4d5d92', wordmark: '#ffffff', name: BCTS_TEAL, descriptor: '#ffffff'
+}
+
+/** The published colours, then each green on the rest of the published mark, then one ink. */
+const bctsPresets = (id, greens) => {
+  const printed = { ...ONE_OFF_MARKS[id].printed }
+  printed.background ??= '#ffffff'
+  return [
+    ...greens.map(({ id: presetId, label, colours }) => ({ id: presetId, label, sun: 'glow', colours: { ...printed, ...colours } })),
+    { id: 'mono', label: 'One ink', sun: 'flat', colours: oneInk('#000000', '#ffffff') },
+    { id: 'mono-reverse', label: 'One ink, reversed', sun: 'flat', colours: oneInk('#ffffff', BCTS_FOREST) }
+  ]
+}
+
+const bcts = (entry) => ({ kind: 'artwork', mark: entry.id, ...entry, presets: bctsPresets(entry.id, entry.presets) })
+
+export const BCTS_ENTRIES = {
+  earlier: [
+    bcts({
+      id: 'bcts-wordmark-earlier',
+      label: 'BCTS, BC Timber Sales in a slab serif',
+      body: 'BC Timber Sales',
+      years: 'earlier',
+      note: 'The initials in a heavy green sans over the name in a slab serif, set without the BC mark.',
+      caveat: 'Drawn from the supplied artwork. Its green, #008450, sits between the two the later ' +
+        'marks use.',
+      presets: [
+        { id: 'published', label: 'As published', colours: {} },
+        { id: 'forest', label: 'Forest green', colours: { name: BCTS_FOREST } },
+        { id: 'teal', label: 'Teal', colours: { name: BCTS_TEAL } }
+      ]
+    })
+  ],
+  current: [
+    bcts({
+      id: 'bcts',
+      label: 'BCTS, BC Timber Sales',
+      body: 'BC Timber Sales',
+      years: 'in use today',
+      note: 'The BC mark with its flat sun, a grey divider, and the initials over the name in a sans — ' +
+        'forest green over black on white, or teal over white reversed.',
+      caveat: 'Drawn from the published artwork. The reversed colours are sampled from a picture of ' +
+        'the reversed mark, which lines up with this artwork to within a pixel; its ground is ' +
+        'transparent, so the dark behind it here is not part of the mark.',
+      presets: [
+        { id: 'forest', label: 'Forest green, as published', colours: {} },
+        { id: 'teal-reversed', label: 'Teal, reversed, as published', colours: BCTS_REVERSED },
+        { id: 'teal', label: 'Teal on white', colours: { name: BCTS_TEAL } }
+      ]
+    })
+  ]
+}

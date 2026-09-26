@@ -6,6 +6,14 @@
     <title>Province of British Columbia — logo generator</title>
     <meta name="description" content="Generate the three official Province of British Columbia lockups in any ministry and colourway, and download them as SVG, PDF, PNG, WebP or JPEG." />
     <meta name="color-scheme" content="light dark" />
+    <!-- The theme chosen on an earlier visit, applied before the stylesheet paints, so a light page
+         on a dark system does not open dark and then flip. src/site/useTheme.js takes over from here. -->
+    <script>
+      try {
+        var theme = localStorage.getItem('pofbc-theme') || localStorage.getItem('pofbc-government-theme')
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme
+      } catch (error) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -78,5 +78,18 @@ export {
   isKnownMinistry
 } from './ministries/ministries.js'
 
+// ── BC Hydro: the historical signatures in the gallery ────────────────────────────────────────────
+export {
+  HYDRO_PRESETS,
+  HYDRO_TYPES,
+  HYDRO_GROUPS,
+  hydroDefaults,
+  hydroScene,
+  validateHydro,
+  recommendedMode as hydroRecommendedMode
+} from './hydro/hydroLayout.js'
+export { renderHydroSvg, renderHydroSheet } from './hydro/renderHydroSvg.js'
+export { HYDRO_STANDARDS } from './hydro/standards.js'
+
 // ── React ─────────────────────────────────────────────────────────────────────────────────────────
 export { BcLockup } from './logo/BcLockup.jsx'

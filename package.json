@@ -48,7 +48,12 @@
     "build:flag": "node scripts/build-flag.mjs",
     "build:one-offs": "node scripts/build-one-offs.mjs",
     "build:crest": "python3 scripts/build_crest.py",
-    "build:ministry-history": "node scripts/build-ministry-history.mjs"
+    "build:ministry-history": "node scripts/build-ministry-history.mjs",
+    "build:government-history": "node scripts/build-government-history.mjs",
+    "build:government-events": "node scripts/build-government-events.mjs",
+    "build:government-atlas": "node scripts/build-government-atlas.mjs",
+    "build:hydro-serif": "node scripts/build-hydro-serif.mjs",
+    "extract:hydro-marks": "python3 scripts/extract_hydro_marks.py"
   },
   "peerDependencies": {
     "react": ">=18",

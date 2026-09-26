@@ -224,8 +224,9 @@ const buildCurrentArtwork = ({
 /**
  * Rasterises an SVG string. The SVG carries explicit width/height attributes so the <img> reports
  * a definite intrinsic size in every browser — Firefox will not infer one from a viewBox alone.
+ * Exported for the gallery, whose marks are drawn by renderers of their own.
  */
-const rasterize = async (svgSource, { mimeType, quality, background }) => {
+export const rasterize = async (svgSource, { mimeType, quality, background }) => {
   const blob = new Blob([svgSource], { type: 'image/svg+xml;charset=utf-8' })
   const url = URL.createObjectURL(blob)
 
@@ -265,9 +266,10 @@ const rasterize = async (svgSource, { mimeType, quality, background }) => {
  * text rather than outlines, so it stays selectable and scales cleanly in print.
  *
  * jsPDF and svg2pdf are ~200 KB between them and are only needed for this one format, so they are
- * imported on demand rather than bundled into the initial load.
+ * imported on demand rather than bundled into the initial load. Exported for the gallery, like
+ * rasterize(); `resolved` needs only its viewBox.
  */
-const renderPdf = async (svgSource, resolved, { outlined }) => {
+export const renderPdf = async (svgSource, resolved, { outlined }) => {
   const [{ jsPDF }, { svg2pdf }, faces] = await Promise.all([
     import('jspdf'),
     import('svg2pdf.js'),

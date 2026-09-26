@@ -30,11 +30,42 @@ const target = resolve(root, 'src/assets/oneOffMarks.js')
 const attributesOf = (text) => Object.fromEntries([...text.matchAll(/([\w:-]+)="([^"]*)"/g)].map((m) => [m[1], m[2]]))
 
 /**
+ * What each class in the file's stylesheet sets, since Illustrator writes fills as classes. A
+ * class named in several rules takes each property from its last.
+ */
+const classStyles = (source) => {
+  const styles = new Map()
+  for (const [, selectors, body] of source.matchAll(/([^{}<>]+)\{([^}]*)\}/g)) {
+    const declared = Object.fromEntries([...body.matchAll(/([\w-]+)\s*:\s*([^;]+)/g)].map(([, key, value]) => [key, value.trim()]))
+    for (const selector of selectors.split(',')) {
+      const name = /^\s*\.([\w-]+)\s*$/.exec(selector)?.[1]
+      if (name) styles.set(name, { ...styles.get(name), ...declared })
+    }
+  }
+  return styles
+}
+
+/** A rectangle or polygon as the path it draws, so the rest of the build sees only paths. */
+const pathOf = (tag, attrs) => {
+  if (tag === 'path') return attrs.d
+  if (tag === 'rect') {
+    // A rectangle sized in percent is a converter's canvas, not part of the artwork.
+    const [x, y, w, h] = ['x', 'y', 'width', 'height'].map((key) => Number(attrs[key] ?? 0))
+    return [x, y, w, h].every(Number.isFinite) ? `M${x} ${y}h${w}v${h}h${-w}Z` : null
+  }
+  const points = (attrs.points ?? '').trim().split(/[\s,]+/).map(Number)
+  return points.length >= 4 ? `M${points.join(' ')}Z` : null
+}
+
+/**
  * Every drawn path and image, with the fill it inherits and the clip paths it sits inside.
  * Converters write fills on groups as often as on shapes, so inheritance is followed.
  */
 function parse (source) {
   const [, , width, height] = /viewBox="([^"]+)"/.exec(source)[1].split(/\s+/).map(Number)
+  const styles = classStyles(source)
+  const styleOf = (attrs, property) => attrs[property] ??
+    (attrs.class ?? '').split(/\s+/).map((name) => styles.get(name)?.[property]).findLast(Boolean)
   const clips = new Map()
   const items = []
   const stack = [{ fill: '#000', clips: [] }]
@@ -59,18 +90,19 @@ function parse (source) {
       else if (!selfClosing) {
         const parent = stack.at(-1)
         stack.push({
-          fill: attrs.fill ?? parent.fill,
+          fill: styleOf(attrs, 'fill') ?? parent.fill,
           clips: attrs['clip-path'] ? [...parent.clips, attrs['clip-path'].slice(5, -1)] : parent.clips
         })
       }
       continue
     }
-    if (closing || (tag !== 'path' && tag !== 'image')) continue
+    if (closing || !['path', 'rect', 'polygon', 'image'].includes(tag)) continue
     const parent = stack.at(-1)
     items.push({
-      tag,
       ...attrs,
-      fill: attrs.fill ?? parent.fill,
+      tag: tag === 'image' ? 'image' : 'path',
+      ...(tag === 'image' ? {} : { d: pathOf(tag, attrs) }),
+      fill: styleOf(attrs, 'fill') ?? parent.fill,
       clips: attrs['clip-path'] ? [...parent.clips, attrs['clip-path'].slice(5, -1)] : parent.clips
     })
   }
@@ -252,14 +284,20 @@ function extract (entry) {
   const thin = (box, along) => along === 'x'
     ? box.bottom - box.top > 15 && box.right - box.left < 1.5
     : box.right - box.left > 10 && box.bottom - box.top < 1.5
-  const divider = contours.find((c) => thin(c.box, 'x'))
-  const rule = contours.find((c) => thin(c.box, 'y') && (!divider || c.box.right < divider.box.left))
-  const markSide = (c) => !divider || c.box.right < divider.box.left
+  // A name set on its own, with no BC mark beside it, is all name: nothing in it is a divider or
+  // a rule, however thin, and there is no sun to find.
+  const divider = entry.alone ? null : contours.find((c) => thin(c.box, 'x'))
+  const rule = entry.alone ? null : contours.find((c) => thin(c.box, 'y') && (!divider || c.box.right < divider.box.left))
+  const markSide = (c) => !entry.alone && (!divider || c.box.right < divider.box.left)
 
   let sun, shapes, gradients, sunColour, lightColour
   const flatSun = new Set()
 
-  if (sunParts.length) {
+  if (entry.alone) {
+    sun = null
+    gradients = {}
+    shapes = []
+  } else if (sunParts.length) {
     // The shaded sun: its disc, its rays and its core, each a bitmap in a shape.
     const [disc, second, ...others] = sunParts
     const discWidth = disc.box.right - disc.box.left
@@ -296,7 +334,9 @@ function extract (entry) {
     const box = union([...rays, ...discs].map((c) => c.box))
     sun = { cx: (box.left + box.right) / 2, r: (box.right - box.left) / 2 }
     sun.cy = box.top + sun.r
-    sunColour = rays[0].fill
+    // The colour of the rays themselves, not of a sliver drawn in another gold beside them.
+    const area = ({ box }) => (box.right - box.left) * (box.bottom - box.top)
+    sunColour = rays.reduce((best, c) => area(c) > area(best) ? c : best).fill
     lightColour = discs[0]?.fill ?? '#ffffff'
     gradients = {}
     // The disc first and the rays over it, as drawn. As parts they are the light and the sun, the
@@ -312,18 +352,23 @@ function extract (entry) {
     if (!roles.has(role)) roles.set(role, { fill: contour.fill, subpaths: [], box: null })
     roles.get(role).subpaths.push(contour.subpath)
   }
+  // Beside the mark, gold is the accent. Of the rest, the first colour is the name's, and a line
+  // in a second colour — BCTS's “BC Timber Sales” under its initials — describes it.
+  const nameSide = (contour) => gold(contour.fill) ? 'accent'
+    : !roles.has('name') || roles.get('name').fill === contour.fill ? 'name'
+      : 'descriptor'
   for (const contour of contours) {
     if (flatSun.has(contour)) continue
     if (contour === divider) add('divider', contour)
     else if (contour === rule) add('rule', contour)
-    else if (!markSide(contour)) add(gold(contour.fill) ? 'accent' : 'name', contour)
+    else if (!markSide(contour)) add(nameSide(contour), contour)
     else if (contour.box.top < sun.cy) add('mountains', contour)
     else if (rule && contour.box.top > rule.box.bottom) add('tagline', contour)
     else add('wordmark', contour)
   }
 
   shapes.push(
-    ...['mountains', 'wordmark', 'rule', 'tagline', 'divider', 'name', 'accent']
+    ...['mountains', 'wordmark', 'rule', 'tagline', 'divider', 'name', 'descriptor', 'accent']
       .filter((role) => roles.has(role))
       .map((role) => ({ role, subpaths: roles.get(role).subpaths })),
     ...(leaves.length ? [{ role: 'leaf', subpaths: leaves.flatMap((leaf) => leaf.subpaths) }] : [])
@@ -331,8 +376,8 @@ function extract (entry) {
 
   const colours = {
     background: background ?? null,
-    sun: sunColour,
-    light: lightColour,
+    ...(sun ? { sun: sunColour } : {}),
+    ...(lightColour ? { light: lightColour } : {}),
     ...Object.fromEntries([...roles].map(([role, { fill }]) => [role, fill])),
     ...(leaves.length ? { leaf: hex(leaves[0].mean) } : {})
   }
@@ -363,11 +408,13 @@ for (const entry of manifest) {
   marks[entry.id] = {
     width: Number(round(box.right - box.left)),
     height: Number(round(box.bottom - box.top)),
-    sun: { cx: Number(round(mark.sun.cx + dx)), cy: Number(round(mark.sun.cy + dy)), r: Number(round(mark.sun.r)) },
+    sun: mark.sun && { cx: Number(round(mark.sun.cx + dx)), cy: Number(round(mark.sun.cy + dy)), r: Number(round(mark.sun.r)) },
     gradients: Object.fromEntries(Object.entries(mark.gradients).map(([key, { stops }]) => [key, stops])),
-    // Written out in full: #fff is valid SVG, but a colour input only takes six digits.
+    // Written out in full and in lower case: #fff is valid SVG, but a colour input takes only six
+    // digits, and reports them back in lower case.
     printed: Object.fromEntries(Object.entries(mark.colours).map(([role, colour]) => [role,
-      /^#[0-9a-f]{3}$/i.test(colour ?? '') ? '#' + [...colour.slice(1)].map((c) => c + c).join('') : colour])),
+      /^#[0-9a-f]{3}$/i.test(colour ?? '') ? '#' + [...colour.slice(1)].map((c) => c + c).join('').toLowerCase()
+        : /^#[0-9a-f]{6}$/i.test(colour ?? '') ? colour.toLowerCase() : colour])),
     shapes: mark.shapes.map(({ role, subpaths }) => ({ role, d: serialise(subpaths, dx, dy) }))
   }
 
@@ -382,9 +429,9 @@ writeFileSync(target, `// Generated by scripts/build-one-offs.mjs — do not edi
 // points from each mark's own top-left corner. Every shape carries the part it plays, so a mark
 // can be recoloured without being redrawn.
 //
-// \`sun\` is the centre and radius the glow is measured from. \`gradients\` holds its shading as
-// [distance, mix] stops: distance from the centre as a fraction of the radius, and how far the
-// colour sits from the core's light toward the sun's gold. \`printed\` is the colours as published.
+// \`sun\` is the centre and radius the glow is measured from, or null for a name set without the
+// mark. \`gradients\` holds its shading as [distance, mix] stops: distance from the centre as a
+// fraction of the radius, and how far the colour sits from the core's light toward the sun's gold. \`printed\` is the colours as published.
 
 export const ONE_OFF_MARKS = ${JSON.stringify(marks, null, 2)}
 `)

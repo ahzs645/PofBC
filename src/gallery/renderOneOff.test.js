@@ -3,14 +3,20 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { ONE_OFF_MARKS } from '../assets/oneOffMarks.js'
-import { ONE_OFFS } from './oneOffs.js'
+import { BCTS_ENTRIES, BCTS_FOREST, BCTS_TEAL, ONE_OFFS } from './oneOffs.js'
 import { ONE_OFF_ROLES, hasGlow, renderOneOffSvg, rolesOf } from './renderOneOff.js'
+import { renderCurrentSvg } from '../current/currentMarks.js'
+import { unsupported } from '../current/currentLayout.js'
 
 const roleFills = (svg) => Object.fromEntries(
   [...svg.matchAll(/data-role="(\w+)"[^>]*fill="([^"]+)"/g)].map(([, role, fill]) => [role, fill]))
 
+// BCTS's earlier wordmark is set without the BC mark.
+const WITHOUT_MARK = ['bcts-wordmark-earlier']
+
 test('every mark has a sun, mountains and the wordmark, lifted from its artwork', () => {
   for (const [id, mark] of Object.entries(ONE_OFF_MARKS)) {
+    if (WITHOUT_MARK.includes(id)) continue
     const roles = rolesOf(id)
     for (const role of ['sun', 'mountains', 'wordmark']) assert.ok(roles.includes(role), `${id} has no ${role}`)
     for (const { role } of mark.shapes) assert.ok(ONE_OFF_ROLES.includes(role), `${id}: unknown part ${role}`)
@@ -19,7 +25,7 @@ test('every mark has a sun, mountains and the wordmark, lifted from its artwork'
 })
 
 test('the marks beside a name have a divider and a name; the stacked mark has neither', () => {
-  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc', 'bc-wildfire-service', 'bc-wildfire-service-one-line', 'public-service', 'pacific-gateway']) {
+  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'environmental-lab-bc', 'stronger-bc', 'bc-wildfire-service', 'bc-wildfire-service-one-line', 'public-service', 'pacific-gateway']) {
     assert.ok(rolesOf(id).includes('divider'), `${id} has no divider`)
     assert.ok(rolesOf(id).includes('name'), `${id} has no name`)
   }
@@ -29,7 +35,7 @@ test('the marks beside a name have a divider and a name; the stacked mark has ne
 
 test('“BC” is picked out in gold where the published marks pick it out', () => {
   // Print gold (#fdb913), WorkBC's warmer #f6aa0d and the screen gold (#e3a82b) all count.
-  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'stronger-bc', 'bc-wildfire-service', 'bc-wildfire-service-one-line']) {
+  for (const id of ['welcome-bc', 'work-bc', 'bc-stats', 'environmental-reporting-bc', 'environmental-lab-bc', 'stronger-bc', 'bc-wildfire-service', 'bc-wildfire-service-one-line']) {
     assert.ok(rolesOf(id).includes('accent'), `${id} has no accent`)
     const { svg } = renderOneOffSvg({ id, idPrefix: 't' })
     const [r, g, b] = [1, 3, 5].map((i) => parseInt(roleFills(svg).accent.slice(i, i + 2), 16))
@@ -71,7 +77,8 @@ test('gradient ids do not collide between marks on one page', () => {
 })
 
 test('every gallery preset colours every part its mark has', () => {
-  for (const entry of ONE_OFFS.filter((e) => e.kind === 'artwork')) {
+  const entries = [...ONE_OFFS, ...BCTS_ENTRIES.earlier, ...BCTS_ENTRIES.current]
+  for (const entry of entries.filter((e) => e.kind === 'artwork')) {
     for (const preset of entry.presets) {
       const fills = roleFills(renderOneOffSvg({ id: entry.mark, colours: preset.colours, sun: preset.sun, idPrefix: 'p' }).svg)
       for (const role of rolesOf(entry.mark)) {
@@ -115,4 +122,54 @@ test('BC Wildfire Service keeps its reversed colours, and turns to BC blue on wh
   // Two lines are about half as wide for their height as one.
   const ratio = (id) => ONE_OFF_MARKS[id].width / ONE_OFF_MARKS[id].height
   assert.ok(ratio('bc-wildfire-service') < 0.8 * ratio('bc-wildfire-service-one-line'))
+})
+
+test('BCTS sets its name in green over a descriptor in a colour of its own', () => {
+  for (const id of ['bcts', 'bcts-wordmark-earlier']) {
+    assert.deepEqual(rolesOf(id).filter((role) => ['name', 'descriptor', 'accent'].includes(role)), ['name', 'descriptor'], id)
+    const fills = roleFills(renderOneOffSvg({ id }).svg)
+    assert.equal(fills.descriptor, '#231f20', `${id}: “BC Timber Sales” is near-black`)
+  }
+  assert.equal(roleFills(renderOneOffSvg({ id: 'bcts' }).svg).name, BCTS_FOREST)
+  assert.equal(roleFills(renderOneOffSvg({ id: 'bcts-wordmark-earlier' }).svg).name, '#008450')
+  // A Province mark with one colour beside the mark keeps it all as the name.
+  assert.ok(!rolesOf('stronger-bc').includes('descriptor'))
+})
+
+test('the earlier BCTS wordmark has no mark, so no sun or light to colour', () => {
+  const mark = ONE_OFF_MARKS['bcts-wordmark-earlier']
+  assert.equal(mark.sun, null)
+  assert.equal(hasGlow('bcts-wordmark-earlier'), false)
+  assert.ok(!('sun' in mark.printed) && !('light' in mark.printed))
+  assert.doesNotMatch(renderOneOffSvg({ id: 'bcts-wordmark-earlier' }).svg, /data-role="(sun|core|divider)"/)
+})
+
+test('BCTS reversed is the same mark with white type and the initials in teal', () => {
+  // Its picture has white type on a transparent ground, so on a white page it looks like the
+  // symbol and “BCTS” alone. It is a colourway of the one mark, not a mark of its own.
+  const entry = BCTS_ENTRIES.current.find((e) => e.id === 'bcts')
+  const reversed = entry.presets.find((p) => p.id === 'teal-reversed')
+  const fills = roleFills(renderOneOffSvg({ id: 'bcts', colours: reversed.colours }).svg)
+  assert.equal(fills.wordmark, '#ffffff')
+  assert.equal(fills.descriptor, '#ffffff')
+  assert.equal(fills.name, BCTS_TEAL)
+  assert.equal(fills.mountains, '#4d5d92')
+  assert.notEqual(reversed.colours.background, '#ffffff')
+})
+
+test('every BCTS mark starts from either green', () => {
+  for (const entry of [...BCTS_ENTRIES.earlier, ...BCTS_ENTRIES.current]) {
+    const greens = entry.presets.map((preset) => preset.colours.name)
+    assert.ok(greens.includes(BCTS_FOREST), `${entry.id} offers forest green`)
+    assert.ok(greens.includes(BCTS_TEAL), `${entry.id} offers teal`)
+  }
+})
+
+test('PreparedBC is remade in the current identity, every letter from the ministry alphabet', () => {
+  const entry = ONE_OFFS.find((e) => e.id === 'prepared-bc')
+  assert.equal(entry.kind, 'current')
+  assert.ok(!(entry.id in ONE_OFF_MARKS), 'nothing of it is lifted from artwork')
+  assert.deepEqual(unsupported(entry.text), [])
+  const svg = renderCurrentSvg({ text: entry.text })
+  assert.match(svg, /^<svg /)
 })
