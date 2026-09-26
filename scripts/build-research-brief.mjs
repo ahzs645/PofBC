@@ -185,6 +185,9 @@ const template = {
   instructions: 'One object per sub-agency. Fill established/names/parents/relations/legal_basis with a source each; leave null where unknown and say why in note. Add objects for bodies that no longer exist (set ended). See BRIEF.md §3–§5 and research/README.md.',
   records: subs.map((s) => ({
     id: s.id.replace(/^sub-/, ''),
+    // Where the review stands: 'not_researched' records are the work; reviewed ones are extended in
+    // research/history/sub-agencies-researched.json rather than started again here.
+    review: s.researched ? s.status : 'not_researched',
     name: s.name,
     ...(s.shortName ? { shortName: s.shortName } : {}),
     kind: s.type,
