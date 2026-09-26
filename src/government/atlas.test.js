@@ -104,3 +104,88 @@ test('the comparison accounts for every ministry on both sides', () => {
   assert.ok(continuing + created.length <= after)
   assert.ok(result.offices.some((office) => office.label === 'Premier'))
 })
+
+// ── The sub-agency review (tmp/research/history/sub-agencies-researched.json, 2026-09-26) ────────
+
+import { SUB_AGENCIES } from './historyData.js'
+
+const sub = (id) => SUB_AGENCIES.find((entry) => entry.id === id)
+
+test('a body in two collection files keeps the date only the second file had', () => {
+  for (const id of ['sub-bc-farm-industry-review-board', 'sub-civil-resolution-tribunal', 'sub-employment-standards-tribunal']) {
+    assert.ok(sub(id).established, id)
+    assert.equal(SUB_AGENCIES.filter((entry) => entry.id === id).length, 1, `${id} is kept once`)
+  }
+})
+
+test('no date is ever an object turned into text', () => {
+  for (const entry of SUB_AGENCIES) {
+    for (const value of [entry.established, entry.ended]) {
+      if (value !== null && value !== undefined) assert.match(value, /^\d{4}(-\d{2}(-\d{2})?)?$/, entry.id)
+    }
+  }
+})
+
+test('GPEB stands until IGCO replaces it on 13 April 2026, and not after', () => {
+  // Its start is unknown, so before today it is drawn only when undated bodies are asked for.
+  assert.ok(find(2025, 'sub-gaming-policy-and-enforcement-branch', { includeUndated: true }))
+  assert.ok(!find(PRESENT_YEAR, 'sub-gaming-policy-and-enforcement-branch'))
+  const igco = find(PRESENT_YEAR, 'sub-independent-gambling-control-office')
+  assert.ok(igco)
+  assert.ok(igco.cameFrom.some((body) => body.id === 'sub-gaming-policy-and-enforcement-branch'))
+})
+
+test('CRT: its 2012 assent is an event, its 2016 commencement the start', () => {
+  assert.equal(sub('sub-civil-resolution-tribunal').established, '2016-07-13')
+  assert.ok(!find(2014, 'sub-civil-resolution-tribunal'))
+  const assent = EVENTS.find((event) => event.subject === 'sub-civil-resolution-tribunal' && event.date.start === '2012-05-31')
+  assert.equal(assent?.type, 'legislation_assented')
+})
+
+test('IIO: legal establishment (July 2011) and opening are kept apart, at month precision', () => {
+  const iio = sub('sub-independent-investigations-office')
+  assert.equal(iio.established, '2011-07')
+  assert.equal(iio.establishedClaim.precision, 'month')
+  assert.ok(EVENTS.some((event) => event.subject === iio.id && event.date.start !== '2011-07'))
+})
+
+test('BC Renal is not drawn under PHSA before the sourced 2002 relationship', () => {
+  const in2001 = find(2001, 'sub-bc-renal')
+  assert.ok(in2001, 'it stood from 1997')
+  assert.notEqual(in2001.parent, 'provincial-health-services-authority')
+  assert.ok(in2001.unplacedSub)
+  const in2003 = find(2003, 'sub-bc-renal')
+  assert.equal(in2003.parent, 'provincial-health-services-authority')
+  assert.ok(!in2003.inferredParent)
+})
+
+test('an observation is not a period: BCTS is placed by it in 2003 only', () => {
+  assert.ok(!find(2003, 'sub-bc-timber-sales').inferredParent)
+  assert.ok(find(2010, 'sub-bc-timber-sales').inferredParent)
+  // And an observed name is used only in the year it was seen.
+  assert.equal(find(1973, 'sub-hospital-appeal-board').name, 'Medical Appeal Board')
+  assert.equal(find(1990, 'sub-hospital-appeal-board').name, 'Hospital Appeal Board')
+})
+
+test('the bodies WCAT replaced are drawn in their years, apart, and lead to it', () => {
+  const board = find(1980, 'sub-workers-compensation-review-board')
+  assert.equal(board.name, 'Boards of Review')
+  assert.ok(board.unplacedSub && !board.parent)
+  assert.equal(find(1995, 'sub-workers-compensation-review-board').became.id, 'sub-workers-compensation-appeal-tribunal')
+  assert.ok(!find(2004, 'sub-workers-compensation-review-board'))
+})
+
+test('a start the review could not settle is marked, not presented as resolved', () => {
+  // (BC Timber Sales was, until a recorded decision settled it — tested below.)
+  const powertech = find(2000, 'sub-powertech-labs')
+  assert.ok(powertech?.reconcile)
+})
+
+test('a recorded decision settles BCTS on 20 June 2003, and keeps the dates it set aside as events', () => {
+  const bcts = find(2010, 'sub-bc-timber-sales')
+  assert.equal(bcts.established, '2003-06-20')
+  assert.ok(!bcts.reconcile)
+  assert.match(bcts.evidence[0].note, /Decided 2026-09-26/)
+  const dates = EVENTS.filter((event) => event.subject === 'sub-bc-timber-sales').map((event) => event.date.start)
+  assert.ok(dates.includes('2003-04-01') && dates.includes('2003-05-29'))
+})

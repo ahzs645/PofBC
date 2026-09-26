@@ -1,0 +1,272 @@
+{
+  "metadata": {
+    "title": "British Columbia government atlas — research companion",
+    "as_of": "2026-09-25",
+    "scope": "Selected official-source research for the proposed historical government interface",
+    "not_a_patch": true,
+    "integration_note": "Local subject keys are proposed identifiers, not IDs from the user’s project. Review and map before import.",
+    "coverage_note": "The user’s reported 242 ministry episodes, 1,236 ministerial terms and other totals were not comprehensively audited.",
+    "asset_note": "No corporate logo masters, font files or original source documents are included.",
+    "source_count": 37,
+    "event_seed_count": 26,
+    "logo_route_count": 5,
+    "backlog_count": 17
+  },
+  "tasks": [
+    {
+      "id": "R01",
+      "priority": "now",
+      "title": "Reconcile Lieutenant Governors count",
+      "interface_value": "Removes an avoidable reference-data discrepancy.",
+      "source_ids": [
+        "S07",
+        "S08"
+      ],
+      "completion_criteria": "Compare all 32 local records against the official 31-person sequence; retain administrators or separate terms under explicit categories.",
+      "status": "open",
+      "notes": "Do not delete a record solely because counts differ."
+    },
+    {
+      "id": "R02",
+      "priority": "now",
+      "title": "Add typed dates instead of one founding year",
+      "interface_value": "Allows historical organizations to appear without pretending current names existed earlier.",
+      "source_ids": [
+        "S10",
+        "S11",
+        "S13"
+      ],
+      "completion_criteria": "Store function origin, legal creation, operational start, name adoption and brand adoption separately; map the seed events to reviewed local IDs.",
+      "status": "open",
+      "notes": ""
+    },
+    {
+      "id": "R03",
+      "priority": "now",
+      "title": "Distinguish direct, accountable and partner relationships",
+      "interface_value": "Prevents an attractive but false organizational tree.",
+      "source_ids": [
+        "S23",
+        "S32",
+        "S33"
+      ],
+      "completion_criteria": "Add typed relationship intervals and a lane for bodies whose responsible ministry is unknown.",
+      "status": "open",
+      "notes": ""
+    },
+    {
+      "id": "R04",
+      "priority": "watch",
+      "title": "Prepare the 2026 election update pipeline",
+      "interface_value": "Supports called, preliminary, final and post-election government states.",
+      "source_ids": [
+        "S01",
+        "S03",
+        "S04"
+      ],
+      "completion_criteria": "Import official milestones now; ingest results only when published; record actual cabinet appointments independently.",
+      "status": "open",
+      "notes": "This pack creates no scheduled job or background monitoring."
+    },
+    {
+      "id": "R05",
+      "priority": "priority 1",
+      "title": "Acquire the five priority corporate logo families",
+      "interface_value": "Adds recognizable identity without approximate redrawing.",
+      "source_ids": [
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S20",
+        "S21",
+        "S22"
+      ],
+      "completion_criteria": "Obtain originals, rights/conditions, variant names, provenance, adoption/observation dates and visual comparison results.",
+      "status": "open",
+      "notes": "No font files are included or redistributed."
+    },
+    {
+      "id": "R06",
+      "priority": "priority 1",
+      "title": "Historical sub-agencies: begin with organizations users will open",
+      "interface_value": "Creates visibly populated historical snapshots.",
+      "source_ids": [
+        "S06",
+        "S10",
+        "S11",
+        "S25",
+        "S26",
+        "S29"
+      ],
+      "completion_criteria": "Research each selected unit’s first/last attestation, predecessor and parent intervals; distinguish unknown dates from confirmed inactivity.",
+      "status": "open",
+      "notes": ""
+    },
+    {
+      "id": "R07",
+      "priority": "priority 1",
+      "title": "BC Rail responsible-minister intervals, 1972–2003",
+      "interface_value": "Resolves a long, high-visibility orphan period.",
+      "source_ids": [
+        "S23",
+        "S25",
+        "S28",
+        "S29",
+        "S37"
+      ],
+      "completion_criteria": "For each interval, retrieve contemporaneous report transmittal/governance evidence or a legal assignment; record exact relation and bounds.",
+      "status": "open",
+      "notes": "Current transport affiliation is not evidence for all earlier years. This interval remains unresolved."
+    },
+    {
+      "id": "R08",
+      "priority": "priority 1",
+      "title": "WCB responsible-minister intervals, 1917–1974",
+      "interface_value": "Resolves another long orphan period.",
+      "source_ids": [
+        "S06",
+        "S13",
+        "S14",
+        "S25",
+        "S27",
+        "S28",
+        "S37"
+      ],
+      "completion_criteria": "Identify reports and instruments; distinguish minister tabling a report, statutory accountability and operational control.",
+      "status": "open",
+      "notes": "No continuous ministry assignment has been established here."
+    },
+    {
+      "id": "R09",
+      "priority": "priority 1",
+      "title": "Pre-1905 agency discovery by report series",
+      "interface_value": "Targets many missing periods from a small set of historical sources.",
+      "source_ids": [
+        "S25",
+        "S26",
+        "S27",
+        "S37"
+      ],
+      "completion_criteria": "Use indexes to locate reports; read original pages; create sourced period claims with report year and publication year separated.",
+      "status": "open",
+      "notes": ""
+    },
+    {
+      "id": "R10",
+      "priority": "priority 2",
+      "title": "MLAs, ridings and by-elections",
+      "interface_value": "Makes the Legislature explorable.",
+      "source_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "completion_criteria": "Link people to elected service episodes and contemporaneous districts; record vacancies, by-elections, affiliations and party changes separately.",
+      "status": "open",
+      "notes": "Plan for historical multi-member districts; verify voting rules per election before applying a modern seat model."
+    },
+    {
+      "id": "R11",
+      "priority": "priority 2",
+      "title": "Parliament, sessions and committee memberships",
+      "interface_value": "Enables legislative rather than merely election-night history.",
+      "source_ids": [
+        "S06"
+      ],
+      "completion_criteria": "Use Assembly records to create Parliament/session records, committee mandates and dated memberships; do not extrapolate from current listings.",
+      "status": "open",
+      "notes": ""
+    },
+    {
+      "id": "R12",
+      "priority": "priority 2",
+      "title": "Historical deputy ministers and executives",
+      "interface_value": "Replaces present-only people cards with timelines.",
+      "source_ids": [
+        "S06",
+        "S09",
+        "S15",
+        "S25",
+        "S29",
+        "S37"
+      ],
+      "completion_criteria": "Obtain appointment instruments or dated official rosters; represent report attestations as observations when term boundaries are unknown.",
+      "status": "open",
+      "notes": "No ready-made comprehensive deputy list was verified."
+    },
+    {
+      "id": "R13",
+      "priority": "priority 2",
+      "title": "Historical staffing and spending",
+      "interface_value": "Adds scale to organization cards and comparisons.",
+      "source_ids": [
+        "S29",
+        "S30"
+      ],
+      "completion_criteria": "Extract fiscal-period measures with unit, budget/actual basis, consolidated scope and source page; preserve reorganization comparability flags.",
+      "status": "open",
+      "notes": ""
+    },
+    {
+      "id": "R14",
+      "priority": "priority 2",
+      "title": "Resolve government identity chronology",
+      "interface_value": "Makes automatic historical branding defensible.",
+      "source_ids": [
+        "S06",
+        "S09",
+        "S24",
+        "S25",
+        "S34"
+      ],
+      "completion_criteria": "Locate dated identity manuals, directives or original applications; separate symbol grant, program issue, first observation and documented retirement.",
+      "status": "open",
+      "notes": "Earlier 1977/1982 manual leads from the project should be reconciled with catalogue records and scans, not treated as newly verified adoption dates."
+    },
+    {
+      "id": "R15",
+      "priority": "scope decision",
+      "title": "Include connected public institutions as optional layers",
+      "interface_value": "Lets users explore beyond core government without implying ownership.",
+      "source_ids": [
+        "S23",
+        "S32",
+        "S33"
+      ],
+      "completion_criteria": "Decide rules for TransLink, post-2003 BC Ferries, universities/colleges, school boards and municipalities; assign legal/governance types before drawing links.",
+      "status": "open",
+      "notes": "A scope choice is not a research finding. Keep First Nations governance distinct."
+    },
+    {
+      "id": "R16",
+      "priority": "QA",
+      "title": "Reconcile counts and coverage denominators",
+      "interface_value": "Makes coverage indicators intelligible and trustworthy.",
+      "source_ids": [
+        "S07"
+      ],
+      "completion_criteria": "Define unique bodies versus episodes, unique people versus terms, overlapping sub-agency classes, and duration-weighted versus sampled-year coverage.",
+      "status": "open",
+      "notes": "User-reported subcategory counts may overlap; do not infer an error from approximate totals alone."
+    },
+    {
+      "id": "R17",
+      "priority": "QA",
+      "title": "Visual identity export verification",
+      "interface_value": "Separates archival evidence, reconstruction fidelity and permitted use.",
+      "source_ids": [
+        "S14",
+        "S15",
+        "S16",
+        "S34"
+      ],
+      "completion_criteria": "For each preset, retain source application and a rendered comparison; classify original/vector-derived/reconstructed/synthetic and record font substitutions.",
+      "status": "open",
+      "notes": "Government symbols and font files need their own rights treatment. No export-overlay test of the user’s generator was performed here."
+    }
+  ]
+}

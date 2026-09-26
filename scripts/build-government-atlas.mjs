@@ -15,17 +15,16 @@
 //
 // Run with the research directory:
 //
-//   GOVERNMENT_RESEARCH=tmp/research npm run build:government-atlas
+//   npm run build:government-atlas
+//
+// It reads the committed research in research/ (see research/README.md); GOVERNMENT_RESEARCH points it
+// elsewhere.
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { MINISTRY_EPISODES } from '../src/government/episodes.js'
 
-const ROOT = process.env.GOVERNMENT_RESEARCH
-if (!ROOT) {
-  console.error('GOVERNMENT_RESEARCH is not set — point it at the research directory (tmp/research).')
-  process.exit(1)
-}
+const ROOT = process.env.GOVERNMENT_RESEARCH || 'research'
 const read = (path) => JSON.parse(readFileSync(resolve(ROOT, path), 'utf8'))
 const OUT = resolve('src/government/atlasData.js')
 

@@ -1,0 +1,1860 @@
+{
+  "generated": "2026-09-26",
+  "schema_version": "sub-agencies-research/1.0-additive",
+  "repository": {
+    "full_name": "ahzs645/PofBC",
+    "reviewed_commit": "b83a40f0928f15c0ac13caa69e4fa730db142557",
+    "remote_modified": false
+  },
+  "instructions": "One object per sub-agency. Fill established/names/parents/relations/legal_basis with a source each; leave null where unknown and say why in note. Add objects for bodies that no longer exist (set ended). See README.md §3–§5.",
+  "scope": "First research tranche, not an exhaustive history or a ready-to-compile legacy collection.",
+  "date_policy": "Dates retain source precision; exact replacements use exclusive end boundaries. Null means unknown, not absent.",
+  "observation_policy": "Rows with coverage=observation_only prove presence on observed_on, not continuous membership or naming.",
+  "status_policy": "documented_partial applies to supplied claims only; it does not mean names, parents and full lifecycle are complete.",
+  "records": [
+    {
+      "id": "bc-farm-industry-review-board",
+      "name": "British Columbia Farm Industry Review Board",
+      "shortName": "BCFIRB",
+      "kind": "tribunal",
+      "parent_today": "ministry-of-agriculture-and-food-2022",
+      "parent_today_name": "Ministry of Agriculture and Food",
+      "official_url": "https://bcfarmindustryreviewboard.ca/",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Supervises B.C.'s agricultural marketing boards and commissions and hears appeals and complaints on marketing decisions, farm practices and animal seizures.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2003-11-01",
+        "precision": "day",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v46n20_350-2003",
+        "source_id": "firb-oic",
+        "locator": "Opening order, clauses (a)–(c); effective date",
+        "checked": "2026-09-26",
+        "meaning": "Combined BCFIRB tribunal / 2003 reorganization"
+      },
+      "ended": null,
+      "names": [
+        {
+          "name": "British Columbia Farm Industry Review Board",
+          "from": "2003-11-01",
+          "to": null,
+          "from_precision": "day",
+          "to_precision": null,
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v46n20_350-2003",
+          "source_id": "firb-oic",
+          "locator": "Clause (b)",
+          "checked": "2026-09-26",
+          "coverage": "start_documented_end_unknown"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Miscellaneous Statutes Amendment Act, 2003, SBC 2003, c. 7; B.C. Reg. 350/2003; OIC 928/2003",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v46n20_350-2003",
+        "source_id": "firb-oic",
+        "locator": "Opening order and clauses (a)–(c)",
+        "checked": "2026-09-26"
+      },
+      "evidence_status": "documented_partial",
+      "note": "The institution describes a 2003 combination of two boards. The regulation also renames the Farm Practices Board regulation. This start is for the combined BCFIRB identity, not a finding that every underlying legal or functional lineage began in 2003. Predecessor identity mapping requires review; no duplicate predecessor nodes were invented.",
+      "research_events": [
+        {
+          "date": "2003",
+          "precision": "year",
+          "evidence": "official_webpage",
+          "source": "https://bcfarmindustryreviewboard.ca/about/learn/",
+          "source_id": "firb-history",
+          "locator": "History of BCFIRB",
+          "checked": "2026-09-26",
+          "type": "combination",
+          "summary": "Two earlier boards combined into BCFIRB."
+        }
+      ],
+      "date_claims": [],
+      "first_observed": null,
+      "identity_review_required": true,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "employment-standards-tribunal",
+      "name": "Employment Standards Tribunal",
+      "kind": "tribunal",
+      "parent_today": "ministry-of-labour-2017",
+      "parent_today_name": "Ministry of Labour",
+      "official_url": "https://www.bcest.bc.ca/",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/lbr.pdf",
+      "description": "Hears appeals of determinations issued by the Director of Employment Standards.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "1995-11-01",
+        "precision": "day",
+        "evidence": "official_webpage",
+        "source": "https://www.bcest.bc.ca/about-us/",
+        "source_id": "est-history",
+        "locator": "About us; establishment paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Tribunal establishment"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Employment Standards Act, Part 12",
+        "source": "https://www.bcest.bc.ca/about-us/",
+        "source_id": "est-history",
+        "locator": "About us; statutory basis",
+        "checked": "2026-09-26"
+      },
+      "evidence_status": "documented_partial",
+      "note": "The official tribunal history supplies the exact date missing from the first merged collection record. Parent-ministry history was not established in this pass.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "civil-resolution-tribunal",
+      "name": "Civil Resolution Tribunal",
+      "shortName": "CRT",
+      "kind": "tribunal",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://civilresolutionbc.ca/",
+      "source_today": "https://civilresolutionbc.ca/",
+      "description": "Canada's first online tribunal, resolving strata, small claims, minor vehicle injury, intimate image and other disputes without the need to go to court.",
+      "held": {
+        "established": null,
+        "events_on_file": [
+          {
+            "date": "2012-05",
+            "type": "legislation_assented",
+            "title": "Civil Resolution Tribunal Act receives Royal Assent"
+          },
+          {
+            "date": "2013-03-15",
+            "type": "executive_appointment",
+            "title": "Cheryl Vickers appointed Acting Chair (first CRT chair role)"
+          },
+          {
+            "date": "2016-07-13",
+            "type": "operational_start",
+            "title": "CRT launches, accepting strata property claims (Canada's first online tribunal)"
+          },
+          {
+            "date": "2017-06-01",
+            "type": "jurisdiction_expansion",
+            "title": "Small claims $5,000 and under added"
+          },
+          {
+            "date": "2019-04-01",
+            "type": "jurisdiction_expansion",
+            "title": "Motor vehicle injury disputes added"
+          },
+          {
+            "date": "2019-07-01",
+            "type": "jurisdiction_expansion",
+            "title": "Societies and cooperative associations claims added - gov.bc.ca date"
+          },
+          {
+            "date": "2019-07-15",
+            "type": "jurisdiction_expansion",
+            "title": "Societies and cooperative associations claims added (date conflicts between sources)"
+          },
+          {
+            "date": "2024-04-26",
+            "type": "executive_appointment",
+            "title": "Shelley Lopez becomes Chair"
+          }
+        ]
+      },
+      "established": {
+        "date": "2016-07-13",
+        "precision": "day",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v59n12_171-2016",
+        "source_id": "crt-oic",
+        "locator": "Effective-date provision bringing sections 1–61 into force",
+        "checked": "2026-09-26",
+        "meaning": "Statutory establishment provision (section 2) in force"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Civil Resolution Tribunal Act, SBC 2012, c. 25, s. 2",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/consol33/consol33/00_12025_01",
+        "source_id": "crt-act",
+        "locator": "Act heading, assent line, and section 2",
+        "checked": "2026-09-26"
+      },
+      "evidence_status": "documented_partial",
+      "note": "Royal Assent, advance appointments and commencement are separate events. The selected start follows commencement of section 2; it is also the public strata-claims launch. The separate 2019 jurisdiction-date conflict in held events was not resolved here.",
+      "research_events": [
+        {
+          "date": "2012-05-31",
+          "precision": "day",
+          "evidence": "statute",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/consol33/consol33/00_12025_01",
+          "source_id": "crt-act",
+          "locator": "Assent line",
+          "checked": "2026-09-26",
+          "type": "legislation_assented",
+          "summary": "Act received Royal Assent."
+        },
+        {
+          "date": "2016-07-13",
+          "precision": "day",
+          "evidence": "official_webpage",
+          "source": "https://civilresolutionbc.ca/about-the-crt/",
+          "source_id": "crt-history",
+          "locator": "History / launch paragraph",
+          "checked": "2026-09-26",
+          "type": "operational_start",
+          "summary": "Strata-claims intake opened."
+        }
+      ],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "independent-gambling-control-office",
+      "name": "Independent Gambling Control Office",
+      "shortName": "IGCO",
+      "kind": "agency",
+      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
+      "parent_today_name": "Ministry of Public Safety and Solicitor General",
+      "official_url": "https://www.igcobc.ca/",
+      "source_today": "https://www.igcobc.ca/updates/2026-04-13/launch-independent-gambling-control-office",
+      "description": "BC's gambling and horse-racing regulator under the Gaming Control Act, overseeing BCLC, charitable gaming and horse racing and administering Gambling Support BC.",
+      "held": {
+        "established": "2026",
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2026-04-13",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://www.igcobc.ca/updates/2026-04-13/launch-independent-gambling-control-office",
+        "source_id": "igco-launch",
+        "locator": "Dateline and opening paragraph",
+        "checked": "2026-09-26",
+        "meaning": "IGCO launch replacing GPEB"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Gaming Control Act (2022)",
+        "source": "https://www.igcobc.ca/about/laws-regulations",
+        "source_id": "igco-laws",
+        "locator": "Governing legislation",
+        "checked": "2026-09-26"
+      },
+      "evidence_status": "documented_partial",
+      "note": "A prospective December 2025 announcement is not used as the establishment date. Independence does not by itself establish a historical ministry-parent interval.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "gaming-policy-and-enforcement-branch",
+      "name": "Gaming Policy and Enforcement Branch",
+      "shortName": "GPEB",
+      "kind": "division",
+      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
+      "parent_today_name": "Ministry of Public Safety and Solicitor General",
+      "official_url": "https://www2.gov.bc.ca/gov/content/sports-culture/gambling-fundraising/gambling-in-bc",
+      "source_today": "https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/org-chart-pssg",
+      "description": "Regulates gambling in B.C., including lotteries and horse racing, and runs the responsible and problem gambling programs.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": {
+        "date": "2026-04-13",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://www.igcobc.ca/updates/2026-04-13/launch-independent-gambling-control-office",
+        "source_id": "igco-launch",
+        "locator": "Opening paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Effective replacement by IGCO",
+        "boundary": "exclusive"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [
+        {
+          "type": "replaced_by",
+          "body": "independent-gambling-control-office",
+          "date": "2026-04-13",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://www.igcobc.ca/updates/2026-04-13/launch-independent-gambling-control-office",
+          "source_id": "igco-launch",
+          "locator": "Opening paragraph",
+          "checked": "2026-09-26"
+        }
+      ],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "GPEB was already present in the uploaded records, so it is end-dated there rather than duplicated in gone. Its original establishment and ministry transfers remain unresolved. The end is the effective replacement boundary, not the previous calendar day.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "names",
+          "parents",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "workers-compensation-appeal-tribunal",
+      "name": "Workers' Compensation Appeal Tribunal",
+      "shortName": "WCAT",
+      "kind": "tribunal",
+      "parent_today": "ministry-of-labour-2017",
+      "parent_today_name": "Ministry of Labour",
+      "official_url": "https://www.wcat.bc.ca/",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/lbr.pdf",
+      "description": "Independent tribunal that hears appeals of WorkSafeBC decisions.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2003-03-03",
+        "precision": "day",
+        "evidence": "official_webpage",
+        "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+        "source_id": "wcat-history",
+        "locator": "Appendix 1, final paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Replacement appeal tribunal starts"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Workers Compensation Amendment Act (No. 2), 2002",
+        "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+        "source_id": "wcat-history",
+        "locator": "Appendix 1, final paragraph",
+        "checked": "2026-09-26",
+        "scope": "Instrument restructuring the appeal system; not a complete current legal-basis survey."
+      },
+      "evidence_status": "documented_partial",
+      "note": "Earlier review bodies are separate predecessor records, not earlier names of WCAT.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "health-professions-review-board",
+      "name": "Health Professions Review Board",
+      "shortName": "HPRB",
+      "kind": "board",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www.bchprb.ca/",
+      "source_today": "https://www.bchprb.ca/",
+      "description": "Reviews certain registration and complaint decisions of the health profession regulatory colleges, now under the Health Professions and Occupations Act.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2009-03-16",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2009HSERV0024-000497.htm",
+        "source_id": "hprb-launch",
+        "locator": "Paragraph stating when the board came into effect",
+        "checked": "2026-09-26",
+        "meaning": "Board comes into effect"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The source was published March 24, 2009 but explicitly dates commencement to March 16. The publication date is not used as the start.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "financial-services-tribunal",
+      "name": "Financial Services Tribunal",
+      "shortName": "FST",
+      "kind": "tribunal",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www.bcfst.ca/",
+      "source_today": "https://www.bcfst.ca/home/about-the-tribunal/",
+      "description": "Hears appeals of enforcement decisions by the Insurance Council of BC, the Superintendents of Real Estate, Pensions and Financial Institutions, and the Registrar of Mortgage Brokers.",
+      "held": {
+        "established": "2004",
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2004",
+        "precision": "year",
+        "evidence": "official_webpage",
+        "source": "https://www.bcfst.ca/home/about-the-tribunal/",
+        "source_id": "fst-history",
+        "locator": "About the tribunal; establishment paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Tribunal establishment"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Financial Institutions Act, s. 242.1",
+        "source": "https://www.bcfst.ca/home/about-the-tribunal/",
+        "source_id": "fst-history",
+        "locator": "Statutory establishment paragraph",
+        "checked": "2026-09-26"
+      },
+      "evidence_status": "documented_partial",
+      "note": "Year confirmed. No month or day is asserted.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "hospital-appeal-board",
+      "name": "Hospital Appeal Board",
+      "shortName": "HAB",
+      "kind": "board",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www.bchab.ca/",
+      "source_today": "https://www.bchab.ca/home/about/",
+      "description": "Hears medical practitioners' appeals of hospital board of management decisions affecting hospital privileges under the Hospital Act.",
+      "held": {
+        "established": "1973",
+        "events_on_file": []
+      },
+      "established": {
+        "date": "1973",
+        "precision": "year",
+        "evidence": "official_webpage",
+        "source": "https://www.bchab.ca/home/about/",
+        "source_id": "hab-history",
+        "locator": "Mandate; original Medical Appeal Board",
+        "checked": "2026-09-26",
+        "meaning": "Body under its earlier name"
+      },
+      "ended": null,
+      "names": [
+        {
+          "name": "Medical Appeal Board",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "source": "https://www.bchab.ca/home/about/",
+          "source_id": "hab-history",
+          "locator": "Mandate; original name in 1973",
+          "checked": "2026-09-26",
+          "observed_on": "1973",
+          "coverage": "observation_only"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Hospital Act, s. 46(1)",
+        "source": "https://www.bchab.ca/home/about/",
+        "source_id": "hab-history",
+        "locator": "Mandate",
+        "checked": "2026-09-26"
+      },
+      "evidence_status": "documented_partial",
+      "note": "The original name is documented, but the transition date to Hospital Appeal Board was not found. A historical-name observation is retained without pretending its open end means it is still the current name.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "public-guardian-and-trustee",
+      "name": "Public Guardian and Trustee of British Columbia",
+      "shortName": "PGT",
+      "kind": "office",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www.trustee.bc.ca/",
+      "source_today": "https://www.trustee.bc.ca/",
+      "description": "Helps people who need assistance with decision-making or are under 19 and administers deceased estates.",
+      "held": {
+        "established": null,
+        "events_on_file": [
+          {
+            "date": "1963",
+            "type": "unit_established",
+            "title": "Public Trustee established under the Public Trustee Act, succeeding the Official Guardian and the Official Administrator for the County of Vancouver (OIC 538/1963)"
+          },
+          {
+            "date": "1989",
+            "type": "functions_transferred",
+            "title": "Public Trustee appointed official administrator for all of BC (OIC 1546/1989)"
+          },
+          {
+            "date": "2000",
+            "type": "legal_name_change",
+            "title": "Public Trustee renamed Public Guardian and Trustee with the adult guardianship legislation (OIC 1753/1999)"
+          },
+          {
+            "date": "2000-02-28",
+            "type": "legislation_repealed",
+            "title": "Public Trustee Act repealed effective February 28, 2000 (B.C. Reg. 12/2000)"
+          }
+        ]
+      },
+      "established": {
+        "date": "1963",
+        "precision": "year",
+        "evidence": "news_release",
+        "source": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1999/2018.asp",
+        "source_id": "pgt-history",
+        "locator": "Background paragraph on establishment of the Public Trustee",
+        "checked": "2026-09-26",
+        "meaning": "Public Trustee office / PGT lineage"
+      },
+      "ended": null,
+      "names": [
+        {
+          "name": "Public Trustee of British Columbia",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "source": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1999/2018.asp",
+          "source_id": "pgt-history",
+          "locator": "Public Trustee name and establishment paragraph",
+          "checked": "2026-09-26",
+          "observed_on": "1999-03-19",
+          "coverage": "observation_only"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Public Guardian and Trustee Act",
+        "source": "https://news.gov.bc.ca/releases/2017AG0032-001776",
+        "source_id": "pgt-current-history",
+        "locator": "Background on the office and corporation sole",
+        "checked": "2026-09-26",
+        "scope": "Governing statute reported in 2017; not claimed to be the original 1963 citation."
+      },
+      "evidence_status": "documented_partial",
+      "note": "The founding year is confirmed in official 1999 and 2017 material. The held 2000 rename chronology remains a lead, not a newly verified name-change interval.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "environmental-assessment-office",
+      "name": "Environmental Assessment Office",
+      "shortName": "EAO",
+      "kind": "office",
+      "parent_today": "ministry-of-environment-and-parks-2024",
+      "parent_today_name": "Ministry of Environment and Parks",
+      "official_url": "https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/environmental-assessments",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Runs the neutral assessment process under the Environmental Assessment Act for major projects and enforces certified projects' conditions.",
+      "held": {
+        "established": null,
+        "events_on_file": [
+          {
+            "date": "1994-07-08",
+            "type": "legislation_assented",
+            "title": "Environmental Assessment Act (SBC 1994, c. 35) assented; s. 58 establishes the EAO as an office of the government"
+          },
+          {
+            "date": "1995",
+            "type": "unit_established",
+            "title": "EAO created to coordinate assessment of major projects"
+          },
+          {
+            "date": "1995-07",
+            "type": "operational_start",
+            "title": "EAO undertakes its first reviews (e.g., Salmon Aquaculture Review)"
+          },
+          {
+            "date": "2002-12",
+            "type": "legislation_in_force",
+            "title": "New BC Environmental Assessment Act proclaimed; EAO role preserved"
+          },
+          {
+            "date": "2019-12",
+            "type": "legislation_in_force",
+            "title": "Environmental Assessment Act (2018) comes into force; EAO continued as an office of the government"
+          }
+        ]
+      },
+      "established": {
+        "date": "1995",
+        "precision": "year",
+        "evidence": "service_plan",
+        "source": "https://www.bcbudget.gov.bc.ca/2006/sp/env/Overview9.htm",
+        "source_id": "eao-plan",
+        "locator": "Purpose / overview; creation in 1995",
+        "checked": "2026-09-26",
+        "meaning": "Administrative office creation"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The office’s service plan states 1995. The held 1994 Royal Assent event is not substituted for office commencement; no day was independently confirmed.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-timber-sales",
+      "name": "BC Timber Sales",
+      "shortName": "BCTS",
+      "kind": "program",
+      "parent_today": "ministry-of-forests-2022",
+      "parent_today_name": "Ministry of Forests",
+      "official_url": "https://www2.gov.bc.ca/gov/content/industry/forestry/bc-timber-sales",
+      "source_today": "https://www2.gov.bc.ca/gov/content/industry/forestry/bc-timber-sales",
+      "description": "Manages 20 per cent of B.C.'s public timber harvest and sells Crown timber at auction.",
+      "held": {
+        "established": null,
+        "events_on_file": [
+          {
+            "date": "1988-07-11",
+            "type": "legal_instrument_deposited",
+            "title": "Small Business Forest Enterprise Regulation (B.C. Reg. 265/88, O.C. 1326/88) deposited"
+          },
+          {
+            "date": "2003-06-20",
+            "type": "unit_established",
+            "title": "BC Timber Sales established"
+          },
+          {
+            "date": "2003-06-20",
+            "type": "succession",
+            "title": "BC Timber Sales replaces the Small Business Forest Enterprise Program"
+          },
+          {
+            "date": "2004-04-02",
+            "type": "name_observed",
+            "title": "Regulation B.C. Reg. 265/88 carries the title 'BC Timber Sales Regulation' (consolidation current to April 2, 2004, incl. B.C. Reg. 242/2003)"
+          }
+        ]
+      },
+      "established": {
+        "date": "2003",
+        "precision": "year",
+        "evidence": "news_release",
+        "source": "https://news.gov.bc.ca/releases/2013FLNR0194-001483",
+        "source_id": "bcts-anniversary",
+        "locator": "Anniversary statement dating establishment to June 20, 2003",
+        "checked": "2026-09-26",
+        "meaning": "Year-level organizational start; exact milestone unresolved",
+        "selection": "Year retained pending reconciliation; exact source claim preserved in date_claims."
+      },
+      "ended": null,
+      "names": [],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Forests",
+          "from": null,
+          "to": null,
+          "relation": "part_of",
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/for/for_goals_link2.htm",
+          "source_id": "bcts-plan",
+          "locator": "BC Timber Sales core business; independence from Field Services Division",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [
+        {
+          "type": "formed_from",
+          "body": "small-business-forest-enterprise-program",
+          "date": "2003",
+          "precision": "year",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/for/for_goals_link2.htm",
+          "source_id": "bcts-plan",
+          "locator": "BC Timber Sales core business",
+          "checked": "2026-09-26",
+          "note": "Year-level relationship only; exact effective date remains under review."
+        }
+      ],
+      "legal_basis": null,
+      "evidence_status": "requires_reconciliation",
+      "note": "Official sources distinguish an April 1 replacement of SBFEP and a June 20 establishment claim. The BCTS name also appears in a May 29 Gazette notice. Do not resolve this by selecting the earliest date or treating all three as equivalent birth dates.",
+      "research_events": [],
+      "date_claims": [
+        {
+          "date": "2003-06-20",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://news.gov.bc.ca/releases/2013FLNR0194-001483",
+          "source_id": "bcts-anniversary",
+          "locator": "Anniversary establishment statement",
+          "checked": "2026-09-26",
+          "type": "establishment_claim",
+          "summary": "Retrospective establishment date."
+        },
+        {
+          "date": "2003-04-01",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://www.bcfpb.ca/news-resources/news-releases/page/43/",
+          "source_id": "bcts-fpb",
+          "locator": "News item paragraph identifying BCTS as replacement for SBFEP",
+          "checked": "2026-09-26",
+          "type": "succession_claim",
+          "summary": "SBFEP replacement date."
+        }
+      ],
+      "first_observed": {
+        "date": "2003-05-29",
+        "precision": "day",
+        "evidence": "official_webpage",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/bcgaz1/bcgaz1/1550264017",
+        "source_id": "bcts-gazette",
+        "locator": "Timber-sale notice naming BC Timber Sales Okanagan-Columbia office",
+        "checked": "2026-09-26",
+        "meaning": "Earliest dated observation located in this pass; not proof of first-ever use"
+      },
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-cancer",
+      "name": "BC Cancer",
+      "kind": "agency",
+      "parent_today": "provincial-health-services-authority",
+      "parent_today_name": "Provincial Health Services Authority",
+      "official_url": "https://www.phsa.ca/our-services/programs-services/bc-cancer-agency",
+      "source_today": "https://www.phsa.ca/our-services/programs-services/bc-cancer-agency",
+      "description": "Leads the provincial planning and regional delivery of cancer care, from prevention and screening through treatment, survivorship and end-of-life care.",
+      "held": {
+        "established": null,
+        "events_on_file": [
+          {
+            "date": "1938-11-05",
+            "type": "operational_start",
+            "title": "British Columbia Cancer Institute, first cancer treatment centre, officially opens in Vancouver"
+          },
+          {
+            "date": "1974-10-31",
+            "type": "unit_established",
+            "title": "Provincial government takes over cancer care from the BC Cancer Foundation; Cancer Control Agency of British Columbia formed"
+          },
+          {
+            "date": "1990",
+            "type": "legal_name_change",
+            "title": "Cancer Control Agency of BC renamed British Columbia Cancer Agency"
+          },
+          {
+            "date": "1994",
+            "type": "operating_name_change",
+            "title": "British Columbia Cancer Agency shortens its name to BC Cancer Agency"
+          },
+          {
+            "date": "2017",
+            "type": "operating_name_and_identity_change",
+            "title": "New identity announced (BC Cancer), with the BC Cancer Foundation"
+          },
+          {
+            "date": "2018-04-01",
+            "type": "legal_status_change",
+            "title": "British Columbia Cancer Agency Branch amalgamated with PHSA into one society"
+          }
+        ]
+      },
+      "established": {
+        "date": "1974-10-31",
+        "precision": "day",
+        "evidence": "official_webpage",
+        "source": "https://www.bccancer.bc.ca/about/history",
+        "source_id": "cancer-history",
+        "locator": "1974 timeline entry",
+        "checked": "2026-09-26",
+        "meaning": "Public Cancer Control Agency formed"
+      },
+      "ended": null,
+      "names": [
+        {
+          "name": "Cancer Control Agency of British Columbia",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "source": "https://www.bccancer.bc.ca/about/history",
+          "source_id": "cancer-history",
+          "locator": "1974 timeline entry",
+          "checked": "2026-09-26",
+          "observed_on": "1974-10-31",
+          "coverage": "observation_only"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "This start is for the public agency, not the earlier cancer-treatment institution. The current program name and later legal-society changes need separate name/status history.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "workbc",
+      "name": "WorkBC",
+      "kind": "program",
+      "parent_today": "ministry-of-social-development-and-poverty-reduction-2017",
+      "parent_today_name": "Ministry of Social Development and Poverty Reduction",
+      "official_url": "https://www.workbc.ca/",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/sdpr.pdf",
+      "description": "Provincial employment services that help people find and keep jobs, plus online career and labour market resources.",
+      "held": {
+        "established": null,
+        "events_on_file": [
+          {
+            "date": "2012-04-02",
+            "type": "operational_start",
+            "title": "85 WorkBC Employment Services Centres and 114 satellite offices open under the new Employment Program of BC"
+          }
+        ]
+      },
+      "established": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "requires_reconciliation",
+      "note": "The verified April 2, 2012 event is the Employment Program of BC / WorkBC centres launch. The template also covers the broader WorkBC website and brand. Their identity and earlier history are unresolved; a centres launch is not silently promoted to the birth of everything called WorkBC.",
+      "research_events": [
+        {
+          "date": "2012-04-02",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://news.gov.bc.ca/releases/2012SD0004-000410",
+          "source_id": "workbc-launch",
+          "locator": "Paragraph explicitly dating program start to April 2",
+          "checked": "2026-09-26",
+          "type": "operational_start",
+          "summary": "Employment Program of BC / WorkBC centres began."
+        }
+      ],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "independent-investigations-office",
+      "name": "Independent Investigations Office of BC",
+      "shortName": "IIO",
+      "kind": "office",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://iiobc.ca/",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Civilian-led office that investigates incidents where the actions or inactions of police may have caused serious injury or death.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2011-07",
+        "precision": "month",
+        "evidence": "news_release",
+        "source": "https://iiobc.ca/media/b-c-s-police-agencies-sign-mou-with-the-iio/",
+        "source_id": "iio-formation",
+        "locator": "Quick Facts; establishment under Police Act amendments",
+        "checked": "2026-09-26",
+        "meaning": "Statutory establishment month"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Legal establishment in July 2011 is distinct from becoming fully operational on September 10, 2012. The source does not support a specific July day.",
+      "research_events": [
+        {
+          "date": "2012-09-10",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://iiobc.ca/media/independent-investigations-office-opens-its-doors/",
+          "source_id": "iio-launch",
+          "locator": "Dateline and opening paragraph",
+          "checked": "2026-09-26",
+          "type": "operational_start",
+          "summary": "IIO became fully operational."
+        }
+      ],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "quadreal-property-group",
+      "name": "QuadReal Property Group",
+      "shortName": "QuadReal",
+      "kind": "subsidiary",
+      "parent_today": "bc-investment-management-corporation",
+      "parent_today_name": "British Columbia Investment Management Corporation",
+      "official_url": "https://www.quadreal.com",
+      "source_today": "https://www.bci.ca/about/",
+      "description": "Wholly owned BCI subsidiary for global real estate investment, development and management.",
+      "held": {
+        "established": "2017",
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2016",
+        "precision": "year",
+        "evidence": "news_release",
+        "source": "https://quadreal.com/candice-todd-joins-quadreals-board-of-directors/",
+        "source_id": "quadreal-history",
+        "locator": "Corporate background; BCI established QuadReal in 2016",
+        "checked": "2026-09-26",
+        "meaning": "Company establishment"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Corrects the uploaded 2017 founding value to the company’s explicit 2016 establishment year. Any 2017 operational or portfolio-transfer milestone should be recorded separately if sourced; none is asserted here.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "powertech-labs",
+      "name": "Powertech Labs Inc.",
+      "shortName": "Powertech",
+      "kind": "subsidiary",
+      "parent_today": "bc-hydro",
+      "parent_today_name": "British Columbia Hydro and Power Authority",
+      "official_url": "https://www.powertechlabs.com",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf",
+      "description": "Wholly owned BC Hydro subsidiary providing specialized testing and technical expertise to the energy sector, including hydrogen refuelling technology.",
+      "held": {
+        "established": "1988",
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": null,
+      "names": [],
+      "parents": [
+        {
+          "ministry_as_printed": "BC Hydro",
+          "from": null,
+          "to": null,
+          "relation": "subsidiary_of",
+          "observed_on": "2009-09-09",
+          "coverage": "observation_only",
+          "source": "https://www.bchydro.com/news/press_centre/news_releases/2009/powertech_hydrogen_station.html",
+          "source_id": "powertech-history",
+          "locator": "About Powertech paragraph",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "requires_reconciliation",
+      "note": "The uploaded founding year 1988 was not independently substantiated in this pass. BC Hydro describes service delivery since 1989, which may differ from incorporation. The held 1988 value is preserved, and neither year is silently treated as proof of the other event.",
+      "research_events": [
+        {
+          "date": "1989",
+          "precision": "year",
+          "evidence": "news_release",
+          "source": "https://www.bchydro.com/news/press_centre/news_releases/2009/powertech_hydrogen_station.html",
+          "source_id": "powertech-history",
+          "locator": "About Powertech paragraph",
+          "checked": "2026-09-26",
+          "type": "operational_history_claim",
+          "summary": "BC Hydro dates service delivery from 1989."
+        }
+      ],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "names",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-services-card",
+      "name": "BC Services Card",
+      "kind": "program",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "parent_today_name": "Ministry of Citizens’ Services",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-services-card",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/citizens-services",
+      "description": "Provincial identification card used to access health coverage and other government services, in person and online.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2013-02-15",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://news.gov.bc.ca/releases/2013HLTH0025-000253",
+        "source_id": "card-launch",
+        "locator": "Dateline and opening “starting today” statement",
+        "checked": "2026-09-26",
+        "meaning": "Public launch of the card program"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Dates this card program, not MSP or the earlier CareCard. Launch is appropriate to this record’s program kind, not a new statutory corporation.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "drivebc",
+      "name": "DriveBC",
+      "kind": "program",
+      "parent_today": "ministry-of-transportation-and-transit-2024",
+      "parent_today_name": "Ministry of Transportation and Transit",
+      "official_url": "https://www.drivebc.ca/",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/transportation",
+      "description": "Real-time information on B.C. road conditions, closures, highway webcams and delays.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2005",
+        "precision": "year",
+        "evidence": "news_release",
+        "source": "https://news.gov.bc.ca/releases/2014TRAN0009-000124",
+        "source_id": "drivebc-history",
+        "locator": "Background / Quick Facts; original launch year",
+        "checked": "2026-09-26",
+        "meaning": "Public service launch"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Original 2005 launch, not a later website redesign or survey date. No exact launch day or full ministry-parent history was verified.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "cleanbc",
+      "name": "CleanBC",
+      "kind": "program",
+      "parent_today": "ministry-of-energy-and-climate-solutions-2024",
+      "parent_today_name": "Ministry of Energy and Climate Solutions",
+      "official_url": "https://cleanbc.gov.bc.ca/",
+      "source_today": "https://cleanbc.gov.bc.ca/",
+      "description": "The Province's climate plan and program brand for cutting emissions, building a cleaner economy and preparing communities.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2018-12-05",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://news.gov.bc.ca/releases/2018PREM0088-002338",
+        "source_id": "cleanbc-launch",
+        "locator": "Dateline and opening announcement",
+        "checked": "2026-09-26",
+        "meaning": "Release of the named plan/program"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "This is a plan/program launch, not establishment of the Climate Action Secretariat or a ministry. No administrative parent is inferred from ministers quoted in the release.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-renal",
+      "name": "BC Renal",
+      "kind": "agency",
+      "parent_today": "provincial-health-services-authority",
+      "parent_today_name": "Provincial Health Services Authority",
+      "official_url": "https://www.phsa.ca/our-services/programs-services/bc-renal",
+      "source_today": "https://www.phsa.ca/our-services/programs-services/bc-renal",
+      "description": "Plans and coordinates the care of patients with kidney disease throughout the province.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "1997",
+        "precision": "year",
+        "evidence": "official_webpage",
+        "source": "https://www.bcrenal.ca/about/who-we-are/what-we-do",
+        "source_id": "renal-history",
+        "locator": "Organizational structure; founding year",
+        "checked": "2026-09-26",
+        "meaning": "Provincial kidney-care network founding"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [
+        {
+          "ministry_as_printed": "Provincial Health Services Authority",
+          "from": "2002",
+          "to": null,
+          "from_precision": "year",
+          "to_precision": null,
+          "relation": "part_of",
+          "coverage": "continuing_as_of_source",
+          "source": "https://www.bcrenal.ca/about/who-we-are/what-we-do",
+          "source_id": "renal-history",
+          "locator": "Partners; part of PHSA since 2002",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Founding in 1997 and PHSA membership since 2002 are separately documented. Earlier institutional names and the pre-2002 parent remain unresolved.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-builds",
+      "name": "BC Builds",
+      "kind": "program",
+      "parent_today": "bc-housing",
+      "parent_today_name": "British Columbia Housing Management Commission",
+      "official_url": "https://www.bchousing.org",
+      "source_today": "https://news.gov.bc.ca/releases/2024HOUS0006-000188",
+      "description": "BC Housing-delivered program that uses low-cost financing, grants and underused land to build rental homes for middle-income households.",
+      "held": {
+        "established": "2024",
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2024-02-13",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://archive.news.gov.bc.ca/releases/news_releases_2020-2024/2024HOUS0006-000188.htm",
+        "source_id": "builds-launch",
+        "locator": "Dateline and opening launch announcement",
+        "checked": "2026-09-26",
+        "meaning": "Program launch"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Refines the uploaded 2024 year to the official launch day. Funding through BC Housing is not by itself used to manufacture a part_of interval.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "declaration-act-secretariat",
+      "name": "Declaration Act Secretariat",
+      "kind": "office",
+      "parent_today": "ministry-of-indigenous-relations-and-reconciliation-2017",
+      "parent_today_name": "Ministry of Indigenous Relations and Reconciliation",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/indigenous-people/new-relationship/united-nations-declaration-on-the-rights-of-indigenous-peoples/declaration-act-secretariat",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/indigenous-people/new-relationship/united-nations-declaration-on-the-rights-of-indigenous-peoples/declaration-act-secretariat",
+      "description": "Central agency that guides government to align provincial laws with the UN Declaration on the Rights of Indigenous Peoples.",
+      "held": {
+        "established": "2022",
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2022",
+        "precision": "year",
+        "evidence": "official_webpage",
+        "source": "https://www2.gov.bc.ca/gov/content/governments/indigenous-people/new-relationship/united-nations-declaration-on-the-rights-of-indigenous-peoples/declaration-act-secretariat",
+        "source_id": "declaration-history",
+        "locator": "Opening paragraph; establishment in 2022",
+        "checked": "2026-09-26",
+        "meaning": "Central agency establishment"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Confirms the year without treating Budget announcement, staff appointments or the Declaration Act’s 2019 enactment as an exact establishment day.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "managed-forest-council",
+      "name": "Managed Forest Council",
+      "kind": "board",
+      "parent_today": "ministry-of-forests-2022",
+      "parent_today_name": "Ministry of Forests",
+      "official_url": "https://www.mfcouncil.ca/",
+      "source_today": "https://www.mfcouncil.ca/",
+      "description": "Independent provincial agency under the Private Managed Forest Land Act that regulates forest practices on private managed forest land.",
+      "held": {
+        "established": "2004",
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2004-05",
+        "precision": "month",
+        "evidence": "official_webpage",
+        "source": "https://www.mfcouncil.ca/",
+        "source_id": "managed-history",
+        "locator": "Protecting Key Environmental Values; established in May 2004",
+        "checked": "2026-09-26",
+        "meaning": "Council establishment"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Private Managed Forest Land Act",
+        "source": "https://www.mfcouncil.ca/",
+        "source_id": "managed-history",
+        "locator": "What is the Managed Forest Council?",
+        "checked": "2026-09-26"
+      },
+      "evidence_status": "documented_partial",
+      "note": "Month-level refinement of the uploaded year. The 1988 property classification is not the Council’s establishment; government appointments are not a part_of relationship.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-transplant",
+      "name": "BC Transplant",
+      "shortName": "BCT",
+      "kind": "agency",
+      "parent_today": "provincial-health-services-authority",
+      "parent_today_name": "Provincial Health Services Authority",
+      "official_url": "https://www.phsa.ca/our-services/programs-services/bc-transplant",
+      "source_today": "https://www.phsa.ca/our-services/programs-services/bc-transplant",
+      "description": "Responsible for all aspects of organ donation and transplantation in B.C.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "1986",
+        "precision": "year",
+        "evidence": "news_release",
+        "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2007health0120-001340-attachment1.htm",
+        "source_id": "transplant-history",
+        "locator": "Opening paragraph; society establishment",
+        "checked": "2026-09-26",
+        "meaning": "BC Transplant Society / program lineage"
+      },
+      "ended": null,
+      "names": [
+        {
+          "name": "British Columbia Transplant Society",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2007health0120-001340-attachment1.htm",
+          "source_id": "transplant-history",
+          "locator": "Opening paragraph",
+          "checked": "2026-09-26",
+          "observed_on": "2007-10-22",
+          "coverage": "observation_only"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Society creation is distinct from the first provincial organ transplant in 1968. The date of transition to the current BC Transplant operating name was not established.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "healthlink-bc",
+      "name": "HealthLink BC",
+      "kind": "program",
+      "parent_today": "ministry-of-health-2011",
+      "parent_today_name": "Ministry of Health",
+      "official_url": "https://www.healthlinkbc.ca/",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health",
+      "description": "24/7 provincial health information and advice service, including 8-1-1.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2008-11-21",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2008HSERV0104-001782.htm",
+        "source_id": "healthlink-launch",
+        "locator": "Dateline, opening paragraph and expanded HealthLink BC description",
+        "checked": "2026-09-26",
+        "meaning": "Integrated HealthLink BC / 8-1-1 service launch"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Dates the integrated named service, not its older constituent services. Earlier BC NurseLine, Dial-A-Dietitian and BC HealthGuide histories are not collapsed into an unsourced 2001 establishment date.",
+      "research_events": [
+        {
+          "date": "2008-11-21",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2008HSERV0104-001782.htm",
+          "source_id": "healthlink-launch",
+          "locator": "Opening two paragraphs",
+          "checked": "2026-09-26",
+          "type": "operational_start",
+          "summary": "8-1-1 access to the expanded service opened."
+        }
+      ],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      }
+    }
+  ],
+  "gone": [
+    {
+      "id": "workers-compensation-review-board",
+      "name": "Workers’ Compensation Review Board",
+      "kind": "tribunal",
+      "parent_today": null,
+      "parent_today_name": null,
+      "official_url": null,
+      "source_today": null,
+      "description": null,
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "1968",
+        "precision": "year",
+        "evidence": "official_webpage",
+        "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+        "source_id": "wcat-history",
+        "locator": "Appendix 1, first paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Boards of Review statutory creation"
+      },
+      "ended": {
+        "date": "2003-03-03",
+        "precision": "day",
+        "evidence": "official_webpage",
+        "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+        "source_id": "wcat-history",
+        "locator": "Appendix 1, final paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Replaced by WCAT",
+        "boundary": "exclusive"
+      },
+      "names": [
+        {
+          "name": "Boards of Review",
+          "from": "1968",
+          "to": "1986",
+          "from_precision": "year",
+          "to_precision": "year",
+          "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+          "source_id": "wcat-history",
+          "locator": "Appendix 1, first paragraph",
+          "checked": "2026-09-26",
+          "coverage": "documented_period"
+        },
+        {
+          "name": "Workers’ Compensation Review Board",
+          "from": "1986",
+          "to": "2003-03-03",
+          "from_precision": "year",
+          "to_precision": "day",
+          "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+          "source_id": "wcat-history",
+          "locator": "Appendix 1, first and final paragraphs",
+          "checked": "2026-09-26",
+          "coverage": "documented_period"
+        }
+      ],
+      "parents": [],
+      "relations": [
+        {
+          "type": "replaced_by",
+          "body": "workers-compensation-appeal-tribunal",
+          "date": "2003-03-03",
+          "precision": "day",
+          "evidence": "official_webpage",
+          "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+          "source_id": "wcat-history",
+          "locator": "Appendix 1, final paragraph",
+          "checked": "2026-09-26"
+        }
+      ],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "One lineage through the 1986 rename; the predecessor does not duplicate WCAT.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "workers-compensation-board-appeal-division",
+      "name": "Appeal Division of the Workers’ Compensation Board",
+      "kind": "tribunal",
+      "parent_today": null,
+      "parent_today_name": null,
+      "official_url": null,
+      "source_today": null,
+      "description": null,
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "1991-06-03",
+        "precision": "day",
+        "evidence": "official_webpage",
+        "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+        "source_id": "wcat-history",
+        "locator": "Appendix 1, third paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Appeal Division established"
+      },
+      "ended": {
+        "date": "2003-03-03",
+        "precision": "day",
+        "evidence": "official_webpage",
+        "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+        "source_id": "wcat-history",
+        "locator": "Appendix 1, final paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Replaced by WCAT",
+        "boundary": "exclusive"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [
+        {
+          "type": "replaced_by",
+          "body": "workers-compensation-appeal-tribunal",
+          "date": "2003-03-03",
+          "precision": "day",
+          "evidence": "official_webpage",
+          "source": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+          "source_id": "wcat-history",
+          "locator": "Appendix 1, final paragraph",
+          "checked": "2026-09-26"
+        }
+      ],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Administrative and appellate functions separated in 1991. Parent named by the source; no ministry parent inferred.",
+      "research_events": [],
+      "date_claims": [],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "small-business-forest-enterprise-program",
+      "name": "Small Business Forest Enterprise Program",
+      "kind": "program",
+      "parent_today": null,
+      "parent_today_name": null,
+      "official_url": null,
+      "source_today": null,
+      "description": null,
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": {
+        "date": "2003",
+        "precision": "year",
+        "evidence": "service_plan",
+        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/for/for_goals_link2.htm",
+        "source_id": "bcts-plan",
+        "locator": "BC Timber Sales core business; replacement of SBFEP",
+        "checked": "2026-09-26",
+        "meaning": "Replacement year; exact transition milestone unresolved",
+        "boundary": "exclusive"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [
+        {
+          "type": "replaced_by",
+          "body": "bc-timber-sales",
+          "date": "2003",
+          "precision": "year",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/for/for_goals_link2.htm",
+          "source_id": "bcts-plan",
+          "locator": "BC Timber Sales core business",
+          "checked": "2026-09-26"
+        }
+      ],
+      "legal_basis": null,
+      "evidence_status": "requires_reconciliation",
+      "note": "Creation date remains unverified. The 1988 regulation in held BCTS events is not promoted to program establishment. Exact 2003 replacement dates require reconciliation.",
+      "research_events": [],
+      "date_claims": [
+        {
+          "date": "2003-04-01",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://www.bcfpb.ca/news-resources/news-releases/page/43/",
+          "source_id": "bcts-fpb",
+          "locator": "Paragraph identifying the replacement of SBFEP",
+          "checked": "2026-09-26",
+          "type": "succession_claim",
+          "summary": "Board report dates replacement to April 1."
+        }
+      ],
+      "first_observed": null,
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "selected historical claims only",
+        "full_history_complete": false
+      }
+    }
+  ]
+}

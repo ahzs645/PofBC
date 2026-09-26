@@ -67,10 +67,13 @@ export const EvidenceCard = ({ node }) => {
   const [open, setOpen] = useState(false)
   const claims = node.evidence ?? []
   const caveats = [
-    node.unattached && !node.uncertain && 'Existed in this period — its responsible ministry is not yet established in the sources.',
-    node.uncertain && 'Existence in this year is unknown: no source gives when it began. Shown because “Undated bodies” is on.'
+    node.unattached && !node.unplacedSub && !node.uncertain && 'Existed in this period — its responsible ministry is not yet established in the sources.',
+    node.unplacedSub && 'Existed in this period — which ministry or body it sat under is not established in the sources, so it is drawn apart.',
+    node.reconcile && 'Its start is not settled: the sources give competing dates (see its events), and it is drawn from the year the review chose.',
+    node.uncertain && !node.reconcile && 'Existence in this year is unknown: no source gives when it began. Shown because “Undated bodies” is on.'
   ].filter(Boolean)
-  if (!claims.length && !caveats.length) return null
+  const research = node.researched && node.note
+  if (!claims.length && !caveats.length && !research) return null
   return (
     <section className="gov-card gov-evidence">
       <button type="button" className="gov-evidence__toggle" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
@@ -78,6 +81,7 @@ export const EvidenceCard = ({ node }) => {
         <span aria-hidden="true">{open ? '−' : '+'}</span>
       </button>
       {caveats.map((text) => <p key={text} className="gov-notice">{text}</p>)}
+      {open && research && <p className="gov-muted gov-evidence__note">Research note{node.checked ? ` (${node.checked})` : ''}: {node.note}</p>}
       {open && (
         <ul className="gov-evidence__list">
           {claims.map((entry, index) => (

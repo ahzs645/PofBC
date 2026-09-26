@@ -1,0 +1,27 @@
+{
+  "about": "Editorial decisions made on top of the research. The research files record what the sources say, including where they disagree; a decision records which reading the atlas uses, why, and what it set aside. The builds apply these after reading the research, and never edit the research files themselves. See research/README.md, 'Recording a decision'.",
+  "decisions": [
+    {
+      "id": "bcts-established-2003-06-20",
+      "subject": "sub-agencies/bc-timber-sales",
+      "field": "established",
+      "value": {
+        "date": "2003-06-20",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://news.gov.bc.ca/releases/2013FLNR0194-001483",
+        "source_id": "bcts-anniversary",
+        "locator": "\"BC Timber Sales (BCTS) was established on June 20, 2003 with a mandate to support the market-based pricing system…\"",
+        "checked": "2026-09-26",
+        "meaning": "as BC Timber Sales dates itself, in its 10th-anniversary release of 2013"
+      },
+      "status": "documented_partial",
+      "reason": "The organisation's own official founding date. It is not the first sign of the body: BCTS replaced the Small Business Forest Enterprise Program and was operating from April 2003, and its name is in the Gazette on 29 May 2003. Those stay as events. No order in council or regulation dated 20 June 2003 was found; the Gazette of 26 June 2003 shows the handover still under way.",
+      "set_aside": [
+        { "date": "2003-04-01", "why": "The Small Business program's replacement and BCTS becoming operational — an earlier milestone, not the date BCTS gives for its establishment." },
+        { "date": "2003-05-29", "why": "An observation of the name in use, not an establishment." }
+      ],
+      "decided": "2026-09-26"
+    }
+  ]
+}

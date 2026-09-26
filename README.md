@@ -802,8 +802,10 @@ generator in that identity.
   checked 2026-09-25).
 - **The history is built, not typed.** `scripts/build-government-history.mjs` reads the research
   files and writes `src/government/historyData.js`, matching each portfolio to the episode it
-  headed and keeping every record's source (`GOVERNMENT_HISTORY_SOURCE=<dir> npm run
-  build:government-history`). Portfolios that headed no ministry of their own — President of the
+  headed and keeping every record's source (`npm run build:government-history`). The research
+  itself is committed in [`research/`](research/README.md), which explains how to add to it, how
+  to record an editorial decision between competing sources (`research/decisions.json`), and what
+  is still wanted ([`research/WANTED.md`](research/WANTED.md)). Portfolios that headed no ministry of their own — President of the
   Council, Deputy Premier, the "Minister Responsible for…" roles — are left unmatched and listed.
 - **Marks are drawn for the page.** A ministry's mark sits on the panel with no ground of its own:
   the current mark in its Colour version on light and its Reverse version on dark, the flag in its
@@ -828,6 +830,18 @@ year. Beyond their parents sit **sub-agencies** as dots, as the model draws its 
 today, from ministries' divisions (BC Wildfire Service, BC Parks, Service BC) and the
 administrative tribunals to the Crowns' subsidiaries (Powerex, BC Cancer), researched into the same
 build as the rest of the history.
+
+Most were collected from 2026 sources and have no start date, so before today they are drawn only
+when "Undated bodies" is on. A reviewed tranche (`research/history/sub-agencies-researched.json`,
+2026-09-26) dates 26 of them and adds three that are gone, as claims rather than a finished history:
+each start says what it dates (the Civil Resolution Tribunal's 2016 commencement, not its 2012
+assent), an end is exclusive (GPEB stands until the day IGCO replaced it), and a name or parent is a
+period only where a source gives one — a single sighting places it in that year alone. Where the
+review dated a parent, a body is not placed under it outside that period (BC Renal joins PHSA in
+2002, not at its 1997 founding); where nothing names a parent, it is drawn apart in the no-ministry
+lane; and a start the review could not settle (WorkBC, Powertech) says so — BC Timber Sales' was settled
+by a recorded decision. The brief listing what is still missing for every sub-agency
+(`research/sub-agencies/BRIEF.md`) is regenerated from the data by `npm run build:research-brief`.
 
 **An atlas, not just an org chart.** Following the BC government atlas research package of
 2026-09-25 (its model notes and acceptance cases are what the tests in

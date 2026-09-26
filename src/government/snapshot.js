@@ -410,31 +410,117 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
   }
 
   // Sub-agencies, as dots beyond their parent: today's, and in earlier years those known to have
-  // begun by then whose parent stood — a division of today's Ministry of Forests is placed beside
-  // that ministry's forerunner, as the Crown corporations are.
+  // begun by then and not yet ended (an end is exclusive: the day a successor began).
+  //
+  // Where it sat is taken from a source where one states it for the year. An observation — a
+  // source that shows it under a parent on one day — places it only in that year: it is not a
+  // period. Failing both, a body is placed beside its present parent, or that ministry's
+  // forerunner, and says the placement is inferred — unless the review has dated its parent and
+  // the year falls outside that, when the placement is unknown. A body known to stand with no
+  // parent to place it under is drawn apart, in the lane for bodies with no ministry established.
   const drawn = new Map(nodes.map((node) => [node.id, node]))
+  // A ministry of exactly that name, then a body of exactly that name, and only then a ministry
+  // whose name is near it — "Provincial Health Services Authority" is not the Ministry of Health
+  // Services.
+  const nodeNamed = (name) => {
+    const exact = standingByKey.get(ministryKey(name))
+    if (exact) return exact
+    const wanted = fold(name)
+    const body = nodes.find((node) => node.kind !== 'ministry' && (fold(node.name) === wanted || (node.shortName && fold(node.shortName) === wanted)))
+    return body?.id ?? ministryNamed(name)
+  }
+  const yearOf = (value) => Number(String(value).slice(0, 4))
+  const observedIn = (row) => row.coverage === 'observation_only' && row.observedOn && yearOf(row.observedOn) === year
+  const coversDay = (row) => row.coverage !== 'observation_only' && stands(row.from ?? '1871', row.to)
+  const subById = new Map(SUB_AGENCIES.map((entry) => [entry.id, entry]))
+  const brief = (entry) => entry && ({ id: entry.id, name: entry.name, established: entry.established, ended: entry.ended ?? null })
+  const SUB_AS_BODY = { tribunal: 'tribunal', board: 'agency', subsidiary: 'crown-corporation' }
+  const claimOf = (label, dated, extra = {}) => dated
+    ? claim(`${label} ${dated.date}${dated.meaning ? ` (${dated.meaning})` : ''}`,
+      historySource(dated.source), { ...(dated.locator ? { note: dated.locator } : {}), ...(dated.checked ? { checked: dated.checked } : {}), ...extra })
+    : null
+
   for (const entry of SUB_AGENCIES) {
+    if (entry.ended && startOf(entry.ended) <= day) continue
     const undated = !entry.established
     if (!present && !(entry.established && stands(entry.established, null)) && !(includeUndated && undated)) continue
-    const parentId = drawn.has(entry.parent) ? entry.parent
-      : !present && MINISTRY_EPISODES.some((episode) => episode.id === entry.parent) ? forerunnerIn(entry.parent, year)?.id ?? null
-        : null
+
+    // Where it sat in the year.
+    const statedRow = (entry.parents ?? []).filter(coversDay).at(-1) ?? (entry.parents ?? []).find(observedIn) ?? null
+    const statedId = statedRow ? nodeNamed(statedRow.name) : null
+    const datedParents = (entry.parents ?? []).some((row) => row.coverage !== 'observation_only' && row.from)
+    let parentId = null
+    let placement = null
+    if (statedId && drawn.has(statedId)) {
+      parentId = statedId
+      placement = 'stated'
+    } else if (present && entry.parent && drawn.has(entry.parent)) {
+      parentId = entry.parent
+      placement = 'today'
+    } else if (!present && !datedParents && entry.parent) {
+      parentId = drawn.has(entry.parent) ? entry.parent
+        : MINISTRY_EPISODES.some((episode) => episode.id === entry.parent) ? forerunnerIn(entry.parent, year)?.id ?? null : null
+      placement = 'inferred'
+    }
     const parent = parentId ? drawn.get(parentId) : null
-    if (!parent || !parent.branch) continue
-    const node = add({
+    // An undated body is shown only beside a parent: with nothing to say it stood, it cannot stand apart.
+    if ((!parent || !parent.branch) && undated) continue
+
+    // What it was called in the year: a dated name, or one observed in this very year.
+    const nameRow = (entry.names ?? []).filter(coversDay).at(-1) ?? (entry.names ?? []).find(observedIn) ?? null
+    const name = nameRow?.name ?? entry.name
+    const renamed = name !== entry.name
+
+    const successors = (entry.relations ?? []).filter((relation) => relation.type === 'replaced_by' || relation.type === 'merged_into')
+    const cameFrom = [
+      ...SUB_AGENCIES.filter((other) => (other.relations ?? []).some((relation) => relation.body === entry.id && (relation.type === 'replaced_by' || relation.type === 'merged_into'))),
+      ...(entry.relations ?? []).filter((relation) => relation.type === 'formed_from').map((relation) => subById.get(relation.body))
+    ].filter(Boolean).filter((other, index, list) => list.findIndex((item) => item.id === other.id) === index)
+
+    const reconcile = entry.status === 'requires_reconciliation'
+    const decided = (field) => (entry.decisions ?? []).find((decision) => decision.field === field)
+    const decisionNote = (field) => decided(field) ? { note: `Decided ${decided(field).decided}: ${decided(field).reason}` } : {}
+    const evidence = [
+      claimOf('Began', entry.establishedClaim, decisionNote('established')),
+      !entry.establishedClaim && entry.established
+        ? claim(`${entry.name}, from ${entry.established}`, historySource(entry.establishedSource ?? entry.source), reconcile ? { note: 'Collected, not confirmed: the review left this start unresolved.' } : {})
+        : null,
+      claimOf('Ended', entry.endedClaim, decided('ended') ? decisionNote('ended') : { note: 'An exclusive end: it stood until that day.' }),
+      nameRow && renamed ? claim(`Known as ${name}${nameRow.coverage === 'observation_only' ? ` in ${nameRow.observedOn}` : ` from ${nameRow.from ?? '?'}${nameRow.to ? ` to ${nameRow.to}` : ''}`}`, historySource(nameRow.source), nameRow.locator ? { note: nameRow.locator } : {}) : null,
+      placement === 'stated'
+        ? claim(`${statedRow.relation === 'subsidiary_of' ? 'A subsidiary of' : 'Part of'} ${statedRow.name}${statedRow.coverage === 'observation_only' ? ` (observed ${statedRow.observedOn})` : statedRow.from ? ` from ${statedRow.from}` : ''}`, historySource(statedRow.source), statedRow.locator ? { note: statedRow.locator } : {})
+        : placement === 'today' ? claim(`${entry.name}, part of the ${parent.name}`, historySource(entry.source), { checked: CURRENT_AS_OF }) : null,
+      entry.legalBasis ? claim(entry.legalBasis.citation, historySource(entry.legalBasis.source), entry.legalBasis.locator ? { note: entry.legalBasis.locator } : {}) : null
+    ].filter(Boolean)
+
+    const common = {
       ...entry,
-      kind: 'sub',
-      ring: 'sub',
-      branch: parent.branch,
-      parent: parent.id,
-      parentName: parent.shortName ?? parent.name,
-      inferredParent: parent.id !== entry.parent,
+      name,
+      ...(renamed ? { shortName: undefined, laterName: entry.name } : {}),
+      subType: entry.type,
+      inferredParent: placement === 'inferred' && Boolean(parent),
+      parentToday: entry.parent ?? null,
+      // The review found competing dates, or could not confirm the one collected.
       uncertain: !present && undated,
+      reconcile,
       present,
-      events: eventsFor([entry.id]),
-      evidence: [claim(`${entry.name}, part of the ${parent.name}`, historySource(entry.source), present ? { checked: CURRENT_AS_OF } : {})].filter(Boolean)
-    })
-    link(parent.id, node.id, 'part')
+      events: eventsFor([entry.id, ...cameFrom.map((other) => other.id)]),
+      // Succession is shown as what it came from and became; `relations` is for typed
+      // responsibility relations, which the review did not record for sub-agencies.
+      relations: [],
+      succession: entry.relations ?? [],
+      cameFrom: cameFrom.map(brief),
+      became: successors.length ? brief(subById.get(successors[0].body)) : null,
+      evidence
+    }
+
+    if (parent && parent.branch) {
+      const node = add({ ...common, kind: 'sub', ring: 'sub', branch: parent.branch, parent: parent.id, parentName: parent.shortName ?? parent.name })
+      link(parent.id, node.id, 'part')
+    } else {
+      // Known to stand, under nothing a source names for the year.
+      add({ ...common, kind: SUB_AS_BODY[entry.type] ?? 'agency', ring: 'outer', branch: 'executive', parent: null, group: null, unattached: true, unplacedSub: true })
+    }
   }
 
   // Partnerships: bodies that work with a ministry without answering to it.

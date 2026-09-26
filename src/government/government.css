@@ -370,6 +370,12 @@
 .gov-feed__names button + button::before { content: ', '; text-decoration: none; display: inline-block; white-space: pre; }
 .gov-feed__out { color: var(--gov-ink-3); }
 
+/* A long label ("Executive departure") wraps inside its column rather than running into the text
+   beside it, and a title set as a button reads left-aligned, as text. */
+.gov-feed__item { grid-template-columns: 112px minmax(0, 1fr); align-items: start; }
+.gov-feed__item > .gov-chip { justify-self: start; max-width: 100%; white-space: normal; overflow-wrap: anywhere; border-radius: 8px; }
+.gov-feed__names .gov-link-button { text-align: left; }
+
 .gov-sources summary { cursor: pointer; font-weight: 600; font-size: 14px; }
 .gov-sources ul { margin: 12px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.5; color: var(--gov-ink-3); }
 
@@ -459,13 +465,18 @@
 }
 
 .gov-graph__node { cursor: pointer; }
-.gov-graph__node:focus-visible { outline: none; }
+/* A click focuses the node it selects; the browser's own outline would then box the shape. The
+   selection already shows which node is chosen, so no outline is drawn on any focus — keyboard
+   focus gets the diagram's own ring instead (below). */
+.gov-graph__node:focus, .gov-graph__node:focus-visible,
+.gov-graph__seal:focus, .gov-graph__seal:focus-visible,
+.gov-graph:focus, .gov-graph svg:focus { outline: none; }
+.gov-graph__node { -webkit-tap-highlight-color: transparent; }
 .gov-graph__focus { display: none; fill: none; stroke: var(--focus); stroke-width: 2; }
 .gov-graph__node:focus-visible .gov-graph__focus { display: inline; }
 .gov-graph__node[data-hidden] { opacity: 0.12; pointer-events: none; }
 .gov-graph__node { animation: gov-enter 400ms ease-out both; }
 .gov-graph__seal { cursor: pointer; }
-.gov-graph__seal:focus-visible { outline: none; }
 .gov-graph__seal:focus-visible path { stroke-width: 3; }
 
 @keyframes gov-enter { from { opacity: 0; } }

@@ -13,20 +13,20 @@
 //
 // Run with the research directory's path:
 //
-//   GOVERNMENT_HISTORY_SOURCE=tmp/research/history npm run build:government-history
+//   npm run build:government-history
+//
+// It reads the committed research in research/history/ (see research/README.md); GOVERNMENT_HISTORY_SOURCE points it
+// elsewhere.
 //
 // The output is committed: like the ministry history it is a fixed record, not something that
 // re-derives per machine.
 
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { MINISTRY_EPISODES } from '../src/government/episodes.js'
+import { applyDecisions, readDecisions } from './research-decisions.mjs'
 
-const SOURCE = process.env.GOVERNMENT_HISTORY_SOURCE
-if (!SOURCE) {
-  console.error('GOVERNMENT_HISTORY_SOURCE is not set — point it at the research directory.')
-  process.exit(1)
-}
+const SOURCE = process.env.GOVERNMENT_HISTORY_SOURCE || 'research/history'
 
 const read = (name) => JSON.parse(readFileSync(resolve(SOURCE, name), 'utf8'))
 const ERAS = ['1871-1903', '1903-1941', '1941-1975', '1975-1991', '1991-2011', '2011-2026']
@@ -187,7 +187,8 @@ const bodies = researched
 // Which ministry answered for each body, period by period, from the follow-up research where it
 // found one: added to the research record, or — for a body only the present's record has — to a
 // record of its own that carries nothing else.
-const responsibleFiles = [0, 1, 2, 3].map((index) => `responsible-${index}.json`).filter((name) => existsSync(resolve(SOURCE, name)))
+// Every responsible-*.json file, so a new round of research is a new file.
+const responsibleFiles = readdirSync(SOURCE).filter((name) => /^responsible-.*\.json$/.test(name)).sort()
 let periods = 0
 for (const name of responsibleFiles) {
   for (const [researchId, list] of Object.entries(read(name).records ?? {})) {
@@ -245,24 +246,156 @@ const offices = Object.fromEntries(read('holders.json').offices.map((office) => 
 }]))
 
 // ── Sub-agencies: ministries' divisions, tribunals, and the Crowns' subsidiaries ──────────────────
+//
+// The three collection files overlap — a tribunal is also a ministry's division — so a body found
+// twice is merged field by field: the first copy's values stand, a later copy fills what the first
+// left empty, and a start date keeps the source that gave it. (Keeping only the first copy used to
+// drop the dates that only the tribunal file had.)
 
 const subFiles = ['sub-divisions.json', 'sub-tribunals.json', 'sub-subsidiaries.json'].filter((name) => existsSync(resolve(SOURCE, name)))
-const subAgencies = []
+const MERGED = ['name', 'shortName', 'parent', 'kind', 'established', 'description', 'url', 'source']
+const collected = new Map()
+const mergeWarnings = []
 for (const name of subFiles) {
   for (const record of read(name).records ?? []) {
-    // The same body can come from two files — a tribunal is also a ministry's division — and is kept once.
-    if (!record?.id || !record.parent || subAgencies.some((entry) => entry.id === `sub-${record.id}`)) continue
-    subAgencies.push({
+    if (!record?.id) continue
+    const held = collected.get(record.id)
+    if (!held) {
+      collected.set(record.id, { ...record, establishedSource: record.established ? record.source : null })
+      continue
+    }
+    for (const field of MERGED) {
+      const value = record[field]
+      if (value === null || value === undefined || value === '') continue
+      if (held[field] === null || held[field] === undefined || held[field] === '') {
+        held[field] = value
+        if (field === 'established') held.establishedSource = record.source
+      } else if (String(held[field]) !== String(value) && (field === 'established' || field === 'parent')) {
+        mergeWarnings.push(`${record.id}: ${field} ${held[field]} kept, ${value} in ${name} set aside`)
+      }
+    }
+  }
+}
+
+const subAgencies = []
+for (const record of collected.values()) {
+  if (!record.parent) continue
+  subAgencies.push({
+    id: `sub-${record.id}`,
+    name: record.name,
+    ...(record.shortName ? { shortName: record.shortName } : {}),
+    parent: record.parent,
+    type: record.kind ?? null,
+    established: record.established ? String(record.established) : null,
+    description: record.description ?? null,
+    officialUrl: record.url ?? null,
+    source: sourceIndex(record.source),
+    ...(record.establishedSource && record.establishedSource !== record.source ? { establishedSource: sourceIndex(record.establishedSource) } : {})
+  })
+}
+
+// ── Sub-agencies: the reviewed history (sub-agencies-researched.json) ────────────────────────────
+//
+// Claims, not a finished history. Each date keeps its precision and says what it dates ("opened",
+// "statutory establishment provision in force"); an end is an exclusive boundary; names and parents
+// are kept as periods where the source gives one and as single observations where it does not — an
+// observation is not a period, and is never drawn as one. A record whose research is incomplete
+// says so. Bodies that are gone are added, with no parent unless a source names one.
+
+const RESEARCHED = 'sub-agencies-researched.json'
+let researchedCount = 0
+let goneCount = 0
+if (existsSync(resolve(SOURCE, RESEARCHED))) {
+  const research = read(RESEARCHED)
+  if (!String(research.schema_version ?? '').startsWith('sub-agencies-research/1')) {
+    console.error(`${RESEARCHED}: unknown schema ${research.schema_version}`)
+    process.exit(1)
+  }
+  // Editorial decisions (research/decisions.json) come first: they pick between competing claims.
+  for (const id of applyDecisions('sub-agencies', [...(research.records ?? []), ...(research.gone ?? [])], readDecisions(SOURCE))) {
+    console.warn(`decision ${id} matches no sub-agency record`)
+  }
+  const dateOf = (claim) => claim?.date
+    ? {
+        date: String(claim.date),
+        precision: claim.precision ?? null,
+        meaning: claim.meaning ?? null,
+        evidence: claim.evidence ?? null,
+        source: sourceIndex(claim.source),
+        locator: claim.locator ?? null,
+        checked: claim.checked ?? null
+      }
+    : null
+  const periodOf = (row, value) => ({
+    ...value,
+    from: row.from ?? null,
+    to: row.to ?? null,
+    fromPrecision: row.from_precision ?? null,
+    toPrecision: row.to_precision ?? null,
+    observedOn: row.observed_on ?? null,
+    coverage: row.coverage ?? null,
+    source: sourceIndex(row.source),
+    locator: row.locator ?? null
+  })
+  const byId = new Map(subAgencies.map((entry) => [entry.id, entry]))
+  const compile = (record, entry) => {
+    const established = dateOf(record.established)
+    const ended = dateOf(record.ended)
+    // A researched start replaces the collected one; where the research left the start unresolved,
+    // a collected year stands but is marked as needing reconciliation.
+    if (established) entry.established = established.date
+    Object.assign(entry, {
+      researched: true,
+      status: record.evidence_status ?? null,
+      ...(established ? { establishedClaim: established } : {}),
+      ...(ended ? { ended: ended.date, endedClaim: ended } : {}),
+      names: (record.names ?? []).map((row) => periodOf(row, { name: row.name })),
+      parents: (record.parents ?? []).map((row) => periodOf(row, { name: row.ministry_as_printed, relation: row.relation ?? 'part_of' })),
+      relations: (record.relations ?? []).map((row) => ({
+        type: row.type,
+        body: `sub-${row.body}`,
+        date: row.date ?? null,
+        precision: row.precision ?? null,
+        source: sourceIndex(row.source),
+        locator: row.locator ?? null
+      })),
+      legalBasis: record.legal_basis
+        ? { citation: record.legal_basis.citation, source: sourceIndex(record.legal_basis.source), locator: record.legal_basis.locator ?? null }
+        : null,
+      identityReview: Boolean(record.identity_review_required),
+      decisions: (record.decisions ?? []).map(({ id, field, reason, decided }) => ({ id, field, reason, decided })),
+      note: record.note || null,
+      checked: record.review?.checked ?? null
+    })
+  }
+  for (const record of research.records ?? []) {
+    const entry = byId.get(`sub-${record.id}`)
+    if (!entry) {
+      console.warn(`${RESEARCHED}: no collected sub-agency ${record.id}`)
+      continue
+    }
+    compile(record, entry)
+    researchedCount += 1
+  }
+  for (const record of research.gone ?? []) {
+    if (byId.has(`sub-${record.id}`)) continue
+    const entry = {
       id: `sub-${record.id}`,
       name: record.name,
       ...(record.shortName ? { shortName: record.shortName } : {}),
-      parent: record.parent,
+      // Gone, and placed under nothing no source names.
+      parent: record.parent_today ?? null,
       type: record.kind ?? null,
-      established: record.established ? String(record.established) : null,
+      established: null,
       description: record.description ?? null,
-      officialUrl: record.url ?? null,
-      source: sourceIndex(record.source)
-    })
+      officialUrl: record.official_url ?? null,
+      source: sourceIndex(record.established?.source ?? record.ended?.source),
+      gone: true
+    }
+    compile(record, entry)
+    subAgencies.push(entry)
+    byId.set(entry.id, entry)
+    goneCount += 1
   }
 }
 
@@ -295,8 +428,9 @@ const lines = [
   ...bodies.map((body) => `  ${json(body)},`),
   ']',
   '',
-  '/** Sub-agencies as they stand today: a parent id from the present diagram, and where known the',
-  ' *  year each began, which is what lets it appear on the timeline before today. */',
+  '/** Sub-agencies: today\'s, with a parent id from the present diagram and where known the date each',
+  ' *  began; and, where reviewed, dated claims ({date, precision, meaning, source, locator}), an',
+  ' *  exclusive end, names and parents as periods or single observations, and succession. */',
   'export const SUB_AGENCIES = [',
   ...subAgencies.map((entry) => `  ${json(entry)},`),
   ']',
@@ -311,7 +445,8 @@ writeFileSync(OUT, lines.join('\n'))
 
 console.log(`${matched}/${terms.length} minister terms matched to ${byEpisode.size} of ${MINISTRY_EPISODES.length} episodes`)
 console.log(`${bodies.length} bodies, ${Object.keys(offices).length} offices, ${sources.length} sources`)
-console.log(`${subAgencies.length} sub-agencies from ${subFiles.length} files; ${typedRelations} typed relations for BC Rail and the WCB`)
+console.log(`${subAgencies.length} sub-agencies from ${subFiles.length} files (${researchedCount} with reviewed history, ${goneCount} gone); ${typedRelations} typed relations for BC Rail and the WCB`)
+for (const warning of mergeWarnings) console.warn(`sub-agency merge: ${warning}`)
 console.log(`${periods} responsible-ministry periods from ${responsibleFiles.length} follow-up files; ${bodies.filter((body) => body.responsible.length).length} bodies have at least one`)
 if (unmatched.size) {
   console.log('Unmatched portfolios (usually ones that headed no ministry of their own):')

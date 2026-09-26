@@ -15,16 +15,16 @@
 //
 // Run with the research directory that holds both:
 //
-//   GOVERNMENT_RESEARCH=tmp/research npm run build:government-events
+//   npm run build:government-events
+//
+// It reads the committed research in research/ (see research/README.md); GOVERNMENT_RESEARCH points it
+// elsewhere.
 
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { applyDecisions, readDecisions } from './research-decisions.mjs'
 
-const ROOT = process.env.GOVERNMENT_RESEARCH
-if (!ROOT) {
-  console.error('GOVERNMENT_RESEARCH is not set — point it at the research directory (tmp/research).')
-  process.exit(1)
-}
+const ROOT = process.env.GOVERNMENT_RESEARCH || 'research'
 
 const OUT = resolve('src/government/eventsData.js')
 const read = (path) => JSON.parse(readFileSync(resolve(ROOT, path), 'utf8'))
@@ -134,6 +134,50 @@ for (const name of atlasFiles) {
   }
 }
 
+// ── The sub-agency research (history/sub-agencies-researched.json) ──────────────────────────────
+//
+// What each reviewed start and end dates, the milestones that compete with a start (BC Timber
+// Sales has three), a name's first sighting, and events the review found — each typed as the
+// research types it, so an opening is not shown as a founding.
+
+const reviewed = resolve(ROOT, 'history/sub-agencies-researched.json')
+let reviewedEvents = 0
+if (existsSync(reviewed)) {
+  const research = JSON.parse(readFileSync(reviewed, 'utf8'))
+  applyDecisions('sub-agencies', [...(research.records ?? []), ...(research.gone ?? [])], readDecisions(ROOT))
+  const catalogue = existsSync(resolve(ROOT, 'history/sub-agencies-sources.json'))
+    ? Object.fromEntries(read('history/sub-agencies-sources.json').sources.map((source) => [source.id, source]))
+    : {}
+  const sourceOf = (claim) => sourceIndex({ url: claim.source, title: catalogue[claim.source_id]?.title ?? null })
+  const eventOf = (record, claim, type, title, suffix) => {
+    if (!claim?.date) return
+    // An earlier pass may already have the same start or end as an event of its own.
+    const kind = /establish/.test(type) ? /establish/ : /dissol|replace|abolish/.test(type) ? /dissol|replace|abolish|succession/ : null
+    if (kind && events.some((event) => event.subject === `sub-${record.id}` && event.date.start === String(claim.date) && kind.test(event.type))) return
+    add({
+      id: `sub:${record.id}:${suffix}`,
+      subject: `sub-${record.id}`,
+      type,
+      title,
+      date: { start: String(claim.date), end: null, precision: claim.precision ?? 'unknown', inclusive: false },
+      status: 'source_reported_past',
+      sources: [sourceOf(claim)].filter((index) => index !== null),
+      locator: locatorText(claim.locator),
+      notes: claim.boundary === 'exclusive' ? 'The end is the day its successor began: it stood until then, not through it.' : null,
+      reviewed: claim.checked ?? research.generated ?? null
+    })
+    reviewedEvents += 1
+  }
+  for (const record of [...(research.records ?? []), ...(research.gone ?? [])]) {
+    const name = record.name
+    eventOf(record, record.established, 'established', record.established?.meaning ? `${name}: ${record.established.meaning}` : `${name} established`, 'established')
+    eventOf(record, record.ended, 'dissolved', record.ended?.meaning ? `${name}: ${record.ended.meaning}` : `${name} ended`, 'ended')
+    eventOf(record, record.first_observed, 'name_first_observed', `${name}: the name first seen in this review's sources`, 'first-observed')
+    ;(record.research_events ?? []).forEach((event, index) => eventOf(record, event, event.type, `${name}: ${event.summary}`, `event-${index}`))
+    ;(record.date_claims ?? []).forEach((claim, index) => eventOf(record, claim, claim.type ?? 'establishment_claim', `${name}: ${claim.summary ?? 'a competing start date'}`, `claim-${index}`))
+  }
+}
+
 events.sort((a, b) => a.date.start.localeCompare(b.date.start) || a.id.localeCompare(b.id))
 
 const json = (value) => JSON.stringify(value)
@@ -153,4 +197,4 @@ writeFileSync(OUT, [
   ''
 ].join('\n'))
 
-console.log(`${events.length} events (${atlasFiles.length} research files), ${sources.length} sources`)
+console.log(`${events.length} events (${atlasFiles.length} research files, ${reviewedEvents} from the sub-agency review), ${sources.length} sources`)

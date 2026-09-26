@@ -390,9 +390,15 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
 
         {node.inferredParent && (
           <p className="gov-notice">
-            Part of {node.parentName} in {year} by inference: it belongs to that ministry’s successor
-            today, and when it moved between ministries is not recorded here.
+            {node.parent === node.parentToday
+              ? <>Shown under {node.parentName}, where it sits today; where it sat in {year} is not recorded here.</>
+              : <>Part of {node.parentName} in {year} by inference: it belongs to that ministry’s successor
+                today, and when it moved between ministries is not recorded here.</>}
           </p>
+        )}
+
+        {node.laterName && (
+          <p className="gov-notice">Known today as {node.laterName}.</p>
         )}
 
         {node.inferredGroup && (
