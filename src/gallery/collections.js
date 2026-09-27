@@ -16,6 +16,7 @@
 // era's marks all share one record it is written once, on the era, and each entry inherits it.
 
 import { BCTS_ENTRIES, ONE_OFFS } from './oneOffs.js'
+import { COLLECTION_ERAS, TIMELINES, timelineKeyOf } from './timelines.js'
 import { CURRENT_VARIANT_ORDER, CURRENT_VARIANTS } from '../hydro/hydroMarks.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
@@ -80,12 +81,11 @@ const PUBLISHED = {
   rights: PROVINCE_RIGHTS
 }
 
-const BEST_PLACE_YEARS = {
-  kind: 'estimated_era',
-  years: 'Best Place on Earth years',
-  note: 'Dated by its style — the shaded sun and the gold-accented Garamond of the Best Place on Earth ' +
-    'identity — not by a record of when it was adopted or retired.'
-}
+/**
+ * A mark dated by the timeline it sits on (timelines.js), which cites the sources. What the dates
+ * rest on is said here in brief, for the mark's own account of itself.
+ */
+const DATED_BY_TIMELINE = (kind, years, note) => ({ kind, years, note: `${note} Its timeline cites the sources.` })
 
 const UNSOURCED = (years) => ({
   kind: 'estimated_era',
@@ -105,28 +105,60 @@ const ONE_OFF_IDENTITY = {
     fidelity: 'partially compared',
     fidelityNote: 'Set by this project’s flag renderer, with its proportions read off a picture of the ' +
       'mark rather than measured from artwork.',
-    applicability: {
-      kind: 'estimated_era',
-      years: 'from the 1980s',
-      note: 'The decade is inferred from the flag-era identity it belongs to; no adoption record is cited.'
-    },
+    applicability: DATED_BY_TIMELINE('first_observation', 'by 2002',
+      'Seen on park brochures printed in 2002. A start in the 1980s is inferred from the flag-era identity ' +
+      'it belongs to, and no adoption record is cited.'),
     rights: PROVINCE_RIGHTS
   },
-  'welcome-bc': { ...PUBLISHED, applicability: BEST_PLACE_YEARS },
-  'work-bc': { ...PUBLISHED, applicability: BEST_PLACE_YEARS },
-  'bc-stats': { ...PUBLISHED, applicability: BEST_PLACE_YEARS },
-  'environmental-reporting-bc': { ...PUBLISHED, applicability: BEST_PLACE_YEARS },
-  'public-service': { ...PUBLISHED, applicability: BEST_PLACE_YEARS },
-  'pacific-gateway': { ...PUBLISHED, applicability: BEST_PLACE_YEARS },
-  'best-place-on-earth': { ...PUBLISHED, applicability: BEST_PLACE_YEARS },
-  'stronger-bc': { ...PUBLISHED, applicability: UNSOURCED('from 2021') },
+  'welcome-bc': {
+    ...PUBLISHED,
+    applicability: DATED_BY_TIMELINE('estimated_era', 'before 2016',
+      'Its shaded sun puts it before the flat mark WelcomeBC.ca carried from March 2016; the program itself ' +
+      'was announced in June 2007.')
+  },
+  'work-bc': {
+    ...PUBLISHED,
+    applicability: DATED_BY_TIMELINE('estimated_era', '2007–2011',
+      'Bounded by WorkBC.ca’s first capture, in April 2007, and by its tagline, which the Province dropped ' +
+      'in 2011.')
+  },
+  'bc-stats': {
+    ...PUBLISHED,
+    applicability: DATED_BY_TIMELINE('estimated_era', '2007–2012',
+      'Most likely the lockup in BC Stats’ site header from 2007 to 2012, which has not been compared with it.')
+  },
+  'environmental-reporting-bc': {
+    ...PUBLISHED,
+    applicability: DATED_BY_TIMELINE('estimated_era', '2012–2016',
+      'The program launched in 2012; a lockup with the shaded sun is in its report templates of 2015–2016.')
+  },
+  'public-service': {
+    ...PUBLISHED,
+    applicability: DATED_BY_TIMELINE('estimated_era', 'from 2007',
+      'The “Where ideas work” brand launched in 2007; when this lockup of it was replaced is not recorded.')
+  },
+  'pacific-gateway': {
+    ...PUBLISHED,
+    applicability: DATED_BY_TIMELINE('estimated_era', '2008–2011',
+      'The brand is first seen on gov.bc.ca in April 2008 and was replaced in 2011; nothing dates this lockup ' +
+      'of it in particular.')
+  },
+  'best-place-on-earth': {
+    ...PUBLISHED,
+    applicability: DATED_BY_TIMELINE('documented_adoption', '2005–2011',
+      'The slogan and the sun mark were launched in 2005, and the slogan dropped in 2011; neither is dated ' +
+      'to the month.')
+  },
+  'stronger-bc': {
+    ...PUBLISHED,
+    applicability: DATED_BY_TIMELINE('documented_adoption', 'from 2020',
+      'The recovery plan it names was released in September 2020, and its guidelines give this word mark in ' +
+      'January 2021.')
+  },
   'bc-wildfire-service': {
     ...PUBLISHED,
-    applicability: {
-      kind: 'estimated_era',
-      years: 'in use today',
-      note: 'Seen in current published material; when it was adopted is not recorded here.'
-    }
+    applicability: DATED_BY_TIMELINE('first_observation', 'by 2023',
+      'Its file on the wildfire situation site is first captured in May 2023; it may be older.')
   },
   'bc-wildfire-service-one-line': {
     ...PUBLISHED,
@@ -141,35 +173,35 @@ const ONE_OFF_IDENTITY = {
   // so they say as much and no more — as the earlier BCTS wordmark does below.
   'environmental-lab-bc': {
     ...PUBLISHED,
-    fidelityNote: SUPPLIED_FIDELITY,
-    applicability: UNDATED('Its flat sun places it in the later marks; no date for it has been found.')
+    fidelityNote: SUPPLIED_FIDELITY + ' The file is the same Illustrator export as the mark on the lab’s ' +
+      'page on gov.bc.ca.',
+    applicability: DATED_BY_TIMELINE('first_observation', 'by 2025',
+      'Its file on the lab’s page is first captured in April 2025, after the lab took the name.')
   },
-  // Remade, not lifted: the program's own mark was the BC mark in outline, in one ink, which the
-  // current identity does not draw, so the card is the published BC mark with the name set beside it.
+  // Remade, not lifted: the program's own marks have not been obtained, so the card is the published
+  // BC mark with the name set beside it.
   'prepared-bc': {
     provenance: 'synthetic_name_variant',
     fidelity: 'no comparison',
     fidelityNote: 'The BC mark is the published one; “PreparedBC” is set in the ministry alphabet, not ' +
-      'taken from any artwork of the program’s own.',
-    applicability: UNDATED('A remake, not a mark the program used. Its own outline mark has no date ' +
-      'found for it either.'),
+      'taken from any artwork of the program’s own. The program’s own lockup, which it has used since 2015, ' +
+      'sets “BC” in gold; this does not.',
+    applicability: UNDATED('A remake, not a mark the program used. The program was launched on 1 May 2015, ' +
+      'and its own lockup is first seen that September.'),
     rights: PROVINCE_RIGHTS
   },
   bcts: {
     ...PUBLISHED,
-    applicability: {
-      kind: 'estimated_era',
-      years: 'in use today',
-      note: 'Seen in current published material; when it was adopted is not recorded here.'
-    }
+    applicability: DATED_BY_TIMELINE('first_observation', 'by 2023',
+      'On BC Timber Sales’ business plan of August 2023 and its reports since.')
   },
   // Its file came to the project without a record of where it was published, so this claims only
-  // what the build did with it; the date is unknown rather than guessed.
+  // what the build did with it; its dates are the website's, where the same wordmark is seen.
   'bcts-wordmark-earlier': {
     ...PUBLISHED,
     fidelityNote: SUPPLIED_FIDELITY,
-    applicability: UNDATED('Taken to be earlier than the mark beside the BC mark from its setting alone; ' +
-      'no date for it has been found.')
+    applicability: DATED_BY_TIMELINE('first_observation', '2005–2017',
+      'The wordmark heads BC Timber Sales’ website from May 2005 to November 2017.')
   }
 }
 
@@ -247,8 +279,17 @@ const GRAPH_NODES = {
 
 const withNode = (entry) => (GRAPH_NODES[entry.id] ? { ...entry, graphNode: GRAPH_NODES[entry.id] } : entry)
 
-/** One of the Province's marks as the gallery shows it: its body in the diagram, and its identity. */
-const provincial = (entry) => withIdentity(withNode(entry))
+/** Which timeline a one-off sits on (timelines.js), where one has been researched. */
+const withTimeline = (entry) => (timelineKeyOf(entry.id) ? { ...entry, timeline: timelineKeyOf(entry.id) } : entry)
+
+/**
+ * One of the Province's marks as the gallery shows it: its body in the diagram, its identity, and
+ * the timeline it sits on.
+ */
+const provincial = (entry) => withTimeline(withIdentity(withNode(entry)))
+
+/** A collection's researched eras (timelines.js), with the gallery's marks put into the held ones. */
+const withMarks = (eras, marks) => eras.map((each) => ({ ...each, entries: marks[each.id] ?? [] }))
 
 /**
  * The gallery in two shelves.
@@ -366,40 +407,32 @@ export const GALLERY_COLLECTIONS = [
     shelf: 'bodies',
     label: 'BC Timber Sales',
     body: 'Program · Ministry of Forests',
-    years: 'earlier–present',
+    years: '2003–present',
     graphNode: 'sub-bc-timber-sales',
     cover: 'bcts',
-    intro: 'BC Timber Sales’ marks: its initials over its name, first on their own and then beside the ' +
-      'BC mark. The initials have been published in two greens — forest on white, teal reversed — and ' +
-      'every mark starts from either. Open one to recolour it.',
-    eras: [
-      {
-        id: 'bcts-earlier',
-        years: 'earlier',
-        label: 'The wordmark on its own',
-        note: '“BCTS” in green over “BC Timber Sales” in a slab serif, with no BC mark beside it.',
-        entries: BCTS_ENTRIES.earlier.map(withIdentity)
-      },
-      {
-        id: 'bcts-current',
-        years: 'in use today',
-        label: 'Beside the BC mark',
-        note: 'The initials over the name in a sans, beside the BC mark with a grey divider.',
-        entries: BCTS_ENTRIES.current.map(withIdentity)
-      }
-    ]
+    intro: 'BC Timber Sales’ marks since it was established in 2003: its initials over its name, first on ' +
+      'their own, then beside a ministry crest, then beside the BC mark. The initials have been published ' +
+      'in two greens — forest on white, teal reversed — and every mark here starts from either. Open one ' +
+      'to recolour it.',
+    eras: withMarks(COLLECTION_ERAS.bcts, {
+      'bcts-earlier': BCTS_ENTRIES.earlier.map(withIdentity),
+      'bcts-current': BCTS_ENTRIES.current.map(withIdentity)
+    })
   },
   {
     id: 'bc-parks',
     shelf: 'bodies',
     label: 'BC Parks',
     body: 'Division · Ministry of Environment and Parks',
-    years: 'from the 1980s',
+    years: '2002–present',
     graphNode: 'sub-bc-parks',
     cover: 'bc-parks',
-    intro: 'BC Parks’ badge from the flag years: the flag symbol in a rounded frame with “Parks” set at ' +
-      'the size of “BC”. Open it to recolour it.',
-    entries: ONE_OFFS.filter((entry) => entry.id === 'bc-parks').map(provincial)
+    intro: 'BC Parks’ marks, oldest first: its badge from the flag years — the flag symbol in a rounded ' +
+      'frame with “Parks” set at the size of “BC”, which opens to recolour — then the marks that followed ' +
+      'it on the Province’s sun, which the gallery does not have yet.',
+    eras: withMarks(COLLECTION_ERAS['bc-parks'], {
+      'parks-badge': ONE_OFFS.filter((entry) => entry.id === 'bc-parks').map(provincial)
+    })
   },
   {
     id: 'bc-mark',
@@ -425,3 +458,23 @@ export const entriesOf = (collection) => collection.eras
 export const findGalleryEntry = (id) => GALLERY_COLLECTIONS
   .flatMap(entriesOf)
   .find((entry) => entry.id === id)
+
+/**
+ * The timeline a one-off sits on, with each era's marks resolved to the gallery's own entries, so a
+ * mark on it opens as it does anywhere else. Undefined for a mark with no researched history.
+ */
+export const timelineOf = (entry) => {
+  const timeline = entry?.timeline && TIMELINES[entry.timeline]
+  if (!timeline) return undefined
+  return {
+    ...timeline,
+    eras: timeline.eras.map((each) => ({ ...each, entries: (each.marks ?? []).map(findGalleryEntry) }))
+  }
+}
+
+/**
+ * What an era holds: its marks, a mark the generator draws, a mark of its own the gallery has not
+ * obtained, or none of its own (the body went under the Province's or its ministry's marks). An era
+ * that does not say — BC Hydro's — is held if it has marks.
+ */
+export const eraStatus = (each) => each.status ?? (each.entries.length > 0 ? 'held' : 'sought')

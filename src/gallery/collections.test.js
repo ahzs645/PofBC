@@ -45,6 +45,13 @@ test('the reconstructed 1961 signatures own up to their substitute lettering', (
 })
 
 test('an undated mark is unknown, not estimated', () => {
+  const remake = everyEntry.find((entry) => entry.id === 'prepared-bc')
+  assert.equal(remake.identity.applicability.kind, 'unknown')
+})
+
+test('a mark dated by where it was seen says so, rather than claiming an adoption', () => {
   const earlier = everyEntry.find((entry) => entry.id === 'bcts-wordmark-earlier')
-  assert.equal(earlier.identity.applicability.kind, 'unknown')
+  assert.equal(earlier.identity.applicability.kind, 'first_observation')
+  const bcts = GALLERY_COLLECTIONS.find((collection) => collection.id === 'bcts')
+  assert.deepEqual(bcts.eras.map((era) => era.entries.length > 0), [false, true, false, true])
 })

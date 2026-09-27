@@ -41,6 +41,17 @@ each draws itself from the same renderer as everything else, so a card cannot dr
 gives you. The second is **BC Hydro**, in all three of its identities (below); `src/gallery/collections.js` is where another body's
 marks would go, and an entry's `kind` decides what opening it shows.
 
+**Every mark sits on a timeline.** BC Hydro's page runs through its three identities oldest first,
+and so does every other body's: BC Parks from its flag-era badge to today's logo, BC Timber Sales
+from its first banner in 2003, and — under each one-off, when it is opened — WorkBC, WelcomeBC,
+BC Stats, BC Wildfire Service and the rest, each with the eras its body has had. A rail across the
+top steps through them. An era whose mark the gallery does not hold keeps its place as an empty
+slot, with where its artwork has been seen; an era in which the body had no mark of its own says
+so; and an era the generator draws (the flag logo, today's BC mark) opens there. Every era cites
+its sources, and most dates are first seen in a Wayback Machine capture rather than adopted, and
+say so. The eras are in `src/gallery/timelines.js`; how they were found, and the artwork still to
+obtain, is in [`research/identity/`](research/identity/README.md).
+
 Most of the gallery is the **Best Place on Earth years**: WelcomeBC, WorkBC, BC Stats,
 Environmental Reporting BC, the BC Public Service's "Where ideas work", Canada's Pacific Gateway,
 and the stacked BC mark with its tagline. Each is the BC mark with a shaded sun, a gold divider, and
@@ -64,15 +75,16 @@ shape, so it drops out.
 Environmental Reporting BC's two-line arrangement. The build reads rectangles and polygons for it,
 which Illustrator writes for straight-sided shapes like a divider.
 
-**PreparedBC** is the one card that is not lifted. Its own mark was the BC mark in outline, in one
-orange ink — nothing the current identity draws — so it is remade as a ministry mark is today: the
-published BC mark with "PreparedBC" set in the ministry alphabet. The card is drawn by the current
+**PreparedBC** is the one card that is not lifted. Its own lockup — used since 2015, much like this
+one but with "BC" in gold, and printed on its guides in one ink of each guide's colour — has not been
+obtained, so it is remade as a ministry mark is today: the published BC mark with "PreparedBC" set in
+the ministry alphabet. The card is drawn by the current
 era's renderer and opens in the generator with the wording typed, where every colourway and export
 applies to it.
 
 **BC Timber Sales** has a collection of its own, because it has several marks: "BCTS" over "BC
-Timber Sales", first on its own with the name in a slab serif, then beside the BC mark (flat sun,
-grey divider) with the name in a sans. Its initials were published in two greens: forest
+Timber Sales", first on its own with the name in a slab serif (on its site from 2005 to 2017), then
+beside the BC mark (flat sun, grey divider) with the name in a sans. Its initials were published in two greens: forest
 (`#016a37`) on white, and teal (`#009979`) on the reversed mark, whose type is white — so on a white
 page its picture looks like the symbol and "BCTS" alone. Every one of its marks can start from
 either green. The build lifts them the same way, with two additions: a second colour beside the

@@ -11,13 +11,14 @@
 // whose marks have not been obtained get a shelf of their own, so a gap reads as a gap rather than
 // as a body with no mark.
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
 import { renderFlagSvg } from '../flag/renderFlagSvg.js'
 import { FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_PALETTE_ORDER, FLAG_SWATCHES } from '../flag/flagPalettes.js'
 import {
-  APPLICABILITY, COLLECTIONS_ON_SHELF, FIDELITY, GALLERY_COLLECTIONS, PROVENANCE, RIGHTS, entriesOf, findGalleryEntry
+  APPLICABILITY, COLLECTIONS_ON_SHELF, FIDELITY, GALLERY_COLLECTIONS, PROVENANCE, RIGHTS, entriesOf, eraStatus,
+  findGalleryEntry, timelineOf
 } from './collections.js'
 import { ASSET_STATUS, WANTED, WANTED_AS_OF } from './wanted.js'
 import { HydroStudio } from '../hydro/HydroStudio.jsx'
@@ -259,7 +260,7 @@ const whoOf = (collection, entries) => {
   const ids = new Set(entries.map((entry) => entry.id))
   const names = []
   for (const era of collection.eras ?? []) {
-    if (era.entries.every((entry) => ids.has(entry.id))) {
+    if (era.entries.length && era.entries.every((entry) => ids.has(entry.id))) {
       names.push(era.label)
       era.entries.forEach((entry) => ids.delete(entry.id))
     }
@@ -427,6 +428,20 @@ const Tile = ({ entry, onOpen, theme }) => (
   </button>
 )
 
+/** The mark already open, on its own timeline: drawn as its tile is, but not a way to itself. */
+const ThisMark = ({ entry, theme }) => (
+  <div className="gallery__pick gallery__pick--tile gallery__pick--this" aria-current="true">
+    <span
+      className="gallery__art"
+      data-ground={onPage(entry) ? 'page' : 'own'}
+      // Built by this project's own renderers; every value is escaped where written.
+      dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }}
+    />
+    <span className="gallery__label">{entry.label}</span>
+    <span className="gallery__note">The mark open above.</span>
+  </div>
+)
+
 /**
  * A one-off: a card of its own, with what it is beside it. One remade in the current identity is
  * drawn by the generator's current era, and opens there rather than in the gallery.
@@ -435,7 +450,10 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
   <section className="panel gallery__entry">
     <div className="gallery__head">
       <h2>{entry.label}</h2>
-      <span className="gallery__years">{entry.years}</span>
+      <span className="gallery__years">
+        {entry.years}
+        {timelineOf(entry) && ` · ${timelineOf(entry).eras.length} eras`}
+      </span>
     </div>
     <p className="gallery__note">{entry.note}</p>
     <IdentityChips identity={entry.identity} />
@@ -483,6 +501,132 @@ const CollectionCard = ({ collection, onOpen, theme }) => {
     </button>
   )
 }
+
+/** Where an era's dates and description come from, each a link to the page it rests on. */
+const Sources = ({ sources }) => sources?.length > 0 && (
+  <p className="gallery__sources">
+    <span>{sources.length === 1 ? 'Source' : 'Sources'}:</span>{' '}
+    {sources.map((source, index) => (
+      <span key={source.url}>
+        {index > 0 && '; '}
+        <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+        {source.locator && <span className="gallery__sources-locator">, {source.locator}</span>}
+      </span>
+    ))}
+  </p>
+)
+
+/**
+ * A collection's eras in order, oldest first, as a rail across the top of its page. Each step is
+ * the same width whatever its years: most of these dates are estimated or first seen, and a scale
+ * would claim a precision they do not have. An era with no artwork keeps its place, drawn hollow,
+ * because a gap in the gallery is not a gap in the body's history.
+ */
+const Timeline = ({ eras, current, onPick }) => (
+  <nav className="gallery__timeline" aria-label="Eras, oldest first">
+    <ol>
+      {eras.map((era) => (
+        <li key={era.id} data-status={eraStatus(era)}>
+          <button type="button" aria-current={era.id === current ? 'step' : undefined} onClick={() => onPick(era.id)}>
+            <span className="gallery__timeline-years">{era.years}</span>
+            <span className="gallery__timeline-label">{era.label}</span>
+            <span className="gallery__timeline-count">{STATUS_COUNT[eraStatus(era)](era.entries.length)}</span>
+          </button>
+        </li>
+      ))}
+    </ol>
+  </nav>
+)
+
+/** What the rail says an era holds. */
+const STATUS_COUNT = {
+  held: (count) => `${count} ${count === 1 ? 'mark' : 'marks'}`,
+  generator: () => 'In the generator',
+  sought: () => 'No artwork yet',
+  none: () => 'No mark of its own'
+}
+
+/** What stands where an era's marks would be, when the gallery has none to show. */
+const EMPTY_SLOT = { generator: 'Drawn in the generator', sought: 'Not in the gallery yet', none: 'No mark of its own' }
+
+/**
+ * Where an era's mark can be seen outside the gallery — the artwork to obtain, or, beside a mark
+ * the gallery holds, the pictures still to compare it with. Each is a picture, not a source for a
+ * date, so they are listed apart from the sources.
+ */
+const SeenAt = ({ urls }) => urls?.length > 0 && (
+  <p className="gallery__sources">
+    <span>Artwork seen at:</span>{' '}
+    {urls.map((url, index) => (
+      <span key={url}>{index > 0 && '; '}<a href={url} target="_blank" rel="noreferrer">{hostOf(url)}</a></span>
+    ))}
+  </p>
+)
+
+/**
+ * An era without marks in the gallery: an empty slot where they would be, as a body on the "not
+ * yet in the gallery" shelf has, and — for an identity the generator draws — a way to it there.
+ */
+const EmptyEra = ({ era, onOpenInGenerator }) => (
+  <div className="gallery__era-missing">
+    <div className="gallery__wanted-slot" data-status={eraStatus(era)}>{EMPTY_SLOT[eraStatus(era)]}</div>
+    {era.generator && onOpenInGenerator && (
+      <button type="button" className="gallery__graph-link" onClick={() => onOpenInGenerator(era.generator)}>
+        Open in the generator <span aria-hidden="true">→</span>
+      </button>
+    )}
+  </div>
+)
+
+/**
+ * A picture's link, named for the site it is on and the file it is — two files on one site would
+ * otherwise read the same. A Wayback capture is named for the site it captured, and its year.
+ */
+const hostOf = (url) => {
+  const { hostname, pathname } = new URL(url)
+  const site = (host) => host.replace(/^www\d?\./, '')
+  // A file name without the build hash a site stamps into it, which says nothing to a reader.
+  const file = (path) => decodeURIComponent(path.split('/').filter(Boolean).at(-1) ?? '').replace(/-[0-9a-f]{16,}(?=\.)/, '')
+  if (hostname === 'web.archive.org') {
+    const captured = pathname.match(/^\/web\/(\d{4})\d*[a-z_]*\/(?:https?:\/\/)?([^/]+)(\/.*)?$/)
+    if (captured) return `${site(captured[2])}, ${captured[1]} (Wayback Machine)${captured[3]?.length > 1 ? `: ${file(captured[3])}` : ''}`
+  }
+  return pathname.length > 1 ? `${site(hostname)}: ${file(pathname)}` : site(hostname)
+}
+
+/** What an era's dates rest on, in a sentence, for an era the identity records do not cover. */
+const EraDates = ({ era }) => era.applicability && (
+  <p className="gallery__era-dates">
+    {APPLICABILITY[era.applicability.kind]}: {era.applicability.years}. {era.applicability.note}
+  </p>
+)
+
+/**
+ * One era: its name and years, what changed, and its marks — or the slot that stands for them —
+ * then where it all comes from. On a mark's own timeline the open mark is marked as the one
+ * being looked at rather than offered again.
+ */
+const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => (
+  <section className="gallery__era" aria-labelledby={`${era.id}-heading`} data-current={era.entries.some((entry) => entry.id === openId) || undefined}>
+    <div className="gallery__head">
+      <h2 id={`${era.id}-heading`}>{era.label}</h2>
+      <span className="gallery__years">{era.years}</span>
+    </div>
+    <p className="gallery__note">{era.note}</p>
+    <EraDates era={era} />
+    {era.entries.length > 0
+      ? (
+        <div className="gallery__tiles">
+          {era.entries.map((entry) => entry.id === openId
+            ? <ThisMark key={entry.id} entry={entry} theme={theme} />
+            : <Tile key={entry.id} entry={entry} theme={theme} onOpen={() => onOpen(entry.id)} />)}
+        </div>
+        )
+      : <EmptyEra era={era} onOpenInGenerator={onOpenInGenerator} />}
+    <SeenAt urls={era.seenAt} />
+    <Sources sources={era.sources} />
+  </section>
+)
 
 /** A link from a mark to the body it stands for, in the government diagram. */
 const GraphLink = ({ node, onOpenGovernment }) => node && onOpenGovernment && (
@@ -557,13 +701,21 @@ const Crumbs = ({ collection, entry, onHome, onCollection }) => (
       <span aria-hidden="true">←</span> All logos
     </button>
     {collection && <span aria-hidden="true">/</span>}
-    {collection && (entry && entriesOf(collection).length > 1
+    {collection && (entry && hasPage(collection)
       ? <button type="button" className="gallery__crumb" onClick={onCollection}>{collection.label}</button>
       : <span aria-current="page">{collection.label}</span>)}
-    {entry && entriesOf(collection).length > 1 && <span aria-hidden="true">/</span>}
-    {entry && entriesOf(collection).length > 1 && <span aria-current="page">{entry.label}</span>}
+    {entry && hasPage(collection) && <span aria-hidden="true">/</span>}
+    {entry && hasPage(collection) && <span aria-current="page">{entry.label}</span>}
   </nav>
 )
+
+/**
+ * Whether a collection has a page of its own to show, rather than opening straight to its mark: it
+ * has more than one, or it has a history to show — a single mark with eras around it still has a
+ * timeline to put it in.
+ */
+const hasPage = (collection) => Boolean(collection.eras) || entriesOf(collection).length > 1
+
 
 /**
  * @param {object} props
@@ -584,10 +736,10 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     writePlace(nextCollection, nextMark)
     globalThis.scrollTo?.({ top: 0 })
   }
-  // A collection of one mark opens straight to it: there is nothing to choose between.
+  // A collection of one mark and no history opens straight to it: there is nothing to choose between.
   const choose = (id) => {
     const chosen = GALLERY_COLLECTIONS.find((candidate) => candidate.id === id)
-    const only = chosen && entriesOf(chosen).length === 1 ? entriesOf(chosen)[0].id : null
+    const only = chosen && !hasPage(chosen) ? entriesOf(chosen)[0].id : null
     go(id, only)
   }
   const openMark = (id) => {
@@ -599,15 +751,46 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const backToCollection = () => go(collectionId, null)
   const crumbs = <Crumbs collection={collection} entry={open} onHome={home} onCollection={backToCollection} />
 
+  // The eras a page puts on its rail: its collection's, or — for one of the Province's one-offs,
+  // whose collection is not a history — the timeline of the body the open mark belongs to.
+  const markTimeline = open && !collection?.eras ? timelineOf(open) : undefined
+  const eras = collection?.eras ?? markTimeline?.eras
+
+  // An era picked on the rail is scrolled to where it is drawn: on this page if it is here, or on
+  // its collection's page, gone back to from a mark, once that is showing.
+  const [eraTarget, setEraTarget] = useState(null)
+  useEffect(() => {
+    if (!eraTarget) return
+    document.getElementById(`${eraTarget}-heading`)?.closest('section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    setEraTarget(null)
+  }, [eraTarget, openId, collectionId])
+  const pickEra = (id) => {
+    if (open && !document.getElementById(`${id}-heading`)) go(collectionId, null)
+    setEraTarget(id)
+  }
+  const timeline = eras && (
+    <Timeline eras={eras} current={open ? eras.find((each) => each.entries.some((entry) => entry.id === open.id))?.id : undefined} onPick={pickEra} />
+  )
+  const eraSection = (era) => (
+    <EraSection key={era.id} era={era} theme={theme} onOpen={openMark} openId={openId} onOpenInGenerator={onOpenInGenerator} />
+  )
+
   if (open) {
     return (
       <div className="gallery">
         {crumbs}
+        {timeline}
         {open.kind === 'hydro'
           ? <HydroStudio initialPreset={open.preset} />
           : open.kind === 'hydro-mark'
             ? <HydroMarkView mark={open.mark} variant={open.variant} />
             : <Detail entry={open} />}
+        {markTimeline && (
+          <section className="gallery__history" aria-labelledby="mark-history">
+            <h2 id="mark-history" className="gallery__shelf-title">{markTimeline.label} through time</h2>
+            {markTimeline.eras.map(eraSection)}
+          </section>
+        )}
         <AboutMark identity={open.identity} />
       </div>
     )
@@ -666,19 +849,9 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
       </div>
       <p className="gallery__intro">{collection.intro}</p>
 
+      {timeline}
       {collection.eras
-        ? collection.eras.map((era) => (
-          <section key={era.id} className="gallery__era" aria-labelledby={`${era.id}-heading`}>
-            <div className="gallery__head">
-              <h2 id={`${era.id}-heading`}>{era.label}</h2>
-              <span className="gallery__years">{era.years}</span>
-            </div>
-            <p className="gallery__note">{era.note}</p>
-            <div className="gallery__tiles">
-              {era.entries.map((entry) => <Tile key={entry.id} entry={entry} theme={theme} onOpen={() => openMark(entry.id)} />)}
-            </div>
-          </section>
-          ))
+        ? collection.eras.map(eraSection)
         : (
           <div className="gallery__list">
             {collection.entries.map((entry) => (
