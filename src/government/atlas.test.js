@@ -5,7 +5,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { compareYears } from './compare.js'
 import { EVENTS, electionStages, eventsInYear, formatEventDate, operatingNameIn, typeOf } from './events.js'
-import { governmentIn, PRESENT_YEAR } from './snapshot.js'
+import { governmentIn, lifeOf, PRESENT_YEAR } from './snapshot.js'
 
 const find = (year, id, options) => governmentIn(year, options).nodes.find((node) => node.id === id)
 
@@ -14,7 +14,7 @@ test('QA 1: 1911 shows the parks function’s origin, not a Parks Branch that di
   assert.equal(in1911.length, 1)
   assert.equal(typeOf(in1911[0]).kind, 'origin')
   assert.ok(!find(1911, 'sub-bc-parks'), 'no BC Parks node is drawn in 1911')
-  assert.equal(eventsInYear(1957).find((event) => event.subject === 'sub-bc-parks')?.type, 'organizational_milestone')
+  assert.ok(eventsInYear(1957).some((event) => event.subject === 'sub-bc-parks' && event.type === 'organizational_milestone'))
 })
 
 test('QA 2: the 1912 wildfire origin is an origin claim, not the date of today’s name or logo', () => {
@@ -188,4 +188,35 @@ test('a recorded decision settles BCTS on 20 June 2003, and keeps the dates it s
   assert.match(bcts.evidence[0].note, /Decided 2026-09-26/)
   const dates = EVENTS.filter((event) => event.subject === 'sub-bc-timber-sales').map((event) => event.date.start)
   assert.ok(dates.includes('2003-04-01') && dates.includes('2003-05-29'))
+})
+
+test('round 2: a Crown named as a parent is matched to that Crown, for the observed year only', () => {
+  assert.equal(find(PRESENT_YEAR, 'sub-columbia-hydro-constructors').parent, 'bc-hydro')
+  assert.ok(!find(PRESENT_YEAR, 'sub-columbia-hydro-constructors').inferredParent)
+  assert.ok(find(1990, 'sub-columbia-hydro-constructors').inferredParent)
+})
+
+test('round 2: a start the sources dispute keeps the collected year, marked unsettled', () => {
+  // The Board's manual says 1982; the collected record says 1981. Neither is chosen yet.
+  const eab = find(2000, 'sub-environmental-appeal-board')
+  assert.equal(eab.established, '1981')
+  assert.ok(eab.reconcile)
+})
+
+test('the timeline follows a chosen body through its whole life, whatever year is shown', () => {
+  const bcts = lifeOf('sub-bc-timber-sales')
+  assert.equal(bcts.from, '2003-06-20')
+  assert.ok(bcts.events.some((event) => event.date.start === '2003-04-01'))
+  const forests = lifeOf('ministry-of-forests-1976')
+  assert.deepEqual([forests.from, forests.to], ['1976', '1986'])
+  // Unknown start stays unknown, and a gone body keeps its exclusive end.
+  assert.equal(lifeOf('sub-bc-parks').from, null)
+  assert.equal(lifeOf('sub-workers-compensation-review-board').to, '2003-03-03')
+  assert.equal(lifeOf('no-such-body'), null)
+})
+
+test('WorkBC starts with the 2007 launch, by recorded decision; the 2012 centres stay an event', () => {
+  assert.ok(!find(2006, 'sub-workbc'))
+  assert.equal(find(2007, 'sub-workbc').established, '2007-04-27')
+  assert.ok(lifeOf('sub-workbc').events.some((event) => event.date.start === '2012-04-02'))
 })

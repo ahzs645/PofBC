@@ -3,6 +3,10 @@
 // Four strips read off the same axis: the identity the Province's lockups took (the generator's
 // own four eras), the premier and their party, each general election, and how much the ministries
 // were reorganised each year — which is what makes the years worth stopping at easy to find.
+//
+// With a body chosen, a fifth strip follows it: when it stood (dashed where its start is unknown)
+// and a mark for each dated event in its history, and the arrows step through that history rather
+// than through the whole government's.
 
 import { useMemo } from 'react'
 import { changesIn } from './episodes.js'
@@ -35,10 +39,38 @@ export const EVENT_YEARS = (() => {
 
 const ERA_SHADES = { historical: '#6b8f71', flag: '#c8411f', crest: '#57534e', current: '#2f5f9e' }
 
-export const TimelineBar = ({ year, onYear, playing, onPlay }) => {
+/** The years in a body's life worth stopping at, each with what happened then. */
+const stopsOf = (life) => {
+  const stops = new Map()
+  const note = (value, label) => {
+    const at = Number(String(value).slice(0, 4))
+    if (!Number.isFinite(at) || at < FIRST_YEAR || at > PRESENT_YEAR) return
+    stops.set(at, [...(stops.get(at) ?? []), label])
+  }
+  if (life.from) note(life.from, 'began')
+  if (life.to) note(life.to, 'ended')
+  for (const event of life.events) note(event.date.start, event.title)
+  return [...stops.entries()].sort((a, b) => a[0] - b[0])
+}
+
+/**
+ * @param {object} props
+ * @param {object|null} [props.life]  The chosen body's life (snapshot.js lifeOf), to follow.
+ */
+export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
   const maxChurn = useMemo(() => Math.max(...Object.values(CHURN)), [])
-  const previous = [...EVENT_YEARS].reverse().find((candidate) => candidate < year)
-  const next = EVENT_YEARS.find((candidate) => candidate > year)
+  const stops = useMemo(() => (life ? stopsOf(life) : []), [life])
+  // A body is followed once chosen; the arrows step through its history when it has one.
+  const following = Boolean(life)
+  const stepping = stops.length > 0
+  const stepYears = stepping ? stops.map(([at]) => at) : EVENT_YEARS
+  const previous = [...stepYears].reverse().find((candidate) => candidate < year)
+  const next = stepYears.find((candidate) => candidate > year)
+  const whatIn = (at) => (stepping ? stops.find(([candidate]) => candidate === at)?.[1].join('; ') : null)
+  const stepTitle = (at, word) => at && `${word} ${at}${whatIn(at) ? ` — ${whatIn(at)}` : ''}`
+  const height = following ? 90 : 78
+  const start = life?.from ? yearOf(life.from) : null
+  const end = life?.to ? yearOf(life.to) : PRESENT_YEAR + 1
   const decades = []
   for (let decade = Math.ceil(FIRST_YEAR / 10) * 10; decade <= PRESENT_YEAR; decade += 10) decades.push(decade)
 
@@ -48,15 +80,15 @@ export const TimelineBar = ({ year, onYear, playing, onPlay }) => {
         <button type="button" className="gov-button" onClick={onPlay} aria-label={playing ? 'Pause' : 'Play through the years'} title={playing ? 'Pause' : 'Play through the years'}>
           {playing ? '❚❚' : '▶'}
         </button>
-        <button type="button" className="gov-button" disabled={!previous} onClick={() => onYear(previous)} title={previous ? `Back to ${previous}` : undefined} aria-label="Previous change">‹</button>
+        <button type="button" className="gov-button" disabled={!previous} onClick={() => onYear(previous)} title={stepTitle(previous, 'Back to')} aria-label={stepping ? `Previous in ${life.name ?? 'its'} history` : 'Previous change'}>‹</button>
         {/* Announced when it settles, not on every step of playback. */}
         <output className="gov-timeline__year" aria-live={playing ? 'off' : 'polite'}>{year}</output>
-        <button type="button" className="gov-button" disabled={!next} onClick={() => onYear(next)} title={next ? `On to ${next}` : undefined} aria-label="Next change">›</button>
+        <button type="button" className="gov-button" disabled={!next} onClick={() => onYear(next)} title={stepTitle(next, 'On to')} aria-label={stepping ? `Next in ${life.name ?? 'its'} history` : 'Next change'}>›</button>
         <button type="button" className="gov-button gov-button--text" disabled={year === PRESENT_YEAR} onClick={() => onYear(PRESENT_YEAR)}>Today</button>
       </div>
 
-      <div className="gov-timeline__track">
-        <svg viewBox={`0 0 ${WIDTH} 78`} preserveAspectRatio="none" aria-hidden="true">
+      <div className="gov-timeline__track" data-following={following || undefined}>
+        <svg viewBox={`0 0 ${WIDTH} ${height}`} preserveAspectRatio="none" aria-hidden="true">
           {/* The identity of the day, which is the lockup a ministry chosen that year is shown in. */}
           {IDENTITY_ERAS.map((era) => (
             <g key={era.era}>
@@ -98,8 +130,21 @@ export const TimelineBar = ({ year, onYear, playing, onPlay }) => {
             />
           ))}
           <line x1={PAD} x2={WIDTH - PAD} y1={62.5} y2={62.5} className="gov-timeline__axis" />
+          {/* The chosen body: when it stood, and each dated event in its history. */}
+          {following && (
+            <g>
+              {start !== null
+                ? <rect x={x(start)} y={71} width={Math.max(1.5, x(end) - x(start))} height={6} rx={1.5} className="gov-timeline__life" />
+                : <line x1={PAD} x2={x(end)} y1={74} y2={74} className="gov-timeline__life-unknown" />}
+              {stops.map(([at, labels]) => (
+                <rect key={at} x={x(at) + 0.2} y={67} width={Math.max(1.4, x(1) - x(0) - 0.4)} height={14} rx={0.8} className="gov-timeline__stop">
+                  <title>{at}: {labels.join('; ')}</title>
+                </rect>
+              ))}
+            </g>
+          )}
           {/* The year shown. */}
-          <rect x={x(year) - 1} y={0} width={Math.max(2, x(1) - x(0))} height={64} className="gov-timeline__cursor" />
+          <rect x={x(year) - 1} y={0} width={Math.max(2, x(1) - x(0))} height={following ? height - 2 : 64} className="gov-timeline__cursor" />
         </svg>
         <div className="gov-timeline__decades" aria-hidden="true">
           {decades.filter((decade) => decade % 20 === 0).map((decade) => (
@@ -127,6 +172,15 @@ export const TimelineBar = ({ year, onYear, playing, onPlay }) => {
         <li><span className="gov-timeline__swatch" style={{ background: partyColour('NDP') }} />Premier, by party</li>
         <li><span className="gov-timeline__swatch gov-timeline__swatch--tick" />Election</li>
         <li><span className="gov-timeline__swatch gov-timeline__swatch--churn" />Ministries reorganised</li>
+        {following && (
+          <li>
+            <span className="gov-timeline__swatch gov-timeline__swatch--life" />
+            {life.name ?? 'The chosen body'}: {life.from ? 'when it stood' : 'start unknown'}
+            {stepping
+              ? <>, and {stops.length} {stops.length === 1 ? 'year' : 'years'} with a dated event — the arrows step through them</>
+              : <>; no dated events yet</>}
+          </li>
+        )}
       </ul>
     </div>
   )

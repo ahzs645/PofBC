@@ -1,0 +1,46 @@
+{
+  "about": "Unapplied proposals, not a replacement for research/decisions.json. WorkBC needs identity-scope approval; EAB needs the original commencement instrument checked. Copy an accepted choice into the repository decision schema only after review.",
+  "proposals": [
+    {
+      "id": "proposed-workbc-established-2007-04-27",
+      "subject": "sub-agencies/workbc",
+      "field": "established",
+      "value": {
+        "date": "2007-04-27",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2007ECD0021-000529.htm",
+        "source_id": "r2-workbc-launch-2007",
+        "locator": "Opening paragraph and website-unveiling paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Broad WorkBC strategy and website launch"
+      },
+      "proposal_status": "editorial_review_required",
+      "applied": false,
+      "reason": "The template includes the website and broader WorkBC brand. For that scope, use the explicit 2007 launch; keep 2012-04-02 as the centres operational_start. Separate the centres if the intended scope is narrower.",
+      "proposed": "2026-09-26",
+      "research_status_after_acceptance": "documented_partial"
+    },
+    {
+      "id": "proposed-environmental-appeal-board-established-1982",
+      "subject": "sub-agencies/environmental-appeal-board",
+      "field": "established",
+      "value": {
+        "date": "1982",
+        "precision": "year",
+        "evidence": "official_webpage",
+        "source": "https://www.bceab.ca/uploads/2021/04/eab_proc_manual.pdf",
+        "source_id": "r2-eab-manual",
+        "locator": "PDF page 8 / printed page 8, Introduction",
+        "checked": "2026-09-26",
+        "meaning": "Board establishment as explicitly stated by its own manual"
+      },
+      "proposal_status": "editorial_review_required",
+      "applied": false,
+      "reason": "Prefer the explicit body-establishment statement to a statutory citation year. Confirm the original commencement instrument before applying an editorial decision. The collected 1981 value remains in held.",
+      "proposed": "2026-09-26",
+      "research_status_after_acceptance": "documented_partial"
+    }
+  ],
+  "existing_decisions_preserved": "The uploaded decisions.json, including the BC Timber Sales 2003-06-20 decision, was not changed."
+}

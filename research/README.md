@@ -50,6 +50,7 @@ These come from the atlas research package (`package/MODEL_NOTES.md`) and are ch
 | `package/` | The atlas research package of 2026-09-25: model notes, QA cases, event seeds, logo routes | `build:government-events` |
 | `decisions.json` | Editorial choices between competing claims (below) | both history and events builds |
 | `sub-agencies/BRIEF.md`, `TEMPLATE.json` | What is known and missing for each sub-agency, generated | `build:research-brief` |
+| `reviews/round-<n>/` | Each research round's own notes, limits and unapplied proposals, kept as delivered | not read by the builds |
 
 Ids are the atlas's own: a ministry episode is `ministry-of-forests-2022` (name and first year, from
 `src/government/episodes.js`); a body is its slug (`bc-hydro`); a sub-agency is its slug without the
@@ -71,6 +72,11 @@ files, or start `responsible-4.json` — every `responsible-*.json` file is read
 is read. Use the event types in `src/government/events.js` where one fits, or a descriptive
 snake_case type (`legislation_assented`, `operational_start`); unfamiliar types are sorted by their
 words.
+
+**A secondary timeline or chronology** (the BC Forest Service's, say). Keep only entries about a
+body the atlas draws, cite the compilation and the source each entry credits in the locator, and
+record disagreements with dates the atlas holds as notes and `conflicts` rather than changing them —
+`atlas/events-bcfs-timeline.json` is the example.
 
 **A minister, a Speaker, an officer.** Add the appointment to the era's `ministers-*.json` or to
 `holders.json`. A portfolio that does not match a ministry is listed in the build's output.

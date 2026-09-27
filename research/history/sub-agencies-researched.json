@@ -3,11 +3,14 @@
   "schema_version": "sub-agencies-research/1.0-additive",
   "repository": {
     "full_name": "ahzs645/PofBC",
-    "reviewed_commit": "b83a40f0928f15c0ac13caa69e4fa730db142557",
-    "remote_modified": false
+    "snapshot_commit_as_reported_by_start_here": "400ecb8",
+    "reviewed_commit": null,
+    "remote_verified": false,
+    "remote_modified": false,
+    "note": "This pass uses the 13 uploaded snapshot files. The reported main commit was not independently checked against GitHub; the earlier research commit is preserved in prior_repository_metadata."
   },
   "instructions": "One object per sub-agency. Fill established/names/parents/relations/legal_basis with a source each; leave null where unknown and say why in note. Add objects for bodies that no longer exist (set ended). See README.md §3–§5.",
-  "scope": "First research tranche, not an exhaustive history or a ready-to-compile legacy collection.",
+  "scope": "Round 1 retained plus a partial round-2 tranche: 16 previously unreviewed sub-agencies and additive follow-up on WorkBC and Powertech. No full lifecycle is certified complete.",
   "date_policy": "Dates retain source precision; exact replacements use exclusive end boundaries. Null means unknown, not absent.",
   "observation_policy": "Rows with coverage=observation_only prove presence on observed_on, not continuous membership or naming.",
   "status_policy": "documented_partial applies to supplied claims only; it does not mean names, parents and full lifecycle are complete.",
@@ -986,7 +989,7 @@
       "relations": [],
       "legal_basis": null,
       "evidence_status": "requires_reconciliation",
-      "note": "The verified April 2, 2012 event is the Employment Program of BC / WorkBC centres launch. The template also covers the broader WorkBC website and brand. Their identity and earlier history are unresolved; a centres launch is not silently promoted to the birth of everything called WorkBC.",
+      "note": "The verified April 2, 2012 event is the Employment Program of BC / WorkBC centres launch. The template also covers the broader WorkBC website and brand. Their identity and earlier history are unresolved; a centres launch is not silently promoted to the birth of everything called WorkBC. Round 2 locates the original WorkBC strategy and website launch on 2007-04-27, independently confirmed in a 2008 backgrounder. The 2012 centres event is retained. established remains null pending an editorial decision on whether this record represents the broad WorkBC identity or specifically the service-centre network. No parent interval is inferred from the minister announcing a cross-government initiative.",
       "research_events": [
         {
           "date": "2012-04-02",
@@ -998,10 +1001,53 @@
           "checked": "2026-09-26",
           "type": "operational_start",
           "summary": "Employment Program of BC / WorkBC centres began."
+        },
+        {
+          "date": "2007-04-27",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2007ECD0021-000529.htm",
+          "source_id": "r2-workbc-launch-2007",
+          "locator": "Dateline, opening paragraph, and website-unveiling paragraph",
+          "checked": "2026-09-26",
+          "type": "program_launch",
+          "summary": "WorkBC labour-market strategy and website launched."
+        },
+        {
+          "date": "2007-04-27",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2008ecd0023-000692-attachment1.htm",
+          "source_id": "r2-workbc-achievements-2008",
+          "locator": "Strategic area 4; WorkBC.ca launch sentence",
+          "checked": "2026-09-26",
+          "type": "website_launch",
+          "summary": "Retrospective government account explicitly dates the WorkBC website launch."
         }
       ],
-      "date_claims": [],
-      "first_observed": null,
+      "date_claims": [
+        {
+          "date": "2007-04-27",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2007ECD0021-000529.htm",
+          "source_id": "r2-workbc-launch-2007",
+          "locator": "Opening paragraph and website-unveiling paragraph",
+          "checked": "2026-09-26",
+          "type": "program_establishment_claim",
+          "summary": "Candidate start for the broad WorkBC strategy/website identity, not the centres network."
+        }
+      ],
+      "first_observed": {
+        "date": "2007-04-27",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2007ECD0021-000529.htm",
+        "source_id": "r2-workbc-launch-2007",
+        "locator": "Dateline and opening paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Contemporaneous observation of WorkBC; also an explicit strategy launch"
+      },
       "review": {
         "checked": "2026-09-26",
         "scope": "selected historical claims only",
@@ -1014,6 +1060,25 @@
           "legal_basis"
         ],
         "full_history_complete": false
+      },
+      "round2_review": {
+        "checked": "2026-09-26",
+        "scope": "Additive follow-up; prior claims retained",
+        "full_history_complete": false,
+        "unresolved_fields": [
+          "established",
+          "names",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "prior_review_preserved": true
+      },
+      "identity_review_required": true,
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
       }
     },
     {
@@ -1151,12 +1216,25 @@
           "source_id": "powertech-history",
           "locator": "About Powertech paragraph",
           "checked": "2026-09-26"
+        },
+        {
+          "ministry_as_printed": "BC Hydro",
+          "from": null,
+          "to": null,
+          "relation": "subsidiary_of",
+          "observed_on": "2026-09-26",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://www.bchydro.com/toolbar/about/who_we_are/subsidiaries.html",
+          "source_id": "r2-hydro-subsidiaries",
+          "locator": "Powertech Labs section, opening sentence",
+          "checked": "2026-09-26"
         }
       ],
       "relations": [],
       "legal_basis": null,
       "evidence_status": "requires_reconciliation",
-      "note": "The uploaded founding year 1988 was not independently substantiated in this pass. BC Hydro describes service delivery since 1989, which may differ from incorporation. The held 1988 value is preserved, and neither year is silently treated as proof of the other event.",
+      "note": "The uploaded founding year 1988 was not independently substantiated in this pass. BC Hydro describes service delivery since 1989, which may differ from incorporation. The held 1988 value is preserved, and neither year is silently treated as proof of the other event. Round 2 rechecks current ownership but finds no incorporation evidence resolving 1988 versus the existing 1989 service-history statement. Undated descriptions of 30 or 35 years of experience are not converted into a founding year.",
       "research_events": [
         {
           "date": "1989",
@@ -1183,6 +1261,24 @@
           "legal_basis"
         ],
         "full_history_complete": false
+      },
+      "round2_review": {
+        "checked": "2026-09-26",
+        "scope": "Additive follow-up; prior claims retained",
+        "full_history_complete": false,
+        "unresolved_fields": [
+          "established",
+          "names",
+          "complete_parent_history",
+          "relations",
+          "legal_basis"
+        ],
+        "prior_review_preserved": true
+      },
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
       }
     },
     {
@@ -1642,6 +1738,1338 @@
         ],
         "full_history_complete": false
       }
+    },
+    {
+      "id": "columbia-hydro-constructors",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "complete_parent_history",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Columbia Hydro Constructors Ltd.",
+      "kind": "subsidiary",
+      "parent_today": "bc-hydro",
+      "parent_today_name": "British Columbia Hydro and Power Authority",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf",
+      "description": "Active BC Hydro subsidiary that administers and supplies the labour force to specified projects.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "1962",
+        "precision": "year",
+        "evidence": "official_webpage",
+        "source": "https://www.bchydro.com/toolbar/about/who_we_are/subsidiaries.html",
+        "source_id": "r2-hydro-subsidiaries",
+        "locator": "Columbia Hydro Constructors Ltd. section, opening sentence",
+        "checked": "2026-09-26",
+        "meaning": "Company formation year"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [
+        {
+          "ministry_as_printed": "BC Hydro",
+          "from": null,
+          "to": null,
+          "relation": "subsidiary_of",
+          "observed_on": "2026-09-26",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://www.bchydro.com/toolbar/about/who_we_are/subsidiaries.html",
+          "source_id": "r2-hydro-subsidiaries",
+          "locator": "Columbia Hydro Constructors Ltd. section, opening sentence",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The corporate parent explicitly states formation in 1962. No incorporation instrument, exact day, earlier names, or continuous ownership interval was established.",
+      "first_observed": null,
+      "research_events": [],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "energy-resource-appeal-tribunal",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "complete_name_history",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Energy Resource Appeal Tribunal",
+      "shortName": "ERAT",
+      "kind": "tribunal",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www.bcerat.ca/",
+      "source_today": "https://www.bcerat.ca/",
+      "description": "Hears appeals of certain orders, penalties and permitting decisions of the BC Energy Regulator under the Oil and Gas Activities Act as amended in 2023.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2010-10-04",
+        "precision": "day",
+        "evidence": "annual_report",
+        "source": "https://www.bcerat.ca/app/uploads/sites/847/2020/07/OGAT_AR_2010_2013.pdf",
+        "source_id": "r2-ogat-first-report",
+        "locator": "PDF page 10 / printed page 8, About the Tribunal",
+        "checked": "2026-09-26",
+        "meaning": "Commencement of the Act establishing the Oil and Gas Appeal Tribunal under section 19"
+      },
+      "ended": null,
+      "names": [
+        {
+          "name": "Oil and Gas Appeal Tribunal",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "observed_on": "2010-10-04",
+          "coverage": "observation_only",
+          "evidence": "annual_report",
+          "source": "https://www.bcerat.ca/app/uploads/sites/847/2020/07/OGAT_AR_2010_2013.pdf",
+          "source_id": "r2-ogat-first-report",
+          "locator": "PDF page 10 / printed page 8, About the Tribunal",
+          "checked": "2026-09-26"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Energy Resource Activities Act, SBC 2008, c. 36, s. 19(1)",
+        "evidence": "statute",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/08036_01",
+        "source_id": "r2-energy-resource-act",
+        "locator": "Section 19(1), continuation as Energy Resource Appeal Tribunal",
+        "checked": "2026-09-26",
+        "scope": "Continuation and present name; not evidence of the rename effective date."
+      },
+      "evidence_status": "documented_partial",
+      "note": "A continuing tribunal under a changed name, not two invented predecessor/successor bodies. The precise effective date of the later rename was not established in this pass. No ministry parent is inferred from the regulated industry or ministers receiving reports.",
+      "first_observed": null,
+      "research_events": [
+        {
+          "date": "2010-10-07",
+          "precision": "day",
+          "evidence": "annual_report",
+          "source": "https://www.bcerat.ca/app/uploads/sites/847/2020/07/OGAT_AR_2010_2013.pdf",
+          "source_id": "r2-ogat-first-report",
+          "locator": "PDF page 10 / printed page 8, About the Tribunal",
+          "checked": "2026-09-26",
+          "type": "initial_members_appointed",
+          "summary": "First tribunal members appointed; separate from commencement."
+        }
+      ],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "forest-appeals-commission",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Forest Appeals Commission",
+      "shortName": "FAC",
+      "kind": "tribunal",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www.bcfac.ca/",
+      "source_today": "https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector",
+      "description": "Decides appeals of certain decisions under five provincial statutes on forests and environmental issues, now operating under the Forest and Range Practices Act.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "1995",
+        "precision": "year",
+        "evidence": "annual_report",
+        "source": "https://www.bcfac.ca/app/uploads/sites/837/2020/07/fac_ar01.pdf",
+        "source_id": "r2-fac-report-2001",
+        "locator": "PDF page 6 / printed page 5, Introduction",
+        "checked": "2026-09-26",
+        "meaning": "Commission establishment under the Forest Practices Code"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Forest Practices Code of British Columbia Act",
+        "evidence": "annual_report",
+        "source": "https://www.bcfac.ca/app/uploads/sites/837/2020/07/fac_ar01.pdf",
+        "source_id": "r2-fac-report-2001",
+        "locator": "PDF page 6 / printed page 5, Introduction",
+        "checked": "2026-09-26",
+        "scope": "Historical establishment basis; current continuation statute not audited."
+      },
+      "evidence_status": "documented_partial",
+      "note": "The report ties creation to the Forest Practices Code, effective 1995-06-15. Year-level establishment is retained; the exact statutory commencement is separately typed rather than overstating an independently verified section-specific start. Full parent and jurisdiction history remains incomplete.",
+      "first_observed": null,
+      "research_events": [
+        {
+          "date": "1995-06-15",
+          "precision": "day",
+          "evidence": "annual_report",
+          "source": "https://www.bcfac.ca/app/uploads/sites/837/2020/07/fac_ar01.pdf",
+          "source_id": "r2-fac-report-2001",
+          "locator": "PDF page 6 / printed page 5, Introduction",
+          "checked": "2026-09-26",
+          "type": "legislation_in_force",
+          "summary": "Forest Practices Code came into effect."
+        },
+        {
+          "date": "1999-04",
+          "precision": "month",
+          "evidence": "annual_report",
+          "source": "https://www.bcfac.ca/app/uploads/sites/837/2020/07/fac_ar01.pdf",
+          "source_id": "r2-fac-report-2001",
+          "locator": "PDF page 6 / printed page 5, Introduction",
+          "checked": "2026-09-26",
+          "type": "jurisdiction_expansion",
+          "summary": "Appeal jurisdiction expanded under the Forest Act and Range Act."
+        }
+      ],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "mental-health-review-board",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Mental Health Review Board",
+      "shortName": "MHRB",
+      "kind": "board",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www.bcmhrb.ca/",
+      "source_today": "https://www.bcmhrb.ca/",
+      "description": "Conducts review panel hearings on whether people certified or detained involuntarily in provincial mental health facilities should remain so under the Mental Health Act.",
+      "held": {
+        "established": "2005",
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2005-04",
+        "precision": "month",
+        "evidence": "official_webpage",
+        "source": "https://www.bcmhrb.ca/",
+        "source_id": "r2-mhrb-home",
+        "locator": "Welcome to the Mental Health Review Board, opening sentence",
+        "checked": "2026-09-26",
+        "meaning": "Independent tribunal establishment month"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Mental Health Act",
+        "evidence": "official_webpage",
+        "source": "https://www.bcmhrb.ca/",
+        "source_id": "r2-mhrb-home",
+        "locator": "Welcome, opening sentence",
+        "checked": "2026-09-26",
+        "scope": "Named governing statute; not a section-specific commencement audit."
+      },
+      "evidence_status": "documented_partial",
+      "note": "Refines the held 2005 year to April 2005. Earlier review-panel arrangements are not equated with this board. Exact day and administrative parent history remain unknown.",
+      "first_observed": null,
+      "research_events": [],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "environmental-appeal-board",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Environmental Appeal Board",
+      "shortName": "EAB",
+      "kind": "board",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www.bceab.ca/",
+      "source_today": "https://www.bceab.ca/",
+      "description": "Decides appeals of certain government decisions under nine provincial statutes on environmental issues such as water licences, contaminated sites, pesticides and hunting licences.",
+      "held": {
+        "established": "1981",
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Environmental Management Act, SBC 2003, c. 53, s. 93",
+        "evidence": "official_webpage",
+        "source": "https://www.bceab.ca/uploads/2021/04/eab_proc_manual.pdf",
+        "source_id": "r2-eab-manual",
+        "locator": "PDF page 8 / printed page 8, Introduction",
+        "checked": "2026-09-26",
+        "scope": "Continuation statute as described in the 2019 manual, not the original commencement instrument."
+      },
+      "evidence_status": "requires_reconciliation",
+      "note": "The held 1981 establishment year is not independently confirmed. The Board manual expressly states establishment in 1982; the homepage instead identifies the Environment Management Act (1981). An Act citation year is not a body commencement date. Both readings are preserved for editorial review; established is null here rather than silently replacing the held value.",
+      "first_observed": null,
+      "research_events": [
+        {
+          "date": "1981",
+          "precision": "year",
+          "evidence": "official_webpage",
+          "source": "https://www.bceab.ca/",
+          "source_id": "r2-eab-home",
+          "locator": "Welcome, opening paragraph",
+          "checked": "2026-09-26",
+          "type": "legal_basis_year_observed",
+          "summary": "Homepage identifies the Environment Management Act (1981); the parenthetical year dates the Act, not explicitly the Board."
+        }
+      ],
+      "date_claims": [
+        {
+          "date": "1982",
+          "precision": "year",
+          "evidence": "official_webpage",
+          "source": "https://www.bceab.ca/uploads/2021/04/eab_proc_manual.pdf",
+          "source_id": "r2-eab-manual",
+          "locator": "PDF page 8 / printed page 8, Introduction, first paragraph",
+          "checked": "2026-09-26",
+          "type": "establishment_claim",
+          "summary": "Board manual explicitly dates establishment to 1982."
+        }
+      ],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "office-of-the-seniors-advocate",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Office of the Seniors Advocate",
+      "kind": "office",
+      "parent_today": "ministry-of-health-2011",
+      "parent_today_name": "Ministry of Health",
+      "official_url": "https://www.seniorsadvocatebc.ca/",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Monitors and reports on services for seniors, including health care, housing, transportation and income supports.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2014",
+        "precision": "year",
+        "evidence": "official_webpage",
+        "source": "https://www.seniorsadvocatebc.ca/annual-report-of-the-office-of-the-seniors-advocate/",
+        "source_id": "r2-osa-history",
+        "locator": "Annual Report, opening paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Creation of the Office of the Seniors Advocate"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Seniors Advocate Act, SBC 2013, c. 15, ss. 2–5",
+        "evidence": "statute",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/13015_01",
+        "source_id": "r2-osa-act",
+        "locator": "Sections 2–5; section 12 (commencement by regulation)",
+        "checked": "2026-09-26",
+        "scope": "Current statutory office and staffing framework; original commencement regulation not retrieved."
+      },
+      "evidence_status": "documented_partial",
+      "note": "The office explicitly dates its creation to 2014. Royal Assent on 2013-03-14 and the first advocate taking up the role on 2014-03-31 are separate events, not substitutes for an unverified exact office-creation day. No ministry parent is inferred from annual-report delivery.",
+      "first_observed": null,
+      "research_events": [
+        {
+          "date": "2013-03-14",
+          "precision": "day",
+          "evidence": "statute",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/13015_01",
+          "source_id": "r2-osa-act",
+          "locator": "Act heading and assent line",
+          "checked": "2026-09-26",
+          "type": "legislation_assented",
+          "summary": "Seniors Advocate Act received Royal Assent."
+        },
+        {
+          "date": "2014-03-31",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://archive.news.gov.bc.ca/releases/news_releases_2013-2017/2014HLTH0023-000333.htm",
+          "source_id": "r2-osa-appointment",
+          "locator": "Paragraph specifying when Isobel Mackenzie will take up the role",
+          "checked": "2026-09-26",
+          "type": "executive_appointment_effective",
+          "summary": "Announced effective date for the first Seniors Advocate; appointment announcement dated March 19."
+        }
+      ],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "bc-bid",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "parents",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      },
+      "name": "BC Bid",
+      "kind": "program",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "parent_today_name": "Ministry of Citizens’ Services",
+      "official_url": "https://www2.gov.bc.ca/gov/content/content?id=C8A3B1B982304D88B87FD75473A62B14",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/citizens-services",
+      "description": "The Province's online marketplace for public-sector procurement opportunities.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": null,
+      "names": [
+        {
+          "name": "B.C. Bid",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "observed_on": "1996-07-30",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://api.lims.leg.bc.ca/hdms/file/Debates/36th1st/19960730pm1-Hansard-v2n9.htm",
+          "source_id": "r2-bcbid-hansard-1996",
+          "locator": "Printed page 1156; response beginning The program is now known",
+          "checked": "2026-09-26"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Hansard documents a functioning B.C. Bid website in 1996 and identifies B.C. Buy Smart as the earlier name. It does not date the original launch or the rename. This observation is not an establishment date and does not assert uninterrupted naming since 1996.",
+      "first_observed": {
+        "date": "1996-07-30",
+        "precision": "day",
+        "evidence": "official_webpage",
+        "source": "https://api.lims.leg.bc.ca/hdms/file/Debates/36th1st/19960730pm1-Hansard-v2n9.htm",
+        "source_id": "r2-bcbid-hansard-1996",
+        "locator": "Printed page 1156; exchange between P. Reitsma and A. Petter on B.C. Buy Smart / B.C. Bid",
+        "checked": "2026-09-26",
+        "meaning": "Dated observation of B.C. Bid and its already-established website; earliest source checked in this tranche, not first-ever use"
+      },
+      "research_events": [
+        {
+          "date": "1996-07-30",
+          "precision": "day",
+          "evidence": "official_webpage",
+          "source": "https://api.lims.leg.bc.ca/hdms/file/Debates/36th1st/19960730pm1-Hansard-v2n9.htm",
+          "source_id": "r2-bcbid-hansard-1996",
+          "locator": "Printed page 1156; B.C. Buy Smart exchange",
+          "checked": "2026-09-26",
+          "type": "rename_observed",
+          "summary": "Minister states that the B.C. Buy Smart program is now called B.C. Bid; effective rename date not stated."
+        }
+      ],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "court-services-branch",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Court Services Branch",
+      "kind": "division",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www2.gov.bc.ca/gov/content/justice/courthouse-services",
+      "source_today": "https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart",
+      "description": "Provides court registries, court administration, juror support, transcript services and sheriff services to the Court of Appeal, Supreme Court and Provincial Court.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": null,
+      "names": [
+        {
+          "name": "Court Services Branch",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/ag/ag.pdf",
+          "source_id": "r2-ag-plan-2003",
+          "locator": "PDF page 17 / printed page 11, Judiciary",
+          "checked": "2026-09-26"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Attorney General",
+          "from": null,
+          "to": null,
+          "relation": "part_of",
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/ag/ag.pdf",
+          "source_id": "r2-ag-plan-2003",
+          "locator": "PDF pages 16–17 / printed pages 10–11, Core Business Areas and Judiciary",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The 2003 service plan expressly names the Court Services Branch and places Court Services within the Ministry of Attorney General. This is a historical name and parent observation, not the founding year or proof of continuous placement throughout the three-year planning horizon.",
+      "first_observed": {
+        "date": "2003",
+        "precision": "year",
+        "evidence": "service_plan",
+        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/ag/ag.pdf",
+        "source_id": "r2-ag-plan-2003",
+        "locator": "PDF page 17 / printed page 11, Judiciary paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Court Services Branch named in the 2003 plan; not a founding claim"
+      },
+      "research_events": [],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "bc-corrections",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      },
+      "name": "BC Corrections",
+      "kind": "division",
+      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
+      "parent_today_name": "Ministry of Public Safety and Solicitor General",
+      "official_url": "https://www2.gov.bc.ca/gov/content/justice/criminal-justice/corrections",
+      "source_today": "https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/org-chart-pssg",
+      "description": "Manages remanded and sentenced adult offenders in custody and in the community.",
+      "held": {
+        "established": null,
+        "events_on_file": [
+          {
+            "date": "1942",
+            "type": "function_milestone",
+            "title": "Provincial adult probation system announced by Attorney General Royal Maitland; Ernie Stevens appointed follow-up officer"
+          },
+          {
+            "date": "1950",
+            "type": "unit_established",
+            "title": "Corrections Branch created after policing transfers to the RCMP"
+          },
+          {
+            "date": "1951",
+            "type": "unit_established",
+            "title": "BC Archives: Corrections Branch established in 1951 within the Attorney General's ministry"
+          },
+          {
+            "date": "1957",
+            "type": "office_retitled",
+            "title": "Head of corrections becomes Director of Correction"
+          },
+          {
+            "date": "1978",
+            "type": "office_retitled",
+            "title": "Head retitled Commissioner of Corrections (by 1978)"
+          },
+          {
+            "date": "1980",
+            "type": "unit_established",
+            "title": "B.C. Parole Board created"
+          },
+          {
+            "date": "1988",
+            "type": "office_retitled",
+            "title": "Commissioner of Corrections replaced by Assistant Deputy Minister of Corrections"
+          }
+        ]
+      },
+      "established": null,
+      "ended": null,
+      "names": [
+        {
+          "name": "Corrections",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
+          "source_id": "r2-pssg-plan-2003",
+          "locator": "PDF page 13 / printed page 7, Core Business Areas — Corrections",
+          "checked": "2026-09-26"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Public Safety and Solicitor General",
+          "from": null,
+          "to": null,
+          "relation": "part_of",
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
+          "source_id": "r2-pssg-plan-2003",
+          "locator": "PDF page 13 / printed page 7, Core Business Areas — Corrections",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "A named ministry unit is documented in the 2003 service plan. This supports a 2003 observation only; the establishment date and earlier/later transfers remain unverified. The plan horizon is not treated as a continuous parent interval. Earlier held events, where present, remain leads rather than newly verified dates.",
+      "first_observed": {
+        "date": "2003",
+        "precision": "year",
+        "evidence": "service_plan",
+        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
+        "source_id": "r2-pssg-plan-2003",
+        "locator": "PDF page 13 / printed page 7, Core Business Areas — Corrections",
+        "checked": "2026-09-26",
+        "meaning": "Named unit observed in a historical service plan; not first-ever existence"
+      },
+      "research_events": [],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "bc-coroners-service",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      },
+      "name": "BC Coroners Service",
+      "kind": "agency",
+      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
+      "parent_today_name": "Ministry of Public Safety and Solicitor General",
+      "official_url": "https://www2.gov.bc.ca/gov/content/life-events/death/coroners-service",
+      "source_today": "https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/org-chart-pssg",
+      "description": "Investigates unnatural, sudden and unexpected deaths, holds inquests and death review panels and makes prevention recommendations.",
+      "held": {
+        "established": null,
+        "events_on_file": [
+          {
+            "date": "1871",
+            "type": "function_origin",
+            "title": "Coroners' death investigation inherited with the English Coroners Act (1848) at Confederation; coroners report to the Attorney General"
+          },
+          {
+            "date": "1969",
+            "type": "office_established",
+            "title": "Supervisory Coroner appointed (Glen McDonald, OIC 2379/1969)"
+          },
+          {
+            "date": "1979",
+            "type": "unit_established",
+            "title": "First BC Coroners Act enacted; first Chief Coroner (Dr. William McArthur, OIC 612/1979) appointed; Coroners Service dated from 1979"
+          },
+          {
+            "date": "2007",
+            "type": "administrative_grouping",
+            "title": "B.C. Coroners Service grouped within Emergency Management B.C. core business area"
+          },
+          {
+            "date": "2007-05-31",
+            "type": "legislation_assented",
+            "title": "Coroners Act (SBC 2007, c. 15) assented"
+          }
+        ]
+      },
+      "established": null,
+      "ended": null,
+      "names": [
+        {
+          "name": "Coroners Service",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
+          "source_id": "r2-pssg-plan-2003",
+          "locator": "PDF pages 13–14 / printed pages 7–8, Policing and Community Safety",
+          "checked": "2026-09-26"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Public Safety and Solicitor General",
+          "from": null,
+          "to": null,
+          "relation": "part_of",
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
+          "source_id": "r2-pssg-plan-2003",
+          "locator": "PDF pages 13–14 / printed pages 7–8, Policing and Community Safety",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "A named ministry unit is documented in the 2003 service plan. This supports a 2003 observation only; the establishment date and earlier/later transfers remain unverified. The plan horizon is not treated as a continuous parent interval. Earlier held events, where present, remain leads rather than newly verified dates.",
+      "first_observed": {
+        "date": "2003",
+        "precision": "year",
+        "evidence": "service_plan",
+        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
+        "source_id": "r2-pssg-plan-2003",
+        "locator": "PDF pages 13–14 / printed pages 7–8, Policing and Community Safety",
+        "checked": "2026-09-26",
+        "meaning": "Named unit observed in a historical service plan; not first-ever existence"
+      },
+      "research_events": [],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "commercial-vehicle-safety-and-enforcement",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Commercial Vehicle Safety and Enforcement",
+      "shortName": "CVSE",
+      "kind": "division",
+      "parent_today": "ministry-of-transportation-and-transit-2024",
+      "parent_today_name": "Ministry of Transportation and Transit",
+      "official_url": "https://www2.gov.bc.ca/gov/content/transportation/vehicle-safety-enforcement",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Enforces commercial vehicle safety through inspection stations and runs commercial transport permitting.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": null,
+      "names": [
+        {
+          "name": "Commercial Vehicle Safety and Enforcement Division",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
+          "source_id": "r2-pssg-plan-2003",
+          "locator": "PDF pages 14–15 / printed pages 8–9, Compliance and Consumer Services divisions",
+          "checked": "2026-09-26"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Public Safety and Solicitor General",
+          "from": null,
+          "to": null,
+          "relation": "part_of",
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
+          "source_id": "r2-pssg-plan-2003",
+          "locator": "PDF pages 14–15 / printed pages 8–9, Compliance and Consumer Services divisions",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "A named ministry unit is documented in the 2003 service plan. This supports a 2003 observation only; the establishment date and earlier/later transfers remain unverified. The plan horizon is not treated as a continuous parent interval. Earlier held events, where present, remain leads rather than newly verified dates.",
+      "first_observed": {
+        "date": "2003",
+        "precision": "year",
+        "evidence": "service_plan",
+        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
+        "source_id": "r2-pssg-plan-2003",
+        "locator": "PDF pages 14–15 / printed pages 8–9, Compliance and Consumer Services divisions",
+        "checked": "2026-09-26",
+        "meaning": "Named unit observed in a historical service plan; not first-ever existence"
+      },
+      "research_events": [],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "skilled-trades-bc-appeal-board",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Skilled Trades BC Appeal Board",
+      "shortName": "STBCAB",
+      "kind": "board",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://www.stbcab.ca/",
+      "source_today": "https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector",
+      "description": "Hears appeals under section 45 of the Skilled Trades BC Act about SkilledTradesBC decisions on trainees, authorizations and credentials.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": null,
+      "names": [
+        {
+          "name": "Industry Training Appeal Board",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "observed_on": "2006",
+          "coverage": "observation_only",
+          "evidence": "annual_report",
+          "source": "https://www.stbcab.ca/app/uploads/sites/771/2020/01/ITAB_AR_2006-2017.pdf",
+          "source_id": "r2-itab-first-report",
+          "locator": "PDF page 5 / printed page 5, Message from the Chair",
+          "checked": "2026-09-26"
+        },
+        {
+          "name": "Skilled Trades BC Appeal Board",
+          "from": "2022-12-01",
+          "to": null,
+          "from_precision": "day",
+          "to_precision": null,
+          "coverage": "start_documented_end_unknown",
+          "evidence": "annual_report",
+          "source": "https://www.stbcab.ca/app/uploads/sites/771/2023/08/STBCAB_AR_2022-23.pdf",
+          "source_id": "r2-stbcab-rename",
+          "locator": "PDF page 3 / printed page 3, opening paragraph",
+          "checked": "2026-09-26"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Skilled Trades BC Act, SBC 2022, c. 4, s. 42",
+        "evidence": "annual_report",
+        "source": "https://www.stbcab.ca/app/uploads/sites/771/2023/08/STBCAB_AR_2022-23.pdf",
+        "source_id": "r2-stbcab-rename",
+        "locator": "PDF page 5 / printed page 5, Mandate, statutory continuation quotation",
+        "checked": "2026-09-26",
+        "scope": "Continuation of the Industry Training Appeal Board, originally under Industry Training Authority Act, SBC 2003, c. 34, s. 10(1)."
+      },
+      "evidence_status": "documented_partial",
+      "note": "The 2022/23 report explicitly documents a rename on 2022-12-01 and statutory continuation, so the earlier Industry Training Appeal Board is not a separate gone body. The inaugural report dates the start of operations to 2006. The exact legal establishment/commencement date was not located; established stays null. The April 1 reporting boundary is not promoted to an opening day.",
+      "first_observed": {
+        "date": "2006",
+        "precision": "year",
+        "evidence": "annual_report",
+        "source": "https://www.stbcab.ca/app/uploads/sites/771/2020/01/ITAB_AR_2006-2017.pdf",
+        "source_id": "r2-itab-first-report",
+        "locator": "PDF page 5 / printed page 5, Appeals during Reporting Period",
+        "checked": "2026-09-26",
+        "meaning": "Retrospectively documented operation under the Industry Training Appeal Board name"
+      },
+      "research_events": [
+        {
+          "date": "2006",
+          "precision": "year",
+          "evidence": "annual_report",
+          "source": "https://www.stbcab.ca/app/uploads/sites/771/2020/01/ITAB_AR_2006-2017.pdf",
+          "source_id": "r2-itab-first-report",
+          "locator": "PDF page 5 / printed page 5, Message from the Chair — Appeals during Reporting Period",
+          "checked": "2026-09-26",
+          "type": "operational_start",
+          "summary": "Inaugural report states that the Board started operations in 2006."
+        },
+        {
+          "date": "2022-12-01",
+          "precision": "day",
+          "evidence": "annual_report",
+          "source": "https://www.stbcab.ca/app/uploads/sites/771/2023/08/STBCAB_AR_2022-23.pdf",
+          "source_id": "r2-stbcab-rename",
+          "locator": "PDF page 3 / printed page 3, Message from the Chair, opening paragraph",
+          "checked": "2026-09-26",
+          "type": "legal_name_change",
+          "summary": "Industry Training Appeal Board renamed Skilled Trades BC Appeal Board when the new Act came into force."
+        }
+      ],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "intimate-images-protection-service",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "parents",
+          "relations"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Intimate Images Protection Service",
+      "kind": "program",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "parent_today_name": "Ministry of Attorney General",
+      "official_url": "https://takebackyourimages.gov.bc.ca/",
+      "source_today": "https://takebackyourimages.gov.bc.ca/",
+      "description": "Supports people whose intimate images have been shared, or threatened to be shared, without consent.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2024-01-29",
+        "precision": "day",
+        "evidence": "news_release",
+        "source": "https://archive.news.gov.bc.ca/releases/news_releases_2020-2024/2024AG0004-000096.htm",
+        "source_id": "r2-iips-launch",
+        "locator": "Dateline, opening launch paragraph and paragraph beginning To ensure that victims",
+        "checked": "2026-09-26",
+        "meaning": "Public launch of the named support service"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Intimate Images Protection Act",
+        "evidence": "news_release",
+        "source": "https://archive.news.gov.bc.ca/releases/news_releases_2020-2024/2024AG0004-000096.htm",
+        "source_id": "r2-iips-launch",
+        "locator": "Opening and service-launch paragraphs",
+        "checked": "2026-09-26",
+        "scope": "Policy/statutory context of the launch; not a claim that the Act creates a separate statutory corporation."
+      },
+      "evidence_status": "documented_partial",
+      "note": "The service launch and commencement of the Intimate Images Protection Act coincide in the announcement but are separately typed. Joint issuing ministries and collaboration with the CRT are not treated as administrative parenthood. Full parent history remains unverified.",
+      "first_observed": null,
+      "research_events": [
+        {
+          "date": "2024-01-29",
+          "precision": "day",
+          "evidence": "news_release",
+          "source": "https://archive.news.gov.bc.ca/releases/news_releases_2020-2024/2024AG0004-000096.htm",
+          "source_id": "r2-iips-launch",
+          "locator": "Opening paragraph",
+          "checked": "2026-09-26",
+          "type": "legislation_in_force",
+          "summary": "Intimate Images Protection Act came into force."
+        }
+      ],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "civil-forfeiture-office",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "names",
+          "complete_parent_history",
+          "relations"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Civil Forfeiture Office",
+      "kind": "office",
+      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
+      "parent_today_name": "Ministry of Public Safety and Solicitor General",
+      "official_url": "https://www2.gov.bc.ca/gov/content/safety/crime-prevention/civil-forfeiture-office",
+      "source_today": "https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/org-chart-pssg",
+      "description": "Uses civil court proceedings to take the proceeds and instruments of unlawful activity.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": {
+        "date": "2005",
+        "precision": "year",
+        "evidence": "official_webpage",
+        "source": "https://www2.gov.bc.ca/gov/content/safety/crime-prevention/civil-forfeiture-office",
+        "source_id": "r2-cfo-about",
+        "locator": "Opening paragraph",
+        "checked": "2026-09-26",
+        "meaning": "Office establishment year explicitly stated on the government page"
+      },
+      "ended": null,
+      "names": [],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Public Safety and Solicitor General",
+          "from": null,
+          "to": null,
+          "relation": "part_of",
+          "observed_on": "2026-09-26",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://www2.gov.bc.ca/gov/content/safety/crime-prevention/civil-forfeiture-office",
+          "source_id": "r2-cfo-about",
+          "locator": "Second paragraph, explicit part-of statement",
+          "checked": "2026-09-26",
+          "via_unit_as_printed": "Community Safety and Victim Services branch"
+        }
+      ],
+      "relations": [],
+      "legal_basis": {
+        "citation": "Civil Forfeiture Act",
+        "evidence": "official_webpage",
+        "source": "https://www2.gov.bc.ca/gov/content/safety/crime-prevention/civil-forfeiture-office",
+        "source_id": "r2-cfo-about",
+        "locator": "Opening paragraph",
+        "checked": "2026-09-26",
+        "scope": "Named authority for the office; original commencement instrument not examined."
+      },
+      "evidence_status": "documented_partial",
+      "note": "The page explicitly says the office was established in 2005. This is not assumed to be the date of statutory commencement or of the first proceeding. The ministry and internal branch placement are documented only as a present-day observation; no continuous 2005–present interval is invented.",
+      "first_observed": null,
+      "research_events": [],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "bc-pharmacare",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      },
+      "name": "BC PharmaCare",
+      "shortName": "PharmaCare",
+      "kind": "program",
+      "parent_today": "ministry-of-health-2011",
+      "parent_today_name": "Ministry of Health",
+      "official_url": "https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/pharmacare-for-bc-residents",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf",
+      "description": "Publicly funded program that helps B.C. residents pay for some prescription drugs, medical supplies and pharmacy services.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": null,
+      "names": [
+        {
+          "name": "Pharmacare",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/hs/hs.pdf",
+          "source_id": "r2-health-services-plan-2003",
+          "locator": "PDF page 17 / printed page 11, mandate box",
+          "checked": "2026-09-26"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Health Services",
+          "from": null,
+          "to": null,
+          "relation": "part_of",
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/hs/hs.pdf",
+          "source_id": "r2-health-services-plan-2003",
+          "locator": "PDF page 17 / printed page 11, Operate the two provincial service plans",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The 2003 ministry mandate explicitly includes operating this provincial service plan. This adds an observed historical administrative placement, not the program start. Later versions of the program and the full parent chronology remain unverified.",
+      "first_observed": {
+        "date": "2003",
+        "precision": "year",
+        "evidence": "service_plan",
+        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/hs/hs.pdf",
+        "source_id": "r2-health-services-plan-2003",
+        "locator": "PDF page 17 / printed page 11, Ministry of Health Services Mandate box",
+        "checked": "2026-09-26",
+        "meaning": "Program observed in the 2003 plan; earliest source reviewed in this tranche, not first-ever use"
+      },
+      "research_events": [],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
+    },
+    {
+      "id": "medical-services-plan",
+      "review": {
+        "checked": "2026-09-26",
+        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "relations",
+          "legal_basis"
+        ],
+        "full_history_complete": false
+      },
+      "name": "Medical Services Plan",
+      "shortName": "MSP",
+      "kind": "program",
+      "parent_today": "ministry-of-health-2011",
+      "parent_today_name": "Ministry of Health",
+      "official_url": "https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/msp",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf",
+      "description": "The provincial health insurance plan, covering most physician, diagnostic and laboratory services for residents.",
+      "held": {
+        "established": null,
+        "events_on_file": []
+      },
+      "established": null,
+      "ended": null,
+      "names": [
+        {
+          "name": "Medical Services Plan",
+          "from": null,
+          "to": null,
+          "from_precision": null,
+          "to_precision": null,
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/hs/hs.pdf",
+          "source_id": "r2-health-services-plan-2003",
+          "locator": "PDF page 17 / printed page 11, mandate box",
+          "checked": "2026-09-26"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Health Services",
+          "from": null,
+          "to": null,
+          "relation": "part_of",
+          "observed_on": "2003",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2003/sp/hs/hs.pdf",
+          "source_id": "r2-health-services-plan-2003",
+          "locator": "PDF page 17 / printed page 11, Operate the two provincial service plans",
+          "checked": "2026-09-26"
+        }
+      ],
+      "relations": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The 2003 ministry mandate explicitly includes operating this provincial service plan. This adds an observed historical administrative placement, not the program start. Later versions of the program and the full parent chronology remain unverified.",
+      "first_observed": {
+        "date": "2003",
+        "precision": "year",
+        "evidence": "service_plan",
+        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/hs/hs.pdf",
+        "source_id": "r2-health-services-plan-2003",
+        "locator": "PDF page 17 / printed page 11, Ministry of Health Services Mandate box",
+        "checked": "2026-09-26",
+        "meaning": "Program observed in the 2003 plan; earliest source reviewed in this tranche, not first-ever use"
+      },
+      "research_events": [],
+      "date_claims": [],
+      "round2_status": {
+        "claims_reviewed": true,
+        "lifecycle_complete": false,
+        "run": "2026-09-26-round2-partial"
+      }
     }
   ],
   "gone": [
@@ -1856,5 +3284,41 @@
         "full_history_complete": false
       }
     }
-  ]
+  ],
+  "prior_repository_metadata": {
+    "full_name": "ahzs645/PofBC",
+    "reviewed_commit": "b83a40f0928f15c0ac13caa69e4fa730db142557",
+    "remote_modified": false
+  },
+  "round2": {
+    "input_basis": "Uploaded snapshot; START-HERE.md reports main at 400ecb8",
+    "new_reviewed_record_ids": [
+      "columbia-hydro-constructors",
+      "energy-resource-appeal-tribunal",
+      "forest-appeals-commission",
+      "mental-health-review-board",
+      "environmental-appeal-board",
+      "office-of-the-seniors-advocate",
+      "bc-bid",
+      "court-services-branch",
+      "bc-corrections",
+      "bc-coroners-service",
+      "commercial-vehicle-safety-and-enforcement",
+      "skilled-trades-bc-appeal-board",
+      "intimate-images-protection-service",
+      "civil-forfeiture-office",
+      "bc-pharmacare",
+      "medical-services-plan"
+    ],
+    "updated_reviewed_record_ids": [
+      "workbc",
+      "powertech-labs"
+    ],
+    "new_gone_records": 0,
+    "editorial_decisions_applied": false,
+    "repository_builds_run": false,
+    "repository_tests_run": false,
+    "observation_warning": "observation_only rows do not establish a continuous period. A first_observed value is not an establishment date.",
+    "parent_identifier_warning": "The supplied schema uses ministry_as_printed for both ministries and named corporate parents (including BC Hydro). That existing shape is retained; repository name matching has not been tested."
+  }
 }

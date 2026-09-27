@@ -6,12 +6,13 @@ as of 2026-09-26 (the Coverage card under the Government view's sources measures
 
 **Where the atlas stands:** 1,972 of 1,990 ministry-years have a minister on record (99%); 2,218 of
 2,909 body-years have a responsible ministry stated by a source (76%), 89 more are placed by
-inference, and **602 have none**; **32 of 239 sub-agencies** have a start date.
+inference, and **602 have none**; **38 of 239 sub-agencies** have a start date (after round 2).
 
 ## 1. Sub-agencies — the biggest visible gap
 
 Most of today's 239 sub-agencies have no start date, so they vanish the moment the timeline leaves
-2026. The first review dated 26; 213 are untouched.
+2026. Two review rounds have covered 42; **197 are untouched** (`reviews/round-2/remaining-work.json`
+lists them).
 
 - **The brief:** [`sub-agencies/BRIEF.md`](sub-agencies/BRIEF.md) lists every one, by parent, with
   what is held and the parent ministry's earlier names to search under. Fill
@@ -19,8 +20,10 @@ Most of today's 239 sub-agencies have no start date, so they vanish the moment t
 - **Start with the largest families:** Attorney General (22 undated), Finance (12), Health (12),
   Public Safety and Solicitor General (12), Citizens' Services (11), PHSA (11), Education and Child
   Care (10).
-- **Still to settle:** WorkBC (a 2012 centres launch is known; the brand's start is not) and
-  Powertech Labs (1988 as collected, service from 1989 in BC Hydro's account).
+- **Still to settle:** the Environmental Appeal Board — 1981 as collected, 1982 in its own manual;
+  the original commencement instrument would settle it (a proposal is in
+  `reviews/round-2/decision-recommendations.json`). (WorkBC is settled: 27 April 2007, by decision.)
+  Powertech Labs — 1988 as collected, service from 1989 in BC Hydro's account.
 - **Parents over time:** almost none is recorded, so past placement is inferred from today's
   parent. The cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches;
   ministry annual reports' organisation charts are the best evidence.
@@ -50,9 +53,18 @@ These bodies are drawn in the "no ministry established" lane. Largest gaps, in b
 | Labour Relations Board | 12 | |
 | BC Pavilion Corporation | 12 | |
 
-Hand back periods as `responsible-<n>.json` (see README): `{ministry, from, to, source, note}` for
+Round 2 could not fetch the BC Archives authority pages for the Workmen's Compensation Board, the
+Civil Service Commission and the Emergency Health Services Commission — try them again, or their
+PDF finding aids, first. Hand back periods as `responsible-<n>.json` (see README): `{ministry, from, to, source, note}` for
 each stated responsibility. Orders in council (BC Laws' historical OIC archive), the Estimates'
 vote structure and ministry annual reports are the usual evidence.
+
+**Leads from the BC Forest Service timeline** (`atlas/events-bcfs-timeline.json`, a secondary
+compilation): Forestry Innovation Investment was incorporated on 31 March 2003 (the atlas holds no
+start for it); Forest Renewal BC was terminated on 14 June 2002 (the atlas says 27 June); the Small
+Business Forest Enterprise Program is dated 1979; the Department of Forests to 1976 (the Archives
+diagram says 1975). Each wants a primary source — FII's annual report or BC Registries, the Forest
+Renewal repeal, the 1978 Forest Act and Ministry of Forests annual reports.
 
 ## 3. Ministries and ministers
 

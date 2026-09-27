@@ -750,6 +750,15 @@
 .gov-timeline__axis { stroke: var(--gov-mid); stroke-width: 1; }
 .gov-timeline__cursor { fill: var(--gov-ink); fill-opacity: 0.85; }
 
+/* Following a chosen body: a fifth strip under the axis, and a taller track to hold it. */
+.gov-timeline__track[data-following] { height: 96px; }
+.gov-timeline__track[data-following] svg,
+.gov-timeline__track[data-following] .gov-timeline__range { height: 76px; }
+.gov-timeline__life { fill: var(--gov-ink-3); fill-opacity: 0.45; }
+.gov-timeline__life-unknown { stroke: var(--gov-ink-3); stroke-width: 1.5; stroke-dasharray: 4 3; opacity: 0.6; }
+.gov-timeline__stop { fill: var(--gov-legislative); }
+.gov-timeline__swatch--life { background: linear-gradient(90deg, var(--gov-ink-3) 0 70%, var(--gov-legislative) 70%); opacity: 0.8; }
+
 .gov-timeline__decades {
   position: relative;
   height: 16px;

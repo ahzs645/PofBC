@@ -20,7 +20,7 @@ import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
 import { useSiteTheme } from '../site/useTheme.js'
 import { layoutGovernment } from './layout.js'
-import { FIRST_YEAR, governmentIn, PRESENT_YEAR } from './snapshot.js'
+import { FIRST_YEAR, governmentIn, lifeOf, PRESENT_YEAR } from './snapshot.js'
 import { TimelineBar } from './TimelineBar.jsx'
 import { THEMES } from './theme.js'
 import { CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
@@ -218,6 +218,8 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
 
   const government = useMemo(() => governmentIn(year, { includeUndated }), [year, includeUndated])
   const selected = government.nodes.find((node) => node.id === selectedId) ?? null
+  // The chosen body's whole life, kept while the years move through ones it did not exist in.
+  const life = useMemo(() => lifeOf(selectedId), [selectedId])
 
   useEffect(() => {
     writeParams({ year, node: selected ? selectedId : null, mode, compare: compareYear, undated: includeUndated })
@@ -371,7 +373,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
           </div>
         </div>
 
-        <TimelineBar year={year} onYear={changeYear} playing={playing} onPlay={play} />
+        <TimelineBar year={year} onYear={changeYear} playing={playing} onPlay={play} life={life} />
       </div>
       <div className="gov__panel" ref={panel}>
 

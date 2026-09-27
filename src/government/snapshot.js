@@ -260,6 +260,7 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
       description: current?.description ?? null,
       predecessors: predecessorsOf(episode.id),
       successors: successorsOf(episode.id),
+      events: eventsFor([episode.id]),
       evidence: [
         claim(`${episode.name}, ${episode.from}–${episode.to ?? ''}`, ARCHIVES_DIAGRAM, episode.inferredEnd ? { note: 'End year inferred from what it became.' } : {}),
         current ? claim(`${current.minister.person}, ${current.minister.title}; ${current.deputy?.person ?? 'deputy not recorded'}, ${current.deputy?.title ?? 'Deputy Minister'}`, TODAY_SOURCE, { checked: CURRENT_AS_OF }) : null,
@@ -534,3 +535,26 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
 }
 
 export { PEOPLE_ID }
+
+/**
+ * A body's whole life, whatever year is shown: when it stood, as precisely as known, and every
+ * dated event about it. What the timeline draws for the body chosen, so its history can be seen
+ * and stepped through even from a year it did not exist in.
+ * @returns {{id: string, name: string|null, from: string|null, to: string|null, events: object[]}|null}
+ */
+export const lifeOf = (id) => {
+  if (!id) return null
+  const episode = MINISTRY_EPISODES.find((entry) => entry.id === id)
+  const sub = SUB_AGENCIES.find((entry) => entry.id === id)
+  const body = HISTORICAL_BODIES.find((entry) => entry.id === id && entry.name)
+  const current = CURRENT_BODIES.find((entry) => entry.id === id)
+  const events = eventsFor([id])
+  const record = episode
+    ? { name: episode.name, from: String(episode.from), to: episode.to ? String(episode.to) : null }
+    : sub ? { name: sub.name, from: sub.established ?? null, to: sub.ended ?? null }
+      : body ? { name: body.name, from: body.established ?? null, to: body.ended ?? null }
+        : current ? { name: current.name, from: current.established ? String(current.established) : null, to: null }
+          : null
+  if (!record && !events.length) return null
+  return { id, name: record?.name ?? null, from: record?.from ?? null, to: record?.to ?? null, events }
+}
