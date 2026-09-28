@@ -9,13 +9,14 @@ Researched 2026-09-26, mostly from Wayback Machine captures of each body's site,
 release archive, and the covers of its published plans and reports. Nothing was downloaded into the
 repo.
 
-## ICBC, BCLC and BC Ferries
+## ICBC, BCLC, BC Ferries and WorkSafeBC
 
-Their timelines came as three research packages (27 September 2026), filed here whole in
-[`icbc/`](icbc), [`bclc/`](bclc) and [`bc-ferries/`](bc-ferries): each package's own README
-(`PACKAGE.md`), its evidence notes (`NOTES.md` and `SOURCES.md` for ICBC, `EVIDENCE.md` for BCLC,
-`SOURCE-NOTES.md` for BC Ferries) and its machine-readable timeline and sources. The logo SVGs are
-in `artwork/icbc/`, `artwork/bclc/` and `artwork/bc-ferries/`, with the files originally supplied
+Their timelines came as four research packages (27 September 2026), filed here whole in
+[`icbc/`](icbc), [`bclc/`](bclc), [`bc-ferries/`](bc-ferries) and [`worksafebc/`](worksafebc): each
+package's own README (`PACKAGE.md`), its evidence notes (`NOTES.md` and `SOURCES.md` for ICBC,
+`EVIDENCE.md` for BCLC, `SOURCE-NOTES.md` for BC Ferries, `SOURCES.md` for WorkSafeBC) and its
+machine-readable timeline and sources. The logo SVGs are in `artwork/icbc/`, `artwork/bclc/`,
+`artwork/bc-ferries/` and `artwork/worksafebc/`, with the files originally supplied
 to the research in `supplied/` beside them; the packages' boards, previews and screenshots were left
 out. Paths inside `PACKAGE.md` are the package's own (`logos/`, `data/`, …), not this repo's.
 
@@ -32,13 +33,21 @@ What the gallery took from them, and did not:
   lockups and the serif badge are rebuilt; BCLC's red, orange and green mark is today's letters in the
   design system's older palette, not a 2008 master. Every BC Ferries dogwood mark is rebuilt; the 1963
   flag is an interpretation of a brochure illustration. The isolated geometric dogwood (white petals,
-  no ground) and the uniform-patch photograph were left out; the flag carries the same flower.
+  no ground) and the uniform-patch photograph were left out; the flag carries the same flower. Both
+  WorkSafeBC marks are rebuilt: the 1983 lockup from undated catalogue specimens, with substitute
+  lettering, and today's wordmark from a 210-pixel picture.
+- **A documented design with no picture is an empty era.** WorkSafeBC's 1968 worker-protection design
+  is dated by the board's own history but has not been found, so it is `sought`. Nothing stands for
+  1917–1968: whether the board had a mark then is not known, and a slot would claim it did. Its 1974
+  and 2005 name changes are not treated as redesigns.
 - **Open:** a 1973 example; when any early ICBC mark was adopted or retired; the serif-to-sans change;
   what the orange treatment is for; the first appearance and colours of BCLC's sun and waves; and when
   BCLC's purple, coral and yellow palette came in; a dated introduction for BC Ferries' geometric
   dogwood, and whether its flower and lettering changed together. No body has supplied a master or
   permission. BC Ferries' wave belongs to BC Ferry Services Inc., which is not a public body; the
-  collection links to the Crown corporation it replaced.
+  collection links to the Crown corporation it replaced. For WorkSafeBC: the 1968 artwork, a dated
+  example of the 1983 lockup, when the black-and-orange wordmark first appeared, and its 2004 and 2005
+  report covers, which the package could not open.
 
 ## The rules the timelines follow
 
@@ -86,5 +95,3 @@ Each is linked from its era as "Artwork seen at". In rough order of how much it 
 - **BC Wildfire Service's oval crest:** when it started. The ministry it names existed 2010–2017.
 - **Retirements:** no source dates the end of "Where ideas work" (still in use in 2023) or of the
   "StrongerBC for everyone" word mark.
-- **WorkSafeBC** is on the "not yet in the gallery" shelf with its 1968 and 1983 logo dates already
-  verified; a timeline for it waits on artwork.

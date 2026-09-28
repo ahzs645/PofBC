@@ -548,6 +548,62 @@ const BCF_ENTRIES = {
   ]
 }
 
+// ── WorkSafeBC ───────────────────────────────────────────────────────────────────────────────────
+//
+// From a fourth package (research/identity/worksafebc). Both marks are rebuilt: the 1983 lockup from
+// undated specimens, today's wordmark from a small supplied picture.
+
+const WCB_RIGHTS = {
+  status: 'unresolved',
+  note: 'WorkSafeBC’s mark. Its published terms require prior written permission to use its trademarks. ' +
+    NO_PERMISSION
+}
+
+const WCB_ENTRIES = {
+  'wcb-1983': [
+    supplied({
+      provenance: 'reconstructed',
+      fidelity: 'font substitution',
+      fidelityNote: 'The symbol is drawn by hand from undated specimens on two logo catalogues; the name is a ' +
+        'fitted Noto Sans Condensed Medium converted to paths, standing in for a typeface not identified.',
+      applicability: DATED_BY_TIMELINE('estimated_era', 'from 1983', 'The redesign’s year is documented; this ' +
+        'lockup belongs to it by likeness, not by a dated example.'),
+      rights: WCB_RIGHTS
+    })({
+      id: 'wcb-1983',
+      label: 'Symbol and name',
+      years: 'from 1983',
+      note: 'The province-and-worker symbol beside the board’s name on three lines.'
+    }),
+    supplied({
+      ...RECONSTRUCTED('The symbol’s paths from the reconstructed lockup, on their own. That the symbol was used ' +
+        'alone is not established.'),
+      applicability: DATED_BY_TIMELINE('estimated_era', 'from 1983', 'The lockup’s years.'),
+      rights: WCB_RIGHTS
+    })({
+      id: 'wcb-1983-symbol',
+      label: 'Symbol',
+      years: 'from 1983',
+      note: 'The province, the sheltering hand and the worker, without the name.'
+    })
+  ],
+  'worksafebc-orange': [
+    supplied({
+      ...RECONSTRUCTED('Letters and blocks drawn by hand from a supplied picture 210 pixels wide, and checked by ' +
+        'eye against a logo on an official WorkSafeBC service. The orange, #ED8B00, is a screen approximation, ' +
+        'not a brand value.'),
+      applicability: DATED_BY_TIMELINE('first_observation', 'by 2026', 'On an official WorkSafeBC service in ' +
+        'September 2026.'),
+      rights: WCB_RIGHTS
+    })({
+      id: 'worksafebc',
+      label: 'WorkSafeBC',
+      years: 'by 2026',
+      note: 'The operating name in black and orange blocks.'
+    })
+  ]
+}
+
 /**
  * Which one-offs stand for a body the government diagram draws, so a card can lead to it. The
  * Province's marks that name a campaign or a slogan rather than a body have none.
@@ -746,6 +802,20 @@ export const GALLERY_COLLECTIONS = [
       'then the wave, introduced on 2 April 2003 with the company that replaced the Crown corporation. ' +
       'The dogwood marks are reconstructions; the wave is supplied paths, shown as they came.',
     eras: withMarks(COLLECTION_ERAS['bc-ferries'], BCF_ENTRIES)
+  },
+  {
+    id: 'worksafebc',
+    shelf: 'bodies',
+    label: 'WorkSafeBC',
+    body: 'Workers’ Compensation Board · agency',
+    years: '1917–present',
+    graphNode: 'workers-compensation-board',
+    cover: 'worksafebc',
+    intro: 'The Workers’ Compensation Board’s marks since its own history starts dating them: a ' +
+      'worker-protection emblem in 1968, not yet found; the province and the worker from 1983; and ' +
+      'WorkSafeBC in black and orange, the everyday name since 2005. What the board used from its ' +
+      'founding in 1917 until 1968 is not known. Both marks here are reconstructions.',
+    eras: withMarks(COLLECTION_ERAS.worksafebc, WCB_ENTRIES)
   },
   {
     id: 'bc-parks',

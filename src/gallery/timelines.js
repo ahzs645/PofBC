@@ -703,9 +703,26 @@ const BCF_SOURCES = {
   S3: source('BC Ferries, Investor Overview, September 2026 [S3]', 'https://www.bcferries.com/web_image/h7f/h2d/9106869944350.pdf', 'cover')
 }
 
+// WorkSafeBC's sources, from the research package in research/identity/worksafebc (27 September 2026).
+
+const WCB_SOURCES = {
+  S1: source('WorkSafeBC, “Our story: 1917–1941” [S1]', 'https://www.worksafebc.com/en/about-us/who-we-are/our-story/1917-1941',
+    'founded on 1 January 1917 as the Workmen’s Compensation Board'),
+  S2: source('WorkSafeBC, “Our story: 1967–1991” [S2]', 'https://www.worksafebc.com/en/about-us/who-we-are/our-story/1967-1991',
+    'a worker-protection logo in 1968; provincial imagery added in 1983; “Workmen’s” became “Workers’” in 1974'),
+  S3: source('WorkSafeBC, “Our story: 1992–2016” [S3]', 'https://www.worksafebc.com/en/about-us/who-we-are/our-story/1992-2016',
+    'WorkSafeBC adopted as the operating name in 2005; the legal name is kept'),
+  S4: source('WorkSafeBC clearance service, logo image [S4]', 'https://asmtclr.online.worksafebc.com/Mobile/css/images/WorkSafeBC-logo.png',
+    'observed 27 September 2026'),
+  S5: source('Freebie Supply, Worker’s Compensation Board logo [S5]', 'https://freebiesupply.com/logos/workers-compensation-board-logo/',
+    'an undated specimen'),
+  S6: source('Seeklogo, Worker’s Compensation Board logo no. 153800 [S6]', 'https://seeklogo.com/vector-logo/153800/workers-compensation-board',
+    'an undated specimen')
+}
+
 /**
  * BC Parks' eras around its flag-era badge, BC Timber Sales' around its two marks, and ICBC's,
- * BCLC's and BC Ferries'. These are collections, not one-offs, so collections.js puts their marks into the held
+ * BCLC's, BC Ferries' and WorkSafeBC's. These are collections, not one-offs, so collections.js puts their marks into the held
  * eras itself; what is here is everything else an era says.
  */
 export const COLLECTION_ERAS = {
@@ -1052,6 +1069,62 @@ export const COLLECTION_ERAS = {
         note: 'Announced on 2 April 2003, and on the cover of BC Ferries’ investor overview of September 2026.'
       },
       sources: [BCF_SOURCES.S1, BCF_SOURCES.S3]
+    }
+  ],
+
+  // The board's own history dates two redesigns, 1968 and 1983; a name change (1974) and an
+  // operating name (2005) are kept apart from them. What came before 1968 is not known, so no era
+  // stands for it — the intro says so rather than a slot claiming a mark that may not have existed.
+  worksafebc: [
+    {
+      id: 'wcb-1968',
+      status: 'sought',
+      years: '1968–1983',
+      label: 'The worker-protection emblem',
+      note: 'The board’s history describes a new design in 1968 built on protecting the worker. No ' +
+        'picture of it has been found, so it is not drawn.',
+      applicability: {
+        kind: 'documented_adoption',
+        years: '1968–1983',
+        note: 'The board’s own history dates the design to 1968 and the next one to 1983; when this one ' +
+          'actually went out of use, or whether the two overlapped, is not recorded.'
+      },
+      sources: [WCB_SOURCES.S2]
+    },
+    {
+      id: 'wcb-1983',
+      status: 'held',
+      years: 'from 1983',
+      label: 'The province and the worker',
+      note: 'The outline of British Columbia with the coast’s islands, shaped into a hand sheltering a ' +
+        'worker’s head, beside the Workers’ Compensation Board’s name — the board, renamed from ' +
+        '“Workmen’s” in 1974, added the province to its mark in 1983.',
+      applicability: {
+        kind: 'documented_adoption',
+        years: 'from 1983',
+        note: 'The board’s history dates the redesign to 1983. The lockup drawn here comes from undated ' +
+          'specimens and belongs to it by likeness, not by a dated example; when it was retired is not known, ' +
+          'and 2005 is not taken as its end.'
+      },
+      seenAt: ['https://seeklogo.com/vector-logo/153800/workers-compensation-board'],
+      sources: [WCB_SOURCES.S2, WCB_SOURCES.S5, WCB_SOURCES.S6]
+    },
+    {
+      id: 'worksafebc-orange',
+      status: 'held',
+      years: 'by 2026',
+      label: 'WorkSafeBC, in black and orange',
+      note: '“Work” and “Safe” reversed out of black blocks and “BC” out of an orange one. The board took ' +
+        'WorkSafeBC as its everyday name in 2005 and kept its legal name; when this wordmark first ' +
+        'appeared has not been found.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 2026',
+        note: 'On an official WorkSafeBC service on 27 September 2026. The name dates from 2005, which ' +
+          'does not date this drawing of it.'
+      },
+      seenAt: ['https://asmtclr.online.worksafebc.com/Mobile/css/images/WorkSafeBC-logo.png'],
+      sources: [WCB_SOURCES.S4, WCB_SOURCES.S3]
     }
   ]
 }

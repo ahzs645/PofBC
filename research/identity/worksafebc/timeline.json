@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "organization": "WorkSafeBC / Workers’ Compensation Board of British Columbia",
+  "research_date": "2026-09-27",
+  "edition": "Evidence-led research edition 01",
+  "events": [
+    {
+      "id": "foundation-1917",
+      "display_date": "1 January 1917",
+      "date": "1917-01-01",
+      "date_precision": "day",
+      "event_type": "organization_foundation",
+      "title": "Workmen’s Compensation Board established",
+      "source_ids": [
+        "S1"
+      ],
+      "date_confidence": "high",
+      "artwork_status": "unverified",
+      "asset": null,
+      "evidence_note": "Foundation and name are documented. Do not backdate a later logo to this event."
+    },
+    {
+      "id": "redesign-1968",
+      "display_date": "1968",
+      "date": "1968",
+      "date_precision": "year",
+      "event_type": "logo_redesign",
+      "title": "Worker-protection emblem introduced",
+      "source_ids": [
+        "S2"
+      ],
+      "date_confidence": "high",
+      "artwork_status": "description_only",
+      "asset": null,
+      "evidence_note": "Official retrospective explicitly identifies a new protective-worker design. Exact artwork not recovered."
+    },
+    {
+      "id": "name-1974",
+      "display_date": "1974",
+      "date": "1974",
+      "date_precision": "year",
+      "event_type": "organization_name_change",
+      "title": "Workmen’s becomes Workers’",
+      "source_ids": [
+        "S2"
+      ],
+      "date_confidence": "high",
+      "artwork_status": "not_a_separate_proven_design",
+      "asset": null,
+      "evidence_note": "Name amendment documented. No separate graphic-redesign claim is made."
+    },
+    {
+      "id": "redesign-1983",
+      "display_date": "1983",
+      "date": "1983",
+      "date_precision": "year",
+      "event_type": "logo_redesign",
+      "title": "Provincial imagery incorporated",
+      "source_ids": [
+        "S2",
+        "S5",
+        "S6"
+      ],
+      "date_confidence": "high",
+      "artwork_status": "approximate_reconstruction_from_undated_specimen",
+      "asset": "assets/wcb-1983-family-reconstruction.svg",
+      "evidence_note": "Year from official history; visual family association from secondary specimens. Exact lockup still needs a dated primary cross-check."
+    },
+    {
+      "id": "operating-name-2005",
+      "display_date": "2005",
+      "date": "2005",
+      "date_precision": "year",
+      "event_type": "operating_name_adoption",
+      "title": "WorkSafeBC becomes the everyday name",
+      "source_ids": [
+        "S3"
+      ],
+      "date_confidence": "high",
+      "artwork_status": "current_graphic_displayed_for_context",
+      "asset": "assets/worksafebc-current-reconstruction.svg",
+      "evidence_note": "This event dates the operating name, not necessarily the first appearance of the displayed orange wordmark."
+    },
+    {
+      "id": "official-observation-2026",
+      "display_date": "2026-09-27",
+      "date": "2026-09-27",
+      "date_precision": "day",
+      "event_type": "logo_use_observation",
+      "title": "Black-and-orange logo observed on an official service",
+      "source_ids": [
+        "S4"
+      ],
+      "date_confidence": "high_for_observation_only",
+      "artwork_status": "approximate_reconstruction_from_supplied_image",
+      "asset": "assets/worksafebc-current-reconstruction.svg",
+      "evidence_note": "The official live image matches the supplied visual family. Its file history and first publication date have not been established."
+    }
+  ],
+  "logo_families": [
+    {
+      "id": "pre-1968",
+      "label": "Earlier artwork unresolved",
+      "introduced": null,
+      "retired": null,
+      "artwork": null,
+      "note": "Do not assume a single logo covered 1917–1967."
+    },
+    {
+      "id": "worker-protection",
+      "label": "1968 protective-worker design",
+      "introduced": {
+        "year": 1968,
+        "confidence": "high",
+        "source_id": "S2"
+      },
+      "retired": null,
+      "superseded_by_event": "redesign-1983",
+      "artwork": null,
+      "note": "The next official redesign milestone is 1983; exact withdrawal or overlap dates are unknown."
+    },
+    {
+      "id": "province-worker",
+      "label": "1983 province-and-worker design family",
+      "introduced": {
+        "year": 1983,
+        "confidence": "high",
+        "source_id": "S2"
+      },
+      "retired": null,
+      "artwork": "assets/wcb-1983-family-reconstruction.svg",
+      "note": "The illustrated undated lockup is associated with the family by visual correspondence, not by a dated primary specimen. Do not encode 2005 as a proven last-use date."
+    },
+    {
+      "id": "black-orange",
+      "label": "Black-and-orange WorkSafeBC wordmark",
+      "introduced": null,
+      "retired": null,
+      "observed_on": "2026-09-27",
+      "artwork": "assets/worksafebc-current-reconstruction.svg",
+      "note": "Operating-name adoption in 2005 is separately recorded; first use of this precise graphic remains unresolved."
+    }
+  ],
+  "open_questions": [
+    "Exact artwork for the 1968 design",
+    "Pre-1968 logos or seals and their individual dates",
+    "Dated primary example of the 1983 lockup",
+    "First appearance and rollout dates of the black-and-orange graphic",
+    "Overlap and retirement dates",
+    "Original designer/agency attribution",
+    "Original lettering and certified colour specifications"
+  ],
+  "date_rules": [
+    "Null means unknown, not absent.",
+    "Year-only evidence stays year-only; no invented 1 January dates.",
+    "A publication landing-page update date is not a logo introduction date.",
+    "An observation proves use at that observation, not uninterrupted use between dates.",
+    "Institutional name changes and graphic changes are separate event types."
+  ]
+}

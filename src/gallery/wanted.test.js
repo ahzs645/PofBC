@@ -6,7 +6,7 @@ import { ASSET_STATUS, WANTED } from './wanted.js'
 import { GALLERY_COLLECTIONS, findGalleryEntry } from './collections.js'
 
 test('the routes from the research package are all here, once each, but those now in the gallery', () => {
-  assert.deepEqual(WANTED.map((item) => item.source), ['L04', 'L05'])
+  assert.deepEqual(WANTED.map((item) => item.source), ['L04'])
   assert.equal(new Set(WANTED.map((item) => item.id)).size, WANTED.length)
 })
 

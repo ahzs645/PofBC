@@ -1,0 +1,45 @@
+{
+  "research_date": "2026-09-27",
+  "assets": [
+    {
+      "file": "assets/worksafebc-current-reconstruction.svg",
+      "format": "SVG path artwork",
+      "status": "independent_approximate_reconstruction",
+      "based_on": [
+        "references/user-supplied-worksafebc.jpg",
+        "S4"
+      ],
+      "method": "Manually authored paths and rectangles; no bitmap embedded. Small supplied raster is the geometry reference.",
+      "fonts": "Custom path approximations; no identified font is claimed.",
+      "colours": {
+        "black": "#000000",
+        "white": "#FFFFFF",
+        "orange": "#ED8B00"
+      },
+      "colour_status": "Approximate screen recreation informed by supplied JPEG; not an official colour specification.",
+      "original_master": false
+    },
+    {
+      "file": "assets/wcb-1983-family-reconstruction.svg",
+      "format": "SVG path artwork",
+      "status": "independent_approximate_reconstruction",
+      "based_on": [
+        "S5",
+        "S6"
+      ],
+      "method": "Manually authored icon contours with fitted substitute text converted to paths.",
+      "fonts": "Noto Sans Condensed Medium used as a reconstruction substitute; not claimed as the historic typeface.",
+      "original_master": false
+    },
+    {
+      "file": "assets/wcb-1983-symbol-reconstruction.svg",
+      "format": "SVG path artwork",
+      "status": "symbol_only_derivative",
+      "based_on": [
+        "assets/wcb-1983-family-reconstruction.svg"
+      ],
+      "method": "Same symbol paths as the lockup; no separate historical-variant claim.",
+      "original_master": false
+    }
+  ]
+}

@@ -11,11 +11,11 @@
 // kept so each can be traced back to sources.json there. Nothing is fetched: the contact routes are
 // the package's, recorded as text, not links this site follows.
 //
-// ICBC (L01), BCLC (L02) and BC Ferries (L03) were on this list until their logo histories arrived
-// (research/identity/, 2026-09-27); they are collections in the gallery now. No package is an
-// official master, so the routes the companion recorded for them still stand: ICBC through its
-// newsroom's media contacts, BCLC through mediarelations@bclc.com, BC Ferries through
-// media@bcferries.com.
+// ICBC (L01), BCLC (L02), BC Ferries (L03) and WorkSafeBC (L05) were on this list until their logo
+// histories arrived (research/identity/, 2026-09-27); they are collections in the gallery now. No
+// package is an official master, so the routes the companion recorded for them still stand: ICBC
+// through its newsroom's media contacts, BCLC through mediarelations@bclc.com, BC Ferries through
+// media@bcferries.com, WorkSafeBC through its Contact Us route.
 
 /**
  * What the package found about each body's artwork. Every status here means the same thing on the
@@ -43,19 +43,5 @@ export const WANTED = [
     nextAction: 'Request original vector and brand guide, including historical versions and permission ' +
       'appropriate to this atlas.',
     warning: 'No logo file or project-specific permission was obtained in this pass.'
-  },
-  {
-    id: 'worksafebc',
-    source: 'L05',
-    label: 'WorkSafeBC',
-    body: 'Workers’ Compensation Board · agency',
-    graphNode: 'workers-compensation-board',
-    sourceIds: ['S13', 'S14', 'S15'],
-    verified: 'Official 1968 and 1983 logo dates, 1974 legal-name and 2005 operating-name milestones',
-    assetStatus: 'chronology_verified_artwork_pending',
-    contact: 'Use the organization’s official Contact Us route',
-    nextAction: 'Request original artwork for the 1968, 1983 and WorkSafeBC eras; retain ' +
-      'legal-name/operating-name separation.',
-    warning: 'Year-level chronology is not equivalent to a verified vector master or exact rollout interval.'
   }
 ]
