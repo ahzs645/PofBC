@@ -33,6 +33,8 @@ import { TRANSPARENT } from '../logo/logoColors.js'
 import { useSiteTheme } from '../site/useTheme.js'
 import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { renderCurrentSvg } from '../current/currentMarks.js'
+import { renderSuppliedSvg } from './renderSupplied.js'
+import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -383,6 +385,13 @@ const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
     const printed = ONE_OFF_MARKS[entry.mark].printed
     return renderOneOffSvg({ id: entry.mark, colours: pageColoursFor(printed, theme), sun: 'glow', clearSpaceFactor: 0.02 }).svg
   }
+  // ICBC's and BCLC's marks are never recoloured: on dark, one supplied reversed takes that version,
+  // and any other keeps a white ground of its own.
+  if (entry.kind === 'supplied') {
+    const dark = theme === 'dark'
+    const id = dark && entry.reverse ? entry.reverse : entry.mark
+    return renderSuppliedSvg({ id, background: dark && !entry.reverse ? '#ffffff' : TRANSPARENT, clearSpace: dark ? 0.12 : 0.02 }).svg
+  }
   // Remade in the current identity: drawn by the generator's current era, reversed on dark.
   if (entry.kind === 'current') {
     return renderCurrentSvg({ text: entry.text, variant: theme === 'dark' ? 'reverse' : 'colour', clearSpaceFactor: 0.02 })
@@ -410,7 +419,7 @@ const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
 }
 
 /** Whether a card draws on the page's ground, or keeps a ground of its own. */
-const onPage = (entry) => entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.mark === '1990' ||
+const onPage = (entry) => entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
   (entry.kind === 'hydro' && HYDRO_PRESETS[entry.preset]?.group === 'signature')
 
 /** A card in an era. */
@@ -784,7 +793,9 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
           ? <HydroStudio initialPreset={open.preset} />
           : open.kind === 'hydro-mark'
             ? <HydroMarkView mark={open.mark} variant={open.variant} />
-            : <Detail entry={open} />}
+            : open.kind === 'supplied'
+              ? <SuppliedMarkView key={open.id} entry={open} />
+              : <Detail entry={open} />}
         {markTimeline && (
           <section className="gallery__history" aria-labelledby="mark-history">
             <h2 id="mark-history" className="gallery__shelf-title">{markTimeline.label} through time</h2>

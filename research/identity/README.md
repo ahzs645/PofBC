@@ -9,6 +9,37 @@ Researched 2026-09-26, mostly from Wayback Machine captures of each body's site,
 release archive, and the covers of its published plans and reports. Nothing was downloaded into the
 repo.
 
+## ICBC, BCLC and BC Ferries
+
+Their timelines came as three research packages (27 September 2026), filed here whole in
+[`icbc/`](icbc), [`bclc/`](bclc) and [`bc-ferries/`](bc-ferries): each package's own README
+(`PACKAGE.md`), its evidence notes (`NOTES.md` and `SOURCES.md` for ICBC, `EVIDENCE.md` for BCLC,
+`SOURCE-NOTES.md` for BC Ferries) and its machine-readable timeline and sources. The logo SVGs are
+in `artwork/icbc/`, `artwork/bclc/` and `artwork/bc-ferries/`, with the files originally supplied
+to the research in `supplied/` beside them; the packages' boards, previews and screenshots were left
+out. Paths inside `PACKAGE.md` are the package's own (`logos/`, `data/`, …), not this repo's.
+
+What the gallery took from them, and did not:
+
+- **Evidence groups, not exclusive eras.** ICBC's five eras are the package's five dated groups; a
+  trademark filing, a use claimed in one and a dated cover are kept apart, and no adoption or
+  retirement date is invented. A filing is `first_observation`, never an adoption. Only BCLC's
+  August 2008 redesign and BC Ferries' wave (announced 2 April 2003) rest on a record. BC Ferries'
+  "about 1978" is the package's inference from that announcement ("unchanged for 25 years").
+- **Colour variants are not eras.** ICBC's orange (on icbc.com in 2026) and black sit in the rounded
+  badge's era beside the blue; the blue and black are declared recolours of the supplied orange paths.
+- **Reconstructions say so.** ICBC's 1974 emblem (outlines only, colours not inferred), both 1989
+  lockups and the serif badge are rebuilt; BCLC's red, orange and green mark is today's letters in the
+  design system's older palette, not a 2008 master. Every BC Ferries dogwood mark is rebuilt; the 1963
+  flag is an interpretation of a brochure illustration. The isolated geometric dogwood (white petals,
+  no ground) and the uniform-patch photograph were left out; the flag carries the same flower.
+- **Open:** a 1973 example; when any early ICBC mark was adopted or retired; the serif-to-sans change;
+  what the orange treatment is for; the first appearance and colours of BCLC's sun and waves; and when
+  BCLC's purple, coral and yellow palette came in; a dated introduction for BC Ferries' geometric
+  dogwood, and whether its flower and lettering changed together. No body has supplied a master or
+  permission. BC Ferries' wave belongs to BC Ferry Services Inc., which is not a public body; the
+  collection links to the Crown corporation it replaced.
+
 ## The rules the timelines follow
 
 - **A capture is an observation, not an adoption.** Nearly every date is the first or last capture

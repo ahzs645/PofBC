@@ -52,6 +52,19 @@ its sources, and most dates are first seen in a Wayback Machine capture rather t
 say so. The eras are in `src/gallery/timelines.js`; how they were found, and the artwork still to
 obtain, is in [`research/identity/`](research/identity/README.md).
 
+**ICBC** and **BCLC** have collections of their own, from two logo-history research packages
+(27 September 2026). ICBC's runs from a 1974 registry emblem through the half-disc lockups of 1989
+to the road badge — serif, heavier sans, then rounded since about 2008, in blue and, on icbc.com
+today, orange. BCLC's runs from the sun-and-waves lockup to the lowercase `bclc` of August 2008, and
+its later purple, coral and yellow palette. **BC Ferries**, from a third package, runs from the
+dogwood flag of the 1960s and the geometric dogwood beside "BC FERRIES" (about 1978) to the wave of
+2 April 2003, which came in with the company that replaced the Crown corporation. Their marks are
+drawn **exactly as supplied** and are not recoloured: each package file already says whether it is
+supplied paths, a declared recolour, or a reconstruction, and the gallery repeats that rather than
+blurring it. The SVGs are in [`artwork/icbc/`](artwork/icbc), [`artwork/bclc/`](artwork/bclc) and
+[`artwork/bc-ferries/`](artwork/bc-ferries); `npm run build:crown-marks` packages them into
+`src/assets/crownMarks.js`.
+
 Most of the gallery is the **Best Place on Earth years**: WelcomeBC, WorkBC, BC Stats,
 Environmental Reporting BC, the BC Public Service's "Where ideas work", Canada's Pacific Gateway,
 and the stacked BC mark with its tagline. Each is the BC mark with a shaded sun, a gold divider, and

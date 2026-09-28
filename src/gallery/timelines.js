@@ -650,10 +650,63 @@ export const timelineKeyOf = (entryId) => TIMELINE_OF[entryId]
 
 // ── Eras for the bodies with collections of their own ───────────────────────────────────────────
 
+// ICBC's and BCLC's sources, from the research packages in research/identity/icbc and
+// research/identity/bclc (27 September 2026), whose source ids are kept in each title.
+
+const cipo = (number) => `https://ised-isde.canada.ca/cipo/trademark-search/${number}`
+const cipoImage = (number) => `https://ised-isde.canada.ca/cipo/trademark-search/media/${number}.png`
+
+const ICBC_SOURCES = {
+  S1: source('ICBC Service Plan 2014–2016 [S1]', 'https://www.bcbudget.gov.bc.ca/2014/sp/pdf/agency/icbc.pdf',
+    'printed page 3: the corporation was established in 1973'),
+  S2: source('CIPO official mark 0903609 [S2]', cipo('903609'), 'filed 12 January 1989, advertised 17 May 1989'),
+  S3: source('CIPO 1326195, ICBC & Design [S3]', cipo('1326195'),
+    'square-corner sans badge; filed 29 November 2006; insurance use claimed since at least March 1992'),
+  S4: source('CIPO 1379948, ICBC & Design (rounded corners) [S4]', cipo('1379948'),
+    '“three rounded corners”; filed 21 January 2008'),
+  S5: source('CIPO 1561227, ICBC & Design (colour) [S5]', cipo('1561227'),
+    'white lettering and road on blue; filed 2012, use claimed since at least January 2008'),
+  S6: source('ICBC Annual Service Plan Report 2025/26 [S6]', 'https://www.icbc.com/assets/en/5zp5LxLIznBZi8nODF4yQt/ar-26.pdf',
+    'cover, dated August 2026'),
+  S9: source('icbc.com [S9]', 'https://icbc.com/', 'header, observed 27 September 2026'),
+  S10: source('CIPO 0374886, ICBC & Design [S10]', cipo('374886'),
+    'use claimed from 1 March 1974; filed 6 May 1974; registration cancelled 20 June 2023'),
+  S11: source('ICBC 1992 annual report, scanned by McGill University [S11]', 'https://digital.library.mcgill.ca/images/hrcorpreports/pdfs/6/634113.pdf',
+    'back cover, PDF page 28; print code “PI 151 (2 93)”'),
+  S12: source('ICBC 2007–2009 Service Plan [S12]', 'https://www.bcbudget.gov.bc.ca/2007/sp/pdf/agency/icbc.pdf', 'cover, January 2007'),
+  S13: source('ICBC 2008–2010 Service Plan [S13]', 'https://www.bcbudget.gov.bc.ca/2008/sp/pdf/agency/icbc.pdf', 'cover, January 2008'),
+  S14: source('ICBC 2009–2011 Service Plan [S14]', 'https://www.bcbudget.gov.bc.ca/2009/sp/pdf/agency/icbc.pdf', 'cover, January 2009')
+}
+
+const BCLC_SOURCES = {
+  S1: source('BCLC 2006/07 Annual Report [1]', 'https://corporate.bclc.com/content/dam/bclccorporate/reports/annual-reports/2007/bclc-annual-report-0607.pdf', 'cover'),
+  S2: source('BCLC Service Plan 2008/09–2010/11 [2]', 'https://www.bcbudget.gov.bc.ca/2008/sp/pdf/agency/bclc.pdf', 'cover, early 2008'),
+  S3: source('Canadian Press, “B.C. Lottery rebrands as BCLC”, Marketing, 13 Aug 2008 [3]', 'https://marketingmag.ca/brands/b-c-lottery-rebrands-as-bclc-17155/',
+    'the lowercase acronym, dots inside the b and both c’s, and the tagline “playing it right”'),
+  S4: source('BCLC Service Plan 2009/10–2011/12 [4]', 'https://www.bcbudget.gov.bc.ca/2009/sp/pdf/agency/bclc.pdf', 'cover'),
+  S6: source('BCLC Environmental, Social and Governance Report 2022 [6]', 'https://corporate.bclc.com/content/dam/bclccorporate/reports/corporate-citizenship/2022/environmental-social-and-governance-report-2022.pdf', 'cover'),
+  S7: source('BCLC Design System: Colour [7]', 'https://corporate.bclc.com/documentation/design-system/styles/colour.html',
+    'grey #414B56, red #9B1831, orange #E86A10, green #7DBC13; undated'),
+  S8: source('BCLC 2025/26 Prince George Community Impact Report [8]', 'https://corporate.bclc.com/content/dam/bclccorporate/reports/community-impact-reports/2026/community-impact-report-2025-26-prince-george.pdf', 'page 1'),
+  S9: source('BCLC 2008 Carbon Neutral Action Report [9]', 'https://www2.gov.bc.ca/assets/gov/environment/climate-change/cnar/2008/cc/bc_lottery_corporation.pdf',
+    'page 4, 30 June 2009: new supplies replaced the old only as stock ran out')
+}
+
+// BC Ferries' sources, from the research package in research/identity/bc-ferries (27 September 2026).
+
+const BCF_SOURCES = {
+  S1: source('B.C. news release, “New BC Ferry Company to Improve Services”, 2 Apr 2003 [S1]',
+    'https://archive.news.gov.bc.ca/releases/archive/2001-2005/2003tran0017-000313.htm',
+    'the dogwood retired after 43 years; the outgoing logo unchanged for 25; the wave introduced, and phased in over the following year'),
+  S2: source('British Columbia Toll Authority Ferry System, 1963 season brochure, via ExploreNorth [S2]',
+    'https://explorenorth.com/bc/bc_ferries-1963.html', 'cover: a black-outlined dogwood on a green flag'),
+  S3: source('BC Ferries, Investor Overview, September 2026 [S3]', 'https://www.bcferries.com/web_image/h7f/h2d/9106869944350.pdf', 'cover')
+}
+
 /**
- * BC Parks' eras around its flag-era badge, and BC Timber Sales' around its two marks. These are
- * collections, not one-offs, so collections.js puts their marks into the held eras itself; what is
- * here is everything else an era says.
+ * BC Parks' eras around its flag-era badge, BC Timber Sales' around its two marks, and ICBC's,
+ * BCLC's and BC Ferries'. These are collections, not one-offs, so collections.js puts their marks into the held
+ * eras itself; what is here is everything else an era says.
  */
 export const COLLECTION_ERAS = {
   'bc-parks': [
@@ -807,6 +860,198 @@ export const COLLECTION_ERAS = {
       sources: [
         source('BC Timber Sales business plan 2023/24–2025/26', 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/bc-timber-sales/business-plans-performance-reports/bcts_business_plan_2023-2024_to_2025-2026_final.pdf', 'cover')
       ]
+    }
+  ],
+
+  // ICBC's eras are the package's evidence groups, and like it they do not claim to be exclusive:
+  // a filing, a use claimed in one and a dated cover answer different questions, and the early
+  // arrangements may have overlapped. No adoption or retirement date is known for any of them.
+  icbc: [
+    {
+      id: 'icbc-1974',
+      status: 'held',
+      years: '1974',
+      label: 'The registry emblem',
+      note: 'An early vertical emblem: a half-disc facing left in a tall frame, under a separate upper ' +
+        'component of paired curved shapes. Known from the drawing in its trademark record, which is ' +
+        'hatched for colour without saying which colours; it is drawn here as outlines for that reason.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'from 1974',
+        note: 'Its trademark record claims use from 1 March 1974, and was filed on 6 May. The corporation ' +
+          'was established in 1973, but no example from that year has been found. The record was cancelled ' +
+          'in 2023, which says nothing about when the emblem stopped being used.'
+      },
+      seenAt: [cipoImage('374886')],
+      sources: [ICBC_SOURCES.S10, ICBC_SOURCES.S1]
+    },
+    {
+      id: 'icbc-half-disc',
+      status: 'held',
+      years: 'by 1989',
+      label: 'The half-disc and the name',
+      note: 'A solid half-disc beside “ICBC”, and beside the full name on three lines. The half-disc ' +
+        'arrangement is in an official-mark record; the full name is known only from a picture supplied ' +
+        'to the research, filed under 1989. How either relates to the 1974 emblem is not known.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 1989',
+        note: 'The half-disc arrangement was filed as an official mark on 12 January 1989 and advertised on ' +
+          '17 May. A filing is not a launch, and the full-name version is not dated by it.'
+      },
+      seenAt: [cipoImage('903609')],
+      sources: [ICBC_SOURCES.S2]
+    },
+    {
+      id: 'icbc-serif-road',
+      status: 'held',
+      years: 'about 1992',
+      label: 'The road badge, in a serif',
+      note: 'The square badge with a road curving through it, and “ICBC” reversed out in a narrow serif — ' +
+        'the start of the road family every later mark belongs to.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'about 1992',
+        note: 'On the back cover of the 1992 annual report, printed in February 1993 by its print code; a ' +
+          'later record of the road badge claims use from March 1992. Together they date the road family, ' +
+          'not this serif drawing.'
+      },
+      sources: [ICBC_SOURCES.S11, ICBC_SOURCES.S3]
+    },
+    {
+      id: 'icbc-square-sans',
+      status: 'held',
+      years: 'by 2007–2008',
+      label: 'The square badge, in a heavier sans',
+      note: 'The same square-cornered badge, with “ICBC” in a heavy sans. The serif-to-sans change has not ' +
+        'been dated, nor shown to have happened everywhere at once.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 2007–2008',
+        note: 'On the covers of the service plans of January 2007 and January 2008, and in a trademark ' +
+          'filed in November 2006. The supplied file was filed under 2005, which nothing independent confirms.'
+      },
+      seenAt: [cipoImage('1326195')],
+      sources: [ICBC_SOURCES.S12, ICBC_SOURCES.S13, ICBC_SOURCES.S3]
+    },
+    {
+      id: 'icbc-rounded',
+      status: 'held',
+      years: '2008–present',
+      label: 'The rounded badge',
+      note: 'Three corners rounded, and the badge in blue with the lettering and road reversed out in ' +
+        'white. The same drawing is on icbc.com today in orange, a colour variant rather than a new ' +
+        'mark: why, and for how long, is not known.',
+      applicability: {
+        kind: 'estimated_era',
+        years: '2008–present',
+        note: 'A rollout in 2008 is inferred: the rounded drawing was filed on 21 January 2008, the blue ' +
+          'version claims use from that month, and the service plan of January 2008 still has the square ' +
+          'badge where January 2009’s has this one. It is on the report of August 2026.'
+      },
+      seenAt: [cipoImage('1379948'), cipoImage('1561227')],
+      sources: [ICBC_SOURCES.S4, ICBC_SOURCES.S5, ICBC_SOURCES.S13, ICBC_SOURCES.S14, ICBC_SOURCES.S6, ICBC_SOURCES.S9]
+    }
+  ],
+
+  bclc: [
+    {
+      id: 'bclc-legacy',
+      status: 'held',
+      years: 'by 2007–2008',
+      label: 'The sun and waves',
+      note: 'A sun rising over waves, beside “British Columbia Lottery Corporation” in a heavy italic. ' +
+        'Only one colour of it has been supplied, so it is drawn in one ink; what colours it was printed ' +
+        'in is not established.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 2007–2008',
+        note: 'On the 2006/07 annual report and the service plan of early 2008. BCLC has operated since ' +
+          '1985, but that does not date this mark.'
+      },
+      sources: [BCLC_SOURCES.S1, BCLC_SOURCES.S2]
+    },
+    {
+      id: 'bclc-2008',
+      status: 'held',
+      years: '2008–by 2022',
+      label: 'Lowercase, in red, orange and green',
+      note: 'The corporation’s initials in lowercase, with a dot of colour inside the b and each c, launched ' +
+        'with the tagline “playing it right”. New stationery replaced the old only as stock ran out.',
+      applicability: {
+        kind: 'documented_adoption',
+        years: '2008–by 2022',
+        note: 'The new identity was reported on 13 August 2008, and is on the next year’s service plan. ' +
+          'The older palette is still on a report of 2022, which is not an end date.'
+      },
+      sources: [BCLC_SOURCES.S3, BCLC_SOURCES.S4, BCLC_SOURCES.S9, BCLC_SOURCES.S6, BCLC_SOURCES.S7]
+    },
+    {
+      id: 'bclc-contemporary',
+      status: 'held',
+      years: 'by 2025/26–present',
+      label: 'Purple, coral and yellow',
+      note: 'The same lowercase letters, darker, with the dots in purple, coral and yellow. When the colours ' +
+        'changed has not been found; it is a new palette, not a new drawing.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 2025/26',
+        note: 'On page 1 of a community impact report for 2025/26. The report’s year is not a launch date.'
+      },
+      sources: [BCLC_SOURCES.S8]
+    }
+  ],
+
+  // Two symbol families — the dogwood, then the wave — with the dogwood split where the package
+  // splits it: a dated 1963 example, and the drawing the 2003 announcement retired.
+  'bc-ferries': [
+    {
+      id: 'bcf-early-dogwood',
+      status: 'held',
+      years: '1960s',
+      label: 'The early dogwood',
+      note: 'A white dogwood with a yellow centre, its petals outlined in black, on a green waving flag — ' +
+        'as the ferry system’s 1963 brochure draws it. One illustration does not say what every drawing of ' +
+        'the time looked like.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 1963',
+        note: 'On the cover of the 1963 season brochure. The dogwood itself goes back to 1960: the 2003 ' +
+          'announcement retires it after 43 years.'
+      },
+      seenAt: ['https://explorenorth.com/bc/images/bc_ferries-1963a.jpg'],
+      sources: [BCF_SOURCES.S2, BCF_SOURCES.S1]
+    },
+    {
+      id: 'bcf-geometric-dogwood',
+      status: 'held',
+      years: 'about 1978–2003',
+      label: 'The geometric dogwood',
+      note: 'The flower redrawn in flat geometric petals, white on a green flag, beside “BC FERRIES” in a ' +
+        'heavy squared capital. Retired with the dogwood on 2 April 2003.',
+      applicability: {
+        kind: 'estimated_era',
+        years: 'about 1978–2003',
+        note: 'The 2003 announcement says the outgoing logo had not changed in 25 years, which points to ' +
+          'about 1978; no record of its introduction has been found, nor whether the flower and the lettering ' +
+          'changed together. Its retirement is documented.'
+      },
+      sources: [BCF_SOURCES.S1]
+    },
+    {
+      id: 'bcf-wave',
+      status: 'held',
+      years: '2003–present',
+      label: 'The wave',
+      note: 'A stylised wave running into “BCFerries” in a slanted sans, in blue — introduced with BC Ferry ' +
+        'Services Inc., the company that took over from the Crown corporation, and phased onto the fleet ' +
+        'over the following year.',
+      applicability: {
+        kind: 'documented_adoption',
+        years: '2003–present',
+        note: 'Announced on 2 April 2003, and on the cover of BC Ferries’ investor overview of September 2026.'
+      },
+      sources: [BCF_SOURCES.S1, BCF_SOURCES.S3]
     }
   ]
 }

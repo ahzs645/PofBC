@@ -1,0 +1,76 @@
+{
+  "title": "BCLC logo evolution",
+  "as_of": "2026-09-27",
+  "scope": "Corporate BCLC identity, not Lotto, PlayNow, GameSense or other product brands.",
+  "not_to_scale": true,
+  "stages": [
+    {
+      "id": "legacy",
+      "eyebrow": "FULL-NAME EMBLEM",
+      "display_date": "Before August 2008",
+      "date_note": "Original introduction not yet verified.",
+      "caption": "Sun + waves / italic full-name lettering",
+      "description_lines": ["Verified on the 2006/07 annual report and the", "early-2008 service-plan cover. [1, 2]"],
+      "construction_note": "Supplied vector geometry; monochrome presentation.",
+      "asset": "logos/bclc-legacy-monochrome.svg",
+      "display_width": 490,
+      "date_confidence": "Dated uses confirmed; introduction unknown; superseded at corporate-identity level in August 2008.",
+      "introduction_date": null,
+      "supersession_month": "2008-08",
+      "known_occurrences": [
+        {"document":"2006/07 annual report", "source_id":"S1", "page":1},
+        {"document":"2008/09–2010/11 service plan", "source_id":"S2", "page":1}
+      ],
+      "provenance": "BCLC(1).zip / BCLC/before/before.svg. Four existing compound paths. Source background and extraneous page clipping removed; logo fill changed for monochrome presentation. No raster trace."
+    },
+    {
+      "id": "lowercase-historical",
+      "eyebrow": "LOWERCASE CORPORATE IDENTITY",
+      "display_date": "August 2008",
+      "date_note": "New identity reported on 13 August. [3]",
+      "caption": "Lowercase acronym + three inset circles",
+      "description_lines": ["The launch used “playing it right”. [3] The older", "red/orange/green palette still appears in 2022. [6]"],
+      "construction_note": "Historical-palette reconstruction; not a 2008 master.",
+      "asset": "logos/bclc-2008-family-palette-reconstruction.svg",
+      "display_width": 310,
+      "date_confidence": "Major redesign month confirmed; article date is not asserted as the exact launch day.",
+      "introduction_month": "2008-08",
+      "report_date": "2008-08-13",
+      "end_date": null,
+      "known_occurrences": [
+        {"document":"Contemporary Canadian Press report", "source_id":"S3"},
+        {"document":"2009/10–2011/12 service plan", "source_id":"S4", "page":1},
+        {"document":"Environmental, Social and Governance Report 2022", "source_id":"S6", "page":1}
+      ],
+      "palette": {"lettering":"#414B56", "dot_b":"#9B1831", "dot_first_c":"#E86A10", "dot_second_c":"#7DBC13"},
+      "palette_source": "S7: older BCLC digital design-system colour guide; not verified original 2008 print standards.",
+      "provenance": "Recoloured supplied contemporary contours. Historical letter contours have not been independently verified against an original 2008 vector master. The documented launch tagline is discussed in captions but intentionally not typeset as part of a purported authentic historical lockup."
+    },
+    {
+      "id": "contemporary",
+      "eyebrow": "CONTEMPORARY PALETTE",
+      "display_date": "By 2025/26",
+      "date_note": "Dated use verified; refresh launch still unconfirmed.",
+      "caption": "Purple / coral / yellow",
+      "description_lines": ["This colour family appears in the 2025/26", "Prince George Community Impact Report. [8]"],
+      "construction_note": "Supplied SVG geometry and RGB colours preserved.",
+      "asset": "logos/bclc-contemporary-supplied.svg",
+      "display_width": 310,
+      "date_confidence": "Use documented in an official report for 2025/26, not a confirmed redesign year.",
+      "introduction_date": null,
+      "known_occurrences": [{"document":"2025/26 Prince George Community Impact Report", "source_id":"S8", "page":1}],
+      "palette": {"lettering":"#28222A", "dot_b":"#9936D2", "dot_first_c":"#FF8F68", "dot_second_c":"#F4C221"},
+      "palette_source": "Exact values in user-supplied BCLC/curent.svg; not sampled from a PDF screenshot.",
+      "provenance": "BCLC(1).zip / BCLC/curent.svg. Logo path geometry and colours preserved; solid rectangular masks converted to equivalent clipping rectangles to avoid PDF rasterization. Original file retained untouched in source-artwork. Official 2025/26 report supports the colour-family identification, not an exact RGB match or the supplied file's official-master status."
+    }
+  ],
+  "cautions": [
+    "1985 corporate operating history is not proof of the legacy logo introduction date.",
+    "The 2011 REBRAND award is not the launch of the lowercase identity.",
+    "Monochrome, reversed, stacked, and tagline variants are not automatically new chronological eras.",
+    "A report cover is evidence of use, not a universal first or last appearance.",
+    "The red/orange/green palette in a 2022 report does not strictly exclude concurrent use of a refreshed palette elsewhere.",
+    "User screenshot capture timestamps do not date the photographed sign or logo.",
+    "This is an evidence-based reference sheet, not an exhaustive corporate brand archive."
+  ]
+}

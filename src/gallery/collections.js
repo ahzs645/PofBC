@@ -264,6 +264,290 @@ export const HYDRO_ENTRIES = [
   })
 ]
 
+// ── ICBC and BCLC ────────────────────────────────────────────────────────────────────────────────
+//
+// Both come from research packages (research/identity/icbc, research/identity/bclc) whose every file
+// says what it is: a supplied vector with its paths kept, a declared recolour of one, or a
+// reconstruction. The records below say the same, and the marks are drawn exactly as supplied
+// (renderSupplied.js). Their dates are the eras' (timelines.js), which cite the sources.
+
+const ICBC_RIGHTS = {
+  status: 'unresolved',
+  note: 'ICBC’s mark. ICBC’s trademark policy asks for written permission to associate its marks with ' +
+    `products, services and events. ${NO_PERMISSION}`
+}
+
+const BCLC_RIGHTS = { status: 'unresolved', note: `BCLC’s mark. ${NO_PERMISSION}` }
+
+/** A mark from a package, drawn as the file has it, with `reverse` the file to show on a dark page. */
+const supplied = (identity) => ({ id, label, note, years, reverse }) => ({
+  id, kind: 'supplied', mark: id, label, note, years, ...(reverse ? { reverse } : {}), identity
+})
+
+/** Rebuilt by the package's researcher from a registry drawing, a photograph or a screenshot. */
+const RECONSTRUCTED = (fidelityNote) => ({ provenance: 'reconstructed', fidelity: 'partially compared', fidelityNote })
+
+/** Paths kept from a supplied file; only what surrounded the mark was removed. */
+const SUPPLIED_PATHS = (fidelityNote) => ({ provenance: 'original_supplied', fidelity: 'partially compared', fidelityNote })
+
+const ICBC_ENTRIES = {
+  'icbc-1974': [
+    supplied({
+      ...RECONSTRUCTED('Outlines rebuilt by hand from the drawing in CIPO record 0374886, and compared with it in ' +
+        'the package’s proofs. The drawing is hatched for colour; neither the colours nor which shapes were ' +
+        'filled are inferred, so it is drawn as boundaries only.'),
+      applicability: DATED_BY_TIMELINE('first_observation', 'from 1974', 'Its trademark record claims use from 1 March 1974.'),
+      rights: ICBC_RIGHTS
+    })({
+      id: 'icbc-1974-emblem',
+      label: 'Registry emblem',
+      years: 'from 1974',
+      note: 'The half-disc in its frame under the upper component, as outlines: the record’s drawing, without ' +
+        'its colour hatching.'
+    })
+  ],
+  'icbc-half-disc': [
+    supplied({
+      ...RECONSTRUCTED('Rebuilt from CIPO image 0903609 and a supplied screenshot. The lettering is approximate; ' +
+        'the typeface was not identified.'),
+      applicability: DATED_BY_TIMELINE('first_observation', 'by 1989', 'Filed as an official mark in January 1989.'),
+      rights: ICBC_RIGHTS
+    })({
+      id: 'icbc-half-disc-lockup',
+      label: 'Half-disc and ICBC',
+      years: 'by 1989',
+      note: 'The arrangement in the 1989 official-mark record: the half-disc beside the initials.'
+    }),
+    supplied({
+      ...RECONSTRUCTED('Rebuilt from a supplied screenshot, letter by letter, in a tapered sans. The lettering ' +
+        'is approximate; the typeface was not identified.'),
+      applicability: {
+        kind: 'unknown',
+        years: 'undated',
+        note: 'Its picture was supplied filed under 1989, which nothing independent confirms. Its timeline ' +
+          'cites the record of the related half-disc arrangement.'
+      },
+      rights: ICBC_RIGHTS
+    })({
+      id: 'icbc-full-name',
+      label: 'Half-disc and full name',
+      years: 'undated',
+      note: '“Insurance Corporation of British Columbia” on three lines beside the half-disc.'
+    }),
+    supplied({
+      ...RECONSTRUCTED('The half-disc alone, rebuilt geometrically from CIPO image 0903609 and a supplied screenshot.'),
+      applicability: DATED_BY_TIMELINE('first_observation', 'by 1989', 'Part of the arrangement filed in January 1989.'),
+      rights: ICBC_RIGHTS
+    })({
+      id: 'icbc-half-disc',
+      label: 'Half-disc',
+      years: 'by 1989',
+      note: 'The emblem of both lockups, on its own.'
+    })
+  ],
+  'icbc-serif-road': [
+    supplied({
+      ...RECONSTRUCTED('Rebuilt from a supplied photograph filed under 1994, with its perspective squared up. The ' +
+        'road’s curves and the letters’ proportions are approximate, and the serif was not identified.'),
+      applicability: DATED_BY_TIMELINE('first_observation', 'about 1992', 'On the back cover of the 1992 annual report.'),
+      rights: ICBC_RIGHTS
+    })({
+      id: 'icbc-serif-road',
+      label: 'Serif road badge',
+      years: 'about 1992',
+      note: '“ICBC” in a narrow serif, reversed out of the square badge above the road.'
+    })
+  ],
+  'icbc-square-sans': [
+    supplied({
+      ...SUPPLIED_PATHS('Every path is the supplied file’s own; its page background, unused clips and empty ' +
+        'groups were removed. Where the file was published is not recorded.'),
+      applicability: DATED_BY_TIMELINE('first_observation', 'by 2007–2008', 'On the service plans of January 2007 and January 2008.'),
+      rights: ICBC_RIGHTS
+    })({
+      id: 'icbc-square-sans',
+      label: 'Square sans badge',
+      years: 'by 2007–2008',
+      note: 'The square-cornered badge with “ICBC” in a heavy sans.'
+    })
+  ],
+  'icbc-rounded': [
+    supplied({
+      ...SUPPLIED_PATHS('The paths are the supplied orange file’s. The blue is a declared recolour, sampled from ' +
+        'a supplied screenshot — the right colour family, not a certified brand value.'),
+      applicability: DATED_BY_TIMELINE('estimated_era', '2008–present', 'Blue use is claimed from January 2008; a 2008 rollout is inferred.'),
+      rights: ICBC_RIGHTS
+    })({
+      id: 'icbc-rounded-blue',
+      label: 'Blue',
+      years: '2008–present',
+      note: 'The rounded badge in blue, as on ICBC’s reports.'
+    }),
+    supplied({
+      ...SUPPLIED_PATHS('Every path and the orange fill are the supplied file’s own. Where the file came from is ' +
+        'not recorded beyond a capture of icbc.com.'),
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 2026',
+        note: 'On icbc.com on 27 September 2026. Whether it replaces the blue, or marks a campaign, is not known.'
+      },
+      rights: ICBC_RIGHTS
+    })({
+      id: 'icbc-rounded-orange',
+      label: 'Orange',
+      years: 'by 2026',
+      note: 'The same drawing in orange, as on icbc.com in 2026.'
+    }),
+    supplied({
+      ...SUPPLIED_PATHS('The supplied orange file’s paths in black: a recolour made for reference, not a version ' +
+        'ICBC is known to publish.'),
+      applicability: DATED_BY_TIMELINE('estimated_era', '2008–present', 'The rounded drawing’s years.'),
+      rights: ICBC_RIGHTS
+    })({
+      id: 'icbc-rounded-black',
+      label: 'Black',
+      years: '2008–present',
+      note: 'The same drawing in one dark ink.'
+    })
+  ]
+}
+
+const BCLC_ENTRIES = {
+  'bclc-legacy': [
+    supplied({
+      ...SUPPLIED_PATHS('The supplied file’s four paths, unchanged; its lilac background and page clip were ' +
+        'removed. Drawn in one ink, which is not a claim about the colours it was printed in.'),
+      applicability: DATED_BY_TIMELINE('first_observation', 'by 2007–2008', 'On the 2006/07 annual report and the service plan of early 2008.'),
+      rights: BCLC_RIGHTS
+    })({
+      id: 'bclc-legacy',
+      label: 'Full-name lockup',
+      years: 'by 2007–2008',
+      reverse: 'bclc-legacy-reversed',
+      note: 'The sun and waves beside the corporation’s full name.'
+    }),
+    supplied({
+      ...SUPPLIED_PATHS('The emblem’s three paths from the supplied file, isolated and unchanged.'),
+      applicability: DATED_BY_TIMELINE('first_observation', 'by 2007–2008', 'Part of the lockup seen in 2007 and 2008.'),
+      rights: BCLC_RIGHTS
+    })({
+      id: 'bclc-legacy-symbol',
+      label: 'Sun and waves',
+      years: 'by 2007–2008',
+      note: 'The emblem on its own.'
+    })
+  ],
+  'bclc-2008': [
+    supplied({
+      provenance: 'reconstructed',
+      fidelity: 'no comparison',
+      fidelityNote: 'The supplied present-day letters, recoloured in the grey, red, orange and green of BCLC’s ' +
+        'digital design system. No 2008 master was available to compare the letters with, and the palette is ' +
+        'the design system’s, not a 2008 print specification. The launch tagline is not set.',
+      applicability: DATED_BY_TIMELINE('documented_adoption', '2008–by 2022', 'Reported on 13 August 2008; the palette is still on a report of 2022.'),
+      rights: BCLC_RIGHTS
+    })({
+      id: 'bclc-2008',
+      label: 'Red, orange and green',
+      years: '2008–by 2022',
+      note: 'The lowercase initials with the older palette’s dots.'
+    })
+  ],
+  'bclc-contemporary': [
+    supplied({
+      ...SUPPLIED_PATHS('Every path and colour is the supplied file’s own; three rectangular masks were redrawn ' +
+        'as the clips they amount to. The report it is seen on confirms the colour family, not these exact values.'),
+      applicability: DATED_BY_TIMELINE('first_observation', 'by 2025/26', 'On a community impact report for 2025/26.'),
+      rights: BCLC_RIGHTS
+    })({
+      id: 'bclc-contemporary',
+      label: 'Purple, coral and yellow',
+      years: 'by 2025/26–present',
+      note: 'The lowercase initials as BCLC uses them now.'
+    })
+  ]
+}
+
+// ── BC Ferries ───────────────────────────────────────────────────────────────────────────────────
+//
+// From a third package of the same kind (research/identity/bc-ferries). The dogwood marks are all
+// reconstructions; the wave is supplied paths.
+
+const BCF_RIGHTS = {
+  status: 'unresolved',
+  note: 'BC Ferries’ mark; since 2003 it has belonged to BC Ferry Services Inc., which is not a public ' +
+    `body. ${NO_PERMISSION}`
+}
+
+const BCF_ENTRIES = {
+  'bcf-early-dogwood': [
+    supplied({
+      provenance: 'reconstructed',
+      fidelity: 'no comparison',
+      fidelityNote: 'A simplified interpretation of the flag illustrated on the 1963 brochure’s cover — not a ' +
+        'facsimile, and not a claim about its exact colours. No side-by-side check is recorded.',
+      applicability: DATED_BY_TIMELINE('first_observation', 'by 1963', 'On the cover of the 1963 season brochure.'),
+      rights: BCF_RIGHTS
+    })({
+      id: 'bcf-1963-flag',
+      label: 'Dogwood flag, 1963',
+      years: 'by 1963',
+      note: 'The outlined dogwood on a green waving flag.'
+    })
+  ],
+  'bcf-geometric-dogwood': [
+    supplied({
+      ...RECONSTRUCTED('Rebuilt from a small supplied picture of the lockup. The drop shadow is left out; the ' +
+        'green and the letters are approximate, and no substitute font was used.'),
+      applicability: DATED_BY_TIMELINE('estimated_era', 'about 1978–2003', 'The start is inferred; the end, 2 April 2003, is documented.'),
+      rights: BCF_RIGHTS
+    })({
+      id: 'bcf-dogwood-lockup',
+      label: 'Flag and wordmark',
+      years: 'about 1978–2003',
+      note: 'The geometric dogwood on its waving flag, beside “BC FERRIES”.'
+    }),
+    supplied({
+      ...RECONSTRUCTED('The flower redrawn as smooth contours from a supplied GIF, on the flat flag; the green ' +
+        'and yellow are sampled from it.'),
+      applicability: DATED_BY_TIMELINE('estimated_era', 'about 1978–2003', 'The same drawing’s years; when this flat ' +
+        'flag was first used has not been found.'),
+      rights: BCF_RIGHTS
+    })({
+      id: 'bcf-dogwood-flag',
+      label: 'House flag',
+      years: 'about 1978–2003',
+      note: 'The geometric dogwood on a flat green flag.'
+    }),
+    supplied({
+      ...RECONSTRUCTED('Letter contours drawn from a small supplied picture, not set in a lookalike font; their ' +
+        'shapes and spacing may differ slightly from the original.'),
+      applicability: DATED_BY_TIMELINE('estimated_era', 'about 1978–2003', 'The lockup’s years.'),
+      rights: BCF_RIGHTS
+    })({
+      id: 'bcf-dogwood-wordmark',
+      label: 'Wordmark',
+      years: 'about 1978–2003',
+      note: '“BC FERRIES” on its own.'
+    })
+  ],
+  'bcf-wave': [
+    supplied({
+      ...SUPPLIED_PATHS('Every path is the supplied file’s own; its page background and clips were removed. ' +
+        'The blue is sampled from a supplied picture, not an official colour value, and the document the file ' +
+        'came from is not identified.'),
+      applicability: DATED_BY_TIMELINE('documented_adoption', '2003–present', 'Announced on 2 April 2003.'),
+      rights: BCF_RIGHTS
+    })({
+      id: 'bcf-wave',
+      label: 'Wave and wordmark',
+      years: '2003–present',
+      reverse: 'bcf-wave-white',
+      note: 'The wave into “BCFerries”, in blue; the same paths in white for dark grounds.'
+    })
+  ]
+}
+
 /**
  * Which one-offs stand for a body the government diagram draws, so a card can lead to it. The
  * Province's marks that name a campaign or a slogan rather than a body have none.
@@ -418,6 +702,50 @@ export const GALLERY_COLLECTIONS = [
       'bcts-earlier': BCTS_ENTRIES.earlier.map(withIdentity),
       'bcts-current': BCTS_ENTRIES.current.map(withIdentity)
     })
+  },
+  {
+    id: 'icbc',
+    shelf: 'bodies',
+    label: 'ICBC',
+    body: 'Crown corporation · Ministry of Attorney General',
+    years: '1973–present',
+    graphNode: 'icbc',
+    cover: 'icbc-rounded-blue',
+    intro: 'The Insurance Corporation of British Columbia’s marks, as dated evidence rather than a clean run ' +
+      'of eras: a registry emblem of 1974, a half-disc beside its name by 1989, then the road badge — in a ' +
+      'serif, a heavier sans, and since 2008 with rounded corners. The early marks are reconstructions; ' +
+      'the later ones are supplied paths, shown as they came.',
+    eras: withMarks(COLLECTION_ERAS.icbc, ICBC_ENTRIES)
+  },
+  {
+    id: 'bclc',
+    shelf: 'bodies',
+    label: 'BCLC',
+    body: 'Crown corporation · Ministry of Finance',
+    years: '1984–present',
+    graphNode: 'bclc',
+    cover: 'bclc-contemporary',
+    intro: 'The British Columbia Lottery Corporation’s marks: the sun and waves beside its full name, then ' +
+      'from August 2008 its initials in lowercase with three dots of colour, which have since changed ' +
+      'from red, orange and green to purple, coral and yellow. Shown as supplied; the 2008 colours are a ' +
+      'reconstruction.',
+    eras: withMarks(COLLECTION_ERAS.bclc, BCLC_ENTRIES)
+  },
+  {
+    id: 'bc-ferries',
+    shelf: 'bodies',
+    label: 'BC Ferries',
+    body: 'Crown corporation until 2003',
+    years: '1960–present',
+    // The diagram has the Crown corporation, which ended in 2003; the company that followed it is not
+    // a public body, so the link goes to the years it was one.
+    graphNode: 'bc-ferry-corporation',
+    cover: 'bcf-wave',
+    intro: 'BC Ferries’ two symbols: the dogwood, from the ferry system’s start in 1960 — first as an ' +
+      'outlined flower on a waving flag, later redrawn in geometric petals beside a squared wordmark — ' +
+      'then the wave, introduced on 2 April 2003 with the company that replaced the Crown corporation. ' +
+      'The dogwood marks are reconstructions; the wave is supplied paths, shown as they came.',
+    eras: withMarks(COLLECTION_ERAS['bc-ferries'], BCF_ENTRIES)
   },
   {
     id: 'bc-parks',

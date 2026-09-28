@@ -3,10 +3,10 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { ASSET_STATUS, WANTED } from './wanted.js'
-import { findGalleryEntry } from './collections.js'
+import { GALLERY_COLLECTIONS, findGalleryEntry } from './collections.js'
 
-test('the five routes from the research package are all here, once each', () => {
-  assert.deepEqual(WANTED.map((item) => item.source), ['L01', 'L02', 'L03', 'L04', 'L05'])
+test('the routes from the research package are all here, once each, but those now in the gallery', () => {
+  assert.deepEqual(WANTED.map((item) => item.source), ['L04', 'L05'])
   assert.equal(new Set(WANTED.map((item) => item.id)).size, WANTED.length)
 })
 
@@ -16,6 +16,7 @@ test('a wanted body has no artwork, and is not also a mark in the gallery', () =
       assert.equal(item[key], undefined, `${item.id} carries ${key}`)
     }
     assert.equal(findGalleryEntry(item.id), undefined, `${item.id} is in the gallery`)
+    assert.ok(!GALLERY_COLLECTIONS.some((collection) => collection.graphNode === item.graphNode), `${item.id} has a collection`)
   }
 })
 

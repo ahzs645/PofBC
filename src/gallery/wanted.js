@@ -10,6 +10,12 @@
 // "British Columbia government atlas — research companion", as of 2026-09-25), with its source ids
 // kept so each can be traced back to sources.json there. Nothing is fetched: the contact routes are
 // the package's, recorded as text, not links this site follows.
+//
+// ICBC (L01), BCLC (L02) and BC Ferries (L03) were on this list until their logo histories arrived
+// (research/identity/, 2026-09-27); they are collections in the gallery now. No package is an
+// official master, so the routes the companion recorded for them still stand: ICBC through its
+// newsroom's media contacts, BCLC through mediarelations@bclc.com, BC Ferries through
+// media@bcferries.com.
 
 /**
  * What the package found about each body's artwork. Every status here means the same thing on the
@@ -24,50 +30,6 @@ export const ASSET_STATUS = {
 export const WANTED_AS_OF = '2026-09-25'
 
 export const WANTED = [
-  {
-    id: 'icbc',
-    source: 'L01',
-    label: 'ICBC',
-    body: 'Crown corporation',
-    graphNode: 'icbc',
-    sourceIds: ['S17', 'S18', 'S19'],
-    verified: 'Official newsroom and editorial gallery',
-    assetStatus: 'no_vector_master_verified',
-    contact: 'Use the newsroom’s media contacts',
-    nextAction: 'Request current corporate master and earlier wordmarks, brand guidelines, first-use ' +
-      'evidence and historical-display permission.',
-    warning: 'Approved photographs are not a confirmed SVG logo pack.'
-  },
-  {
-    id: 'bclc',
-    source: 'L02',
-    label: 'BCLC',
-    body: 'Crown corporation',
-    graphNode: 'bclc',
-    sourceIds: ['S20', 'S21'],
-    verified: 'Official media centre and media terms',
-    assetStatus: 'no_vector_master_verified',
-    contact: 'mediarelations@bclc.com',
-    nextAction: 'Request BCLC corporate and earlier identity masters, with documented era dates; separate ' +
-      'corporate and lottery/game brands.',
-    warning: 'The photo gallery is not evidence of a logo asset or unrestricted reuse rights.'
-  },
-  {
-    id: 'bc-ferries',
-    source: 'L03',
-    label: 'BC Ferries',
-    body: 'Crown corporation until 2003',
-    // The diagram has the Crown corporation, which ended in 2003; the company that followed it is not
-    // a public body, so the link goes to the years it was one.
-    graphNode: 'bc-ferry-corporation',
-    sourceIds: ['S22'],
-    verified: 'Official media library and media contact',
-    assetStatus: 'no_vector_master_verified',
-    contact: 'media@bcferries.com',
-    nextAction: 'Request current corporate and historical marks; distinguish the corporation, vessel ' +
-      'liveries and government-era identity.',
-    warning: 'A current logo does not establish historical legal status or date of adoption.'
-  },
   {
     id: 'bc-transit',
     source: 'L04',
