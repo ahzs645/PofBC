@@ -660,6 +660,7 @@
   position: absolute;
   inset: 52px 0 52px;
   overflow-y: auto;
+  scrollbar-gutter: stable;
   display: grid;
   align-content: start;
   gap: 12px;
@@ -954,7 +955,7 @@
 .gov-stages li[data-state='next'] .gov-stages__label { font-weight: 600; }
 .gov-stages__note { margin: 8px 0 0; font-size: 12px; }
 
-.gov-compare { position: absolute; inset: 52px 0 52px; overflow-y: auto; display: grid; align-content: start; gap: 12px; padding-right: 4px; }
+.gov-compare { position: absolute; inset: 52px 0 52px; overflow-y: auto; scrollbar-gutter: stable; display: grid; align-content: start; gap: 12px; padding-right: 4px; }
 @media (max-width: 1023px) { .gov-compare { position: static; padding: 52px 0; } }
 .gov-compare__pick { margin: 4px 8px 8px; font-size: 14px; }
 .gov-compare__pick select { height: 32px; padding: 0 8px; border: 1px solid var(--gov-outline); border-radius: 8px; background: var(--gov-hover); color: var(--gov-ink); font: inherit; }

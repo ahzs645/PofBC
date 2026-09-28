@@ -117,6 +117,10 @@
 
 * { box-sizing: border-box; }
 
+/* The page's length follows the year's content, so the scrollbar comes and goes as the years
+   change; reserving its gutter keeps the layout from shifting sideways when it does. */
+html { scrollbar-gutter: stable; }
+
 body {
   margin: 0;
   background: var(--page);
