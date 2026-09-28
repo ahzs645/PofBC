@@ -96,9 +96,11 @@ budget and actual apart and quote what each statement says it counts.
 
 ## 7. Logos (package R05, R14, R17)
 
-- **Wanted shelf:** ICBC, BCLC, BC Ferries, BC Transit and WorkSafeBC have no artwork. Original files
-  or dated archival images, from the organisations' media contacts or annual reports
-  (`package/logo_acquisition.json` has the routes).
+- **The five Crown bodies' masters:** ICBC, BCLC, BC Ferries, BC Transit and WorkSafeBC are in the
+  gallery now, from research packages (`research/identity/`, 27 September 2026), but every mark is a
+  supplied specimen or a reconstruction, not a master. Still missing: WorkSafeBC's 1968 design and
+  BC Transit's flag lockups as artwork; dated first uses for most of their eras; and original masters
+  from the organisations' media contacts (`package/logo_acquisition.json` has the routes).
 - **Dates for the marks we have:** most are "date estimated" or "date unknown" in the gallery;
   adoption announcements or first appearances in annual reports would date them.
 - **Permission:** none of the marks has documented permission to be shown.

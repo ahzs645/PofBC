@@ -8,8 +8,8 @@
 // Every mark also says what it is as an artefact — where its artwork came from, how closely it has
 // been checked, what its dates rest on, and that nobody has permission to show it — as chips on its
 // card and in full when it is open (the identity records are in collections.js). And the bodies
-// whose marks have not been obtained get a shelf of their own, so a gap reads as a gap rather than
-// as a body with no mark.
+// whose marks have not been obtained get a shelf of their own, while there are any, so a gap reads
+// as a gap rather than as a body with no mark.
 
 import { useEffect, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
@@ -814,8 +814,8 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <p className="gallery__intro">
           Logos the generator does not make. First, public bodies with identities of their own — a Crown
           corporation, a program, a division — each through the eras it has had. Then the Province’s own
-          one-off marks, the names set beside the BC mark. Last, the bodies whose marks are still being
-          sought.
+          one-off marks, the names set beside the BC mark.
+          {WANTED.length > 0 && ' Last, the bodies whose marks are still being sought.'}
         </p>
         <section className="gallery__shelf" aria-labelledby="shelf-bodies">
           <h2 id="shelf-bodies" className="gallery__shelf-title">Crown corporations and public bodies</h2>
@@ -833,17 +833,20 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
         </section>
-        <section className="gallery__shelf" aria-labelledby="shelf-wanted">
-          <h2 id="shelf-wanted" className="gallery__shelf-title">Not yet in the gallery</h2>
-          <p className="gallery__intro gallery__shelf-intro">
-            Public bodies whose marks have been looked for and not obtained. None is drawn, because no
-            artwork for it has been verified; each says how far the search has got. From the research
-            companion’s logo routes, as of {WANTED_AS_OF}.
-          </p>
-          <div className="gallery__collections">
-            {WANTED.map((item) => <WantedCard key={item.id} item={item} onOpenGovernment={onOpenGovernment} />)}
-          </div>
-        </section>
+        {/* Shown only while a body is still sought: an empty shelf would read as one still to fill. */}
+        {WANTED.length > 0 && (
+          <section className="gallery__shelf" aria-labelledby="shelf-wanted">
+            <h2 id="shelf-wanted" className="gallery__shelf-title">Not yet in the gallery</h2>
+            <p className="gallery__intro gallery__shelf-intro">
+              Public bodies whose marks have been looked for and not obtained. None is drawn, because no
+              artwork for it has been verified; each says how far the search has got. From the research
+              companion’s logo routes, as of {WANTED_AS_OF}.
+            </p>
+            <div className="gallery__collections">
+              {WANTED.map((item) => <WantedCard key={item.id} item={item} onOpenGovernment={onOpenGovernment} />)}
+            </div>
+          </section>
+        )}
       </div>
     )
   }

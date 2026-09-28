@@ -720,9 +720,25 @@ const WCB_SOURCES = {
     'an undated specimen')
 }
 
+// BC Transit's sources, from the research package in research/identity/bc-transit (27 September 2026).
+
+const BCT_SOURCES = {
+  S1: source('BC Transit, “Our history” [S1]', 'https://www.bctransit.com/about/history/',
+    'the Urban Transit Authority formed in 1979, renamed BC Transit in 1982'),
+  S2: source('BC Transit Service Plan 2007/08–2009/10 [S2]', 'https://www.bcbudget.gov.bc.ca/2007/sp/pdf/agency/bctransit.pdf',
+    'cover: an angled provincial flag above the name'),
+  S3: source('BC Transit Service Plan 2008/09–2010/11 [S3]', 'https://www.bcbudget.gov.bc.ca/2008/sp/pdf/agency/bctransit.pdf',
+    'cover; tabled 19 February 2008'),
+  S4: source('BC Transit Service Plan 2009/10–2011/12 [S4]', 'https://www.bcbudget.gov.bc.ca/2009/sp/pdf/agency/bctransit.pdf',
+    'cover: the loop and its tagline; tabled 17 February 2009'),
+  S5: source('BC Transit, “New Livery — Exterior Bus Design Update” [S5]', 'https://www.bctransit.com/news-and-media/bus-designs/',
+    'the previous exterior design dates from 2007; the logo is unchanged'),
+  S6: source('BC Transit, “BC Transit buses are getting a new look”, 19 Sep 2024 [S6]', 'https://www.bctransit.com/bc-transit-buses-are-getting-a-new-look-2024-09-19/')
+}
+
 /**
  * BC Parks' eras around its flag-era badge, BC Timber Sales' around its two marks, and ICBC's,
- * BCLC's, BC Ferries' and WorkSafeBC's. These are collections, not one-offs, so collections.js puts their marks into the held
+ * BCLC's, BC Ferries', WorkSafeBC's and BC Transit's. These are collections, not one-offs, so collections.js puts their marks into the held
  * eras itself; what is here is everything else an era says.
  */
 export const COLLECTION_ERAS = {
@@ -1125,6 +1141,45 @@ export const COLLECTION_ERAS = {
       },
       seenAt: ['https://asmtclr.online.worksafebc.com/Mobile/css/images/WorkSafeBC-logo.png'],
       sources: [WCB_SOURCES.S4, WCB_SOURCES.S3]
+    }
+  ],
+
+  // Two families, the flag and the loop. The flag was seen in two arrangements whose order is not
+  // known, so they share one era rather than being given a sequence the evidence does not have;
+  // and neither livery change (2007, 2024) is a logo era, since BC Transit says the 2024 one kept it.
+  'bc-transit': [
+    {
+      id: 'bct-flag',
+      status: 'sought',
+      years: 'by 2007–2008',
+      label: 'The flag',
+      note: 'The provincial flag, waving, with the name: above it on the covers of the 2007 and 2008 service ' +
+        'plans, and beside it in white on red in a supplied picture that nothing dates. Which came first, ' +
+        'and whether both were in use at once, is not known. No vector of either has been obtained.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 2007–2008',
+        note: 'On the service plans of 2007 and February 2008. BC Transit took its name in 1982, which does ' +
+          'not date the flag; the supplied picture was filed under “pre 2000”, which is not evidence either.'
+      },
+      seenAt: ['https://www.bcbudget.gov.bc.ca/2007/sp/pdf/agency/bctransit.pdf'],
+      sources: [BCT_SOURCES.S2, BCT_SOURCES.S3, BCT_SOURCES.S1]
+    },
+    {
+      id: 'bct-loop',
+      status: 'held',
+      years: 'by 2009–present',
+      label: 'The loop',
+      note: 'A blue-and-green loop like a road looping back on itself, beside “BCTransit” in a heavy italic, ' +
+        'first with the tagline “Linking Communities, Businesses & Lifestyles”. The green bus livery of 2024 ' +
+        'kept it.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 2009',
+        note: 'On the cover of the service plan tabled on 17 February 2009; it may be older. The new bus ' +
+          'exterior of 2007 does not date it, and BC Transit says the 2024 livery left the logo unchanged.'
+      },
+      sources: [BCT_SOURCES.S4, BCT_SOURCES.S5, BCT_SOURCES.S6]
     }
   ]
 }

@@ -11,11 +11,13 @@
 // kept so each can be traced back to sources.json there. Nothing is fetched: the contact routes are
 // the package's, recorded as text, not links this site follows.
 //
-// ICBC (L01), BCLC (L02), BC Ferries (L03) and WorkSafeBC (L05) were on this list until their logo
-// histories arrived (research/identity/, 2026-09-27); they are collections in the gallery now. No
-// package is an official master, so the routes the companion recorded for them still stand: ICBC
-// through its newsroom's media contacts, BCLC through mediarelations@bclc.com, BC Ferries through
-// media@bcferries.com, WorkSafeBC through its Contact Us route.
+// All five of its bodies — ICBC (L01), BCLC (L02), BC Ferries (L03), BC Transit (L04) and WorkSafeBC
+// (L05) — have since had their logo histories researched (research/identity/, 2026-09-27) and are
+// collections in the gallery, so the list is empty and the gallery shows no shelf for it. It is kept
+// for the next body found missing. No package is an official master, so the routes the companion
+// recorded still stand: ICBC through its newsroom's media contacts, BCLC through
+// mediarelations@bclc.com, BC Ferries through media@bcferries.com, BC Transit through
+// media@bctransit.com, and WorkSafeBC through its Contact Us route.
 
 /**
  * What the package found about each body's artwork. Every status here means the same thing on the
@@ -29,19 +31,9 @@ export const ASSET_STATUS = {
 
 export const WANTED_AS_OF = '2026-09-25'
 
-export const WANTED = [
-  {
-    id: 'bc-transit',
-    source: 'L04',
-    label: 'BC Transit',
-    body: 'Crown corporation',
-    graphNode: 'bc-transit',
-    sourceIds: ['S16'],
-    verified: 'Explicit instructions to request the corporate logo for media use',
-    assetStatus: 'request_route_verified',
-    contact: 'media@bctransit.com',
-    nextAction: 'Request original vector and brand guide, including historical versions and permission ' +
-      'appropriate to this atlas.',
-    warning: 'No logo file or project-specific permission was obtained in this pass.'
-  }
-]
+/**
+ * @type {Array<{id: string, source: string, label: string, body: string, graphNode: string,
+ *   sourceIds: string[], verified: string, assetStatus: keyof ASSET_STATUS, contact: string,
+ *   nextAction: string, warning: string}>}
+ */
+export const WANTED = []

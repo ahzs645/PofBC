@@ -1,0 +1,330 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "bc-transit",
+  "graphNode": "bc-transit",
+  "title": "BC Transit — identity evidence timeline",
+  "asOf": "2026-09-27",
+  "scope": "Corporate logo families, observed variants, organizational context and livery changes; not every local transit-system or service brand.",
+  "datePolicy": "Unknown adoption and retirement dates are null. A dated publication is evidence of use, not a launch date. Unknown-date assets are not forced onto an exact year.",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "BC Transit — Our history",
+      "publisher": "BC Transit",
+      "url": "https://www.bctransit.com/about/history/",
+      "locator": "History paragraphs and highlights: 1979, 1980, 1982, 1999",
+      "type": "official_history",
+      "accessed": "2026-09-27"
+    },
+    {
+      "id": "S2",
+      "title": "BC Transit 2007/08–2009/10 Service Plan",
+      "publisher": "Province of British Columbia / BC Transit",
+      "url": "https://www.bcbudget.gov.bc.ca/2007/sp/pdf/agency/bctransit.pdf",
+      "locator": "PDF page 1, cover; flag above name",
+      "type": "official_document_visual",
+      "accessed": "2026-09-27"
+    },
+    {
+      "id": "S3",
+      "title": "BC Transit 2008/09–2010/11 Service Plan",
+      "publisher": "Province of British Columbia / BC Transit",
+      "url": "https://www.bcbudget.gov.bc.ca/2008/sp/pdf/agency/bctransit.pdf",
+      "locator": "PDF page 1, cover; PDF page 8 (printed page 2), tabling date 19 February 2008",
+      "type": "official_document_visual",
+      "accessed": "2026-09-27"
+    },
+    {
+      "id": "S4",
+      "title": "BC Transit 2009/10–2011/12 Service Plan",
+      "publisher": "Province of British Columbia / BC Transit",
+      "url": "https://www.bcbudget.gov.bc.ca/2009/sp/pdf/agency/bctransit.pdf",
+      "locator": "PDF page 1, cover; PDF page 8 (printed page 8), tabling date 17 February 2009",
+      "type": "official_document_visual",
+      "accessed": "2026-09-27"
+    },
+    {
+      "id": "S5",
+      "title": "New Livery — Exterior Bus Design Update",
+      "publisher": "BC Transit",
+      "url": "https://www.bctransit.com/news-and-media/bus-designs/",
+      "locator": "Seven facts; transition timeline. Explicitly says the logo is unchanged. Dates earlier exterior design to 2007.",
+      "type": "official_explanation",
+      "accessed": "2026-09-27"
+    },
+    {
+      "id": "S6",
+      "title": "BC Transit buses are getting a new look",
+      "publisher": "BC Transit",
+      "url": "https://www.bctransit.com/bc-transit-buses-are-getting-a-new-look-2024-09-19/",
+      "locator": "News release, 19 September 2024",
+      "type": "official_announcement",
+      "published": "2024-09-19",
+      "accessed": "2026-09-27"
+    },
+    {
+      "id": "U1",
+      "title": "User-supplied bctransit.zip",
+      "publisher": "User upload; original publisher not established",
+      "url": null,
+      "locator": "current/Logo.svg; current/page-1-selection-1.svg; pre 2000/BCTransit_Old_Logo.jpg",
+      "type": "supplied_artwork",
+      "accessed": "2026-09-27"
+    }
+  ],
+  "events": [
+    {
+      "id": "uta-formed",
+      "date": "1979",
+      "datePrecision": "year",
+      "kind": "governance",
+      "dateBasis": "documented_event",
+      "title": "Urban Transit Authority formed",
+      "note": "The provincial government establishes the UTA. This is predecessor history, not a BC Transit logo-adoption date.",
+      "sourceIds": [
+        "S1"
+      ],
+      "logoChange": false
+    },
+    {
+      "id": "operations-transfer",
+      "date": "1980",
+      "datePrecision": "year",
+      "kind": "governance",
+      "dateBasis": "documented_event",
+      "title": "Victoria and Vancouver operations transfer",
+      "note": "Operations transfer from BC Hydro. Do not attach a new logo to this administrative event without artwork evidence.",
+      "sourceIds": [
+        "S1"
+      ],
+      "logoChange": false
+    },
+    {
+      "id": "name-bc-transit",
+      "date": "1982",
+      "datePrecision": "year",
+      "kind": "governance",
+      "dateBasis": "documented_event",
+      "title": "UTA becomes BC Transit",
+      "note": "BC Transit’s own history gives 1982. The introduction date of the horizontal flag lockup remains unknown.",
+      "sourceIds": [
+        "S1"
+      ],
+      "logoChange": false
+    },
+    {
+      "id": "metro-vancouver-transfer",
+      "date": "1999",
+      "datePrecision": "year",
+      "kind": "governance",
+      "dateBasis": "documented_event",
+      "title": "Metro Vancouver passes to TransLink",
+      "note": "Record a jurisdictional handover, not the disappearance of BC Transit or a logo redesign.",
+      "sourceIds": [
+        "S1"
+      ],
+      "logoChange": false
+    },
+    {
+      "id": "livery-2007",
+      "date": "2007",
+      "datePrecision": "year",
+      "kind": "livery",
+      "dateBasis": "documented_event",
+      "title": "Earlier exterior-design milestone",
+      "note": "The 2024 explanation dates the previous notable exterior bus-design change to 2007. This alone does not date adoption of the loop logo.",
+      "sourceIds": [
+        "S5"
+      ],
+      "logoChange": false
+    },
+    {
+      "id": "flag-2008-observed",
+      "date": "2008-02-19",
+      "datePrecision": "day",
+      "kind": "logo_observation",
+      "dateBasis": "first_observation",
+      "title": "Flag lockup in the 2008 service plan",
+      "note": "The cover has an angled provincial flag above the name. This dates a publication using it, not the start or end of the identity.",
+      "sourceIds": [
+        "S3"
+      ],
+      "logoChange": null
+    },
+    {
+      "id": "loop-2009-observed",
+      "date": "2009-02-17",
+      "datePrecision": "day",
+      "kind": "logo_observation",
+      "dateBasis": "first_observation",
+      "title": "Loop and tagline documented by 2009",
+      "note": "The service plan shows the blue-and-green loop, italic wordmark and “Linking Communities, Businesses & Lifestyles”. Its exact launch remains unresolved.",
+      "sourceIds": [
+        "S4"
+      ],
+      "logoChange": null
+    },
+    {
+      "id": "green-livery",
+      "date": "2024-09-19",
+      "datePrecision": "day",
+      "kind": "livery",
+      "dateBasis": "documented_event",
+      "title": "Green bus livery; logo unchanged",
+      "note": "The new exterior design is announced in September; rollout begins that fall on new buses. BC Transit explicitly says there is no logo change.",
+      "sourceIds": [
+        "S5",
+        "S6"
+      ],
+      "logoChange": false
+    }
+  ],
+  "families": [
+    {
+      "id": "flag-family",
+      "label": "Flag-based identity",
+      "adopted": null,
+      "retired": null,
+      "observations": [
+        {
+          "date": "2007",
+          "variant": "flag-above-name",
+          "sourceIds": [
+            "S2"
+          ]
+        },
+        {
+          "date": "2008-02-19",
+          "variant": "flag-above-name",
+          "sourceIds": [
+            "S3"
+          ]
+        }
+      ],
+      "variants": [
+        "flag-horizontal-reference",
+        "flag-above-name"
+      ],
+      "note": "The supplied horizontal flag image and the stacked report lockup differ. They are not assigned consecutive eras without transition evidence."
+    },
+    {
+      "id": "loop-family",
+      "label": "Loop and italic wordmark",
+      "adopted": null,
+      "retired": null,
+      "documentedBy": "2009-02-17",
+      "observations": [
+        {
+          "date": "2009-02-17",
+          "variant": "loop-colour-tagline",
+          "sourceIds": [
+            "S4"
+          ]
+        }
+      ],
+      "variants": [
+        "loop-colour-tagline",
+        "loop-navy"
+      ],
+      "note": "The supplied navy and full-colour/tagline files are variants of this family, not proven successive redesigns. Their exact publication dates are unknown."
+    }
+  ],
+  "assets": [
+    {
+      "id": "flag-horizontal-reference",
+      "family": "flag-family",
+      "file": "assets/bc-transit-flag-horizontal-reference.jpg",
+      "format": "raster",
+      "provenance": "archival_raster",
+      "dateBasis": "unknown",
+      "adopted": null,
+      "retired": null,
+      "sourceIds": [
+        "U1"
+      ],
+      "note": "Preserved supplied JPEG. Folder label “pre 2000” is not independent dating evidence. No vector recreation is claimed.",
+      "rights": {
+        "status": "unresolved",
+        "note": "No permission to reproduce this mark has been sought or documented."
+      },
+      "sha256": "631d5c60401bdd9545c5c06c1a78872542e641c29e2234d57693b08115ff5c10"
+    },
+    {
+      "id": "flag-above-name",
+      "family": "flag-family",
+      "file": null,
+      "format": null,
+      "provenance": "observed_official_document",
+      "dateBasis": "first_observation",
+      "documentedBy": "2007",
+      "sourceIds": [
+        "S2",
+        "S3"
+      ],
+      "note": "Visually verified on official covers. Artwork not recovered; kept as an explicit acquisition gap.",
+      "rights": {
+        "status": "unresolved",
+        "note": "No permission to reproduce this mark has been sought or documented."
+      }
+    },
+    {
+      "id": "loop-navy",
+      "family": "loop-family",
+      "file": "assets/bc-transit-loop-navy.svg",
+      "format": "pure_vector",
+      "provenance": "original_supplied",
+      "dateBasis": "unknown",
+      "sourceIds": [
+        "U1"
+      ],
+      "note": "Supplied path geometry, cropped; no type substitution. #004370 is a file value, not a recovered brand standard.",
+      "rights": {
+        "status": "unresolved",
+        "note": "No permission to reproduce this mark has been sought or documented."
+      },
+      "sha256": "8307fc5ee1e8029e5ee5632d4546f04fde3732849266cd6651efa5df1eed1be9"
+    },
+    {
+      "id": "loop-colour-tagline",
+      "family": "loop-family",
+      "file": "assets/bc-transit-loop-colour-source-hybrid.svg",
+      "format": "hybrid_svg",
+      "provenance": "original_supplied",
+      "dateBasis": "unknown",
+      "sourceIds": [
+        "U1"
+      ],
+      "note": "Source-font tagline outlined at supplied positions. Retains one clipped 54×26-pixel shading image. Not entirely vector.",
+      "rights": {
+        "status": "unresolved",
+        "note": "No permission to reproduce this mark has been sought or documented."
+      },
+      "sha256": "c4bea63d16ec78ba6d96499070f7fd5b24e860cba6566724a062f7c57c2551be"
+    },
+    {
+      "id": "loop-colour-flat",
+      "family": "loop-family",
+      "file": "assets/bc-transit-loop-colour-flat.svg",
+      "format": "pure_vector",
+      "provenance": "reconstructed",
+      "dateBasis": "unknown",
+      "sourceIds": [
+        "U1"
+      ],
+      "note": "Explicit derivative: same path geometry and outlined tagline; small shading bitmap replaced by flat blue from its exact clipping boundary. White highlights converted to cut-outs. Not an official master or a historical redesign.",
+      "rights": {
+        "status": "unresolved",
+        "note": "No permission to reproduce this mark has been sought or documented."
+      },
+      "sha256": "d5543b4d7655d57d9d6704ee76f82141a4600dd36ef108a8008b9f3623b92403"
+    }
+  ],
+  "openQuestions": [
+    "Find dated first-use and retirement evidence for the horizontal flag lockup.",
+    "Obtain the stacked flag lockup in original vector form and establish its relationship to the horizontal form.",
+    "Obtain the 2007–2009 identity rollout brief or corporate brand manual; do not infer the logo launch from livery alone.",
+    "Identify the author/designer, official colour specifications and master versions of the loop identity.",
+    "Establish when the navy/no-tagline application was first published, independently of the supplied folder name.",
+    "Obtain permission appropriate to a public historical atlas."
+  ]
+}

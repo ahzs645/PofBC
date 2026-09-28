@@ -60,11 +60,16 @@ its later purple, coral and yellow palette. **BC Ferries**, from a third package
 dogwood flag of the 1960s and the geometric dogwood beside "BC FERRIES" (about 1978) to the wave of
 2 April 2003, which came in with the company that replaced the Crown corporation. **WorkSafeBC**, from
 a fourth, has the 1983 province-and-worker mark and today's black-and-orange wordmark, both rebuilt,
-with its documented 1968 design kept as an empty era until a picture of it turns up. Their marks are
+with its documented 1968 design kept as an empty era until a picture of it turns up. **BC Transit**,
+from a fifth, has its blue-and-green loop (by 2009), with its earlier flag lockups kept as an empty
+era; neither livery change (2007, 2024) is counted as a logo. With it, every body the research
+companion listed as missing has a collection, and the "not yet in the gallery" shelf is hidden
+until another is found. Their marks are
 drawn **exactly as supplied** and are not recoloured: each package file already says whether it is
 supplied paths, a declared recolour, or a reconstruction, and the gallery repeats that rather than
 blurring it. The SVGs are in [`artwork/icbc/`](artwork/icbc), [`artwork/bclc/`](artwork/bclc),
-[`artwork/bc-ferries/`](artwork/bc-ferries) and [`artwork/worksafebc/`](artwork/worksafebc); `npm run build:crown-marks` packages them into
+[`artwork/bc-ferries/`](artwork/bc-ferries), [`artwork/worksafebc/`](artwork/worksafebc) and
+[`artwork/bc-transit/`](artwork/bc-transit); `npm run build:crown-marks` packages them into
 `src/assets/crownMarks.js`.
 
 Most of the gallery is the **Best Place on Earth years**: WelcomeBC, WorkBC, BC Stats,

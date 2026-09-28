@@ -604,6 +604,56 @@ const WCB_ENTRIES = {
   ]
 }
 
+// ── BC Transit ───────────────────────────────────────────────────────────────────────────────────
+//
+// From a fifth package (research/identity/bc-transit). It came with an installer that would have
+// made these marks recolourable one-offs; they are drawn as supplied instead, like every Crown
+// corporation's here. The colour version with its tagline is the package's all-vector derivative —
+// the supplied file keeps a small shading bitmap (artwork/bc-transit/supplied/), which this gallery
+// does not draw.
+
+const BCT_RIGHTS = { status: 'unresolved', note: `BC Transit’s mark. ${NO_PERMISSION}` }
+
+const BCT_LOOP_DATES = DATED_BY_TIMELINE('first_observation', 'by 2009', 'On the service plan tabled in February 2009.')
+
+const BCT_ENTRIES = {
+  'bct-loop': [
+    // The package classes this derivative as reconstructed, and so does the gallery: its paths are the
+    // supplied file's, but it is not the file as supplied.
+    supplied({
+      provenance: 'reconstructed',
+      fidelity: 'partially compared',
+      fidelityNote: 'The supplied colour file’s paths, with its tagline’s font outlined where it stood. The file ' +
+        'shaded part of the loop with a tiny bitmap; here that part is flat blue, cut along the bitmap’s exact ' +
+        'clip, and its white highlights are cut-outs — a derivative, not the file as supplied. When and where ' +
+        'the file was published is not recorded.',
+      applicability: BCT_LOOP_DATES,
+      rights: BCT_RIGHTS
+    })({
+      id: 'bct-loop-colour',
+      label: 'Colour, with tagline',
+      years: 'by 2009',
+      note: 'The loop in blue and green, “BCTransit”, and “Linking Communities, Businesses & Lifestyles”.'
+    }),
+    supplied({
+      ...SUPPLIED_PATHS('Every path is the supplied file’s own, cropped. The navy, #004370, is the file’s value, ' +
+        'not a brand standard.'),
+      applicability: {
+        kind: 'unknown',
+        years: 'undated',
+        note: 'When this one-colour version without the tagline was first published has not been found. Its ' +
+          'timeline cites the sources for the loop.'
+      },
+      rights: BCT_RIGHTS
+    })({
+      id: 'bct-loop-navy',
+      label: 'Navy, no tagline',
+      years: 'undated',
+      note: 'The loop and name in one navy, without the tagline.'
+    })
+  ]
+}
+
 /**
  * Which one-offs stand for a body the government diagram draws, so a card can lead to it. The
  * Province's marks that name a campaign or a slogan rather than a body have none.
@@ -816,6 +866,19 @@ export const GALLERY_COLLECTIONS = [
       'WorkSafeBC in black and orange, the everyday name since 2005. What the board used from its ' +
       'founding in 1917 until 1968 is not known. Both marks here are reconstructions.',
     eras: withMarks(COLLECTION_ERAS.worksafebc, WCB_ENTRIES)
+  },
+  {
+    id: 'bc-transit',
+    shelf: 'bodies',
+    label: 'BC Transit',
+    body: 'Crown corporation · Ministry of Transportation and Transit',
+    years: '1982–present',
+    graphNode: 'bc-transit',
+    cover: 'bct-loop-colour',
+    intro: 'BC Transit’s two families of mark since it took the name in 1982: the provincial flag with the ' +
+      'name, seen in two arrangements that have not been obtained as artwork, then by 2009 the blue-and-green ' +
+      'loop, which it still uses. Its bus liveries changed in 2007 and 2024; neither is a new logo.',
+    eras: withMarks(COLLECTION_ERAS['bc-transit'], BCT_ENTRIES)
   },
   {
     id: 'bc-parks',

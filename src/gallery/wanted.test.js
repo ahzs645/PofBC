@@ -5,8 +5,11 @@ import assert from 'node:assert/strict'
 import { ASSET_STATUS, WANTED } from './wanted.js'
 import { GALLERY_COLLECTIONS, findGalleryEntry } from './collections.js'
 
-test('the routes from the research package are all here, once each, but those now in the gallery', () => {
-  assert.deepEqual(WANTED.map((item) => item.source), ['L04'])
+test('every body the research package routed is in the gallery now, so none is still sought', () => {
+  assert.deepEqual(WANTED.map((item) => item.source), [])
+  for (const node of ['icbc', 'bclc', 'bc-ferry-corporation', 'bc-transit', 'workers-compensation-board']) {
+    assert.ok(GALLERY_COLLECTIONS.some((collection) => collection.graphNode === node), `${node} has no collection`)
+  }
   assert.equal(new Set(WANTED.map((item) => item.id)).size, WANTED.length)
 })
 

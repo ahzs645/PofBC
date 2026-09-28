@@ -9,14 +9,15 @@ Researched 2026-09-26, mostly from Wayback Machine captures of each body's site,
 release archive, and the covers of its published plans and reports. Nothing was downloaded into the
 repo.
 
-## ICBC, BCLC, BC Ferries and WorkSafeBC
+## ICBC, BCLC, BC Ferries, WorkSafeBC and BC Transit
 
-Their timelines came as four research packages (27 September 2026), filed here whole in
-[`icbc/`](icbc), [`bclc/`](bclc), [`bc-ferries/`](bc-ferries) and [`worksafebc/`](worksafebc): each
-package's own README (`PACKAGE.md`), its evidence notes (`NOTES.md` and `SOURCES.md` for ICBC,
-`EVIDENCE.md` for BCLC, `SOURCE-NOTES.md` for BC Ferries, `SOURCES.md` for WorkSafeBC) and its
-machine-readable timeline and sources. The logo SVGs are in `artwork/icbc/`, `artwork/bclc/`,
-`artwork/bc-ferries/` and `artwork/worksafebc/`, with the files originally supplied
+Their timelines came as five research packages (27 September 2026), filed here whole in
+[`icbc/`](icbc), [`bclc/`](bclc), [`bc-ferries/`](bc-ferries), [`worksafebc/`](worksafebc) and
+[`bc-transit/`](bc-transit): each package's own README (`PACKAGE.md`), its evidence notes (`NOTES.md`
+and `SOURCES.md` for ICBC, `EVIDENCE.md` for BCLC and BC Transit, `SOURCE-NOTES.md` for BC Ferries,
+`SOURCES.md` for WorkSafeBC) and its machine-readable timeline and sources. The logo SVGs are in
+`artwork/icbc/`, `artwork/bclc/`, `artwork/bc-ferries/`, `artwork/worksafebc/` and
+`artwork/bc-transit/`, with the files originally supplied
 to the research in `supplied/` beside them; the packages' boards, previews and screenshots were left
 out. Paths inside `PACKAGE.md` are the package's own (`logos/`, `data/`, …), not this repo's.
 
@@ -39,7 +40,16 @@ What the gallery took from them, and did not:
 - **A documented design with no picture is an empty era.** WorkSafeBC's 1968 worker-protection design
   is dated by the board's own history but has not been found, so it is `sought`. Nothing stands for
   1917–1968: whether the board had a mark then is not known, and a slot would claim it did. Its 1974
-  and 2005 name changes are not treated as redesigns.
+  and 2005 name changes are not treated as redesigns. BC Transit's two flag arrangements (above the
+  name on the 2007–2008 plans; beside it on red in an undated picture, kept here as
+  `bc-transit-flag-horizontal-reference.jpg`) share one `sought` era, since their order is not known.
+- **Liveries are not logos.** BC Transit's bus exteriors changed in 2007 and 2024; it says the 2024
+  one kept the logo, so neither is an era.
+- **An installer is not a patch to apply.** BC Transit's package came with a script that would have
+  made its marks recolourable one-offs, written against an older copy of this repo. It was not run;
+  the marks were brought in as supplied, like the others. Its colour loop with tagline is the
+  package's all-vector derivative (a shading bitmap flattened), classed as reconstructed; the file as
+  supplied is in `artwork/bc-transit/supplied/`.
 - **Open:** a 1973 example; when any early ICBC mark was adopted or retired; the serif-to-sans change;
   what the orange treatment is for; the first appearance and colours of BCLC's sun and waves; and when
   BCLC's purple, coral and yellow palette came in; a dated introduction for BC Ferries' geometric
@@ -47,7 +57,8 @@ What the gallery took from them, and did not:
   permission. BC Ferries' wave belongs to BC Ferry Services Inc., which is not a public body; the
   collection links to the Crown corporation it replaced. For WorkSafeBC: the 1968 artwork, a dated
   example of the 1983 lockup, when the black-and-orange wordmark first appeared, and its 2004 and 2005
-  report covers, which the package could not open.
+  report covers, which the package could not open. For BC Transit: either flag lockup as artwork, and
+  when each was used; when the loop came in, and its navy version without the tagline.
 
 ## The rules the timelines follow
 
