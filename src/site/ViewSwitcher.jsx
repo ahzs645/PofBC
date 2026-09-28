@@ -6,7 +6,7 @@
 // after the org-graph site the government view is modelled on. The menu follows the WAI-ARIA menu
 // button pattern: arrows move, Home and End jump, Escape closes and returns focus.
 
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 
 export const VIEWS = [
   { id: 'generator', label: 'Generator', description: 'A ministry lockup in any of the four identities' },
@@ -36,6 +36,7 @@ export const ViewSwitcher = ({ view, onChange, className = '' }) => {
   const [open, setOpen] = useState(false)
   const root = useRef(null)
   const trigger = useRef(null)
+  const menu = useRef(null)
   const items = useRef([])
   const id = useId()
   const current = VIEWS.find((entry) => entry.id === view) ?? VIEWS[0]
@@ -48,6 +49,17 @@ export const ViewSwitcher = ({ view, onChange, className = '' }) => {
     document.addEventListener('pointerdown', away)
     return () => document.removeEventListener('pointerdown', away)
   }, [open, current])
+
+  // The menu hangs from the trigger's left edge, which on a phone is far enough across the page that
+  // the menu would run off its right side; it is moved back in, before it is painted, to keep a
+  // margin from both edges.
+  useLayoutEffect(() => {
+    if (!open || !menu.current) return
+    const edge = 16
+    const box = menu.current.getBoundingClientRect()
+    const over = box.right - (document.documentElement.clientWidth - edge)
+    if (over > 0) menu.current.style.left = `${parseFloat(getComputedStyle(menu.current).left) - Math.min(over, box.left - edge)}px`
+  }, [open])
 
   const close = () => { setOpen(false); trigger.current?.focus() }
   const choose = (next) => { setOpen(false); if (next !== view) onChange(next) }
@@ -83,7 +95,7 @@ export const ViewSwitcher = ({ view, onChange, className = '' }) => {
         <Chevron open={open} />
       </button>
       {open && (
-        <div id={id} className="view-switcher__menu" role="menu" aria-label="Switch view" onKeyDown={onMenuKey}>
+        <div ref={menu} id={id} className="view-switcher__menu" role="menu" aria-label="Switch view" onKeyDown={onMenuKey}>
           <div className="view-switcher__heading" aria-hidden="true">Switch view</div>
           {VIEWS.map((entry, index) => (
             <button

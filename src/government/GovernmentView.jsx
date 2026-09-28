@@ -8,7 +8,7 @@
 // The year and the chosen body live in the address bar, so a view of the 1986 cabinet with the
 // Ministry of Forests and Lands open is a link that can be sent.
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { MINISTRY_EPISODES, standsIn } from './episodes.js'
 import { ChangesCard, EntityCard, OverviewCard } from './GovernmentPanel.jsx'
 import { GovernmentGraph } from './GovernmentGraph.jsx'
@@ -78,6 +78,28 @@ const useNarrow = () => {
     return () => media.removeEventListener('change', listen)
   }, [media])
   return narrow
+}
+
+/**
+ * Whether the breadcrumb has room for the site's name in full; where it has not, it says "PofBC".
+ * The full name is put back and measured on every change of width or of what follows it, and the
+ * swap is made before the browser paints, so neither is seen to flicker.
+ */
+const useShortName = (nav, deps) => {
+  useLayoutEffect(() => {
+    const element = nav.current
+    const site = element?.querySelector('.gov-breadcrumb__site')
+    if (!site) return undefined
+    const fit = () => {
+      delete element.dataset.short
+      if (site.scrollWidth > site.clientWidth) element.dataset.short = ''
+    }
+    fit()
+    const observer = new ResizeObserver(fit)
+    observer.observe(element)
+    document.fonts?.ready.then(fit)
+    return () => observer.disconnect()
+  }, deps)
 }
 
 /**
@@ -215,6 +237,10 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   const theme = THEMES[themeName]
   const narrow = useNarrow()
   const panel = useRef(null)
+  const breadcrumb = useRef(null)
+  const stage = useRef(null)
+  const diagram = useRef(null)
+  const [stageAway, setStageAway] = useState(false)
 
   const government = useMemo(() => governmentIn(year, { includeUndated }), [year, includeUndated])
   const selected = government.nodes.find((node) => node.id === selectedId) ?? null
@@ -230,6 +256,14 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     setSelectedId(id)
     if (narrow && id) requestAnimationFrame(() => panel.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
   }
+
+  // On a phone, whether the diagram has been scrolled out of sight — reading the panel below it.
+  useEffect(() => {
+    if (!narrow || !diagram.current) return undefined
+    const observer = new IntersectionObserver(([entry]) => setStageAway(!entry.isIntersecting))
+    observer.observe(diagram.current)
+    return () => observer.disconnect()
+  }, [narrow])
 
   // Playing runs the years forward, a little over two a second, and stops at today.
   useEffect(() => {
@@ -297,6 +331,13 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     setSelectedId(siblings[(index + direction + siblings.length) % siblings.length].id)
   }
 
+  // The dock's arrows change the panel being read, so its new body is brought to the top of it.
+  const stepInPanel = (direction) => {
+    step(direction)
+    requestAnimationFrame(() => panel.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+  }
+  const docked = narrow && stageAway && Boolean(selected)
+
   const present = useMemo(() => [...new Set(government.nodes.map((node) => node.kind))], [government])
   // A legend row can stand for several kinds; it hides them together, or shows them together.
   const toggleKinds = (kinds) => setHidden((current) => {
@@ -315,18 +356,23 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     return next
   })
 
+  useShortName(breadcrumb, [year, selected?.branch])
+
   return (
-    <div className="gov" data-theme={themeName}>
-      <nav className="gov-card gov-breadcrumb" aria-label="Breadcrumb">
+    <div className="gov" data-theme={themeName} data-docked={docked || undefined}>
+      <nav className="gov-card gov-breadcrumb" aria-label="Breadcrumb" ref={breadcrumb}>
         <SunGlyph fill={theme.people} />
-        <strong className="gov-breadcrumb__site">Province of BC</strong>
+        <strong className="gov-breadcrumb__site">
+          <span className="gov-breadcrumb__full">Province of BC</span>
+          <abbr className="gov-breadcrumb__short" title="Province of British Columbia">PofBC</abbr>
+        </strong>
         <span className="gov-muted" aria-hidden="true">/</span>
         <ViewSwitcher view="government" onChange={onChangeView} className="gov-breadcrumb__views" />
         <span className="gov-muted" aria-hidden="true">/</span>
         <button type="button" className="gov-breadcrumb__year" onClick={() => setSelectedId(null)} title="Back to the overview">{year}</button>
-        {selected?.branch && <span className="gov-muted">/ {selected.branch[0].toUpperCase() + selected.branch.slice(1)}</span>}
+        {selected?.branch && <span className="gov-muted gov-breadcrumb__branch">/ {selected.branch[0].toUpperCase() + selected.branch.slice(1)}</span>}
       </nav>
-      <div className="gov__stage">
+      <div className="gov__stage" ref={stage}>
         <div className="gov__overlay gov__overlay--top">
           <Search onPick={pick} />
           <div className="gov__tools">
@@ -340,7 +386,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
           </div>
         </div>
 
-        <div className="gov__graph" data-mode={mode}>
+        <div className="gov__graph" data-mode={mode} ref={diagram}>
           {mode === 'graph'
             ? <GovernmentGraph government={government} selectedId={selected ? selectedId : null} onSelect={chooseFromGraph} hiddenKinds={hidden} hiddenRelations={hiddenRelations} theme={theme} compact={narrow} />
             : mode === 'list'
@@ -416,6 +462,18 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
         </details>
       </div>
 
+      {/* On a phone, once the diagram is scrolled away: the chosen body, the way back up to it, and
+          the same previous and next as the diagram's own arrows. */}
+      {docked && (
+        <div className="gov-dock" role="group" aria-label="Chosen body">
+          <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => stepInPanel(-1)} aria-label="Previous of this kind"><ChevronIcon direction={-1} /></button>
+          <button type="button" className="gov-dock__name" onClick={() => stage.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
+            <span>{selected.name}</span>
+            <span className="gov-muted">Back to the diagram ↑</span>
+          </button>
+          <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => stepInPanel(1)} aria-label="Next of this kind"><ChevronIcon direction={1} /></button>
+        </div>
+      )}
     </div>
   )
 }

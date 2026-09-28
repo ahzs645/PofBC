@@ -461,8 +461,19 @@
 }
 
 @media (max-width: 1023px) {
-  .gov-graph { aspect-ratio: 10 / 10.5; height: auto; padding-top: 48px; }
+  /* Clear of the tools above it and of the legend and the switch below, which on a phone would
+     otherwise cover the caption of a body turned to the foot of the disc. */
+  .gov-graph { aspect-ratio: 10 / 10.5; height: auto; padding: 48px 0; }
 }
+
+/* The page keeps its scroll and loses its pinch over the diagram, which zooms itself instead
+   (GovernmentGraph's useZoom); zoomed, one finger pans the diagram rather than the page, and the
+   drawing is clipped to its frame instead of spilling over the timeline. */
+.gov-graph { touch-action: pan-x pan-y; }
+.gov-graph[data-zoomed] { touch-action: none; overflow: hidden; }
+
+/* Zoom's buttons, bottom right of the diagram and above the legend's row. */
+.gov-zoom { position: absolute; right: 0; bottom: 48px; z-index: 2; display: flex; gap: 6px; }
 
 .gov-graph__node { cursor: pointer; }
 /* A click focuses the node it selects; the browser's own outline would then box the shape. The
@@ -509,7 +520,7 @@
 }
 
 .gov__overlay > * { pointer-events: auto; }
-.gov__overlay--top { top: 0; }
+.gov__overlay--top { top: 0; z-index: 3; }
 .gov__overlay--bottom { bottom: 0; align-items: flex-end; }
 .gov__tools { display: flex; gap: 8px; }
 
@@ -539,6 +550,13 @@
 }
 
 .gov-search__results li { font-size: 14px; }
+
+@media (max-width: 1023px) {
+  /* Beside the tools, not over them: at full width it pushed them off the side of the page. */
+  .gov-search { flex: 1; width: auto; min-width: 0; }
+  .gov-search input { font-size: 16px; }
+  .gov-search__results { width: calc(100vw - 32px); max-height: 60vh; max-height: 60svh; }
+}
 .gov-search__results li.gov-muted { padding: 8px; }
 
 .gov-search__results button {
@@ -579,6 +597,12 @@
   border-radius: 12px;
   background: var(--gov-surface);
   box-shadow: var(--gov-shadow);
+}
+
+/* On a phone the diagram is short and near the top of the page, so above its trigger the panel ran
+   off the top; it opens downward instead, over the timeline, where the page has room. */
+@media (max-width: 1023px) {
+  .gov-legend__panel { top: 42px; bottom: auto; width: min(300px, calc(100vw - 32px)); max-height: 70vh; max-height: 70svh; }
 }
 
 .gov-legend__heading {
@@ -667,8 +691,11 @@
   padding-right: 4px;
 }
 
+/* On a phone the list and the comparison scroll inside a frame of their own, as on a wide screen:
+   laid out in full they ran to thousands of pixels, and took the switch back and the timeline with
+   them to the foot of the page. */
 @media (max-width: 1023px) {
-  .gov-list { position: static; padding: 52px 0; }
+  .gov__graph[data-mode='list'], .gov__graph[data-mode='compare'] { flex: none; height: 75vh; height: 75svh; min-height: 420px; }
 }
 
 .gov-list__section { background: var(--gov-surface); border-radius: 12px; padding: 16px 12px; }
@@ -698,9 +725,24 @@
 .gov-list__meta { font-size: 11px; font-weight: 400; color: var(--gov-ink-4); }
 .gov-list__head { flex: none; font-size: 12px; color: var(--gov-ink-3); max-width: 40%; text-align: right; }
 
-/* The breadcrumb carries the site's view switch, in the view's own palette. */
-.gov-breadcrumb { flex-wrap: wrap; row-gap: 0; }
+/* The breadcrumb carries the site's view switch, in the view's own palette. It stays on one line:
+   on a phone it is only just wide enough, so rather than let the year drop to a second line — which
+   it did for some years and not others, the digits not being the same width — the site's name and
+   the branch give way to an ellipsis. */
+.gov-breadcrumb { flex-wrap: nowrap; white-space: nowrap; }
+.gov-breadcrumb > * { flex: none; }
+.gov-breadcrumb > .gov-breadcrumb__site,
+.gov-breadcrumb > .gov-breadcrumb__branch { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .gov-breadcrumb__site { font-weight: 600; }
+/* Where the full name does not fit, it is "PofBC" (useShortName); the ellipsis is only a last resort. */
+.gov-breadcrumb__short { display: none; text-decoration: none; }
+.gov-breadcrumb[data-short] .gov-breadcrumb__full { display: none; }
+.gov-breadcrumb[data-short] .gov-breadcrumb__short { display: inline; }
+@media (max-width: 479px) {
+  .gov-breadcrumb { padding: 8px 16px; }
+  /* The panel's eyebrow names the branch already. */
+  .gov-breadcrumb__branch { display: none; }
+}
 .gov-breadcrumb .view-switcher {
   --menu-surface: var(--gov-surface);
   --menu-ink: var(--gov-ink);
@@ -717,9 +759,52 @@
   background: none;
   color: var(--gov-ink-4);
   font: inherit;
+  font-variant-numeric: tabular-nums;
   cursor: pointer;
 }
 .gov-breadcrumb__year:hover { background: var(--gov-hover); color: var(--gov-ink); }
+
+/* ── The dock ─────────────────────────────────────────────────────────────────────────────────── */
+
+/* A phone's way back to the diagram from the panel under it (GovernmentView): fixed to the foot of
+   the screen, and room left beneath the page so it covers nothing at the end. */
+.gov-dock {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 14px;
+  background: var(--gov-surface);
+  box-shadow: var(--gov-menu-shadow);
+  animation: gov-enter 160ms ease-out;
+}
+
+.gov-dock__name {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--gov-ink);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.gov-dock__name span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gov-dock__name .gov-muted { font-size: 12px; font-weight: 400; }
+.gov-dock .gov-button--icon { width: 44px; height: 44px; background: var(--gov-hover); }
+.gov[data-docked] { padding-bottom: calc(88px + env(safe-area-inset-bottom)); }
+.gov__stage, .gov__panel { scroll-margin-top: 16px; }
 
 /* ── The timeline ─────────────────────────────────────────────────────────────────────────────── */
 
@@ -734,6 +819,8 @@
 .gov-timeline__controls { display: flex; align-items: center; gap: 4px; }
 .gov-timeline__controls .gov-button { background: var(--gov-hover); height: 30px; min-width: 30px; }
 .gov-timeline__controls .gov-button:hover:not(:disabled) { background: var(--gov-mid); }
+/* A finger needs a bigger step than a pointer does. */
+@media (pointer: coarse) { .gov-timeline__controls .gov-button { height: 40px; min-width: 40px; } }
 
 .gov-timeline__year {
   min-width: 64px;
@@ -743,7 +830,7 @@
   font-variant-numeric: tabular-nums;
 }
 
-.gov-timeline__track { position: relative; height: 84px; }
+.gov-timeline__track { position: relative; height: 84px; cursor: ew-resize; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
 .gov-timeline__track svg { display: block; width: 100%; height: 64px; }
 
 .gov-timeline__tick { fill: var(--gov-ink-3); }
@@ -777,7 +864,8 @@
   height: 64px;
   margin: 0;
   opacity: 0;
-  cursor: ew-resize;
+  /* It keeps the keyboard and the screen reader; the track above takes the pointer (TimelineBar). */
+  pointer-events: none;
 }
 
 .gov-timeline__range:focus-visible { opacity: 0.01; }
@@ -956,12 +1044,14 @@
 .gov-stages__note { margin: 8px 0 0; font-size: 12px; }
 
 .gov-compare { position: absolute; inset: 52px 0 52px; overflow-y: auto; scrollbar-gutter: stable; display: grid; align-content: start; gap: 12px; padding-right: 4px; }
-@media (max-width: 1023px) { .gov-compare { position: static; padding: 52px 0; } }
 .gov-compare__pick { margin: 4px 8px 8px; font-size: 14px; }
 .gov-compare__pick select { height: 32px; padding: 0 8px; border: 1px solid var(--gov-outline); border-radius: 8px; background: var(--gov-hover); color: var(--gov-ink); font: inherit; }
 .gov-compare__head p.gov-muted { margin: 0 8px; font-size: 13px; }
 .gov-compare__rows, .gov-compare__names { list-style: none; margin: 0; padding: 0 8px; display: grid; gap: 6px; font-size: 14px; }
 .gov-compare__rows li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; }
+/* Narrow, a row is its name over its change, every row alike, rather than some wrapping and some not. */
+@media (max-width: 559px) { .gov-compare__rows { gap: 10px; } .gov-compare__rows li { display: grid; gap: 2px; } }
+@media (max-width: 1023px) { .gov-compare__pick select { font-size: 16px; } }
 .gov-compare__pair { display: grid; gap: 12px; }
 @media (min-width: 720px) { .gov-compare__pair { grid-template-columns: 1fr 1fr; } }
 .gov-compare .gov-card { margin: 0; }

@@ -8,7 +8,7 @@
 // and a mark for each dated event in its history, and the arrows step through that history rather
 // than through the whole government's.
 
-import { useMemo } from 'react'
+import { useMemo, useRef } from 'react'
 import { changesIn } from './episodes.js'
 import { FIRST_YEAR, PRESENT_YEAR } from './snapshot.js'
 import { ELECTIONS, IDENTITY_ERAS, PENDING_ELECTION, PREMIERS } from './timelineData.js'
@@ -72,6 +72,44 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
   const start = life?.from ? yearOf(life.from) : null
   const end = life?.to ? yearOf(life.to) : PRESENT_YEAR + 1
   const decades = []
+  const track = useRef(null)
+  const input = useRef(null)
+  const drag = useRef(null)
+
+  // The track is scrubbed by pointer rather than by the range input under it: iOS moves a range only
+  // by its thumb, and this thumb is invisible. A mouse sets the year where it presses; a finger only
+  // once it moves sideways or lifts without moving, so a swipe up the page does not change the year.
+  const scrub = (event) => {
+    const box = track.current.getBoundingClientRect()
+    const units = ((event.clientX - box.left) / box.width) * WIDTH
+    const at = FIRST_YEAR + Math.floor(((units - PAD) / (WIDTH - PAD * 2)) * (PRESENT_YEAR + 1 - FIRST_YEAR))
+    onYear(Math.min(PRESENT_YEAR, Math.max(FIRST_YEAR, at)))
+  }
+  const press = (event) => {
+    if (event.button !== 0) return
+    drag.current = { id: event.pointerId, x: event.clientX, y: event.clientY, sliding: event.pointerType === 'mouse' }
+    if (event.pointerType === 'mouse') {
+      event.preventDefault()
+      input.current?.focus({ preventScroll: true })
+      event.currentTarget.setPointerCapture(event.pointerId)
+      scrub(event)
+    }
+  }
+  const slide = (event) => {
+    const current = drag.current
+    if (current?.id !== event.pointerId) return
+    if (!current.sliding) {
+      const dx = Math.abs(event.clientX - current.x)
+      if (dx < 6 || dx < Math.abs(event.clientY - current.y)) return
+      current.sliding = true
+      event.currentTarget.setPointerCapture(event.pointerId)
+    }
+    scrub(event)
+  }
+  const release = (event) => {
+    if (drag.current?.id === event.pointerId) scrub(event)
+    drag.current = null
+  }
   for (let decade = Math.ceil(FIRST_YEAR / 10) * 10; decade <= PRESENT_YEAR; decade += 10) decades.push(decade)
 
   return (
@@ -87,7 +125,15 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
         <button type="button" className="gov-button gov-button--text" disabled={year === PRESENT_YEAR} onClick={() => onYear(PRESENT_YEAR)}>Today</button>
       </div>
 
-      <div className="gov-timeline__track" data-following={following || undefined}>
+      <div
+        ref={track}
+        className="gov-timeline__track"
+        data-following={following || undefined}
+        onPointerDown={press}
+        onPointerMove={slide}
+        onPointerUp={release}
+        onPointerCancel={() => { drag.current = null }}
+      >
         <svg viewBox={`0 0 ${WIDTH} ${height}`} preserveAspectRatio="none" aria-hidden="true">
           {/* The identity of the day, which is the lockup a ministry chosen that year is shown in. */}
           {IDENTITY_ERAS.map((era) => (
@@ -152,6 +198,7 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
           ))}
         </div>
         <input
+          ref={input}
           type="range"
           className="gov-timeline__range"
           min={FIRST_YEAR}

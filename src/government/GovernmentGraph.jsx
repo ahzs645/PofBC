@@ -72,6 +72,146 @@ const useTween = (target) => {
   return frame
 }
 
+// ── Zoom ───────────────────────────────────────────────────────────────────────────────────────
+
+const MAX_ZOOM = 6
+const UNZOOMED = { s: 1, x: 0, y: 0 }
+
+/** Keeps the scale in range, and the drawing covering the whole frame — it is never panned off. */
+const bound = ({ s, x, y }) => {
+  const scale = Math.min(MAX_ZOOM, Math.max(1, s))
+  const { x: left, y: top, width, height } = VIEWBOX
+  return {
+    s: scale,
+    x: Math.min(left - scale * left, Math.max(left + width - scale * (left + width), x)),
+    y: Math.min(top - scale * top, Math.max(top + height - scale * (top + height), y))
+  }
+}
+
+/** The view after scaling by `factor` about `focus`, a point in the frame's own units. */
+const zoomAbout = (view, factor, focus) => {
+  const s = Math.min(MAX_ZOOM, Math.max(1, view.s * factor))
+  const content = { x: (focus.x - view.x) / view.s, y: (focus.y - view.y) / view.s }
+  return bound({ s, x: focus.x - content.x * s, y: focus.y - content.y * s })
+}
+
+/**
+ * Pinch and pan for the diagram, which on a phone is drawn too small to pick the smaller bodies
+ * from. Two fingers zoom about their midpoint; once zoomed, one finger pans. Unzoomed, one finger
+ * is left to the page, so the diagram never traps a scroll. A trackpad's pinch, which a browser
+ * reports as a wheel with Ctrl held, zooms too.
+ *
+ * Native listeners, not React's, because they must be able to cancel the page's own scroll and
+ * zoom, and iOS honours little of CSS touch-action. A drag that moved is not also a tap.
+ */
+const useZoom = (svg) => {
+  const [view, setView] = useState(UNZOOMED)
+  const live = useRef(view)
+  live.current = view
+
+  useEffect(() => {
+    const element = svg.current
+    if (!element) return undefined
+    const toFrame = (clientX, clientY) => {
+      const m = element.getScreenCTM()?.inverse()
+      return m ? { x: m.a * clientX + m.c * clientY + m.e, y: m.b * clientX + m.d * clientY + m.f } : { x: 0, y: 0 }
+    }
+    const pointsOf = (touches) => [...touches].map((touch) => ({ ...toFrame(touch.clientX, touch.clientY), cx: touch.clientX, cy: touch.clientY }))
+    const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y)
+    const middle = (a, b) => ({ x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 })
+    let gesture = null
+    let moved = false
+    // Until when a click is taken for the end of a drag. Most browsers send none after a drag, so
+    // the window is short, and a new touch closes it: any click after that is the new touch's.
+    let swallowUntil = 0
+
+    const panFrom = (point) => ({ kind: 'pan', view: live.current, from: point })
+    const start = (event) => {
+      swallowUntil = 0
+      const points = pointsOf(event.touches)
+      if (points.length >= 2) {
+        event.preventDefault()
+        gesture = { kind: 'pinch', view: live.current, span: distance(points[0], points[1]) || 1, focus: middle(points[0], points[1]) }
+      } else if (live.current.s > 1) {
+        gesture = panFrom(points[0])
+        moved = false
+      } else {
+        gesture = null
+      }
+    }
+    const move = (event) => {
+      if (!gesture) return
+      const points = pointsOf(event.touches)
+      if (gesture.kind === 'pinch' && points.length >= 2) {
+        event.preventDefault()
+        const { view: was, span, focus } = gesture
+        const content = { x: (focus.x - was.x) / was.s, y: (focus.y - was.y) / was.s }
+        const s = Math.min(MAX_ZOOM, Math.max(1, (was.s * distance(points[0], points[1])) / span))
+        const now = middle(points[0], points[1])
+        setView(bound({ s, x: now.x - content.x * s, y: now.y - content.y * s }))
+        moved = true
+      } else if (gesture.kind === 'pan' && points.length === 1) {
+        event.preventDefault()
+        const [point] = points
+        if (!moved && Math.hypot(point.cx - gesture.from.cx, point.cy - gesture.from.cy) < 6) return
+        moved = true
+        setView(bound({ ...gesture.view, x: gesture.view.x + point.x - gesture.from.x, y: gesture.view.y + point.y - gesture.from.y }))
+      }
+    }
+    const end = (event) => {
+      if (event.touches.length === 0) {
+        if (moved) swallowUntil = performance.now() + 350
+        gesture = null
+        moved = false
+      } else if (event.touches.length === 1 && gesture?.kind === 'pinch') {
+        // One finger lifted from a pinch: the other carries on as a pan.
+        gesture = live.current.s > 1 ? panFrom(pointsOf(event.touches)[0]) : null
+        moved = true
+      }
+    }
+    const click = (event) => {
+      if (performance.now() > swallowUntil) return
+      swallowUntil = 0
+      event.stopPropagation()
+      event.preventDefault()
+    }
+    const wheel = (event) => {
+      if (!event.ctrlKey) return
+      event.preventDefault()
+      setView((current) => zoomAbout(current, Math.exp(-event.deltaY * 0.01), toFrame(event.clientX, event.clientY)))
+    }
+    const noPageZoom = (event) => event.preventDefault()
+
+    element.addEventListener('touchstart', start, { passive: false })
+    element.addEventListener('touchmove', move, { passive: false })
+    element.addEventListener('touchend', end)
+    element.addEventListener('touchcancel', end)
+    element.addEventListener('click', click, true)
+    element.addEventListener('wheel', wheel, { passive: false })
+    element.addEventListener('gesturestart', noPageZoom)
+    return () => {
+      element.removeEventListener('touchstart', start)
+      element.removeEventListener('touchmove', move)
+      element.removeEventListener('touchend', end)
+      element.removeEventListener('touchcancel', end)
+      element.removeEventListener('click', click, true)
+      element.removeEventListener('wheel', wheel)
+      element.removeEventListener('gesturestart', noPageZoom)
+    }
+  }, [svg])
+
+  // The buttons zoom about the middle of what is on screen.
+  const centre = { x: VIEWBOX.x + VIEWBOX.width / 2, y: VIEWBOX.y + VIEWBOX.height / 2 }
+  const zoomBy = (factor) => setView((current) => zoomAbout(current, factor, centre))
+  return { view, zoomBy, reset: () => setView(UNZOOMED) }
+}
+
+const PlusMinus = ({ plus }) => (
+  <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+    <path d={plus ? 'M3 7h8M7 3v8' : 'M3 7h8'} stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+  </svg>
+)
+
 // ── Glyphs: shape says what kind of body, colour which branch ─────────────────────────────────────
 
 const polygon = (sides, radius, offset = -Math.PI / 2) => Array.from({ length: sides }, (_, index) => {
@@ -178,6 +318,8 @@ const headPoint = (angle, radius, size) => toPoint(angle, radius + size * 0.95)
 export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds, hiddenRelations = NO_RELATIONS, theme, compact = false }) => {
   const [pointed, setHovered] = useState(null)
   const svg = useRef(null)
+  const { view, zoomBy, reset } = useZoom(svg)
+  const zoomed = view.s > 1
   const nodes = government.nodes
   const byId = useMemo(() => new Map(nodes.map((node) => [node.id, node])), [nodes])
   // A body under the pointer can leave the diagram without the pointer leaving it — the year moves
@@ -260,246 +402,263 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
   const cabinetLabelRadius = RINGS.cabinet * UNIT + (innerCrowded ? 29 : -30)
 
   return (
-    <svg
-      ref={svg}
-      className="gov-graph"
-      viewBox={`${VIEWBOX.x} ${VIEWBOX.y} ${VIEWBOX.width} ${VIEWBOX.height}`}
-      role="group"
-      aria-label={`The Government of British Columbia in ${government.year}`}
-      onClick={(event) => { if (event.target === event.currentTarget) onSelect(null) }}
-    >
-      {/* Territory: each branch's sector, and a tooth beyond the rim for each ministry's family. */}
-      <g className="gov-graph__territory" onClick={() => onSelect(null)}>
-        {/* One path per branch: the band and its teeth together, filled with an opaque tint so
-            nothing doubles where they meet, and inset by half a seam at every radius. */}
-        {frame.sectors.map((sector) => (
-          <path
-            key={sector.id}
-            d={territoryPath(
-              { start: sector.start + r, end: sector.end + r },
-              teethOf(sector.id).map((tooth) => ({ ...tooth, start: tooth.start + r, end: tooth.end + r }))
-            )}
-            fill={mix(theme.branch[sector.id], theme.canvas, theme.territoryAlpha)}
-          />
-        ))}
-        {[RINGS.inner, RINGS.oversight, RINGS.outer].map((ring) => (
-          <circle key={ring} cx={CENTRE.x} cy={CENTRE.y} r={ring * UNIT} fill="none" stroke={theme.seam} strokeDasharray="4 3" />
-        ))}
-        {cabinetSpan && (
-          <path
-            d={arcPath(cabinetSpan[0] - 0.04, cabinetSpan[1] + 0.04, RINGS.cabinet * UNIT)}
-            fill="none"
-            stroke={mix(theme.branch.executive, theme.canvas, theme.territoryAlpha + theme.pillAlpha)}
-            strokeWidth={44}
-            strokeLinecap="round"
-          />
-        )}
-        {legislature && (
-          <path
-            d={beanPath(legislature)}
-            fill={mix(theme.branch.legislative, theme.canvas, theme.territoryAlpha + theme.pillAlpha)}
-            stroke={theme.branch.legislative}
-            strokeWidth={1.5}
-          />
-        )}
-      </g>
-
-      {/* Labels on arcs: the branches outside the rim, the cabinet along its band. */}
-      <g className="gov-graph__labels" aria-hidden="true">
-        {frame.sectors.map((sector) => {
-          const width = sector.end - sector.start
-          const middle = (sector.start + sector.end) / 2 + r
-          const span = Math.min(width / 2, 0.5)
-          const id = `sector-label-${sector.id}`
-          return (
-            <g key={sector.id}>
-              <path id={id} d={arcPath(middle - span, middle + span, labelRadius(sector, middle - r, span))} fill="none" />
-              <text className="gov-graph__sector-label" fill={theme.branch[sector.id]}>
-                <textPath href={`#${id}`} startOffset="50%" textAnchor="middle">{sector.label}</textPath>
-              </text>
-            </g>
-          )
-        })}
-        {cabinetSpan && executive && (
-          <g>
-            {/* At the band's leading end: inside it, unless the Premier or the Crown sits there — as in
-                the early years, when a handful of departments gather mid-sector — and then outside.
-                The arc is reversed when it would read upside down, so the anchor follows it. */}
-            <path id="cabinet-label" d={arcPath(cabinetSpan[0] - 0.05, cabinetSpan[0] + 0.75, cabinetLabelRadius)} fill="none" />
-            <text className="gov-graph__ring-label" fill={theme.branch.executive}>
-              <textPath
-                href="#cabinet-label"
-                startOffset={readsReversed(cabinetSpan[0] - 0.05, cabinetSpan[0] + 0.75) ? '96%' : '4%'}
-                textAnchor={readsReversed(cabinetSpan[0] - 0.05, cabinetSpan[0] + 0.75) ? 'end' : 'start'}
-              >
-                {government.year < 1976 ? 'DEPARTMENTS' : 'CABINET'}
-              </textPath>
-            </text>
-          </g>
-        )}
-      </g>
-
-      {/* The rings, named along the bottom as the model names them — while the disc is at rest. Once
-          a body is chosen it turns to the bottom, and the names would only cross it. */}
-      <g className="gov-graph__labels gov-graph__ring-names" data-hidden={selectedId ? true : undefined} aria-hidden="true">
-        {[
-          { id: 'ring-inner', radius: BAND_INNER + 6, text: 'HIGHEST AUTHORITY' },
-          { id: 'ring-oversight', radius: RINGS.oversight * UNIT + 14, text: 'OVERSIGHT' },
-          { id: 'ring-outer', radius: RINGS.outer * UNIT - 16, text: 'CROWN CORPORATIONS AND AGENCIES' }
-        ].map((ring) => (
-          <g key={ring.id}>
-            <path id={ring.id} d={arcPath(Math.PI / 2 - 0.6, Math.PI / 2 + 0.6, ring.radius)} fill="none" />
-            <text className="gov-graph__ring-label gov-graph__ring-label--halo" fill={theme.inkMuted} stroke={theme.canvas}>
-              <textPath href={`#${ring.id}`} startOffset="50%" textAnchor="middle">{ring.text}</textPath>
-            </text>
-          </g>
-        ))}
-        {/* Bodies known to have stood with no ministry named for them in the sources: labelled as
-            such along their tooth, rather than attached to a plausible ministry. */}
-        {unattachedLane && (
-          <g>
-            <path id="unattached-label" d={arcPath(unattachedLane.start + r, unattachedLane.end + r, Math.max(unattachedLane.top, RIM) + 14)} fill="none" />
-            <text className="gov-graph__ring-label gov-graph__ring-label--lane" fill={theme.inkMuted}>
-              <textPath href="#unattached-label" startOffset="50%" textAnchor="middle">NO MINISTRY ESTABLISHED</textPath>
-            </text>
-          </g>
-        )}
-        {legislature && (
-          <g>
-            <path id="legislature-label" d={arcPath(legislature.angle - 0.4, legislature.angle + 0.4, legislature.radius + legislature.size + 22)} fill="none" />
-            <text className="gov-graph__ring-label" fill={theme.branch.legislative}>
-              <textPath href="#legislature-label" startOffset="50%" textAnchor="middle">LEGISLATURE</textPath>
-            </text>
-          </g>
-        )}
-      </g>
-
-      {/* Edges, only for the body chosen, drawn once it has come to rest. */}
-      <g className="gov-graph__edges">
-        {selectedEdges.map((edge) => {
-          const a = edge.from === 'people-of-british-columbia' ? { ...CENTRE } : at(edge.from)
-          const b = edge.to === 'people-of-british-columbia' ? { ...CENTRE } : at(edge.to)
-          if (!a || !b) return null
-          const relation = RELATIONS[edge.kind] ?? RELATIONS.appoints
-          const source = byId.get(edge.from)
-          const colour = colourOf(source, theme)
-          const dx = b.x - a.x
-          const dy = b.y - a.y
-          const length = Math.hypot(dx, dy) || 1
-          // Curved relations bow to one side, so they read apart from the straight ones.
-          const bend = relation.curve ? 0.2 * length : 0
-          const cx = (a.x + b.x) / 2 - (dy / length) * bend
-          const cy = (a.y + b.y) / 2 + (dx / length) * bend
-          const mid = { x: 0.25 * a.x + 0.5 * cx + 0.25 * b.x, y: 0.25 * a.y + 0.5 * cy + 0.25 * b.y }
-          const tangent = Math.atan2(b.y - a.y + (relation.curve ? 0 : 0), b.x - a.x) * (180 / Math.PI)
-          return (
-            <g key={`${edge.from}-${edge.to}-${edge.kind}`} className="gov-graph__edge">
-              <path
-                d={`M${a.x},${a.y}Q${cx},${cy} ${b.x},${b.y}`}
-                fill="none"
-                stroke={colour}
-                strokeWidth={1}
-                strokeDasharray={relation.dash ?? undefined}
-              />
-              <g transform={`translate(${mid.x},${mid.y}) rotate(${tangent})`}>
-                <MarkerPath kind={relation.marker} colour={colour} fill={theme.nodeFill} />
-              </g>
-            </g>
-          )
-        })}
-      </g>
-
-      {/* The people, at the centre: the sun, rippled like a seal. */}
-      <g
-        className="gov-graph__seal"
-        data-id={PEOPLE}
-        role="button"
-        tabIndex={anchor === PEOPLE ? 0 : -1}
-        aria-label="People of British Columbia"
-        aria-pressed={selectedId === PEOPLE}
-        onClick={() => onSelect(PEOPLE)}
-        onKeyDown={(event) => moveFocus(event, PEOPLE)}
+    <>
+      <svg
+        ref={svg}
+        className="gov-graph"
+        viewBox={`${VIEWBOX.x} ${VIEWBOX.y} ${VIEWBOX.width} ${VIEWBOX.height}`}
+        role="group"
+        aria-label={`The Government of British Columbia in ${government.year}`}
+        data-zoomed={zoomed || undefined}
+        onClick={(event) => { if (event.target === event.currentTarget) onSelect(null) }}
       >
-        <path
-          d={sealPath()}
-          fill={selectedId === 'people-of-british-columbia' ? theme.people : mix(theme.people, theme.blendBase, 0.3)}
-          stroke={theme.people}
-          strokeWidth={1.5}
-        />
-        <text x={CENTRE.x} y={CENTRE.y - 3} className="gov-graph__seal-label" fill={selectedId === PEOPLE ? theme.sealInkSelected : theme.sealInk}>People of</text>
-        <text x={CENTRE.x} y={CENTRE.y + 11} className="gov-graph__seal-label" fill={selectedId === PEOPLE ? theme.sealInkSelected : theme.sealInk}>British Columbia</text>
-      </g>
+        {/* Everything but the caption is zoomed; the caption stays where it can be read. */}
+        <g transform={zoomed ? `translate(${view.x} ${view.y}) scale(${view.s})` : undefined}>
+          {/* Territory: each branch's sector, and a tooth beyond the rim for each ministry's family. */}
+          <g className="gov-graph__territory" onClick={() => onSelect(null)}>
+            {/* One path per branch: the band and its teeth together, filled with an opaque tint so
+                nothing doubles where they meet, and inset by half a seam at every radius. */}
+            {frame.sectors.map((sector) => (
+              <path
+                key={sector.id}
+                d={territoryPath(
+                  { start: sector.start + r, end: sector.end + r },
+                  teethOf(sector.id).map((tooth) => ({ ...tooth, start: tooth.start + r, end: tooth.end + r }))
+                )}
+                fill={mix(theme.branch[sector.id], theme.canvas, theme.territoryAlpha)}
+              />
+            ))}
+            {[RINGS.inner, RINGS.oversight, RINGS.outer].map((ring) => (
+              <circle key={ring} cx={CENTRE.x} cy={CENTRE.y} r={ring * UNIT} fill="none" stroke={theme.seam} strokeDasharray="4 3" />
+            ))}
+            {cabinetSpan && (
+              <path
+                d={arcPath(cabinetSpan[0] - 0.04, cabinetSpan[1] + 0.04, RINGS.cabinet * UNIT)}
+                fill="none"
+                stroke={mix(theme.branch.executive, theme.canvas, theme.territoryAlpha + theme.pillAlpha)}
+                strokeWidth={44}
+                strokeLinecap="round"
+              />
+            )}
+            {legislature && (
+              <path
+                d={beanPath(legislature)}
+                fill={mix(theme.branch.legislative, theme.canvas, theme.territoryAlpha + theme.pillAlpha)}
+                stroke={theme.branch.legislative}
+                strokeWidth={1.5}
+              />
+            )}
+          </g>
 
-      {/* Bodies. */}
-      <g className="gov-graph__nodes">
-        {nodes.map((node) => {
-          const point = at(node.id)
-          if (!point) return null
-          const kind = KINDS[node.kind] ?? KINDS.agency
-          const colour = colourOf(node, theme)
-          const isSelected = node.id === selectedId
-          const isConnected = !isSelected && connected.has(node.id)
-          const hidden = hiddenKinds.has(node.kind)
-          const size = point.size * (isSelected ? 1.3 : 1)
-          const fill = fillOf(colour, theme, { selected: isSelected || hovered === node.id, connected: isConnected })
-          const facing = (point.angle * 180) / Math.PI + 90
-          const hasHead = ['ministry', 'crown-corporation', 'officer', 'health-authority', 'court'].includes(node.kind)
-          const isDot = node.kind === 'sub'
-          const head = hasHead && !hiddenKinds.has('heads') ? headPoint(point.angle, point.radius, size) : null
-          const vacant = !node.head?.person
-          const select = () => onSelect(node.id)
-          return (
-            <g
-              key={node.id}
-              className="gov-graph__node"
-              data-id={node.id}
-              data-hidden={hidden || undefined}
-              data-uncertain={node.uncertain || undefined}
-              role="button"
-              tabIndex={!hidden && anchor === node.id ? 0 : -1}
-              aria-label={node.name}
-              aria-pressed={isSelected}
-              onClick={select}
-              onKeyDown={(event) => moveFocus(event, node.id)}
-              onPointerEnter={() => setHovered(node.id)}
-              onPointerLeave={() => setHovered((current) => (current === node.id ? null : current))}
-              onFocus={() => setHovered(node.id)}
-              onBlur={() => setHovered((current) => (current === node.id ? null : current))}
-            >
-              {head && (
-                <circle
-                  cx={head.x}
-                  cy={head.y}
-                  r={Math.max(3.2, size * 0.26)}
-                  fill={isSelected ? colour : theme.nodeFill}
-                  stroke={colour}
-                  strokeWidth={1}
-                  strokeDasharray={vacant ? '2 2.4' : undefined}
-                />
-              )}
-              <g transform={`translate(${point.x},${point.y}) rotate(${facing})`}>
-                <circle r={isDot ? (compact ? 9 : 5) : Math.max(size * 1.5, compact ? 22 : 12)} fill="transparent" />
-                <circle className="gov-graph__focus" r={Math.max(size * 1.55, 11)} />
-                {GLYPHS[kind.glyph](size, {
-                  fill,
-                  stroke: colour,
-                  strokeWidth: node.ring === 'inner' ? 2 : 1,
-                  vectorEffect: 'non-scaling-stroke'
-                })}
+          {/* Labels on arcs: the branches outside the rim, the cabinet along its band. */}
+          <g className="gov-graph__labels" aria-hidden="true">
+            {frame.sectors.map((sector) => {
+              const width = sector.end - sector.start
+              const middle = (sector.start + sector.end) / 2 + r
+              const span = Math.min(width / 2, 0.5)
+              const id = `sector-label-${sector.id}`
+              return (
+                <g key={sector.id}>
+                  <path id={id} d={arcPath(middle - span, middle + span, labelRadius(sector, middle - r, span))} fill="none" />
+                  <text className="gov-graph__sector-label" fill={theme.branch[sector.id]}>
+                    <textPath href={`#${id}`} startOffset="50%" textAnchor="middle">{sector.label}</textPath>
+                  </text>
+                </g>
+              )
+            })}
+            {cabinetSpan && executive && (
+              <g>
+                {/* At the band's leading end: inside it, unless the Premier or the Crown sits there — as in
+                    the early years, when a handful of departments gather mid-sector — and then outside.
+                    The arc is reversed when it would read upside down, so the anchor follows it. */}
+                <path id="cabinet-label" d={arcPath(cabinetSpan[0] - 0.05, cabinetSpan[0] + 0.75, cabinetLabelRadius)} fill="none" />
+                <text className="gov-graph__ring-label" fill={theme.branch.executive}>
+                  <textPath
+                    href="#cabinet-label"
+                    startOffset={readsReversed(cabinetSpan[0] - 0.05, cabinetSpan[0] + 0.75) ? '96%' : '4%'}
+                    textAnchor={readsReversed(cabinetSpan[0] - 0.05, cabinetSpan[0] + 0.75) ? 'end' : 'start'}
+                  >
+                    {government.year < 1976 ? 'DEPARTMENTS' : 'CABINET'}
+                  </textPath>
+                </text>
               </g>
-            </g>
-          )
-        })}
-      </g>
+            )}
+          </g>
 
-      {/* A caption for the chosen body, and a tooltip for the one under the pointer. */}
-      {selected && selected.kind !== 'people' && (
-        <Caption text={selected.shortName ?? selected.name} colour={colourOf(selected, theme)} theme={theme} x={400} y={VIEWBOX.y + VIEWBOX.height - 20} />
+          {/* The rings, named along the bottom as the model names them — while the disc is at rest. Once
+              a body is chosen it turns to the bottom, and the names would only cross it. */}
+          <g className="gov-graph__labels gov-graph__ring-names" data-hidden={selectedId ? true : undefined} aria-hidden="true">
+            {[
+              { id: 'ring-inner', radius: BAND_INNER + 6, text: 'HIGHEST AUTHORITY' },
+              { id: 'ring-oversight', radius: RINGS.oversight * UNIT + 14, text: 'OVERSIGHT' },
+              { id: 'ring-outer', radius: RINGS.outer * UNIT - 16, text: 'CROWN CORPORATIONS AND AGENCIES' }
+            ].map((ring) => (
+              <g key={ring.id}>
+                <path id={ring.id} d={arcPath(Math.PI / 2 - 0.6, Math.PI / 2 + 0.6, ring.radius)} fill="none" />
+                <text className="gov-graph__ring-label gov-graph__ring-label--halo" fill={theme.inkMuted} stroke={theme.canvas}>
+                  <textPath href={`#${ring.id}`} startOffset="50%" textAnchor="middle">{ring.text}</textPath>
+                </text>
+              </g>
+            ))}
+            {/* Bodies known to have stood with no ministry named for them in the sources: labelled as
+                such along their tooth, rather than attached to a plausible ministry. */}
+            {unattachedLane && (
+              <g>
+                <path id="unattached-label" d={arcPath(unattachedLane.start + r, unattachedLane.end + r, Math.max(unattachedLane.top, RIM) + 14)} fill="none" />
+                <text className="gov-graph__ring-label gov-graph__ring-label--lane" fill={theme.inkMuted}>
+                  <textPath href="#unattached-label" startOffset="50%" textAnchor="middle">NO MINISTRY ESTABLISHED</textPath>
+                </text>
+              </g>
+            )}
+            {legislature && (
+              <g>
+                <path id="legislature-label" d={arcPath(legislature.angle - 0.4, legislature.angle + 0.4, legislature.radius + legislature.size + 22)} fill="none" />
+                <text className="gov-graph__ring-label" fill={theme.branch.legislative}>
+                  <textPath href="#legislature-label" startOffset="50%" textAnchor="middle">LEGISLATURE</textPath>
+                </text>
+              </g>
+            )}
+          </g>
+
+          {/* Edges, only for the body chosen, drawn once it has come to rest. */}
+          <g className="gov-graph__edges">
+            {selectedEdges.map((edge) => {
+              const a = edge.from === 'people-of-british-columbia' ? { ...CENTRE } : at(edge.from)
+              const b = edge.to === 'people-of-british-columbia' ? { ...CENTRE } : at(edge.to)
+              if (!a || !b) return null
+              const relation = RELATIONS[edge.kind] ?? RELATIONS.appoints
+              const source = byId.get(edge.from)
+              const colour = colourOf(source, theme)
+              const dx = b.x - a.x
+              const dy = b.y - a.y
+              const length = Math.hypot(dx, dy) || 1
+              // Curved relations bow to one side, so they read apart from the straight ones.
+              const bend = relation.curve ? 0.2 * length : 0
+              const cx = (a.x + b.x) / 2 - (dy / length) * bend
+              const cy = (a.y + b.y) / 2 + (dx / length) * bend
+              const mid = { x: 0.25 * a.x + 0.5 * cx + 0.25 * b.x, y: 0.25 * a.y + 0.5 * cy + 0.25 * b.y }
+              const tangent = Math.atan2(b.y - a.y + (relation.curve ? 0 : 0), b.x - a.x) * (180 / Math.PI)
+              return (
+                <g key={`${edge.from}-${edge.to}-${edge.kind}`} className="gov-graph__edge">
+                  <path
+                    d={`M${a.x},${a.y}Q${cx},${cy} ${b.x},${b.y}`}
+                    fill="none"
+                    stroke={colour}
+                    strokeWidth={1}
+                    strokeDasharray={relation.dash ?? undefined}
+                  />
+                  <g transform={`translate(${mid.x},${mid.y}) rotate(${tangent})`}>
+                    <MarkerPath kind={relation.marker} colour={colour} fill={theme.nodeFill} />
+                  </g>
+                </g>
+              )
+            })}
+          </g>
+
+          {/* The people, at the centre: the sun, rippled like a seal. */}
+          <g
+            className="gov-graph__seal"
+            data-id={PEOPLE}
+            role="button"
+            tabIndex={anchor === PEOPLE ? 0 : -1}
+            aria-label="People of British Columbia"
+            aria-pressed={selectedId === PEOPLE}
+            onClick={() => onSelect(PEOPLE)}
+            onKeyDown={(event) => moveFocus(event, PEOPLE)}
+          >
+            <path
+              d={sealPath()}
+              fill={selectedId === 'people-of-british-columbia' ? theme.people : mix(theme.people, theme.blendBase, 0.3)}
+              stroke={theme.people}
+              strokeWidth={1.5}
+            />
+            <text x={CENTRE.x} y={CENTRE.y - 3} className="gov-graph__seal-label" fill={selectedId === PEOPLE ? theme.sealInkSelected : theme.sealInk}>People of</text>
+            <text x={CENTRE.x} y={CENTRE.y + 11} className="gov-graph__seal-label" fill={selectedId === PEOPLE ? theme.sealInkSelected : theme.sealInk}>British Columbia</text>
+          </g>
+
+          {/* Bodies. */}
+          <g className="gov-graph__nodes">
+            {nodes.map((node) => {
+              const point = at(node.id)
+              if (!point) return null
+              const kind = KINDS[node.kind] ?? KINDS.agency
+              const colour = colourOf(node, theme)
+              const isSelected = node.id === selectedId
+              const isConnected = !isSelected && connected.has(node.id)
+              const hidden = hiddenKinds.has(node.kind)
+              const size = point.size * (isSelected ? 1.3 : 1)
+              const fill = fillOf(colour, theme, { selected: isSelected || hovered === node.id, connected: isConnected })
+              const facing = (point.angle * 180) / Math.PI + 90
+              const hasHead = ['ministry', 'crown-corporation', 'officer', 'health-authority', 'court'].includes(node.kind)
+              const isDot = node.kind === 'sub'
+              const head = hasHead && !hiddenKinds.has('heads') ? headPoint(point.angle, point.radius, size) : null
+              const vacant = !node.head?.person
+              const select = () => onSelect(node.id)
+              return (
+                <g
+                  key={node.id}
+                  className="gov-graph__node"
+                  data-id={node.id}
+                  data-hidden={hidden || undefined}
+                  data-uncertain={node.uncertain || undefined}
+                  role="button"
+                  tabIndex={!hidden && anchor === node.id ? 0 : -1}
+                  aria-label={node.name}
+                  aria-pressed={isSelected}
+                  onClick={select}
+                  onKeyDown={(event) => moveFocus(event, node.id)}
+                  onPointerEnter={() => setHovered(node.id)}
+                  onPointerLeave={() => setHovered((current) => (current === node.id ? null : current))}
+                  onFocus={() => setHovered(node.id)}
+                  onBlur={() => setHovered((current) => (current === node.id ? null : current))}
+                >
+                  {head && (
+                    <circle
+                      cx={head.x}
+                      cy={head.y}
+                      r={Math.max(3.2, size * 0.26)}
+                      fill={isSelected ? colour : theme.nodeFill}
+                      stroke={colour}
+                      strokeWidth={1}
+                      strokeDasharray={vacant ? '2 2.4' : undefined}
+                    />
+                  )}
+                  <g transform={`translate(${point.x},${point.y}) rotate(${facing})`}>
+                    {/* The target a finger needs is a size on the screen, so zooming in does not grow it. */}
+                    <circle r={isDot ? (compact ? 9 : 5) / view.s : Math.max(size * 1.5, (compact ? 22 : 12) / view.s)} fill="transparent" />
+                    <circle className="gov-graph__focus" r={Math.max(size * 1.55, 11)} />
+                    {GLYPHS[kind.glyph](size, {
+                      fill,
+                      stroke: colour,
+                      strokeWidth: node.ring === 'inner' ? 2 : 1,
+                      vectorEffect: 'non-scaling-stroke'
+                    })}
+                  </g>
+                </g>
+              )
+            })}
+          </g>
+
+          {/* A tooltip for the body under the pointer, and a caption for the chosen one. */}
+          {hovered && hovered !== selectedId && byId.get(hovered) && at(hovered) && (
+            <Tooltip node={byId.get(hovered)} point={at(hovered)} theme={theme} />
+          )}
+        </g>
+        {selected && selected.kind !== 'people' && (
+          <Caption text={selected.shortName ?? selected.name} colour={colourOf(selected, theme)} theme={theme} x={400} y={VIEWBOX.y + VIEWBOX.height - 20} />
+        )}
+      </svg>
+      {/* On a phone, buttons for what a pinch does, so that it can be found; anywhere, a way back. */}
+      {(compact || zoomed) && (
+        <div className="gov-zoom" role="group" aria-label="Zoom">
+          <span className="gov-button-group">
+            <button type="button" className="gov-button gov-button--icon" disabled={!zoomed} onClick={() => zoomBy(1 / 1.6)} aria-label="Zoom out"><PlusMinus /></button>
+            <button type="button" className="gov-button gov-button--icon" disabled={view.s >= MAX_ZOOM} onClick={() => zoomBy(1.6)} aria-label="Zoom in"><PlusMinus plus /></button>
+          </span>
+          {zoomed && <button type="button" className="gov-button gov-button--text" onClick={reset}>Reset</button>}
+        </div>
       )}
-      {hovered && hovered !== selectedId && byId.get(hovered) && at(hovered) && (
-        <Tooltip node={byId.get(hovered)} point={at(hovered)} theme={theme} />
-      )}
-    </svg>
+    </>
   )
 }
 
