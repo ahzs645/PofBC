@@ -86,7 +86,7 @@ export const ministersOf = (episodeId) => (MINISTERS[episodeId] ?? [])
 const ministerOn = (episodeId, day) => {
   const rows = MINISTERS[episodeId] ?? []
   const row = termOn(rows, day, 5) ?? rows.filter((entry) => startOf(entry[1]) <= day).at(-1)
-  return row ? { title: row[3], person: row[0], since: row[1], party: row[4], acting: Boolean(row[5]), source: historySource(row[6]) } : null
+  return row ? { title: row[3], person: row[0], since: row[1], party: row[4], acting: Boolean(row[5]), source: historySource(row[6]), corroboratingEvidence: (row[7] ?? []).map((e) => ({ ...e, source: historySource(e.source) })) } : null
 }
 
 /** The sources an event gives, as {title, url}. */
@@ -218,7 +218,7 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
       ? [claim(
           `${lieutenantGovernor.name}${lieutenantGovernor.sequence ? `, ${lieutenantGovernor.sequence}th in the Library’s numbering` : ''}${lieutenantGovernor.commissioned ? `; commissioned ${lieutenantGovernor.commissioned}` : ''}${lieutenantGovernor.sworn ? `, sworn in ${lieutenantGovernor.sworn}` : ''}`,
           { title: 'Legislative Library of BC — Lieutenant Governors of British Columbia, 1871–Present', url: lieutenantGovernor.source },
-          lieutenantGovernor.evidence !== 'documented' ? { note: 'Unverified: from Wikipedia alone.' } : { note: lieutenantGovernor.locator }
+          { note: [lieutenantGovernor.locator, lieutenantGovernor.evidence === 'unreviewed' ? 'Review status not supplied.' : lieutenantGovernor.evidence !== 'documented' ? `Evidence status: ${lieutenantGovernor.evidence}` : null].filter(Boolean).join(' · ') }
         )].filter(Boolean)
       : [],
     description: 'The King’s representative in British Columbia. Gives royal assent to laws, summons and dissolves the Legislature, and appoints the Premier — by convention, whoever can hold the Assembly’s confidence.',
@@ -264,6 +264,7 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
       evidence: [
         claim(`${episode.name}, ${episode.from}–${episode.to ?? ''}`, ARCHIVES_DIAGRAM, episode.inferredEnd ? { note: 'End year inferred from what it became.' } : {}),
         current ? claim(`${current.minister.person}, ${current.minister.title}; ${current.deputy?.person ?? 'deputy not recorded'}, ${current.deputy?.title ?? 'Deputy Minister'}`, TODAY_SOURCE, { checked: CURRENT_AS_OF }) : null,
+        ...(!current ? (ministerOn(episode.id, day)?.corroboratingEvidence ?? []).map((e) => claim('Corroborating appointment evidence', e.source, { note: e.locator, checked: e.reviewed })) : []),
         !current && ministerOn(episode.id, day) ? claim(`${ministerOn(episode.id, day).person}, ${ministerOn(episode.id, day).title}`, ministerOn(episode.id, day).source) : null
       ].filter(Boolean)
     })
@@ -316,7 +317,7 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
     return present ? todaysMinistry : forerunnerIn(todaysMinistry, year)?.id ?? null
   }
   const lineage = (id) => ({
-    cameFrom: HISTORICAL_BODIES.filter((body) => body.became === id).map(({ id: from, name, established, ended }) => ({ id: from, name, established, ended })),
+    cameFrom: HISTORICAL_BODIES.filter((body) => body.became === id || (research.get(id)?.predecessors ?? []).includes(body.id)).map(({ id: from, name, established, ended }) => ({ id: from, name, established, ended })),
     became: research.get(id)?.became ? (({ id: to, name, established, ended }) => ({ id: to, name, established, ended }))(research.get(research.get(id).became) ?? { id: research.get(id).became, name: currentById.get(research.get(id).became)?.name ?? research.get(id).became }) : null
   })
   const placed = new Set()

@@ -5,7 +5,9 @@ never reads them directly: three build scripts compile them into `src/government
 `eventsData.js` and `atlasData.js`, which are committed. So adding to the history is always the same
 three steps: **add sourced records here → rebuild → run the tests.**
 
-What is still missing, and in what order to look for it, is in [`WANTED.md`](WANTED.md).
+What is still missing, and in what order to look for it, is in [`WANTED.md`](WANTED.md). The
+sub-agency work is split into batches that can each be handed to one researcher or AI assistant, with
+a self-contained guide: [`queue/README.md`](queue/README.md).
 
 ## The rules every record follows
 
@@ -115,6 +117,7 @@ npm run build:government-history   # ministers, bodies, office holders, sub-agen
 npm run build:government-events    # dated events
 npm run build:government-atlas     # Lieutenant Governors, staffing, the 43rd Parliament
 npm run build:research-brief       # regenerate sub-agencies/BRIEF.md and TEMPLATE.json
+npm run build:research-queue       # regenerate queue/INDEX.md, queue/sub-agencies.json and the batches
 npm test
 ```
 
@@ -132,3 +135,43 @@ If you research outside the repo (another tool, a spreadsheet), return JSON in t
 for sub-agencies, fill `sub-agencies/TEMPLATE.json` — with a note of what you checked and what you
 could not resolve. The sub-agency review of 2026-09-26 is a good model: it kept every claim with its
 locator, said what each date meant, and listed its limits rather than smoothing them over.
+
+## Evidence preservation and historical censuses (30 September 2026)
+
+Run `npm run build:government` for the entire government compilation chain. `npm run
+check:government` rebuilds and compares the committed outputs byte-for-byte; CI runs this and the
+government regression tests. `GOVERNMENT_AS_OF` selects the research brief's reference date (default
+`2026-09-30`); it does not change the app's present-year dataset or certify that date's government.
+
+`audit/events-import.json`, `history-import.json` and `atlas-import.json` retain input assertions,
+processing dispositions and reasons for rejected/unmapped inputs. A compiler's **accepted** outcome
+means processed, not historically verified. History rows include source objects, not one row per
+individual scalar claim; these counts must not be presented as a research-completion percentage.
+Conflicting sub-collection fields retain the existing selection and preserve the competing input in
+the audit. Competing responsibility end bounds survive as separate rows. This does not yet provide
+an editorial adjudication workflow for every conflict.
+
+Identical event IDs with the same subject/type/date/status/title/interpretation merge independently located citations.
+An ID with differing assertions produces stable variants marked `conflicting`, with each original
+input retained. Semantic similarity under different IDs is not silently deduplicated, with one
+exception: a sub-agency review's start or end on the same subject and day as an earlier event of the
+same kind becomes further evidence on that event (`corroborating_duplicate` in the audit), with its
+own wording, locator and review date shown, so one founding is not drawn twice. Review dates
+come only from supplied review fields. Neither an import date nor a file generation date is used as
+a claim's review date. Source URLs keep fragments; event source objects also retain a fragment-free
+`documentUrl` for indexing. The event panel shows each evidence item's locator and review date.
+
+`censuses/*.json` holds contemporary source rosters, with printed parent, locator, scope, matching
+status and unresolved identities. `build:government-research` compiles these for the Government
+page's Sources section. They have their own scope and denominator, separate from current-body
+research coverage. A report year is not an establishment date. `audits/caws-reconciliation.json`
+records disagreements between chart and narrative. `audits/executive-council-errata.json` records the
+original-volume reading, erratum and corresponding stored rows for all eighteen corrections.
+
+`discovery/marc-1995-1999.json` indexes a downloaded catalogue batch, not the documents themselves.
+`discovery/roster-source-queue.json` attaches research questions to candidate publications. MARC-8
+text is explicitly marked as not decoded; preserve the bytes and use a proper MARC-8 decoder before
+relying on non-ASCII names. Extraction utilities live in `scripts/research/`; raw captures stay in
+`tmp/research/raw/`. No catalogue date or publisher is promoted to an institutional date or parent.
+
+Full findings and remaining work: `reviews/round-3/REPORT.md`.

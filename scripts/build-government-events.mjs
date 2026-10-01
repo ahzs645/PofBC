@@ -22,6 +22,7 @@
 
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { eventCollector, ledger } from './evidence-integrity.mjs'
 import { applyDecisions, readDecisions } from './research-decisions.mjs'
 
 const ROOT = process.env.GOVERNMENT_RESEARCH || 'research'
@@ -51,10 +52,10 @@ const SUBJECTS = {
 const sources = []
 const sourceIndex = (source) => {
   if (!source?.url) return null
-  const key = source.url.split('#')[0]
+  const key = source.url.trim()
   let index = sources.findIndex((entry) => entry.url === key)
   if (index < 0) {
-    sources.push({ url: key, title: source.title ?? null, publisher: source.publisher ?? null })
+    sources.push({ url: key, documentUrl: key.split('#')[0], title: source.title ?? null, publisher: source.publisher ?? null })
     index = sources.length - 1
   }
   return index
@@ -72,11 +73,8 @@ const locatorText = (locator) => {
   return String(locator)
 }
 
-const events = []
-const add = (event) => {
-  if (events.some((existing) => existing.id === event.id)) return
-  events.push(event)
-}
+const accounting = ledger()
+const { events, add, attach } = eventCollector(accounting)
 
 // ── The package's seeds ──────────────────────────────────────────────────────────────────────────
 
@@ -84,10 +82,16 @@ const packageSources = existsSync(resolve(ROOT, 'package/sources.json'))
   ? Object.fromEntries(read('package/sources.json').sources.map((source) => [source.id, source]))
   : {}
 
+// Locators found later for seeds that shipped without one, recorded beside the atlas events.
+const atlas = resolve(ROOT, 'atlas')
+const atlasFiles = existsSync(atlas) ? readdirSync(atlas).filter((name) => /^events-.*\.json$/.test(name)).sort() : []
+const seedLocators = new Map(atlasFiles.flatMap((name) => (read(`atlas/${name}`).seed_locator_updates ?? []).map((update) => [update.seed_id, update.locator])))
+
 if (existsSync(resolve(ROOT, 'package/event_seeds.json'))) {
   for (const seed of read('package/event_seeds.json').events) {
     const subject = SUBJECTS[seed.subject_key]
     if (!subject) {
+      accounting.record(`package/event_seeds.json#${seed.id}`, 'unresolved_unmapped', seed, { reason: `Unmapped subject ${seed.subject_key}` })
       console.warn(`unmapped package subject: ${seed.subject_key}`)
       continue
     }
@@ -99,21 +103,22 @@ if (existsSync(resolve(ROOT, 'package/event_seeds.json'))) {
       date: { start: seed.date.start, end: seed.date.end, precision: seed.date.precision, inclusive: seed.date.range_end_inclusive },
       status: seed.temporal_status,
       sources: seed.evidence.source_ids.map((id) => sourceIndex(packageSources[id])).filter((index) => index !== null),
-      locator: locatorText(seed.evidence.locator),
+      locator: locatorText(seed.evidence.locator) ?? seedLocators.get(seed.id) ?? null,
       notes: seed.interpretation_notes ?? null,
       reviewed: seed.reviewed_on ?? null
-    })
+    }, `package/event_seeds.json#${seed.id}`, seed)
   }
 }
 
 // ── The follow-up research pass ──────────────────────────────────────────────────────────────────
 
-const atlas = resolve(ROOT, 'atlas')
-const atlasFiles = existsSync(atlas) ? readdirSync(atlas).filter((name) => /^events-.*\.json$/.test(name)) : []
 for (const name of atlasFiles) {
   for (const record of read(`atlas/${name}`).events ?? []) {
     const subject = record.subject_id ?? null
-    if (!subject || !record.date?.start) continue
+    if (!subject || !record.date?.start) {
+      accounting.record(`atlas/${name}#${record.id ?? 'unknown'}`, 'unresolved_unmapped', record, { reason: 'Missing subject or date' })
+      continue
+    }
     add({
       id: record.id,
       subject,
@@ -129,8 +134,8 @@ for (const name of atlasFiles) {
       sources: [sourceIndex({ url: record.evidence?.source_url, title: record.evidence?.source_title })].filter((index) => index !== null),
       locator: locatorText(record.evidence?.locator),
       notes: record.interpretation_notes ?? record.notes ?? null,
-      reviewed: record.reviewed_on ?? '2026-09-25'
-    })
+      reviewed: record.reviewed_on ?? null
+    }, `atlas/${name}#${record.id}`, record)
   }
 }
 
@@ -150,11 +155,11 @@ if (existsSync(reviewed)) {
     : {}
   const sourceOf = (claim) => sourceIndex({ url: claim.source, title: catalogue[claim.source_id]?.title ?? null })
   const eventOf = (record, claim, type, title, suffix) => {
-    if (!claim?.date) return
-    // An earlier pass may already have the same start or end as an event of its own.
-    const kind = /establish/.test(type) ? /establish/ : /dissol|replace|abolish/.test(type) ? /dissol|replace|abolish|succession/ : null
-    if (kind && events.some((event) => event.subject === `sub-${record.id}` && event.date.start === String(claim.date) && kind.test(event.type))) return
-    add({
+    if (!claim?.date) {
+      if (claim) accounting.record(`history/sub-agencies-researched.json#${record.id}/${suffix}`, 'unresolved_unmapped', claim, { reason: 'No supported event date; claim retained without inventing a timestamp' })
+      return
+    }
+    const event = {
       id: `sub:${record.id}:${suffix}`,
       subject: `sub-${record.id}`,
       type,
@@ -164,9 +169,18 @@ if (existsSync(reviewed)) {
       sources: [sourceOf(claim)].filter((index) => index !== null),
       locator: locatorText(claim.locator),
       notes: claim.boundary === 'exclusive' ? 'The end is the day its successor began: it stood until then, not through it.' : null,
-      reviewed: claim.checked ?? research.generated ?? null
-    })
-    reviewedEvents += 1
+      reviewed: claim.checked ?? null
+    }
+    const origin = `history/sub-agencies-researched.json#${record.id}/${suffix}`
+    // An earlier pass may already have the same start or end as an event of its own: this review's
+    // claim becomes further evidence for it, so the one founding is not drawn twice.
+    const kind = /establish/.test(type) ? /establish/ : /dissol|replace|abolish/.test(type) ? /dissol|replace|abolish|succession/ : null
+    const earlier = kind && events.find((existing) => existing.subject === event.subject && existing.date.start === event.date.start && kind.test(existing.type))
+    if (earlier) attach(earlier, event, origin, claim, `Same subject, date and kind as ${earlier.id}`)
+    else {
+      add(event, origin, claim)
+      reviewedEvents += 1
+    }
   }
   for (const record of [...(research.records ?? []), ...(research.gone ?? [])]) {
     const name = record.name
@@ -196,5 +210,7 @@ writeFileSync(OUT, [
   ']',
   ''
 ].join('\n'))
+
+accounting.write(resolve(ROOT, 'audit/events-import.json'))
 
 console.log(`${events.length} events (${atlasFiles.length} research files, ${reviewedEvents} from the sub-agency review), ${sources.length} sources`)

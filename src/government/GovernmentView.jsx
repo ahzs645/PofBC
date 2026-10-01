@@ -13,7 +13,7 @@ import { MINISTRY_EPISODES, standsIn } from './episodes.js'
 import { ChangesCard, EntityCard, OverviewCard } from './GovernmentPanel.jsx'
 import { GovernmentGraph } from './GovernmentGraph.jsx'
 import { GovernmentList } from './GovernmentList.jsx'
-import { CompareView, CoverageCard } from './AtlasCards.jsx'
+import { CompareView, CoverageCard, ResearchCard } from './AtlasCards.jsx'
 import { EVENT_SOURCES } from './events.js'
 import { Legend } from './Legend.jsx'
 import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
@@ -446,6 +446,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
             proof a body did not exist.
           </p>
           <CoverageCard />
+          <ResearchCard />
           <ul>
             {[...TIMELINE_SOURCES, ...CURRENT_SOURCES].map((source) => (
               <li key={source.id}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>

@@ -15,7 +15,9 @@ const { MINISTRY_EPISODES, predecessorsOf } = await import(`${R}/src/government/
 const { governmentIn } = await import(`${R}/src/government/snapshot.js`)
 const OUT = `${R}/research/sub-agencies`
 
-const today = governmentIn(2026)
+const asOf = process.env.GOVERNMENT_AS_OF ?? '2026-09-30'
+if (!/^\d{4}-\d{2}-\d{2}$/.test(asOf)) throw new Error('GOVERNMENT_AS_OF must be YYYY-MM-DD')
+const today = governmentIn(Number(asOf.slice(0, 4)))
 const nameOf = (id) => today.nodes.find((n) => n.id === id)?.name ?? MINISTRY_EPISODES.find((e) => e.id === id)?.name ?? id
 const eventsOf = (id) => EVENTS.filter((e) => e.subject === id).sort((a, b) => String(a.date?.start ?? '').localeCompare(String(b.date?.start ?? '')))
 const gaps = ['sub-divisions', 'sub-subsidiaries', 'sub-tribunals'].flatMap((f) =>

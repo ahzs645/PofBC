@@ -1,0 +1,105 @@
+{
+  "schema": "pofbc-review-corrections/1",
+  "checked": "2026-09-30",
+  "production_merged": false,
+  "corrections": [
+    {
+      "id": "COR-01",
+      "subject": "skilled-trades-bc-appeal-board",
+      "finding": "The prior board is continued; do not create a ceased-body record solely for the rename.",
+      "source_ids": [
+        "STBC-ACT",
+        "STBC-AR-2023"
+      ],
+      "claims": [
+        {
+          "type": "legal_continuation",
+          "source_id": "STBC-ACT",
+          "locator": "Section 42(1)"
+        },
+        {
+          "type": "operating_name_change",
+          "date": "2022-12-01",
+          "precision": "day",
+          "source_id": "STBC-AR-2023",
+          "locator": "PDF p. 3, transmittal letter"
+        }
+      ],
+      "novelty": "Revalidation: the queue already contains a 2022 rename; this corrects the generic gone-discovery framing."
+    },
+    {
+      "id": "COR-02",
+      "subject": "BC Ambulance Service (README discovery lead)",
+      "finding": "The official service page describes BCAS operating under BCEHS. It is not a supported gone-body example.",
+      "source_ids": [
+        "BCAS-CURRENT"
+      ],
+      "claims": [
+        {
+          "type": "current_operational_observation",
+          "observed_on": "2026-09-30",
+          "precision": "day",
+          "source_id": "BCAS-CURRENT",
+          "locator": "Main BC Ambulance Service description"
+        }
+      ],
+      "novelty": "Current observation only; no historical start or continuity interval is established."
+    },
+    {
+      "id": "COR-03",
+      "subject": "climate-action-secretariat",
+      "finding": "The 2010 budget presentation places the Secretariat under Environment, not the suggested Energy ministry.",
+      "source_ids": [
+        "ENV-2010"
+      ],
+      "claims": [
+        {
+          "type": "budget_placement",
+          "observed_on": "2010",
+          "precision": "year",
+          "ministry_as_printed": "Ministry of Environment",
+          "source_id": "ENV-2010",
+          "locator": "PDF p. 110 / printed p. 100, Climate Action Secretariat"
+        }
+      ],
+      "novelty": "Correction to a research lead; not an asserted complete structural-parent interval."
+    },
+    {
+      "id": "COR-04",
+      "subject": "office-of-the-fire-commissioner",
+      "finding": "The 2002 CAWS vote names the Office; historical searching must not be limited to its current ministry lineage.",
+      "source_ids": [
+        "CAWS-2002"
+      ],
+      "claims": [
+        {
+          "type": "budget_placement",
+          "observed_on": "2002",
+          "precision": "year",
+          "ministry_as_printed": "Ministry of Community, Aboriginal and Women’s Services",
+          "source_id": "CAWS-2002",
+          "locator": "Vote 19, paragraph (g), Safety and Standards"
+        }
+      ],
+      "novelty": "A source-specific budget placement, not a founding date."
+    },
+    {
+      "id": "COR-05",
+      "subject": "bc-ferry-commission",
+      "finding": "The Commission describes itself as independent from the Province, BC Ferry Authority and BC Ferries. Funding or ministerial accountability alone must not be encoded as structural membership.",
+      "source_ids": [
+        "FERRY-CURRENT"
+      ],
+      "claims": [
+        {
+          "type": "stated_independence",
+          "observed_on": "2026-09-30",
+          "precision": "day",
+          "source_id": "FERRY-CURRENT",
+          "locator": "Official home page, opening independence statement"
+        }
+      ],
+      "novelty": "Relationship-model warning; this review did not reconstruct the full statutory accountability history."
+    }
+  ]
+}

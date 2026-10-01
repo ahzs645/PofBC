@@ -1,0 +1,21 @@
+name: Government evidence integrity
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: npm run build:current-extras
+      - run: npm run check:government
+      - run: node --test 'src/government/*.test.js' scripts/evidence-integrity.test.mjs scripts/merge-research.test.mjs

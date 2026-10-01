@@ -24,8 +24,10 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { MINISTRY_EPISODES } from '../src/government/episodes.js'
+import { dateBound, ledger } from './evidence-integrity.mjs'
 import { applyDecisions, readDecisions } from './research-decisions.mjs'
 
+const accounting = ledger()
 const SOURCE = process.env.GOVERNMENT_HISTORY_SOURCE || 'research/history'
 
 const read = (name) => JSON.parse(readFileSync(resolve(SOURCE, name), 'utf8'))
@@ -37,7 +39,7 @@ const OUT = resolve('src/government/historyData.js')
 const sources = []
 const sourceIndex = (url) => {
   if (!url) return null
-  const clean = String(url).split('#')[0].trim()
+  const clean = String(url).trim()
   let index = sources.indexOf(clean)
   if (index < 0) { sources.push(clean); index = sources.length - 1 }
   return index
@@ -48,7 +50,7 @@ const sourceIndex = (url) => {
 /** The words that name what a portfolio or ministry is for, with the furniture folded away. */
 const STOP = new Set(['of', 'and', 'the', 'for', 'minister', 'ministry', 'department', 'dept', 'provincial', 'responsible', 'chief', 'commissioner'])
 const words = (name) => String(name).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
-  .replace(/[‘’ʼ']/g, '').replace(/&/g, ' and ').replace(/-/g, ' ').replace(/\bsports\b/g, 'sport')
+  .replace(/[‘’ʼ']/g, '').replace(/&/g, ' and ').replace(/-/g, ' ').replace(/\bsports\b/g, 'sport').replace(/\bcommunications\b/g, 'communication')
   .replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter((word) => word && !STOP.has(word))
 const key = (name) => words(name).join(' ')
 
@@ -60,13 +62,7 @@ const ALIASES = {
   'justice': 'justice attorney general'
 }
 
-const day = (value, end = false) => {
-  if (!value) return null
-  const text = String(value)
-  if (text.length === 4) return `${text}-${end ? '12-31' : '01-01'}`
-  if (text.length === 7) return `${text}-${end ? '28' : '01'}`
-  return text
-}
+const day = dateBound
 const episodeSpan = (episode) => [`${episode.from}-01-01`, episode.to === null ? '9999-12-31' : `${episode.to}-12-31`]
 const overlaps = (a0, a1, b0, b1) => a0 <= b1 && b0 <= a1
 
@@ -78,7 +74,7 @@ const unmatched = new Map()
 for (const term of terms) {
   const from = day(term.from)
   const to = day(term.to, true) ?? '9999-12-31'
-  const termKey = key(term.portfolio)
+  const termKey = key(term.llbc_portfolio ?? term.portfolio)
   const candidates = MINISTRY_EPISODES.filter((episode) => {
     const [start, end] = episodeSpan(episode)
     return overlaps(from, to, start, end)
@@ -99,9 +95,11 @@ for (const term of terms) {
     if (scored.length && scored[0].extra <= 2 && (scored.length === 1 || scored[1].extra > scored[0].extra)) hits = [scored[0].episode]
   }
   if (!hits.length) {
+    accounting.record(`appointment:${terms.indexOf(term)}`, 'unresolved_unmapped', term, { reason: 'No matching ministry; appointment retained here, not assumed invalid' })
     unmatched.set(term.portfolio, (unmatched.get(term.portfolio) ?? 0) + 1)
     continue
   }
+  accounting.record(`appointment:${terms.indexOf(term)}`, 'accepted', term, { output_ids: hits.map((e) => e.id) })
   matched += 1
   for (const episode of hits) {
     if (!byEpisode.has(episode.id)) byEpisode.set(episode.id, [])
@@ -112,7 +110,8 @@ for (const term of terms) {
       term.portfolio,
       term.party ? String(term.party).replace(/^New Democratic( Party)?$/, 'NDP').replace(/^British Columbia /, '') : null,
       term.acting ? 1 : 0,
-      sourceIndex(term.source)
+      sourceIndex(term.source),
+      (term.corroborating_evidence ?? []).map((e) => ({ source: sourceIndex(e.source_url), locator: e.locator, reviewed: e.reviewed_on ?? null }))
     ])
   }
 }
@@ -166,6 +165,7 @@ const OMIT = new Set([
 ])
 
 const researched = read('bodies.json').records
+for (const record of researched) accounting.record(`bodies.json#${record.id}`, OMIT.has(record.id) ? 'intentionally_excluded' : 'accepted', record, OMIT.has(record.id) ? { reason: 'Outside provincial diagram scope; original succession target retained' } : {})
 const idOf = (id) => SAME_AS[id] ?? id
 const bodies = researched
   .filter((record) => !OMIT.has(record.id))
@@ -176,8 +176,10 @@ const bodies = researched
     kind: record.kind,
     established: record.established ? String(record.established) : null,
     ended: record.ended ? String(record.ended) : null,
+    predecessors: (record.predecessorIds ?? []).map(idOf),
+    successionClaims: { predecessorIds: record.predecessorIds ?? [], becameId: record.becameId ?? null },
     became: record.becameId && !OMIT.has(record.becameId) ? idOf(record.becameId) : null,
-    responsible: (record.responsible ?? []).map(({ ministry, from, to }) => [ministry, from ? String(from) : null, to ? String(to) : null]),
+    responsible: (record.responsible ?? []).map(({ ministry, from, to, source, locator }) => [ministry, from ? String(from) : null, to ? String(to) : null, sourceIndex(source ?? record.source), locator ?? null]),
     description: record.description ?? null,
     source: sourceIndex(record.source),
     // Whether the present already draws it, from its own record.
@@ -199,9 +201,11 @@ for (const name of responsibleFiles) {
       bodies.push(body)
     }
     for (const period of list ?? []) {
-      if (!period?.ministry) continue
-      const row = [period.ministry, period.from ? String(period.from) : null, period.to ? String(period.to) : null, sourceIndex(period.source)]
-      if (!body.responsible.some((existing) => existing[0] === row[0] && existing[1] === row[1])) {
+      if (!period?.ministry) { accounting.record(`${name}#${researchId}`, 'unresolved_unmapped', period, { reason: 'No ministry' }); continue }
+      const competing = body.responsible.some((r) => r[0] === period.ministry && r[1] === period.from && r[2] !== (period.to ?? null))
+      accounting.record(`${name}#${researchId}`, competing ? 'conflicting' : 'accepted', period)
+      const row = [period.ministry, period.from ? String(period.from) : null, period.to ? String(period.to) : null, sourceIndex(period.source), period.locator ?? null]
+      if (!body.responsible.some((existing) => JSON.stringify(existing) === JSON.stringify(row))) {
         body.responsible.push(row)
         periods += 1
       }
@@ -224,11 +228,12 @@ if (existsSync(railWcb)) {
   for (const interval of JSON.parse(readFileSync(railWcb, 'utf8')).intervals ?? []) {
     const id = idOf(interval.subject_id)
     const body = bodies.find((entry) => entry.id === id)
-    if (!body || !interval.from) continue
+    if (!body || !interval.from) { accounting.record('responsibility-rail-wcb.json', 'unresolved_unmapped', interval, { reason: 'Body or start not mapped' }); continue }
+    accounting.record(`responsibility-rail-wcb.json#${id}/${interval.from}`, 'accepted', interval)
     const source = sourceIndex(interval.source_url)
     if (interval.relation === 'minister_responsible_for' && interval.office) {
       const row = [officeToMinistry(interval.office), String(interval.from), interval.to ? String(interval.to) : null, source]
-      if (!body.responsible.some((existing) => existing[0] === row[0] && existing[1] === row[1])) body.responsible.push(row)
+      if (!body.responsible.some((existing) => JSON.stringify(existing) === JSON.stringify(row))) body.responsible.push(row)
     } else {
       ;(body.relations ??= []).push([interval.relation, interval.office ?? null, interval.holder ?? null, String(interval.from), interval.to ? String(interval.to) : null, source, interval.locator ?? null])
       typedRelations += 1
@@ -239,7 +244,9 @@ if (existsSync(railWcb)) {
 
 // ── Office-holders ───────────────────────────────────────────────────────────────────────────────
 
-const offices = Object.fromEntries(read('holders.json').offices.map((office) => [office.id, {
+const officeRecords = read('holders.json').offices
+for (const office of officeRecords) accounting.record(`holders.json#${office.id}`, 'accepted', office)
+const offices = Object.fromEntries(officeRecords.map((office) => [office.id, {
   title: office.title,
   established: office.established ? String(office.established) : null,
   holders: office.holders.map((holder) => [holder.name, holder.from ? String(holder.from) : null, holder.to ? String(holder.to) : null, holder.acting ? 1 : 0, sourceIndex(holder.source)])
@@ -258,7 +265,8 @@ const collected = new Map()
 const mergeWarnings = []
 for (const name of subFiles) {
   for (const record of read(name).records ?? []) {
-    if (!record?.id) continue
+    if (!record?.id) { accounting.record(name, 'unresolved_unmapped', record, { reason: 'No id' }); continue }
+    accounting.record(`${name}#${record.id}`, 'accepted', record, { reason: 'Collection retained; conflicts below are field-specific' })
     const held = collected.get(record.id)
     if (!held) {
       collected.set(record.id, { ...record, establishedSource: record.established ? record.source : null })
@@ -271,6 +279,7 @@ for (const name of subFiles) {
         held[field] = value
         if (field === 'established') held.establishedSource = record.source
       } else if (String(held[field]) !== String(value) && (field === 'established' || field === 'parent')) {
+        accounting.record(`${name}#${record.id}/${field}`, 'conflicting', record, { selected: held[field], field })
         mergeWarnings.push(`${record.id}: ${field} ${held[field]} kept, ${value} in ${name} set aside`)
       }
     }
@@ -339,6 +348,7 @@ if (existsSync(resolve(SOURCE, RESEARCHED))) {
   })
   const byId = new Map(subAgencies.map((entry) => [entry.id, entry]))
   const compile = (record, entry) => {
+    accounting.record(`${RESEARCHED}#${record.id}`, 'accepted', record)
     const established = dateOf(record.established)
     const ended = dateOf(record.ended)
     // A researched start replaces the collected one; where the research left the start unresolved,
@@ -346,6 +356,7 @@ if (existsSync(resolve(SOURCE, RESEARCHED))) {
     if (established) entry.established = established.date
     Object.assign(entry, {
       researched: true,
+      firstObservedClaim: dateOf(record.first_observed),
       status: record.evidence_status ?? null,
       ...(established ? { establishedClaim: established } : {}),
       ...(ended ? { ended: ended.date, endedClaim: ended } : {}),
@@ -371,6 +382,7 @@ if (existsSync(resolve(SOURCE, RESEARCHED))) {
   for (const record of research.records ?? []) {
     const entry = byId.get(`sub-${record.id}`)
     if (!entry) {
+      accounting.record(`${RESEARCHED}#${record.id}`, 'unresolved_unmapped', record, { reason: 'Not in collected records' })
       console.warn(`${RESEARCHED}: no collected sub-agency ${record.id}`)
       continue
     }
@@ -442,6 +454,7 @@ const lines = [
   ''
 ]
 writeFileSync(OUT, lines.join('\n'))
+accounting.write(resolve(SOURCE, '../audit/history-import.json'))
 
 console.log(`${matched}/${terms.length} minister terms matched to ${byEpisode.size} of ${MINISTRY_EPISODES.length} episodes`)
 console.log(`${bodies.length} bodies, ${Object.keys(offices).length} offices, ${sources.length} sources`)

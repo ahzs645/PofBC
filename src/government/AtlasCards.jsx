@@ -6,6 +6,7 @@
 // its source gives; a scheduled event is labelled as scheduled; every claim links to its source,
 // and what only the present records says when it was checked; an unknown is reported as unknown.
 
+import { HISTORICAL_CENSUSES, IMPORT_COUNTS } from './researchData.js'
 import { useMemo, useState } from 'react'
 import { compareYears } from './compare.js'
 import { EVENT_SOURCES, formatEventDate, isAhead, typeOf } from './events.js'
@@ -43,14 +44,19 @@ export const EventsCard = ({ events, day, title = 'Origins and changes' }) => {
               <span className="gov-events__body">
                 <span className="gov-events__type">
                   {type.label}
-                  {event.status !== 'source_reported_past' && <span className="gov-chip" data-type="scheduled">{event.status === 'planned' ? 'Planned' : 'Scheduled'}</span>}
+                  {event.status !== 'source_reported_past' && <span className="gov-chip" data-type="scheduled">{event.status === 'conflicting' ? 'Conflicting evidence' : event.status === 'planned' ? 'Planned' : 'Scheduled'}</span>}
                 </span>
                 <span className="gov-events__title">{event.title}</span>
                 {event.notes && <span className="gov-events__note">{event.notes}</span>}
-                <span className="gov-events__sources">
-                  {event.sources.map((index) => <SourceLink key={index} source={EVENT_SOURCES[index]} />)}
-                  {event.locator && <span className="gov-muted"> · {String(event.locator)}</span>}
-                </span>
+                {(event.evidence ?? [{ sources: event.sources, locator: event.locator, reviewed: event.reviewed }]).map((entry, ordinal) => (
+                  <span className="gov-events__sources" key={ordinal}>
+                    {entry.sources.map((index) => <SourceLink key={index} source={EVENT_SOURCES[index]} />)}
+                    {entry.locator && <span className="gov-muted"> · {String(entry.locator)}</span>}
+                    <span className="gov-muted"> · {entry.reviewed ? `Reviewed ${entry.reviewed}` : 'Review date not supplied'}</span>
+                    {entry.title && entry.title !== event.title && <span className="gov-muted"> · {entry.title}</span>}
+                    {entry.notes && entry.notes !== event.notes && <span className="gov-muted"> · {entry.notes}</span>}
+                  </span>
+                ))}
               </span>
             </li>
           )
@@ -430,3 +436,34 @@ export const RelationsCard = ({ relations }) => {
     </section>
   )
 }
+
+/** Contemporary rosters have their own denominator and do not imply continuous existence. */
+export const ResearchCard = () => (
+  <section className="gov-card">
+    <h3 className="gov-card__subheading">Historical source rosters</h3>
+    <p>These lists record what a report printed. A name match is a research lead; it does not establish founding, continuous responsibility or institutional identity.</p>
+    {HISTORICAL_CENSUSES.map((census) => (
+      <div key={census.ministry}>
+        <h4>{census.ministry}</h4>
+        {census.rosters.map((roster) => (
+          <details key={roster.id}>
+            <summary>{roster.report_period}: {`Appendix ${roster.id.slice(-1).toUpperCase()}`} · {roster.rows.length} entries · {roster.observed_on ? `observed ${roster.observed_on}` : 'exact observation date unresolved'}</summary>
+            <SourceLink source={{ url: roster.source_url, title: 'Open source roster' }} />
+            <p className="gov-notice">{roster.limitation}</p>
+            <ul>{roster.rows.map((row) => (
+              <li key={row.ordinal}>
+                <strong>{row.name_as_printed}</strong> · {row.parent_as_printed}
+                <span className="gov-muted"> · {row.disposition.replaceAll('_', ' ')}</span>
+              </li>
+            ))}</ul>
+          </details>
+        ))}
+      </div>
+    ))}
+    <details>
+      <summary>Import accounting</summary>
+      <p>Compiler outcomes describe processing, not historical verification. Full input assertions and reasons are retained in the research audit files.</p>
+      {Object.entries(IMPORT_COUNTS).map(([build, counts]) => <p key={build}>{build}: {counts ? Object.entries(counts).map(([status, count]) => `${count} ${status.replaceAll('_', ' ')}`).join(' · ') : 'not built'}</p>)}
+    </details>
+  </section>
+)

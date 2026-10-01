@@ -55,7 +55,12 @@
     "build:government-atlas": "node scripts/build-government-atlas.mjs",
     "build:research-brief": "node scripts/build-research-brief.mjs",
     "build:hydro-serif": "node scripts/build-hydro-serif.mjs",
-    "extract:hydro-marks": "python3 scripts/extract_hydro_marks.py"
+    "extract:hydro-marks": "python3 scripts/extract_hydro_marks.py",
+    "build:government-research": "node scripts/build-government-research.mjs",
+    "build:government": "npm run build:government-history && npm run build:government-events && npm run build:government-atlas && npm run build:government-research && npm run build:research-brief && npm run build:research-queue",
+    "check:government": "node scripts/check-government-drift.mjs",
+    "build:research-queue": "node scripts/build-research-queue.mjs",
+    "research:merge": "node scripts/merge-research.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

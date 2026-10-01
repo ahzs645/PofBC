@@ -22,8 +22,10 @@
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { ledger } from './evidence-integrity.mjs'
 import { MINISTRY_EPISODES } from '../src/government/episodes.js'
 
+const accounting = ledger()
 const ROOT = process.env.GOVERNMENT_RESEARCH || 'research'
 const read = (path) => JSON.parse(readFileSync(resolve(ROOT, path), 'utf8'))
 const OUT = resolve('src/government/atlasData.js')
@@ -42,11 +44,14 @@ const lieutenantGovernors = lg.officeholders.map((holder) => ({
   // taking office.
   from: holder.sworn_in ?? holder.effective ?? null,
   to: holder.end ?? null,
-  evidence: holder.evidence_status ?? 'documented',
+  evidence: holder.evidence_status ?? 'unreviewed',
   source: holder.source_url ?? lg.source?.url ?? null,
   locator: holder.locator ?? null,
-  note: holder.notes ?? null
+  note: holder.notes ?? null,
+  periodAsStated: holder.period_as_stated ?? null,
+  datePrecision: holder.date_precision ?? null
 })).filter((holder) => holder.from)
+for (const holder of lg.officeholders) accounting.record(`lieutenant-governors.json#${holder.name}/${holder.period_as_stated ?? holder.sworn_in ?? holder.effective}`, holder.sworn_in || holder.effective ? 'accepted' : 'unresolved_unmapped', holder, { reason: holder.sworn_in || holder.effective ? 'Dated officeholder' : 'No supported start; stated period retained in audit' })
 lieutenantGovernors.sort((a, b) => a.from.localeCompare(b.from))
 
 // ── Staffing ─────────────────────────────────────────────────────────────────────────────────────
@@ -86,9 +91,11 @@ for (const measure of staffing.measures) {
     target = (exact.length === 1 ? exact[0] : near.length === 1 ? near[0] : null)?.id ?? null
   }
   if (!target) {
+    accounting.record(`staffing.json#${staffing.measures.indexOf(measure)}`, 'unresolved_unmapped', measure, { reason: 'No unique ministry/body mapping' })
     unmatched.set(printed, (unmatched.get(printed) ?? 0) + 1)
     continue
   }
+  accounting.record(`staffing.json#${staffing.measures.indexOf(measure)}`, 'accepted', measure, { output_id: target })
   ;(byEpisode[target] ??= []).push([measure.fiscal_year, measure.basis, measure.value, printed, measure.source_url, measure.locator])
 }
 for (const rows of Object.values(byEpisode)) rows.sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]))
@@ -97,6 +104,7 @@ const totals = (staffing.totals ?? []).map((total) => [total.fiscal_year, total.
 // ── The 43rd Parliament ──────────────────────────────────────────────────────────────────────────
 
 const parliament = existsSync(resolve(ROOT, 'atlas/parliament-43.json')) ? read('atlas/parliament-43.json') : null
+if (parliament) accounting.record('parliament-43.json', 'accepted', parliament, { reason: 'Source data retained; display remains specific to Parliament 43' })
 const seats = (parliament?.seats ?? []).map((seat) => ({
   district: seat.district,
   member: seat.member,
@@ -150,6 +158,7 @@ writeFileSync(OUT, [
   ''
 ].join('\n'))
 
+accounting.write(resolve(ROOT, 'audit/atlas-import.json'))
 console.log(`${lieutenantGovernors.length} Lieutenant Governors and administrators`)
 console.log(`${staffing.measures.length - [...unmatched.values()].reduce((a, b) => a + b, 0)}/${staffing.measures.length} staffing figures matched to ${Object.keys(byEpisode).length} ministries and bodies`)
 if (unmatched.size) console.log('unmatched staffing rows:', [...unmatched.entries()].map(([name, count]) => `${count}× ${name}`).join('; '))

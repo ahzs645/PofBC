@@ -1,0 +1,146 @@
+[
+  {
+    "id": "F01",
+    "severity": "critical",
+    "title": "A negative search can incorrectly become a birth boundary",
+    "location": "README.md: Track A, lines 71–72 and 91–92",
+    "finding": "The guide suggests that repeated non-listings locate a likely start and tells researchers to stop at the first non-listing. Estimates can omit, aggregate, rename or relocate a unit.",
+    "action": "Record the actual searched scope, terminology and outcome; continue relevant checkpoints and alternate ministries. Never derive a founding/end date from a negative search.",
+    "basis": "archive_instructions"
+  },
+  {
+    "id": "F02",
+    "severity": "critical",
+    "title": "Current ministry lineages are unreliable historical search boundaries",
+    "location": "sub-agencies.json: parent_likely_by_year; README §3C",
+    "finding": "The Climate Action Secretariat’s suggested 2010 ministry disagrees with the 2010 Environment vote. The Fire Commissioner is named under CAWS in 2002.",
+    "action": "Retain leads as explicitly unverified. Store the document’s exact ministry label and observation date; search across contemporary rosters.",
+    "basis": "ENV-2010; CAWS-2002"
+  },
+  {
+    "id": "F03",
+    "severity": "critical",
+    "title": "Discovery leads mix abolition, continuation and a still-operating service",
+    "location": "README.md: Track D, lines 129–142",
+    "finding": "Industry Training Appeal Board is legally continued under a new name; BC Ambulance Service’s current page describes it operating under BCEHS. These are unsafe gone-body examples, not proven errors in an unseen gone database.",
+    "action": "Require explicit cessation evidence. A rename normally stays one identity; a different successor is linked separately; a surviving nested service is not gone.",
+    "basis": "STBC-ACT; STBC-AR-2023; BCAS-CURRENT"
+  },
+  {
+    "id": "F04",
+    "severity": "high",
+    "title": "The export loses provenance for inherited claims",
+    "location": "sub-agencies.json: items[].held",
+    "finding": "All 175 event rows contain only date/type/title; none include source or locator. Selected start dates and sightings are also flattened scalars.",
+    "action": "Export full dated claims, claim IDs, locators, precision, alternative claims and editorial decisions, or include the exact upstream research files at a pinned revision.",
+    "basis": "archive_data"
+  },
+  {
+    "id": "F05",
+    "severity": "high",
+    "title": "Dated does not mean the start has been reviewed",
+    "location": "sub-agencies.json: priority/tracks/review_status",
+    "finding": "Six C-only records still say not_researched; two C-only records explicitly require reconciliation. Date presence determines routing more strongly than evidence maturity.",
+    "action": "Track research completeness and reconciliation independently of timeline priority. Existing date claims must remain reviewable.",
+    "basis": "archive_data"
+  },
+  {
+    "id": "F06",
+    "severity": "high",
+    "title": "Retrospective testimony is being confused with contemporary observation",
+    "location": "README.md: Track A; selected held names/first_observed rows",
+    "finding": "A later history statement can support existed-by testimony but is not necessarily a founding statement or a contemporaneous sighting. Several held observations originate in later annual reports/about pages.",
+    "action": "Store claim effective date, source publication/observation date, date precision and testimony type separately. Do not turn all “since” statements into establishment claims.",
+    "basis": "archive_data"
+  },
+  {
+    "id": "F07",
+    "severity": "high",
+    "title": "First-sighting work is not yet connected to timeline behaviour",
+    "location": "README.md: lines 331–334",
+    "finding": "The guide explicitly says the diagram does not use first_observed to draw historical bodies. Collecting data alone will not resolve disappearance.",
+    "action": "Implement and test an evidence-aware resolver with historical names and parents, unknown-start labels and non-continuity safeguards. Do not claim the renderer is fixed by this packet.",
+    "basis": "archive_instructions"
+  },
+  {
+    "id": "F08",
+    "severity": "high",
+    "title": "Budget placement is not a universal organizational-parent relation",
+    "location": "README.md: rules and parents field",
+    "finding": "Only part_of/subsidiary_of are offered, while the queue contains independent bodies, programmes, accounts, facilities and projects. Budget chapters also group functions for appropriation purposes.",
+    "action": "Preserve budget placement as its own fact. Expand typed relationships only with schema/runtime support and appropriate evidence, rather than forcing a misleading parent.",
+    "basis": "FIN-2025; FERRY-CURRENT"
+  },
+  {
+    "id": "F09",
+    "severity": "high",
+    "title": "The handoff is not reproducible against an identified code revision",
+    "location": "README.md: maintenance commands; source dependencies",
+    "finding": "The archive lacks the build/merge code and several linked research files. The public main package inspected has differently named scripts and no research:merge or build:government alias.",
+    "action": "Pin the upstream commit and include the complete dependency set, schemas, generator and tests. Do not run unsupported merge commands against an unidentified checkout.",
+    "basis": "REPO-PACKAGE"
+  },
+  {
+    "id": "F10",
+    "severity": "medium",
+    "title": "The batch handback instruction contradicts its own skeleton",
+    "location": "All 23 batch Markdown files, handback paragraph",
+    "finding": "Every batch says one JSON object per body, but its skeleton and README specify one object per batch containing records.",
+    "action": "Correct the generated boilerplate and its generator. The included documentation patch fixes the exported copies only.",
+    "basis": "archive_instructions"
+  },
+  {
+    "id": "F11",
+    "severity": "high",
+    "title": "Succession does not establish an exclusive end date",
+    "location": "README.md: ended field",
+    "finding": "The parenthetical describes the end as the day the successor began. Distinct bodies can overlap; transferred functions do not by themselves prove closure.",
+    "action": "Require independent cessation evidence and an explicit interval convention. Keep cessation, transfer and successor commencement as separate claims.",
+    "basis": "archive_instructions"
+  },
+  {
+    "id": "F12",
+    "severity": "high",
+    "title": "A 2026-survivor queue is not a historical government census",
+    "location": "README.md: current-source collection and Track D",
+    "finding": "The 238-item inventory starts with present-day bodies. It cannot discover every abolished, absorbed or otherwise absent historical unit by following survivors backward.",
+    "action": "Add period-specific roster extraction, then resolve entities and relations. Keep discovered candidates separate until identity and evidence checks pass.",
+    "basis": "archive_scope"
+  },
+  {
+    "id": "F13",
+    "severity": "high",
+    "title": "Some selected events exceed the certainty of their descriptions",
+    "location": "Held histories: Timber Sales, Wildfire, Corrections, CRT, Parks",
+    "finding": "The snapshot contains bounded name changes, competing date descriptions, function origins and repeated milestones. Source-free flattening makes automatic selection unsafe.",
+    "action": "Restore claim provenance; use bounded temporal claims and milestone types; do not assign an exact day to an observation interval or erase disagreements.",
+    "basis": "archive_data"
+  },
+  {
+    "id": "F14",
+    "severity": "medium",
+    "title": "A fiscal document is not a year-long organization chart",
+    "location": "Checkpoint method and Estimates presentation",
+    "finding": "Earlier-year comparison columns are restated to the current presentation. Cabinet changes within one year also make a ministry label year-dependent.",
+    "action": "Use the actual document and as-of date. Do not read a restated prior-year column as historical parentage, or a checkpoint year as a full documented span.",
+    "basis": "FIN-2002; FIN-2005; FIN-2025"
+  },
+  {
+    "id": "F15",
+    "severity": "medium",
+    "title": "INDEX timeline counts are upstream assertions, not reproducible here",
+    "location": "INDEX.md: Where things stand",
+    "finding": "The reported counts are 23 for 2010 and 8 for 2000. A simple selected-start-year filter yields 25 and 13. This is not proof of a renderer bug: parent/lifecycle rules are absent.",
+    "action": "Reproduce the actual resolver at the pinned revision and explain every inclusion/exclusion. Keep archive counts distinct from renderer regression tests.",
+    "basis": "archive_data"
+  },
+  {
+    "id": "F16",
+    "severity": "medium",
+    "title": "Record kinds mix organizations with programmes and delivery objects",
+    "location": "sub-agencies.json: kind (82 programmes plus other kinds)",
+    "finding": "A general-purpose public-sector atlas can include programmes and assets, but a uniform agency/daughter node implies relationships that evidence may not support.",
+    "action": "Define display semantics by entity kind and relationship; do not remove programmes solely because they are not legal persons.",
+    "basis": "archive_data"
+  }
+]

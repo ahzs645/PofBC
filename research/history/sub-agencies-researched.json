@@ -1229,12 +1229,23 @@
           "source_id": "r2-hydro-subsidiaries",
           "locator": "Powertech Labs section, opening sentence",
           "checked": "2026-09-26"
+        },
+        {
+          "ministry_as_printed": "BC Hydro",
+          "relation": "subsidiary_of",
+          "observed_on": "2026-09-30",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://www.bchydro.com/toolbar/about/who_we_are/subsidiaries.html",
+          "source_id": "r2-hydro-subsidiaries",
+          "locator": "Powertech Labs, first paragraph",
+          "checked": "2026-09-30"
         }
       ],
       "relations": [],
       "legal_basis": null,
       "evidence_status": "requires_reconciliation",
-      "note": "The uploaded founding year 1988 was not independently substantiated in this pass. BC Hydro describes service delivery since 1989, which may differ from incorporation. The held 1988 value is preserved, and neither year is silently treated as proof of the other event. Round 2 rechecks current ownership but finds no incorporation evidence resolving 1988 versus the existing 1989 service-history statement. Undated descriptions of 30 or 35 years of experience are not converted into a founding year.",
+      "note": "The uploaded founding year 1988 was not independently substantiated in this pass. BC Hydro describes service delivery since 1989, which may differ from incorporation. The held 1988 value is preserved, and neither year is silently treated as proof of the other event. Round 2 rechecks current ownership but finds no incorporation evidence resolving 1988 versus the existing 1989 service-history statement. Undated descriptions of 30 or 35 years of experience are not converted into a founding year. Targeted claims from the 2026-09-30 worked review; the full history is open.",
       "research_events": [
         {
           "date": "1989",
@@ -1251,8 +1262,8 @@
       "date_claims": [],
       "first_observed": null,
       "review": {
-        "checked": "2026-09-26",
-        "scope": "selected historical claims only",
+        "checked": "2026-09-30",
+        "scope": "selected historical claims only; Worked queue review, 2026-09-30: targeted claims only",
         "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
         "unresolved_fields": [
           "established",
@@ -1260,7 +1271,9 @@
           "relations",
           "legal_basis"
         ],
-        "full_history_complete": false
+        "full_history_complete": false,
+        "sources_checked": [],
+        "by": "ChatGPT (worked queue review)"
       },
       "round2_review": {
         "checked": "2026-09-26",
@@ -1742,8 +1755,8 @@
     {
       "id": "columbia-hydro-constructors",
       "review": {
-        "checked": "2026-09-26",
-        "scope": "Round 2 selected claims; not a complete lifecycle",
+        "checked": "2026-09-30",
+        "scope": "Round 2 selected claims; not a complete lifecycle; Worked queue review, 2026-09-30: targeted claims only",
         "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
         "unresolved_fields": [
           "names",
@@ -1751,7 +1764,9 @@
           "relations",
           "legal_basis"
         ],
-        "full_history_complete": false
+        "full_history_complete": false,
+        "sources_checked": [],
+        "by": "ChatGPT (worked queue review)"
       },
       "name": "Columbia Hydro Constructors Ltd.",
       "kind": "subsidiary",
@@ -1789,12 +1804,23 @@
           "source_id": "r2-hydro-subsidiaries",
           "locator": "Columbia Hydro Constructors Ltd. section, opening sentence",
           "checked": "2026-09-26"
+        },
+        {
+          "ministry_as_printed": "BC Hydro",
+          "relation": "subsidiary_of",
+          "observed_on": "2026-09-30",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://www.bchydro.com/toolbar/about/who_we_are/subsidiaries.html",
+          "source_id": "r2-hydro-subsidiaries",
+          "locator": "Columbia Hydro Constructors Ltd., first paragraph",
+          "checked": "2026-09-30"
         }
       ],
       "relations": [],
       "legal_basis": null,
       "evidence_status": "documented_partial",
-      "note": "The corporate parent explicitly states formation in 1962. No incorporation instrument, exact day, earlier names, or continuous ownership interval was established.",
+      "note": "The corporate parent explicitly states formation in 1962. No incorporation instrument, exact day, earlier names, or continuous ownership interval was established. Targeted claims from the 2026-09-30 worked review; the full history is open.",
       "first_observed": null,
       "research_events": [],
       "date_claims": [],
@@ -3070,6 +3096,2122 @@
         "lifecycle_complete": false,
         "run": "2026-09-26-round2-partial"
       }
+    },
+    {
+      "id": "anti-money-laundering-secretariat",
+      "name": "Anti-Money Laundering Secretariat",
+      "kind": "office",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Coordinates the Province's anti-money-laundering work.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+        "source_id": "FIN-2025",
+        "locator": "PDF p. 102 / printed p. 92, Revenue Division description",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Anti-Money Laundering Secretariat",
+          "observed_on": "2025",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+          "source_id": "FIN-2025",
+          "locator": "PDF p. 102 / printed p. 92, Revenue Division description",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": false,
+            "searched_for": [
+              "Anti-Money Laundering Secretariat"
+            ],
+            "locator": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": false,
+            "searched_for": [
+              "Anti-Money Laundering Secretariat"
+            ],
+            "locator": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": false,
+            "searched_for": [
+              "Anti-Money Laundering Secretariat"
+            ],
+            "locator": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": false,
+            "searched_for": [
+              "Anti-Money Laundering Secretariat"
+            ],
+            "locator": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": null,
+            "searched_for": [
+              "Anti-Money Laundering Secretariat"
+            ],
+            "locator": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "function_only",
+            "note": "An initiative/function is mentioned, not the named Secretariat; this does not establish that the Secretariat was absent."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": true,
+            "searched_for": [
+              "Anti-Money Laundering Secretariat"
+            ],
+            "locator": "PDF p. 102 / printed p. 92, Revenue Division description",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only",
+        "by": "ChatGPT",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "crown-agencies-and-board-resourcing-office",
+      "name": "Crown Agencies and Board Resourcing Office",
+      "kind": "office",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/crown-agencies-secretariat/crown-agencies-and-board-resourcing-office",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/crown-agencies-secretariat",
+      "description": "Recruits and recommends candidates for appointment to Crown corporations, agencies, boards and commissions.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "PDF p. 98 / printed p. 90, Crown Agencies and Board Resourcing Office",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Crown Agencies and Board Resourcing Office",
+          "observed_on": "2020",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+          "source_id": "FIN-2020",
+          "locator": "PDF p. 98 / printed p. 90, Crown Agencies and Board Resourcing Office",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": false,
+            "searched_for": [
+              "Crown Agencies and Board Resourcing Office"
+            ],
+            "locator": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": false,
+            "searched_for": [
+              "Crown Agencies and Board Resourcing Office"
+            ],
+            "locator": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": null,
+            "searched_for": [
+              "Crown Agencies and Board Resourcing Office"
+            ],
+            "locator": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "related_label_identity_unresolved",
+            "note": "Possible organizational predecessor or component; do not infer a rename or continuity."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": false,
+            "searched_for": [
+              "Crown Agencies and Board Resourcing Office"
+            ],
+            "locator": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": true,
+            "searched_for": [
+              "Crown Agencies and Board Resourcing Office"
+            ],
+            "locator": "PDF p. 98 / printed p. 90, Crown Agencies and Board Resourcing Office",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": false,
+            "searched_for": [
+              "Crown Agencies and Board Resourcing Office"
+            ],
+            "locator": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only",
+        "by": "ChatGPT",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "crown-agencies-secretariat",
+      "name": "Crown Agencies Secretariat",
+      "kind": "office",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/crown-agencies-secretariat",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/crown-agencies-secretariat",
+      "description": "Central agency in the Ministry of Finance that provides governance support and oversight for public sector organizations.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+        "source_id": "FIN-2025",
+        "locator": "PDF p. 103 / printed p. 93, Crown Agencies Secretariat",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Crown Agencies Secretariat",
+          "observed_on": "2025",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+          "source_id": "FIN-2025",
+          "locator": "PDF p. 103 / printed p. 93, Crown Agencies Secretariat",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": false,
+            "searched_for": [
+              "Crown Agencies Secretariat"
+            ],
+            "locator": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": false,
+            "searched_for": [
+              "Crown Agencies Secretariat"
+            ],
+            "locator": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": false,
+            "searched_for": [
+              "Crown Agencies Secretariat"
+            ],
+            "locator": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": false,
+            "searched_for": [
+              "Crown Agencies Secretariat"
+            ],
+            "locator": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": false,
+            "searched_for": [
+              "Crown Agencies Secretariat"
+            ],
+            "locator": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": true,
+            "searched_for": [
+              "Crown Agencies Secretariat"
+            ],
+            "locator": "PDF p. 103 / printed p. 93, Crown Agencies Secretariat",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only",
+        "by": "ChatGPT",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "gender-equity-office",
+      "name": "Gender Equity Office",
+      "kind": "office",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/gender-equity",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/gender-equity",
+      "description": "Leads government-wide gender equity work, including pay transparency and Gender-Based Analysis Plus.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "PDF p. 99 / printed p. 91, Executive and Support Services description",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Gender Equity Office",
+          "observed_on": "2020",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+          "source_id": "FIN-2020",
+          "locator": "PDF p. 99 / printed p. 91, Executive and Support Services description",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Gender Equity Office",
+          "observed_on": "2025",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+          "source_id": "FIN-2025",
+          "locator": "PDF p. 103 / printed p. 93, Executive and Support Services description",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": false,
+            "searched_for": [
+              "Gender Equity Office"
+            ],
+            "locator": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": false,
+            "searched_for": [
+              "Gender Equity Office"
+            ],
+            "locator": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": false,
+            "searched_for": [
+              "Gender Equity Office"
+            ],
+            "locator": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": false,
+            "searched_for": [
+              "Gender Equity Office"
+            ],
+            "locator": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": true,
+            "searched_for": [
+              "Gender Equity Office"
+            ],
+            "locator": "PDF p. 99 / printed p. 91, Executive and Support Services description",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": true,
+            "searched_for": [
+              "Gender Equity Office"
+            ],
+            "locator": "PDF p. 103 / printed p. 93, Executive and Support Services description",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only",
+        "by": "ChatGPT",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "internal-audit-and-advisory-services",
+      "name": "Internal Audit & Advisory Services",
+      "kind": "office",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": null,
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/office-of-the-comptroller-general",
+      "description": "Carries out internal audits of ministries, Crown corporations and the broader public sector.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+        "source_id": "FIN-2002",
+        "locator": "Vote 26, sub-vote classification and description (d)(iii)",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Internal Audit and Advisory Services",
+          "observed_on": "2002",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+          "source_id": "FIN-2002",
+          "locator": "Vote 26, sub-vote classification and description (d)(iii)",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Internal Audit and Advisory Services",
+          "observed_on": "2005",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+          "source_id": "FIN-2005",
+          "locator": "PDF p. 3 / printed p. 81, Financial Governance, Accounting and Reporting",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Internal Audit and Advisory Services",
+          "observed_on": "2015",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+          "source_id": "FIN-2015",
+          "locator": "PDF p. 98 / printed p. 88, Internal Audit and Crown Governance description",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Internal Audit and Advisory Services",
+          "observed_on": "2020",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+          "source_id": "FIN-2020",
+          "locator": "PDF p. 97 / printed p. 89, Internal Audit and Advisory Services",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Internal Audit and Advisory Services",
+          "observed_on": "2025",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+          "source_id": "FIN-2025",
+          "locator": "PDF p. 101 / printed p. 91, Internal Audit and Advisory Services",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "date": "2026-09-30",
+          "precision": "day",
+          "type": "contextual_placement_observed",
+          "summary": "The OCG page lists Internal Audit & Advisory Services under Internal audits.",
+          "meaning": "Supports a named service association. Do not automatically infer a direct structural-parent edge without an organization chart or equivalent.",
+          "evidence": "official_webpage",
+          "source": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/office-of-the-comptroller-general",
+          "source_id": "wr-ocg",
+          "locator": "Internal audits section",
+          "checked": "2026-09-30"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open. Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": true,
+            "searched_for": [
+              "Internal Audit & Advisory Services",
+              "Internal Audit and Advisory Services"
+            ],
+            "locator": "Vote 26, sub-vote classification and description (d)(iii)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": true,
+            "searched_for": [
+              "Internal Audit & Advisory Services",
+              "Internal Audit and Advisory Services"
+            ],
+            "locator": "PDF p. 3 / printed p. 81, Financial Governance, Accounting and Reporting",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": null,
+            "searched_for": [
+              "Internal Audit & Advisory Services",
+              "Internal Audit and Advisory Services"
+            ],
+            "locator": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "function_only",
+            "note": "The Office of the Comptroller General description includes an audit function; a separately named Internal Audit and Advisory Services unit is not established by this selected passage."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": true,
+            "searched_for": [
+              "Internal Audit & Advisory Services",
+              "Internal Audit and Advisory Services"
+            ],
+            "locator": "PDF p. 98 / printed p. 88, Internal Audit and Crown Governance description",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": true,
+            "searched_for": [
+              "Internal Audit & Advisory Services",
+              "Internal Audit and Advisory Services"
+            ],
+            "locator": "PDF p. 97 / printed p. 89, Internal Audit and Advisory Services",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": true,
+            "searched_for": [
+              "Internal Audit & Advisory Services",
+              "Internal Audit and Advisory Services"
+            ],
+            "locator": "PDF p. 101 / printed p. 91, Internal Audit and Advisory Services",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only; Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT; ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "office-of-the-comptroller-general",
+      "name": "Office of the Comptroller General",
+      "kind": "office",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/office-of-the-comptroller-general",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/office-of-the-comptroller-general",
+      "description": "Maintains the government's financial control framework, administers the central accounts and prepares the Public Accounts.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+        "source_id": "FIN-2002",
+        "locator": "Vote 26, sub-vote classification and description (d)",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Office of the Comptroller General",
+          "observed_on": "2002",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+          "source_id": "FIN-2002",
+          "locator": "Vote 26, sub-vote classification and description (d)",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Office of the Comptroller General",
+          "observed_on": "2005",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+          "source_id": "FIN-2005",
+          "locator": "PDF p. 3 / printed p. 81, Financial Governance description",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Office of the Comptroller General",
+          "observed_on": "2010",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+          "source_id": "FIN-2010",
+          "locator": "PDF p. 119 / printed p. 109, Office of the Comptroller General",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Office of the Comptroller General",
+          "observed_on": "2015",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+          "source_id": "FIN-2015",
+          "locator": "PDF p. 97 / printed p. 87, Office of the Comptroller General",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Office of the Comptroller General",
+          "observed_on": "2020",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+          "source_id": "FIN-2020",
+          "locator": "PDF p. 97 / printed p. 89, Office of the Comptroller General",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Office of the Comptroller General",
+          "observed_on": "2025",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+          "source_id": "FIN-2025",
+          "locator": "PDF p. 101 / printed p. 91, Office of the Comptroller General",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "date": "2026-09-30",
+          "precision": "day",
+          "type": "reporting_relationship_observed",
+          "summary": "The Comptroller General reports to the Deputy Minister of Finance.",
+          "meaning": "Current reporting relationship, not an all-years structural-parent claim.",
+          "evidence": "official_webpage",
+          "source": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/office-of-the-comptroller-general",
+          "source_id": "wr-ocg",
+          "locator": "Opening paragraph",
+          "checked": "2026-09-30"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open. Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": true,
+            "searched_for": [
+              "Office of the Comptroller General"
+            ],
+            "locator": "Vote 26, sub-vote classification and description (d)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": true,
+            "searched_for": [
+              "Office of the Comptroller General"
+            ],
+            "locator": "PDF p. 3 / printed p. 81, Financial Governance description",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": true,
+            "searched_for": [
+              "Office of the Comptroller General"
+            ],
+            "locator": "PDF p. 119 / printed p. 109, Office of the Comptroller General",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": true,
+            "searched_for": [
+              "Office of the Comptroller General"
+            ],
+            "locator": "PDF p. 97 / printed p. 87, Office of the Comptroller General",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": true,
+            "searched_for": [
+              "Office of the Comptroller General"
+            ],
+            "locator": "PDF p. 97 / printed p. 89, Office of the Comptroller General",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": true,
+            "searched_for": [
+              "Office of the Comptroller General"
+            ],
+            "locator": "PDF p. 101 / printed p. 91, Office of the Comptroller General",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only; Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT; ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "property-assessment-review-panels",
+      "name": "Property Assessment Review Panels",
+      "kind": "board",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": "https://www2.gov.bc.ca/gov/content/housing-tenancy/owning-a-home/property-assessment-review-panels2",
+      "source_today": "https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector",
+      "description": "First level of appeal for BC property assessments under the Assessment Act, hearing owners' complaints each year from February 1 to March 15.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+        "source_id": "FIN-2025",
+        "locator": "PDF p. 102 / printed p. 92, Policy and Legislation description",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Property Assessment Review Panels",
+          "observed_on": "2025",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+          "source_id": "FIN-2025",
+          "locator": "PDF p. 102 / printed p. 92, Policy and Legislation description",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": false,
+            "searched_for": [
+              "Property Assessment Review Panels"
+            ],
+            "locator": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": false,
+            "searched_for": [
+              "Property Assessment Review Panels"
+            ],
+            "locator": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": false,
+            "searched_for": [
+              "Property Assessment Review Panels"
+            ],
+            "locator": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": false,
+            "searched_for": [
+              "Property Assessment Review Panels"
+            ],
+            "locator": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": false,
+            "searched_for": [
+              "Property Assessment Review Panels"
+            ],
+            "locator": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": true,
+            "searched_for": [
+              "Property Assessment Review Panels"
+            ],
+            "locator": "PDF p. 102 / printed p. 92, Policy and Legislation description",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only",
+        "by": "ChatGPT",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "public-sector-employers-council-secretariat",
+      "name": "Public Sector Employers' Council Secretariat",
+      "kind": "office",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/public-sector-employers-council-secretariat",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/public-sector-employers-council-secretariat",
+      "description": "Coordinates labour relations, compensation planning and HR management across the broader provincial public sector.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2005",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+        "source_id": "FIN-2005",
+        "locator": "PDF p. 5 / printed p. 83, Vote 23 description; explicitly the secretariat of the Public Sector Employers' Council",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Public Sector Employers' Council Secretariat",
+          "observed_on": "2015",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+          "source_id": "FIN-2015",
+          "locator": "PDF p. 98 / printed p. 88, Public Sector Employers' Council Secretariat",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Public Sector Employers' Council Secretariat",
+          "observed_on": "2020",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+          "source_id": "FIN-2020",
+          "locator": "PDF p. 98 / printed p. 90, Public Sector Employers' Council Secretariat",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Public Sector Employers' Council Secretariat",
+          "observed_on": "2025",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+          "source_id": "FIN-2025",
+          "locator": "PDF p. 103 / printed p. 93, Public Sector Employers' Council Secretariat",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": false,
+            "searched_for": [
+              "Public Sector Employers' Council Secretariat"
+            ],
+            "locator": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": true,
+            "searched_for": [
+              "Public Sector Employers' Council Secretariat"
+            ],
+            "locator": "PDF p. 5 / printed p. 83, Vote 23 description; explicitly the secretariat of the Public Sector Employers' Council",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "found_contextual_name",
+            "note": "The council is named immediately before its secretariat. This is an unambiguous contextual reference, not evidence that the generic phrase was a historical formal name."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": false,
+            "searched_for": [
+              "Public Sector Employers' Council Secretariat"
+            ],
+            "locator": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": true,
+            "searched_for": [
+              "Public Sector Employers' Council Secretariat"
+            ],
+            "locator": "PDF p. 98 / printed p. 88, Public Sector Employers' Council Secretariat",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": true,
+            "searched_for": [
+              "Public Sector Employers' Council Secretariat"
+            ],
+            "locator": "PDF p. 98 / printed p. 90, Public Sector Employers' Council Secretariat",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": true,
+            "searched_for": [
+              "Public Sector Employers' Council Secretariat"
+            ],
+            "locator": "PDF p. 103 / printed p. 93, Public Sector Employers' Council Secretariat",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only",
+        "by": "ChatGPT",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "revenue-division",
+      "name": "Revenue Division",
+      "kind": "division",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": "https://billing-and-payment.revenueservicesbc.gov.bc.ca/",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Administers and enforces provincial tax and revenue statutes and related benefit, loan and collection programs.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2015",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "PDF p. 98 / printed p. 88, Revenue Division",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Revenue Division",
+          "observed_on": "2015",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+          "source_id": "FIN-2015",
+          "locator": "PDF p. 98 / printed p. 88, Revenue Division",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Revenue Division",
+          "observed_on": "2020",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+          "source_id": "FIN-2020",
+          "locator": "PDF p. 98 / printed p. 90, Revenue Division",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Revenue Division",
+          "observed_on": "2025",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+          "source_id": "FIN-2025",
+          "locator": "PDF p. 102 / printed p. 92, Revenue Division",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": false,
+            "searched_for": [
+              "Revenue Division"
+            ],
+            "locator": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": false,
+            "searched_for": [
+              "Revenue Division"
+            ],
+            "locator": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "not_found_in_scope",
+            "note": "The target name was not identified in the selected Finance vote pages. No whole-volume or all-government absence is asserted."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": null,
+            "searched_for": [
+              "Revenue Division"
+            ],
+            "locator": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "related_label_identity_unresolved",
+            "note": "Related revenue functions/labels are not automatically the present-day division."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": true,
+            "searched_for": [
+              "Revenue Division"
+            ],
+            "locator": "PDF p. 98 / printed p. 88, Revenue Division",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": true,
+            "searched_for": [
+              "Revenue Division"
+            ],
+            "locator": "PDF p. 98 / printed p. 90, Revenue Division",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": true,
+            "searched_for": [
+              "Revenue Division"
+            ],
+            "locator": "PDF p. 102 / printed p. 92, Revenue Division",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only",
+        "by": "ChatGPT",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "treasury-board-staff",
+      "name": "Treasury Board Staff",
+      "kind": "division",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Advises Treasury Board and builds the provincial budget, three-year fiscal plan, Estimates and quarterly reports.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+        "source_id": "FIN-2002",
+        "locator": "Vote 26, sub-vote classification and description (c)",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Treasury Board Staff",
+          "observed_on": "2002",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+          "source_id": "FIN-2002",
+          "locator": "Vote 26, sub-vote classification and description (c)",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Treasury Board Staff",
+          "observed_on": "2005",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+          "source_id": "FIN-2005",
+          "locator": "PDF p. 3 / printed p. 81, Treasury Board Staff Operations description",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Treasury Board Staff",
+          "observed_on": "2010",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+          "source_id": "FIN-2010",
+          "locator": "PDF p. 119 / printed p. 109, Treasury Board Staff",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Treasury Board Staff",
+          "observed_on": "2015",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+          "source_id": "FIN-2015",
+          "locator": "PDF p. 97 / printed p. 87, Treasury Board Staff",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Treasury Board Staff",
+          "observed_on": "2020",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+          "source_id": "FIN-2020",
+          "locator": "PDF p. 97 / printed p. 89, Treasury Board Staff",
+          "checked": "2026-09-30"
+        },
+        {
+          "name": "Treasury Board Staff",
+          "observed_on": "2025",
+          "observed_precision": "year",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+          "source_id": "FIN-2025",
+          "locator": "PDF p. 101 / printed p. 91, Treasury Board Staff",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Current identity fields are copied from the queue. Finance budget placement is preserved in the companion matrix; no structural parent is automatically asserted. Missing names at other checkpoints are scoped search outcomes, not lifecycle boundaries. Full founding, identity, naming and parent histories remain open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_FINANCE.htm",
+            "source_id": "FIN-2002",
+            "year": "2002",
+            "listed": true,
+            "searched_for": [
+              "Treasury Board Staff"
+            ],
+            "locator": "Vote 26, sub-vote classification and description (c)",
+            "scope": "Vote 26, classification by sub-vote and vote description (HTML)",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+            "source_id": "FIN-2005",
+            "year": "2005",
+            "listed": true,
+            "searched_for": [
+              "Treasury Board Staff"
+            ],
+            "locator": "PDF p. 3 / printed p. 81, Treasury Board Staff Operations description",
+            "scope": "Votes 22 and 23; PDF pages 3–5 / printed pages 81–83. Vote 24 is outside this checkpoint scope.",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "FIN-2010",
+            "year": "2010",
+            "listed": true,
+            "searched_for": [
+              "Treasury Board Staff"
+            ],
+            "locator": "PDF p. 119 / printed p. 109, Treasury Board Staff",
+            "scope": "Finance Vote 32 descriptions; PDF pages 119–121 / printed pages 109–111",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+            "source_id": "FIN-2015",
+            "year": "2015",
+            "listed": true,
+            "searched_for": [
+              "Treasury Board Staff"
+            ],
+            "locator": "PDF p. 97 / printed p. 87, Treasury Board Staff",
+            "scope": "Finance Vote 23 descriptions; PDF pages 97–99 / printed pages 87–89",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+            "source_id": "FIN-2020",
+            "year": "2020",
+            "listed": true,
+            "searched_for": [
+              "Treasury Board Staff"
+            ],
+            "locator": "PDF p. 97 / printed p. 89, Treasury Board Staff",
+            "scope": "Finance Vote 25 descriptions; PDF pages 97–99 / printed pages 89–91",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          },
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+            "source_id": "FIN-2025",
+            "year": "2025",
+            "listed": true,
+            "searched_for": [
+              "Treasury Board Staff"
+            ],
+            "locator": "PDF p. 101 / printed p. 91, Treasury Board Staff",
+            "scope": "Finance Vote 26 descriptions; PDF pages 101–103 / printed pages 91–93",
+            "outcome": "found_name",
+            "note": "Named in the contemporaneous budget presentation. This is not a founding date, proof of operational launch, or a continuous existence interval."
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "complete_name_history",
+          "complete_parent_history",
+          "identity_continuity",
+          "relations",
+          "legal_basis",
+          "pre_2002_history"
+        ],
+        "scope": "Batch 03: selected Finance vote descriptions at six checkpoints only",
+        "by": "ChatGPT",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-teachers-council",
+      "name": "BC Teachers' Council",
+      "kind": "board",
+      "parent_today": "ministry-of-education-and-child-care-2022",
+      "parent_today_name": "Ministry of Education and Child Care",
+      "official_url": "https://www2.gov.bc.ca/gov/content/education-training/k-12/teach/teacher-regulation",
+      "source_today": "https://www2.gov.bc.ca/gov/content/education-training/k-12/teach",
+      "description": "Sets standards for B.C. educators and teacher education programs under the Teachers Act.",
+      "established": {
+        "date": "2012-01-09",
+        "precision": "day",
+        "meaning": "Teachers Act section creating the body in force (B.C. Reg. 239/2011); legal establishment, not first appointments or meetings",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v54n24_239-2011",
+        "source_id": "wr-teachers-commence",
+        "locator": "Opening effective-date clause and clause (a)",
+        "checked": "2026-09-30"
+      },
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "date": "2012-01-09",
+          "precision": "day",
+          "type": "legislation_in_force",
+          "summary": "The relevant Teachers Act provision commenced on 9 January 2012.",
+          "meaning": "Candidate legal establishment date; not the date of first appointments or meetings.",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v54n24_239-2011",
+          "source_id": "wr-teachers-commence",
+          "locator": "Opening effective-date clause and clause (a)",
+          "checked": "2026-09-30"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": {
+        "citation": "Teachers Act, SBC 2011, c. 19, s. 9",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/11019_01",
+        "source_id": "wr-teachers-act",
+        "locator": "Section 9; current consolidation",
+        "checked": "2026-09-30"
+      },
+      "evidence_status": "documented_partial",
+      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "commissioner-for-teacher-regulation",
+      "name": "Commissioner for Teacher Regulation",
+      "kind": "office",
+      "parent_today": "ministry-of-education-and-child-care-2022",
+      "parent_today_name": "Ministry of Education and Child Care",
+      "official_url": "https://www2.gov.bc.ca/gov/content/education-training/k-12/teach/teacher-regulation",
+      "source_today": "https://www2.gov.bc.ca/gov/content/education-training/k-12/teach",
+      "description": "Statutory decision-maker who handles complaints and discipline of certified teachers in B.C.",
+      "established": null,
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "date": "2012-01-09",
+          "precision": "day",
+          "type": "legislation_in_force",
+          "summary": "The relevant Teachers Act provision commenced on 9 January 2012.",
+          "meaning": "Date the appointment framework commenced; first commissioner appointment is a separate unresolved milestone.",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v54n24_239-2011",
+          "source_id": "wr-teachers-commence",
+          "locator": "Opening effective-date clause and clause (a)",
+          "checked": "2026-09-30"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": {
+        "citation": "Teachers Act, SBC 2011, c. 19, s. 2",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/11019_01",
+        "source_id": "wr-teachers-act",
+        "locator": "Section 2; current consolidation",
+        "checked": "2026-09-30"
+      },
+      "evidence_status": "documented_partial",
+      "note": "The Act section providing for the commissioner came into force on 9 January 2012; the first appointment is a separate milestone, still unresearched.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "disciplinary-and-professional-conduct-board",
+      "name": "Disciplinary and Professional Conduct Board",
+      "kind": "board",
+      "parent_today": "ministry-of-education-and-child-care-2022",
+      "parent_today_name": "Ministry of Education and Child Care",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/boards-commissions-tribunals/commissioner-for-teacher-regulation/hearing-panel",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/educ.pdf",
+      "description": "Nine B.C. Teachers' Council members, appointed by the Minister, who hear teacher conduct and competence matters and certification appeals referred by the Commissioner for Teacher Regulation.",
+      "established": {
+        "date": "2012-01-09",
+        "precision": "day",
+        "meaning": "Teachers Act section creating the body in force (B.C. Reg. 239/2011); legal establishment, not first appointments or meetings",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v54n24_239-2011",
+        "source_id": "wr-teachers-commence",
+        "locator": "Opening effective-date clause and clause (a)",
+        "checked": "2026-09-30"
+      },
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "date": "2012-01-09",
+          "precision": "day",
+          "type": "legislation_in_force",
+          "summary": "The relevant Teachers Act provision commenced on 9 January 2012.",
+          "meaning": "Candidate legal establishment date; not the date of first appointments or meetings.",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v54n24_239-2011",
+          "source_id": "wr-teachers-commence",
+          "locator": "Opening effective-date clause and clause (a)",
+          "checked": "2026-09-30"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": {
+        "citation": "Teachers Act, SBC 2011, c. 19, s. 26",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/11019_01",
+        "source_id": "wr-teachers-act",
+        "locator": "Section 26; current consolidation",
+        "checked": "2026-09-30"
+      },
+      "evidence_status": "documented_partial",
+      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "strongstart-bc",
+      "name": "StrongStart BC",
+      "kind": "program",
+      "parent_today": "ministry-of-education-and-child-care-2022",
+      "parent_today_name": "Ministry of Education and Child Care",
+      "official_url": "https://www2.gov.bc.ca/gov/content/education-training/early-learning/support/programs/strongstart-bc",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/education",
+      "description": "Free drop-in early learning programs for children up to age five and their parents or caregivers, usually in schools.",
+      "established": null,
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "date": "2006-12-14",
+          "precision": "day",
+          "type": "program_launch_announced",
+          "summary": "StrongStart programme launch was announced; individual centre openings were also prospective.",
+          "meaning": "Do not treat this as the first opening date of every centre or an incorporation date.",
+          "evidence": "news_release",
+          "source": "https://archive.news.gov.bc.ca/releases/news_releases_2005-2009/2006EDU0131-001512.htm",
+          "source_id": "wr-strongstart-2006",
+          "locator": "Dateline; title and opening three paragraphs",
+          "checked": "2026-09-30"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "trans-care-bc",
+      "name": "Trans Care BC",
+      "kind": "agency",
+      "parent_today": "provincial-health-services-authority",
+      "parent_today_name": "Provincial Health Services Authority",
+      "official_url": "https://www.phsa.ca/our-services/programs-services/trans-care-bc",
+      "source_today": "https://www.phsa.ca/our-services/programs-services/trans-care-bc",
+      "description": "Provincial clinical program that sets direction and provides leadership for trans health services across B.C.",
+      "established": null,
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "date": "2015-04",
+          "precision": "month",
+          "type": "planned_function_transfer",
+          "summary": "The 2014 announcement scheduled PHSA coordination responsibilities for April 2015.",
+          "meaning": "Planned transition for a function, not proof of an April start under the Trans Care BC name.",
+          "evidence": "news_release",
+          "source": "https://news.gov.bc.ca/releases/2014HLTH0119-001650",
+          "source_id": "wr-trans-2014",
+          "locator": "Release body: paragraph beginning Beginning in April 2015",
+          "checked": "2026-09-30"
+        },
+        {
+          "date": "2015",
+          "precision": "year",
+          "type": "retrospective_claim",
+          "summary": "PHSA reports taking provincial coordination responsibility in fall 2015, with Trans Care BC developing from then. (fall; no month/day supplied)",
+          "meaning": "Retrospective account. Keep the planned April transition distinct; do not infer that the programme was operational under its current name in April.",
+          "evidence": "official_webpage",
+          "source": "https://www.phsa.ca/transcarebc-archive/about/who-we-are",
+          "source_id": "wr-trans-phsa",
+          "locator": "Program progress, first paragraph",
+          "checked": "2026-09-30"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "powerex",
+      "name": "Powerex Corp.",
+      "kind": "subsidiary",
+      "parent_today": "bc-hydro",
+      "parent_today_name": "British Columbia Hydro and Power Authority",
+      "official_url": "https://powerex.com",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf",
+      "description": "Wholly owned energy marketing subsidiary of BC Hydro that trades wholesale power, natural gas and environmental products across North America.",
+      "established": null,
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [
+        {
+          "ministry_as_printed": "BC Hydro",
+          "relation": "subsidiary_of",
+          "observed_on": "2026-09-30",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://www.bchydro.com/toolbar/about/who_we_are/subsidiaries.html",
+          "source_id": "r2-hydro-subsidiaries",
+          "locator": "Powerex, first paragraph",
+          "checked": "2026-09-30"
+        }
+      ],
+      "relations": [],
+      "research_events": [
+        {
+          "date": "1988",
+          "precision": "year",
+          "type": "operational_history_claim",
+          "summary": "Powerex reports being active since 1988.",
+          "meaning": "Supports an operations milestone; it is not by itself an incorporation record or contemporaneous 1988 observation.",
+          "evidence": "official_webpage",
+          "source": "https://clean24x7.powerex.com/",
+          "source_id": "wr-powerex-about",
+          "locator": "About Powerex, first paragraph",
+          "checked": "2026-09-30"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "kings-printer",
+      "name": "King's Printer",
+      "kind": "office",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "parent_today_name": "Ministry of Citizens’ Services",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/citz.pdf",
+      "description": "Full cost-recovery publishing service for government, including official print and publication services.",
+      "established": null,
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "date": "1859",
+          "precision": "year",
+          "type": "institutional_origin_claim",
+          "summary": "BC Laws traces the government printing institution’s establishment to 1859.",
+          "meaning": "Institutional origin in the colonial period; does not establish current brand spelling, present administrative identity or ministry parent in 1859.",
+          "evidence": "official_webpage",
+          "source": "https://www.bclaws.gov.bc.ca/civix/content/complete/statreg/1089244767/170718998/398788026/?xsl=/templates/browse.xsl",
+          "source_id": "wr-printer-faq",
+          "locator": "FAQ: What is the Queen’s Printer?, answer paragraph",
+          "checked": "2026-09-30"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "climate-action-secretariat",
+      "name": "Climate Action Secretariat",
+      "kind": "office",
+      "parent_today": "ministry-of-energy-and-climate-solutions-2024",
+      "parent_today_name": "Ministry of Energy and Climate Solutions",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2025/sp/pdf/ministry/ecs.pdf",
+      "description": "Leads the Province's climate policy, greenhouse gas reporting and climate accountability work.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Named in the 2010/11 Estimates (Environment); a sighting from one page read, not a founding date",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+        "source_id": "wr-est-2010-env",
+        "locator": "PDF page 110 / printed page 100, Climate Action Secretariat",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Climate Action Secretariat",
+          "observed_on": "2010",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+          "source_id": "wr-est-2010-env",
+          "locator": "PDF page 110 / printed page 100, Climate Action Secretariat",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "wr-est-2010-env",
+            "year": "2010",
+            "listed": true,
+            "outcome": "found_name",
+            "scope": "PDF page 110 / printed page 100",
+            "name_as_printed": "Climate Action Secretariat",
+            "ministry_as_printed": "Ministry of Environment"
+          }
+        ],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "sustainable-environment-fund",
+      "name": "Sustainable Environment Fund",
+      "kind": "program",
+      "parent_today": "ministry-of-environment-and-parks-2024",
+      "parent_today_name": "Ministry of Environment and Parks",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Statutory fund under the Sustainable Environment Fund Act that supports environmental protection.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Named in the 2010/11 Estimates (Environment); a sighting from one page read, not a founding date",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+        "source_id": "wr-est-2010-env",
+        "locator": "PDF page 110 / printed page 100, Environmental Protection and Climate Action Secretariat descriptions",
+        "checked": "2026-09-30"
+      },
+      "names": [
+        {
+          "name": "Sustainable Environment Fund Special Account",
+          "observed_on": "2010",
+          "coverage": "observation_only",
+          "evidence": "estimates",
+          "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+          "source_id": "wr-est-2010-env",
+          "locator": "PDF page 110 / printed page 100, Environmental Protection and Climate Action Secretariat descriptions",
+          "checked": "2026-09-30"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "wr-est-2010-env",
+            "year": "2010",
+            "listed": true,
+            "outcome": "found_contextual_name",
+            "scope": "PDF page 110 / printed page 100",
+            "name_as_printed": "Sustainable Environment Fund Special Account",
+            "ministry_as_printed": "Ministry of Environment"
+          }
+        ],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "water-licensing-and-rights",
+      "name": "Water licensing and rights",
+      "kind": "program",
+      "parent_today": "ministry-of-water-land-and-resource-stewardship-2022",
+      "parent_today_name": "Ministry of Water, Land and Resource Stewardship",
+      "official_url": "https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/water-licensing-rights",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Authorizes the use of Crown-owned surface water and groundwater under the Water Sustainability Act.",
+      "established": null,
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The 2010/11 Environment vote (PDF p. 110) describes water licensing as a function; the body itself is not named there.",
+      "review": {
+        "checked": "2026-09-30",
+        "sources_checked": [
+          {
+            "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_Estimates.pdf",
+            "source_id": "wr-est-2010-env",
+            "year": "2010",
+            "listed": null,
+            "outcome": "function_only",
+            "scope": "PDF page 110 / printed page 100, Water Stewardship description",
+            "name_as_printed": null,
+            "ministry_as_printed": "Ministry of Environment",
+            "note": "Water licensing is described as a function. No accepted identity or dated start for the modern queue record."
+          }
+        ],
+        "scope": "Worked queue review, 2026-09-30: targeted claims only",
+        "by": "ChatGPT (worked queue review)",
+        "full_history_complete": false
+      }
     }
   ],
   "gone": [
@@ -3282,6 +5424,303 @@
         "checked": "2026-09-26",
         "scope": "selected historical claims only",
         "full_history_complete": false
+      }
+    },
+    {
+      "id": "electrical-safety-advisory-committee",
+      "name": "Electrical Safety Advisory Committee",
+      "kind": "committee",
+      "established": null,
+      "ended": {
+        "date": "2004-04-01",
+        "precision": "day",
+        "meaning": "General dissolution; hearings already in progress excepted",
+        "boundary": "exclusive",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v47n07_137-2004",
+        "source_id": "safety-transition-2004",
+        "locator": "Commencement order and regulation section 6(a)",
+        "checked": "2026-09-30"
+      },
+      "first_observed": {
+        "date": null,
+        "precision": null,
+        "meaning": "Listed in a fiscal-year report with no exact observation day; not founding",
+        "source": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/caws/caws_appendixa.htm",
+        "locator": "Appendix A, Safety and Standards",
+        "checked": "2026-09-30",
+        "report_period": "2002/03"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "evidence_status": "documented_partial",
+      "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
+      "review": {
+        "checked": "2026-09-30"
+      }
+    },
+    {
+      "id": "electrical-safety-appeal-board",
+      "name": "Electrical Safety Appeal Board",
+      "kind": "tribunal",
+      "established": null,
+      "ended": {
+        "date": "2004-04-01",
+        "precision": "day",
+        "meaning": "General dissolution; hearings already in progress excepted",
+        "boundary": "exclusive",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v47n07_137-2004",
+        "source_id": "safety-transition-2004",
+        "locator": "Commencement order and regulation section 6(b)",
+        "checked": "2026-09-30"
+      },
+      "first_observed": {
+        "date": null,
+        "precision": null,
+        "meaning": "Listed in a fiscal-year report with no exact observation day; not founding",
+        "source": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/caws/caws_appendixa.htm",
+        "locator": "Appendix A, Safety and Standards",
+        "checked": "2026-09-30",
+        "report_period": "2002/03"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "evidence_status": "documented_partial",
+      "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
+      "review": {
+        "checked": "2026-09-30"
+      }
+    },
+    {
+      "id": "electrical-safety-board-of-review",
+      "name": "Electrical Safety Board of Review",
+      "kind": "tribunal",
+      "established": null,
+      "ended": {
+        "date": "2004-04-01",
+        "precision": "day",
+        "meaning": "General dissolution; hearings already in progress excepted",
+        "boundary": "exclusive",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v47n07_137-2004",
+        "source_id": "safety-transition-2004",
+        "locator": "Commencement order and regulation section 6(c)",
+        "checked": "2026-09-30"
+      },
+      "first_observed": {
+        "date": null,
+        "precision": null,
+        "meaning": "Listed in a fiscal-year report with no exact observation day; not founding",
+        "source": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/caws/caws_appendixa.htm",
+        "locator": "Appendix A, Safety and Standards",
+        "checked": "2026-09-30",
+        "report_period": "2002/03"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "evidence_status": "documented_partial",
+      "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
+      "review": {
+        "checked": "2026-09-30"
+      }
+    },
+    {
+      "id": "elevating-devices-advisory-committee",
+      "name": "Elevating Devices Advisory Committee",
+      "kind": "committee",
+      "established": null,
+      "ended": {
+        "date": "2004-04-01",
+        "precision": "day",
+        "meaning": "General dissolution; hearings already in progress excepted",
+        "boundary": "exclusive",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v47n07_137-2004",
+        "source_id": "safety-transition-2004",
+        "locator": "Commencement order and regulation section 6(d)",
+        "checked": "2026-09-30"
+      },
+      "first_observed": {
+        "date": null,
+        "precision": null,
+        "meaning": "Listed in a fiscal-year report with no exact observation day; not founding",
+        "source": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/caws/caws_appendixa.htm",
+        "locator": "Appendix A, Safety and Standards",
+        "checked": "2026-09-30",
+        "report_period": "2002/03"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "evidence_status": "documented_partial",
+      "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
+      "review": {
+        "checked": "2026-09-30"
+      }
+    },
+    {
+      "id": "elevating-devices-appeal-board",
+      "name": "Elevating Devices Appeal Board",
+      "kind": "tribunal",
+      "established": null,
+      "ended": {
+        "date": "2004-04-01",
+        "precision": "day",
+        "meaning": "General dissolution; hearings already in progress excepted",
+        "boundary": "exclusive",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v47n07_137-2004",
+        "source_id": "safety-transition-2004",
+        "locator": "Commencement order and regulation section 6(e)",
+        "checked": "2026-09-30"
+      },
+      "first_observed": {
+        "date": null,
+        "precision": null,
+        "meaning": "Listed in a fiscal-year report with no exact observation day; not founding",
+        "source": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/caws/caws_appendixa.htm",
+        "locator": "Appendix A, Safety and Standards",
+        "checked": "2026-09-30",
+        "report_period": "2002/03"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "evidence_status": "documented_partial",
+      "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
+      "review": {
+        "checked": "2026-09-30"
+      }
+    },
+    {
+      "id": "gas-safety-advisory-committee",
+      "name": "Gas Safety Advisory Committee",
+      "kind": "committee",
+      "established": null,
+      "ended": {
+        "date": "2004-04-01",
+        "precision": "day",
+        "meaning": "General dissolution; hearings already in progress excepted",
+        "boundary": "exclusive",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v47n07_137-2004",
+        "source_id": "safety-transition-2004",
+        "locator": "Commencement order and regulation section 6(f)",
+        "checked": "2026-09-30"
+      },
+      "first_observed": {
+        "date": null,
+        "precision": null,
+        "meaning": "Listed in a fiscal-year report with no exact observation day; not founding",
+        "source": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/caws/caws_appendixa.htm",
+        "locator": "Appendix A, Safety and Standards",
+        "checked": "2026-09-30",
+        "report_period": "2002/03"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "evidence_status": "documented_partial",
+      "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
+      "review": {
+        "checked": "2026-09-30"
+      }
+    },
+    {
+      "id": "gas-safety-appeal-board",
+      "name": "Gas Safety Appeal Board",
+      "kind": "tribunal",
+      "established": null,
+      "ended": {
+        "date": "2004-04-01",
+        "precision": "day",
+        "meaning": "General dissolution; hearings already in progress excepted",
+        "boundary": "exclusive",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v47n07_137-2004",
+        "source_id": "safety-transition-2004",
+        "locator": "Commencement order and regulation section 6(g)",
+        "checked": "2026-09-30"
+      },
+      "first_observed": {
+        "date": null,
+        "precision": null,
+        "meaning": "Listed in a fiscal-year report with no exact observation day; not founding",
+        "source": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/caws/caws_appendixa.htm",
+        "locator": "Appendix A, Safety and Standards",
+        "checked": "2026-09-30",
+        "report_period": "2002/03"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "evidence_status": "documented_partial",
+      "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
+      "review": {
+        "checked": "2026-09-30"
+      }
+    },
+    {
+      "id": "power-engineers-boiler-pressure-vessel-safety-advisory-committee",
+      "name": "Power Engineers and Boiler and Pressure Vessel Safety Advisory Committee",
+      "kind": "committee",
+      "established": null,
+      "ended": {
+        "date": "2004-04-01",
+        "precision": "day",
+        "meaning": "General dissolution; hearings already in progress excepted",
+        "boundary": "exclusive",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v47n07_137-2004",
+        "source_id": "safety-transition-2004",
+        "locator": "Commencement order and regulation section 6(h)",
+        "checked": "2026-09-30"
+      },
+      "first_observed": {
+        "date": null,
+        "precision": null,
+        "meaning": "Listed in a fiscal-year report with no exact observation day; not founding",
+        "source": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/caws/caws_appendixa.htm",
+        "locator": "Appendix A, Safety and Standards",
+        "checked": "2026-09-30",
+        "report_period": "2002/03"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "evidence_status": "documented_partial",
+      "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
+      "review": {
+        "checked": "2026-09-30"
+      }
+    },
+    {
+      "id": "power-engineers-boiler-pressure-vessel-safety-appeal-board",
+      "name": "Power Engineers and Boiler and Pressure Vessel Safety Appeal Board",
+      "kind": "tribunal",
+      "established": null,
+      "ended": {
+        "date": "2004-04-01",
+        "precision": "day",
+        "meaning": "General dissolution; hearings already in progress excepted",
+        "boundary": "exclusive",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v47n07_137-2004",
+        "source_id": "safety-transition-2004",
+        "locator": "Commencement order and regulation section 6(i)",
+        "checked": "2026-09-30"
+      },
+      "first_observed": {
+        "date": null,
+        "precision": null,
+        "meaning": "Listed in a fiscal-year report with no exact observation day; not founding",
+        "source": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/caws/caws_appendixa.htm",
+        "locator": "Appendix A, Safety and Standards",
+        "checked": "2026-09-30",
+        "report_period": "2002/03"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "evidence_status": "documented_partial",
+      "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
+      "review": {
+        "checked": "2026-09-30"
       }
     }
   ],
