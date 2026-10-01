@@ -35,29 +35,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Accessibility Directorate"
 - **Questions:** A, B and C, as above.
 
-### 2. BC Bus Pass Program
-
-- **id** `bc-bus-pass-program` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Social Development and Poverty Reduction. Official site: https://www2.gov.bc.ca/gov/content/transportation/passenger-travel/buses-taxis-limos/bus-pass
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/social-development-poverty-reduction
-- **What it does:** Reduced-cost annual TransLink or BC Transit bus pass for eligible low-income seniors and people on disability assistance.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC Bus Pass Program"
-- **Questions:** A, B and C, as above.
-
-### 3. Employment and Assistance Appeal Tribunal (EAAT)
-
-- **id** `employment-and-assistance-appeal-tribunal` · tribunal · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Social Development and Poverty Reduction. Official site: https://www.eaat.ca/
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Single-level, community-based tribunal hearing appeals of the ministry's reconsideration decisions on income and disability assistance.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Employment and Assistance Appeal Tribunal", "EAAT"
-- **Questions:** A, B and C, as above.
-
-### 4. Income and Disability Assistance
+### 2. Income and Disability Assistance
 
 - **id** `bc-employment-and-assistance` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Social Development and Poverty Reduction. Official site: https://www2.gov.bc.ca/gov/content/family-social-supports/income-assistance
@@ -68,7 +46,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Income and Disability Assistance"
 - **Questions:** A, B and C, as above.
 
-### 5. My Self Serve
+### 3. My Self Serve
 
 - **id** `my-self-serve` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Social Development and Poverty Reduction. Official site: https://myselfserve.gov.bc.ca/
@@ -79,7 +57,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "My Self Serve"
 - **Questions:** A, B and C, as above.
 
-### 6. Provincial Accessibility Committee
+### 4. Provincial Accessibility Committee
 
 - **id** `provincial-accessibility-committee` · board · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Social Development and Poverty Reduction.
@@ -90,7 +68,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Provincial Accessibility Committee"
 - **Questions:** A, B and C, as above.
 
-### 7. Single Parent Employment Initiative
+### 5. Single Parent Employment Initiative
 
 - **id** `single-parent-employment-initiative` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Social Development and Poverty Reduction. Official site: https://www2.gov.bc.ca/gov/content/family-social-supports/income-assistance/on-assistance/employability-planning/spei
@@ -101,13 +79,43 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Single Parent Employment Initiative"
 - **Questions:** A, B and C, as above.
 
+### 6. BC Bus Pass Program
+
+- **id** `bc-bus-pass-program` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Social Development and Poverty Reduction. Official site: https://www2.gov.bc.ca/gov/content/transportation/passenger-travel/buses-taxis-limos/bus-pass
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/social-development-poverty-reduction
+- **What it does:** Reduced-cost annual TransLink or BC Transit bus pass for eligible low-income seniors and people on disability assistance.
+- **Held:** no start date; first seen 2025; names on file: BC Bus Pass Program (seen 2025)
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "BC Bus Pass Program"
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 7. Employment and Assistance Appeal Tribunal (EAAT)
+
+- **id** `employment-and-assistance-appeal-tribunal` · tribunal · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Social Development and Poverty Reduction. Official site: https://www.eaat.ca/
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Single-level, community-based tribunal hearing appeals of the ministry's reconsideration decisions on income and disability assistance.
+- **Held:** no start date; first seen 2005; names on file: Employment and Assistance Appeal Tribunal (seen 2005), Employment and Assistance Appeal Tribunal (seen 2010), Employment and Assistance Appeal Tribunal (seen 2015), Employment and Assistance Appeal Tribunal (seen 2020), Employment and Assistance Appeal Tribunal (seen 2025)
+- **Events on file:** 2005 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Employment and Assistance Appeal Tribunal", "EAAT"
+- **Questions:**
+  - A. It is already seen in 2005. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
 ### 8. WorkBC
 
 - **id** `workbc` · program · **P3 — dated; history over time**
 - **Today:** under Ministry of Social Development and Poverty Reduction. Official site: https://www.workbc.ca/
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/sdpr.pdf
 - **What it does:** Provincial employment services that help people find and keep jobs, plus online career and labour market resources.
-- **Held:** began 2007-04-27 (the WorkBC strategy and website launch); first seen 2007-04-27
+- **Held:** began 2007-04-27 (the WorkBC strategy and website launch); first seen 2007-04-27; names on file: WorkBC (seen 2015)
 - **Events on file:** 2007-04-27 established; 2007-04-27 program launch; 2007-04-27 website launch; 2007-04-27 name first observed; 2012-04-02 operational start; 2012-04-02 operational start
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "WorkBC"
@@ -126,56 +134,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "accessibility-directorate",
       "name": "Accessibility Directorate",
       "kind": "office",
-      "parent_today": "ministry-of-social-development-and-poverty-reduction-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 13",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "bc-bus-pass-program",
-      "name": "BC Bus Pass Program",
-      "kind": "program",
-      "parent_today": "ministry-of-social-development-and-poverty-reduction-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 13",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "employment-and-assistance-appeal-tribunal",
-      "name": "Employment and Assistance Appeal Tribunal",
-      "kind": "tribunal",
       "parent_today": "ministry-of-social-development-and-poverty-reduction-2017",
       "established": null,
       "first_observed": null,
@@ -276,6 +234,56 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "single-parent-employment-initiative",
       "name": "Single Parent Employment Initiative",
       "kind": "program",
+      "parent_today": "ministry-of-social-development-and-poverty-reduction-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 13",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-bus-pass-program",
+      "name": "BC Bus Pass Program",
+      "kind": "program",
+      "parent_today": "ministry-of-social-development-and-poverty-reduction-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 13",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "employment-and-assistance-appeal-tribunal",
+      "name": "Employment and Assistance Appeal Tribunal",
+      "kind": "tribunal",
       "parent_today": "ministry-of-social-development-and-poverty-reduction-2017",
       "established": null,
       "first_observed": null,

@@ -38,20 +38,27 @@ The sub-agencies were collected from **2026** sources: the 2026/27 Estimates, se
 ministry and Crown websites. Those sources say what exists now. Most of them do not say when a body
 began.
 
-The site draws a body in a past year only if a source shows it existed by then. So a body with no
-start date is drawn in 2026 and **disappears the moment the timeline moves back even one year**. On
-30 September 2026, 238 sub-agencies were drawn in 2026 and only 38 in 2025.
+In any past year, the site draws each body in one of three states:
+
+- **Known:** a source gives a start on or before that year, or shows the body existing by then (a
+  sighting). Drawn solid. A body known only from a sighting is marked "start unknown".
+- **Unconfirmed:** no source yet shows it in that year, and none says it began later. Drawn faint and
+  dashed, because an unknown start is not a sign the body did not exist. A switch hides these.
+- **Not yet existing:** a source gives a start after that year. Not drawn.
+
+So the research turns faint bodies solid. On 1 October 2026, 90 of the 238 were known in 2025
+and 148 unconfirmed; in 2010, 53 were known and 143 unconfirmed.
 
 Two examples:
 
-- **Child Care Resource and Referral Centres** has no start date on file. It is drawn in 2026 and
-  gone in 2025, although it certainly existed then.
+- **Treasury Board Staff** has no start date, but the 2002 Estimates name it. It is drawn solid from
+  2002 and faint before.
 - **Energy Resource Appeal Tribunal** is dated: its Act came into force on 4 October 2010. It is drawn
-  back to 2010, as it should be.
+  solid from 2010 and not at all before. (It was the Oil and Gas Appeal Tribunal until 2023.)
 
-The site does not guess, because a guess would be wrong in both directions. The Liquor and Cannabis
-Regulation Branch did not exist in 1990 under that name. Many branches were created, renamed, split
-or moved between ministries at cabinet shuffles. The fix is evidence.
+The site does not guess a start, because a guess would be wrong in both directions. The Liquor and
+Cannabis Regulation Branch did not exist in 1990 under that name. Many branches were created, renamed,
+split or moved between ministries at cabinet shuffles. The fix is evidence.
 
 ## 3. What we are looking for
 
@@ -373,10 +380,10 @@ competing claims is an editorial decision, recorded in `../decisions.json` (see 
 After rebuilding, open the Government view at a year the change affects, select the body, and check
 its Evidence card.
 
-**Not yet in the site.** The build compiles `first_observed`, but the diagram does not yet use it
-to draw a body before its start date. Until it does, a sighting shows in the body's evidence, not
-on the timeline. Recording sightings now is still the right order of work. The display rule, which
-draws a body from its earliest sighting and marks its start as unknown, needs the evidence first.
+**How a sighting shows.** A body with a `first_observed` and no start is drawn solid from the year
+of the sighting, marked "start unknown", and faint before it. Between two sightings it is drawn solid,
+and its card says the years between are not each confirmed. A sighting does not place the body under a
+ministry: placement still comes from `parents`, or is inferred from today's parent and marked so.
 
 ## 9. A prompt for an AI assistant
 

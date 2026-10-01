@@ -63,14 +63,14 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Environment and Parks. Official site: https://bcparks.ca/
 - **Collected from:** https://bcparks.ca/about/
 - **What it does:** Manages B.C.'s provincial parks and protected areas.
-- **Held:** no start date
-- **Events on file:** 1911-03-01 function milestone; 1913 function milestone; 1939 unit established; 1939 functions transferred; 1948 unit established; 1948-05 legal name change; 1949 legal name change; 1957 functions transferred; 1957 organizational milestone; 1957-03-28 reorganization; 1965 legislation enacted; 1978-12-05 amalgamation; 1979-01 legal name change; 1979-05 legal name change; 1991 unit established; 1995 legislation enacted; 2002 unit established; 2010 legal name change
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2015; names on file: BC Parks (seen 2015), BC Parks (seen 2020)
+- **Events on file:** 1911-03-01 function milestone; 1913 function milestone; 1939 unit established; 1939 functions transferred; 1948 unit established; 1948-05 legal name change; 1949 legal name change; 1957 functions transferred; 1957 organizational milestone; 1957-03-28 reorganization; 1965 legislation enacted; 1978-12-05 amalgamation; 1979-01 legal name change; 1979-05 legal name change; 1991 unit established; 1995 legislation enacted; 2002 unit established; 2010 legal name change; 2015 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Parks"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 18 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 19 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 5. Conservation Officer Service (COS)
 
@@ -78,14 +78,14 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Environment and Parks. Official site: https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service
 - **Collected from:** https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service
 - **What it does:** Public safety provider focused on natural resource law enforcement and on preventing and responding to human-wildlife conflicts.
-- **Held:** no start date
-- **Events on file:** 1905 function origin; 1909 functions transferred; 1918 reorganization; 1926 unit established; 1929 reorganization; 1934 unit established; 1957 reorganization; 1966 legal name change; 1980 unit established; 1988 reorganization; 1990 legal name change; 1994 amalgamation; 2002 legal status change; 2004-02-20 symbol granted; 2015-11-04 retrospective origin claim
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2015; names on file: Conservation Officer Service (seen 2015), Conservation Officer Service (seen 2020)
+- **Events on file:** 1905 function origin; 1909 functions transferred; 1918 reorganization; 1926 unit established; 1929 reorganization; 1934 unit established; 1957 reorganization; 1966 legal name change; 1980 unit established; 1988 reorganization; 1990 legal name change; 1994 amalgamation; 2002 legal status change; 2004-02-20 symbol granted; 2015 name first observed; 2015-11-04 retrospective origin claim
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Conservation Officer Service", "COS"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 15 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 16 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 6. Sustainable Environment Fund
 
@@ -108,12 +108,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Environment and Parks. Official site: https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/environmental-assessments
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Runs the neutral assessment process under the Environmental Assessment Act for major projects and enforces certified projects' conditions.
-- **Held:** began 1995 (Administrative office creation)
-- **Events on file:** 1994-07-08 legislation assented; 1995 unit established; 1995-07 operational start; 2002-12 legislation in force; 2019-12 legislation in force
+- **Held:** began 1995 (Administrative office creation); first seen 2002; names on file: Environmental Assessment Office (seen 2002), Environmental Assessment Office (seen 2005), Environmental Assessment Office (seen 2010), Environmental Assessment Office (seen 2015), Environmental Assessment Office (seen 2020), Environmental Assessment Office (seen 2025)
+- **Events on file:** 1994-07-08 legislation assented; 1995 unit established; 1995-07 operational start; 2002 name first observed; 2002-12 legislation in force; 2019-12 legislation in force
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Environmental Assessment Office", "EAO"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ## Hand back
 

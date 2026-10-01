@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 446,
+    "accepted": 508,
     "unresolved_unmapped": 24,
     "corroborating_duplicate": 4
   },
@@ -11806,6 +11806,438 @@
       "output_id": "atlas:wao-s351-current"
     },
     {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-006",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-006",
+        "subject_id": "sub-workers-compensation-appeal-tribunal",
+        "event_type": "replacement_of_predecessor_bodies",
+        "title": "Workers’ Compensation Appeal Tribunal: WCAT replaced the Workers’ Compensation Review Board and the Appeal Division of the Workers’ Compensation Board.",
+        "date": {
+          "start": "2003-03-03",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.wcat.bc.ca/home/resources/mrpp/appendices/",
+          "source_title": "WCAT: A Short History of the Workers’ Compensation Appeal System",
+          "locator": "Appendix 1, final paragraph"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-006"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-007",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-007",
+        "subject_id": "sub-bc-farm-industry-review-board",
+        "event_type": "regulatory_name_and_function_transition",
+        "title": "British Columbia Farm Industry Review Board: Specified provisions took effect and regulatory Farm Practices Board / BC Marketing Board wording changed to BC Farm Industry Review Board.",
+        "date": {
+          "start": "2003-11-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0928_2003",
+          "source_title": "Order in Council 928/2003",
+          "locator": "Order commencement; Schedule"
+        },
+        "interpretation_notes": "This verifies the regulatory transition, not every element of a fully reconstructed legal amalgamation.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-007"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-008",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-008",
+        "subject_id": "bc-financial-services-authority",
+        "event_type": "operational_commencement_and_accountability_transfer",
+        "title": "BC Financial Services Authority: BCFSA commenced operations and assumed FICOM regulatory accountabilities. This is operational commencement, not necessarily the legal incorporation date.",
+        "date": {
+          "start": "2019-11-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bcbudget.gov.bc.ca/2021/sp/pdf/agency/bcfsa.pdf",
+          "source_title": "BCFSA 2021/22–2023/24 Service Plan",
+          "locator": "Printed/PDF p. 6"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-008"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-009",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-009",
+        "subject_id": "financial-institutions-commission",
+        "event_type": "dissolution_on_full_implementation",
+        "title": "Financial Institutions Commission: The official history associates FICOM dissolution with full implementation of BCFSA in November 2019.",
+        "date": {
+          "start": "2019-11",
+          "end": null,
+          "precision": "month"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bcfsa.ca/about-us/what-we-do/history",
+          "source_title": "BC Financial Services Authority: history",
+          "locator": "Transition from FICOM, final paragraphs"
+        },
+        "interpretation_notes": "Do not borrow the separate operational-start day as an independently verified dissolution day.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-009"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-010",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-010",
+        "subject_id": "bc-financial-services-authority",
+        "event_type": "regulatory_integration",
+        "title": "BCFSA and real estate regulators: BCFSA integrated RECBC and Office of the Superintendent of Real Estate regulatory accountabilities.",
+        "date": {
+          "start": "2021-08-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bcfsa.ca/about-us/what-we-do/history",
+          "source_title": "BC Financial Services Authority: history",
+          "locator": "Integration with Real Estate Regulators"
+        },
+        "interpretation_notes": "The continuing statutory Superintendent role is not labelled abolished.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-010"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-012",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-012",
+        "subject_id": "bc-energy-regulator",
+        "event_type": "rename_and_continuation",
+        "title": "BC Energy Regulator: BC Oil and Gas Commission became BC Energy Regulator effective 17 February; the notice was issued on 22 February. Expanded-mandate provisions were staged.",
+        "date": {
+          "start": "2023-02-17",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bc-er.ca/news/transitioning-to-bc-energy-regulator-iu-2023-04/",
+          "source_title": "BCER: Transitioning to BC Energy Regulator (IU 2023-04)",
+          "locator": "Opening paragraphs"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-012"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-013",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-013",
+        "subject_id": "skilledtradesbc",
+        "event_type": "rename_and_mandate_change",
+        "title": "SkilledTradesBC: Industry Training Authority became SkilledTradesBC. This body is distinct from the similarly named appeal board.",
+        "date": {
+          "start": "2022-12-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://skilledtradesbc.ca/introducing-skilledtradesbc",
+          "source_title": "Introducing SkilledTradesBC",
+          "locator": "Opening announcement"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-013"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-014",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-014",
+        "subject_id": "sub-skilled-trades-bc-appeal-board",
+        "event_type": "rename",
+        "title": "Skilled Trades BC Appeal Board: Industry Training Appeal Board was renamed when the Skilled Trades BC Act came into force.",
+        "date": {
+          "start": "2022-12-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.stbcab.ca/app/uploads/sites/771/2024/05/STBCAB_AR_2023-24.pdf",
+          "source_title": "Skilled Trades BC Appeal Board 2023/24 Annual Report",
+          "locator": "PDF p. 2, footnote 1"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-014"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-015",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-015",
+        "subject_id": "sub-energy-resource-appeal-tribunal",
+        "event_type": "rename",
+        "title": "Energy Resource Appeal Tribunal: Oil and Gas Appeal Tribunal was renamed Energy Resource Appeal Tribunal, on a different date from the regulator rename.",
+        "date": {
+          "start": "2023-09-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.stbcab.ca/app/uploads/sites/771/2024/05/STBCAB_AR_2023-24.pdf",
+          "source_title": "Skilled Trades BC Appeal Board 2023/24 Annual Report",
+          "locator": "PDF p. 8, footnote 6"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-015"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-016",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-016",
+        "subject_id": "sub-bc-timber-sales",
+        "event_type": "program_organization_replacement",
+        "title": "BC Timber Sales: BCTS replaced the Small Business Forest Enterprise Program within the Ministry of Forests.",
+        "date": {
+          "start": "2003-04-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bcfpb.ca/release-publications/releases/audit-bcts-100-mile-house-forest-district/",
+          "source_title": "Forest Practices Board: BCTS 100 Mile House audit",
+          "locator": "Background paragraph"
+        },
+        "interpretation_notes": "The older special-account creation date is not the BCTS program founding date.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-016"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-017",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-017",
+        "subject_id": "tourism-bc",
+        "event_type": "dissolution_and_asset_transfer",
+        "title": "Tourism British Columbia: Repeal dissolved Tourism BC and vested assets and obligations in government. The commencement table fixes 1 April 2010.",
+        "date": {
+          "start": "2010-04-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/491244185",
+          "source_title": "Budget Measures Implementation Act (No. 2), 2009, SBC c. 14",
+          "locator": "Sections 17–18; section 76 commencement item 6"
+        },
+        "interpretation_notes": "Destination BC is a later corporation, not automatically one uninterrupted identity.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-017"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-018",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-018",
+        "subject_id": "destination-bc",
+        "event_type": "corporate_establishment",
+        "title": "Destination BC Corp.: Destination BC was established under the Business Corporations Act; operational commencement is separate.",
+        "date": {
+          "start": "2012-11-02",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.destinationbc.ca/content/uploads/2022/02/2022-23DBCServicePlan-OrgOverview-AppendixA_Final.pdf",
+          "source_title": "Destination BC 2022/23 Service Plan: overview",
+          "locator": "PDF p. 1"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-018"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-019",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-019",
+        "subject_id": "destination-bc",
+        "event_type": "operational_commencement",
+        "title": "Destination BC Corp.: Destination BC began operations after its November 2012 establishment.",
+        "date": {
+          "start": "2013-04-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.destinationbc.ca/content/uploads/2022/02/2022-23DBCServicePlan-OrgOverview-AppendixA_Final.pdf",
+          "source_title": "Destination BC 2022/23 Service Plan: overview",
+          "locator": "PDF p. 1"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-019"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-020",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-020",
+        "subject_id": "royal-bc-museum",
+        "event_type": "corporate_form_established",
+        "title": "Royal British Columbia Museum Corporation: The corporation was formed under the Museum Act on 1 April 2003.",
+        "date": {
+          "start": "2003-04-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://rbcm.ca/wp-content/uploads/2025/08/Statements-of-Financial-Information-2023_24.pdf",
+          "source_title": "Royal BC Museum 2023/24 Statement of Financial Information",
+          "locator": "Note 1; printed p. 12 / PDF p. 19"
+        },
+        "interpretation_notes": "Do not replace the older museum or Archives histories with a 2003 founding date.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-020"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-021",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-021",
+        "subject_id": "community-living-bc",
+        "event_type": "establishment_and_adult_services_transfer",
+        "title": "Community Living British Columbia: CLBC was established and assumed adult community living service responsibility. Staff support for children’s services under agreement was distinct from retained MCFD funding, policy, monitoring and accountability.",
+        "date": {
+          "start": "2005-07-01",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/FinancialStatements2006.pdf",
+          "source_title": "CLBC financial statements for nine months ended 31 March 2006",
+          "locator": "Note 1; printed p. 30 / PDF p. 8"
+        },
+        "interpretation_notes": "Not a transfer of every children’s-service responsibility.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-021"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-022",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-022",
+        "subject_id": "provincial-capital-commission",
+        "event_type": "dissolution_and_asset_transfer",
+        "title": "Provincial Capital Commission: OIC 128/2014 brought the Act into force on 25 March 2014. The Act dissolved the commission and vested its property and obligations in government.",
+        "date": {
+          "start": "2014-03-25",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0128_2014",
+          "source_title": "Order in Council 128/2014",
+          "locator": "Clause (a), together with Dissolution Act s. 2"
+        },
+        "interpretation_notes": "24 March assent is not the commencement date.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-022"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-023",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-023",
+        "subject_id": "bc-human-rights-commission",
+        "event_type": "abolition",
+        "title": "BC Human Rights Commission: The report dates elimination of the Commission and Advisory Council to proclamation on 31 March 2003; the existing Tribunal continued under direct access.",
+        "date": {
+          "start": "2003-03-31",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bchrt.bc.ca/shareddocs/annual_reports/2003-2004.pdf",
+          "source_title": "BC Human Rights Tribunal 2003/04 Annual Report",
+          "locator": "Printed p. 4 / PDF p. 5"
+        },
+        "interpretation_notes": "No automatic continuity with a later commissioner’s office.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-023"
+    },
+    {
+      "origin": "atlas/events-historical-checkpoints.json#hc:evt-025",
+      "disposition": "accepted",
+      "input": {
+        "id": "hc:evt-025",
+        "subject_id": "bc-human-rights-tribunal",
+        "event_type": "mandate_and_process_change",
+        "title": "BC Human Rights Tribunal: The pre-existing Tribunal moved to direct complaint access and received transferred files.",
+        "date": {
+          "start": "2003-03-31",
+          "end": null,
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bchrt.bc.ca/shareddocs/annual_reports/2003-2004.pdf",
+          "source_title": "BC Human Rights Tribunal 2003/04 Annual Report",
+          "locator": "Printed pp. 4–6 / PDF pp. 5–7"
+        },
+        "interpretation_notes": "A process change, not the Tribunal’s original establishment.",
+        "reviewed_on": "2026-10-01"
+      },
+      "output_id": "hc:evt-025"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#bc-farm-industry-review-board/established",
       "disposition": "accepted",
       "input": {
@@ -11819,6 +12251,21 @@
         "meaning": "Combined BCFIRB tribunal / 2003 reorganization"
       },
       "output_id": "sub:bc-farm-industry-review-board:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-farm-industry-review-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2005",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2005/est/10_Agriculture,FoodsandFisheries.pdf",
+        "source_id": "hc-est-2005-agriculture-food-and-fisheries",
+        "locator": "Printed p. 38; PDF p. 4 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2005 Estimates as \"BC Farm Industry Review Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-farm-industry-review-board:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#bc-farm-industry-review-board/event-0",
@@ -11852,6 +12299,21 @@
       "output_id": "sub:employment-standards-tribunal:established"
     },
     {
+      "origin": "history/sub-agencies-researched.json#employment-standards-tribunal/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_estimates.pdf",
+        "source_id": "hc-est-2010",
+        "locator": "Printed p. 151; PDF p. 161 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2010 Estimates as \"Employment Standards Tribunal\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:employment-standards-tribunal:first-observed"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#civil-resolution-tribunal/established",
       "disposition": "accepted",
       "input": {
@@ -11865,6 +12327,21 @@
         "meaning": "Statutory establishment provision (section 2) in force"
       },
       "output_id": "sub:civil-resolution-tribunal:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#civil-resolution-tribunal/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+        "source_id": "FIN-2025",
+        "locator": "Printed p. 40; PDF p. 50 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2025 Estimates as \"Civil Resolution Tribunal\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:civil-resolution-tribunal:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#civil-resolution-tribunal/event-0",
@@ -11945,6 +12422,21 @@
       "output_id": "sub:workers-compensation-appeal-tribunal:established"
     },
     {
+      "origin": "history/sub-agencies-researched.json#workers-compensation-appeal-tribunal/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2005",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2005/est/19_Education.pdf",
+        "source_id": "hc-est-2005-education",
+        "locator": "Printed p. 69; PDF p. 3 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2005 Estimates as \"Workers' Compensation Appeal Tribunal\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:workers-compensation-appeal-tribunal:first-observed"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#health-professions-review-board/established",
       "disposition": "accepted",
       "input": {
@@ -11958,6 +12450,21 @@
         "meaning": "Board comes into effect"
       },
       "output_id": "sub:health-professions-review-board:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#health-professions-review-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "Printed p. 44; PDF p. 52 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2020 Estimates as \"Health Professions Review Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:health-professions-review-board:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#financial-services-tribunal/established",
@@ -11975,6 +12482,21 @@
       "output_id": "sub:financial-services-tribunal:established"
     },
     {
+      "origin": "history/sub-agencies-researched.json#financial-services-tribunal/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2005",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
+        "source_id": "FIN-2005",
+        "locator": "Printed p. 82; PDF p. 4 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2005 Estimates as \"Financial Services Tribunal\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:financial-services-tribunal:first-observed"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#hospital-appeal-board/established",
       "disposition": "accepted",
       "input": {
@@ -11988,6 +12510,21 @@
         "meaning": "Body under its earlier name"
       },
       "output_id": "sub:hospital-appeal-board:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#hospital-appeal-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "Printed p. 44; PDF p. 52 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2020 Estimates as \"Hospital Appeal Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:hospital-appeal-board:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#public-guardian-and-trustee/established",
@@ -12006,6 +12543,21 @@
       "reason": "Same subject, date and kind as atlas:pgt-public-trustee-1963"
     },
     {
+      "origin": "history/sub-agencies-researched.json#public-guardian-and-trustee/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_ATTORNEY_GENERAL.htm",
+        "source_id": "hc-est-2002-attorney-general",
+        "locator": "Vote 14(g), Agencies, Boards and Commissions",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"Public Guardian and Trustee of British Columbia\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:public-guardian-and-trustee:first-observed"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#environmental-assessment-office/established",
       "disposition": "corroborating_duplicate",
       "input": {
@@ -12020,6 +12572,21 @@
       },
       "output_id": "atlas:eao-created-1995",
       "reason": "Same subject, date and kind as atlas:eao-created-1995"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#environmental-assessment-office/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_SUSTAINABLE_RESOURCE_MANAGEMENT.htm",
+        "source_id": "hc-est-2002-sustainable-resource-management",
+        "locator": "Vote 41(b)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"Environmental Assessment Office\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:environmental-assessment-office:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#bc-timber-sales/established",
@@ -12406,6 +12973,21 @@
       "output_id": "sub:energy-resource-appeal-tribunal:established"
     },
     {
+      "origin": "history/sub-agencies-researched.json#energy-resource-appeal-tribunal/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 133; PDF p. 143 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"Oil and Gas Appeal Tribunal\" (earlier name, bridged by a reviewed source); the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:energy-resource-appeal-tribunal:first-observed"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#energy-resource-appeal-tribunal/event-0",
       "disposition": "accepted",
       "input": {
@@ -12435,6 +13017,21 @@
         "meaning": "Commission establishment under the Forest Practices Code"
       },
       "output_id": "sub:forest-appeals-commission:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#forest-appeals-commission/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "Printed p. 44; PDF p. 52 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2020 Estimates as \"Forest Appeals Commission\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:forest-appeals-commission:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#forest-appeals-commission/event-0",
@@ -12484,6 +13081,36 @@
       "output_id": "sub:mental-health-review-board:established"
     },
     {
+      "origin": "history/sub-agencies-researched.json#mental-health-review-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "Printed p. 44; PDF p. 52 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2020 Estimates as \"Mental Health Review Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:mental-health-review-board:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#environmental-appeal-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "Printed p. 44; PDF p. 52 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2020 Estimates as \"Environmental Appeal Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:environmental-appeal-board:first-observed"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#environmental-appeal-board/event-0",
       "disposition": "accepted",
       "input": {
@@ -12529,6 +13156,21 @@
         "meaning": "Creation of the Office of the Seniors Advocate"
       },
       "output_id": "sub:office-of-the-seniors-advocate:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#office-of-the-seniors-advocate/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 113; PDF p. 123 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"Office of the Seniors Advocate\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:office-of-the-seniors-advocate:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#office-of-the-seniors-advocate/event-0",
@@ -12765,14 +13407,14 @@
       "origin": "history/sub-agencies-researched.json#medical-services-plan/first-observed",
       "disposition": "accepted",
       "input": {
-        "date": "2003",
+        "date": "2002",
         "precision": "year",
-        "evidence": "service_plan",
-        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/hs/hs.pdf",
-        "source_id": "r2-health-services-plan-2003",
-        "locator": "PDF page 17 / printed page 11, Ministry of Health Services Mandate box",
-        "checked": "2026-09-26",
-        "meaning": "Program observed in the 2003 plan; earliest source reviewed in this tranche, not first-ever use"
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_HEALTH_SERVICES.htm",
+        "source_id": "hc-est-2002-health-services",
+        "locator": "Vote 31(c)–(f)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"Medical Services Plan\"; the earliest of six checkpoints read, not a founding date"
       },
       "output_id": "sub:medical-services-plan:first-observed"
     },
@@ -12904,14 +13546,14 @@
       "origin": "history/sub-agencies-researched.json#property-assessment-review-panels/first-observed",
       "disposition": "accepted",
       "input": {
-        "date": "2025",
+        "date": "2005",
         "precision": "year",
-        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
         "evidence": "estimates",
-        "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
-        "source_id": "FIN-2025",
-        "locator": "PDF p. 102 / printed p. 92, Policy and Legislation description",
-        "checked": "2026-09-30"
+        "source": "https://www.bcbudget.gov.bc.ca/2005/est/35-36_SustainableResourceManagement.pdf",
+        "source_id": "hc-est-2005-sustainable-resource-management",
+        "locator": "Printed p. 143; PDF p. 3 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2005 Estimates as \"Property Assessment Review Panels\"; the earliest of six checkpoints read, not a founding date"
       },
       "output_id": "sub:property-assessment-review-panels:first-observed"
     },
@@ -12919,14 +13561,14 @@
       "origin": "history/sub-agencies-researched.json#public-sector-employers-council-secretariat/first-observed",
       "disposition": "accepted",
       "input": {
-        "date": "2005",
+        "date": "2002",
         "precision": "year",
-        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
         "evidence": "estimates",
-        "source": "https://www.bcbudget.gov.bc.ca/2005/est/22-23_Finance.pdf",
-        "source_id": "FIN-2005",
-        "locator": "PDF p. 5 / printed p. 83, Vote 23 description; explicitly the secretariat of the Public Sector Employers' Council",
-        "checked": "2026-09-30"
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_MANAGEMENT_SERVICES.htm",
+        "source_id": "hc-est-2002-management-services",
+        "locator": "Vote 34(b), Corporate Services",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"Public Sector Employers' Council Secretariat\"; the earliest of six checkpoints read, not a founding date"
       },
       "output_id": "sub:public-sector-employers-council-secretariat:first-observed"
     },
@@ -13155,6 +13797,456 @@
         "checked": "2026-09-30"
       },
       "output_id": "sub:sustainable-environment-fund:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#office-of-the-fire-commissioner/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_COMMUNITY.htm",
+        "source_id": "hc-est-2002-community-aboriginal-and-women-s-services",
+        "locator": "Vote 19 classification and descriptions",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"Office of the Fire Commissioner\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:office-of-the-fire-commissioner:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#university-endowment-lands/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_COMMUNITY.htm",
+        "source_id": "hc-est-2002-community-aboriginal-and-women-s-services",
+        "locator": "Vote 19 classification and descriptions",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"University Endowment Lands\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:university-endowment-lands:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#office-of-the-provincial-health-officer/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_HEALTH_PLANNING.htm",
+        "source_id": "hc-est-2002-health-planning",
+        "locator": "Vote 30(b)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"Office of the Provincial Health Officer\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:office-of-the-provincial-health-officer:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-archives/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_MANAGEMENT_SERVICES.htm",
+        "source_id": "hc-est-2002-management-services",
+        "locator": "Vote 34(c), (e)–(h)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"BC Archives\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-archives:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-stats/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_MANAGEMENT_SERVICES.htm",
+        "source_id": "hc-est-2002-management-services",
+        "locator": "Vote 34(c), (e)–(h)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"BC Stats\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-stats:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-online/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/Estimates/html/MINISTRY_OF_MANAGEMENT_SERVICES.htm",
+        "source_id": "hc-est-2002-management-services",
+        "locator": "Vote 34(c), (e)–(h)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2002 Estimates as \"BC Online\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-online:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#employment-and-assistance-appeal-tribunal/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2005",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2005/est/27_HumanResources.pdf",
+        "source_id": "hc-est-2005-human-resources",
+        "locator": "Printed p. 104; PDF p. 4 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2005 Estimates as \"Employment and Assistance Appeal Tribunal\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:employment-and-assistance-appeal-tribunal:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#property-assessment-appeal-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2005",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2005/est/35-36_SustainableResourceManagement.pdf",
+        "source_id": "hc-est-2005-sustainable-resource-management",
+        "locator": "Printed p. 143; PDF p. 3 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2005 Estimates as \"Property Assessment Appeal Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:property-assessment-appeal-board:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#passenger-transportation-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2005",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2005/est/37_Transportation.pdf",
+        "source_id": "hc-est-2005-transportation",
+        "locator": "Printed p. 152; PDF p. 4 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2005 Estimates as \"Passenger Transportation Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:passenger-transportation-board:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#passenger-transportation-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2005",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2005/est/37_Transportation.pdf",
+        "source_id": "hc-est-2005-transportation",
+        "locator": "Printed p. 152; PDF p. 4 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2005 Estimates as \"Passenger Transportation Branch\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:passenger-transportation-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-provincial-nominee-program/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 123; PDF p. 133 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"BC Provincial Nominee Program\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-provincial-nominee-program:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-ferry-commission/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_estimates.pdf",
+        "source_id": "hc-est-2010",
+        "locator": "Printed p. 56; PDF p. 66 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2010 Estimates as \"BC Ferry Commission\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-ferry-commission:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-review-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_estimates.pdf",
+        "source_id": "hc-est-2010",
+        "locator": "Printed p. 56; PDF p. 66 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2010 Estimates as \"BC Review Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-review-board:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#residential-tenancy-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_estimates.pdf",
+        "source_id": "hc-est-2010",
+        "locator": "Printed p. 143; PDF p. 153 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2010 Estimates as \"residential tenancy branch\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:residential-tenancy-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#building-code-appeal-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_estimates.pdf",
+        "source_id": "hc-est-2010",
+        "locator": "Printed p. 143; PDF p. 153 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2010 Estimates as \"Building Code Appeal Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:building-code-appeal-board:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#small-business-roundtable/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/estimates/2010_estimates.pdf",
+        "source_id": "hc-est-2010",
+        "locator": "Printed p. 165; PDF p. 175 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2010 Estimates as \"Small Business Roundtable\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:small-business-roundtable:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#early-childhood-educator-registry/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 49; PDF p. 59 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"Early Childhood Educator Registry\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:early-childhood-educator-registry:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#child-and-youth-mental-health-services/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 49; PDF p. 59 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"Child and Youth Mental Health Services\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:child-and-youth-mental-health-services:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#youth-justice-services/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 50; PDF p. 60 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"Youth Justice Services\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:youth-justice-services:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#community-gaming-grants/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 55; PDF p. 65 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"Community Gaming Grants\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:community-gaming-grants:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-parks/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 77; PDF p. 87 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"BC Parks\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-parks:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#conservation-officer-service/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 78; PDF p. 88 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"Conservation Officer Service\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:conservation-officer-service:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#roadsafetybc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 133; PDF p. 143 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"RoadSafetyBC\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:roadsafetybc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#safety-standards-appeal-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
+        "source_id": "FIN-2015",
+        "locator": "Printed p. 151; PDF p. 161 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2015 Estimates as \"Safety Standards Appeal Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:safety-standards-appeal-board:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#community-care-and-assisted-living-appeal-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "Printed p. 44; PDF p. 52 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2020 Estimates as \"Community Care and Assisted Living Appeal Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:community-care-and-assisted-living-appeal-board:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#surface-rights-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "Printed p. 44; PDF p. 52 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2020 Estimates as \"Surface Rights Board\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:surface-rights-board:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#office-of-the-chief-forester/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
+        "source_id": "FIN-2020",
+        "locator": "Printed p. 105; PDF p. 113 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2020 Estimates as \"Office of the Chief Forester\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:office-of-the-chief-forester:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#indigenous-justice-secretariat/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+        "source_id": "FIN-2025",
+        "locator": "Printed p. 39; PDF p. 49 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2025 Estimates as \"Indigenous Justice Secretariat\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:indigenous-justice-secretariat:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-output-based-pricing-system/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+        "source_id": "FIN-2025",
+        "locator": "Printed p. 73; PDF p. 83 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2025 Estimates as \"BC-Output Based Pricing System\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-output-based-pricing-system:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-bus-pass-program/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "evidence": "estimates",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
+        "source_id": "FIN-2025",
+        "locator": "Printed p. 175; PDF p. 185 (1-based)",
+        "checked": "2026-10-01",
+        "meaning": "Named in the 2025 Estimates as \"BC Bus Pass Program\"; the earliest of six checkpoints read, not a founding date"
+      },
+      "output_id": "sub:bc-bus-pass-program:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#workers-compensation-review-board/established",

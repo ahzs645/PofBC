@@ -1,0 +1,200 @@
+[
+  {
+    "issue_id": "GAP-001",
+    "subject": "All 238 baseline records",
+    "issue": "Candidate labels do not establish institutional continuity",
+    "next_action": "Accept identities separately, retain rejected candidate matches and original observations, and do not populate scalar establishment dates from observations.",
+    "evidence_refs": [
+      "identity_crosswalk.json",
+      "body_year_matrix.json"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-002",
+    "subject": "PSEC Secretariat",
+    "issue": "2002 source establishes a support recipient, not its structural parent",
+    "next_action": "Keep the earlier observation; find an organization chart or responsibility instrument for historical placement.",
+    "evidence_refs": [
+      "OBS-0064"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-003",
+    "subject": "Treasury / Provincial Treasury Operations",
+    "issue": "Related names have no accepted identity bridge",
+    "next_action": "Read 2005–2010 Finance charts before merging budget headings into Provincial Treasury.",
+    "evidence_refs": [
+      "EST-2005-finance",
+      "EST-2010"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-004",
+    "subject": "Government Chief Risk Office",
+    "issue": "Risk-management functions are not the same as an identified office",
+    "next_action": "Resolve the named risk-management branches in Finance service plans and dated organizational charts.",
+    "evidence_refs": [
+      "inherited_finance_72_checks.json"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-005",
+    "subject": "Crown Agencies Secretariat / CABRO",
+    "issue": "Different names cannot be assumed to be a simple rename",
+    "next_action": "Find 2020–2025 reorganization or transfer records.",
+    "evidence_refs": [
+      "EST-2020",
+      "EST-2025"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-006",
+    "subject": "Pacific Carbon Trust",
+    "issue": "Residual liability reference does not supply exact dissolution date",
+    "next_action": "Locate corporate dissolution and completed operational-transfer records, not only the announcement.",
+    "evidence_refs": [
+      "EST-2015"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-007",
+    "subject": "Okanagan Valley Tree Fruit Authority",
+    "issue": "Closure is planned, not confirmed by the 2002 budget",
+    "next_action": "Read the final report or repealing/completion instrument around 2004/05.",
+    "evidence_refs": [
+      "EVT-001"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-008",
+    "subject": "BC Farm Industry Review Board",
+    "issue": "Regulatory transition is verified but the full legal identity chain is incomplete",
+    "next_action": "Read the enabling Act provisions commenced by OIC 928/2003 and predecessor final reports.",
+    "evidence_refs": [
+      "BCFIRB-OIC-2003"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-009",
+    "subject": "BC Archives / Royal BC Museum",
+    "issue": "Corporate form does not establish old institutional founding dates",
+    "next_action": "Verify the Archives transfer and museum continuity against Museum Act instruments and contemporary reports.",
+    "evidence_refs": [
+      "RBCM-SOFI-2024",
+      "OBS-0067"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-010",
+    "subject": "Child care / Early Childhood Educator Registry",
+    "issue": "Broad responsibility transfer does not date every nested unit",
+    "next_action": "Compare MCFD 2021/22 and Education 2022/23 charts and registry mandates.",
+    "evidence_refs": [
+      "EDUC-AR-2023"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-011",
+    "subject": "Service BC / Solutions BC / Shared Services",
+    "issue": "Service brands and organizational divisions can differ",
+    "next_action": "Trace 2003–2005 and 2009–2010 charts without flattening nested units into one brand.",
+    "evidence_refs": [
+      "EST-2005-management-services",
+      "EST-2010"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-012",
+    "subject": "BC Stats / BC Data Service",
+    "issue": "Similar functions do not prove a rename",
+    "next_action": "Locate an explicit organizational transfer or renaming document before matching them.",
+    "evidence_refs": [
+      "EST-2020",
+      "EST-2025"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-013",
+    "subject": "Passenger Transportation Board",
+    "issue": "Exact administrative-transfer effective date remains open",
+    "next_action": "Find the 2024/25 administrative instrument; keep Board and Branch separate.",
+    "evidence_refs": [
+      "prior/first-batch/evidence.json",
+      "EST-2025"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-014",
+    "subject": "Emergency Management BC / Provincial Emergency Program",
+    "issue": "Co-listing does not establish exact successor identity",
+    "next_action": "Review the 2010 chart and adjacent dates; a new ministry is not proof of old program abolition.",
+    "evidence_refs": [
+      "EST-2010",
+      "EST-2025"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-015",
+    "subject": "Health-authority programs and corporate subsidiaries",
+    "issue": "Ministry budgets do not list all subordinate entities",
+    "next_action": "Use contemporary health-authority and Crown annual-report rosters for remaining baseline records.",
+    "evidence_refs": [
+      "baseline_record_coverage.json"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-016",
+    "subject": "Inherited index-only sources",
+    "issue": "First-batch retrieval limitations remain unresolved",
+    "next_action": "Re-fetch Sheriff history, liquor-branch rename and Buy BC sources before editorial acceptance.",
+    "evidence_refs": [
+      "prior/first-batch/evidence.json"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-017",
+    "subject": "Source preservation",
+    "issue": "Complete remote documents are not archived",
+    "next_action": "Use fetch_sources.py from a network-enabled machine, then check content and locators; a new retrieval is not proof of identical bytes.",
+    "evidence_refs": [
+      "sources.json"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-018",
+    "subject": "CAWS chart/narrative conflicts",
+    "issue": "A later chart can disagree with a reported transfer",
+    "next_action": "Preserve both and resolve with a dated instrument rather than source-order selection.",
+    "evidence_refs": [
+      "prior/finance-and-caws/caws-reconciliation.json"
+    ],
+    "closed": false
+  },
+  {
+    "issue_id": "GAP-019",
+    "subject": "Production integration",
+    "issue": "No current-branch import or renderer test has run",
+    "next_action": "Pin the target commit, build an additive adapter and execute the integration acceptance tests.",
+    "evidence_refs": [
+      "docs/INTEGRATION.md"
+    ],
+    "closed": false
+  }
+]

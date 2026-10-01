@@ -35,84 +35,35 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "BC Sheriff Services"
 - **Questions:** A, B and C, as above.
 
-### 2. British Columbia Ferry Commission
-
-- **id** `bc-ferry-commission` · agency · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www.bcferrycommission.ca/
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/ag.pdf
-- **What it does:** Independent regulator under the Coastal Ferry Act that sets the price cap on fares for BC's coastal ferry operators and approves major capital expenditures.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "British Columbia Ferry Commission"
-- **Questions:** A, B and C, as above.
-
-### 3. British Columbia Review Board (BCRB)
-
-- **id** `bc-review-board` · tribunal · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www.bcrb.ca/
-- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
-- **What it does:** Tribunal constituted under the Criminal Code that makes and reviews dispositions for accused persons found unfit to stand trial or not criminally responsible on account of mental disorder.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "British Columbia Review Board", "BCRB"
-- **Questions:** A, B and C, as above.
-
-### 4. Building Code Appeal Board
-
-- **id** `building-code-appeal-board` · board · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/industry/construction-industry/building-codes-standards/building-code-appeal-board
-- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
-- **What it does:** Resolves disputes under the Building Act about whether a matter conforms to a provincial building regulation such as the BC Building and Plumbing Codes.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Building Code Appeal Board"
-- **Questions:** A, B and C, as above.
-
-### 5. Community Care and Assisted Living Appeal Board (CCALAB)
-
-- **id** `community-care-and-assisted-living-appeal-board` · board · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www.bcccalab.ca/
-- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
-- **What it does:** Hears appeals of licensing, registration and certification decisions about community care facilities, assisted living residences and early childhood educators under the Community Care and Assisted Living Act.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Community Care and Assisted Living Appeal Board", "CCALAB"
-- **Questions:** A, B and C, as above.
-
-### 6. Family Justice Services Division
+### 2. Family Justice Services Division
 
 - **id** `family-justice-services-division` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/life-events/divorce/family-justice/who-can-help/family-justice-services-division
 - **Collected from:** https://www2.gov.bc.ca/gov/content/life-events/divorce/family-justice/who-can-help/family-justice-services-division
 - **What it does:** Promotes the timely and just resolution of family disputes through information, dispute resolution and parenting programs, and runs the Justice Access Centres.
 - **Held:** no start date
-- **Review:** not yet researched
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Family Justice Services Division"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 7. Indigenous Justice Secretariat
-
-- **id** `indigenous-justice-secretariat` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/ag.pdf
-- **What it does:** Joint commitment with the BC First Nations Justice Council to reduce the overrepresentation of Indigenous people in the justice system and rebuild Indigenous justice systems.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Indigenous Justice Secretariat"
-- **Questions:** A, B and C, as above.
-
-### 8. Legal Services Branch
+### 3. Legal Services Branch
 
 - **id** `legal-services-branch` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/justice/for-legal-professionals/articled-student-program/articles-with-legal-services-branch
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart
 - **What it does:** Government's in-house law office, giving legal advice, conducting civil litigation for the Province and drafting legislation through the Office of Legislative Counsel.
 - **Held:** no start date
-- **Review:** not yet researched
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Legal Services Branch"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 9. Multiculturalism and Anti-Racism Branch
+### 4. Multiculturalism and Anti-Racism Branch
 
 - **id** `multiculturalism-and-anti-racism-branch` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/governments/multiculturalism-anti-racism
@@ -123,51 +74,67 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Multiculturalism and Anti-Racism Branch"
 - **Questions:** A, B and C, as above.
 
-### 10. Passenger Transportation Board (PTB)
+### 5. British Columbia Ferry Commission
 
-- **id** `passenger-transportation-board` · board · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www.ptboard.bc.ca/
+- **id** `bc-ferry-commission` · agency · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www.bcferrycommission.ca/
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/ag.pdf
-- **What it does:** Independent tribunal that licenses and regulates taxis, ride-hail, limousines, shuttles and inter-city buses in British Columbia.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Passenger Transportation Board", "PTB"
-- **Questions:** A, B and C, as above.
+- **What it does:** Independent regulator under the Coastal Ferry Act that sets the price cap on fares for BC's coastal ferry operators and approves major capital expenditures.
+- **Held:** no start date; first seen 2010; names on file: BC Ferry Commission (seen 2010), British Columbia Ferry Commission (seen 2015), British Columbia Ferry Commission (seen 2020), British Columbia Ferry Commission (seen 2025)
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "British Columbia Ferry Commission", "BC Ferry Commission"
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 11. Property Assessment Appeal Board (PAAB)
+### 6. British Columbia Review Board (BCRB)
 
-- **id** `property-assessment-appeal-board` · board · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www.assessmentappeal.bc.ca/
+- **id** `bc-review-board` · tribunal · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www.bcrb.ca/
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
-- **What it does:** Second level of appeal for BC property assessments under the Assessment Act, after the Property Assessment Review Panels.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Property Assessment Appeal Board", "PAAB"
-- **Questions:** A, B and C, as above.
+- **What it does:** Tribunal constituted under the Criminal Code that makes and reviews dispositions for accused persons found unfit to stand trial or not criminally responsible on account of mental disorder.
+- **Held:** no start date; first seen 2010; names on file: BC Review Board (seen 2010), British Columbia Review Board (seen 2015), British Columbia Review Board (seen 2020), British Columbia Review Board (seen 2025)
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "British Columbia Review Board", "BCRB", "BC Review Board"
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 12. Safety Standards Appeal Board (SSAB)
+### 7. Building Code Appeal Board
 
-- **id** `safety-standards-appeal-board` · board · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/boards-commissions-tribunals/safety-standards-appeal-board
+- **id** `building-code-appeal-board` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/industry/construction-industry/building-codes-standards/building-code-appeal-board
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
-- **What it does:** Adjudicative tribunal created under section 43 of the Safety Standards Act that hears appeals under that Act, the Homeowner Protection Act and the Building Act.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Safety Standards Appeal Board", "SSAB"
-- **Questions:** A, B and C, as above.
+- **What it does:** Resolves disputes under the Building Act about whether a matter conforms to a provincial building regulation such as the BC Building and Plumbing Codes.
+- **Held:** no start date; first seen 2010; names on file: Building Code Appeal Board (seen 2010), Building Code Appeal Board (seen 2015), Building Code Appeal Board (seen 2020), Building Code Appeal Board (seen 2025)
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Building Code Appeal Board"
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 13. Surface Rights Board (SRB)
+### 8. Community Care and Assisted Living Appeal Board (CCALAB)
 
-- **id** `surface-rights-board` · board · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: http://www.surfacerightsboard.bc.ca/
+- **id** `community-care-and-assisted-living-appeal-board` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www.bcccalab.ca/
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
-- **What it does:** Resolves disputes between landowners and companies that need access to private land to explore for or produce Crown-owned subsurface resources such as oil, gas, coal, minerals and geothermal.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Surface Rights Board", "SRB"
-- **Questions:** A, B and C, as above.
+- **What it does:** Hears appeals of licensing, registration and certification decisions about community care facilities, assisted living residences and early childhood educators under the Community Care and Assisted Living Act.
+- **Held:** no start date; first seen 2020; names on file: Community Care and Assisted Living Appeal Board (seen 2020), Community Care and Assisted Living Appeal Board (seen 2025)
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Community Care and Assisted Living Appeal Board", "CCALAB"
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 14. Court Services Branch
+### 9. Court Services Branch
 
 - **id** `court-services-branch` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/justice/courthouse-services
@@ -182,6 +149,81 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
+### 10. Indigenous Justice Secretariat
+
+- **id** `indigenous-justice-secretariat` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/ag.pdf
+- **What it does:** Joint commitment with the BC First Nations Justice Council to reduce the overrepresentation of Indigenous people in the justice system and rebuild Indigenous justice systems.
+- **Held:** no start date; first seen 2025; names on file: Indigenous Justice Secretariat (seen 2025)
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Indigenous Justice Secretariat"
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 11. Passenger Transportation Board (PTB)
+
+- **id** `passenger-transportation-board` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www.ptboard.bc.ca/
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/ag.pdf
+- **What it does:** Independent tribunal that licenses and regulates taxis, ride-hail, limousines, shuttles and inter-city buses in British Columbia.
+- **Held:** no start date; first seen 2005; names on file: Passenger Transportation Board (seen 2005), Passenger Transportation Board (seen 2010), Passenger Transportation Board (seen 2015), Passenger Transportation Board (seen 2020), Passenger Transportation Board (seen 2025), Passenger Transportation Board (seen 2025)
+- **Events on file:** 2005 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Passenger Transportation Board", "PTB"
+- **Questions:**
+  - A. It is already seen in 2005. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 12. Property Assessment Appeal Board (PAAB)
+
+- **id** `property-assessment-appeal-board` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www.assessmentappeal.bc.ca/
+- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
+- **What it does:** Second level of appeal for BC property assessments under the Assessment Act, after the Property Assessment Review Panels.
+- **Held:** no start date; first seen 2005; names on file: Property Assessment Appeal Board (seen 2005), Property Assessment Appeal Board (seen 2010), Property Assessment Appeal Board (seen 2015), Property Assessment Appeal Board (seen 2020), Property Assessment Appeal Board (seen 2025)
+- **Events on file:** 2005 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Property Assessment Appeal Board", "PAAB"
+- **Questions:**
+  - A. It is already seen in 2005. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 13. Safety Standards Appeal Board (SSAB)
+
+- **id** `safety-standards-appeal-board` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/boards-commissions-tribunals/safety-standards-appeal-board
+- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
+- **What it does:** Adjudicative tribunal created under section 43 of the Safety Standards Act that hears appeals under that Act, the Homeowner Protection Act and the Building Act.
+- **Held:** no start date; first seen 2015; names on file: Safety Standards Appeal Board (seen 2015), Safety Standards Appeal Board (seen 2020), Safety Standards Appeal Board (seen 2025)
+- **Events on file:** 2015 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Safety Standards Appeal Board", "SSAB"
+- **Questions:**
+  - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 14. Skilled Trades BC Appeal Board (STBCAB)
+
+- **id** `skilled-trades-bc-appeal-board` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www.stbcab.ca/
+- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
+- **What it does:** Hears appeals under section 45 of the Skilled Trades BC Act about SkilledTradesBC decisions on trainees, authorizations and credentials.
+- **Held:** no start date; first seen 2006; names on file: Industry Training Appeal Board (seen 2006), Skilled Trades BC Appeal Board (2022-12-01–), Industry Training Appeal Board (seen 2020), Skilled Trades BC Appeal Board (seen 2025)
+- **Events on file:** 2006 operational start; 2006 name first observed; 2022-12-01 rename; 2022-12-01 legal name change
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Skilled Trades BC Appeal Board", "STBCAB", "Industry Training Appeal Board", "Industry Training Appeal Board"
+- **Questions:**
+  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 4 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
 ## Hand back
 
 Return **one JSON object for the batch, with one record per body**, in the shape of this skeleton, with every field you could not establish left `null` or empty and the reason in `note`. The field-by-field format, with a worked example, is in `research/queue/README.md` §6. Return new sources with them as `{id, url, title, evidence}`.
@@ -194,6 +236,81 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "bc-sheriff-services",
       "name": "BC Sheriff Services",
       "kind": "office",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 01",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "family-justice-services-division",
+      "name": "Family Justice Services Division",
+      "kind": "division",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 01",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "legal-services-branch",
+      "name": "Legal Services Branch",
+      "kind": "division",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 01",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "multiculturalism-and-anti-racism-branch",
+      "name": "Multiculturalism and Anti-Racism Branch",
+      "kind": "division",
       "parent_today": "ministry-of-attorney-general-2017",
       "established": null,
       "first_observed": null,
@@ -316,8 +433,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "family-justice-services-division",
-      "name": "Family Justice Services Division",
+      "id": "court-services-branch",
+      "name": "Court Services Branch",
       "kind": "division",
       "parent_today": "ministry-of-attorney-general-2017",
       "established": null,
@@ -344,56 +461,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "indigenous-justice-secretariat",
       "name": "Indigenous Justice Secretariat",
       "kind": "office",
-      "parent_today": "ministry-of-attorney-general-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 01",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "legal-services-branch",
-      "name": "Legal Services Branch",
-      "kind": "division",
-      "parent_today": "ministry-of-attorney-general-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 01",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "multiculturalism-and-anti-racism-branch",
-      "name": "Multiculturalism and Anti-Racism Branch",
-      "kind": "division",
       "parent_today": "ministry-of-attorney-general-2017",
       "established": null,
       "first_observed": null,
@@ -491,34 +558,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "surface-rights-board",
-      "name": "Surface Rights Board",
+      "id": "skilled-trades-bc-appeal-board",
+      "name": "Skilled Trades BC Appeal Board",
       "kind": "board",
-      "parent_today": "ministry-of-attorney-general-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 01",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "court-services-branch",
-      "name": "Court Services Branch",
-      "kind": "division",
       "parent_today": "ministry-of-attorney-general-2017",
       "established": null,
       "first_observed": null,

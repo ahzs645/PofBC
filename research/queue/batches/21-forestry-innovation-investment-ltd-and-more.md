@@ -67,9 +67,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Plans, procures and manages capital projects for schools, child care, hospitals and post-secondary facilities.
 - **Held:** no start date
-- **Review:** not yet researched
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Community Capital Development"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 5. Policy and Partnerships
 
@@ -78,9 +81,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Develops policy, programs and legislation for provincial vertical capital infrastructure projects.
 - **Held:** no start date
-- **Review:** not yet researched
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Policy and Partnerships"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 6. Real Property Division
 
@@ -140,12 +146,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Labour. Official site: https://www.bcest.bc.ca/
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/lbr.pdf
 - **What it does:** Hears appeals of determinations issued by the Director of Employment Standards.
-- **Held:** began 1995-11-01 (Tribunal establishment)
-- **Events on file:** 1995-11-01 established
+- **Held:** began 1995-11-01 (Tribunal establishment); first seen 2010; names on file: Employment Standards Tribunal (seen 2010), Employment Standards Tribunal (seen 2015), Employment Standards Tribunal (seen 2020), Employment Standards Tribunal (seen 2025)
+- **Events on file:** 1995-11-01 established; 2010 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Employment Standards Tribunal", "EST"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 11. Workers' Compensation Appeal Tribunal (WCAT)
 
@@ -153,12 +159,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Labour. Official site: https://www.wcat.bc.ca/
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/lbr.pdf
 - **What it does:** Independent tribunal that hears appeals of WorkSafeBC decisions.
-- **Held:** began 2003-03-03 (Replacement appeal tribunal starts)
-- **Events on file:** 2003-03-03 established
+- **Held:** began 2003-03-03 (Replacement appeal tribunal starts); first seen 2005; names on file: Workers' Compensation Appeal Tribunal (seen 2005), Workers' Compensation Appeal Tribunal (seen 2005), Workers' Compensation Appeal Tribunal (seen 2010), Workers’ Compensation Appeal Tribunal (seen 2015), Workers’ Compensation Appeal Tribunal (seen 2020), Workers’ Compensation Appeal Tribunal (seen 2025)
+- **Events on file:** 2003-03-03 replacement of predecessor bodies; 2003-03-03 established; 2005 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Workers' Compensation Appeal Tribunal", "WCAT"
+- **Search for:** "Workers' Compensation Appeal Tribunal", "WCAT", "Workers’ Compensation Appeal Tribunal", "Workers’ Compensation Appeal Tribunal", "Workers’ Compensation Appeal Tribunal"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ## Hand back
 

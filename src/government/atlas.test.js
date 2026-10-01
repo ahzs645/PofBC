@@ -89,6 +89,27 @@ test('QA 19: an unknown start is not rendered as "did not exist" when undated bo
   assert.ok(extra.every((node) => !plain.nodes.some((other) => other.id === node.id)))
 })
 
+test('a budget sighting draws a body from that year, with its start still unknown', () => {
+  // Treasury Board Staff: no start on file, named in the 2002 Estimates.
+  const seen = find(2002, 'sub-treasury-board-staff')
+  assert.equal(seen?.presence, 'seen')
+  assert.equal(seen.uncertain, false)
+  assert.equal(seen.firstSeen, '2002')
+  assert.ok(seen.evidence.some((entry) => /^First seen 2002/.test(entry.claim) && entry.source?.url))
+  // Before the sighting nothing says either way: drawn faint when asked, never as known.
+  assert.equal(find(2001, 'sub-treasury-board-staff'), undefined)
+  assert.equal(find(2001, 'sub-treasury-board-staff', { includeUndated: true })?.presence, 'unconfirmed')
+})
+
+test('only a start after the year rules a body out; no evidence leaves it unconfirmed', () => {
+  // The BC Teachers' Council was established on 9 January 2012.
+  assert.equal(find(2011, 'sub-bc-teachers-council', { includeUndated: true }), undefined)
+  assert.equal(find(2012, 'sub-bc-teachers-council')?.presence, 'dated')
+  for (const node of governmentIn(2010, { includeUndated: true }).nodes.filter((node) => node.kind === 'sub')) {
+    assert.equal(node.uncertain, node.presence === 'unconfirmed', node.id)
+  }
+})
+
 test('every claim of evidence names a source', () => {
   for (const year of [1950, 1986, 2010, PRESENT_YEAR]) {
     for (const node of governmentIn(year).nodes) {

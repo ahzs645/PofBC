@@ -37,31 +37,35 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Inland Ferries"
 - **Questions:** A, B and C, as above.
 
-### 2. Passenger Transportation Branch
-
-- **id** `passenger-transportation-branch` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Transportation and Transit. Official site: https://www2.gov.bc.ca/gov/content/transportation/vehicle-safety-enforcement/services/passenger-transportation
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Licenses and enforces rules for commercial passenger vehicles under the Passenger Transportation Act.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Passenger Transportation Branch"
-- **Questions:** A, B and C, as above.
-
-### 3. Commercial Vehicle Safety and Enforcement (CVSE)
+### 2. Commercial Vehicle Safety and Enforcement (CVSE)
 
 - **id** `commercial-vehicle-safety-and-enforcement` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Transportation and Transit. Official site: https://www2.gov.bc.ca/gov/content/transportation/vehicle-safety-enforcement
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Enforces commercial vehicle safety through inspection stations and runs commercial transport permitting.
-- **Held:** no start date; first seen 2003; names on file: Commercial Vehicle Safety and Enforcement Division (seen 2003); parents on file: Ministry of Public Safety and Solicitor General (seen 2003)
+- **Held:** no start date; first seen 2003; names on file: Commercial Vehicle Safety and Enforcement Division (seen 2003), Commercial Vehicle Safety and Enforcement (seen 2005), Commercial Vehicle Safety and Enforcement (seen 2010), Commercial Vehicle Safety and Enforcement (seen 2015), Commercial Vehicle Safety and Enforcement (seen 2020), Commercial Vehicle Safety and Enforcement (seen 2025); parents on file: Ministry of Public Safety and Solicitor General (seen 2003)
 - **Events on file:** 2003 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Commercial Vehicle Safety and Enforcement", "CVSE", "Commercial Vehicle Safety and Enforcement Division"
 - **Questions:**
   - A. It is already seen in 2003. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 3. Passenger Transportation Branch
+
+- **id** `passenger-transportation-branch` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Transportation and Transit. Official site: https://www2.gov.bc.ca/gov/content/transportation/vehicle-safety-enforcement/services/passenger-transportation
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Licenses and enforces rules for commercial passenger vehicles under the Passenger Transportation Act.
+- **Held:** no start date; first seen 2005; names on file: Passenger Transportation Branch (seen 2005), Passenger Transportation Branch (seen 2010), Passenger Transportation Branch (seen 2015), Passenger Transportation Branch (seen 2020), Passenger Transportation Branch (seen 2025)
+- **Events on file:** 2005 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Passenger Transportation Branch"
+- **Questions:**
+  - A. It is already seen in 2005. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 4. DriveBC
 
@@ -228,9 +232,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "passenger-transportation-branch",
-      "name": "Passenger Transportation Branch",
-      "kind": "office",
+      "id": "commercial-vehicle-safety-and-enforcement",
+      "name": "Commercial Vehicle Safety and Enforcement",
+      "kind": "division",
       "parent_today": "ministry-of-transportation-and-transit-2024",
       "established": null,
       "first_observed": null,
@@ -253,9 +257,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "commercial-vehicle-safety-and-enforcement",
-      "name": "Commercial Vehicle Safety and Enforcement",
-      "kind": "division",
+      "id": "passenger-transportation-branch",
+      "name": "Passenger Transportation Branch",
+      "kind": "office",
       "parent_today": "ministry-of-transportation-and-transit-2024",
       "established": null,
       "first_observed": null,

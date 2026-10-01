@@ -35,18 +35,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Asset Investment Recovery"
 - **Questions:** A, B and C, as above.
 
-### 2. BC OnLine
-
-- **id** `bc-online` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/bc-online
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Fee-based online service giving professional users access to provincial registry and other government data.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC OnLine"
-- **Questions:** A, B and C, as above.
-
-### 3. BC Registries and Online Services (BC Registries)
+### 2. BC Registries and Online Services (BC Registries)
 
 - **id** `bc-registries-and-online-services` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/citizens-services/bc-registries-online-services
@@ -57,7 +46,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "BC Registries and Online Services", "BC Registries"
 - **Questions:** A, B and C, as above.
 
-### 4. Connected Services BC (CSBC)
+### 3. Connected Services BC (CSBC)
 
 - **id** `connected-services-bc` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/csbc
@@ -68,7 +57,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Connected Services BC", "CSBC"
 - **Questions:** A, B and C, as above.
 
-### 5. Connectivity in B.C. (Connectivity)
+### 4. Connectivity in B.C. (Connectivity)
 
 - **id** `connectivity-in-bc` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/connectivity-in-bc
@@ -79,7 +68,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Connectivity in B.C.", "Connectivity"
 - **Questions:** A, B and C, as above.
 
-### 6. Product Distribution Centre
+### 5. Product Distribution Centre
 
 - **id** `product-distribution-centre` · office · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Citizens’ Services.
@@ -90,7 +79,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Product Distribution Centre"
 - **Questions:** A, B and C, as above.
 
-### 7. BC Bid
+### 6. BC Bid
 
 - **id** `bc-bid` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/content?id=C8A3B1B982304D88B87FD75473A62B14
@@ -105,20 +94,35 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
+### 7. BC OnLine
+
+- **id** `bc-online` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/bc-online
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Fee-based online service giving professional users access to provincial registry and other government data.
+- **Held:** no start date; first seen 2002; names on file: BC Online (seen 2002), BC Online (seen 2015), BC Online (seen 2020), BC Online (seen 2025)
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "BC OnLine", "BC Online", "BC Online", "BC Online", "BC Online"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
 ### 8. BC Stats
 
 - **id** `bc-stats` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www.bcstats.gov.bc.ca/
 - **Collected from:** https://www.bcstats.gov.bc.ca/
 - **What it does:** The provincial government's statistical office, providing statistics, economic research and analysis under the Statistics Act.
-- **Held:** no start date
-- **Events on file:** 1894-04-11 legislation enacted; 1937 unit established; 2002 name first observed
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2002; names on file: BC Stats (seen 2002), BC Stats (seen 2005), BC Stats (seen 2010), BC Stats (seen 2015), BC Stats (seen 2020)
+- **Events on file:** 1894-04-11 legislation enacted; 1937 unit established; 2002 name first observed; 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Stats"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 4 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 9. King's Printer
 
@@ -143,7 +147,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **What it does:** Government's front door for in-person, phone and online services, from driver's licences and health cards to business registration.
 - **Held:** no start date
 - **Events on file:** 1859-09-07 function origin; 2004 name first observed; 2013 name observed
-- **Review:** not yet researched
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Service BC"
 - **Questions:**
   - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
@@ -175,31 +179,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "asset-investment-recovery",
       "name": "Asset Investment Recovery",
       "kind": "office",
-      "parent_today": "ministry-of-citizens-services-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 04",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "bc-online",
-      "name": "BC OnLine",
-      "kind": "program",
       "parent_today": "ministry-of-citizens-services-2017",
       "established": null,
       "first_observed": null,
@@ -324,6 +303,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "bc-bid",
       "name": "BC Bid",
+      "kind": "program",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 04",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-online",
+      "name": "BC OnLine",
       "kind": "program",
       "parent_today": "ministry-of-citizens-services-2017",
       "established": null,

@@ -76,7 +76,8 @@ export const EvidenceCard = ({ node }) => {
     node.unattached && !node.unplacedSub && !node.uncertain && 'Existed in this period — its responsible ministry is not yet established in the sources.',
     node.unplacedSub && 'Existed in this period — which ministry or body it sat under is not established in the sources, so it is drawn apart.',
     node.reconcile && 'Its start is not settled: the sources give competing dates (see its events), and it is drawn from the year the review chose.',
-    node.uncertain && !node.reconcile && 'Existence in this year is unknown: no source gives when it began. Shown because “Undated bodies” is on.'
+    node.presence === 'seen' && `Its start is unknown. It is drawn because a source shows it by ${node.firstSeen}; the years between sightings are not each confirmed.`,
+    node.uncertain && !node.reconcile && 'Not yet confirmed for this year: no source found so far shows it existed then, and none says it began later. Drawn faint because an unknown start is not a sign it did not exist.'
   ].filter(Boolean)
   const research = node.researched && node.note
   if (!claims.length && !caveats.length && !research) return null

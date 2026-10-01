@@ -70,14 +70,14 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Forests. Official site: https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/timber-supply-review-and-allowable-annual-cut
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Leads timber supply review and allowable annual cut decisions, forest inventory, forest genetics, silviculture and forest health programs.
-- **Held:** no start date
-- **Events on file:** 1912 executive appointment; 1912 office established; 1912-02 unit established; 1912-02 unit established; 2016-02-26 executive appointment
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020; names on file: Office of the Chief Forester (seen 2020), Office of the Chief Forester (seen 2025)
+- **Events on file:** 1912 executive appointment; 1912 office established; 1912-02 unit established; 1912-02 unit established; 2016-02-26 executive appointment; 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Office of the Chief Forester"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 5 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 6 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 5. BC Timber Sales (BCTS)
 
@@ -85,12 +85,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Forests. Official site: https://www2.gov.bc.ca/gov/content/industry/forestry/bc-timber-sales
 - **Collected from:** https://www2.gov.bc.ca/gov/content/industry/forestry/bc-timber-sales
 - **What it does:** Manages 20 per cent of B.C.'s public timber harvest and sells Crown timber at auction.
-- **Held:** began 2003-06-20 (as BC Timber Sales dates itself, in its 10th-anniversary release of 2013); first seen 2003-05-29; parents on file: Ministry of Forests (seen 2003)
-- **Events on file:** 1988-07-11 legal instrument deposited; 2003-04-01 succession claim; 2003-05-29 name first observed; 2003-06-20 unit established; 2003-06-20 succession; 2004-04-02 name observed
+- **Held:** began 2003-06-20 (as BC Timber Sales dates itself, in its 10th-anniversary release of 2013); first seen 2003-05-29; names on file: BC Timber Sales (seen 2005), BC Timber Sales (seen 2010); parents on file: Ministry of Forests (seen 2003)
+- **Events on file:** 1988-07-11 legal instrument deposited; 2003-04-01 program organization replacement; 2003-04-01 succession claim; 2003-05-29 name first observed; 2003-06-20 unit established; 2003-06-20 succession; 2004-04-02 name observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Timber Sales", "BCTS"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 6. Managed Forest Council
 
@@ -127,18 +127,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "EaseBiz BC"
 - **Questions:** A, B and C, as above.
 
-### 9. Small Business Roundtable
-
-- **id** `small-business-roundtable` · board · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Jobs and Economic Growth.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Advisory roundtable on small business issues operated by the ministry.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Small Business Roundtable"
-- **Questions:** A, B and C, as above.
-
-### 10. Trade and Invest British Columbia
+### 9. Trade and Invest British Columbia
 
 - **id** `trade-and-invest-british-columbia` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Jobs and Economic Growth. Official site: https://www.britishcolumbia.ca/
@@ -148,6 +137,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Review:** not yet researched
 - **Search for:** "Trade and Invest British Columbia"
 - **Questions:** A, B and C, as above.
+
+### 10. Small Business Roundtable
+
+- **id** `small-business-roundtable` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Jobs and Economic Growth.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Advisory roundtable on small business issues operated by the ministry.
+- **Held:** no start date; first seen 2010; names on file: Small Business Roundtable (seen 2010), Small Business Roundtable (seen 2015), Small Business Roundtable (seen 2020), Small Business Roundtable (seen 2025)
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Small Business Roundtable"
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 11. Building BC
 
@@ -404,9 +408,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "small-business-roundtable",
-      "name": "Small Business Roundtable",
-      "kind": "board",
+      "id": "trade-and-invest-british-columbia",
+      "name": "Trade and Invest British Columbia",
+      "kind": "program",
       "parent_today": "ministry-of-jobs-and-economic-growth-2025",
       "established": null,
       "first_observed": null,
@@ -429,9 +433,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "trade-and-invest-british-columbia",
-      "name": "Trade and Invest British Columbia",
-      "kind": "program",
+      "id": "small-business-roundtable",
+      "name": "Small Business Roundtable",
+      "kind": "board",
       "parent_today": "ministry-of-jobs-and-economic-growth-2025",
       "established": null,
       "first_observed": null,

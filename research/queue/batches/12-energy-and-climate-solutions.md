@@ -35,18 +35,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "B.C. Low Carbon Fuel Standard"
 - **Questions:** A, B and C, as above.
 
-### 2. B.C. Output-Based Pricing System (B.C. OBPS)
-
-- **id** `bc-output-based-pricing-system` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Energy and Climate Solutions. Official site: https://www2.gov.bc.ca/gov/content/environment/climate-change/industry/bc-output-based-pricing-system
-- **Collected from:** https://www2.gov.bc.ca/gov/content/environment/climate-change/industry/bc-output-based-pricing-system
-- **What it does:** Carbon-pricing system for large industrial emitters that gives a price incentive to cut emissions while addressing carbon leakage.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "B.C. Output-Based Pricing System", "B.C. OBPS"
-- **Questions:** A, B and C, as above.
-
-### 3. CleanBC Industry Fund
+### 2. CleanBC Industry Fund
 
 - **id** `cleanbc-industry-fund` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Energy and Climate Solutions. Official site: https://www2.gov.bc.ca/gov/content/environment/climate-change/industry/clean-industry-fund
@@ -57,7 +46,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "CleanBC Industry Fund"
 - **Questions:** A, B and C, as above.
 
-### 4. Climate Solutions Council
+### 3. Climate Solutions Council
 
 - **id** `climate-solutions-council` · board · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Energy and Climate Solutions. Official site: https://www2.gov.bc.ca/gov/content/environment/climate-change/planning-and-action/advisory-council
@@ -68,18 +57,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Climate Solutions Council"
 - **Questions:** A, B and C, as above.
 
-### 5. First Nations Clean Energy Business Fund
+### 4. First Nations Clean Energy Business Fund
 
 - **id** `first-nations-clean-energy-business-fund` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Energy and Climate Solutions.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Special account under the Clean Energy Act that supports First Nations' participation in the clean energy sector.
 - **Held:** no start date
-- **Review:** not yet researched
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "First Nations Clean Energy Business Fund"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 6. Innovative Clean Energy Fund (ICE Fund)
+### 5. Innovative Clean Energy Fund (ICE Fund)
 
 - **id** `innovative-clean-energy-fund` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Energy and Climate Solutions.
@@ -89,6 +81,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Review:** not yet researched
 - **Search for:** "Innovative Clean Energy Fund", "ICE Fund"
 - **Questions:** A, B and C, as above.
+
+### 6. B.C. Output-Based Pricing System (B.C. OBPS)
+
+- **id** `bc-output-based-pricing-system` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Energy and Climate Solutions. Official site: https://www2.gov.bc.ca/gov/content/environment/climate-change/industry/bc-output-based-pricing-system
+- **Collected from:** https://www2.gov.bc.ca/gov/content/environment/climate-change/industry/bc-output-based-pricing-system
+- **What it does:** Carbon-pricing system for large industrial emitters that gives a price incentive to cut emissions while addressing carbon leakage.
+- **Held:** no start date; first seen 2025; names on file: BC-Output Based Pricing System (seen 2025)
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "B.C. Output-Based Pricing System", "B.C. OBPS", "BC-Output Based Pricing System"
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 7. Climate Action Secretariat (CAS)
 
@@ -129,31 +136,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "low-carbon-fuel-standard",
       "name": "B.C. Low Carbon Fuel Standard",
-      "kind": "program",
-      "parent_today": "ministry-of-energy-and-climate-solutions-2024",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 12",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "bc-output-based-pricing-system",
-      "name": "B.C. Output-Based Pricing System",
       "kind": "program",
       "parent_today": "ministry-of-energy-and-climate-solutions-2024",
       "established": null,
@@ -254,6 +236,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "innovative-clean-energy-fund",
       "name": "Innovative Clean Energy Fund",
+      "kind": "program",
+      "parent_today": "ministry-of-energy-and-climate-solutions-2024",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 12",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-output-based-pricing-system",
+      "name": "B.C. Output-Based Pricing System",
       "kind": "program",
       "parent_today": "ministry-of-energy-and-climate-solutions-2024",
       "established": null,

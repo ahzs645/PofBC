@@ -57,18 +57,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Criminal Records Review Program"
 - **Questions:** A, B and C, as above.
 
-### 4. Office of the Fire Commissioner (OFC)
-
-- **id** `office-of-the-fire-commissioner` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Public Safety and Solicitor General. Official site: https://www2.gov.bc.ca/gov/content/safety/public-safety/fire-safety
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Administers the Fire Safety Act through fire inspections, investigations, prevention and support for local fire services.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Office of the Fire Commissioner", "OFC"
-- **Questions:** A, B and C, as above.
-
-### 5. Policing and Security Branch (PSB)
+### 4. Policing and Security Branch (PSB)
 
 - **id** `policing-and-security-branch` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Public Safety and Solicitor General. Official site: https://www2.gov.bc.ca/gov/content/justice/criminal-justice/policing-in-bc
@@ -79,18 +68,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Policing and Security Branch", "PSB"
 - **Questions:** A, B and C, as above.
 
-### 6. RoadSafetyBC
-
-- **id** `roadsafetybc` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Public Safety and Solicitor General. Official site: https://www2.gov.bc.ca/gov/content/transportation/driving-and-cycling/roadsafetybc
-- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/org-chart-pssg
-- **What it does:** Leads traffic safety, sets driver licensing policy, monitors unfit drivers and reviews driving prohibitions.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "RoadSafetyBC"
-- **Questions:** A, B and C, as above.
-
-### 7. Security Programs
+### 5. Security Programs
 
 - **id** `security-programs` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Public Safety and Solicitor General. Official site: https://www2.gov.bc.ca/gov/content/employment-business/business/security-services/security-industry-licensing
@@ -101,7 +79,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Security Programs"
 - **Questions:** A, B and C, as above.
 
-### 8. VictimLinkBC
+### 6. VictimLinkBC
 
 - **id** `victimlinkbc` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Public Safety and Solicitor General. Official site: https://www2.gov.bc.ca/gov/content/justice/criminal-justice/victims-of-crime/victimlinkbc
@@ -112,22 +90,22 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "VictimLinkBC"
 - **Questions:** A, B and C, as above.
 
-### 9. BC Coroners Service
+### 7. BC Coroners Service
 
 - **id** `bc-coroners-service` · agency · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Public Safety and Solicitor General. Official site: https://www2.gov.bc.ca/gov/content/life-events/death/coroners-service
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/org-chart-pssg
 - **What it does:** Investigates unnatural, sudden and unexpected deaths, holds inquests and death review panels and makes prevention recommendations.
-- **Held:** no start date; first seen 2003; names on file: Coroners Service (seen 2003); parents on file: Ministry of Public Safety and Solicitor General (seen 2003)
+- **Held:** no start date; first seen 2003; names on file: Coroners Service (seen 2003), BC Coroners Service (seen 2010), BC Coroners Service (seen 2015), BC Coroners Service (seen 2020), BC Coroners Service (seen 2025); parents on file: Ministry of Public Safety and Solicitor General (seen 2003)
 - **Events on file:** 1871 function origin; 1969 office established; 1979 unit established; 2003 name first observed; 2007 administrative grouping; 2007-05-31 legislation assented
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Coroners Service", "Coroners Service"
 - **Questions:**
   - A. It is already seen in 2003. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 6 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 10. BC Corrections
+### 8. BC Corrections
 
 - **id** `bc-corrections` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Public Safety and Solicitor General. Official site: https://www2.gov.bc.ca/gov/content/justice/criminal-justice/corrections
@@ -141,6 +119,36 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - A. It is already seen in 2003. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 8 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 9. Office of the Fire Commissioner (OFC)
+
+- **id** `office-of-the-fire-commissioner` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Public Safety and Solicitor General. Official site: https://www2.gov.bc.ca/gov/content/safety/public-safety/fire-safety
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Administers the Fire Safety Act through fire inspections, investigations, prevention and support for local fire services.
+- **Held:** no start date; first seen 2002; names on file: Office of the Fire Commissioner (seen 2002), Office of the Fire Commissioner (seen 2005), Office of the Fire Commissioner (seen 2010), Office of the Fire Commissioner (seen 2015), Office of the Fire Commissioner (seen 2020), Office of the Fire Commissioner (seen 2025)
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Office of the Fire Commissioner", "OFC"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 10. RoadSafetyBC
+
+- **id** `roadsafetybc` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Public Safety and Solicitor General. Official site: https://www2.gov.bc.ca/gov/content/transportation/driving-and-cycling/roadsafetybc
+- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/org-chart-pssg
+- **What it does:** Leads traffic safety, sets driver licensing policy, monitors unfit drivers and reviews driving prohibitions.
+- **Held:** no start date; first seen 2015; names on file: RoadSafetyBC (seen 2015), RoadSafetyBC (seen 2020), RoadSafetyBC (seen 2025)
+- **Events on file:** 2015 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "RoadSafetyBC"
+- **Questions:**
+  - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 11. Civil Forfeiture Office
 
@@ -252,58 +260,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "office-of-the-fire-commissioner",
-      "name": "Office of the Fire Commissioner",
-      "kind": "office",
-      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 06",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "policing-and-security-branch",
       "name": "Policing and Security Branch",
-      "kind": "division",
-      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 06",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "roadsafetybc",
-      "name": "RoadSafetyBC",
       "kind": "division",
       "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
       "established": null,
@@ -404,6 +362,56 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "bc-corrections",
       "name": "BC Corrections",
+      "kind": "division",
+      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 06",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "office-of-the-fire-commissioner",
+      "name": "Office of the Fire Commissioner",
+      "kind": "office",
+      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 06",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "roadsafetybc",
+      "name": "RoadSafetyBC",
       "kind": "division",
       "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
       "established": null,

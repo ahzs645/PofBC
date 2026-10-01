@@ -96,10 +96,10 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Agriculture and Food. Official site: https://bcfarmindustryreviewboard.ca/
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Supervises B.C.'s agricultural marketing boards and commissions and hears appeals and complaints on marketing decisions, farm practices and animal seizures.
-- **Held:** began 2003-11-01 (Combined BCFIRB tribunal / 2003 reorganization); names on file: British Columbia Farm Industry Review Board (2003-11-01–)
-- **Events on file:** 2003 combination; 2003-11-01 established
+- **Held:** began 2003-11-01 (Combined BCFIRB tribunal / 2003 reorganization); first seen 2005; names on file: British Columbia Farm Industry Review Board (2003-11-01–), BC Farm Industry Review Board (seen 2005), BC Farm Industry Review Board (seen 2010), BC Farm Industry Review Board (seen 2015), BC Farm Industry Review Board (seen 2020), British Columbia Farm Industry Review Board (seen 2025)
+- **Events on file:** 2003 combination; 2003-11-01 regulatory name and function transition; 2003-11-01 established; 2005 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "British Columbia Farm Industry Review Board", "BCFIRB"
+- **Search for:** "British Columbia Farm Industry Review Board", "BCFIRB", "BC Farm Industry Review Board", "BC Farm Industry Review Board", "BC Farm Industry Review Board", "BC Farm Industry Review Board"
 - **Questions:**
   - C. Names and parents: extend what is on file; fill the years between observations.
 

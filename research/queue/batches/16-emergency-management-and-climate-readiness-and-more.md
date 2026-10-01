@@ -135,31 +135,35 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Short-Term Rental Branch"
 - **Questions:** A, B and C, as above.
 
-### 11. University Endowment Lands (UEL)
-
-- **id** `university-endowment-lands` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Housing and Municipal Affairs.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hous.pdf
-- **What it does:** The ministry provides local services and oversees land use in the University Endowment Lands.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "University Endowment Lands", "UEL"
-- **Questions:** A, B and C, as above.
-
-### 12. Residential Tenancy Branch (RTB)
+### 11. Residential Tenancy Branch (RTB)
 
 - **id** `residential-tenancy-branch` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Housing and Municipal Affairs. Official site: https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hous.pdf
 - **What it does:** Provides information and dispute resolution for landlords and tenants under the Residential Tenancy and Manufactured Home Park Tenancy Acts.
-- **Held:** no start date
-- **Events on file:** 1974 legislation enacted; 1984 unit established
-- **Review:** not yet researched
-- **Search for:** "Residential Tenancy Branch", "RTB"
+- **Held:** no start date; first seen 2010; names on file: residential tenancy branch (seen 2010), residential tenancy branch (seen 2015), residential tenancy branch (seen 2020), Residential Tenancy Branch (seen 2025)
+- **Events on file:** 1974 legislation enacted; 1984 unit established; 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Residential Tenancy Branch", "RTB", "residential tenancy branch", "residential tenancy branch", "residential tenancy branch"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 12. University Endowment Lands (UEL)
+
+- **id** `university-endowment-lands` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Housing and Municipal Affairs.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hous.pdf
+- **What it does:** The ministry provides local services and oversees land use in the University Endowment Lands.
+- **Held:** no start date; first seen 2002; names on file: University Endowment Lands (seen 2002), University Endowment Lands (seen 2005), University Endowment Lands (seen 2010), University Endowment Lands (seen 2015), University Endowment Lands (seen 2020), University Endowment Lands (seen 2025)
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "University Endowment Lands", "UEL"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ## Hand back
 
@@ -420,8 +424,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "university-endowment-lands",
-      "name": "University Endowment Lands",
+      "id": "residential-tenancy-branch",
+      "name": "Residential Tenancy Branch",
       "kind": "office",
       "parent_today": "ministry-of-housing-and-municipal-affairs-2024",
       "established": null,
@@ -445,8 +449,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "residential-tenancy-branch",
-      "name": "Residential Tenancy Branch",
+      "id": "university-endowment-lands",
+      "name": "University Endowment Lands",
       "kind": "office",
       "parent_today": "ministry-of-housing-and-municipal-affairs-2024",
       "established": null,

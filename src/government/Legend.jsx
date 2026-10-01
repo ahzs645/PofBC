@@ -150,12 +150,12 @@ export const Legend = ({ hiddenKinds, hiddenRelations, onToggleKinds, onToggleRe
             </Row>
           ))}
           <p className="gov-legend__heading">Evidence</p>
-          <Row label="Undated bodies" shown={Boolean(includeUndated)} onToggle={onToggleUndated}>
+          <Row label="Unconfirmed bodies" shown={Boolean(includeUndated)} onToggle={onToggleUndated}>
             <EntitySwatch shape="square" ink={ink} fill={fill} dashed />
           </Row>
           <p className="gov-legend__hint">
-            Bodies whose start no source gives, drawn faint before today: an unknown start is not a
-            sign they did not exist.
+            Bodies that exist today but that no source yet shows in this year, drawn faint: an unknown
+            start is not a sign they did not exist.
           </p>
           {hiddenRows > 0 && (
             <button type="button" className="gov-legend__reset" onClick={onReset}>Show all</button>

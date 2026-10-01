@@ -122,14 +122,14 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Health. Official site: https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/msp
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf
 - **What it does:** The provincial health insurance plan, covering most physician, diagnostic and laboratory services for residents.
-- **Held:** no start date; first seen 2003; names on file: Medical Services Plan (seen 2003); parents on file: Ministry of Health Services (seen 2003)
-- **Events on file:** 2003 name first observed
+- **Held:** no start date; first seen 2002; names on file: Medical Services Plan (seen 2003), Medical Services Plan (seen 2002), Medical Services Plan (seen 2005), Medical Services Plan (seen 2010), Medical Services Plan (seen 2015), Medical Services Plan (seen 2020), Medical Services Plan (seen 2025); parents on file: Ministry of Health Services (seen 2003)
+- **Events on file:** 2002 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Medical Services Plan", "MSP"
 - **Questions:**
-  - A. It is already seen in 2003. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 10. Office of the Provincial Health Officer (PHO)
 
@@ -137,14 +137,14 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Health. Official site: https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer
 - **Collected from:** https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer
 - **What it does:** Office of B.C.'s senior public health official, who monitors population health and gives independent advice under the Public Health Act.
-- **Held:** no start date
-- **Events on file:** 1892 office established; 1911 legislation enacted; 2008-05-29 legislation assented; 2018 executive appointment
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2002; names on file: Office of the Provincial Health Officer (seen 2002), Office of the Provincial Health Officer (seen 2010)
+- **Events on file:** 1892 office established; 1911 legislation enacted; 2002 name first observed; 2008-05-29 legislation assented; 2018 executive appointment
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Office of the Provincial Health Officer", "PHO"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 4 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 5 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 11. Health Professions and Occupations Regulatory Oversight Office
 
@@ -177,12 +177,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Health. Official site: https://www.seniorsadvocatebc.ca/
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Monitors and reports on services for seniors, including health care, housing, transportation and income supports.
-- **Held:** began 2014 (Creation of the Office of the Seniors Advocate)
-- **Events on file:** 2013-03-14 legislation assented; 2014 established; 2014-03-31 executive appointment effective
+- **Held:** began 2014 (Creation of the Office of the Seniors Advocate); first seen 2015; names on file: Office of the Seniors Advocate (seen 2015), Office of the Seniors Advocate (seen 2020), Office of the Seniors Advocate (seen 2025)
+- **Events on file:** 2013-03-14 legislation assented; 2014 established; 2014-03-31 executive appointment effective; 2015 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Office of the Seniors Advocate"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ## Hand back
 

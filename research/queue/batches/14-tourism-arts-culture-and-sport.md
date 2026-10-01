@@ -35,18 +35,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "BC Arts and Culture Endowment"
 - **Questions:** A, B and C, as above.
 
-### 2. Community Gaming Grants
-
-- **id** `community-gaming-grants` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www2.gov.bc.ca/gov/content/sports-culture/gambling-fundraising/gaming-grants
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/tacs.pdf
-- **What it does:** Distributes gaming revenue to community non-profits in arts and culture, sport, public safety, environment, parent advisory councils and human and social services.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Community Gaming Grants"
-- **Questions:** A, B and C, as above.
-
-### 3. Heritage Branch
+### 2. Heritage Branch
 
 - **id** `heritage-branch` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places
@@ -57,7 +46,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Heritage Branch"
 - **Questions:** A, B and C, as above.
 
-### 4. Let's Go BC
+### 3. Let's Go BC
 
 - **id** `lets-go-bc` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://letsgobc.ca/
@@ -68,7 +57,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Let's Go BC"
 - **Questions:** A, B and C, as above.
 
-### 5. Mountain Resorts Branch
+### 4. Mountain Resorts Branch
 
 - **id** `mountain-resorts-branch` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resort-development
@@ -79,7 +68,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Mountain Resorts Branch"
 - **Questions:** A, B and C, as above.
 
-### 6. Office of the BC Athletic Commissioner
+### 5. Office of the BC Athletic Commissioner
 
 - **id** `office-of-the-bc-athletic-commissioner` · office · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www.bcathleticcommission.ca/
@@ -90,7 +79,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Office of the BC Athletic Commissioner"
 - **Questions:** A, B and C, as above.
 
-### 7. Physical Fitness and Amateur Sports Fund
+### 6. Physical Fitness and Amateur Sports Fund
 
 - **id** `physical-fitness-and-amateur-sports-fund` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Tourism, Arts, Culture and Sport.
@@ -100,6 +89,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Review:** not yet researched
 - **Search for:** "Physical Fitness and Amateur Sports Fund"
 - **Questions:** A, B and C, as above.
+
+### 7. Community Gaming Grants
+
+- **id** `community-gaming-grants` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www2.gov.bc.ca/gov/content/sports-culture/gambling-fundraising/gaming-grants
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/tacs.pdf
+- **What it does:** Distributes gaming revenue to community non-profits in arts and culture, sport, public safety, environment, parent advisory councils and human and social services.
+- **Held:** no start date; first seen 2015; names on file: Community Gaming Grants (seen 2015), Community Gaming Grants (seen 2020), Community Gaming Grants (seen 2025)
+- **Events on file:** 2015 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Community Gaming Grants"
+- **Questions:**
+  - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ## Hand back
 
@@ -112,31 +116,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "bc-arts-and-culture-endowment",
       "name": "BC Arts and Culture Endowment",
-      "kind": "program",
-      "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 14",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "community-gaming-grants",
-      "name": "Community Gaming Grants",
       "kind": "program",
       "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
       "established": null,
@@ -262,6 +241,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "physical-fitness-and-amateur-sports-fund",
       "name": "Physical Fitness and Amateur Sports Fund",
+      "kind": "program",
+      "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 14",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "community-gaming-grants",
+      "name": "Community Gaming Grants",
       "kind": "program",
       "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
       "established": null,

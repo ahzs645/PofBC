@@ -35,18 +35,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "BC Newcomers Services Program"
 - **Questions:** A, B and C, as above.
 
-### 2. BC Provincial Nominee Program (BC PNP)
-
-- **id** `bc-provincial-nominee-program` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www.welcomebc.ca/Immigrate-to-B-C/B-C-Provincial-Nominee-Program
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Economic immigration program that nominates workers and entrepreneurs for permanent residence in B.C.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC Provincial Nominee Program", "BC PNP"
-- **Questions:** A, B and C, as above.
-
-### 3. Education Quality Assurance (EQA)
+### 2. Education Quality Assurance (EQA)
 
 - **id** `education-quality-assurance` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www2.gov.bc.ca/gov/content/education-training/post-secondary-education/institution-resources-administration/post-secondary-international-education-designated-institutions-act
@@ -57,7 +46,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Education Quality Assurance", "EQA"
 - **Questions:** A, B and C, as above.
 
-### 4. EducationPlannerBC
+### 3. EducationPlannerBC
 
 - **id** `educationplannerbc` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www.educationplannerbc.ca/
@@ -68,7 +57,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "EducationPlannerBC"
 - **Questions:** A, B and C, as above.
 
-### 5. Office for International Credential Recognition (OICR)
+### 4. Office for International Credential Recognition (OICR)
 
 - **id** `office-for-international-credential-recognition` · office · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/regulatory-authorities/oicr
@@ -79,7 +68,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Office for International Credential Recognition", "OICR"
 - **Questions:** A, B and C, as above.
 
-### 6. Private Training Institutions Branch (PTIB)
+### 5. Private Training Institutions Branch (PTIB)
 
 - **id** `private-training-institutions-branch` · office · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Post-Secondary Education and Future Skills.
@@ -90,7 +79,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Private Training Institutions Branch", "PTIB"
 - **Questions:** A, B and C, as above.
 
-### 7. Safe Campuses BC
+### 6. Safe Campuses BC
 
 - **id** `safe-campuses-bc` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www2.gov.bc.ca/gov/content/safe-campuses-bc
@@ -101,7 +90,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Safe Campuses BC"
 - **Questions:** A, B and C, as above.
 
-### 8. StudentAid BC (SABC)
+### 7. StudentAid BC (SABC)
 
 - **id** `studentaid-bc` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://studentaidbc.ca/sabc-home-page
@@ -111,6 +100,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Review:** not yet researched
 - **Search for:** "StudentAid BC", "SABC"
 - **Questions:** A, B and C, as above.
+
+### 8. BC Provincial Nominee Program (BC PNP)
+
+- **id** `bc-provincial-nominee-program` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www.welcomebc.ca/Immigrate-to-B-C/B-C-Provincial-Nominee-Program
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Economic immigration program that nominates workers and entrepreneurs for permanent residence in B.C.
+- **Held:** no start date; first seen 2015; names on file: BC Provincial Nominee Program (seen 2015), British Columbia Provincial Nominee Program (seen 2020), British Columbia Provincial Nominee Program (seen 2025)
+- **Events on file:** 2015 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "BC Provincial Nominee Program", "BC PNP", "British Columbia Provincial Nominee Program", "British Columbia Provincial Nominee Program"
+- **Questions:**
+  - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ## Hand back
 
@@ -123,31 +127,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "bc-newcomers-services-program",
       "name": "BC Newcomers Services Program",
-      "kind": "program",
-      "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 09",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "bc-provincial-nominee-program",
-      "name": "BC Provincial Nominee Program",
       "kind": "program",
       "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
       "established": null,
@@ -298,6 +277,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "studentaid-bc",
       "name": "StudentAid BC",
+      "kind": "program",
+      "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 09",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-provincial-nominee-program",
+      "name": "BC Provincial Nominee Program",
       "kind": "program",
       "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
       "established": null,

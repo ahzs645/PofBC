@@ -6,8 +6,8 @@ as of 2026-09-26 (the Coverage card under the Government view's sources measures
 
 **Where the atlas stands:** 1,973 of 1,990 ministry-years have a minister on record (99%, after
 round 3); 2,218 of 2,909 body-years have a responsible ministry stated by a source (76%), 89 more are
-placed by inference, and **602 have none**; **39 of 238 current sub-agencies** have a start date
-(2026-09-30; [`queue/INDEX.md`](queue/INDEX.md) has the live count).
+placed by inference, and **602 have none**; **41 of 238 current sub-agencies** have a start date and
+**50 more** a dated sighting (2026-10-01; [`queue/INDEX.md`](queue/INDEX.md) has the live count).
 
 ## 1. Sub-agencies — the biggest visible gap
 

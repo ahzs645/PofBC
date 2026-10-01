@@ -57,18 +57,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "ChildCareBC"
 - **Questions:** A, B and C, as above.
 
-### 4. Early Childhood Educator Registry
-
-- **id** `early-childhood-educator-registry` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/education-training/early-learning/teach/training-and-professional-development/become-an-early-childhood-educator
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Certifies early childhood educators under the Community Care and Assisted Living Act.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Early Childhood Educator Registry"
-- **Questions:** A, B and C, as above.
-
-### 5. erase (expect respect & a safe education) (erase)
+### 4. erase (expect respect & a safe education) (erase)
 
 - **id** `erase` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/erase
@@ -79,7 +68,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "erase (expect respect & a safe education)", "erase"
 - **Questions:** A, B and C, as above.
 
-### 6. Feeding Futures
+### 5. Feeding Futures
 
 - **id** `feeding-futures` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/program-management/feeding-futures
@@ -90,7 +79,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Feeding Futures"
 - **Questions:** A, B and C, as above.
 
-### 7. Commissioner for Teacher Regulation
+### 6. Commissioner for Teacher Regulation
 
 - **id** `commissioner-for-teacher-regulation` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/education-training/k-12/teach/teacher-regulation
@@ -104,6 +93,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 7. Early Childhood Educator Registry
+
+- **id** `early-childhood-educator-registry` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/education-training/early-learning/teach/training-and-professional-development/become-an-early-childhood-educator
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Certifies early childhood educators under the Community Care and Assisted Living Act.
+- **Held:** no start date; first seen 2015; names on file: Early Childhood Educator Registry (seen 2015), Early Childhood Educator Registry (seen 2020), Early Childhood Educator Registry (seen 2025)
+- **Events on file:** 2015 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Early Childhood Educator Registry"
+- **Questions:**
+  - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 8. StrongStart BC
 
@@ -230,31 +234,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "early-childhood-educator-registry",
-      "name": "Early Childhood Educator Registry",
-      "kind": "office",
-      "parent_today": "ministry-of-education-and-child-care-2022",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 08",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "erase",
       "name": "erase (expect respect & a safe education)",
       "kind": "program",
@@ -307,6 +286,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "commissioner-for-teacher-regulation",
       "name": "Commissioner for Teacher Regulation",
+      "kind": "office",
+      "parent_today": "ministry-of-education-and-child-care-2022",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 08",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "early-childhood-educator-registry",
+      "name": "Early Childhood Educator Registry",
       "kind": "office",
       "parent_today": "ministry-of-education-and-child-care-2022",
       "established": null,

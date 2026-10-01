@@ -42,18 +42,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "BCLIQUOR", "BC Liquor Stores"
 - **Questions:** A, B and C, as above.
 
-### 3. BC Archives
-
-- **id** `bc-archives` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Royal British Columbia Museum Corporation. Official site: https://royalbcmuseum.bc.ca/bc-archives
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/rbcm.pdf
-- **What it does:** The provincial archives, part of the Royal BC Museum under the Museum Act, holding the recorded heritage of British Columbia and the archives of government.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC Archives"
-- **Questions:** A, B and C, as above.
-
-### 4. IMAX Victoria
+### 3. IMAX Victoria
 
 - **id** `imax-victoria` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Royal British Columbia Museum Corporation.
@@ -63,6 +52,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Review:** not yet researched
 - **Search for:** "IMAX Victoria"
 - **Questions:** A, B and C, as above.
+
+### 4. BC Archives
+
+- **id** `bc-archives` · division · **P2 — undated, but some history on file**
+- **Today:** under Royal British Columbia Museum Corporation. Official site: https://royalbcmuseum.bc.ca/bc-archives
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/rbcm.pdf
+- **What it does:** The provincial archives, part of the Royal BC Museum under the Museum Act, holding the recorded heritage of British Columbia and the archives of government.
+- **Held:** no start date; first seen 2002; names on file: BC Archives (seen 2002)
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "BC Archives"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 5. BCR Properties Ltd.
 
@@ -170,8 +174,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "bc-archives",
-      "name": "BC Archives",
+      "id": "imax-victoria",
+      "name": "IMAX Victoria",
       "kind": "division",
       "parent_today": "royal-bc-museum",
       "established": null,
@@ -195,8 +199,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "imax-victoria",
-      "name": "IMAX Victoria",
+      "id": "bc-archives",
+      "name": "BC Archives",
       "kind": "division",
       "parent_today": "royal-bc-museum",
       "established": null,

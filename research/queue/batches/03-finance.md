@@ -142,14 +142,14 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/housing-tenancy/owning-a-home/property-assessment-review-panels2
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
 - **What it does:** First level of appeal for BC property assessments under the Assessment Act, hearing owners' complaints each year from February 1 to March 15.
-- **Held:** no start date; first seen 2025; names on file: Property Assessment Review Panels (seen 2025)
-- **Events on file:** 2025 name first observed
+- **Held:** no start date; first seen 2005; names on file: Property Assessment Review Panels (seen 2025), Property Assessment Review Panels (seen 2005), Property Assessment Review Panels (seen 2010), Property Assessment Review Panels (seen 2015), Property Assessment Review Panels (seen 2020)
+- **Events on file:** 2005 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Property Assessment Review Panels", "PARP"
 - **Questions:**
-  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - A. It is already seen in 2005. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 10. Public Sector Employers' Council Secretariat (PSEC Secretariat)
 
@@ -157,12 +157,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/public-sector-employers-council-secretariat
 - **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/public-sector-employers-council-secretariat
 - **What it does:** Coordinates labour relations, compensation planning and HR management across the broader provincial public sector.
-- **Held:** no start date; first seen 2005; names on file: Public Sector Employers' Council Secretariat (seen 2015), Public Sector Employers' Council Secretariat (seen 2020), Public Sector Employers' Council Secretariat (seen 2025)
-- **Events on file:** 2005 name first observed
+- **Held:** no start date; first seen 2002; names on file: Public Sector Employers' Council Secretariat (seen 2015), Public Sector Employers' Council Secretariat (seen 2020), Public Sector Employers' Council Secretariat (seen 2025), Public Sector Employers' Council Secretariat (seen 2002), Public Sector Employers' Council Secretariat (seen 2010), Public Sector Employers’ Council Secretariat (seen 2015), Public Sector Employers’ Council Secretariat (seen 2020), Public Sector Employers’ Council Secretariat (seen 2025)
+- **Events on file:** 2002 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Public Sector Employers' Council Secretariat", "PSEC Secretariat"
+- **Search for:** "Public Sector Employers' Council Secretariat", "PSEC Secretariat", "Public Sector Employers’ Council Secretariat", "Public Sector Employers’ Council Secretariat", "Public Sector Employers’ Council Secretariat"
 - **Questions:**
-  - A. It is already seen in 2005. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 

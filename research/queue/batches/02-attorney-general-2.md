@@ -24,19 +24,19 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ## The bodies (13)
 
-### 1. Skilled Trades BC Appeal Board (STBCAB)
+### 1. Surface Rights Board (SRB)
 
-- **id** `skilled-trades-bc-appeal-board` · board · **P2 — undated, but some history on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www.stbcab.ca/
+- **id** `surface-rights-board` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: http://www.surfacerightsboard.bc.ca/
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
-- **What it does:** Hears appeals under section 45 of the Skilled Trades BC Act about SkilledTradesBC decisions on trainees, authorizations and credentials.
-- **Held:** no start date; first seen 2006; names on file: Industry Training Appeal Board (seen 2006), Skilled Trades BC Appeal Board (2022-12-01–)
-- **Events on file:** 2006 operational start; 2006 name first observed; 2022-12-01 legal name change
+- **What it does:** Resolves disputes between landowners and companies that need access to private land to explore for or produce Crown-owned subsurface resources such as oil, gas, coal, minerals and geothermal.
+- **Held:** no start date; first seen 2020; names on file: Surface Rights Board (seen 2020), Surface Rights Board (seen 2025)
+- **Events on file:** 2020 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Skilled Trades BC Appeal Board", "STBCAB", "Industry Training Appeal Board"
+- **Search for:** "Surface Rights Board", "SRB"
 - **Questions:**
-  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
-  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 2. BC Prosecution Service (BCPS)
@@ -58,8 +58,8 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://civilresolutionbc.ca/
 - **Collected from:** https://civilresolutionbc.ca/
 - **What it does:** Canada's first online tribunal, resolving strata, small claims, minor vehicle injury, intimate image and other disputes without the need to go to court.
-- **Held:** began 2016-07-13 (Statutory establishment provision (section 2) in force)
-- **Events on file:** 2012-05 legislation assented; 2012-05-31 legislation assented; 2013-03-15 executive appointment; 2016-07-13 operational start; 2016-07-13 established; 2016-07-13 operational start; 2017-06-01 jurisdiction expansion; 2019-04-01 jurisdiction expansion; 2019-07-01 jurisdiction expansion; 2019-07-15 jurisdiction expansion; 2024-04-26 executive appointment
+- **Held:** began 2016-07-13 (Statutory establishment provision (section 2) in force); first seen 2025; names on file: Civil Resolution Tribunal (seen 2025)
+- **Events on file:** 2012-05 legislation assented; 2012-05-31 legislation assented; 2013-03-15 executive appointment; 2016-07-13 operational start; 2016-07-13 established; 2016-07-13 operational start; 2017-06-01 jurisdiction expansion; 2019-04-01 jurisdiction expansion; 2019-07-01 jurisdiction expansion; 2019-07-15 jurisdiction expansion; 2024-04-26 executive appointment; 2025 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Civil Resolution Tribunal", "CRT"
 - **Questions:**
@@ -71,12 +71,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bcerat.ca/
 - **Collected from:** https://www.bcerat.ca/
 - **What it does:** Hears appeals of certain orders, penalties and permitting decisions of the BC Energy Regulator under the Oil and Gas Activities Act as amended in 2023.
-- **Held:** began 2010-10-04 (Commencement of the Act establishing the Oil and Gas Appeal Tribunal under section 19); names on file: Oil and Gas Appeal Tribunal (seen 2010-10-04)
-- **Events on file:** 2010-10-04 established; 2010-10-07 initial members appointed
+- **Held:** began 2010-10-04 (Commencement of the Act establishing the Oil and Gas Appeal Tribunal under section 19); first seen 2015; names on file: Oil and Gas Appeal Tribunal (seen 2010-10-04), Oil and Gas Appeal Tribunal (seen 2015), Oil and Gas Appeal Tribunal (seen 2020), Energy Resource Appeal Tribunal (seen 2025)
+- **Events on file:** 2010-10-04 established; 2010-10-07 initial members appointed; 2015 name first observed; 2023-09-01 rename
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Energy Resource Appeal Tribunal", "ERAT", "Oil and Gas Appeal Tribunal"
+- **Search for:** "Energy Resource Appeal Tribunal", "ERAT", "Oil and Gas Appeal Tribunal", "Oil and Gas Appeal Tribunal", "Oil and Gas Appeal Tribunal"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 5. Environmental Appeal Board (EAB)
 
@@ -84,12 +84,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bceab.ca/
 - **Collected from:** https://www.bceab.ca/
 - **What it does:** Decides appeals of certain government decisions under nine provincial statutes on environmental issues such as water licences, contaminated sites, pesticides and hunting licences.
-- **Held:** began 1981
-- **Events on file:** 1981 legal basis year observed; 1982 establishment claim
+- **Held:** began 1981; first seen 2020; names on file: Environmental Appeal Board (seen 2020), Environmental Appeal Board (seen 2025)
+- **Events on file:** 1981 legal basis year observed; 1982 establishment claim; 2020 name first observed
 - **Review:** partly reviewed (requires_reconciliation): extend the existing record, do not start again
 - **Search for:** "Environmental Appeal Board", "EAB"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
   - D. Reconcile: the review found competing dates. Find the instrument that settles it; do not choose between them yourself — record every claim with its source.
 
 ### 6. Financial Services Tribunal (FST)
@@ -98,12 +98,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bcfst.ca/
 - **Collected from:** https://www.bcfst.ca/home/about-the-tribunal/
 - **What it does:** Hears appeals of enforcement decisions by the Insurance Council of BC, the Superintendents of Real Estate, Pensions and Financial Institutions, and the Registrar of Mortgage Brokers.
-- **Held:** began 2004 (Tribunal establishment)
-- **Events on file:** 2004 established
+- **Held:** began 2004 (Tribunal establishment); first seen 2005; names on file: Financial Services Tribunal (seen 2005), Financial Services Tribunal (seen 2010), Financial Services Tribunal (seen 2015), Financial Services Tribunal (seen 2020), Financial Services Tribunal (seen 2025)
+- **Events on file:** 2004 established; 2005 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Financial Services Tribunal", "FST"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 7. Forest Appeals Commission (FAC)
 
@@ -111,12 +111,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bcfac.ca/
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector
 - **What it does:** Decides appeals of certain decisions under five provincial statutes on forests and environmental issues, now operating under the Forest and Range Practices Act.
-- **Held:** began 1995 (Commission establishment under the Forest Practices Code)
-- **Events on file:** 1995 established; 1995-06-15 legislation in force; 1999-04 jurisdiction expansion
+- **Held:** began 1995 (Commission establishment under the Forest Practices Code); first seen 2020; names on file: Forest Appeals Commission (seen 2020), Forest Appeals Commission (seen 2025)
+- **Events on file:** 1995 established; 1995-06-15 legislation in force; 1999-04 jurisdiction expansion; 2020 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Forest Appeals Commission", "FAC"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 8. Health Professions Review Board (HPRB)
 
@@ -124,12 +124,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bchprb.ca/
 - **Collected from:** https://www.bchprb.ca/
 - **What it does:** Reviews certain registration and complaint decisions of the health profession regulatory colleges, now under the Health Professions and Occupations Act.
-- **Held:** began 2009-03-16 (Board comes into effect)
-- **Events on file:** 2009-03-16 established
+- **Held:** began 2009-03-16 (Board comes into effect); first seen 2020; names on file: Health Professions Review Board (seen 2020), Health Professions Review Board (seen 2025)
+- **Events on file:** 2009-03-16 established; 2020 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Health Professions Review Board", "HPRB"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 9. Hospital Appeal Board (HAB)
 
@@ -137,12 +137,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bchab.ca/
 - **Collected from:** https://www.bchab.ca/home/about/
 - **What it does:** Hears medical practitioners' appeals of hospital board of management decisions affecting hospital privileges under the Hospital Act.
-- **Held:** began 1973 (Body under its earlier name); names on file: Medical Appeal Board (seen 1973)
-- **Events on file:** 1973 established
+- **Held:** began 1973 (Body under its earlier name); first seen 2020; names on file: Medical Appeal Board (seen 1973), Hospital Appeal Board (seen 2020), Hospital Appeal Board (seen 2025)
+- **Events on file:** 1973 established; 2020 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Hospital Appeal Board", "HAB", "Medical Appeal Board"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 10. Independent Investigations Office of BC (IIO)
 
@@ -176,12 +176,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bcmhrb.ca/
 - **Collected from:** https://www.bcmhrb.ca/
 - **What it does:** Conducts review panel hearings on whether people certified or detained involuntarily in provincial mental health facilities should remain so under the Mental Health Act.
-- **Held:** began 2005-04 (Independent tribunal establishment month)
-- **Events on file:** 2005-04 established
+- **Held:** began 2005-04 (Independent tribunal establishment month); first seen 2020; names on file: Mental Health Review Board (seen 2020), Mental Health Review Board (seen 2025)
+- **Events on file:** 2005-04 established; 2020 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Mental Health Review Board", "MHRB"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 13. Public Guardian and Trustee of British Columbia (PGT)
 
@@ -189,12 +189,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.trustee.bc.ca/
 - **Collected from:** https://www.trustee.bc.ca/
 - **What it does:** Helps people who need assistance with decision-making or are under 19 and administers deceased estates.
-- **Held:** began 1963 (Public Trustee office / PGT lineage); names on file: Public Trustee of British Columbia (seen 1999-03-19)
-- **Events on file:** 1963 unit established; 1989 functions transferred; 2000 legal name change; 2000-02-28 legislation repealed
+- **Held:** began 1963 (Public Trustee office / PGT lineage); first seen 2002; names on file: Public Trustee of British Columbia (seen 1999-03-19), Public Guardian and Trustee of British Columbia (seen 2002), Public Guardian and Trustee of BC (seen 2010)
+- **Events on file:** 1963 unit established; 1989 functions transferred; 2000 legal name change; 2000-02-28 legislation repealed; 2002 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Public Guardian and Trustee of British Columbia", "PGT", "Public Trustee of British Columbia"
+- **Search for:** "Public Guardian and Trustee of British Columbia", "PGT", "Public Trustee of British Columbia", "Public Guardian and Trustee of BC"
 - **Questions:**
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+  - C. Names and parents: extend what is on file; fill the years between observations.
 
 ## Hand back
 
@@ -205,8 +205,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
   "batch": "02",
   "records": [
     {
-      "id": "skilled-trades-bc-appeal-board",
-      "name": "Skilled Trades BC Appeal Board",
+      "id": "surface-rights-board",
+      "name": "Surface Rights Board",
       "kind": "board",
       "parent_today": "ministry-of-attorney-general-2017",
       "established": null,

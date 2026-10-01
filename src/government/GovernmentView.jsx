@@ -40,13 +40,14 @@ const readParams = () => {
     node: params.get('node'),
     mode: ['graph', 'list', 'compare'].includes(mode) ? mode : 'graph',
     compare: validYear(compare) ? compare : null,
-    undated: params.get('undated') === '1'
+    // Unconfirmed bodies are drawn unless the link turns them off.
+    undated: params.get('undated') !== '0'
   }
 }
 
 /**
  * Everything that decides what is on screen goes in the address bar — the year, the body, the view,
- * the year compared against, and whether undated bodies are drawn — so a copied link restores it.
+ * the year compared against, and whether unconfirmed bodies are drawn — so a copied link restores it.
  */
 const writeParams = ({ year, node, mode, compare, undated }) => {
   if (!globalThis.history?.replaceState) return
@@ -57,7 +58,7 @@ const writeParams = ({ year, node, mode, compare, undated }) => {
   set('node', node)
   set('mode', mode === 'graph' ? null : mode)
   set('compare', mode === 'compare' ? compare : null)
-  set('undated', undated ? 1 : null)
+  set('undated', undated ? null : 0)
   globalThis.history.replaceState(null, '', url)
 }
 
