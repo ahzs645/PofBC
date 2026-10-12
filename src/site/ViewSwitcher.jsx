@@ -11,6 +11,7 @@ import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 export const VIEWS = [
   { id: 'generator', label: 'Generator', description: 'A ministry lockup in any of the four identities' },
   { id: 'gallery', label: 'Logos', description: 'BC Hydro, BC Timber Sales, BC Parks, and the Province’s one-off marks' },
+  { id: 'internal', label: 'Internal Logos', description: 'Internal logo families and their history, starting with Forests' },
   { id: 'government', label: 'Government', description: 'The Province’s structure, back to 1871', badge: 'New' }
 ]
 

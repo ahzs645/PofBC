@@ -17,6 +17,23 @@ Already cloned without `--recurse-submodules`? `git submodule update --init --re
 
 ## Four identities
 
+**Internal Logos** is a separate view in the title menu (`?view=internal`). It
+opens on a Forests family card. Selecting it shows Forest Oval's three main
+ovals: Forests, the long ministry name, and Forest Service, with historical
+comments and sources beneath each logo. Each oval opens its colour and service
+variants: full colour, black and white, generated green and reversed colourways,
+and the related Wildfire presets. Forest Service also includes black
+and gold, navy and gold, and the Airtanker package with the shared tree crest.
+Display recolours are labelled
+separately from reference variants. The family has a direct link at
+`?view=internal&internal=forests`; add `&internal-logo=forest-service` to open a
+design's variants. Known sightings and related uses are kept
+separate from unverified adoption dates. The artwork and
+lettering engine are bundled locally from a pinned Forest Oval revision; see
+[`vendor/forestoval/README.md`](vendor/forestoval/README.md). The badges retain
+their reference/reconstruction labels. This view displays the specimens without
+the lettering editor or its options.
+
 An **Identity** switch at the top of the controls chooses between them. They have almost nothing in
 common, so most of the panel changes with it.
 
