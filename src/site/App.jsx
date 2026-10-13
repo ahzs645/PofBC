@@ -10,6 +10,8 @@ const GalleryView = lazy(() => import('../gallery/GalleryView.jsx').then((module
 // Likewise the government diagram, which carries a century and a half of ministries with it.
 const GovernmentView = lazy(() => import('../government/GovernmentView.jsx').then((module) => ({ default: module.GovernmentView })))
 const InternalLogosView = lazy(() => import('../internal/InternalLogosView.jsx').then((module) => ({ default: module.InternalLogosView })))
+// The posters carry their own drawings, photographs and stage, none of which the generator needs.
+const PostersView = lazy(() => import('../posters/PostersView.jsx').then((module) => ({ default: module.PostersView })))
 import { generatorPatchFor } from '../government/eraMark.js'
 import {
   FLAG_PALETTE_ORDER, FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_SWATCHES
@@ -35,6 +37,7 @@ import { MinistryField } from './MinistryField.jsx'
 import { Segmented } from './Segmented.jsx'
 import { ShareLink } from './ShareLink.jsx'
 import { ViewSwitcher, VIEWS } from './ViewSwitcher.jsx'
+import { NavigationContext, searchFor } from './navigation.jsx'
 import { SunGlyph, ThemeIcon } from './icons.jsx'
 import { useSiteTheme } from './useTheme.js'
 import { useAgentTools } from './useAgentTools.js'
@@ -130,7 +133,7 @@ const initialView = () => {
 const writeView = (view) => {
   if (!globalThis.history?.replaceState) return
   const url = new URL(globalThis.location.href)
-  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'part']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   globalThis.history.replaceState(null, '', url)
 }
@@ -141,10 +144,24 @@ export const App = () => {
   // to do with the generator's state. The diagram keeps its place in the address bar, so a link to
   // it opens it.
   const [view, setView] = useState(initialView)
+  // Bumped by every link between views, so the view it lands on opens afresh and reads its place
+  // from the address — even when it is the view already on screen.
+  const [visit, setVisit] = useState(0)
   const theme = useSiteTheme()
   const showView = (next) => {
     setView(next)
     writeView(next)
+  }
+  // A link from one view to a place in another: the posters to the emblem they carry, the emblem to
+  // the posters, either to the body in the government diagram.
+  const navigate = (params) => {
+    const next = VIEW_IDS.includes(params.view) ? params.view : 'generator'
+    const url = new URL(globalThis.location.href)
+    url.search = searchFor({ ...params, view: next === 'generator' ? null : next })
+    globalThis.history?.replaceState(null, '', url)
+    setView(next)
+    setVisit((value) => value + 1)
+    globalThis.scrollTo?.({ top: 0 })
   }
   // A mark in the gallery leads to the body it stands for in the government diagram, which reads
   // its body from the address bar when it opens.
@@ -183,12 +200,13 @@ export const App = () => {
   if (view === 'government') {
     return (
       <Suspense fallback={<p className="gallery__intro">Loading the government…</p>}>
-        <GovernmentView onOpenInGenerator={openInGenerator} onChangeView={showView} />
+        <GovernmentView key={visit} onOpenInGenerator={openInGenerator} onChangeView={showView} />
       </Suspense>
     )
   }
 
   return (
+    <NavigationContext.Provider value={navigate}>
     <div className="app">
       {/* A breadcrumb card, as the government view has: the site, then the view, which opens the
           menu of the others. The heading is kept so the page still has one. */}
@@ -212,7 +230,13 @@ export const App = () => {
 
       {view === 'internal' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the oval logos…</p>}>
-          <InternalLogosView />
+          <InternalLogosView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'posters' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the posters…</p>}>
+          <PostersView key={visit} />
         </Suspense>
       )}
 
@@ -609,5 +633,6 @@ export const App = () => {
         <a href={`${import.meta.env.BASE_URL}capabilities.json`}>capabilities.json</a>.
       </p>
     </div>
+    </NavigationContext.Provider>
   )
 }

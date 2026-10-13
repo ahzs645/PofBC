@@ -5,7 +5,33 @@ const forestOval = {
   url: 'https://projects.ahmadjalil.com/forestoval/'
 }
 
+const forestServiceTimeline = {
+  title: 'BC Forest Service Centenary Society · BC Forest Service timeline',
+  url: 'https://bcfs100.for.gov.bc.ca/bscripts/timeline.asp'
+}
+
+// The posters that carry the evergreen emblem, as places in the Posters view.
+const onPoster = (poster, title, note) => ({ title, note, to: { view: 'posters', poster, part: 'emblem' } })
+
 export const FOREST_LOGOS = [
+  {
+    id: 'forest-service-emblem',
+    kind: 'emblem',
+    name: 'Forest Service evergreen emblem',
+    description: 'A dark evergreen over a white map of the province, on a rounded green badge.',
+    evidence: 'Before about 1973 · dating unconfirmed',
+    comments: [
+      'The British Columbia Forest Service’s mark before the oval designs: the mainland and its three largest islands in white, with a geometric evergreen standing over the mainland’s eastern edge, on a badge whose sides bow gently outward.',
+      'It is believed to have been in use until about 1973. No source in this collection yet confirms that date, or when the emblem was introduced; it is recorded here as the working date, to be replaced when a dated document turns up.',
+      'In the emblem’s last years the Forest Service sat within the Department of Lands, Forests and Water Resources (1962–1976). The Department of Forests was separated from it in 1976, and the Ministry of Forests Act came into force on 1 January 1979.',
+      'The artwork is a vector reconstruction from a supplied image: seven shapes — the badge, the mainland, three islands, the crown and the trunk — with flat colours chosen from the image, not verified ink specifications. The same drawing is used on both Forest Service posters in the Posters view.'
+    ],
+    sources: [forestServiceTimeline],
+    seenOn: [
+      onPoster('reward-living-forest', 'REWARD — A Living Forest', 'Campfire poster · bottom right, beside the service’s name'),
+      onPoster('enjoy-protect-forests', 'Enjoy & Protect our Forests', 'Sign · bottom right, beside the service’s name')
+    ]
+  },
   {
     id: 'forests',
     name: 'Forests',
@@ -78,7 +104,19 @@ const oneInk = (foreground, background) => ({
   descriptor: foreground, strip: foreground, stripText: background
 })
 
-export const variantsFor = (logo) => ({
+// The emblem's colourways: its reconstructed colours, and the two greens it is printed in on the
+// photographed posters. Those were sampled from photographs, so they are approximate.
+const EMBLEM_INK = { map: '#ffffff', tree: '#00240b' }
+const emblemVariants = () => ({
+  colours: [
+    { id: 'colour', name: 'Full colour', emblem: { badge: '#278f38', ...EMBLEM_INK }, note: 'The reconstruction’s flat colours, chosen from the supplied emblem image.' },
+    { id: 'reward-lime', name: 'Lime, as on REWARD', emblem: { badge: '#8cbe0c', ...EMBLEM_INK }, note: 'The badge green sampled from the photograph of the REWARD poster. Approximate: print and photograph both shift colour.' },
+    { id: 'sign-green', name: 'Bright green, as on the sign', emblem: { badge: '#2db43c', ...EMBLEM_INK }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' }
+  ],
+  related: []
+})
+
+export const variantsFor = (logo) => logo.kind === 'emblem' ? emblemVariants() : ({
   colours: [
     { id: 'colour', name: 'Full colour', recipe: logo.id, note: 'The Forest Oval preset palette.' },
     { id: 'black', name: 'Black & white', recipe: logo.id, theme: 'mono', note: 'The Forest Oval single-colour palette.' },

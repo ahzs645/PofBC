@@ -18,9 +18,15 @@ Already cloned without `--recurse-submodules`? `git submodule update --init --re
 ## Four identities
 
 **Internal Logos** is a separate view in the title menu (`?view=internal`). It
-opens on a Forests family card. Selecting it shows Forest Oval's three main
+opens on a Forests family card. Selecting it shows the Forest Service's
+**evergreen emblem** — the white map of the province with a dark evergreen on a
+rounded green badge, its mark before about 1973 (a working date, not yet
+confirmed by a source) — and Forest Oval's three main
 ovals: Forests, the long ministry name, and Forest Service, with historical
-comments and sources beneath each logo. Each oval opens its colour and service
+comments and sources beneath each logo. The emblem is a plain vector drawing
+rather than a Forest Oval recipe; it opens its colourways (its reconstructed
+green, and the two greens sampled from the posters it is printed on) and links
+to those posters at their emblem (`&internal-logo=forest-service-emblem`). Each oval opens its colour and service
 variants: full colour, black and white, generated green and reversed colourways,
 and the related Wildfire presets. Forest Service also includes black
 and gold, navy and gold, and the Airtanker package with the shared tree crest.
@@ -435,6 +441,45 @@ wordmark's size, and flagged as not historical.
 The print recipes — CMYK for coated and uncoated stock, and the non-process numbers — ride along in
 each SVG's metadata. They do not change the screen colours, which are sampled from the scan and are
 approximations. None of this is current BC Hydro brand guidance.
+
+---
+
+## Posters, by series
+
+**Posters** in the title menu (`?view=posters`) holds printed pieces rebuilt as drawings, grouped by
+series. Each opens as a full-screen stage with nothing on it marked as clickable: move the pointer
+across it and the part underneath comes forward while everything else settles back. Click, and the
+view glides onto that part while a panel tells its history. Arrow keys step through the parts, digits
+jump, `P` plays a tour, `E` exports (SVG, PDF, PNG, WebP, JPEG) and `Esc` steps back out. The place is
+kept in the address — `?view=posters&poster=dont-drop-it&part=credit` — so any part can be linked to.
+
+| Series | Posters |
+|---|---|
+| Ministry of Environment | **Coastal Forest** (1979–86), with its live crest-lockup studio |
+| British Columbia Forest Service | **REWARD — A Living Forest**, **Enjoy & Protect our Forests** |
+| B. C. Forest Service fire-prevention badges | **DON’T DROP IT!**, **Don’t gamble with FIRE** (set in the first one’s green) |
+
+The panels link on: the emblem on either Forest Service poster opens the evergreen emblem in
+Internal Logos (which links back), a service credit opens the department the Forest Service sat in on
+the government diagram, and each poster links to the others in its series. Every claim that is not
+established — a date, a typeface, an ink — is said to be so.
+
+**Coastal Forest** was its own app, [coastal-forest-poster](https://github.com/ahzs645/coastal-forest-poster),
+and imported this repository's renderer through an alias; it now lives here, importing the same
+modules directly.
+
+**Adding a poster** is three steps: a folder under `src/posters/` with its drawing and its parts,
+an entry in `src/posters/catalogue.js`, and a loader in `PostersView.jsx`. A part is a box in the
+drawing's own units, a `layer` selector to spotlight, and a panel. Panels can be data —
+`src/posters/forest-service/posters.js` writes every part as paragraphs, facts, palettes, notes and
+links — or components, as the coastal poster's are, through a `useExtras` hook that can also take over
+the frame and the export targets. Where parts overlap (a badge's lettering and the cigarette laid
+across it), `hit: 'shape'` makes the drawn shapes of the layer the hotspot instead of its box. A new
+series is one more entry in `SERIES`. `src/posters/catalogue.test.js` checks that every part sits on
+its drawing, names layers the drawing has, and that every link lands somewhere that exists. The
+supplied reconstruction packages are in [`artwork/posters/`](artwork/posters/README.md).
+
+---
 
 ## Requirements
 

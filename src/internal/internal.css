@@ -35,7 +35,7 @@
 .internal-logos__family-text { display: grid; gap: 8px; }
 .internal-logos__family-title { display: flex; justify-content: space-between; gap: 16px; font-size: 22px; font-weight: 650; }
 .internal-logos__family-description { color: var(--ink-muted); font-size: 14px; }
-.internal-logos__designs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.internal-logos__designs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
 .internal-logos__design { min-width: 0; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
 .internal-logos__open {
   display: block;
@@ -71,11 +71,29 @@
 .internal-logos__svg { width: 100%; height: 100%; }
 .internal-logos__svg:empty { display: none; }
 .internal-logos__svg > svg { display: block; width: 100%; height: 100%; }
+.internal-logos__svg--emblem { padding: 12%; }
+.internal-logos__posters { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; }
+.internal-logos__posters a {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+.internal-logos__posters a:hover { background: var(--hover); border-color: var(--mid); }
+.internal-logos__posters b { font-size: 14px; }
+.internal-logos__posters span { font-size: 12.5px; color: var(--ink-muted); }
+.internal-logos__comments .internal-logos__posters + * { margin-top: 12px; }
+.internal-logos__comments h4 + .internal-logos__posters { margin-top: 0; }
 .internal-logos__notes { padding: 20px; }
 .internal-logos__notes h3 { margin: 0 0 6px; font-size: 20px; }
 .internal-logos__description { margin: 0; color: var(--ink-muted); }
 .internal-logos__comments { margin-top: 20px; border-top: 1px solid var(--outline); padding-top: 16px; }
 .internal-logos__comments h4 { margin: 0 0 8px; font-size: 14px; }
+.internal-logos__comments p + h4 { margin-top: 16px; }
 .internal-logos__comments p { margin: 10px 0 0; font-size: 14px; color: var(--ink-muted); }
 .internal-logos__comments .internal-logos__evidence { color: var(--ink); font-size: 12px; font-weight: 600; }
 .internal-logos__sources { margin-top: 18px; color: var(--ink-muted); font-size: 12px; }
