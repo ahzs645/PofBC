@@ -3,6 +3,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { createDigitizer, renderTextured, writeDst, writeExp } from 'patcher'
+import { loadPatchSvg } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 
 /** Patcher's own site, which opens a library patch with every digitizing setting exposed. */
@@ -59,6 +60,9 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const [result, setResult] = useState(null)
   const [status, setStatus] = useState('sewing')
   const [attempt, setAttempt] = useState(0)
+  // The whole drawing: library patches are stored with their shared crests and outlines apart, and
+  // loadPatchSvg joins them back into the atlas's file (checked against its SHA-256).
+  const [drawing, setDrawing] = useState(null)
   const digitizer = useRef(null)
   const canvas = useRef(null)
 
@@ -70,14 +74,27 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
   useEffect(() => {
     let gone = false
+    let url = null
     setStatus('sewing')
-    fetch(patch.svgUrl)
-      .then((response) => (response.ok ? response.text() : Promise.reject(new Error(`HTTP ${response.status}`))))
-      .then((svg) => digitizer.current.digitize(svg, { widthMm: Number(widthMm), border }))
+    loadPatchSvg(patch)
+      .then((text) => {
+        if (gone) return
+        url = URL.createObjectURL(new Blob([text], { type: 'image/svg+xml' }))
+        setDrawing({ text, url })
+      })
+      .catch((error) => { if (!gone) { console.error(error); setStatus('failed') } })
+    return () => { gone = true; if (url) URL.revokeObjectURL(url) }
+  }, [patch, attempt])
+
+  useEffect(() => {
+    if (!drawing) return undefined
+    let gone = false
+    setStatus('sewing')
+    digitizer.current.digitize(drawing.text, { widthMm: Number(widthMm), border })
       .then((sewn) => { if (!gone) { setResult(sewn); setStatus('ready') } })
       .catch((error) => { if (!gone) { console.error(error); setStatus('failed') } })
     return () => { gone = true }
-  }, [patch.svgUrl, widthMm, border, attempt])
+  }, [drawing, widthMm, border])
 
   useEffect(() => {
     if (!result || !canvas.current) return
@@ -118,7 +135,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
         <div className="patch__stages">
           <figure className="patch__stage">
             <figcaption>Vector</figcaption>
-            <img src={patch.svgUrl} alt={patch.label} />
+            <img src={drawing?.url ?? patch.previewUrl} alt={patch.label} />
           </figure>
           <figure className="patch__stage" aria-busy={status === 'sewing'}>
             <figcaption>Embroidered</figcaption>
@@ -159,7 +176,9 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
             <button type="button" className="button button--primary" disabled={!ready} onClick={exportPng}>PNG</button>
             <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeDst(result, name)]), `${name}.dst`)} title="Tajima machine file">DST</button>
             <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeExp(result)]), `${name}.exp`)} title="Melco machine file">EXP</button>
-            <a className="button" href={patch.svgUrl} download={`${name}.svg`}>SVG</a>
+            {drawing
+              ? <a className="button" href={drawing.url} download={`${name}.svg`}>SVG</a>
+              : <button type="button" className="button" disabled>SVG</button>}
           </div>
           <p className="patch__more">
             <a href={`${PATCHER_URL}?patch=${encodeURIComponent(patch.id)}`} target="_blank" rel="noreferrer">Open in Patcher</a> for

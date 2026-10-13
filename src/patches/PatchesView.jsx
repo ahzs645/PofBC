@@ -159,7 +159,7 @@ export const PatchesView = () => {
                     onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); go({ org: place.org, patch: patch.id }) } }}
                   >
                     <span className="patches__thumb">
-                      <img src={patch.previewUrl ?? patch.svgUrl} alt="" loading="lazy" decoding="async" />
+                      <img src={patch.previewUrl} alt="" loading="lazy" decoding="async" />
                     </span>
                     <span className="patches__card-text">
                       <span className="patches__title">{patch.label}</span>

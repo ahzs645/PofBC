@@ -1,19 +1,23 @@
 // The patch library comes from the Patcher submodule (vendor/patcher/library). These check that it
 // is there and hangs together as the Patches view expects: every patch filed under exactly one
-// organization, every organization under a sector the view lists, and every file it names present.
+// organization, every organization under a sector the view lists, and every patch joining back from
+// its stored file and shared parts into the atlas's drawing, byte for byte.
 
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
 import { existsSync, readFileSync } from 'node:fs'
 
 const LIBRARY = new URL('../../vendor/patcher/library/', import.meta.url)
 const MANIFEST = new URL('manifest.json', LIBRARY)
+const JOIN = new URL('../src/library-join.js', LIBRARY)
 
 test('the Patcher submodule is checked out', () => {
   assert.ok(existsSync(MANIFEST), 'vendor/patcher is empty: run `git submodule update --init --recursive`')
 })
 
 const manifest = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, 'utf8')) : null
+const read = (path) => readFileSync(new URL(path, LIBRARY), 'utf8')
 
 test('every organization belongs to a listed sector and counts its own patches', { skip: !manifest }, () => {
   const sectors = new Set(manifest.sectors.map((sector) => sector.id))
@@ -34,7 +38,23 @@ test('every patch is filed once, under its own folder, and nothing is left unsor
     for (const patch of org.patches) {
       assert.ok(patch.svg.startsWith(`${org.id}/`), `${patch.id}: filed outside ${org.id}/`)
       assert.ok(existsSync(new URL(patch.svg, LIBRARY)), `${patch.id}: ${patch.svg} is missing`)
-      if (patch.preview) assert.ok(existsSync(new URL(patch.preview, LIBRARY)), `${patch.id}: ${patch.preview} is missing`)
+      assert.ok(patch.preview && existsSync(new URL(patch.preview, LIBRARY)), `${patch.id}: preview missing`)
+    }
+  }
+})
+
+test('every patch joins back into the atlas drawing, byte for byte', { skip: !manifest }, async () => {
+  const { joinSvg, unwrapBlock } = await import(JOIN)
+  const blockFile = new Map(manifest.shared.blocks.map((block) => [block.id, block.file]))
+  const bundleFile = new Map(manifest.shared.bundles.map((bundle) => [bundle.name, bundle.file]))
+  for (const org of manifest.orgs) {
+    for (const patch of org.patches) {
+      // Only the parts the manifest says this patch needs, as the view fetches them.
+      const blocks = new Map(patch.blocks.map((id) => [id, unwrapBlock(id, read(blockFile.get(id)))]))
+      const paths = Object.assign({}, ...patch.bundles.map((name) => JSON.parse(read(bundleFile.get(name)))))
+      const joined = Buffer.from(joinSvg(read(patch.svg), { block: (id) => blocks.get(id), path: (id) => paths[id] }), 'utf8')
+      assert.equal(joined.length, patch.bytes, `${patch.id}: size`)
+      assert.equal(createHash('sha256').update(joined).digest('hex'), patch.sha256, `${patch.id}: SHA-256`)
     }
   }
 })

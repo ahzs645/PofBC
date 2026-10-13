@@ -489,10 +489,12 @@ Nothing about the patches is kept here. The drawings, the organization each belo
 digitizer are all Patcher's (see its [`library/README.md`](vendor/patcher/library/README.md)). To
 regroup a patch, edit Patcher's `library/orgs.json` and re-import there, then move the submodule
 forward (below). PofBC only needs the view: `src/patches/PatchesView.jsx` (the index) and
-`PatchViewer.jsx` (one patch). `vite.config.js` aliases `patcher` and `patcher/library` to the
+`PatchViewer.jsx` (one patch). Patcher stores repeated crests and outlines once (34 MB of drawings in
+13.2 MB), so the viewer gets each drawing from `loadPatchSvg`, which joins a patch with its shared parts
+and checks the result against the atlas's SHA-256. `vite.config.js` aliases `patcher` and `patcher/library` to the
 submodule's TypeScript source, which Vite compiles together with Patcher's digitizing worker.
-`src/patches/patches.test.js` checks that the submodule is checked out and that its library hangs
-together.
+`src/patches/patches.test.js` checks that the submodule is checked out, that its library hangs
+together, and that every patch joins back into the atlas's drawing byte for byte.
 
 To take a newer Patcher:
 
