@@ -13,13 +13,14 @@ export const fit = (box, pad, rect) => {
   return { x: box.x + box.w / 2 - w / 2, y: box.y + box.h / 2 - h / 2, w, h }
 }
 
-const easeInOutQuint = (p) => (p < 0.5 ? 16 * p ** 5 : 1 - (-2 * p + 2) ** 5 / 2)
+export const easeInOutQuint = (p) => (p < 0.5 ? 16 * p ** 5 : 1 - (-2 * p + 2) ** 5 / 2)
+export const easeOutQuint = (p) => 1 - (1 - p) ** 5
 
 /**
  * Tweens `from` to `to`, calling onUpdate with a fresh object each frame. Returns a stop function.
  * A zero duration jumps straight to the end.
  */
-export const tween = (from, to, { duration = 900, onUpdate, onComplete } = {}) => {
+export const tween = (from, to, { duration = 900, ease = easeInOutQuint, onUpdate, onComplete } = {}) => {
   if (duration <= 0) {
     onUpdate?.({ ...to })
     onComplete?.()
@@ -29,7 +30,7 @@ export const tween = (from, to, { duration = 900, onUpdate, onComplete } = {}) =
   let frame = 0
   const step = (now) => {
     const p = Math.min(1, (now - start) / duration)
-    const e = easeInOutQuint(p)
+    const e = ease(p)
     onUpdate?.({
       x: from.x + (to.x - from.x) * e,
       y: from.y + (to.y - from.y) * e,

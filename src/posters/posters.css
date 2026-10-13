@@ -22,6 +22,7 @@
   --body: Inter, 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --radius: 18px;
+  --pv-dock-h: 60px;
   color-scheme: dark;
   scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
 }
@@ -157,33 +158,34 @@
 .pv-ghost.pv-solid:hover { background: #fff; }
 .pv-ghost:disabled { opacity: 0.4; cursor: default; }
 
-/* ── Dock ── */
+/* ── Dock: a bar along the bottom edge, which the drawing is framed above ── */
 .pv-dock {
   position: absolute;
-  /* Centred without a transform: Motion owns this element's transform for its entrance. */
   left: 0;
   right: 0;
-  width: fit-content;
-  max-width: calc(100% - 24px);
-  margin: 0 auto;
-  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
-  display: flex;
+  bottom: 0;
+  height: calc(var(--pv-dock-h) + env(safe-area-inset-bottom, 0px));
+  padding: 0 20px env(safe-area-inset-bottom, 0px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  gap: 6px;
-  padding: 6px;
-  background: rgba(10, 12, 10, 0.7);
-  backdrop-filter: blur(14px);
-  border: 1px solid var(--line-2);
-  border-radius: 999px;
+  gap: 16px;
+  background: rgba(10, 12, 10, 0.9);
+  backdrop-filter: blur(18px);
+  border-top: 1px solid var(--line);
   z-index: 6;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
-.pv-dock.pv-hint { padding: 8px 8px 8px 18px; gap: 14px; font-size: 13.5px; color: var(--muted); }
-.pv-dock.pv-hint > span { white-space: nowrap; }
-.pv-dock .pv-arrow { width: 34px; height: 34px; border-radius: 50%; border: none; background: none; color: var(--muted); font-size: 16px; transition: background 150ms, color 150ms; }
-.pv-dock .pv-arrow:hover { background: var(--glass-3); color: var(--text); }
-.pv-steps { display: flex; align-items: center; gap: 6px; padding: 0 4px; }
+.pv-dock-start { min-width: 0; font-size: 13.5px; color: var(--muted); }
+.pv-dock-hint { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pv-dock-count { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; }
+.pv-dock-count b { color: var(--text); font-weight: 500; }
+.pv-dock-end { display: flex; justify-content: flex-end; gap: 4px; }
+.pv-dock .pv-arrow { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line-2); background: none; color: var(--text); font-size: 16px; transition: background 150ms, border-color 150ms; }
+.pv-dock .pv-arrow:hover { background: var(--glass-3); border-color: rgba(255, 255, 255, 0.28); }
+.pv-steps { position: relative; display: flex; align-items: center; gap: 6px; min-width: 0; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+.pv-steps::-webkit-scrollbar { display: none; }
 .pv-step {
+  flex: none;
   height: 30px;
   min-width: 10px;
   padding: 0;
@@ -208,7 +210,7 @@
   position: absolute;
   top: calc(66px + env(safe-area-inset-top, 0px));
   right: 20px;
-  bottom: 20px;
+  bottom: calc(var(--pv-dock-h) + env(safe-area-inset-bottom, 0px) + 14px);
   width: 440px;
   max-width: calc(100% - 40px);
   background: var(--glass);
@@ -438,15 +440,15 @@
   .pv-panel {
     top: auto;
     left: 10px; right: 10px;
-    bottom: 0;
+    bottom: calc(var(--pv-dock-h) + env(safe-area-inset-bottom, 0px));
     width: auto;
     max-width: none;
     height: 52vh;
     border-radius: var(--radius) var(--radius) 0 0;
+    border-bottom: none;
   }
-  .pv-panel-body { padding: 22px 18px 90px; }
-  .pv-dock { bottom: calc(52vh + 12px); }
-  .pv-dock.pv-hint { bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
+  .pv-panel-body { padding: 22px 18px 34px; }
+  .pv-dock { padding-left: 14px; padding-right: 14px; gap: 10px; }
   .pv-brand span { display: none; }
   .pv-top { padding: 12px 14px; }
   .pv-ghost { padding: 6px 11px; font-size: 13px; }
@@ -454,8 +456,11 @@
   .pv-step-poster { display: none; }
 }
 @media (max-width: 600px) {
-  .pv-back-label, .pv-tour-btn, .pv-dock.pv-hint > span { display: none; }
-  .pv-dock.pv-hint { padding: 6px; }
+  .pv-back-label, .pv-tour-btn { display: none; }
+  /* No room for a hint: the steps take the left, the way forward stays on the right. */
+  .pv-dock { grid-template-columns: minmax(0, 1fr) auto; }
+  .pv-dock-start { display: none; }
+  .pv-steps { justify-self: start; }
   .pv-top-actions { gap: 4px; }
   .pv-brand { padding: 4px 10px; }
   .pv-top-start { gap: 8px; }

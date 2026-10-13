@@ -18,6 +18,9 @@ import { ExportDialog } from './export/ExportDialog.jsx'
 import { posterTarget } from './export/targets.js'
 
 const PANEL_INSET = 440 + 40
+// Keep in step with --pv-dock-h and the narrow sheet's height in posters.css.
+const DOCK_HEIGHT = 60
+const SHEET_SHARE = 0.52
 const TOUR_SECONDS = 12
 const noExtras = () => ({})
 
@@ -60,7 +63,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
 
   const frame = extras.frame ?? { box: parts[current].box, pad: parts[current].pad, initial: parts.overview.box }
   const panelOpen = current !== 'overview' || aboutOpen
-  const inset = { right: panelOpen && !narrow ? PANEL_INSET : 0, bottom: panelOpen && narrow ? Math.round(innerHeight * 0.5) : 0 }
+  const inset = { right: panelOpen && !narrow ? PANEL_INSET : 0, bottom: DOCK_HEIGHT + (panelOpen && narrow ? Math.round(innerHeight * SHEET_SHARE) : 0) }
   const steps = useMemo(() => order.filter((id) => id !== 'overview').map((id) => ({ id, label: parts[id].label })), [order, parts])
   const regionList = useMemo(() => regions.map((id) => ({ id, ...parts[id] })), [regions, parts])
 
