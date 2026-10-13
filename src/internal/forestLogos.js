@@ -16,7 +16,9 @@ const onPoster = (poster, title, note) => ({ title, note, to: { view: 'posters',
 export const FOREST_LOGOS = [
   {
     id: 'forest-service-emblem',
-    kind: 'emblem',
+    kind: 'drawing',
+    artwork: 'forest-service-emblem.svg',
+    padding: '12%',
     name: 'Forest Service evergreen emblem',
     description: 'A dark evergreen over a white map of the province, on a rounded green badge.',
     evidence: 'Before about 1973 · dating unconfirmed',
@@ -93,6 +95,20 @@ export const FOREST_LOGOS = [
         url: 'https://web.archive.org/web/20171123201642/https://www.for.gov.bc.ca/bcts/'
       }
     ]
+  },
+  {
+    id: 'forest-service-green-gold',
+    kind: 'drawing',
+    artwork: 'forest-service-green-gold.svg',
+    name: 'Forest Service, green and gold',
+    description: 'A dark green oval with gold rules around a lone evergreen, mountains and a lake.',
+    evidence: 'Adoption date unverified',
+    comments: [
+      '“FOREST SERVICE” arcs over the top and “BRITISH COLUMBIA” under the bottom of a dark green oval with two gold rules. Inside the inner rim a single evergreen stands in front of snow-capped mountains, a band of distant forest and a lake, under a blue sky crossed by white cloud bands.',
+      'It shares its wording and its lone conifer with the Forest Service tree oval, but not its construction: no diamond separators, gold rules in place of a plain ring, and a full-colour landscape. How the two designs relate, and which came first, is not established.',
+      'The artwork is an independent vector reconstruction from a supplied image: concentric ellipses, 28 custom outlined letters and hand-drawn landscape paths, with no tracing. The colours are flat approximations of the image, not verified institutional colours, and the small landscape details are interpreted.'
+    ],
+    sources: []
   }
 ]
 
@@ -104,19 +120,25 @@ const oneInk = (foreground, background) => ({
   descriptor: foreground, strip: foreground, stripText: background
 })
 
-// The emblem's colourways: its reconstructed colours, and the two greens it is printed in on the
-// photographed posters. Those were sampled from photographs, so they are approximate.
-const EMBLEM_INK = { map: '#ffffff', tree: '#00240b' }
-const emblemVariants = () => ({
-  colours: [
-    { id: 'colour', name: 'Full colour', emblem: { badge: '#278f38', ...EMBLEM_INK }, note: 'The reconstruction’s flat colours, chosen from the supplied emblem image.' },
-    { id: 'reward-lime', name: 'Lime, as on REWARD', emblem: { badge: '#8cbe0c', ...EMBLEM_INK }, note: 'The badge green sampled from the photograph of the REWARD poster. Approximate: print and photograph both shift colour.' },
-    { id: 'sign-green', name: 'Bright green, as on the sign', emblem: { badge: '#2db43c', ...EMBLEM_INK }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' }
+// The supplied drawings' colourways, as maps from the drawing's own colours to new ones. The
+// evergreen emblem's alternatives are the greens it is printed in on the photographed posters,
+// sampled from those photographs, so they are approximate. The green-and-gold oval's are generated,
+// after the treatments the tree oval is offered in.
+const DRAWING_VARIANTS = {
+  'forest-service-emblem.svg': [
+    { id: 'colour', name: 'Full colour', recolour: {}, note: 'The reconstruction’s flat colours, chosen from the supplied emblem image.' },
+    { id: 'reward-lime', name: 'Lime, as on REWARD', recolour: { '#278F38': '#8CBE0C' }, note: 'The badge green sampled from the photograph of the REWARD poster. Approximate: print and photograph both shift colour.' },
+    { id: 'sign-green', name: 'Bright green, as on the sign', recolour: { '#278F38': '#2DB43C' }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' }
   ],
-  related: []
-})
+  'forest-service-green-gold.svg': [
+    { id: 'colour', name: 'Full colour', recolour: {}, note: 'The reconstruction’s flat colours: badge green, gold, and the landscape’s greens, blue and grey.' },
+    { id: 'black-gold', name: 'Black & gold', recolour: { '#00381E': '#000000' }, note: 'The oval and its keylines in black, the gold and the landscape kept. A generated recolour after the tree oval’s black-and-gold treatment.' },
+    { id: 'black', name: 'Black & white', recolour: { '#00381E': '#000000', '#080C0A': '#000000', '#E6C786': '#FFFFFF', '#005737': '#FFFFFF', '#0FB4E0': '#FFFFFF', '#8D8F8D': '#FFFFFF' }, note: 'One ink: the oval and every outline in black, the lettering and the landscape left white. A generated recolour.' }
+  ]
+}
+const drawingVariants = (logo) => ({ colours: DRAWING_VARIANTS[logo.artwork].map((variant) => ({ ...variant, artwork: logo.artwork, padding: logo.padding })), related: [] })
 
-export const variantsFor = (logo) => logo.kind === 'emblem' ? emblemVariants() : ({
+export const variantsFor = (logo) => logo.kind === 'drawing' ? drawingVariants(logo) : ({
   colours: [
     { id: 'colour', name: 'Full colour', recipe: logo.id, note: 'The Forest Oval preset palette.' },
     { id: 'black', name: 'Black & white', recipe: logo.id, theme: 'mono', note: 'The Forest Oval single-colour palette.' },

@@ -26,7 +26,12 @@ ovals: Forests, the long ministry name, and Forest Service, with historical
 comments and sources beneath each logo. The emblem is a plain vector drawing
 rather than a Forest Oval recipe; it opens its colourways (its reconstructed
 green, and the two greens sampled from the posters it is printed on) and links
-to those posters at their emblem (`&internal-logo=forest-service-emblem`). Each oval opens its colour and service
+to those posters at their emblem (`&internal-logo=forest-service-emblem`).
+A fourth oval, **Forest Service, green and gold** (`&internal-logo=forest-service-green-gold`), is
+likewise a supplied drawing: FOREST SERVICE and BRITISH COLUMBIA in gold on a dark green oval around
+a lone evergreen, mountains and a lake. Its adoption date is unverified; it opens in full colour and
+two generated colourways. Drawn designs are recoloured by mapping their own colours to new ones
+(`src/internal/forestLogos.js`), and their source packages are in [`artwork/internal/`](artwork/internal). Each oval opens its colour and service
 variants: full colour, black and white, generated green and reversed colourways,
 and the related Wildfire presets. Forest Service also includes black
 and gold, navy and gold, and the Airtanker package with the shared tree crest.

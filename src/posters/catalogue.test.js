@@ -101,7 +101,7 @@ test('the data panels say something, and every link lands somewhere that exists'
 test('the evergreen emblem and the posters that carry it point at each other', () => {
   const emblem = FOREST_LOGOS.find(({ id }) => id === 'forest-service-emblem')
   assert.ok(emblem, 'the emblem is among the Forests logos')
-  assert.equal(emblem.kind, 'emblem')
+  assert.equal(emblem.kind, 'drawing')
   const carriers = emblem.seenOn.map(({ to }) => to.poster).sort()
   const withEmblem = Object.entries(FOREST_SERVICE_POSTERS).filter(([, { parts }]) => parts.emblem).map(([id]) => id).sort()
   assert.deepEqual(carriers, withEmblem)

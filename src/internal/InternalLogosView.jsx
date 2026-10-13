@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { loadLetteringRuntime } from '../../vendor/forestoval/shared-primitives/live-lettering/src/runtime.ts'
 import mountainRidge from '../../vendor/forestoval/shared-primitives/bc-ministry-v5/scenes/tree-parts/mountain-ridge.svg?raw'
 import mountainBase from '../../vendor/forestoval/shared-primitives/bc-ministry-v5/scenes/tree-parts/mountain-base.svg?raw'
 import { FOREST_LOGOS, variantsFor } from './forestLogos.js'
 import emblemSvg from './forest-service-emblem.svg?raw'
+import greenGoldSvg from './forest-service-green-gold.svg?raw'
 import { SiteLink } from '../site/navigation.jsx'
 import './internal.css'
 
@@ -95,24 +96,30 @@ const OvalLogo = ({ preset, name, decorative = false, theme, colours, compositio
   )
 }
 
-// The evergreen emblem is a plain drawing rather than a Forest Oval recipe: recoloured by its three
-// layers, with its ids dropped so several copies can share a page.
-const EMBLEM_DEFAULT = variantsFor({ kind: 'emblem' }).colours[0].emblem
-const emblemMarkup = ({ badge, map, tree }, name) => emblemSvg
+// Some designs are supplied drawings rather than Forest Oval recipes: recoloured by mapping their own
+// colours to new ones, with every id prefixed per copy so a clip path still finds its own shape
+// when several copies share a page.
+const DRAWINGS = {
+  'forest-service-emblem.svg': emblemSvg,
+  'forest-service-green-gold.svg': greenGoldSvg
+}
+const drawingMarkup = ({ artwork, recolour = {}, name, prefix }) => DRAWINGS[artwork]
   .replace(/<\?xml[^>]*>\s*/, '')
-  .replace(/<title[\s\S]*?<\/title>\s*<desc[\s\S]*?<\/desc>/, '')
-  .replace(/<svg[^>]*>/, (tag) => tag.replace(/ (?:width|height|aria-labelledby)="[^"]*"/g, ''))
-  .replace(/ id="[^"]*"/g, '')
-  .replace('fill="#278F38"', `fill="${badge}"`)
-  .replace('fill="#FFFFFF"', `fill="${map}"`)
-  .replace('fill="#00240B"', `fill="${tree}"`)
-  .replace('role="img"', `role="img" aria-label="${name}" focusable="false"`)
+  .replace(/<title[\s\S]*?<\/title>\s*/, '')
+  .replace(/<desc[\s\S]*?<\/desc>\s*/, '')
+  .replace(/<svg[^>]*>/, (tag) => tag.replace(/ (?:width|height|aria-labelledby|role)="[^"]*"/g, '').replace('<svg', `<svg role="img" aria-label="${name}" focusable="false"`))
+  .replace(/ id="([^"]+)"/g, (_, id) => ` id="${prefix}-${id}"`)
+  .replace(/url\(#([^)]+)\)/g, (_, id) => `url(#${prefix}-${id})`)
+  .replace(/(fill|stroke)="(#[0-9a-fA-F]{6})"/g, (_, attribute, hex) => `${attribute}="${recolour[hex.toUpperCase()] ?? hex}"`)
 
-const EmblemLogo = ({ colours = EMBLEM_DEFAULT, name, decorative = false, background = '#fff' }) => (
-  <div className="internal-logos__artwork" style={{ background }} aria-hidden={decorative || undefined}>
-    <div className="internal-logos__svg internal-logos__svg--emblem" dangerouslySetInnerHTML={{ __html: emblemMarkup(colours, `${name}`) }} />
-  </div>
-)
+const DrawingLogo = ({ artwork, recolour, padding, name, decorative = false, background = '#fff' }) => {
+  const prefix = `drawing${useId().replace(/[^a-zA-Z0-9]/g, '')}`
+  return (
+    <div className="internal-logos__artwork" style={{ background }} aria-hidden={decorative || undefined}>
+      <div className="internal-logos__svg" style={{ padding }} dangerouslySetInnerHTML={{ __html: drawingMarkup({ artwork, recolour, name, prefix }) }} />
+    </div>
+  )
+}
 
 const PosterLinks = ({ logo }) => (
   <ul className="internal-logos__posters">
@@ -137,17 +144,17 @@ const LogoHistory = ({ logo }) => (
         </>
       )}
     </div>
-    <details className="internal-logos__sources">
+    {logo.sources.length > 0 && <details className="internal-logos__sources">
       <summary>Sources</summary>
       <ul>{logo.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul>
-    </details>
+    </details>}
   </>
 )
 
 const VariantCard = ({ variant }) => (
   <article className="internal-logos__variant" aria-labelledby={`variant-${variant.id}`}>
-    {variant.emblem
-      ? <EmblemLogo colours={variant.emblem} name={variant.name} background={variant.background} />
+    {variant.artwork
+      ? <DrawingLogo artwork={variant.artwork} recolour={variant.recolour} padding={variant.padding} name={variant.name} background={variant.background} />
       : <OvalLogo preset={variant.recipe} name={variant.name} theme={variant.theme} colours={variant.colours} composition={variant.composition} background={variant.background} />}
     <div className="internal-logos__notes">
       <h3 id={`variant-${variant.id}`}>{variant.name}</h3>
@@ -196,7 +203,7 @@ export const InternalLogosView = () => {
           <div className="internal-logos__intro">
             <button className="internal-logos__back" type="button" onClick={backToFamily}>← Forests</button>
             <h2 ref={title} tabIndex={-1}>{current.name}</h2>
-            <p>{current.description} {variants.related.length ? 'Explore its colours and service variants below.' : 'Explore its colours below, and the posters it appears on.'}</p>
+            <p>{current.description} {variants.related.length ? 'Explore its colours and service variants below.' : current.seenOn ? 'Explore its colours below, and the posters it appears on.' : 'Explore its colours below.'}</p>
           </div>
           <h3 className="internal-logos__section-title">Colour variants</h3>
           <div className="internal-logos__variants">
@@ -231,7 +238,7 @@ export const InternalLogosView = () => {
             {FOREST_LOGOS.map((logo) => (
               <article key={logo.id} className="internal-logos__design" aria-labelledby={`internal-${logo.id}`}>
                 <button type="button" className="internal-logos__open" aria-label={`View ${logo.name} variants`} ref={(element) => { logoButtons.current[logo.id] = element }} onClick={() => navigate(true, logo.id)}>
-                  {logo.kind === 'emblem' ? <EmblemLogo name={logo.name} decorative /> : <OvalLogo preset={logo.id} name={logo.name} decorative />}
+                  {logo.kind === 'drawing' ? <DrawingLogo artwork={logo.artwork} padding={logo.padding} name={logo.name} decorative /> : <OvalLogo preset={logo.id} name={logo.name} decorative />}
                   <span className="internal-logos__open-label">View variants <span aria-hidden="true">→</span></span>
                 </button>
                 <div className="internal-logos__notes">
@@ -242,7 +249,7 @@ export const InternalLogosView = () => {
               </article>
             ))}
           </div>
-          <p className="internal-logos__footnote">The ovals are reconstructed in Forest Oval from supplied references; the evergreen emblem is a separate vector reconstruction from a supplied image. The designs are grouped by family; apart from the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
+          <p className="internal-logos__footnote">Three of the ovals are reconstructed in Forest Oval from supplied references; the evergreen emblem and the green-and-gold Forest Service oval are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
         </>
       ) : (
         <>
@@ -254,8 +261,8 @@ export const InternalLogosView = () => {
             <OvalLogo preset="forests" name="Forests" decorative />
             <span className="internal-logos__family-text">
               <span className="internal-logos__family-title">Forests <span aria-hidden="true">→</span></span>
-              <span>The evergreen emblem and three oval designs</span>
-              <span className="internal-logos__family-description">The Forest Service’s evergreen emblem from before about 1973, then the Forests, long ministry name and Forest Service ovals. View the logos and their history.</span>
+              <span>The evergreen emblem and four oval designs</span>
+              <span className="internal-logos__family-description">The Forest Service’s evergreen emblem from before about 1973, then the Forests and long ministry name ovals and two Forest Service ovals. View the logos and their history.</span>
             </span>
           </button>
         </>
