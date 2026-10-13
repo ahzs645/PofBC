@@ -14,9 +14,14 @@ export const VIEWS = [
   { id: 'internal', label: 'Internal Logos', description: 'Internal logo families and their history, starting with Forests' },
   { id: 'posters', label: 'Posters', description: 'Posters by series, every part clickable for its history' },
   { id: 'signs', label: 'Signs', description: 'Signs by series, every part clickable for its history' },
-  { id: 'patches', label: 'Patches', description: 'Patches and badges by organization, sewn as embroidery', badge: 'New' },
+  { id: 'patches', label: 'Patches', description: 'Patches by organization, sewn as embroidery', badge: 'New' },
   { id: 'guides', label: 'Visual Guides', description: 'Identity manuals, rebuilt page by page' },
   { id: 'government', label: 'Government', description: 'The Province’s structure, back to 1871' }
+]
+
+// Views that open from a link but aren't offered in the menu yet. The title still names them.
+export const HIDDEN_VIEWS = [
+  { id: 'badges', label: 'Badges', description: 'Metal and leather badges by organization' }
 ]
 
 const Check = () => (
@@ -44,12 +49,13 @@ export const ViewSwitcher = ({ view, onChange, className = '' }) => {
   const menu = useRef(null)
   const items = useRef([])
   const id = useId()
-  const current = VIEWS.find((entry) => entry.id === view) ?? VIEWS[0]
+  const current = [...VIEWS, ...HIDDEN_VIEWS].find((entry) => entry.id === view) ?? VIEWS[0]
 
-  // Opening moves focus to the current view's item; a click elsewhere closes the menu.
+  // Opening moves focus to the current view's item (the first, on a hidden view); a click elsewhere
+  // closes the menu.
   useEffect(() => {
     if (!open) return undefined
-    items.current[VIEWS.indexOf(current)]?.focus()
+    items.current[Math.max(0, VIEWS.indexOf(current))]?.focus()
     const away = (event) => { if (!root.current?.contains(event.target)) setOpen(false) }
     document.addEventListener('pointerdown', away)
     return () => document.removeEventListener('pointerdown', away)

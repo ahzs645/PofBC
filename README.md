@@ -475,11 +475,15 @@ loading and viewer, given a catalogue. A sign is added as a poster is: its drawi
 ## Patches
 
 **Patches** in the title menu (`?view=patches`) is the patch library of
-[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 277
-patches, badges and emblems from the BC Forestry Patch Atlas, grouped into 34 organizations under
-ten sectors. Among them are the BC Forest Service, BC Parks, the Conservation Officer Service and
+[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 159
+patches and emblems from the BC Forestry Patch Atlas, grouped by organization under sectors. Among
+them are the BC Forest Service, BC Wildfire Service, BC Parks, the Conservation Officer Service and
 its Fish & Game predecessors, BC Sheriff Service, BC Corrections, Highways and Motor Vehicles, BC
-Hydro and the universities. Filter by organization (`&org=bc-parks`) or search. A patch
+Hydro's patrol patches and the universities. The atlas's logos, signs, decals and printed emblems
+(the Province's ministry lockups, BC Timber Sales, the BC Hydro, BC Transit and ICBC logos, …) are
+left out by Patcher's `library/orgs.json`. The library's 14 metal and leather badges have their own
+view, **Badges** (`?view=badges`), which works the same way but isn't in the menu yet: to list it,
+move its entry from `HIDDEN_VIEWS` to `VIEWS` in `src/site/ViewSwitcher.jsx`. Filter by organization (`&org=bc-parks`) or search. A patch
 (`&patch=S25-O01`) opens its vector drawing beside the same drawing sewn by Patcher's digitizer, at
 3″ to 5″, with a merrow, satin or no edge, in matte or glossy thread. It downloads as an embroidered
 PNG, a Tajima `.dst` or Melco `.exp` machine file, or the SVG, and *Open in Patcher* opens it with
@@ -489,8 +493,8 @@ Nothing about the patches is kept here. The drawings, the organization each belo
 digitizer are all Patcher's (see its [`library/README.md`](vendor/patcher/library/README.md)). To
 regroup a patch, edit Patcher's `library/orgs.json` and re-import there, then move the submodule
 forward (below). PofBC only needs the view: `src/patches/PatchesView.jsx` (the index) and
-`PatchViewer.jsx` (one patch). Patcher stores repeated crests and outlines once (34 MB of drawings in
-13.2 MB), so the viewer gets each drawing from `loadPatchSvg`, which joins a patch with its shared parts
+`PatchViewer.jsx` (one patch). Patcher stores repeated crests and outlines once (29 MB of drawings in
+9 MB), so the viewer gets each drawing from `loadPatchSvg`, which joins a patch with its shared parts
 and checks the result against the atlas's SHA-256. `vite.config.js` aliases `patcher` and `patcher/library` to the
 submodule's TypeScript source, which Vite compiles together with Patcher's digitizing worker.
 `src/patches/patches.test.js` checks that the submodule is checked out, that its library hangs

@@ -40,7 +40,7 @@ import { LayoutPicker } from './LayoutPicker.jsx'
 import { MinistryField } from './MinistryField.jsx'
 import { Segmented } from './Segmented.jsx'
 import { ShareLink } from './ShareLink.jsx'
-import { ViewSwitcher, VIEWS } from './ViewSwitcher.jsx'
+import { HIDDEN_VIEWS, ViewSwitcher, VIEWS } from './ViewSwitcher.jsx'
 import { NavigationContext, searchFor } from './navigation.jsx'
 import { SunGlyph, ThemeIcon } from './icons.jsx'
 import { useSiteTheme } from './useTheme.js'
@@ -122,7 +122,7 @@ const BACKDROP_OPTIONS = [
   { value: 'dark', label: 'Dark' }
 ]
 
-const VIEW_IDS = VIEWS.map(({ id }) => id)
+const VIEW_IDS = [...VIEWS, ...HIDDEN_VIEWS].map(({ id }) => id)
 
 /** The view in the address bar, so a link to the gallery or the diagram opens it. */
 const initialView = () => {
@@ -247,6 +247,12 @@ export const App = () => {
       {view === 'patches' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the patches…</p>}>
           <PatchesView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'badges' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the badges…</p>}>
+          <PatchesView key={visit} collection="badges" />
         </Suspense>
       )}
 

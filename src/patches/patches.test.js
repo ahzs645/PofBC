@@ -19,20 +19,35 @@ test('the Patcher submodule is checked out', () => {
 const manifest = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, 'utf8')) : null
 const read = (path) => readFileSync(new URL(path, LIBRARY), 'utf8')
 
-test('every organization belongs to a listed sector and counts its own patches', { skip: !manifest }, () => {
+test('every organization belongs to a listed sector and counts its own designs by collection', { skip: !manifest }, () => {
   const sectors = new Set(manifest.sectors.map((sector) => sector.id))
+  const collections = new Set(manifest.collections.map((collection) => collection.id))
   for (const org of manifest.orgs) {
     assert.ok(sectors.has(org.sector), `${org.id}: unknown sector ${org.sector}`)
-    assert.equal(org.count, org.patches.length, `${org.id}: count`)
     assert.ok(org.patches.length > 0, `${org.id}: empty`)
+    for (const id of collections) assert.equal(org.counts[id], org.patches.filter((p) => p.collection === id).length, `${org.id}: ${id} count`)
   }
   assert.equal(manifest.summary.orgs, manifest.orgs.length)
+})
+
+test('badges are their own hidden collection, and what orgs.json leaves out stays out', { skip: !manifest }, () => {
+  const designs = manifest.orgs.flatMap((org) => org.patches)
+  assert.ok(manifest.collections.find((c) => c.id === 'badges')?.hidden, 'badges should be hidden for now')
+  for (const design of designs) {
+    const badge = /badge/i.test(design.medium)
+    assert.equal(design.collection, badge ? 'badges' : 'patches', `${design.id} (${design.medium})`)
+  }
+  const kept = new Set(designs.map((d) => d.id))
+  for (const gone of manifest.excluded) assert.ok(!kept.has(gone.id), `${gone.id} is excluded but still in the library`)
+  // The Province's identity, BC Timber Sales and the corporate logos are not patches.
+  const orgs = new Set(manifest.orgs.map((org) => org.id))
+  for (const id of ['province-of-bc', 'bc-timber-sales', 'bc-transit', 'icbc']) assert.ok(!orgs.has(id), `${id} should be left out`)
 })
 
 test('every patch is filed once, under its own folder, and nothing is left unsorted', { skip: !manifest }, () => {
   const ids = manifest.orgs.flatMap((org) => org.patches.map((patch) => patch.id))
   assert.equal(new Set(ids).size, ids.length, 'a patch is listed twice')
-  assert.equal(ids.length, manifest.summary.patches)
+  assert.equal(ids.length, manifest.summary.designs)
   assert.equal(manifest.summary.unsorted, 0, 'some patches matched no organization in orgs.json')
   for (const org of manifest.orgs) {
     for (const patch of org.patches) {
