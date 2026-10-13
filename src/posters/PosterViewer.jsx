@@ -21,7 +21,7 @@ const PANEL_INSET = 440 + 40
 const TOUR_SECONDS = 12
 const noExtras = () => ({})
 
-export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next }) {
+export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, backLabel = 'Posters', noun = 'poster' }) {
   const { parts, order, regions, spotlight, svgRaw, prepare } = module
   const useExtras = module.useExtras ?? noExtras
   const [svg, setSvg] = useState(null)
@@ -65,14 +65,14 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const regionList = useMemo(() => regions.map((id) => ({ id, ...parts[id] })), [regions, parts])
 
   const targets = [
-    posterTarget({ meta, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag }),
+    posterTarget({ meta, noun, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag }),
     ...(extras.targets ?? [])
   ]
 
   const content = extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} />
 
   return (
-    <div className="pv" role="region" aria-label={`${meta.title}, interactive poster`}>
+    <div className="pv" role="region" aria-label={`${meta.title}, interactive ${noun}`}>
       <div className="pv-app">
         <Poster
           svgRaw={svgRaw}
@@ -96,8 +96,8 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
 
         <header className="pv-top">
           <div className="pv-top-start">
-            <button type="button" className="pv-ghost pv-back" onClick={onExit} title="All posters (Esc from the whole poster)" aria-label="Back to all posters">← <span className="pv-back-label">Posters</span></button>
-            <button type="button" className="pv-brand" onClick={() => select('overview')} aria-label="Back to the whole poster">
+            <button type="button" className="pv-ghost pv-back" onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>← <span className="pv-back-label">{backLabel}</span></button>
+            <button type="button" className="pv-brand" onClick={() => select('overview')} aria-label={`Back to the whole ${noun}`}>
               <b>{meta.title}</b>
               <span>{series.title}</span>
             </button>
@@ -115,7 +115,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
           {content}
         </Panel>
 
-        <Dock steps={steps} current={current} onSelect={select} coarse={coarse} hint="Move across the poster to find its parts" startLabel="Start the story →" />
+        <Dock steps={steps} current={current} onSelect={select} coarse={coarse} hint={`Move across the ${noun} to find its parts`} startLabel="Start the story →" />
 
         <ExportDialog open={exportOpen} onClose={() => setExportOpen(false)} targets={targets} target={exportTarget} onTarget={setExportTarget} />
       </div>

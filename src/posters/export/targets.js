@@ -7,13 +7,13 @@ const round = (value) => Math.round(value / 100) * 100
  * The poster itself, at its own page size. `meta` is its catalogue card; `tag` names a change made
  * on the stage (a swapped logo, say), which goes into the label and the file name.
  */
-export const posterTarget = ({ meta, getSvg, tag, changed = 'with the swapped logo' }) => {
+export const posterTarget = ({ meta, getSvg, tag, noun = 'poster', changed = 'with the swapped logo' }) => {
   const { page } = meta
   const widths = [...new Set(DPI.map((dpi) => round(page.w * dpi)))]
   const photo = meta.id === 'coastal-forest'
   return {
     id: 'poster',
-    label: tag ? `The poster, ${changed}` : 'The poster',
+    label: tag ? `The ${noun}, ${changed}` : `The ${noun}`,
     getSvg,
     inches: page,
     dpiBase: page.w,

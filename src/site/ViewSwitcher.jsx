@@ -13,7 +13,8 @@ export const VIEWS = [
   { id: 'gallery', label: 'Logos', description: 'BC Hydro, BC Timber Sales, BC Parks, and the Province’s one-off marks' },
   { id: 'internal', label: 'Internal Logos', description: 'Internal logo families and their history, starting with Forests' },
   { id: 'posters', label: 'Posters', description: 'Posters by series, every part clickable for its history' },
-  { id: 'guides', label: 'Visual Guides', description: 'Identity manuals, rebuilt page by page', badge: 'New' },
+  { id: 'signs', label: 'Signs', description: 'Signs by series, every part clickable for its history', badge: 'New' },
+  { id: 'guides', label: 'Visual Guides', description: 'Identity manuals, rebuilt page by page' },
   { id: 'government', label: 'Government', description: 'The Province’s structure, back to 1871' }
 ]
 

@@ -454,6 +454,23 @@ approximations. None of this is current BC Hydro brand guidance.
 
 ---
 
+## Signs
+
+**Signs** in the title menu (`?view=signs`) works as Posters does, on the same stage: signs grouped by
+series, each opening with hidden hotspots, a panel per part, a tour and export. The first is the
+British Columbia Forest Service's triangular **LOOKOUT** sign: click the red wordmark, BRITISH
+COLUMBIA up its slopes, FOREST SERVICE along the base, or its two green frames. The wordmark's panel
+says what fire lookouts were, from the Province's 2012 release on restoring them; the service's
+links on to its marks in Internal Logos and to its posters and badges.
+
+Posters and Signs are both shelves (`src/posters/ShelfView.jsx`): the same index, address handling,
+loading and viewer, given a catalogue. A sign is added as a poster is: its drawing and parts under
+`src/signs/`, an entry in `src/signs/catalogue.js`, and a loader in `SignsView.jsx`.
+`src/signs/signs.test.js` checks the parts and links; the package is in
+[`artwork/signs/`](artwork/signs/README.md).
+
+---
+
 ## Visual guides
 
 **Visual Guides** in the title menu (`?view=guides`) holds identity manuals rebuilt page by page as

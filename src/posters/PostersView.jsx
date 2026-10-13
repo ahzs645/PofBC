@@ -1,18 +1,12 @@
-// The posters, by series: an index of cards, and the interactive viewer over it when one is open.
-//
-// The place is kept in the address bar — `?view=posters&poster=dont-drop-it&part=credit` — so a
-// link to a part of a poster opens it there, from anywhere on the site.
+// The posters: a shelf (see ShelfView.jsx) over the poster catalogue.
 
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { NavigationContext, SiteLink, useNavigate } from '../site/navigation.jsx'
-import { POSTERS, SERIES, neighbours, seriesOf } from './catalogue.js'
-import { PosterViewer } from './PosterViewer.jsx'
+import { ShelfView } from './ShelfView.jsx'
+import { POSTERS, SERIES } from './catalogue.js'
 import coastalThumb from './coastal-forest/thumbnail.jpg'
 import dropThumb from './forest-service/dont-drop-it.svg?url'
 import gambleThumb from './forest-service/dont-gamble-with-fire.svg?url'
 import rewardThumb from './forest-service/reward-living-forest.svg?url'
 import enjoyThumb from './forest-service/enjoy-protect-forests.svg?url'
-import './posters.css'
 
 // Each poster's drawing and parts, fetched when it is opened.
 const forestService = (id) => () => import('./forest-service/index.js').then((module) => module.loaderFor(id)())
@@ -32,121 +26,19 @@ const THUMBNAILS = {
   'enjoy-protect-forests': enjoyThumb
 }
 
-const readPlace = () => {
-  const params = new URLSearchParams(globalThis.location?.search ?? '')
-  const poster = POSTERS[params.get('poster')] ? params.get('poster') : null
-  return { poster, part: poster ? params.get('part') || 'overview' : 'overview' }
-}
+const postersOf = (series) => series.posters
 
-const writePlace = ({ poster, part }) => {
-  if (!globalThis.history?.replaceState) return
-  const url = new URL(globalThis.location.href)
-  url.searchParams.set('view', 'posters')
-  if (poster) url.searchParams.set('poster', poster)
-  else url.searchParams.delete('poster')
-  if (poster && part && part !== 'overview') url.searchParams.set('part', part)
-  else url.searchParams.delete('part')
-  globalThis.history.replaceState(null, '', url)
-}
-
-const PosterCard = ({ id, cardRef }) => {
-  const meta = POSTERS[id]
-  return (
-    <SiteLink to={{ view: 'posters', poster: id }} className="posters__card" ref={cardRef}>
-      <span className="posters__thumb" style={{ background: meta.background ?? undefined }}>
-        <img src={THUMBNAILS[id]} alt="" loading="lazy" />
-      </span>
-      <span className="posters__card-text">
-        <span className="posters__title">{meta.title}</span>
-        <span className="posters__dated">{meta.when}</span>
-      </span>
-    </SiteLink>
-  )
-}
-
-export const PostersView = () => {
-  const [place, setPlace] = useState(readPlace)
-  const [module, setModule] = useState(null)
-  const [failed, setFailed] = useState(false)
-  const [attempt, setAttempt] = useState(0)
-  const cards = useRef({})
-  const parentNavigate = useNavigate()
-
-  const go = useCallback((next) => {
-    setPlace(next)
-    writePlace(next)
-  }, [])
-
-  // Load the open poster's drawing; keep it while only the part changes.
-  useEffect(() => {
-    if (!place.poster) { setModule(null); return undefined }
-    let gone = false
-    setModule(null)
-    setFailed(false)
-    LOADERS[place.poster]()
-      .then((loaded) => { if (!gone) setModule({ id: place.poster, ...loaded }) })
-      .catch((error) => { console.error(error); if (!gone) setFailed(true) })
-    return () => { gone = true }
-  }, [place.poster, attempt])
-
-  // Links inside the posters land here without leaving the view; links elsewhere go to the App.
-  const navigate = useCallback((params) => {
-    if (params.view === 'posters') {
-      go({ poster: POSTERS[params.poster] ? params.poster : null, part: params.part || 'overview' })
-      if (!params.poster) globalThis.scrollTo?.({ top: 0 })
-    } else parentNavigate?.(params)
-  }, [go, parentNavigate])
-
-  const exit = useCallback(() => {
-    const id = place.poster
-    go({ poster: null, part: 'overview' })
-    requestAnimationFrame(() => cards.current[id]?.focus())
-  }, [go, place.poster])
-
-  const meta = place.poster ? POSTERS[place.poster] : null
-  const around = meta ? neighbours(meta.id) : {}
-  const step = (id) => id && { title: POSTERS[id].title, open: () => go({ poster: id, part: 'overview' }) }
-
-  return (
-    <NavigationContext.Provider value={navigate}>
-      <section className="posters" aria-label="Posters">
-        <div className="posters__intro">
-          <h2>Posters</h2>
-          <p>Open a poster and click any part to see its history.</p>
-        </div>
-        {SERIES.map((series) => (
-          <section key={series.id} className="posters__series" aria-labelledby={`series-${series.id}`}>
-            <header className="posters__series-head">
-              <h3 id={`series-${series.id}`}>{series.title}</h3>
-              <p className="posters__kind">{series.kind}</p>
-            </header>
-            <div className="posters__grid">
-              {series.posters.map((id) => <PosterCard key={id} id={id} cardRef={(element) => { cards.current[id] = element }} />)}
-            </div>
-          </section>
-        ))}
-      </section>
-
-      {meta && module?.id === meta.id && (
-        <PosterViewer
-          key={meta.id}
-          meta={meta}
-          series={seriesOf(meta.id)}
-          module={module}
-          part={place.part}
-          onPart={(part) => go({ poster: meta.id, part })}
-          onExit={exit}
-          previous={step(around.previous)}
-          next={step(around.next)}
-        />
-      )}
-      {meta && module?.id !== meta.id && (
-        <div className="pv pv-loading" role="status">
-          {failed
-            ? <p>Could not load {meta.title}. <button type="button" className="pv-ghost" onClick={() => setAttempt((n) => n + 1)}>Retry</button> <button type="button" className="pv-ghost" onClick={exit}>Back to the posters</button></p>
-            : <p>Loading {meta.title}…</p>}
-        </div>
-      )}
-    </NavigationContext.Provider>
-  )
-}
+export const PostersView = () => (
+  <ShelfView
+    view="posters"
+    param="poster"
+    title="Posters"
+    intro="Open a poster and click any part to see its history."
+    noun="poster"
+    series={SERIES}
+    itemsOf={postersOf}
+    items={POSTERS}
+    loaders={LOADERS}
+    thumbnails={THUMBNAILS}
+  />
+)
