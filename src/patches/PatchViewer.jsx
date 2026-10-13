@@ -1,0 +1,178 @@
+// One patch: its vector drawing beside the same drawing sewn by Patcher's digitizer, with the size,
+// edge and thread finish to sew it at, and the machine files to download.
+
+import { useEffect, useRef, useState } from 'react'
+import { createDigitizer, renderTextured, writeDst, writeExp } from 'patcher'
+import { Segmented } from '../site/Segmented.jsx'
+
+/** Patcher's own site, which opens a library patch with every digitizing setting exposed. */
+const PATCHER_URL = 'https://ahzs645.github.io/patcher/'
+
+const SIZES = [
+  { value: '76', label: '3″', title: '76 mm wide' },
+  { value: '89', label: '3½″', title: '89 mm wide' },
+  { value: '102', label: '4″', title: '102 mm wide' },
+  { value: '127', label: '5″', title: '127 mm wide' }
+]
+const BORDERS = [
+  { value: 'merrow', label: 'Merrow', title: 'An overlocked edge, as most cloth patches have' },
+  { value: 'satin', label: 'Satin', title: 'A satin-stitch edge' },
+  { value: 'none', label: 'None' }
+]
+const FINISHES = [
+  { value: 'matte', label: 'Matte', title: 'Polyester or cotton thread' },
+  { value: 'glossy', label: 'Glossy', title: 'Rayon thread with a satin sheen' }
+]
+const LIGHT_DEG = 225
+
+const download = (blob, name) => {
+  const link = document.createElement('a')
+  link.href = URL.createObjectURL(blob)
+  link.download = name
+  link.click()
+  setTimeout(() => URL.revokeObjectURL(link.href), 1000)
+}
+
+const textured = (result, finish, scale, canvas) => renderTextured(result, {
+  scale,
+  lightDeg: LIGHT_DEG,
+  colors: result.palette,
+  borderColor: result.borderColor,
+  dropShadow: true,
+  finish
+}, canvas)
+
+/**
+ * @param {object} props
+ * @param {object} props.patch      A resolved library patch (patcher/library).
+ * @param {object} props.org        Its organization.
+ * @param {{index: number, count: number}} props.position  Where it sits among the organization's patches.
+ * @param {object|null} props.previous
+ * @param {object|null} props.next
+ * @param {(patch: object) => void} props.onOpen
+ * @param {() => void} props.onClose
+ */
+export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onClose }) => {
+  const [widthMm, setWidthMm] = useState('89')
+  const [border, setBorder] = useState('merrow')
+  const [finish, setFinish] = useState('matte')
+  const [result, setResult] = useState(null)
+  const [status, setStatus] = useState('sewing')
+  const [attempt, setAttempt] = useState(0)
+  const digitizer = useRef(null)
+  const canvas = useRef(null)
+
+  useEffect(() => {
+    const instance = createDigitizer()
+    digitizer.current = instance
+    return () => { instance.dispose(); if (digitizer.current === instance) digitizer.current = null }
+  }, [])
+
+  useEffect(() => {
+    let gone = false
+    setStatus('sewing')
+    fetch(patch.svgUrl)
+      .then((response) => (response.ok ? response.text() : Promise.reject(new Error(`HTTP ${response.status}`))))
+      .then((svg) => digitizer.current.digitize(svg, { widthMm: Number(widthMm), border }))
+      .then((sewn) => { if (!gone) { setResult(sewn); setStatus('ready') } })
+      .catch((error) => { if (!gone) { console.error(error); setStatus('failed') } })
+    return () => { gone = true }
+  }, [patch.svgUrl, widthMm, border, attempt])
+
+  useEffect(() => {
+    if (!result || !canvas.current) return
+    const ratio = Math.min(2, globalThis.devicePixelRatio || 1)
+    textured(result, finish, (Math.min(16, 3200 / Math.max(result.widthMm, result.heightMm)) * ratio) / 1.4, canvas.current)
+  }, [result, finish])
+
+  useEffect(() => {
+    const onKey = (event) => {
+      if (event.target.closest?.('input, select, textarea') || event.metaKey || event.ctrlKey || event.altKey) return
+      if (event.key === 'Escape') onClose()
+      else if (event.key === 'ArrowLeft' && previous) onOpen(previous)
+      else if (event.key === 'ArrowRight' && next) onOpen(next)
+    }
+    globalThis.addEventListener('keydown', onKey)
+    return () => globalThis.removeEventListener('keydown', onKey)
+  }, [onClose, onOpen, previous, next])
+
+  const name = `${patch.id}-${org.id}`
+  const ready = status === 'ready' && result
+  const exportPng = () => {
+    const png = textured(result, finish, Math.min(24, 6000 / Math.max(result.widthMm, result.heightMm)))
+    png.toBlob((blob) => blob && download(blob, `${name}-embroidered.png`), 'image/png')
+  }
+
+  return (
+    <section className="patch" aria-label={patch.label}>
+      <nav className="patch__bar" aria-label="Patches">
+        <button type="button" className="button button--ghost" onClick={onClose}>← All patches</button>
+        <span className="patch__crumb">{org.name} · {position.index + 1} of {position.count}</span>
+        <span className="patch__steps">
+          <button type="button" className="button" disabled={!previous} onClick={() => onOpen(previous)} title={previous?.label}>Previous</button>
+          <button type="button" className="button" disabled={!next} onClick={() => onOpen(next)} title={next?.label}>Next</button>
+        </span>
+      </nav>
+
+      <div className="patch__body">
+        <div className="patch__stages">
+          <figure className="patch__stage">
+            <figcaption>Vector</figcaption>
+            <img src={patch.svgUrl} alt={patch.label} />
+          </figure>
+          <figure className="patch__stage" aria-busy={status === 'sewing'}>
+            <figcaption>Embroidered</figcaption>
+            <canvas ref={canvas} hidden={!ready} aria-label={`${patch.label}, embroidered`} role="img" />
+            {status === 'sewing' && <p className="patch__status" role="status">Sewing…</p>}
+            {status === 'failed' && (
+              <p className="patch__status" role="alert">
+                This patch couldn’t be sewn. <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button>
+              </p>
+            )}
+          </figure>
+        </div>
+
+        <aside className="patch__panel">
+          <h2>{patch.label}</h2>
+          <p className="patch__meta">{patch.medium} · {patch.quality}</p>
+
+          <Segmented label="Width" options={SIZES} value={widthMm} onChange={setWidthMm} compact />
+          <Segmented label="Edge" options={BORDERS} value={border} onChange={setBorder} compact />
+          <Segmented label="Thread" options={FINISHES} value={finish} onChange={setFinish} compact />
+
+          {ready && (
+            <>
+              <dl className="patch__facts">
+                <div><dt>Size</dt><dd>{Math.round(result.widthMm - 2 * result.padMm)} × {Math.round(result.heightMm - 2 * result.padMm)} mm</dd></div>
+                <div><dt>Stitches</dt><dd>{result.stitchCount.toLocaleString()}</dd></div>
+                <div><dt>Threads</dt><dd>{result.palette.length}</dd></div>
+              </dl>
+              <ul className="patch__threads" aria-label="Thread colours">
+                {result.palette.map((colour, index) => (
+                  <li key={colour} title={`${colour} · ${Math.round(result.coverage[index] * 100)}%`} style={{ background: colour }} />
+                ))}
+              </ul>
+            </>
+          )}
+
+          <div className="patch__exports">
+            <button type="button" className="button button--primary" disabled={!ready} onClick={exportPng}>PNG</button>
+            <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeDst(result, name)]), `${name}.dst`)} title="Tajima machine file">DST</button>
+            <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeExp(result)]), `${name}.exp`)} title="Melco machine file">EXP</button>
+            <a className="button" href={patch.svgUrl} download={`${name}.svg`}>SVG</a>
+          </div>
+          <p className="patch__more">
+            <a href={`${PATCHER_URL}?patch=${encodeURIComponent(patch.id)}`} target="_blank" rel="noreferrer">Open in Patcher</a> for
+            stitch density, thread charts and the sew-out.
+          </p>
+
+          {patch.limitations && <p className="patch__limits"><strong>Limitations.</strong> {patch.limitations}</p>}
+          <p className="patch__source">
+            {patch.id} in the atlas
+            {patch.sourceUrl && <> · <a href={patch.sourceUrl} target="_blank" rel="noreferrer">source photograph</a></>}
+          </p>
+        </aside>
+      </div>
+    </section>
+  )
+}

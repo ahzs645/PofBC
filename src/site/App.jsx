@@ -13,6 +13,8 @@ const InternalLogosView = lazy(() => import('../internal/InternalLogosView.jsx')
 // The posters carry their own drawings, photographs and stage, none of which the generator needs.
 const PostersView = lazy(() => import('../posters/PostersView.jsx').then((module) => ({ default: module.PostersView })))
 const SignsView = lazy(() => import('../signs/SignsView.jsx').then((module) => ({ default: module.SignsView })))
+// The patch library and digitizer come from the Patcher submodule (vendor/patcher).
+const PatchesView = lazy(() => import('../patches/PatchesView.jsx').then((module) => ({ default: module.PatchesView })))
 const GuidesView = lazy(() => import('../guides/GuidesView.jsx').then((module) => ({ default: module.GuidesView })))
 import { generatorPatchFor } from '../government/eraMark.js'
 import {
@@ -135,7 +137,7 @@ const initialView = () => {
 const writeView = (view) => {
   if (!globalThis.history?.replaceState) return
   const url = new URL(globalThis.location.href)
-  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   globalThis.history.replaceState(null, '', url)
 }
@@ -239,6 +241,12 @@ export const App = () => {
       {view === 'signs' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the signs…</p>}>
           <SignsView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'patches' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the patches…</p>}>
+          <PatchesView key={visit} />
         </Suspense>
       )}
 

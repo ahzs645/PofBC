@@ -472,6 +472,37 @@ loading and viewer, given a catalogue. A sign is added as a poster is: its drawi
 
 ---
 
+## Patches
+
+**Patches** in the title menu (`?view=patches`) is the patch library of
+[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 277
+patches, badges and emblems from the BC Forestry Patch Atlas, grouped into 34 organizations under
+ten sectors. Among them are the BC Forest Service, BC Parks, the Conservation Officer Service and
+its Fish & Game predecessors, BC Sheriff Service, BC Corrections, Highways and Motor Vehicles, BC
+Hydro and the universities. Filter by organization (`&org=bc-parks`) or search. A patch
+(`&patch=S25-O01`) opens its vector drawing beside the same drawing sewn by Patcher's digitizer, at
+3″ to 5″, with a merrow, satin or no edge, in matte or glossy thread. It downloads as an embroidered
+PNG, a Tajima `.dst` or Melco `.exp` machine file, or the SVG, and *Open in Patcher* opens it with
+every digitizing setting exposed.
+
+Nothing about the patches is kept here. The drawings, the organization each belongs to, and the
+digitizer are all Patcher's (see its [`library/README.md`](vendor/patcher/library/README.md)). To
+regroup a patch, edit Patcher's `library/orgs.json` and re-import there, then move the submodule
+forward (below). PofBC only needs the view: `src/patches/PatchesView.jsx` (the index) and
+`PatchViewer.jsx` (one patch). `vite.config.js` aliases `patcher` and `patcher/library` to the
+submodule's TypeScript source, which Vite compiles together with Patcher's digitizing worker.
+`src/patches/patches.test.js` checks that the submodule is checked out and that its library hangs
+together.
+
+To take a newer Patcher:
+
+```
+git -C vendor/patcher fetch && git -C vendor/patcher checkout origin/main
+git add vendor/patcher && git commit -m "Patcher: …"
+```
+
+---
+
 ## Visual guides
 
 **Visual Guides** in the title menu (`?view=guides`) holds identity manuals rebuilt page by page as
@@ -533,10 +564,14 @@ supplied reconstruction packages are in [`artwork/posters/`](artwork/posters/REA
 
 ## Requirements
 
-**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and one git submodule. A copy of **Adobe
+**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and two git submodules. A copy of **Adobe
 Garamond Pro** is optional and widens the current era's alphabet.
 
-### The submodule
+### The submodules
+
+[`vendor/patcher`](https://github.com/ahzs645/patcher) is the patch library and embroidery
+digitizer behind **Patches** (above). It needs no build step: Vite compiles its source directly.
+
 
 [`vendor/json-url`](https://github.com/ahzs645/json-url) compresses a lockup configuration into a
 share link. It gitignores its own `dist/`, and every entry in its package `exports` points there,
