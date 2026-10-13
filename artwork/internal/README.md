@@ -6,7 +6,12 @@ recipes. Each folder is the package as supplied, minus its raster previews and r
 | Folder | Design | Used by the site as |
 |---|---|---|
 | `forest-service-lands-department/` | Forest Service, Lands Department engraved seal | `src/internal/forest-service-lands-department.svg`, a **lighter copy** (below) |
+| `forest-service-yellow-sky/` | Forest Service, yellow-sky oval (the package's photo-reference redraw) | `src/internal/forest-service-yellow-sky.svg`: `svg/BCFS_reference_green.svg` without its colour tokens and editor labels; the cream colourway is a recolour of it |
 | `forest-service-green-gold/` | Forest Service, green and gold oval | `src/internal/forest-service-green-gold.svg` (the main master, unchanged) |
+
+**The yellow-sky oval package held two redraws.** Only the one drawn from the two photographs is kept
+here; the other redrew a generated preview image, which is not evidence of the original badge. The
+reference photographs and raster previews are left out.
 
 **The Lands Department seal is shown from a lighter copy.** Its master is 5.6 MB: 11,600 shapes
 with three-decimal coordinates, ids and editor labels. `forest-service-lands-department/web_copy.py`

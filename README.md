@@ -27,7 +27,8 @@ comments and sources beneath each logo. The emblem is a plain vector drawing
 rather than a Forest Oval recipe; it opens its colourways (its reconstructed
 green, and the two greens sampled from the posters it is printed on) and links
 to those posters at their emblem (`&internal-logo=forest-service-emblem`).
-A fourth oval, **Forest Service, green and gold** (`&internal-logo=forest-service-green-gold`), is
+A **Forest Service, yellow-sky oval** (`&internal-logo=forest-service-yellow-sky`), redrawn from two
+photographs, opens in the two colourways they show: green around a yellow sky, and cream. A further oval, **Forest Service, green and gold** (`&internal-logo=forest-service-green-gold`), is
 likewise a supplied drawing: FOREST SERVICE and BRITISH COLUMBIA in gold on a dark green oval around
 a lone evergreen, mountains and a lake. Its adoption date is unverified; it opens in full colour and
 two generated colourways. The oldest design, an engraved **Forest Service, Lands Department** seal

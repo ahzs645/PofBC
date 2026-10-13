@@ -101,7 +101,8 @@ const OvalLogo = ({ preset, name, decorative = false, theme, colours, compositio
 const DRAWINGS = {
   'forest-service-lands-department.svg': () => import('./forest-service-lands-department.svg?raw'),
   'forest-service-emblem.svg': () => import('./forest-service-emblem.svg?raw'),
-  'forest-service-green-gold.svg': () => import('./forest-service-green-gold.svg?raw')
+  'forest-service-green-gold.svg': () => import('./forest-service-green-gold.svg?raw'),
+  'forest-service-yellow-sky.svg': () => import('./forest-service-yellow-sky.svg?raw')
 }
 const fetched = new Map()
 
@@ -270,7 +271,7 @@ export const InternalLogosView = () => {
               </article>
             ))}
           </div>
-          <p className="internal-logos__footnote">Three of the ovals are reconstructed in Forest Oval from supplied references; the Lands Department seal, the evergreen emblem and the green-and-gold Forest Service oval are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the seal and the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
+          <p className="internal-logos__footnote">Three of the ovals are reconstructed in Forest Oval from supplied references; the Lands Department seal, the evergreen emblem and the yellow-sky and green-and-gold Forest Service ovals are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the seal and the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
         </>
       ) : (
         <>
@@ -282,8 +283,8 @@ export const InternalLogosView = () => {
             <OvalLogo preset="forests" name="Forests" decorative />
             <span className="internal-logos__family-text">
               <span className="internal-logos__family-title">Forests <span aria-hidden="true">→</span></span>
-              <span>Two early marks and four oval designs</span>
-              <span className="internal-logos__family-description">The Forest Service’s engraved Lands Department seal and its evergreen emblem from before about 1973, then the Forests and long ministry name ovals and two Forest Service ovals. View the logos and their history.</span>
+              <span>Two early marks and five oval designs</span>
+              <span className="internal-logos__family-description">The Forest Service’s engraved Lands Department seal and its evergreen emblem from before about 1973, then the Forests and long ministry name ovals and three Forest Service ovals. View the logos and their history.</span>
             </span>
           </button>
         </>
