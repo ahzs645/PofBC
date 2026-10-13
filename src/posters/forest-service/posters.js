@@ -14,22 +14,22 @@ import { POSTERS } from '../catalogue.js'
 
 const EMBLEM_LINK = {
   label: 'The evergreen emblem',
-  note: 'Internal Logos · Forests — its colourways, history and the other posters it is on',
+  note: 'Internal Logos · Forests: its colourways, history and the other posters it is on',
   to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service-emblem' }
 }
 const OVALS_LINK = {
   label: 'The Forest Service’s later marks',
-  note: 'Internal Logos · Forests — the tree oval and the wildlife ovals',
+  note: 'Internal Logos · Forests: the tree oval and the wildlife ovals',
   to: { view: 'internal', internal: 'forests' }
 }
 const DEPARTMENT_LINK = {
   label: 'Department of Lands, Forests and Water Resources',
-  note: 'Government · 1970 — the department the Forest Service sat in from 1962 to 1976',
+  note: 'Government · 1970: the department the Forest Service sat in from 1962 to 1976',
   to: { view: 'government', year: 1970, node: 'department-of-lands-forests-and-water-resources-1962' }
 }
 const MINISTRY_OF_FORESTS_LINK = {
   label: 'Ministry of Forests',
-  note: 'Government · 1979 — the ministry the service became part of',
+  note: 'Government · 1979: the ministry the service became part of',
   to: { view: 'government', year: 1979, node: 'ministry-of-forests-1976' }
 }
 const poster = (id, part, note) => ({
@@ -92,7 +92,7 @@ export const DONT_DROP_IT = {
         em: 'drawn, not set',
         lede: 'Each word is its own group, turned 21 degrees anticlockwise about its own centre, so the three step down the badge parallel to the cigarette.',
         blocks: [
-          'The letters are hand-authored straight and cubic-Bézier paths, fitted to the photograph for proportion and optical alignment rather than traced from it. Their counters — the holes in D, O, R and P — are openings in compound paths, not green patches laid on top, so the field shows through them in any colour.',
+          'The letters are hand-authored straight and cubic-Bézier paths, fitted to the photograph for proportion and optical alignment rather than traced from it. Their counters (the holes in D, O, R and P) are openings in compound paths, not green patches laid on top, so the field shows through them in any colour.',
           'The exclamation mark is drawn on its own, larger and steeper than the words, as the badge has it.',
           { facts: [
             ['Groups', 'word-dont, word-drop, word-it, exclamation'],
@@ -198,7 +198,7 @@ export const DONT_GAMBLE = {
         eyebrow: 'The headline',
         heading: 'don’t gamble!',
         em: 'in a soft, heavy lowercase',
-        lede: 'Two lines of rounded display letters, each one drawn as its own shape from straight segments and Bézier curves — no font, and no automatic tracing.',
+        lede: 'Two lines of rounded display letters, each one drawn as its own shape from straight segments and Bézier curves. No font, and no automatic tracing.',
         blocks: [
           'The exclamation mark leans out to the right past the edge of the line, as on the badge. Each main letter is a separate, editable shape, so spacing can be adjusted letter by letter.',
           { facts: [
@@ -263,7 +263,7 @@ export const DONT_GAMBLE = {
         em: 'down the left side',
         lede: 'Where DON’T DROP IT! puts the service along the bottom, this badge runs it down the left of the rim, reading downwards.',
         blocks: [
-          'The caption is individually placed, outlined glyphs of DejaVu Sans Bold — a substitute, not an identification of the historical face — with each full stop a separate circle.',
+          'The caption is individually placed, outlined glyphs of DejaVu Sans Bold (a substitute, not an identification of the historical face), with each full stop a separate circle.',
           { facts: [
             ['Glyphs', 'individually rotated along the arc'],
             ['Substitute face', 'DejaVu Sans Bold, outlined']
@@ -287,7 +287,7 @@ const EMBLEM_PANEL = (others) => ({
   lede: 'A rounded green badge holding a white silhouette of British Columbia, its three largest islands, and a dark evergreen standing over the mainland’s eastern edge.',
   blocks: [
     'This was the Forest Service’s mark before the oval designs. It is the same drawing on every poster in this series: one vector reconstruction, shared, rather than a fresh copy for each.',
-    'It also dates the poster. With no printed date, the emblem is the best evidence for when this was issued — before about 1973, the date the emblem is believed to have been replaced, which has not yet been confirmed by a source.',
+    'It also dates the poster. With no printed date, the emblem is the best evidence for when this was issued: before about 1973, the date the emblem is believed to have been replaced, which has not yet been confirmed by a source.',
     { facts: [
       ['Badge', '#278F38'],
       ['Map and islands', '#FFFFFF'],
@@ -380,7 +380,7 @@ export const REWARD = {
         heading: 'A bird on the bough',
         lede: 'Blue, with an orange head, a yellow breast, lime shoulder markings and orange feet, perched on the upper left bough and looking out of the frame.',
         blocks: [
-          'Its feathers are separate inlaid panels — tail, wing and shoulder — so each colour is its own shape rather than a stroke over a fill. The eye is geometric: concentric circles.',
+          'Its feathers are separate inlaid panels (tail, wing and shoulder), so each colour is its own shape rather than a stroke over a fill. The eye is geometric: concentric circles.',
           { facts: [
             ['Groups', 'tail feathers, feet, shoulder markings, wing panels, eye'],
             ['Simplified', 'the finest feather detail']
@@ -399,7 +399,7 @@ export const REWARD = {
         heading: 'A bear in the ferns',
         lede: 'A round yellow bear with a brown eye mask, peering out from behind the ferns with one paw over the bottom of the frame.',
         blocks: [
-          'The foreleg is a layer of its own, drawn last, so the paw sits in front of the foliage and the frame — the one place the illustration steps out of its box.',
+          'The foreleg is a layer of its own, drawn last, so the paw sits in front of the foliage and the frame: the one place the illustration steps out of its box.',
           { facts: [
             ['Layers', 'bear (head, mask, muzzle), foreleg and paw'],
             ['Order', 'paw above the foreground foliage']
@@ -495,7 +495,7 @@ export const ENJOY_PROTECT = {
       panel: {
         eyebrow: 'The headline',
         heading: 'Enjoy & Protect our Forests',
-        lede: 'One line of tight, condensed bold lettering across the top of the panel, in mixed case — unusually soft for a government sign.',
+        lede: 'One line of tight, condensed bold lettering across the top of the panel, in mixed case, unusually soft for a government sign.',
         blocks: [
           'The headline uses custom, reconstructed letter shapes rather than a font. A live-text version sets it in Roboto Condensed Bold as a substitute; that is a stand-in, not an identification of the historical lettering.',
           { facts: [
@@ -533,7 +533,7 @@ export const ENJOY_PROTECT = {
       panel: {
         eyebrow: 'The figure',
         heading: 'Arms out, in a red hat',
-        lede: 'A cartoon figure in a red hat and shirt, black trousers and cream boots, arms flung wide, beside the tree — with a clump of red flowers between them.',
+        lede: 'A cartoon figure in a red hat and shirt, black trousers and cream boots, arms flung wide, beside the tree, with a clump of red flowers between them.',
         blocks: [
           'The cream face, hands and boots are solid shapes, not holes, so the drawing can sit on any background without the panel showing through them.',
           { facts: [

@@ -83,7 +83,7 @@ export const renderLogo = (c, { background = 'none', clearSpace = 0 } = {}) => {
       variant: c.variant,
       background,
       clearSpaceFactor: clearSpace,
-      title: `British Columbia — ${c.currentText.replace(/\n/g, ' ')}`
+      title: `British Columbia: ${c.currentText.replace(/\n/g, ' ')}`
     })
   }
   return renderLockupSvg({

@@ -34,7 +34,7 @@ test('every series lists posters that exist, and every poster is in the series i
   assert.equal(new Set(listed).size, listed.length, 'a poster is listed twice')
   assert.deepEqual([...listed].sort(), Object.keys(POSTERS).sort())
   for (const series of SERIES) {
-    assert.ok(series.title && series.kind && series.description, `${series.id} is missing its words`)
+    assert.ok(series.title && series.kind, `${series.id} is missing its words`)
     for (const id of series.posters) assert.equal(POSTERS[id].series, series.id, `${id} names another series`)
   }
   for (const id of listed) assert.equal(seriesOf(id).id, POSTERS[id].series)

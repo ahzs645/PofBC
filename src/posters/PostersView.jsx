@@ -58,10 +58,7 @@ const PosterCard = ({ id, cardRef }) => {
       </span>
       <span className="posters__card-text">
         <span className="posters__title">{meta.title}</span>
-        <span className="posters__issuer">{meta.issuer}</span>
-        <span className="posters__summary">{meta.summary}</span>
-        <span className="posters__dated">{meta.dated}</span>
-        <span className="posters__open">Explore its parts <span aria-hidden="true">→</span></span>
+        <span className="posters__dated">{meta.when}</span>
       </span>
     </SiteLink>
   )
@@ -115,21 +112,19 @@ export const PostersView = () => {
       <section className="posters" aria-label="Posters">
         <div className="posters__intro">
           <h2>Posters</h2>
-          <p>Printed pieces from the Province and its services, rebuilt as drawings and grouped by series. Open one and move across it: every part — a headline, a logo, a credit line — opens with its history, and links on to the marks and the bodies behind it.</p>
+          <p>Open a poster and click any part to see its history.</p>
         </div>
         {SERIES.map((series) => (
           <section key={series.id} className="posters__series" aria-labelledby={`series-${series.id}`}>
             <header className="posters__series-head">
-              <p className="posters__kind">{series.kind} · {series.posters.length}</p>
               <h3 id={`series-${series.id}`}>{series.title}</h3>
-              <p>{series.description}</p>
+              <p className="posters__kind">{series.kind}</p>
             </header>
             <div className="posters__grid">
               {series.posters.map((id) => <PosterCard key={id} id={id} cardRef={(element) => { cards.current[id] = element }} />)}
             </div>
           </section>
         ))}
-        <p className="posters__footnote">Each drawing is a reconstruction from a photograph of a printed copy, not an original production master. Where a date, a typeface or a colour is not established, the panels say so.</p>
       </section>
 
       {meta && module?.id === meta.id && (

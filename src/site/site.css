@@ -121,6 +121,11 @@
    change; reserving its gutter keeps the layout from shifting sideways when it does. */
 html { scrollbar-gutter: stable; }
 
+/* Scrollbars in the page's own colours: a quiet thumb on a track that is the page itself, so the
+   bar and its reserved gutter read as part of the surface rather than a grey strip down the side.
+   The property inherits, so every scrolling panel and menu on the site follows. */
+:root { scrollbar-color: color-mix(in srgb, var(--ink) 22%, var(--page)) var(--page); }
+
 body {
   margin: 0;
   background: var(--page);

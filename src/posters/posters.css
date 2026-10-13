@@ -23,6 +23,7 @@
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --radius: 18px;
   color-scheme: dark;
+  scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
 }
 
 .pv {
@@ -219,10 +220,14 @@
   overflow-x: hidden;
   overscroll-behavior: contain;
   z-index: 5;
+  /* A slim bar that stays out of the way: no track, a thumb only while the pointer is over the
+     panel, and its room reserved so nothing shifts when it appears. */
   scrollbar-width: thin;
-  scrollbar-color: var(--line-2) transparent;
+  scrollbar-color: transparent transparent;
+  scrollbar-gutter: stable;
 }
-.pv-panel-body { padding: 26px 26px 34px; }
+.pv-panel:hover, .pv-panel:focus-within { scrollbar-color: rgba(255, 255, 255, 0.22) transparent; }
+.pv-panel-body { padding: 26px 18px 34px 26px; }
 .pv-panel-close {
   position: sticky;
   top: 10px;
@@ -410,7 +415,7 @@
 
 /* ── Export dialog ── */
 .pv-dialog-backdrop { position: fixed; inset: 0; background: rgba(4, 5, 4, 0.6); backdrop-filter: blur(6px); display: grid; place-items: center; padding: 16px; z-index: 20; }
-.pv-dialog { width: min(560px, 100%); max-height: 100%; overflow-y: auto; background: rgba(18, 20, 18, 0.9); backdrop-filter: blur(24px); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 20px 22px 18px; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6); }
+.pv-dialog { width: min(560px, 100%); max-height: 100%; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.22) transparent; background: rgba(18, 20, 18, 0.9); backdrop-filter: blur(24px); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 20px 22px 18px; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6); }
 .pv-dialog-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 .pv-dialog h2 { font-family: var(--display); font-weight: 600; font-size: 22px; letter-spacing: -0.02em; margin: 0; }
 .pv-dialog .pv-close { background: none; border: none; font-size: 26px; line-height: 1; color: var(--muted); padding: 0 4px; }
@@ -492,17 +497,16 @@
   margin-bottom: var(--gap);
 }
 .posters__intro h2 { margin: 0 0 6px; font-size: 22px; }
-.posters__intro p { margin: 0; color: var(--ink-muted); max-width: 70ch; }
+.posters__intro p { margin: 0; color: var(--ink-muted); }
 .posters__series {
   background: var(--surface);
   border-radius: var(--radius);
   padding: 20px;
   margin-bottom: var(--gap);
 }
-.posters__series-head { margin-bottom: 16px; }
-.posters__series-head h3 { margin: 0 0 6px; font-size: 18px; }
-.posters__series-head p { margin: 0; color: var(--ink-muted); max-width: 70ch; }
-.posters__series-head .posters__kind { margin: 0 0 4px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
+.posters__series-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin-bottom: 14px; }
+.posters__series-head h3 { margin: 0; font-size: 18px; }
+.posters__series-head .posters__kind { margin: 0; font-size: 13px; color: var(--ink-faint); }
 .posters__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--gap); }
 .posters__card {
   display: grid;
@@ -527,14 +531,18 @@
   background: repeating-conic-gradient(var(--checker-a) 0 25%, var(--checker-b) 0 50%) 0 0 / 16px 16px;
 }
 .posters__thumb img { max-width: 100%; max-height: 224px; width: auto; height: auto; display: block; filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18)); }
-.posters__card-text { display: grid; align-content: start; gap: 4px; padding: 14px 16px 16px; }
+.posters__card-text { display: grid; align-content: start; gap: 2px; padding: 12px 16px 14px; }
 .posters__title { font-weight: 650; font-size: 16px; }
-.posters__issuer { font-size: 13px; color: var(--ink-muted); }
-.posters__summary { font-size: 13.5px; line-height: 1.45; margin-top: 4px; }
 .posters__dated { font-size: 12.5px; color: var(--ink-faint); }
-.posters__open { margin-top: 8px; font-size: 13px; font-weight: 600; }
-.posters__footnote { color: var(--ink-faint); font-size: 13px; margin: 4px 4px var(--gap); max-width: 70ch; }
 @media (max-width: 600px) {
   .posters__intro, .posters__series { padding: 16px; }
   .posters__grid { grid-template-columns: 1fr; }
+}
+
+/* Safari draws WebKit scrollbars and ignores scrollbar-color; give it the same slim, quiet bar. */
+@supports not (scrollbar-color: auto) {
+  .pv-panel::-webkit-scrollbar, .pv-dialog::-webkit-scrollbar { width: 8px; }
+  .pv-panel::-webkit-scrollbar-track, .pv-dialog::-webkit-scrollbar-track { background: transparent; }
+  .pv-panel::-webkit-scrollbar-thumb, .pv-dialog::-webkit-scrollbar-thumb { background: transparent; border-radius: 8px; border: 2px solid transparent; background-clip: padding-box; }
+  .pv-panel:hover::-webkit-scrollbar-thumb, .pv-dialog::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.22); }
 }

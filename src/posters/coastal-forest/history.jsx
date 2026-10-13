@@ -3,7 +3,7 @@
 export const MINISTRY_NAMES = [
   { year: '1975', text: <>Department of Environment, created from the old Department of Lands, Forests and Water Resources</> },
   { year: '1976', text: <>Ministry of <i>the</i> Environment</> },
-  { year: '1979', text: <><b>Ministry of Environment</b> — the wording on this poster</>, here: true },
+  { year: '1979', text: <><b>Ministry of Environment</b>, the wording on this poster</>, here: true },
   { year: '1986', text: 'Ministry of Environment and Parks' },
   { year: '1991', text: 'Ministry of Environment, Lands and Parks' },
   { year: 'now', text: 'Ministry of Environment and Parks again' }

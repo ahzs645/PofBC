@@ -24,11 +24,11 @@ export const FOREST_LOGOS = [
       'The British Columbia Forest Service’s mark before the oval designs: the mainland and its three largest islands in white, with a geometric evergreen standing over the mainland’s eastern edge, on a badge whose sides bow gently outward.',
       'It is believed to have been in use until about 1973. No source in this collection yet confirms that date, or when the emblem was introduced; it is recorded here as the working date, to be replaced when a dated document turns up.',
       'In the emblem’s last years the Forest Service sat within the Department of Lands, Forests and Water Resources (1962–1976). The Department of Forests was separated from it in 1976, and the Ministry of Forests Act came into force on 1 January 1979.',
-      'The artwork is a vector reconstruction from a supplied image: seven shapes — the badge, the mainland, three islands, the crown and the trunk — with flat colours chosen from the image, not verified ink specifications. The same drawing is used on both Forest Service posters in the Posters view.'
+      'The artwork is a vector reconstruction from a supplied image: seven shapes (the badge, the mainland, three islands, the crown and the trunk) with flat colours chosen from the image, not verified ink specifications. The same drawing is used on both Forest Service posters in the Posters view.'
     ],
     sources: [forestServiceTimeline],
     seenOn: [
-      onPoster('reward-living-forest', 'REWARD — A Living Forest', 'Campfire poster · bottom right, beside the service’s name'),
+      onPoster('reward-living-forest', 'REWARD: A Living Forest', 'Campfire poster · bottom right, beside the service’s name'),
       onPoster('enjoy-protect-forests', 'Enjoy & Protect our Forests', 'Sign · bottom right, beside the service’s name')
     ]
   },
