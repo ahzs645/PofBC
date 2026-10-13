@@ -452,6 +452,28 @@ approximations. None of this is current BC Hydro brand guidance.
 
 ---
 
+## Visual guides
+
+**Visual Guides** in the title menu (`?view=guides`) holds identity manuals rebuilt page by page as
+drawings, from the ManualKit reconstruction project: the Province's **Visual Identity Program**
+(the General, Reproduction, Sign and Vehicle manuals of 1977, and the September 1982 policy memo)
+and **BC Hydro's Graphic Standards Manual** of June 1983, 156 pages in all. Each family opens to its
+books, each book to a grid of its pages, and each page full size with zoom, previous and next (the
+arrow keys too), its reconstruction notes, and its SVG to download. A page is linked by its address:
+`?view=guides&guide=sign&page=S05`.
+
+Only the rebuilt pages are here. The reference scans and PDFs are not: the pages are live text in
+open-licence stand-ins (TeX Gyre faces for Helvetica and Times) and drawn geometry. Four pages of the
+1982 memo carried cropped pieces of the scan, two photographs and two handwritten signatures; each
+is replaced by a labelled placeholder. `scripts/import_visual_guides.py` copies the pages into
+`public/visual-guides/` and writes `src/guides/guidesData.js`; `scripts/render-guide-thumbnails.mjs`
+renders the grid images from those copies. `src/guides/guides.test.js` checks that every page is
+there and that none embeds an image.
+The pages embed subsets of TeX Gyre Heros, Termes and Cursor and of Noto Sans; their licences are
+in `public/visual-guides/font-licences/`, served beside the pages.
+
+---
+
 ## Posters, by series
 
 **Posters** in the title menu (`?view=posters`) holds printed pieces rebuilt as drawings, grouped by
