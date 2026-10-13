@@ -30,7 +30,10 @@ to those posters at their emblem (`&internal-logo=forest-service-emblem`).
 A fourth oval, **Forest Service, green and gold** (`&internal-logo=forest-service-green-gold`), is
 likewise a supplied drawing: FOREST SERVICE and BRITISH COLUMBIA in gold on a dark green oval around
 a lone evergreen, mountains and a lake. Its adoption date is unverified; it opens in full colour and
-two generated colourways. Drawn designs are recoloured by mapping their own colours to new ones
+two generated colourways. The oldest design, an engraved **Forest Service, Lands Department** seal
+(`&internal-logo=forest-service-lands-department`), opens the family: its wording places it in the
+Department of Lands years (1912–1945), and the view says why that is not yet a date. It is shown from a
+lighter copy of its 5.6 MB master. Drawn designs are fetched when first shown, and recoloured by mapping their own colours to new ones
 (`src/internal/forestLogos.js`), and their source packages are in [`artwork/internal/`](artwork/internal). Each oval opens its colour and service
 variants: full colour, black and white, generated green and reversed colourways,
 and the related Wildfire presets. Forest Service also includes black

@@ -1,10 +1,8 @@
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { loadLetteringRuntime } from '../../vendor/forestoval/shared-primitives/live-lettering/src/runtime.ts'
 import mountainRidge from '../../vendor/forestoval/shared-primitives/bc-ministry-v5/scenes/tree-parts/mountain-ridge.svg?raw'
 import mountainBase from '../../vendor/forestoval/shared-primitives/bc-ministry-v5/scenes/tree-parts/mountain-base.svg?raw'
 import { FOREST_LOGOS, variantsFor } from './forestLogos.js'
-import emblemSvg from './forest-service-emblem.svg?raw'
-import greenGoldSvg from './forest-service-green-gold.svg?raw'
 import { SiteLink } from '../site/navigation.jsx'
 import './internal.css'
 
@@ -98,12 +96,30 @@ const OvalLogo = ({ preset, name, decorative = false, theme, colours, compositio
 
 // Some designs are supplied drawings rather than Forest Oval recipes: recoloured by mapping their own
 // colours to new ones, with every id prefixed per copy so a clip path still finds its own shape
-// when several copies share a page.
+// when several copies share a page. They are fetched when first shown, since the engraved seal
+// alone is larger than the rest of this view.
 const DRAWINGS = {
-  'forest-service-emblem.svg': emblemSvg,
-  'forest-service-green-gold.svg': greenGoldSvg
+  'forest-service-lands-department.svg': () => import('./forest-service-lands-department.svg?raw'),
+  'forest-service-emblem.svg': () => import('./forest-service-emblem.svg?raw'),
+  'forest-service-green-gold.svg': () => import('./forest-service-green-gold.svg?raw')
 }
-const drawingMarkup = ({ artwork, recolour = {}, name, prefix }) => DRAWINGS[artwork]
+const fetched = new Map()
+
+const useDrawing = (artwork, attempt) => {
+  const [state, setState] = useState(() => ({ svg: fetched.get(artwork) ?? null, failed: false }))
+  useEffect(() => {
+    if (fetched.has(artwork)) { setState({ svg: fetched.get(artwork), failed: false }); return undefined }
+    let gone = false
+    setState({ svg: null, failed: false })
+    DRAWINGS[artwork]()
+      .then(({ default: svg }) => { fetched.set(artwork, svg); if (!gone) setState({ svg, failed: false }) })
+      .catch(() => { if (!gone) setState({ svg: null, failed: true }) })
+    return () => { gone = true }
+  }, [artwork, attempt])
+  return state
+}
+
+const drawingMarkup = ({ svg, recolour = {}, name, prefix }) => svg
   .replace(/<\?xml[^>]*>\s*/, '')
   .replace(/<title[\s\S]*?<\/title>\s*/, '')
   .replace(/<desc[\s\S]*?<\/desc>\s*/, '')
@@ -114,9 +130,14 @@ const drawingMarkup = ({ artwork, recolour = {}, name, prefix }) => DRAWINGS[art
 
 const DrawingLogo = ({ artwork, recolour, padding, name, decorative = false, background = '#fff' }) => {
   const prefix = `drawing${useId().replace(/[^a-zA-Z0-9]/g, '')}`
+  const [attempt, setAttempt] = useState(0)
+  const { svg, failed } = useDrawing(artwork, attempt)
+  const markup = useMemo(() => svg && drawingMarkup({ svg, recolour, name, prefix }), [svg, recolour, name, prefix])
   return (
     <div className="internal-logos__artwork" style={{ background }} aria-hidden={decorative || undefined}>
-      <div className="internal-logos__svg" style={{ padding }} dangerouslySetInnerHTML={{ __html: drawingMarkup({ artwork, recolour, name, prefix }) }} />
+      {markup && <div className="internal-logos__svg" style={{ padding }} dangerouslySetInnerHTML={{ __html: markup }} />}
+      {!markup && !failed && <span role="status">Loading logo…</span>}
+      {failed && (decorative ? <span>Logo unavailable</span> : <div role="alert">Could not load this logo. <button type="button" onClick={() => setAttempt((value) => value + 1)}>Retry</button></div>)}
     </div>
   )
 }
@@ -249,7 +270,7 @@ export const InternalLogosView = () => {
               </article>
             ))}
           </div>
-          <p className="internal-logos__footnote">Three of the ovals are reconstructed in Forest Oval from supplied references; the evergreen emblem and the green-and-gold Forest Service oval are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
+          <p className="internal-logos__footnote">Three of the ovals are reconstructed in Forest Oval from supplied references; the Lands Department seal, the evergreen emblem and the green-and-gold Forest Service oval are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the seal and the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
         </>
       ) : (
         <>
@@ -261,8 +282,8 @@ export const InternalLogosView = () => {
             <OvalLogo preset="forests" name="Forests" decorative />
             <span className="internal-logos__family-text">
               <span className="internal-logos__family-title">Forests <span aria-hidden="true">→</span></span>
-              <span>The evergreen emblem and four oval designs</span>
-              <span className="internal-logos__family-description">The Forest Service’s evergreen emblem from before about 1973, then the Forests and long ministry name ovals and two Forest Service ovals. View the logos and their history.</span>
+              <span>Two early marks and four oval designs</span>
+              <span className="internal-logos__family-description">The Forest Service’s engraved Lands Department seal and its evergreen emblem from before about 1973, then the Forests and long ministry name ovals and two Forest Service ovals. View the logos and their history.</span>
             </span>
           </button>
         </>

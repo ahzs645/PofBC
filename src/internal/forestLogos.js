@@ -15,6 +15,21 @@ const onPoster = (poster, title, note) => ({ title, note, to: { view: 'posters',
 
 export const FOREST_LOGOS = [
   {
+    id: 'forest-service-lands-department',
+    kind: 'drawing',
+    artwork: 'forest-service-lands-department.svg',
+    padding: '2%',
+    name: 'Forest Service, Lands Department',
+    description: 'An engraved seal: a lone conifer through the lettering, with boughs and cones on either side.',
+    evidence: 'Lands Department wording (1912–1945) · dating unconfirmed',
+    comments: [
+      '“BRITISH COLUMBIA” arcs over a white oval and “LANDS DEPARTMENT” under it, with “FOREST SERVICE” across the middle. A single conifer stands up through the lettering on a narrow trunk with spreading roots, and engraved boughs and cones spread out on both sides of the oval.',
+      'Its wording is the best evidence of its age. The Forest Branch was created within the Department of Lands in February 1912, and the BC Forest Service timeline records it becoming the Forest Service in 1945, when forests became a department of their own under the Minister of Lands and Forests. A seal naming both the Forest Service and the Lands Department sits at that change, or shows the service’s name in use before the timeline’s date. Which of the two is not established.',
+      'The artwork is a vector reconstruction from a supplied image: the engraving rebuilt as measured, variable-width strokes, the trunk, roots and 43 letters as separately fitted outlines, and the oval as a measured ellipse. The letters are reconstructed shapes, not an identified typeface. The site shows a lighter copy of the master, its coordinates rounded to a tenth of a unit.'
+    ],
+    sources: [forestServiceTimeline]
+  },
+  {
     id: 'forest-service-emblem',
     kind: 'drawing',
     artwork: 'forest-service-emblem.svg',
@@ -125,6 +140,11 @@ const oneInk = (foreground, background) => ({
 // sampled from those photographs, so they are approximate. The green-and-gold oval's are generated,
 // after the treatments the tree oval is offered in.
 const DRAWING_VARIANTS = {
+  'forest-service-lands-department.svg': [
+    { id: 'colour', name: 'As engraved', recolour: {}, note: 'Black ink on a white oval, as in the supplied image. Outside the oval the paper shows through.' },
+    { id: 'green', name: 'Forest green', recolour: { '#000000': '#00381E' }, note: 'The ink in the green-and-gold oval’s badge green. A generated recolour.' },
+    { id: 'reversed', name: 'White on green', recolour: { '#000000': '#FFFFFF', '#FFFFFF': '#00381E' }, background: '#00381E', note: 'The engraving in white, its oval filled with the same green. A generated recolour.' }
+  ],
   'forest-service-emblem.svg': [
     { id: 'colour', name: 'Full colour', recolour: {}, note: 'The reconstruction’s flat colours, chosen from the supplied emblem image.' },
     { id: 'reward-lime', name: 'Lime, as on REWARD', recolour: { '#278F38': '#8CBE0C' }, note: 'The badge green sampled from the photograph of the REWARD poster. Approximate: print and photograph both shift colour.' },
