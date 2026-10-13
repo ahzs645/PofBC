@@ -479,7 +479,44 @@ const BCF_RIGHTS = {
     `body. ${NO_PERMISSION}`
 }
 
+// Rebuilt from three small screenshots by setting the lettering in substitute outlines, one scale per
+// line, and checking each against its screenshot in an overlay. The screenshots' sources are not
+// recorded in the package.
+const BCF_TOLL = (ground) => ({
+  provenance: 'reconstructed',
+  fidelity: 'font substitution',
+  fidelityNote: `Lettering set in substitute outlines (${ground}), fitted to a small screenshot of the printed ` +
+    'wordmark and compared with it in overlay proofs. The outlines name no original typeface, and where the ' +
+    'screenshot came from is not recorded.',
+  applicability: DATED_BY_TIMELINE('estimated_era', '1960–1964', 'The name’s years: from the service’s start ' +
+    'in 1960 to the authority’s renaming on 1 April 1964.'),
+  rights: BCF_RIGHTS
+})
+
 const BCF_ENTRIES = {
+  'bcf-toll-authority': [
+    supplied(BCF_TOLL('Roboto Condensed Bold'))({
+      id: 'bcf-toll-condensed',
+      reverse: 'bcf-toll-condensed-white',
+      label: 'One line, condensed',
+      years: '1960–1964',
+      note: 'Condensed capitals on one line, “Toll Authority” stacked small between the two halves. Printed black on orange.'
+    }),
+    supplied(BCF_TOLL('Inter Display Black, with Liberation Sans for the middle line'))({
+      id: 'bcf-toll-stacked',
+      reverse: 'bcf-toll-stacked-white',
+      label: 'Three lines',
+      years: '1960–1964',
+      note: 'Heavy extended capitals over “Toll Authority” in a light line. Printed black on pale blue, under “served by”.'
+    }),
+    supplied(BCF_TOLL('Inter Display Regular, with Roboto Condensed for the middle'))({
+      id: 'bcf-toll-regular',
+      reverse: 'bcf-toll-regular-white',
+      label: 'One line, regular',
+      years: '1960–1964',
+      note: 'The one-line arrangement in lighter capitals. Printed white on a black strip.'
+    })
+  ],
   'bcf-early-dogwood': [
     supplied({
       provenance: 'reconstructed',
@@ -847,10 +884,11 @@ export const GALLERY_COLLECTIONS = [
     // a public body, so the link goes to the years it was one.
     graphNode: 'bc-ferry-corporation',
     cover: 'bcf-wave',
-    intro: 'BC Ferries’ two symbols: the dogwood, from the ferry system’s start in 1960 — first as an ' +
-      'outlined flower on a waving flag, later redrawn in geometric petals beside a squared wordmark — ' +
-      'then the wave, introduced on 2 April 2003 with the company that replaced the Crown corporation. ' +
-      'The dogwood marks are reconstructions; the wave is supplied paths, shown as they came.',
+    intro: 'BC Ferries from its start in 1960, when it sailed as the British Columbia Toll Authority Ferry ' +
+      'System under that name’s wordmark, until 1964, when its authority was renamed. Then its two symbols: ' +
+      'the dogwood, first an outlined flower on a waving flag and later redrawn in geometric petals beside a ' +
+      'squared wordmark, and the wave, introduced on 2 April 2003 with the company that replaced the Crown ' +
+      'corporation. The wordmarks and dogwoods are reconstructions; the wave is supplied paths, shown as they came.',
     eras: withMarks(COLLECTION_ERAS['bc-ferries'], BCF_ENTRIES)
   },
   {

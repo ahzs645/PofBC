@@ -87,8 +87,10 @@ obtain, is in [`research/identity/`](research/identity/README.md).
 (27 September 2026). ICBC's runs from a 1974 registry emblem through the half-disc lockups of 1989
 to the road badge — serif, heavier sans, then rounded since about 2008, in blue and, on icbc.com
 today, orange. BCLC's runs from the sun-and-waves lockup to the lowercase `bclc` of August 2008, and
-its later purple, coral and yellow palette. **BC Ferries**, from a third package, runs from the
-dogwood flag of the 1960s and the geometric dogwood beside "BC FERRIES" (about 1978) to the wave of
+its later purple, coral and yellow palette. **BC Ferries**, from a third package, runs from its
+first name, the British Columbia Toll Authority Ferry System (three wordmarks, 1960 to 1964, rebuilt in
+substitute lettering, in [`artwork/bc-ferries/toll-authority/`](artwork/bc-ferries/toll-authority)), through
+the dogwood flag of the 1960s and the geometric dogwood beside "BC FERRIES" (about 1978) to the wave of
 2 April 2003, which came in with the company that replaced the Crown corporation. **WorkSafeBC**, from
 a fourth, has the 1983 province-and-worker mark and today's black-and-orange wordmark, both rebuilt,
 with its documented 1968 design kept as an empty era until a picture of it turns up. **BC Transit**,

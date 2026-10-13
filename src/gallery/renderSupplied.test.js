@@ -42,5 +42,5 @@ test('the drawing is the file’s own, placed rather than changed', () => {
 })
 
 test('only the marks supplied reversed are white alone', () => {
-  assert.deepEqual(ids.filter(isReversed), ['bclc-legacy-reversed', 'bcf-wave-white'])
+  assert.deepEqual(ids.filter(isReversed), ['bclc-legacy-reversed', 'bcf-toll-condensed-white', 'bcf-toll-stacked-white', 'bcf-toll-regular-white', 'bcf-wave-white'])
 })

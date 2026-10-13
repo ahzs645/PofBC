@@ -700,7 +700,14 @@ const BCF_SOURCES = {
     'the dogwood retired after 43 years; the outgoing logo unchanged for 25; the wave introduced, and phased in over the following year'),
   S2: source('British Columbia Toll Authority Ferry System, 1963 season brochure, via ExploreNorth [S2]',
     'https://explorenorth.com/bc/bc_ferries-1963.html', 'cover: a black-outlined dogwood on a green flag'),
-  S3: source('BC Ferries, Investor Overview, September 2026 [S3]', 'https://www.bcferries.com/web_image/h7f/h2d/9106869944350.pdf', 'cover')
+  S3: source('BC Ferries, Investor Overview, September 2026 [S3]', 'https://www.bcferries.com/web_image/h7f/h2d/9106869944350.pdf', 'cover'),
+  // The two below are the government atlas's own sources for the ferry system's first name.
+  S4: source('BC Ferry Commission, “1960–2003: Gov’t Ops”, web capture of 2005, Legislative Library of BC [S4]',
+    'https://www.llbc.leg.bc.ca/public/PubDocs/bcdocs/375876/bc_ferries.pdf',
+    'paragraph 1: the government service begins in summer 1960 as the BC Toll Authority Ferry System'),
+  S5: source('British Columbia Ferry Authority Act, S.B.C. 1964, c. 57 [S5]',
+    'https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/490475398',
+    'ss. 1–5: the Toll Highways and Bridges Authority renamed the British Columbia Ferry Authority, from 1 April 1964')
 }
 
 // WorkSafeBC's sources, from the research package in research/identity/worksafebc (27 September 2026).
@@ -1038,6 +1045,23 @@ export const COLLECTION_ERAS = {
   // Two symbol families — the dogwood, then the wave — with the dogwood split where the package
   // splits it: a dated 1963 example, and the drawing the 2003 announcement retired.
   'bc-ferries': [
+    {
+      id: 'bcf-toll-authority',
+      status: 'held',
+      years: '1960–1964',
+      label: 'The Toll Authority wordmark',
+      note: 'The ferry system’s first name, “British Columbia Toll Authority Ferry System”, set in capitals: ' +
+        'across one line with “Toll Authority” stacked small in the middle, or in three lines. The service ' +
+        'was run by the Toll Highways and Bridges Authority, a Crown corporation, which gave it the name.',
+      applicability: {
+        kind: 'estimated_era',
+        years: '1960–1964',
+        note: 'The name is the ferry system’s from its start in summer 1960, and its 1963 brochure carries it. ' +
+          'On 1 April 1964 the authority became the British Columbia Ferry Authority. The wordmarks themselves ' +
+          'are not dated, and when each went out of use is not recorded.'
+      },
+      sources: [BCF_SOURCES.S4, BCF_SOURCES.S2, BCF_SOURCES.S5]
+    },
     {
       id: 'bcf-early-dogwood',
       status: 'held',
