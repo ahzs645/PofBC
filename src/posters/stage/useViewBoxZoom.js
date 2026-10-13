@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useReducedMotion } from 'motion/react'
-import { fit, tween } from './zoom.js'
+import { easeInOutQuint, easeOutQuint, fit, tween } from './zoom.js'
 
 const setViewBox = (svg, v) => svg.setAttribute('viewBox', `${v.x} ${v.y} ${v.w} ${v.h}`)
 
@@ -11,9 +11,14 @@ const setViewBox = (svg, v) => svg.setAttribute('viewBox', `${v.x} ${v.y} ${v.w}
  * `inset` is the part of the stage covered by floating UI ({ right, bottom } in px): the box is
  * fitted into what is left and the viewBox then widened to cover the whole stage, so the subject
  * stays centred in the uncovered area.
+ *
+ * A new target while a zoom is still running picks up from where that one is, already moving, so
+ * stepping quickly through targets reads as one continuous glide rather than a run of restarts.
  */
 export const useViewBoxZoom = (svg, stageRef, { box, pad = 0.05, inset = { right: 0, bottom: 0 }, duration = 1000, initial }) => {
   const vb = useRef(initial ?? { x: 0, y: 0, w: 1, h: 1 })
+  const stop = useRef(null)
+  const running = useRef(false)
   const reduced = useReducedMotion()
   const key = `${box.x},${box.y},${box.w},${box.h},${pad}`
 
@@ -24,23 +29,41 @@ export const useViewBoxZoom = (svg, stageRef, { box, pad = 0.05, inset = { right
     const unitsPerPx = v.w / free.width
     return { x: v.x, y: v.y, w: v.w + inset.right * unitsPerPx, h: v.h + inset.bottom * unitsPerPx }
   }
+  // The resize observer outlives renders, so it reads the latest target through a ref.
+  const latest = useRef(target)
+  latest.current = target
 
   useEffect(() => {
     if (!svg) return
-    return tween(vb.current, target(), {
+    const moving = running.current
+    stop.current?.()
+    running.current = true
+    stop.current = tween(vb.current, target(), {
       duration: reduced ? 0 : duration,
-      onUpdate: (v) => { vb.current = v; setViewBox(svg, v) }
+      ease: moving ? easeOutQuint : easeInOutQuint,
+      onUpdate: (v) => { vb.current = v; setViewBox(svg, v) },
+      onComplete: () => { running.current = false }
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [svg, key, inset.right, inset.bottom, reduced, duration])
 
+  useEffect(() => () => stop.current?.(), [])
+
+  // Only a real change of the stage's size refits, and it snaps: the observer's first call on
+  // observe() is skipped, or it would jump to the target for a frame under a running zoom.
   useEffect(() => {
     if (!svg) return
-    const observer = new ResizeObserver(() => { vb.current = target(); setViewBox(svg, vb.current) })
+    let observed = false
+    const observer = new ResizeObserver(() => {
+      if (!observed) { observed = true; return }
+      stop.current?.()
+      running.current = false
+      vb.current = latest.current()
+      setViewBox(svg, vb.current)
+    })
     observer.observe(stageRef.current)
     return () => observer.disconnect()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [svg, key, inset.right, inset.bottom])
+  }, [svg, stageRef])
 
   return vb
 }
