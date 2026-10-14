@@ -263,7 +263,7 @@
 .pv-step {
   flex: none;
   height: 30px;
-  min-width: 10px;
+  min-width: 18px;
   padding: 0;
   border: none;
   border-radius: 999px;
@@ -275,6 +275,8 @@
   transition: background 150ms;
 }
 .pv-step:hover { background: rgba(255, 255, 255, 0.35); }
+/* A finger needs a bigger target than a pointer. */
+@media (pointer: coarse) { .pv-step { height: 36px; min-width: 28px; } }
 .pv-step.pv-current { background: var(--text); padding: 0 14px 0 10px; }
 .pv-step span { white-space: nowrap; font-size: 13px; font-weight: 600; display: flex; gap: 8px; align-items: center; }
 .pv-step span em { font-style: normal; font-family: var(--mono); font-size: 11px; opacity: 0.6; }
@@ -559,6 +561,7 @@
   .pv-back { padding: 0 10px; }
   .pv-top { gap: 6px; }
   .pv-switch-pick { padding: 0 9px; letter-spacing: -0.04em; }
+  .pv-switch-noun { display: none; }
   .pv-switch-pick::after { display: none; }
   .pv-top-start { gap: 8px; }
   .pv-brand b { font-size: 15px; }

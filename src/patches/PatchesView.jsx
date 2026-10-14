@@ -126,6 +126,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
         next={at < siblings.length - 1 ? siblings[at + 1] : null}
         onOpen={(patch) => go({ org: place.org, patch: patch.id })}
         onClose={close}
+        noun={copy.noun}
       />
     )
   }
@@ -175,7 +176,8 @@ export const PatchesView = ({ collection = 'patches' }) => {
                   </a>
                 </h4>
                 <span className="patches__count">{patches.length === org.patches.filter(isCard).length ? patches.length : `${patches.length} of ${org.patches.filter(isCard).length}`}</span>
-                {org.description && <p>{org.description}</p>}
+                {/* The organization's description is written for its patches. */}
+                {org.description && copy.view === 'patches' && <p>{org.description}</p>}
               </header>
               <div className="patches__grid">
                 {patches.map((patch) => (

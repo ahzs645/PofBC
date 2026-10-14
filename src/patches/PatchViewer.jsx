@@ -99,7 +99,7 @@ const textured = (result, finish, scale, canvas) => renderTextured(result, {
  * @param {(patch: object) => void} props.onOpen
  * @param {() => void} props.onClose
  */
-export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onClose }) => {
+export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onClose, noun = 'patches' }) => {
   const [widthMm, setWidthMm] = useState('89')
   const [border, setBorder] = useState('merrow')
   const [finish, setFinish] = useState('matte')
@@ -171,12 +171,17 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
   return (
     <section className="patch" aria-label={title}>
-      <nav className="patch__bar" aria-label="Patches">
-        <button type="button" className="button button--ghost" onClick={onClose}>← All patches</button>
+      <nav className="patch__bar" aria-label={noun === 'badges' ? 'Badges' : 'Patches'}>
+        <button type="button" className="button button--ghost" onClick={onClose}>← All {noun}</button>
         <span className="patch__crumb">{org.name} · {position.index + 1} of {position.count}</span>
+        {/* On a phone the steps shrink to arrows, so the bar stays one row. */}
         <span className="patch__steps">
-          <button type="button" className="button" disabled={!previous} onClick={() => onOpen(previous)} title={previous?.label}>Previous</button>
-          <button type="button" className="button" disabled={!next} onClick={() => onOpen(next)} title={next?.label}>Next</button>
+          <button type="button" className="button" disabled={!previous} onClick={() => onOpen(previous)} title={previous?.label} aria-label="Previous">
+            <span aria-hidden="true">‹</span><span className="patch__step-label"> Previous</span>
+          </button>
+          <button type="button" className="button" disabled={!next} onClick={() => onOpen(next)} title={next?.label} aria-label="Next">
+            <span className="patch__step-label">Next </span><span aria-hidden="true">›</span>
+          </button>
         </span>
       </nav>
 
@@ -246,7 +251,12 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
           </p>
 
           <PatchHistory patch={patch} />
-          {patch.limitations && <p className="patch__limits"><strong>Limitations.</strong> {patch.limitations}</p>}
+          {patch.limitations && (
+            <details className="patch__limits">
+              <summary>Limitations</summary>
+              <p>{patch.limitations}</p>
+            </details>
+          )}
           <p className="patch__source">
             {patch.supplied
               ? <>{patch.id}, a supplied drawing rather than an atlas entry</>

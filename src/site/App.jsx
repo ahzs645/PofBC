@@ -644,22 +644,28 @@ export const App = () => {
       </div>
       )}
 
-      <p className="footnote">
-        The mark is reproduced from the supplied artwork and is a provincial symbol; use of it is
-        governed by the Government of British Columbia. The typeface is embedded in exports under
-        whatever licence covers the copy this site was built with.
-        {view === 'gallery' && (
-          <> The gallery also holds other public bodies’ marks, such as BC Hydro’s, which are theirs
-            and are reconstructed here from historical material, not supplied by them.</>
-        )}
-      </p>
+      {/* The rights and capabilities notes concern the generator's mark and the gallery's; the
+          other views (posters, patches, guides…) carry their own sources. */}
+      {(view === 'generator' || view === 'gallery') && (
+        <>
+          <p className="footnote">
+            The mark is reproduced from the supplied artwork and is a provincial symbol; use of it is
+            governed by the Government of British Columbia. The typeface is embedded in exports under
+            whatever licence covers the copy this site was built with.
+            {view === 'gallery' && (
+              <> The gallery also holds other public bodies’ marks, such as BC Hydro’s, which are theirs
+                and are reconstructed here from historical material, not supplied by them.</>
+            )}
+          </p>
 
-      {/* Linked rather than only sitting at a path, so it is reachable from the page itself —
-          by a person wondering what the generator can do, and by an agent reading the document. */}
-      <p className="footnote">
-        Every option this generator offers is listed in{' '}
-        <a href={`${import.meta.env.BASE_URL}capabilities.json`}>capabilities.json</a>.
-      </p>
+          {/* Linked rather than only sitting at a path, so it is reachable from the page itself —
+              by a person wondering what the generator can do, and by an agent reading the document. */}
+          <p className="footnote">
+            Every option this generator offers is listed in{' '}
+            <a href={`${import.meta.env.BASE_URL}capabilities.json`}>capabilities.json</a>.
+          </p>
+        </>
+      )}
     </div>
     </NavigationContext.Provider>
   )

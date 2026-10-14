@@ -90,7 +90,7 @@
   padding: 10px 12px;
   border-bottom: 1px solid var(--outline);
 }
-.patch__crumb { font-size: 13px; color: var(--ink-muted); }
+.patch__crumb { flex: 1; min-width: 0; font-size: 13px; color: var(--ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .patch__steps { display: flex; gap: 8px; margin-left: auto; }
 
 .patch__body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; }
@@ -139,9 +139,10 @@
 .patch__exports { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
 .patch__exports .button { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; padding-inline: 8px; }
 .patch__exports .button--primary { width: auto; min-height: var(--control); }
+.patch__limits summary { cursor: pointer; font-weight: 600; color: var(--ink-2); width: fit-content; }
+.patch__limits p { margin: 6px 0 0; }
 .patch__more, .patch__limits, .patch__source { margin: 0; font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
 .patch__more a, .patch__source a { color: var(--ink); }
-.patch__limits strong { color: var(--ink-2); }
 .patch__history { display: grid; gap: 6px; }
 .patch__history h3 { margin: 0; font-size: 13px; font-weight: 600; color: var(--ink-2); }
 .patch__history ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
@@ -155,5 +156,7 @@
 @media (max-width: 600px) {
   .patch__stages { grid-template-columns: 1fr; }
   .patch__stage { min-height: 300px; }
-  .patch__steps { margin-left: 0; }
+  .patch__bar { flex-wrap: nowrap; }
+  .patch__step-label { display: none; }
+  .patch__steps .button { min-width: 40px; justify-content: center; font-size: 18px; line-height: 1; }
 }

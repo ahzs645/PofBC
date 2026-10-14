@@ -119,7 +119,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
                 <button type="button" className="pv-switch-step" disabled={!previous} onClick={previous?.open} title={previous ? `Previous: ${previous.title} ([)` : undefined} aria-label={previous ? `Previous ${noun}: ${previous.title}` : `No previous ${noun}`}>‹</button>
                 {/* The count reads as "3 / 5"; under it, a native list of every one to jump to. */}
                 <label className="pv-switch-pick" title={`Go to another ${noun}`}>
-                  <span aria-hidden="true">{shelf.index + 1} / {shelf.list.length}</span>
+                  <span aria-hidden="true"><span className="pv-switch-noun">{noun[0].toUpperCase() + noun.slice(1)} </span>{shelf.index + 1} / {shelf.list.length}</span>
                   <select aria-label={`Go to another ${noun}`} value={meta.id} onChange={(event) => shelf.open(event.target.value)}>
                     {shelf.list.map((entry, i) => <option key={entry.id} value={entry.id}>{i + 1}. {entry.title}</option>)}
                   </select>
