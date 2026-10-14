@@ -5,7 +5,7 @@
 // to it, the courts, and whatever answers to no ministry the sources name. It is the view that
 // works on a phone, and the one a screen reader can walk without learning the diagram's geometry.
 
-import { useMemo } from 'react'
+import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { KINDS } from './GovernmentGraph.jsx'
 
 const Item = ({ node, selected, onSelect, nested }) => (
@@ -27,7 +27,7 @@ const Item = ({ node, selected, onSelect, nested }) => (
   </li>
 )
 
-export const GovernmentList = ({ government, selectedId, onSelect, hiddenKinds }) => {
+export const GovernmentList = ({ government, selectedId, onSelect, hiddenKinds, compact = false }) => {
   const sections = useMemo(() => {
     const visible = government.nodes.filter((node) => node.kind !== 'people' && !hiddenKinds.has(node.kind))
     const by = (test) => visible.filter(test)
@@ -54,18 +54,40 @@ export const GovernmentList = ({ government, selectedId, onSelect, hiddenKinds }
     ].filter((section) => section.items.length)
   }, [government, hiddenKinds])
 
+  // The body chosen when the list opened; its group starts unfolded, and is not folded again under the
+  // reader as the choice moves.
+  const [chosenAtStart] = useState(selectedId)
+
+  // The list scrolls in the diagram's frame, and its scrollbar sits in the page's margin beside it,
+  // so the cards line up with the timeline under them whether the system's scrollbars take room or not.
+  const frame = useRef(null)
+  useLayoutEffect(() => {
+    const element = frame.current
+    if (element) element.style.setProperty('--gov-list-gutter', `${element.offsetWidth - element.clientWidth}px`)
+  }, [compact])
+
   return (
-    <div className="gov-list" aria-label={`The Government of British Columbia in ${government.year}, as a list`}>
-      {sections.map((section) => (
-        <section key={section.title} className="gov-list__section">
-          <h2 className="gov-list__title">{section.title} <span className="gov-muted">{section.items.length}</span></h2>
+    <div className="gov-list" ref={frame} aria-label={`The Government of British Columbia in ${government.year}, as a list`}>
+      {sections.map((section) => {
+        const title = <h2 className="gov-list__title">{section.title} <span className="gov-muted">{section.items.length}</span></h2>
+        const items = (
           <ul>
             {section.items.map(({ node, nested }) => (
               <Item key={node.id} node={node} nested={nested} selected={node.id === selectedId} onSelect={onSelect} />
             ))}
           </ul>
-        </section>
-      ))}
+        )
+        // On a phone the list is part of the page rather than a frame of its own, so its groups are
+        // folded — the one holding the chosen body open — so the timeline stays near.
+        return compact
+          ? (
+            <details key={section.title} className="gov-list__section" open={section.items.some(({ node }) => node.id === chosenAtStart) || undefined}>
+              <summary>{title}</summary>
+              {items}
+            </details>
+            )
+          : <section key={section.title} className="gov-list__section">{title}{items}</section>
+      })}
     </div>
   )
 }

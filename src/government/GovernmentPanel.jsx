@@ -514,8 +514,8 @@ export const OverviewCard = ({ government, onSelect }) => {
       )}
       <p className="gov-description gov-muted">
         {present
-          ? 'Choose any body to see who leads it and what it answers to. Move the timeline to watch the ministries reorganise, back to Confederation in 1871.'
-          : `The government as ${year} ended, plus any ministry that came and went within the year: its ministries and who held them, the Crown corporations and agencies that stood, and the Speaker, officers and chief justices then in office. Where no source says which ministry answered for a body, it is placed by inference and the panel says so.`}
+          ? 'Pick any body, or move the timeline back to 1871.'
+          : `The government as ${year} ended, plus any ministry that came and went within the year.`}
       </p>
       <p><button type="button" className="gov-link-button" onClick={() => onSelect(PEOPLE_ID)}>Start with the people →</button></p>
     </section>

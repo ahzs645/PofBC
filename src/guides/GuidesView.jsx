@@ -41,9 +41,9 @@ const pageLabel = ({ printed }) => {
   return printed[0].toUpperCase() + printed.slice(1)
 }
 
-const Thumb = ({ book, page, onOpen, buttonRef }) => (
+const Thumb = ({ book, page, onOpen, buttonRef, shape }) => (
   <button type="button" className="guides__thumb" onClick={onOpen} ref={buttonRef}>
-    <span className="guides__thumb-page">
+    <span className="guides__thumb-page" style={{ aspectRatio: shape }}>
       <img src={pageUrl(BASE, book.id, page.id, 'webp')} alt="" loading="lazy" width="320" height={Math.round(320 * page.height / page.width)} />
     </span>
     <span className="guides__thumb-title">{page.title}</span>
@@ -85,8 +85,16 @@ const Families = ({ open }) => (
   </>
 )
 
+/** The shape most of a book's pages share, as an aspect ratio, so its grid of pages is even. */
+const usualShape = (pages) => {
+  const counts = new Map()
+  for (const { width, height } of pages) counts.set(`${width} / ${height}`, (counts.get(`${width} / ${height}`) ?? 0) + 1)
+  return [...counts].sort((a, b) => b[1] - a[1])[0]?.[0]
+}
+
 const Book = ({ book, open, focusPage }) => {
   const family = familyOf(book.id)
+  const shape = usualShape(book.pages)
   const thumbs = useRef({})
   useEffect(() => { if (focusPage) thumbs.current[focusPage]?.focus() }, [focusPage])
   return (
@@ -98,7 +106,7 @@ const Book = ({ book, open, focusPage }) => {
       </div>
       <div className="guides__pages">
         {book.pages.map((page) => (
-          <Thumb key={page.id} book={book} page={page} onOpen={() => open({ book: book.id, page: page.id })} buttonRef={(element) => { thumbs.current[page.id] = element }} />
+          <Thumb key={page.id} book={book} page={page} shape={shape} onOpen={() => open({ book: book.id, page: page.id })} buttonRef={(element) => { thumbs.current[page.id] = element }} />
         ))}
       </div>
     </>
@@ -142,7 +150,7 @@ const Page = ({ book, page, open }) => {
           <div className="guides__zoom" role="group" aria-label="Zoom">
             {ZOOMS.map((entry) => <button key={entry.id} type="button" aria-pressed={zoom === entry.id} onClick={() => setZoom(entry.id)}>{entry.label}</button>)}
           </div>
-          <a className="guides__download" href={pageUrl(BASE, book.id, page.id)} download={`${page.id}.svg`}>Download SVG</a>
+          <a className="guides__download" href={pageUrl(BASE, book.id, page.id)} download={`${page.id}.svg`} aria-label="Download SVG"><span aria-hidden="true">↓ </span><span className="guides__download-word">Download </span>SVG</a>
         </div>
       </div>
       <div className="guides__viewer" data-zoom={zoom}>
