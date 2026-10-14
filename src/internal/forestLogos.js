@@ -10,6 +10,12 @@ const forestServiceTimeline = {
   url: 'https://bcfs100.for.gov.bc.ca/bscripts/timeline.asp'
 }
 
+// Photographs in the BC Forestry Patch Atlas (the source of the Patches view), by its photo ids.
+const atlasPhoto = (id, title, file) => ({
+  title: `BC Forestry Patch Atlas, photo ${id}: ${title}`,
+  url: `https://drive.google.com/file/d/${file}/view`
+})
+
 // The posters that carry the evergreen emblem, as places in the Posters view.
 const onPoster = (poster, title, note) => ({ title, note, to: { view: 'posters', poster, part: 'emblem' } })
 
@@ -25,9 +31,16 @@ export const FOREST_LOGOS = [
     comments: [
       '“BRITISH COLUMBIA” arcs over a white oval and “LANDS DEPARTMENT” under it, with “FOREST SERVICE” across the middle. A single conifer stands up through the lettering on a narrow trunk with spreading roots, and engraved boughs and cones spread out on both sides of the oval.',
       'Its wording is the best evidence of its age. The Forest Branch was created within the Department of Lands in February 1912, and the BC Forest Service timeline records it becoming the Forest Service in 1945, when forests became a department of their own under the Minister of Lands and Forests. A seal naming both the Forest Service and the Lands Department sits at that change, or shows the service’s name in use before the timeline’s date. Which of the two is not established.',
-      'The artwork is a vector reconstruction from a supplied image: the engraving rebuilt as measured, variable-width strokes, the trunk, roots and 43 letters as separately fitted outlines, and the oval as a measured ellipse. The letters are reconstructed shapes, not an identified typeface. The site shows a lighter copy of the master, its coordinates rounded to a tenth of a unit.'
+      'The artwork is a vector reconstruction from a supplied image: the engraving rebuilt as measured, variable-width strokes, the trunk, roots and 43 letters as separately fitted outlines, and the oval as a measured ellipse. The letters are reconstructed shapes, not an identified typeface. The site shows a lighter copy of the master, its coordinates rounded to a tenth of a unit.',
+      'The BC Forestry Patch Atlas photographs the seal four times, on a card, a Fire Emergency Ration notice and printed matter, as its pine-bough seal (S10-O01). It is a printed seal, not a patch, so the Patches view leaves it out and it is kept here, as a logo.'
     ],
-    sources: [forestServiceTimeline]
+    sources: [
+      forestServiceTimeline,
+      atlasPhoto('S08', 'Lands Department badge, card and campfire decal', '15JI44htPICcRkrgZc4gI2Mt3X3la3wQ0'),
+      atlasPhoto('S10', 'pine-bough Lands Department / Forest Service seal', '1B5Vn00JKHVSN6sVozNnuriihbWPNv6nT'),
+      atlasPhoto('S23', 'Fire Emergency Ration notice', '1xrjjiufOriYvletlkS_aZhNQVg1VFPJP'),
+      atlasPhoto('S24', 'signs, manuals and insignia', '1-QVWbIQg6MrkZRVLNYN1qmXptWJfsTMt')
+    ]
   },
   {
     id: 'forest-service-emblem',

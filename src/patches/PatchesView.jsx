@@ -74,7 +74,8 @@ const isPlainClick = (event) => event.button === 0 && !event.metaKey && !event.c
 export const PatchesView = ({ collection = 'patches' }) => {
   const copy = COLLECTIONS[collection]
   const SECTIONS = useMemo(() => sectionsOf(collection), [collection])
-  const total = LIBRARY.summary.byCollection[collection] ?? 0
+  // Counted as cards: a variant group is one.
+  const total = SECTIONS.reduce((n, s) => n + s.orgs.reduce((m, o) => m + o.patches.filter(isCard).length, 0), 0)
   const orgCount = SECTIONS.reduce((n, s) => n + s.orgs.length, 0)
   const [place, setPlace] = useState(() => read(collection, SECTIONS))
   const [query, setQuery] = useState('')
@@ -146,7 +147,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
               <option value="">All {orgCount} organizations</option>
               {SECTIONS.map(({ sector, orgs }) => (
                 <optgroup key={sector.id} label={sector.name}>
-                  {orgs.map((org) => <option key={org.id} value={org.id}>{org.name} ({org.patches.length})</option>)}
+                  {orgs.map((org) => <option key={org.id} value={org.id}>{org.name} ({org.patches.filter(isCard).length})</option>)}
                 </optgroup>
               ))}
             </select>
@@ -180,7 +181,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
                     {org.name}
                   </a>
                 </h4>
-                <span className="patches__count">{patches.length === org.patches.length ? org.patches.length : `${patches.length} of ${org.patches.length}`}</span>
+                <span className="patches__count">{patches.length === org.patches.filter(isCard).length ? patches.length : `${patches.length} of ${org.patches.filter(isCard).length}`}</span>
                 {org.description && <p>{org.description}</p>}
               </header>
               <div className="patches__grid">
