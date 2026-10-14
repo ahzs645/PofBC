@@ -480,7 +480,8 @@ patches and emblems from the BC Forestry Patch Atlas, grouped by organization un
 lists a design once per photograph it appears in; Patcher merges those into one patch (the Parks scenic
 arch, seen in five photographs, is one card), and the viewer links every photograph. Some designs use a better drawing supplied to Patcher in
 place of the atlas's (the Parks Branch elk roundel, the Recreation and Conservation arch, the scenic
-arch's landscape, and the BC Parks flag patches, which take this site's own flag badge). The Lands
+arch's landscape, the BC Parks flag patches, which take this site's own flag badge, and the B.C. Hydro
+Security shield, which takes this site's BC Hydro symbol). The Lands
 Department pine-bough seal is a printed seal, not a patch, so it is left out there and kept in
 Internal Logos. The atlas's Forest Service and Wildfire Service ovals are replaced by this site's own
 Forest Ovals (Internal Logos → Forests): five cards (the tree oval, the Forests and long ministry-name
