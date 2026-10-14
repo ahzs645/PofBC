@@ -19,12 +19,12 @@ test('every design has its words, and ids are unique', () => {
 test('every supplied drawing exists, and every recolour names a colour it paints', () => {
   assert.ok(drawings.length >= 2)
   for (const logo of drawings) {
-    const svg = readFileSync(new URL(`./${logo.artwork}`, import.meta.url), 'utf8')
-    const paints = new Set([...svg.matchAll(/(?:fill|stroke)="(#[0-9a-f]{6})"/gi)].map((m) => m[1].toUpperCase()))
-    const { colours } = variantsFor(logo)
+    const { colours, studies = [] } = variantsFor(logo)
     assert.equal(colours[0].id, 'colour', `${logo.id} opens on its full colour`)
-    for (const variant of colours) {
-      assert.equal(variant.artwork, logo.artwork)
+    for (const variant of [...colours, ...studies]) {
+      const svg = readFileSync(new URL(`./${variant.artwork}`, import.meta.url), 'utf8')
+      const paints = new Set([...svg.matchAll(/(?:fill|stroke)="(#[0-9a-f]{6})"/gi)].map((m) => m[1].toUpperCase()))
+      assert.ok(svg.includes('<svg') && !svg.includes('<image'), `${variant.id} must be all-vector`)
       for (const [from, to] of Object.entries(variant.recolour)) {
         assert.ok(paints.has(from), `${logo.id}/${variant.id}: the drawing never paints ${from}`)
         assert.match(to, /^#[0-9A-F]{6}$/, `${logo.id}/${variant.id}: ${to}`)
@@ -37,4 +37,21 @@ test('the green-and-gold oval keeps its landscape clipped to the inner rim', () 
   const svg = readFileSync(new URL('./forest-service-green-gold.svg', import.meta.url), 'utf8')
   assert.match(svg, /<clipPath id="landscape-clip"/)
   assert.match(svg, /clip-path="url\(#landscape-clip\)"/)
+})
+
+test('evergreen joined-island studies are explicit and the original remains separate', () => {
+  const logo = FOREST_LOGOS.find(({ id }) => id === 'forest-service-emblem')
+  assert.ok(logo.article?.title.includes('Socreds'))
+  const variants = variantsFor(logo)
+  assert.ok(variants.studies.length >= 5)
+  const original = readFileSync(new URL('./forest-service-emblem.svg', import.meta.url), 'utf8')
+  const merged = readFileSync(new URL('./forest-service-emblem-joined-islands.svg', import.meta.url), 'utf8')
+  assert.match(original, /id="island-north"/)
+  assert.match(original, /id="island-middle"/)
+  assert.match(original, /id="island-south"/)
+  assert.match(merged, /id="islands-combined"/)
+  assert.doesNotMatch(merged, /id="island-middle"/)
+  const reverse = readFileSync(new URL('./forest-service-emblem-reverse-joined-islands.svg', import.meta.url), 'utf8')
+  assert.match(reverse, /id="ground"/)
+  assert.match(reverse, /id="islands-combined"/)
 })

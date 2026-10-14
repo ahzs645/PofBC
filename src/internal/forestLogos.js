@@ -54,8 +54,16 @@ export const FOREST_LOGOS = [
       'The British Columbia Forest Service’s mark before the oval designs: the mainland and its three largest islands in white, with a geometric evergreen standing over the mainland’s eastern edge, on a badge whose sides bow gently outward.',
       'It is believed to have been in use until about 1973. No source in this collection yet confirms that date, or when the emblem was introduced; it is recorded here as the working date, to be replaced when a dated document turns up.',
       'In the emblem’s last years the Forest Service sat within the Department of Lands, Forests and Water Resources (1962–1976). The Department of Forests was separated from it in 1976, and the Ministry of Forests Act came into force on 1 January 1979.',
-      'The artwork is a vector reconstruction from a supplied image: seven shapes (the badge, the mainland, three islands, the crown and the trunk) with flat colours chosen from the image, not verified ink specifications. The same drawing is used on both Forest Service posters in the Posters view.'
+      'The artwork is a vector reconstruction from a supplied image: seven shapes (the badge, the mainland, three islands, the crown and the trunk) with flat colours chosen from the image, not verified ink specifications. The same drawing is used on both Forest Service posters in the Posters view.',
+      'An undated newspaper clipping headed “Identity crisis for Socreds?” compares a Social Credit League provincial-profile emblem to the B.C. Forest Service symbol without its tree. This is historical evidence of a visual comparison, not proof of shared artwork, authorization, or the Forest Service logo’s introduction date.'
     ],
+    article: {
+      title: 'Identity crisis for Socreds?',
+      excerpt: 'reminiscent of the B.C. Forest Service logo without the tree',
+      context: 'The report describes a new stylized provincial-profile design among several competing symbols for the B.C. Social Credit League. Grace McCarthy is quoted explaining that the profile indicates a B.C. party rather than a national affiliation.',
+      citation: 'Undated newspaper clipping supplied for this collection. Publication, issue date, page, and byline not yet identified.',
+      qualification: 'Evidence for a contemporary visual comparison only. The paper does not establish who designed either symbol, a transfer of artwork, or a Forest Service adoption date.'
+    },
     sources: [forestServiceTimeline],
     seenOn: [
       onPoster('reward-living-forest', 'REWARD: A Living Forest', 'Campfire poster · bottom right, beside the service’s name'),
@@ -175,7 +183,13 @@ const DRAWING_VARIANTS = {
   'forest-service-emblem.svg': [
     { id: 'colour', name: 'Full colour', recolour: {}, note: 'The reconstruction’s flat colours, chosen from the supplied emblem image.' },
     { id: 'reward-lime', name: 'Lime, as on REWARD', recolour: { '#278F38': '#8CBE0C' }, note: 'The badge green sampled from the photograph of the REWARD poster. Approximate: print and photograph both shift colour.' },
-    { id: 'sign-green', name: 'Bright green, as on the sign', recolour: { '#278F38': '#2DB43C' }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' }
+    { id: 'sign-green', name: 'Bright green, as on the sign', recolour: { '#278F38': '#2DB43C' }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' },
+    { id: 'archival-one-ink', study: true, name: 'One ink · islands separate', artwork: 'forest-service-emblem-one-ink.svg', recolour: {}, note: 'Constructed from the supplied black-and-white specimens: an outlined frame, dark province and light tree. Proportions are independently adjusted; not an authenticated master.' },
+    { id: 'joined-islands', study: true, name: 'Joined island group', artwork: 'forest-service-emblem-joined-islands.svg', recolour: {}, note: 'Three island fragments become one continuous hand-constructed Bézier silhouette, still separate from the mainland. Modern interpretation.' },
+    { id: 'joined-coast', study: true, name: 'Islands joined to mainland', artwork: 'forest-service-emblem-joined-coast.svg', recolour: {}, note: 'Also connects the island group to the mainland via a purpose-built bridge. Design experiment, not geographic or period evidence.' },
+    { id: 'reverse', study: true, name: 'Reversed · white on black', artwork: 'forest-service-emblem-reverse.svg', recolour: {}, note: 'One-ink separated-island drawing reversed for use on a dark ground. Newly generated treatment.' },
+    { id: 'reverse-joined', study: true, name: 'Reversed · joined islands', artwork: 'forest-service-emblem-reverse-joined-islands.svg', recolour: {}, note: 'White-on-black reversal of the single connected-island silhouette. Proposed inversion, not documented historic use.' },
+    { id: 'profile-study', study: true, name: 'Without the tree · comparison', artwork: 'forest-service-emblem-profile-study.svg', recolour: {}, note: 'A tree-free provincial profile for discussing the newspaper clipping; not a reconstruction of an authenticated Social Credit Party logo.' }
   ],
   'forest-service-yellow-sky.svg': [
     { id: 'colour', name: 'Green, as in the first photograph', recolour: {}, note: 'A green ring around a strong yellow sky. Colours approximated from a small photograph.' },
@@ -187,7 +201,14 @@ const DRAWING_VARIANTS = {
     { id: 'black', name: 'Black & white', recolour: { '#00381E': '#000000', '#080C0A': '#000000', '#E6C786': '#FFFFFF', '#005737': '#FFFFFF', '#0FB4E0': '#FFFFFF', '#8D8F8D': '#FFFFFF' }, note: 'One ink: the oval and every outline in black, the lettering and the landscape left white. A generated recolour.' }
   ]
 }
-const drawingVariants = (logo) => ({ colours: DRAWING_VARIANTS[logo.artwork].map((variant) => ({ ...variant, artwork: logo.artwork, padding: logo.padding })), related: [] })
+const drawingVariants = (logo) => {
+  const variants = DRAWING_VARIANTS[logo.artwork].map((variant) => ({ ...variant, artwork: variant.artwork ?? logo.artwork, padding: logo.padding }))
+  return {
+    colours: variants.filter((variant) => !variant.study),
+    studies: variants.filter((variant) => variant.study),
+    related: []
+  }
+}
 
 export const variantsFor = (logo) => logo.kind === 'drawing' ? drawingVariants(logo) : ({
   colours: [

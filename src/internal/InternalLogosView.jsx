@@ -101,6 +101,12 @@ const OvalLogo = ({ preset, name, decorative = false, theme, colours, compositio
 const DRAWINGS = {
   'forest-service-lands-department.svg': () => import('./forest-service-lands-department.svg?raw'),
   'forest-service-emblem.svg': () => import('./forest-service-emblem.svg?raw'),
+  'forest-service-emblem-one-ink.svg': () => import('./forest-service-emblem-one-ink.svg?raw'),
+  'forest-service-emblem-joined-islands.svg': () => import('./forest-service-emblem-joined-islands.svg?raw'),
+  'forest-service-emblem-joined-coast.svg': () => import('./forest-service-emblem-joined-coast.svg?raw'),
+  'forest-service-emblem-reverse.svg': () => import('./forest-service-emblem-reverse.svg?raw'),
+  'forest-service-emblem-reverse-joined-islands.svg': () => import('./forest-service-emblem-reverse-joined-islands.svg?raw'),
+  'forest-service-emblem-profile-study.svg': () => import('./forest-service-emblem-profile-study.svg?raw'),
   'forest-service-green-gold.svg': () => import('./forest-service-green-gold.svg?raw'),
   'forest-service-yellow-sky.svg': () => import('./forest-service-yellow-sky.svg?raw')
 }
@@ -163,6 +169,15 @@ const LogoSources = ({ logo }) => logo.sources.length > 0 && (
 const LogoComments = ({ logo }) => (
   <>
     {logo.comments.map((comment) => <p key={comment}>{comment}</p>)}
+    {logo.article && (
+      <aside className="internal-logos__article" aria-label="Newspaper clipping comparison">
+        <h4>Newspaper comparison · {logo.article.title}</h4>
+        <blockquote>“{logo.article.excerpt}”</blockquote>
+        <p>{logo.article.context}</p>
+        <p className="internal-logos__article-evidence">{logo.article.qualification}</p>
+        <p className="internal-logos__article-source">{logo.article.citation}</p>
+      </aside>
+    )
     {logo.seenOn && (
       <>
         <h4>On the posters</h4>
@@ -256,6 +271,15 @@ export const InternalLogosView = () => {
           <div className="internal-logos__variants">
             {variants.colours.map((variant) => <VariantCard key={variant.id} variant={variant} />)}
           </div>
+          {variants.studies?.length > 0 && (
+            <>
+              <h3 className="internal-logos__section-title">Reconstructed one-ink and coastal studies</h3>
+              <p className="internal-logos__footnote">These are modern construction and reversal experiments based on the reference specimens, not verified historical logo versions.</p>
+              <div className="internal-logos__variants">
+                {variants.studies.map((variant) => <VariantCard key={variant.id} variant={variant} />)}
+              </div>
+            </>
+          )
           <p className="internal-logos__footnote">The colourways are display variations; they do not establish historical adoption or official approval.</p>
           {variants.related.length > 0 && (
             <>
