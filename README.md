@@ -503,7 +503,13 @@ being listed.) Filter by organization (`&org=bc-parks`) or search. A patch
 PNG, a Tajima `.dst` or Melco `.exp` machine file, or the SVG, and *Open in Patcher* opens it with
 every digitizing setting exposed.
 
-Nothing about the patches is kept here. The drawings, the organization each belongs to, and the
+A patch's **History** comes from this site: `src/patches/patchHistory.js` matches the wording on
+it (Lands Department, Forest Service, its parks, Department or Ministry of Forests, Airtanker, Wildfire)
+to the dates the [BC Forest Service timeline](https://bcfs100.for.gov.bc.ca/bscripts/timeline.asp)
+gives for them, which bound the wording rather than date the patch, and links a Forest Oval card to
+its Internal Logos entry. The Parks Branch and BC Parks flag semicircles are constructed in Patcher
+(a true semicircle, its field the exact inset, concentric lettering). Nothing else about the patches
+is kept here. The drawings, the organization each belongs to, and the
 digitizer are all Patcher's (see its [`library/README.md`](vendor/patcher/library/README.md)). To
 regroup a patch, edit Patcher's `library/orgs.json` and re-import there, then move the submodule
 forward (below). PofBC only needs the view: `src/patches/PatchesView.jsx` (the index) and

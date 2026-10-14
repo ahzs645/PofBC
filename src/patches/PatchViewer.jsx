@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from 'react'
 import { createDigitizer, renderTextured, writeDst, writeExp } from 'patcher'
 import { LIBRARY, cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
+import { SiteLink } from '../site/navigation.jsx'
+import { FOREST_SERVICE_TIMELINE, historyOf } from './patchHistory.js'
 
 /** Patcher's own site, which opens a library patch with every digitizing setting exposed. */
 const PATCHER_URL = 'https://ahzs645.github.io/patcher/'
@@ -39,6 +41,36 @@ export const photosOf = (patch) => {
 
 const mergedLabels = new Map(LIBRARY.merged.map((m) => [m.id, m.label]))
 const absorbedLabels = new Map((LIBRARY.absorbed ?? []).map((m) => [m.id, m.label]))
+
+/** What the BC Forest Service timeline says about the patch's wording, and a Forest Oval's own history. */
+function PatchHistory({ patch }) {
+  const { notes, logo } = historyOf(patch)
+  if (!notes.length && !logo) return null
+  return (
+    <section className="patch__history" aria-label="History">
+      <h3>History</h3>
+      {notes.length > 0 && (
+        <ul>
+          {notes.map((note) => (
+            <li key={note.id}><span className="patch__era">{note.era}</span> {note.text}</li>
+          ))}
+        </ul>
+      )}
+      {notes.length > 0 && (
+        <p className="patch__source">
+          From the <a href={FOREST_SERVICE_TIMELINE.url} target="_blank" rel="noreferrer">BC Forest Service timeline</a>: the dates
+          bound the wording, not the patch itself.
+        </p>
+      )}
+      {logo && (
+        <p className="patch__source">
+          {logo.evidence}. <SiteLink to={{ view: 'internal', internal: 'forests', 'internal-logo': logo.id }}>{logo.name} in Internal Logos</SiteLink> has
+          its dated research.
+        </p>
+      )}
+    </section>
+  )
+}
 
 const download = (blob, name) => {
   const link = document.createElement('a')
@@ -213,6 +245,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
             stitch density, thread charts and the sew-out.
           </p>
 
+          <PatchHistory patch={patch} />
           {patch.limitations && <p className="patch__limits"><strong>Limitations.</strong> {patch.limitations}</p>}
           <p className="patch__source">
             {patch.supplied

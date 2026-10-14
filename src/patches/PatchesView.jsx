@@ -6,7 +6,7 @@
 // so a link to an organization or to one patch opens it there.
 
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
-import { LIBRARY, cardLabel, cardOf, findPatch, isCard, orgsBySector, variantsOf } from 'patcher/library'
+import { cardLabel, cardOf, findPatch, isCard, orgsBySector, variantsOf } from 'patcher/library'
 import { searchFor } from '../site/navigation.jsx'
 import { PatchViewer, photosOf } from './PatchViewer.jsx'
 import './patches.css'
@@ -16,14 +16,12 @@ const COLLECTIONS = {
   patches: {
     view: 'patches',
     title: 'Patches',
-    intro: (n) => `${n} patches and emblems from the ${LIBRARY.source.name}, grouped by organization. Open one to see it sewn as an embroidered patch, and to download it for an embroidery machine.`,
     placeholder: 'Sheriff, rocker, Parks…',
     noun: 'patches'
   },
   badges: {
     view: 'badges',
     title: 'Badges',
-    intro: (n) => `${n} metal and leather badges from the ${LIBRARY.source.name}, grouped by organization.`,
     placeholder: 'Park Ranger, cap badge…',
     noun: 'badges'
   }
@@ -135,8 +133,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
   return (
     <section className="patches" aria-label={copy.title}>
       <div className="patches__intro">
-        <h2>{copy.title}</h2>
-        <p>{copy.intro(total)}</p>
+        <h2>{copy.title} <span className="patches__count">{total}</span></h2>
         <div className="patches__filters">
           <label className="patches__filter">
             <span>Organization</span>
@@ -159,7 +156,6 @@ export const PatchesView = ({ collection = 'patches' }) => {
             />
           </label>
         </div>
-        <p className="patches__note">{LIBRARY.source.note}</p>
       </div>
 
       {shown === 0 && <p className="patches__empty" role="status">No {copy.noun} match “{query}”.</p>}

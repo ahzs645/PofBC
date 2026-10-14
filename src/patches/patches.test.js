@@ -106,3 +106,14 @@ test('atlas entries absorbed into a supplied design are gone, and the design say
   for (const id of ['R22-O01', 'R13-O01', 'S43-O01', 'S58-O05', 'S47-O01']) assert.ok(manifest.absorbed.some((a) => a.id === id), `${id} should be absorbed`)
   assert.ok(!manifest.orgs.some((org) => org.id === 'bc-wildfire-service'), 'every Wildfire Service oval is a Forest Oval variant now')
 })
+
+test('the BC Forest Service timeline dates the wording it names', async () => {
+  const { historyOf } = await import('./patchHistory.js')
+  const eras = (label, group) => historyOf({ label, group }).notes.map((n) => n.era)
+  assert.deepEqual(eras('British Columbia / Lands Department / Forest Service'), ['1912–1945'])
+  assert.deepEqual(eras('Forest Service / British Columbia / Parks — tree oval'), ['1945–1957'])
+  assert.deepEqual(eras('Forest Service / British Columbia — tree oval · Airtanker Operations'), ['From 1945', 'From 1958'])
+  assert.deepEqual(eras('BC / Forests, Lands and Natural Resource Operations — wildlife oval · Full colour'), [])
+  assert.deepEqual(eras('British Columbia / Ministry of Forests — wildlife oval'), ['From 1976'])
+  assert.equal(historyOf({ label: 'x', group: 'forests-oval' }).logo?.id, 'forests')
+})
