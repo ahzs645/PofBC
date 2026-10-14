@@ -6,7 +6,7 @@
 // so a link to an organization or to one patch opens it there.
 
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
-import { LIBRARY, findPatch, orgsBySector } from 'patcher/library'
+import { LIBRARY, cardLabel, cardOf, findPatch, isCard, orgsBySector, variantsOf } from 'patcher/library'
 import { searchFor } from '../site/navigation.jsx'
 import { PatchViewer, photosOf } from './PatchViewer.jsx'
 import './patches.css'
@@ -61,7 +61,9 @@ const matcher = (query) => {
   const words = query.toLowerCase().split(/\s+/).filter(Boolean)
   if (!words.length) return null
   return (patch, org) => {
-    const text = `${patch.label} ${patch.medium} ${org.name} ${patch.id}`.toLowerCase()
+    // A card answers for all its variants.
+    const designs = variantsOf(patch)?.members ?? [patch]
+    const text = `${cardLabel(patch)} ${designs.map((d) => `${d.label} ${d.variant ?? ''} ${d.id}`).join(' ')} ${patch.medium} ${org.name}`.toLowerCase()
     return words.every((word) => text.includes(word))
   }
 }
@@ -91,7 +93,10 @@ export const PatchesView = ({ collection = 'patches' }) => {
         sector,
         orgs: orgs
           .filter((org) => !place.org || org.id === place.org)
-          .map((org) => ({ org, patches: matches ? org.patches.filter((p) => matches(p, org)) : org.patches }))
+          .map((org) => {
+            const cards = org.patches.filter(isCard)
+            return { org, patches: matches ? cards.filter((p) => matches(p, org)) : cards }
+          })
           .filter(({ patches }) => patches.length > 0)
       }))
       .filter(({ orgs }) => orgs.length > 0)
@@ -112,11 +117,12 @@ export const PatchesView = ({ collection = 'patches' }) => {
   useEffect(() => { if (!open) return; globalThis.scrollTo?.({ top: 0 }) }, [open])
 
   if (open) {
-    const siblings = openOrg.patches
-    const at = siblings.findIndex((p) => p.id === open.id)
+    // Stepping goes card to card; a variant sits at its card's place.
+    const siblings = openOrg.patches.filter(isCard)
+    const at = siblings.findIndex((p) => p.id === cardOf(open).id)
     return (
       <PatchViewer
-        key={open.id}
+        key={cardOf(open).id}
         patch={open}
         org={openOrg}
         position={{ index: at, count: siblings.length }}
@@ -190,9 +196,10 @@ export const PatchesView = ({ collection = 'patches' }) => {
                       <img src={patch.previewUrl} alt="" loading="lazy" decoding="async" />
                     </span>
                     <span className="patches__card-text">
-                      <span className="patches__title">{patch.label}</span>
+                      <span className="patches__title">{cardLabel(patch)}</span>
                       <span className="patches__medium">
                         {patch.medium}
+                        {variantsOf(patch) && ` · ${variantsOf(patch).members.length} variants`}
                         {photosOf(patch).length > 1 && ` · seen in ${photosOf(patch).length} photos`}
                       </span>
                     </span>

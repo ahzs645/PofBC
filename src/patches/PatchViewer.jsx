@@ -3,7 +3,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { createDigitizer, renderTextured, writeDst, writeExp } from 'patcher'
-import { LIBRARY, loadPatchSvg } from 'patcher/library'
+import { LIBRARY, cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 
 /** Patcher's own site, which opens a library patch with every digitizing setting exposed. */
@@ -127,6 +127,9 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   }, [onClose, onOpen, previous, next])
 
   const name = `${patch.id}-${org.id}`
+  // A variant is shown under its card's label, and named in full where it stands alone.
+  const variants = variantsOf(patch)
+  const title = patch.variant ? `${cardLabel(patch)} — ${patch.variant}` : patch.label
   const ready = status === 'ready' && result
   const exportPng = () => {
     const png = textured(result, finish, Math.min(24, 6000 / Math.max(result.widthMm, result.heightMm)))
@@ -134,7 +137,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   }
 
   return (
-    <section className="patch" aria-label={patch.label}>
+    <section className="patch" aria-label={title}>
       <nav className="patch__bar" aria-label="Patches">
         <button type="button" className="button button--ghost" onClick={onClose}>← All patches</button>
         <span className="patch__crumb">{org.name} · {position.index + 1} of {position.count}</span>
@@ -148,11 +151,11 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
         <div className="patch__stages">
           <figure className="patch__stage">
             <figcaption>Vector</figcaption>
-            <img src={drawing?.url ?? patch.previewUrl} alt={patch.label} />
+            <img src={drawing?.url ?? patch.previewUrl} alt={title} />
           </figure>
           <figure className="patch__stage" aria-busy={status === 'sewing'}>
             <figcaption>Embroidered</figcaption>
-            <canvas ref={canvas} hidden={!ready} aria-label={`${patch.label}, embroidered`} role="img" />
+            <canvas ref={canvas} hidden={!ready} aria-label={`${title}, embroidered`} role="img" />
             {status === 'sewing' && <p className="patch__status" role="status">Sewing…</p>}
             {status === 'failed' && (
               <p className="patch__status" role="alert">
@@ -163,9 +166,18 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
         </div>
 
         <aside className="patch__panel">
-          <h2>{patch.label}</h2>
+          <h2>{cardLabel(patch)}</h2>
           <p className="patch__meta">{patch.medium} · {patch.quality}</p>
 
+          {variants && (
+            <Segmented
+              label="Variant"
+              options={variants.members.map((m) => ({ value: m.id, label: m.variant, title: m.label }))}
+              value={patch.id}
+              onChange={(id) => onOpen(variants.members.find((m) => m.id === id))}
+              compact
+            />
+          )}
           <Segmented label="Width" options={SIZES} value={widthMm} onChange={setWidthMm} compact />
           <Segmented label="Edge" options={BORDERS} value={border} onChange={setBorder} compact />
           <Segmented label="Thread" options={FINISHES} value={finish} onChange={setFinish} compact />

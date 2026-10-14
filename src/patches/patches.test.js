@@ -78,3 +78,17 @@ test('every patch joins back into the atlas drawing, byte for byte', { skip: !ma
     }
   }
 })
+
+test('variant groups name designs in the library, each in one group, in one collection', { skip: !manifest }, () => {
+  const designs = new Map(manifest.orgs.flatMap((org) => org.patches.map((p) => [p.id, p])))
+  for (const group of manifest.variants) {
+    assert.ok(group.members.length > 1, `${group.id}: a group needs two variants`)
+    for (const { id, name } of group.members) {
+      assert.equal(designs.get(id)?.group, group.id, `${id} should be in ${group.id}`)
+      assert.equal(designs.get(id).variant, name)
+    }
+    assert.equal(new Set(group.members.map(({ id }) => designs.get(id).collection)).size, 1, `${group.id} spans collections`)
+  }
+  // The scenic arch and its integrated Ranger edition are one card.
+  assert.deepEqual(manifest.variants.find((g) => g.id === 'parks-scenic-arch')?.members.map((m) => m.id), ['S30-O04', 'S27-O04'])
+})
