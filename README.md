@@ -484,8 +484,9 @@ its Fish & Game predecessors, BC Sheriff Service, BC Corrections, Highways and M
 Hydro's patrol patches and the universities. The atlas's logos, signs, decals and printed emblems
 (the Province's ministry lockups, BC Timber Sales, the BC Hydro, BC Transit and ICBC logos, …) are
 left out by Patcher's `library/orgs.json`. The library's 14 metal and leather badges have their own
-view, **Badges** (`?view=badges`), which works the same way but isn't in the menu yet: to list it,
-move its entry from `HIDDEN_VIEWS` to `VIEWS` in `src/site/ViewSwitcher.jsx`. Filter by organization (`&org=bc-parks`) or search. A patch
+view, **Badges** (`?view=badges`), next to Patches in the title menu, which works the same way.
+(`HIDDEN_VIEWS` in `src/site/ViewSwitcher.jsx` holds any view that should open from a link without
+being listed.) Filter by organization (`&org=bc-parks`) or search. A patch
 (`&patch=S25-O01`) opens its vector drawing beside the same drawing sewn by Patcher's digitizer, at
 3″ to 5″, with a merrow, satin or no edge, in matte or glossy thread. It downloads as an embroidered
 PNG, a Tajima `.dst` or Melco `.exp` machine file, or the SVG, and *Open in Patcher* opens it with

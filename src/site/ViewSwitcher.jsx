@@ -15,14 +15,13 @@ export const VIEWS = [
   { id: 'posters', label: 'Posters', description: 'Posters by series, every part clickable for its history' },
   { id: 'signs', label: 'Signs', description: 'Signs by series, every part clickable for its history' },
   { id: 'patches', label: 'Patches', description: 'Patches by organization, sewn as embroidery', badge: 'New' },
+  { id: 'badges', label: 'Badges', description: 'Metal and leather badges by organization', badge: 'New' },
   { id: 'guides', label: 'Visual Guides', description: 'Identity manuals, rebuilt page by page' },
   { id: 'government', label: 'Government', description: 'The Province’s structure, back to 1871' }
 ]
 
 // Views that open from a link but aren't offered in the menu yet. The title still names them.
-export const HIDDEN_VIEWS = [
-  { id: 'badges', label: 'Badges', description: 'Metal and leather badges by organization' }
-]
+export const HIDDEN_VIEWS = []
 
 const Check = () => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">

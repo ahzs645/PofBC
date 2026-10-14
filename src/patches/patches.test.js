@@ -30,9 +30,9 @@ test('every organization belongs to a listed sector and counts its own designs b
   assert.equal(manifest.summary.orgs, manifest.orgs.length)
 })
 
-test('badges are their own hidden collection, and what orgs.json leaves out stays out', { skip: !manifest }, () => {
+test('badges are their own collection, and what orgs.json leaves out stays out', { skip: !manifest }, () => {
   const designs = manifest.orgs.flatMap((org) => org.patches)
-  assert.ok(manifest.collections.find((c) => c.id === 'badges')?.hidden, 'badges should be hidden for now')
+  assert.ok(manifest.collections.some((c) => c.id === 'badges'), 'the library has no badges collection')
   for (const design of designs) {
     const badge = /badge/i.test(design.medium)
     assert.equal(design.collection, badge ? 'badges' : 'patches', `${design.id} (${design.medium})`)

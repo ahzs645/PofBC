@@ -1,6 +1,6 @@
 // Patches: the patch library from the Patcher submodule (vendor/patcher, see README), grouped by
 // sector and organization, each patch opening on a viewer that sews it as embroidery. The same view
-// shows the library's badges (`?view=badges`), which are kept out of the site's menu for now.
+// shows the library's metal and leather badges as Badges (`?view=badges`).
 //
 // The place is kept in the address bar (`?view=patches&org=bc-parks`, `?view=patches&patch=S25-O01`),
 // so a link to an organization or to one patch opens it there.
