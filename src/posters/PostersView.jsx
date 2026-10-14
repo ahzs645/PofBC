@@ -33,7 +33,6 @@ export const PostersView = () => (
     view="posters"
     param="poster"
     title="Posters"
-    intro="Open a poster and click any part to see its history."
     noun="poster"
     series={SERIES}
     itemsOf={postersOf}

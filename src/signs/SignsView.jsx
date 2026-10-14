@@ -25,7 +25,6 @@ export const SignsView = () => (
     view="signs"
     param="sign"
     title="Signs"
-    intro="Open a sign and click any part to see its history."
     noun="sign"
     series={SIGN_SERIES}
     itemsOf={signsOf}

@@ -24,7 +24,7 @@ const SHEET_SHARE = 0.52
 const TOUR_SECONDS = 12
 const noExtras = () => ({})
 
-export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, backLabel = 'Posters', noun = 'poster' }) {
+export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, shelf, backLabel = 'Posters', noun = 'poster' }) {
   const { parts, order, regions, spotlight, svgRaw, prepare } = module
   const useExtras = module.useExtras ?? noExtras
   const [svg, setSvg] = useState(null)
@@ -56,7 +56,12 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
 
   useKeyboardNav({
     order, current, onSelect: select, onExit, enabled: !exportOpen,
-    keys: useMemo(() => ({ e: () => setExportOpen(true), p: tour.toggle }), [tour.toggle])
+    keys: useMemo(() => ({
+      e: () => setExportOpen(true),
+      p: tour.toggle,
+      '[': () => previous?.open(),
+      ']': () => next?.open()
+    }), [tour.toggle, previous, next])
   })
 
   const extras = useExtras({ svg, part: current, select, openExport, tour })
@@ -98,16 +103,30 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         </Poster>
 
         <header className="pv-top">
-          <div className="pv-top-start">
-            <button type="button" className="pv-ghost pv-back" onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>← <span className="pv-back-label">{backLabel}</span></button>
+          {/* The way back sits in the title itself: "← Posters │ REWARD: A Living Forest". */}
+          <nav className="pv-top-start pv-crumb" aria-label={`${meta.title}, in ${backLabel.toLowerCase()}`}>
+            <button type="button" className="pv-back" onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>
+              <span aria-hidden="true">←</span> <span className="pv-back-label">{backLabel}</span>
+            </button>
             <button type="button" className="pv-brand" onClick={() => select('overview')} aria-label={`Back to the whole ${noun}`}>
               <b>{meta.title}</b>
               <span>{series.title}</span>
             </button>
-          </div>
+          </nav>
           <div className="pv-top-actions">
-            {previous && <button type="button" className="pv-ghost pv-step-poster" onClick={previous.open} title={`Previous: ${previous.title}`} aria-label={`Previous poster: ${previous.title}`}>‹</button>}
-            {next && <button type="button" className="pv-ghost pv-step-poster" onClick={next.open} title={`Next: ${next.title}`} aria-label={`Next poster: ${next.title}`}>›</button>}
+            {shelf && shelf.list.length > 1 && (
+              <div className="pv-switch" role="group" aria-label={`Other ${backLabel.toLowerCase()}`}>
+                <button type="button" className="pv-switch-step" disabled={!previous} onClick={previous?.open} title={previous ? `Previous: ${previous.title} ([)` : undefined} aria-label={previous ? `Previous ${noun}: ${previous.title}` : `No previous ${noun}`}>‹</button>
+                {/* The count reads as "3 / 5"; under it, a native list of every one to jump to. */}
+                <label className="pv-switch-pick" title={`Go to another ${noun}`}>
+                  <span aria-hidden="true">{shelf.index + 1} / {shelf.list.length}</span>
+                  <select aria-label={`Go to another ${noun}`} value={meta.id} onChange={(event) => shelf.open(event.target.value)}>
+                    {shelf.list.map((entry, i) => <option key={entry.id} value={entry.id}>{i + 1}. {entry.title}</option>)}
+                  </select>
+                </label>
+                <button type="button" className="pv-switch-step" disabled={!next} onClick={next?.open} title={next ? `Next: ${next.title} (])` : undefined} aria-label={next ? `Next ${noun}: ${next.title}` : `No next ${noun}`}>›</button>
+              </div>
+            )}
             <button type="button" className="pv-ghost" aria-pressed={aboutOpen && current === 'overview'} onClick={() => { if (current !== 'overview') select('overview'); setAboutOpen((o) => !o) }}>About</button>
             <button type="button" className="pv-ghost pv-tour-btn" aria-pressed={tour.playing} onClick={tour.toggle} title="Play the tour (P)">{tour.playing ? 'Stop' : 'Tour'}</button>
             <button type="button" className="pv-ghost pv-solid" onClick={() => openExport('poster')} title="Export (E)">Export</button>

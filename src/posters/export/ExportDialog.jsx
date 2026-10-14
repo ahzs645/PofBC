@@ -8,6 +8,10 @@ import { Dialog } from '../ui/Dialog.jsx'
 import { Segmented } from '../ui/Segmented.jsx'
 import { FORMATS, FORMAT_ORDER, downloadBlob, exportSvg, formatBytes, isFormatSupported } from './exportSvg.js'
 
+/** Pixel widths a custom entry is held to: below this a raster is no use, above it browsers can't draw. */
+const MIN_WIDTH = 200
+const MAX_WIDTH = 8000
+
 const aspectOf = (svg) => {
   const vb = /viewBox="([-\d.]+) ([-\d.]+) ([-\d.]+) ([-\d.]+)"/.exec(svg)
   return vb ? +vb[4] / +vb[3] : 1
@@ -16,6 +20,8 @@ const aspectOf = (svg) => {
 export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase }) {
   const [format, setFormat] = useState('pdf')
   const [width, setWidth] = useState(null)
+  const [custom, setCustom] = useState(false)
+  const [draft, setDraft] = useState('')
   const [background, setBackground] = useState(null)
   const [busy, setBusy] = useState(false)
   const [status, setStatus] = useState(null)
@@ -28,6 +34,7 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
     if (!open) return
     setStatus(null)
     setWidth(t.widths[Math.min(1, t.widths.length - 1)])
+    setCustom(false)
     setBackground(t.backgrounds?.[0]?.value ?? null)
   }, [open, t])
 
@@ -71,9 +78,42 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
       {!spec.vector && (
         <div className="pv-control">
           <span className="pv-control-label">Width</span>
-          <Segmented wrap label="Pixel width" value={width} onChange={setWidth} options={t.widths.map((w) => ({
-            value: w, label: `${w} px`, extra: t.dpiBase ? `${Math.round(w / t.dpiBase)} dpi` : undefined
-          }))} />
+          {/* A list of the usual sizes, or any width typed in. */}
+          <div className="pv-width">
+            <select
+              className="pv-select"
+              aria-label="Pixel width"
+              value={custom ? 'custom' : String(width)}
+              onChange={(event) => {
+                if (event.target.value === 'custom') { setCustom(true); setDraft(String(width)) } else { setCustom(false); setWidth(Number(event.target.value)) }
+              }}
+            >
+              {t.widths.map((w) => <option key={w} value={w}>{w} px{t.dpiBase ? ` · ${Math.round(w / t.dpiBase)} dpi` : ''}</option>)}
+              <option value="custom">Custom…</option>
+            </select>
+            {custom && (
+              <label className="pv-number">
+                <input
+                  type="number"
+                  inputMode="numeric"
+                  min={MIN_WIDTH}
+                  max={MAX_WIDTH}
+                  step={50}
+                  value={draft}
+                  aria-label="Custom pixel width"
+                  autoFocus
+                  onChange={(event) => {
+                    setDraft(event.target.value)
+                    const n = Math.round(Number(event.target.value))
+                    if (n >= MIN_WIDTH && n <= MAX_WIDTH) setWidth(n)
+                  }}
+                  onBlur={() => setDraft(String(width))}
+                />
+                <span>px{t.dpiBase ? ` · ${Math.round(width / t.dpiBase)} dpi` : ''}</span>
+              </label>
+            )}
+          </div>
+          {custom && <p className="pv-dialog-note">Any width from {MIN_WIDTH} to {MAX_WIDTH} px.</p>}
           {t.largeNote && width >= t.largeNote.from && <p className="pv-dialog-note">{t.largeNote.text}</p>}
           {t.backgrounds && (
             <Segmented wrap label="Background" value={background} onChange={setBackground} style={{ marginTop: 8 }} options={t.backgrounds.map((b) => ({
