@@ -35,7 +35,7 @@
 .internal-logos__family-text { display: grid; gap: 8px; }
 .internal-logos__family-title { display: flex; justify-content: space-between; gap: 16px; font-size: 22px; font-weight: 650; }
 .internal-logos__family-description { color: var(--ink-muted); font-size: 14px; }
-.internal-logos__designs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.internal-logos__designs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: var(--gap); align-items: start; }
 .internal-logos__design { min-width: 0; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
 .internal-logos__open {
   display: block;
@@ -48,13 +48,29 @@
   text-align: left;
   cursor: pointer;
 }
-.internal-logos__open:hover .internal-logos__open-label { background: var(--hover); }
-.internal-logos__open:focus-visible { outline-offset: -3px; }
-.internal-logos__open-label { display: flex; justify-content: space-between; padding: 12px 20px; font-size: 13px; }
+.internal-logos__design .internal-logos__artwork { height: 300px; }
+.internal-logos__title {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.internal-logos__title:hover, .internal-logos__design:has(.internal-logos__open:hover) .internal-logos__title { text-decoration: underline; text-underline-offset: 3px; }
+.internal-logos__title:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.internal-logos__notes > .internal-logos__evidence { margin: 10px 0 0; font-size: 12px; font-weight: 600; color: var(--ink); }
+.internal-logos__history { margin-top: 12px; font-size: 13px; }
+.internal-logos__history > summary { width: fit-content; cursor: pointer; font-weight: 600; color: var(--ink-muted); }
+.internal-logos__history > summary:hover { color: var(--ink); }
+.internal-logos__history .internal-logos__comments { margin-top: 8px; padding-top: 0; border-top: 0; }
+.internal-logos__history .internal-logos__sources { margin-top: 12px; }
 .internal-logos__section-title { margin: 20px 4px 12px; font-size: 18px; }
-.internal-logos__variants { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.internal-logos__variants { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: var(--gap); }
 .internal-logos__variant { min-width: 0; border-radius: var(--radius); overflow: hidden; background: var(--surface); }
-.internal-logos__variant .internal-logos__artwork { height: 380px; }
+.internal-logos__variant .internal-logos__artwork { height: 300px; }
 .internal-logos__variant-source { margin: 10px 0 0; font-size: 12px; color: var(--ink-muted); }
 .internal-logos__history-panel { margin-top: var(--gap); padding: 20px; border-radius: var(--radius); background: var(--surface); }
 .internal-logos__history-panel .internal-logos__comments { margin-top: 0; padding-top: 0; border-top: 0; }
@@ -100,14 +116,11 @@
 .internal-logos__sources ul { padding-left: 18px; }
 .internal-logos__sources li { margin: 8px 0; overflow-wrap: anywhere; }
 .internal-logos__footnote { margin: 16px 4px; color: var(--ink-muted); font-size: 12px; }
-@media (max-width: 1000px) {
-  .internal-logos__designs { grid-template-columns: 1fr; }
-  .internal-logos__design { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-}
+details.internal-logos__footnote summary { width: fit-content; cursor: pointer; }
+details.internal-logos__footnote p { max-width: 90ch; margin: 8px 0 0; }
 @media (max-width: 600px) {
-  .internal-logos__variants { grid-template-columns: 1fr; }
   .internal-logos__family { flex-direction: column; align-items: stretch; }
   .internal-logos__family .internal-logos__artwork { flex-basis: auto; }
-  .internal-logos__design { display: block; }
   .internal-logos__artwork { height: 340px; }
+  .internal-logos__design .internal-logos__artwork, .internal-logos__variant .internal-logos__artwork { height: 300px; }
 }

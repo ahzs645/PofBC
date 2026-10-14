@@ -854,10 +854,9 @@ export const GALLERY_COLLECTIONS = [
     years: '1973–present',
     graphNode: 'icbc',
     cover: 'icbc-rounded-blue',
-    intro: 'The Insurance Corporation of British Columbia’s marks, as dated evidence rather than a clean run ' +
-      'of eras: a registry emblem of 1974, a half-disc beside its name by 1989, then the road badge — in a ' +
-      'serif, a heavier sans, and since 2008 with rounded corners. The early marks are reconstructions; ' +
-      'the later ones are supplied paths, shown as they came.',
+    intro: 'The Insurance Corporation of British Columbia’s marks: a registry emblem of 1974, a half-disc ' +
+      'beside its name by 1989, then the road badge — in a serif, a heavier sans, and since 2008 with ' +
+      'rounded corners.',
     eras: withMarks(COLLECTION_ERAS.icbc, ICBC_ENTRIES)
   },
   {

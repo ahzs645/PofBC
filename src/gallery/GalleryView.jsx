@@ -215,7 +215,7 @@ const chipsOf = (identity) => [
  * A card's chips. They sit inside buttons, where a list would be flattened anyway, so the
  * separators are text a screen reader hears and the page does not show.
  */
-const Chips = ({ labels, title }) => (
+const Chips = ({ labels, title }) => labels.length > 0 && (
   <span className="gallery__chips" title={title}>
     {labels.map((label, index) => (
       <span key={label} className="gallery__chip">
@@ -293,28 +293,26 @@ const AboutCollection = ({ collection }) => {
         )
     return [term, detail]
   })
+  // Closed at first: the cards already carry the short form, and this is the long one.
   return (
-    <section className="panel gallery__about" aria-labelledby="about-collection">
-      <h2 id="about-collection">{entries.length === 1 ? 'About this mark' : 'About these marks'}</h2>
+    <details className="panel gallery__about gallery__about--closed">
+      <summary>
+        <h2>{entries.length === 1 ? 'About this mark' : 'About these marks'}</h2>
+        <span className="gallery__summary-hint">Provenance, fidelity, dates and rights</span>
+      </summary>
       <Facts rows={rows} />
-    </section>
+    </details>
   )
 }
 
 /**
- * A collection card's chips: every provenance its marks have, then the date and rights where all
- * its marks agree. A collection that mixes them says so by listing each, not by picking one.
+ * A collection card's one chip: where its marks came from — the one provenance they share, or that
+ * they do not share one. Their dates and rights are left to the collection's own page: every mark
+ * here has its rights unresolved, so on every card that chip said nothing that told cards apart.
  */
 const collectionChips = (collection) => {
-  const identities = entriesOf(collection).map((entry) => entry.identity)
-  const distinct = (read) => [...new Set(identities.map(read))]
-  const dates = distinct((identity) => APPLICABILITY[identity.applicability.kind])
-  const rights = distinct((identity) => RIGHTS[identity.rights.status])
-  return [
-    ...distinct((identity) => PROVENANCE[identity.provenance]),
-    ...(dates.length === 1 ? dates : []),
-    ...(rights.length === 1 ? rights : [])
-  ]
+  const provenances = new Set(entriesOf(collection).map((entry) => PROVENANCE[entry.identity.provenance]))
+  return provenances.size === 1 ? [...provenances] : ['Mixed provenance']
 }
 
 /** One mark, opened: its colours editable, its arrangement not. */
@@ -422,8 +420,8 @@ const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
 const onPage = (entry) => entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
   (entry.kind === 'hydro' && HYDRO_PRESETS[entry.preset]?.group === 'signature')
 
-/** A card in an era. */
-const Tile = ({ entry, onOpen, theme }) => (
+/** A card in an era, with only the chips its era has not already said for every mark in it. */
+const Tile = ({ entry, onOpen, theme, said = [] }) => (
   <button type="button" className="gallery__pick gallery__pick--tile" onClick={onOpen} aria-label={`Open ${entry.label}`}>
     <span
       className="gallery__art"
@@ -433,7 +431,7 @@ const Tile = ({ entry, onOpen, theme }) => (
     />
     <span className="gallery__label">{entry.label}</span>
     <span className="gallery__note">{entry.note}</span>
-    <IdentityChips identity={entry.identity} />
+    <Chips labels={chipsOf(entry.identity).filter((label) => !said.includes(label))} title={FIDELITY[entry.identity.fidelity]} />
   </button>
 )
 
@@ -610,32 +608,62 @@ const EraDates = ({ era }) => era.applicability && (
   </p>
 )
 
+/** The chips every mark in an era shares, said once for the era rather than on each card. */
+const eraChips = (entries) => entries.length === 0
+  ? []
+  : chipsOf(entries[0].identity).filter((label) => entries.every((entry) => chipsOf(entry.identity).includes(label)))
+
+/** What an era's dates rest on and where its artwork was seen, folded under one line. */
+const EraMore = ({ era }) => {
+  const dated = Boolean(era.applicability)
+  if (!dated && !era.seenAt?.length && !era.sources?.length) return null
+  return (
+    <details className="gallery__era-more">
+      <summary>{dated ? 'Dates & sources' : 'Sources'}</summary>
+      <EraDates era={era} />
+      <SeenAt urls={era.seenAt} />
+      <Sources sources={era.sources} />
+    </details>
+  )
+}
+
 /**
- * One era: its name and years, what changed, and its marks — or the slot that stands for them —
- * then where it all comes from. On a mark's own timeline the open mark is marked as the one
- * being looked at rather than offered again.
+ * One era: its name and years, what changed, what all its marks share, where that comes from, and
+ * its marks — or the slot that stands for them. An era of one mark, or none, sets it beside the
+ * words on a wide screen rather than under them. On a mark's own timeline the open mark is marked
+ * as the one being looked at rather than offered again.
  */
-const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => (
-  <section className="gallery__era" aria-labelledby={`${era.id}-heading`} data-current={era.entries.some((entry) => entry.id === openId) || undefined}>
-    <div className="gallery__head">
-      <h2 id={`${era.id}-heading`}>{era.label}</h2>
-      <span className="gallery__years">{era.years}</span>
-    </div>
-    <p className="gallery__note">{era.note}</p>
-    <EraDates era={era} />
-    {era.entries.length > 0
-      ? (
-        <div className="gallery__tiles">
-          {era.entries.map((entry) => entry.id === openId
-            ? <ThisMark key={entry.id} entry={entry} theme={theme} />
-            : <Tile key={entry.id} entry={entry} theme={theme} onOpen={() => onOpen(entry.id)} />)}
+const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
+  const said = eraChips(era.entries)
+  const fidelities = new Set(era.entries.map((entry) => entry.identity.fidelity))
+  return (
+    <section
+      className="gallery__era"
+      aria-labelledby={`${era.id}-heading`}
+      data-current={era.entries.some((entry) => entry.id === openId) || undefined}
+      data-single={era.entries.length < 2 || undefined}
+    >
+      <div className="gallery__era-text">
+        <div className="gallery__head">
+          <h2 id={`${era.id}-heading`}>{era.label}</h2>
+          <span className="gallery__years">{era.years}</span>
         </div>
-        )
-      : <EmptyEra era={era} onOpenInGenerator={onOpenInGenerator} />}
-    <SeenAt urls={era.seenAt} />
-    <Sources sources={era.sources} />
-  </section>
-)
+        <p className="gallery__note">{era.note}</p>
+        <Chips labels={said} title={fidelities.size === 1 ? FIDELITY[[...fidelities][0]] : undefined} />
+        <EraMore era={era} />
+      </div>
+      {era.entries.length > 0
+        ? (
+          <div className="gallery__tiles">
+            {era.entries.map((entry) => entry.id === openId
+              ? <ThisMark key={entry.id} entry={entry} theme={theme} />
+              : <Tile key={entry.id} entry={entry} theme={theme} said={said} onOpen={() => onOpen(entry.id)} />)}
+          </div>
+          )
+        : <EmptyEra era={era} onOpenInGenerator={onOpenInGenerator} />}
+    </section>
+  )
+}
 
 /** A link from a mark to the body it stands for, in the government diagram. */
 const GraphLink = ({ node, onOpenGovernment }) => node && onOpenGovernment && (
@@ -812,10 +840,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     return (
       <div className="gallery">
         <p className="gallery__intro">
-          Logos the generator does not make. First, public bodies with identities of their own — a Crown
-          corporation, a program, a division — each through the eras it has had. Then the Province’s own
-          one-off marks, the names set beside the BC mark.
-          {WANTED.length > 0 && ' Last, the bodies whose marks are still being sought.'}
+          Logos the generator doesn’t make: public bodies’ own identities, then the Province’s one-off marks.
         </p>
         <section className="gallery__shelf" aria-labelledby="shelf-bodies">
           <h2 id="shelf-bodies" className="gallery__shelf-title">Crown corporations and public bodies</h2>

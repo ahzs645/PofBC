@@ -153,25 +153,50 @@ const PosterLinks = ({ logo }) => (
   </ul>
 )
 
-const LogoHistory = ({ logo }) => (
+const LogoSources = ({ logo }) => logo.sources.length > 0 && (
+  <details className="internal-logos__sources">
+    <summary>Sources</summary>
+    <ul>{logo.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul>
+  </details>
+)
+
+const LogoComments = ({ logo }) => (
   <>
-    <div className="internal-logos__comments" aria-label={`${logo.name} historical comments`}>
-      <h4>History &amp; comments</h4>
-      <p className="internal-logos__evidence">{logo.evidence}</p>
-      {logo.comments.map((comment) => <p key={comment}>{comment}</p>)}
-      {logo.seenOn && (
-        <>
-          <h4>On the posters</h4>
-          <PosterLinks logo={logo} />
-        </>
-      )}
-    </div>
-    {logo.sources.length > 0 && <details className="internal-logos__sources">
-      <summary>Sources</summary>
-      <ul>{logo.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul>
-    </details>}
+    {logo.comments.map((comment) => <p key={comment}>{comment}</p>)}
+    {logo.seenOn && (
+      <>
+        <h4>On the posters</h4>
+        <PosterLinks logo={logo} />
+      </>
+    )}
   </>
 )
+
+// On a logo's own page its history is shown whole; on the family's page, each card carries only
+// what dates it, with the comments and sources folded beneath.
+const LogoHistory = ({ logo, folded = false }) => folded
+  ? (
+    <>
+      <p className="internal-logos__evidence">{logo.evidence}</p>
+      <details className="internal-logos__history">
+        <summary>History &amp; comments</summary>
+        <div className="internal-logos__comments" aria-label={`${logo.name} historical comments`}>
+          <LogoComments logo={logo} />
+        </div>
+        <LogoSources logo={logo} />
+      </details>
+    </>
+    )
+  : (
+    <>
+      <div className="internal-logos__comments" aria-label={`${logo.name} historical comments`}>
+        <h4>History &amp; comments</h4>
+        <p className="internal-logos__evidence">{logo.evidence}</p>
+        <LogoComments logo={logo} />
+      </div>
+      <LogoSources logo={logo} />
+    </>
+    )
 
 const VariantCard = ({ variant }) => (
   <article className="internal-logos__variant" aria-labelledby={`variant-${variant.id}`}>
@@ -225,7 +250,7 @@ export const InternalLogosView = () => {
           <div className="internal-logos__intro">
             <button className="internal-logos__back" type="button" onClick={backToFamily}>← Forests</button>
             <h2 ref={title} tabIndex={-1}>{current.name}</h2>
-            <p>{current.description} {variants.related.length ? 'Explore its colours and service variants below.' : current.seenOn ? 'Explore its colours below, and the posters it appears on.' : 'Explore its colours below.'}</p>
+            <p>{current.description}</p>
           </div>
           <h3 className="internal-logos__section-title">Colour variants</h3>
           <div className="internal-logos__variants">
@@ -254,30 +279,36 @@ export const InternalLogosView = () => {
           <div className="internal-logos__intro">
             <button className="internal-logos__back" type="button" onClick={() => { navigate(false); requestAnimationFrame(() => forestButton.current?.focus()) }}>← Internal Logos</button>
             <h2 ref={title} tabIndex={-1}>Forests</h2>
-            <p>Choose a design to see its colour and service variants. Historical comments sit beneath each logo.</p>
           </div>
           <div className="internal-logos__designs">
             {FOREST_LOGOS.map((logo) => (
               <article key={logo.id} className="internal-logos__design" aria-labelledby={`internal-${logo.id}`}>
-                <button type="button" className="internal-logos__open" aria-label={`View ${logo.name} variants`} ref={(element) => { logoButtons.current[logo.id] = element }} onClick={() => navigate(true, logo.id)}>
+                {/* The artwork opens the logo too, for a pointer; the title is the one way in for a
+                    keyboard or a screen reader, so the artwork stays out of both. */}
+                <button type="button" className="internal-logos__open" tabIndex={-1} aria-hidden="true" onClick={() => navigate(true, logo.id)}>
                   {logo.kind === 'drawing' ? <DrawingLogo artwork={logo.artwork} padding={logo.padding} name={logo.name} decorative /> : <OvalLogo preset={logo.id} name={logo.name} decorative />}
-                  <span className="internal-logos__open-label">View variants <span aria-hidden="true">→</span></span>
                 </button>
                 <div className="internal-logos__notes">
-                  <h3 id={`internal-${logo.id}`}>{logo.name}</h3>
+                  <h3 id={`internal-${logo.id}`}>
+                    <button type="button" className="internal-logos__title" aria-label={`${logo.name}: view variants`} ref={(element) => { logoButtons.current[logo.id] = element }} onClick={() => navigate(true, logo.id)}>
+                      {logo.name} <span aria-hidden="true">→</span>
+                    </button>
+                  </h3>
                   <p className="internal-logos__description">{logo.description}</p>
-                  <LogoHistory logo={logo} />
+                  <LogoHistory logo={logo} folded />
                 </div>
               </article>
             ))}
           </div>
-          <p className="internal-logos__footnote">Three of the ovals are reconstructed in Forest Oval from supplied references; the Lands Department seal, the evergreen emblem and the yellow-sky and green-and-gold Forest Service ovals are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the seal and the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
+          <details className="internal-logos__footnote">
+            <summary>All are reconstructions, and their order is not a verified sequence of adoption.</summary>
+            <p>Three of the ovals are reconstructed in Forest Oval from supplied references; the Lands Department seal, the evergreen emblem and the yellow-sky and green-and-gold Forest Service ovals are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the seal and the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
+          </details>
         </>
       ) : (
         <>
           <div className="internal-logos__intro">
             <h2>Internal Logos</h2>
-            <p>Explore the logo families used within the Province’s services.</p>
           </div>
           <button ref={forestButton} type="button" className="internal-logos__family" onClick={() => navigate(true)}>
             <OvalLogo preset="forests" name="Forests" decorative />

@@ -17,7 +17,7 @@ import {
   allHydroDefaults, effectiveMode, formatRecipe, HYDRO_ADVANCED_SLIDERS, HYDRO_GROUP_ORDER, HYDRO_GROUPS,
   HYDRO_MODE_ORDER, HYDRO_MODES, HYDRO_PRESETS, HYDRO_RANGES, HYDRO_SCREEN_PALETTES, HYDRO_SLIDERS,
   HYDRO_TYPE_ORDER, HYDRO_TYPES, hydroDefaults, hydroProject, pairedPreset, productionSpec, readHydroProject,
-  ruleDescription, updateHydroSettings, validateHydro
+  updateHydroSettings, validateHydro
 } from './hydroLayout.js'
 import { renderHydroSheet, renderHydroSvg } from './renderHydroSvg.js'
 
@@ -261,7 +261,9 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
       <div className="gallery__head hydro__head">
         <div>
           <h2>BC Hydro <span className="gallery__years">historical identity</span></h2>
-          <p className="gallery__note">{HYDRO_STANDARDS.status}</p>
+          {/* The last sentence of HYDRO_STANDARDS.status: the rest, on the screenshots and what they
+              leave out, is "About this mark" below, and goes out whole with the rules as JSON. */}
+          <p className="gallery__note">Not current BC Hydro brand guidance.</p>
         </div>
         {onClose && <button type="button" className="button button--ghost" onClick={onClose}>Back to the gallery</button>}
       </div>
@@ -288,7 +290,6 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
           </div>
 
           <RuleNotes notes={notes} />
-          <p className="field__note hydro__rule">{ruleDescription(settings)}</p>
         </section>
 
         <div className="controls">
@@ -302,13 +303,17 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
               hint={`${HYDRO_PRESETS[active].name}: ${HYDRO_PRESETS[active].caption}.`}
             />
             <PresetPicker all={all} group={group} active={active} onPick={setActive} />
-            <Segmented
-              label="Signature"
-              options={TYPE_OPTIONS}
-              value={settings.type}
-              onChange={(type) => update('type', type)}
-              hint={HYDRO_TYPES[settings.type]}
-            />
+            {/* The signatures' presets are one per signature, so a second choice of signature there
+                would only repeat them — unless a loaded file has set one apart from its preset. The
+                other applications' presets do not cover every signature, so they keep the choice. */}
+            {(group !== 'signature' || settings.type !== HYDRO_PRESETS[active].type) && (
+              <Segmented
+                label="Signature"
+                options={TYPE_OPTIONS}
+                value={settings.type}
+                onChange={(type) => update('type', type)}
+              />
+            )}
             <Check label="Emblem only" checked={settings.emblemOnly} onChange={(value) => update('emblemOnly', value)} />
             <div className="row" style={{ marginTop: 12 }}>
               <button type="button" className="button button--ghost" onClick={reset}>Reset this preset</button>

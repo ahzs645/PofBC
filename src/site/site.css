@@ -1035,6 +1035,12 @@ input.share__url {
 /* ── BC Hydro, opened from the gallery ─────────────────────────────────────────────────────── */
 
 /* The generator's own layout — stage, then panels — under a heading that says whose it is. */
+.hydro, .hydro .layout > * { min-width: 0; }
+
+/* On a phone the four applications only fit a row with the buttons' side padding cut down. */
+@media (max-width: 600px) {
+  .hydro .segmented button { padding-inline: 4px; }
+}
 .hydro__head { margin-bottom: var(--gap); align-items: flex-start; }
 .hydro__head h2 { margin: 0; font-size: 20px; }
 .hydro__head .gallery__years { margin-left: 6px; font-weight: 500; }
@@ -1047,7 +1053,6 @@ input.share__url {
 .hydro__guides { margin: 0; font-size: 13px; }
 
 .hydro__rules { margin-top: 14px; }
-.hydro__rule { margin: 10px 2px 0; max-width: 70ch; }
 
 .hydro input[type='number'] {
   width: 100%;
@@ -1185,6 +1190,26 @@ input.share__url {
 /* What an era's dates rest on, under what it was. */
 .gallery__era-dates { margin: 6px 0 0; max-width: 62ch; font-size: 13px; line-height: 1.5; color: var(--ink-faint); }
 
+/* An era's dates and sources, folded under one line beneath its note and chips. */
+.gallery__era-more { margin-top: 10px; }
+.gallery__era-more summary { width: fit-content; cursor: pointer; font-size: 13px; font-weight: 600; color: var(--ink-muted); }
+.gallery__era-more summary:hover { color: var(--ink); }
+.gallery__era-more .gallery__era-dates { margin-top: 8px; }
+.gallery__era-more .gallery__sources { margin-top: 8px; }
+
+/* An era of one mark, or of none, sets it beside its words on a wide screen, not under them with
+   most of the card empty beside it. */
+@media (min-width: 760px) {
+  .gallery__era[data-single] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
+    gap: 24px;
+    align-items: start;
+  }
+  .gallery__era[data-single] > .gallery__tiles { margin-top: 0; grid-template-columns: minmax(0, 1fr); }
+  .gallery__era[data-single] > .gallery__era-missing { margin-top: 0; }
+}
+
 /* A one-off's history, under the open mark: its eras as a collection's are, the open mark among
    them outlined rather than offered again. */
 .gallery__history { display: grid; gap: var(--gap); }
@@ -1200,8 +1225,8 @@ input.share__url {
 
 /* A collection's eras as a rail, oldest first: a dot per era on one line, equal steps whatever the
    years, because the years are mostly estimates. A dot is filled where the gallery holds the era's
-   marks and hollow where it does not. On a narrow screen the rail scrolls rather than wraps, so the
-   order still reads left to right. */
+   marks and hollow where it does not. On a phone the rail turns to run down the page, oldest at the
+   top, so every era shows without scrolling sideways. */
 .gallery__timeline { overflow-x: auto; padding: 4px 0 2px; }
 
 .gallery__timeline ol {
@@ -1266,6 +1291,24 @@ input.share__url {
 .gallery__timeline-label { font-size: 14px; font-weight: 600; line-height: 1.3; }
 .gallery__timeline-count { font-size: 12.5px; color: var(--ink-muted); }
 .gallery__timeline li:is([data-status='sought'], [data-status='none']) .gallery__timeline-count { font-style: italic; }
+
+@media (max-width: 600px) {
+  .gallery__timeline { overflow-x: visible; padding: 0; }
+  .gallery__timeline ol { grid-auto-flow: row; grid-auto-columns: auto; }
+  .gallery__timeline li::before { top: 0; bottom: 0; left: 16px; right: auto; border-top: 0; border-left: 2px solid var(--mid); }
+  .gallery__timeline li:first-child::before { top: 19px; left: 16px; }
+  .gallery__timeline li:last-child::before { bottom: calc(100% - 19px); right: auto; }
+  .gallery__timeline li:only-child::before { display: none; }
+  .gallery__timeline button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 8px;
+    row-gap: 0;
+    padding: 8px 12px 8px 34px;
+  }
+  .gallery__timeline button::before { top: 12px; }
+}
 
 /* A card's mark sits on the card itself — the one ground every mark in the gallery shares, drawn in
    the version that ground calls for (src/gallery/pageColours.js). Only a mark that is defined by
@@ -1332,6 +1375,12 @@ input.share__url {
 /* The fuller account on a mark's or a collection's own page: each classification as a term with
    its sentences beside it on a wide screen, beneath it on a narrow one. */
 .gallery__about > h2 { margin-bottom: 12px; }
+
+/* A collection's account starts closed, its heading the line that opens it. */
+.gallery__about--closed summary { cursor: pointer; }
+.gallery__about--closed summary h2 { display: inline; margin: 0; font-size: 16px; font-weight: 600; color: var(--ink); }
+.gallery__summary-hint { margin-left: 10px; font-size: 13px; color: var(--ink-faint); }
+.gallery__about--closed[open] summary { margin-bottom: 12px; }
 
 .gallery__facts { display: grid; gap: 10px; margin: 0; }
 .gallery__facts > div { display: grid; gap: 2px; }
