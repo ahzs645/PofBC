@@ -8,7 +8,7 @@
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { LIBRARY, findPatch, orgsBySector } from 'patcher/library'
 import { searchFor } from '../site/navigation.jsx'
-import { PatchViewer } from './PatchViewer.jsx'
+import { PatchViewer, photosOf } from './PatchViewer.jsx'
 import './patches.css'
 
 /** Each collection's view and wording. The view id is also the site view (`?view=`). */
@@ -31,9 +31,13 @@ const COLLECTIONS = {
 
 const sectionsOf = (collection) => orgsBySector(collection)
 
+// An atlas entry merged into another photograph's patch (S27-O01 into S30-O04) still opens it.
+const MERGED_INTO = new Map(LIBRARY.merged.map((m) => [m.id, m.into]))
+
 const read = (collection, sections) => {
   const params = new URLSearchParams(globalThis.location?.search ?? '')
-  const patch = findPatch(params.get('patch') ?? '')
+  const asked = params.get('patch') ?? ''
+  const patch = findPatch(MERGED_INTO.get(asked) ?? asked)
   const orgs = sections.flatMap((s) => s.orgs)
   return {
     org: orgs.some((o) => o.id === params.get('org')) ? params.get('org') : null,
@@ -187,7 +191,10 @@ export const PatchesView = ({ collection = 'patches' }) => {
                     </span>
                     <span className="patches__card-text">
                       <span className="patches__title">{patch.label}</span>
-                      <span className="patches__medium">{patch.medium}</span>
+                      <span className="patches__medium">
+                        {patch.medium}
+                        {photosOf(patch).length > 1 && ` · seen in ${photosOf(patch).length} photos`}
+                      </span>
                     </span>
                   </a>
                 ))}

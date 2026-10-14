@@ -3,7 +3,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { createDigitizer, renderTextured, writeDst, writeExp } from 'patcher'
-import { loadPatchSvg } from 'patcher/library'
+import { LIBRARY, loadPatchSvg } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 
 /** Patcher's own site, which opens a library patch with every digitizing setting exposed. */
@@ -25,6 +25,19 @@ const FINISHES = [
   { value: 'glossy', label: 'Glossy', title: 'Rayon thread with a satin sheen' }
 ]
 const LIGHT_DEG = 225
+
+/** The photographs a design was seen in: one per source (S27-O01 and S27-O03 are both photo S27). */
+export const photosOf = (patch) => {
+  const photos = new Map()
+  for (const { id, sourceUrl } of patch.sightings ?? []) {
+    const photo = id.replace(/-O\d+$/, '')
+    if (!photos.has(photo)) photos.set(photo, { photo, sourceUrl, ids: [] })
+    photos.get(photo).ids.push(id)
+  }
+  return [...photos.values()]
+}
+
+const mergedLabels = new Map(LIBRARY.merged.map((m) => [m.id, m.label]))
 
 const download = (blob, name) => {
   const link = document.createElement('a')
@@ -188,8 +201,26 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
           {patch.limitations && <p className="patch__limits"><strong>Limitations.</strong> {patch.limitations}</p>}
           <p className="patch__source">
             {patch.id} in the atlas
-            {patch.sourceUrl && <> · <a href={patch.sourceUrl} target="_blank" rel="noreferrer">source photograph</a></>}
+            {photosOf(patch).length <= 1 && patch.sourceUrl && <> · <a href={patch.sourceUrl} target="_blank" rel="noreferrer">source photograph</a></>}
           </p>
+          {photosOf(patch).length > 1 && (
+            <p className="patch__source">
+              Seen {patch.sightings.length} times in {photosOf(patch).length} photographs:{' '}
+              {photosOf(patch).map(({ photo, sourceUrl, ids }, index) => (
+                <span key={photo}>
+                  {index > 0 && ', '}
+                  {sourceUrl ? <a href={sourceUrl} target="_blank" rel="noreferrer">{photo}</a> : photo}
+                  {ids.length > 1 && ` (×${ids.length})`}
+                </span>
+              ))}
+            </p>
+          )}
+          {patch.merged.length > 0 && (
+            <p className="patch__source">
+              The atlas also lists it as {patch.merged.map((id) => `${id} “${mergedLabels.get(id) ?? id}”`).join(', ')}: the same
+              drawing fitted to another photograph.
+            </p>
+          )}
         </aside>
       </div>
     </section>

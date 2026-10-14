@@ -39,6 +39,11 @@ test('badges are their own hidden collection, and what orgs.json leaves out stay
   }
   const kept = new Set(designs.map((d) => d.id))
   for (const gone of manifest.excluded) assert.ok(!kept.has(gone.id), `${gone.id} is excluded but still in the library`)
+  // Another photograph of a kept design is merged into it, not listed twice.
+  for (const { id, into } of manifest.merged) {
+    assert.ok(!kept.has(id), `${id} is merged into ${into} but still listed`)
+    assert.ok(designs.find((d) => d.id === into)?.merged.includes(id), `${into} doesn't record ${id}`)
+  }
   // The Province's identity, BC Timber Sales and the corporate logos are not patches.
   const orgs = new Set(manifest.orgs.map((org) => org.id))
   for (const id of ['province-of-bc', 'bc-timber-sales', 'bc-transit', 'icbc']) assert.ok(!orgs.has(id), `${id} should be left out`)

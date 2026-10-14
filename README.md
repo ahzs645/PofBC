@@ -475,8 +475,10 @@ loading and viewer, given a catalogue. A sign is added as a poster is: its drawi
 ## Patches
 
 **Patches** in the title menu (`?view=patches`) is the patch library of
-[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 159
-patches and emblems from the BC Forestry Patch Atlas, grouped by organization under sectors. Among
+[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 154
+patches and emblems from the BC Forestry Patch Atlas, grouped by organization under sectors. The atlas
+lists a design once per photograph it appears in; Patcher merges those into one patch (the Parks scenic
+arch, seen in five photographs, is one card), and the viewer links every photograph. Among
 them are the BC Forest Service, BC Wildfire Service, BC Parks, the Conservation Officer Service and
 its Fish & Game predecessors, BC Sheriff Service, BC Corrections, Highways and Motor Vehicles, BC
 Hydro's patrol patches and the universities. The atlas's logos, signs, decals and printed emblems
