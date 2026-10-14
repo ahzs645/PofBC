@@ -31,13 +31,10 @@ const COLLECTIONS = {
 
 const sectionsOf = (collection) => orgsBySector(collection)
 
-// An atlas entry merged into another photograph's patch (S27-O01 into S30-O04) still opens it.
-const MERGED_INTO = new Map(LIBRARY.merged.map((m) => [m.id, m.into]))
-
 const read = (collection, sections) => {
   const params = new URLSearchParams(globalThis.location?.search ?? '')
-  const asked = params.get('patch') ?? ''
-  const patch = findPatch(MERGED_INTO.get(asked) ?? asked)
+  // findPatch follows an atlas id merged or absorbed into another patch (S27-O01, R22-O01) to it.
+  const patch = findPatch(params.get('patch') ?? '')
   const orgs = sections.flatMap((s) => s.orgs)
   return {
     org: orgs.some((o) => o.id === params.get('org')) ? params.get('org') : null,

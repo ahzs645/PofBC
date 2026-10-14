@@ -1,7 +1,7 @@
 // The patch library comes from the Patcher submodule (vendor/patcher/library). These check that it
 // is there and hangs together as the Patches view expects: every patch filed under exactly one
 // organization, every organization under a sector the view lists, and every patch joining back from
-// its stored file and shared parts into the atlas's drawing, byte for byte.
+// its stored file and shared parts into the atlas's drawing (or the supplied one), byte for byte.
 
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
@@ -91,4 +91,18 @@ test('variant groups name designs in the library, each in one group, in one coll
   }
   // The scenic arch and its integrated Ranger edition are one card.
   assert.deepEqual(manifest.variants.find((g) => g.id === 'parks-scenic-arch')?.members.map((m) => m.id), ['S30-O04', 'S27-O04'])
+})
+
+test('atlas entries absorbed into a supplied design are gone, and the design says so', { skip: !manifest }, () => {
+  const designs = new Map(manifest.orgs.flatMap((org) => org.patches.map((p) => [p.id, p])))
+  for (const { id, into } of manifest.absorbed) {
+    assert.ok(!designs.has(id), `${id} is absorbed into ${into} but still listed`)
+    assert.ok(designs.get(into)?.supplied, `${into} isn't a supplied design`)
+    assert.ok(designs.get(into).absorbs.includes(id), `${into} doesn't record ${id}`)
+  }
+  // The atlas's Forest Service and Wildfire Service ovals are PofBC's Forest Ovals, one card per design.
+  const ovals = ['forest-service-oval', 'forests-oval', 'long-ministry-oval', 'forest-service-yellow-sky', 'forest-service-green-gold']
+  for (const id of ovals) assert.ok(manifest.variants.some((g) => g.id === id), `${id} is missing`)
+  for (const id of ['R22-O01', 'R13-O01', 'S43-O01', 'S58-O05', 'S47-O01']) assert.ok(manifest.absorbed.some((a) => a.id === id), `${id} should be absorbed`)
+  assert.ok(!manifest.orgs.some((org) => org.id === 'bc-wildfire-service'), 'every Wildfire Service oval is a Forest Oval variant now')
 })

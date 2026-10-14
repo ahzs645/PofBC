@@ -38,6 +38,7 @@ export const photosOf = (patch) => {
 }
 
 const mergedLabels = new Map(LIBRARY.merged.map((m) => [m.id, m.label]))
+const absorbedLabels = new Map((LIBRARY.absorbed ?? []).map((m) => [m.id, m.label]))
 
 const download = (blob, name) => {
   const link = document.createElement('a')
@@ -170,13 +171,15 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
           <p className="patch__meta">{patch.medium} · {patch.quality}</p>
 
           {variants && (
-            <Segmented
-              label="Variant"
-              options={variants.members.map((m) => ({ value: m.id, label: m.variant, title: m.label }))}
-              value={patch.id}
-              onChange={(id) => onOpen(variants.members.find((m) => m.id === id))}
-              compact
-            />
+            // Above the other controls and wrapping, since a design can have ten variants.
+            <div className="patch__variants">
+              <Segmented
+                label="Variant"
+                options={variants.members.map((m) => ({ value: m.id, label: m.variant, title: m.label }))}
+                value={patch.id}
+                onChange={(id) => onOpen(variants.members.find((m) => m.id === id))}
+              />
+            </div>
           )}
           <Segmented label="Width" options={SIZES} value={widthMm} onChange={setWidthMm} compact />
           <Segmented label="Edge" options={BORDERS} value={border} onChange={setBorder} compact />
@@ -212,7 +215,9 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
           {patch.limitations && <p className="patch__limits"><strong>Limitations.</strong> {patch.limitations}</p>}
           <p className="patch__source">
-            {patch.id} in the atlas
+            {patch.supplied
+              ? <>{patch.id}, a supplied drawing rather than an atlas entry</>
+              : <>{patch.id} in the atlas</>}
             {photosOf(patch).length <= 1 && patch.sourceUrl && <> · <a href={patch.sourceUrl} target="_blank" rel="noreferrer">source photograph</a></>}
           </p>
           {photosOf(patch).length > 1 && (
@@ -225,6 +230,11 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
                   {ids.length > 1 && ` (×${ids.length})`}
                 </span>
               ))}
+            </p>
+          )}
+          {patch.absorbs?.length > 0 && (
+            <p className="patch__source">
+              It takes the place of the atlas’s {patch.absorbs.map((id) => `${id} “${absorbedLabels.get(id) ?? id}”`).join(', ')}.
             </p>
           )}
           {patch.merged.length > 0 && (

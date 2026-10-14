@@ -475,15 +475,21 @@ loading and viewer, given a catalogue. A sign is added as a poster is: its drawi
 ## Patches
 
 **Patches** in the title menu (`?view=patches`) is the patch library of
-[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 152
+[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 132
 patches and emblems from the BC Forestry Patch Atlas, grouped by organization under sectors. The atlas
 lists a design once per photograph it appears in; Patcher merges those into one patch (the Parks scenic
 arch, seen in five photographs, is one card), and the viewer links every photograph. Some designs use a better drawing supplied to Patcher in
 place of the atlas's (the Parks Branch elk roundel, the Recreation and Conservation arch, the scenic
 arch's landscape, and the BC Parks flag patches, which take this site's own flag badge). The Lands
 Department pine-bough seal is a printed seal, not a patch, so it is left out there and kept in
-Internal Logos. Among
-them are the BC Forest Service, BC Wildfire Service, BC Parks, the Conservation Officer Service and
+Internal Logos. The atlas's Forest Service and Wildfire Service ovals are replaced by this site's own
+Forest Ovals (Internal Logos → Forests): five cards (the tree oval, the Forests and long ministry-name
+wildlife ovals, the yellow-sky and the green-and-gold ovals), each with a variant switch for its
+colourways and its Wildfire Management, Wildfire Service, Fire Control, Airtanker and Ministry of Forests
+editions. Patcher's `supplied/pofbc-forest-ovals/capture.mjs` renders them from this site's dev server
+with the lettering outlined; an old link to an atlas id they replaced (`&patch=R22-O01`) opens its
+variant. Among
+them are the BC Forest Service, BC Parks, the Conservation Officer Service and
 its Fish & Game predecessors, BC Sheriff Service, BC Corrections, Highways and Motor Vehicles, BC
 Hydro's patrol patches and the universities. The atlas's logos, signs, decals and printed emblems
 (the Province's ministry lockups, BC Timber Sales, the BC Hydro, BC Transit and ICBC logos, …) are
@@ -501,11 +507,11 @@ digitizer are all Patcher's (see its [`library/README.md`](vendor/patcher/librar
 regroup a patch, edit Patcher's `library/orgs.json` and re-import there, then move the submodule
 forward (below). PofBC only needs the view: `src/patches/PatchesView.jsx` (the index) and
 `PatchViewer.jsx` (one patch). Patcher stores repeated crests and outlines once (29 MB of drawings in
-9 MB), so the viewer gets each drawing from `loadPatchSvg`, which joins a patch with its shared parts
+8 MB), so the viewer gets each drawing from `loadPatchSvg`, which joins a patch with its shared parts
 and checks the result against the atlas's SHA-256. `vite.config.js` aliases `patcher` and `patcher/library` to the
 submodule's TypeScript source, which Vite compiles together with Patcher's digitizing worker.
 `src/patches/patches.test.js` checks that the submodule is checked out, that its library hangs
-together, and that every patch joins back into the atlas's drawing byte for byte.
+together, and that every patch joins back into the atlas's drawing (or the supplied one) byte for byte.
 
 To take a newer Patcher:
 
