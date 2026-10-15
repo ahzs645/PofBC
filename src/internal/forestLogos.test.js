@@ -55,3 +55,31 @@ test('evergreen joined-island studies are explicit and the original remains sepa
   assert.match(reverse, /id="ground"/)
   assert.match(reverse, /id="islands-combined"/)
 })
+
+
+// Structural regression: no return to the earlier seven-shape recolour with a white painted triangle.
+test('black-and-white print reconstructions share the same compact geometry and true tree cutout', () => {
+  const variants = [
+    'forest-service-emblem-one-ink.svg',
+    'forest-service-emblem-joined-islands.svg',
+    'forest-service-emblem-reverse.svg',
+    'forest-service-emblem-reverse-joined-islands.svg'
+  ]
+  const svgs = variants.map((file) => readFileSync(new URL(`./${file}`, import.meta.url), 'utf8'))
+  const badges = svgs.map((svg) => svg.match(/id="badge-outline" d="([^"]+)"/)?.[1])
+  assert.ok(badges.every(Boolean))
+  assert.equal(new Set(badges).size, 1, 'all one-ink studies must share their manually reconstructed badge geometry')
+  for (const [index, svg] of svgs.entries()) {
+    assert.match(svg, /id="province-and-tree"[^>]*fill-rule="evenodd"/)
+    assert.match(svg, /id="badge-outline"[^>]*fill-rule="evenodd"/)
+    assert.doesNotMatch(svg, /<(?:image|filter)\b/)
+    assert.ok([...svg.matchAll(/<path\b/g)].length <= 4, `${variants[index]} must remain a compact geometric vector`)
+  }
+  assert.match(svgs[0], /id="northern-island"/)
+  assert.match(svgs[0], /id="southern-island"/)
+  assert.doesNotMatch(svgs[0], /id="islands-combined"/)
+  assert.match(svgs[1], /id="islands-combined"/)
+  assert.match(svgs[3], /id="islands-combined"/)
+  assert.match(svgs[2], /id="ground"/)
+  assert.match(svgs[3], /id="ground"/)
+})
