@@ -58,7 +58,7 @@ test('evergreen joined-island studies are explicit and the original remains sepa
 
 
 // Structural regression: no return to the earlier seven-shape recolour with a white painted triangle.
-test('black-and-white print reconstructions share the same compact geometry and true tree cutout', () => {
+test('black-and-white studies share one symmetric squircle and a true tree cutout', () => {
   const variants = [
     'forest-service-emblem-one-ink.svg',
     'forest-service-emblem-joined-islands.svg',
@@ -68,10 +68,10 @@ test('black-and-white print reconstructions share the same compact geometry and 
   const svgs = variants.map((file) => readFileSync(new URL(`./${file}`, import.meta.url), 'utf8'))
   const badges = svgs.map((svg) => svg.match(/id="badge-outline" d="([^"]+)"/)?.[1])
   assert.ok(badges.every(Boolean))
-  assert.equal(new Set(badges).size, 1, 'all one-ink studies must share their manually reconstructed badge geometry')
+  assert.equal(new Set(badges).size, 1, 'all one-ink studies must share their symmetric parametric squircle geometry')
   for (const [index, svg] of svgs.entries()) {
     assert.match(svg, /id="province-and-tree"[^>]*fill-rule="evenodd"/)
-    assert.match(svg, /id="badge-outline"[^>]*fill-rule="evenodd"/)
+    assert.match(svg, /id="badge-outline"[^>]*fill="none" stroke="#(?:111111|FFFFFF)" stroke-width="13\.85"/)
     assert.doesNotMatch(svg, /<(?:image|filter)\b/)
     assert.ok([...svg.matchAll(/<path\b/g)].length <= 4, `${variants[index]} must remain a compact geometric vector`)
   }
