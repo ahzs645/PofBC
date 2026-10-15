@@ -22,7 +22,7 @@ The article attributes to League president Grace McCarthy an explanation that th
 
 ### Use in PofBC
 
-The Forest Service evergreen emblem detail page displays the clipping title, its distinctive comparison, a contextual explanation, and its provenance limitation. The six added SVG studies provide geometric comparisons only. In particular, the **tree-free profile** is a design study based on Forest Service geometry; it is NOT offered as a recovered Social Credit logo.
+The Forest Service evergreen emblem detail page displays the clipping title, its distinctive comparison, a contextual explanation, and its provenance limitation. The four revised SVG studies show a reconstructed two-island monochrome emblem, an optional three-*separate*-island comparison informed by PofBC's existing coloured master, and reversed/green treatments. The two prints themselves do not clearly show the third island. Earlier combined-island and tree-free mockups have been withdrawn from the catalogue; no recovered Social Credit Party vector is claimed.
 
 ### Follow-up research
 
