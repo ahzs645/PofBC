@@ -39,47 +39,50 @@ test('the green-and-gold oval keeps its landscape clipped to the inner rim', () 
   assert.match(svg, /clip-path="url\(#landscape-clip\)"/)
 })
 
-test('evergreen joined-island studies are explicit and the original remains separate', () => {
+test('evergreen study retains separate islands and preserves the three-island coloured master', () => {
   const logo = FOREST_LOGOS.find(({ id }) => id === 'forest-service-emblem')
   assert.ok(logo.article?.title.includes('Socreds'))
-  const variants = variantsFor(logo)
-  assert.ok(variants.studies.length >= 5)
+  const { studies } = variantsFor(logo)
+  assert.equal(studies.length, 4)
+  assert.ok(studies.every(({ id }) => !id.includes('joined')))
   const original = readFileSync(new URL('./forest-service-emblem.svg', import.meta.url), 'utf8')
-  const merged = readFileSync(new URL('./forest-service-emblem-joined-islands.svg', import.meta.url), 'utf8')
   assert.match(original, /id="island-north"/)
   assert.match(original, /id="island-middle"/)
   assert.match(original, /id="island-south"/)
-  assert.match(merged, /id="islands-combined"/)
-  assert.doesNotMatch(merged, /id="island-middle"/)
-  const reverse = readFileSync(new URL('./forest-service-emblem-reverse-joined-islands.svg', import.meta.url), 'utf8')
-  assert.match(reverse, /id="ground"/)
-  assert.match(reverse, /id="islands-combined"/)
+  const printStudy = readFileSync(new URL('./forest-service-emblem-one-ink.svg', import.meta.url), 'utf8')
+  const threeStudy = readFileSync(new URL('./forest-service-emblem-three-islands-separated.svg', import.meta.url), 'utf8')
+  assert.match(printStudy, /id="northern-island"/)
+  assert.match(printStudy, /id="southern-island"/)
+  assert.doesNotMatch(printStudy, /id="central-island-colour-study"/)
+  assert.match(threeStudy, /id="northern-island"/)
+  assert.match(threeStudy, /id="central-island-colour-study"/)
+  assert.match(threeStudy, /id="southern-island"/)
+  assert.doesNotMatch(threeStudy, /islands-combined|coast-join-bridge/)
 })
 
-
-// Structural regression: no return to the earlier seven-shape recolour with a white painted triangle.
-test('black-and-white studies share one symmetric squircle and a true tree cutout', () => {
-  const variants = [
+test('all four studies have one squircle and independently editable islands', () => {
+  const files = [
     'forest-service-emblem-one-ink.svg',
-    'forest-service-emblem-joined-islands.svg',
-    'forest-service-emblem-reverse.svg',
-    'forest-service-emblem-reverse-joined-islands.svg'
+    'forest-service-emblem-three-islands-separated.svg',
+    'forest-service-emblem-three-islands-green.svg',
+    'forest-service-emblem-reverse.svg'
   ]
-  const svgs = variants.map((file) => readFileSync(new URL(`./${file}`, import.meta.url), 'utf8'))
+  const svgs = files.map((file) => readFileSync(new URL(`./${file}`, import.meta.url), 'utf8'))
   const badges = svgs.map((svg) => svg.match(/id="badge-outline" d="([^"]+)"/)?.[1])
   assert.ok(badges.every(Boolean))
-  assert.equal(new Set(badges).size, 1, 'all one-ink studies must share their symmetric parametric squircle geometry')
-  for (const [index, svg] of svgs.entries()) {
+  assert.equal(new Set(badges).size, 1, 'every study uses the exact same analytic squircle path')
+  for (const [i, svg] of svgs.entries()) {
     assert.match(svg, /id="province-and-tree"[^>]*fill-rule="evenodd"/)
-    assert.match(svg, /id="badge-outline"[^>]*fill="none" stroke="#(?:111111|FFFFFF)" stroke-width="13\.85"/)
+    assert.match(svg, /id="badge-outline"[^>]*fill="none" stroke="#(?:111111|FFFFFF|176A3C)" stroke-width="13\.85"/)
     assert.doesNotMatch(svg, /<(?:image|filter)\b/)
-    assert.ok([...svg.matchAll(/<path\b/g)].length <= 4, `${variants[index]} must remain a compact geometric vector`)
+    assert.doesNotMatch(svg, /islands-combined|coast-join-bridge/)
+    assert.ok([...svg.matchAll(/<path\b/g)].length <= 5, `${files[i]} should use concise editable primitives`)
+    assert.match(svg, /id="northern-island"/)
+    assert.match(svg, /id="southern-island"/)
   }
-  assert.match(svgs[0], /id="northern-island"/)
-  assert.match(svgs[0], /id="southern-island"/)
-  assert.doesNotMatch(svgs[0], /id="islands-combined"/)
-  assert.match(svgs[1], /id="islands-combined"/)
-  assert.match(svgs[3], /id="islands-combined"/)
-  assert.match(svgs[2], /id="ground"/)
+  assert.doesNotMatch(svgs[0], /id="central-island-colour-study"/)
+  assert.match(svgs[1], /id="central-island-colour-study"/)
+  assert.match(svgs[2], /id="central-island-colour-study"/)
+  assert.doesNotMatch(svgs[3], /id="central-island-colour-study"/)
   assert.match(svgs[3], /id="ground"/)
 })
