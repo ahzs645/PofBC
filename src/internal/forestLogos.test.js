@@ -19,12 +19,12 @@ test('every design has its words, and ids are unique', () => {
 test('every supplied drawing exists, and every recolour names a colour it paints', () => {
   assert.ok(drawings.length >= 2)
   for (const logo of drawings) {
-    const svg = readFileSync(new URL(`./${logo.artwork}`, import.meta.url), 'utf8')
-    const paints = new Set([...svg.matchAll(/(?:fill|stroke)="(#[0-9a-f]{6})"/gi)].map((m) => m[1].toUpperCase()))
     const { colours } = variantsFor(logo)
     assert.equal(colours[0].id, 'colour', `${logo.id} opens on its full colour`)
+    assert.equal(colours[0].artwork, logo.artwork)
     for (const variant of colours) {
-      assert.equal(variant.artwork, logo.artwork)
+      const svg = readFileSync(new URL(`./${variant.artwork}`, import.meta.url), 'utf8')
+      const paints = new Set([...svg.matchAll(/(?:fill|stroke)="(#[0-9a-f]{6})"/gi)].map((m) => m[1].toUpperCase()))
       for (const [from, to] of Object.entries(variant.recolour)) {
         assert.ok(paints.has(from), `${logo.id}/${variant.id}: the drawing never paints ${from}`)
         assert.match(to, /^#[0-9A-F]{6}$/, `${logo.id}/${variant.id}: ${to}`)

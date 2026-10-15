@@ -101,6 +101,7 @@ const OvalLogo = ({ preset, name, decorative = false, theme, colours, compositio
 const DRAWINGS = {
   'forest-service-lands-department.svg': () => import('./forest-service-lands-department.svg?raw'),
   'forest-service-emblem.svg': () => import('./forest-service-emblem.svg?raw'),
+  'forest-service-emblem-two-islands.svg': () => import('./forest-service-emblem-two-islands.svg?raw'),
   'forest-service-green-gold.svg': () => import('./forest-service-green-gold.svg?raw'),
   'forest-service-yellow-sky.svg': () => import('./forest-service-yellow-sky.svg?raw')
 }

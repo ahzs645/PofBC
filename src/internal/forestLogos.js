@@ -165,7 +165,8 @@ const oneInk = (foreground, background) => ({
 // The supplied drawings' colourways, as maps from the drawing's own colours to new ones. The
 // evergreen emblem's alternatives are the greens it is printed in on the photographed posters,
 // sampled from those photographs, so they are approximate. The green-and-gold oval's are generated,
-// after the treatments the tree oval is offered in.
+// after the treatments the tree oval is offered in. A variant naming its own artwork is a separate
+// drawing of the same design, shown in place of the logo's.
 const DRAWING_VARIANTS = {
   'forest-service-lands-department.svg': [
     { id: 'colour', name: 'As engraved', recolour: {}, note: 'Black ink on a white oval, as in the supplied image. Outside the oval the paper shows through.' },
@@ -175,7 +176,8 @@ const DRAWING_VARIANTS = {
   'forest-service-emblem.svg': [
     { id: 'colour', name: 'Full colour', recolour: {}, note: 'The reconstruction’s flat colours, chosen from the supplied emblem image.' },
     { id: 'reward-lime', name: 'Lime, as on REWARD', recolour: { '#278F38': '#8CBE0C' }, note: 'The badge green sampled from the photograph of the REWARD poster. Approximate: print and photograph both shift colour.' },
-    { id: 'sign-green', name: 'Bright green, as on the sign', recolour: { '#278F38': '#2DB43C' }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' }
+    { id: 'sign-green', name: 'Bright green, as on the sign', recolour: { '#278F38': '#2DB43C' }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' },
+    { id: 'one-ink', name: 'Black, two islands', artwork: 'forest-service-emblem-two-islands.svg', padding: '7%', recolour: {}, note: 'The emblem in one ink: an outlined badge, the evergreen cut out of the mainland, and two islands, as the one-colour emblem draws them. A separate reconstruction from two black-and-white images, not a recolour.' }
   ],
   'forest-service-yellow-sky.svg': [
     { id: 'colour', name: 'Green, as in the first photograph', recolour: {}, note: 'A green ring around a strong yellow sky. Colours approximated from a small photograph.' },
@@ -187,7 +189,7 @@ const DRAWING_VARIANTS = {
     { id: 'black', name: 'Black & white', recolour: { '#00381E': '#000000', '#080C0A': '#000000', '#E6C786': '#FFFFFF', '#005737': '#FFFFFF', '#0FB4E0': '#FFFFFF', '#8D8F8D': '#FFFFFF' }, note: 'One ink: the oval and every outline in black, the lettering and the landscape left white. A generated recolour.' }
   ]
 }
-const drawingVariants = (logo) => ({ colours: DRAWING_VARIANTS[logo.artwork].map((variant) => ({ ...variant, artwork: logo.artwork, padding: logo.padding })), related: [] })
+const drawingVariants = (logo) => ({ colours: DRAWING_VARIANTS[logo.artwork].map((variant) => ({ artwork: logo.artwork, padding: logo.padding, ...variant })), related: [] })
 
 export const variantsFor = (logo) => logo.kind === 'drawing' ? drawingVariants(logo) : ({
   colours: [
