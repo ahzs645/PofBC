@@ -102,11 +102,9 @@ const DRAWINGS = {
   'forest-service-lands-department.svg': () => import('./forest-service-lands-department.svg?raw'),
   'forest-service-emblem.svg': () => import('./forest-service-emblem.svg?raw'),
   'forest-service-emblem-one-ink.svg': () => import('./forest-service-emblem-one-ink.svg?raw'),
-  'forest-service-emblem-joined-islands.svg': () => import('./forest-service-emblem-joined-islands.svg?raw'),
-  'forest-service-emblem-joined-coast.svg': () => import('./forest-service-emblem-joined-coast.svg?raw'),
+  'forest-service-emblem-three-islands-separated.svg': () => import('./forest-service-emblem-three-islands-separated.svg?raw'),
+  'forest-service-emblem-three-islands-green.svg': () => import('./forest-service-emblem-three-islands-green.svg?raw'),
   'forest-service-emblem-reverse.svg': () => import('./forest-service-emblem-reverse.svg?raw'),
-  'forest-service-emblem-reverse-joined-islands.svg': () => import('./forest-service-emblem-reverse-joined-islands.svg?raw'),
-  'forest-service-emblem-profile-study.svg': () => import('./forest-service-emblem-profile-study.svg?raw'),
   'forest-service-green-gold.svg': () => import('./forest-service-green-gold.svg?raw'),
   'forest-service-yellow-sky.svg': () => import('./forest-service-yellow-sky.svg?raw')
 }
