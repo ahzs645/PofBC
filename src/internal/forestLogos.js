@@ -54,8 +54,17 @@ export const FOREST_LOGOS = [
       'The British Columbia Forest Service’s mark before the oval designs: the mainland and its three largest islands in white, with a geometric evergreen standing over the mainland’s eastern edge, on a badge whose sides bow gently outward.',
       'It is believed to have been in use until about 1973. No source in this collection yet confirms that date, or when the emblem was introduced; it is recorded here as the working date, to be replaced when a dated document turns up.',
       'In the emblem’s last years the Forest Service sat within the Department of Lands, Forests and Water Resources (1962–1976). The Department of Forests was separated from it in 1976, and the Ministry of Forests Act came into force on 1 January 1979.',
-      'The artwork is a vector reconstruction from a supplied image: seven shapes (the badge, the mainland, three islands, the crown and the trunk) with flat colours chosen from the image, not verified ink specifications. The same drawing is used on both Forest Service posters in the Posters view.'
+      'The artwork is a vector reconstruction from a supplied image: seven shapes (the badge, the mainland, three islands, the crown and the trunk) with flat colours chosen from the image, not verified ink specifications. The same drawing is used on both Forest Service posters in the Posters view.',
+      'The black-and-white print reconstructions use one fourfold-symmetric superellipse frame (exponent 3.25, constant stroke), a province-and-tree silhouette with an unpainted evergreen cutout, and two detached coastal island marks. Both prints show only two identifiable detached island components; the earlier coloured reconstruction has three. A separately labelled three-island variation is offered for comparing these distinct renderings, not as proof of a missing historical detail. The revised two-island geometry gives about 92.4% and 90.8% full-image pixel intersection-over-union against the two prints after size registration; those scores remain sensitive to scans and are not evidence of official construction.',
+      'An undated newspaper clipping headed “Identity crisis for Socreds?” compares a Social Credit League provincial-profile emblem to the B.C. Forest Service symbol without its tree. This is historical evidence of a visual comparison, not proof of shared artwork, authorization, or the Forest Service logo’s introduction date.'
     ],
+    article: {
+      title: 'Identity crisis for Socreds?',
+      excerpt: 'reminiscent of the B.C. Forest Service logo without the tree',
+      context: 'The report describes a new stylized provincial-profile design among several competing symbols for the B.C. Social Credit League. Grace McCarthy is quoted explaining that the profile indicates a B.C. party rather than a national affiliation.',
+      citation: 'Undated newspaper clipping supplied for this collection. Publication, issue date, page, and byline not yet identified.',
+      qualification: 'Evidence for a contemporary visual comparison only. The paper does not establish who designed either symbol, a transfer of artwork, or a Forest Service adoption date.'
+    },
     sources: [forestServiceTimeline],
     seenOn: [
       onPoster('reward-living-forest', 'REWARD: A Living Forest', 'Campfire poster · bottom right, beside the service’s name'),
@@ -175,7 +184,11 @@ const DRAWING_VARIANTS = {
   'forest-service-emblem.svg': [
     { id: 'colour', name: 'Full colour', recolour: {}, note: 'The reconstruction’s flat colours, chosen from the supplied emblem image.' },
     { id: 'reward-lime', name: 'Lime, as on REWARD', recolour: { '#278F38': '#8CBE0C' }, note: 'The badge green sampled from the photograph of the REWARD poster. Approximate: print and photograph both shift colour.' },
-    { id: 'sign-green', name: 'Bright green, as on the sign', recolour: { '#278F38': '#2DB43C' }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' }
+    { id: 'sign-green', name: 'Bright green, as on the sign', recolour: { '#278F38': '#2DB43C' }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' },
+    { id: 'archival-one-ink', study: true, name: 'Archival print study · two detached islands', artwork: 'forest-service-emblem-one-ink.svg', recolour: {}, note: 'Updated manually constructed monochrome geometry: standardized squircle, fuller lower coast, corrected evergreen slope and trunk opening. Both supplied black-and-white prints show two separate island components. This reconstruction is not an official vector master.' },
+    { id: 'three-islands-separated', study: true, name: 'Three detached islands · colour-master comparison', artwork: 'forest-service-emblem-three-islands-separated.svg', recolour: {}, note: 'Optional interpretation carrying forward the three separate island shapes in the earlier coloured PofBC master. The third central island is not discernible in the two monochrome reference prints. No island is connected to another.' },
+    { id: 'three-islands-green', study: true, name: 'Three detached islands · forest-green study', artwork: 'forest-service-emblem-three-islands-green.svg', recolour: {}, note: 'Generated forest-green colouring of the three-detached-island geometry. Neither the additional middle island nor this green ink is documented by the supplied black-and-white prints.' },
+    { id: 'reverse', study: true, name: 'Reversed · white on black', artwork: 'forest-service-emblem-reverse.svg', recolour: {}, note: 'One-ink separated-island drawing reversed for use on a dark ground. Newly generated treatment.' },
   ],
   'forest-service-yellow-sky.svg': [
     { id: 'colour', name: 'Green, as in the first photograph', recolour: {}, note: 'A green ring around a strong yellow sky. Colours approximated from a small photograph.' },
@@ -187,7 +200,14 @@ const DRAWING_VARIANTS = {
     { id: 'black', name: 'Black & white', recolour: { '#00381E': '#000000', '#080C0A': '#000000', '#E6C786': '#FFFFFF', '#005737': '#FFFFFF', '#0FB4E0': '#FFFFFF', '#8D8F8D': '#FFFFFF' }, note: 'One ink: the oval and every outline in black, the lettering and the landscape left white. A generated recolour.' }
   ]
 }
-const drawingVariants = (logo) => ({ colours: DRAWING_VARIANTS[logo.artwork].map((variant) => ({ ...variant, artwork: logo.artwork, padding: logo.padding })), related: [] })
+const drawingVariants = (logo) => {
+  const variants = DRAWING_VARIANTS[logo.artwork].map((variant) => ({ ...variant, artwork: variant.artwork ?? logo.artwork, padding: logo.padding }))
+  return {
+    colours: variants.filter((variant) => !variant.study),
+    studies: variants.filter((variant) => variant.study),
+    related: []
+  }
+}
 
 export const variantsFor = (logo) => logo.kind === 'drawing' ? drawingVariants(logo) : ({
   colours: [
