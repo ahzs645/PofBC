@@ -1,4 +1,4 @@
-// Recalculate the identical standardized squircle outline used by all monochrome studies.
+// Recalculate the identical standardized squircle outline used by all separate-island geometric studies.
 // Usage: node artwork/internal/forest-service-monochrome-squircle/rebuild.mjs [--check]
 // Only the badge-outline path is updated; the manually drawn province/tree/islands remain unchanged.
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -31,9 +31,9 @@ for (let i = 0; i < g.cubicSegments; i++) {
 outline += ' Z'
 const files = [
   'forest-service-emblem-one-ink.svg',
-  'forest-service-emblem-joined-islands.svg',
-  'forest-service-emblem-reverse.svg',
-  'forest-service-emblem-reverse-joined-islands.svg'
+  'forest-service-emblem-three-islands-separated.svg',
+  'forest-service-emblem-three-islands-green.svg',
+  'forest-service-emblem-reverse.svg'
 ]
 let failures = 0
 for (const file of files) {
