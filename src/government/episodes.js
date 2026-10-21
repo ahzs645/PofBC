@@ -150,8 +150,19 @@ const buildEpisodes = () => {
 
 export const MINISTRY_EPISODES = buildEpisodes()
 
+/**
+ * Ids an episode had before its name was corrected, so a link made then still finds it. The id is
+ * built from the name, and the name followed the source until a better one was found.
+ */
+export const LEGACY_IDS = {
+  // OIC 3018/1978 names it in the plural (Round 4).
+  'ministry-of-transportation-communication-and-highways-1978': 'ministry-of-transportation-communications-and-highways-1978'
+}
+/** The current id for one that may be a legacy id. */
+export const canonicalId = (id) => LEGACY_IDS[id] ?? id
+
 const byId = new Map(MINISTRY_EPISODES.map((episode) => [episode.id, episode]))
-export const episodeById = (id) => byId.get(id) ?? null
+export const episodeById = (id) => byId.get(canonicalId(id)) ?? null
 
 /**
  * Each rename, bound to the pairs of episodes it joins.

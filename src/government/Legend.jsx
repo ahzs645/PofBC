@@ -18,7 +18,8 @@ export const ENTITY_ROWS = [
   { id: 'agencies', label: 'Agencies & boards', kinds: ['agency'], swatch: 'octagon' },
   { id: 'health', label: 'Health authorities', kinds: ['health-authority'], swatch: 'hexagon' },
   { id: 'courts', label: 'Courts & tribunals', kinds: ['court', 'tribunal'], swatch: 'pentagon' },
-  { id: 'subs', label: 'Sub-agencies', kinds: ['sub'], swatch: 'subs' }
+  { id: 'subs', label: 'Sub-agencies', kinds: ['sub'], swatch: 'subs' },
+  { id: 'local', label: 'Local bodies', kinds: ['regional-hospital-district', 'hospital-improvement-district'], swatch: 'triangle' }
 ]
 
 export const RELATION_ROWS = [
@@ -27,7 +28,8 @@ export const RELATION_ROWS = [
   { id: 'confidence', label: 'Confidence', swatch: 'confidence' },
   { id: 'responsible', label: 'Answers for', swatch: 'responsible' },
   { id: 'part', label: 'Part of', swatch: 'part' },
-  { id: 'partner', label: 'Partner of', swatch: 'partner' }
+  { id: 'partner', label: 'Partner of', swatch: 'partner' },
+  { id: 'owned', label: 'Owned by', swatch: 'owned' }
 ]
 
 /** The model's legend inks, per theme. */
@@ -51,6 +53,7 @@ const EntitySwatch = ({ shape, ink, fill, dashed = false }) => {
     diamond: <rect x="4" y="4" width="8" height="8" rx="2" transform="rotate(45 8 8)" {...stroke} />,
     hexagon: <polygon points="8.00,2.00 13.20,5.00 13.20,11.00 8.00,14.00 2.80,11.00 2.80,5.00" {...stroke} />,
     pentagon: <polygon points="8.00,2.50 13.71,6.65 11.53,13.35 4.47,13.35 2.29,6.65" {...stroke} />,
+    triangle: <polygon points="8.00,2.20 14.00,13.20 2.00,13.20" {...stroke} />,
     double: (
       <>
         <rect x="2.5" y="2.5" width="11" height="11" rx="2.5" {...stroke} />
@@ -79,7 +82,8 @@ const RelationSwatch = ({ shape, ink, fill }) => {
     confidence: <>{curve}<path d="M10.5,1.8 L16,5 L10.5,8.2 Z" fill={fill} stroke={ink} strokeWidth="1.1" /></>,
     responsible: <>{curve}<path d="M9.5,2.2 L12.3,5 L9.5,7.8 M13.5,2.2 L16.3,5 L13.5,7.8" fill="none" stroke={ink} strokeWidth="1.1" /></>,
     part: <line x1="1" y1="6" x2="25" y2="6" stroke={ink} strokeWidth="1.2" strokeDasharray="4 2" />,
-    partner: <path d="M1,8.5 Q13,2.5 25,8.5" fill="none" stroke={ink} strokeWidth="1.2" strokeDasharray="1.5 3" />
+    partner: <path d="M1,8.5 Q13,2.5 25,8.5" fill="none" stroke={ink} strokeWidth="1.2" strokeDasharray="1.5 3" />,
+    owned: <line x1="1" y1="6" x2="25" y2="6" stroke={ink} strokeWidth="1.2" strokeDasharray="6 2 1 2" />
   }
   return <svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true">{shapes[shape]}</svg>
 }
@@ -107,7 +111,7 @@ const Row = ({ label, shown, onToggle, children }) => (
  * @param {string[]} props.present              Node kinds on the diagram this year.
  * @param {'light'|'dark'} props.themeName
  */
-export const Legend = ({ hiddenKinds, hiddenRelations, onToggleKinds, onToggleRelation, onReset, present, themeName, includeUndated, onToggleUndated }) => {
+export const Legend = ({ hiddenKinds, hiddenRelations, onToggleKinds, onToggleRelation, onReset, present, themeName, includeUndated, onToggleUndated, includeLocal, onToggleLocal }) => {
   const [open, setOpen] = useState(false)
   const root = useRef(null)
   const { ink, fill } = CHROME[themeName] ?? CHROME.light
@@ -157,6 +161,17 @@ export const Legend = ({ hiddenKinds, hiddenRelations, onToggleKinds, onToggleRe
             Bodies that exist today but that no source yet shows in this year, drawn faint: an unknown
             start is not a sign they did not exist.
           </p>
+          {onToggleLocal && (
+            <>
+              <Row label="Local bodies" shown={Boolean(includeLocal)} onToggle={onToggleLocal}>
+                <EntitySwatch shape="triangle" ink={ink} fill={fill} />
+              </Row>
+              <p className="gov-legend__hint">
+                Regional hospital districts and hospital improvement districts: local corporations under
+                provincial statute, in a lane of their own. None answers to a ministry.
+              </p>
+            </>
+          )}
           {hiddenRows > 0 && (
             <button type="button" className="gov-legend__reset" onClick={onReset}>Show all</button>
           )}

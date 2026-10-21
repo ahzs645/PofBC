@@ -8,6 +8,7 @@ its reason. Editorial changes made after review are listed in each proposal's `e
 Run from the repository root, in this order:
 
 ```sh
+python3 -I research/reviews/round-4-2026-10-21/local_register.py
 python3 -I research/reviews/round-4-2026-10-21/convert.py
 python3 -I research/reviews/institutional-history-2026-10-21/convert.py
 npm run build:government
@@ -126,3 +127,36 @@ to the minister matching.
   medium-confidence reprint), and the franchise claims, which need a franchise data file.
 
 The questions all of this leaves are in `research/WANTED.md`, rewritten after this round.
+
+## After the integration review (21 October 2026)
+
+The review of `0dbdb18` (`../integration-review-2026-10-21/`) found the integration reproducible but
+incomplete, and asked for changes to the model. Applied:
+
+- **The earlier branch batch**, unmerged before: 144 records, adapted to keep the newer review
+  metadata on 35 of them. Sub-agencies with neither a start nor a sighting fell from 138 to 24.
+- **Lives read one way everywhere.** A body's end is known, untraced, or known to have happened on a
+  day not found (`endStatus`); an untraced body is drawn only as far as a source shows it standing
+  (`attestations`), then only on the layer for bodies not confirmed that year. Snapshot, search,
+  navigation, timeline and panel all read `lifespanOf`. An operational end is kept apart from a legal
+  one (`operationalEnd`).
+- **The seven rural boards** are drawn from their designations to M597/1995, with untraced ends.
+- **MTOC** stands as a legal shell after its operations passed to BC Transit on 1 June 1985 (OIC
+  1096/1985 appointed a board that day), so 1984-1985 no longer lists it as closed.
+- **Ownership is not accountability.** A subsidiary is drawn as "Owned by" and is not a step to the
+  people (Powertech).
+- **Local bodies.** `local_register.py` writes the 68 hospital districts to
+  `history/local-hospital-districts.json`; they are searchable, shown on a layer of their own
+  ("Local bodies"), with governance dated from each instrument (Fort Nelson's appointed first
+  trustees and later elected ones; the board-of-management roles where an instrument gives them),
+  and the province's orders are indexed to the districts they name.
+- **Smaller fixes.** Events keep every body they name; sub-agency ends are typed by what they were;
+  BC Hydro's start cites OIC 839/1962; a period's bounding note (the LDB's 1986 cap) reaches the
+  panel; the 1978 ministry's old id still opens it; the merge no longer repeats review scope or
+  resets completeness; the measures include ministry-years with no minister.
+- **Evidence-backed closures** (`integration/review.json`, `review-sub-agency-batch.json`): Forest
+  Renewal BC's statutory end on 27 June 2002, the LCLB-LCRB identity, the Industry Training Appeal
+  Board's continuation, the shared-services society's 2009 start and 2010 transfer.
+
+`lifecycle.test.js` checks each of these.
+

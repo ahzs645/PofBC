@@ -1,6 +1,7 @@
 """Brings Round 4 (21 October 2026) into the history, from the reviewed proposals in integration/.
 
-Run from the repository root:  python3 -I research/reviews/round-4-2026-10-21/convert.py
+Run from the repository root:  python3 -I research/reviews/round-4-2026-10-21/local_register.py
+then                            python3 -I research/reviews/round-4-2026-10-21/convert.py
 then                            python3 -I research/reviews/institutional-history-2026-10-21/convert.py
 and                             npm run build:government
 
@@ -27,7 +28,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 HERE = Path(__file__).resolve().parent
 RESEARCH = ROOT / 'research'
-MODULES = ['branches', 'crowns', 'health', 'root', 'carried']
+MODULES = ['branches', 'crowns', 'health', 'root', 'carried', 'review']
 # Files another converter writes: Round 4 only tells that converter what to change.
 GENERATED = {'history/bodies-health-lineage.json', 'atlas/events-institutional-history.json'}
 
@@ -57,6 +58,17 @@ def rel_of(file):
 # ── Events ──────────────────────────────────────────────────────────────────────────────────────
 
 events = [event for p in proposals.values() for event in p.get('events', [])]
+# The local bodies an event acts on (research/history/local-hospital-districts.json, written by
+# local_register.py, run first): every district whose research claims the event's claims name is a
+# related subject, so the event is found from the district as well as from the ministry.
+LOCAL = RESEARCH / 'history/local-hospital-districts.json'
+if LOCAL.exists():
+    local = json.loads(LOCAL.read_text())['records']
+    for event in events:
+        named = set(event.get('round4_claims', []))
+        districts = [record['id'] for record in local if named & set(record.get('claims', []))]
+        if districts:
+            event['related_subject_ids'] = list(dict.fromkeys([*event.get('related_subject_ids', []), *districts]))
 ids = [event['id'] for event in events]
 assert len(ids) == len(set(ids)), 'duplicate Round 4 event ids'
 held = {e['id'] for f in (RESEARCH / 'atlas').glob('events-*.json') if f.name != 'events-round4.json' for e in json.loads(f.read_text()).get('events', [])}
@@ -150,7 +162,23 @@ def remove_responsible(body_id, rows):
         write(rel, data)
 
 
+# Several modules may correct one record (the crowns module dated MTOC's end; the integration review
+# then made it an operational transfer): their changes are composed in module order, the later
+# winning, and the record is checked once against the value the first one corrects.
+composed = {}
 for p in proposals.values():
+    for change in p.get('body_changes', []):
+        key = (change.get('file'), change['id'])
+        if key not in composed:
+            composed[key] = {**change, 'set': dict(change.get('set', {})), 'remove': list(change.get('remove', []))}
+            continue
+        held = composed[key]
+        held['set'].update(change.get('set', {}))
+        held['remove'] = [field for field in dict.fromkeys(held['remove'] + list(change.get('remove', []))) if field not in change.get('set', {})]
+        for field in change.get('remove', []):
+            held['set'].pop(field, None)
+
+for p in [{'body_changes': list(composed.values())}, *[{'event_corrections': p.get('event_corrections', [])} for p in proposals.values()]]:
     for change in p.get('body_changes', []):
         new = dict(change.get('set', {}))
         responsible = new.pop('responsible', None)

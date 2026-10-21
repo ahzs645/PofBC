@@ -149,9 +149,13 @@ export function merge(research, catalogue, batch, queueItems = new Map()) {
     review.checked = [review.checked, record.review?.checked].filter(Boolean).sort().at(-1) ?? null
     append(review.sources_checked ??= [], record.review?.sources_checked)
     if (record.review?.unresolved_fields) review.unresolved_fields = record.review.unresolved_fields
-    if (record.review?.scope) review.scope = [review.scope, record.review.scope].filter((s, i, all) => s && all.indexOf(s) === i).join('; ')
-    if (record.review?.by) review.by = [review.by, record.review.by].filter((s, i, all) => s && all.indexOf(s) === i).join('; ')
-    review.full_history_complete = Boolean(record.review?.full_history_complete)
+    // Scope and reviewer accumulate, each part once, so merging the same batch again changes nothing.
+    const joined = (held, incoming) => (!held ? incoming : String(held).includes(incoming) ? held : `${held}; ${incoming}`)
+    if (record.review?.scope) review.scope = joined(review.scope, record.review.scope)
+    if (record.review?.by) review.by = joined(review.by, record.review.by)
+    // A batch that does not say whether the history is complete leaves the held answer as it is.
+    if (record.review && 'full_history_complete' in record.review) review.full_history_complete = Boolean(record.review.full_history_complete)
+    else review.full_history_complete ??= false
   }
   for (const record of batch.records ?? []) fold(record, research.records)
   for (const record of batch.gone ?? []) fold(record, research.gone ??= [])

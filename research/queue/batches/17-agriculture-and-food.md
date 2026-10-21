@@ -86,12 +86,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Agriculture and Food. Official site: https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/af.pdf
 - **What it does:** Regulates and licenses the provincial liquor and cannabis sectors under the Liquor Control and Licensing Act and the Cannabis Control and Licensing Act.
-- **Held:** no start date; first seen 2018-07-05
-- **Events on file:** 2018-07-05 renamed by; 2018-07-05 name first observed
+- **Held:** no start date; first seen 1977-09-01; names on file: Liquor Control and Licensing Branch (seen 1977-09-01)
+- **Events on file:** 1977-09-01 name first observed; 2018-07-05 renamed by
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Liquor and Cannabis Regulation Branch", "LCRB"
+- **Search for:** "Liquor and Cannabis Regulation Branch", "LCRB", "Liquor Control and Licensing Branch"
 - **Questions:**
-  - A. It is already seen in 2018-07-05. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - A. It is already seen in 1977-09-01. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 

@@ -417,7 +417,9 @@
           "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-hydro-and-power-authority-2",
           "why": "BC Archives authority record (retrospective); the proclamation order fixes 30 March 1962"
         }
-      ]
+      ],
+      "establishedSource": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0839_1962",
+      "establishedLocator": "OIC 839/1962, proclamation of the British Columbia Hydro and Power Authority Act, 1962, effective 30 March 1962"
     },
     {
       "id": "bc-housing",
@@ -828,19 +830,39 @@
       "shortName": "MTOC",
       "kind": "crown-corporation",
       "established": "1980-01-18",
-      "ended": "1985-06-01",
+      "ended": null,
       "becameId": null,
       "predecessorIds": [],
       "responsible": [],
-      "description": "Crown corporation established on 18 January 1980 under the Metro Transit Operating Company Act to operate Vancouver-area transit, with a Cabinet-appointed board. On 1 June 1985 its property, obligations and employees passed to British Columbia Transit; the company itself was not dissolved then, and when it ended in law is not known.",
+      "description": "Crown corporation established on 18 January 1980 under the Metro Transit Operating Company Act to operate Vancouver-area transit, with a Cabinet-appointed board. On 1 June 1985 its property, obligations and employees passed to British Columbia Transit, and a new board was appointed the same day; when the company ended in law is untraced.",
       "source": "https://search-bcarchives.royalbcmuseum.bc.ca/metro-transit-operating-company",
       "otherSources": [
         "https://en.wikipedia.org/wiki/BC_Transit"
       ],
       "establishedMeaning": "established by the Metro Transit Operating Company Act, in force by proclamation (OIC 29/1980, approved 10 January 1980); the Act was assented on 31 July 1979",
-      "endedMeaning": "emptied: its property, rights, debts, obligations and employees passed to British Columbia Transit (BC Transit Amendment Act (No. 2), 1985; OIC 1093/1985). It was not dissolved then, since a new board was appointed from the same day (OIC 1096/1985) and its Act was still in the 1991 consolidation, so its legal end is unknown",
       "serviceSuccessorIds": [
         "bc-transit"
+      ],
+      "endStatus": "untraced",
+      "operationalEnd": {
+        "date": "1985-06-01",
+        "meaning": "its property, rights, debts, obligations and employees passed to British Columbia Transit (BC Transit Amendment Act (No. 2), 1985)",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1093_1985",
+        "locator": "OIC 1093/1985, bringing the British Columbia Transit Amendment Act (No. 2), 1985 into force on 1 June 1985"
+      },
+      "attestations": [
+        {
+          "date": "1985-06-01",
+          "scope": "a new board appointed from that day",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1096_1985",
+          "locator": "OIC 1096/1985, operative paragraph (\"effective June 1, 1985\")"
+        },
+        {
+          "date": "1991",
+          "scope": "its constituting Act in the 1991 consolidation, administered by Human Resources",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/91consol15/91consol15/79257",
+          "locator": "Metro Transit Operating Company Act, 1991 consolidation, administration heading"
+        }
       ]
     },
     {

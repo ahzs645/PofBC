@@ -13,9 +13,9 @@ In any year other than today, a sub-agency is drawn only if it is known to have 
 | 2026 | 238 | 238 |
 | 2025 | 220 | 237 |
 | 2020 | 163 | 217 |
-| 2010 | 91 | 192 |
-| 2000 | 13 | 150 |
-| 1990 | 10 | 82 |
+| 2010 | 92 | 192 |
+| 2000 | 14 | 150 |
+| 1990 | 11 | 82 |
 | 1980 | 7 | 71 |
 
 That is deliberate — an undated body can't be placed in 1990 without claiming it existed in 1990 (the Liquor and Cannabis Regulation Branch did not) — but it means the history of the public service below ministry level is almost empty. This brief lists what is needed to fill it.
@@ -90,7 +90,7 @@ That is deliberate — an undated body can't be placed in 1990 without claiming 
 
 These have origin/rename events in `eventsData.js` (from the atlas package), but no `established` value, so they still vanish. The research question here is narrower: **which event is the start of _this_ body** (as opposed to the start of its function), and what was it called and under which ministry at each step.
 
-- **Liquor and Cannabis Regulation Branch** (Ministry of Agriculture and Food): 2018-07-05 renamed by; 2018-07-05 name first observed
+- **Liquor and Cannabis Regulation Branch** (Ministry of Agriculture and Food): 1977-09-01 name first observed; 2018-07-05 renamed by
 - **Animal Health Centre** (Ministry of Agriculture and Food): 2010 name first observed
 - **AgriService BC** (Ministry of Agriculture and Food): 2015-08-13 public launch; 2015-08-13 name first observed
 - **Feed BC** (Ministry of Agriculture and Food): 2018-06-22 name first observed
@@ -195,7 +195,7 @@ These have origin/rename events in `eventsData.js` (from the atlas package), but
 - **BC Corrections** (Ministry of Public Safety and Solicitor General): 1942 function milestone; 1950 unit established; 1951 unit established; 1957 office retitled; 1978 office retitled; 1980 unit established; 1988 office retitled; 2002 name first observed
 - **Community Safety and Victim Services** (Ministry of Public Safety and Solicitor General): 2024 name first observed
 - **VictimLinkBC** (Ministry of Public Safety and Solicitor General): 2015 name first observed
-- **Gaming Policy and Enforcement Branch** (Ministry of Public Safety and Solicitor General): 2026-04-13 dissolved
+- **Gaming Policy and Enforcement Branch** (Ministry of Public Safety and Solicitor General): 2026-04-13 replaced
 - **Office of the Fire Commissioner** (Ministry of Public Safety and Solicitor General): 2002 name first observed
 - **Policing and Security Branch** (Ministry of Public Safety and Solicitor General): 2015 name first observed
 - **RoadSafetyBC** (Ministry of Public Safety and Solicitor General): 2015 name first observed
@@ -762,7 +762,7 @@ _Look under:_ Ministry of Transportation and Infrastructure (2008–2024) · Min
 | `tongass-power-and-light` | Tongass Power and Light Company | subsidiary |  | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
 | `columbia-hydro-constructors` | Columbia Hydro Constructors Ltd. | subsidiary | 1962 | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
 | `powerex` | Powerex Corp. (Powerex) | subsidiary | 1988 | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
-| `powertech-labs` | Powertech Labs Inc. (Powertech) | subsidiary | 1988-09-29 | 7 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
+| `powertech-labs` | Powertech Labs Inc. (Powertech) | subsidiary | 1988-09-29 | 6 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
 
 ### British Columbia Lottery Corporation — 2 (2 undated)
 

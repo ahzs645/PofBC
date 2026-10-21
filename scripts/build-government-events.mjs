@@ -134,7 +134,10 @@ for (const name of atlasFiles) {
       sources: [sourceIndex({ url: record.evidence?.source_url, title: record.evidence?.source_title })].filter((index) => index !== null),
       locator: locatorText(record.evidence?.locator),
       notes: record.interpretation_notes ?? record.notes ?? null,
-      reviewed: record.reviewed_on ?? null
+      reviewed: record.reviewed_on ?? null,
+      // The other bodies the event names (the recipients of a transfer, the parties to a merger), so it
+      // is found from each of them too.
+      ...(record.related_subject_ids?.length ? { related: record.related_subject_ids } : {})
     }, `atlas/${name}#${record.id}`, record)
   }
 }
@@ -174,7 +177,7 @@ if (existsSync(reviewed)) {
     const origin = `history/sub-agencies-researched.json#${record.id}/${suffix}`
     // An earlier pass may already have the same start or end as an event of its own: this review's
     // claim becomes further evidence for it, so the one founding is not drawn twice.
-    const kind = /establish/.test(type) ? /establish/ : /dissol|replace|abolish/.test(type) ? /dissol|replace|abolish|succession/ : null
+    const kind = /establish/.test(type) ? /establish/ : /^ended$|dissol|replace|abolish|merg|renam|continu/.test(type) ? /^ended$|dissol|replace|abolish|merg|renam|continu|succession/ : null
     const earlier = kind && events.find((existing) => existing.subject === event.subject && existing.date.start === event.date.start && kind.test(existing.type))
     if (earlier) attach(earlier, event, origin, claim, `Same subject, date and kind as ${earlier.id}`)
     else {
@@ -185,7 +188,11 @@ if (existsSync(reviewed)) {
   for (const record of [...(research.records ?? []), ...(research.gone ?? [])]) {
     const name = record.name
     eventOf(record, record.established, 'established', record.established?.meaning ? `${name}: ${record.established.meaning}` : `${name} established`, 'established')
-    eventOf(record, record.ended, 'dissolved', record.ended?.meaning ? `${name}: ${record.ended.meaning}` : `${name} ended`, 'ended')
+    // What the end was, as the review records it, not a dissolution because it is an end: a body
+    // replaced by or merged into another, renamed or continued, or simply ended.
+    const succession = (record.relations ?? []).find((relation) => ['replaced_by', 'merged_into', 'continued_as', 'renamed_as'].includes(relation.type))
+    const endType = record.ended?.event_type ?? record.ended?.kind ?? (succession ? { replaced_by: 'replaced', merged_into: 'merged', continued_as: 'continued', renamed_as: 'renamed' }[succession.type] : 'ended')
+    eventOf(record, record.ended, endType, record.ended?.meaning ? `${name}: ${record.ended.meaning}` : `${name} ended`, 'ended')
     eventOf(record, record.first_observed, 'name_first_observed', `${name}: the name first seen in this review's sources`, 'first-observed')
     ;(record.research_events ?? []).forEach((event, index) => eventOf(record, event, event.type, `${name}: ${event.summary}`, `event-${index}`))
     ;(record.date_claims ?? []).forEach((claim, index) => eventOf(record, claim, claim.type ?? 'establishment_claim', `${name}: ${claim.summary ?? 'a competing start date'}`, `claim-${index}`))

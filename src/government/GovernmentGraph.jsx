@@ -233,6 +233,7 @@ export const GLYPHS = {
   octagon: (size, props) => <polygon points={polygon(8, size * 0.9, Math.PI / 8)} {...props} />,
   pentagon: (size, props) => <polygon points={polygon(5, size * 0.9)} {...props} />,
   hexagon: (size, props) => <polygon points={polygon(6, size * 0.9)} {...props} />,
+  triangle: (size, props) => <polygon points={polygon(3, size)} {...props} />,
   // A sub-agency: a dot in its branch colour, without an outline, as the model draws its own.
   dot: (size, { stroke }) => <circle r={size} fill={stroke} fillOpacity={0.75} />
 }
@@ -249,7 +250,9 @@ export const KINDS = {
   tribunal: { glyph: 'pentagon', label: 'Tribunals', one: 'Tribunal' },
   'health-authority': { glyph: 'hexagon', label: 'Health authorities', one: 'Health authority' },
   court: { glyph: 'pentagon', label: 'Courts', one: 'Court' },
-  sub: { glyph: 'dot', label: 'Sub-agencies', one: 'Sub-agency' }
+  sub: { glyph: 'dot', label: 'Sub-agencies', one: 'Sub-agency' },
+  'regional-hospital-district': { glyph: 'triangle', label: 'Regional hospital districts', one: 'Regional hospital district (local)' },
+  'hospital-improvement-district': { glyph: 'triangle', label: 'Hospital improvement districts', one: 'Hospital improvement district (local)' }
 }
 
 /** Relationship kinds: how each is drawn, and what it is called in the legend and the panel. */
@@ -260,7 +263,9 @@ export const RELATIONS = {
   responsible: { label: 'Answers for', legend: 'Answers for', marker: 'chevrons', dash: null, curve: true },
   part: { label: 'Includes', legend: 'Part of', marker: null, dash: '4 2', curve: false },
   // Working with a ministry without answering to it, as the First Nations Health Authority does.
-  partner: { label: 'Partner of', legend: 'Partner of', marker: null, dash: '1.5 3', curve: true }
+  partner: { label: 'Partner of', legend: 'Partner of', marker: null, dash: '1.5 3', curve: true },
+  // Owning a subsidiary, which is not answering for it: not a line to the people.
+  owned: { label: 'Owns', legend: 'Owned by', marker: null, dash: '6 2 1 2', curve: false }
 }
 
 const MARKERS = {
@@ -311,6 +316,7 @@ export const edgeTitle = (edge, from, to) => {
     case 'responsible': return `${a} answers for ${b}`
     case 'part': return `${b} is part of ${a}`
     case 'partner': return `${b} is a partner of the ${a}`
+    case 'owned': return `${b} is a subsidiary of ${a}: owned, which is not answering to it`
     default: return `${a} — ${b}`
   }
 }
@@ -379,6 +385,8 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
   const teethOf = (sectorId) => frame.teeth.filter((tooth) => tooth.sector === sectorId)
   // The executive's family of bodies with no stated ministry, when it is wide enough to name.
   const unattachedLane = frame.teeth.find((tooth) => tooth.sector === 'executive' && tooth.group === 'none' && tooth.end - tooth.start > 0.18) ?? null
+  // The local bodies' lane, when they are shown.
+  const localLane = frame.teeth.find((tooth) => tooth.group === 'local' && tooth.end - tooth.start > 0.12) ?? null
   // The branch label sits just beyond the highest part of the rim it spans.
   const labelRadius = (sector, middle, span) => {
     let top = RIM
@@ -528,6 +536,14 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
                 <path id="unattached-label" d={arcPath(unattachedLane.start + r, unattachedLane.end + r, Math.max(unattachedLane.top, RIM) + 14)} fill="none" />
                 <text className="gov-graph__ring-label gov-graph__ring-label--lane" fill={theme.inkMuted}>
                   <textPath href="#unattached-label" startOffset="50%" textAnchor="middle">NO MINISTRY ESTABLISHED</textPath>
+                </text>
+              </g>
+            )}
+            {localLane && (
+              <g>
+                <path id="local-label" d={arcPath(localLane.start + r, localLane.end + r, Math.max(localLane.top, RIM) + 14)} fill="none" />
+                <text className="gov-graph__ring-label gov-graph__ring-label--lane" fill={theme.inkMuted}>
+                  <textPath href="#local-label" startOffset="50%" textAnchor="middle">LOCAL BODIES</textPath>
                 </text>
               </g>
             )}

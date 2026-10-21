@@ -12,7 +12,7 @@ import { EVENT_SOURCES, eventsFor, operatingNameIn } from './events.js'
 import { LIEUTENANT_GOVERNORS_OFFICIAL, PARLIAMENT_43, STAFFING } from './atlasData.js'
 import { CURRENT_MINISTRIES, episodesIn, fold, forerunnerIn, MINISTRY_EPISODES, predecessorsOf, slugify, successorsOf } from './episodes.js'
 import { ELECTIONS, LIEUTENANT_GOVERNORS, PENDING_ELECTION, PREMIERS } from './timelineData.js'
-import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, OFFICE_HOLDERS, SUB_AGENCIES } from './historyData.js'
+import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, OFFICE_HOLDERS, SUB_AGENCIES, LOCAL_BODIES } from './historyData.js'
 
 /** The BC Archives diagram every ministry episode comes from. */
 const ARCHIVES_DIAGRAM = {
@@ -99,6 +99,42 @@ const eventSources = (event) => event.sources.map((index) => EVENT_SOURCES[index
  */
 const claim = (text, source, extra = {}) => (source?.url ? { claim: text, source, ...extra } : null)
 /** What a body's start and end were, where its record says: "the day it was established by …". */
+/**
+ * A body's life as its sources give it, one reading for every view (the diagram, search, the
+ * timeline, the panel), so none of them says more than another.
+ *
+ * `from` is its start, or failing that `firstSeen`, the earliest day a source shows it. Its end is
+ * one of: `ended` (a dated end), `untraced` (no source gives an end, which is not a claim that it
+ * still stands), `occurred_date_unknown` (known to have ended, on a day not found) or `open` (no end,
+ * because it continues). An untraced body is confirmed only as far as `lastSeen`, the latest day a
+ * source shows it standing. `operationalEnd` is the day its operations passed elsewhere, where that
+ * is not its legal end (the Metro Transit Operating Company's in 1985).
+ * @param {object} record  A HISTORICAL_BODIES record, or a diagram node built from one.
+ */
+export const lifespanOf = (record) => {
+  const seen = Array.isArray(record.firstSeen) ? record.firstSeen[0] : record.firstSeen ?? null
+  const from = record.established ? String(record.established) : seen
+  const untraced = record.endStatus === 'untraced' || record.endStatus === 'occurred_date_unknown'
+  const lastSeen = Array.isArray(record.lastSeen) ? record.lastSeen[0] : record.lastSeen ?? null
+  return {
+    from,
+    fromKind: record.established ? 'established' : seen ? 'firstSeen' : null,
+    to: record.ended ? String(record.ended) : null,
+    toKind: record.ended ? 'ended' : untraced ? record.endStatus : 'open',
+    lastSeen: untraced ? lastSeen : null,
+    operationalEnd: Array.isArray(record.operationalEnd) ? record.operationalEnd[0] : record.operationalEnd ?? null
+  }
+}
+
+/** A life in years, for a search result or a list: "1980–1985", "known 1983–1985", "1994–?". */
+export const lifeYears = (life) => {
+  const y = (value) => (value ? String(value).slice(0, 4) : '?')
+  const start = `${life.fromKind === 'firstSeen' ? 'known ' : ''}${y(life.from)}`
+  if (life.toKind === 'ended') return `${start}–${y(life.to)}`
+  if (life.toKind === 'open') return `${start}–`
+  return `${start}–?`
+}
+
 const meaningNote = (record) => {
   const said = [
     record.establishedMeaning && `The start is the day it was ${record.establishedMeaning}.`,
@@ -178,10 +214,11 @@ const PARTNERS = [
  */
 /**
  * @param {number} year
- * @param {{includeUndated?: boolean}} [options]  Also draw, before today, bodies whose start no source
- *   gives — marked uncertain, since an unknown founding date is not evidence that a body did not exist.
+ * @param {{includeUndated?: boolean, includeLocal?: boolean}} [options]  Also draw, before today, bodies
+ *   whose start no source gives — marked uncertain, since an unknown founding date is not evidence that
+ *   a body did not exist; and the local bodies (hospital districts), in a lane of their own.
  */
-export const governmentIn = (year, { includeUndated = false } = {}) => {
+export const governmentIn = (year, { includeUndated = false, includeLocal = false } = {}) => {
   const day = dayOf(year)
   const present = year >= PRESENT_YEAR
   const premier = premierOn(day)
@@ -377,13 +414,25 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
       ...family,
       evidence: [
         record?.source !== undefined && record?.source !== null
-          ? claim(`${record.name}${record.established ? `, from ${record.established}` : ''}${record.ended ? ` to ${record.ended}` : ''}`, historySource(record.source), meaningNote(record))
+          ? claim(`${record.name}${record.established ? `, from ${record.established}` : ''}${record.ended && record.establishedSource === undefined ? ` to ${record.ended}` : ''}`,
+            historySource(record.establishedSource ?? record.source),
+            record.establishedSource !== undefined && record.establishedLocator ? { note: `${record.establishedLocator}. ${meaningNote({ establishedMeaning: record.establishedMeaning }).note ?? ''}`.trim() } : meaningNote(record.establishedSource !== undefined ? { establishedMeaning: record.establishedMeaning } : record))
+          : null,
+        // A start with a source of its own: the end is claimed from the record's.
+        record?.establishedSource !== undefined && record.ended
+          ? claim(`Ended ${record.ended}`, historySource(record.source), meaningNote({ ended: record.ended, endedMeaning: record.endedMeaning }))
+          : null,
+        record?.lastSeen
+          ? claim(`Last shown standing ${record.lastSeen[0]}${record.lastSeen[3] ? ` (${record.lastSeen[3]})` : ''}; ${record.endStatus === 'occurred_date_unknown' ? 'it ended later, on a day not found' : 'its later legal status is untraced'}`, historySource(record.lastSeen[1]), record.lastSeen[2] ? { note: record.lastSeen[2] } : {})
+          : null,
+        record?.operationalEnd
+          ? claim(`Its operations passed elsewhere on ${record.operationalEnd[0]}, which was not its legal end${record.operationalEnd[1] ? `: ${record.operationalEnd[1]}` : ''}`, historySource(record.operationalEnd[2]), record.operationalEnd[3] ? { note: record.operationalEnd[3] } : {})
           : null,
         ...(record?.names ?? []).filter(([, from]) => from).map(([name, from, , source, locator]) => claim(`Known as ${name} from ${from}`, historySource(source), locator ? { note: locator } : {})),
         record?.firstSeen && !record.established
           ? claim(`Shown to exist by ${record.firstSeen[0]}; its start is unknown`, historySource(record.firstSeen[1]), record.firstSeen[2] ? { note: record.firstSeen[2] } : {})
           : null,
-        period ? claim(`Answered to the ${period[0]}${period[1] ? ` from ${period[1]}` : ''}${period[2] ? ` to ${period[2]}` : ''}`, historySource(period[3])) : null,
+        period ? claim(`Answered to the ${period[0]}${period[1] ? ` from ${period[1]}` : ''}${period[2] ? ` to ${period[2]}` : ''}`, historySource(period[3]), [period[4], period[5]].filter(Boolean).length ? { note: [period[4], period[5]].filter(Boolean).join('. ') } : {}) : null,
         present && body.head?.person ? claim(`${body.head.person}, ${body.head.title}`, TODAY_SOURCE, { checked: CURRENT_AS_OF }) : null,
         !present && body.head?.source ? claim(`${body.head.person}, ${body.head.title}`, body.head.source) : null
       ].filter(Boolean)
@@ -416,9 +465,19 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
   const nameOn = (record) => (record.names ?? []).find(([, from, to]) => (!from || startOf(from) <= day) && (!to || startOf(to) > day)) ?? null
   for (const record of HISTORICAL_BODIES) {
     if (placed.has(record.id) || record.current || !record.name) continue
-    // A body whose start is unknown is drawn from the first day a source shows it, and says so.
-    const seenOn = !record.established && record.firstSeen ? record.firstSeen[0] : null
-    if (!stands(record.established ?? seenOn, record.ended)) continue
+    // A body whose start is unknown is drawn from the first day a source shows it, and says so. One
+    // whose end is untraced is drawn as far as a source shows it standing; after that only on the
+    // layer for bodies not confirmed that year, never as if it stood to today.
+    const life = lifespanOf(record)
+    const seenOn = life.fromKind === 'firstSeen' ? life.from : null
+    let unconfirmed = false
+    if (life.toKind === 'untraced' || life.toKind === 'occurred_date_unknown') {
+      if (!life.from || startOf(life.from) > day) continue
+      if (year > Number(String(life.lastSeen ?? life.from).slice(0, 4))) {
+        if (!includeUndated) continue
+        unconfirmed = true
+      }
+    } else if (!stands(life.from, record.ended)) continue
     place({
       id: record.id,
       kind: KIND[record.kind] ?? 'agency',
@@ -432,8 +491,12 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
       head: null,
       description: record.description,
       historical: true,
-      ...(seenOn ? { presence: 'seen', firstSeen: seenOn } : {})
-    }, record)
+      ...(seenOn ? { presence: 'seen', firstSeen: seenOn } : {}),
+      ...(record.endStatus ? { endStatus: record.endStatus, lastSeen: record.lastSeen?.[0] ?? null } : {}),
+      // Shown that year by a source, but before its last day: documented during the year, not at its end.
+      ...(life.lastSeen && Number(life.lastSeen.slice(0, 4)) === year && startOf(life.lastSeen) < day ? { observedDuringYear: true } : {}),
+      ...(record.operationalEnd ? { operationalEnd: record.operationalEnd[0] } : {})
+    }, record, { uncertain: unconfirmed })
   }
 
   // The Merit Commissioner, an officer of the Legislature from 2001 until the office was folded
@@ -569,10 +632,56 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
 
     if (parent && parent.branch) {
       const node = add({ ...common, kind: 'sub', ring: 'sub', branch: parent.branch, parent: parent.id, parentName: parent.shortName ?? parent.name })
-      link(parent.id, node.id, 'part')
+      // A subsidiary is owned, which a source can show without showing who answers for it: drawn as
+      // ownership, and not a step on the path to the people.
+      link(parent.id, node.id, placement === 'stated' && statedRow.relation === 'subsidiary_of' ? 'owned' : 'part')
     } else {
       // Known to stand, under nothing a source names for the year.
       add({ ...common, kind: SUB_AS_BODY[entry.type] ?? 'agency', ring: 'outer', branch: 'executive', parent: null, group: null, unattached: true, unplacedSub: true })
+    }
+  }
+
+  // Local bodies: corporations under provincial statute with boards and electors of their own (a
+  // regional district's directors, a hospital improvement district's landowning electors), in a
+  // lane of their own and under no ministry, when asked. Their lives read as every other body's.
+  if (includeLocal) {
+    for (const record of LOCAL_BODIES) {
+      const life = lifespanOf(record)
+      let unconfirmed = false
+      if (life.toKind === 'untraced') {
+        if (!life.from || startOf(life.from) > day) continue
+        if (year > Number(String(life.lastSeen ?? life.from).slice(0, 4))) {
+          if (!includeUndated) continue
+          unconfirmed = true
+        }
+      } else if (!stands(life.from, record.ended)) continue
+      const nameRow = (record.names ?? []).find(([, from, to]) => (!from || startOf(from) <= day) && (!to || startOf(to) > day))
+      const governance = (record.governance ?? []).filter(([from]) => startOf(from) <= day).at(-1) ?? null
+      add({
+        id: record.id,
+        kind: record.kind,
+        branch: 'executive',
+        ring: 'outer',
+        lane: 'local',
+        group: null,
+        local: true,
+        name: nameRow?.[0] ?? record.name,
+        established: record.established,
+        ended: record.ended,
+        ...(record.endStatus ? { endStatus: record.endStatus, lastSeen: record.lastSeen?.[0] ?? null } : {}),
+        description: record.description,
+        governance,
+        uncertain: unconfirmed,
+        present,
+        events: eventsFor([record.id]),
+        evidence: [
+          claim(`${record.name}, from ${record.established}${record.ended ? ` to ${record.ended}` : ''}`, historySource(record.source), meaningNote({ establishedMeaning: record.establishedMeaning })),
+          record.ended && record.endedSource !== undefined ? claim(`Ended ${record.ended}`, historySource(record.endedSource), meaningNote({ ended: record.ended, endedMeaning: record.endedMeaning })) : null,
+          record.lastSeen ? claim(`Last shown standing ${record.lastSeen[0]}${record.lastSeen[3] ? ` (${record.lastSeen[3]})` : ''}; its later legal status is untraced`, historySource(record.lastSeen[1]), record.lastSeen[2] ? { note: record.lastSeen[2] } : {}) : null,
+          ...(record.governance ?? []).map(([from, rule, source, locator]) => claim(`From ${from}: ${rule}`, historySource(source), locator ? { note: locator } : {})),
+          ...(record.transfers ?? []).map(([to, type, date, scope, conditions, source, locator]) => claim(`${String(type).replace(/_/g, ' ')} ${to}${date ? ` on ${date}` : ''}${scope ? ` (${scope})` : ''}${conditions ? `: ${conditions}` : ''}`, historySource(source), locator ? { note: locator } : {}))
+        ].filter(Boolean)
+      })
     }
   }
 
@@ -635,15 +744,20 @@ export const lifeOf = (id) => {
   if (!id) return null
   const episode = MINISTRY_EPISODES.find((entry) => entry.id === id)
   const sub = SUB_AGENCIES.find((entry) => entry.id === id)
-  const body = HISTORICAL_BODIES.find((entry) => entry.id === id && entry.name)
+  const body = HISTORICAL_BODIES.find((entry) => entry.id === id && entry.name) ?? LOCAL_BODIES.find((entry) => entry.id === id)
   const current = CURRENT_BODIES.find((entry) => entry.id === id)
   const events = eventsFor([id])
+  // `from` is a start a source gives; `firstSeen` the earliest sighting where none does. `toKind` says
+  // what the end is (see lifespanOf): only an `open` life runs on to today.
   const record = episode
-    ? { name: episode.name, from: String(episode.from), to: episode.to ? String(episode.to) : null }
-    : sub ? { name: sub.name, from: sub.established ?? null, to: sub.ended ?? null }
-      : body ? { name: body.name, from: body.established ?? null, to: body.ended ?? null }
-        : current ? { name: current.name, from: current.established ? String(current.established) : null, to: null }
+    ? { name: episode.name, from: String(episode.from), to: episode.to ? String(episode.to) : null, toKind: episode.to ? 'ended' : 'open' }
+    : sub ? { name: sub.name, from: sub.established ?? null, firstSeen: sub.established ? null : sub.firstObservedClaim?.date ? String(sub.firstObservedClaim.date) : null, to: sub.ended ?? null, toKind: sub.ended ? 'ended' : 'open' }
+      : body ? (() => {
+        const life = lifespanOf(body)
+        return { name: body.name, from: body.established ?? null, firstSeen: life.fromKind === 'firstSeen' ? life.from : null, to: life.to, toKind: life.toKind, lastSeen: life.lastSeen, operationalEnd: life.operationalEnd }
+      })()
+        : current ? { name: current.name, from: current.established ? String(current.established) : null, to: null, toKind: 'open' }
           : null
   if (!record && !events.length) return null
-  return { id, name: record?.name ?? null, from: record?.from ?? null, to: record?.to ?? null, events }
+  return { id, name: record?.name ?? null, from: record?.from ?? null, firstSeen: record?.firstSeen ?? null, to: record?.to ?? null, toKind: record?.toKind ?? 'open', lastSeen: record?.lastSeen ?? null, operationalEnd: record?.operationalEnd ?? null, events }
 }

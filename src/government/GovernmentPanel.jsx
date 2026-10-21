@@ -6,7 +6,7 @@ import { CURRENT_AS_OF } from './currentData.js'
 import { changesIn, predecessorsOf, successorsOf } from './episodes.js'
 import { currentMarkFor, identityFor, renderEraMark } from './eraMark.js'
 import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
-import { officeHoldersTo, pathToPeople, PEOPLE_ID, PRESENT_YEAR } from './snapshot.js'
+import { lifespanOf, officeHoldersTo, pathToPeople, PEOPLE_ID, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
 import { PENDING_ELECTION, PREMIERS } from './timelineData.js'
@@ -78,6 +78,29 @@ const MarkCard = ({ node, year, theme, onOpenInGenerator }) => {
         Open in the generator
       </button>
     </section>
+  )
+}
+
+/**
+ * When a body stood, saying only what the sources do: "Since 1973" only for one that continues, an
+ * untraced end as untraced, a start known only by a sighting as such, and operations that passed
+ * elsewhere before its legal end apart from that end.
+ */
+const LifeLine = ({ node, year }) => {
+  const life = lifespanOf(node)
+  const start = life.fromKind === 'firstSeen' ? `Known by ${formatDate(life.from)}; start unknown` : null
+  const text = life.toKind === 'ended'
+    ? (start ? `${start} · ended ${formatDate(life.to)}` : span(life.from, life.to))
+    : life.toKind === 'open'
+      ? (start ?? `Since ${formatDate(life.from)}`)
+      : `${start ?? `From ${formatDate(life.from)}`} · last shown standing ${life.lastSeen ? formatDate(life.lastSeen) : 'at its start'}; ${life.toKind === 'occurred_date_unknown' ? 'it ended later, on a day not found' : 'its later legal status is untraced'}`
+  return (
+    <>
+      <p className="gov-muted">{text}</p>
+      {life.operationalEnd && <p className="gov-muted">Operations passed elsewhere {formatDate(life.operationalEnd)}; that was not its legal end.</p>}
+      {node.uncertain && life.toKind !== 'open' && life.toKind !== 'ended' && <p className="gov-muted">Not shown by any source to be standing in {year}: drawn on the layer for bodies not confirmed that year.</p>}
+      {node.observedDuringYear && <p className="gov-muted">Shown standing during {year}, not at its end.</p>}
+    </>
   )
 }
 
@@ -338,7 +361,11 @@ const PathToPeople = ({ node, government, onSelect }) => {
       ? 'Courts are independent of the government: judges are appointed, but do not answer to a minister for their decisions.'
       : node.kind === 'crown'
         ? 'The Crown acts on the advice of ministers who hold the Assembly’s confidence; it does not answer to the people through an election.'
-        : node.unattached
+        : node.local
+          ? `A local corporation under provincial statute, not a provincial body: it answers to its own board and electors, not to a ministry.${node.governance ? ` As its instrument of ${node.governance[0]} set it: ${node.governance[1]}` : ' Who chose its board, and who could vote for it, is recorded here only where an instrument gives it.'} The atlas does not yet draw local electorates, so no line to the people is drawn.`
+        : government.edges.some((edge) => edge.kind === 'owned' && edge.to === node.id)
+          ? 'A source shows who owns it, and ownership is not a line of accountability: no source names a body or ministry that answers for it, so no line to the people is drawn.'
+          : node.unattached
           ? `No source names a ministry that answered for it in ${government.year}, so no line to the people is drawn.`
           : (government.edges.some((edge) => edge.kind === 'partner' && edge.to === node.id)
               ? 'It works with a ministry as a partner rather than answering to one; its own governance is its line of accountability.'
@@ -394,7 +421,8 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
   const officeId = node.kind === 'assembly' ? 'speaker' : node.id
   const holders = ['officer', 'court', 'assembly'].includes(node.kind) ? officeHoldersTo(officeId, day) : []
   const isMinistry = node.kind === 'ministry'
-  const breadcrumb = node.branch ? BRANCH_LABELS[node.branch] : 'Everyone'
+  // A local body is drawn in the executive's sector for room, but is not part of the executive.
+  const breadcrumb = node.local ? 'Local' : node.branch ? BRANCH_LABELS[node.branch] : 'Everyone'
   const kindLabel = KINDS[node.kind]?.label
 
   return (
@@ -421,11 +449,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
             Operating as {node.operatingName.name} since {node.operatingName.from} · legal name {node.name}
           </p>
         )}
-        {isBody && node.established && (
-          <p className="gov-muted">
-            {node.ended ? `${span(node.established, node.ended)}` : `Since ${formatDate(node.established)}`}
-          </p>
-        )}
+        {isBody && (node.established || node.firstSeen) && <LifeLine node={node} year={year} />}
         {!node.description && isMinistry && !present && (
           <p className="gov-description gov-muted">
             A ministry of the {year} government, from the BC Archives’ ministry history, with its

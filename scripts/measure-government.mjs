@@ -12,9 +12,13 @@ import { FIRST_YEAR, PRESENT_YEAR, governmentIn } from '../src/government/snapsh
 import { HISTORICAL_BODIES, HISTORY_SOURCES, SUB_AGENCIES } from '../src/government/historyData.js'
 
 const NOT_BODIES = new Set(['people', 'assembly', 'crown', 'premier', 'ministry', 'officer', 'court'])
-const count = { stated: 0, inferred: 0, none: 0, subYears: 0, subInferred: 0 }
+const count = { stated: 0, inferred: 0, none: 0, subYears: 0, subInferred: 0, ministryYears: 0, headless: 0 }
 for (let year = FIRST_YEAR; year <= PRESENT_YEAR; year++) {
   for (const node of governmentIn(year).nodes) {
+    if (node.kind === 'ministry') {
+      count.ministryYears++
+      if (!node.head?.person) count.headless++
+    }
     if (node.kind === 'sub' && year < PRESENT_YEAR) {
       count.subYears++
       if (node.inferredParent) count.subInferred++
@@ -29,6 +33,7 @@ for (let year = FIRST_YEAR; year <= PRESENT_YEAR; year++) {
 const started = SUB_AGENCIES.filter((sub) => sub.established).length
 const seen = SUB_AGENCIES.filter((sub) => !sub.established && sub.firstObservedClaim).length
 const rows = [
+  ['Ministry-years with no minister matched (annual snapshots, not day by day)', `${count.headless} of ${count.ministryYears}`],
   ['Body-years with a stated responsible ministry', count.stated],
   ['Body-years placed beside a ministry by inference', count.inferred],
   ['Body-years with no ministry', count.none],

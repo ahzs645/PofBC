@@ -13,22 +13,31 @@ for that period. Two more, from Round 4: **give every source a public URL** (cla
 was not handed back could not be applied), and **say what kind of thing a record is** (a legal body,
 a program, a statutory account, a web resource and a brand are dated differently).
 
+Since the integration review of 21 October 2026 (`reviews/integration-review-2026-10-21/`), each open part says which of
+four kinds of work it is: **evidence not recovered** (research), **supplied, not integrated** (the
+review's complete handoff has it: integrate it, do not research it again), **model support needed**
+(our side), or **editorial decision needed**.
+
 **Where the atlas stands** (counted across 1871-2026 by `node scripts/measure-government.mjs`):
 
-| Measure | Before Round 4 | Now |
-|---|---|---|
-| Body-years with a stated responsible ministry | 2,610 | 2,741 |
-| Body-years placed beside a ministry by inference | 98 | 99 |
-| Body-years with no ministry (sub-agencies, partnerships and courts aside) | 498 | 496 |
-| Sub-agencies with a start / a dated sighting / neither (of 251) | 43 / 50 / 158 | 48 / 65 / 138 |
-| Past sub-agency-years whose parent is inferred from today's | 1,609 of 1,641 | 1,879 of 1,940 |
-| Ministry-years with no minister matched | 17 | 0 |
-| Bodies whose main source is Wikipedia | 22 | 22 |
-| Bodies whose start is a year only | 63 | 59 |
-| Historical bodies with no start at all (listed in lineage only) | 52 | 5 |
+| Measure | Before Round 4 | After Round 4 | Now |
+|---|---|---|---|
+| Body-years with a stated responsible ministry | 2,610 | 2,741 | 2,754 |
+| Body-years placed beside a ministry by inference | 98 | 99 | 106 |
+| Body-years with no ministry (sub-agencies, partnerships and courts aside) | 498 | 496 | 496 |
+| Sub-agencies with a start / a dated sighting / neither (of 251) | 43 / 50 / 158 | 48 / 65 / 138 | 51 / 176 / 24 |
+| Past sub-agency-years whose parent is inferred from today's | 1,609 of 1,641 | 1,879 of 1,940 | 2,950 of 3,047 |
+| Ministry-years with no minister matched | 17 | 0 | 0 of 2,015 |
+| Bodies whose main source is Wikipedia | 22 | 22 | 22 |
+| Bodies whose start is a year only | 63 | 59 | 59 |
+| Historical bodies with no start at all (listed in lineage only) | 52 | 5 | 5 |
 
-More sub-agency-years are drawn now, because more sub-agencies are shown to exist earlier; nearly
-all of those years still place the body under today's parent (F2).
+More sub-agency-years are drawn now, because more sub-agencies are shown to exist earlier (the
+earlier branch batch the review found unmerged dated 114 of them); nearly all of those years still
+place the body under today's parent (F2). The ministry-year count is of annual snapshots, not a
+day-by-day audit of tenures. The inferred body-years rose by seven because MTOC is now drawn as a
+legal shell from 1985 to its last sighting in 1991, beside the ministry that answers for its
+successor's services.
 
 Priority: **P1** changes what the diagram draws; **P2** corrects or deepens what a panel says;
 **P3** completes the record.
@@ -41,18 +50,20 @@ Drawn from original orders since the primary-evidence follow-up; Round 4 added t
 designation days of 51 more councils and corrected the Capital Health Board's start to 8 September
 1994. What is left:
 
-- [ ] **A1 (P1) How the seven rural boards ended.** West Kootenay-Boundary, East Kootenay, Cariboo,
-  Upper Island/Central Coast, North West, Coast Garibaldi and Peace Liard now have their original
-  designation orders and days (M306, M328, M339, M366, M422, M448/1994, M74/1995) and Upper Island
-  its 31 August 1995 name order (M455/1995). They are not drawn, because no end is known. Wanted, for
-  each: the order rescinding or amending its designation regulation, December 1995 to February 1999,
-  and whether the same-named 1997 society succeeded it in law or only replaced it in operation. Do
-  not give all seven the 28 February 1999 repeal of Reg. 521/95. *Where:* BC Laws ministerial-order
-  archive for 1996-1998 (`mo/hmo/m####_1996` to `_1998`); the 1996-1998 cumulative regulation
-  bulletins under "Health Authorities Act". *Hand back:* `ended` with the order and its effective day.
-- [ ] **A2 (P1) The day each folded council was amalgamated.** 42 of the 43 councils the 1996 orders
-  folded into boards now start on their designation day, and end in 1997 by year only: the orders act
-  "on amalgamation". Wanted: the minister's specification under Reg. 338/96 s. 4, or each board's
+- [ ] **A1 (P1) How the seven rural boards ended.** *Evidence not recovered.* The seven boards are
+  now drawn from their designation days (M306, M328, M339, M366, M422, M448/1994, M74/1995) to their
+  last sighting in the twenty-board set of M597/1995 (6 December 1995), with their later legal
+  status **untraced**: after 1995 they are on the layer for bodies not confirmed that year, never
+  drawn as surviving to today. Wanted, for each: the order rescinding or amending its designation
+  regulation, December 1995 to February 1999, and whether the same-named 1997 society succeeded it
+  in law or only replaced it in operation. Do not give all seven the 28 February 1999 repeal of Reg.
+  521/95. *Where:* BC Laws ministerial-order archive for 1996-1998 (`mo/hmo/m####_1996` to `_1998`);
+  the 1996-1998 cumulative regulation bulletins. *Hand back:* `ended` with the order and its effective
+  day, or a later dated `attestations` row.
+- [ ] **A2 (P1) The day each folded council was amalgamated.** *Evidence not recovered.* 43 councils
+  reconcile (42 dated in Round 4, Prince George before). Each ends in 1997 by year only; the diagram
+  reads a year-only end as its first day for drawing, which is not a claim that the amalgamation was
+  executed on 1 January. Wanted: the minister's specification under Reg. 338/96 s. 4, or each board's
   1997 resolution or completion letter. *Where:* Executive Records schedule 102906 and ORCS 122352 at
   BC Archives or the Ministry of Health records office. The 442-order sweep of 2001-2002 found none.
 - [x] **A3 The 82-council plan.** Closed by Round 4: 30 continuing, 43 folded into boards and 9
@@ -83,16 +94,16 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   1970-72); improvement districts beyond the 25 (the Comptroller of Water Rights' register; BC
   Gazette Part I, 1946-1972); the executed 1998 transfer agreements. The districts themselves need a
   register before they are drawn (below, our side).
-- [ ] **A9 (P3) Health service delivery areas.** Fifteen were planned in December 2001; Statistics
+- [ ] **A9 (P3) Health service delivery areas.** *Supplied, not integrated:* the Statistics Canada URLs are recovered in the review's catalogue; the areas need an area model (our side), at month precision. Fifteen were planned in December 2001; Statistics
   Canada shows sixteen by June 2002. When and why the sixteenth came. Schedule B was replaced by
   B.C. Reg. 8/2003 (deposited 17 January 2003) and the Burnaby parcel moved by M158/2008. *Where:* the
   Ministry of Health Services' 2002 definition document, or Statistics Canada's 2002 health-region
   release (cat. 82-402), with URLs.
-- [ ] **A10 (P2) Nisga'a health governance.** The registry has the Nisga'a Valley Health Board from
+- [ ] **A10 (P2) Nisga'a health governance.** *Supplied, not integrated:* the source mappings are recovered; keep government, society, health service and treaty identities apart. The registry has the Nisga'a Valley Health Board from
   16 October 1984 (S0019586), renamed Authority on 31 August 2004. Open: the Nisga'a enactment and
   the health delivery agreement of 2000, and whether the atlas draws the board at all (see G7).
   *Where:* the Nisga'a Lisims Government registry of laws; the 2002 treaty implementation report.
-- [ ] **A11 (P2) FNHA's governance bodies.** FNHA's registry line (2009-2012) and the Health
+- [ ] **A11 (P2) FNHA's governance bodies.** *Supplied, not integrated:* the FNHC and FNHDA source mappings are recovered. FNHA's registry line (2009-2012) and the Health
   Directors Association (2010) are now events. Open: the First Nations Health Council's founding
   (February 2007) and the signed 2007 Tripartite First Nations Health Plan and 2011 Framework
   Agreement, with URLs. *Where:* FNHA's archive; First Nations Summit, UBCIC and BCAFN records.
@@ -115,16 +126,18 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   with the S0037212 and S0042656 files (BC Registries, a paid search).
 - [ ] **B5 (P2) The December 2001 branch societies:** which numbered society (S0044073-78) continued
   which agency. *Where:* the five 31 December 2001 amalgamation filings (BC Registries).
-- [ ] **B6 (P2) Forensic Psychiatric Services and Riverview.** OIC 1424/1998 reconstitutes the
+- [ ] **B6 (P2) Forensic Psychiatric Services and Riverview.** *Supplied, not integrated:* the 2002/03 statements URL is recovered (R3H-086). OIC 1424/1998 reconstitutes the
   Commission's board; it did not create it. Open: the Forensic Psychiatry Act and its commencement;
   the 1 April 1999 resource transfer and 2002/03 PHSA funding, with URLs; Riverview's site, hospital,
   society and service kept apart.
 - [ ] **B7 (P2) BCEHS and PHSA.** EHSC's finances passed to PHSA on 1 April 2011 (now an event).
   Open: the Health Emergency Act's 1974 commencement order (BC Laws OIC archive, 1974) and the 2010
   commitment.
-- [ ] **B8 (P3) Shared services.** BCCSS's society is dated (2008, 2016, 2018). Open: the SSO
-  Administration Society's 2009-2010 steps, with a URL (its 2010/11 statements), and BCSHS's 2026
-  transfer waves.
+- [ ] **B8 (P3) Shared services.** Now events: the society's 15 October 2008 registration, its
+  operating start on 1 April 2009 and the transfer of its net assets to PHSA's Health Shared Services
+  BC division on 17 September 2010 (the 2010/11 statements, recovered by the review); the members'
+  and PHSA's approvals are separate. *Model support needed:* the society and the division as
+  identities of their own, before succession is drawn. Open: BCSHS's 2026 transfer waves.
 - [ ] **B9 (P3) Other PHSA programs.** PHSA's 2004/05 list of the ten agencies and programs it
   manages is known. Open: Cardiac Services BC, Perinatal Services BC and Provincial Language Services'
   starts (PHSA annual reports 2002/03-2004/05); Correctional Health Services (1 October 2017); the
@@ -145,21 +158,22 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   the Board's first meeting, 30-31 October 1895; OIC 1164/1994 (approved 10 September 1994). Open:
   that order's deposit day (the 1994 cumulative regulation bulletin) and the statutory chain
   1911-2008.
-- [ ] **C4 (P3) Programs.** The Medical Services Commission is now apart from the Plan (constituted
+- [ ] **C4 (P3) Programs.** *Supplied, not integrated:* the Health Insurance BC annual-report source is recovered (R3H-100), an administrative contract, not an incorporation. The Medical Services Commission is now apart from the Plan (constituted
   24 March 1967; 1 July 1968 is Medicare's start). Open: the 1967 proclamation and the minister
   designated under the 1967 Act (BC Gazette and `arc_oic`, March-April 1967); whether the 1968
   Medical Service Act re-constituted the Commission; BC Hospital Insurance Service (1949);
   PharmaCare's 1974 and 1987 orders; Health Insurance BC (1 April 2005), with a URL.
-- [ ] **C5 (P2) Health profession regulators.** Round 4 holds the designations and six mergers
-  (2018-2024) but no URLs, and the atlas has no regulators. Wanted: the 30 source URLs (BC Laws
-  point-in-time versions of B.C. Reg. 270/2008 and each designation regulation), once the atlas has a
-  regulators layer (G1).
-
+- [ ] **C5 (P2) Health profession regulators.** *Supplied, not integrated:* all 25 distinct sources
+  the 32 held claims cite resolve in the review's catalogue (the earlier "30" was a count error).
+  *Model support needed:* a regulators layer, and each college's identity and event meanings
+  (designation, merger, the 2026 framework's commencement) before they are drawn.
 ## D. Other ministries and their functions
 
-- [ ] **D1 (P1) Reorganization schedules for all ministries.** As C1, for every cabinet change since
-  1976: 1979, 1986, 1991, 1996, 2001, 2005, 2008, 2009, 2011, 2012, 2013, 2017, 2020, 2022, 2024.
-  Round 4 found single statute assignments (the UTA, liquor and transit Acts), not schedules.
+- [ ] **D1 (P1) Reorganization schedules for all ministries.** *Supplied, not integrated:* the
+  review's handoff has 657 extracted clauses from 17 orders (`reviews/integration-review-2026-10-21/``datasets/root/ministry_transfer_clauses.json`).
+  Each clause must be resolved to a legal body, program or Act before it becomes a relationship: they
+  are not 657 ready parent edges, and they do not cover every cabinet change. Still to find: the
+  schedules for the cabinet changes those 17 orders do not cover.
 - [x] **D2 The Treasury Department's ministers.** Closed by Round 4: until June 1916 the Executive
   Council styled the portfolio "Minister of Finance and Agriculture", which the Treasury's alias did
   not match. With 18 Public Accounts transmittals (1899-1916) tying the department to that
@@ -170,10 +184,9 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 - [x] **D3 The Ministry of Transportation, Communications and Highways (1978).** Closed by Round 4:
   OIC 3018/1978 (approved 5 December 1978) names it in the plural and OIC 3019/1978 designates
   Alexander Vaughan Fraser; the ministry is drawn under that title.
-- [ ] **D4 (P3) Deputy ministers, ministers of state and parliamentary secretaries** before today,
-  each tenure with its end. *Where:* BC Gazette Part I appointment notices by year (archive.org) and
-  the BC Laws OIC archive; the Legislative Library's executive appointment lists.
-
+- [ ] **D4 (P3) Deputy ministers, ministers of state and parliamentary secretaries.** *Supplied, not
+  integrated:* deputy-minister checkpoints and their sources are in the review's handoff. Each tenure's
+  end remains open; a later handwritten annotation is not an ending instrument.
 ## E. Crown corporations, agencies and their relations
 
 - [ ] **E1 (P1) Which ministry answered for these bodies, by period.** Round 4 added express
@@ -197,9 +210,12 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 - [ ] **E3 (P2) PRHC.** Open: the 1973 acquisition (day and instrument), the 1961 certificate, and
   its minister from 1973. *Where:* the Public Accounts 1973/74 Housing Fund investment schedule; 1973
   orders under the Housing Act (`arc_oic`); company 52129's file at the BC Registry.
-- [ ] **E4 (P2) The modern ferry structure.** BC Ferry Services' amended memorandum and share
-  registers of 2 April 2003; the first BC Ferries Commissioner's appointment and first report (the
-  office's start kept apart from the person's); the coastal ferry services contract and renewals.
+- [ ] **E4 (P2) The modern ferry structure.** The coastal ferry services contract is recovered: it
+  starts 1 April 2003 for an initial term of 60 years, with performance terms of five years first and
+  four years after; 18 amendments are catalogued, and amendments 17 and 18 take effect on 1 April 2024
+  (original contract ss. 1.01, 3.01-3.04; amendments cl. 3.11). Open: other clause-level effective
+  dates, BC Ferry Services' executed 2 April 2003 memorandum and share registers, and the first BC
+  Ferries Commissioner's appointment and first report (the office apart from the person).
 - [ ] **E5 (P2) Pensions and land titles.** The Public Sector Pension Plans Act's 1999/2000
   commencement orders for its corporate provisions; LTSA's 2005 establishment and operating agreement.
 - [ ] **E6 (P2) The 2026 service-plan exemption list and the Public Accounts' reporting entities.**
@@ -233,22 +249,26 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   Innovation Investment, BC Infrastructure Benefits.
 - [ ] **E11 (P3) Older Crown histories.** Vancouver Wharves: bought by BC Rail on or before 30 March
   1993; its 75% partnership interest approved for transfer on 30 December 2003. Open: the 1993
-  closing day and buyer (the share-purchase agreement), BC Rail Ltd. (1984) and BCR Properties, Forest
-  Renewal BC's end (14 or 27 June 2002).
+  closing day and buyer (the share-purchase agreement), BC Rail Ltd. (1984) and BCR Properties.
+  Closed: **Forest Renewal BC's statutory end is 27 June 2002**, when B.C. Reg. 158/2002 was deposited
+  (OIC 517/2002, approved 26 June; the Act's ss. 8 and 28): now events. The BC Forest Service
+  timeline's 14 June is kept as that compilation reports it; an operational step that day would need
+  its own source.
 
 ## F. Branches and sub-agencies
 
-- [ ] **F1 (P1) Sub-agency starts and sightings.** 138 of 251 have neither (158 before Round 4). The
-  queue (`queue/INDEX.md`) splits them into batches. Of the 33 Round 3 left undated, 13 still are,
-  most of them program umbrellas or web categories whose kind must be settled first. Two specific
-  ones: the IRR and EMCR divisions (the ministries' 2025/26 organisation charts or FOI-released
-  transition binders on docs.openinfo.gov.bc.ca), and Safe Campuses BC (a Wayback Machine capture
-  whose page title prints the name, with its date).
-- [ ] **F2 (P1) Sub-agency parents over time.** 1,879 of 1,940 past sub-agency-years place a body under
-  today's parent by inference. Round 4 dated a few parents (Provincial Treasury in Finance, 1986 and
-  1996; BC Parks in Recreation and Conservation from 1 April 1957; the COS in Environment, 1980).
-  *Where:* ministry annual reports' organisation charts for 2001, 2005, 2017, 2020, 2022 and 2024;
-  for the Medical Services Commission, the minister designated in 1967.
+- [ ] **F1 (P1) Sub-agency starts and sightings.** 24 of 251 have neither (138 before the review's
+  earlier branch batch was merged, 158 before Round 4): 10 marked gone and 14 others, listed in the
+  review's `audit/branch-atlas-impact.json`. Most of the 176 dated by a sighting still lack a start.
+  Two specific ones: the IRR and EMCR divisions (the ministries' 2025/26 organisation charts or
+  FOI-released transition binders on docs.openinfo.gov.bc.ca), and Safe Campuses BC (a Wayback
+  Machine capture whose page title prints the name, with its date). *Editorial decision needed:* the
+  Compliance and Enforcement Collaborative is an inter-agency working group, not its secretariat's
+  ministry unit.
+- [ ] **F2 (P1) Sub-agency parents over time.** 2,950 of 3,047 past sub-agency-years place a body under
+  today's parent by inference. The 47 parent rows the earlier batch brought are observations on a
+  day, not periods, and are drawn only in their year. *Where:* ministry annual reports' organisation
+  charts for 2001, 2005, 2017, 2020, 2022 and 2024; the D1 schedules once integrated.
 - [ ] **F3 (P2) The sheriffs.** The statutory chain 1860-1920 is now events, and the 1974 Police Act
   is ruled out as the instrument that combined the nine offices. Open: that instrument and its day;
   the first appointment to each county office; the pre-1873 colonial line from 1857. *Where:* the
@@ -264,7 +284,11 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 - [ ] **F5 (P2) Bodies that are gone, with a successor still drawn.** The Game Commission now ends
   1 April 1957, as the Fish and Game Branch. The Liquor Control and Licensing Branch's statutory start
   (31 December 1976) is known: wanted, the order or Act that renamed or ended it (the 2018 Cannabis
-  Control and Licensing Act period). Also open: Emergency Management BC, the Industry Training Appeal
+  Control and Licensing Act period). Settled since: the **Liquor and Cannabis Regulation Branch is the
+  former Liquor Control and Licensing Branch, renamed by 5 July 2018** (the provincial bulletin; now on
+  its record), and the **Industry Training Appeal Board continues as the Skilled Trades BC Appeal Board**
+  from 1 December 2022 (Skilled Trades BC Act s. 42; OIC 650/2022), a continuation, not a new board.
+  Open: the LCLB's exact renaming day. Also open: Emergency Management BC, the Industry Training Appeal
   Board, BC Ambulance Service, the old Forest Service divisions, the 2002-03 core-review tribunals.
 - [ ] **F6 (P3) Powertech's operating start.** Settled by decisions in Round 4: the Environmental
   Appeal Board was established on 1 January 1982 (OIC 2603/1981), and Powertech's company was
@@ -275,10 +299,15 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 
 ## G. Accountability, services and the people (model work, and the evidence it needs)
 
-- [ ] **G1 (P1, our side) New line types.** Owned by, administered by, member of, board appointed by,
-  funded by, regulated by, oversees: each drawn differently from "answers for", and none a path to
-  the people. Round 4's crowns, branches and hospital-district evidence gives worked examples.
-- [ ] **G2 (P1) Scrutiny and remedy routes, body by body.** FOIPPA's local-public-body classes are in
+- [ ] **G1 (P1, our side) New line types.** Started: a subsidiary is now drawn as ownership ("Owned
+  by"), and ownership is not a step on the path to the people (Powertech no longer answers to the
+  people through BC Hydro). *Model support needed* for the rest: administered by, member of, board
+  appointed by (not the constitutional "appoints" line, which the path follows), funded by,
+  regulated by, inspects, oversees, each drawn and each kept off the accountability path unless a
+  source makes it one. The review's crowns, branches and hospital-district evidence gives examples.
+- [ ] **G2 (P1) Scrutiny and remedy routes, body by body.** *Supplied, not integrated:* the review's
+  handoff has the earlier scrutiny, remedy, Ombudsperson, Auditor General and FOIPPA datasets
+  (`datasets/root/`); keep their dated coverage, and do not backfill present law into the past. FOIPPA's local-public-body classes are in
   force from 3 November 1994 (OIC 1356/1994), with health boards and councils joining on 13 July
   1995. Open: when each drawn body came under FOIPPA, the Ombudsperson and the Auditor General,
   matched to its legal identity. *Where:* the Ombudsperson Act schedule and its amending Acts in the
@@ -300,7 +329,9 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 
 ## H. The Legislature, the early province, scale and marks (carried over)
 
-- [ ] **H1 (P2) MLAs, ridings and by-elections** for every Parliament before the 43rd, reconciled
+- [ ] **H1 (P2) MLAs, ridings and by-elections** (*supplied, not integrated:* the review's earlier
+  election and session tables, with identity and date checks still to do; recovering a file does not
+  approve a roster) for every Parliament before the 43rd, reconciled
   person by person; party at election apart from later caucus changes.
 - [ ] **H2 (P3) Sessions and committees** (the Assembly's Journals); 140 older session ends need the
   original Journals before they are called prorogations.
@@ -318,12 +349,20 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 
 ## Not research: fixes on our side
 
-- **An end whose day is not known.** The seven rural boards (A1) have starts and no end; drawn with
-  `ended: null` they would run to 2026. A convention for "ended, date unknown" (drawn to its last
-  sighting, marked uncertain) would let them in now.
-- **A register for local bodies.** Regional hospital districts and hospital improvement districts
-  are local corporations under provincial statute; a register the diagram does not draw is designed
-  in `reviews/round-4-2026-10-21/integration/root.json` (`local_register_proposal`).
+Done after the integration review: a body's end is now **known**, **untraced** or **known to have
+occurred on a day not found**, read the same way by the diagram, search, navigation, the timeline and
+the panel (`lifespanOf`); an untraced body is drawn only as far as a source shows it standing. An
+operational end is kept apart from a legal one (MTOC). The **local-body register** is built
+(`history/local-hospital-districts.json`, 68 districts, by `reviews/round-4-2026-10-21/local_register.py`)
+and shown on a layer of its own, searchable, with its governance from each instrument and events
+indexed to it. Events keep every body they name. Sub-agency ends are typed by what they were. The
+1978 ministry's old id still opens it. What is left on our side:
+
+- **Local electorates.** A local body's line to the people runs through its own electors (a hospital
+  improvement district's landowners), which the atlas does not draw yet.
+- **Field-level provenance** for every date, not only a body's start (done for BC Hydro).
+- **A year-end snapshot and a sighting earlier that year.** The panel says "shown standing during the
+  year, not at its end"; the diagram still draws the body that year.
 - **Entity kinds for sub-agencies.** Trans Care BC and four PHSA service nodes are services; Safe
   Campuses BC and Connectivity in B.C. are web resources; Let's Go BC is a brand.
 - **A franchise data file**, so the 1988 dates and the earlier exclusions are data, not code.

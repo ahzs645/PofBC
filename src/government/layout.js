@@ -140,9 +140,11 @@ const packFamilies = (sector, outer, placed, subsOf) => {
   const base = RINGS.outer * UNIT
   const families = []
   for (const node of outer) {
+    // A body under a placed parent joins its family; one in a lane of its own (the local bodies) its lane's.
     const group = node.group && placed[node.group] ? node.group : null
-    let family = families.find((entry) => entry.group === group)
-    if (!family) families.push(family = { group, members: [] })
+    const lane = group ? null : node.lane ?? null
+    let family = families.find((entry) => entry.group === group && entry.lane === lane)
+    if (!family) families.push(family = { group, lane, members: [] })
     family.members.push(node)
   }
   if (!families.length) return { positions: {}, teeth: [] }
@@ -202,7 +204,7 @@ const packFamilies = (sector, outer, placed, subsOf) => {
         size: nodeSize(node)
       }
     })
-    teeth.push({ sector: sector.id, group: family.group ?? 'none', start: family.start, end: family.start + family.width, top })
+    teeth.push({ sector: sector.id, group: family.group ?? family.lane ?? 'none', start: family.start, end: family.start + family.width, top })
   }
   return { positions, teeth }
 }

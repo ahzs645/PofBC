@@ -158,7 +158,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf
 - **What it does:** Wholly owned BC Hydro subsidiary providing specialized testing and technical expertise to the energy sector, including hydrogen refuelling technology.
 - **Held:** began 1988-09-29 (Incorporation of the company registered as BC0352143, under the numbered name 352143 B.C. LTD.; it took the name Powertech Labs Inc. on 6 January 1989. A legal start, not the start of the laboratory's work); names on file: 352143 B.C. LTD. (1988-09-29–1989-01-06), Powertech Labs Inc. (1989-01-06–), 352143 B.C. LTD. (1988-09-29–1989-01-06), POWERTECH LABS INC. (1989-01-06–); parents on file: BC Hydro (seen 2009-09-09), BC Hydro (seen 2026-09-26), BC Hydro (seen 2026-09-30), BC Hydro and Power Authority (seen 2020)
-- **Events on file:** 1979 function origin claim; 1979 function origin; 1988-09-29 established; 1988-09-29 incorporated; 1989 operational history claim; 1989-01-06 renamed; 1989-01-06 renamed
+- **Events on file:** 1979 function origin claim; 1979 function origin; 1988-09-29 established; 1988-09-29 incorporated; 1989 operational history claim; 1989-01-06 renamed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Powertech Labs Inc.", "Powertech", "352143 B.C. LTD.", "352143 B.C. LTD.", "POWERTECH LABS INC."
 - **Questions:**
