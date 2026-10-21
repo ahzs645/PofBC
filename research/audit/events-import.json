@@ -1,9 +1,9 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 746,
-    "unresolved_unmapped": 25,
-    "corroborating_duplicate": 4
+    "accepted": 890,
+    "unresolved_unmapped": 26,
+    "corroborating_duplicate": 8
   },
   "rows": [
     {
@@ -18733,6 +18733,57 @@
       "output_id": "sub:powertech-labs:event-2"
     },
     {
+      "origin": "history/sub-agencies-researched.json#powertech-labs/event-3",
+      "disposition": "accepted",
+      "input": {
+        "date": "1988-09-29",
+        "precision": "day",
+        "meaning": "The same registry entity later named Powertech Labs Inc. was incorporated as352143 B.C. LTD.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-006",
+        "source": "https://orgbook.gov.bc.ca/api/v4/topic/360507/credential-set",
+        "locator": "BC0352143 registration credential493544; effective_date, name and CONVICORP reason",
+        "checked": "2026-10-21",
+        "type": "incorporated",
+        "summary": "The same registry entity later named Powertech Labs Inc. was incorporated as352143 B.C. LTD."
+      },
+      "output_id": "sub:powertech-labs:event-3"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#powertech-labs/event-4",
+      "disposition": "accepted",
+      "input": {
+        "date": "1989-01-06",
+        "precision": "day",
+        "meaning": "352143 B.C. LTD. became POWERTECH LABS INC.; this dates the legal name rather than first laboratory operations.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-006",
+        "source": "https://orgbook.gov.bc.ca/api/v4/topic/360507/credential-set",
+        "locator": "BC0352143 registration credential493593; effective_date, entity_name_effective and CONVNC reason",
+        "checked": "2026-10-21",
+        "type": "renamed",
+        "summary": "352143 B.C. LTD. became POWERTECH LABS INC.; this dates the legal name rather than first laboratory operations."
+      },
+      "output_id": "sub:powertech-labs:event-4"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#powertech-labs/event-5",
+      "disposition": "accepted",
+      "input": {
+        "date": "1979",
+        "precision": "year",
+        "meaning": "BC Hydro’s 2020 service plan describes Powertech as operating in Surrey since its inception in 1979. This is a laboratory/service antecedent and does not supersede the later corporate registry dates.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-101",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/bchydro.pdf",
+        "locator": "PDFp28, Powertech Labs Inc. subsidiary profile",
+        "checked": "2026-10-21",
+        "type": "function_origin",
+        "summary": "BC Hydro’s 2020 service plan describes Powertech as operating in Surrey since its inception in 1979. This is a laboratory/service antecedent and does not supersede the later corporate registry dates."
+      },
+      "output_id": "sub:powertech-labs:event-5"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#bc-services-card/established",
       "disposition": "accepted",
       "input": {
@@ -19147,6 +19198,72 @@
       "reason": "No supported event date; claim retained without inventing a timestamp"
     },
     {
+      "origin": "history/sub-agencies-researched.json#environmental-appeal-board/event-4",
+      "disposition": "accepted",
+      "input": {
+        "date": "1982-01-01",
+        "precision": "day",
+        "meaning": "Sections 11 and 12 of the Environment Management Act, SBC 1981 c14, brought into force; order approved18 December 1981.",
+        "evidence": "order_in_council",
+        "source_id": "R3F-EXT-003",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2602_1981",
+        "locator": "OIC 2602/1981, sole operative paragraph; PDFp1",
+        "checked": "2026-10-21",
+        "type": "legislation_in_force",
+        "summary": "Sections 11 and 12 of the Environment Management Act, SBC 1981 c14, brought into force; order approved18 December 1981."
+      },
+      "output_id": "sub:environmental-appeal-board:event-4"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#environmental-appeal-board/event-5",
+      "disposition": "corroborating_duplicate",
+      "input": {
+        "date": "1982-01-01",
+        "precision": "day",
+        "meaning": "The Lieutenant Governor in Council establishes the Environmental Appeal Board effective1 January 1982; the order was approved18 December 1981.",
+        "evidence": "order_in_council",
+        "source_id": "R3F-EXT-004",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2603_1981",
+        "locator": "OIC 2603/1981, sole operative paragraph; PDFp1",
+        "checked": "2026-10-21",
+        "type": "legal_establishment",
+        "summary": "The Lieutenant Governor in Council establishes the Environmental Appeal Board effective1 January 1982; the order was approved18 December 1981."
+      },
+      "output_id": "sub:environmental-appeal-board:established",
+      "reason": "Same subject, date and kind as sub:environmental-appeal-board:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#environmental-appeal-board/event-6",
+      "disposition": "accepted",
+      "input": {
+        "date": "1982-01-01",
+        "precision": "day",
+        "meaning": "Initial board membership appointed for two-year terms effective1 January 1982; Francis A. Hillier designated chairman.",
+        "evidence": "order_in_council",
+        "source_id": "R3F-EXT-005",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2604_1981",
+        "locator": "OIC 2604/1981, operative paragraph and schedule; PDFpp1–2",
+        "checked": "2026-10-21",
+        "type": "first_members_appointed",
+        "summary": "Initial board membership appointed for two-year terms effective1 January 1982; Francis A. Hillier designated chairman."
+      },
+      "output_id": "sub:environmental-appeal-board:event-6"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#environmental-appeal-board/event-7",
+      "disposition": "unresolved_unmapped",
+      "input": {
+        "type": "legal_basis_claim",
+        "date": null,
+        "summary": "Environment Management Act, SBC1981 c14 s11; OIC2603/1981",
+        "citation": "Environment Management Act, SBC1981 c14 s11; OIC2603/1981",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2603_1981",
+        "source_id": "R3F-EXT-004",
+        "locator": "Sole operative paragraph, establishing the board effective1January1982"
+      },
+      "reason": "No supported event date; claim retained without inventing a timestamp"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#environmental-appeal-board/claim-0",
       "disposition": "accepted",
       "input": {
@@ -19274,14 +19391,14 @@
       "origin": "history/sub-agencies-researched.json#bc-corrections/first-observed",
       "disposition": "accepted",
       "input": {
-        "date": "2003",
+        "date": "2002",
         "precision": "year",
-        "evidence": "service_plan",
-        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
-        "source_id": "r2-pssg-plan-2003",
-        "locator": "PDF page 13 / printed page 7, Core Business Areas — Corrections",
-        "checked": "2026-09-26",
-        "meaning": "Named unit observed in a historical service plan; not first-ever existence"
+        "meaning": "Core Business Areas and Programs identifies the Corrections Branch as a ministry branch; historical name is already held.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-220",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/pssg.pdf",
+        "locator": "PDF p. 9 (one-based)",
+        "checked": "2026-10-21"
       },
       "output_id": "sub:bc-corrections:first-observed"
     },
@@ -19289,14 +19406,14 @@
       "origin": "history/sub-agencies-researched.json#bc-coroners-service/first-observed",
       "disposition": "accepted",
       "input": {
-        "date": "2003",
+        "date": "2002",
         "precision": "year",
-        "evidence": "service_plan",
-        "source": "https://www.bcbudget.gov.bc.ca/2003/sp/pssg/pssg.pdf",
-        "source_id": "r2-pssg-plan-2003",
-        "locator": "PDF pages 13–14 / printed pages 7–8, Policing and Community Safety",
-        "checked": "2026-09-26",
-        "meaning": "Named unit observed in a historical service plan; not first-ever existence"
+        "meaning": "The ministry’s explicit protective-program list includes the Coroners Service and describes its investigation and prevention duties. Does not remove coroners’ statutory decision independence.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-220",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/pssg.pdf",
+        "locator": "PDF p. 10 (one-based)",
+        "checked": "2026-10-21"
       },
       "output_id": "sub:bc-coroners-service:first-observed"
     },
@@ -19472,14 +19589,14 @@
       "origin": "history/sub-agencies-researched.json#crown-agencies-secretariat/first-observed",
       "disposition": "accepted",
       "input": {
-        "date": "2025",
+        "date": "2002",
         "precision": "year",
-        "meaning": "Earliest named budget observation located in this limited six-checkpoint Finance review; not a founding date or claim of globally earliest evidence.",
-        "evidence": "estimates",
-        "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
-        "source_id": "FIN-2025",
-        "locator": "PDF p. 103 / printed p. 93, Crown Agencies Secretariat",
-        "checked": "2026-09-30"
+        "meaning": "The Premier describes a new internal reporting structure bringing the named secretariat under the Office of the Premier.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-216",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/premier.pdf",
+        "locator": "PDF p. 5 (one-based)",
+        "checked": "2026-10-21"
       },
       "output_id": "sub:crown-agencies-secretariat:first-observed"
     },
@@ -19655,6 +19772,21 @@
       "output_id": "sub:bc-teachers-council:event-0"
     },
     {
+      "origin": "history/sub-agencies-researched.json#commissioner-for-teacher-regulation/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "The named Commissioner for Teacher Regulation refers complaints, reports and certification appeals to the Disciplinary and Professional Conduct Board. This is a sighting, not evidence of the commissioner’s own structural parent.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-131",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/ministry/educ.pdf",
+        "locator": "PDF p. 16 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:commissioner-for-teacher-regulation:first-observed"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#commissioner-for-teacher-regulation/event-0",
       "disposition": "accepted",
       "input": {
@@ -19702,6 +19834,21 @@
         "checked": "2026-09-30"
       },
       "output_id": "sub:disciplinary-and-professional-conduct-board:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#strongstart-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "The ministry purpose explicitly identifies StrongStart BC early learning centres as a ministry initiative for preschoolers and their families. This is an administered early-learning program, not a separate corporation or branch.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-062",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/educ.pdf",
+        "locator": "PDF p. 6 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:strongstart-bc:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#strongstart-bc/event-0",
@@ -19787,6 +19934,21 @@
       "output_id": "sub:powerex:event-0"
     },
     {
+      "origin": "history/sub-agencies-researched.json#kings-printer/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Earlier held name Queen’s Printer appears in the explicit list of procurement and supply services. Name continuity is already held by the repository.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-243",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/lcs/lcs.pdf",
+        "locator": "PDF p. 33 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:kings-printer:first-observed"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#kings-printer/event-0",
       "disposition": "accepted",
       "input": {
@@ -19832,6 +19994,36 @@
         "checked": "2026-09-30"
       },
       "output_id": "sub:sustainable-environment-fund:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#legal-services-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "The report explicitly calls it the ministry’s Legal Services Branch; structural observation only.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-200",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/ag.pdf",
+        "locator": "PDF p. 9 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:legal-services-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#family-justice-services-division/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Data-source footnote explicitly identifies the division and its ministry.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-127",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/ministry/ag-pssg.pdf",
+        "locator": "PDF p. 7 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:family-justice-services-division:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#office-of-the-fire-commissioner/first-observed",
@@ -19924,6 +20116,21 @@
       "output_id": "sub:bc-online:first-observed"
     },
     {
+      "origin": "history/sub-agencies-researched.json#first-citizens-fund/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Dated annual chronology records legislation doubling existing fund in August 2001; does not establish fund creation or structural parent.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-203",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/caws.pdf",
+        "locator": "PDF p. 10 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:first-citizens-fund:first-observed"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#employment-and-assistance-appeal-tribunal/first-observed",
       "disposition": "accepted",
       "input": {
@@ -19937,6 +20144,21 @@
         "meaning": "Named in the 2005 Estimates as \"Employment and Assistance Appeal Tribunal\"; the earliest of six checkpoints read, not a founding date"
       },
       "output_id": "sub:employment-and-assistance-appeal-tribunal:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#service-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Explicit service-delivery narrative identifies Service BC as one of four Citizens’ Services business organizations.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-243",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/lcs/lcs.pdf",
+        "locator": "PDF p. 31 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:service-bc:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#property-assessment-appeal-board/first-observed",
@@ -20183,6 +20405,57 @@
       "output_id": "sub:bc-parks:event-1"
     },
     {
+      "origin": "history/sub-agencies-researched.json#bc-parks/event-2",
+      "disposition": "accepted",
+      "input": {
+        "date": "1957-03-28",
+        "precision": "day",
+        "meaning": "Act constitutes Recreation and Conservation and transfers park administration from Lands and Forests, game administration from Attorney-General, and Fisheries powers. It does not itself name or create a Parks Branch.",
+        "evidence": "statute",
+        "source_id": "R3F-EXT-044",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1525674329",
+        "locator": "Department of Recreation and Conservation Act 1957 c53 ss3,5–8; PDFpp1–2",
+        "checked": "2026-10-21",
+        "type": "royal_assent",
+        "summary": "Act constitutes Recreation and Conservation and transfers park administration from Lands and Forests, game administration from Attorney-General, and Fisheries powers. It does not itself name or create a Parks Branch."
+      },
+      "output_id": "sub:bc-parks:event-2"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-parks/event-3",
+      "disposition": "accepted",
+      "input": {
+        "date": "1957",
+        "precision": "year",
+        "meaning": "Official BC Parks history says the new Department of Recreation and Conservation included a Parks Branch independent of the Forest Service. Exact branch-creation instrument remains open.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-029",
+        "source": "https://bcparks.ca/about/our-mission-responsibilities/history/",
+        "locator": "History of BC Parks, paragraph beginning The distinction between park management",
+        "checked": "2026-10-21",
+        "type": "retrospective_claim",
+        "summary": "Official BC Parks history says the new Department of Recreation and Conservation included a Parks Branch independent of the Forest Service. Exact branch-creation instrument remains open."
+      },
+      "output_id": "sub:bc-parks:event-3"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-parks/event-4",
+      "disposition": "accepted",
+      "input": {
+        "date": "1965-03-26",
+        "precision": "day",
+        "meaning": "Park Act assent. Existing parks and ClassC park boards are continued; every former ClassA and ClassB advisory board is dissolved by s33(2). No delayed-commencement clause appears.",
+        "evidence": "statute",
+        "source_id": "R3F-EXT-045",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1960750738",
+        "locator": "Park Act 1965 c31, title, s33(1)–(2); PDFpp1,9",
+        "checked": "2026-10-21",
+        "type": "royal_assent",
+        "summary": "Park Act assent. Existing parks and ClassC park boards are continued; every former ClassA and ClassB advisory board is dissolved by s33(2). No delayed-commencement clause appears."
+      },
+      "output_id": "sub:bc-parks:event-4"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#conservation-officer-service/first-observed",
       "disposition": "accepted",
       "input": {
@@ -20230,6 +20503,91 @@
         "checked": "2026-10-21"
       },
       "output_id": "sub:conservation-officer-service:event-1"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#conservation-officer-service/event-2",
+      "disposition": "accepted",
+      "input": {
+        "date": "1905-04-08",
+        "precision": "day",
+        "meaning": "Assent date of the Act authorizing appointment of a Provincial Game and Forest Warden and deputies. The office’s actual organization and appointment are separately dated by its first report.",
+        "evidence": "statute",
+        "source_id": "R3F-EXT-030",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/318868896",
+        "locator": "Game Protection Amendment Act 1905 c25 s17 adding ss30–34; PDFpp4–5",
+        "checked": "2026-10-21",
+        "type": "royal_assent",
+        "summary": "Assent date of the Act authorizing appointment of a Provincial Game and Forest Warden and deputies. The office’s actual organization and appointment are separately dated by its first report."
+      },
+      "output_id": "sub:conservation-officer-service:event-2"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#conservation-officer-service/event-3",
+      "disposition": "accepted",
+      "input": {
+        "date": "1905-07-01",
+        "precision": "day",
+        "meaning": "The Department for the Protection of Game and Forests and the office of Provincial Game and Forest Warden were organized and the warden appointed on1 July 1905, as retrospectively stated in the first report.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-033",
+        "source": "https://www.llbc.leg.bc.ca/public/pubdocs/bcdocs2016_2/346798/1st_report_1905.pdf",
+        "locator": "First report, PDFp5 / printedD5, opening paragraph",
+        "checked": "2026-10-21",
+        "type": "predecessor_organized",
+        "summary": "The Department for the Protection of Game and Forests and the office of Provincial Game and Forest Warden were organized and the warden appointed on1 July 1905, as retrospectively stated in the first report."
+      },
+      "output_id": "sub:conservation-officer-service:event-3"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#conservation-officer-service/event-4",
+      "disposition": "accepted",
+      "input": {
+        "date": "1961-03-27",
+        "precision": "day",
+        "meaning": "Act replaces the Game Warden definition with Conservation Officer and identifies the Director of the Fish and Game Branch of Recreation and Conservation. No delayed-commencement clause appears in the Act.",
+        "evidence": "statute",
+        "source_id": "R3F-EXT-031",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1982484672",
+        "locator": "Game Act Amendment Act 1961 c21, title/assent and s2; PDFp1",
+        "checked": "2026-10-21",
+        "type": "royal_assent",
+        "summary": "Act replaces the Game Warden definition with Conservation Officer and identifies the Director of the Fish and Game Branch of Recreation and Conservation. No delayed-commencement clause appears in the Act."
+      },
+      "output_id": "sub:conservation-officer-service:event-4"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#conservation-officer-service/event-5",
+      "disposition": "accepted",
+      "input": {
+        "date": "1980",
+        "precision": "year",
+        "meaning": "Official hunting synopsis says conservation officers formed their own branch in the Ministry of Environment, separate from Fish and Wildlife, in 1980. The precise administrative instrument remains unlocated.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-035",
+        "source": "https://a100.gov.bc.ca/pub/acat/documents/r22560/BCHunt-Reg-2006_1302274612849_c6f39a1ae8071865a6644c488c6c9e8e53123f77e36657766a8e9e405acca6bc.pdf",
+        "locator": "2005/06 hunting synopsis, Conservation Officer Service100-year history, PDFp85 / printed85",
+        "checked": "2026-10-21",
+        "type": "retrospective_claim",
+        "summary": "Official hunting synopsis says conservation officers formed their own branch in the Ministry of Environment, separate from Fish and Wildlife, in 1980. The precise administrative instrument remains unlocated."
+      },
+      "output_id": "sub:conservation-officer-service:event-5"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#conservation-officer-service/event-6",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002-05-09",
+        "precision": "day",
+        "meaning": "Section8.1 expressly establishes Conservation Officer Service as the ministry enforcement program and provides for a chief conservation officer. The Act contains no delayed-commencement provision; Interpretation Act s3(2) supplies the assent-date commencement rule.",
+        "evidence": "statute",
+        "source_id": "R3F-EXT-043",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1203260726",
+        "locator": "Environment Management Amendment Act 2002 c27 s2 adding s8.1; PDFp1",
+        "checked": "2026-10-21",
+        "type": "statutory_establishment",
+        "summary": "Section8.1 expressly establishes Conservation Officer Service as the ministry enforcement program and provides for a chief conservation officer. The Act contains no delayed-commencement provision; Interpretation Act s3(2) supplies the assent-date commencement rule."
+      },
+      "output_id": "sub:conservation-officer-service:event-6"
     },
     {
       "origin": "history/sub-agencies-researched.json#roadsafetybc/first-observed",
@@ -20305,6 +20663,21 @@
         "meaning": "Named in the 2020 Estimates as \"Office of the Chief Forester\"; the earliest of six checkpoints read, not a founding date"
       },
       "output_id": "sub:office-of-the-chief-forester:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#first-nations-clean-energy-business-fund/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "meaning": "Ministry mandate describes supporting First Nations through the named fund; a program relationship, not BC Hydro ownership.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-077",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/sp/pdf/ministry/arr.pdf",
+        "locator": "PDF p. 6 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:first-nations-clean-energy-business-fund:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#indigenous-justice-secretariat/first-observed",
@@ -20924,6 +21297,1939 @@
         "checked": "2026-10-21"
       },
       "output_id": "sub:building-bc:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#liquor-and-cannabis-regulation-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2018-07-05",
+        "precision": "day",
+        "meaning": "The release names the Liquor and Cannabis Regulation Branch and expressly says it was formerly the Liquor Control and Licensing Branch. This proves continuity of the renamed branch and that renaming was complete by the release date, not an exact rename day. Attorney General is the historical issuing ministry; the release alone is not used to infer a structural parent.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-058",
+        "source": "https://news.gov.bc.ca/releases/2018AG0053-001343",
+        "locator": "Named section described in note",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:liquor-and-cannabis-regulation-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#liquor-and-cannabis-regulation-branch/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2018-07-05",
+        "precision": "day",
+        "meaning": "The Liquor Control and Licensing Branch had been renamed the Liquor and Cannabis Regulation Branch by 5 July 2018. No precise effective day is stated in this source.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-058",
+        "source": "https://news.gov.bc.ca/releases/2018AG0053-001343",
+        "locator": "Release of 5 July 2018, opening paragraph and Quick Facts",
+        "checked": "2026-10-21",
+        "type": "renamed_by",
+        "summary": "The Liquor Control and Licensing Branch had been renamed the Liquor and Cannabis Regulation Branch by 5 July 2018. No precise effective day is stated in this source."
+      },
+      "output_id": "sub:liquor-and-cannabis-regulation-branch:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#animal-health-centre/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Named diagnostic facility and current service description. Ministry placement needs the organizational context, not merely the report cover.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-056",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/al.pdf",
+        "locator": "PDF p. 19 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:animal-health-centre:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#agriservice-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015-08-13",
+        "precision": "day",
+        "meaning": "Release body announces AgriService BC is now available. Historical media-contact ministry and minister quotation are used; current navigation labels are excluded.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-036",
+        "source": "https://news.gov.bc.ca/releases/2015AGRI0054-001298",
+        "locator": "Release dated13 August 2015, substantive opening paragraph",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:agriservice-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#agriservice-bc/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015-08-13",
+        "precision": "day",
+        "meaning": "AgriService BC is announced as now available for people starting or expanding agrifood businesses.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-036",
+        "source": "https://news.gov.bc.ca/releases/2015AGRI0054-001298",
+        "locator": "13 August 2015 release, first substantive paragraph",
+        "checked": "2026-10-21",
+        "type": "public_launch",
+        "summary": "AgriService BC is announced as now available for people starting or expanding agrifood businesses."
+      },
+      "output_id": "sub:agriservice-bc:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#feed-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2018-06-22",
+        "precision": "day",
+        "meaning": "Dated minister message describes Grow BC, Buy BC and Feed BC as ministry three-pillared approach. A sighting of initiative, not launch day.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-252",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2017_2018/pdf/ministry/agri.pdf",
+        "locator": "PDF p. 3 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:feed-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-sheriff-services/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "1975",
+        "precision": "year",
+        "meaning": "The Attorney-General annual report for 1974, issued in 1975, has a Sheriff Services section at printed T92–93. It describes nine sheriffs and 246 deputy sheriffs as of 1 January 1975. Original UBC OCR was retrieved; the scanned PDF has not been visually verified.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-056",
+        "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0376316",
+        "locator": "Named section described in note",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-sheriff-services:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-sheriff-services/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "1976-06-30",
+        "precision": "day",
+        "meaning": "Modern Act provides for a director of sheriff services responsible to the minister, provincewide jurisdiction, and repeal of RSBC 1960 c355. It does not itself document the claimed 1974 amalgamation.",
+        "evidence": "statute",
+        "source_id": "R3F-EXT-046",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1973154540",
+        "locator": "Sheriffs Act 1976 c50 title and ss1–4,12; PDFpp1–2",
+        "checked": "2026-10-21",
+        "type": "royal_assent",
+        "summary": "Modern Act provides for a director of sheriff services responsible to the minister, provincewide jurisdiction, and repeal of RSBC 1960 c355. It does not itself document the claimed 1974 amalgamation."
+      },
+      "output_id": "sub:bc-sheriff-services:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-sheriff-services/event-1",
+      "disposition": "accepted",
+      "input": {
+        "date": "1973-12",
+        "precision": "month",
+        "meaning": "Plans to expand the sheriff role were first formulated in December 1973. There were then nine sheriffs, 22 deputy sheriffs and 49 sheriffs’ officers. This describes planning and staffing, not an amalgamation instrument.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-056",
+        "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0376316",
+        "locator": "Attorney-General report 1974, printed T92, opening Sheriff Services paragraph; UBC digitized OCR",
+        "checked": "2026-10-21",
+        "type": "expansion_planning",
+        "summary": "Plans to expand the sheriff role were first formulated in December 1973. There were then nine sheriffs, 22 deputy sheriffs and 49 sheriffs’ officers. This describes planning and staffing, not an amalgamation instrument."
+      },
+      "output_id": "sub:bc-sheriff-services:event-1"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-sheriff-services/event-2",
+      "disposition": "accepted",
+      "input": {
+        "date": "1974-04-01",
+        "precision": "day",
+        "meaning": "The report dates new criminal-document, court-support, protection and escort duties from 1 April 1974. Nine justice regions and expanded sheriff operations must not be equated with a proved legal amalgamation of nine county offices.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-056",
+        "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0376316",
+        "locator": "Attorney-General report 1974, printed T92–93; asterisked list of new duties; UBC digitized OCR",
+        "checked": "2026-10-21",
+        "type": "duties_expanded",
+        "summary": "The report dates new criminal-document, court-support, protection and escort duties from 1 April 1974. Nine justice regions and expanded sheriff operations must not be equated with a proved legal amalgamation of nine county offices."
+      },
+      "output_id": "sub:bc-sheriff-services:event-2"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-sheriff-services/event-3",
+      "disposition": "accepted",
+      "input": {
+        "date": "1974-07-05",
+        "precision": "day",
+        "meaning": "The first sheriff-training class delivered with the British Columbia Institute of Technology graduated on 5 July 1974.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-056",
+        "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0376316",
+        "locator": "Attorney-General report 1974, printed T93, Sheriffs’ training program; UBC digitized OCR",
+        "checked": "2026-10-21",
+        "type": "training_milestone",
+        "summary": "The first sheriff-training class delivered with the British Columbia Institute of Technology graduated on 5 July 1974."
+      },
+      "output_id": "sub:bc-sheriff-services:event-3"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-sheriff-services/event-4",
+      "disposition": "accepted",
+      "input": {
+        "date": "1975-01-01",
+        "precision": "day",
+        "meaning": "The report states that nine sheriffs and 246 deputy sheriffs were in place as of 1 January 1975. Later planned staffing of 442 is not treated as an accomplished fact.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-056",
+        "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0376316",
+        "locator": "Attorney-General report 1974, printed T93, training program paragraph; UBC digitized OCR",
+        "checked": "2026-10-21",
+        "type": "staffing_snapshot",
+        "summary": "The report states that nine sheriffs and 246 deputy sheriffs were in place as of 1 January 1975. Later planned staffing of 442 is not treated as an accomplished fact."
+      },
+      "output_id": "sub:bc-sheriff-services:event-4"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#multiculturalism-and-anti-racism-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2021",
+        "precision": "year",
+        "meaning": "Footnote documents transfer from Tourism, Arts and Culture effective 2020-11-26.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-272",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2020_2021/pdf/ministry/ag-pssg.pdf",
+        "locator": "PDF p. 7 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:multiculturalism-and-anti-racism-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#multiculturalism-and-anti-racism-branch/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020-11-26",
+        "precision": "day",
+        "meaning": "Branch transferred from Tourism, Arts and Culture to Attorney General and Minister Responsible for Housing.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-272",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2020_2021/pdf/ministry/ag-pssg.pdf",
+        "locator": "PDFp7, ministry purpose footnote",
+        "checked": "2026-10-21",
+        "type": "transferred",
+        "summary": "Branch transferred from Tourism, Arts and Culture to Attorney General and Minister Responsible for Housing."
+      },
+      "output_id": "sub:multiculturalism-and-anti-racism-branch:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#mcfd-child-protection-reporting-line/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2017-08-15",
+        "precision": "day",
+        "meaning": "Dated briefing note names Provincial Centralized Screening and its 24/7 child-protection report service. The sign-off is the acting ADM of Service Delivery Division.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-013",
+        "source": "https://docs.openinfo.gov.bc.ca/Response_Package_CFD-2017-74046.pdf",
+        "locator": "PDF p. 152 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:mcfd-child-protection-reporting-line:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#mcfd-child-protection-reporting-line/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2016-03-31",
+        "precision": "day",
+        "meaning": "Provincial Centralized Screening was fully implemented to receive and screen all child-protection calls on31 March 2016; this is not necessarily the first pilot or administrative creation date.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-013",
+        "source": "https://docs.openinfo.gov.bc.ca/Response_Package_CFD-2017-74046.pdf",
+        "locator": "2017/18 Estimates briefing note6.5, PDFp152; dated15 August 2017",
+        "checked": "2026-10-21",
+        "type": "full_implementation",
+        "summary": "Provincial Centralized Screening was fully implemented to receive and screen all child-protection calls on31 March 2016; this is not necessarily the first pilot or administrative creation date."
+      },
+      "output_id": "sub:mcfd-child-protection-reporting-line:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#maples-adolescent-treatment-centre/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Listed under ministry primary service areas as an operated treatment centre.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-204",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/cfd.pdf",
+        "locator": "PDF p. 23 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:maples-adolescent-treatment-centre:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#early-childhood-development-mcfd/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Named program in ministry primary service areas. No establishment claim.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-204",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/cfd.pdf",
+        "locator": "PDF p. 23 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:early-childhood-development-mcfd:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#connected-services-bc/established",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025-10-01",
+        "precision": "day",
+        "meaning": "Official history dates the beginning of Connected Services BC to1 October 2025, bringing together former information-management branches, ministry/sector IT teams, OCIO and Service BC.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-015",
+        "source": "https://digital.gov.bc.ca/cs/who-we-are/",
+        "locator": "Who we are / How CSBC is organized, first paragraph; page updated3 September 2026",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:connected-services-bc:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#connected-services-bc/event-0",
+      "disposition": "corroborating_duplicate",
+      "input": {
+        "date": "2025-10-01",
+        "precision": "day",
+        "meaning": "Official history dates the beginning of Connected Services BC to1 October 2025, bringing together former information-management branches, ministry/sector IT teams, OCIO and Service BC.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-015",
+        "source": "https://digital.gov.bc.ca/cs/who-we-are/",
+        "locator": "Who we are / How CSBC is organized, first paragraph; page updated3 September 2026",
+        "checked": "2026-10-21",
+        "type": "retrospective_establishment",
+        "summary": "Official history dates the beginning of Connected Services BC to1 October 2025, bringing together former information-management branches, ministry/sector IT teams, OCIO and Service BC."
+      },
+      "output_id": "sub:connected-services-bc:established",
+      "reason": "Same subject, date and kind as sub:connected-services-bc:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-registries-and-online-services/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023",
+        "precision": "year",
+        "meaning": "Names modernization initiative and ministry actions; structural placement corroborated by Service BC context on page.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-295",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/citz.pdf",
+        "locator": "PDF p. 14 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-registries-and-online-services:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#asset-investment-recovery/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Named within Procurement and Supply Services, which is a ministry service area.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-243",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/lcs/lcs.pdf",
+        "locator": "PDF p. 33 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:asset-investment-recovery:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#product-distribution-centre/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Named within Procurement and Supply Services, ministry service area.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-243",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/lcs/lcs.pdf",
+        "locator": "PDF p. 33 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:product-distribution-centre:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#childcarebc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023",
+        "precision": "year",
+        "meaning": "Named ChildCareBC spaces in provincial results; does not itself establish parent or2018founding.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-291",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/StrategicPlan_AnnualReport_2022-23.pdf",
+        "locator": "PDF p. 8 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:childcarebc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#child-care-resource-and-referral-centres/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Contemporary name of contractor-delivered centres; report says funding will be eliminated, not dissolution or ministry subunit status.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-203",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/caws.pdf",
+        "locator": "PDF p. 19 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:child-care-resource-and-referral-centres:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#feeding-futures/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023",
+        "precision": "year",
+        "meaning": "School food funding announced in Budget 2023, implementation results prospective for 2023/24. Record announced program, not a2022body.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-292",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/af.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:feeding-futures:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#erase/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Ministry delivers named erase strategy and training.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-181",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/sp/pdf/ministry/educ.pdf",
+        "locator": "PDF p. 12 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:erase:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#emergency-support-services/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Existing named services under modernization; joint ministry plan does not resolve the exact parent on this page.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-127",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/ministry/ag-pssg.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:emergency-support-services:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#preparedbc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2018",
+        "precision": "year",
+        "meaning": "Named disaster-readiness information service in ministry contact appendix; joint plan alone cannot select the ministry parent.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-251",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2017_2018/pdf/ministry/ag-pssg.pdf",
+        "locator": "PDF p. 22 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:preparedbc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#emergencyinfobc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2018",
+        "precision": "year",
+        "meaning": "Named emergency information website/service; source states it is active during emergencies.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-251",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2017_2018/pdf/ministry/ag-pssg.pdf",
+        "locator": "PDF p. 22 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:emergencyinfobc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#climatereadybc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023-08-09",
+        "precision": "day",
+        "meaning": "Minister reports platform launch over last year, but this does not give exact launch date.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-297",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/emcr.pdf",
+        "locator": "PDF p. 5 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:climatereadybc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#cleanbc-industry-fund/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2021",
+        "precision": "year",
+        "meaning": "Ministry describes completed funding through the named fund.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-278",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2020_2021/pdf/ministry/env.pdf",
+        "locator": "PDF p. 12 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:cleanbc-industry-fund:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#low-carbon-fuel-standard/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023",
+        "precision": "year",
+        "meaning": "Named regulatory approach/program, not an agency or corporation.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-298",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/emli.pdf",
+        "locator": "PDF p. 9 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:low-carbon-fuel-standard:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#innovative-clean-energy-fund/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Minister identifies ongoing fund in ministry mandate; fund identity, not an incorporated body.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-073",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/sted.pdf",
+        "locator": "PDF p. 3 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:innovative-clean-energy-fund:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#climate-solutions-council/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023-03-31",
+        "precision": "day",
+        "meaning": "Appendix explicitly lists minister responsible and accountable. Retrospective creation month October 2017; founding-name continuity still needs checking.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-299",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/env.pdf",
+        "locator": "PDF p. 22 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:climate-solutions-council:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#recreation-sites-and-trails-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Named active program under ministry mandate; website launch described, not branch establishment.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-074",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/tca.pdf",
+        "locator": "PDF p. 17 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:recreation-sites-and-trails-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#report-all-poachers-and-polluters/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2005",
+        "precision": "year",
+        "meaning": "2005/06 hunting synopsis advertises RAPP as a24/7 reporting service and announces highway signs beginning in 2005. This predates the 2006 annual-report communications rollout.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-035",
+        "source": "https://a100.gov.bc.ca/pub/acat/documents/r22560/BCHunt-Reg-2006_1302274612849_c6f39a1ae8071865a6644c488c6c9e8e53123f77e36657766a8e9e405acca6bc.pdf",
+        "locator": "PDF p. 85 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:report-all-poachers-and-polluters:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#report-all-poachers-and-polluters/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006-03",
+        "precision": "month",
+        "meaning": "New RAPP highway signs, website and hotline introduced inMarch 2006 according to the report. The 2005/06 hunting synopsis already advertises RAPP, so this is not a safe first-establishment date.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-238",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/env/env.pdf",
+        "locator": "PDFp10, Conservation Officer Service results",
+        "checked": "2026-10-21",
+        "type": "communications_rollout",
+        "summary": "New RAPP highway signs, website and hotline introduced inMarch 2006 according to the report. The 2005/06 hunting synopsis already advertises RAPP, so this is not a safe first-establishment date."
+      },
+      "output_id": "sub:report-all-poachers-and-polluters:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#park-enhancement-fund/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Named fund receiving contributions; no distinct agency or structural parent inferred.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-064",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/env.pdf",
+        "locator": "PDF p. 29 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:park-enhancement-fund:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#government-chief-risk-office/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2012-10",
+        "precision": "month",
+        "meaning": "Current manual history says the October 2012 amendment defined roles for the Government Chief Risk Office. This is neither a contemporaneous 2012 sighting nor a founding claim.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-014",
+        "source": "https://www2.gov.bc.ca/gov/content/governments/policies-for-government/core-policy/amendments",
+        "locator": "Amendment history /2012 /October /Policy14: Risk Management",
+        "checked": "2026-10-21",
+        "type": "retrospective_claim",
+        "summary": "Current manual history says the October 2012 amendment defined roles for the Government Chief Risk Office. This is neither a contemporaneous 2012 sighting nor a founding claim."
+      },
+      "output_id": "sub:government-chief-risk-office:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-wildfire-service/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2016-07",
+        "precision": "month",
+        "meaning": "The July 2016 plan assigns functions under the heading naming the Ministry and BC Wildfire Services. The singular BC Wildfire Service appears in the scope and response organization diagram. The 2015 amendment entry is a separate document-edit event.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-007",
+        "source": "https://www2.gov.bc.ca/assets/gov/public-safety-and-emergency-services/emergency-preparedness-response-recovery/provincial-emergency-planning/bc-provincial-coord-plan-for-wuifire_revised_july_2016.pdf",
+        "locator": "PDF p. 22 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-wildfire-service:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-wildfire-service/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015-06-06",
+        "precision": "day",
+        "meaning": "Provincial wildfire coordination plan records replacing Wildfire Management Branch with BC Wildfire Service. This is the document-edit date, not proof of the administrative renaming order.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-007",
+        "source": "https://www2.gov.bc.ca/assets/gov/public-safety-and-emergency-services/emergency-preparedness-response-recovery/provincial-emergency-planning/bc-provincial-coord-plan-for-wuifire_revised_july_2016.pdf",
+        "locator": "Amendment record, entries6 June 2015 and19 July 2016",
+        "checked": "2026-10-21",
+        "type": "document_terminology_change",
+        "summary": "Provincial wildfire coordination plan records replacing Wildfire Management Branch with BC Wildfire Service. This is the document-edit date, not proof of the administrative renaming order."
+      },
+      "output_id": "sub:bc-wildfire-service:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#archaeology-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025-03-31",
+        "precision": "day",
+        "meaning": "Explicitly identifies Archaeology branch, Ministry of Forests, as collaboration partner.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-338",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/ministry/tacs.pdf",
+        "locator": "PDF p. 33 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:archaeology-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#tree-improvement-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "AppendixA6 explicitly places branch in Forest Stewardship Division and describes Tree Seed Centre and five seed orchards.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-240",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/for/for.pdf",
+        "locator": "PDF p. 112 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:tree-improvement-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#health-connect-registry/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Whole-government results name active registry; no parent inferred from cover.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-316",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/StrategicPlan_Annual_Report_2024-25.pdf",
+        "locator": "PDF p. 6 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:health-connect-registry:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#office-of-indigenous-health/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2021-11-30",
+        "precision": "day",
+        "meaning": "Progress section expressly names the Ministry of Health’s Office of Indigenous Health, collaborating on a post-secondary workplan.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-040",
+        "source": "https://news.gov.bc.ca/releases/2021HLTH0075-002294",
+        "locator": "Release dated30 November 2021, post-secondary education progress paragraph",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:office-of-indigenous-health:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#patient-care-quality-review-boards/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Named complaints-review boards aligned to health authorities; alignment is not structural subordination.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-136",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/ministry/hlth.pdf",
+        "locator": "PDF p. 23 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:patient-care-quality-review-boards:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#helpstartshere/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Named website in reporting on former Ministry of Mental Health and Addictions service plan. Health report cover must not be backdated as parent for whole 2024/25.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-327",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/ministry/hlth.pdf",
+        "locator": "PDF p. 25 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:helpstartshere:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#short-term-rental-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2024",
+        "precision": "year",
+        "meaning": "Branch list and following page organization chart place Short Term Rental Branch / Short-Term Rentals Branch in the division. No exact creation date is stated here.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-021",
+        "source": "https://docs.openinfo.gov.bc.ca/Ministry_of_Housing_Transition_Binder_2024.pdf",
+        "locator": "PDF p. 18 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:short-term-rental-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#public-libraries-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2021",
+        "precision": "year",
+        "meaning": "Prince George Public Library’s report discusses reopening inJanuary 2021 and names provincial Public Libraries Branch funding. PDF createdSeptember 2021; this is a 2021 sighting of the printed name, not a 2020 founding claim.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-050",
+        "source": "https://www2.gov.bc.ca/assets/gov/residents/sports-and-recreation/arts-culture/public-libraries/public-library-grant-reports/2020/plgr_prince-georgepublic-library2020.pdf",
+        "locator": "PDF p. 15 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:public-libraries-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#housing-targets-program/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023",
+        "precision": "year",
+        "meaning": "New program implemented by new Housing Targets Branch established early 2023. Branch and program are separate identity types.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-303",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/hous.pdf",
+        "locator": "PDF p. 9 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:housing-targets-program:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#housing-targets-program/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023",
+        "precision": "year",
+        "meaning": "Housing Targets Branch was established inearly 2023 to implement the program. The program and administrative branch should have separate identities.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-303",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/hous.pdf",
+        "locator": "PDFp9, ministry purpose / organization",
+        "checked": "2026-10-21",
+        "type": "retrospective_claim",
+        "summary": "Housing Targets Branch was established inearly 2023 to implement the program. The program and administrative branch should have separate identities."
+      },
+      "output_id": "sub:housing-targets-program:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#ministers-advisory-council-on-indigenous-women/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Purpose expressly says ministry responsible for named advisory council; responsibility relationship, not ownership.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-137",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/ministry/irr.pdf",
+        "locator": "PDF p. 4 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:ministers-advisory-council-on-indigenous-women:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#real-property-division/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "meaning": "Named division maintains ministry property management system; service-delivery context, no creation date.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-091",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/sp/pdf/ministry/mtics.pdf",
+        "locator": "PDF p. 13 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:real-property-division:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#trade-and-invest-british-columbia/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Trade and Invest BC newsletter/marketing named in ministry service delivery narrative; brand/program, not incorporated organization.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-331",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/ministry/jeg.pdf",
+        "locator": "PDF p. 13 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:trade-and-invest-british-columbia:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#easebiz-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025-12-30",
+        "precision": "day",
+        "meaning": "Dated release describes the active EaseBiz BC submission portal and retrospectively dates the encompassing initiative launch to June5,2025.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-039",
+        "source": "https://news.gov.bc.ca/releases/2025JEG0064-001290",
+        "locator": "Release dated30 December 2025, initiative and portal paragraphs",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:easebiz-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#easebiz-bc/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025-06-05",
+        "precision": "day",
+        "meaning": "Ease of Doing Business initiative launched5 June 2025 with submissions through EaseBiz BC. This establishes a portal/program event, not a separate government body.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-039",
+        "source": "https://news.gov.bc.ca/releases/2025JEG0064-001290",
+        "locator": "30 December 2025 release, second substantive paragraph",
+        "checked": "2026-10-21",
+        "type": "initiative_launch",
+        "summary": "Ease of Doing Business initiative launched5 June 2025 with submissions through EaseBiz BC. This establishes a portal/program event, not a separate government body."
+      },
+      "output_id": "sub:easebiz-bc:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bizpal-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Report says OneStop launched BizPal, found permanent business owner in Small Business and Revenue and began transition. Not an exact completed transfer day.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-239",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/fin/fin.pdf",
+        "locator": "PDF p. 34 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bizpal-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#employment-standards-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "The ministry’s Core Business Areas section identifies the Employment Standards Branch and its administration, complaint, mediation and enforcement duties. The Employment Standards Tribunal is expressly described as an independent tribunal within the ministry.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-221",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/sdl.pdf",
+        "locator": "PDF p. 9 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:employment-standards-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#workers-advisers-office/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "The service plan expressly says the Workers’ Advisers and Employers’ Advisers offices are administered by the ministry and funded through the accident fund. Administration and funding are distinct relationships.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-025",
+        "source": "https://www.bcbudget.gov.bc.ca/2002/sp/sdl.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:workers-advisers-office:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#employers-advisers-office/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Named ministry service, with retrospective activity figures for 1999/00,2000/01,2001/02; observed 2002, not founded 2002.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-221",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/sdl.pdf",
+        "locator": "PDF p. 13 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:employers-advisers-office:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#british-columbia-geological-survey/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Named survey produces accessible geological data. Geoscience BC is mentioned separately and must not be conflated.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-063",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/empr.pdf",
+        "locator": "PDF p. 5 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:british-columbia-geological-survey:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#mineral-development-office/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2014",
+        "precision": "year",
+        "meaning": "Government contacts list prints the BC Mineral Development Office, Geological Survey and ministry as a nested address; publication colophon further describes its coordinating role.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-017",
+        "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/publicationcatalogue/InformationCircular/BCGS_IC2014-08.pdf",
+        "locator": "PDF p. 33 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:mineral-development-office:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#critical-minerals-office/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Launched in 2024/25 according to ministry report; exact launch day and ministry name at launch need separate evidence.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-333",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/ministry/mcm.pdf",
+        "locator": "PDF p. 7 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:critical-minerals-office:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#mineral-titles-online/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Ministry implemented named claim registration and maintenance system; existing operation by report, not separate agency.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-237",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/empr/empr.pdf",
+        "locator": "PDF p. 5 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:mineral-titles-online:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#mines-health-safety-and-enforcement/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "New named Division contains Mine Audits and Effectiveness Unit; no exact start date on page.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-132",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/ministry/empr.pdf",
+        "locator": "PDF p. 5 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:mines-health-safety-and-enforcement:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#studentaid-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Ministry Branch/Agency contact table explicitly names StudentAid BC and services.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-057",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/almd.pdf",
+        "locator": "PDF p. 23 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:studentaid-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#private-training-institutions-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2016-09-01",
+        "precision": "day",
+        "meaning": "Original Private Training Regulation names the Private Training Institutions Branch of the ministry in s17(2)(f). The regulation’s effective date is not by itself the branch’s creation date.",
+        "evidence": "regulation",
+        "source_id": "R3F-EXT-012",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v59n10_153-2016",
+        "locator": "Original regulation s17(2)(f), effective-date heading",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:private-training-institutions-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#office-for-international-credential-recognition/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "First annual report describes combining staff of the Office of the Superintendent of Professional Governance and Credential Recognition Improvement Branch into one team. Statute commencement is a separate event.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-018",
+        "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/organizational-structure/ministries-organizations/oicr-annual-reports/oicr_annual_report_2024-2025_final-signed.pdf",
+        "locator": "PDF p. 4 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:office-for-international-credential-recognition:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-newcomers-services-program/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025-07-31",
+        "precision": "day",
+        "meaning": "Dated minister letter explicitly welcomes newcomers through named program, Provincial Nominee and Safe Haven programs.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-335",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/ministry/psefs.pdf",
+        "locator": "PDF p. 5 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-newcomers-services-program:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#educationplannerbc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Ministry provides named information resource; no ownership or corporate-identity assertion.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-126",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/ministry/aest.pdf",
+        "locator": "PDF p. 4 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:educationplannerbc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#education-quality-assurance/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Minister says designation has been launched. This is a designation program, not a body.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-057",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/almd.pdf",
+        "locator": "PDF p. 3 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:education-quality-assurance:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#victimlinkbc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "meaning": "Named active helpline, function and contact details. Delivery operator/structural parent not stated.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-086",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/sp/pdf/ministry/jag.pdf",
+        "locator": "PDF p. 26 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:victimlinkbc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#policing-and-security-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "meaning": "Data-source note explicitly states Policing and Security Branch, Ministry of Justice.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-086",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/sp/pdf/ministry/jag.pdf",
+        "locator": "PDF p. 15 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:policing-and-security-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#security-programs/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Named program in ministry regulatory service description, licensing security industries.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-220",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/pssg.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:security-programs:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#criminal-records-review-program/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Named ministry protective program; also names Protection Order Registry and Community Notification Advisory Program.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-220",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/pssg.pdf",
+        "locator": "PDF p. 10 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:criminal-records-review-program:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#compliance-and-enforcement-collaborative/established",
+      "disposition": "accepted",
+      "input": {
+        "date": "2012",
+        "precision": "year",
+        "meaning": "Official terms state the C&E Collaborative was established in 2012 as an inter-agency working group and community of practice, supported by a permanent C&E Secretariat.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-023",
+        "source": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/compliance-enforcement-collaborative/terms-of-reference",
+        "locator": "Terms of Reference / Introduction, second paragraph",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:compliance-and-enforcement-collaborative:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#compliance-and-enforcement-collaborative/event-0",
+      "disposition": "corroborating_duplicate",
+      "input": {
+        "date": "2012",
+        "precision": "year",
+        "meaning": "Official terms state the C&E Collaborative was established in 2012 as an inter-agency working group and community of practice, supported by a permanent C&E Secretariat.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-023",
+        "source": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/compliance-enforcement-collaborative/terms-of-reference",
+        "locator": "Terms of Reference / Introduction, second paragraph",
+        "checked": "2026-10-21",
+        "type": "retrospective_establishment",
+        "summary": "Official terms state the C&E Collaborative was established in 2012 as an inter-agency working group and community of practice, supported by a permanent C&E Secretariat."
+      },
+      "output_id": "sub:compliance-and-enforcement-collaborative:established",
+      "reason": "Same subject, date and kind as sub:compliance-and-enforcement-collaborative:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#accessibility-directorate/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023",
+        "precision": "year",
+        "meaning": "Ministry reports named directorate completed government accessibility requirements.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-312",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/sdpr.pdf",
+        "locator": "PDF p. 14 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:accessibility-directorate:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#provincial-accessibility-committee/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023",
+        "precision": "year",
+        "meaning": "Named established committee; use body text, not minister letter erroneous future October 2023 wording in August 2023 report. Exact creation checked separately.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-312",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/sdpr.pdf",
+        "locator": "PDF p. 14 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:provincial-accessibility-committee:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-employment-and-assistance/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Purpose explicitly says ministry programs administered under named BCEA program; enabling Acts came into force September 2002.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-236",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/eia/eia.pdf",
+        "locator": "PDF p. 10 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-employment-and-assistance:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#my-self-serve/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2018",
+        "precision": "year",
+        "meaning": "Ministry contact appendix names online access to income assistance services through My Self Serve.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-267",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2017_2018/pdf/ministry/sdpr.pdf",
+        "locator": "PDF p. 10 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:my-self-serve:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#single-parent-employment-initiative/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015-09-01",
+        "precision": "day",
+        "meaning": "Dated release announces the program launching today, delivered through WorkBC Employment Services Centres.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-037",
+        "source": "https://news.gov.bc.ca/releases/2015SDSI0043-001405",
+        "locator": "Release dated1 September 2015, substantive opening paragraph",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:single-parent-employment-initiative:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#single-parent-employment-initiative/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015-09-01",
+        "precision": "day",
+        "meaning": "Single Parent Employment Initiative launching today through WorkBC centres, serving single parents on income and disability assistance.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-037",
+        "source": "https://news.gov.bc.ca/releases/2015SDSI0043-001405",
+        "locator": "1 September 2015 release, first substantive paragraph",
+        "checked": "2026-10-21",
+        "type": "public_launch",
+        "summary": "Single Parent Employment Initiative launching today through WorkBC centres, serving single parents on income and disability assistance."
+      },
+      "output_id": "sub:single-parent-employment-initiative:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#office-of-the-bc-athletic-commissioner/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2018",
+        "precision": "year",
+        "meaning": "Explicit ministry oversight; retain oversees rather than assumed part_of.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-268",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2017_2018/pdf/ministry/tac.pdf",
+        "locator": "PDF p. 6 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:office-of-the-bc-athletic-commissioner:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#heritage-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2005",
+        "precision": "year",
+        "meaning": "Named branch reviews historic place records in ministry heritage delivery context.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-035",
+        "source": "https://www.bcbudget.gov.bc.ca/2005/sp/caws/caws.pdf",
+        "locator": "PDF p. 18 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:heritage-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#mountain-resorts-branch/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025-03-31",
+        "precision": "day",
+        "meaning": "Named branch tenuring and support to ski areas in ministry results.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-338",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/ministry/tacs.pdf",
+        "locator": "PDF p. 32 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:mountain-resorts-branch:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#physical-fitness-and-amateur-sports-fund/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Dated chronology records legislation increasing existing fund; no creation claim.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-203",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/caws.pdf",
+        "locator": "PDF p. 10 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:physical-fitness-and-amateur-sports-fund:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-river-forecast-centre/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "1999-03-01",
+        "precision": "day",
+        "meaning": "Archived contemporary March1,1999 Fraser Basin snow bulletin names River Forecast Centre as the monitoring body. PDF was compiled from archived pages in 2010; the bulletin content itself is dated 1999.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-054",
+        "source": "https://www2.gov.bc.ca/assets/gov/environment/research-monitoring-and-reporting/monitoring/river-forecast-centre/snow-survey-archive/snowbulletin_1999.pdf",
+        "locator": "PDF p. 42 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-river-forecast-centre:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-drought-information-portal/established",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "meaning": "Official climate-and-health report states the B.C. Drought Information Portal was created in 2015; timeline narrows this to spring 2015 without an exact month or day.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-049",
+        "source": "https://nrs.objectstore.gov.bc.ca/xedyjn/Projects/2023/ClimateReadyBC/page_health_r2r/R2R-Chapter-7.pdf",
+        "locator": "Chapter7, PDFp19 / printed156, information-sharing section; timeline PDFp14 / printed151",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-drought-information-portal:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-drought-information-portal/event-0",
+      "disposition": "corroborating_duplicate",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "meaning": "Official climate-and-health report states the B.C. Drought Information Portal was created in 2015; timeline narrows this to spring 2015 without an exact month or day.",
+        "evidence": "official_webpage",
+        "source_id": "R3F-EXT-049",
+        "source": "https://nrs.objectstore.gov.bc.ca/xedyjn/Projects/2023/ClimateReadyBC/page_health_r2r/R2R-Chapter-7.pdf",
+        "locator": "Chapter7, PDFp19 / printed156, information-sharing section; timeline PDFp14 / printed151",
+        "checked": "2026-10-21",
+        "type": "retrospective_establishment",
+        "summary": "Official climate-and-health report states the B.C. Drought Information Portal was created in 2015; timeline narrows this to spring 2015 without an exact month or day."
+      },
+      "output_id": "sub:bc-drought-information-portal:established",
+      "reason": "Same subject, date and kind as sub:bc-drought-information-portal:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#caribou-recovery-program/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2018",
+        "precision": "year",
+        "meaning": "Ministry mandate results names program and engagement planning; no agency creation claim.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-259",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2017_2018/pdf/ministry/flnro.pdf",
+        "locator": "PDF p. 9 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:caribou-recovery-program:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#together-for-wildlife/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Named draft strategy prepared by ministry; date is prelaunch draft sighting, not operational program start.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-135",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/ministry/flnr.pdf",
+        "locator": "PDF p. 5 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:together-for-wildlife:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#permit-connect-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023-09-18",
+        "precision": "day",
+        "meaning": "Release body names the existing Permit Connect BC portal and says it launched earlier in the year; later report narrows launch to March 2023.",
+        "evidence": "news_release",
+        "source_id": "R3F-EXT-038",
+        "source": "https://news.gov.bc.ca/releases/2023HOUS0058-001472",
+        "locator": "Release dated18 September 2023, single housing application / Permit Connect paragraph",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:permit-connect-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#permit-connect-bc/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023-03",
+        "precision": "month",
+        "meaning": "Permit Connect BC website was released inMarch 2023; do not manufacture the31 March day from a secondary blog.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-047",
+        "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/initiatives-plans-strategies/poverty-reduction-strategy/togetherbc-2023-annual-report.pdf",
+        "locator": "2023 annual report published 2024, PDFp77 / printed77, housing-permitting entry",
+        "checked": "2026-10-21",
+        "type": "website_launch",
+        "summary": "Permit Connect BC website was released inMarch 2023; do not manufacture the31 March day from a secondary blog."
+      },
+      "output_id": "sub:permit-connect-bc:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#frontcounter-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Explicit prototype creation inKamloops followed by transfer to ILMB during 2005/06; date only fiscal-year bounded.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-243",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/lcs/lcs.pdf",
+        "locator": "PDF p. 3 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:frontcounter-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#frontcounter-bc/event-0",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Report says a FrontCounter BC prototype was created inKamloops and subsequently transferred to the Integrated Land Management Bureau duringFY 2005/06. No exact transfer day is supplied.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-243",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/lcs/lcs.pdf",
+        "locator": "PDFp3, minister message",
+        "checked": "2026-10-21",
+        "type": "retrospective_claim",
+        "summary": "Report says a FrontCounter BC prototype was created inKamloops and subsequently transferred to the Integrated Land Management Bureau duringFY 2005/06. No exact transfer day is supplied."
+      },
+      "output_id": "sub:frontcounter-bc:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#emergency-medical-assistants-licensing-board/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2021",
+        "precision": "year",
+        "meaning": "Named statutory licensing board; report page alone does not establish structural subordination.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-281",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2020_2021/pdf/ministry/hlth.pdf",
+        "locator": "PDF p. 30 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:emergency-medical-assistants-licensing-board:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#cardiac-services-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Explicit named specialized programs/services through PHSA agencies.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-069",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/hserv.pdf",
+        "locator": "PDF p. 5 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:cardiac-services-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#health-emergency-management-bc/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2014",
+        "precision": "year",
+        "meaning": "BCCDC Report 2013 lists Health Emergency Management BC as a partner of its Public Health Emergency Management service line. The PDF was produced in December 2014 and discusses the 2013–14 influenza season, so this is recorded conservatively as a 2014 publication sighting. PHEM, established in 2007, is a separate service line.",
+        "evidence": "annual_report",
+        "source_id": "R3F-EXT-061",
+        "source": "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf",
+        "locator": "PDF p. 33 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:health-emergency-management-bc:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bchpa-captive-insurance/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Explicit active subsidiary, fulfilled by BCHydro employees; relationship subsidiary_of.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-101",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/bchydro.pdf",
+        "locator": "PDF p. 28 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bchpa-captive-insurance:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#tongass-power-and-light/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Explicit active subsidiary supplying Hyder,Alaska; relationship subsidiary_of.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-101",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/bchydro.pdf",
+        "locator": "PDF p. 28 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:tongass-power-and-light:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#playnow/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Named online service; page continuation requires prior page for explicit operator.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-104",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/bclc.pdf",
+        "locator": "PDF p. 6 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:playnow:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-lottotech-international/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Explicit wholly owned subsidiary with management and oversight consolidated within BCLC operations.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-104",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/bclc.pdf",
+        "locator": "PDF p. 21 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-lottotech-international:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-housing-licensing-and-consumer-services/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Contact directory explicitly names this BC Housing office/service.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-100",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/bch.pdf",
+        "locator": "PDF p. 2 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-housing-licensing-and-consumer-services:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#heart-and-hearth/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Named HEART and HEARTH programs implemented with partners. Pair of programs, not singular incorporated agency.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-328",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/ministry/hous.pdf",
+        "locator": "PDF p. 15 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:heart-and-hearth:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#arrow-lakes-power-corporation/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Named equity-accounted investee; income table alone does not prove ownership percentage or subsidiary relationship.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-109",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/cpc.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:arrow-lakes-power-corporation:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#brilliant-expansion-power-corporation/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2002",
+        "precision": "year",
+        "meaning": "Explicit joint venture of Columbia Power Corporation and Columbia Basin Trust; application submitted November 2000, not corporation creation.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-206",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/eao.pdf",
+        "locator": "PDF p. 7 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:brilliant-expansion-power-corporation:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#brilliant-power-corporation/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Named equity-accounted investee; parent share must come from narrative or financial notes.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-109",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/cpc.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:brilliant-power-corporation:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#waneta-expansion-power-corporation/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Named corporation distinct from Waneta Expansion Limited Partnership acquiredApril 2019.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-109",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/cpc.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:waneta-expansion-power-corporation:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#fii-consulting-shanghai/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Explicit wholly owned subsidiary; consulting invoices are funding mechanism, separate from ownership.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-112",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/fii.pdf",
+        "locator": "PDF p. 24 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:fii-consulting-shanghai:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#fii-consulting-india/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Jointly owned by FII and0939031BC Ltd.; do not collapse to sole ownership.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-112",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/fii.pdf",
+        "locator": "PDF p. 24 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:fii-consulting-india:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#forestry-innovation-consulting-vietnam/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Explicit wholly owned subsidiary and operating activities.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-164",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/sp/pdf/agency/fii.pdf",
+        "locator": "PDF p. 21 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:forestry-innovation-consulting-vietnam:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#vancouver-convention-centre/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2006",
+        "precision": "year",
+        "meaning": "Existing facility described separately from expansion project and older Vancouver Convention and Exhibition Centre name; no exact renaming date.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-248",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2005_2006/tsa/tsa.pdf",
+        "locator": "PDF p. 8 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:vancouver-convention-centre:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-place/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Existing stadium undergoing revitalization; no creation or minister structural-parent inference.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-074",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/tca.pdf",
+        "locator": "PDF p. 29 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-place:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-renaissance-capital-fund/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Explicit Crown agency administered by ministry; relationship administered_by, not sole ownership inferred.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-073",
+        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/sted.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-renaissance-capital-fund:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bcr-properties/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2015",
+        "precision": "year",
+        "meaning": "Explicit BCRC subsidiary. Page also states BCRC became wholly owned BCTFA subsidiary 2010-04-01; operations staff inTransport ministry distinct from ownership.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-094",
+        "source": "https://www.bcbudget.gov.bc.ca/2015/sp/pdf/ministry/tran.pdf",
+        "locator": "PDF p. 18 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bcr-properties:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#pattullo-bridge-replacement/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2018",
+        "precision": "year",
+        "meaning": "Province announced moving forward with replacement inFebruary 2018; project sighting, not separate agency creation.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-269",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2017_2018/pdf/ministry/tran.pdf",
+        "locator": "PDF p. 8 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:pattullo-bridge-replacement:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#broadway-subway-project/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Named project in supportive policies agreements; does not make Municipal Affairs the project operator.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-140",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/ministry/mah.pdf",
+        "locator": "PDF p. 5 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:broadway-subway-project:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#surrey-langley-skytrain/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023",
+        "precision": "year",
+        "meaning": "Named project, no discrete agency or structural parent inferred.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-314",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/tran.pdf",
+        "locator": "PDF p. 6 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:surrey-langley-skytrain:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#fraser-river-tunnel-project/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023-03-31",
+        "precision": "day",
+        "meaning": "Named capital project with costs incurred; project identity, not separate agency.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-314",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/tran.pdf",
+        "locator": "PDF p. 40 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:fraser-river-tunnel-project:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#steveston-interchange-project/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2023-03-31",
+        "precision": "day",
+        "meaning": "Explicit TI Corp project delivery mandate; relationship delivered_by, not subsidiary_of.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-314",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2022_2023/pdf/ministry/tran.pdf",
+        "locator": "PDF p. 41 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:steveston-interchange-project:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#belleville-terminal-redevelopment/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "Whole-government results name project and phase1completion; operator not resolved by this page.",
+        "evidence": "annual_report",
+        "source_id": "R3F-DOC-316",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/StrategicPlan_Annual_Report_2024-25.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:belleville-terminal-redevelopment:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bcliquor/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2025",
+        "precision": "year",
+        "meaning": "LDB explicitly operates198BCLIQUORstores; operating brand, not separate corporation.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-172",
+        "source": "https://www.bcbudget.gov.bc.ca/2025/sp/pdf/agency/ldb.pdf",
+        "locator": "PDF p. 6 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bcliquor:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#bc-cannabis-stores/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "LDB Cannabis Retail Operations explicitly opens named stores; retail brand, not legal entity.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-118",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/ldb.pdf",
+        "locator": "PDF p. 7 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:bc-cannabis-stores:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#imax-victoria/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "2020",
+        "precision": "year",
+        "meaning": "Museum provides services and amenities and counts visits; ownership not established by this preacquisition serviceplan.",
+        "evidence": "service_plan",
+        "source_id": "R3F-DOC-123",
+        "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/rbcm.pdf",
+        "locator": "PDF p. 11 (one-based)",
+        "checked": "2026-10-21"
+      },
+      "output_id": "sub:imax-victoria:first-observed"
     },
     {
       "origin": "history/sub-agencies-researched.json#workers-compensation-review-board/established",

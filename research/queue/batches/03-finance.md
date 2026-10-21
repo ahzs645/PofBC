@@ -24,18 +24,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ## The bodies (12)
 
-### 1. Government Chief Risk Office
-
-- **id** `government-chief-risk-office` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Finance.
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/provincial-treasury
-- **What it does:** Central risk-management agency for ministries and the broader public sector.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Government Chief Risk Office"
-- **Questions:** A, B and C, as above.
-
-### 2. Anti-Money Laundering Secretariat
+### 1. Anti-Money Laundering Secretariat
 
 - **id** `anti-money-laundering-secretariat` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance.
@@ -50,7 +39,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 3. Crown Agencies and Board Resourcing Office (CABRO)
+### 2. Crown Agencies and Board Resourcing Office (CABRO)
 
 - **id** `crown-agencies-and-board-resourcing-office` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/crown-agencies-secretariat/crown-agencies-and-board-resourcing-office
@@ -65,22 +54,22 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 4. Crown Agencies Secretariat (CAS)
+### 3. Crown Agencies Secretariat (CAS)
 
 - **id** `crown-agencies-secretariat` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/crown-agencies-secretariat
 - **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/crown-agencies-secretariat
 - **What it does:** Central agency in the Ministry of Finance that provides governance support and oversight for public sector organizations.
-- **Held:** no start date; first seen 2025; names on file: Crown Agencies Secretariat (seen 2025)
-- **Events on file:** 2025 name first observed
+- **Held:** no start date; first seen 2002; names on file: Crown Agencies Secretariat (seen 2025); parents on file: Ministry of Finance (seen 2006), Office of the Premier (seen 2002)
+- **Events on file:** 2002 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Crown Agencies Secretariat", "CAS"
 - **Questions:**
-  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 5. Gender Equity Office
+### 4. Gender Equity Office
 
 - **id** `gender-equity-office` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/gender-equity
@@ -95,13 +84,28 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
+### 5. Government Chief Risk Office
+
+- **id** `government-chief-risk-office` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Finance.
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/provincial-treasury
+- **What it does:** Central risk-management agency for ministries and the broader public sector.
+- **Held:** no start date
+- **Events on file:** 2012-10 retrospective claim
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Government Chief Risk Office"
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
 ### 6. Internal Audit & Advisory Services
 
 - **id** `internal-audit-and-advisory-services` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance.
 - **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/office-of-the-comptroller-general
 - **What it does:** Carries out internal audits of ministries, Crown corporations and the broader public sector.
-- **Held:** no start date; first seen 2002; names on file: Internal Audit and Advisory Services (seen 2002), Internal Audit and Advisory Services (seen 2005), Internal Audit and Advisory Services (seen 2015), Internal Audit and Advisory Services (seen 2020), Internal Audit and Advisory Services (seen 2025)
+- **Held:** no start date; first seen 2002; names on file: Internal Audit and Advisory Services (seen 2002), Internal Audit and Advisory Services (seen 2005), Internal Audit and Advisory Services (seen 2015), Internal Audit and Advisory Services (seen 2020), Internal Audit and Advisory Services (seen 2025); parents on file: Ministry of Finance (seen 2006)
 - **Events on file:** 2002 name first observed; 2026-09-30 contextual placement observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Internal Audit & Advisory Services", "Internal Audit and Advisory Services", "Internal Audit and Advisory Services", "Internal Audit and Advisory Services", "Internal Audit and Advisory Services", "Internal Audit and Advisory Services"
@@ -191,7 +195,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Finance.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Advises Treasury Board and builds the provincial budget, three-year fiscal plan, Estimates and quarterly reports.
-- **Held:** no start date; first seen 2002; names on file: Treasury Board Staff (seen 2002), Treasury Board Staff (seen 2005), Treasury Board Staff (seen 2010), Treasury Board Staff (seen 2015), Treasury Board Staff (seen 2020), Treasury Board Staff (seen 2025)
+- **Held:** no start date; first seen 2002; names on file: Treasury Board Staff (seen 2002), Treasury Board Staff (seen 2005), Treasury Board Staff (seen 2010), Treasury Board Staff (seen 2015), Treasury Board Staff (seen 2020), Treasury Board Staff (seen 2025); parents on file: Ministry of Finance (seen 2006)
 - **Events on file:** 2002 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Treasury Board Staff", "TBS"
@@ -208,31 +212,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
 {
   "batch": "03",
   "records": [
-    {
-      "id": "government-chief-risk-office",
-      "name": "Government Chief Risk Office",
-      "kind": "office",
-      "parent_today": "ministry-of-finance-2001",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 03",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
     {
       "id": "anti-money-laundering-secretariat",
       "name": "Anti-Money Laundering Secretariat",
@@ -311,6 +290,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "gender-equity-office",
       "name": "Gender Equity Office",
+      "kind": "office",
+      "parent_today": "ministry-of-finance-2001",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 03",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "government-chief-risk-office",
+      "name": "Government Chief Risk Office",
       "kind": "office",
       "parent_today": "ministry-of-finance-2001",
       "established": null,

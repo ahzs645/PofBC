@@ -24,51 +24,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ## The bodies (7)
 
-### 1. Heritage Branch
-
-- **id** `heritage-branch` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places
-- **What it does:** Supports the conservation of heritage values on the land base through policy, programs, provincial heritage sites and partnerships.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Heritage Branch"
-- **Questions:** A, B and C, as above.
-
-### 2. Mountain Resorts Branch
-
-- **id** `mountain-resorts-branch` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resort-development
-- **Collected from:** https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resort-development
-- **What it does:** Administers all-season resort development on Crown land in B.C.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Mountain Resorts Branch"
-- **Questions:** A, B and C, as above.
-
-### 3. Office of the BC Athletic Commissioner
-
-- **id** `office-of-the-bc-athletic-commissioner` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www.bcathleticcommission.ca/
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/tacs.pdf
-- **What it does:** Oversees professional boxing, kickboxing and MMA and all amateur combat sports events in B.C.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Office of the BC Athletic Commissioner"
-- **Questions:** A, B and C, as above.
-
-### 4. Physical Fitness and Amateur Sports Fund
-
-- **id** `physical-fitness-and-amateur-sports-fund` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Tourism, Arts, Culture and Sport.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Special account supporting sport and physical activity in B.C.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Physical Fitness and Amateur Sports Fund"
-- **Questions:** A, B and C, as above.
-
-### 5. Community Gaming Grants
+### 1. Community Gaming Grants
 
 - **id** `community-gaming-grants` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www2.gov.bc.ca/gov/content/sports-culture/gambling-fundraising/gaming-grants
@@ -83,7 +39,22 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 6. Let's Go BC
+### 2. Heritage Branch
+
+- **id** `heritage-branch` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places
+- **What it does:** Supports the conservation of heritage values on the land base through policy, programs, provincial heritage sites and partnerships.
+- **Held:** no start date; first seen 2005; parents on file: Ministry of Community, Aboriginal and Women’s Services (seen 2005)
+- **Events on file:** 2005 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Heritage Branch"
+- **Questions:**
+  - A. It is already seen in 2005. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 3. Let's Go BC
 
 - **id** `lets-go-bc` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://letsgobc.ca/
@@ -96,6 +67,51 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Questions:**
   - A. It is already seen in 2025-04-23. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 4. Mountain Resorts Branch
+
+- **id** `mountain-resorts-branch` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resort-development
+- **Collected from:** https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resort-development
+- **What it does:** Administers all-season resort development on Crown land in B.C.
+- **Held:** no start date; first seen 2025-03-31; parents on file: Ministry of Tourism, Arts, Culture and Sport (seen 2025-03-31)
+- **Events on file:** 2025-03-31 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Mountain Resorts Branch"
+- **Questions:**
+  - A. It is already seen in 2025-03-31. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 5. Office of the BC Athletic Commissioner
+
+- **id** `office-of-the-bc-athletic-commissioner` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Tourism, Arts, Culture and Sport. Official site: https://www.bcathleticcommission.ca/
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/tacs.pdf
+- **What it does:** Oversees professional boxing, kickboxing and MMA and all amateur combat sports events in B.C.
+- **Held:** no start date; first seen 2018
+- **Events on file:** 2018 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Office of the BC Athletic Commissioner"
+- **Questions:**
+  - A. It is already seen in 2018. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 6. Physical Fitness and Amateur Sports Fund
+
+- **id** `physical-fitness-and-amateur-sports-fund` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Tourism, Arts, Culture and Sport.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Special account supporting sport and physical activity in B.C.
+- **Held:** no start date; first seen 2002
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Physical Fitness and Amateur Sports Fund"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 7. BC Arts and Culture Endowment
@@ -120,9 +136,59 @@ Return **one JSON object for the batch, with one record per body**, in the shape
   "batch": "16",
   "records": [
     {
+      "id": "community-gaming-grants",
+      "name": "Community Gaming Grants",
+      "kind": "program",
+      "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 16",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
       "id": "heritage-branch",
       "name": "Heritage Branch",
       "kind": "division",
+      "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 16",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "lets-go-bc",
+      "name": "Let's Go BC",
+      "kind": "program",
       "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
       "established": null,
       "first_observed": null,
@@ -197,56 +263,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "physical-fitness-and-amateur-sports-fund",
       "name": "Physical Fitness and Amateur Sports Fund",
-      "kind": "program",
-      "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 16",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "community-gaming-grants",
-      "name": "Community Gaming Grants",
-      "kind": "program",
-      "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 16",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "lets-go-bc",
-      "name": "Let's Go BC",
       "kind": "program",
       "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
       "established": null,

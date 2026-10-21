@@ -1,0 +1,947 @@
+{
+  "schema": "pofbc.integration-audit.v1",
+  "created": "2026-10-21",
+  "reviewer": "integration_crowns_audit",
+  "scope": "Read-only Crown integration audit against retained original evidence; MTOC, Hydro/BC Electric/Power Commission, Harbours Board, Liquor Distribution Branch.",
+  "repository": "https://github.com/ahzs645/PofBC",
+  "branch": "claude/vibrant-cori-gy5e6w",
+  "commit": "0dbdb18cfebfb27e5529ce5940850e96eb9a995c",
+  "checkout": "/workspace/scratch/a5ca1a8fd90b/round5/repo",
+  "repository_mutated": false,
+  "repository_status_at_finish": "clean",
+  "method": [
+    "Read integration proposals and applied history data.",
+    "Read targeted build, snapshot, search, comparison and panel consumers.",
+    "Compared claims with preserved original Acts, orders and contemporary annual-report/Public Accounts extracts.",
+    "Executed focused read-only Node imports to reproduce the observed outputs. No full test suite was rerun by this child."
+  ],
+  "summary": {
+    "required_corrections": 4,
+    "interpretive_notes": 2,
+    "overall": "Substantive date corrections are mostly supported. The main losses occur when qualified research is flattened into generic lifespan and responsible-period fields or displayed without field-level provenance."
+  },
+  "findings": [
+    {
+      "id": "CROWN-AUDIT-01",
+      "severity": "medium",
+      "category": "temporal_semantics",
+      "status": "correction_recommended",
+      "title": "MTOC operational withdrawal is displayed as closure of the body",
+      "locations": [
+        {
+          "file": "research/reviews/round-4-2026-10-21/integration/crowns.json",
+          "lines": "979-1004"
+        },
+        {
+          "file": "research/history/bodies.json",
+          "lines": "826-845"
+        },
+        {
+          "file": "src/government/snapshot.js",
+          "lines": "312-316, 417-433"
+        },
+        {
+          "file": "src/government/compare.js",
+          "lines": "86-91"
+        },
+        {
+          "file": "src/government/AtlasCards.jsx",
+          "lines": "217-219"
+        }
+      ],
+      "observed": "The integration deliberately stores the 1 June 1985 transfer in ended, while correctly saying in endedMeaning that legal dissolution is unknown. The snapshot filters existence using ended and drops endedMeaning from node fields; the year comparison calls every disappearance a closure. MTOC is consequently in Bodies that closed when comparing 1984 and 1985.",
+      "evidence": "R4E-C019 and C020 prove the asset, obligation and employee transfer. R4E-C021 records a new MTOC board appointed effective 1 June 1985, affirmative evidence against legal dissolution that day. R4E-C022 is only a later statutory-edition observation, not proof of operating continuity.",
+      "correction": "Preserve the transfer as an operational/display boundary and retain an explicit unknown legal end. Carry an end kind or separate operationsEnded/legalEnded/visibleUntil fields through the snapshot and comparison, labeling the change operations transferred rather than body dissolved/closed. Do not replace this with an unqualified null that depicts continuing operation through 2026. Ensure the legal entity remains discoverable in the record even if not drawn after transfer.",
+      "verification": {
+        "governmentIn_1984_contains_mtoc": true,
+        "governmentIn_1985_contains_mtoc": false,
+        "compareYears_1984_1985_bodies_closed_includes": "metro-transit-operating-company",
+        "comparison_node_endedMeaning": "undefined"
+      },
+      "claim_ids": [
+        "R4E-C013",
+        "R4E-C019",
+        "R4E-C020",
+        "R4E-C021",
+        "R4E-C022"
+      ],
+      "source_ids": [
+        "R4E-006",
+        "R4E-007",
+        "R4E-012",
+        "R4E-013",
+        "R4E-014",
+        "R4E-015",
+        "R4E-016",
+        "R4E-017",
+        "R4E-019"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "CROWN-AUDIT-02",
+      "severity": "medium",
+      "category": "claim_provenance",
+      "status": "correction_recommended",
+      "title": "Changed lifespan facts inherit an old general source instead of the new field-level evidence",
+      "locations": [
+        {
+          "file": "research/reviews/round-4-2026-10-21/integration/crowns.json",
+          "lines": "1007-1030"
+        },
+        {
+          "file": "research/history/bodies.json",
+          "lines": "395-420, 826-845"
+        },
+        {
+          "file": "scripts/build-government-history.mjs",
+          "lines": "181-202"
+        },
+        {
+          "file": "src/government/snapshot.js",
+          "lines": "378-386"
+        }
+      ],
+      "observed": "Hydro is displayed from 1962-03-30 but that lifespan claim links to the BC Archives authority record which the same record explicitly says gives 1962-03-31. MTOC new exact dates similarly retain the old Archives source. Primary orders appear as event evidence or textual mentions rather than the source of the changed lifespan fact.",
+      "evidence": "R4E-C030 uses the 1962 Act and OIC 839 for 30 March. The integration records the conflicting Archives date separately, so its own evidence proves that the current lifespan source cannot substantiate the exact new start.",
+      "correction": "Preserve provenance for established, ended and firstSeen individually, including source IDs/URLs, locators, date kind and qualification. Build separate sourced assertions for original commencement, reconstitution, amalgamation and operational transfer. Keep the Archives record as background/conflicting evidence; do not use it as the sole link on a primary-source-corrected date.",
+      "verification": {
+        "body": "bc-hydro",
+        "year": 1962,
+        "claim": "British Columbia Hydro and Power Authority, from 1962-03-30",
+        "linked_source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-hydro-and-power-authority-2",
+        "note_acknowledges_conflicting_date": "BC Archives gives 31 March 1962"
+      },
+      "claim_ids": [
+        "R4E-C013",
+        "R4E-C019",
+        "R4E-C020",
+        "R4E-C030",
+        "R4E-C035",
+        "R4E-C039"
+      ],
+      "source_ids": [
+        "R4E-006",
+        "R4E-007",
+        "R4E-012",
+        "R4E-013",
+        "R4E-030",
+        "R4E-031",
+        "R4E-035",
+        "R4E-036",
+        "R4E-037",
+        "R4E-039",
+        "R4E-040"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "CROWN-AUDIT-03",
+      "severity": "medium",
+      "category": "qualification_loss",
+      "status": "correction_recommended",
+      "title": "LDB inferred 1986 endpoint is presented as part of a source-stated ministry period",
+      "locations": [
+        {
+          "file": "research/reviews/round-4-2026-10-21/integration/crowns.json",
+          "lines": "1070-1096"
+        },
+        {
+          "file": "research/history/bodies.json",
+          "lines": "164-182"
+        },
+        {
+          "file": "scripts/build-government-history.mjs",
+          "lines": "198, 223-225"
+        },
+        {
+          "file": "src/government/snapshot.js",
+          "lines": "327-330, 354-367, 386"
+        }
+      ],
+      "observed": "The source JSON explains that the responsible period is capped at 1986 because the ministry episode ends then. The build only retains ministry/from/to/source/locator, discarding that note; the snapshot also omits the retained locator. The 1985 panel therefore says Answered to the Ministry of Consumer and Corporate Affairs from 1976-12-31 to 1986 with only the 1976 appointment order as source.",
+      "evidence": "R4E-C026 dates the administration assignment order to 2 December 1976, before statutory commencement on 31 December. OIC 3495/1976 contains no 1986 end or proof that no intervening transfer occurred. The cap is a modeling inference from ministry lifespan, not an established legal reassignment date.",
+      "correction": "Carry the qualification and both endpoint bases into generated responsible periods and evidence. Cite the ministry-episode source for the cap; label continuation/capping as inferred. Preserve an unknown later responsible ministry until a source establishes the transfer. Keep order approval and operative commencement distinct.",
+      "verification": {
+        "body": "liquor-distribution-branch",
+        "year": 1985,
+        "claim": "Answered to the Ministry of Consumer and Corporate Affairs from 1976-12-31 to 1986",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3495_1976",
+        "rendered_evidence_has_note": false
+      },
+      "claim_ids": [
+        "R4E-C023",
+        "R4E-C026"
+      ],
+      "source_ids": [
+        "R4E-020",
+        "R4E-025",
+        "R4E-026"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "CROWN-AUDIT-04",
+      "severity": "medium",
+      "category": "ui_first_seen_handling",
+      "status": "correction_recommended",
+      "title": "The new Harbours first-seen record generates a null start label in search",
+      "locations": [
+        {
+          "file": "research/reviews/round-4-2026-10-21/integration/crowns.json",
+          "lines": "1117-1144"
+        },
+        {
+          "file": "research/history/bodies-round4.json",
+          "lines": "5-14"
+        },
+        {
+          "file": "src/government/GovernmentView.jsx",
+          "lines": "99-105"
+        }
+      ],
+      "observed": "Harbours correctly has established=null and firstSeen=1983-09-23. The search index derives its year and date label solely from established, yielding NaN and null–1985. This is a new valid data shape exposing an incomplete consumer.",
+      "evidence": "The 1983 source is an observation of an existing board in the repeal Act, not its creating instrument. Moving 1983 into established would repair the label by corrupting the historical assertion.",
+      "correction": "Use established or firstSeen[0] for navigation, and explicitly label a first-seen lower bound as known by 1983 / start unknown. Keep established null. Check other lifespan consumers for the same assumption, without changing the correct firstSeen semantics.",
+      "verification": {
+        "search_year": "NaN",
+        "search_detail": "null–1985",
+        "established": null,
+        "firstSeen": "1983-09-23"
+      },
+      "claim_ids": [
+        "R4E-C046"
+      ],
+      "source_ids": [
+        "R4E-047",
+        "R4E-048",
+        "R4E-017"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "interpretive_notes": [
+    {
+      "id": "CROWN-AUDIT-N01",
+      "severity": "low",
+      "category": "identity_and_attribution",
+      "title": "Keep the Hydro operating lineage distinct from the 1964 corporation",
+      "locations": [
+        {
+          "file": "research/reviews/round-4-2026-10-21/integration/crowns.json",
+          "lines": "366-390, 418-443, 497-522, 1007-1066"
+        },
+        {
+          "file": "research/history/bodies.json",
+          "lines": "395-420"
+        }
+      ],
+      "assessment": "The 30 March 1962 original commencement is well supported, and the 20 August 1965 ends of BC Electric and the Power Commission are well supported by the agreement ratified in the 1966 Act. It is reasonable to keep one public-facing Hydro lineage if the dates are typed. A continuous lineage from 1962 is not a finding that the modern legal corporation was constituted in 1962. R4E-C035 identifies its new 1964 constitution, effective 23 March 1964. The event for the 1963 judgment already correctly preserves contemporary annual-report attribution and the fact that the judgment and any appellate outcome were not recovered.",
+      "recommended_wording": "BC Hydro’s operating lineage begins under the 1962 scheme on 30 March 1962. Following the judicial invalidity reported in Hydro’s contemporary annual report, a new corporation was constituted under the 1964 Act on 23 March 1964. BC Electric and the Power Commission ceased separate corporate existence under the amalgamation effective 20 August 1965.",
+      "avoid": "Do not summarize the whole display as the settled legal identity from 1962, or imply the full 1963 judgment was inspected. Do not undo the 1965 ends merely because the full judgment is unavailable: the later ratified agreement directly establishes those ends.",
+      "claim_ids": [
+        "R4E-C030",
+        "R4E-C032",
+        "R4E-C035",
+        "R4E-C039",
+        "R4E-C040",
+        "R4E-C041"
+      ],
+      "source_ids": [
+        "R4E-030",
+        "R4E-031",
+        "R4E-033",
+        "R4E-035",
+        "R4E-036",
+        "R4E-037",
+        "R4E-039",
+        "R4E-040",
+        "R4E-041"
+      ]
+    },
+    {
+      "id": "CROWN-AUDIT-N02",
+      "severity": "low",
+      "category": "asset_transfer_vs_service_succession",
+      "title": "Harbours transfer provisions should retain their conditions and relationship type",
+      "locations": [
+        {
+          "file": "research/reviews/round-4-2026-10-21/integration/crowns.json",
+          "lines": "1127-1140"
+        },
+        {
+          "file": "research/history/bodies-round4.json",
+          "lines": "15-24"
+        },
+        {
+          "file": "src/government/snapshot.js",
+          "lines": "336-351"
+        }
+      ],
+      "assessment": "Dissolution on 30 May 1985 is secure. The 1983 Act authorizes specified asset/liability transfers to BC Development Corporation and BC Railway on separately fixed transfer dates. R4E-C046 expressly leaves those orders/dates unresolved. The body text converts this into a completed division of assets, and serviceSuccessorIds makes the relation a service lineage. The cited Public Accounts independently proves a railway-asset exchange in fiscal 1983/84, but that does not supply every executed transfer or convert all asset transfers into service succession.",
+      "correction": "State that the Act provided for the transfers; record separately the railway-asset exchange reported for the year ended 31 March 1984. Use asset-transfer relationships until service succession is independently established. Recover the actual transfer orders for complete dated edges.",
+      "additional_original_observations": [
+        {
+          "source_id": "R4E-017",
+          "locator": "Public Accounts 1984/85, list of transportation companies and commercial enterprises recorded on equity basis, footnote 3; raw text lines 4635-4665",
+          "observation": "The Harbours Board had no assets, liabilities or operations during fiscal 1984/85."
+        },
+        {
+          "source_id": "R4E-017",
+          "locator": "Public Accounts 1984/85, railway note, raw text lines 891-906",
+          "observation": "During the year ended 31 March 1984 the Province acquired 111,156 Railway shares in exchange for the Harbours Board net railway assets."
+        }
+      ],
+      "model_implication": "Harbours is retained through legal dissolution despite the documented empty period; MTOC is removed at its emptying. An explicit common legal/operational convention is needed.",
+      "claim_ids": [
+        "R4E-C046"
+      ],
+      "source_ids": [
+        "R4E-047",
+        "R4E-048",
+        "R4E-017"
+      ]
+    }
+  ],
+  "keep_decisions": [
+    {
+      "subject": "MTOC",
+      "decision": "Keep 18 January 1980 statutory commencement and 1 June 1985 transfer events; legal dissolution remains unproved.",
+      "claim_ids": [
+        "R4E-C013",
+        "R4E-C019",
+        "R4E-C020",
+        "R4E-C021"
+      ]
+    },
+    {
+      "subject": "Hydro",
+      "decision": "Keep 30 March 1962 original scheme commencement, 23 March 1964 reconstitution, and 20 August 1965 amalgamation; distinguish their date kinds and identities.",
+      "claim_ids": [
+        "R4E-C030",
+        "R4E-C035",
+        "R4E-C039"
+      ]
+    },
+    {
+      "subject": "BC Electric and Power Commission",
+      "decision": "Keep 20 August 1965 separate-corporate-existence ends. Retain BC Electric formal dissolution on 23 August as a different event.",
+      "claim_ids": [
+        "R4E-C039",
+        "R4E-C040"
+      ]
+    },
+    {
+      "subject": "Harbours Board",
+      "decision": "Keep established=null, firstSeen=23 September 1983 and legal dissolution=30 May 1985. Do not describe 1983 as its foundation. Earlier legal start remains a separate research task.",
+      "claim_ids": [
+        "R4E-C046"
+      ]
+    },
+    {
+      "subject": "LDB",
+      "decision": "Keep the 31 December 1976 statutory-branch event distinct from 1973 administrative lineage; keep the explicit 1976 responsible-minister assignment, with its period inference exposed.",
+      "claim_ids": [
+        "R4E-C023",
+        "R4E-C026"
+      ]
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim_id": "R4E-C013",
+      "subject": "Metro Transit Operating Company",
+      "predicate": "established_statutory_corporation",
+      "claim": "The Metro Transit Operating Company Act, including its establishing section 2, came into force on 18 January 1980 under OIC 29/1980.",
+      "date": "1980-01-18",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-006",
+        "R4E-007"
+      ],
+      "source_keys": [
+        "mtoc1979-act",
+        "oic29-1980"
+      ],
+      "locator": "Act ss2,17; OIC operative paragraph",
+      "wanted_items": [
+        "E8",
+        "E9"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "Act assent was 31 July 1979 and order approval 10 January 1980. Commencement does not establish the date that each Hydro employee or asset was transferred.",
+      "date_kind": "statutory_commencement",
+      "assent_date": "1979-07-31",
+      "order_approved": "1980-01-10",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C019",
+      "subject": "Metro Transit Operating Company",
+      "predicate": "assets_rights_and_obligations_transferred",
+      "claim": "The 1985 amendment’s new BC Transit Act section 2.1 transfers all MTOC property and rights to BC Transit and makes BC Transit liable for MTOC debts and obligations. The provision commenced on 1 June 1985.",
+      "date": "1985-06-01",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-012",
+        "R4E-013"
+      ],
+      "source_keys": [
+        "transit1985-act",
+        "oic1093-1985"
+      ],
+      "locator": "1985 Act s2; OIC 1093/1985",
+      "wanted_items": [
+        "E2",
+        "E9"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "A transfer/assumption event. The provision does not itself declare MTOC dissolved.",
+      "date_kind": "statutory_commencement",
+      "object": "British Columbia Transit",
+      "order_approved": "1985-05-30",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C020",
+      "subject": "Metro Transit Operating Company",
+      "predicate": "employees_transfer_evidenced",
+      "claim": "OIC 1094/1985 selects every MTOC employee for transfer; the reproduced Public Accounts describes the employee and asset merger as effective 1 June 1985.",
+      "date": "1985-06-01",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-012",
+        "R4E-013",
+        "R4E-014",
+        "R4E-017"
+      ],
+      "source_keys": [
+        "transit1985-act",
+        "oic1093-1985",
+        "oic1094-1985",
+        "transit1985-oag"
+      ],
+      "locator": "1985 Act s6; OIC 1094; Public Accounts note 18(e), printed B21",
+      "wanted_items": [
+        "E9",
+        "F5"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "OIC 1094 says the effective date of this order rather than spelling out June 1. June 1 is explicitly reported in Public Accounts and matches commencement of the enabling section. Do not use its May 30 approval stamp as the employee-transfer date.",
+      "date_kind": "transfer_date_confirmed_in_financial_statement",
+      "object": "British Columbia Transit",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C021",
+      "subject": "Metro Transit Operating Company",
+      "predicate": "new_board_appointed_on_transfer_day",
+      "claim": "OIC 1096/1985 appoints nine MTOC directors and its chair effective 1 June 1985, while OIC 1095 appoints the BC Transit board.",
+      "date": "1985-06-01",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-015",
+        "R4E-016"
+      ],
+      "source_keys": [
+        "oic1095-1985",
+        "oic1096-1985"
+      ],
+      "locator": "Operative paragraphs",
+      "wanted_items": [
+        "E2",
+        "E9",
+        "G3"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "This is affirmative evidence against automatically treating the 1985 asset transfer as MTOC legal dissolution. Its ultimate legal end remains unproved.",
+      "date_kind": "appointment_effective_date",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C022",
+      "subject": "Metro Transit Operating Company Act",
+      "predicate": "ministerial_administration_observed",
+      "claim": "The 1991 official consolidation prints that the Act is administered by the Ministry of Human Resources.",
+      "date": "1991",
+      "date_precision": "edition_year",
+      "source_ids": [
+        "R4E-019"
+      ],
+      "source_keys": [
+        "mtoc1991-consolidation"
+      ],
+      "locator": "Administration heading",
+      "wanted_items": [
+        "E1"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "An observation in this edition, not the assignment order or proof that Human Resources administered the Act from its 1980 start.",
+      "date_kind": "source_edition_observation",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C023",
+      "subject": "Liquor Distribution Branch",
+      "predicate": "statutory_establishment_commenced",
+      "claim": "The branch-establishing section 2 of the Liquor Distribution Act became operative on 31 December 1976 under OIC 3494/1976.",
+      "date": "1976-12-31",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-020",
+        "R4E-025",
+        "R4E-027"
+      ],
+      "source_keys": [
+        "ldb1975-act",
+        "oic3494-1976",
+        "ldb1991-consolidation"
+      ],
+      "locator": "Act ss2,28; OIC; 1991 s2 historical note",
+      "wanted_items": [
+        "E8",
+        "E9",
+        "F5"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "Assent on 26 June 1975 and administrative historical references to 1975 are different milestones. Order excludes ss16(3),17(1), but includes s2.",
+      "date_kind": "statutory_commencement",
+      "assent_date": "1975-06-26",
+      "order_approved": "1976-12-02",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C026",
+      "subject": "Liquor Distribution Act",
+      "predicate": "administration_assigned",
+      "claim": "OIC 3495/1976 charges the Minister of Consumer and Corporate Affairs with administration of the Liquor Distribution Act.",
+      "date": "1976-12-02",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-026"
+      ],
+      "source_keys": [
+        "oic3495-1976"
+      ],
+      "locator": "Entire order",
+      "wanted_items": [
+        "D1",
+        "E1"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "Assignment order was made before the 31 December commencement of the branch-establishing provision.",
+      "date_kind": "order_approved_assignment",
+      "object": "Minister of Consumer and Corporate Affairs",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C030",
+      "subject": "British Columbia Hydro and Power Authority (1962 enactment)",
+      "predicate": "original_statutory_amalgamation_commenced",
+      "claim": "The 1962 Act purports to amalgamate BC Electric and the BC Power Commission as BC Hydro. OIC 839 brings the Act into force on 30 March 1962.",
+      "date": "1962-03-30",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-030",
+        "R4E-031"
+      ],
+      "source_keys": [
+        "hydro1962-act",
+        "oic839-1962"
+      ],
+      "locator": "Act s3 and OIC operative paragraph",
+      "wanted_items": [
+        "E8",
+        "E9"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "Retain this historical commencement, but qualify its subsequent judicial invalidation and the 1964/1965 legal reconstruction.",
+      "date_kind": "original_statutory_commencement",
+      "assent_date": "1962-03-29",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C032",
+      "subject": "Power Development Acts and original Hydro Act",
+      "predicate": "judicial_invalidity_reported",
+      "claim": "Hydro’s contemporary annual report states that Chief Justice Lett held the 1961 Power Development Act, its 1962 amendment and the 1962 Hydro Act ultra vires on 29 July 1963.",
+      "date": "1963-07-29",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-033"
+      ],
+      "source_keys": [
+        "hydro1964-ar"
+      ],
+      "locator": "Printed p17 (PDF19) and p22 note 1 (PDF24)",
+      "wanted_items": [
+        "E9"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "The annual report is contemporary primary corporate evidence of the judgment; the full reported judgment has not been recovered in this package.",
+      "date_kind": "judgment_date_reported_in_contemporary_source",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C035",
+      "subject": "British Columbia Hydro and Power Authority (1964 statutory corporation)",
+      "predicate": "established_statutory_corporation",
+      "claim": "The new 1964 Hydro Act establishes the statutory corporation. OIC 773 orders its proclamation, and OIC 2519 expressly records that the proclamation brought the Act into force on 23 March 1964.",
+      "date": "1964-03-23",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-035",
+        "R4E-036",
+        "R4E-037"
+      ],
+      "source_keys": [
+        "hydro1964-act",
+        "oic773-1964",
+        "oic2519-1964"
+      ],
+      "locator": "Act ss3,58; OIC 773; OIC 2519 recital 4",
+      "wanted_items": [
+        "E8",
+        "E9"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "A new legal constitution under the 1964 Act; the operational historical lineage still reaches 1962.",
+      "date_kind": "statutory_commencement",
+      "assent_date": "1964-03-20",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C039",
+      "subject": "British Columbia Electric Company Limited and British Columbia Power Commission",
+      "predicate": "ceased_separate_existence_by_amalgamation",
+      "claim": "The agreement reproduced in the Power Measures Act 1966 takes effect at 5 p.m. local Vancouver time on 20 August 1965. The three bodies continue as the Hydro authority established under the 1964 Act, and BC Electric and the Power Commission cease separate corporate existence.",
+      "date": "1965-08-20",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-039",
+        "R4E-040"
+      ],
+      "source_keys": [
+        "oic2386-1965",
+        "power1966-measures"
+      ],
+      "locator": "1966 Act s3 and Schedule clauses 1–2, printed pp241–242",
+      "wanted_items": [
+        "E2",
+        "E8",
+        "E9"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "The ratifying Act assented on 1 April 1966 expressly validates the 20 August 1965 agreement. Do not date the amalgamation to the later assent.",
+      "date_kind": "amalgamation_effective_datetime",
+      "local_time": "17:00 local time, Vancouver",
+      "ratifying_act_assent": "1966-04-01",
+      "successor": "British Columbia Hydro and Power Authority established by the 1964 Act",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C040",
+      "subject": "British Columbia Electric Company Limited",
+      "predicate": "incorporation_cancelled_and_dissolution_declared",
+      "claim": "OIC 2387/1965 separately revokes and cancels BC Electric’s incorporation and declares it dissolved after reciting that the amalgamation had already occurred.",
+      "date": "1965-08-23",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-041"
+      ],
+      "source_keys": [
+        "oic2387-1965"
+      ],
+      "locator": "Entire order",
+      "wanted_items": [
+        "E8",
+        "E9"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "This is the later formal corporate cancellation/dissolution event; the agreement says separate existence ceased on 20 August.",
+      "date_kind": "formal_dissolution_order",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C041",
+      "subject": "British Columbia Electric Company Limited",
+      "predicate": "common_shares_cancelled_upon_amalgamation",
+      "claim": "Power Measures Act 1966 section 5 deems the Crown-held BC Electric common shares surrendered to Hydro and cancelled immediately upon the amalgamation.",
+      "date": "1965-08-20",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-040"
+      ],
+      "source_keys": [
+        "power1966-measures"
+      ],
+      "locator": "Section 5 and Schedule clause 2",
+      "wanted_items": [
+        "E2",
+        "E9"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "Statutory retroactive confirmation, assented to 1 April 1966.",
+      "date_kind": "retroactively_confirmed_share_cancellation",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    },
+    {
+      "claim_id": "R4E-C046",
+      "subject": "British Columbia Harbours Board",
+      "predicate": "dissolved",
+      "claim": "Sections 2 and 3 of the Harbour Board Repeal Act commenced under OIC 1061/1985 on 30 May 1985, repealing the Harbour Board Act, dissolving the board and terminating members’ appointments. The date is expressly confirmed in Public Accounts.",
+      "date": "1985-05-30",
+      "date_precision": "day",
+      "source_ids": [
+        "R4E-047",
+        "R4E-048",
+        "R4E-017"
+      ],
+      "source_keys": [
+        "harbour1983-repeal",
+        "oic1061-1985",
+        "transit1985-oag"
+      ],
+      "locator": "1983 Act ss2,3,8; OIC 1061; Public Accounts 1984/85 C24 note 19(b)",
+      "wanted_items": [
+        "E8",
+        "E10",
+        "F5"
+      ],
+      "confidence": "high",
+      "evidence_type": "direct",
+      "caveat": "The repeal Act assented on 23 September 1983; that is not the board’s dissolution date. Sections 4–5 authorize transfers to BC Development Corporation and BC Railway Company, but their precise transfer orders/dates are not supplied by OIC 1061.",
+      "date_kind": "dissolution_commencement",
+      "assent_date": "1983-09-23",
+      "novelty": "new_specific_detail_or_original_instrument_against_recovered_round3_package"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "R4E-006",
+      "title": "Metro Transit Operating Company Act, SBC 1979, c 18",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1632786748",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/mtoc1979-act.pdf",
+      "review_scope": "Sections 1–6, 12, 17",
+      "sha256": "35d3d1f2ef0f5932adaed5fbdb9b5618e528096197d9b9fdd4010455087c863e",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-006-mtoc1979-act.pdf"
+    },
+    {
+      "source_id": "R4E-007",
+      "title": "Order in Council 29/1980",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0029_1980",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic29-1980.pdf",
+      "review_scope": "Entire one-page order; visually verified",
+      "sha256": "f1683e666548a56df5780a79f361f59414cfd956056916909bcd9195b9175bc6",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-007-oic29-1980.pdf"
+    },
+    {
+      "source_id": "R4E-012",
+      "title": "British Columbia Transit Amendment Act (No. 2), SBC 1985, c 35",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/123385008",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/transit1985-act.pdf",
+      "review_scope": "Sections 2, 4, 6, 12",
+      "sha256": "0fc3478d8b31957d07838b1a7da953fc474a89e077fc11184a684ca84c76bb9e",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-012-transit1985-act.pdf"
+    },
+    {
+      "source_id": "R4E-013",
+      "title": "Order in Council 1093/1985",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1093_1985",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic1093-1985.pdf",
+      "review_scope": "Entire one-page order; visually verified",
+      "sha256": "af60841d8b7dc33decfd6d318b9f3fa7b5c7f4c688f590569bfc07f339afc473",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-013-oic1093-1985.pdf"
+    },
+    {
+      "source_id": "R4E-014",
+      "title": "Order in Council 1094/1985",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1094_1985",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic1094-1985.pdf",
+      "review_scope": "Entire one-page employee-transfer order; visually verified",
+      "sha256": "6d6888a0615f54d47e1b2a530c6fbf813a02b996c1c144714b8d58151a707e0d",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-014-oic1094-1985.pdf"
+    },
+    {
+      "source_id": "R4E-015",
+      "title": "Order in Council 1095/1985",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1095_1985",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic1095-1985.pdf",
+      "review_scope": "British Columbia Transit board appointments",
+      "sha256": "c8f51ea1d8f75b2eadc812d46649f105c2516d6da68b95248c8fe17003de2d7e",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-015-oic1095-1985.pdf"
+    },
+    {
+      "source_id": "R4E-016",
+      "title": "Order in Council 1096/1985",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1096_1985",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic1096-1985.pdf",
+      "review_scope": "Entire one-page MTOC board order; visually verified",
+      "sha256": "8999836bcc0010f75b758100f3417a6d81dc8d8e68843736d409ee487a357df9",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-016-oic1096-1985.pdf"
+    },
+    {
+      "source_id": "R4E-017",
+      "title": "Auditor General 1986 report, Part 2 appendices, reproducing 1984/85 Public Accounts",
+      "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/transit1985-oag.pdf",
+      "review_scope": "Printed B21 note 18(e), C24 note 19(b),(e), subsequent events (PDF26,87)",
+      "sha256": "cfc5c173e39bc122e491c3dbfec96e53a0a9a18f4049614a2e5643c492c7cc52",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-017-transit1985-oag-selected-pages.pdf"
+    },
+    {
+      "source_id": "R4E-019",
+      "title": "Metro Transit Operating Company Act, 1991 consolidation",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/91consol15/91consol15/79257",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/mtoc1991-consolidation.html",
+      "review_scope": "Administration heading and sections 1–4",
+      "sha256": "d4931a5de3add450791f89c17acfbef560fc1538675ae2cf554c5a1608d56577",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-019-mtoc1991-consolidation.html"
+    },
+    {
+      "source_id": "R4E-020",
+      "title": "Liquor Distribution Act, SBC 1975, c 39",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/706478044",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/ldb1975-act.pdf",
+      "review_scope": "Sections 1–3, 27–28",
+      "sha256": "a2b474f6b57d01644bb7b1570ba2ebccbf7f5802d72024122eb1dbf1d04881fa",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-020-ldb1975-act.pdf"
+    },
+    {
+      "source_id": "R4E-025",
+      "title": "Order in Council 3494/1976",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3494_1976",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic3494-1976.pdf",
+      "review_scope": "Entire one-page order; visually verified",
+      "sha256": "ce0d7a729f7d44a3d898dbdd47549f0a75ecb162a41f299cf6e1cd48d945b540",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-025-oic3494-1976.pdf"
+    },
+    {
+      "source_id": "R4E-026",
+      "title": "Order in Council 3495/1976",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3495_1976",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic3495-1976.pdf",
+      "review_scope": "Entire one-page order; visually verified",
+      "sha256": "f7365a2f952979c948ffbbd2aac347c3934bbd411f4b55b122d9eda34367161e",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-026-oic3495-1976.pdf"
+    },
+    {
+      "source_id": "R4E-030",
+      "title": "British Columbia Hydro and Power Authority Act, SBC 1962, c 8",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/744546168",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/hydro1962-act.pdf",
+      "review_scope": "Sections 3, 5 and commencement",
+      "sha256": "a1a8a964c46f954511fa30656458cd26e0aad5ddf561b46ff175ac63ec77bf6f",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-030-hydro1962-act.pdf"
+    },
+    {
+      "source_id": "R4E-031",
+      "title": "Order in Council 839/1962",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0839_1962",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic839-1962.pdf",
+      "review_scope": "Proclamation of the 1962 Act; one-page order visually verified",
+      "sha256": "f9532b0ec676098508a178088f853f2461db948114fc815b4a34db1db040ae5c",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-031-oic839-1962.pdf"
+    },
+    {
+      "source_id": "R4E-033",
+      "title": "British Columbia Hydro and Power Authority second annual report, year ended 31 March 1964",
+      "url": "https://digital.library.mcgill.ca/images/hrcorpreports/pdfs/6/632603.pdf",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/hydro1964-ar.pdf",
+      "review_scope": "Printed pp 17 and 22 (PDF 19, 24), visually verified",
+      "sha256": "356ab56aec1f7714edeecd75c797b1f767a07560f02d39db3ab90fd47f3379d9",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-033-hydro1964-ar-selected-pages.pdf"
+    },
+    {
+      "source_id": "R4E-035",
+      "title": "British Columbia Hydro and Power Authority Act, SBC 1964, c 7",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/511440219",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/hydro1964-act.pdf",
+      "review_scope": "Sections 3–6, 14, 58",
+      "sha256": "2b26cc9d40d8d133acb3e5d21d203827edadc844685d615629c2002ece833fb9",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-035-hydro1964-act.pdf"
+    },
+    {
+      "source_id": "R4E-036",
+      "title": "Order in Council 773/1964",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0773_1964",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic773-1964.pdf",
+      "review_scope": "Proclamation of the 1964 Act; one-page order visually verified",
+      "sha256": "63968d67ff37633ad8408b275fd0f52ec4c445c495c102fcc34319fb92f24a67",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-036-oic773-1964.pdf"
+    },
+    {
+      "source_id": "R4E-037",
+      "title": "Order in Council 2519/1964",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2519_1964",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic2519-1964.pdf",
+      "review_scope": "Recital 4 states OIC 773 and proclamation of 23 March 1964",
+      "sha256": "1e92fa7eeabc352cad65c208fdf1032e8ce6deae62be748e77e6df893dd75d67",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-037-oic2519-1964.pdf"
+    },
+    {
+      "source_id": "R4E-039",
+      "title": "Order in Council 2386/1965",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2386_1965",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic2386-1965.pdf",
+      "review_scope": "Both pages; first page visually verified; approval and agreement procedure",
+      "sha256": "e1adbca436bbbfb1442c5be3cb5c1e9c4482bc94956cc316b4b1c64484638bf6",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-039-oic2386-1965.pdf"
+    },
+    {
+      "source_id": "R4E-040",
+      "title": "Power Measures Act, SBC 1966, c 38",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/815001869",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/power1966-measures.pdf",
+      "review_scope": "Sections 3, 5, 6, 9 and full scheduled agreement, especially clauses 1–2; PDF page 4 visually verified",
+      "sha256": "b34ebaddc0ed277b4e1e44641df34f8432cdeee29fa0552b53932454d66e326a",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-040-power1966-measures.pdf"
+    },
+    {
+      "source_id": "R4E-041",
+      "title": "Order in Council 2387/1965",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2387_1965",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic2387-1965.pdf",
+      "review_scope": "Entire one-page dissolution order; visually verified",
+      "sha256": "21b371b624c15d10bc4e4a7c3002da9badc9b83157bce9336ef91bdfde8ad7d3",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-041-oic2387-1965.pdf"
+    },
+    {
+      "source_id": "R4E-047",
+      "title": "Harbour Board Repeal Act, SBC 1983, c 5",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/881646216",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/harbour1983-repeal.pdf",
+      "review_scope": "Sections 2–5,8; page 1 visually verified",
+      "sha256": "894d98dee90aa315cb43de48efa34aafe47ad4b2509ab7879f70a55a707da2e4",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-047-harbour1983-repeal.pdf"
+    },
+    {
+      "source_id": "R4E-048",
+      "title": "Order in Council 1061/1985",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1061_1985",
+      "local_file": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/raw/oic1061-1985.pdf",
+      "review_scope": "Entire one-page order; visually verified",
+      "sha256": "27dd81a564bcc40f5967df53d70cfef140e3a0e8b301d697817df304302903f9",
+      "package_evidence_path": "/workspace/scratch/a5ca1a8fd90b/round4/crowns/evidence/R4E-048-oic1061-1985.pdf"
+    }
+  ],
+  "remaining_unknowns": [
+    "MTOC ultimate legal dissolution or repeal.",
+    "The complete 1963 reported Hydro judgment and any relevant subsequent judicial disposition.",
+    "LDB responsible-ministry transfers after the 1976 assignment, including the exact 1986 transition.",
+    "Harbours Board original creating/commencement instrument and executed transfer dates to each successor."
+  ]
+}

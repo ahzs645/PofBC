@@ -1,0 +1,2367 @@
+{
+  "schema": "pofbc-current-ombudsperson-schedule-class-review/1",
+  "checked_at": "2026-10-21",
+  "scope": "All 35 records in the current tribunal/office inventory, using the current statutory appointment observations and a bounded review of ambiguous classes.",
+  "statistics": {
+    "unresolved_current_schedule_limb": 3,
+    "supported_schedule_class": 32,
+    "records": 35,
+    "expressly_excluded": 0,
+    "officeholder_scoped_supported_records": 7,
+    "records_with_dated_official_authority_rows": 14,
+    "records_with_current_direct_named_complaint_route_evidence": 2
+  },
+  "source_catalogue": "source-catalogue.json",
+  "statute_rules": {
+    "schedule_2a": {
+      "source_id": "R3R-001",
+      "locator": "Schedule item 2(a)",
+      "textual_rule": "A person, corporation, commission, board, bureau or authority qualifies where the person, a majority of its members, or a majority of its management/director board is appointed by an Act, a minister or the Lieutenant Governor in Council."
+    },
+    "schedule_2b": {
+      "source_id": "R3R-001",
+      "locator": "Schedule item 2(b)",
+      "textual_rule": "The same person/majority formulation applies where those persons, in discharging their duties, are public officers or servants of the government."
+    },
+    "schedule_2c": {
+      "source_id": "R3R-001",
+      "locator": "Schedule item 2(c)",
+      "textual_rule": "The same person/majority formulation applies where those persons are responsible to the government."
+    },
+    "authority_includes_members_employees": {
+      "source_id": "R3R-001",
+      "locator": "s.1",
+      "textual_rule": "The statutory definition of authority includes members and employees of a scheduled authority."
+    },
+    "administrative_scope": {
+      "source_id": "R3R-001",
+      "locator": "ss.10–13",
+      "textual_rule": "The investigation power concerns administrative decisions, acts, omissions and procedures. Section 11 limits investigations while a statutory appeal, objection or merits review remains unexercised and unexpired, and excludes counsel conduct in the specified circumstances. Section 13 provides grounds to refuse or end an investigation."
+    }
+  },
+  "methodology": [
+    "Current appointment composition is the primary factual premise. A statutory majority appointed by the listed government appointors supports an explicitly labeled application of Schedule 2(a).",
+    "The legal text and the factual appointment provisions are direct evidence; matching a named body to a generic Schedule class is the researcher’s inference, not a named entry in the Act.",
+    "An elected or nominating body is not treated as the appointor when the statute gives the final appointment to a minister or Cabinet.",
+    "Chair-appointed temporary or ordinary tribunal members are not automatically treated as Cabinet-appointed members, or as appointed by an Act merely because the power appears in an Act.",
+    "A statutory person can satisfy item 2 without a board; officeholder-scoped conclusions are labeled and do not manufacture a corporate board or establish all branch functions.",
+    "The two specified express exclusions were checked before assigning any class. No one in this 35-record set is one of the excluded ferry corporations or a Police Act body under its identified enabling provisions.",
+    "The Managed Forest Council’s normal 2-of-5 ministerial appointments are not a majority, nor is statutory incorporation itself proof of government ownership.",
+    "Named Ombudsperson authority statistics and official complaint procedures are recorded independently. They can provide positive jurisdiction/route evidence even where the exact Schedule limb is unresolved.",
+    "No class is backdated to establishment, incorporation or a predecessor. All first-coverage dates remain null.",
+    "A scrutiny relationship is not a managerial accountability path and does not promise reversal of a tribunal’s decision."
+  ],
+  "records": [
+    {
+      "id": "civil-resolution-tribunal",
+      "name": "Civil Resolution Tribunal",
+      "body_form": "adjudicative tribunal",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-001",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/12025_01",
+          "locator": "ss.2,2.1,67–69; Part 10",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair, vice chairs and regular members under ss.67–68, but s.69 also allows chair-appointed temporary members without a numerical cap in that section.",
+      "class_application_inference": null,
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Civil Resolution Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Civil Resolution Tribunal'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Civil Resolution Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Civil Resolution Tribunal'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [
+        {
+          "source_id": "R3T-041",
+          "locator": "PDF pp.2,4; policy OP-005 dated 10 August 2026",
+          "statement": "The CRT’s official complaints policy directs a person dissatisfied with the complaint outcome to the BC Ombudsperson. The policy distinguishes complaints about process/conduct from disagreement with the merits of a CRT decision."
+        }
+      ],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "unresolved_current_schedule_limb",
+      "supported_schedule_classes": [],
+      "candidate_schedule_classes": [
+        "2(a)",
+        "2(c)"
+      ],
+      "class_application_is_inference": true,
+      "reason_current_limb_unresolved": "The appointment provisions alone do not establish the currently serving majority. An appointment by the chair is not relabeled an appointment by Cabinet or by the Act. Section 82’s annual-report requirement is retained but not treated as a conclusive interpretation of Schedule 2(c).",
+      "additional_statute_locators": [
+        "Civil Resolution Tribunal Act ss.67–69,82"
+      ],
+      "next_evidence_needed": "An authoritative statement of the applicable Schedule limb or a dated complete member roster establishing the majority. Current complaint-route evidence already supports a separate administrative-scrutiny edge.",
+      "unresolved_does_not_mean_excluded": true,
+      "exact_limb_proven_by_named_schedule_entry": false
+    },
+    {
+      "id": "bc-review-board",
+      "name": "British Columbia Review Board",
+      "body_form": "federal-law provincial review board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-002",
+          "source": "https://laws-lois.justice.gc.ca/eng/acts/C-46/section-672.38.html",
+          "locator": "Criminal Code s.672.38(1)–(2)",
+          "source_currency": "current to 2026-09-30 and last amended on 2026-07-18"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "All of the board’s at least five members are appointed by the provincial Lieutenant Governor in Council; subsection (2) treats the board as established under provincial law.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "BC Review Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'BC Review Board'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 1,
+          "authority_label_as_printed": "BC Review Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'BC Review Board'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Criminal Code s.672.38",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "building-code-appeal-board",
+      "name": "Building Code Appeal Board",
+      "body_form": "appeal board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-003",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/15002",
+          "locator": "ss.19(1),20",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The minister appoints the chair, vice chairs and other members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Building Act s.19(1)",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "community-care-and-assisted-living-appeal-board",
+      "name": "Community Care and Assisted Living Appeal Board",
+      "body_form": "appeal board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-004",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/02075_01",
+          "locator": "s.29(1)–(3)",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The Lieutenant Governor in Council appoints the chair and other members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Community Care and Assisted Living Appeal Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Community Care and Assisted Living Appeal Board'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Community Care and Assisted Living Act s.29",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "employment-standards-tribunal",
+      "name": "Employment Standards Tribunal",
+      "body_form": "tribunal with mixed appointment routes",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-005",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00_96113_01",
+          "locator": "ss.102,112,116",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair and the minister appoints the other members; both are qualifying appointors.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Employment Standards Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Employment Standards Tribunal'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Employment Standards Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Employment Standards Tribunal'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Employment Standards Act s.102",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "energy-resource-appeal-tribunal",
+      "name": "Energy Resource Appeal Tribunal",
+      "body_form": "appeal tribunal",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-006",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/08036_01",
+          "locator": "ss.19,72",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair, vice chairs and other tribunal members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Energy Resource Activities Act s.19",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "environmental-appeal-board",
+      "name": "Environmental Appeal Board",
+      "body_form": "appeal board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-007",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03053_00_multi",
+          "locator": "ss.93,100",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair, vice chairs and other board members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Environmental Management Act s.93",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "financial-services-tribunal",
+      "name": "Financial Services Tribunal",
+      "body_form": "appeal tribunal",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-008",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96141_00_multi",
+          "locator": "ss.242,242.1",
+          "source_currency": "This Act is current to October 12, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the tribunal’s chair and other members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Financial Services Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Financial Services Tribunal'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Financial Services Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Financial Services Tribunal'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Financial Institutions Act s.242.1",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "forest-appeals-commission",
+      "name": "Forest Appeals Commission",
+      "body_form": "appeal commission",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-009",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/02069_01",
+          "locator": "ss.140.1,140.3",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair, vice chairs and other commission members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Forest and Range Practices Act s.140.1",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "health-professions-review-board",
+      "name": "Health Professions Review Board",
+      "body_form": "review board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-010",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/22043",
+          "locator": "ss.307–311",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair and the other review-board members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Health Professions Review Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Health Professions Review Board'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 2,
+          "authority_label_as_printed": "Health Professions Review Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.2, row 'Health Professions Review Board'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Health Professions and Occupations Act ss.308–311",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "hospital-appeal-board",
+      "name": "Hospital Appeal Board",
+      "body_form": "appeal board with nominated seats",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-011",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96200_01",
+          "locator": "s.46(1)–(4.1)",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The minister appoints all ten members. Profession-specific nominations do not change the appointing authority.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Hospital Act s.46(4)–(4.1)",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits.",
+      "not_used_as_basis": "Schedule item 26 concerns hospitals and their management boards; it is not substituted for the Hospital Appeal Board’s own item 2(a) appointment basis."
+    },
+    {
+      "id": "mental-health-review-board",
+      "name": "Mental Health Review Board",
+      "body_form": "review board with case panels",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-012",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96288_01",
+          "locator": "ss.21,24.1,25",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The minister appoints the chair and other board members. The chair’s selection of a hearing panel is a separate step.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Mental Health Review Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Mental Health Review Board'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 2,
+          "authority_label_as_printed": "Mental Health Review Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.2, row 'Mental Health Review Board'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Mental Health Act s.24.1",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "passenger-transportation-board",
+      "name": "Passenger Transportation Board",
+      "body_form": "regulatory board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-013",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/04039_01",
+          "locator": "ss.6,7,28",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints all board members, at least three, and designates the chair.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Passenger Transportation Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Passenger Transportation Board'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 2,
+          "authority_label_as_printed": "Passenger Transportation Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.2, row 'Passenger Transportation Board'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Passenger Transportation Act s.6",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "property-assessment-appeal-board",
+      "name": "Property Assessment Appeal Board",
+      "body_form": "appeal board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-014",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96020_01",
+          "locator": "ss.43,50",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints at least six members, including the chair and vice chairs.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Property Assessment Appeal Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Property Assessment Appeal Board'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 2,
+          "authority_label_as_printed": "Property Assessment Appeal Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.2, row 'Property Assessment Appeal Board'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Assessment Act s.43",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "safety-standards-appeal-board",
+      "name": "Safety Standards Appeal Board",
+      "body_form": "appeal board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-015",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03039_01",
+          "locator": "ss.43,51–52",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The minister appoints the chair and other members and designates vice chairs.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Safety Standards Act s.43",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "skilled-trades-bc-appeal-board",
+      "name": "Skilled Trades BC Appeal Board",
+      "body_form": "appeal board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-016",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/22004",
+          "locator": "ss.42–45,54(4)",
+          "source_currency": "This Act is current to October 13, 2026"
+        },
+        {
+          "source_id": "R3T-038",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0650_2022",
+          "locator": "OIC 650/2022, PDF p.1, operative paragraph(a)",
+          "source_currency": null
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair and other board members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Skilled Trades BC Act s.42",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "surface-rights-board",
+      "name": "Surface Rights Board",
+      "body_form": "surface-rights board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-017",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96361_01",
+          "locator": "ss.146–147",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair, vice chair and other members, up to nine in total.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Petroleum and Natural Gas Act s.146",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "bc-ferry-commission",
+      "name": "British Columbia Ferry Commission",
+      "body_form": "statutory commissioner office",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-018",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03014_01",
+          "locator": "ss.35,38",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "BC Ferries Commissioner and deputy commissioners; not B.C. Ferry Authority or BC Ferry Services Inc.",
+      "officeholder_scope_only": true,
+      "statutory_fact": "Cabinet appoints the BC Ferries Commissioner and up to two deputy commissioners. This record represents statutory persons, not the Ferry Authority’s corporate board.",
+      "class_application_inference": "The appointment fact satisfies the person-based limb of Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "expressly_checked_commissioner_is_distinct_from_both_excluded_ferry_corporate_bodies",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Coastal Ferry Act s.35",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "workers-compensation-appeal-tribunal",
+      "name": "Workers' Compensation Appeal Tribunal",
+      "body_form": "appeal tribunal with chair-appointed adjudicators",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-019",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/19001_00_multi",
+          "locator": "ss.278,288–291",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair; the chair appoints vice chairs and extraordinary members after consulting the minister under s.278. Section 286 requires an operational report to the minister, who may specify matters and form.",
+      "class_application_inference": null,
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Workers' Compensation Appeal Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row \"Workers' Compensation Appeal Tribunal\""
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 2,
+          "authority_label_as_printed": "Workers' Compensation Appeal Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.2, row \"Workers' Compensation Appeal Tribunal\""
+        }
+      ],
+      "current_direct_named_coverage_evidence": [
+        {
+          "source_id": "R3T-042",
+          "locator": "Our team: Tribunal Counsel Office paragraph",
+          "statement": "WCAT’s current official description says its Tribunal Counsel Office responds to inquiries or complaints from the public or via the BC Ombudsperson."
+        }
+      ],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "unresolved_current_schedule_limb",
+      "supported_schedule_classes": [],
+      "candidate_schedule_classes": [
+        "2(b)",
+        "2(c)"
+      ],
+      "class_application_is_inference": true,
+      "reason_current_limb_unresolved": "Consultation is not ministerial appointment, and a Cabinet-appointed chair alone does not prove that a majority of tribunal members satisfies Schedule 2(a). Reporting is an additional fact but no unqualified Schedule 2(c) legal conclusion is drawn from it in this bounded review.",
+      "additional_statute_locators": [
+        "Workers Compensation Act ss.278,282,286"
+      ],
+      "next_evidence_needed": "An authoritative statement of the exact Schedule limb. The dated Ombudsperson authority rows and current WCAT complaints description should remain separate positive coverage evidence.",
+      "unresolved_does_not_mean_excluded": true,
+      "exact_limb_proven_by_named_schedule_entry": false
+    },
+    {
+      "id": "employment-and-assistance-appeal-tribunal",
+      "name": "Employment and Assistance Appeal Tribunal",
+      "body_form": "appeal tribunal with mixed appointment routes",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-020",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/02040_01",
+          "locator": "ss.19,22",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints the chair and vice chairs; the minister appoints all other members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Employment and Assistance Appeal Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Employment and Assistance Appeal Tribunal'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Employment and Assistance Appeal Tribunal",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Employment and Assistance Appeal Tribunal'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Employment and Assistance Act s.19",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "bc-farm-industry-review-board",
+      "name": "British Columbia Farm Industry Review Board",
+      "body_form": "review board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-021",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96330_01",
+          "locator": "ss.2–3,8",
+          "source_currency": "This Act is current to October 13, 2026"
+        },
+        {
+          "source_id": "R3T-032",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96131_01",
+          "locator": "ss.1,3,5–6",
+          "source_currency": "This Act is current to October 13, 2026"
+        },
+        {
+          "source_id": "R3T-033",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96372_01",
+          "locator": "ss.20.1,20.3",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints all board members, up to ten.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "BC Farm Industry Review Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'BC Farm Industry Review Board'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 1,
+          "authority_label_as_printed": "BC Farm Industry Review Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'BC Farm Industry Review Board'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Natural Products Marketing (BC) Act s.3",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "liquor-and-cannabis-regulation-branch",
+      "name": "Liquor and Cannabis Regulation Branch",
+      "body_form": "administrative branch exercising statutory general-manager powers",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-022",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/15019",
+          "locator": "ss.3,39",
+          "source_currency": "This Act is current to October 13, 2026"
+        },
+        {
+          "source_id": "R3T-031",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/18029",
+          "locator": "s.4",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "Statutory general manager under the liquor and cannabis legislation; a class match for the person, not independent proof of every unit or contractor represented by the branch label.",
+      "officeholder_scope_only": true,
+      "statutory_fact": "The minister appoints the statutory general manager under the Public Service Act in each Act. This proves a class for the statutory person represented by the branch label.",
+      "class_application_inference": "The appointment fact satisfies the person-based limb of Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Liquor Control and Licensing Act s.3; Cannabis Control and Licensing Act s.4",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "independent-gambling-control-office",
+      "name": "Independent Gambling Control Office",
+      "body_form": "regulatory office headed by a general manager",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-023",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/22029",
+          "locator": "s.31",
+          "source_currency": "This Act is current to October 13, 2026"
+        },
+        {
+          "source_id": "R3T-035",
+          "source": "https://www.igcobc.ca/updates/2026-04-13/launch-independent-gambling-control-office",
+          "locator": "Launch release,13 April 2026, mandate and leadership paragraphs",
+          "source_currency": null
+        }
+      ],
+      "authority_scope": "Statutory general manager and deputy-minister status; not the BCLC board.",
+      "officeholder_scope_only": true,
+      "statutory_fact": "Cabinet designates as general manager a person appointed as a deputy minister under s.12 of the Public Service Act. The general manager is therefore a government public officer; this conclusion concerns the statutory person.",
+      "class_application_inference": "Public Service Act appointment to the identified statutory office supports the person-based public-officer/servant limb in Schedule 2(b).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(b)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Gaming Control Act s.31",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "disciplinary-and-professional-conduct-board",
+      "name": "Disciplinary and Professional Conduct Board",
+      "body_form": "disciplinary board drawn from teachers council",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-024",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/11019_01",
+          "locator": "ss.26,56–57",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The minister appoints all nine board members from the specified Teachers’ Council categories. A member’s underlying elected Council position does not turn their separate disciplinary-board appointment into an election.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Teachers Act s.26",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "commissioner-for-teacher-regulation",
+      "name": "Commissioner for Teacher Regulation",
+      "body_form": "statutory commissioner office",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-024",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/11019_01",
+          "locator": "ss.2,44,47,51,70",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "Commissioner and acting commissioner in that statutory capacity.",
+      "officeholder_scope_only": true,
+      "statutory_fact": "Cabinet appoints the commissioner under the Public Service Act; the minister can designate an acting commissioner. These are qualifying appointments of a statutory person.",
+      "class_application_inference": "The appointment fact satisfies the person-based limb of Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Teachers Act s.2",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "bc-teachers-council",
+      "name": "B.C. Teachers' Council",
+      "body_form": "mixed elected and appointed council",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-024",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/11019_01",
+          "locator": "ss.9–10,18–20,24",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The minister appoints 4 nominated members, 7 other members and 1 non-voting member: 12 of 18 statutory positions. Even excluding the non-voting member, 11 of 17 voting positions are minister-appointed. The five elected members and one First Nations Education Authority appointee remain distinct.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Teachers Act s.9(1), (7)",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits.",
+      "majority_calculation": {
+        "all_positions": 18,
+        "minister_appointed_positions": 12,
+        "voting_positions": 17,
+        "minister_appointed_voting_positions": 11,
+        "based_on": "current statutory composition, not a current name-by-name roster"
+      }
+    },
+    {
+      "id": "health-care-practitioners-special-committee-for-audit-hearings",
+      "name": "Health Care Practitioners Special Committee for Audit Hearings",
+      "body_form": "special committee with Cabinet-specified membership",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-025",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96286_01",
+          "locator": "s.4",
+          "source_currency": "This Act is current to October 13, 2026"
+        },
+        {
+          "source_id": "R3T-036",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0367_2024",
+          "locator": "OIC 367/2024, PDF p.1, effective 30 June 2024",
+          "source_currency": null
+        },
+        {
+          "source_id": "R3T-034",
+          "source": "https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/msp/billing-integrity-program",
+          "locator": "Review Process and Audit Hearings headings",
+          "source_currency": null
+        },
+        {
+          "source_id": "R3T-037",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/426_97",
+          "locator": "s.46(b)",
+          "source_currency": "This consolidation is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet specifies the persons composing a special committee and its chair. The named Audit Hearings committee is identified in the regulation and named Cabinet appointments appear in OIC 367/2024. The committee exercises specified Medical Services Commission powers.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Medicare Protection Act s.4; OIC 367/2024; B.C. Reg.426/97 s.46(b)",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "medical-services-commission",
+      "name": "Medical Services Commission",
+      "body_form": "commission with nominated/representative seats",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-025",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96286_01",
+          "locator": "ss.2,3(1)–(4)",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints all nine members. Professional nominations and joint recommendations are selection inputs, not separate appointment powers. Subsection (2) additionally says the commission reports to the minister.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Medicare Protection Act s.3(1)–(2)",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "patient-care-quality-review-boards",
+      "name": "Patient Care Quality Review Boards",
+      "body_form": "regional family of review boards",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-026",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/08035_01",
+          "locator": "ss.8–9,13–14",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The minister appoints the chair and other members of each review board. This is a family-level statutory conclusion, not a count of currently serving members.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Patient Care Quality Review Board Act ss.8–9",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits.",
+      "not_used_as_basis": "Schedule item 28 covers regional health boards; these separately appointed complaint-review boards are assessed under item 2(a)."
+    },
+    {
+      "id": "emergency-medical-assistants-licensing-board",
+      "name": "Emergency Medical Assistants Licensing Board",
+      "body_form": "licensing board",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-027",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96182_01",
+          "locator": "s.6",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "Cabinet appoints all three members and designates the chair. Prescribed selection of the EMA member is distinct from the final appointment.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Emergency Medical Assistants Licensing Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Emergency Medical Assistants Licensing Board'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Emergency Medical Assistants Licensing Board",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Emergency Medical Assistants Licensing Board'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Emergency Health Services Act s.6",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "health-professions-and-occupations-regulatory-oversight-office",
+      "name": "Health Professions and Occupations Regulatory Oversight Office",
+      "body_form": "government office headed by superintendent",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-010",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/22043",
+          "locator": "ss.435–437",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "Statutory superintendent. The office also contains the discipline tribunal and staff; their separate appointment or delegation routes are not collapsed into a board.",
+      "officeholder_scope_only": true,
+      "statutory_fact": "Cabinet appoints the superintendent under the Public Service Act. The Act expressly establishes the superintendent’s office as an office of government. The class inference here is made for the statutory superintendent, not an imagined corporate board.",
+      "class_application_inference": "The appointment fact satisfies the person-based limb of Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Health Professions and Occupations Act ss.435–437",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "property-assessment-review-panels",
+      "name": "Property Assessment Review Panels",
+      "body_form": "local review-panel family",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-014",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96020_01",
+          "locator": "ss.31–33",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The minister appoints all three members of each panel and designates the chair. This applies to each statutory panel, not to a single province-wide review board.",
+      "class_application_inference": "The statutory composition places all, or the identified numerical majority, of members within the qualifying appointors in Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Assessment Act s.31",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "residential-tenancy-branch",
+      "name": "Residential Tenancy Branch",
+      "body_form": "administrative branch with statutory director",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-028",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/02078_01",
+          "locator": "ss.8–9,58,62",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "Statutory residential tenancy director in that capacity. The proof is not a finding of the appointing official or the branch’s historical ministry parent.",
+      "officeholder_scope_only": true,
+      "statutory_fact": "The statutory director must be appointed in accordance with the Public Service Act. This supports public-servant status for the director. The particular appointing official is not specified by these sections and is not invented.",
+      "class_application_inference": "Public Service Act appointment to the identified statutory office supports the person-based public-officer/servant limb in Schedule 2(b).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(b)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Residential Tenancy Act ss.8–9",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "office-of-the-bc-container-trucking-commissioner",
+      "name": "Office of the BC Container Trucking Commissioner",
+      "body_form": "statutory commissioner office",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-029",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14028_01",
+          "locator": "ss.2,26,29",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "Statutory Container Trucking Commissioner and deputy commissioners.",
+      "officeholder_scope_only": true,
+      "statutory_fact": "Cabinet appoints the commissioner and up to two deputy commissioners; the person-based limb applies without inventing a corporate board.",
+      "class_application_inference": "The appointment fact satisfies the person-based limb of Schedule 2(a).",
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "supported_schedule_class",
+      "supported_schedule_classes": [
+        "2(a)"
+      ],
+      "class_application_is_inference": true,
+      "appointment_fact_locator": "Container Trucking Act s.2",
+      "exact_limb_proven_by_named_schedule_entry": false,
+      "remaining_uncertainty": "No historical first-coverage date is established; the Schedule application remains our documented inference and is subject to case-specific statutory limits."
+    },
+    {
+      "id": "managed-forest-council",
+      "name": "Managed Forest Council",
+      "body_form": "statutory corporation with mixed membership",
+      "checked_at": "2026-10-21",
+      "observed_at": "2026-10-21",
+      "coverage_start": null,
+      "coverage_end": null,
+      "first_coverage_date_proven": false,
+      "historical_backfill_permitted": false,
+      "temporal_scope": "Current statutory class assessment only; historical official observations retain their own fiscal periods.",
+      "evidence_status": "Textual statutory facts are distinguished from the researcher’s application of the Schedule class.",
+      "legal_rule_source": {
+        "source_id": "R3R-001",
+        "locator": "s.1 and Schedule item 2; subject to ss.10–13"
+      },
+      "statutory_evidence": [
+        {
+          "source_id": "R3T-030",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03080_01",
+          "locator": "ss.4–6",
+          "source_currency": "This Act is current to October 13, 2026"
+        }
+      ],
+      "authority_scope": "The named statutory board, commission, tribunal or family of statutory panels/review boards.",
+      "officeholder_scope_only": false,
+      "statutory_fact": "The normal five-member composition is two minister appointees, two owner appointees, and a chair selected by those four. Conditional ministerial fallback appointments are permitted. Sections 10–11 require an annual report to the minister and allow a minister-ordered performance audit.",
+      "class_application_inference": null,
+      "specific_exceptions_reviewed": [
+        {
+          "source_id": "R3R-222",
+          "locator": "Police Act s.72",
+          "result": "not_a_Police_Act_body_or_power_in_the_identified_enabling_provisions",
+          "scope_note": "The exemption concerns the Police Act and its regulations; a case involving additional Police Act powers would require a separate conduct-specific analysis."
+        },
+        {
+          "source_id": "R3R-215",
+          "locator": "Coastal Ferry Act s.75",
+          "result": "does_not_name_this_body",
+          "scope_note": "The excluded persons are B.C. Ferry Authority and the former ferry corporation after conversion into a company; it does not exclude every official created by the Coastal Ferry Act."
+        }
+      ],
+      "expressly_excluded_by_reviewed_rules": false,
+      "dated_official_authority_observations": [
+        {
+          "source_id": "R3T-039",
+          "fiscal_year": "2019/20",
+          "pdf_page": 1,
+          "authority_label_as_printed": "Managed Forest Council",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.1, row 'Managed Forest Council'"
+        },
+        {
+          "source_id": "R3T-040",
+          "fiscal_year": "2020/21",
+          "pdf_page": 2,
+          "authority_label_as_printed": "Managed Forest Council",
+          "source_group_heading": "Commissions and Boards",
+          "locator": "PDF p.2, row 'Managed Forest Council'"
+        }
+      ],
+      "current_direct_named_coverage_evidence": [],
+      "counts_as_managerial_accountability_path": false,
+      "proposed_relationship_type": "subject_to_administrative_fairness_scrutiny",
+      "case_specific_jurisdiction_decided": false,
+      "classification": "unresolved_current_schedule_limb",
+      "supported_schedule_classes": [],
+      "candidate_schedule_classes": [
+        "2(c)"
+      ],
+      "class_application_is_inference": true,
+      "reason_current_limb_unresolved": "Two of five is not a majority. No evidence shows that fallback powers have produced a current minister-appointed majority. The council is a statutory corporation, but that does not prove government ownership; staff are expressly outside the Public Service Act under s.7(3). Annual reporting and audit powers are not silently converted into a conclusive Schedule 2(c) holding.",
+      "additional_statute_locators": [
+        "Private Managed Forest Land Act ss.4,6–7,10–11"
+      ],
+      "next_evidence_needed": "An authoritative current jurisdiction statement identifying the applicable class, or a current appointment/ownership instrument supporting another class. Official authority statistics prove named jurisdiction observations for the two historical reporting periods, independently of the unresolved current class limb.",
+      "unresolved_does_not_mean_excluded": true,
+      "exact_limb_proven_by_named_schedule_entry": false
+    }
+  ]
+}

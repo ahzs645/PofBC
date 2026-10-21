@@ -25,6 +25,9 @@ evidence rules:
 npm run research:merge -- research/reviews/round-4-2026-10-21/integration/branches-sub-agency-batch.json
 npm run research:merge -- research/reviews/round-4-2026-10-21/integration/health-sub-agency-batch.json
 npm run research:merge -- research/reviews/round-4-2026-10-21/integration/carried-sub-agency-batch.json
+# the earlier branch batch, adapted so it keeps the newer review metadata on 35 records
+# (research/reviews/integration-review-2026-10-21/README.md):
+npm run research:merge -- research/reviews/integration-review-2026-10-21/integration/prior-branch-preserving-batch.json
 ```
 
 Bodies can now say what their end was (`endedMeaning`, beside `establishedMeaning`), and the panel

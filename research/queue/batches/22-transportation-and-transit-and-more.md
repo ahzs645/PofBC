@@ -33,9 +33,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** B.C.'s free inland ferry system, operated and maintained by the ministry.
 - **Held:** no start date
-- **Review:** not yet researched
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Inland Ferries"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 2. Commercial Vehicle Safety and Enforcement (CVSE)
 
@@ -94,25 +97,33 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ### 6. BCHPA Captive Insurance Company Ltd.
 
-- **id** `bchpa-captive-insurance` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `bchpa-captive-insurance` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Hydro and Power Authority.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf
 - **What it does:** Active BC Hydro subsidiary that procures insurance products and services on behalf of BC Hydro.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020; parents on file: BC Hydro and Power Authority (seen 2020)
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BCHPA Captive Insurance Company Ltd."
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 7. Tongass Power and Light Company
 
-- **id** `tongass-power-and-light` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `tongass-power-and-light` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Hydro and Power Authority.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf
 - **What it does:** Active BC Hydro subsidiary that supplies electricity to Hyder, Alaska from Stewart, B.C.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020; parents on file: BC Hydro and Power Authority (seen 2020)
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Tongass Power and Light Company"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 8. Columbia Hydro Constructors Ltd.
 
@@ -146,56 +157,72 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under British Columbia Hydro and Power Authority. Official site: https://www.powertechlabs.com
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf
 - **What it does:** Wholly owned BC Hydro subsidiary providing specialized testing and technical expertise to the energy sector, including hydrogen refuelling technology.
-- **Held:** began 1988-09-29 (Incorporation of the company registered as BC0352143, under the numbered name 352143 B.C. LTD.; it took the name Powertech Labs Inc. on 6 January 1989. A legal start, not the start of the laboratory's work); names on file: 352143 B.C. LTD. (1988-09-29–1989-01-06), Powertech Labs Inc. (1989-01-06–); parents on file: BC Hydro (seen 2009-09-09), BC Hydro (seen 2026-09-26), BC Hydro (seen 2026-09-30), BC Hydro and Power Authority (seen 2020)
-- **Events on file:** 1979 function origin claim; 1988-09-29 established; 1989 operational history claim; 1989-01-06 renamed
+- **Held:** began 1988-09-29 (Incorporation of the company registered as BC0352143, under the numbered name 352143 B.C. LTD.; it took the name Powertech Labs Inc. on 6 January 1989. A legal start, not the start of the laboratory's work); names on file: 352143 B.C. LTD. (1988-09-29–1989-01-06), Powertech Labs Inc. (1989-01-06–), 352143 B.C. LTD. (1988-09-29–1989-01-06), POWERTECH LABS INC. (1989-01-06–); parents on file: BC Hydro (seen 2009-09-09), BC Hydro (seen 2026-09-26), BC Hydro (seen 2026-09-30), BC Hydro and Power Authority (seen 2020)
+- **Events on file:** 1979 function origin claim; 1979 function origin; 1988-09-29 established; 1988-09-29 incorporated; 1989 operational history claim; 1989-01-06 renamed; 1989-01-06 renamed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Powertech Labs Inc.", "Powertech", "352143 B.C. LTD."
+- **Search for:** "Powertech Labs Inc.", "Powertech", "352143 B.C. LTD.", "352143 B.C. LTD.", "POWERTECH LABS INC."
 - **Questions:**
   - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 11. B.C. Lottotech International Inc. (Lottotech)
 
-- **id** `bc-lottotech-international` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `bc-lottotech-international` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Lottery Corporation.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bclc.pdf
 - **What it does:** Wholly owned BCLC subsidiary that buys capital assets and leases them to BCLC.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020; parents on file: BC Lottery Corporation (seen 2020)
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "B.C. Lottotech International Inc.", "Lottotech"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 12. PlayNow
 
-- **id** `playnow` · program · **P1 — disappears before today, nothing on file**
+- **id** `playnow` · program · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Lottery Corporation. Official site: https://www.playnow.com
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bclc.pdf
 - **What it does:** BCLC's regulated online gambling platform and the only legal option for online gambling in British Columbia.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "PlayNow"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 13. BC Place
 
-- **id** `bc-place` · division · **P1 — disappears before today, nothing on file**
+- **id** `bc-place` · division · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Pavilion Corporation. Official site: https://www.bcplace.com
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/pavco.pdf
 - **What it does:** Stadium operated by B.C. Pavilion Corporation.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2010
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Place"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 14. Vancouver Convention Centre
 
-- **id** `vancouver-convention-centre` · division · **P1 — disappears before today, nothing on file**
+- **id** `vancouver-convention-centre` · division · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Pavilion Corporation. Official site: https://www.vancouverconventioncentre.com
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/pavco.pdf
 - **What it does:** Convention facility operated by B.C. Pavilion Corporation.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2006
+- **Events on file:** 2006 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Vancouver Convention Centre"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ## Hand back
 

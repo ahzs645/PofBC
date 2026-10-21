@@ -1,0 +1,239 @@
+{
+  "schema": "pofbc-prior-batch-semantic-review/1",
+  "reviewed_on": "2026-10-21",
+  "reviewed_head": "0dbdb18cfebfb27e5529ce5940850e96eb9a995c",
+  "repo_modified": false,
+  "verdict": "Mechanically valid additive evidence, suitable for the derived metadata-preserving import; not an unconditional endorsement of all graph identities, historical continuity or accountability paths.",
+  "original_batch": "research/reviews/round-4-2026-10-21/branches/prior/handback-importable.json",
+  "derived_batch": "/workspace/scratch/a5ca1a8fd90b/round5/audit/prior-branch-preserving-batch.json",
+  "preparation_manifest": "/workspace/scratch/a5ca1a8fd90b/round5/audit/prior-branch-preserving-preparation.json",
+  "counts": {
+    "records": 144,
+    "sources": 118,
+    "incoming_establishment_claims": 5,
+    "new_establishment_claims": 3,
+    "parent_observations": 47,
+    "part_of_observations": 41,
+    "subsidiary_of_observations": 6,
+    "name_rows": 12,
+    "name_observations": 10,
+    "name_periods": 2,
+    "new_end_claims": 0,
+    "succession_relations": 0,
+    "competing_date_claims": 0,
+    "existing_review_metadata_adjusted": 35
+  },
+  "new_starts": [
+    {
+      "id": "connected-services-bc",
+      "date": "2025-10-01",
+      "precision": "day",
+      "meaning": "organizational beginning",
+      "source_id": "R3F-EXT-015",
+      "verified_local_locator": "round4/prior/evidence/round3/branches/raw/extras/R3F-EXT-015.txt:97-98",
+      "additional_limit": "2025 integration of other units is described in the source but no child-parent intervals are imported."
+    },
+    {
+      "id": "compliance-and-enforcement-collaborative",
+      "date": "2012",
+      "precision": "year",
+      "meaning": "inter-agency working group established",
+      "source_id": "R3F-EXT-023",
+      "verified_local_locator": "round4/prior/evidence/round3/branches/raw/extras/R3F-EXT-023.txt:40-41,90-91",
+      "additional_limit": "Collaborative and Secretariat are distinct; queue kind=office needs review."
+    },
+    {
+      "id": "bc-drought-information-portal",
+      "date": "2015",
+      "precision": "year",
+      "meaning": "portal created; source timeline narrows to spring",
+      "source_id": "R3F-EXT-049",
+      "verified_local_locator": "round4/prior/evidence/round3/branches/raw/extras/R3F-EXT-049.txt:521-527,788-792",
+      "additional_limit": "A web portal/program, not a corporation or newly constituted ministry branch."
+    }
+  ],
+  "existing_settled_dates_preserved": [
+    {
+      "id": "environmental-appeal-board",
+      "date": "1982-01-01"
+    },
+    {
+      "id": "powertech-labs",
+      "date": "1988-09-29"
+    }
+  ],
+  "original_merge_metadata_defects": {
+    "unresolved_fields_changed": 35,
+    "material_examples": [
+      {
+        "ids": [
+          "powertech-labs"
+        ],
+        "lost": [
+          "operational_start",
+          "relations"
+        ]
+      },
+      {
+        "ids": [
+          "crown-agencies-secretariat",
+          "internal-audit-and-advisory-services",
+          "office-of-the-comptroller-general",
+          "treasury-board-staff"
+        ],
+        "lost": [
+          "identity_continuity",
+          "pre_2002_history",
+          "relations"
+        ]
+      },
+      {
+        "ids": [
+          "buy-bc"
+        ],
+        "lost": [
+          "contemporary_1993_launch_document",
+          "administration_2002_2018",
+          "parent_before_2023"
+        ]
+      },
+      {
+        "ids": [
+          "bc-parks"
+        ],
+        "lost": [
+          "parks_branch_1957_instrument",
+          "parent_after_1957"
+        ]
+      },
+      {
+        "ids": [
+          "conservation-officer-service"
+        ],
+        "lost": [
+          "separation_instrument_1980",
+          "parent_history"
+        ]
+      }
+    ],
+    "existing_evidence_status_changes": 0,
+    "existing_established_date_reversals": 0,
+    "replay_scope_changes": 35,
+    "replay_by_changes": 34,
+    "code_locations": [
+      "scripts/merge-research.mjs:146",
+      "scripts/merge-research.mjs:151-154"
+    ]
+  },
+  "derived_verification": {
+    "existing_record_preservation_violations": [],
+    "established_dates_unchanged_for_existing_records": true,
+    "evidence_status_unchanged_for_existing_records": true,
+    "existing_unresolved_fields_preserved": true,
+    "existing_scope_by_preserved": true,
+    "existing_full_history_complete_preserved": true,
+    "first_merge_log_lines": 300,
+    "second_merge_log": [],
+    "research_byte_identical_after_in_memory_replay": true,
+    "source_catalogue_byte_identical_after_in_memory_replay": true,
+    "first_result_research_sha256": "0afaee85ba108b23e223a526898a412079dff393d88bc49338422a1c9d227bdb",
+    "first_result_catalogue_sha256": "d3c83a1a9b52921204f698434e67e7fcb5008cdfc64b57d13005cb8dd8b82953"
+  },
+  "semantic_gates": [
+    {
+      "id": "PB1",
+      "severity": "decision_required_for_graph_identity",
+      "subject": "compliance-and-enforcement-collaborative",
+      "finding": "The 2012 start belongs to an inter-agency working group/community of practice, distinct from its supporting permanent C&E Secretariat. Existing queue kind=office and ministry placement are inherited; the batch supplies no correction.",
+      "action": "Accept the 2012 historical fact for the Collaborative. Decide/correct entity kind and supporting-secretariat relationship before treating it as a ministry office or dating the Secretariat from 2012.",
+      "source_id": "R3F-EXT-023",
+      "source": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/compliance-enforcement-collaborative/terms-of-reference",
+      "locator": "Introduction paragraphs 2-3; Location"
+    },
+    {
+      "id": "PB2",
+      "severity": "existing_renderer_gate",
+      "subject": "six subsidiary observations",
+      "finding": "Six subsidiary_of observations remain correctly typed in research but current snapshot converts every parent relation to part and permits it in pathToPeople.",
+      "action": "Preserve ownership edges; do not imply political accountability from them. No claim of fully correct accountability graph follows from a clean import.",
+      "subjects": [
+        "bchpa-captive-insurance",
+        "tongass-power-and-light",
+        "bc-lottotech-international",
+        "fii-consulting-shanghai",
+        "forestry-innovation-consulting-vietnam",
+        "bcr-properties"
+      ],
+      "code": "src/government/snapshot.js:570-572,594,609"
+    },
+    {
+      "id": "PB3",
+      "severity": "qualification_required",
+      "subject": "observations versus periods",
+      "finding": "All 47 incoming parent rows are observation_only. First observations do not prove continuous existence, all intermediate years, a foundation date or a parent move day.",
+      "action": "Describe generated gains as dated sightings and three additional starts. Preserve uncertainty and current metadata, especially Finance identity_continuity questions. Do not describe F2 or full lifecycles as complete.",
+      "code": "src/government/snapshot.js:477-478,493-513"
+    },
+    {
+      "id": "PB4",
+      "severity": "qualification_required",
+      "subject": "retrospective and original-source distinction",
+      "finding": "Three new start claims have been re-read in retained official sources; 2012 Collaborative and 2015 Portal are retrospective year-level claims, while Connected Services dates an organizational beginning to 2025-10-01. No new corporate or statutory formation is asserted for a web portal/working group.",
+      "action": "Keep original meanings and precision; do not relabel all three as legal incorporation dates."
+    }
+  ],
+  "field_gate_audit": {
+    "incoming_top_level_identity_review_required_count": 0,
+    "incoming_top_level_import_status_count": 0,
+    "incoming_top_level_atlas_import_count": 0,
+    "incoming_record_field_keys": [
+      "id",
+      "name",
+      "established",
+      "first_observed",
+      "names",
+      "parents",
+      "relations",
+      "research_events",
+      "date_claims",
+      "legal_basis",
+      "evidence_status",
+      "note",
+      "review"
+    ],
+    "existing_identity_flagged_records_in_batch": [],
+    "note": "No explicit top-level import/identity flag in these 144 records is silently lost. Important unresolved_fields are preserved by this derivation. Entity-kind distinctions are carried in claim meanings; the old queue kind is not semantically validated by merge."
+  },
+  "existing_identity_qualified_checks_not_promoted": [
+    "buy-bc",
+    "bc-training-and-education-savings-program",
+    "disaster-financial-assistance",
+    "office-of-the-comptroller-general",
+    "provincial-treasury",
+    "community-capital-development",
+    "infrastructure-policy-and-partnerships",
+    "community-safety-and-victim-services",
+    "bc-arts-and-culture-endowment"
+  ],
+  "metric_interpretation": {
+    "denominator": 251,
+    "baseline": {
+      "established": 48,
+      "first_seen_only": 65,
+      "undated": 138
+    },
+    "root_isolated_simulation": {
+      "established": 51,
+      "first_seen_only": 176,
+      "undated": 24
+    },
+    "meaning": "Three additional starts and 111 formerly undated entries acquiring an observation; not 114 new incorporations, full lifecycles, or completion of dated parent history. Figures are root generated simulation, not queue-only 238-item counts."
+  },
+  "limits": [
+    "No complete re-audit of all 134 original sighted bodies",
+    "Fresh isolated derived-batch build/tests performed by root, not this sub-review",
+    "No repo mutation",
+    "No unrecorded type corrections or inferred dates added to the derived input"
+  ],
+  "report_file": "/workspace/scratch/a5ca1a8fd90b/round5/audit/prior-batch-review.md"
+}

@@ -1,0 +1,94 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> pofbc-logo@0.1.0 build:government
+> npm run build:government-history && npm run build:government-events && npm run build:government-atlas && npm run build:government-research && npm run build:research-brief && npm run build:research-queue
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> pofbc-logo@0.1.0 build:government-history
+> node scripts/build-government-history.mjs
+
+1069/1236 minister terms matched to 242 of 242 episodes
+224 bodies, 14 offices, 1057 sources
+251 sub-agencies from 3 files (227 with reviewed history, 12 gone); 56 typed relations for BC Rail and the WCB
+sub-agency merge: employment-standards-tribunal: parent ministry-of-labour-2017 kept, ministry-of-attorney-general-2017 in sub-tribunals.json set aside
+533 responsible-ministry periods from 4 follow-up files; 218 bodies have at least one
+Unmatched portfolios (usually ones that headed no ministry of their own):
+  43× President of the Council
+  17× Minister of Education
+  14× Minister of Mines
+  12× Minister Responsible for Seniors
+  11× Deputy Premier
+  4× President of the Executive Council
+  4× Minister Responsible for Youth
+  4× Minister Responsible for Northern Development
+  4× Minister Responsible for the Public Service
+  3× Minister of Education and Immigration
+  3× Minister Responsible for Multiculturalism and Human Rights
+  3× Minister Responsible for Multiculturalism
+  2× Minister Responsible for Sports and Commonwealth Games
+  2× Minister Responsible for Sports
+  2× Minister Responsible for Multiculturalism, Human Rights and Immigration
+  2× Minister of Intergovernmental Relations
+  2× Minister Responsible for the Insurance Corporation of British Columbia
+  2× Minister Responsible for Human Rights
+  2× Minister Responsible for Rural Development
+  2× Minister Responsible for Asia-Pacific Initiative
+  2× Minister Responsible for Deregulation
+  2× Minister Responsible for Early Learning and Literacy
+  2× Minister Responsible for Public Affairs Bureau
+  1× Colonial Secretary
+  1× Minister Responsible for Science and Technology
+  1× Minister Responsible for Families
+  1× Minister Responsible for Multiculturalism and Immigration
+  1× Minister Responsible for Constitutional Affairs
+  1× Minister Responsible for Culture
+  1× Minister Responsible for Intergovernmental Relations
+  1× Minister Responsible for Volunteers and the Community Services Sector
+  1× Minister Responsible for British Columbia Ferry Corporation
+  1× Minister of Community Development, Co-operatives and Volunteers
+  1× Minister Responsible for Housing
+  1× Minister Responsible for Ferries
+  1× Minister Responsible for Treaty Negotiations
+  1× Minister Responsible for Olympics
+  1× Minister Responsible for Research and Technology
+  1× Minister Responsible for Seniors' and Women's Issues
+  1× Minister Responsible for Water Stewardship and Sustainable Communities
+  1× Minister Responsible for Climate Action
+  1× Minister Responsible for Child Care
+  1× Minister Responsible for Integrated Land Management Bureau
+  1× Minister Responsible for Intergovernmental Relations Secretariat
+  1× Minister Responsible for Small Business
+  1× Minister Responsible for Labour
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> pofbc-logo@0.1.0 build:government-events
+> node scripts/build-government-events.mjs
+
+890 events (9 research files, 335 from the sub-agency review), 500 sources
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> pofbc-logo@0.1.0 build:government-atlas
+> node scripts/build-government-atlas.mjs
+
+32 Lieutenant Governors and administrators
+758/831 staffing figures matched to 119 ministries and bodies
+unmatched staffing rows: 35× Officers of the Legislature; 35× Other Appropriations; 1× Ministry of Public Safety and Solicitor General; 1× Ministry of Advanced Education, Skills and Training; 1× Ministry of Advanced Education and Skills Training
+93 seats in the 43rd Parliament
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> pofbc-logo@0.1.0 build:government-research
+> node scripts/build-government-research.mjs
+
+1 historical censuses, 160 roster occurrences
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> pofbc-logo@0.1.0 build:research-brief
+> node scripts/build-research-brief.mjs
+
+ok 49 178 12 37
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> pofbc-logo@0.1.0 build:research-queue
+> node scripts/build-research-queue.mjs
+

@@ -29,49 +29,50 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ### 1. FII Consulting (Shanghai) Co. Ltd.
 
-- **id** `fii-consulting-shanghai` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `fii-consulting-shanghai` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under Forestry Innovation Investment Ltd..
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/fii.pdf
 - **What it does:** Wholly owned FII subsidiary that develops the Chinese market for B.C. wood products.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020; parents on file: Forestry Innovation Investment Ltd. (seen 2020)
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "FII Consulting (Shanghai) Co. Ltd."
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 2. FII Consulting India Private Limited
 
-- **id** `fii-consulting-india` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `fii-consulting-india` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under Forestry Innovation Investment Ltd..
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/fii.pdf
 - **What it does:** FII subsidiary that develops the Indian market for B.C. forest products.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "FII Consulting India Private Limited"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 3. Forestry Innovation Consulting (Vietnam) Ltd.
 
-- **id** `forestry-innovation-consulting-vietnam` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `forestry-innovation-consulting-vietnam` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under Forestry Innovation Investment Ltd..
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/fii.pdf
 - **What it does:** Wholly owned FII subsidiary that develops the Vietnamese market for B.C. forest products.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2025; parents on file: Forestry Innovation Investment Ltd. (seen 2025)
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Forestry Innovation Consulting (Vietnam) Ltd."
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
-### 4. Real Property Division
-
-- **id** `real-property-division` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Infrastructure. Official site: https://www2.gov.bc.ca/gov/content/governments/services-for-government/real-estate-space
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/inf.pdf
-- **What it does:** Manages the Province's office and special-purpose real estate portfolio, including leasing and workplace services.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Real Property Division"
-- **Questions:** A, B and C, as above.
-
-### 5. Community Capital Development
+### 4. Community Capital Development
 
 - **id** `community-capital-development` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Infrastructure.
@@ -86,7 +87,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 6. Policy and Partnerships
+### 5. Policy and Partnerships
 
 - **id** `infrastructure-policy-and-partnerships` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Infrastructure.
@@ -101,16 +102,35 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
+### 6. Real Property Division
+
+- **id** `real-property-division` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Infrastructure. Official site: https://www2.gov.bc.ca/gov/content/governments/services-for-government/real-estate-space
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/inf.pdf
+- **What it does:** Manages the Province's office and special-purpose real estate portfolio, including leasing and workplace services.
+- **Held:** no start date; first seen 2015; parents on file: Ministry of Technology, Innovation and Citizens’ Services (seen 2015)
+- **Events on file:** 2015 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Real Property Division"
+- **Questions:**
+  - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
 ### 7. Employers' Advisers Office (EAO)
 
-- **id** `employers-advisers-office` · office · **P1 — disappears before today, nothing on file**
+- **id** `employers-advisers-office` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Labour. Official site: https://www2.gov.bc.ca/gov/content/employment-business/employers/employers-advisers-office
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/lbr.pdf
 - **What it does:** Free advice, representation and education for employers on workers' compensation and occupational health and safety.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2002; parents on file: Ministry of Skills Development and Labour (seen 2002)
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Employers' Advisers Office", "EAO"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 8. Employment Standards Branch
 
@@ -118,13 +138,13 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Labour. Official site: https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/lbr.pdf
 - **What it does:** Administers the Employment Standards Act and Regulation, which set minimum wages and working conditions.
-- **Held:** no start date
-- **Events on file:** 1980-08-22 legislation assented; 1995-11-01 legislation in force
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2002; parents on file: Ministry of Skills Development and Labour (seen 2002)
+- **Events on file:** 1980-08-22 legislation assented; 1995-11-01 legislation in force; 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Employment Standards Branch"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 9. Workers' Advisers Office (WAO)
@@ -133,13 +153,13 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Labour. Official site: https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/personal-injury-and-workplace-safety
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/lbr.pdf
 - **What it does:** Free advice and assistance for workers and dependants in disputes with WorkSafeBC decisions.
-- **Held:** no start date
-- **Events on file:** 1980-10-02 legal basis observed; 2026-07-03 legal basis observed
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2002
+- **Events on file:** 1980-10-02 legal basis observed; 2002 name first observed; 2026-07-03 legal basis observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Workers' Advisers Office", "WAO"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 10. Employment Standards Tribunal (EST)
@@ -252,31 +272,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "real-property-division",
-      "name": "Real Property Division",
-      "kind": "division",
-      "parent_today": "ministry-of-infrastructure-2024",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 21",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "community-capital-development",
       "name": "Community Capital Development",
       "kind": "division",
@@ -304,6 +299,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "infrastructure-policy-and-partnerships",
       "name": "Policy and Partnerships",
+      "kind": "division",
+      "parent_today": "ministry-of-infrastructure-2024",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 21",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "real-property-division",
+      "name": "Real Property Division",
       "kind": "division",
       "parent_today": "ministry-of-infrastructure-2024",
       "established": null,

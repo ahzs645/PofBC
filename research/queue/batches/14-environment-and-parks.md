@@ -24,67 +24,79 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ## The bodies (7)
 
-### 1. Park Enhancement Fund
-
-- **id** `park-enhancement-fund` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Environment and Parks.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Special account that funds improvements in B.C. parks.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Park Enhancement Fund"
-- **Questions:** A, B and C, as above.
-
-### 2. Recreation Sites and Trails BC (RSTBC)
-
-- **id** `recreation-sites-and-trails-bc` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Environment and Parks. Official site: https://www2.gov.bc.ca/gov/content/sports-culture/recreation/camping-hiking/sites-trails
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/env.pdf
-- **What it does:** Develops, maintains and manages a province-wide network of recreation sites and trails.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Recreation Sites and Trails BC", "RSTBC"
-- **Questions:** A, B and C, as above.
-
-### 3. Report All Poachers and Polluters (RAPP)
-
-- **id** `report-all-poachers-and-polluters` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Environment and Parks. Official site: https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp
-- **Collected from:** https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp
-- **What it does:** Toll-free tip line and web service for reporting known or suspected violations of fisheries, wildlife or environmental protection laws.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Report All Poachers and Polluters", "RAPP"
-- **Questions:** A, B and C, as above.
-
-### 4. BC Parks
+### 1. BC Parks
 
 - **id** `bc-parks` · agency · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Environment and Parks. Official site: https://bcparks.ca/
 - **Collected from:** https://bcparks.ca/about/
 - **What it does:** Manages B.C.'s provincial parks and protected areas.
 - **Held:** no start date; first seen 1957-04-01; names on file: BC Parks (seen 2015), BC Parks (seen 2020), Provincial Parks Branch (1957-04-01–); parents on file: Department of Recreation and Conservation (1957-04-01–)
-- **Events on file:** 1911-03-01 function milestone; 1913 function milestone; 1939 unit established; 1939 functions transferred; 1948 unit established; 1948 retrospective claim; 1948-05 legal name change; 1949 legal name change; 1957 functions transferred; 1957 organizational milestone; 1957-03-28 reorganization; 1957-04-01 administrative transfer and rename; 1957-04-01 name first observed; 1965 legislation enacted; 1978-12-05 amalgamation; 1979-01 legal name change; 1979-05 legal name change; 1991 unit established; 1995 legislation enacted; 2002 unit established; 2010 legal name change
+- **Events on file:** 1911-03-01 function milestone; 1913 function milestone; 1939 unit established; 1939 functions transferred; 1948 unit established; 1948 retrospective claim; 1948-05 legal name change; 1949 legal name change; 1957 functions transferred; 1957 organizational milestone; 1957 retrospective claim; 1957-03-28 reorganization; 1957-03-28 royal assent; 1957-04-01 administrative transfer and rename; 1957-04-01 name first observed; 1965 legislation enacted; 1965-03-26 royal assent; 1978-12-05 amalgamation; 1979-01 legal name change; 1979-05 legal name change; 1991 unit established; 1995 legislation enacted; 2002 unit established; 2010 legal name change
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Parks", "Provincial Parks Branch"
 - **Questions:**
   - A. It is already seen in 1957-04-01. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
-  - B. Start: 21 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - B. Start: 24 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 5. Conservation Officer Service (COS)
+### 2. Conservation Officer Service (COS)
 
 - **id** `conservation-officer-service` · agency · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Environment and Parks. Official site: https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service
 - **Collected from:** https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service
 - **What it does:** Public safety provider focused on natural resource law enforcement and on preventing and responding to human-wildlife conflicts.
-- **Held:** no start date; first seen 1980-09-18; names on file: Conservation Officer Service (seen 2015), Conservation Officer Service (seen 2020); parents on file: Ministry of Environment (seen 1980-09-18), Ministry of Environment (seen 1981)
-- **Events on file:** 1905 function origin; 1909 functions transferred; 1918 reorganization; 1926 unit established; 1929 reorganization; 1934 unit established; 1957 reorganization; 1957-04-01 administrative transfer and rename; 1966 legal name change; 1980 unit established; 1980 reorganization observed; 1980-09-18 name first observed; 1988 reorganization; 1990 legal name change; 1994 amalgamation; 2002 legal status change; 2004-02-20 symbol granted; 2015-11-04 retrospective origin claim
+- **Held:** no start date; first seen 1980-09-18; names on file: Conservation Officer Service (seen 2015), Conservation Officer Service (seen 2020); parents on file: Ministry of Environment (seen 1980-09-18), Ministry of Environment (seen 1981), Compliance Division, Ministry of Environment (seen 2006)
+- **Events on file:** 1905 function origin; 1905-04-08 royal assent; 1905-07-01 predecessor organized; 1909 functions transferred; 1918 reorganization; 1926 unit established; 1929 reorganization; 1934 unit established; 1957 reorganization; 1957-04-01 administrative transfer and rename; 1961-03-27 royal assent; 1966 legal name change; 1980 unit established; 1980 reorganization observed; 1980 retrospective claim; 1980-09-18 name first observed; 1988 reorganization; 1990 legal name change; 1994 amalgamation; 2002 legal status change; 2002-05-09 statutory establishment; 2004-02-20 symbol granted; 2015-11-04 retrospective origin claim
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Conservation Officer Service", "COS"
 - **Questions:**
   - A. It is already seen in 1980-09-18. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
-  - B. Start: 18 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - B. Start: 23 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 3. Park Enhancement Fund
+
+- **id** `park-enhancement-fund` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Environment and Parks.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Special account that funds improvements in B.C. parks.
+- **Held:** no start date; first seen 2010
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Park Enhancement Fund"
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 4. Recreation Sites and Trails BC (RSTBC)
+
+- **id** `recreation-sites-and-trails-bc` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Environment and Parks. Official site: https://www2.gov.bc.ca/gov/content/sports-culture/recreation/camping-hiking/sites-trails
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/env.pdf
+- **What it does:** Develops, maintains and manages a province-wide network of recreation sites and trails.
+- **Held:** no start date; first seen 2010
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Recreation Sites and Trails BC", "RSTBC"
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 5. Report All Poachers and Polluters (RAPP)
+
+- **id** `report-all-poachers-and-polluters` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Environment and Parks. Official site: https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp
+- **Collected from:** https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp
+- **What it does:** Toll-free tip line and web service for reporting known or suspected violations of fisheries, wildlife or environmental protection laws.
+- **Held:** no start date; first seen 2005; names on file: Report All Poachers and Polluters (seen 2006), Report All Poachers and Polluters (seen 2005)
+- **Events on file:** 2005 name first observed; 2006-03 communications rollout
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Report All Poachers and Polluters", "RAPP"
+- **Questions:**
+  - A. It is already seen in 2005. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 6. Sustainable Environment Fund
@@ -123,6 +135,56 @@ Return **one JSON object for the batch, with one record per body**, in the shape
 {
   "batch": "14",
   "records": [
+    {
+      "id": "bc-parks",
+      "name": "BC Parks",
+      "kind": "agency",
+      "parent_today": "ministry-of-environment-and-parks-2024",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 14",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "conservation-officer-service",
+      "name": "Conservation Officer Service",
+      "kind": "agency",
+      "parent_today": "ministry-of-environment-and-parks-2024",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 14",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
     {
       "id": "park-enhancement-fund",
       "name": "Park Enhancement Fund",
@@ -177,56 +239,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "report-all-poachers-and-polluters",
       "name": "Report All Poachers and Polluters",
       "kind": "program",
-      "parent_today": "ministry-of-environment-and-parks-2024",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 14",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "bc-parks",
-      "name": "BC Parks",
-      "kind": "agency",
-      "parent_today": "ministry-of-environment-and-parks-2024",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 14",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "conservation-officer-service",
-      "name": "Conservation Officer Service",
-      "kind": "agency",
       "parent_today": "ministry-of-environment-and-parks-2024",
       "established": null,
       "first_observed": null,

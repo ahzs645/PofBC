@@ -37,47 +37,63 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ### 2. AgriService BC
 
-- **id** `agriservice-bc` · office · **P1 — disappears before today, nothing on file**
+- **id** `agriservice-bc` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Agriculture and Food. Official site: https://www2.gov.bc.ca/gov/content/industry/agriculture-seafood/agriservice-bc
 - **Collected from:** https://www2.gov.bc.ca/gov/content/industry/agriculture-seafood/agriservice-bc
 - **What it does:** Point of contact for information on provincial programs, resources and services for agriculture, aquaculture, fisheries, seafood and food-processing businesses.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2015-08-13
+- **Events on file:** 2015-08-13 public launch; 2015-08-13 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "AgriService BC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2015-08-13. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 3. Animal Health Centre
 
-- **id** `animal-health-centre` · office · **P1 — disappears before today, nothing on file**
+- **id** `animal-health-centre` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Agriculture and Food. Official site: https://www2.gov.bc.ca/gov/content/industry/agriculture-seafood/animals-and-crops/animal-health/animal-health-centre
 - **Collected from:** https://www2.gov.bc.ca/gov/content/industry/agriculture-seafood/animals-and-crops/animal-health/animal-health-centre
 - **What it does:** The Province's animal health diagnostic laboratory, providing pathology, bacteriology, virology, toxicology and other testing for animals in B.C.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2010
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Animal Health Centre"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 4. Feed BC
 
-- **id** `feed-bc` · program · **P1 — disappears before today, nothing on file**
+- **id** `feed-bc` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Agriculture and Food. Official site: https://www2.gov.bc.ca/gov/content/industry/agriculture-seafood/growbc-feedbc-buybc/feed-bc-and-the-bc-food-hub-network
 - **Collected from:** https://www2.gov.bc.ca/gov/content/industry/agriculture-seafood/growbc-feedbc-buybc/feed-bc-and-the-bc-food-hub-network
 - **What it does:** Works with government and industry partners to bring more B.C. food into B.C. government facilities such as hospitals and post-secondary institutions.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2018-06-22
+- **Events on file:** 2018-06-22 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Feed BC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2018-06-22. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 5. Liquor and Cannabis Regulation Branch (LCRB)
 
-- **id** `liquor-and-cannabis-regulation-branch` · division · **P1 — disappears before today, nothing on file**
+- **id** `liquor-and-cannabis-regulation-branch` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Agriculture and Food. Official site: https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/af.pdf
 - **What it does:** Regulates and licenses the provincial liquor and cannabis sectors under the Liquor Control and Licensing Act and the Cannabis Control and Licensing Act.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2018-07-05
+- **Events on file:** 2018-07-05 renamed by; 2018-07-05 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Liquor and Cannabis Regulation Branch", "LCRB"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2018-07-05. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 6. British Columbia Farm Industry Review Board (BCFIRB)
 

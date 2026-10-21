@@ -25,18 +25,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ## The bodies (12)
 
-### 1. ClimateReadyBC
-
-- **id** `climatereadybc` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Emergency Management and Climate Readiness. Official site: https://climatereadybc.gov.bc.ca/
-- **Collected from:** https://climatereadybc.gov.bc.ca/
-- **What it does:** Online platform to help the public and communities understand disaster and climate risks and find funding to build resilience.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "ClimateReadyBC"
-- **Questions:** A, B and C, as above.
-
-### 2. Disaster Resilience Division
+### 1. Disaster Resilience Division
 
 - **id** `disaster-resilience-division` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Emergency Management and Climate Readiness.
@@ -47,38 +36,65 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Disaster Resilience Division"
 - **Questions:** A, B and C, as above.
 
+### 2. ClimateReadyBC
+
+- **id** `climatereadybc` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Emergency Management and Climate Readiness. Official site: https://climatereadybc.gov.bc.ca/
+- **Collected from:** https://climatereadybc.gov.bc.ca/
+- **What it does:** Online platform to help the public and communities understand disaster and climate risks and find funding to build resilience.
+- **Held:** no start date; first seen 2023-08-09
+- **Events on file:** 2023-08-09 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "ClimateReadyBC"
+- **Questions:**
+  - A. It is already seen in 2023-08-09. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
 ### 3. Emergency Support Services (ESS)
 
-- **id** `emergency-support-services` · program · **P1 — disappears before today, nothing on file**
+- **id** `emergency-support-services` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Emergency Management and Climate Readiness. Official site: https://ess.gov.bc.ca/
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/emcr.pdf
 - **What it does:** Provides evacuees with basic supports such as accommodation, food and clothing, backed by the BC Evacuee Helpline.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Emergency Support Services", "ESS"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 4. EmergencyInfoBC
 
-- **id** `emergencyinfobc` · program · **P1 — disappears before today, nothing on file**
+- **id** `emergencyinfobc` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Emergency Management and Climate Readiness. Official site: https://www.emergencyinfobc.gov.bc.ca/
 - **Collected from:** https://www.emergencyinfobc.gov.bc.ca/
 - **What it does:** Official source of current information during emergencies in B.C.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2018
+- **Events on file:** 2018 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "EmergencyInfoBC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2018. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 5. PreparedBC
 
-- **id** `preparedbc` · program · **P1 — disappears before today, nothing on file**
+- **id** `preparedbc` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Emergency Management and Climate Readiness. Official site: https://www2.gov.bc.ca/gov/content/safety/emergency-management/preparedbc
 - **Collected from:** https://www2.gov.bc.ca/gov/content/safety/emergency-management/preparedbc
 - **What it does:** British Columbia's one-stop shop for disaster readiness information.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2018
+- **Events on file:** 2018 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "PreparedBC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2018. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 6. Disaster Financial Assistance (DFA)
 
@@ -93,21 +109,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Questions:**
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 7. First Citizens Fund
-
-- **id** `first-citizens-fund` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Indigenous Relations and Reconciliation.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Special account supporting Indigenous cultural, educational and economic initiatives.
-- **Held:** no start date
-- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "First Citizens Fund"
-- **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
-
-### 8. Government to Government and Community Relations Division
+### 7. Government to Government and Community Relations Division
 
 - **id** `government-to-government-and-community-relations-division` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Indigenous Relations and Reconciliation. Official site: https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/consulting-with-first-nations/first-nations-negotiations
@@ -118,18 +120,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Government to Government and Community Relations Division"
 - **Questions:** A, B and C, as above.
 
-### 9. Minister's Advisory Council on Indigenous Women (MACIW)
-
-- **id** `ministers-advisory-council-on-indigenous-women` · board · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Indigenous Relations and Reconciliation. Official site: https://www2.gov.bc.ca/gov/content/governments/indigenous-people/minister-s-advisory-council-on-indigenous-women-maciw
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/indigenous-relations-reconciliation
-- **What it does:** Advises the Province on improving the quality of life of Indigenous women.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Minister's Advisory Council on Indigenous Women", "MACIW"
-- **Questions:** A, B and C, as above.
-
-### 10. Policy, Intergovernmental Relations and Legislation Division
+### 8. Policy, Intergovernmental Relations and Legislation Division
 
 - **id** `policy-intergovernmental-relations-and-legislation-division` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Indigenous Relations and Reconciliation.
@@ -140,7 +131,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Policy, Intergovernmental Relations and Legislation Division"
 - **Questions:** A, B and C, as above.
 
-### 11. Programs and Partnerships Division
+### 9. Programs and Partnerships Division
 
 - **id** `programs-and-partnerships-division` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Indigenous Relations and Reconciliation.
@@ -150,6 +141,36 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Review:** not yet researched
 - **Search for:** "Programs and Partnerships Division"
 - **Questions:** A, B and C, as above.
+
+### 10. First Citizens Fund
+
+- **id** `first-citizens-fund` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Indigenous Relations and Reconciliation.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Special account supporting Indigenous cultural, educational and economic initiatives.
+- **Held:** no start date; first seen 2002
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "First Citizens Fund"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 11. Minister's Advisory Council on Indigenous Women (MACIW)
+
+- **id** `ministers-advisory-council-on-indigenous-women` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Indigenous Relations and Reconciliation. Official site: https://www2.gov.bc.ca/gov/content/governments/indigenous-people/minister-s-advisory-council-on-indigenous-women-maciw
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/indigenous-relations-reconciliation
+- **What it does:** Advises the Province on improving the quality of life of Indigenous women.
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Minister's Advisory Council on Indigenous Women", "MACIW"
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 12. Declaration Act Secretariat
 
@@ -173,9 +194,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
   "batch": "18",
   "records": [
     {
-      "id": "climatereadybc",
-      "name": "ClimateReadyBC",
-      "kind": "program",
+      "id": "disaster-resilience-division",
+      "name": "Disaster Resilience Division",
+      "kind": "division",
       "parent_today": "ministry-of-emergency-management-and-climate-readiness-2022",
       "established": null,
       "first_observed": null,
@@ -198,9 +219,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "disaster-resilience-division",
-      "name": "Disaster Resilience Division",
-      "kind": "division",
+      "id": "climatereadybc",
+      "name": "ClimateReadyBC",
+      "kind": "program",
       "parent_today": "ministry-of-emergency-management-and-climate-readiness-2022",
       "established": null,
       "first_observed": null,
@@ -323,59 +344,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "first-citizens-fund",
-      "name": "First Citizens Fund",
-      "kind": "program",
-      "parent_today": "ministry-of-indigenous-relations-and-reconciliation-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 18",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "government-to-government-and-community-relations-division",
       "name": "Government to Government and Community Relations Division",
       "kind": "division",
-      "parent_today": "ministry-of-indigenous-relations-and-reconciliation-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 18",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "ministers-advisory-council-on-indigenous-women",
-      "name": "Minister's Advisory Council on Indigenous Women",
-      "kind": "board",
       "parent_today": "ministry-of-indigenous-relations-and-reconciliation-2017",
       "established": null,
       "first_observed": null,
@@ -426,6 +397,56 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "programs-and-partnerships-division",
       "name": "Programs and Partnerships Division",
       "kind": "division",
+      "parent_today": "ministry-of-indigenous-relations-and-reconciliation-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 18",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "first-citizens-fund",
+      "name": "First Citizens Fund",
+      "kind": "program",
+      "parent_today": "ministry-of-indigenous-relations-and-reconciliation-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 18",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "ministers-advisory-council-on-indigenous-women",
+      "name": "Minister's Advisory Council on Indigenous Women",
+      "kind": "board",
       "parent_today": "ministry-of-indigenous-relations-and-reconciliation-2017",
       "established": null,
       "first_observed": null,

@@ -1,0 +1,531 @@
+{
+  "baseline": "Round 3 remaining-undated.json: 33 records from the held 59-item WANTED baseline",
+  "baseline_count": 33,
+  "counts": {
+    "still_no_accepted_pre2026_date": 12,
+    "new_dated_evidence": 16,
+    "prior_cross_module_date_integration": 5
+  },
+  "new_dated_ids": [
+    "buy-bc",
+    "connectivity-in-bc",
+    "bc-training-and-education-savings-program",
+    "disaster-financial-assistance",
+    "provincial-treasury",
+    "building-and-safety-standards",
+    "community-capital-development",
+    "infrastructure-policy-and-partnerships",
+    "safe-campuses-bc",
+    "community-safety-and-victim-services",
+    "lets-go-bc",
+    "bc-arts-and-culture-endowment",
+    "medical-services-commission",
+    "bc-mental-health-and-substance-use-services",
+    "trans-care-bc",
+    "building-bc"
+  ],
+  "cross_module_ids": [
+    "health-care-practitioners-special-committee-for-audit-hearings",
+    "bc-centre-for-disease-control",
+    "bc-childrens-hospital",
+    "bc-womens-hospital",
+    "perinatal-services-bc"
+  ],
+  "remaining_undated_ids": [
+    "bc-agriculture-insurance-and-income-protection",
+    "children-and-youth-with-support-needs",
+    "mcfd-adoption-services",
+    "foster-caregiving-and-kinship-care",
+    "disaster-resilience-division",
+    "government-chief-risk-office",
+    "government-to-government-and-community-relations-division",
+    "policy-intergovernmental-relations-and-legislation-division",
+    "programs-and-partnerships-division",
+    "inland-ferries",
+    "water-licensing-and-rights",
+    "planning-in-partnership"
+  ],
+  "claim_count": 88,
+  "claim_counts_by_novelty": {
+    "new_evidence_not_in_round3_branches": 79,
+    "prior_cross_module_integration": 9
+  },
+  "historical_parent_policy": "A dated observation supports only the stated checkpoint or explicit effective change, not all intervening years. Statutory reporting, program administration, legal ownership and ministry membership are separate relations.",
+  "rows": [
+    {
+      "body_id": "bc-agriculture-insurance-and-income-protection",
+      "name": "Agriculture Insurance and Income Protection programs",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "The label is a collection of insurance/income programs. Histories of individual schemes do not establish one umbrella organization; no dated organizational identity found."
+    },
+    {
+      "body_id": "buy-bc",
+      "name": "Buy BC",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "1993",
+      "date_meaning": "program_launch",
+      "entity_kind": "program",
+      "claim_ids": [
+        "R4B-C001",
+        "R4B-C002",
+        "R4B-C003",
+        "R4B-C004"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "children-and-youth-with-support-needs",
+      "name": "Children and Youth with Support Needs",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "Contemporaneous MCFD service references are function descriptions; named organizational unit and any rename from special needs remain to be verified."
+    },
+    {
+      "body_id": "mcfd-adoption-services",
+      "name": "Adoption Services",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "Earlier reports describe adoption services, but a distinct branch matching the repository node has not been established. Classify as a service or locate an organization chart."
+    },
+    {
+      "body_id": "foster-caregiving-and-kinship-care",
+      "name": "Foster caregiving and kinship care",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "Current web category/program family; no historical administrative unit with this exact identity proved."
+    },
+    {
+      "body_id": "connectivity-in-bc",
+      "name": "Connectivity in B.C.",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2021-04-07",
+      "date_meaning": "named_web_resource_sighting",
+      "entity_kind": "public_information_resource",
+      "claim_ids": [
+        "R4B-C029"
+      ],
+      "integration_gate": "Requires resource/account/program-family type; do not draw as a ministry branch"
+    },
+    {
+      "body_id": "bc-training-and-education-savings-program",
+      "name": "British Columbia Training and Education Savings Program",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2013-03-20",
+      "date_meaning": "named_program_regulation_made",
+      "entity_kind": "program_and_distinct_special_account",
+      "claim_ids": [
+        "R4B-C006",
+        "R4B-C007",
+        "R4B-C008"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "disaster-financial-assistance",
+      "name": "Disaster Financial Assistance",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "1995",
+      "date_meaning": "program_established",
+      "entity_kind": "program",
+      "claim_ids": [
+        "R4B-C011",
+        "R4B-C012",
+        "R4B-C013",
+        "R4B-C014"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "disaster-resilience-division",
+      "name": "Disaster Resilience Division",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "20 April 2026 Hansard names ADM Tomas Ernst and this division. This does not establish existence before 2026; predecessor Disaster Risk Management/Recovery division mapping is unresolved."
+    },
+    {
+      "body_id": "provincial-treasury",
+      "name": "Provincial Treasury",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "1986-04-10",
+      "date_meaning": "existence_sighting",
+      "entity_kind": "administrative_division",
+      "claim_ids": [
+        "R4B-C015",
+        "R4B-C016",
+        "R4B-C017",
+        "R4B-C018"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "government-chief-risk-office",
+      "name": "Government Chief Risk Office",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "The October 2012 policy amendment log was already in Round 3 as a retrospective statement. A 2016 agenda names the Chief Risk Officer but does not prove identity/creation of a separate Office. No new accepted historical-office sighting."
+    },
+    {
+      "body_id": "building-and-safety-standards",
+      "name": "Building and Safety Standards",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2014-05-20",
+      "date_meaning": "existence_sighting",
+      "entity_kind": "administrative_branch",
+      "claim_ids": [
+        "R4B-C019",
+        "R4B-C020"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "government-to-government-and-community-relations-division",
+      "name": "Government to Government and Community Relations Division",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "29 April 2025 Hansard still lists Negotiations and Regional Operations, Reconciliation Transformation and Strategies, and Strategic Initiatives and Partnerships. Current 2026 names cannot be backdated using restated 2025 budget columns."
+    },
+    {
+      "body_id": "policy-intergovernmental-relations-and-legislation-division",
+      "name": "Policy, Intergovernmental Relations and Legislation Division",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "Same 2025 old structure/2026 new structure problem; a dated reorganization chart or transfer directive remains needed."
+    },
+    {
+      "body_id": "programs-and-partnerships-division",
+      "name": "Programs and Partnerships Division",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "Same 2025 old structure/2026 new structure problem; do not equate an old unit just because functions are similar."
+    },
+    {
+      "body_id": "community-capital-development",
+      "name": "Community Capital Development",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2025-03-17",
+      "date_meaning": "existence_sighting",
+      "entity_kind": "administrative_division",
+      "claim_ids": [
+        "R4B-C021",
+        "R4B-C022"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "infrastructure-policy-and-partnerships",
+      "name": "Policy and Partnerships",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2025-03-17",
+      "date_meaning": "existence_sighting",
+      "entity_kind": "administrative_division",
+      "claim_ids": [
+        "R4B-C023",
+        "R4B-C024"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "safe-campuses-bc",
+      "name": "Safe Campuses BC",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2019-08-29",
+      "date_meaning": "named_web_resource_sighting",
+      "entity_kind": "public_information_resource",
+      "claim_ids": [
+        "R4B-C028"
+      ],
+      "integration_gate": "Requires resource/account/program-family type; do not draw as a ministry branch"
+    },
+    {
+      "body_id": "community-safety-and-victim-services",
+      "name": "Community Safety and Victim Services",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2024",
+      "date_meaning": "existence_sighting",
+      "entity_kind": "administrative_branch",
+      "claim_ids": [
+        "R4B-C025",
+        "R4B-C026",
+        "R4B-C027"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "lets-go-bc",
+      "name": "Let's Go BC",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2025-04-23",
+      "date_meaning": "official_mark_publication",
+      "entity_kind": "campaign_brand",
+      "claim_ids": [
+        "R4B-C030",
+        "R4B-C031",
+        "R4B-C032"
+      ],
+      "integration_gate": "Requires resource/account/program-family type; do not draw as a ministry branch"
+    },
+    {
+      "body_id": "bc-arts-and-culture-endowment",
+      "name": "BC Arts and Culture Endowment",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2008-03-31",
+      "date_meaning": "statutory_special_account_established",
+      "entity_kind": "statutory_special_account",
+      "claim_ids": [
+        "R4B-C009",
+        "R4B-C010"
+      ],
+      "integration_gate": "Requires resource/account/program-family type; do not draw as a ministry branch"
+    },
+    {
+      "body_id": "inland-ferries",
+      "name": "Inland Ferries",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "Service network is distinct from its Marine Branch manager. Historic ferry operation dates are not a single branch founding date."
+    },
+    {
+      "body_id": "water-licensing-and-rights",
+      "name": "Water licensing and rights",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "Website service category is not proved to be a standalone unit; Water Rights Branch/Water Management Branch history requires an explicit identity bridge."
+    },
+    {
+      "body_id": "planning-in-partnership",
+      "name": "Planning in Partnership",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "still_no_accepted_pre2026_date",
+      "reason": "Modern land-use-policy dates do not prove the named website/resource start or a separate administrative body."
+    },
+    {
+      "body_id": "health-care-practitioners-special-committee-for-audit-hearings",
+      "name": "Health Care Practitioners Special Committee for Audit Hearings",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "prior_cross_module_date_integration",
+      "recommended_date": "2024-06-30",
+      "entity_kind": "statutory_committee",
+      "claim_ids": [
+        "R4B-C046"
+      ],
+      "integration_gate": "Reuse cited previous-package evidence; do not count as new archival discovery"
+    },
+    {
+      "body_id": "medical-services-commission",
+      "name": "Medical Services Commission",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "1967-03-24",
+      "date_meaning": "initial_members_appointed",
+      "entity_kind": "statutory_commission",
+      "claim_ids": [
+        "R4B-C076",
+        "R4B-C077",
+        "R4B-C078",
+        "R4B-C079",
+        "R4B-C080",
+        "R4B-C081",
+        "R4B-C082",
+        "R4B-C083",
+        "R4B-C084",
+        "R4B-C085",
+        "R4B-C086"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "bc-centre-for-disease-control",
+      "name": "BC Centre for Disease Control",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "prior_cross_module_date_integration",
+      "recommended_date": "2009/10",
+      "entity_kind": "health_service_program",
+      "claim_ids": [
+        "R4B-C038",
+        "R4B-C039"
+      ],
+      "integration_gate": "Reuse cited previous-package evidence; do not count as new archival discovery"
+    },
+    {
+      "body_id": "bc-childrens-hospital",
+      "name": "BC Children's Hospital and Sunny Hill Health Centre",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "prior_cross_module_date_integration",
+      "recommended_date": "2009/10",
+      "entity_kind": "health_service_program",
+      "claim_ids": [
+        "R4B-C040",
+        "R4B-C041"
+      ],
+      "integration_gate": "Reuse cited previous-package evidence; do not count as new archival discovery"
+    },
+    {
+      "body_id": "bc-womens-hospital",
+      "name": "BC Women's Hospital + Health Centre",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "prior_cross_module_date_integration",
+      "recommended_date": "2009/10",
+      "entity_kind": "health_service_program",
+      "claim_ids": [
+        "R4B-C042",
+        "R4B-C043"
+      ],
+      "integration_gate": "Reuse cited previous-package evidence; do not count as new archival discovery"
+    },
+    {
+      "body_id": "bc-mental-health-and-substance-use-services",
+      "name": "BC Mental Health and Substance Use Services",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2015-12-17",
+      "date_meaning": "existence_sighting",
+      "entity_kind": "health_service_program",
+      "claim_ids": [
+        "R4B-C037"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "perinatal-services-bc",
+      "name": "Perinatal Services BC",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "prior_cross_module_date_integration",
+      "recommended_date": "2009/10",
+      "entity_kind": "health_service_program",
+      "claim_ids": [
+        "R4B-C044",
+        "R4B-C045"
+      ],
+      "integration_gate": "Reuse cited previous-package evidence; do not count as new archival discovery"
+    },
+    {
+      "body_id": "trans-care-bc",
+      "name": "Trans Care BC",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "fall 2015",
+      "date_meaning": "program_established",
+      "entity_kind": "health_program",
+      "claim_ids": [
+        "R4B-C035",
+        "R4B-C036"
+      ],
+      "integration_gate": "Preserve correct entity kind and date meaning; no perpetual parent inferred"
+    },
+    {
+      "body_id": "building-bc",
+      "name": "Building BC",
+      "baseline_start": null,
+      "baseline_first_observed": null,
+      "full_history_complete": false,
+      "disposition": "new_dated_evidence",
+      "recommended_date": "2018/19",
+      "date_meaning": "program_family_sighting",
+      "entity_kind": "program_family",
+      "claim_ids": [
+        "R4B-C033",
+        "R4B-C034"
+      ],
+      "integration_gate": "Requires resource/account/program-family type; do not draw as a ministry branch"
+    }
+  ],
+  "unresolved_instruments": [
+    "1974 sheriff administrative consolidation instrument",
+    "First actual appointment for every county sheriff office, especially the Cariboo split",
+    "1880 Clinton commencement proclamation",
+    "1890 annual sheriff-roster provision commencement order and annual Gazette rosters",
+    "1892 Vancouver sheriff amendment commencement OIC",
+    "Gazette proclamation publications following OIC 346/1895 and OIC 121/1905",
+    "1957 Parks Branch signed implementing instrument; effective transfer date 1 April 1957 is now documented",
+    "1980 COS separation directive; a contemporary April–May 1980 observation is now documented",
+    "Wildfire Management Branch administrative rename order; prior 6 June 2015 date remains documented without the order",
+    "Surveyor General 2019 exact dated internal split instrument",
+    "Medical Services Act 1967 Gazette proclamations following OIC 964/1967 and OIC 966/1967; appointment and staffing orders are recovered",
+    "Medical Services Act 1967 initial ministerial designation"
+  ],
+  "saturation_statement": "Targeted public-source pass with original statutes, OICs, contemporary newsletters, audited reports, transition binders and both search engines. Missing instruments remain explicitly open; not a claim of exhaustive archival search.",
+  "counts_note": "21 of the 33 records now have dated evidence: 16 new findings and 5 integrations of evidence already held in other prior-package modules. These are not 21 newly discovered branch founding dates. Twelve remain without an accepted pre-2026 date.",
+  "claim_counts_by_evidence_role": {
+    "substantive_historical_finding": 84,
+    "archival_lead": 2,
+    "negative_evidence": 1,
+    "conflicting_source_statement": 1
+  }
+}

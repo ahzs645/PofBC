@@ -24,51 +24,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ## The bodies (10)
 
-### 1. Child Care Resource and Referral Centres (CCRR)
-
-- **id** `child-care-resource-and-referral-centres` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children/childcarebc-programs/child-care-resource-referral
-- **Collected from:** https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children/childcarebc-programs/child-care-resource-referral
-- **What it does:** Community centres that help families find and access quality child care.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Child Care Resource and Referral Centres", "CCRR"
-- **Questions:** A, B and C, as above.
-
-### 2. ChildCareBC
-
-- **id** `childcarebc` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children
-- **Collected from:** https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children
-- **What it does:** Provincial child care program lowering fees for families, opening new licensed spaces and training early learning professionals.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "ChildCareBC"
-- **Questions:** A, B and C, as above.
-
-### 3. erase (expect respect & a safe education) (erase)
-
-- **id** `erase` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/erase
-- **Collected from:** https://www2.gov.bc.ca/gov/content/erase
-- **What it does:** Helps students, adults and school staff build safe, caring and inclusive school communities.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "erase (expect respect & a safe education)", "erase"
-- **Questions:** A, B and C, as above.
-
-### 4. Feeding Futures
-
-- **id** `feeding-futures` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/program-management/feeding-futures
-- **Collected from:** https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/program-management/feeding-futures
-- **What it does:** Funding for school food programs in B.C. public schools.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Feeding Futures"
-- **Questions:** A, B and C, as above.
-
-### 5. British Columbia Training and Education Savings Program (BCTESP)
+### 1. British Columbia Training and Education Savings Program (BCTESP)
 
 - **id** `bc-training-and-education-savings-program` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Education and Child Care.
@@ -83,22 +39,52 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 6. Commissioner for Teacher Regulation
+### 2. Child Care Resource and Referral Centres (CCRR)
+
+- **id** `child-care-resource-and-referral-centres` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children/childcarebc-programs/child-care-resource-referral
+- **Collected from:** https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children/childcarebc-programs/child-care-resource-referral
+- **What it does:** Community centres that help families find and access quality child care.
+- **Held:** no start date; first seen 2002
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Child Care Resource and Referral Centres", "CCRR"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 3. ChildCareBC
+
+- **id** `childcarebc` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children
+- **Collected from:** https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children
+- **What it does:** Provincial child care program lowering fees for families, opening new licensed spaces and training early learning professionals.
+- **Held:** no start date; first seen 2023
+- **Events on file:** 2023 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "ChildCareBC"
+- **Questions:**
+  - A. It is already seen in 2023. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 4. Commissioner for Teacher Regulation
 
 - **id** `commissioner-for-teacher-regulation` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/education-training/k-12/teach/teacher-regulation
 - **Collected from:** https://www2.gov.bc.ca/gov/content/education-training/k-12/teach
 - **What it does:** Statutory decision-maker who handles complaints and discipline of certified teachers in B.C.
-- **Held:** no start date
-- **Events on file:** 2012-01-09 legislation in force
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2012-01-09 legislation in force; 2020 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Commissioner for Teacher Regulation"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 7. Early Childhood Educator Registry
+### 5. Early Childhood Educator Registry
 
 - **id** `early-childhood-educator-registry` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/education-training/early-learning/teach/training-and-professional-development/become-an-early-childhood-educator
@@ -113,19 +99,49 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
+### 6. erase (expect respect & a safe education) (erase)
+
+- **id** `erase` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/erase
+- **Collected from:** https://www2.gov.bc.ca/gov/content/erase
+- **What it does:** Helps students, adults and school staff build safe, caring and inclusive school communities.
+- **Held:** no start date; first seen 2025
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "erase (expect respect & a safe education)", "erase"
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 7. Feeding Futures
+
+- **id** `feeding-futures` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/program-management/feeding-futures
+- **Collected from:** https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/program-management/feeding-futures
+- **What it does:** Funding for school food programs in B.C. public schools.
+- **Held:** no start date; first seen 2023
+- **Events on file:** 2023 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Feeding Futures"
+- **Questions:**
+  - A. It is already seen in 2023. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
 ### 8. StrongStart BC
 
 - **id** `strongstart-bc` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Education and Child Care. Official site: https://www2.gov.bc.ca/gov/content/education-training/early-learning/support/programs/strongstart-bc
 - **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/education
 - **What it does:** Free drop-in early learning programs for children up to age five and their parents or caregivers, usually in schools.
-- **Held:** no start date
-- **Events on file:** 2006-12-14 program launch announced
+- **Held:** no start date; first seen 2010
+- **Events on file:** 2006-12-14 program launch announced; 2010 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "StrongStart BC"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 9. BC Teachers' Council (BCTC)
@@ -162,6 +178,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
 {
   "batch": "08",
   "records": [
+    {
+      "id": "bc-training-and-education-savings-program",
+      "name": "British Columbia Training and Education Savings Program",
+      "kind": "program",
+      "parent_today": "ministry-of-education-and-child-care-2022",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 08",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
     {
       "id": "child-care-resource-and-referral-centres",
       "name": "Child Care Resource and Referral Centres",
@@ -213,81 +254,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "erase",
-      "name": "erase (expect respect & a safe education)",
-      "kind": "program",
-      "parent_today": "ministry-of-education-and-child-care-2022",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 08",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "feeding-futures",
-      "name": "Feeding Futures",
-      "kind": "program",
-      "parent_today": "ministry-of-education-and-child-care-2022",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 08",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "bc-training-and-education-savings-program",
-      "name": "British Columbia Training and Education Savings Program",
-      "kind": "program",
-      "parent_today": "ministry-of-education-and-child-care-2022",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 08",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "commissioner-for-teacher-regulation",
       "name": "Commissioner for Teacher Regulation",
       "kind": "office",
@@ -316,6 +282,56 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "early-childhood-educator-registry",
       "name": "Early Childhood Educator Registry",
       "kind": "office",
+      "parent_today": "ministry-of-education-and-child-care-2022",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 08",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "erase",
+      "name": "erase (expect respect & a safe education)",
+      "kind": "program",
+      "parent_today": "ministry-of-education-and-child-care-2022",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 08",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "feeding-futures",
+      "name": "Feeding Futures",
+      "kind": "program",
       "parent_today": "ministry-of-education-and-child-care-2022",
       "established": null,
       "first_observed": null,

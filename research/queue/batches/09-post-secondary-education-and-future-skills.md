@@ -24,62 +24,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ## The bodies (8)
 
-### 1. BC Newcomers Services Program
-
-- **id** `bc-newcomers-services-program` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Post-Secondary Education and Future Skills.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/psefs.pdf
-- **What it does:** Immigrant settlement and integration services for newcomers to B.C.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC Newcomers Services Program"
-- **Questions:** A, B and C, as above.
-
-### 2. Education Quality Assurance (EQA)
-
-- **id** `education-quality-assurance` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www2.gov.bc.ca/gov/content/education-training/post-secondary-education/institution-resources-administration/post-secondary-international-education-designated-institutions-act
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Designation that public and private post-secondary institutions need to enrol international students with study permits.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Education Quality Assurance", "EQA"
-- **Questions:** A, B and C, as above.
-
-### 3. EducationPlannerBC
-
-- **id** `educationplannerbc` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www.educationplannerbc.ca/
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/post-secondary-education-and-future-skills
-- **What it does:** Online service for planning, searching and applying to public post-secondary institutions in B.C.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "EducationPlannerBC"
-- **Questions:** A, B and C, as above.
-
-### 4. Office for International Credential Recognition (OICR)
-
-- **id** `office-for-international-credential-recognition` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/regulatory-authorities/oicr
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/regulatory-authorities/oicr
-- **What it does:** Oversees how professional regulators assess the credentials of internationally trained professionals seeking work in B.C.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Office for International Credential Recognition", "OICR"
-- **Questions:** A, B and C, as above.
-
-### 5. Private Training Institutions Branch (PTIB)
-
-- **id** `private-training-institutions-branch` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Post-Secondary Education and Future Skills.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Regulates private training institutions certified under the Private Training Act and administers the Student Tuition Protection Fund.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Private Training Institutions Branch", "PTIB"
-- **Questions:** A, B and C, as above.
-
-### 6. Safe Campuses BC
+### 1. Safe Campuses BC
 
 - **id** `safe-campuses-bc` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www2.gov.bc.ca/gov/content/safe-campuses-bc
@@ -93,18 +38,22 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 7. StudentAid BC (SABC)
+### 2. BC Newcomers Services Program
 
-- **id** `studentaid-bc` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://studentaidbc.ca/sabc-home-page
+- **id** `bc-newcomers-services-program` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Post-Secondary Education and Future Skills.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/psefs.pdf
-- **What it does:** Provides student loans, grants and other financial help for post-secondary learners.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "StudentAid BC", "SABC"
-- **Questions:** A, B and C, as above.
+- **What it does:** Immigrant settlement and integration services for newcomers to B.C.
+- **Held:** no start date; first seen 2025-07-31
+- **Events on file:** 2025-07-31 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "BC Newcomers Services Program"
+- **Questions:**
+  - A. It is already seen in 2025-07-31. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 8. BC Provincial Nominee Program (BC PNP)
+### 3. BC Provincial Nominee Program (BC PNP)
 
 - **id** `bc-provincial-nominee-program` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www.welcomebc.ca/Immigrate-to-B-C/B-C-Provincial-Nominee-Program
@@ -119,6 +68,81 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
+### 4. Education Quality Assurance (EQA)
+
+- **id** `education-quality-assurance` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www2.gov.bc.ca/gov/content/education-training/post-secondary-education/institution-resources-administration/post-secondary-international-education-designated-institutions-act
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Designation that public and private post-secondary institutions need to enrol international students with study permits.
+- **Held:** no start date; first seen 2010
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Education Quality Assurance", "EQA"
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 5. EducationPlannerBC
+
+- **id** `educationplannerbc` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www.educationplannerbc.ca/
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/post-secondary-education-and-future-skills
+- **What it does:** Online service for planning, searching and applying to public post-secondary institutions in B.C.
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "EducationPlannerBC"
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 6. Office for International Credential Recognition (OICR)
+
+- **id** `office-for-international-credential-recognition` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/regulatory-authorities/oicr
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/regulatory-authorities/oicr
+- **What it does:** Oversees how professional regulators assess the credentials of internationally trained professionals seeking work in B.C.
+- **Held:** no start date; first seen 2025; parents on file: Ministry of Post-Secondary Education and Future Skills (seen 2025)
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Office for International Credential Recognition", "OICR"
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 7. Private Training Institutions Branch (PTIB)
+
+- **id** `private-training-institutions-branch` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Post-Secondary Education and Future Skills.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Regulates private training institutions certified under the Private Training Act and administers the Student Tuition Protection Fund.
+- **Held:** no start date; first seen 2016-09-01
+- **Events on file:** 2016-09-01 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Private Training Institutions Branch", "PTIB"
+- **Questions:**
+  - A. It is already seen in 2016-09-01. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 8. StudentAid BC (SABC)
+
+- **id** `studentaid-bc` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Post-Secondary Education and Future Skills. Official site: https://studentaidbc.ca/sabc-home-page
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/psefs.pdf
+- **What it does:** Provides student loans, grants and other financial help for post-secondary learners.
+- **Held:** no start date; first seen 2010
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "StudentAid BC", "SABC"
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
 ## Hand back
 
 Return **one JSON object for the batch, with one record per body**, in the shape of this skeleton, with every field you could not establish left `null` or empty and the reason in `note`. The field-by-field format, with a worked example, is in `research/queue/README.md` §6. Return new sources with them as `{id, url, title, evidence}`.
@@ -128,8 +152,58 @@ Return **one JSON object for the batch, with one record per body**, in the shape
   "batch": "09",
   "records": [
     {
+      "id": "safe-campuses-bc",
+      "name": "Safe Campuses BC",
+      "kind": "program",
+      "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 09",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
       "id": "bc-newcomers-services-program",
       "name": "BC Newcomers Services Program",
+      "kind": "program",
+      "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 09",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-provincial-nominee-program",
+      "name": "BC Provincial Nominee Program",
       "kind": "program",
       "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
       "established": null,
@@ -253,58 +327,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "safe-campuses-bc",
-      "name": "Safe Campuses BC",
-      "kind": "program",
-      "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 09",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "studentaid-bc",
       "name": "StudentAid BC",
-      "kind": "program",
-      "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 09",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "bc-provincial-nominee-program",
-      "name": "BC Provincial Nominee Program",
       "kind": "program",
       "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
       "established": null,

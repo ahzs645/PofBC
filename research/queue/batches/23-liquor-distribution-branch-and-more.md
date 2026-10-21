@@ -22,38 +22,35 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ### 1. BC Cannabis Stores (BCCS)
 
-- **id** `bc-cannabis-stores` · division · **P1 — disappears before today, nothing on file**
+- **id** `bc-cannabis-stores` · division · **P2 — undated, but some history on file**
 - **Today:** under Liquor Distribution Branch. Official site: https://www.bccannabisstores.com
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/ldb.pdf
 - **What it does:** The LDB's public non-medical cannabis retail brand, with 39 stores and an e-commerce channel.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Cannabis Stores", "BCCS"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 2. BCLIQUOR (BC Liquor Stores)
 
-- **id** `bcliquor` · division · **P1 — disappears before today, nothing on file**
+- **id** `bcliquor` · division · **P2 — undated, but some history on file**
 - **Today:** under Liquor Distribution Branch. Official site: https://www.bcliquorstores.com
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/ldb.pdf
 - **What it does:** The LDB's public liquor retail brand, operating 198 stores across the province.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2025
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BCLIQUOR", "BC Liquor Stores"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
-### 3. IMAX Victoria
-
-- **id** `imax-victoria` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Royal British Columbia Museum Corporation.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/rbcm.pdf
-- **What it does:** IMAX theatre operated as part of the Royal BC Museum.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "IMAX Victoria"
-- **Questions:** A, B and C, as above.
-
-### 4. BC Archives
+### 3. BC Archives
 
 - **id** `bc-archives` · division · **P2 — undated, but some history on file**
 - **Today:** under Royal British Columbia Museum Corporation. Official site: https://royalbcmuseum.bc.ca/bc-archives
@@ -68,27 +65,50 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
+### 4. IMAX Victoria
+
+- **id** `imax-victoria` · division · **P2 — undated, but some history on file**
+- **Today:** under Royal British Columbia Museum Corporation.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/rbcm.pdf
+- **What it does:** IMAX theatre operated as part of the Royal BC Museum.
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "IMAX Victoria"
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
+
 ### 5. BCR Properties Ltd.
 
-- **id** `bcr-properties` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `bcr-properties` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Railway Company.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/tran.pdf
 - **What it does:** BCRC subsidiary that owns port-related lands leased to industrial tenants and terminal operators, including Vancouver Wharves and Squamish Terminals.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2015; parents on file: British Columbia Railway Company (seen 2015)
+- **Events on file:** 2015 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BCR Properties Ltd."
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 6. BC Renaissance Capital Fund (BCRCF)
 
-- **id** `bc-renaissance-capital-fund` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `bc-renaissance-capital-fund` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under InBC Investment Corp..
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/inbc.pdf
 - **What it does:** Wholly owned InBC subsidiary that manages legacy venture capital assets InBC inherited in 2020.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2010
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Renaissance Capital Fund", "BCRCF"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 7. QuadReal Property Group (QuadReal)
 
@@ -174,8 +194,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "imax-victoria",
-      "name": "IMAX Victoria",
+      "id": "bc-archives",
+      "name": "BC Archives",
       "kind": "division",
       "parent_today": "royal-bc-museum",
       "established": null,
@@ -199,8 +219,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "bc-archives",
-      "name": "BC Archives",
+      "id": "imax-victoria",
+      "name": "IMAX Victoria",
       "kind": "division",
       "parent_today": "royal-bc-museum",
       "established": null,
