@@ -280,8 +280,8 @@ const ICBC_RIGHTS = {
 const BCLC_RIGHTS = { status: 'unresolved', note: `BCLC’s mark. ${NO_PERMISSION}` }
 
 /** A mark from a package, drawn as the file has it, with `reverse` the file to show on a dark page. */
-const supplied = (identity) => ({ id, label, note, years, reverse }) => ({
-  id, kind: 'supplied', mark: id, label, note, years, ...(reverse ? { reverse } : {}), identity
+const supplied = (identity) => ({ id, label, note, years, reverse, onDark }) => ({
+  id, kind: 'supplied', mark: id, label, note, years, ...(reverse ? { reverse } : {}), ...(onDark ? { onDark } : {}), identity
 })
 
 /** Rebuilt by the package's researcher from a registry drawing, a photograph or a screenshot. */
@@ -635,6 +635,9 @@ const WCB_ENTRIES = {
     })({
       id: 'worksafebc',
       label: 'WorkSafeBC',
+      // "Work" and "BC" are white on the blocks: on a dark page the black block goes white, so they
+      // take the card's colour.
+      onDark: { swap: ['#ffffff'] },
       years: 'by 2026',
       note: 'The operating name in black and orange blocks.'
     })

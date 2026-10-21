@@ -70,7 +70,7 @@ A **Gallery** button opens the marks the generator does not make, grouped by who
 first collection is the Province's one-off marks — BC Parks and its like — which follow no pattern
 the generator can offer and so have nothing to be loaded into. Each still opens for recolouring, and
 each draws itself from the same renderer as everything else, so a card cannot drift from what it
-gives you. The second is **BC Hydro**, in all three of its identities (below); `src/gallery/collections.js` is where another body's
+gives you. On a dark page the cards show every mark in its reversal: a mark supplied with a reversed version takes it, and the Crown corporations' other marks (ICBC, BCLC, BC Ferries, WorkSafeBC, BC Transit) have their black and navy inks drawn white, their own colours kept, rather than sitting on a white plate; opened, each is still drawn exactly as supplied. The second is **BC Hydro**, in all three of its identities (below); `src/gallery/collections.js` is where another body's
 marks would go, and an entry's `kind` decides what opening it shows.
 
 **Every mark sits on a timeline.** BC Hydro's page runs through its three identities oldest first,

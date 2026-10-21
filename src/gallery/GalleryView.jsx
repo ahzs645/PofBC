@@ -33,7 +33,7 @@ import { TRANSPARENT } from '../logo/logoColors.js'
 import { useSiteTheme } from '../site/useTheme.js'
 import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { renderCurrentSvg } from '../current/currentMarks.js'
-import { renderSuppliedSvg } from './renderSupplied.js'
+import { darkPageInks, renderSuppliedSvg } from './renderSupplied.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
@@ -383,12 +383,13 @@ const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
     const printed = ONE_OFF_MARKS[entry.mark].printed
     return renderOneOffSvg({ id: entry.mark, colours: pageColoursFor(printed, theme), sun: 'glow', clearSpaceFactor: 0.02 }).svg
   }
-  // ICBC's and BCLC's marks are never recoloured: on dark, one supplied reversed takes that version,
-  // and any other keeps a white ground of its own.
+  // The Crown corporations' marks are drawn as supplied: on dark, one supplied reversed takes that
+  // version, and any other its page reversal (darkPageInks), with no ground of its own.
   if (entry.kind === 'supplied') {
     const dark = theme === 'dark'
     const id = dark && entry.reverse ? entry.reverse : entry.mark
-    return renderSuppliedSvg({ id, background: dark && !entry.reverse ? '#ffffff' : TRANSPARENT, clearSpace: dark ? 0.12 : 0.02 }).svg
+    const inks = dark && !entry.reverse ? darkPageInks(id, entry.onDark) : null
+    return renderSuppliedSvg({ id, inks, clearSpace: 0.02 }).svg
   }
   // Remade in the current identity: drawn by the generator's current era, reversed on dark.
   if (entry.kind === 'current') {
@@ -839,9 +840,6 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   if (!collection) {
     return (
       <div className="gallery">
-        <p className="gallery__intro">
-          Logos the generator doesn’t make: public bodies’ own identities, then the Province’s one-off marks.
-        </p>
         <section className="gallery__shelf" aria-labelledby="shelf-bodies">
           <h2 id="shelf-bodies" className="gallery__shelf-title">Crown corporations and public bodies</h2>
           <div className="gallery__collections">
