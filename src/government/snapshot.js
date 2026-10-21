@@ -371,6 +371,7 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
         record?.source !== undefined && record?.source !== null
           ? claim(`${record.name}${record.established ? `, from ${record.established}` : ''}${record.ended ? ` to ${record.ended}` : ''}`, historySource(record.source), record.establishedMeaning ? { note: `The start is the day it was ${record.establishedMeaning}.` } : {})
           : null,
+        ...(record?.names ?? []).filter(([, from]) => from).map(([name, from, , source, locator]) => claim(`Known as ${name} from ${from}`, historySource(source), locator ? { note: locator } : {})),
         record?.firstSeen && !record.established
           ? claim(`Shown to exist by ${record.firstSeen[0]}; its start is unknown`, historySource(record.firstSeen[1]), record.firstSeen[2] ? { note: record.firstSeen[2] } : {})
           : null,
@@ -403,6 +404,8 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
   }
 
   const KIND = { 'crown-corporation': 'crown-corporation', agency: 'agency', tribunal: 'tribunal', 'health-authority': 'health-authority' }
+  // What a body was called on the day: the period an order gave it, or its record's name.
+  const nameOn = (record) => (record.names ?? []).find(([, from, to]) => (!from || startOf(from) <= day) && (!to || startOf(to) > day)) ?? null
   for (const record of HISTORICAL_BODIES) {
     if (placed.has(record.id) || record.current || !record.name) continue
     // A body whose start is unknown is drawn from the first day a source shows it, and says so.
@@ -413,7 +416,8 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
       kind: KIND[record.kind] ?? 'agency',
       branch: 'executive',
       ring: 'outer',
-      name: record.name,
+      name: nameOn(record)?.[0] ?? record.name,
+      ...(nameOn(record) && nameOn(record)[0] !== record.name ? { laterName: record.name, nameSince: nameOn(record) } : {}),
       shortName: record.shortName,
       established: record.established,
       ended: record.ended,

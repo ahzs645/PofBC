@@ -485,7 +485,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
         )}
 
         {node.laterName && (
-          <p className="gov-notice">Known today as {node.laterName}.</p>
+          <p className="gov-notice">{node.ended ? `Later renamed the ${node.laterName}.` : `Known today as ${node.laterName}.`}</p>
         )}
 
         {node.inferredGroup && (

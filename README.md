@@ -1057,7 +1057,11 @@ community health services societies passed their services on rather than amalgam
 Cariboo society's went to both Interior and Northern. A body whose start no source gives is drawn
 from the first day a source shows it, and says so; one with neither stays in its successor's
 "Came from" list without being drawn. PHSA is a society of its own (12 December 2001), not a sixth
-successor of the boards.
+successor of the boards. A primary-evidence follow-up then dated every board and council from its
+original designation order (Northern Interior on 17 November 1994), drew each under the name it
+had that year (the Upper Fraser Valley Health Board of 1994 is the Fraser Valley Health Region of
+2001), and stated which ministry each answered to, so 1997 shows the 52 bodies of that system and
+the societies stand until the registry dissolved them in February 2002.
 
 **Every body's line to the people.** Choosing a body draws its whole line of accountability, not
 only its nearest connections, as [graph.civlab.org](https://graph.civlab.org) does: a health

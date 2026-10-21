@@ -181,6 +181,8 @@ const bodies = researched
     // A body whose start is unknown, drawn from the earliest day a source shows it.
     ...(!record.established && record.firstSeen?.date ? { firstSeen: [String(record.firstSeen.date), sourceIndex(record.firstSeen.source), record.firstSeen.locator ?? null] } : {}),
     ended: record.ended ? String(record.ended) : null,
+    // The names it held, period by period, where an order renamed it: [name, from, to, source, locator].
+    ...(record.names?.length ? { names: record.names.map(({ name, from, to, source, locator }) => [name, from ? String(from) : null, to ? String(to) : null, sourceIndex(source ?? record.source), locator ?? null]) } : {}),
     predecessors: [
       ...(record.predecessorIds ?? []),
       // A body whose services passed to this one, which is not an amalgamation: a society's to an authority.

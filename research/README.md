@@ -39,7 +39,7 @@ These come from the atlas research package (`package/MODEL_NOTES.md`) and are ch
 |---|---|---|
 | `history/ministers-<era>.json` | Every cabinet appointment: `{portfolio, holder, from, to, premier, acting, party, source}` | `build:government-history` |
 | `history/bodies.json` | Crown corporations and agencies since 1871: `{id, name, kind, established, ended, becameId, predecessorIds, responsible: [{ministry, from, to}], description, source}` | `build:government-history` |
-| `history/bodies-*.json` | Further bodies in the same shape, one file per research round. Two optional fields: `firstSeen: {date, source, locator}` for a body whose start is unknown (drawn from that day and marked as seen, not started), and `serviceSuccessorIds` for a body whose services passed to others without amalgamating (shown as "Its services passed to", never as `becameId`) | `build:government-history` |
+| `history/bodies-*.json` | Further bodies in the same shape, one file per research round. Optional fields: `names: [{name, from, to, source, locator}]` for the names an order gave a body, period by period (drawn under the name of the year); `firstSeen: {date, source, locator}` for a body whose start is unknown (drawn from that day and marked as seen, not started), and `serviceSuccessorIds` for a body whose services passed to others without amalgamating (shown as "Its services passed to", never as `becameId`) | `build:government-history` |
 | `history/responsible-*.json` | Which ministry answered for a body, by period: `{records: [{<body id>: [{ministry, from, to, source, note}]}], gaps}` | `build:government-history` |
 | `history/holders.json` | Speakers, officers of the Legislature, chief justices: `{offices: [{id, title, holders: [{name, from, to, acting, source}]}]}` | `build:government-history` |
 | `history/sub-divisions.json`, `sub-tribunals.json`, `sub-subsidiaries.json` | Today's sub-agencies as collected: `{id, name, shortName, parent, kind, established, description, url, source}` | `build:government-history` |
@@ -186,3 +186,9 @@ community health services societies, the 43 councils the December 1996 orders fo
 and three earlier boards), `atlas/events-health-lineage.json` and
 `atlas/events-institutional-history.json`. What was applied, and what was left, is in its
 `INTEGRATION.md`; the open questions are in its `research_backlog.md`.
+
+`reviews/primary-evidence-2026-10-21/` is the follow-up that answered most of them from original
+orders, Gazettes and registry records (the 159 MB of evidence files are not committed; their hashes
+are in its `evidence_manifest.json`). Its `INTEGRATION.md` says what changed: designation dates for
+every board and council, names over time, the 1997 roster of 52, stated ministries, the societies'
+2002 dissolutions, the 1946 commencement, PHSA's registry identities, the sheriffs, HPO and PRHC.

@@ -70,12 +70,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart
 - **What it does:** Provides court security, prisoner escort, document service and warrant services under the Sheriff Act.
 - **Held:** no start date
-- **Events on file:** 1974 amalgamation
+- **Events on file:** 1973-07-05 roster observed; 1974 amalgamation; 1974-06-20 legislation assented
 - **Review:** not yet researched
 - **Search for:** "BC Sheriff Services"
 - **Questions:**
   - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 5. British Columbia Ferry Commission

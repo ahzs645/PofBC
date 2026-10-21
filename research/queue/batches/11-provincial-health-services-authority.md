@@ -20,29 +20,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ## The bodies (12)
 
-### 1. BC Children's Hospital and Sunny Hill Health Centre (BC Children's)
-
-- **id** `bc-childrens-hospital` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/bc-childrens-hospital-and-sunny-hill-health-centre-for-children
-- **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-childrens-hospital-and-sunny-hill-health-centre-for-children
-- **What it does:** BC's major treatment, teaching and research facilities for child health, caring for the most seriously ill or injured children in the province.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC Children's Hospital and Sunny Hill Health Centre", "BC Children's"
-- **Questions:** A, B and C, as above.
-
-### 2. BC Mental Health and Substance Use Services (BCMHSUS)
-
-- **id** `bc-mental-health-and-substance-use-services` · agency · **P1 — disappears before today, nothing on file**
-- **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/bc-mental-health-substance-use-services
-- **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-mental-health-substance-use-services
-- **What it does:** Treats people with the most complex mental health and substance use needs referred by the regional health authorities or the courts.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC Mental Health and Substance Use Services", "BCMHSUS"
-- **Questions:** A, B and C, as above.
-
-### 3. Cardiac Services BC
+### 1. Cardiac Services BC
 
 - **id** `cardiac-services-bc` · agency · **P1 — disappears before today, nothing on file**
 - **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/cardiac-services-bc
@@ -53,7 +31,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Cardiac Services BC"
 - **Questions:** A, B and C, as above.
 
-### 4. Health Emergency Management BC (HEMBC)
+### 2. Health Emergency Management BC (HEMBC)
 
 - **id** `health-emergency-management-bc` · agency · **P1 — disappears before today, nothing on file**
 - **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/health-emergency-management-bc
@@ -64,7 +42,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Health Emergency Management BC", "HEMBC"
 - **Questions:** A, B and C, as above.
 
-### 5. Perinatal Services BC (PSBC)
+### 3. Perinatal Services BC (PSBC)
 
 - **id** `perinatal-services-bc` · agency · **P1 — disappears before today, nothing on file**
 - **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/perinatal-services-bc
@@ -75,19 +53,49 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Perinatal Services BC", "PSBC"
 - **Questions:** A, B and C, as above.
 
-### 6. BC Centre for Disease Control (BCCDC)
+### 4. BC Centre for Disease Control (BCCDC)
 
 - **id** `bc-centre-for-disease-control` · agency · **P2 — undated, but some history on file**
 - **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/bc-centre-for-disease-control
 - **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-centre-for-disease-control
 - **What it does:** Provides provincial and national public health leadership through surveillance, detection, treatment, prevention and consultation services.
 - **Held:** no start date
-- **Events on file:** 1955 co location; 1977 administrative consolidation; 1986 name change; 1997 name first observed; 1997 governance transferred; 1999-07-15 name observed; 2001-12 governance transferred; 2018-04-01 legal status change
+- **Events on file:** 1955 co location; 1977 administrative consolidation; 1986 name change; 1997 name first observed; 1997 governance transferred; 1997-08-06 registration; 1999-07-15 name observed; 2001-04-02 amalgamation; 2001-12 governance transferred; 2018-04-01 legal status change
 - **Review:** not yet researched
 - **Search for:** "BC Centre for Disease Control", "BCCDC"
 - **Questions:**
   - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 8 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - B. Start: 10 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
+
+### 5. BC Children's Hospital and Sunny Hill Health Centre (BC Children's)
+
+- **id** `bc-childrens-hospital` · division · **P2 — undated, but some history on file**
+- **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/bc-childrens-hospital-and-sunny-hill-health-centre-for-children
+- **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-childrens-hospital-and-sunny-hill-health-centre-for-children
+- **What it does:** BC's major treatment, teaching and research facilities for child health, caring for the most seriously ill or injured children in the province.
+- **Held:** no start date
+- **Events on file:** 1997-07-15 amalgamation
+- **Review:** not yet researched
+- **Search for:** "BC Children's Hospital and Sunny Hill Health Centre", "BC Children's"
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
+
+### 6. BC Mental Health and Substance Use Services (BCMHSUS)
+
+- **id** `bc-mental-health-and-substance-use-services` · agency · **P2 — undated, but some history on file**
+- **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/bc-mental-health-substance-use-services
+- **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-mental-health-substance-use-services
+- **What it does:** Treats people with the most complex mental health and substance use needs referred by the regional health authorities or the courts.
+- **Held:** no start date
+- **Events on file:** 1987-12-11 registration
+- **Review:** not yet researched
+- **Search for:** "BC Mental Health and Substance Use Services", "BCMHSUS"
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 7. BC Women's Hospital + Health Centre (BC Women's)
@@ -127,7 +135,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-cancer-agency
 - **What it does:** Leads the provincial planning and regional delivery of cancer care, from prevention and screening through treatment, survivorship and end-of-life care.
 - **Held:** began 1974-10-31 (Public Cancer Control Agency formed); names on file: Cancer Control Agency of British Columbia (seen 1974-10-31)
-- **Events on file:** 1938-11-05 operational start; 1974-10-31 unit established; 1990 legal name change; 1994 operating name change; 2017 operating name and identity change; 2018-04-01 legal status change
+- **Events on file:** 1938-11-05 operational start; 1974-09-09 registration; 1974-10-31 unit established; 1990 legal name change; 1990-02-14 registry name change; 1994 operating name change; 2017 operating name and identity change; 2018-04-01 legal status change
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Cancer", "Cancer Control Agency of British Columbia"
 - **Questions:**
@@ -153,7 +161,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-transplant
 - **What it does:** Responsible for all aspects of organ donation and transplantation in B.C.
 - **Held:** began 1986 (BC Transplant Society / program lineage); names on file: British Columbia Transplant Society (seen 2007-10-22)
-- **Events on file:** 1986 established
+- **Events on file:** 1986 established; 1986-04-01 registration
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Transplant", "BCT", "British Columbia Transplant Society"
 - **Questions:**
@@ -179,56 +187,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
 {
   "batch": "11",
   "records": [
-    {
-      "id": "bc-childrens-hospital",
-      "name": "BC Children's Hospital and Sunny Hill Health Centre",
-      "kind": "division",
-      "parent_today": "provincial-health-services-authority",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 11",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "bc-mental-health-and-substance-use-services",
-      "name": "BC Mental Health and Substance Use Services",
-      "kind": "agency",
-      "parent_today": "provincial-health-services-authority",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 11",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
     {
       "id": "cardiac-services-bc",
       "name": "Cardiac Services BC",
@@ -307,6 +265,56 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "bc-centre-for-disease-control",
       "name": "BC Centre for Disease Control",
+      "kind": "agency",
+      "parent_today": "provincial-health-services-authority",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 11",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-childrens-hospital",
+      "name": "BC Children's Hospital and Sunny Hill Health Centre",
+      "kind": "division",
+      "parent_today": "provincial-health-services-authority",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 11",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-mental-health-and-substance-use-services",
+      "name": "BC Mental Health and Substance Use Services",
       "kind": "agency",
       "parent_today": "provincial-health-services-authority",
       "established": null,
