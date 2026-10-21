@@ -68,18 +68,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "HelpStartsHere"
 - **Questions:** A, B and C, as above.
 
-### 5. Medical Services Commission (MSC)
-
-- **id** `medical-services-commission` · board · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Health.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf
-- **What it does:** Manages the Medical Services Plan under the Medicare Protection Act, ensuring reasonable access to medical care and managing payment for medical services.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Medical Services Commission", "MSC"
-- **Questions:** A, B and C, as above.
-
-### 6. Office of Indigenous Health
+### 5. Office of Indigenous Health
 
 - **id** `office-of-indigenous-health` · office · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Health. Official site: https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/aboriginal-health
@@ -90,7 +79,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Office of Indigenous Health"
 - **Questions:** A, B and C, as above.
 
-### 7. Patient Care Quality Review Boards (PCQRB)
+### 6. Patient Care Quality Review Boards (PCQRB)
 
 - **id** `patient-care-quality-review-boards` · board · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Health. Official site: https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/health-care-complaints
@@ -101,18 +90,33 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Patient Care Quality Review Boards", "PCQRB"
 - **Questions:** A, B and C, as above.
 
-### 8. BC PharmaCare (PharmaCare)
+### 7. BC PharmaCare (PharmaCare)
 
 - **id** `bc-pharmacare` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Health. Official site: https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/pharmacare-for-bc-residents
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf
 - **What it does:** Publicly funded program that helps B.C. residents pay for some prescription drugs, medical supplies and pharmacy services.
 - **Held:** no start date; first seen 2003; names on file: Pharmacare (seen 2003); parents on file: Ministry of Health Services (seen 2003)
-- **Events on file:** 2003 name first observed
+- **Events on file:** 1974 operational start; 1987 functions transferred; 2003 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC PharmaCare", "PharmaCare", "Pharmacare"
 - **Questions:**
   - A. It is already seen in 2003. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 8. Medical Services Commission (MSC)
+
+- **id** `medical-services-commission` · board · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Health.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf
+- **What it does:** Manages the Medical Services Plan under the Medicare Protection Act, ensuring reasonable access to medical care and managing payment for medical services.
+- **Held:** no start date
+- **Events on file:** 1968-07-01 legal establishment
+- **Review:** not yet researched
+- **Search for:** "Medical Services Commission", "MSC"
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
@@ -293,31 +297,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "medical-services-commission",
-      "name": "Medical Services Commission",
-      "kind": "board",
-      "parent_today": "ministry-of-health-2011",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 05",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "office-of-indigenous-health",
       "name": "Office of Indigenous Health",
       "kind": "office",
@@ -371,6 +350,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "bc-pharmacare",
       "name": "BC PharmaCare",
       "kind": "program",
+      "parent_today": "ministry-of-health-2011",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 05",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "medical-services-commission",
+      "name": "Medical Services Commission",
+      "kind": "board",
       "parent_today": "ministry-of-health-2011",
       "established": null,
       "first_observed": null,

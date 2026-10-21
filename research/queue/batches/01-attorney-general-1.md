@@ -24,18 +24,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ## The bodies (14)
 
-### 1. BC Sheriff Services
-
-- **id** `bc-sheriff-services` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General.
-- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart
-- **What it does:** Provides court security, prisoner escort, document service and warrant services under the Sheriff Act.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC Sheriff Services"
-- **Questions:** A, B and C, as above.
-
-### 2. Family Justice Services Division
+### 1. Family Justice Services Division
 
 - **id** `family-justice-services-division` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/life-events/divorce/family-justice/who-can-help/family-justice-services-division
@@ -49,7 +38,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 3. Legal Services Branch
+### 2. Legal Services Branch
 
 - **id** `legal-services-branch` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/justice/for-legal-professionals/articled-student-program/articles-with-legal-services-branch
@@ -63,7 +52,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 4. Multiculturalism and Anti-Racism Branch
+### 3. Multiculturalism and Anti-Racism Branch
 
 - **id** `multiculturalism-and-anti-racism-branch` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/governments/multiculturalism-anti-racism
@@ -73,6 +62,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Review:** not yet researched
 - **Search for:** "Multiculturalism and Anti-Racism Branch"
 - **Questions:** A, B and C, as above.
+
+### 4. BC Sheriff Services
+
+- **id** `bc-sheriff-services` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General.
+- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart
+- **What it does:** Provides court security, prisoner escort, document service and warrant services under the Sheriff Act.
+- **Held:** no start date
+- **Events on file:** 1973-07-05 roster observed; 1974 amalgamation; 1974-06-20 legislation assented
+- **Review:** not yet researched
+- **Search for:** "BC Sheriff Services"
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 5. British Columbia Ferry Commission
 
@@ -233,31 +237,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
   "batch": "01",
   "records": [
     {
-      "id": "bc-sheriff-services",
-      "name": "BC Sheriff Services",
-      "kind": "office",
-      "parent_today": "ministry-of-attorney-general-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 01",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "family-justice-services-division",
       "name": "Family Justice Services Division",
       "kind": "division",
@@ -311,6 +290,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "multiculturalism-and-anti-racism-branch",
       "name": "Multiculturalism and Anti-Racism Branch",
       "kind": "division",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 01",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-sheriff-services",
+      "name": "BC Sheriff Services",
+      "kind": "office",
       "parent_today": "ministry-of-attorney-general-2017",
       "established": null,
       "first_observed": null,

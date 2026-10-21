@@ -7,10 +7,11 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
-  arcPath, BAND_INNER, CENTRE, lerpAngle, layoutGovernment, readsReversed, RIM, rimAt, RINGS, rotationToBottom,
+  aroundCentre, arcPath, BAND_INNER, CENTRE, lerpAngle, layoutGovernment, readsReversed, RIM, rimAt, RINGS, rotationToBottom,
   sealPath, territoryPath, toPoint, UNIT, VIEWBOX
 } from './layout.js'
 import { colourOf, fillOf, mix } from './theme.js'
+import { pathToPeople } from './snapshot.js'
 
 const DURATION = 750
 const DISC = BAND_INNER
@@ -298,6 +299,21 @@ const beanPath = ({ angle, radius, size }) => {
 
 const PEOPLE = 'people-of-british-columbia'
 const NO_RELATIONS = new Set()
+
+/** What a line says when pointed at, read the way it runs: who does what to whom. */
+export const edgeTitle = (edge, from, to) => {
+  const a = from?.shortName ?? from?.name ?? edge.from
+  const b = to?.shortName ?? to?.name ?? edge.to
+  switch (edge.kind) {
+    case 'elects': return `${a} elect the ${b}${edge.seats ? ` (${edge.seats} members)` : ''}`
+    case 'appoints': return to?.kind === 'ministry' ? `${a} chooses the minister of the ${b}` : `${a} appoints the ${b}`
+    case 'confidence': return `${b} governs with the confidence of the ${a}`
+    case 'responsible': return `${a} answers for ${b}`
+    case 'part': return `${b} is part of ${a}`
+    case 'partner': return `${b} is a partner of the ${a}`
+    default: return `${a} — ${b}`
+  }
+}
 const clockwise = (angle) => ((angle + Math.PI / 2) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2)
 
 /** Where a head — minister, chief justice, chair — hangs from its body: just outside it, facing out. */
@@ -345,13 +361,18 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
     return { ...toPoint(angle, position.radius), angle, radius: position.radius, size: position.size }
   }
 
-  const selectedEdges = useMemo(
-    () => (selectedId
-      ? government.edges.filter((edge) => (edge.from === selectedId || edge.to === selectedId) && !hiddenRelations.has(edge.kind))
-      : []),
-    [government.edges, selectedId, hiddenRelations]
-  )
+  // What the chosen body is connected to, and the whole of its line up to the people — not only
+  // the first step of it.
+  const selectedEdges = useMemo(() => {
+    if (!selectedId) return []
+    const path = pathToPeople(government, selectedId)
+    const near = government.edges.filter((edge) => edge.from === selectedId || edge.to === selectedId)
+    return [...near, ...path.filter((step) => !near.some((edge) => edge.from === step.from && edge.to === step.to && edge.kind === step.kind))]
+      .filter((edge) => !hiddenRelations.has(edge.kind))
+  }, [government, selectedId, hiddenRelations])
   const connected = useMemo(() => new Set(selectedEdges.flatMap((edge) => [edge.from, edge.to])), [selectedEdges])
+  // The people are lit whenever the chosen body's line reaches them, not only when they are chosen.
+  const peopleLit = selectedId === PEOPLE || connected.has(PEOPLE)
 
   const selected = selectedId ? byId.get(selectedId) : null
   const r = frame.rotation
@@ -532,14 +553,22 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
               const dx = b.x - a.x
               const dy = b.y - a.y
               const length = Math.hypot(dx, dy) || 1
-              // Curved relations bow to one side, so they read apart from the straight ones.
+              // Curved relations bow to one side, so they read apart from the straight ones; a line
+              // that would cross the people bows round them instead.
               const bend = relation.curve ? 0.2 * length : 0
-              const cx = (a.x + b.x) / 2 - (dy / length) * bend
-              const cy = (a.y + b.y) / 2 + (dx / length) * bend
+              const around = aroundCentre(a, b)
+              const cx = around ? around.x : (a.x + b.x) / 2 - (dy / length) * bend
+              const cy = around ? around.y : (a.y + b.y) / 2 + (dx / length) * bend
               const mid = { x: 0.25 * a.x + 0.5 * cx + 0.25 * b.x, y: 0.25 * a.y + 0.5 * cy + 0.25 * b.y }
-              const tangent = Math.atan2(b.y - a.y + (relation.curve ? 0 : 0), b.x - a.x) * (180 / Math.PI)
+              // The marker follows the curve at its midpoint: along b − a for a symmetric bow, which
+              // is what the curve's own tangent there is.
+              const tangent = Math.atan2(b.y - a.y, b.x - a.x) * (180 / Math.PI)
+              const title = edgeTitle(edge, source, byId.get(edge.to))
               return (
                 <g key={`${edge.from}-${edge.to}-${edge.kind}`} className="gov-graph__edge">
+                  <title>{title}</title>
+                  {/* A wide clear stroke, so the line can be pointed at. */}
+                  <path d={`M${a.x},${a.y}Q${cx},${cy} ${b.x},${b.y}`} fill="none" stroke="transparent" strokeWidth={10} />
                   <path
                     d={`M${a.x},${a.y}Q${cx},${cy} ${b.x},${b.y}`}
                     fill="none"
@@ -568,7 +597,7 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
           >
             <path
               d={sealPath()}
-              fill={selectedId === 'people-of-british-columbia' ? theme.people : mix(theme.people, theme.blendBase, 0.3)}
+              fill={peopleLit ? theme.people : mix(theme.people, theme.blendBase, 0.3)}
               stroke={theme.people}
               strokeWidth={1.5}
             />

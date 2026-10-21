@@ -404,3 +404,31 @@ export const sealPath = (radius = RINGS.seal * UNIT, lobes = 16, amplitude = 4, 
 }
 
 const f = (value) => Math.round(value * 100) / 100
+
+/** How far a line keeps from the centre, so it bows round the people rather than crossing them. */
+export const SEAL_CLEARANCE = RINGS.seal * UNIT + 16
+
+/**
+ * The control point that bows a straight line from `a` to `b` round the seal at the centre, or null
+ * when the line does not pass through it (or starts or ends there, as the people's own lines do).
+ * The curve's midpoint lands `clearance` from the centre, on the side the line was passing.
+ */
+export const aroundCentre = (a, b, clearance = SEAL_CLEARANCE) => {
+  const dx = b.x - a.x
+  const dy = b.y - a.y
+  const length2 = dx * dx + dy * dy
+  if (length2 < 1) return null
+  if (Math.hypot(a.x - CENTRE.x, a.y - CENTRE.y) < clearance || Math.hypot(b.x - CENTRE.x, b.y - CENTRE.y) < clearance) return null
+  const t = ((CENTRE.x - a.x) * dx + (CENTRE.y - a.y) * dy) / length2
+  if (t <= 0 || t >= 1) return null
+  const near = { x: a.x + t * dx, y: a.y + t * dy }
+  const off = Math.hypot(near.x - CENTRE.x, near.y - CENTRE.y)
+  if (off >= clearance) return null
+  // Away from the centre on the side the line passes; through the centre exactly, to its left.
+  const length = Math.sqrt(length2)
+  const ux = off > 1e-6 ? (near.x - CENTRE.x) / off : -dy / length
+  const uy = off > 1e-6 ? (near.y - CENTRE.y) / off : dx / length
+  const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }
+  const apex = { x: CENTRE.x + ux * clearance, y: CENTRE.y + uy * clearance }
+  return { x: 2 * apex.x - mid.x, y: 2 * apex.y - mid.y }
+}

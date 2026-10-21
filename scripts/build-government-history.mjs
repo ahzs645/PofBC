@@ -164,7 +164,9 @@ const OMIT = new Set([
   'bc-ferry-services-inc', 'greater-vancouver-transportation-authority', 'south-coast-bc-transportation-authority', 'merit-commissioner'
 ])
 
-const researched = read('bodies.json').records
+// bodies.json, then every bodies-*.json, so a new round of research is a new file.
+const bodyFiles = ['bodies.json', ...readdirSync(SOURCE).filter((name) => /^bodies-.*\.json$/.test(name)).sort()]
+const researched = bodyFiles.flatMap((name) => read(name).records)
 for (const record of researched) accounting.record(`bodies.json#${record.id}`, OMIT.has(record.id) ? 'intentionally_excluded' : 'accepted', record, OMIT.has(record.id) ? { reason: 'Outside provincial diagram scope; original succession target retained' } : {})
 const idOf = (id) => SAME_AS[id] ?? id
 const bodies = researched
@@ -175,8 +177,18 @@ const bodies = researched
     ...(record.shortName ? { shortName: record.shortName } : {}),
     kind: record.kind,
     established: record.established ? String(record.established) : null,
+    ...(record.establishedMeaning ? { establishedMeaning: record.establishedMeaning } : {}),
+    // A body whose start is unknown, drawn from the earliest day a source shows it.
+    ...(!record.established && record.firstSeen?.date ? { firstSeen: [String(record.firstSeen.date), sourceIndex(record.firstSeen.source), record.firstSeen.locator ?? null] } : {}),
     ended: record.ended ? String(record.ended) : null,
-    predecessors: (record.predecessorIds ?? []).map(idOf),
+    // The names it held, period by period, where an order renamed it: [name, from, to, source, locator].
+    ...(record.names?.length ? { names: record.names.map(({ name, from, to, source, locator }) => [name, from ? String(from) : null, to ? String(to) : null, sourceIndex(source ?? record.source), locator ?? null]) } : {}),
+    predecessors: [
+      ...(record.predecessorIds ?? []),
+      // A body whose services passed to this one, which is not an amalgamation: a society's to an authority.
+      ...researched.filter((other) => (other.serviceSuccessorIds ?? []).includes(record.id)).map((other) => other.id)
+    ].map(idOf),
+    ...(record.serviceSuccessorIds?.length ? { servicesPassedTo: record.serviceSuccessorIds.map(idOf) } : {}),
     successionClaims: { predecessorIds: record.predecessorIds ?? [], becameId: record.becameId ?? null },
     became: record.becameId && !OMIT.has(record.becameId) ? idOf(record.becameId) : null,
     responsible: (record.responsible ?? []).map(({ ministry, from, to, source, locator }) => [ministry, from ? String(from) : null, to ? String(to) : null, sourceIndex(source ?? record.source), locator ?? null]),

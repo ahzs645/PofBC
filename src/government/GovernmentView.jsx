@@ -274,7 +274,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
 
   /** Moves the timeline to a year a body stood — its first, or its last — and chooses it. */
   const jumpBody = useCallback((body, end) => {
-    const first = Number(String(body.established ?? PRESENT_YEAR).slice(0, 4))
+    const first = Number(String(body.established ?? body.firstSeen ?? PRESENT_YEAR).slice(0, 4))
     const last = body.ended ? Math.max(first, Number(String(body.ended).slice(0, 4)) - 1) : PRESENT_YEAR
     setPlaying(false)
     setYear(Math.min(PRESENT_YEAR, Math.max(FIRST_YEAR, end === 'end' ? last : first)))

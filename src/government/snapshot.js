@@ -132,6 +132,23 @@ export const electionBefore = (day) => {
 
 const PEOPLE_ID = 'people-of-british-columbia'
 
+const ELECTORAL_HISTORY = { title: 'Elections BC — Electoral history of British Columbia', url: 'https://elections.bc.ca/voting/outreach-and-education/electoral-history-of-bc/' }
+
+/**
+ * Who the provincial franchise left out in `year`, from Elections BC's electoral history: a
+ * diagram of 1900 should not imply that everyone then had today's right to vote.
+ * @returns {{excluded: string[], source: object}|null}
+ */
+export const franchiseIn = (year) => {
+  const excluded = [
+    year < 1917 && 'women',
+    year < 1947 && 'Chinese and South Asian Canadians',
+    year < 1949 && 'Japanese Canadians',
+    year < 1949 && 'First Nations people'
+  ].filter(Boolean)
+  return excluded.length ? { excluded, source: ELECTORAL_HISTORY } : null
+}
+
 /**
  * Bodies that are partners of a ministry rather than part of it. The First Nations Health Authority
  * is governed by First Nations through the First Nations Health Council and Health Directors
@@ -167,7 +184,7 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
   const nodes = []
   const edges = []
   const add = (node) => { nodes.push(node); return node }
-  const link = (from, to, kind) => edges.push({ from, to, kind })
+  const link = (from, to, kind, extra = {}) => edges.push({ from, to, kind, ...extra })
 
   add({
     id: PEOPLE_ID,
@@ -175,7 +192,8 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
     branch: null,
     ring: 'seal',
     name: 'People of British Columbia',
-    description: 'Every adult citizen living in the province elects a Member of the Legislative Assembly for their electoral district.'
+    description: 'Those eligible to vote elect a Member of the Legislative Assembly for their electoral district. The people are more than the electors: children, residents who are not citizens, patients, families and communities are served by these bodies and live under their decisions.',
+    franchise: franchiseIn(year)
   })
 
   const assembly = add({
@@ -196,7 +214,8 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
     description: 'The elected house of the Legislature, which also includes the Lieutenant Governor. It makes provincial law, votes the government its money, and holds it to account; a government governs only while it has the Assembly’s confidence.',
     officialUrl: 'https://www.leg.bc.ca'
   })
-  link(PEOPLE_ID, assembly.id, 'elects')
+  // How many members the people elect, where the election is known: what the line carries.
+  link(PEOPLE_ID, assembly.id, 'elects', election?.totalSeats ? { seats: election.totalSeats } : {})
 
   const crown = add({
     id: 'lieutenant-governor',
@@ -309,6 +328,8 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
     if (!record || seen.has(record.id)) return null
     seen.add(record.id)
     if (currentById.has(record.id)) return currentById.get(record.id)
+    // A body whose services passed to others, not amalgamated into one, is placed by where they went.
+    if (!record.became && record.servicesPassedTo?.length) return presentOf(research.get(record.servicesPassedTo[0]) ?? currentById.get(record.servicesPassedTo[0]), seen)
     return presentOf(research.get(record.became), seen)
   }
   const inferredGroup = (body) => {
@@ -317,8 +338,10 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
     return present ? todaysMinistry : forerunnerIn(todaysMinistry, year)?.id ?? null
   }
   const lineage = (id) => ({
-    cameFrom: HISTORICAL_BODIES.filter((body) => body.became === id || (research.get(id)?.predecessors ?? []).includes(body.id)).map(({ id: from, name, established, ended }) => ({ id: from, name, established, ended })),
-    became: research.get(id)?.became ? (({ id: to, name, established, ended }) => ({ id: to, name, established, ended }))(research.get(research.get(id).became) ?? { id: research.get(id).became, name: currentById.get(research.get(id).became)?.name ?? research.get(id).became }) : null
+    cameFrom: HISTORICAL_BODIES.filter((body) => body.became === id || (research.get(id)?.predecessors ?? []).includes(body.id)).map(({ id: from, name, established, ended, firstSeen }) => ({ id: from, name, established, ended, firstSeen: firstSeen?.[0] ?? null })),
+    became: research.get(id)?.became ? (({ id: to, name, established, ended }) => ({ id: to, name, established, ended }))(research.get(research.get(id).became) ?? { id: research.get(id).became, name: currentById.get(research.get(id).became)?.name ?? research.get(id).became }) : null,
+    // Where its services went, when it was not amalgamated into one body.
+    passedTo: (research.get(id)?.servicesPassedTo ?? []).map((to) => (({ id: at, name, established, ended }) => ({ id: at, name, established, ended }))(research.get(to)?.name ? research.get(to) : { id: to, name: currentById.get(to)?.name ?? to }))
   })
   const placed = new Set()
   const place = (body, record, { uncertain = false } = {}) => {
@@ -346,7 +369,11 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
       ...family,
       evidence: [
         record?.source !== undefined && record?.source !== null
-          ? claim(`${record.name}${record.established ? `, from ${record.established}` : ''}${record.ended ? ` to ${record.ended}` : ''}`, historySource(record.source))
+          ? claim(`${record.name}${record.established ? `, from ${record.established}` : ''}${record.ended ? ` to ${record.ended}` : ''}`, historySource(record.source), record.establishedMeaning ? { note: `The start is the day it was ${record.establishedMeaning}.` } : {})
+          : null,
+        ...(record?.names ?? []).filter(([, from]) => from).map(([name, from, , source, locator]) => claim(`Known as ${name} from ${from}`, historySource(source), locator ? { note: locator } : {})),
+        record?.firstSeen && !record.established
+          ? claim(`Shown to exist by ${record.firstSeen[0]}; its start is unknown`, historySource(record.firstSeen[1]), record.firstSeen[2] ? { note: record.firstSeen[2] } : {})
           : null,
         period ? claim(`Answered to the ${period[0]}${period[1] ? ` from ${period[1]}` : ''}${period[2] ? ` to ${period[2]}` : ''}`, historySource(period[3])) : null,
         present && body.head?.person ? claim(`${body.head.person}, ${body.head.title}`, TODAY_SOURCE, { checked: CURRENT_AS_OF }) : null,
@@ -377,20 +404,27 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
   }
 
   const KIND = { 'crown-corporation': 'crown-corporation', agency: 'agency', tribunal: 'tribunal', 'health-authority': 'health-authority' }
+  // What a body was called on the day: the period an order gave it, or its record's name.
+  const nameOn = (record) => (record.names ?? []).find(([, from, to]) => (!from || startOf(from) <= day) && (!to || startOf(to) > day)) ?? null
   for (const record of HISTORICAL_BODIES) {
-    if (placed.has(record.id) || record.current || !record.name || !stands(record.established, record.ended)) continue
+    if (placed.has(record.id) || record.current || !record.name) continue
+    // A body whose start is unknown is drawn from the first day a source shows it, and says so.
+    const seenOn = !record.established && record.firstSeen ? record.firstSeen[0] : null
+    if (!stands(record.established ?? seenOn, record.ended)) continue
     place({
       id: record.id,
       kind: KIND[record.kind] ?? 'agency',
       branch: 'executive',
       ring: 'outer',
-      name: record.name,
+      name: nameOn(record)?.[0] ?? record.name,
+      ...(nameOn(record) && nameOn(record)[0] !== record.name ? { laterName: record.name, nameSince: nameOn(record) } : {}),
       shortName: record.shortName,
       established: record.established,
       ended: record.ended,
       head: null,
       description: record.description,
-      historical: true
+      historical: true,
+      ...(seenOn ? { presence: 'seen', firstSeen: seenOn } : {})
     }, record)
   }
 
@@ -545,6 +579,43 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
 }
 
 export { PEOPLE_ID }
+
+// Which way a body answers upwards, most direct first. The Premier holds office on the Assembly's
+// confidence and is appointed by the Lieutenant Governor: the path to the people runs through the
+// Assembly, which they elect. Partnership, funding and the rest are not a line of accountability.
+const ACCOUNTABLE = ['part', 'responsible', 'confidence', 'appoints', 'elects']
+
+/**
+ * How a body answers to the people in the year shown, along the lines the diagram draws.
+ *
+ * Every route is kept, as a reader of the diagram would want to see it: the main route, step by
+ * step from the body to the people (`route: 'main'`), and beside any step the other lines into the
+ * same body (`route: 'also'`) — the Lieutenant Governor's appointment of the Premier beside the
+ * Assembly's confidence. An `also` line is not followed further unless it too reaches the people.
+ * Empty when no route reaches the people: a court, the Crown, a partner such as FNHA, or a body no
+ * source places under a ministry.
+ * @returns {{from: string, to: string, kind: string, route: 'main'|'also', inferred: boolean, seats?: number}[]}
+ */
+export const pathToPeople = (government, id) => {
+  const byId = new Map(government.nodes.map((node) => [node.id, node]))
+  const incoming = (at) => government.edges.filter((edge) => edge.to === at && ACCOUNTABLE.includes(edge.kind))
+  const rank = (edge) => ACCOUNTABLE.indexOf(edge.kind)
+  const steps = []
+  const seen = new Set([id])
+  let at = id
+  while (at && at !== PEOPLE_ID) {
+    const lines = incoming(at).sort((a, b) => rank(a) - rank(b))
+    const edge = lines[0]
+    if (!edge || seen.has(edge.from)) return []
+    const node = byId.get(at)
+    const inferred = Boolean(node?.inferredGroup || node?.inferredParent)
+    steps.push({ ...edge, route: 'main', inferred })
+    for (const other of lines.slice(1)) steps.push({ ...other, route: 'also', inferred: false })
+    seen.add(edge.from)
+    at = edge.from
+  }
+  return steps
+}
 
 /**
  * A body's whole life, whatever year is shown: when it stood, as precisely as known, and every

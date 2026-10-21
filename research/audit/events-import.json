@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 508,
+    "accepted": 591,
     "unresolved_unmapped": 24,
     "corroborating_duplicate": 4
   },
@@ -11806,6 +11806,357 @@
       "output_id": "atlas:wao-s351-current"
     },
     {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-fraser-health-amalgamation",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-fraser-health-amalgamation",
+        "subject_id": "fraser-health",
+        "related_subject_ids": [
+          "fraser-valley-health-region",
+          "simon-fraser-health-region",
+          "south-fraser-health-region"
+        ],
+        "event_type": "amalgamation",
+        "title": "Fraser Health Authority formed by amalgamating 3 boards and councils",
+        "date": {
+          "start": "2001-12-12",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+          "locator": "B.C. Reg. 293/2001, sections 2-4 and Schedule A",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Signed 11 December 2001 (M297), deposited and announced 12 December.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-fraser-health-amalgamation"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-interior-health-amalgamation",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-interior-health-amalgamation",
+        "subject_id": "interior-health",
+        "related_subject_ids": [
+          "arrow-lakes-upper-slocan-valley-health-council",
+          "bella-coola-and-district-transitional-health-authority",
+          "boundary-health-council",
+          "castlegar-and-district-health-council",
+          "central-cariboo-chilcotin-health-council",
+          "columbia-valley-health-council",
+          "cranbrook-health-council",
+          "creston-and-district-health-council",
+          "elk-valley-and-south-country-health-council",
+          "golden-health-council",
+          "greater-trail-community-health-council",
+          "kimberley-community-health-council",
+          "nelson-and-area-health-council",
+          "north-okanagan-health-region",
+          "okanagan-similkameen-health-region",
+          "south-cariboo-community-health-council",
+          "thompson-health-region"
+        ],
+        "event_type": "amalgamation",
+        "title": "Interior Health Authority formed by amalgamating 17 boards and councils",
+        "date": {
+          "start": "2001-12-12",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+          "locator": "B.C. Reg. 293/2001, sections 2-4 and Schedule A",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Signed 11 December 2001 (M297), deposited and announced 12 December.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-interior-health-amalgamation"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-northern-health-amalgamation",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-northern-health-amalgamation",
+        "subject_id": "northern-health",
+        "related_subject_ids": [
+          "bulkley-valley-health-council",
+          "fort-nelson-liard-health-council",
+          "kitimat-and-area-health-council",
+          "north-coast-community-health-council",
+          "north-peace-health-council",
+          "northern-interior-regional-health-board",
+          "queen-charlotte-islands-haida-gwaii-community-health-council",
+          "quesnel-and-district-community-health-council",
+          "snow-country-health-council",
+          "south-peace-health-council",
+          "stikine-health-council",
+          "terrace-and-area-health-council",
+          "upper-skeena-community-health-council"
+        ],
+        "event_type": "amalgamation",
+        "title": "Northern Health Authority formed by amalgamating 13 boards and councils",
+        "date": {
+          "start": "2001-12-12",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+          "locator": "B.C. Reg. 293/2001, sections 2-4 and Schedule A",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Signed 11 December 2001 (M297), deposited and announced 12 December.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-northern-health-amalgamation"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-vancouver-coastal-health-amalgamation",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-vancouver-coastal-health-amalgamation",
+        "subject_id": "vancouver-coastal-health",
+        "related_subject_ids": [
+          "north-shore-health-region",
+          "powell-river-community-health-council",
+          "sea-to-sky-community-health-council",
+          "sunshine-coast-community-health-council",
+          "vancouver-richmond-health-board"
+        ],
+        "event_type": "amalgamation",
+        "title": "Vancouver Coastal Health Authority formed by amalgamating 5 boards and councils",
+        "date": {
+          "start": "2001-12-12",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+          "locator": "B.C. Reg. 293/2001, sections 2-4 and Schedule A",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Signed 11 December 2001 (M297), deposited and announced 12 December.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-vancouver-coastal-health-amalgamation"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-island-health-amalgamation",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-island-health-amalgamation",
+        "subject_id": "island-health",
+        "related_subject_ids": [
+          "campbell-river-nootka-community-health-council",
+          "capital-health-region",
+          "central-coast-transitional-health-authority",
+          "central-vancouver-island-health-region",
+          "comox-valley-community-health-council",
+          "mount-waddington-health-council"
+        ],
+        "event_type": "amalgamation",
+        "title": "Vancouver Island Health Authority formed by amalgamating 6 boards and councils",
+        "date": {
+          "start": "2001-12-12",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+          "locator": "B.C. Reg. 293/2001, sections 2-4 and Schedule A",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Signed 11 December 2001 (M297), deposited and announced 12 December.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-island-health-amalgamation"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-new-directions",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-new-directions",
+        "subject_id": "ministry-of-health-1976",
+        "related_subject_ids": [],
+        "event_type": "policy_announced",
+        "title": "New Directions for a Healthy British Columbia announced, beginning regionalization",
+        "date": {
+          "start": "1993-02",
+          "end": null,
+          "precision": "month",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://lims.leg.bc.ca/hdms/file/Debates/35th3rd/19940606pm-Hansard-v16n3.htm",
+          "locator": "Hansard, 6 June 1994, printed p. 11445 (minister Paul Ramsey)",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The Auditor General's 1998 review assigns it to 1992; the contemporaneous testimony is preferred.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-new-directions"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-act-1993",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-act-1993",
+        "subject_id": "ministry-of-health-1976",
+        "related_subject_ids": [],
+        "event_type": "legislation_assented",
+        "title": "Health Authorities Act receives assent: regional health boards and community health councils, with community representation and public meetings",
+        "date": {
+          "start": "1993-07-29",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/94consol18/94consol18/93047",
+          "locator": "SBC 1993 c. 47, sections 4, 6, 8",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The original framework: councils sent members to regional boards, ministerial appointees were capped at a third, and meetings were public with stated exceptions.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-act-1993"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-better-teamwork",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-better-teamwork",
+        "subject_id": "ministry-of-health-1976",
+        "related_subject_ids": [],
+        "event_type": "policy_announced",
+        "title": "Better Teamwork, Better Care resets regionalization to 11 regional boards, 34 councils and 7 societies",
+        "date": {
+          "start": "1996-11-29",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf",
+          "locator": "Auditor General 1998 review, printed pp. 1, 6, 22-24",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-better-teamwork"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-devolution-1997",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-devolution-1997",
+        "subject_id": "ministry-of-health-1976",
+        "related_subject_ids": [],
+        "event_type": "functions_transferred",
+        "title": "Health services devolve to the regional boards, councils and societies (1 April to 1 October 1997)",
+        "date": {
+          "start": "1997-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf",
+          "locator": "Auditor General 1998 review, implementation timeline, printed p. 28",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The remaining council transfers completed by 1 October 1997.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-devolution-1997"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-nisgaa-1999",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-nisgaa-1999",
+        "subject_id": "ministry-of-health-1976",
+        "related_subject_ids": [],
+        "event_type": "designation_removed",
+        "title": "Nisga'a Community Health Council designation removed from the council regulation",
+        "date": {
+          "start": "1999-10-18",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/regulationbulletin/1999cumulati",
+          "locator": "1999 cumulative regulation bulletin, Health Authorities Act, Reg. 333/99 (M366/1999)",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Not the end of Nisga'a health services: the Nisga'a Valley Health Board kept a distinct status through the 2001 restructuring.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-nisgaa-1999"
+    },
+    {
+      "origin": "atlas/events-health-lineage.json#atlas:health-lineage-central-coast-2002",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:health-lineage-central-coast-2002",
+        "subject_id": "vancouver-coastal-health",
+        "related_subject_ids": [
+          "bella-coola-and-district-transitional-health-authority",
+          "central-coast-transitional-health-authority",
+          "interior-health",
+          "island-health"
+        ],
+        "event_type": "territory_transferred",
+        "title": "Bella Coola and Central Coast areas move to Vancouver Coastal Health from Interior and Vancouver Island",
+        "date": {
+          "start": "2002-03-18",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/regulationbulletin/2002cumulati",
+          "locator": "2002 cumulative regulation bulletin: B.C. Reg. 52/2002 (M51/2002), deposited 18 March 2002",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "A boundary change after the 2001 amalgamation; the two bodies amalgamated into Interior and Vancouver Island, and only their areas moved.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:health-lineage-central-coast-2002"
+    },
+    {
       "origin": "atlas/events-historical-checkpoints.json#hc:evt-006",
       "disposition": "accepted",
       "input": {
@@ -12236,6 +12587,1992 @@
         "reviewed_on": "2026-10-01"
       },
       "output_id": "hc:evt-025"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bccdc-1955",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bccdc-1955",
+        "subject_id": "sub-bc-centre-for-disease-control",
+        "related_subject_ids": [],
+        "event_type": "co_location",
+        "title": "Special Health and Treatment Services divisions in Vancouver brought under one roof, each keeping its own operations",
+        "date": {
+          "start": "1955",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf",
+          "locator": "BCCDC Annual Report 2013, History, printed p. 7",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Co-location, not a merger or an incorporation.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bccdc-1955"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bccdc-1977",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bccdc-1977",
+        "subject_id": "sub-bc-centre-for-disease-control",
+        "related_subject_ids": [],
+        "event_type": "administrative_consolidation",
+        "title": "The divisions brought under one administration as the Vancouver Bureau",
+        "date": {
+          "start": "1977",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf",
+          "locator": "BCCDC Annual Report 2013, History, printed p. 7",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bccdc-1977"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bccdc-1986",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bccdc-1986",
+        "subject_id": "sub-bc-centre-for-disease-control",
+        "related_subject_ids": [],
+        "event_type": "name_change",
+        "title": "The Vancouver Bureau becomes the BC Centre for Disease Control",
+        "date": {
+          "start": "1986",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf",
+          "locator": "BCCDC Annual Report 2013, History, printed p. 7",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bccdc-1986"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bccdc-1997",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bccdc-1997",
+        "subject_id": "sub-bc-centre-for-disease-control",
+        "related_subject_ids": [
+          "vancouver-richmond-health-board"
+        ],
+        "event_type": "governance_transferred",
+        "title": "BCCDC becomes a society, its governance moving from the ministry to the Vancouver/Richmond Health Board",
+        "date": {
+          "start": "1997",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf",
+          "locator": "BCCDC Annual Report 2013, History, printed p. 7",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Incorporation and the governance transfer are two claims; neither day is known.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bccdc-1997"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bccdc-2001",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bccdc-2001",
+        "subject_id": "sub-bc-centre-for-disease-control",
+        "related_subject_ids": [
+          "provincial-health-services-authority"
+        ],
+        "event_type": "governance_transferred",
+        "title": "BCCDC becomes part of the Provincial Health Services Authority",
+        "date": {
+          "start": "2001-12",
+          "end": null,
+          "precision": "month",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf",
+          "locator": "BCCDC Annual Report 2013, History, printed p. 7",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bccdc-2001"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-grace-1927",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-grace-1927",
+        "subject_id": "sub-bc-womens-hospital",
+        "related_subject_ids": [],
+        "event_type": "operational_start",
+        "title": "Grace Hospital opens in Vancouver, run by the Salvation Army",
+        "date": {
+          "start": "1927-10-02",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bcwomens.ca/about/who-we-are/our-unique-role/our-story",
+          "locator": "Our Story: milestones and memories, 1927",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "A Grace Hospital founded in 1904 was in Winnipeg, not this one.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-grace-1927"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-grace-1994-02",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-grace-1994-02",
+        "subject_id": "sub-bc-womens-hospital",
+        "related_subject_ids": [],
+        "event_type": "governance_transferred",
+        "title": "The Salvation Army transfers responsibility for Grace Hospital to the provincial government; an interim board is set up",
+        "date": {
+          "start": "1994-02",
+          "end": null,
+          "precision": "month",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bcwomens.ca/about/who-we-are/our-unique-role/our-story",
+          "locator": "Our Story: milestones and memories, 1994",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-grace-1994-02"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-womens-1994-03",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-womens-1994-03",
+        "subject_id": "sub-bc-womens-hospital",
+        "related_subject_ids": [],
+        "event_type": "legal_establishment",
+        "title": "British Columbia's Women's Hospital and Health Centre Society formed, joining the hospital and the Women's Health Centre",
+        "date": {
+          "start": "1994-03-31",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bcwomens.ca/about/who-we-are/our-unique-role/our-story",
+          "locator": "Our Story: milestones and memories, 1994",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The society's formation, not the hospital's opening.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-womens-1994-03"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-phsa-2001",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-phsa-2001",
+        "subject_id": "provincial-health-services-authority",
+        "related_subject_ids": [],
+        "event_type": "legal_establishment",
+        "title": "Provincial Health Services Authority created under the Society Act",
+        "date": {
+          "start": "2001-12-12",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.phsa.ca/about-site/Documents/PHSA%20Consolidated%20FS.pdf",
+          "locator": "PHSA consolidated financial statements, nature of operations, printed pp. 6-8",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "A society coordinating provincial agencies, not a successor of the regional boards.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-phsa-2001"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-phsa-branches-2001",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-phsa-branches-2001",
+        "subject_id": "provincial-health-services-authority",
+        "related_subject_ids": [
+          "sub-bc-cancer",
+          "sub-bc-centre-for-disease-control"
+        ],
+        "event_type": "amalgamation",
+        "title": "The agencies' societies amalgamate as PHSA branch societies (cancer, disease control, mental health, transplant, Children's and Women's among them)",
+        "date": {
+          "start": "2001-12-31",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.phsa.ca/about-site/Documents/Mental%20Health.pdf",
+          "locator": "BC Mental Health Society Branch financial statements, printed p. 5, introductory notes",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Five branch names are evidenced; that there were seven is not. HSSBC and BCEHS were not among them.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-phsa-branches-2001"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bcshs-2026",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bcshs-2026",
+        "subject_id": "bc-shared-health-services",
+        "related_subject_ids": [],
+        "event_type": "legal_establishment",
+        "title": "BC Shared Health Services incorporated as a society (S0085000)",
+        "date": {
+          "start": "2026-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://free.bcpublications.ca/civix/document/id/corpreg/corpreg/soc0409soc0526",
+          "locator": "BC Registries society filings, 1 April 2026 entry S0085000",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "A stand-alone society and a member of HEABC, not part of it. Functions move to it in waves after this date (HSA's published BCSHS answers).",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bcshs-2026"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-msc-1968",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-msc-1968",
+        "subject_id": "sub-medical-services-commission",
+        "related_subject_ids": [],
+        "event_type": "legal_establishment",
+        "title": "Medical Services Commission established under the Medical Service Act",
+        "date": {
+          "start": "1968-07-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/medical-services-plan/bluebook2002.pdf",
+          "locator": "MSC financial statements 2002 (Blue Book), printed p. 6, Note 1",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The commission administers the Medical Services Plan; the two have related but separate histories.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-msc-1968"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-pharmacare-1974",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-pharmacare-1974",
+        "subject_id": "sub-bc-pharmacare",
+        "related_subject_ids": [],
+        "event_type": "operational_start",
+        "title": "PharmaCare begins under the Ministry of Human Resources",
+        "date": {
+          "start": "1974",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/health/health-drug-coverage/pharmacare/pharmacare_trends_2022_2023.pdf",
+          "locator": "PharmaCare Trends 2022/23, history, printed pp. 7-9",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-pharmacare-1974"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-pharmacare-1987",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-pharmacare-1987",
+        "subject_id": "sub-bc-pharmacare",
+        "related_subject_ids": [],
+        "event_type": "functions_transferred",
+        "title": "PharmaCare's administration moves from Human Resources to Health",
+        "date": {
+          "start": "1987",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/health/health-drug-coverage/pharmacare/pharmacare_trends_2022_2023.pdf",
+          "locator": "PharmaCare Trends 2022/23, history, printed pp. 7-9",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-pharmacare-1987"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-health-welfare-1946",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-health-welfare-1946",
+        "subject_id": "department-of-health-and-welfare-1946",
+        "related_subject_ids": [],
+        "event_type": "legislation_assented",
+        "title": "Department of Health and Welfare Act assented: Public Health and Social Welfare branches; Provincial Board of Health references redirected; Provincial Secretary functions may transfer",
+        "date": {
+          "start": "1946-04-11",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1217607539",
+          "locator": "SBC 1946 c. 31, sections 2-4, 7-12",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "It came into force by proclamation on 1 October 1946 (see the primary-evidence follow-up).",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-health-welfare-1946"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-hshi-1959",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-hshi-1959",
+        "subject_id": "department-of-health-services-and-hospital-insurance-1959",
+        "related_subject_ids": [],
+        "event_type": "functions_transferred",
+        "title": "Health Services and Hospital Insurance brings together the Health Branch, Mental Health Services (from the Provincial Secretary) and the BC Hospital Insurance Service",
+        "date": {
+          "start": "1959-03-20",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/681611917",
+          "locator": "Department of Health Services and Hospital Insurance Act, RS 1960 c. 102 (from 1959 c. 38), sections 5-11",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-hshi-1959"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-health-planning-2004",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-health-planning-2004",
+        "subject_id": "ministry-of-health-planning-2001",
+        "related_subject_ids": [
+          "ministry-of-health-services-2001"
+        ],
+        "event_type": "functions_transferred",
+        "title": "Health Planning disestablished; all its functions transferred to Health Services",
+        "date": {
+          "start": "2004-01-26",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2004resume03",
+          "locator": "OIC 37/2004, Appendix A, paragraphs 4-5",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-health-planning-2004"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-healthy-living-2010",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-healthy-living-2010",
+        "subject_id": "ministry-of-healthy-living-and-sport-2008",
+        "related_subject_ids": [
+          "ministry-of-health-services-2008"
+        ],
+        "event_type": "functions_transferred",
+        "title": "Healthy Living and Sport disestablished, its functions split three ways: sport to Community, Sport and Cultural Development, air and water human-health policy to Environment, the rest to Health Services",
+        "date": {
+          "start": "2010-10-25",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/bcgaz1/bcgaz1/1335172506",
+          "locator": "OIC 652/2010 (BC Gazette, 4 November 2010), Appendix A, paragraphs 14-15, 21, 35-37",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Not a merger back into Health: three ministries received its functions.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-healthy-living-2010"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bctfa-build-bc-1993",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bctfa-build-bc-1993",
+        "subject_id": "bc-transportation-financing-authority",
+        "related_subject_ids": [],
+        "event_type": "legal_establishment",
+        "title": "BC Transportation Financing Authority established under the Build BC Act",
+        "date": {
+          "start": "1993",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/sup-e/bc-transportation-financing-authority-fs-2025-26.pdf",
+          "locator": "BCTFA financial statements 2025/26, Note 1, PDF p. 11",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The Transportation Act replaced the Build BC Act as its basis on 31 December 2004.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bctfa-build-bc-1993"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bctfa-transportation-act-2004",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bctfa-transportation-act-2004",
+        "subject_id": "bc-transportation-financing-authority",
+        "related_subject_ids": [],
+        "event_type": "legal_basis_change",
+        "title": "The Transportation Act replaces the Build BC Act as BCTFA's legal basis",
+        "date": {
+          "start": "2004-12-31",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/sup-e/bc-transportation-financing-authority-fs-2025-26.pdf",
+          "locator": "BCTFA financial statements 2025/26, Note 1, PDF p. 11",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bctfa-transportation-act-2004"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bctfa-bcrc-2010",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bctfa-bcrc-2010",
+        "subject_id": "bc-transportation-financing-authority",
+        "related_subject_ids": [
+          "bc-railway-company"
+        ],
+        "event_type": "ownership_started",
+        "title": "BC Railway Company becomes a wholly owned subsidiary of BCTFA",
+        "date": {
+          "start": "2010-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/sup-e/bc-transportation-financing-authority-fs-2025-26.pdf",
+          "locator": "BCTFA financial statements 2025/26, Note 1, PDF p. 11",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Ownership, not ministerial responsibility, which is a separate relation. BCRC continues to exist, holding the corridor leased to CN.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bctfa-bcrc-2010"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-bctfa-ticorp-2018",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-bctfa-ticorp-2018",
+        "subject_id": "bc-transportation-financing-authority",
+        "related_subject_ids": [
+          "transportation-investment-corporation"
+        ],
+        "event_type": "ownership_started",
+        "title": "Transportation Investment Corporation becomes a wholly owned subsidiary of BCTFA",
+        "date": {
+          "start": "2018-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/sup-e/bc-transportation-financing-authority-fs-2025-26.pdf",
+          "locator": "BCTFA financial statements 2025/26, Note 1, PDF p. 11",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-bctfa-ticorp-2018"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-hpo-2010",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-hpo-2010",
+        "subject_id": "bc-housing",
+        "related_subject_ids": [
+          "sub-bc-housing-licensing-and-consumer-services"
+        ],
+        "event_type": "functions_transferred",
+        "title": "The Homeowner Protection Office's licensing, owner-builder authorization, research and education move to BC Housing; its Reconstruction Program goes to Finance",
+        "date": {
+          "start": "2010-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://archive.news.gov.bc.ca/releases/news_releases_2009-2013/2010hsd0024-000212.htm",
+          "locator": "Information Bulletin 2010HSD0024-000212, 3 March 2010, transfer list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "A split between two receivers, not a rename of the office.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-hpo-2010"
+    },
+    {
+      "origin": "atlas/events-institutional-history.json#atlas:institutional-history-sheriffs-1974",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:institutional-history-sheriffs-1974",
+        "subject_id": "sub-bc-sheriff-services",
+        "related_subject_ids": [],
+        "event_type": "amalgamation",
+        "title": "Nine county sheriff offices amalgamated into one provincial Sheriff Service",
+        "date": {
+          "start": "1974",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://news.gov.bc.ca/releases/2024AG0027-000679",
+          "locator": "Information Bulletin 2024AG0027-000679, 6 May 2024, paragraph beginning \"The event coincided\"",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The first sheriff was appointed in 1857. Which nine offices, and the day, are not yet found.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:institutional-history-sheriffs-1974"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-twenty-boards-1995",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-twenty-boards-1995",
+        "subject_id": "ministry-of-health-1976",
+        "related_subject_ids": [],
+        "event_type": "designation",
+        "title": "M597/1995 designates a set of twenty regional health boards, repealing their individual regulations",
+        "date": {
+          "start": "1995-12-06",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0597_1995",
+          "locator": "M597/1995, made 6 December 1995 (Reg. 521/95)",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The order-made day. The boards' earlier individual designations keep their own dates; seven rural boards of this set were not continued in 1997.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-twenty-boards-1995"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-hierarchy-1997",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-hierarchy-1997",
+        "subject_id": "ministry-of-health-1976",
+        "related_subject_ids": [],
+        "event_type": "legislation_in_force",
+        "title": "Health Authorities Amendment Act, 1997: councils' regional-service budgets go straight to the minister, councils stop reporting to boards, and the minister approves bylaws",
+        "date": {
+          "start": "1997-08-25",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/2044150625",
+          "locator": "Health Authorities Amendment Act, 1997, SBC1997 c.23, original chapter",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Councils and boards answered to the minister throughout; this changes the line between council and board, not the ministry.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-hierarchy-1997"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-cfm-programs-1997",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-cfm-programs-1997",
+        "subject_id": "ministry-for-children-and-families-1996",
+        "related_subject_ids": [],
+        "event_type": "program_accountability_observed",
+        "title": "Health authorities deliver child and youth programs (public-health nursing, child and youth mental health, infant development) under the Ministry for Children and Families' policy direction",
+        "date": {
+          "start": "1997",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf",
+          "locator": "Auditor General 1998 review, printed pp. 1 and 33-34",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Observed in the April-July 1997 review; it does not say which of the 52 bodies delivered each program.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-cfm-programs-1997"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-health-planning-2001",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-health-planning-2001",
+        "subject_id": "ministry-of-health-planning-2001",
+        "related_subject_ids": [
+          "ministry-of-health-services-2001"
+        ],
+        "event_type": "functions_transferred",
+        "title": "Health becomes Health Services, which keeps the Health Authorities Act; Health Planning takes strategic planning, policy, resource allocation, capital planning and evaluation",
+        "date": {
+          "start": "2001-06-05",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0565_2001",
+          "locator": "OIC 565/2001, Appendix A ss. 37-43; Schedule B ss. 11-12",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "A split of functions: the authorities answered to Health Services, with Health Planning setting system policy beside it.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-health-planning-2001"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-society-governors-2001",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-society-governors-2001",
+        "subject_id": "ministry-of-health-services-2001",
+        "related_subject_ids": [],
+        "event_type": "appointment",
+        "title": "The seven community health services societies' governors replaced by the new authorities' appointees (M298-M305/2001)",
+        "date": {
+          "start": "2001-12-12",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0298_2001",
+          "locator": "M298/2001 to M305/2001, single-page orders",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Appointments only: not a dissolution, a conveyance of assets or an amalgamation.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-society-governors-2001"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-societies-dissolved-2002",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-societies-dissolved-2002",
+        "subject_id": "ministry-of-health-services-2001",
+        "related_subject_ids": [],
+        "event_type": "dissolution",
+        "title": "The seven community health services societies dissolved, as the corporate registry records",
+        "date": {
+          "start": "2002-02-15",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://orgbook.gov.bc.ca/assets/en-DOUkjW9H.js",
+          "locator": "OrgBook BC: Conversion Society Dissolution (Event:CONVSDIS) for S0036593-S0036599",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "How and to whom their assets passed is not found.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-societies-dissolved-2002"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-health-act-1893",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-health-act-1893",
+        "subject_id": "department-of-health-and-welfare-1946",
+        "related_subject_ids": [],
+        "event_type": "function_origin",
+        "title": "Health Act provides for a Provincial Board of Health and local boards of health",
+        "date": {
+          "start": "1893-04-18",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/214279331",
+          "locator": "Health Act,1893, SBC1893 c15",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An antecedent of the provincial health function, not the start of the department.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-health-act-1893"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-social-welfare-1934",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-social-welfare-1934",
+        "subject_id": "department-of-the-provincial-secretary-1872",
+        "related_subject_ids": [],
+        "event_type": "unit_observed",
+        "title": "A Social Welfare Section in the Provincial Secretary's department",
+        "date": {
+          "start": "1934-10-22",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1294_1934",
+          "locator": "OIC1294/1934 — Social Welfare Section appointment",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Known by this day (an appointment to it took effect 12 November 1934); not its creation.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-social-welfare-1934"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-health-welfare-commencement-1946",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-health-welfare-commencement-1946",
+        "subject_id": "department-of-health-and-welfare-1946",
+        "related_subject_ids": [],
+        "event_type": "statutory_commencement",
+        "title": "The Department of Health and Welfare Act comes into force",
+        "date": {
+          "start": "1946-10-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2060_1946",
+          "locator": "OIC 2060/1946, approved 10 September 1946; proclaimed in the British Columbia Gazette, 3 October 1946, p. 2905",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Assented 11 April 1946; proclamation authorized 10 September; published 3 October.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-health-welfare-commencement-1946"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-provincial-secretary-transfer-1946",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-provincial-secretary-transfer-1946",
+        "subject_id": "department-of-health-and-welfare-1946",
+        "related_subject_ids": [
+          "department-of-the-provincial-secretary-1872"
+        ],
+        "event_type": "functions_transferred",
+        "title": "Order transferring listed health and welfare functions from the Provincial Secretary to the new department",
+        "date": {
+          "start": "1946-09-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2214_1946",
+          "locator": "OIC 2214/1946 — assignment of functions to Health and Welfare",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The order's approval; when each transfer took effect is not separately recovered.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-provincial-secretary-transfer-1946"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-reversal-1947",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-reversal-1947",
+        "subject_id": "department-of-the-provincial-secretary-1872",
+        "related_subject_ids": [
+          "department-of-health-and-welfare-1946"
+        ],
+        "event_type": "functions_transferred",
+        "title": "Physiotherapists and Massage Practitioners Act and Welfare Institutions Licensing Act duties return to the Provincial Secretary",
+        "date": {
+          "start": "1947-04-23",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0752_1947",
+          "locator": "OIC 752/1947 — two functions reassigned to Provincial Secretary",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-reversal-1947"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-split-1959",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-split-1959",
+        "subject_id": "department-of-health-and-welfare-1946",
+        "related_subject_ids": [
+          "department-of-health-services-and-hospital-insurance-1959",
+          "department-of-social-welfare-1959"
+        ],
+        "event_type": "department_split",
+        "title": "Health and Welfare splits into Health Services and Hospital Insurance and Social Welfare, both in force",
+        "date": {
+          "start": "1959-03-20",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0559_1959",
+          "locator": "OIC 558/1959 and OIC 559/1959",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The same day Provincial Secretary mental-health responsibilities moved to Health Services and Hospital Insurance.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-split-1959"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-rename-1973",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-rename-1973",
+        "subject_id": "department-of-health-services-and-hospital-insurance-1959",
+        "related_subject_ids": [
+          "department-of-health-1973"
+        ],
+        "event_type": "statutory_rename",
+        "title": "Renamed the Department of Health by statute",
+        "date": {
+          "start": "1973-11-07",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/512738460",
+          "locator": "Department of Health Services and Hospital Insurance Amendment Act, SBC1973 c109",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The statute's date; its commencement is not separately recovered.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-rename-1973"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-health-act-title-1977",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-health-act-title-1977",
+        "subject_id": "ministry-of-health-1976",
+        "related_subject_ids": [],
+        "event_type": "legislative_title_amendment",
+        "title": "Ministerial Titles Act amends the Department of Health Act to the Ministry of Health Act",
+        "date": {
+          "start": "1977-09-27",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1094229012",
+          "locator": "Ministerial Titles Amendment Act, 1977, SBC 1977 c.75",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Assent. Proclamation was authorized on 21 October 1977; the proclamation itself is not retrieved. The ministry had been named by OIC 3199/1976 a year before.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-health-act-title-1977"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-phsa-amalgamation-2018-04",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-phsa-amalgamation-2018-04",
+        "subject_id": "provincial-health-services-authority",
+        "related_subject_ids": [
+          "sub-bc-cancer",
+          "sub-bc-centre-for-disease-control",
+          "sub-bc-mental-health-and-substance-use-services",
+          "sub-bc-transplant",
+          "sub-bc-childrens-hospital",
+          "sub-bc-womens-hospital"
+        ],
+        "event_type": "amalgamation",
+        "title": "PHSA and five branch societies (cancer, disease control, mental health, transplant, Children's and Women's) amalgamate as one society (S0069120)",
+        "date": {
+          "start": "2018-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/corpreg/corpreg/soc0412soc0118",
+          "locator": "Registrar notice, 1 April 2018 entry",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Predecessors S0044011, S0044073, S0044074, S0044076, S0044077, S0044078.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-phsa-amalgamation-2018-04"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-phsa-amalgamation-2018-06",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-phsa-amalgamation-2018-06",
+        "subject_id": "provincial-health-services-authority",
+        "related_subject_ids": [],
+        "event_type": "amalgamation",
+        "title": "PHSA and BC Clinical and Support Services Society amalgamate (S0069572)",
+        "date": {
+          "start": "2018-06-29",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/corpreg/corpreg/soc0705soc0118",
+          "locator": "Registrar notice, 29 June 2018 entry",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Predecessors S0069120 and S0054278.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-phsa-amalgamation-2018-06"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-cancer-society-1974",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-cancer-society-1974",
+        "subject_id": "sub-bc-cancer",
+        "related_subject_ids": [],
+        "event_type": "registration",
+        "title": "Cancer Control Agency of British Columbia registered as a society (S0011125)",
+        "date": {
+          "start": "1974-09-09",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://orgbook.gov.bc.ca/api/v4/topic/2131735/credential-set",
+          "locator": "BC Corporate Registry credential history",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The society's registration, before the 31 October 1974 provincial takeover of cancer care.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-cancer-society-1974"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-cancer-name-1990",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-cancer-name-1990",
+        "subject_id": "sub-bc-cancer",
+        "related_subject_ids": [],
+        "event_type": "registry_name_change",
+        "title": "The registry records the society's new name, British Columbia Cancer Agency",
+        "date": {
+          "start": "1990-02-14",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://orgbook.gov.bc.ca/api/v4/topic/2131735/credential-set",
+          "locator": "BC Corporate Registry credential history",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The day for the 1990 rename already recorded by year.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-cancer-name-1990"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-transplant-society-1986",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-transplant-society-1986",
+        "subject_id": "sub-bc-transplant",
+        "related_subject_ids": [],
+        "event_type": "registration",
+        "title": "British Columbia Transplant Society registered (S0021154)",
+        "date": {
+          "start": "1986-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://orgbook.gov.bc.ca/api/v4/topic/2141570/credential-set",
+          "locator": "BC Corporate Registry credential history",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-transplant-society-1986"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-mental-health-society-1987",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-mental-health-society-1987",
+        "subject_id": "sub-bc-mental-health-and-substance-use-services",
+        "related_subject_ids": [],
+        "event_type": "registration",
+        "title": "British Columbia Mental Health Society registered (S0023123), to operate Riverview",
+        "date": {
+          "start": "1987-12-11",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://orgbook.gov.bc.ca/api/v4/topic/2143509/credential-set",
+          "locator": "BC Corporate Registry credential history",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-mental-health-society-1987"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-cw-amalgamation-1997",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-cw-amalgamation-1997",
+        "subject_id": "sub-bc-childrens-hospital",
+        "related_subject_ids": [
+          "sub-bc-womens-hospital"
+        ],
+        "event_type": "amalgamation",
+        "title": "Children's and Women's Health Centre of British Columbia formed by amalgamation (S0037131)",
+        "date": {
+          "start": "1997-07-15",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://orgbook.gov.bc.ca/api/v4/topic/2157210/credential-set",
+          "locator": "BC Corporate Registry credential history",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Which societies were its parties is not recovered.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-cw-amalgamation-1997"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-bccdc-society-1997",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-bccdc-society-1997",
+        "subject_id": "sub-bc-centre-for-disease-control",
+        "related_subject_ids": [],
+        "event_type": "registration",
+        "title": "British Columbia Centre for Disease Control Society registered (S0037212)",
+        "date": {
+          "start": "1997-08-06",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://orgbook.gov.bc.ca/api/v4/topic/2157289/credential-set",
+          "locator": "BC Corporate Registry credential history",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-bccdc-society-1997"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-bccdc-amalgamation-2001",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-bccdc-amalgamation-2001",
+        "subject_id": "sub-bc-centre-for-disease-control",
+        "related_subject_ids": [],
+        "event_type": "amalgamation",
+        "title": "British Columbia Centre for Disease Control and Prevention Society formed by amalgamation (S0042940)",
+        "date": {
+          "start": "2001-04-02",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://orgbook.gov.bc.ca/api/v4/topic/2162874/credential-set",
+          "locator": "BC Corporate Registry credential history",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The 1997 society (S0037212) and a January 2001 society of the same new name (S0042656) end that day; the full list of parties is not recovered.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-bccdc-amalgamation-2001"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-sheriffs-1973",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-sheriffs-1973",
+        "subject_id": "sub-bc-sheriff-services",
+        "related_subject_ids": [],
+        "event_type": "roster_observed",
+        "title": "Nine sheriffs, one for each bailiwick: the counties of Westminster, Cariboo (outside the Peace River districts), Kootenay, Victoria, Nanaimo, Yale, Vancouver and Prince Rupert, and the Peace River portion of Cariboo",
+        "date": {
+          "start": "1973-07-05",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://archive.org/details/governmentgazett0113gove_y1i7",
+          "locator": "Printed p. 2616, middle column; PDF page 14. Notice dated 21 February 1972, published 5 July 1973.",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "A Gazette roster (notice dated 21 February 1972): the offices as they stood before the 1974 reorganization, not the days they were established.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-sheriffs-1973"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-sheriffs-jurisdiction-1974",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-sheriffs-jurisdiction-1974",
+        "subject_id": "sub-bc-sheriff-services",
+        "related_subject_ids": [],
+        "event_type": "legislation_assented",
+        "title": "Statute Law Amendment Act, 1974 gives sheriffs province-wide jurisdiction",
+        "date": {
+          "start": "1974-06-20",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1095234976",
+          "locator": "SBC 1974 c. 87, s. 35",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The jurisdictional statute; the administrative amalgamation of the nine offices is dated only to 1974.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-sheriffs-jurisdiction-1974"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-ferry-authority-2003",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-ferry-authority-2003",
+        "subject_id": "bc-ferry-corporation",
+        "related_subject_ids": [],
+        "event_type": "related_body_origin",
+        "title": "B.C. Ferry Authority established under the Coastal Ferry Act, as the sole voting shareholder of the company the corporation became",
+        "date": {
+          "start": "2003-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03014_01",
+          "locator": "Coastal Ferry Act, SBC 2003 c. 14, ss. 2 and 89",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Not the British Columbia Ferry Authority of 1964 (the renamed Toll Highways and Bridges Authority).",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-ferry-authority-2003"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-bc-housing-responsibility-1999",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-bc-housing-responsibility-1999",
+        "subject_id": "bc-housing",
+        "related_subject_ids": [
+          "provincial-rental-housing-corporation",
+          "ministry-of-social-development-and-economic-security-1999"
+        ],
+        "event_type": "responsibility_changed",
+        "title": "Ministerial responsibility for BC Housing and PRHC moves from Employment and Investment to Social Development and Economic Security",
+        "date": {
+          "start": "1999-07-21",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19990901-social-housing-governance.pdf",
+          "locator": "Printed p. 60 (PDF p. 55) for Province acquisition in 1973; printed p. 35 (PDF p. 30) for 21 July 1999 ministry reassignment; pp. 24–25 and 59–62 for separate governance.",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-bc-housing-responsibility-1999"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-the-provincial-secretary-and-travel-industry-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-the-provincial-secretary-and-travel-industry-1976",
+        "subject_id": "ministry-of-the-provincial-secretary-and-travel-industry-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of the Provincial Secretary the Ministry of the Provincial Secretary and Travel Industry",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-the-provincial-secretary-and-travel-industry-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-finance-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-finance-1976",
+        "subject_id": "ministry-of-finance-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Finance the Ministry of Finance",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-finance-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-the-attorney-general-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-the-attorney-general-1976",
+        "subject_id": "ministry-of-the-attorney-general-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of the Attorney-General the Ministry of the Attorney-General",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-the-attorney-general-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-agriculture-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-agriculture-1976",
+        "subject_id": "ministry-of-agriculture-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Agriculture the Ministry of Agriculture",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-agriculture-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-education-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-education-1976",
+        "subject_id": "ministry-of-education-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Education the Ministry of Education",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-education-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-municipal-affairs-and-housing-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-municipal-affairs-and-housing-1976",
+        "subject_id": "ministry-of-municipal-affairs-and-housing-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Municipal Affairs and the Department of Housing the Ministry of Municipal Affairs and Housing",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-municipal-affairs-and-housing-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-mines-and-petroleum-resources-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-mines-and-petroleum-resources-1976",
+        "subject_id": "ministry-of-mines-and-petroleum-resources-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Mines and Petroleum Resources the Ministry of Mines and Petroleum Resources",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-mines-and-petroleum-resources-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-forests-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-forests-1976",
+        "subject_id": "ministry-of-forests-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Forests the Ministry of Forests",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-forests-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-labour-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-labour-1976",
+        "subject_id": "ministry-of-labour-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Labour the Ministry of Labour",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-labour-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-health-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-health-1976",
+        "subject_id": "ministry-of-health-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Health the Ministry of Health",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-health-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-highways-and-public-works-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-highways-and-public-works-1976",
+        "subject_id": "ministry-of-highways-and-public-works-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Highways and Public Works the Ministry of Highways and Public Works",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-highways-and-public-works-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-economic-development-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-economic-development-1976",
+        "subject_id": "ministry-of-economic-development-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Economic Development the Ministry of Economic Development",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-economic-development-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-energy-transport-and-communications-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-energy-transport-and-communications-1976",
+        "subject_id": "ministry-of-energy-transport-and-communications-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Transport and Communications the Ministry of Energy, Transport and Communications",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-energy-transport-and-communications-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-human-resources-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-human-resources-1976",
+        "subject_id": "ministry-of-human-resources-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Human Resources the Ministry of Human Resources",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-human-resources-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-the-environment-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-the-environment-1976",
+        "subject_id": "ministry-of-the-environment-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Environment the Ministry of the Environment",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-the-environment-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-consumer-and-corporate-affairs-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-consumer-and-corporate-affairs-1976",
+        "subject_id": "ministry-of-consumer-and-corporate-affairs-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Consumer Services the Ministry of Consumer and Corporate Affairs",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-consumer-and-corporate-affairs-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-oic-3199-ministry-of-recreation-and-conservation-1976",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-oic-3199-ministry-of-recreation-and-conservation-1976",
+        "subject_id": "ministry-of-recreation-and-conservation-1976",
+        "related_subject_ids": [],
+        "event_type": "executive_names_directive",
+        "title": "OIC 3199/1976 names the Department of Recreation and Travel Industry the Ministry of Recreation and Conservation",
+        "date": {
+          "start": "1976-10-28",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3199_1976",
+          "locator": "Two-page order; approval stamp 28 October 1976 and complete operative list",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "An executive naming order: it does not by itself move assets or functions. The statutory titles followed in 1977.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-oic-3199-ministry-of-recreation-and-conservation-1976"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-hpo-opening-1998",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-hpo-opening-1998",
+        "subject_id": "homeowner-protection-office",
+        "related_subject_ids": [],
+        "event_type": "operational_start",
+        "title": "Homeowner Protection Office opens",
+        "date": {
+          "start": "1998-10-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bcbudget.gov.bc.ca/2003/sp/crowncorps/hpo.pdf",
+          "locator": "Printed p. 3, PDF p. 7.",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The opening, after its legal establishment on 21 September.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-hpo-opening-1998"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-pemco-1961",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-pemco-1961",
+        "subject_id": "provincial-rental-housing-corporation",
+        "related_subject_ids": [],
+        "event_type": "incorporation",
+        "title": "Pemco Holdings Ltd. incorporated (No. 52129)",
+        "date": {
+          "start": "1961-12-13",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://archive.org/details/governmentgazett0101gove_d8x4",
+          "locator": "Printed p. 2290, right column, No. 52129; PDF p. 50.",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "A private company; the incorporation certificate itself is not obtained.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-pemco-1961"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-pemco-1973",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-pemco-1973",
+        "subject_id": "provincial-rental-housing-corporation",
+        "related_subject_ids": [],
+        "event_type": "ownership_started",
+        "title": "The Province acquires Pemco Holdings Ltd.",
+        "date": {
+          "start": "1973",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19990901-social-housing-governance.pdf",
+          "locator": "Printed p. 60 (PDF p. 55) for Province acquisition in 1973; printed p. 35 (PDF p. 30) for 21 July 1999 ministry reassignment; pp. 24–25 and 59–62 for separate governance.",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "The day and instrument are not found.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-pemco-1973"
+    },
+    {
+      "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-prhc-control-2024",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:primary-evidence-prhc-control-2024",
+        "subject_id": "provincial-rental-housing-corporation",
+        "related_subject_ids": [
+          "bc-housing"
+        ],
+        "event_type": "control_started",
+        "title": "BC Housing gains control of PRHC through governance and board-appointment changes",
+        "date": {
+          "start": "2024-01-26",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bchousing.org/sites/default/files/media/documents/Annual-Service-Plan-Report-2023-2024.pdf",
+          "locator": "Financial statements note 1, printed p. 10/PDF p. 43; note 20, printed pp. 23–24/PDF pp. 56–57.",
+          "observed_on": "2026-10-21"
+        },
+        "interpretation_notes": "Control, not a share transfer. BC Housing consolidated PRHC in its accounts from 31 March 2024.",
+        "reviewed_on": "2026-10-21"
+      },
+      "output_id": "atlas:primary-evidence-prhc-control-2024"
     },
     {
       "origin": "history/sub-agencies-researched.json#bc-farm-industry-review-board/established",

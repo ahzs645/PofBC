@@ -290,6 +290,7 @@
 }
 
 .gov-link-card:hover { background: var(--gov-hover); }
+.gov-link-card--still, .gov-link-card--still:hover { background: none; cursor: default; }
 
 .gov-link-button {
   padding: 0;
@@ -1093,3 +1094,8 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-seats-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: 13px; }
 .gov-seats-list li { display: grid; gap: 2px; }
 .gov-seats-list__change { font-size: 12px; color: var(--gov-ink-3); }
+
+/* How a body answers to the people: one step per line, outwards from the body to the centre. */
+.gov-path { margin: 0 0 8px; padding-left: 20px; display: grid; gap: 6px; font-size: 14px; line-height: 1.4; }
+.gov-path .gov-link-button { font-size: inherit; }
+.gov-path__also { display: block; color: var(--gov-ink-4); font-size: 13px; }

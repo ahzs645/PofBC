@@ -78,11 +78,12 @@ That is deliberate — an undated body can't be placed in 1990 without claiming 
 | Columbia Basin Broadband Corporation | Columbia Basin Trust | 2011 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/cbt.pdf |
 | QuadReal Property Group | British Columbia Investment Management Corporation | 2016 | https://www.bci.ca/about/ |
 
-### 2b. Undated, but with dated history events already on file (60) — quick wins
+### 2b. Undated, but with dated history events already on file (65) — quick wins
 
 These have origin/rename events in `eventsData.js` (from the atlas package), but no `established` value, so they still vanish. The research question here is narrower: **which event is the start of _this_ body** (as opposed to the start of its function), and what was it called and under which ministry at each step.
 
 - **Court Services Branch** (Ministry of Attorney General): 2003 name first observed
+- **BC Sheriff Services** (Ministry of Attorney General): 1973-07-05 roster observed; 1974 amalgamation; 1974-06-20 legislation assented
 - **Indigenous Justice Secretariat** (Ministry of Attorney General): 2025 name first observed
 - **Child and Youth Mental Health Services** (Ministry of Children and Family Development): 2015 name first observed
 - **Youth Justice Services** (Ministry of Children and Family Development): 2015 name first observed
@@ -112,7 +113,7 @@ These have origin/rename events in `eventsData.js` (from the atlas package), but
 - **Office of the Chief Forester** (Ministry of Forests): 1912 executive appointment; 1912 office established; 1912-02 unit established; 1912-02 unit established; 2016-02-26 executive appointment; 2020 name first observed
 - **Office of the Provincial Health Officer** (Ministry of Health): 1892 office established; 1911 legislation enacted; 2002 name first observed; 2008-05-29 legislation assented; 2018 executive appointment
 - **Medical Services Plan** (Ministry of Health): 2002 name first observed
-- **BC PharmaCare** (Ministry of Health): 2003 name first observed
+- **BC PharmaCare** (Ministry of Health): 1974 operational start; 1987 functions transferred; 2003 name first observed
 - **Residential Tenancy Branch** (Ministry of Housing and Municipal Affairs): 1974 legislation enacted; 1984 unit established; 2010 name first observed
 - **University Endowment Lands** (Ministry of Housing and Municipal Affairs): 2002 name first observed
 - **Small Business Roundtable** (Ministry of Jobs and Economic Growth): 2010 name first observed
@@ -138,12 +139,16 @@ These have origin/rename events in `eventsData.js` (from the atlas package), but
 - **Skilled Trades BC Appeal Board** (Ministry of Attorney General): 2006 operational start; 2006 name first observed; 2022-12-01 rename; 2022-12-01 legal name change
 - **Surface Rights Board** (Ministry of Attorney General): 2020 name first observed
 - **British Columbia Ferry Commission** (Ministry of Attorney General): 2010 name first observed
+- **Medical Services Commission** (Ministry of Health): 1968-07-01 legal establishment
 - **Property Assessment Review Panels** (Ministry of Finance): 2005 name first observed
-- **BC Centre for Disease Control** (Provincial Health Services Authority): 1997 name first observed; 1999-07-15 name observed; 2018-04-01 legal status change
+- **BC Centre for Disease Control** (Provincial Health Services Authority): 1955 co location; 1977 administrative consolidation; 1986 name change; 1997 name first observed; 1997 governance transferred; 1997-08-06 registration; 1999-07-15 name observed; 2001-04-02 amalgamation; 2001-12 governance transferred; 2018-04-01 legal status change
+- **BC Children's Hospital and Sunny Hill Health Centre** (Provincial Health Services Authority): 1997-07-15 amalgamation
+- **BC Women's Hospital + Health Centre** (Provincial Health Services Authority): 1927-10-02 operational start; 1994-02 governance transferred; 1994-03-31 legal establishment
+- **BC Mental Health and Substance Use Services** (Provincial Health Services Authority): 1987-12-11 registration
 - **Trans Care BC** (Provincial Health Services Authority): 2015 retrospective claim; 2015-04 planned function transfer
 - **BC Archives** (Royal British Columbia Museum Corporation): 2002 name first observed
 
-### 2c. Nothing on file beyond today (138)
+### 2c. Nothing on file beyond today (133)
 
 Listed by parent in §6.
 
@@ -230,7 +235,7 @@ _Look under:_ Ministry of Justice (2012–2017) · Ministry of Attorney General 
 
 | id | Name | Kind | Established | Events | Source today |
 |---|---|---|---|---|---|
-| `bc-sheriff-services` | BC Sheriff Services | office |  |  | https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart |
+| `bc-sheriff-services` | BC Sheriff Services | office |  | 3 | https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart |
 | `bc-ferry-commission` | British Columbia Ferry Commission | agency |  | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/ag.pdf |
 | `bc-review-board` | British Columbia Review Board (BCRB) | tribunal |  | 1 | https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector |
 | `building-code-appeal-board` | Building Code Appeal Board | board |  | 1 | https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector |
@@ -321,12 +326,12 @@ _Look under:_ Ministry of Health Services (2008–2011) · Ministry of Health (2
 
 | id | Name | Kind | Established | Events | Source today |
 |---|---|---|---|---|---|
-| `bc-pharmacare` | BC PharmaCare (PharmaCare) | program |  | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf |
+| `bc-pharmacare` | BC PharmaCare (PharmaCare) | program |  | 3 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf |
 | `emergency-medical-assistants-licensing-board` | Emergency Medical Assistants Licensing Board (EMALB) | board |  |  | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf |
 | `health-care-practitioners-special-committee-for-audit-hearings` | Health Care Practitioners Special Committee for Audit Hearings | tribunal |  |  | https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector |
 | `health-connect-registry` | Health Connect Registry | program |  |  | https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health |
 | `helpstartshere` | HelpStartsHere | program |  |  | https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health |
-| `medical-services-commission` | Medical Services Commission (MSC) | board |  |  | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf |
+| `medical-services-commission` | Medical Services Commission (MSC) | board |  | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf |
 | `medical-services-plan` | Medical Services Plan (MSP) | program |  | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf |
 | `office-of-indigenous-health` | Office of Indigenous Health | office |  |  | https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/health |
 | `office-of-the-provincial-health-officer` | Office of the Provincial Health Officer (PHO) | office |  | 5 | https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer |
@@ -401,17 +406,17 @@ _Look under:_ Ministry of Land, Water and Resource Stewardship (2022–2022)
 
 | id | Name | Kind | Established | Events | Source today |
 |---|---|---|---|---|---|
-| `bc-centre-for-disease-control` | BC Centre for Disease Control (BCCDC) | agency |  | 3 | https://www.phsa.ca/our-services/programs-services/bc-centre-for-disease-control |
-| `bc-childrens-hospital` | BC Children's Hospital and Sunny Hill Health Centre (BC Children's) | division |  |  | https://www.phsa.ca/our-services/programs-services/bc-childrens-hospital-and-sunny-hill-health-centre-for-children |
-| `bc-mental-health-and-substance-use-services` | BC Mental Health and Substance Use Services (BCMHSUS) | agency |  |  | https://www.phsa.ca/our-services/programs-services/bc-mental-health-substance-use-services |
-| `bc-womens-hospital` | BC Women's Hospital + Health Centre (BC Women's) | division |  |  | https://www.phsa.ca/our-services/programs-services/bc-womens-hospital-health-centre |
+| `bc-centre-for-disease-control` | BC Centre for Disease Control (BCCDC) | agency |  | 10 | https://www.phsa.ca/our-services/programs-services/bc-centre-for-disease-control |
+| `bc-childrens-hospital` | BC Children's Hospital and Sunny Hill Health Centre (BC Children's) | division |  | 1 | https://www.phsa.ca/our-services/programs-services/bc-childrens-hospital-and-sunny-hill-health-centre-for-children |
+| `bc-mental-health-and-substance-use-services` | BC Mental Health and Substance Use Services (BCMHSUS) | agency |  | 1 | https://www.phsa.ca/our-services/programs-services/bc-mental-health-substance-use-services |
+| `bc-womens-hospital` | BC Women's Hospital + Health Centre (BC Women's) | division |  | 3 | https://www.phsa.ca/our-services/programs-services/bc-womens-hospital-health-centre |
 | `cardiac-services-bc` | Cardiac Services BC | agency |  |  | https://www.phsa.ca/our-services/programs-services/cardiac-services-bc |
 | `health-emergency-management-bc` | Health Emergency Management BC (HEMBC) | agency |  |  | https://www.phsa.ca/our-services/programs-services/health-emergency-management-bc |
 | `perinatal-services-bc` | Perinatal Services BC (PSBC) | agency |  |  | https://www.phsa.ca/our-services/programs-services/perinatal-services-bc |
 | `trans-care-bc` | Trans Care BC | agency |  | 2 | https://www.phsa.ca/our-services/programs-services/trans-care-bc |
-| `bc-cancer` | BC Cancer | agency | 1974-10-31 | 6 | https://www.phsa.ca/our-services/programs-services/bc-cancer-agency |
+| `bc-cancer` | BC Cancer | agency | 1974-10-31 | 8 | https://www.phsa.ca/our-services/programs-services/bc-cancer-agency |
 | `bc-renal` | BC Renal | agency | 1997 | 1 | https://www.phsa.ca/our-services/programs-services/bc-renal |
-| `bc-transplant` | BC Transplant (BCT) | agency | 1986 | 1 | https://www.phsa.ca/our-services/programs-services/bc-transplant |
+| `bc-transplant` | BC Transplant (BCT) | agency | 1986 | 2 | https://www.phsa.ca/our-services/programs-services/bc-transplant |
 | `provincial-laboratory-medicine-services` | Provincial Laboratory Medicine Services (PLMS) | agency | 2019 |  | https://www.phsa.ca/our-services/programs-services/provincial-laboratory-medicine-services |
 
 ### Ministry of Energy and Climate Solutions — 8 (7 undated)
