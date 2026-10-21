@@ -52,7 +52,7 @@ events = [
     # The regional health system, 1995-2002.
     event('twenty-boards-1995', HEALTH_1976, 'designation', 'M597/1995 designates a set of twenty regional health boards, repealing their individual regulations',
           '1995-12-06', 'day', 'HDS053', 'M597/1995, made 6 December 1995 (Reg. 521/95)',
-          'The order-made day. The boards\' earlier individual designations keep their own dates; nine rural boards of this set were not continued in 1997.'),
+          'The order-made day. The boards\' earlier individual designations keep their own dates; seven rural boards of this set were not continued in 1997.'),
     event('hierarchy-1997', HEALTH_1976, 'legislation_in_force', 'Health Authorities Amendment Act, 1997: councils\' regional-service budgets go straight to the minister, councils stop reporting to boards, and the minister approves bylaws',
           '1997-08-25', 'day', 'HT30', None,
           'Councils and boards answered to the minister throughout; this changes the line between council and board, not the ministry.'),

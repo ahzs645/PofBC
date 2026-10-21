@@ -46,7 +46,8 @@ URL in the source register. Two converters bring it in (run from the repository 
 
 ## Not applied
 
-- The nine rural regional health boards of the 1995 twenty-board set: their formal end is open
+- The seven rural regional health boards of the 1995 twenty-board set (West Kootenay-Boundary, East
+  Kootenay, Cariboo, Upper Island/Central Coast, North West, Coast Garibaldi, Peace Liard): their formal end is open
   (HD006), and the research warns against a common 1999 end.
 - The 43 earlier councils' execution days, the societies' asset transfers, and the 1974 sheriff
   amalgamation instrument: still open, as the report lists.
