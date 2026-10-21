@@ -1060,11 +1060,16 @@ from the first day a source shows it, and says so; one with neither stays in its
 successor of the boards.
 
 **Every body's line to the people.** Choosing a body draws its whole line of accountability, not
-only its nearest connections — a health authority to its ministry, the ministry's minister to the
-Premier, the Premier to the Assembly whose confidence they hold, the Assembly to those who elect it
-— and the panel lists each step, marking any the sources do not state for that year. Partnerships,
-funding and the rest are not part of it, and FNHA, the Crown and the courts have none. The people
-are described as more than the electors, and a year before 1949 says whom the franchise left out.
+only its nearest connections, as [graph.civlab.org](https://graph.civlab.org) does: a health
+authority to its ministry, the ministry's minister to the Premier, the Premier to the Assembly whose
+confidence they hold, the Assembly to those who elect it. Every route is kept — beside the Assembly's
+confidence, the Lieutenant Governor's appointment of the Premier is drawn too, and the panel says
+the Crown is not elected. The people's sun lights up when the line reaches it; a line that would
+cross the centre bows round it; each line names itself when pointed at, the people's with the
+number of members they elect. The panel lists each step and marks any the sources do not state for
+that year. Partnerships, funding and the rest are not part of it, and FNHA, the Crown and the
+courts have no route. The people are described as more than the electors, and a year before 1949
+says whom the franchise left out.
 
 **An atlas, not just an org chart.** Following the BC government atlas research package of
 2026-09-25 (its model notes and acceptance cases are what the tests in

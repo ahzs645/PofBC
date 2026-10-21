@@ -354,15 +354,28 @@ const PathToPeople = ({ node, government, onSelect }) => {
     <section className="gov-card">
       <h2 className="gov-card__heading">How it answers to the people</h2>
       <ol className="gov-path">
-        {steps.map((step) => {
+        {steps.filter((step) => step.route === 'main').map((step) => {
           const from = byId.get(step.to)
           const to = byId.get(step.from)
+          // Other lines into the same body: a second route, shown beside the step it sits with.
+          const also = steps.filter((other) => other.route === 'also' && other.to === step.to)
           return (
             <li key={`${step.from}-${step.to}`}>
               <span>{from?.shortName ?? from?.name}</span>{' '}
               <span className="gov-muted">{from?.kind === 'ministry' && step.kind === 'appoints' ? 'has its minister chosen by' : STEP[step.kind]}</span>{' '}
               <button type="button" className="gov-link-button" onClick={() => onSelect(step.from)}>{to?.shortName ?? to?.name}</button>
+              {step.seats ? <span className="gov-muted"> — {step.seats} members</span> : null}
               {step.inferred && <span className="gov-muted"> (inferred: no source names it for {government.year})</span>}
+              {also.map((other) => {
+                const by = byId.get(other.from)
+                return (
+                  <span key={other.from} className="gov-path__also">
+                    Also {STEP[other.kind].replace(/^is /, '')}{' '}
+                    <button type="button" className="gov-link-button" onClick={() => onSelect(other.from)}>{by?.shortName ?? by?.name}</button>
+                    {by?.kind === 'crown' ? ', who is not elected: the Crown acts on the advice of ministers who hold the Assembly’s confidence.' : '.'}
+                  </span>
+                )
+              })}
             </li>
           )
         })}

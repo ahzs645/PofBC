@@ -31,6 +31,13 @@ the only route from it into the history.
 - **Path to the people** (`pathToPeople` in `src/government/snapshot.js`): the diagram and panel
   show the whole accountability line for a chosen body; the people's description no longer equates
   the people with the electors, and years before 1949 name who the franchise excluded.
+- **Following graph.civlab.org** (studied from a capture of the site on 21 October 2026): the path
+  keeps every route (`route: 'also'` for a second line into a step, such as the Lieutenant
+  Governor's appointment of the Premier), the people's seal lights when a path reaches it, lines
+  bow round the centre (`aroundCentre` in `layout.js`), and each line has a hover title, the
+  people's with the seats they elect. Unlike civlab, whose edges per body are listed by hand, ours
+  are derived for each year from the dated relations, and run through the ministry rather than the
+  minister, who is not a node here.
 
 ## Not applied yet
 

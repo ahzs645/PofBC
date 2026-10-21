@@ -5,6 +5,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { EVENTS } from './events.js'
 import { HISTORICAL_BODIES } from './historyData.js'
+import { aroundCentre, CENTRE, SEAL_CLEARANCE } from './layout.js'
 import { franchiseIn, governmentIn, pathToPeople, PEOPLE_ID } from './snapshot.js'
 
 const find = (year, id) => governmentIn(year).nodes.find((node) => node.id === id)
@@ -50,9 +51,35 @@ test('the boundary change of March 2002 is its own event, not a rewrite of the 2
 test('a health authority answers to the people through its ministry, the Premier and the Assembly', () => {
   const government = governmentIn(2010)
   const steps = pathToPeople(government, 'northern-health')
-  assert.deepEqual(steps.map((step) => step.kind), ['responsible', 'appoints', 'confidence', 'elects'])
-  assert.equal(steps.at(-1).from, PEOPLE_ID)
-  assert.equal(steps[2].from, 'legislative-assembly')
+  const main = steps.filter((step) => step.route === 'main')
+  assert.deepEqual(main.map((step) => step.kind), ['responsible', 'appoints', 'confidence', 'elects'])
+  assert.equal(main.at(-1).from, PEOPLE_ID)
+  assert.equal(main[2].from, 'legislative-assembly')
+})
+
+test('every route is kept: the Lieutenant Governor appoints the Premier beside the Assembly’s confidence', () => {
+  const steps = pathToPeople(governmentIn(2010), 'northern-health')
+  const also = steps.filter((step) => step.route === 'also')
+  assert.deepEqual(also.map((step) => [step.from, step.to, step.kind]), [['lieutenant-governor', 'premier', 'appoints']])
+})
+
+test('the people’s line to the Assembly carries the seats they elect', () => {
+  const government = governmentIn(2010)
+  const elects = pathToPeople(government, 'northern-health').find((step) => step.kind === 'elects')
+  assert.equal(elects.seats, government.election.totalSeats)
+  assert.ok(elects.seats > 0)
+})
+
+test('a line that would cross the people bows round them; one that starts there does not', () => {
+  const clear = (point) => Math.hypot(point.x - CENTRE.x, point.y - CENTRE.y)
+  const a = { x: CENTRE.x - 200, y: CENTRE.y + 10 }
+  const b = { x: CENTRE.x + 200, y: CENTRE.y + 10 }
+  const control = aroundCentre(a, b)
+  const mid = { x: 0.25 * a.x + 0.5 * control.x + 0.25 * b.x, y: 0.25 * a.y + 0.5 * control.y + 0.25 * b.y }
+  assert.ok(Math.abs(clear(mid) - SEAL_CLEARANCE) < 1e-6)
+  assert.ok(mid.y > CENTRE.y, 'it bows to the side the line was passing')
+  assert.equal(aroundCentre({ ...CENTRE }, b), null)
+  assert.equal(aroundCentre({ x: CENTRE.x - 200, y: CENTRE.y + 150 }, { x: CENTRE.x + 200, y: CENTRE.y + 150 }), null)
 })
 
 test('a partner and the Crown have no drawn line to the people', () => {

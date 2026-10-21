@@ -184,7 +184,7 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
   const nodes = []
   const edges = []
   const add = (node) => { nodes.push(node); return node }
-  const link = (from, to, kind) => edges.push({ from, to, kind })
+  const link = (from, to, kind, extra = {}) => edges.push({ from, to, kind, ...extra })
 
   add({
     id: PEOPLE_ID,
@@ -214,7 +214,8 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
     description: 'The elected house of the Legislature, which also includes the Lieutenant Governor. It makes provincial law, votes the government its money, and holds it to account; a government governs only while it has the Assembly’s confidence.',
     officialUrl: 'https://www.leg.bc.ca'
   })
-  link(PEOPLE_ID, assembly.id, 'elects')
+  // How many members the people elect, where the election is known: what the line carries.
+  link(PEOPLE_ID, assembly.id, 'elects', election?.totalSeats ? { seats: election.totalSeats } : {})
 
   const crown = add({
     id: 'lieutenant-governor',
@@ -581,22 +582,31 @@ export { PEOPLE_ID }
 const ACCOUNTABLE = ['part', 'responsible', 'confidence', 'appoints', 'elects']
 
 /**
- * How a body answers to the people in the year shown: each step from it to the people of British
- * Columbia, along the lines the diagram draws. Empty when no such line is drawn — a court, the
- * Crown, a partner such as FNHA, or a body no source places under a ministry.
- * @returns {{from: string, to: string, kind: string, inferred: boolean}[]}
+ * How a body answers to the people in the year shown, along the lines the diagram draws.
+ *
+ * Every route is kept, as a reader of the diagram would want to see it: the main route, step by
+ * step from the body to the people (`route: 'main'`), and beside any step the other lines into the
+ * same body (`route: 'also'`) — the Lieutenant Governor's appointment of the Premier beside the
+ * Assembly's confidence. An `also` line is not followed further unless it too reaches the people.
+ * Empty when no route reaches the people: a court, the Crown, a partner such as FNHA, or a body no
+ * source places under a ministry.
+ * @returns {{from: string, to: string, kind: string, route: 'main'|'also', inferred: boolean, seats?: number}[]}
  */
 export const pathToPeople = (government, id) => {
   const byId = new Map(government.nodes.map((node) => [node.id, node]))
+  const incoming = (at) => government.edges.filter((edge) => edge.to === at && ACCOUNTABLE.includes(edge.kind))
+  const rank = (edge) => ACCOUNTABLE.indexOf(edge.kind)
   const steps = []
   const seen = new Set([id])
   let at = id
   while (at && at !== PEOPLE_ID) {
-    const incoming = government.edges.filter((edge) => edge.to === at && ACCOUNTABLE.includes(edge.kind))
-    const edge = ACCOUNTABLE.map((kind) => incoming.find((candidate) => candidate.kind === kind)).find(Boolean)
+    const lines = incoming(at).sort((a, b) => rank(a) - rank(b))
+    const edge = lines[0]
     if (!edge || seen.has(edge.from)) return []
     const node = byId.get(at)
-    steps.push({ ...edge, inferred: Boolean(node?.inferredGroup || node?.inferredParent) })
+    const inferred = Boolean(node?.inferredGroup || node?.inferredParent)
+    steps.push({ ...edge, route: 'main', inferred })
+    for (const other of lines.slice(1)) steps.push({ ...other, route: 'also', inferred: false })
     seen.add(edge.from)
     at = edge.from
   }
