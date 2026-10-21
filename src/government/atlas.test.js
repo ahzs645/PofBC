@@ -197,9 +197,12 @@ test('the bodies WCAT replaced are drawn in their years, apart, and lead to it',
 })
 
 test('a start the review could not settle is marked, not presented as resolved', () => {
-  // (BC Timber Sales was, until a recorded decision settled it — tested below.)
+  // (BC Timber Sales and Powertech were, until recorded decisions settled them.) BC Transplant's
+  // registry start of 1986 stands beside the minister's "established in 1985" (Round 4).
+  assert.ok(find(2000, 'sub-bc-transplant')?.reconcile)
   const powertech = find(2000, 'sub-powertech-labs')
-  assert.ok(powertech?.reconcile)
+  assert.equal(powertech.established, '1988-09-29')
+  assert.ok(!powertech.reconcile)
 })
 
 test('a recorded decision settles BCTS on 20 June 2003, and keeps the dates it set aside as events', () => {
@@ -217,11 +220,13 @@ test('round 2: a Crown named as a parent is matched to that Crown, for the obser
   assert.ok(find(1990, 'sub-columbia-hydro-constructors').inferredParent)
 })
 
-test('round 2: a start the sources dispute keeps the collected year, marked unsettled', () => {
-  // The Board's manual says 1982; the collected record says 1981. Neither is chosen yet.
+test('a disputed start is settled by the instrument: the Environmental Appeal Board, 1 January 1982', () => {
+  // The manual said 1982 and the collected record 1981; OIC 2603/1981 establishes the Board
+  // effective 1 January 1982 (Round 4, decision eab-established-1982-01-01).
   const eab = find(2000, 'sub-environmental-appeal-board')
-  assert.equal(eab.established, '1981')
-  assert.ok(eab.reconcile)
+  assert.equal(eab.established, '1982-01-01')
+  assert.ok(!eab.reconcile)
+  assert.match(eab.evidence[0].note, /Decided 2026-10-21/)
 })
 
 test('the timeline follows a chosen body through its whole life, whatever year is shown', () => {

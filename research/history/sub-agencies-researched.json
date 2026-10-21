@@ -2112,9 +2112,41 @@
         "established": "1988",
         "events_on_file": []
       },
-      "established": null,
+      "established": {
+        "date": "1988-09-29",
+        "precision": "day",
+        "meaning": "Incorporation of the company registered as BC0352143, under the numbered name 352143 B.C. LTD.; it took the name Powertech Labs Inc. on 6 January 1989. A legal start, not the start of the laboratory's work",
+        "evidence": "official_webpage",
+        "source": "https://orgbook.gov.bc.ca/api/v4/topic/360507/credential-set",
+        "source_id": "r4-r3f-ext-006",
+        "locator": "BC Registries credential 493544 (BC0352143): registration_date and entity_name_effective 1988-09-29, reason Event:CONVICORP (converted legacy record)",
+        "checked": "2026-10-21"
+      },
       "ended": null,
-      "names": [],
+      "names": [
+        {
+          "name": "352143 B.C. LTD.",
+          "from": "1988-09-29",
+          "to": "1989-01-06",
+          "from_precision": "day",
+          "to_precision": "day",
+          "coverage": "documented_period",
+          "evidence": "official_webpage",
+          "source": "https://orgbook.gov.bc.ca/api/v4/topic/360507/credential-set",
+          "source_id": "r4-r3f-ext-006",
+          "locator": "Credentials 493544 and 493593, same registration BC0352143; the end is exclusive"
+        },
+        {
+          "name": "Powertech Labs Inc.",
+          "from": "1989-01-06",
+          "from_precision": "day",
+          "coverage": "start_documented_end_unknown",
+          "evidence": "official_webpage",
+          "source": "https://orgbook.gov.bc.ca/api/v4/topic/360507/credential-set",
+          "source_id": "r4-r3f-ext-006",
+          "locator": "Credential 493593: entity_name_effective 1989-01-06, reason Event:CONVNC (name change)"
+        }
+      ],
       "parents": [
         {
           "ministry_as_printed": "BC Hydro",
@@ -2151,12 +2183,22 @@
           "source_id": "r2-hydro-subsidiaries",
           "locator": "Powertech Labs, first paragraph",
           "checked": "2026-09-30"
+        },
+        {
+          "ministry_as_printed": "BC Hydro and Power Authority",
+          "relation": "subsidiary_of",
+          "observed_on": "2020",
+          "coverage": "observation_only",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/bchydro.pdf",
+          "source_id": "r4-r3f-doc-101",
+          "locator": "PDF p. 28, subsidiaries: Powertech Labs Inc."
         }
       ],
       "relations": [],
       "legal_basis": null,
       "evidence_status": "requires_reconciliation",
-      "note": "The uploaded founding year 1988 was not independently substantiated in this pass. BC Hydro describes service delivery since 1989, which may differ from incorporation. The held 1988 value is preserved, and neither year is silently treated as proof of the other event. Round 2 rechecks current ownership but finds no incorporation evidence resolving 1988 versus the existing 1989 service-history statement. Undated descriptions of 30 or 35 years of experience are not converted into a founding year. Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "note": "The uploaded founding year 1988 was not independently substantiated in this pass. BC Hydro describes service delivery since 1989, which may differ from incorporation. The held 1988 value is preserved, and neither year is silently treated as proof of the other event. Round 2 rechecks current ownership but finds no incorporation evidence resolving 1988 versus the existing 1989 service-history statement. Undated descriptions of 30 or 35 years of experience are not converted into a founding year. Targeted claims from the 2026-09-30 worked review; the full history is open. Round 4 (carried round-3 branches evidence R3F-EXT-006 and R3F-DOC-101; OrgBook credentials re-read 2026-10-21). The held 1988 is the incorporation year; BC Hydro's 1989 'service delivery' (2009 release) and its 1979 'inception' (2020 service plan) are statements about the laboratory's work, kept as events. The registry does not itself say BC Hydro owned the company from 1988: the identification with today's subsidiary rests on the name. When BC Hydro acquired or subscribed for its shares is open.",
       "research_events": [
         {
           "date": "1989",
@@ -2168,23 +2210,47 @@
           "checked": "2026-09-26",
           "type": "operational_history_claim",
           "summary": "BC Hydro dates service delivery from 1989."
+        },
+        {
+          "type": "renamed",
+          "summary": "352143 B.C. LTD. changes its name to Powertech Labs Inc.",
+          "date": "1989-01-06",
+          "precision": "day",
+          "meaning": "The day the legal name took effect; not a new body and not the start of laboratory operations",
+          "evidence": "official_webpage",
+          "source": "https://orgbook.gov.bc.ca/api/v4/topic/360507/credential-set",
+          "source_id": "r4-r3f-ext-006",
+          "locator": "Credential 493593: entity_name_effective 1989-01-06, reason Event:CONVNC",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "function_origin_claim",
+          "summary": "BC Hydro's 2020 service plan says Powertech has operated in Surrey since its inception in 1979",
+          "date": "1979",
+          "precision": "year",
+          "meaning": "A retrospective statement about the laboratory work, written in 2020; not the company's incorporation (1988) and not proof that the 1979 work was the same body",
+          "evidence": "service_plan",
+          "source": "https://www.bcbudget.gov.bc.ca/2020/sp/pdf/agency/bchydro.pdf",
+          "source_id": "r4-r3f-doc-101",
+          "locator": "PDF p. 28, Powertech Labs Inc. subsidiary profile",
+          "checked": "2026-10-21"
         }
       ],
       "date_claims": [],
       "first_observed": null,
       "review": {
-        "checked": "2026-09-30",
-        "scope": "selected historical claims only; Worked queue review, 2026-09-30: targeted claims only",
+        "checked": "2026-10-21",
+        "scope": "selected historical claims only; Worked queue review, 2026-09-30: targeted claims only; OrgBook BC credential set for topic 360507 (BC0352143); BC Hydro 2020/21 service plan p. 28",
         "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
         "unresolved_fields": [
-          "established",
-          "names",
           "relations",
-          "legal_basis"
+          "legal_basis",
+          "complete_parent_history",
+          "operational_start"
         ],
         "full_history_complete": false,
         "sources_checked": [],
-        "by": "ChatGPT (worked queue review)"
+        "by": "ChatGPT (worked queue review); Round 4 integration (carried evidence)"
       },
       "round2_review": {
         "checked": "2026-09-26",
@@ -3171,13 +3237,12 @@
     {
       "id": "environmental-appeal-board",
       "review": {
-        "checked": "2026-10-01",
-        "scope": "Round 2 selected claims; not a complete lifecycle; Six Estimates checkpoints, selected name-bearing passages per ministry",
+        "checked": "2026-10-21",
+        "scope": "Round 2 selected claims; not a complete lifecycle; Six Estimates checkpoints, selected name-bearing passages per ministry; OICs 2602, 2603 and 2604 of 1981 (BC Laws archived OICs)",
         "baseline_metadata": "Copied from the uploaded TEMPLATE.json; current name, description and parent_today are inherited context, not comprehensively reverified.",
         "unresolved_fields": [
-          "established",
-          "names",
-          "parents",
+          "complete_name_history",
+          "complete_parent_history",
           "relations"
         ],
         "full_history_complete": false,
@@ -3205,7 +3270,7 @@
             "outcome": "found_name"
           }
         ],
-        "by": "ChatGPT (six-checkpoint historical research, release 1.0)"
+        "by": "ChatGPT (six-checkpoint historical research, release 1.0); Round 4 integration (carried evidence)"
       },
       "name": "Environmental Appeal Board",
       "shortName": "EAB",
@@ -3219,7 +3284,16 @@
         "established": "1981",
         "events_on_file": []
       },
-      "established": null,
+      "established": {
+        "date": "1982-01-01",
+        "precision": "day",
+        "meaning": "The day OIC 2603/1981 establishes the Environmental Appeal Board under s. 11 of the Environment Management Act, SBC 1981 c. 14 ('effective January 1, 1982, there be established an Environmental Appeal Board'); the order was approved 18 December 1981, which is not the start",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2603_1981",
+        "source_id": "r4-r3f-ext-004",
+        "locator": "OIC 2603/1981, approved and ordered 18 December 1981, sole operative paragraph; PDF p. 1",
+        "checked": "2026-10-21"
+      },
       "ended": null,
       "names": [
         {
@@ -3255,7 +3329,7 @@
         "scope": "Continuation statute as described in the 2019 manual, not the original commencement instrument."
       },
       "evidence_status": "requires_reconciliation",
-      "note": "The held 1981 establishment year is not independently confirmed. The Board manual expressly states establishment in 1982; the homepage instead identifies the Environment Management Act (1981). An Act citation year is not a body commencement date. Both readings are preserved for editorial review; established is null here rather than silently replacing the held value. Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent.",
+      "note": "The held 1981 establishment year is not independently confirmed. The Board manual expressly states establishment in 1982; the homepage instead identifies the Environment Management Act (1981). An Act citation year is not a body commencement date. Both readings are preserved for editorial review; established is null here rather than silently replacing the held value. Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent. Round 4 (carried round-3 branches evidence R3F-EXT-003 to -005, read again from the BC Laws originals on 2026-10-21). The 1981 held year is the Act's year, not the Board's; the manual's 1982 agrees with the orders at year precision. The orders were recommended by the Minister of Environment; that is not a statement of which ministry answered for the Board. Its later continuation under the Environmental Management Act, SBC 2003 c. 53 is not dated here.",
       "first_observed": {
         "date": "2020",
         "precision": "year",
@@ -3277,6 +3351,38 @@
           "checked": "2026-09-26",
           "type": "legal_basis_year_observed",
           "summary": "Homepage identifies the Environment Management Act (1981); the parenthetical year dates the Act, not explicitly the Board."
+        },
+        {
+          "type": "legislation_in_force",
+          "summary": "OIC 2602/1981 directs a proclamation bringing ss. 11 and 12 of the Environment Management Act, SBC 1981 c. 14, into force on 1 January 1982",
+          "date": "1982-01-01",
+          "precision": "day",
+          "meaning": "The in-force day the order fixes for the enabling sections; order approved 18 December 1981. The proclamation itself was not retrieved",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2602_1981",
+          "source_id": "r4-r3f-ext-003",
+          "locator": "OIC 2602/1981, approved and ordered 18 December 1981, sole operative paragraph; PDF p. 1",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "first_members_appointed",
+          "summary": "First members of the Environmental Appeal Board appointed for two-year terms from 1 January 1982; Francis A. Hillier appointed Chairman",
+          "date": "1982-01-01",
+          "precision": "day",
+          "meaning": "The day the first appointments take effect; order approved 18 December 1981",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2604_1981",
+          "source_id": "r4-r3f-ext-005",
+          "locator": "OIC 2604/1981, paras 1-3 and member list; PDF pp. 1-2",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "legal_basis_claim",
+          "date": null,
+          "summary": "Environment Management Act, SBC 1981, c. 14, s. 11; OIC 2603/1981",
+          "citation": "Environment Management Act, SBC 1981, c. 14, s. 11; OIC 2603/1981",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2603_1981",
+          "locator": "OIC 2603/1981, administrative part: 'Authority under which Order is made: Environment Management Act, section 11'"
         }
       ],
       "date_claims": [

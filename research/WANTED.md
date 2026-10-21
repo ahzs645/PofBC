@@ -21,7 +21,8 @@ a program, a statutory account, a web resource and a brand are dated differently
 | Body-years placed beside a ministry by inference | 98 | 99 |
 | Body-years with no ministry (sub-agencies, partnerships and courts aside) | 498 | 496 |
 | Sub-agencies with a start / a dated sighting / neither (of 251) | 43 / 50 / 158 | 48 / 65 / 138 |
-| Past sub-agency-years whose parent is inferred from today's | 1,609 of 1,641 | 1,880 of 1,941 |
+| Past sub-agency-years whose parent is inferred from today's | 1,609 of 1,641 | 1,879 of 1,940 |
+| Ministry-years with no minister matched | 17 | 0 |
 | Bodies whose main source is Wikipedia | 22 | 22 |
 | Bodies whose start is a year only | 63 | 59 |
 | Historical bodies with no start at all (listed in lineage only) | 52 | 5 |
@@ -159,14 +160,19 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 - [ ] **D1 (P1) Reorganization schedules for all ministries.** As C1, for every cabinet change since
   1976: 1979, 1986, 1991, 1996, 2001, 2005, 2008, 2009, 2011, 2012, 2013, 2017, 2020, 2022, 2024.
   Round 4 found single statute assignments (the UTA, liquor and transit Acts), not schedules.
-- [ ] **D2 (P2) The Treasury Department's ministers.** 17 ministry-years have no minister matched;
-  Round 3 gathered 18 contemporary observations tying the department to the Minister of Finance
-  (`reviews/round-4-2026-10-21/health/prior/early_province_treasury_minister_checkpoints.json`).
-  Apply them without bridging short gaps.
-- [ ] **D3 (P3) The Ministry of Transportation, Communications and Highways (1978).** Original orders
-  give the plural title and Alexander Vaughan Fraser, approved 5 December 1978. Apply the exact title.
-- [ ] **D4 (P3) Deputy ministers, ministers of state and parliamentary secretaries** before today
-  (Gazette appointment notices, Legislative Library directories), each tenure with its end.
+- [x] **D2 The Treasury Department's ministers.** Closed by Round 4: until June 1916 the Executive
+  Council styled the portfolio "Minister of Finance and Agriculture", which the Treasury's alias did
+  not match. With 18 Public Accounts transmittals (1899-1916) tying the department to that
+  minister, every ministry-year now has a minister; the signatures corroborate the terms, they are
+  not tenures. Left as a modelling question: whether the Department of Finance and Agriculture and
+  the Treasury Department should be drawn as two concurrent episodes, 1899-1916, as BC Archives has
+  them.
+- [x] **D3 The Ministry of Transportation, Communications and Highways (1978).** Closed by Round 4:
+  OIC 3018/1978 (approved 5 December 1978) names it in the plural and OIC 3019/1978 designates
+  Alexander Vaughan Fraser; the ministry is drawn under that title.
+- [ ] **D4 (P3) Deputy ministers, ministers of state and parliamentary secretaries** before today,
+  each tenure with its end. *Where:* BC Gazette Part I appointment notices by year (archive.org) and
+  the BC Laws OIC archive; the Legislative Library's executive appointment lists.
 
 ## E. Crown corporations, agencies and their relations
 
@@ -197,9 +203,16 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 - [ ] **E5 (P2) Pensions and land titles.** The Public Sector Pension Plans Act's 1999/2000
   commencement orders for its corporate provisions; LTSA's 2005 establishment and operating agreement.
 - [ ] **E6 (P2) The 2026 service-plan exemption list and the Public Accounts' reporting entities.**
-  Match each entry to a legal identity and observation date, not by name.
+  Match each entry to a legal identity and observation date, not by name. Round 4 settled one: BC
+  Enterprise Corporation is BC Place Ltd.'s company (BC0207097), registered 25 March 1980, named BCEC
+  on 20 August 1987, restored in 1993 and dissolved on 27 March 2023; its 1989 end was a cessation.
+  Open: what happened in March 1987, which the atlas gives (the BC Enterprise Corporation Act, SBC
+  1987, and its commencement).
 - [ ] **E7 (P2) Primary sources for the 22 bodies that rest on Wikipedia.** One body, one enabling Act
-  and its commencement (or its incorporation), each.
+  and its commencement (or its incorporation), each. Round 4 found the BC Games Society's registry
+  line (registered 26 June 1987, with its names) and Creative BC's (the Film Development Society of
+  1987, renamed 25 February 2013). Open for them: what ran the Games from 1977 (a 1977-78 order or
+  Estimates vote), and the 2013 merger instrument.
 - [ ] **E8 (P3) Day-level starts for the 59 bodies dated to a year.** Round 4 dated the UTA, MTOC, BC
   Transit, BC Steamship and BC Hydro. The enabling Act's commencement order, or the incorporation day.
 - [ ] **E9 (P2) Open questions in `history/bodies.json`.** Settled by Round 4: BC Transit's start (the
@@ -231,7 +244,7 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   ones: the IRR and EMCR divisions (the ministries' 2025/26 organisation charts or FOI-released
   transition binders on docs.openinfo.gov.bc.ca), and Safe Campuses BC (a Wayback Machine capture
   whose page title prints the name, with its date).
-- [ ] **F2 (P1) Sub-agency parents over time.** 1,880 of 1,941 past sub-agency-years place a body under
+- [ ] **F2 (P1) Sub-agency parents over time.** 1,879 of 1,940 past sub-agency-years place a body under
   today's parent by inference. Round 4 dated a few parents (Provincial Treasury in Finance, 1986 and
   1996; BC Parks in Recreation and Conservation from 1 April 1957; the COS in Environment, 1980).
   *Where:* ministry annual reports' organisation charts for 2001, 2005, 2017, 2020, 2022 and 2024;
@@ -253,9 +266,12 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   (31 December 1976) is known: wanted, the order or Act that renamed or ended it (the 2018 Cannabis
   Control and Licensing Act period). Also open: Emergency Management BC, the Industry Training Appeal
   Board, BC Ambulance Service, the old Forest Service divisions, the 2002-03 core-review tribunals.
-- [ ] **F6 (P3) Still to settle.** The Environmental Appeal Board's legal start (OIC 2602-2604/1981,
-  effective 1 January 1982) and Powertech's corporate dates (incorporated 29 September 1988, named
-  6 January 1989) are known; Powertech's operating start is not.
+- [ ] **F6 (P3) Powertech's operating start.** Settled by decisions in Round 4: the Environmental
+  Appeal Board was established on 1 January 1982 (OIC 2603/1981), and Powertech's company was
+  incorporated on 29 September 1988 and named on 6 January 1989. Open: when it began operating (BC
+  Hydro says both 1979 and 1989) and when BC Hydro acquired it. *Where:* BC Hydro's 1988/89 and
+  1989/90 annual reports (subsidiaries note), and the order consenting to the subsidiary under the
+  Hydro and Power Authority Act.
 
 ## G. Accountability, services and the people (model work, and the evidence it needs)
 
@@ -274,7 +290,8 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   reports.
 - [ ] **G5 (P2) The franchise in detail.** The 1988 changes are dated (SBC 1988 c. 2, in force
   28 March 1988: probation and parole, residence, age on polling day). Open: the colonial
-  qualifications (the voting Acts and Ordinances, 1859-1871), the 2003 repeal of the prisoner
+  qualifications (the voting Acts and Ordinances, 1859-1871; the 1872 amendment is known to be proclaimed on
+  26 October 1872, and the 1939 Provincial Elections Act in force on 1 April 1940), the 2003 repeal of the prisoner
   disqualification, and the exclusions before 1949 year by year. Needs a franchise data file (below).
 - [ ] **G6 (P3, our side) Ministers as their own points**, so a path runs through the minister.
 - [ ] **G7 (P3) First Nations governments and treaties.** Modern-treaty governments (Nisga'a 2000,
@@ -288,9 +305,12 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 - [ ] **H2 (P3) Sessions and committees** (the Assembly's Journals); 140 older session ends need the
   original Journals before they are called prorogations.
 - [ ] **H3 (P3) Before 1905:** the agencies of the Provincial Secretary and of Lands and Works, from the
-  Sessional Papers (UBC Open Collections).
+  Sessional Papers (UBC Open Collections), with the statute or order creating each office. The
+  Provincial Museum is now dated (opened 2 December 1886, moved May 1889).
 - [ ] **H4 (P3) Staffing and spending before 2000/01** from earlier Public Accounts, budget and actual
-  kept apart.
+  kept apart. Round 3 extracted 82 departmental actuals (1958-1970), the 1889 asylum estimates and
+  headcounts 1889-1980, which mix measures; they need a historical scale file with explicit measures
+  (in `reviews/round-4-2026-10-21/health/prior/`).
 - [ ] **H5 (P3) Education families:** the Gazette deposit of Reg. 14/88 and the executed 2005 transfer
   agreement (Open Learning Agency to Thompson Rivers University).
 - [ ] **H6 (P3) Logos:** masters, first-use dates and permission for the ICBC, BCLC, BC Ferries, BC

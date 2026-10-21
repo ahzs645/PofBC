@@ -1,6 +1,6 @@
 # What Round 4 changed, and what it left
 
-Each module was read against the repository, claim by claim, and turned into the history's own
+Each module (and the Round 3 evidence the package carried, as a fifth, `carried`) was read against the repository, claim by claim, and turned into the history's own
 shapes: one reviewed proposal per module in `integration/<module>.json`, with the reasoning in
 `<module>-notes.md`. Every claim of the handback is either applied or listed under `not_applied` with
 its reason. Editorial changes made after review are listed in each proposal's `editorial` field.
@@ -24,6 +24,7 @@ evidence rules:
 ```sh
 npm run research:merge -- research/reviews/round-4-2026-10-21/integration/branches-sub-agency-batch.json
 npm run research:merge -- research/reviews/round-4-2026-10-21/integration/health-sub-agency-batch.json
+npm run research:merge -- research/reviews/round-4-2026-10-21/integration/carried-sub-agency-batch.json
 ```
 
 Bodies can now say what their end was (`endedMeaning`, beside `establishedMeaning`), and the panel
@@ -31,8 +32,9 @@ gives both: "The end is the day it was renamed British Columbia Transit …".
 
 ## Applied
 
-**94 events** (`atlas/events-round4.json`), **62 body corrections**, **1 new body**, **8 event
-corrections**, **1 decision**, **25 sub-agency records**.
+**106 events** (`atlas/events-round4.json`), **65 body corrections**, **1 new body**, **8 event
+corrections**, **3 decisions**, **27 sub-agency records**, **10 minister terms corroborated**, and a fix
+to the minister matching.
 
 - **The regional health system (health).** 51 councils now start on the effective day of their
   original designation order: 42 of the 43 the 1996 orders folded into boards (M273/1994 to
@@ -73,6 +75,21 @@ corrections**, **1 decision**, **25 sub-agency records**.
   districts (1969), the 1972 membership alignment, the 1995 restriction and twelve new districts,
   the 1998 reorganization and five dissolutions, Greater Vancouver's dissolution and division of
   assets (1 January 1999), and the 1977 titles proclamation order and its in-force date.
+
+- **Round 3 evidence the package carried (carried).** The rest of what Round 3 left ready, re-read
+  against its sources (`integration/carried.json`). **The Treasury Department's ministers:** until
+  June 1916 the Executive Council styled the portfolio "Minister of Finance and Agriculture", which
+  the alias in `scripts/build-government-history.mjs` did not match; it now lists both styles, and
+  no ministry-year is left without a minister (18 Public Accounts signatures, 1899-1916, recorded as
+  corroboration on the terms, not as tenures). **The 1978 Ministry of Transportation,
+  Communications and Highways** takes its plural title (OIC 3018/1978; `episodes.js` SPELLING), which
+  changes its id. Decisions settle **the Environmental Appeal Board on 1 January 1982** (OIC
+  2603/1981) and **Powertech's company on 29 September 1988**. BC Place Ltd. starts 25 March 1980,
+  its registration; BC Enterprise Corporation's 1989 end is a cessation (it was dissolved in 2023);
+  the BC Games Society's names, the Provincial Museum's opening (1886) and Creative BC's society.
+
+  These reconstructed source URLs from the ids the claims carry (UBC item ids, OrgBook topics),
+  because the round-3 source register was not repackaged; each was re-fetched and read.
 
 ## Editorial choices
 

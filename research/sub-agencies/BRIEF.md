@@ -30,7 +30,7 @@ That is deliberate — an undated body can't be placed in 1990 without claiming 
 
 **Sub-agencies that no longer exist:** 12 (Workers’ Compensation Review Board; Appeal Division of the Workers’ Compensation Board; Small Business Forest Enterprise Program; Electrical Safety Advisory Committee; Electrical Safety Appeal Board; Electrical Safety Board of Review; Elevating Devices Advisory Committee; Elevating Devices Appeal Board; Gas Safety Advisory Committee; Gas Safety Appeal Board; Power Engineers and Boiler and Pressure Vessel Safety Advisory Committee; Power Engineers and Boiler and Pressure Vessel Safety Appeal Board), plus GPEB, end-dated 13 April 2026. Everything else is today's, so a year like 1995 still cannot show most branches that have since closed or merged.
 
-**Reviewed (first tranche, 2026-09-26):** 118 records carry reviewed claims; 3 need reconciliation (Environmental Appeal Board, BC Transplant, Powertech Labs Inc.). The rest are unreviewed.
+**Reviewed (first tranche, 2026-09-26):** 118 records carry reviewed claims; 1 need reconciliation (BC Transplant). The rest are unreviewed.
 
 ### 2a. Already dated (46) — check, add precision and history
 
@@ -60,7 +60,7 @@ That is deliberate — an undated body can't be placed in 1990 without claiming 
 | DriveBC | Ministry of Transportation and Transit | 2005 | https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/transportation |
 | Office of the B.C. Container Trucking Commissioner | Ministry of Transportation and Transit | 2014 | https://obcctc.ca/ |
 | Energy Resource Appeal Tribunal | Ministry of Attorney General | 2010-10-04 | https://www.bcerat.ca/ |
-| Environmental Appeal Board | Ministry of Attorney General | 1981 | https://www.bceab.ca/ |
+| Environmental Appeal Board | Ministry of Attorney General | 1982-01-01 | https://www.bceab.ca/ |
 | Financial Services Tribunal | Ministry of Attorney General | 2004 | https://www.bcfst.ca/home/about-the-tribunal/ |
 | Forest Appeals Commission | Ministry of Attorney General | 1995 | https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector |
 | Health Professions Review Board | Ministry of Attorney General | 2009-03-16 | https://www.bchprb.ca/ |
@@ -77,7 +77,7 @@ That is deliberate — an undated body can't be placed in 1990 without claiming 
 | Provincial Laboratory Medicine Services | Provincial Health Services Authority | 2019 | https://www.phsa.ca/our-services/programs-services/provincial-laboratory-medicine-services |
 | Trans Care BC | Provincial Health Services Authority | 2015 | https://www.phsa.ca/our-services/programs-services/trans-care-bc |
 | Powerex Corp. | British Columbia Hydro and Power Authority | 1988 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
-| Powertech Labs Inc. | British Columbia Hydro and Power Authority | 1988 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
+| Powertech Labs Inc. | British Columbia Hydro and Power Authority | 1988-09-29 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
 | Columbia Hydro Constructors Ltd. | British Columbia Hydro and Power Authority | 1962 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
 | BC Builds | British Columbia Housing Management Commission | 2024-02-13 | https://news.gov.bc.ca/releases/2024HOUS0006-000188 |
 | Columbia Basin Broadband Corporation | Columbia Basin Trust | 2011 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/cbt.pdf |
@@ -267,7 +267,7 @@ _Look under:_ Ministry of Justice (2012–2017) · Ministry of Attorney General 
 | `bc-prosecution-service` | BC Prosecution Service (BCPS) | division | 1974 | 4 | https://www2.gov.bc.ca/gov/content/justice/criminal-justice/bc-prosecution-service/about |
 | `civil-resolution-tribunal` | Civil Resolution Tribunal (CRT) | tribunal | 2016-07-13 | 12 | https://civilresolutionbc.ca/ |
 | `energy-resource-appeal-tribunal` | Energy Resource Appeal Tribunal (ERAT) | tribunal | 2010-10-04 | 4 | https://www.bcerat.ca/ |
-| `environmental-appeal-board` | Environmental Appeal Board (EAB) | board | 1981 | 3 | https://www.bceab.ca/ |
+| `environmental-appeal-board` | Environmental Appeal Board (EAB) | board | 1982-01-01 | 6 | https://www.bceab.ca/ |
 | `financial-services-tribunal` | Financial Services Tribunal (FST) | tribunal | 2004 | 2 | https://www.bcfst.ca/home/about-the-tribunal/ |
 | `forest-appeals-commission` | Forest Appeals Commission (FAC) | tribunal | 1995 | 4 | https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector |
 | `health-professions-review-board` | Health Professions Review Board (HPRB) | board | 2009-03-16 | 2 | https://www.bchprb.ca/ |
@@ -600,7 +600,7 @@ _Look under:_ Ministry of Jobs, Economic Development and Innovation (2022–2025
 
 ### Ministry of Infrastructure — 3 (3 undated)
 
-_Look under:_ Ministry of Transportation and Infrastructure (2008–2024) · Ministry of Transportation (2001–2008) · Ministry of Transportation and Highways (1979–2001) · Ministry of Transportation, Communication and Highways (1978–1979) · Ministry of Highways and Public Works (1976–1978) · Department of Highways and Public Works (1975–1976) · Department of Public Works (1908–1975)
+_Look under:_ Ministry of Transportation and Infrastructure (2008–2024) · Ministry of Transportation (2001–2008) · Ministry of Transportation and Highways (1979–2001) · Ministry of Transportation, Communications and Highways (1978–1979) · Ministry of Highways and Public Works (1976–1978) · Department of Highways and Public Works (1975–1976) · Department of Public Works (1908–1975)
 
 | id | Name | Kind | Established | Events | Source today |
 |---|---|---|---|---|---|
@@ -620,7 +620,7 @@ _Look under:_ Ministry of Transportation and Infrastructure (2008–2024) · Min
 
 ### Ministry of Transportation and Transit — 5 (3 undated)
 
-_Look under:_ Ministry of Transportation and Infrastructure (2008–2024) · Ministry of Transportation (2001–2008) · Ministry of Transportation and Highways (1979–2001) · Ministry of Transportation, Communication and Highways (1978–1979) · Ministry of Highways and Public Works (1976–1978) · Department of Highways and Public Works (1975–1976) · Department of Public Works (1908–1975)
+_Look under:_ Ministry of Transportation and Infrastructure (2008–2024) · Ministry of Transportation (2001–2008) · Ministry of Transportation and Highways (1979–2001) · Ministry of Transportation, Communications and Highways (1978–1979) · Ministry of Highways and Public Works (1976–1978) · Department of Highways and Public Works (1975–1976) · Department of Public Works (1908–1975)
 
 | id | Name | Kind | Established | Events | Source today |
 |---|---|---|---|---|---|
@@ -655,7 +655,7 @@ _Look under:_ Ministry of Transportation and Infrastructure (2008–2024) · Min
 | `tongass-power-and-light` | Tongass Power and Light Company | subsidiary |  |  | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
 | `columbia-hydro-constructors` | Columbia Hydro Constructors Ltd. | subsidiary | 1962 | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
 | `powerex` | Powerex Corp. (Powerex) | subsidiary | 1988 | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
-| `powertech-labs` | Powertech Labs Inc. (Powertech) | subsidiary | 1988 | 1 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
+| `powertech-labs` | Powertech Labs Inc. (Powertech) | subsidiary | 1988-09-29 | 4 | https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bchydro.pdf |
 
 ### British Columbia Lottery Corporation — 2 (2 undated)
 

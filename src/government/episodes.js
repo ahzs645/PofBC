@@ -60,7 +60,9 @@ const LATER_RENAMES = [
 
 /** Names the source spells otherwise than the Province does. */
 const SPELLING = {
-  "Ministry of Citizen's Services": 'Ministry of Citizens’ Services'
+  "Ministry of Citizen's Services": 'Ministry of Citizens’ Services',
+  // OIC 3018/1978 (approved 5 December 1978), para (d), names it in the plural.
+  'Ministry of Transportation, Communication and Highways': 'Ministry of Transportation, Communications and Highways'
 }
 
 /** The ministries in office today, which are the only episodes that may stay open. */

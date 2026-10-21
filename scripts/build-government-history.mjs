@@ -54,10 +54,13 @@ const words = (name) => String(name).toLowerCase().normalize('NFD').replace(/[̀
   .replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter((word) => word && !STOP.has(word))
 const key = (name) => words(name).join(' ')
 
-/** Old department names that differ from the portfolio that headed them. */
+/** Old department names that differ from the portfolio that headed them; a list where it had more than one style. */
 const ALIASES = {
   'railway': 'railways',
-  'treasury': 'finance',
+  // The Public Accounts set the Treasury Department under the Minister of Finance every year from
+  // 1899 to 1916, while the Executive Council appointed that minister "Minister of Finance and
+  // Agriculture" until June 1916 (Public Accounts 1899-1916; research/WANTED.md D2).
+  'treasury': ['finance', 'finance agriculture'],
   'fisheries': 'fisheries',
   'justice': 'justice attorney general'
 }
@@ -80,7 +83,7 @@ for (const term of terms) {
     return overlaps(from, to, start, end)
   })
   // Exact, then an alias, then the closest word set that contains the other.
-  let hits = candidates.filter((episode) => key(episode.name) === termKey || ALIASES[key(episode.name)] === termKey)
+  let hits = candidates.filter((episode) => key(episode.name) === termKey || [ALIASES[key(episode.name)] ?? []].flat().includes(termKey))
   if (!hits.length) {
     const mine = new Set(words(term.portfolio))
     const scored = candidates.map((episode) => {
