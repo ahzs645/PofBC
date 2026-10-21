@@ -1,0 +1,74 @@
+{
+  "canvas": {
+    "width": 1354,
+    "height": 1161,
+    "comparison_transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "source_sha256": "40e933772582c546e77afd19949e8568782e9340726d45c6bb0a65c8b4786f07",
+  "vector_sha256": "e5cd55c3655ae76d433d4b0c43d4b2c95bd09bd3962806db32a0f618bedb331b",
+  "vector_structure": {
+    "svg": 1,
+    "title": 5,
+    "desc": 2,
+    "g": 19,
+    "path": 145,
+    "rect": 23,
+    "circle": 15,
+    "ellipse": 2
+  },
+  "unique_ids": true,
+  "palette": {
+    "cream": "#fce6a3",
+    "teal": "#1da4a9",
+    "green": "#047634",
+    "navy": "#031e24",
+    "ink": "#070a09",
+    "gold": "#efb247"
+  },
+  "outer_silhouette": {
+    "method": "Alpha > 128, largest connected component of reference, both canvases unchanged. Visible edge wear contributes to differences. This does not assess internal artwork.",
+    "mask_iou": 0.9973473248633327,
+    "symmetric_boundary_median_px": 1.0,
+    "symmetric_boundary_p95_px": 2.0,
+    "symmetric_boundary_max_px": 2.8284271247461903
+  },
+  "lettering": {
+    "method": "Rendered final SVG lettering compared with measured reference ink/cream masks on the identity grid. IoU is shape agreement for these regions, not a whole-design fidelity score.",
+    "regions": {
+      "perimeter-top": {
+        "mask_iou": 0.9376453883568472,
+        "source_pixels": 31861,
+        "vector_pixels": 32277
+      },
+      "perimeter-bottom": {
+        "mask_iou": 0.890699959539911,
+        "source_pixels": 16585,
+        "vector_pixels": 16126
+      },
+      "subtitle": {
+        "mask_iou": 0.9263301500682128,
+        "source_pixels": 9853,
+        "vector_pixels": 9915
+      },
+      "title": {
+        "mask_iou": 0.96054079547241,
+        "source_pixels": 49489,
+        "vector_pixels": 50279
+      }
+    }
+  },
+  "limitations": [
+    "Photographic colour variation, paper grain and rough edge fringe intentionally replaced by flat colour and smooth geometry.",
+    "Custom geometric type and saved font outlines visually reconstruct lettering; exact historical fonts were not recovered.",
+    "Small contour/weight differences remain, especially lower route lettering and a few upper glyphs.",
+    "Dogwood internal seams and tiny radial marks are visually reconstructed.",
+    "Ferry geometry hidden by the gull is inferred only to continue the editable shapes coherently."
+  ]
+}

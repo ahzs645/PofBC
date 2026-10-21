@@ -6,6 +6,8 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { POSTERS, SERIES, neighbours, posterIds, seriesOf } from './catalogue.js'
 import { FOREST_SERVICE_POSTERS } from './forest-service/posters.js'
+import { BC_FERRIES_POSTERS } from './bc-ferries/posters.js'
+import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 import { ORDER as COASTAL_ORDER, PARTS as COASTAL_PARTS, REGIONS as COASTAL_REGIONS } from './coastal-forest/parts.js'
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
 
@@ -15,7 +17,9 @@ const DRAWINGS = {
   'dont-drop-it': read('./forest-service/dont-drop-it.svg'),
   'dont-gamble-with-fire': read('./forest-service/dont-gamble-with-fire.svg'),
   'reward-living-forest': read('./forest-service/reward-living-forest.svg'),
-  'enjoy-protect-forests': read('./forest-service/enjoy-protect-forests.svg')
+  'enjoy-protect-forests': read('./forest-service/enjoy-protect-forests.svg'),
+  'go-bc-ferries': read('./bc-ferries/go-bc-ferries.svg'),
+  'queen-of-sidney': read('./bc-ferries/queen-of-sidney.svg')
 }
 const GOVERNMENT = read('../government/historyData.js')
 
@@ -23,11 +27,20 @@ const GOVERNMENT = read('../government/historyData.js')
 // them are hotspots.
 const DEFINITIONS = {
   'coastal-forest': { parts: COASTAL_PARTS, order: COASTAL_ORDER, regions: COASTAL_REGIONS.map(({ id }) => id) },
-  ...FOREST_SERVICE_POSTERS
+  ...FOREST_SERVICE_POSTERS,
+  ...BC_FERRIES_POSTERS
 }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const hasId = (svg, id) => svg.includes(`id="${id}"`)
+
+test('every layer a part names can be found by a CSS selector', () => {
+  for (const [id, { parts }] of Object.entries(DEFINITIONS)) {
+    for (const [partId, part] of Object.entries(parts)) {
+      for (const layer of idsIn(part.layer ?? '')) assert.match(layer, /^[a-z]/i, `${id}/${partId}: #${layer} starts with a digit`)
+    }
+  }
+})
 
 test('every series lists posters that exist, and every poster is in the series it names', () => {
   const listed = posterIds()
@@ -74,7 +87,8 @@ test('every part sits on its drawing, and names layers the drawing has', () => {
 
 test('the data panels say something, and every link lands somewhere that exists', () => {
   const internal = new Set(FOREST_LOGOS.map(({ id }) => id))
-  for (const [id, { parts }] of Object.entries(FOREST_SERVICE_POSTERS)) {
+  const galleries = new Set(GALLERY_COLLECTIONS.map(({ id }) => id))
+  for (const [id, { parts }] of Object.entries({ ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS })) {
     for (const [partId, { panel }] of Object.entries(parts)) {
       assert.ok(panel?.eyebrow && panel.heading && panel.lede, `${id}/${partId}: panel`)
       for (const block of panel.blocks ?? []) {
@@ -87,6 +101,8 @@ test('the data panels say something, and every link lands somewhere that exists'
           } else if (to.view === 'internal') {
             assert.equal(to.internal, 'forests')
             if (to['internal-logo']) assert.ok(internal.has(to['internal-logo']), `${id}/${partId}: no logo ${to['internal-logo']}`)
+          } else if (to.view === 'gallery') {
+            assert.ok(galleries.has(to.logos), `${id}/${partId}: no logo collection ${to.logos}`)
           } else if (to.view === 'government') {
             assert.ok(GOVERNMENT.includes(`"${to.node}"`), `${id}/${partId}: no body ${to.node}`)
           } else {

@@ -565,10 +565,12 @@ kept in the address — `?view=posters&poster=dont-drop-it&part=credit` — so a
 | Ministry of Environment | **Coastal Forest** (1979–86), with its live crest-lockup studio |
 | British Columbia Forest Service | **REWARD — A Living Forest**, **Enjoy & Protect our Forests** |
 | B. C. Forest Service fire-prevention badges | **DON’T DROP IT!**, **Don’t gamble with FIRE** (set in the first one’s green) |
+| British Columbia Ferries car decals | **GO B.C. FERRIES** (1960–64, from its Toll Authority wording), **Queen of Sidney** |
 
 The panels link on: the emblem on either Forest Service poster opens the evergreen emblem in
 Internal Logos (which links back), a service credit opens the department the Forest Service sat in on
-the government diagram, and each poster links to the others in its series. Every claim that is not
+the government diagram, a decal's authority opens the Toll Authority or the Ferry Authority there and its
+flag BC Ferries' marks in Logos, and each poster links to the others in its series. Every claim that is not
 established — a date, a typeface, an ink — is said to be so.
 
 **Coastal Forest** was its own app, [coastal-forest-poster](https://github.com/ahzs645/coastal-forest-poster),
