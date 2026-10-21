@@ -17,6 +17,7 @@ export const VIEWS = [
   { id: 'patches', label: 'Patches', description: 'Patches by organization, sewn as embroidery', badge: 'New' },
   { id: 'badges', label: 'Badges', description: 'Metal and leather badges by organization', badge: 'New' },
   { id: 'guides', label: 'Visual Guides', description: 'Identity manuals, rebuilt page by page' },
+  { id: 'stationery', label: 'Stationery', description: 'The 1977 calling card, letterhead and envelope, filled in', badge: 'New' },
   { id: 'government', label: 'Government', description: 'The Province’s structure, back to 1871' }
 ]
 
