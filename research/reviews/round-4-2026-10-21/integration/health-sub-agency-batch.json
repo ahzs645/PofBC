@@ -1,0 +1,94 @@
+{
+ "batch": "round4-health",
+ "records": [
+  {
+   "id": "bc-transplant",
+   "date_claims": [
+    {
+     "type": "establishment_claim",
+     "date": "1985",
+     "precision": "year",
+     "meaning": "The Health minister's 1988 statement that the provincial government and the medical community established the B.C. Transplant Society in 1985; a retrospective account, not a registration",
+     "evidence": "secondary",
+     "source": "https://lims.leg.bc.ca/hdms/file/Debates/34th2nd/34p_02s_880427p.htm",
+     "source_id": "R4H-003",
+     "locator": "Hansard, 27 April 1988, printed p. 4096, statement of Minister Dueck",
+     "checked": "2026-10-21",
+     "summary": "Competes with the Corporate Registry registration of 1 April 1986 (S0021154) and the 2007 news release's 1986. Kept as a claim; neither is chosen here."
+    }
+   ],
+   "evidence_status": "requires_reconciliation",
+   "note": "Round 4 (health module, R4HC-002 to R4HC-006): the 1987-1991 sources describe the Pacific Organ Retrieval for Transplantation (PORT) program as funded by the Ministry of Health, initiated by and part of the Transplant Society. None shows PORT as a registered corporate name. The 1987 statement names a \"B.C. Heart Transplant Society\", unresolved. The program is a program, not this body's founding.",
+   "review": {
+    "checked": "2026-10-21",
+    "by": "Round 4 health module, integrated 2026-10-21",
+    "scope": "Hansard 27 Apr 1987, 27 Apr 1988, 9 Jun 1988; J Clin Invest April 1991",
+    "unresolved_fields": [
+     "established",
+     "names",
+     "legal_basis"
+    ],
+    "full_history_complete": false
+   }
+  },
+  {
+   "id": "hospital-appeal-board",
+   "names": [
+    {
+     "name": "Hospital Appeal Board",
+     "observed_on": "1997-04-21",
+     "coverage": "observation_only",
+     "evidence": "statute",
+     "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/638385389",
+     "source_id": "R4H-020",
+     "locator": "Table of Legislative Changes to 31 December 1998, PDF p. 32 / printed p. 27: FOIPPA Schedule 2, RS1996 (Supp.) c. 165 s. 1(h), in force 21 April 1997 by 1998-19-8(2), superseding B.C. Reg. 135/97; with the Supplement itself, R4H-016 p. 1 s. 1(h)"
+    }
+   ],
+   "research_events": [
+    {
+     "type": "legislation_in_force",
+     "date": "1997-04-21",
+     "precision": "day",
+     "meaning": "FOIPPA Schedule 2 entry \"Medical Appeal Board (Hospital Act)\" replaced by \"Hospital Appeal Board (Hospital Act)\" (RS1996 Supp. s. 1(h)); in force 21 April 1997 retrospectively under SBC 1998 c. 19 s. 8(2) (assent 30 June 1998), superseding the 15 April 1997 date first ordered by OIC 414/1997 (B.C. Reg. 135/97)",
+     "evidence": "statute",
+     "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/638385389",
+     "source_id": "R4H-020",
+     "locator": "PDF p. 32 / printed p. 27, FOIPPA Schedule 2 row",
+     "checked": "2026-10-21",
+     "summary": "Schedule-name history only. Not the board's creation, not the date its name changed under the Hospital Act, and not the date regional health boards or councils entered FOIPPA."
+    }
+   ],
+   "note": "Round 4 (R4HC-008): the FOIPPA Schedule 2 entry was renamed with effect from 21 April 1997. That date shows the new name in a statute by then; the Hospital Act rename itself is not dated. The 1997 dates must not be used for the regional health boards and councils (13 July 1995).",
+   "review": {
+    "checked": "2026-10-21",
+    "by": "Round 4 health module, integrated 2026-10-21",
+    "scope": "RS1996 FOIPPA Supplement p. 1; 1998 Table of Legislative Changes p. 27",
+    "unresolved_fields": [
+     "names (Hospital Act rename date)"
+    ],
+    "full_history_complete": false
+   }
+  }
+ ],
+ "gone": [],
+ "sources": [
+  {
+   "id": "R4H-003",
+   "url": "https://lims.leg.bc.ca/hdms/file/Debates/34th2nd/34p_02s_880427p.htm",
+   "title": "Hansard, 27 April 1988, afternoon sitting — Organ Donor Awareness Week",
+   "evidence": "secondary"
+  },
+  {
+   "id": "R4H-016",
+   "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1337117255",
+   "title": "Freedom of Information and Protection of Privacy Act, RSBC 1996 c.165, original Supplement",
+   "evidence": "statute"
+  },
+  {
+   "id": "R4H-020",
+   "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/638385389",
+   "title": "Table of Legislative Changes — 31 December 1998",
+   "evidence": "statute"
+  }
+ ]
+}

@@ -137,8 +137,8 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bchab.ca/
 - **Collected from:** https://www.bchab.ca/home/about/
 - **What it does:** Hears medical practitioners' appeals of hospital board of management decisions affecting hospital privileges under the Hospital Act.
-- **Held:** began 1973 (Body under its earlier name); first seen 2020; names on file: Medical Appeal Board (seen 1973), Hospital Appeal Board (seen 2020), Hospital Appeal Board (seen 2025)
-- **Events on file:** 1973 established; 2020 name first observed
+- **Held:** began 1973 (Body under its earlier name); first seen 2020; names on file: Medical Appeal Board (seen 1973), Hospital Appeal Board (seen 2020), Hospital Appeal Board (seen 2025), Hospital Appeal Board (seen 1997-04-21)
+- **Events on file:** 1973 established; 1997-04-21 legislation in force; 2020 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Hospital Appeal Board", "HAB", "Medical Appeal Board"
 - **Questions:**

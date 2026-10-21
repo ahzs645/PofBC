@@ -1,0 +1,1874 @@
+{
+  "checked": "2026-10-21",
+  "policy": "Full originals retained. Compact extracts preserve selected PDF pages without re-rendering; they are derivatives, not byte-identical complete originals. Original and derivative hashes and page mappings are provided. Screened candidates are not counted as accepted sources.",
+  "source_count": 81,
+  "counts_by_category": {
+    "unusable_retrieval": 3,
+    "accepted_original": 50,
+    "screened_only": 24,
+    "diagnostic_or_lead_original": 2,
+    "prior_original_reused": 2
+  },
+  "used_original_bytes": 241083645,
+  "compact_used_bytes": 20821931,
+  "rows": [
+    {
+      "source_id": "R4B-001",
+      "title": "Buy BC Month release, 11 September 2000",
+      "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/2000/4013.asp",
+      "category": "unusable_retrieval",
+      "original_local_file": null,
+      "original_sha256": null,
+      "original_bytes": null,
+      "retrieval_status": "error",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-002",
+      "title": "Provincial Treasury introduced in Finance and Corporate Relations Estimates, 29 July 1996",
+      "url": "https://api.lims.leg.bc.ca/hdms/file/Debates/36th1st/19960729pm2-Hansard-v2n7.htm",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-002.html",
+      "original_sha256": "2ab99e14c9eb1d831506d224b6546158b5d8e49af9c64d8f80744f834dd2a688",
+      "original_bytes": 414029,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C018",
+          "role": "substantive_historical_finding",
+          "locator": "Hansard printed p 1077"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-002.html",
+      "compact_sha256": "2ab99e14c9eb1d831506d224b6546158b5d8e49af9c64d8f80744f834dd2a688",
+      "compact_bytes": 414029,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-003",
+      "title": "Sounder 1980",
+      "url": "https://waves-vagues.dfo-mpo.gc.ca/Library/170964-1980.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-003.pdf",
+      "original_sha256": "86cb6acdbc8bea37c5c70ca40b95eb10676e195a14d9fd2e51258a2b5d471aff",
+      "original_bytes": 14480594,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C052",
+          "role": "substantive_historical_finding",
+          "locator": "Volume VIII no 3 April–May 1980, printed pp 10–11 / bound PDF pp 46–47; issue coverPDFp 37"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-003-cited-pages.pdf",
+      "compact_sha256": "d1988c64b43079fb01143957eb8adb6aac6ecc9836f00bf8aa0832bc36ea1ce0",
+      "compact_bytes": 290322,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 37
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 46
+        },
+        {
+          "excerpt_pdf_page": 3,
+          "original_pdf_page": 47
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-004",
+      "title": "Attorney-General Estimates, 14 March 1974",
+      "url": "https://api.lims.leg.bc.ca/hdms/file/Debates/30th4th/30p_04s_740314p.htm",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-004.html",
+      "original_sha256": "3b67b879a1e28b919bdf27081260254ceb2ef3579160b14756998608bd298ba3",
+      "original_bytes": 195113,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-005",
+      "title": "OIC 562/1974",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0562_1974",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-005.pdf",
+      "original_sha256": "1f0841cb756c9369ef5e35119c1c394943686bdc602add167505cca3ce891acc",
+      "original_bytes": 511860,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-006",
+      "title": "Ministry of Infrastructure Estimates Notes 2025",
+      "url": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-006.pdf",
+      "original_sha256": "7326aff32c0d3108e4425b97b473a492c9ca24f8053063dd3eb61d44d15af0e4",
+      "original_bytes": 16553503,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C021",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 17–18; p 18 staffing as-of date"
+        },
+        {
+          "claim_id": "R4B-C022",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 17–18"
+        },
+        {
+          "claim_id": "R4B-C023",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 17–18; p 18 staffing as-of date"
+        },
+        {
+          "claim_id": "R4B-C024",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 17–18"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-006-cited-pages.pdf",
+      "compact_sha256": "51623c50dd4b3057944d684d8e2bc90ae43f19b22c1ac0e16526b293bc745478",
+      "compact_bytes": 270668,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 1
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 17
+        },
+        {
+          "excerpt_pdf_page": 3,
+          "original_pdf_page": 18
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-007",
+      "title": "BC Housing Annual Report 2018/19",
+      "url": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2018_2019/pdf/agency/bch.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-007.pdf",
+      "original_sha256": "3c467e1b60a6abd167616986481df4ea4e4f54f4093c6ee475b5eb6118b0b78b",
+      "original_bytes": 10271945,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C033",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 5"
+        },
+        {
+          "claim_id": "R4B-C034",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 5"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-007-cited-pages.pdf",
+      "compact_sha256": "86c70d7694d26d088cac58c4c7d19cc0cb387116df405552d046e2fc2772caa0",
+      "compact_bytes": 65551,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 1
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 5
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-008",
+      "title": "Safe Campuses BC official release, 29 August 2019",
+      "url": "https://news.gov.bc.ca/releases/2019AEST0088-001672",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-008.html",
+      "original_sha256": "e31516775a71ff926c67749cf7158d6a9b088e46abd4cd843ba53c4496f728fa",
+      "original_bytes": 74514,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C028",
+          "role": "substantive_historical_finding",
+          "locator": "Learn More section"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-008.html",
+      "compact_sha256": "e31516775a71ff926c67749cf7158d6a9b088e46abd4cd843ba53c4496f728fa",
+      "compact_bytes": 74514,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-009",
+      "title": "Special Accounts Appropriation and Control Act historical amendments",
+      "url": "https://free.bcpublications.ca/civix/document/id/complete/statreg/96436_pit",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-009.html",
+      "original_sha256": "419a3c1e60883cd20e6572c723104ebf1222e5991740b056e345c98f2347eacd",
+      "original_bytes": 58362,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-010",
+      "title": "BC Training and Education Savings Grant Regulation 127/2014",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/loo95/loo95/127_2014",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-010.html",
+      "original_sha256": "19c742b5dbd3060085e495f585666e9644434a7cf8916fc956abce2fd3ccb1f8",
+      "original_bytes": 16587,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-011",
+      "title": "Hansard 6 June 1974",
+      "url": "https://api.lims.leg.bc.ca/hdms/file/Debates/30th4th/30p_04s_740606z.htm",
+      "category": "diagnostic_or_lead_original",
+      "original_local_file": "raw/R4B-011.html",
+      "original_sha256": "f434e0403501cf5fd6703b0be0efe730cf1f3e0cb18c5a09a35bcb49c84e9db0",
+      "original_bytes": 109699,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C074",
+          "role": "negative_evidence",
+          "locator": "Hansard printed p 3809, Attorney General Macdonald response"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-011.html",
+      "compact_sha256": "f434e0403501cf5fd6703b0be0efe730cf1f3e0cb18c5a09a35bcb49c84e9db0",
+      "compact_bytes": 109699,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-012",
+      "title": "Government Core Policy amendment log",
+      "url": "https://www2.gov.bc.ca/gov/content/governments/policies-for-government/core-policy/amendments",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-012.html",
+      "original_sha256": "fec0e3cae6b1e4f9d670a742aa652e4b451362a01b170e4617356571a97cfd34",
+      "original_bytes": 998552,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-013",
+      "title": "Department of Recreation and Conservation Annual Report 1957 (UBC full text metadata)",
+      "url": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-013.json",
+      "original_sha256": "a9647061cd6e0f3a19a1bdf5b79c6cbc34b2fbd19302870b94d5d1ac96692c48",
+      "original_bytes": 87835,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C047",
+          "role": "substantive_historical_finding",
+          "locator": "Provincial Parks history, between section cover at II21 and photographs before II24; exact page image inaccessible"
+        },
+        {
+          "claim_id": "R4B-C048",
+          "role": "substantive_historical_finding",
+          "locator": "Provincial Parks Branch History, paragraph immediately before Okanagan Lake photographs and II24"
+        },
+        {
+          "claim_id": "R4B-C049",
+          "role": "substantive_historical_finding",
+          "locator": "Provincial Parks Branch History; introduction printed II7"
+        },
+        {
+          "claim_id": "R4B-C050",
+          "role": "substantive_historical_finding",
+          "locator": "Fish and Game Branch History, section beginningII9 before II12; introduction II7"
+        },
+        {
+          "claim_id": "R4B-C051",
+          "role": "substantive_historical_finding",
+          "locator": "Printed II42 and preceding history"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-013.json",
+      "compact_sha256": "a9647061cd6e0f3a19a1bdf5b79c6cbc34b2fbd19302870b94d5d1ac96692c48",
+      "compact_bytes": 87835,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-014",
+      "title": "Ministry of Environment Annual Report 1980/81 (UBC full text metadata)",
+      "url": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0372122",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-014.json",
+      "original_sha256": "61c27c1661aa93a7b90d7c0cc61b3ad4aa965c5c6ee28a0bb18e7b16bf914df3",
+      "original_bytes": 299492,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C054",
+          "role": "substantive_historical_finding",
+          "locator": "Printed pp 57–58; report period 1 January 1980–31 March 1981"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-014.json",
+      "compact_sha256": "61c27c1661aa93a7b90d7c0cc61b3ad4aa965c5c6ee28a0bb18e7b16bf914df3",
+      "compact_bytes": 299492,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-015",
+      "title": "OIC 389/2014 (BC Training and Education Savings Program)",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0389_2014",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-015.pdf",
+      "original_sha256": "795faa24057731d777e248d9f0b20e7d21103f6e3e63e04b21557823a26661e5",
+      "original_bytes": 693934,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C007",
+          "role": "substantive_historical_finding",
+          "locator": "Act PDF p 18, s 50 / new s 9.4(2); order PDF p 1; bulletin entry 389/2014"
+        },
+        {
+          "claim_id": "R4B-C008",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 2, regulation s 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-015.pdf",
+      "compact_sha256": "795faa24057731d777e248d9f0b20e7d21103f6e3e63e04b21557823a26661e5",
+      "compact_bytes": 693934,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-016",
+      "title": "BC Regulations Bulletin 23, 24 June 2014",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/regulationbulletin/2014bull23",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-016.html",
+      "original_sha256": "bd65c5d9dbb424051e205cbbe89c38dd9326733b2e677599ceceff6d5e09bc4b",
+      "original_bytes": 24600,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C007",
+          "role": "substantive_historical_finding",
+          "locator": "Act PDF p 18, s 50 / new s 9.4(2); order PDF p 1; bulletin entry 389/2014"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-016.html",
+      "compact_sha256": "bd65c5d9dbb424051e205cbbe89c38dd9326733b2e677599ceceff6d5e09bc4b",
+      "compact_bytes": 24600,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-017",
+      "title": "Special Accounts Appropriation and Control Act historical consolidation",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/consol22/consol22/00_96436_01",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-017.html",
+      "original_sha256": "d6a8231a62c932df083dd7459e911c7d523a0893e0079dfb049d9249b46f9389",
+      "original_bytes": 50201,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-018",
+      "title": "BC Ministry of Finance internal audit of Buy BC Program",
+      "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/buy-bc-program-ministry-of-agriculture-and-food.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-018.pdf",
+      "original_sha256": "f46e22f9472ab8e50d4adffe40404018a8e0455dcb7900bf489e297efb2a5f17",
+      "original_bytes": 672292,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C001",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 6 / printed p 4, Buy BC Program History"
+        },
+        {
+          "claim_id": "R4B-C002",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 6 / printed p 4"
+        },
+        {
+          "claim_id": "R4B-C003",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 6 / printed p 4"
+        },
+        {
+          "claim_id": "R4B-C004",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 5 / printed p 3"
+        },
+        {
+          "claim_id": "R4B-C005",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 5 / printed p 3"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-018.pdf",
+      "compact_sha256": "f46e22f9472ab8e50d4adffe40404018a8e0455dcb7900bf489e297efb2a5f17",
+      "compact_bytes": 672292,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-019",
+      "title": "Buy BC 2012 FOI response AGR-2012-00091",
+      "url": "https://docs.openinfo.gov.bc.ca/d6450713a_response_package_agr-2012-00091.pdf",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-019.pdf",
+      "original_sha256": "acdf58019ab3300aa8212dffa932938877e200bb69eecdfefe5f9585be30474b",
+      "original_bytes": 9228616,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-020",
+      "title": "Sheriff Service grant of arms, flag and badge",
+      "url": "https://www.gg.ca/en/heraldry/public-register/project/2209",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-020.html",
+      "original_sha256": "2e160252b9e10ea7d06143bfc9bede3b8b32799c7dadf2c44fd783f9df9473d9",
+      "original_bytes": 78767,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C075",
+          "role": "substantive_historical_finding",
+          "locator": "Public register project 2209, vol. VI p 64"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-020.html",
+      "compact_sha256": "2e160252b9e10ea7d06143bfc9bede3b8b32799c7dadf2c44fd783f9df9473d9",
+      "compact_bytes": 78767,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-021",
+      "title": "Miscellaneous Statutes Amendment Act 2014, SBC c 14, original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1307220917",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-021.pdf",
+      "original_sha256": "1a582508938906bea5e8768dabce19b096052be9ae155625fa1700a5f0367675",
+      "original_bytes": 177416,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C007",
+          "role": "substantive_historical_finding",
+          "locator": "Act PDF p 18, s 50 / new s 9.4(2); order PDF p 1; bulletin entry 389/2014"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-021.pdf",
+      "compact_sha256": "1a582508938906bea5e8768dabce19b096052be9ae155625fa1700a5f0367675",
+      "compact_bytes": 177416,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-022",
+      "title": "Budget Measures Implementation Act 2008, SBC c 10, original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1326825188",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-022.pdf",
+      "original_sha256": "442bb04cf1676ddd629505ddf5f4481bb9a5b8ff478acef82b0abe4030422461",
+      "original_bytes": 314876,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C009",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed pp 42–43, s 113; p 50, s 126 item 48"
+        },
+        {
+          "claim_id": "R4B-C010",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed pp 42–43, new s 9(5)(b); also p 1, amendment to Arts Council Act s 3(1)(b.1)"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-022.pdf",
+      "compact_sha256": "442bb04cf1676ddd629505ddf5f4481bb9a5b8ff478acef82b0abe4030422461",
+      "compact_bytes": 314876,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-023",
+      "title": "Public Service Labour Relations Act 1973, original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1040646296",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-023.pdf",
+      "original_sha256": "539b76361a9a63f0cef755b08b021bb047f2efef66fba2169d9d5089131a610a",
+      "original_bytes": 907069,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-024",
+      "title": "Public Service Labour Relations Act RSBC1979c 346, original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1416017339",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-024.pdf",
+      "original_sha256": "5a48b2c065124a6b5be90da536fe7f950d3051b6105a774ad3d0e46b79df16d5",
+      "original_bytes": 719165,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-025",
+      "title": "BCTES Program first regulation, 20 March 2013",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v56n05_132-2013",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-025.html",
+      "original_sha256": "bc718c540928a61fac64bfa550e47f2abaef1f68b4434a854ac2aaac176c7f51",
+      "original_bytes": 12828,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-026",
+      "title": "OIC 173/2013 BCTES Program first regulation",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0173_2013",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-026.pdf",
+      "original_sha256": "f1ee7a76a35ee572485f56f735975199c184e6d6a9ec2aaebb48be19f7b9953e",
+      "original_bytes": 838691,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C006",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 1–2; regulation s 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-026.pdf",
+      "compact_sha256": "f1ee7a76a35ee572485f56f735975199c184e6d6a9ec2aaebb48be19f7b9953e",
+      "compact_bytes": 838691,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-027",
+      "title": "Auditor General annual report 1986 on year ended 31 March 1985 (filename misleading)",
+      "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19850301-report-auditor-general-1985.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-027.pdf",
+      "original_sha256": "fe61112e9cd975aedfa78e6574f2569f3f3fdfedbebbfa19544e640bf5caa727",
+      "original_bytes": 9656523,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C016",
+          "role": "substantive_historical_finding",
+          "locator": "Cover letter PDF p 3; printed p 16 para 3.19 and p 20 para 3.41 / PDF pp 22,26"
+        },
+        {
+          "claim_id": "R4B-C017",
+          "role": "substantive_historical_finding",
+          "locator": "Printed p 16 para 3.19 / PDF p 22"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-027-cited-pages.pdf",
+      "compact_sha256": "ae5656c788c3f1c7bbb1418e8f9d51d214679487b65de408e565ccad446b8ac5",
+      "compact_bytes": 153399,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 1
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 3
+        },
+        {
+          "excerpt_pdf_page": 3,
+          "original_pdf_page": 22
+        },
+        {
+          "excerpt_pdf_page": 4,
+          "original_pdf_page": 26
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-028",
+      "title": "Miscellaneous Statutes Amendment Act No 3 1985",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/618061891",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-028.pdf",
+      "original_sha256": "ed61a7078fcf399f1af63e0e6a7cff30ec40d13f69a777c66043f0a70cd5f569",
+      "original_bytes": 1574723,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C015",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 21 / printed p 275, s 84; assent on first page"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-028.pdf",
+      "compact_sha256": "ed61a7078fcf399f1af63e0e6a7cff30ec40d13f69a777c66043f0a70cd5f569",
+      "compact_bytes": 1574723,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-029",
+      "title": "History of British Columbia Building Regulations September 2015",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/construction-industry/building-codes-and-standards/guides/history_of_the_codes_2015_update.pdf",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-029.pdf",
+      "original_sha256": "a0c69f13a96eac86d696481344178befb075dc88ac278b936d4ba78ad2175525",
+      "original_bytes": 237306,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-030",
+      "title": "Building and Safety Standards Branch Modern Regulatory System May 2014",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/construction-industry/building-codes-and-standards/reports/modern_building_regulatory_system_-_2014_update.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-030.pdf",
+      "original_sha256": "73501b014ae1ea79a012c59169fe7c8df30a43f690ea1ac132c1fe7f69ec13d5",
+      "original_bytes": 405546,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C019",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 3"
+        },
+        {
+          "claim_id": "R4B-C020",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 3"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-030.pdf",
+      "compact_sha256": "73501b014ae1ea79a012c59169fe7c8df30a43f690ea1ac132c1fe7f69ec13d5",
+      "compact_bytes": 405546,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-031",
+      "title": "Risk Management AtRisk newsletter index",
+      "url": "https://www2.gov.bc.ca/gov/content/governments/services-for-government/internal-corporate-services/risk-management/at-risk",
+      "category": "unusable_retrieval",
+      "original_local_file": null,
+      "original_sha256": null,
+      "original_bytes": null,
+      "retrieval_status": "error",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-032",
+      "title": "Estimates notes public archive index",
+      "url": "https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/open-government/open-information/government-information-regularly-released/estimates-notes",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-032.html",
+      "original_sha256": "0df7dd860e8b3c0233d01e2f2f6166837f94576aaa2f4b69892ce6b125211ecf",
+      "original_bytes": 665676,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-033",
+      "title": "2025 Indigenous Relations Estimates debate",
+      "url": "https://lims.leg.bc.ca/hdms/file/Debates/43rd1st/20250429pm-CommitteeA-Blues.htm",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-033.html",
+      "original_sha256": "130e580a20b88eee5f9bdfcdd679e86b84a5322282e9bc2df1d6afbce94a6507",
+      "original_bytes": 814058,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-034",
+      "title": "2026 EMCR Estimates debate",
+      "url": "https://lims.leg.bc.ca/hdms/file/Debates/43rd2nd/20260420pm-Hansard-n157.html",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-034.html",
+      "original_sha256": "fdcc6ca182581bb60563a19d18937670f05ac3f98431c307469d9fe4035877d7",
+      "original_bytes": 651127,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-035",
+      "title": "Sheriff service administrative history in federal criminal justice report",
+      "url": "https://www.ojp.gov/pdffiles1/Digitization/88577NCJRS.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-035.pdf",
+      "original_sha256": "3231fff52169c2138bca43f05cbde979dbde4f2034bfb33e245e381ad9bc89ed",
+      "original_bytes": 15674266,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C073",
+          "role": "archival_lead",
+          "locator": "Appendix 12 printed pp 352–353 / PDF p 239"
+        },
+        {
+          "claim_id": "R4B-C088",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 242 / printed p 356, Appendix 12 sectionD Administration"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-035-cited-pages.pdf",
+      "compact_sha256": "cc72195d9cfe1c24e45e3ca1888286d38afd53f995a1de95c789b6a2198eb4f8",
+      "compact_bytes": 761397,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 1
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 2
+        },
+        {
+          "excerpt_pdf_page": 3,
+          "original_pdf_page": 239
+        },
+        {
+          "excerpt_pdf_page": 4,
+          "original_pdf_page": 242
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-036",
+      "title": "2016 Security Day agenda - Government Chief Risk Office",
+      "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-security/information-security-awareness/agenda_securityday_nov09_with_descriptions.pdf",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-036.pdf",
+      "original_sha256": "d6296b13ff744447ff7dad79da9bed24771484fec7c09ff804f248ba8ff01430",
+      "original_bytes": 782819,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-037",
+      "title": "Insurance and Risk Management Account review",
+      "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/insurance-risk-management-account-review.pdf",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-037.pdf",
+      "original_sha256": "4c758afaeba0f0b221ee0bc5d4e4a55ac50d49f7bf3e763a13c3643a8e36f872",
+      "original_bytes": 640435,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-038",
+      "title": "PSSG Transition Binder 2024",
+      "url": "https://docs.openinfo.gov.bc.ca/Ministry_of_Public_Safety_and_Solicitor_General_Transition_Binder_2024.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-038.pdf",
+      "original_sha256": "fe50c1ff333f6e655ee25cef60b0479bc92b6ad201740f59325895aa8aebba50",
+      "original_bytes": 87878592,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C025",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 6 / ministry profile printed p 4 of 6"
+        },
+        {
+          "claim_id": "R4B-C026",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 6 / ministry profile p 4of 6"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-038-cited-pages.pdf",
+      "compact_sha256": "97fc76eab398e135bb17972c71a11a02934011fa2776a3b99764df7154ca77be",
+      "compact_bytes": 145256,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 1
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 6
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-039",
+      "title": "PSSG Estimates Notes 2025",
+      "url": "https://docs.openinfo.gov.bc.ca/Public_Safety_and_Solicitor_General_Estimates_Notes_2025.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-039.pdf",
+      "original_sha256": "9672e46ef236dd050adedfa6c8d4f77cf833c99ac8a7739d5bfd398b45ff7fc8",
+      "original_bytes": 43241215,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C027",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 149–152"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-039-cited-pages.pdf",
+      "compact_sha256": "078eff6b5f904272cc7c1c55644be0a53a3a696f083e86c67b934bf25946c684",
+      "compact_bytes": 655714,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 1
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 149
+        },
+        {
+          "excerpt_pdf_page": 3,
+          "original_pdf_page": 150
+        },
+        {
+          "excerpt_pdf_page": 4,
+          "original_pdf_page": 151
+        },
+        {
+          "excerpt_pdf_page": 5,
+          "original_pdf_page": 152
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-040",
+      "title": "Ministry Tourism Arts Culture Sport official webpage",
+      "url": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/tourism-arts-culture",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-040.html",
+      "original_sha256": "fc99a9832ae2051d407089142ce0b954cf79ad7a198b2f9b1676830c8468db97",
+      "original_bytes": 416820,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-041",
+      "title": "Sheriff's Act 1860 original proclamation",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/760034601",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-041.pdf",
+      "original_sha256": "6dc1f6e8864ef4d9af7fe31e405e566b55caf8b43324bc791a5f263af965932f",
+      "original_bytes": 157759,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C055",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 1–2, especiallyss 1–4 and issuance clause"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-041.pdf",
+      "compact_sha256": "6dc1f6e8864ef4d9af7fe31e405e566b55caf8b43324bc791a5f263af965932f",
+      "compact_bytes": 157759,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-042",
+      "title": "DFA established 1995 - official 7 July 2016bulletin",
+      "url": "https://news.gov.bc.ca/releases/2016TRAN0185-001237",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-042.html",
+      "original_sha256": "cf3c3c2a5522c36dc5e8114cea8c02c0e7fb7d4a819291187d987355eadfc567",
+      "original_bytes": 70873,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C011",
+          "role": "substantive_historical_finding",
+          "locator": "Main bulletin, paragraph beginning Disaster Financial Assistance has consistently..."
+        },
+        {
+          "claim_id": "R4B-C014",
+          "role": "substantive_historical_finding",
+          "locator": "Archived release header and main bulletin"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-042.html",
+      "compact_sha256": "cf3c3c2a5522c36dc5e8114cea8c02c0e7fb7d4a819291187d987355eadfc567",
+      "compact_bytes": 70873,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-043",
+      "title": "OIC 310/1995 Compensation and Disaster Financial Assistance Regulation original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0310_1995",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-043.pdf",
+      "original_sha256": "38836b445ee5d597ae529e03af78f2ce5ced4ec1e4b037e649e3309af1e1f7d9",
+      "original_bytes": 3044001,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C012",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-043.pdf",
+      "compact_sha256": "38836b445ee5d597ae529e03af78f2ce5ced4ec1e4b037e649e3309af1e1f7d9",
+      "compact_bytes": 3044001,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-044",
+      "title": "1957 Recreation and Conservation report - UBC landing page",
+      "url": "https://open.library.ubc.ca/collections/bcsessional/items/1.0354514",
+      "category": "unusable_retrieval",
+      "original_local_file": "raw/R4B-044.html",
+      "original_sha256": "10b06864eba357a764b24ae3c0dbcdfb8729f047c2201a7a487cedb63a7ebedf",
+      "original_bytes": 4935,
+      "retrieval_status": "blocked_response_saved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-045",
+      "title": "BC Supreme Court Act 1897 county court places",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/587481924",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-045.pdf",
+      "original_sha256": "a63e08157a9439ebcd7368fd2ad45ebb6e8d5920414facf2f4c578dcd18b1ca7",
+      "original_bytes": 1875815,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-046",
+      "title": "Counties Definition Act 1895, original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/326459071",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-046.pdf",
+      "original_sha256": "117ea858fd002c0c451ed69fc2f1d0ab3abb25e4d8ee65e386ad75d47e16f506",
+      "original_bytes": 199413,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C070",
+          "role": "substantive_historical_finding",
+          "locator": "OICpp 1–2; ActPDFpp 3–4 / printed pp 33–34, ss 5,8,10"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-046.pdf",
+      "compact_sha256": "117ea858fd002c0c451ed69fc2f1d0ab3abb25e4d8ee65e386ad75d47e16f506",
+      "compact_bytes": 199413,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-047",
+      "title": "Counties Definition Amendment Act 1911, original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/108995211",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-047.pdf",
+      "original_sha256": "f9ba69aa7b78692b66ae9ed7e23d77ad1cc4f4dde0297a76468441b10edf9bcd",
+      "original_bytes": 331774,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-048",
+      "title": "Counties Definition Amendment Act 1899, original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/928368670",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-048.pdf",
+      "original_sha256": "17899d2a6b0588ed65f6a8b7e0f9674c6f8b7e849a60c2592986fcf25179a3c6",
+      "original_bytes": 110615,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-049",
+      "title": "Let’s Go BC official mark - CIPO journal 23 April 2025",
+      "url": "https://www.ic.gc.ca/opic-cipo/tmj/eng/23Apr2025_en.pdf?edition=04-23&year=2025",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-049.pdf",
+      "original_sha256": "eec791a1fd2f0e22e009114ef78ec842c9e15fd6f7215f7aa0823f7efa9bb7f7",
+      "original_bytes": 17103126,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C030",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 2673, application 928917"
+        },
+        {
+          "claim_id": "R4B-C031",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 2673, application 928917"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-049-cited-pages.pdf",
+      "compact_sha256": "55eddfe0300ebd8e99ffb6d479714efab53e3957b2fec85a9faeb82d2ba460c8",
+      "compact_bytes": 891679,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 1
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 2673
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-050",
+      "title": "Vancouver FOI2025-684 includes 19 September 2025 Let’sGoBC correspondence",
+      "url": "https://vancouver.ca/files/cov/2025-684-release.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-050.pdf",
+      "original_sha256": "f980ea73602d228e58de4a914c97a45968da642c6a6c4f0ceaee650757dd3f6b",
+      "original_bytes": 3171382,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C032",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 4 / releasedrecord p 2, email 19 September 2025"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-050-cited-pages.pdf",
+      "compact_sha256": "bc9212c0844e2214fefadcf011b797509b1694aeeb2c32a7a0859587a3305a01",
+      "compact_bytes": 82550,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 1
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 4
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-051",
+      "title": "OIC 2085/1980 conservation officer powers regulation",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2085_1980",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-051.pdf",
+      "original_sha256": "e45462c6a665398eb944c486a5fa91fad9aec7b08146e2841f861c0551c359cb",
+      "original_bytes": 255820,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C053",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 1–2, regulation s 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-051.pdf",
+      "compact_sha256": "e45462c6a665398eb944c486a5fa91fad9aec7b08146e2841f861c0551c359cb",
+      "compact_bytes": 255820,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-052",
+      "title": "Trans Care BC program update April 2018",
+      "url": "https://www.phsa.ca/transcarebc-archive/Documents/About/Trans-Care-BC-progress-update-2018.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-052.pdf",
+      "original_sha256": "32d246bcfab7d95a6387e01eb364121c8a5fe2c531029fa70bfab222b62b425d",
+      "original_bytes": 2014336,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C035",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 3, What is Trans Care BC?"
+        },
+        {
+          "claim_id": "R4B-C036",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 3"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-052.pdf",
+      "compact_sha256": "32d246bcfab7d95a6387e01eb364121c8a5fe2c531029fa70bfab222b62b425d",
+      "compact_bytes": 2014336,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-053",
+      "title": "Connectivity inBCresource named in 7 April 2021officialrelease",
+      "url": "https://news.gov.bc.ca/releases/2021CITZ0025-000648",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-053.html",
+      "original_sha256": "ebc1802d18c25922a9e84586dc9c75d4a817cd8b0faa2b0870ee295bef1b6040",
+      "original_bytes": 79916,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C029",
+          "role": "substantive_historical_finding",
+          "locator": "Learn More section"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-053.html",
+      "compact_sha256": "ebc1802d18c25922a9e84586dc9c75d4a817cd8b0faa2b0870ee295bef1b6040",
+      "compact_bytes": 79916,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-054",
+      "title": "BCMHSUSvicepresident named in 17 December 2015officialrelease",
+      "url": "https://news.gov.bc.ca/releases/2015MNGD0086-002113",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-054.html",
+      "original_sha256": "eed0277e941216074eece14174b4d3526f2480900c87e4ea9c59efcd2eb8d747",
+      "original_bytes": 82912,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C037",
+          "role": "substantive_historical_finding",
+          "locator": "Quotes section, Lynn Pelletier"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-054.html",
+      "compact_sha256": "eed0277e941216074eece14174b4d3526f2480900c87e4ea9c59efcd2eb8d747",
+      "compact_bytes": 82912,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-055",
+      "title": "Counties Definition Amendment Act 1904 original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1071999975",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-055.pdf",
+      "original_sha256": "3a89bd0cccbcf41e6df472c639076dbbd83ea5b2ad7376cb34ee4fd699613c58",
+      "original_bytes": 63471,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C071",
+          "role": "substantive_historical_finding",
+          "locator": "ActPDFpp 1–2, ss 2–4; OICp 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-055.pdf",
+      "compact_sha256": "3a89bd0cccbcf41e6df472c639076dbbd83ea5b2ad7376cb34ee4fd699613c58",
+      "compact_bytes": 63471,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-056",
+      "title": "Counties Definition Amendment Act 1905 original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1789124375",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-056.pdf",
+      "original_sha256": "50ad6da77135f0d72252c3307051086830f7af4cad4f6521dce52824fd622130",
+      "original_bytes": 119228,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-057",
+      "title": "Let’sGoBC public campaign website About",
+      "url": "https://letsgobc.ca/about/",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-057.html",
+      "original_sha256": "b63bf3e2efa08c06d44b0b2be0f50c4fd1f74ae11bb8a1411087e1403692fdea",
+      "original_bytes": 97234,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-058",
+      "title": "Sheriffs Amendment Act 1888 six county offices continued renamed",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1075263863",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-058.pdf",
+      "original_sha256": "fafe86f105a76e511cd3a11d2b7e595e56a6683558dc43bd1c16552c486c5ec9",
+      "original_bytes": 141039,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C060",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 2 / printed p 104, s 2"
+        },
+        {
+          "claim_id": "R4B-C061",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 2 / printed p 104, s 2"
+        },
+        {
+          "claim_id": "R4B-C062",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 2 / printed p 104, s 2"
+        },
+        {
+          "claim_id": "R4B-C063",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 2 / printed p 104, s 2"
+        },
+        {
+          "claim_id": "R4B-C064",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 2 / printed p 104, s 2"
+        },
+        {
+          "claim_id": "R4B-C065",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 2 / printed p 104, s 2"
+        },
+        {
+          "claim_id": "R4B-C066",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 2 / printed p 104, s 3"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-058.pdf",
+      "compact_sha256": "fafe86f105a76e511cd3a11d2b7e595e56a6683558dc43bd1c16552c486c5ec9",
+      "compact_bytes": 141039,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-059",
+      "title": "OIC 346/1895 bringing Counties Definition Act into force 1 October 1895",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0346_1895",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-059.pdf",
+      "original_sha256": "105ff5eec214ebbe4580b74763851e78f4b8c27d8d0ff14f95822a555414b6d5",
+      "original_bytes": 74997,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C070",
+          "role": "substantive_historical_finding",
+          "locator": "OICpp 1–2; ActPDFpp 3–4 / printed pp 33–34, ss 5,8,10"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-059.pdf",
+      "compact_sha256": "105ff5eec214ebbe4580b74763851e78f4b8c27d8d0ff14f95822a555414b6d5",
+      "compact_bytes": 74997,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-060",
+      "title": "Counties Definition Amendment Act 1920 Atlin references becomePrince Rupert",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/588059714",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-060.pdf",
+      "original_sha256": "e8fdaad1123df97da739138e2332fa41eceba45ab7a55f153bcd66d2d4bc9216",
+      "original_bytes": 124899,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C072",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 1 / printed p 75, ss 1–2"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-060.pdf",
+      "compact_sha256": "e8fdaad1123df97da739138e2332fa41eceba45ab7a55f153bcd66d2d4bc9216",
+      "compact_bytes": 124899,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-061",
+      "title": "Sheriffs Act 1873 in official historical compilation, chapter 146",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1447266216",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-061.pdf",
+      "original_sha256": "e0d02a46ace5bb0eceac15402a003cb65d1c97a64ff4f684a4e643fcb874c2bf",
+      "original_bytes": 547583,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C056",
+          "role": "substantive_historical_finding",
+          "locator": "Compiled chapter 146, printed p 648 / PDF p 1, s 1"
+        },
+        {
+          "claim_id": "R4B-C057",
+          "role": "substantive_historical_finding",
+          "locator": "Compiled chapter 146, printed pp 651–652 / PDF pp 4–5, s 16"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-061.pdf",
+      "compact_sha256": "e0d02a46ace5bb0eceac15402a003cb65d1c97a64ff4f684a4e643fcb874c2bf",
+      "compact_bytes": 547583,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-062",
+      "title": "Sheriffs Act 1873 Amendment 1878 original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1730961900",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-062.pdf",
+      "original_sha256": "28322f10c118a2102f2e70c8152035d90e315476f5a307abe92546a394affae8",
+      "original_bytes": 74218,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C058",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 1 / printed p 75, ss 1–2"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-062.pdf",
+      "compact_sha256": "28322f10c118a2102f2e70c8152035d90e315476f5a307abe92546a394affae8",
+      "compact_bytes": 74218,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-063",
+      "title": "Sheriffs and Registrars Act 1880 original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/227067487",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-063.pdf",
+      "original_sha256": "4f065c28c51562b7a090ec8b506701483047e71d09d23eb5013cb6d32bdd742a",
+      "original_bytes": 96540,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C059",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 1–2 / printed pp 71–72, ss 1,7,8"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-063.pdf",
+      "compact_sha256": "4f065c28c51562b7a090ec8b506701483047e71d09d23eb5013cb6d32bdd742a",
+      "compact_bytes": 96540,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-064",
+      "title": "OIC 241/1893 appointment of Vancouver County sheriff",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0241_1893",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-064.pdf",
+      "original_sha256": "cab797e41e117277501b5c0c28337dca0516e078e7d5e6f9a38bfe95bcca752e",
+      "original_bytes": 160462,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C068",
+          "role": "substantive_historical_finding",
+          "locator": "OIC 427 pp 1,4; OIC 241 p 1 cross-reference"
+        },
+        {
+          "claim_id": "R4B-C069",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 3"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-064.pdf",
+      "compact_sha256": "cab797e41e117277501b5c0c28337dca0516e078e7d5e6f9a38bfe95bcca752e",
+      "compact_bytes": 160462,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-065",
+      "title": "Sheriffs Amendment Act 1890",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/659866514",
+      "category": "diagnostic_or_lead_original",
+      "original_local_file": "raw/R4B-065.pdf",
+      "original_sha256": "b3783e1c7dea7ba6c0b263627987059eb632e33f22e293a48f1274a0aeb57ace",
+      "original_bytes": 90913,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C087",
+          "role": "archival_lead",
+          "locator": "PDF p 2 / printed p 244, ss 6–7"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-065.pdf",
+      "compact_sha256": "b3783e1c7dea7ba6c0b263627987059eb632e33f22e293a48f1274a0aeb57ace",
+      "compact_bytes": 90913,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-066",
+      "title": "Sheriffs Act Amendment 1892 creates Vancouver appointment authority",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1326665558",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-066.pdf",
+      "original_sha256": "a667d5f32b8aa88bef1fc032ba483b90627474a443ee762dc6db21be4db7a721",
+      "original_bytes": 108024,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C067",
+          "role": "substantive_historical_finding",
+          "locator": "PDF pp 1–2 / printed pp 237–238, ss 2–5"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-066.pdf",
+      "compact_sha256": "a667d5f32b8aa88bef1fc032ba483b90627474a443ee762dc6db21be4db7a721",
+      "compact_bytes": 108024,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-067",
+      "title": "OIC 427/1892 Vancouver acting sheriff appointment",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0427_1892",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-067.pdf",
+      "original_sha256": "28b6e5a3cf14689d24b89ac7d531892932217558054b122f6e9677af82067e18",
+      "original_bytes": 207953,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C068",
+          "role": "substantive_historical_finding",
+          "locator": "OIC 427 pp 1,4; OIC 241 p 1 cross-reference"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-067.pdf",
+      "compact_sha256": "28b6e5a3cf14689d24b89ac7d531892932217558054b122f6e9677af82067e18",
+      "compact_bytes": 207953,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-068",
+      "title": "OIC 121/1905 commencement authority CountiesDefinition 1904",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0121_1905",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-068.pdf",
+      "original_sha256": "904efb4b6f20c42a64ac1742757e7551dad5ac8d67579a5b8566b210ab6301be",
+      "original_bytes": 185242,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C071",
+          "role": "substantive_historical_finding",
+          "locator": "ActPDFpp 1–2, ss 2–4; OICp 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-068.pdf",
+      "compact_sha256": "904efb4b6f20c42a64ac1742757e7551dad5ac8d67579a5b8566b210ab6301be",
+      "compact_bytes": 185242,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-069",
+      "title": "DFA Regulation 124/1995 official consolidation historical depositeddate",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/124_95",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-069.html",
+      "original_sha256": "08fb83fc67a04ef14d105845241254afd647d531eead5f3b57e9bfa7665b8367",
+      "original_bytes": 144225,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C013",
+          "role": "substantive_historical_finding",
+          "locator": "Consolidation header"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-069.html",
+      "compact_sha256": "08fb83fc67a04ef14d105845241254afd647d531eead5f3b57e9bfa7665b8367",
+      "compact_bytes": 144225,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-070",
+      "title": "Medical Services Act 1967 c 24 original",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/30844302",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-070.pdf",
+      "original_sha256": "31844b4bb3ce6f41e866154b327e30b088612635d5fbb4d67513b8fdb67d67d2",
+      "original_bytes": 296275,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C076",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 1 / printed p 111, s 3; PDF p 5 / printed p 115, s 13"
+        },
+        {
+          "claim_id": "R4B-C079",
+          "role": "substantive_historical_finding",
+          "locator": "OIC PDF p 1; Act PDF p 3 / printed p 113, s 9"
+        },
+        {
+          "claim_id": "R4B-C084",
+          "role": "substantive_historical_finding",
+          "locator": "Act PDF p 1 / printed p 111, s 3; OIC PDF p 1"
+        },
+        {
+          "claim_id": "R4B-C086",
+          "role": "substantive_historical_finding",
+          "locator": "Act PDF p 2 / printed p 112, ss 6–8; OIC PDF p 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-070.pdf",
+      "compact_sha256": "31844b4bb3ce6f41e866154b327e30b088612635d5fbb4d67513b8fdb67d67d2",
+      "compact_bytes": 296275,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-071",
+      "title": "OIC 965/1967 Medical Services Commission initial appointments",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0965_1967",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-071.pdf",
+      "original_sha256": "6bd67099085ce5628cf1a30c5593f479ac4c38b25c8fc7e7e1a02f661eb0ec7c",
+      "original_bytes": 96323,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C078",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 1"
+        },
+        {
+          "claim_id": "R4B-C084",
+          "role": "substantive_historical_finding",
+          "locator": "Act PDF p 1 / printed p 111, s 3; OIC PDF p 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-071.pdf",
+      "compact_sha256": "6bd67099085ce5628cf1a30c5593f479ac4c38b25c8fc7e7e1a02f661eb0ec7c",
+      "compact_bytes": 96323,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-072",
+      "title": "OIC 964/1967 authorizing Medical Services Act commencement except section 9",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0964_1967",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-072.pdf",
+      "original_sha256": "c2eabb07b73e81d48bdb125b178f34cc4c84634f83fac8099e4f37777af4d1e2",
+      "original_bytes": 95865,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C077",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 1"
+        },
+        {
+          "claim_id": "R4B-C086",
+          "role": "substantive_historical_finding",
+          "locator": "Act PDF p 2 / printed p 112, ss 6–8; OIC PDF p 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-072.pdf",
+      "compact_sha256": "c2eabb07b73e81d48bdb125b178f34cc4c84634f83fac8099e4f37777af4d1e2",
+      "compact_bytes": 95865,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-073",
+      "title": "OIC 966/1967 authorizing Medical Services Act section 9 commencement",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0966_1967",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-073.pdf",
+      "original_sha256": "56fe99e18818d38109b013f74de052b2b81f6694fa8a57500defb3c9fbfba2ba",
+      "original_bytes": 104486,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C079",
+          "role": "substantive_historical_finding",
+          "locator": "OIC PDF p 1; Act PDF p 3 / printed p 113, s 9"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-073.pdf",
+      "compact_sha256": "56fe99e18818d38109b013f74de052b2b81f6694fa8a57500defb3c9fbfba2ba",
+      "compact_bytes": 104486,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-074",
+      "title": "OIC 1518/1968 Medical Services Commission staffing",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1518_1968",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-074.pdf",
+      "original_sha256": "ee4a633ed45bf893d7d67cb01ce196468043c47a07fb67e5075193133a30e085",
+      "original_bytes": 77498,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C081",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-074.pdf",
+      "compact_sha256": "ee4a633ed45bf893d7d67cb01ce196468043c47a07fb67e5075193133a30e085",
+      "compact_bytes": 77498,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-075",
+      "title": "Medical Services Commission announcement in Gulf Islands Driftwood 6 June 1968",
+      "url": "https://saltspringarchives.com/driftwood/1968/June6-1968.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-075.pdf",
+      "original_sha256": "8a42f34755383ed10e8998afa2162b69a33546e8d7f5d777f63daca3f4503f3f",
+      "original_bytes": 6520423,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C082",
+          "role": "substantive_historical_finding",
+          "locator": "Printed p 11 / PDF p 11"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "excerpts/R4B-075-cited-pages.pdf",
+      "compact_sha256": "fc51c2f7ea29ca7220a8f77bf44ecff7a4044632c51b330bab3cad10581c999a",
+      "compact_bytes": 973319,
+      "compact_kind": "selected_original_pdf_pages",
+      "page_mapping": [
+        {
+          "excerpt_pdf_page": 1,
+          "original_pdf_page": 1
+        },
+        {
+          "excerpt_pdf_page": 2,
+          "original_pdf_page": 11
+        }
+      ]
+    },
+    {
+      "source_id": "R4B-076",
+      "title": "Medical Services Commission financial statement for year ended 31 March 2004",
+      "url": "https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/medical-services-plan/bluebook2004.pdf",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-076.pdf",
+      "original_sha256": "b6bcebf6f71662597fef900cee4533c649b4636af3f270879d7115a66f65f963",
+      "original_bytes": 726333,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C083",
+          "role": "conflicting_source_statement",
+          "locator": "PDF/printed p 6, note 1"
+        },
+        {
+          "claim_id": "R4B-C085",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 6, note 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-076.pdf",
+      "compact_sha256": "b6bcebf6f71662597fef900cee4533c649b4636af3f270879d7115a66f65f963",
+      "compact_bytes": 726333,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-077",
+      "title": "OIC 963/1967 adjacent minister designation candidate",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0963_1967",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-077.pdf",
+      "original_sha256": "b526a9e496b6e45a64a79487fd235670787d0c6eba1556c39e231bbe23f3cb99",
+      "original_bytes": 132253,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R4B-078",
+      "title": "OIC 967/1967 Medical Services Commission organizational establishment",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0967_1967",
+      "category": "accepted_original",
+      "original_local_file": "raw/R4B-078.pdf",
+      "original_sha256": "6cd5f084bb8bfd5c265d9b83062344c22b468874002e7dd84e55ed321bbaa857",
+      "original_bytes": 123296,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C080",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "raw/R4B-078.pdf",
+      "compact_sha256": "6cd5f084bb8bfd5c265d9b83062344c22b468874002e7dd84e55ed321bbaa857",
+      "compact_bytes": 123296,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R4B-079",
+      "title": "OIC 968/1967 adjacent minister designation candidate",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0968_1967",
+      "category": "screened_only",
+      "original_local_file": "raw/R4B-079.pdf",
+      "original_sha256": "499367730d10c858d1228ec9e3f506f112372e2a828e207baa331a1b47754e2a",
+      "original_bytes": 149198,
+      "retrieval_status": "retrieved",
+      "claim_evidence": [],
+      "include_in_compact_evidence_package": false
+    },
+    {
+      "source_id": "R3H-099",
+      "title": "Ministry of Health Services Annual Service Plan Report 2009/10",
+      "url": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+      "category": "prior_original_reused",
+      "original_local_file": "../prior/evidence/round3/health/originals/hs_2009_10_report.pdf",
+      "original_sha256": "8ccfdb32502def50f92d90747023f8791cf0725ddf2d9d26cce59166af1a49ac",
+      "original_bytes": 1151880,
+      "retrieval_status": "previous_package_original_reused",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C038",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 9"
+        },
+        {
+          "claim_id": "R4B-C039",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 9"
+        },
+        {
+          "claim_id": "R4B-C040",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 9"
+        },
+        {
+          "claim_id": "R4B-C041",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 9"
+        },
+        {
+          "claim_id": "R4B-C042",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 9"
+        },
+        {
+          "claim_id": "R4B-C043",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 9"
+        },
+        {
+          "claim_id": "R4B-C044",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 9"
+        },
+        {
+          "claim_id": "R4B-C045",
+          "role": "substantive_historical_finding",
+          "locator": "PDF/printed p 9"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "../prior/evidence/round3/health/originals/hs_2009_10_report.pdf",
+      "compact_sha256": "8ccfdb32502def50f92d90747023f8791cf0725ddf2d9d26cce59166af1a49ac",
+      "compact_bytes": 1151880,
+      "compact_kind": "full_original"
+    },
+    {
+      "source_id": "R3T-036",
+      "title": "OIC 367/2024 audit-hearings committee appointment",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0367_2024",
+      "category": "prior_original_reused",
+      "original_local_file": "../prior/evidence/round3/tribunals/raw/R3T-036.pdf",
+      "original_sha256": "8b19095cffadb46800a05dc7ce2c30ec9f914836981608f37a86b75b792eba61",
+      "original_bytes": 169110,
+      "retrieval_status": "previous_package_original_reused",
+      "claim_evidence": [
+        {
+          "claim_id": "R4B-C046",
+          "role": "substantive_historical_finding",
+          "locator": "PDF p 1"
+        }
+      ],
+      "include_in_compact_evidence_package": true,
+      "compact_local_file": "../prior/evidence/round3/tribunals/raw/R3T-036.pdf",
+      "compact_sha256": "8b19095cffadb46800a05dc7ce2c30ec9f914836981608f37a86b75b792eba61",
+      "compact_bytes": 169110,
+      "compact_kind": "full_original"
+    }
+  ]
+}

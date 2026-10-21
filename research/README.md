@@ -192,3 +192,15 @@ orders, Gazettes and registry records (the 159 MB of evidence files are not comm
 are in its `evidence_manifest.json`). Its `INTEGRATION.md` says what changed: designation dates for
 every board and council, names over time, the 1997 roster of 52, stated ministries, the societies'
 2002 dissolutions, the 1946 commencement, PHSA's registry identities, the sheriffs, HPO and PRHC.
+
+## Round 4 (21 October 2026)
+
+`reviews/round-4-2026-10-21/` answers the 59 items of `WANTED.md` in four modules (branches, crowns,
+health, root), kept as delivered less its 898 MB of original downloads, which are listed with their
+hashes in `excluded-evidence-manifest.json`. Each module was reviewed into a proposal
+(`integration/<module>.json`, with notes) that says, claim by claim, what was applied and what was
+set aside. Its `convert.py` writes `atlas/events-round4.json` and `history/bodies-round4.json`,
+corrects hand-kept files in place, and writes `overrides.json`, which the institutional-history
+converter applies to the files it owns; so run the two converters in that order, then
+`npm run build:government`. Its `INTEGRATION.md` says what changed. `WANTED.md` was rewritten after
+it, and `node scripts/measure-government.mjs` gives the measures at its top.

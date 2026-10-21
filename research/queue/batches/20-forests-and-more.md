@@ -153,18 +153,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 11. Building BC
-
-- **id** `building-bc` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under British Columbia Housing Management Commission.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bch.pdf
-- **What it does:** BC Housing program for increasing the supply of housing, named alongside BC Builds in its 2026/27 service plan.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Building BC"
-- **Questions:** A, B and C, as above.
-
-### 12. Homeless Encampment Action Response Team and Temporary Housing (HEART / HEARTH)
+### 11. Homeless Encampment Action Response Team and Temporary Housing (HEART / HEARTH)
 
 - **id** `heart-and-hearth` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under British Columbia Housing Management Commission.
@@ -175,7 +164,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Homeless Encampment Action Response Team and Temporary Housing", "HEART / HEARTH"
 - **Questions:** A, B and C, as above.
 
-### 13. Licensing and Consumer Services
+### 12. Licensing and Consumer Services
 
 - **id** `bc-housing-licensing-and-consumer-services` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under British Columbia Housing Management Commission. Official site: https://www.bchousing.org/licensing-consumer-services
@@ -185,6 +174,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Review:** not yet researched
 - **Search for:** "Licensing and Consumer Services"
 - **Questions:** A, B and C, as above.
+
+### 13. Building BC
+
+- **id** `building-bc` · program · **P2 — undated, but some history on file**
+- **Today:** under British Columbia Housing Management Commission.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bch.pdf
+- **What it does:** BC Housing program for increasing the supply of housing, named alongside BC Builds in its 2026/27 service plan.
+- **Held:** no start date; first seen 2019
+- **Events on file:** 2018-02 retrospective claim; 2019 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Building BC"
+- **Questions:**
+  - A. It is already seen in 2019. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 14. BC Builds
 
@@ -458,31 +462,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "building-bc",
-      "name": "Building BC",
-      "kind": "program",
-      "parent_today": "bc-housing",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 20",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "heart-and-hearth",
       "name": "Homeless Encampment Action Response Team and Temporary Housing",
       "kind": "program",
@@ -511,6 +490,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "bc-housing-licensing-and-consumer-services",
       "name": "Licensing and Consumer Services",
       "kind": "division",
+      "parent_today": "bc-housing",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 20",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "building-bc",
+      "name": "Building BC",
+      "kind": "program",
       "parent_today": "bc-housing",
       "established": null,
       "first_observed": null,

@@ -1,0 +1,1738 @@
+{
+  "schema_version": "1.0",
+  "prepared_on": "2026-10-21",
+  "module": "health_round4",
+  "path_base": "/workspace/scratch/a5ca1a8fd90b/round4/health",
+  "counting_rule": "20 catalogue records are not20 accepted findings. Nine records are positive/corroborating sources; five are archival leads or guards; five are indexes/search records; one full source was not retrieved. The10 claim records include an archive target, attributed historical observations, corroboration and negative/identity guards. Count by claim type, not by file or source total.",
+  "counts": {
+    "source_catalogue_records": 20,
+    "source_classification_counts": {
+      "archival_lead_or_guard": 5,
+      "used_positive_or_corroboration": 9,
+      "screened_or_index": 5,
+      "not_retrieved": 1
+    },
+    "claim_records": 10,
+    "claim_type_counts": {
+      "research_record_series_target": 1,
+      "dated_relationship_observation": 3,
+      "retrospective_reported_establishment": 1,
+      "retrospective_historical_account": 1,
+      "statutory_scrutiny_class_start": 1,
+      "identity_and_commencement_guard": 1,
+      "primary_instrument_corroboration": 1,
+      "bounded_statutory_route_exclusion": 1
+    },
+    "complete_originals_preserved": 19,
+    "full_source_not_retrieved": 1,
+    "compact_evidence_source_records": 14,
+    "compact_evidence_files": 26,
+    "compact_evidence_bytes": 2786087,
+    "whole_page_extracts": 5,
+    "extracted_pdf_pages": 16,
+    "ministerial_order_audit_instruments": 442,
+    "oic_audit_instruments": 71,
+    "audit_unique_files": 1040,
+    "audit_bytes": 127830171,
+    "handback_control_files": 9
+  },
+  "classification_definitions": {
+    "used_positive_or_corroboration": "Supports a dated factual statement or corroborates a reported event; not necessarily a new conclusion.",
+    "archival_lead_or_guard": "Locates a record series/holding/access route or prevents identity/chronology conflation; no invented missing transaction.",
+    "screened_or_index": "Catalogue or bounded search documentation; not positive proof of a missing event.",
+    "not_retrieved": "Full source absent; indexed lead not promoted into an accepted factual claim."
+  },
+  "extraction_policy": "Selected PDF pages are copied losslessly as whole pages into separate derived PDFs; originals are untouched. Each page map records the original1-based PDF page, printed label, text hash and72dpiRGB render hash, and equality checks against the source. Complete small originals are retained for the single-page orders/supplement, full10-page Act, small audited statements and HTML sources. The research-article selection is only its relevant affiliation page.",
+  "sources": [
+    {
+      "source_id": "R4H-001",
+      "title": "Health Authority Performance Management ORCS, schedule 122352",
+      "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/records-management/orcs/health-authority-performance.pdf",
+      "classification": "archival_lead_or_guard",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-001"
+      ],
+      "use": "New record-series target; actual underlying agreements not retrieved.",
+      "pinpoint": "PDF pp.51, 56–57 / section 1 pp.25, 30–31; secondary 25440-40. Related executive-records route: PDF p.33 / section 1 p.7.",
+      "original_files": [
+        {
+          "path": "raw/health-authority-performance.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/health-authority-performance.pdf",
+          "bytes": 886933,
+          "sha256": "90eefbcbab0aa46d3e19d459129ebb599dd63008bef34a1db6a2480f4a6c8ad0",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-001"
+          ],
+          "pdf_pages": 90
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "evidence-selection/R4H-001-cited-pages.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-001-cited-pages.pdf",
+          "bytes": 23271,
+          "sha256": "d3baae6511b41a7a0df077ecd185faeeffbfa6afa99cd22691ff9934a315c27a",
+          "representation": "faithful_whole_page_pdf_extract",
+          "source_ids": [
+            "R4H-001"
+          ],
+          "original_path": "raw/health-authority-performance.pdf",
+          "original_sha256": "90eefbcbab0aa46d3e19d459129ebb599dd63008bef34a1db6a2480f4a6c8ad0",
+          "page_map": [
+            {
+              "extract_pdf_page": 1,
+              "original_pdf_page": 33,
+              "original_printed_page": "section 1 p.7",
+              "page_text_sha256": "391b624775fe76b090513f74979b4863428c719ba12c183332401a61425d45f7",
+              "rendered_rgb_72dpi_sha256": "9a7923b425399496dedf9522f5bc0601aabd4e90f29b72034675534a6e4ef706",
+              "render_width": 612,
+              "render_height": 792,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 2,
+              "original_pdf_page": 51,
+              "original_printed_page": "section 1 p.25",
+              "page_text_sha256": "cee3db3956e16d71a01c3daad0434d393346604ff90befd69fd4e1515dc74382",
+              "rendered_rgb_72dpi_sha256": "17ad1e58fac14a3ccae382bbf775703ec376d150bac137d7f6634ff7f582be34",
+              "render_width": 612,
+              "render_height": 792,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 3,
+              "original_pdf_page": 56,
+              "original_printed_page": "section 1 p.30",
+              "page_text_sha256": "f17ca047059b88c0a0a631c852a5bb317d158c0cc1a24a0516b8eed83b462bcd",
+              "rendered_rgb_72dpi_sha256": "0162143500c601b2a26fa8ab276830e5108c2cfa7b1f092d191cef7a930fe805",
+              "render_width": 612,
+              "render_height": 792,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 4,
+              "original_pdf_page": 57,
+              "original_printed_page": "section 1 p.31",
+              "page_text_sha256": "7d4a1ca86434ba079e339048bbc0ede4098cc851aad00b5f2109d2d9db556862",
+              "rendered_rgb_72dpi_sha256": "8fc773dbd781700ebcd5223af504d1e871f1b08f00c619f4c41f6174974224a4",
+              "render_width": 612,
+              "render_height": 792,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            }
+          ],
+          "pdf_pages": 4
+        },
+        {
+          "path": "evidence-selection/R4H-001-cited-pages.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-001-cited-pages.txt",
+          "bytes": 10065,
+          "sha256": "e9f9f27cbf86ee2efc0410a1cd3478162386da194b109958d95ce953ae8f196a",
+          "representation": "searchable_text_of_selected_pages",
+          "source_ids": [
+            "R4H-001"
+          ],
+          "derived_from_path": "evidence-selection/R4H-001-cited-pages.pdf",
+          "warning": "Search aid only; the PDF pages are the visual legal evidence."
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved",
+      "evidential_limit": "The record schedule is retrieved, but the described three binders and individual agreements are not."
+    },
+    {
+      "source_id": "R4H-002",
+      "title": "Hansard, 27 April 1987, afternoon sitting — Organ Donor Awareness Week",
+      "url": "https://lims.leg.bc.ca/hdms/file/Debates/34th1st/34p_01s_870427p.htm",
+      "classification": "used_positive_or_corroboration",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-002"
+      ],
+      "use": "New dated PORT funding and operating observation.",
+      "pinpoint": "Printed p.787, statement of Minister Dueck.",
+      "original_files": [
+        {
+          "path": "raw/hansard_1987_04_27.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1987_04_27.html",
+          "bytes": 170616,
+          "sha256": "6334c22806139c746c4e4ef84ca6ab17ae51453caee45f0a779396eefed57e78",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-002"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/hansard_1987_04_27.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1987_04_27.html",
+          "bytes": 170616,
+          "sha256": "6334c22806139c746c4e4ef84ca6ab17ae51453caee45f0a779396eefed57e78",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-002"
+          ]
+        },
+        {
+          "path": "raw/hansard_1987_04_27.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1987_04_27.txt",
+          "bytes": 159091,
+          "sha256": "b38fa549d52d20183f4dc3d298d405c45b4716a81496bff9ce723420c9f5ec41",
+          "representation": "searchable_text_of_original",
+          "source_ids": [
+            "R4H-002"
+          ],
+          "derived_from_path": "raw/hansard_1987_04_27.html"
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-003",
+      "title": "Hansard, 27 April 1988, afternoon sitting — Organ Donor Awareness Week",
+      "url": "https://lims.leg.bc.ca/hdms/file/Debates/34th2nd/34p_02s_880427p.htm",
+      "classification": "used_positive_or_corroboration",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-003",
+        "R4HC-006"
+      ],
+      "use": "New explicit account that the Transplant Society initiated PORT; historical 1985 establishment assertion kept separate from registration.",
+      "pinpoint": "Printed p.4096, statement of Minister Dueck.",
+      "original_files": [
+        {
+          "path": "raw/hansard_1988_04_27.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_04_27.html",
+          "bytes": 175947,
+          "sha256": "0ae811d3775d1e91ea148a5eb6cb962e0dd601bd16650740cae90fe556e205c4",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-003"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/hansard_1988_04_27.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_04_27.html",
+          "bytes": 175947,
+          "sha256": "0ae811d3775d1e91ea148a5eb6cb962e0dd601bd16650740cae90fe556e205c4",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-003"
+          ]
+        },
+        {
+          "path": "raw/hansard_1988_04_27.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_04_27.txt",
+          "bytes": 165502,
+          "sha256": "119bb1f02f5fdab072bea65c61bf3e50ce77c0a563fabaf66c9d8e2fddf90b71",
+          "representation": "searchable_text_of_original",
+          "source_ids": [
+            "R4H-003"
+          ],
+          "derived_from_path": "raw/hansard_1988_04_27.html"
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-004",
+      "title": "Hansard, 9 June 1988, morning sitting — Ministry of Health estimates",
+      "url": "https://lims.leg.bc.ca/hdms/file/Debates/34th2nd/34p_02s_880609a.htm",
+      "classification": "used_positive_or_corroboration",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-005"
+      ],
+      "use": "New ministerial account dates the Pacific organ retrieval program to 1985.",
+      "pinpoint": "Printed p.4951, statement of Minister Dueck.",
+      "original_files": [
+        {
+          "path": "raw/hansard_1988_06_09.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_06_09.html",
+          "bytes": 92069,
+          "sha256": "44acd058952b466f7396af3b2394f6fffa9add09e7c6a0545141c8a2091f9bf7",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-004"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/hansard_1988_06_09.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_06_09.html",
+          "bytes": 92069,
+          "sha256": "44acd058952b466f7396af3b2394f6fffa9add09e7c6a0545141c8a2091f9bf7",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-004"
+          ]
+        },
+        {
+          "path": "raw/hansard_1988_06_09.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_06_09.txt",
+          "bytes": 85941,
+          "sha256": "923449188ae14d348331129b774b7c8a8e6f02cc00e52a6d21695ae11c0fcc0d",
+          "representation": "searchable_text_of_original",
+          "source_ids": [
+            "R4H-004"
+          ],
+          "derived_from_path": "raw/hansard_1988_06_09.html"
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-005",
+      "title": "A. M. J. Buchan, Effect of Sympathomimetics on Gastrin Secretion from Antral G Cells in Culture, J Clin Invest 87 (1991), 1382–1386",
+      "url": "https://www.jci.org/articles/view/115143/files/pdf",
+      "classification": "used_positive_or_corroboration",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-004"
+      ],
+      "use": "New explicit description of the Pacific Organ Retrieval for Transplantation System as part of the British Columbia Transplant Society.",
+      "pinpoint": "PDF p.1 / printed p.1382, Methods—Cell isolation.",
+      "original_files": [
+        {
+          "path": "raw/buchan1991.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/buchan1991.pdf",
+          "bytes": 880783,
+          "sha256": "e30054e0c249a2108bb9edb554f6c1368cc6e000c3d595c11c1e68c8147579ad",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-005"
+          ],
+          "pdf_pages": 5
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "evidence-selection/R4H-005-cited-pages.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-005-cited-pages.pdf",
+          "bytes": 210847,
+          "sha256": "a8f680c2dc013b7c2862912620a165129bd7c07e3aa6c839f83d22ed7b17c79f",
+          "representation": "faithful_whole_page_pdf_extract",
+          "source_ids": [
+            "R4H-005"
+          ],
+          "original_path": "raw/buchan1991.pdf",
+          "original_sha256": "e30054e0c249a2108bb9edb554f6c1368cc6e000c3d595c11c1e68c8147579ad",
+          "page_map": [
+            {
+              "extract_pdf_page": 1,
+              "original_pdf_page": 1,
+              "original_printed_page": "1382",
+              "page_text_sha256": "b49adc68cbb7731a15595e9793627e4ddd6bc3124e5d4b352da51ef816b1cbd9",
+              "rendered_rgb_72dpi_sha256": "88e13cd11ef357b89a525fa0f91f6427d13738a4472961d1a2d75efb29343c7f",
+              "render_width": 633,
+              "render_height": 827,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            }
+          ],
+          "pdf_pages": 1
+        },
+        {
+          "path": "evidence-selection/R4H-005-cited-pages.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-005-cited-pages.txt",
+          "bytes": 6021,
+          "sha256": "20ff2c3c21c3fa9288b15ba1e264711c46aa9c3b40a205f3147b75493c8d0574",
+          "representation": "searchable_text_of_selected_pages",
+          "source_ids": [
+            "R4H-005"
+          ],
+          "derived_from_path": "evidence-selection/R4H-005-cited-pages.pdf",
+          "warning": "Search aid only; the PDF pages are the visual legal evidence."
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-006",
+      "title": "Courthouse Libraries BC catalogue — The British Columbia Gazette. Part II: regulations",
+      "url": "https://www.courthouselibrary.ca/catalogue-item?cid=8998",
+      "classification": "archival_lead_or_guard",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [],
+      "use": "Physical-volume location lead for missing 1977 proclamation, not a proclamation source.",
+      "pinpoint": "Holdings for volume 20 (1977), part 2; call number KP36.5.",
+      "original_files": [
+        {
+          "path": "raw/gazette_part2_catalogue.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/gazette_part2_catalogue.html",
+          "bytes": 204286,
+          "sha256": "04113b7fbea191ba29b8d844a270446660a3f82e273d97477f95e3be48412886",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-006"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/gazette_part2_catalogue.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/gazette_part2_catalogue.html",
+          "bytes": 204286,
+          "sha256": "04113b7fbea191ba29b8d844a270446660a3f82e273d97477f95e3be48412886",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-006"
+          ]
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-007",
+      "title": "BC Laws ministerial orders — 2001 XML catalogue",
+      "url": "https://www.bclaws.gov.bc.ca/civix/content/mo/hmo/558283955/",
+      "classification": "screened_or_index",
+      "package_group": "audit_index",
+      "claim_ids": [],
+      "use": "Systematic negative-search coverage. Individual PDF URLs are in the scan ledgers.",
+      "pinpoint": "M1–M332/2001; all 332 retrieved and first two pages, or all pages if shorter, screened.",
+      "original_files": [
+        {
+          "path": "raw/mo_index_2001.xml",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/mo_index_2001.xml",
+          "bytes": 234949,
+          "sha256": "ff1165abb81e496018f41c582489c7b16de254f07de218bdf101a5a5c596ddfb",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-007"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/mo_index_2001.xml",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/mo_index_2001.xml",
+          "bytes": 234949,
+          "sha256": "ff1165abb81e496018f41c582489c7b16de254f07de218bdf101a5a5c596ddfb",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-007"
+          ]
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-008",
+      "title": "BC Laws ministerial orders — 2002 XML catalogue",
+      "url": "https://www.bclaws.gov.bc.ca/civix/content/mo/hmo/975619104/",
+      "classification": "screened_or_index",
+      "package_group": "audit_index",
+      "claim_ids": [],
+      "use": "Systematic negative-search coverage. Individual PDF URLs are in the scan ledgers.",
+      "pinpoint": "M1–M110/2002 screened. Later 2002 orders were not part of this pass.",
+      "original_files": [
+        {
+          "path": "raw/mo_index_2002.xml",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/mo_index_2002.xml",
+          "bytes": 271713,
+          "sha256": "08d948372b1cc18b4eac1220a7bb3002b69ff82e830072639624632dbfea2fa7",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-008"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/mo_index_2002.xml",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/mo_index_2002.xml",
+          "bytes": 271713,
+          "sha256": "08d948372b1cc18b4eac1220a7bb3002b69ff82e830072639624632dbfea2fa7",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-008"
+          ]
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-009",
+      "title": "BC Centre for Disease Control Society financial statements, year ended 31 March 2016",
+      "url": "https://www.phsa.ca/about-site/Documents/BC%20Centre%20for%20Disease%20Control.pdf",
+      "classification": "used_positive_or_corroboration",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [],
+      "use": "Corroboration only; describes the 31 December 2001 continuation but supplies no numbered-to-named participant mapping.",
+      "pinpoint": "PDF p.8 / printed p.5, note 1.",
+      "original_files": [
+        {
+          "path": "raw/bccdc_2016.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/bccdc_2016.pdf",
+          "bytes": 259718,
+          "sha256": "3af4caaa762e8833c430a0e1a744c806fc7e5c86238d1db0a90faddcc3eda249",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-009"
+          ],
+          "pdf_pages": 32
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/bccdc_2016.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/bccdc_2016.pdf",
+          "bytes": 259718,
+          "sha256": "3af4caaa762e8833c430a0e1a744c806fc7e5c86238d1db0a90faddcc3eda249",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-009"
+          ],
+          "pdf_pages": 32
+        },
+        {
+          "path": "raw/bccdc_2016.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/bccdc_2016.txt",
+          "bytes": 59644,
+          "sha256": "ea64dd6a90b5861e5e33f0a8f870706b8229710c4648d0946b9a3959df841361",
+          "representation": "searchable_text_of_original",
+          "source_ids": [
+            "R4H-009"
+          ],
+          "derived_from_path": "raw/bccdc_2016.pdf"
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved",
+      "evidential_limit": "Narrative corroboration only; no BCCDC participant certificate or numbered-society mapping supplied."
+    },
+    {
+      "source_id": "R4H-010",
+      "title": "BC Laws historical statutes — 1978 chapter index",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/hstat1978htm",
+      "classification": "screened_or_index",
+      "package_group": "audit_index",
+      "claim_ids": [],
+      "use": "Negative route: chapter index did not supply a commencement table.",
+      "pinpoint": null,
+      "original_files": [
+        {
+          "path": "raw/hstats1978-index.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hstats1978-index.html",
+          "bytes": 10750,
+          "sha256": "0e7c00e33cdfce35ebe7c0110b15a2528f0fd48b403109eaf0dfe1e8fe576fc3",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-010"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/hstats1978-index.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hstats1978-index.html",
+          "bytes": 10750,
+          "sha256": "0e7c00e33cdfce35ebe7c0110b15a2528f0fd48b403109eaf0dfe1e8fe576fc3",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-010"
+          ]
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-011",
+      "title": "Alan F. J. Artibise, A Worthy, if Unlikely, Enterprise: The Labour Relations Board and the Evolution of Labour Policy and Practice in British Columbia, 1973–1980, BC Studies 56 (Winter 1982–83)",
+      "url": "https://ojs.library.ubc.ca/index.php/bcstudies/article/download/1138/1182/4741",
+      "classification": "not_retrieved",
+      "package_group": "unretrieved_lead_record_only",
+      "claim_ids": [],
+      "use": "Supplementary 21 October 1977 proclamation lead only. Not used for an accepted commencement claim.",
+      "pinpoint": "Indexed appendix table, printed p.40.",
+      "original_files": [],
+      "selected_files": [],
+      "retrieval_status": "full_source_not_retrieved",
+      "retrieval_limit": "Search-index text located; publisher PDF returned HTTP 502 and alternate copies were not retrieved.",
+      "accepted_for_commencement_claim": false
+    },
+    {
+      "source_id": "R4H-012",
+      "title": "BC Archives — government records research guidance",
+      "url": "https://bcarchives.ca/government-records/",
+      "classification": "archival_lead_or_guard",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [],
+      "use": "Access guidance only; no accession number for the ORCS binders was established.",
+      "pinpoint": null,
+      "original_files": [
+        {
+          "path": "raw/bcarchives-government-records.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/bcarchives-government-records.html",
+          "bytes": 77522,
+          "sha256": "f2b7fadba97f9c6fd24184803c0ec59b15ce6f131ccb6a5223238b451fcef412",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-012"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/bcarchives-government-records.html",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/bcarchives-government-records.html",
+          "bytes": 77522,
+          "sha256": "f2b7fadba97f9c6fd24184803c0ec59b15ce6f131ccb6a5223238b451fcef412",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-012"
+          ]
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-013",
+      "title": "Internet Archive metadata query: British Columbia Gazette Part II",
+      "url": "https://archive.org/advancedsearch.php?q=title%3A%28British%20Columbia%20Gazette%20Part%20II%29&fl%5B%5D=identifier&fl%5B%5D=year&fl%5B%5D=title&rows=200&output=json",
+      "classification": "screened_or_index",
+      "package_group": "audit_index",
+      "claim_ids": [],
+      "use": "Bounded catalogue search; no 1977 Part II volume in this result set. This does not prove that none is digitized elsewhere.",
+      "pinpoint": "121 returned records; all dated 1958–1962.",
+      "original_files": [
+        {
+          "path": "raw/c2_route_2",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/c2_route_2",
+          "bytes": 17474,
+          "sha256": "1bc9b0d26143f0e8b93a1a215c543bd0ce2c823cdcca5e7a293f1304ce3628ca",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-013"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/c2_route_2",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/c2_route_2",
+          "bytes": 17474,
+          "sha256": "1bc9b0d26143f0e8b93a1a215c543bd0ce2c823cdcca5e7a293f1304ce3628ca",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-013"
+          ]
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-014",
+      "title": "BC Laws annual statutes — 1979 XML catalogue",
+      "url": "https://www.bclaws.gov.bc.ca/civix/content/hstats/hstats/747879843/",
+      "classification": "screened_or_index",
+      "package_group": "audit_index",
+      "claim_ids": [],
+      "use": "Negative route: no Table of Statutes or front-matter entry exposed in this catalogue.",
+      "pinpoint": "Chapter index plus 14 alphabetic statute folders.",
+      "original_files": [
+        {
+          "path": "raw/year-1979.xml",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/year-1979.xml",
+          "bytes": 7700,
+          "sha256": "e277816fa74d33332017e3646da9efb2de807dada37196057b50e2fa8b89fa66",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-014"
+          ]
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "raw/year-1979.xml",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/year-1979.xml",
+          "bytes": 7700,
+          "sha256": "e277816fa74d33332017e3646da9efb2de807dada37196057b50e2fa8b89fa66",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-014"
+          ]
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-015",
+      "title": "Miscellaneous Statutes Amendment Act (No. 3), 1995, SBC 1995 c.53",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/71594662",
+      "classification": "used_positive_or_corroboration",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-007"
+      ],
+      "use": "New exact legislative date: s.14 adds regional health boards and community health councils to FOIPPA health care bodies; not delayed by s.55.",
+      "pinpoint": "PDF pp.1,4,22 / printed pp.925,928,946; assent, s.14 and s.55",
+      "original_files": [
+        {
+          "path": "foi-followup/misc1995c53.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/misc1995c53.pdf",
+          "bytes": 1126322,
+          "sha256": "bdad17514bf2934d285c06d5da96a94e97e97a544f10de77d395f823559c08a4",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-015"
+          ],
+          "pdf_pages": 22
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "evidence-selection/R4H-015-cited-pages.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-015-cited-pages.pdf",
+          "bytes": 147529,
+          "sha256": "ee97851b2033913165928261b255d6783a8588be8682a3ec0be49377b1163b1a",
+          "representation": "faithful_whole_page_pdf_extract",
+          "source_ids": [
+            "R4H-015"
+          ],
+          "original_path": "foi-followup/misc1995c53.pdf",
+          "original_sha256": "bdad17514bf2934d285c06d5da96a94e97e97a544f10de77d395f823559c08a4",
+          "page_map": [
+            {
+              "extract_pdf_page": 1,
+              "original_pdf_page": 1,
+              "original_printed_page": "925",
+              "page_text_sha256": "7b875e895e0999a3227a45285b534d3c3c7ef5d931a317ebe1e77a7f827fe277",
+              "rendered_rgb_72dpi_sha256": "b773b3a5e08544cf3ed23b1ffd48307e225e56f56cfa999eed65e93a5a87ab23",
+              "render_width": 524,
+              "render_height": 738,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 2,
+              "original_pdf_page": 4,
+              "original_printed_page": "928",
+              "page_text_sha256": "14989ad7fc3228f9f2f283c145e7f2cac66848c4343524a00773d2b1594e8b48",
+              "rendered_rgb_72dpi_sha256": "f701b91cae34898051e5c5557f0983953fa35ae54b3426b5198832afcdd4d27b",
+              "render_width": 542,
+              "render_height": 714,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 3,
+              "original_pdf_page": 22,
+              "original_printed_page": "946",
+              "page_text_sha256": "71147fc0d88cab2867bc6002d8dde9c550ffce19406553f2a38d544aa0c50a41",
+              "rendered_rgb_72dpi_sha256": "f50628438fc869498b1283ca8bee6ab45c3ab1ec832ba51e907de4b0fc7d1ce3",
+              "render_width": 566,
+              "render_height": 732,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            }
+          ],
+          "pdf_pages": 3
+        },
+        {
+          "path": "evidence-selection/R4H-015-cited-pages.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-015-cited-pages.txt",
+          "bytes": 5520,
+          "sha256": "48942e9f33157884a41d64837d5d8b5f3d4ff0988c7f6951df610ca82a7464da",
+          "representation": "searchable_text_of_selected_pages",
+          "source_ids": [
+            "R4H-015"
+          ],
+          "derived_from_path": "evidence-selection/R4H-015-cited-pages.pdf",
+          "warning": "Search aid only; the PDF pages are the visual legal evidence."
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-016",
+      "title": "Freedom of Information and Protection of Privacy Act, RSBC 1996 c.165, original Supplement",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1337117255",
+      "classification": "archival_lead_or_guard",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-008"
+      ],
+      "use": "Identity guard: Supplement s.1(h) changes Medical Appeal Board to Hospital Appeal Board in Schedule 2; unrelated to the regional-board/council classes in Schedule 1.",
+      "pinpoint": "PDF p.1, s.1(h)",
+      "original_files": [
+        {
+          "path": "foi-followup/foippa1996supp.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/foippa1996supp.pdf",
+          "bytes": 43103,
+          "sha256": "fa4c440b9467008d7ebf2f355778febca973026e131f7d730504ac9a3765dfe2",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-016"
+          ],
+          "pdf_pages": 1
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "foi-followup/foippa1996supp.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/foippa1996supp.pdf",
+          "bytes": 43103,
+          "sha256": "fa4c440b9467008d7ebf2f355778febca973026e131f7d730504ac9a3765dfe2",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-016"
+          ],
+          "pdf_pages": 1
+        },
+        {
+          "path": "foi-followup/foippa1996supp.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/foippa1996supp.txt",
+          "bytes": 3906,
+          "sha256": "73c423840560b54fb8866e81a7c33ba95a7761d6bf44b9fb9e5666c221e996c6",
+          "representation": "searchable_text_of_original",
+          "source_ids": [
+            "R4H-016"
+          ],
+          "derived_from_path": "foi-followup/foippa1996supp.pdf"
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-017",
+      "title": "Health Authorities Act, SBC 1993 c.47, original enactment",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/206203074",
+      "classification": "archival_lead_or_guard",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-010"
+      ],
+      "use": "Closes one incorrect statutory route: its sole consequential amendment is to the Property Transfer Tax Act, not FOIPPA.",
+      "pinpoint": "Entire ten-page Act; PDF p.10 / printed p.426, ss.18–19",
+      "original_files": [
+        {
+          "path": "foi-followup/haa1993.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/haa1993.pdf",
+          "bytes": 507902,
+          "sha256": "96a8fb110ad491701639d0b83275e305360817102582e33e1da1a51a399143f0",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-017"
+          ],
+          "pdf_pages": 10
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "foi-followup/haa1993.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/haa1993.pdf",
+          "bytes": 507902,
+          "sha256": "96a8fb110ad491701639d0b83275e305360817102582e33e1da1a51a399143f0",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-017"
+          ],
+          "pdf_pages": 10
+        },
+        {
+          "path": "foi-followup/haa1993.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/haa1993.txt",
+          "bytes": 19418,
+          "sha256": "086d4a0e8ceb8ca6792141a917ace43654f378056370781f28a56c185ce091cb",
+          "representation": "searchable_text_of_original",
+          "source_ids": [
+            "R4H-017"
+          ],
+          "derived_from_path": "foi-followup/haa1993.pdf"
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-018",
+      "title": "Freedom of Information and Protection of Privacy Act, RSBC 1996 c.165, original revision",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/794520916",
+      "classification": "used_positive_or_corroboration",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-007"
+      ],
+      "use": "Corroborates the regional-board and council definitions and the historical citation 1995-53-14; the 1996 revision is not their original inclusion date.",
+      "pinpoint": "PDF/printed p.37, Schedule 1 health care body; PDF p.55 / historical-table p.ii",
+      "original_files": [
+        {
+          "path": "foi-followup/foippa1996original.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/foippa1996original.pdf",
+          "bytes": 1708446,
+          "sha256": "dc5fc0ced3c8a5a9becf8f12138ea71d37bd0311729e39875910659aa24b60c2",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-018"
+          ],
+          "pdf_pages": 56
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "evidence-selection/R4H-018-cited-pages.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-018-cited-pages.pdf",
+          "bytes": 157302,
+          "sha256": "e261a09eb755d5bd13cfd806280a8dc3f9b4ff0d6170a005aa1faa61e31611dd",
+          "representation": "faithful_whole_page_pdf_extract",
+          "source_ids": [
+            "R4H-018"
+          ],
+          "original_path": "foi-followup/foippa1996original.pdf",
+          "original_sha256": "dc5fc0ced3c8a5a9becf8f12138ea71d37bd0311729e39875910659aa24b60c2",
+          "page_map": [
+            {
+              "extract_pdf_page": 1,
+              "original_pdf_page": 37,
+              "original_printed_page": "37",
+              "page_text_sha256": "02dd4c1a7ed392d616a7a78a565c7034a8008056943b3a155a65d04307760f45",
+              "rendered_rgb_72dpi_sha256": "fa6ad78895e3dd7e4b269e49128ff98fb54e6812d5a5b201bdeadda24e05de0e",
+              "render_width": 547,
+              "render_height": 770,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 2,
+              "original_pdf_page": 38,
+              "original_printed_page": "38",
+              "page_text_sha256": "4dc76ee1ecd455982cc86836fb2e0c4c9cc622a8ef4517d725c66ea5d1c99185",
+              "rendered_rgb_72dpi_sha256": "8ba86613117a3537b23d2cb71fd8e960f57639aed054efb698f872b59b540e13",
+              "render_width": 552,
+              "render_height": 769,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 3,
+              "original_pdf_page": 39,
+              "original_printed_page": "39",
+              "page_text_sha256": "b21eaa8c6938c56b8e4abfd705e83e12a33180c3be5520d0eb69bc452f859f86",
+              "rendered_rgb_72dpi_sha256": "e766ce1800d9c283f6d476a7af76c3016e070ccec68e95ec65ff60243d6866ae",
+              "render_width": 550,
+              "render_height": 771,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 4,
+              "original_pdf_page": 55,
+              "original_printed_page": "historical table ii",
+              "page_text_sha256": "a194f8b852baf82d0f60ba97366b43661715aa3c2f7b3f7ff5787ecc3be7684f",
+              "rendered_rgb_72dpi_sha256": "d492b9c3773ab1b85e6943376c5c75b373428d3523b89a49a0cfbc86a038453c",
+              "render_width": 551,
+              "render_height": 771,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 5,
+              "original_pdf_page": 56,
+              "original_printed_page": "historical table iii",
+              "page_text_sha256": "309842bd567f84c88c8d0eaf0ac1678ee915a18e2de7574822eb18a9316140aa",
+              "rendered_rgb_72dpi_sha256": "ff196939d128544b077f78177b641acf8ead0b2332d8f2566051808ffecadc1b",
+              "render_width": 548,
+              "render_height": 770,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            }
+          ],
+          "pdf_pages": 5
+        },
+        {
+          "path": "evidence-selection/R4H-018-cited-pages.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-018-cited-pages.txt",
+          "bytes": 10963,
+          "sha256": "7f9acb648c7768d4929614f54aeb8e1c7ae565df8d9bff9950665a5fe1c2f2ee",
+          "representation": "searchable_text_of_selected_pages",
+          "source_ids": [
+            "R4H-018"
+          ],
+          "derived_from_path": "evidence-selection/R4H-018-cited-pages.pdf",
+          "warning": "Search aid only; the PDF pages are the visual legal evidence."
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-019",
+      "title": "Order in Council 1321/1995: FOIPPA Amendment Act 1993 ss.30 and 32 commencement",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1321_1995",
+      "classification": "used_positive_or_corroboration",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-009"
+      ],
+      "use": "New original instrument supporting root R4RC-112; approval 2 November 1995, expressly effective 6 November 1995. It enacts professional Schedule 3 through s.30, alongside the Legal Profession Act amendment in s.32.",
+      "pinpoint": "Single-page order, approval stamp and operative clause",
+      "original_files": [
+        {
+          "path": "foi-followup/oic451-route/1321_1995.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/oic451-route/1321_1995.pdf",
+          "bytes": 75048,
+          "sha256": "6c18bc461b61a49667084a4686db7b6a5225d8e3f66a43263dc9d6f5b177b330",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-019"
+          ],
+          "pdf_pages": 1
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "foi-followup/oic451-route/1321_1995.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/oic451-route/1321_1995.pdf",
+          "bytes": 75048,
+          "sha256": "6c18bc461b61a49667084a4686db7b6a5225d8e3f66a43263dc9d6f5b177b330",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-019"
+          ],
+          "pdf_pages": 1
+        },
+        {
+          "path": "foi-followup/oic451-route/1321_1995.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/oic451-route/1321_1995.txt",
+          "bytes": 881,
+          "sha256": "fd3bc1fe58675c534015012dfd5f1d8c6a239a634223394711ab3bfde1ed0c9a",
+          "representation": "searchable_text_of_original",
+          "source_ids": [
+            "R4H-019"
+          ],
+          "derived_from_path": "foi-followup/oic451-route/1321_1995.pdf"
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved"
+    },
+    {
+      "source_id": "R4H-020",
+      "title": "Table of Legislative Changes — 31 December 1998",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/638385389",
+      "classification": "used_positive_or_corroboration",
+      "package_group": "compact_claim_or_lead_evidence",
+      "claim_ids": [
+        "R4HC-008"
+      ],
+      "use": "Official compilation proves the 21 April 1997 retrospective date superseding BC Reg 135/97, with citation 1998-19-8(2). It applies to the Hospital Appeal Board name, not regional health classes.",
+      "pinpoint": "PDF p.32 / printed p.27, FOIPPA Schedule 2, Supplement s.1(h)",
+      "original_files": [
+        {
+          "path": "foi-followup/table1998.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/table1998.pdf",
+          "bytes": 3881328,
+          "sha256": "516800a1b3182f791935a867dbfa1d3e85e9c469d8782f460f7869272b7e6f4c",
+          "representation": "complete_retrieved_original",
+          "source_ids": [
+            "R4H-020"
+          ],
+          "pdf_pages": 102
+        }
+      ],
+      "selected_files": [
+        {
+          "path": "evidence-selection/R4H-020-cited-pages.pdf",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-020-cited-pages.pdf",
+          "bytes": 105448,
+          "sha256": "5cafacc54876678a8f0b76bf1e660840fa9f2ec6e40f83409e1522935224573a",
+          "representation": "faithful_whole_page_pdf_extract",
+          "source_ids": [
+            "R4H-020"
+          ],
+          "original_path": "foi-followup/table1998.pdf",
+          "original_sha256": "516800a1b3182f791935a867dbfa1d3e85e9c469d8782f460f7869272b7e6f4c",
+          "page_map": [
+            {
+              "extract_pdf_page": 1,
+              "original_pdf_page": 1,
+              "original_printed_page": "i",
+              "page_text_sha256": "0ac02e9543e715fbdacbda1416d2b9616ed2b41b31c4ea9aaa28806c9c98bab5",
+              "rendered_rgb_72dpi_sha256": "2db559aed24b8f745b7ac27957b848e4b4ff898264eb145770e8cb08aa292bee",
+              "render_width": 580,
+              "render_height": 750,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 2,
+              "original_pdf_page": 32,
+              "original_printed_page": "27",
+              "page_text_sha256": "e76420cd7b17829414022fbd3da5b8aed5759e48e3446a373f34cdedd844d6a3",
+              "rendered_rgb_72dpi_sha256": "25216ebaec230c7e2bac163351d491d75ea9fe96caa2d4ff48717719eab81954",
+              "render_width": 582,
+              "render_height": 753,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            },
+            {
+              "extract_pdf_page": 3,
+              "original_pdf_page": 33,
+              "original_printed_page": "28",
+              "page_text_sha256": "200f9a0e35c7a1fcbc25aa644af0f73bb66b312de7823c86f6cbebd4b7a12e70",
+              "rendered_rgb_72dpi_sha256": "1ef16bee7e7be300148574e32fd627a7b5ab50d0638ee116a3625367fa5bee43",
+              "render_width": 584,
+              "render_height": 751,
+              "source_and_extract_render_identical": true,
+              "source_and_extract_text_identical": true
+            }
+          ],
+          "pdf_pages": 3
+        },
+        {
+          "path": "evidence-selection/R4H-020-cited-pages.txt",
+          "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-020-cited-pages.txt",
+          "bytes": 8527,
+          "sha256": "5df3b119327dba43ed63146a3f0600d7220d4194e6f53e4665714fd0f5012c83",
+          "representation": "searchable_text_of_selected_pages",
+          "source_ids": [
+            "R4H-020"
+          ],
+          "derived_from_path": "evidence-selection/R4H-020-cited-pages.pdf",
+          "warning": "Search aid only; the PDF pages are the visual legal evidence."
+        }
+      ],
+      "retrieval_status": "complete_original_retrieved",
+      "evidential_limit": "Official enacted-law table supports the retrospective date; the original enacted 1998 c.19 s.8 page was not retrieved."
+    }
+  ],
+  "compact_claim_evidence_files": [
+    {
+      "path": "evidence-selection/R4H-001-cited-pages.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-001-cited-pages.pdf",
+      "bytes": 23271,
+      "sha256": "d3baae6511b41a7a0df077ecd185faeeffbfa6afa99cd22691ff9934a315c27a",
+      "representation": "faithful_whole_page_pdf_extract",
+      "source_ids": [
+        "R4H-001"
+      ],
+      "original_path": "raw/health-authority-performance.pdf",
+      "original_sha256": "90eefbcbab0aa46d3e19d459129ebb599dd63008bef34a1db6a2480f4a6c8ad0",
+      "page_map": [
+        {
+          "extract_pdf_page": 1,
+          "original_pdf_page": 33,
+          "original_printed_page": "section 1 p.7",
+          "page_text_sha256": "391b624775fe76b090513f74979b4863428c719ba12c183332401a61425d45f7",
+          "rendered_rgb_72dpi_sha256": "9a7923b425399496dedf9522f5bc0601aabd4e90f29b72034675534a6e4ef706",
+          "render_width": 612,
+          "render_height": 792,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 2,
+          "original_pdf_page": 51,
+          "original_printed_page": "section 1 p.25",
+          "page_text_sha256": "cee3db3956e16d71a01c3daad0434d393346604ff90befd69fd4e1515dc74382",
+          "rendered_rgb_72dpi_sha256": "17ad1e58fac14a3ccae382bbf775703ec376d150bac137d7f6634ff7f582be34",
+          "render_width": 612,
+          "render_height": 792,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 3,
+          "original_pdf_page": 56,
+          "original_printed_page": "section 1 p.30",
+          "page_text_sha256": "f17ca047059b88c0a0a631c852a5bb317d158c0cc1a24a0516b8eed83b462bcd",
+          "rendered_rgb_72dpi_sha256": "0162143500c601b2a26fa8ab276830e5108c2cfa7b1f092d191cef7a930fe805",
+          "render_width": 612,
+          "render_height": 792,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 4,
+          "original_pdf_page": 57,
+          "original_printed_page": "section 1 p.31",
+          "page_text_sha256": "7d4a1ca86434ba079e339048bbc0ede4098cc851aad00b5f2109d2d9db556862",
+          "rendered_rgb_72dpi_sha256": "8fc773dbd781700ebcd5223af504d1e871f1b08f00c619f4c41f6174974224a4",
+          "render_width": 612,
+          "render_height": 792,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        }
+      ],
+      "pdf_pages": 4
+    },
+    {
+      "path": "evidence-selection/R4H-001-cited-pages.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-001-cited-pages.txt",
+      "bytes": 10065,
+      "sha256": "e9f9f27cbf86ee2efc0410a1cd3478162386da194b109958d95ce953ae8f196a",
+      "representation": "searchable_text_of_selected_pages",
+      "source_ids": [
+        "R4H-001"
+      ],
+      "derived_from_path": "evidence-selection/R4H-001-cited-pages.pdf",
+      "warning": "Search aid only; the PDF pages are the visual legal evidence."
+    },
+    {
+      "path": "raw/hansard_1987_04_27.html",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1987_04_27.html",
+      "bytes": 170616,
+      "sha256": "6334c22806139c746c4e4ef84ca6ab17ae51453caee45f0a779396eefed57e78",
+      "representation": "complete_retrieved_original",
+      "source_ids": [
+        "R4H-002"
+      ]
+    },
+    {
+      "path": "raw/hansard_1987_04_27.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1987_04_27.txt",
+      "bytes": 159091,
+      "sha256": "b38fa549d52d20183f4dc3d298d405c45b4716a81496bff9ce723420c9f5ec41",
+      "representation": "searchable_text_of_original",
+      "source_ids": [
+        "R4H-002"
+      ],
+      "derived_from_path": "raw/hansard_1987_04_27.html"
+    },
+    {
+      "path": "raw/hansard_1988_04_27.html",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_04_27.html",
+      "bytes": 175947,
+      "sha256": "0ae811d3775d1e91ea148a5eb6cb962e0dd601bd16650740cae90fe556e205c4",
+      "representation": "complete_retrieved_original",
+      "source_ids": [
+        "R4H-003"
+      ]
+    },
+    {
+      "path": "raw/hansard_1988_04_27.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_04_27.txt",
+      "bytes": 165502,
+      "sha256": "119bb1f02f5fdab072bea65c61bf3e50ce77c0a563fabaf66c9d8e2fddf90b71",
+      "representation": "searchable_text_of_original",
+      "source_ids": [
+        "R4H-003"
+      ],
+      "derived_from_path": "raw/hansard_1988_04_27.html"
+    },
+    {
+      "path": "raw/hansard_1988_06_09.html",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_06_09.html",
+      "bytes": 92069,
+      "sha256": "44acd058952b466f7396af3b2394f6fffa9add09e7c6a0545141c8a2091f9bf7",
+      "representation": "complete_retrieved_original",
+      "source_ids": [
+        "R4H-004"
+      ]
+    },
+    {
+      "path": "raw/hansard_1988_06_09.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/hansard_1988_06_09.txt",
+      "bytes": 85941,
+      "sha256": "923449188ae14d348331129b774b7c8a8e6f02cc00e52a6d21695ae11c0fcc0d",
+      "representation": "searchable_text_of_original",
+      "source_ids": [
+        "R4H-004"
+      ],
+      "derived_from_path": "raw/hansard_1988_06_09.html"
+    },
+    {
+      "path": "evidence-selection/R4H-005-cited-pages.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-005-cited-pages.pdf",
+      "bytes": 210847,
+      "sha256": "a8f680c2dc013b7c2862912620a165129bd7c07e3aa6c839f83d22ed7b17c79f",
+      "representation": "faithful_whole_page_pdf_extract",
+      "source_ids": [
+        "R4H-005"
+      ],
+      "original_path": "raw/buchan1991.pdf",
+      "original_sha256": "e30054e0c249a2108bb9edb554f6c1368cc6e000c3d595c11c1e68c8147579ad",
+      "page_map": [
+        {
+          "extract_pdf_page": 1,
+          "original_pdf_page": 1,
+          "original_printed_page": "1382",
+          "page_text_sha256": "b49adc68cbb7731a15595e9793627e4ddd6bc3124e5d4b352da51ef816b1cbd9",
+          "rendered_rgb_72dpi_sha256": "88e13cd11ef357b89a525fa0f91f6427d13738a4472961d1a2d75efb29343c7f",
+          "render_width": 633,
+          "render_height": 827,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        }
+      ],
+      "pdf_pages": 1
+    },
+    {
+      "path": "evidence-selection/R4H-005-cited-pages.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-005-cited-pages.txt",
+      "bytes": 6021,
+      "sha256": "20ff2c3c21c3fa9288b15ba1e264711c46aa9c3b40a205f3147b75493c8d0574",
+      "representation": "searchable_text_of_selected_pages",
+      "source_ids": [
+        "R4H-005"
+      ],
+      "derived_from_path": "evidence-selection/R4H-005-cited-pages.pdf",
+      "warning": "Search aid only; the PDF pages are the visual legal evidence."
+    },
+    {
+      "path": "raw/gazette_part2_catalogue.html",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/gazette_part2_catalogue.html",
+      "bytes": 204286,
+      "sha256": "04113b7fbea191ba29b8d844a270446660a3f82e273d97477f95e3be48412886",
+      "representation": "complete_retrieved_original",
+      "source_ids": [
+        "R4H-006"
+      ]
+    },
+    {
+      "path": "raw/bccdc_2016.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/bccdc_2016.pdf",
+      "bytes": 259718,
+      "sha256": "3af4caaa762e8833c430a0e1a744c806fc7e5c86238d1db0a90faddcc3eda249",
+      "representation": "complete_retrieved_original",
+      "source_ids": [
+        "R4H-009"
+      ],
+      "pdf_pages": 32
+    },
+    {
+      "path": "raw/bccdc_2016.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/bccdc_2016.txt",
+      "bytes": 59644,
+      "sha256": "ea64dd6a90b5861e5e33f0a8f870706b8229710c4648d0946b9a3959df841361",
+      "representation": "searchable_text_of_original",
+      "source_ids": [
+        "R4H-009"
+      ],
+      "derived_from_path": "raw/bccdc_2016.pdf"
+    },
+    {
+      "path": "raw/bcarchives-government-records.html",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/raw/bcarchives-government-records.html",
+      "bytes": 77522,
+      "sha256": "f2b7fadba97f9c6fd24184803c0ec59b15ce6f131ccb6a5223238b451fcef412",
+      "representation": "complete_retrieved_original",
+      "source_ids": [
+        "R4H-012"
+      ]
+    },
+    {
+      "path": "evidence-selection/R4H-015-cited-pages.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-015-cited-pages.pdf",
+      "bytes": 147529,
+      "sha256": "ee97851b2033913165928261b255d6783a8588be8682a3ec0be49377b1163b1a",
+      "representation": "faithful_whole_page_pdf_extract",
+      "source_ids": [
+        "R4H-015"
+      ],
+      "original_path": "foi-followup/misc1995c53.pdf",
+      "original_sha256": "bdad17514bf2934d285c06d5da96a94e97e97a544f10de77d395f823559c08a4",
+      "page_map": [
+        {
+          "extract_pdf_page": 1,
+          "original_pdf_page": 1,
+          "original_printed_page": "925",
+          "page_text_sha256": "7b875e895e0999a3227a45285b534d3c3c7ef5d931a317ebe1e77a7f827fe277",
+          "rendered_rgb_72dpi_sha256": "b773b3a5e08544cf3ed23b1ffd48307e225e56f56cfa999eed65e93a5a87ab23",
+          "render_width": 524,
+          "render_height": 738,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 2,
+          "original_pdf_page": 4,
+          "original_printed_page": "928",
+          "page_text_sha256": "14989ad7fc3228f9f2f283c145e7f2cac66848c4343524a00773d2b1594e8b48",
+          "rendered_rgb_72dpi_sha256": "f701b91cae34898051e5c5557f0983953fa35ae54b3426b5198832afcdd4d27b",
+          "render_width": 542,
+          "render_height": 714,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 3,
+          "original_pdf_page": 22,
+          "original_printed_page": "946",
+          "page_text_sha256": "71147fc0d88cab2867bc6002d8dde9c550ffce19406553f2a38d544aa0c50a41",
+          "rendered_rgb_72dpi_sha256": "f50628438fc869498b1283ca8bee6ab45c3ab1ec832ba51e907de4b0fc7d1ce3",
+          "render_width": 566,
+          "render_height": 732,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        }
+      ],
+      "pdf_pages": 3
+    },
+    {
+      "path": "evidence-selection/R4H-015-cited-pages.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-015-cited-pages.txt",
+      "bytes": 5520,
+      "sha256": "48942e9f33157884a41d64837d5d8b5f3d4ff0988c7f6951df610ca82a7464da",
+      "representation": "searchable_text_of_selected_pages",
+      "source_ids": [
+        "R4H-015"
+      ],
+      "derived_from_path": "evidence-selection/R4H-015-cited-pages.pdf",
+      "warning": "Search aid only; the PDF pages are the visual legal evidence."
+    },
+    {
+      "path": "foi-followup/foippa1996supp.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/foippa1996supp.pdf",
+      "bytes": 43103,
+      "sha256": "fa4c440b9467008d7ebf2f355778febca973026e131f7d730504ac9a3765dfe2",
+      "representation": "complete_retrieved_original",
+      "source_ids": [
+        "R4H-016"
+      ],
+      "pdf_pages": 1
+    },
+    {
+      "path": "foi-followup/foippa1996supp.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/foippa1996supp.txt",
+      "bytes": 3906,
+      "sha256": "73c423840560b54fb8866e81a7c33ba95a7761d6bf44b9fb9e5666c221e996c6",
+      "representation": "searchable_text_of_original",
+      "source_ids": [
+        "R4H-016"
+      ],
+      "derived_from_path": "foi-followup/foippa1996supp.pdf"
+    },
+    {
+      "path": "foi-followup/haa1993.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/haa1993.pdf",
+      "bytes": 507902,
+      "sha256": "96a8fb110ad491701639d0b83275e305360817102582e33e1da1a51a399143f0",
+      "representation": "complete_retrieved_original",
+      "source_ids": [
+        "R4H-017"
+      ],
+      "pdf_pages": 10
+    },
+    {
+      "path": "foi-followup/haa1993.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/haa1993.txt",
+      "bytes": 19418,
+      "sha256": "086d4a0e8ceb8ca6792141a917ace43654f378056370781f28a56c185ce091cb",
+      "representation": "searchable_text_of_original",
+      "source_ids": [
+        "R4H-017"
+      ],
+      "derived_from_path": "foi-followup/haa1993.pdf"
+    },
+    {
+      "path": "evidence-selection/R4H-018-cited-pages.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-018-cited-pages.pdf",
+      "bytes": 157302,
+      "sha256": "e261a09eb755d5bd13cfd806280a8dc3f9b4ff0d6170a005aa1faa61e31611dd",
+      "representation": "faithful_whole_page_pdf_extract",
+      "source_ids": [
+        "R4H-018"
+      ],
+      "original_path": "foi-followup/foippa1996original.pdf",
+      "original_sha256": "dc5fc0ced3c8a5a9becf8f12138ea71d37bd0311729e39875910659aa24b60c2",
+      "page_map": [
+        {
+          "extract_pdf_page": 1,
+          "original_pdf_page": 37,
+          "original_printed_page": "37",
+          "page_text_sha256": "02dd4c1a7ed392d616a7a78a565c7034a8008056943b3a155a65d04307760f45",
+          "rendered_rgb_72dpi_sha256": "fa6ad78895e3dd7e4b269e49128ff98fb54e6812d5a5b201bdeadda24e05de0e",
+          "render_width": 547,
+          "render_height": 770,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 2,
+          "original_pdf_page": 38,
+          "original_printed_page": "38",
+          "page_text_sha256": "4dc76ee1ecd455982cc86836fb2e0c4c9cc622a8ef4517d725c66ea5d1c99185",
+          "rendered_rgb_72dpi_sha256": "8ba86613117a3537b23d2cb71fd8e960f57639aed054efb698f872b59b540e13",
+          "render_width": 552,
+          "render_height": 769,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 3,
+          "original_pdf_page": 39,
+          "original_printed_page": "39",
+          "page_text_sha256": "b21eaa8c6938c56b8e4abfd705e83e12a33180c3be5520d0eb69bc452f859f86",
+          "rendered_rgb_72dpi_sha256": "e766ce1800d9c283f6d476a7af76c3016e070ccec68e95ec65ff60243d6866ae",
+          "render_width": 550,
+          "render_height": 771,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 4,
+          "original_pdf_page": 55,
+          "original_printed_page": "historical table ii",
+          "page_text_sha256": "a194f8b852baf82d0f60ba97366b43661715aa3c2f7b3f7ff5787ecc3be7684f",
+          "rendered_rgb_72dpi_sha256": "d492b9c3773ab1b85e6943376c5c75b373428d3523b89a49a0cfbc86a038453c",
+          "render_width": 551,
+          "render_height": 771,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 5,
+          "original_pdf_page": 56,
+          "original_printed_page": "historical table iii",
+          "page_text_sha256": "309842bd567f84c88c8d0eaf0ac1678ee915a18e2de7574822eb18a9316140aa",
+          "rendered_rgb_72dpi_sha256": "ff196939d128544b077f78177b641acf8ead0b2332d8f2566051808ffecadc1b",
+          "render_width": 548,
+          "render_height": 770,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        }
+      ],
+      "pdf_pages": 5
+    },
+    {
+      "path": "evidence-selection/R4H-018-cited-pages.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-018-cited-pages.txt",
+      "bytes": 10963,
+      "sha256": "7f9acb648c7768d4929614f54aeb8e1c7ae565df8d9bff9950665a5fe1c2f2ee",
+      "representation": "searchable_text_of_selected_pages",
+      "source_ids": [
+        "R4H-018"
+      ],
+      "derived_from_path": "evidence-selection/R4H-018-cited-pages.pdf",
+      "warning": "Search aid only; the PDF pages are the visual legal evidence."
+    },
+    {
+      "path": "foi-followup/oic451-route/1321_1995.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/oic451-route/1321_1995.pdf",
+      "bytes": 75048,
+      "sha256": "6c18bc461b61a49667084a4686db7b6a5225d8e3f66a43263dc9d6f5b177b330",
+      "representation": "complete_retrieved_original",
+      "source_ids": [
+        "R4H-019"
+      ],
+      "pdf_pages": 1
+    },
+    {
+      "path": "foi-followup/oic451-route/1321_1995.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/foi-followup/oic451-route/1321_1995.txt",
+      "bytes": 881,
+      "sha256": "fd3bc1fe58675c534015012dfd5f1d8c6a239a634223394711ab3bfde1ed0c9a",
+      "representation": "searchable_text_of_original",
+      "source_ids": [
+        "R4H-019"
+      ],
+      "derived_from_path": "foi-followup/oic451-route/1321_1995.pdf"
+    },
+    {
+      "path": "evidence-selection/R4H-020-cited-pages.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-020-cited-pages.pdf",
+      "bytes": 105448,
+      "sha256": "5cafacc54876678a8f0b76bf1e660840fa9f2ec6e40f83409e1522935224573a",
+      "representation": "faithful_whole_page_pdf_extract",
+      "source_ids": [
+        "R4H-020"
+      ],
+      "original_path": "foi-followup/table1998.pdf",
+      "original_sha256": "516800a1b3182f791935a867dbfa1d3e85e9c469d8782f460f7869272b7e6f4c",
+      "page_map": [
+        {
+          "extract_pdf_page": 1,
+          "original_pdf_page": 1,
+          "original_printed_page": "i",
+          "page_text_sha256": "0ac02e9543e715fbdacbda1416d2b9616ed2b41b31c4ea9aaa28806c9c98bab5",
+          "rendered_rgb_72dpi_sha256": "2db559aed24b8f745b7ac27957b848e4b4ff898264eb145770e8cb08aa292bee",
+          "render_width": 580,
+          "render_height": 750,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 2,
+          "original_pdf_page": 32,
+          "original_printed_page": "27",
+          "page_text_sha256": "e76420cd7b17829414022fbd3da5b8aed5759e48e3446a373f34cdedd844d6a3",
+          "rendered_rgb_72dpi_sha256": "25216ebaec230c7e2bac163351d491d75ea9fe96caa2d4ff48717719eab81954",
+          "render_width": 582,
+          "render_height": 753,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        },
+        {
+          "extract_pdf_page": 3,
+          "original_pdf_page": 33,
+          "original_printed_page": "28",
+          "page_text_sha256": "200f9a0e35c7a1fcbc25aa644af0f73bb66b312de7823c86f6cbebd4b7a12e70",
+          "rendered_rgb_72dpi_sha256": "1ef16bee7e7be300148574e32fd627a7b5ab50d0638ee116a3625367fa5bee43",
+          "render_width": 584,
+          "render_height": 751,
+          "source_and_extract_render_identical": true,
+          "source_and_extract_text_identical": true
+        }
+      ],
+      "pdf_pages": 3
+    },
+    {
+      "path": "evidence-selection/R4H-020-cited-pages.txt",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence-selection/R4H-020-cited-pages.txt",
+      "bytes": 8527,
+      "sha256": "5df3b119327dba43ed63146a3f0600d7220d4194e6f53e4665714fd0f5012c83",
+      "representation": "searchable_text_of_selected_pages",
+      "source_ids": [
+        "R4H-020"
+      ],
+      "derived_from_path": "evidence-selection/R4H-020-cited-pages.pdf",
+      "warning": "Search aid only; the PDF pages are the visual legal evidence."
+    }
+  ],
+  "handback_control_files": [
+    {
+      "path": "report.md",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/report.md",
+      "bytes": 18794,
+      "sha256": "77a4bb1f1b2131c75612c53b4c6643b9d4700cd306e093318a7b82fd94117dfb",
+      "representation": "research_handback"
+    },
+    {
+      "path": "sources.json",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/sources.json",
+      "bytes": 14782,
+      "sha256": "80fac40fa2785cc7b37b05f8a7fd5781181bc95915eda8bf03959f181b65d139",
+      "representation": "research_handback"
+    },
+    {
+      "path": "claims.json",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/claims.json",
+      "bytes": 10872,
+      "sha256": "527fd471b4bd79662b7f9e51d459b9b3b8df9f9ab0c1b2e7d10fa6bcc74c2441",
+      "representation": "research_handback"
+    },
+    {
+      "path": "coverage.json",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/coverage.json",
+      "bytes": 7571,
+      "sha256": "08fa1380d46bfca120779f9b976e16c7315f1fd5b595ec9543887a497d049d7b",
+      "representation": "research_handback"
+    },
+    {
+      "path": "records_request_targets.md",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/records_request_targets.md",
+      "bytes": 3951,
+      "sha256": "abc257f4c0d419ba75d672325d081f1c126eea98d27652e012a9bf3110862a86",
+      "representation": "research_handback"
+    },
+    {
+      "path": "unresolved_transaction_targets.json",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/unresolved_transaction_targets.json",
+      "bytes": 52853,
+      "sha256": "014b312f6a1a45886262bdb1722f00972efbb613511cf643c295cc3ce1ab7bfe",
+      "representation": "research_handback"
+    },
+    {
+      "path": "hid-verification.json",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/hid-verification.json",
+      "bytes": 84842,
+      "sha256": "24dfb7cdcd1a3125a7ca93bebb1bf5a9b34be3ce66298c7cc1877d5f72e46b25",
+      "representation": "research_handback"
+    },
+    {
+      "path": "hid-verification.md",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/hid-verification.md",
+      "bytes": 4158,
+      "sha256": "16d92ca091542f4f038b0d8c58f3c14a01f303ffec239f15d67953368d424a04",
+      "representation": "research_handback"
+    },
+    {
+      "path": "root-report-review.md",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/root-report-review.md",
+      "bytes": 4303,
+      "sha256": "69dda2aad31cee9458931f9382bc8ef9739d50204cfd5daa36fff5139f9282ce",
+      "representation": "research_handback"
+    }
+  ],
+  "audit_file_list": {
+    "path": "evidence_audit_files.json",
+    "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/health/evidence_audit_files.json",
+    "bytes": 610091,
+    "sha256": "cfe4eab94afd0b1a679cea7378168de6c8fbd241f8b2dfa9803e5eafba61188b",
+    "representation": "separate_audit_inventory"
+  },
+  "audit_inventory_summary": {
+    "instruments": 513,
+    "ministerial_orders": 442,
+    "oic_orders": 71,
+    "screened_pages": 577,
+    "uninspected_later_pages_not_implied_reviewed": true,
+    "audit_unique_files": 1040,
+    "audit_bytes": 127830171
+  },
+  "external_root_dependencies": [
+    {
+      "source_id": "R4R-072",
+      "path": "root/raw/R4R-072.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/root/raw/R4R-072.pdf",
+      "bytes": 576895,
+      "sha256": "8728c78d7ea03bbf81267c18ea1216177cb29835ab3851b2426522078874492e",
+      "required_original_pdf_pages": [
+        7,
+        8,
+        10,
+        11
+      ],
+      "purpose": "1993 FOIPPA definitions, original professional Schedule3 and consequential amendment",
+      "owner": "root",
+      "included_in_health_compact_file_count": false
+    },
+    {
+      "source_id": "R4R-081",
+      "path": "root/raw/R4R-081.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/root/raw/R4R-081.pdf",
+      "bytes": 17614579,
+      "sha256": "514184c07ba1aee1c23321610681f087883815df5bf4f941e3fd35e287bc3b1c",
+      "required_original_pdf_pages": [
+        1,
+        80
+      ],
+      "purpose": "Royal-Assent commencement explanation and1995 FOIPPA history",
+      "owner": "root",
+      "included_in_health_compact_file_count": false
+    },
+    {
+      "source_id": "R4R-086",
+      "path": "root/raw/R4R-086.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/root/raw/R4R-086.pdf",
+      "bytes": 2368048,
+      "sha256": "7717756f12b6501d87353a5fae10ac81d88be15e2bf6343856058798cfbaddcc",
+      "required_original_pdf_pages": [
+        1
+      ],
+      "purpose": "Originally ordered 15 April 1997 date for RS1996 Supplement s.1(h)",
+      "owner": "root",
+      "included_in_health_compact_file_count": false
+    },
+    {
+      "source_id": "R4R-080",
+      "path": "root/raw/R4R-080.pdf",
+      "absolute_path": "/workspace/scratch/a5ca1a8fd90b/round4/root/raw/R4R-080.pdf",
+      "bytes": 17113820,
+      "sha256": "956658b90f1912f5b5916dc2bc8657e1c24d41eeaa75cf682e32cc527c19acb2",
+      "required_original_pdf_pages": [
+        1,
+        90,
+        266
+      ],
+      "purpose": "Report-only1977 proclamation corroboration and narrower retrieval target; root-owned",
+      "owner": "root",
+      "included_in_health_compact_file_count": false
+    }
+  ],
+  "hid_dependency_note": "The HID verification appendix references root-owned originals. Those originals are packaged by root; the appendix does not allocate duplicate R4H sources or duplicate A8 claims.",
+  "verification": {
+    "all_original_files_exist": true,
+    "source_id_count_matches_catalogue": true,
+    "extracts_render_and_text_match": true,
+    "original_hashes_unchanged": true,
+    "failed_retrieval_not_in_compact_evidence": true
+  }
+}

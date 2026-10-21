@@ -98,6 +98,14 @@ const eventSources = (event) => event.sources.map((index) => EVENT_SOURCES[index
  * as though it had one.
  */
 const claim = (text, source, extra = {}) => (source?.url ? { claim: text, source, ...extra } : null)
+/** What a body's start and end were, where its record says: "the day it was established by …". */
+const meaningNote = (record) => {
+  const said = [
+    record.establishedMeaning && `The start is the day it was ${record.establishedMeaning}.`,
+    record.ended && record.endedMeaning && `The end is the day it was ${record.endedMeaning}.`
+  ].filter(Boolean)
+  return said.length ? { note: said.join(' ') } : {}
+}
 
 /** The words that name what a ministry is for, as the build matched portfolios by. */
 const STOP = new Set(['of', 'and', 'the', 'for', 'minister', 'ministry', 'department', 'dept', 'provincial', 'responsible', 'chief', 'commissioner'])
@@ -369,7 +377,7 @@ export const governmentIn = (year, { includeUndated = false } = {}) => {
       ...family,
       evidence: [
         record?.source !== undefined && record?.source !== null
-          ? claim(`${record.name}${record.established ? `, from ${record.established}` : ''}${record.ended ? ` to ${record.ended}` : ''}`, historySource(record.source), record.establishedMeaning ? { note: `The start is the day it was ${record.establishedMeaning}.` } : {})
+          ? claim(`${record.name}${record.established ? `, from ${record.established}` : ''}${record.ended ? ` to ${record.ended}` : ''}`, historySource(record.source), meaningNote(record))
           : null,
         ...(record?.names ?? []).filter(([, from]) => from).map(([name, from, , source, locator]) => claim(`Known as ${name} from ${from}`, historySource(source), locator ? { note: locator } : {})),
         record?.firstSeen && !record.established

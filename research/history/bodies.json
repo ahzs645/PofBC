@@ -113,7 +113,7 @@
       "name": "Game Commission",
       "kind": "agency",
       "established": "1934",
-      "ended": "1957",
+      "ended": "1957-04-01",
       "becameId": null,
       "predecessorIds": [
         "provincial-game-commissioner"
@@ -162,6 +162,14 @@
       ],
       "responsible": [
         {
+          "ministry": "Ministry of Consumer and Corporate Affairs",
+          "from": "1976-12-31",
+          "to": "1986",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3495_1976",
+          "locator": "OIC 3495/1976, operative paragraph (approved 2 December 1976)",
+          "note": "Express assignment of the Liquor Distribution Act, from its commencement (OIC 3495/1976). Capped at 1986, when the Ministry of Consumer and Corporate Affairs itself ended; who answered for the branch from then until the Ministry of Agriculture and Food in 2025 is not in this research."
+        },
+        {
           "ministry": "Ministry of Agriculture and Food",
           "from": "2025",
           "to": null
@@ -172,7 +180,8 @@
       "otherSources": [
         "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-liquor-board",
         "https://www.bcldb.com/about/about-ldb"
-      ]
+      ],
+      "establishedMeaning": "formed when the Liquor Control Board's store functions passed to the Liquor Administration Branch (BC Archives). The Liquor Distribution Branch was established by statute on 31 December 1976, when section 2 of the Liquor Distribution Act came into force (OIC 3494/1976); when the administrative name changed is not known"
     },
     {
       "id": "coal-and-petroleum-control-board",
@@ -246,15 +255,16 @@
       "name": "British Columbia Power Commission",
       "kind": "crown-corporation",
       "established": "1945-04-17",
-      "ended": "1962-03-31",
+      "ended": "1965-08-20",
       "becameId": "bc-hydro",
       "predecessorIds": [],
       "responsible": [],
-      "description": "Public utility created by the Hart government to electrify areas not served by BC Electric; amalgamated with the nationalized BC Electric Company on 31 March 1962 to form BC Hydro.",
+      "description": "Public utility created by the Hart government to electrify areas not served by BC Electric. Purportedly amalgamated with BC Electric as BC Hydro on 30 March 1962; after that Act was struck down it was amalgamated into the reconstituted Authority on 20 August 1965.",
       "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-power-commission-2",
       "otherSources": [
         "https://en.wikipedia.org/wiki/BC_Hydro"
-      ]
+      ],
+      "endedMeaning": "amalgamated with the reconstituted Authority, at 5 p.m. Vancouver time (Power Measures Act, 1966, Schedule clauses 1-2); the statutory amalgamation of 30 March 1962 had been held ultra vires in 1963, and the Power Measures Act, 1964 validated its carrying on business under the Hydro name"
     },
     {
       "id": "bc-hospital-insurance-service",
@@ -370,22 +380,23 @@
       "shortName": "BC Electric",
       "kind": "crown-corporation",
       "established": "1961-08-01",
-      "ended": "1962-03-31",
+      "ended": "1965-08-20",
       "becameId": "bc-hydro",
       "predecessorIds": [],
       "responsible": [],
-      "description": "The private BC Electric utility, expropriated by the provincial government on 1 August 1961 and merged with the BC Power Commission in 1962 to form BC Hydro.",
+      "description": "The private BC Electric utility, whose shares were vested in the Crown with effect from 2 p.m. on 1 August 1961 (confirmed retroactively in 1964 after the 1963 judgment and settlement). It operated with the Power Commission as BC Hydro from 1962 and was amalgamated into the Authority on 20 August 1965.",
       "source": "https://en.wikipedia.org/wiki/British_Columbia_Electric_Railway",
       "otherSources": [
         "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-power-commission-2"
-      ]
+      ],
+      "endedMeaning": "amalgamated with the reconstituted Authority, at 5 p.m. Vancouver time (agreement ratified by the Power Measures Act, 1966); the statutory amalgamation of 30 March 1962 had been held ultra vires in 1963. It was formally dissolved by OIC 2387/1965 on 23 August 1965"
     },
     {
       "id": "bc-hydro",
       "name": "British Columbia Hydro and Power Authority",
       "shortName": "BC Hydro",
       "kind": "crown-corporation",
-      "established": "1962-03-31",
+      "established": "1962-03-30",
       "ended": null,
       "becameId": null,
       "predecessorIds": [
@@ -394,10 +405,18 @@
         "bc-transmission-corporation"
       ],
       "responsible": [],
-      "description": "Provincial electric utility formed by merging the nationalized BC Electric Company with the BC Power Commission; it shed its gas and transit operations from 1979 and re-absorbed BC Transmission Corporation in 2010.",
+      "description": "Provincial electric utility. The 1962 Act amalgamating the nationalized BC Electric Company with the BC Power Commission was struck down in 1963; the Authority was reconstituted by the 1964 Act and absorbed both on 20 August 1965. It shed its gas and transit operations from 1979 and re-absorbed BC Transmission Corporation in 2010.",
       "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-hydro-and-power-authority-2",
       "otherSources": [
         "https://en.wikipedia.org/wiki/BC_Hydro"
+      ],
+      "establishedMeaning": "proclaimed under the 1962 British Columbia Hydro and Power Authority Act (OIC 839/1962), amalgamating the Power Commission and BC Electric. That Act was held ultra vires on 29 July 1963; the Authority was constituted anew under the 1964 Act (in force 23 March 1964), and the amalgamation took effect at 5 p.m. on 20 August 1965. BC Archives gives 31 March 1962",
+      "conflicts": [
+        {
+          "date": "1962-03-31",
+          "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-hydro-and-power-authority-2",
+          "why": "BC Archives authority record (retrospective); the proclamation order fixes 30 March 1962"
+        }
       ]
     },
     {
@@ -608,13 +627,14 @@
       "id": "bc-steamship-company",
       "name": "British Columbia Steamship Company (1975) Ltd.",
       "kind": "crown-corporation",
-      "established": "1975",
+      "established": "1975-05-05",
       "ended": "1992",
       "becameId": null,
       "predecessorIds": [],
       "responsible": [],
       "description": "Crown corporation created in 1975 to restore Victoria-Seattle passenger and car service with the Princess Marguerite, bought from Canadian Pacific; dissolved in 1992.",
-      "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-british-columbia-steamship-company-1975-ltd"
+      "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-british-columbia-steamship-company-1975-ltd",
+      "establishedMeaning": "incorporated under the Canada Corporations Act, as its first-year audited statements record (Public Accounts 1975/76, p. F84); the certificate was not obtained"
     },
     {
       "id": "bc-buildings-corporation",
@@ -765,31 +785,38 @@
       "name": "Urban Transit Authority",
       "shortName": "UTA",
       "kind": "crown-corporation",
-      "established": "1979",
-      "ended": "1982",
+      "established": "1978-07-20",
+      "ended": "1982-08-12",
       "becameId": "bc-transit",
       "predecessorIds": [],
       "responsible": [],
-      "description": "Crown corporation created in 1979 to coordinate planning, marketing and funding of municipal transit; took over Victoria and Vancouver transit from BC Hydro in 1980 and was renamed BC Transit in 1982.",
+      "description": "Crown corporation established on 20 July 1978 under the Urban Transit Authority Act to plan and fund municipal transit, its directors appointed by Cabinet from elected municipal office-holders; took over Victoria and Vancouver transit from BC Hydro in 1980 and was renamed British Columbia Transit on 12 August 1982.",
       "source": "https://www.bctransit.com/about/history/",
       "otherSources": [
         "https://search-bcarchives.royalbcmuseum.bc.ca/b-c-transit"
-      ]
+      ],
+      "establishedMeaning": "established by section 2 of the Urban Transit Authority Act, in force by proclamation (OIC 1931/1978, approved 13 July 1978); the Act was assented on 29 June 1978",
+      "endedMeaning": "renamed British Columbia Transit (Urban Transit Authority Amendment Act, 1982, in force 12 August 1982): the corporation continued under the new name, so this ends the name, not the body"
     },
     {
       "id": "metro-transit-operating-company",
       "name": "Metro Transit Operating Company",
       "shortName": "MTOC",
       "kind": "crown-corporation",
-      "established": "1979-07-31",
-      "ended": "1983",
-      "becameId": "bc-transit",
+      "established": "1980-01-18",
+      "ended": "1985-06-01",
+      "becameId": null,
       "predecessorIds": [],
       "responsible": [],
-      "description": "Crown corporation established by the Metro Transit Operating Company Act to operate Vancouver-area transit; merged with the Urban Transit Authority into BC Transit.",
+      "description": "Crown corporation established on 18 January 1980 under the Metro Transit Operating Company Act to operate Vancouver-area transit, with a Cabinet-appointed board. On 1 June 1985 its property, obligations and employees passed to British Columbia Transit; the company itself was not dissolved then, and when it ended in law is not known.",
       "source": "https://search-bcarchives.royalbcmuseum.bc.ca/metro-transit-operating-company",
       "otherSources": [
         "https://en.wikipedia.org/wiki/BC_Transit"
+      ],
+      "establishedMeaning": "established by the Metro Transit Operating Company Act, in force by proclamation (OIC 29/1980, approved 10 January 1980); the Act was assented on 31 July 1979",
+      "endedMeaning": "emptied: its property, rights, debts, obligations and employees passed to British Columbia Transit (BC Transit Amendment Act (No. 2), 1985; OIC 1093/1985). It was not dissolved then, since a new board was appointed from the same day (OIC 1096/1985) and its Act was still in the 1991 consolidation, so its legal end is unknown",
+      "serviceSuccessorIds": [
+        "bc-transit"
       ]
     },
     {
@@ -827,20 +854,20 @@
       "id": "bc-transit",
       "name": "BC Transit",
       "kind": "crown-corporation",
-      "established": "1982",
+      "established": "1982-08-12",
       "ended": null,
       "becameId": null,
       "predecessorIds": [
-        "urban-transit-authority",
-        "metro-transit-operating-company"
+        "urban-transit-authority"
       ],
       "responsible": [],
-      "description": "Provincial transit Crown corporation, renamed from the Urban Transit Authority in 1982; it handed Metro Vancouver transit to TransLink in 1999 and now coordinates transit elsewhere in the province.",
+      "description": "Provincial transit Crown corporation: the Urban Transit Authority (1978) renamed British Columbia Transit on 12 August 1982. It took over the Metro Transit Operating Company's property, obligations and employees on 1 June 1985, handed Metro Vancouver transit to TransLink in 1999 and now coordinates transit elsewhere in the province.",
       "source": "https://www.bctransit.com/about/history/",
       "otherSources": [
         "https://search-bcarchives.royalbcmuseum.bc.ca/b-c-transit",
         "https://en.wikipedia.org/wiki/BC_Transit"
-      ]
+      ],
+      "establishedMeaning": "renamed from the Urban Transit Authority, and made an agent of the Crown, by the Urban Transit Authority Amendment Act, 1982 (OIC 1534/1982): the same corporation, established on 20 July 1978"
     },
     {
       "id": "bc-utilities-commission",

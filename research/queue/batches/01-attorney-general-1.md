@@ -70,12 +70,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart
 - **What it does:** Provides court security, prisoner escort, document service and warrant services under the Sheriff Act.
 - **Held:** no start date
-- **Events on file:** 1973-07-05 roster observed; 1974 amalgamation; 1974-06-20 legislation assented
+- **Events on file:** 1860-03-08 legislation enacted; 1873-02-21 legislation assented; 1878-04-10 legislation assented; 1880-05-08 legislation assented; 1888-04-28 office retitled; 1892-04-23 legislation assented; 1892-10-26 executive appointment; 1893-07-03 executive appointment; 1895-10-01 statute in force; 1905-03-08 statute in force; 1920-04-17 legislation assented; 1973-07-05 roster observed; 1974 amalgamation; 1974-06-20 legislation assented; 1978-07 administrative placement; 2011-08-15 symbol granted
 - **Review:** not yet researched
 - **Search for:** "BC Sheriff Services"
 - **Questions:**
   - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - B. Start: 16 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 5. British Columbia Ferry Commission

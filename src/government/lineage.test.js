@@ -40,8 +40,10 @@ test('Northern Health reaches back through Northern Interior to Prince George’
   assert.equal(find(1995, 'prince-george-health-council')?.became?.id, 'northern-interior-regional-health-board')
 })
 
-test('a council whose start no source gives is not drawn, but is still what its board came from', () => {
-  for (const year of [1994, 1995, 1996]) assert.ok(!find(year, 'new-westminster-health-council'))
+test('a council is drawn from its designation, and is still what its board came from', () => {
+  // Round 4: M158/1994, effective 17 June 1994. Before that day no source shows it.
+  assert.ok(!find(1993, 'new-westminster-health-council'))
+  for (const year of [1994, 1995, 1996]) assert.ok(find(year, 'new-westminster-health-council'))
   assert.ok(find(1998, 'simon-fraser-health-region').cameFrom.some((body) => body.id === 'new-westminster-health-council'))
 })
 

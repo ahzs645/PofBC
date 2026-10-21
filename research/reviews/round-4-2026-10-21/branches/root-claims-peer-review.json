@@ -1,0 +1,118 @@
+{
+  "schema": "pofbc-local-peer-review/1",
+  "reviewer": "branches_round4",
+  "checked": "2026-10-21",
+  "scope": "Local review of root claims R4RC-104 onward; no new web searches and no root-file mutations.",
+  "reviewed_claim_count": 96,
+  "reviewed_first": "R4RC-104",
+  "reviewed_last": "R4RC-199",
+  "claims_snapshot_sha256": "9803e674c281b033f209b63022c6d7deb88655a7281769e6934972445db9a8d2",
+  "structural_errors": [],
+  "confirmed_substantive_date_or_identity_errors": [],
+  "flags": [
+    {
+      "id": "BR-PR-01",
+      "severity": "packaging_dependency",
+      "claim_ids": [
+        "R4RC-184"
+      ],
+      "finding": "The claim locator refers to hid-verification.json, which was absent from round4/root at review time.",
+      "action": "Include the per-district dated governance/eligibility matrix with clause and PDF-page references, or replace the locator with an existing precise file. Keep the aggregated null-date claim explanatory; generate dated graph rows from the individual original instruments.",
+      "existing_file_at_review": false
+    },
+    {
+      "id": "BR-PR-02",
+      "severity": "integration_caveat",
+      "claim_ids": [
+        "R4RC-186"
+      ],
+      "source_ids": [
+        "R4R-155"
+      ],
+      "locator": "PDF p. 3, clauses 5–6",
+      "finding": "The five district trustees and the hospital board of management are related but different governance compositions. Clause 6 includes the Hospital Act section 5 appointee in the hospital board of management.",
+      "action": "Keep the elected HID trustees separate from the mixed hospital management board. The existing continuation date and five-trustee statement are supported."
+    },
+    {
+      "id": "BR-PR-03",
+      "severity": "integration_caveat",
+      "claim_ids": [
+        "R4RC-190",
+        "R4RC-197"
+      ],
+      "source_ids": [
+        "R4R-118",
+        "R4R-163"
+      ],
+      "locator": "R4R-118 PDF p. 4; R4R-163 PDF p. 3",
+      "finding": "The attached certified regional-board resolutions direct transfers effective on HID dissolution, except debt/financial functions. Their recitals say the Minister is prepared to approve the transfers; executed conveyances and a separate approval are not attached.",
+      "action": "Retain the certified_board_transfer_resolution event type and existing no-conveyance qualification. Do not relabel these as recovered executed conveyances."
+    }
+  ],
+  "checks": [
+    {
+      "claims": "R4RC-104",
+      "result": "supported_as_current_checkpoint",
+      "basis": "R4R-001 current consolidated Hospital District Act ss. 8,17,32,45 read locally. The source states currency to 13 October 2026; 21 October is the research observation date. No historical backdating is warranted."
+    },
+    {
+      "claims": "R4RC-105–109",
+      "result": "supported",
+      "basis": "R4R-059 original Act, printed p. 17 and s. 23, agrees with the qualification changes. R4R-070 order approval on 25 March 1988 is distinguished from 28 March commencement in the official statute tables R4R-080/081. The probation/parole, Canadian residence and Crown-service exceptions retain their statutory conditions."
+    },
+    {
+      "claims": "R4RC-110–111",
+      "result": "supported",
+      "basis": "R4R-071 operative commencement clauses and R4R-072 1993 c. 46 s. 28 definitions agree with class-based coverage; the RHD class appears in health care body paragraph (c), printed p. 412. Approval on 2 November is distinguished from effective 3 November 1994 in R4R-080/081."
+    },
+    {
+      "claims": "R4RC-112",
+      "result": "supported_with_existing_limit",
+      "basis": "R4R-081 official 1995 statute table, printed p. 1244, supports 6 November 1995 and BC Reg 451/95. The missing original regulation is already expressly qualified."
+    },
+    {
+      "claims": "R4RC-113",
+      "result": "appropriately_narrow",
+      "basis": "The claim limits corroboration to identified Hospital Corporations and West Coast National Park amendments. It does not treat those entries as direct proof for every 1977 title amendment."
+    },
+    {
+      "claims": "R4RC-114–182",
+      "result": "no_date_or_recipient_conflict_identified",
+      "basis": "All 23 incorporation records were cross-checked against local original OIC approval and available Letters Patent witness text. R4R-115 was read for the common 25 September 1969 dissolution and recipient schedule. Ambiguous handwritten witness dates for Gulf Islands, Prince George and Lillooet were visually checked and agree with the claim dates. This was a type/date/identity review, not a transcription audit of every territorial boundary."
+    },
+    {
+      "claims": "R4RC-184",
+      "result": "restriction_supported_matrix_dependency",
+      "basis": "Restricted elector language is present in the original sources. Focused clauses were reread in R4R-119,120,121,126,127,137,161; Gulf Islands proxy rules and Creston trustee-candidate rules require the claim’s existing qualifications. A separate per-district matrix is still needed for graph ingestion."
+    },
+    {
+      "claims": "R4RC-185–190",
+      "result": "supported_with_governance_and_transfer_caveats",
+      "basis": "R4R-154 incorporation, R4R-155 continuation and R4R-118 dissolution/resolution align. Visual inspection of R4R-155 PDF p. 6 reads seventh July 1959; OCR incorrectly says eleventh. The R4RC-186 date is correct."
+    },
+    {
+      "claims": "R4RC-191–197",
+      "result": "supported_with_transfer_caveat",
+      "basis": "Original sources R4R-164,166,165 and163 agree. R4R-165 approval is 27 September 1960; 26 September belongs to recommendation text and the later dissolution recital, so the original approval date takes priority."
+    },
+    {
+      "claims": "R4RC-198",
+      "result": "supported",
+      "basis": "R4R-167 OIC 191/2012 is approved 29 March 2012 but attached Letters Patent are effective 1 April 2012. The claim correctly uses membership timing without changing treaty commencement."
+    },
+    {
+      "claims": "R4RC-199",
+      "result": "supported",
+      "basis": "R4R-009 PDF pp. 2–3 adds section 12, limiting pre-membership debt requisitions, with witness date 17 December 2015. This is a financial relationship restriction, not a new district or treaty event."
+    }
+  ],
+  "visual_ocr_correction": {
+    "source_id": "R4R-155",
+    "pdf_page": 6,
+    "ocr": "eleventh July 1959",
+    "scan": "seventh July 1959",
+    "conclusion": "Keep R4RC-186 date 1959-07-07",
+    "render": "raw/review-root155-p6.png"
+  },
+  "review_limit": "No independent audit of every boundary metes-and-bounds clause, future amendments, or executed property conveyance is claimed."
+}

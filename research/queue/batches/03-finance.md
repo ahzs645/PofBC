@@ -35,18 +35,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Government Chief Risk Office"
 - **Questions:** A, B and C, as above.
 
-### 2. Provincial Treasury
-
-- **id** `provincial-treasury` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/provincial-treasury
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/provincial-treasury
-- **What it does:** Handles the Province's borrowing, debt management, banking and cash management.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Provincial Treasury"
-- **Questions:** A, B and C, as above.
-
-### 3. Anti-Money Laundering Secretariat
+### 2. Anti-Money Laundering Secretariat
 
 - **id** `anti-money-laundering-secretariat` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance.
@@ -61,7 +50,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 4. Crown Agencies and Board Resourcing Office (CABRO)
+### 3. Crown Agencies and Board Resourcing Office (CABRO)
 
 - **id** `crown-agencies-and-board-resourcing-office` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/crown-agencies-secretariat/crown-agencies-and-board-resourcing-office
@@ -76,7 +65,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 5. Crown Agencies Secretariat (CAS)
+### 4. Crown Agencies Secretariat (CAS)
 
 - **id** `crown-agencies-secretariat` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/crown-agencies-secretariat
@@ -91,7 +80,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 6. Gender Equity Office
+### 5. Gender Equity Office
 
 - **id** `gender-equity-office` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/gender-equity
@@ -106,7 +95,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 7. Internal Audit & Advisory Services
+### 6. Internal Audit & Advisory Services
 
 - **id** `internal-audit-and-advisory-services` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance.
@@ -121,7 +110,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 8. Office of the Comptroller General (OCG)
+### 7. Office of the Comptroller General (OCG)
 
 - **id** `office-of-the-comptroller-general` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/office-of-the-comptroller-general
@@ -136,7 +125,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 9. Property Assessment Review Panels (PARP)
+### 8. Property Assessment Review Panels (PARP)
 
 - **id** `property-assessment-review-panels` · board · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/housing-tenancy/owning-a-home/property-assessment-review-panels2
@@ -149,6 +138,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Questions:**
   - A. It is already seen in 2005. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 9. Provincial Treasury
+
+- **id** `provincial-treasury` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Finance. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/provincial-treasury
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/provincial-treasury
+- **What it does:** Handles the Province's borrowing, debt management, banking and cash management.
+- **Held:** no start date; first seen 1986-04-10; names on file: Provincial Treasury Division (seen 1985-06-28), Provincial Treasury (seen 1986-04-10); parents on file: Ministry of Finance (seen 1986-04-10), Ministry of Finance and Corporate Relations (seen 1996-07-29)
+- **Events on file:** 1985-06-28 named in assented statute; 1986-04-10 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Provincial Treasury", "Provincial Treasury Division"
+- **Questions:**
+  - A. It is already seen in 1986-04-10. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
 ### 10. Public Sector Employers' Council Secretariat (PSEC Secretariat)
@@ -208,31 +212,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "government-chief-risk-office",
       "name": "Government Chief Risk Office",
       "kind": "office",
-      "parent_today": "ministry-of-finance-2001",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 03",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "provincial-treasury",
-      "name": "Provincial Treasury",
-      "kind": "division",
       "parent_today": "ministry-of-finance-2001",
       "established": null,
       "first_observed": null,
@@ -408,6 +387,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "property-assessment-review-panels",
       "name": "Property Assessment Review Panels",
       "kind": "board",
+      "parent_today": "ministry-of-finance-2001",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 03",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "provincial-treasury",
+      "name": "Provincial Treasury",
+      "kind": "division",
       "parent_today": "ministry-of-finance-2001",
       "established": null,
       "first_observed": null,

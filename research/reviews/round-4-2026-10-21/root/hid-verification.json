@@ -1,0 +1,1588 @@
+{
+  "prepared_on": "2026-10-21",
+  "reviewer": "health_round4",
+  "purpose": "Independent verification requested by root of existing R4R source originals. Root owns A8 source catalogue and integration; this file does not allocate duplicate R4H claims.",
+  "method": "Read original PDFs and text. Visually checked all 23 original Letters Patent witness clauses, plus Fort Nelson 1958 and 1959; visually checked material name/governance ambiguities and the 1969 transfer schedule. The PDF boundaries were read as legal descriptions but not mapped.",
+  "counts": {
+    "originals_in_1969_schedule": 23,
+    "fort_nelson_originals_and_reissue": 2,
+    "dissolution_sources": 2,
+    "original_witness_dates_visually_verified": 25,
+    "original_name_variations_against_1969_schedule": 7
+  },
+  "common_elector_profile": {
+    "id": "original_lp_annual_voters_21_citizen_land",
+    "conditions": [
+      "Canadian citizen",
+      "At least 21 years old",
+      "Eligible to register as a voter under the Provincial Elections Act",
+      "Owner of land within the relevant district or electoral zone, or authorized agent of a board/corporation that owns such land, or a specified legal representative of a landowner"
+    ],
+    "legal_representatives_as_described": "Representatives of an owner who has died, become insolvent, or been adjudged within the historical mental-incapacity wording of the instrument.",
+    "candidate_rule_default": "Qualified voters are also eligible trustee candidates, subject to instrument-specific exceptions below.",
+    "limits": "This is the rule in each original Letters Patent at its date. Later amendments were not exhaustively reviewed. It is not a universal provincial-population electorate. Provincial-voter eligibility is a cross-reference, not an independent reconstruction of all residence or franchise exclusions."
+  },
+  "incorporations": [
+    {
+      "source_id": "R4R-119",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2676_1961",
+      "source_local_file": "../root/raw/R4R-119.pdf",
+      "source_sha256": "5cfd9f37959ffa92586b95b68acbec205f5f6ab84fc5f2c861a44b1199284ac3",
+      "original_corporate_name": "Omineca and Nechako Valley Hospital Improvement District No. 32",
+      "name_pinpoint": "PDF p.4, Letters Patent clause 2",
+      "incorporation_date": "1961-10-24",
+      "date_precision": "day",
+      "order_approval_date": "1961-10-24",
+      "letters_patent_witness_date": "1961-10-24",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          12
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-119-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1960, c.405",
+        "section": "53"
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 7,
+        "zone_count": 7,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "One trustee from each zone.",
+        "board_pinpoint": "PDF p.8, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            10
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Omineca and Nechako Valley Hospital Improvement District No. 32",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Bulkley-Nechako Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-120",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1182_1955",
+      "source_local_file": "../root/raw/R4R-120.pdf",
+      "source_sha256": "a2f885c30cb14b94e7f4345214bc8f564b67d65e9e05455ce8a71877a89f1dc5",
+      "original_corporate_name": "Gulf Islands Hospital Improvement District No. 9",
+      "name_pinpoint": "PDF p.2, Letters Patent clause 2",
+      "incorporation_date": "1955-05-14",
+      "date_precision": "day",
+      "order_approval_date": "1955-05-14",
+      "letters_patent_witness_date": "1955-05-14",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          6
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-120-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": null,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Five elected trustees; no more than two from Salt Spring Island.",
+        "board_pinpoint": "PDF p.2, clause 4",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 5,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            4,
+            5
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights",
+        "specific_rules": [
+          "Voters whose lands are outside Salt Spring Island may vote by proxy (clauses 5 and 9; PDF pp.3,5).",
+          "Trustees normally hold until the next annual general meeting (clause 4; PDF p.2)."
+        ]
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Gulf Islands Hospital Improvement District No. 9",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Capital Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ],
+      "visual_checks": [
+        "Handwritten witness date: 14 May 1955.",
+        "Proxy wording at PDF p.5 visually checked."
+      ]
+    },
+    {
+      "source_id": "R4R-121",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1855_1951",
+      "source_local_file": "../root/raw/R4R-121.pdf",
+      "source_sha256": "14062c45e49a1bdde120a116866bc2ca3c4bffbb124e5bd305944a0d29a0457a",
+      "original_corporate_name": "Creston Valley Hospital Improvement District",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1951-08-07",
+      "date_precision": "day",
+      "order_approval_date": "1951-08-07",
+      "letters_patent_witness_date": "1951-08-07",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          5
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-121-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Water Act Amendment Act, 1951, SBC 1951, c.88, s.7"
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 3,
+        "zone_count": null,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Three elected trustees, initially staggered through 1952, 1953 and 1954.",
+        "board_pinpoint": "PDF p.3, clause 4",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 5,
+        "annual_elector_clause": 8,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            4
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights",
+        "specific_rules": [
+          "Trustee candidate qualification extends to the wife or husband of a qualified voter; this does not itself give the spouse a vote (clauses 5 and 8; PDF pp.3–4).",
+          "First-election voter clause lists owners; annual voter clause expressly includes authorized corporate agents and specified personal representatives."
+        ]
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Creston Valley Hospital Improvement District No. 1",
+      "name_bridge_status": "later_label_differs_no_rename_instrument_recovered",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Central Kootenay Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred.",
+        "Retain the original name and later source label separately. Do not invent the date or instrument adding a district number or changing wording."
+      ],
+      "formation_note": "Order cover reports petition support from 45% of landowners and an express Minister of Health and Welfare recommendation to incorporate nonetheless (PDF p.1).",
+      "visual_checks": [
+        "Witness date and annual spouse-candidate wording visually checked."
+      ]
+    },
+    {
+      "source_id": "R4R-142",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1037_1954",
+      "source_local_file": "../root/raw/R4R-142.pdf",
+      "source_sha256": "873db73af3e494e881107092c45a661971d09a2bc3c1c4a2ce58878d8115b7df",
+      "original_corporate_name": "Castlegar Hospital Improvement District",
+      "name_pinpoint": "PDF p.2, Letters Patent clause 2",
+      "incorporation_date": "1954-05-12",
+      "date_precision": "day",
+      "order_approval_date": "1954-05-12",
+      "letters_patent_witness_date": "1954-05-12",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          6
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-142-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 3,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees each from zones 1 and 2; one from zone 3.",
+        "board_pinpoint": "PDF p.3, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            4,
+            5
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Castlegar Hospital Improvement District No. 3",
+      "name_bridge_status": "later_label_differs_no_rename_instrument_recovered",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Central Kootenay Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred.",
+        "Retain the original name and later source label separately. Do not invent the date or instrument adding a district number or changing wording."
+      ]
+    },
+    {
+      "source_id": "R4R-123",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1178_1954",
+      "source_local_file": "../root/raw/R4R-123.pdf",
+      "source_sha256": "66d930f0eb32fd4e55e782657d815edb8d1b53c1d692c417344452c20320647e",
+      "original_corporate_name": "Kootenay Valley Hospital Improvement District",
+      "name_pinpoint": "PDF p.2, Letters Patent clause 2",
+      "incorporation_date": "1954-05-28",
+      "date_precision": "day",
+      "order_approval_date": "1954-05-28",
+      "letters_patent_witness_date": "1954-05-28",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          10
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-123-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 7,
+        "zone_count": 6,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from Industrial Zone 6; one from each other zone.",
+        "board_pinpoint": "PDF p.8, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            9
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Kootenay Valley Hospital Improvement District No. 4",
+      "name_bridge_status": "later_label_differs_no_rename_instrument_recovered",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Central Kootenay Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred.",
+        "Retain the original name and later source label separately. Do not invent the date or instrument adding a district number or changing wording."
+      ]
+    },
+    {
+      "source_id": "R4R-124",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1153_1964",
+      "source_local_file": "../root/raw/R4R-124.pdf",
+      "source_sha256": "318c11247a9b1d8ad9455dddb6ae0a95a010db40f119a6d57e20346fb4c44896",
+      "original_corporate_name": "Kelowna and District Hospital Improvement District No. 36",
+      "name_pinpoint": "PDF p.4, Letters Patent clause 2",
+      "incorporation_date": "1964-04-23",
+      "date_precision": "day",
+      "order_approval_date": "1964-04-23",
+      "letters_patent_witness_date": "1964-04-23",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          10
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-124-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1960, c.405",
+        "section": "53"
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 8,
+        "zone_count": 4,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from each zone.",
+        "board_pinpoint": "PDF p.7, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            9
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Kelowna and District Hospital Improvement District No. 36",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Central Okanagan Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-150",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1353_1956",
+      "source_local_file": "../root/raw/R4R-150.pdf",
+      "source_sha256": "ed8fa61cd233e08f34959e87e4a894bcfbd18ab0694c5f9b9bdff972c0c6129a",
+      "original_corporate_name": "Shuswap Lake Hospital Improvement District No. 14",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1956-05-29",
+      "date_precision": "day",
+      "order_approval_date": "1956-05-29",
+      "letters_patent_witness_date": "1956-05-29",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          10
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-150-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 7,
+        "zone_count": 6,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from zone 3; one from each other zone.",
+        "board_pinpoint": "PDF p.7, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            8,
+            9
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Shuswap Lake Hospital Improvement District No. 14",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Columbia-Shuswap Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-126",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2020_1959",
+      "source_local_file": "../root/raw/R4R-126.pdf",
+      "source_sha256": "9809cfcc6ec43b90de5a74be5897ecc95163a9f6ad3a7f9076021b18c71c34ec",
+      "original_corporate_name": "Revelstoke Hospital Improvement District No. 26",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1959-09-04",
+      "date_precision": "day",
+      "order_approval_date": "1959-09-04",
+      "letters_patent_witness_date": "1959-09-04",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          9,
+          10
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-126-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 4,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from zone 3; one from each other zone.",
+        "board_pinpoint": "PDF p.6, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            8
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Revelstoke Hospital Improvement District No. 26",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Columbia-Shuswap Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-127",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1345_1962",
+      "source_local_file": "../root/raw/R4R-127.pdf",
+      "source_sha256": "f5c0fb71eec4ae1ec28952d31c8175070f3e5822d51d652021dd67c76f790800",
+      "original_corporate_name": "Ladysmith and District Hospital Improvement District No. 33",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1962-05-17",
+      "date_precision": "day",
+      "order_approval_date": "1962-05-17",
+      "letters_patent_witness_date": "1962-05-17",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          9
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-127-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1960, c.405",
+        "section": "53"
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 4,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from zone 1; one from each other zone.",
+        "board_pinpoint": "PDF p.5, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            7
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Ladysmith and District Hospital Improvement District No. 33",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Cowichan Valley Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-160",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1836_1954",
+      "source_local_file": "../root/raw/R4R-160.pdf",
+      "source_sha256": "4ed613b8a37c9332905455a19b02009c38f5f8c62d76d7b38a25cc7b1e91b603",
+      "original_corporate_name": "Windermere District Hospital Improvement District",
+      "name_pinpoint": "PDF p.2, Letters Patent clause 2",
+      "incorporation_date": "1954-08-11",
+      "date_precision": "day",
+      "order_approval_date": "1954-08-11",
+      "letters_patent_witness_date": "1954-08-11",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          7
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-160-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 6,
+        "zone_count": 6,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "One trustee from each zone.",
+        "board_pinpoint": "PDF p.4, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            5,
+            6
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Windermere Hospital Improvement District No. 7",
+      "name_bridge_status": "later_label_differs_no_rename_instrument_recovered",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "East Kootenay Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred.",
+        "Retain the original name and later source label separately. Do not invent the date or instrument adding a district number or changing wording."
+      ],
+      "visual_checks": [
+        "Original name and witness date visually checked."
+      ]
+    },
+    {
+      "source_id": "R4R-144",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0395_1956",
+      "source_local_file": "../root/raw/R4R-144.pdf",
+      "source_sha256": "1490afa72f07e9337e906dbf5f3e0c1f8e03f9da49a780ecd5c1003245cfd44d",
+      "original_corporate_name": "Selkirk Hospital Improvement District No. 12",
+      "name_pinpoint": "PDF p.2, Letters Patent clause 2",
+      "incorporation_date": "1956-02-21",
+      "date_precision": "day",
+      "order_approval_date": "1956-02-21",
+      "letters_patent_witness_date": "1956-02-21",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          6
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-144-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 5,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "One trustee from each zone.",
+        "board_pinpoint": "PDF p.3, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            5
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Selkirk Hospital Improvement District No. 12",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "East Kootenay Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-130",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2403_1955",
+      "source_local_file": "../root/raw/R4R-130.pdf",
+      "source_sha256": "c1dec5b4d5881936edb320efe81d888d06bb263d16f14e97f0ddff4a5daf46fe",
+      "original_corporate_name": "Prince George and District Hospital Improvement District No. 10",
+      "name_pinpoint": "PDF p.2, Letters Patent clause 2",
+      "incorporation_date": "1955-10-04",
+      "date_precision": "day",
+      "order_approval_date": "1955-10-04",
+      "letters_patent_witness_date": "1955-10-04",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          8
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-130-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 4,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from zone 4; one from each other zone.",
+        "board_pinpoint": "PDF p.4, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            6,
+            7
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Prince George Hospital Improvement District No. 10",
+      "name_bridge_status": "later_label_differs_no_rename_instrument_recovered",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Fraser-Fort George Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred.",
+        "Retain the original name and later source label separately. Do not invent the date or instrument adding a district number or changing wording."
+      ],
+      "visual_checks": [
+        "Original name includes and District; handwritten witness date is 4 October 1955, visually checked."
+      ]
+    },
+    {
+      "source_id": "R4R-161",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2537_1960",
+      "source_local_file": "../root/raw/R4R-161.pdf",
+      "source_sha256": "9634870367e895c15fdd0f5c0b715fcbae0833dc0083bb76df41288d1b72eda0",
+      "original_corporate_name": "Boundary Hospital Improvement District No. 29",
+      "name_pinpoint": "PDF p.4, Letters Patent clause 2",
+      "incorporation_date": "1960-11-10",
+      "date_precision": "day",
+      "order_approval_date": "1960-11-10",
+      "letters_patent_witness_date": "1960-11-10",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          10
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-161-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "note": "Original order states section 50 of the 1948 Act without separately reciting the amendment in the authority clause."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 4,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from zone 3; one from each other zone.",
+        "board_pinpoint": "PDF p.6, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            8,
+            9
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Boundary Hospital Improvement District No. 29",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Kootenay Boundary Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-132",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3342_1963",
+      "source_local_file": "../root/raw/R4R-132.pdf",
+      "source_sha256": "5e1205bc2a0ee74e09a509a22d520a034d8f2aaa593134674b6273799ec23bd4",
+      "original_corporate_name": "Lower Columbia Hospital Improvement District No. 34",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1963-12-23",
+      "date_precision": "day",
+      "order_approval_date": "1963-12-23",
+      "letters_patent_witness_date": "1963-12-23",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          8
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-132-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1960, c.405",
+        "section": "53"
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 6,
+        "zone_count": 3,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from each zone.",
+        "board_pinpoint": "PDF p.5, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            7
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Lower Columbia Hospital Improvement District No. 34",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Kootenay Boundary Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-159",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1315_1958",
+      "source_local_file": "../root/raw/R4R-159.pdf",
+      "source_sha256": "144b7346b0df4a9ca2bbd3be7504a6449bed624fad8d2a0d0d06f38f698d6674",
+      "original_corporate_name": "South Central Vancouver Island Hospital Improvement District No. 20",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1958-06-02",
+      "date_precision": "day",
+      "order_approval_date": "1958-06-02",
+      "letters_patent_witness_date": "1958-06-02",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          13
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-159-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 7,
+        "zone_count": 7,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "One trustee from each zone.",
+        "board_pinpoint": "PDF p.9, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            11,
+            12
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "South Central Vancouver Island Hospital Improvement District No. 20",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Nanaimo Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-134",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1151_1956",
+      "source_local_file": "../root/raw/R4R-134.pdf",
+      "source_sha256": "8f64be0bf42f53d97f5006433648fa9ea1371604bfc54d79ce7452bd84ebb6f3",
+      "original_corporate_name": "North Peace Hospital Improvement District No. 13",
+      "name_pinpoint": "PDF p.2, Letters Patent clause 2",
+      "incorporation_date": "1956-05-08",
+      "date_precision": "day",
+      "order_approval_date": "1956-05-08",
+      "letters_patent_witness_date": "1956-05-08",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          7
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-134-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 7,
+        "zone_count": 5,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Three trustees from zone 4; one from each other zone.",
+        "board_pinpoint": "PDF p.4, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            5,
+            6
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "North Peace Hospital Improvement District No. 13",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Peace River Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred.",
+        "R4R-115 prints Peace River Regional Hospital District. Do not silently expand to Peace River-Liard or infer a rename without supporting evidence."
+      ]
+    },
+    {
+      "source_id": "R4R-135",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0292_1959",
+      "source_local_file": "../root/raw/R4R-135.pdf",
+      "source_sha256": "8fca368568b358924ae7f7abaf3ca270babc93382460cb35641e87d9b37c1de3",
+      "original_corporate_name": "Garibaldi Hospital Improvement District No. 23",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1959-02-18",
+      "date_precision": "day",
+      "order_approval_date": "1959-02-18",
+      "letters_patent_witness_date": "1959-02-18",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          10
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-135-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 5,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "One trustee from each zone.",
+        "board_pinpoint": "PDF p.7, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            8,
+            9
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Garibaldi Hospital Improvement District No. 23",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Squamish-Lillooet Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-136",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2850_1955",
+      "source_local_file": "../root/raw/R4R-136.pdf",
+      "source_sha256": "1d4e3d9dfa4bf00803c10130b3d44695408bd436471f04a16b98fb8bdde086eb",
+      "original_corporate_name": "Lillooet Hospital Improvement District No. 11",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1955-12-09",
+      "date_precision": "day",
+      "order_approval_date": "1955-12-09",
+      "letters_patent_witness_date": "1955-12-09",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          8
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-136-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 4,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from zone 3; one from each other zone.",
+        "board_pinpoint": "PDF p.5, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            6,
+            7
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Lillooet Hospital Improvement District No. 11",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Squamish-Lillooet Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-137",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0654_1961",
+      "source_local_file": "../root/raw/R4R-137.pdf",
+      "source_sha256": "584b3647dafb66eb6806d97f59004a6d310b6ff93181233275d9a0c5ce23de02",
+      "original_corporate_name": "Sunshine Coast Hospital Improvement District No. 31",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1961-03-14",
+      "date_precision": "day",
+      "order_approval_date": "1961-03-14",
+      "letters_patent_witness_date": "1961-03-14",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          10
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-137-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1960, c.405",
+        "section": "53"
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 7,
+        "zone_count": 4,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Zone 1 elects one; zone 2 three; zone 3 two; zone 4 one.",
+        "board_pinpoint": "PDF p.7, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            9
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Sunshine Coast Hospital Improvement District No. 31",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Sunshine Coast Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-147",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1285_1960",
+      "source_local_file": "../root/raw/R4R-147.pdf",
+      "source_sha256": "5804cbc9f375da03129b3bca215026a14ca73d2d64f7c98497b2384b2c50adf6",
+      "original_corporate_name": "Thompson Valleys Hospital Improvement District No. 27",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1960-05-31",
+      "date_precision": "day",
+      "order_approval_date": "1960-05-31",
+      "letters_patent_witness_date": "1960-05-31",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          9
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-147-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "note": "Original order states section 50 of the 1948 Act without separately reciting the amendment in the authority clause."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 7,
+        "zone_count": 5,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Three trustees from zone 4; one from each other zone.",
+        "board_pinpoint": "PDF p.5, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            7
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Thompson Valleys Hospital Improvement District No. 27",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Thompson-Nicola Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    },
+    {
+      "source_id": "R4R-151",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0217_1955",
+      "source_local_file": "../root/raw/R4R-151.pdf",
+      "source_sha256": "88f602ab216537ba0cd9b9ad3b0892c30dc8380b5979b7e8d3671122e6d2c140",
+      "original_corporate_name": "Fraser Canyon Hospital Improvement District",
+      "name_pinpoint": "PDF p.3, Letters Patent clause 2",
+      "incorporation_date": "1955-01-28",
+      "date_precision": "day",
+      "order_approval_date": "1955-01-28",
+      "letters_patent_witness_date": "1955-01-28",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          7
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-151-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 3,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from Hope (zone 1), two from Yale/Spuzzum (zone 2), one from Flood (zone 3).",
+        "board_pinpoint": "PDF p.4, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 10,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            6
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Fraser-Canyon Hospital Improvement District No. 8",
+      "name_bridge_status": "later_label_differs_no_rename_instrument_recovered",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Fraser-Cheam Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred.",
+        "Retain the original name and later source label separately. Do not invent the date or instrument adding a district number or changing wording."
+      ]
+    },
+    {
+      "source_id": "R4R-148",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0795_1953",
+      "source_local_file": "../root/raw/R4R-148.pdf",
+      "source_sha256": "b3e27230f5af43e9a75251c35ac68514dcaba4286c64b9813f2b347f1ceefcba",
+      "original_corporate_name": "Cariboo Hospital Improvement District",
+      "name_pinpoint": "PDF p.2, Letters Patent clause 2",
+      "incorporation_date": "1953-03-31",
+      "date_precision": "day",
+      "order_approval_date": "1953-03-31",
+      "letters_patent_witness_date": "1953-03-31",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          6
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-148-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Water Act Amendment Act, 1951, SBC 1951, c.88, s.7"
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 4,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from Quesnel (zone 1); one from each other zone.",
+        "board_pinpoint": "PDF p.3, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            4,
+            5
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Cariboo Hospital Improvement District No. 2",
+      "name_bridge_status": "later_label_differs_no_rename_instrument_recovered",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Cariboo Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred.",
+        "Retain the original name and later source label separately. Do not invent the date or instrument adding a district number or changing wording."
+      ]
+    },
+    {
+      "source_id": "R4R-149",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2850_1958",
+      "source_local_file": "../root/raw/R4R-149.pdf",
+      "source_sha256": "8aceae4b698ef8069d82b52737c316e9cb1aeb06caf13c2b3dbebd13897459d1",
+      "original_corporate_name": "Central Cariboo Hospital Improvement District No. 22",
+      "name_pinpoint": "PDF p.4, Letters Patent clause 2",
+      "incorporation_date": "1958-12-16",
+      "date_precision": "day",
+      "order_approval_date": "1958-12-16",
+      "letters_patent_witness_date": "1958-12-16",
+      "date_basis": "Operative incorporation in the attached Letters Patent, dated in the witness clause; date agrees with the order cover. Not a petition, plebiscite, later reissue, or retrospective annotation date.",
+      "date_pinpoint": {
+        "pdf_pages": [
+          13
+        ],
+        "clause": "Letters Patent witness clause"
+      },
+      "date_verification": "visually_verified_original_witness_clause",
+      "witness_image": "../health/hid-review/R4R-149-witness.png",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2, recommendation and Letters Patent preamble",
+      "governance": {
+        "trustee_count": 7,
+        "zone_count": 6,
+        "selection": "Elected by qualified district/zone electors at general meetings.",
+        "seat_allocation": "Two trustees from Williams Lake (zone 6); one from each other zone.",
+        "board_pinpoint": "PDF p.9, clause 5",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "first_election_clause": 6,
+        "annual_elector_clause": 9,
+        "annual_elector_pinpoint": {
+          "pdf_pages": [
+            11
+          ]
+        },
+        "minutes_and_financial_reports_filed_with": "Comptroller of Water Rights"
+      },
+      "objects_summary": "Financial assistance for hospital development, equipment, operation and related purposes; exact objects vary. This is not by itself proof that the district directly operated a hospital.",
+      "later_1969_name": "Central Cariboo Hospital Improvement District No. 22",
+      "name_bridge_status": "same_substantive_name",
+      "dissolution": {
+        "date": "1969-09-25",
+        "date_basis": "OIC 3082/1969 operative dissolution and transfer, approved 25 September 1969; no future commencement date stated.",
+        "source_id": "R4R-115",
+        "pinpoint": "PDF pp.1–2, operative recommendation and schedule",
+        "successor_transferee_as_printed": "Cariboo Regional Hospital District",
+        "relationship": "assets_rights_claims_obligations_liabilities_transferred_to"
+      },
+      "review_status": "confirmed_original_incorporation",
+      "limitations": [
+        "Geographic boundary descriptions were not independently geospatially checked.",
+        "Original governance rules are dated observations, not a claim that no subsequent amendments occurred."
+      ]
+    }
+  ],
+  "fort_nelson": {
+    "original_incorporation": {
+      "source_id": "R4R-154",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1373_1958",
+      "original_corporate_name": "Fort Nelson Hospital Improvement District No. 21",
+      "incorporation_date": "1958-06-07",
+      "date_precision": "day",
+      "date_basis": "Letters Patent witness clause, PDF p.8, visually verified; later 1959 and 1972 instruments expressly corroborate issuance on 7 June 1958.",
+      "name_pinpoint": "PDF p.3, clause 2",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "50",
+        "amendment_as_recited": "Section 5 of the Water Act Amendment Act, 1953 (Second Session). Most orders also give SBC 1953 (Second Session), c.38."
+      },
+      "authority_pinpoint": "PDF pp.1–2",
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": 4,
+        "seat_allocation": "Two trustees for zone 3; one for each other zone.",
+        "initial_selection": "Five first trustees named in the Letters Patent, clause 6; initial board was appointed, not elected.",
+        "subsequent_selection": "Elections at annual zone meetings; clause 8.",
+        "board_pinpoint": "PDF p.5, clauses 5–7",
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "elector_pinpoint": "PDF pp.6–7, clause 8",
+        "candidate_exception": "Hospital employees and physicians actively practising medicine were disqualified as trustee candidates; this clause does not by itself remove a qualified person’s vote.",
+        "hospital_board": "Trustees plus the Hospital Act s.5 appointee constitute the hospital board of management.",
+        "hospital_board_pinpoint": "PDF p.5, clause 7"
+      },
+      "objects": "Hospital services, acquisition, ownership, maintenance and operation of a hospital and related land; clause 3, PDF p.3.",
+      "visual_checks": [
+        "Witness date (p.8)",
+        "Candidate exception (p.7)"
+      ]
+    },
+    "replacement_letters_patent": {
+      "source_id": "R4R-155",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1579_1959",
+      "date": "1959-07-07",
+      "date_precision": "day",
+      "date_basis": "Witness clause at PDF p.6, visually checked; cover approved 7 July 1959.",
+      "event_type": "continuation_and_replacement_of_letters_patent",
+      "not_new_incorporation": true,
+      "continuation_pinpoint": "PDF p.2, clause 1 expressly continues incorporation.",
+      "statutory_authority": {
+        "statute": "Water Act",
+        "citation": "RSBC 1948, c.361",
+        "section": "51"
+      },
+      "change": "Five trustees elected from the district as a whole; zonal allocation removed. Ambulance services added to objects.",
+      "pinpoints": [
+        "PDF p.1 recitals",
+        "PDF p.3 clauses 4–7"
+      ],
+      "governance": {
+        "trustee_count": 5,
+        "zone_count": null,
+        "elector_profile": "original_lp_annual_voters_21_citizen_land",
+        "elector_pinpoint": "PDF p.4, clause 7, visually checked.",
+        "candidate_rule": "All qualified voters eligible; the prior instrument’s employee/physician candidate exception is absent from this replacement clause.",
+        "hospital_board": "Trustees plus Hospital Act s.5 appointee constitute hospital board of management (PDF p.3, clause 6)."
+      },
+      "limitation": "This verifies the replacement clause, not the effect of any separately applicable disqualification in another statute."
+    },
+    "dissolution_and_transfer": {
+      "source_id": "R4R-118",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2251_1972",
+      "order": "OIC 2251/1972",
+      "order_approval_date": "1972-06-13",
+      "effective_date": "1972-06-13",
+      "date_basis": "Operative clause expressly makes dissolution effective on the date of the order.",
+      "statutory_authority": "Regional Hospital Districts Act, s.50C",
+      "pinpoint": "PDF pp.1–2",
+      "direct_transferee": "Peace River-Liard Regional Hospital District",
+      "onward_transfer": {
+        "to": "Fort Nelson Hospital Society",
+        "resolution_date": "1972-05-23",
+        "effective_trigger": "As and from the date of dissolution of the improvement district.",
+        "effective_date_from_trigger": "1972-06-13",
+        "pinpoint": "PDF p.4, certified RHD resolution",
+        "exception": "Fundraising, disbursement and long-term debt obligations previously assumed by the regional hospital district remain with it.",
+        "caution": "Attached resolution authorizes appropriate conveyances. The actual signed deeds are not attached."
+      },
+      "society_registration_date_reported": "1971-10-18",
+      "society_registration_basis": "Order recital, PDF p.1; not an independently retrieved registry certificate.",
+      "ambulance_resolution": {
+        "date": "1972-03-23",
+        "pinpoint": "PDF p.3, hospital society board resolution",
+        "effect": "Accepts ambulance-service responsibility as ancillary hospital operation; includes insurance commitments and incorporates 26 May 1970 agreement; resolution expires 31 March 1973."
+      }
+    }
+  },
+  "conflicts_and_cautions": [
+    {
+      "type": "original_name_vs_later_label",
+      "affected_source_ids": [
+        "R4R-121",
+        "R4R-142",
+        "R4R-123",
+        "R4R-160",
+        "R4R-130",
+        "R4R-151",
+        "R4R-148"
+      ],
+      "finding": "Seven original names differ from the 1969 schedule. Six original letters omit the later district number. Windermere also uses Windermere District Hospital; Prince George uses and District. Fraser Canyon later appears hyphenated and numbered.",
+      "action": "Store dated source labels and leave any intervening renaming/numbering date unproved. These differences are not evidence of a separate incorporation."
+    },
+    {
+      "type": "recipient_label_variation",
+      "source_ids": [
+        "R4R-115",
+        "R4R-118"
+      ],
+      "finding": "The 1969 North Peace transfer row prints Peace River Regional Hospital District; the 1972 Fort Nelson transfer names Peace River-Liard Regional Hospital District.",
+      "action": "Preserve source wording; do not infer a formal rename from these labels alone."
+    },
+    {
+      "type": "handwritten_OCR_dates",
+      "affected_source_ids": [
+        "R4R-120",
+        "R4R-130",
+        "R4R-136"
+      ],
+      "finding": "Handwritten witness dates read 14 May 1955, 4 October 1955 and 9 December 1955 respectively. Text extraction is unreliable for these entries.",
+      "action": "Use visually verified witness readings."
+    },
+    {
+      "type": "original_vs_reissued_letters",
+      "source_ids": [
+        "R4R-154",
+        "R4R-155",
+        "R4R-118"
+      ],
+      "finding": "Fort Nelson began 7 June 1958. Its 7 July 1959 letters expressly continued the incorporation; they did not start a new entity.",
+      "action": "Represent a continuation/governance change, then the 13 June 1972 dissolution and transfer."
+    },
+    {
+      "type": "historical_governance_scope",
+      "finding": "Landowner and representative voting qualifications, spouse candidate provisions and occupation-based candidate exceptions differ across instruments.",
+      "action": "Do not collapse these into a modern universal electorate or treat candidate exclusions as voter exclusions."
+    }
+  ],
+  "source_catalogue_untouched": true,
+  "packaging_copy_of": "../health/hid-verification.json"
+}

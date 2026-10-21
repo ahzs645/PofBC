@@ -17,9 +17,9 @@
   },
   "counts": {
     "total": 238,
-    "p1": 133,
-    "p2": 64,
-    "p3": 41
+    "p1": 119,
+    "p2": 73,
+    "p3": 46
   },
   "batches": [
     {
@@ -78,7 +78,6 @@
       ],
       "items": [
         "government-chief-risk-office",
-        "provincial-treasury",
         "anti-money-laundering-secretariat",
         "crown-agencies-and-board-resourcing-office",
         "crown-agencies-secretariat",
@@ -86,6 +85,7 @@
         "internal-audit-and-advisory-services",
         "office-of-the-comptroller-general",
         "property-assessment-review-panels",
+        "provincial-treasury",
         "public-sector-employers-council-secretariat",
         "revenue-division",
         "treasury-board-staff"
@@ -102,11 +102,11 @@
         "asset-investment-recovery",
         "bc-registries-and-online-services",
         "connected-services-bc",
-        "connectivity-in-bc",
         "product-distribution-centre",
         "bc-bid",
         "bc-online",
         "bc-stats",
+        "connectivity-in-bc",
         "kings-printer",
         "service-bc",
         "bc-services-card"
@@ -114,36 +114,12 @@
     },
     {
       "number": "05",
-      "title": "Ministry of Health",
-      "file": "batches/05-health.md",
-      "parents": [
-        "ministry-of-health-2011"
-      ],
-      "items": [
-        "emergency-medical-assistants-licensing-board",
-        "health-care-practitioners-special-committee-for-audit-hearings",
-        "health-connect-registry",
-        "helpstartshere",
-        "office-of-indigenous-health",
-        "patient-care-quality-review-boards",
-        "bc-pharmacare",
-        "medical-services-commission",
-        "medical-services-plan",
-        "office-of-the-provincial-health-officer",
-        "health-professions-and-occupations-regulatory-oversight-office",
-        "healthlink-bc",
-        "office-of-the-seniors-advocate"
-      ]
-    },
-    {
-      "number": "06",
       "title": "Ministry of Public Safety and Solicitor General",
-      "file": "batches/06-public-safety-and-solicitor-general.md",
+      "file": "batches/05-public-safety-and-solicitor-general.md",
       "parents": [
         "ministry-of-public-safety-and-solicitor-general-2017"
       ],
       "items": [
-        "community-safety-and-victim-services",
         "compliance-and-enforcement-collaborative",
         "criminal-records-review-program",
         "policing-and-security-branch",
@@ -151,10 +127,34 @@
         "victimlinkbc",
         "bc-coroners-service",
         "bc-corrections",
+        "community-safety-and-victim-services",
         "office-of-the-fire-commissioner",
         "roadsafetybc",
         "civil-forfeiture-office",
         "independent-gambling-control-office"
+      ]
+    },
+    {
+      "number": "06",
+      "title": "Ministry of Health",
+      "file": "batches/06-health.md",
+      "parents": [
+        "ministry-of-health-2011"
+      ],
+      "items": [
+        "emergency-medical-assistants-licensing-board",
+        "health-connect-registry",
+        "helpstartshere",
+        "office-of-indigenous-health",
+        "patient-care-quality-review-boards",
+        "bc-pharmacare",
+        "health-care-practitioners-special-committee-for-audit-hearings",
+        "medical-services-plan",
+        "office-of-the-provincial-health-officer",
+        "health-professions-and-occupations-regulatory-oversight-office",
+        "healthlink-bc",
+        "medical-services-commission",
+        "office-of-the-seniors-advocate"
       ]
     },
     {
@@ -183,11 +183,11 @@
         "ministry-of-education-and-child-care-2022"
       ],
       "items": [
-        "bc-training-and-education-savings-program",
         "child-care-resource-and-referral-centres",
         "childcarebc",
         "erase",
         "feeding-futures",
+        "bc-training-and-education-savings-program",
         "commissioner-for-teacher-regulation",
         "early-childhood-educator-registry",
         "strongstart-bc",
@@ -233,30 +233,8 @@
     },
     {
       "number": "11",
-      "title": "Provincial Health Services Authority",
-      "file": "batches/11-provincial-health-services-authority.md",
-      "parents": [
-        "provincial-health-services-authority"
-      ],
-      "items": [
-        "cardiac-services-bc",
-        "health-emergency-management-bc",
-        "perinatal-services-bc",
-        "bc-centre-for-disease-control",
-        "bc-childrens-hospital",
-        "bc-mental-health-and-substance-use-services",
-        "bc-womens-hospital",
-        "trans-care-bc",
-        "bc-cancer",
-        "bc-renal",
-        "bc-transplant",
-        "provincial-laboratory-medicine-services"
-      ]
-    },
-    {
-      "number": "12",
       "title": "Ministry of Energy and Climate Solutions",
-      "file": "batches/12-energy-and-climate-solutions.md",
+      "file": "batches/11-energy-and-climate-solutions.md",
       "parents": [
         "ministry-of-energy-and-climate-solutions-2024"
       ],
@@ -272,9 +250,9 @@
       ]
     },
     {
-      "number": "13",
+      "number": "12",
       "title": "Ministry of Social Development and Poverty Reduction",
-      "file": "batches/13-social-development-and-poverty-reduction.md",
+      "file": "batches/12-social-development-and-poverty-reduction.md",
       "parents": [
         "ministry-of-social-development-and-poverty-reduction-2017"
       ],
@@ -290,66 +268,31 @@
       ]
     },
     {
+      "number": "13",
+      "title": "Provincial Health Services Authority",
+      "file": "batches/13-provincial-health-services-authority.md",
+      "parents": [
+        "provincial-health-services-authority"
+      ],
+      "items": [
+        "cardiac-services-bc",
+        "health-emergency-management-bc",
+        "bc-centre-for-disease-control",
+        "bc-childrens-hospital",
+        "bc-mental-health-and-substance-use-services",
+        "bc-womens-hospital",
+        "perinatal-services-bc",
+        "bc-cancer",
+        "bc-renal",
+        "bc-transplant",
+        "provincial-laboratory-medicine-services",
+        "trans-care-bc"
+      ]
+    },
+    {
       "number": "14",
-      "title": "Ministry of Tourism, Arts, Culture and Sport",
-      "file": "batches/14-tourism-arts-culture-and-sport.md",
-      "parents": [
-        "ministry-of-tourism-arts-culture-and-sport-2020"
-      ],
-      "items": [
-        "bc-arts-and-culture-endowment",
-        "heritage-branch",
-        "lets-go-bc",
-        "mountain-resorts-branch",
-        "office-of-the-bc-athletic-commissioner",
-        "physical-fitness-and-amateur-sports-fund",
-        "community-gaming-grants"
-      ]
-    },
-    {
-      "number": "15",
-      "title": "Ministry of Agriculture and Food",
-      "file": "batches/15-agriculture-and-food.md",
-      "parents": [
-        "ministry-of-agriculture-and-food-2022"
-      ],
-      "items": [
-        "bc-agriculture-insurance-and-income-protection",
-        "agriservice-bc",
-        "animal-health-centre",
-        "buy-bc",
-        "feed-bc",
-        "liquor-and-cannabis-regulation-branch",
-        "bc-farm-industry-review-board"
-      ]
-    },
-    {
-      "number": "16",
-      "title": "Ministry of Emergency Management and Climate Readiness and Ministry of Housing and Municipal Affairs",
-      "file": "batches/16-emergency-management-and-climate-readiness-and-more.md",
-      "parents": [
-        "ministry-of-emergency-management-and-climate-readiness-2022",
-        "ministry-of-housing-and-municipal-affairs-2024"
-      ],
-      "items": [
-        "climatereadybc",
-        "disaster-financial-assistance",
-        "disaster-resilience-division",
-        "emergency-support-services",
-        "emergencyinfobc",
-        "preparedbc",
-        "building-and-safety-standards",
-        "housing-targets-program",
-        "public-libraries-branch",
-        "short-term-rental-branch",
-        "residential-tenancy-branch",
-        "university-endowment-lands"
-      ]
-    },
-    {
-      "number": "17",
       "title": "Ministry of Environment and Parks",
-      "file": "batches/17-environment-and-parks.md",
+      "file": "batches/14-environment-and-parks.md",
       "parents": [
         "ministry-of-environment-and-parks-2024"
       ],
@@ -364,20 +307,77 @@
       ]
     },
     {
-      "number": "18",
-      "title": "Transportation Investment Corporation and Ministry of Indigenous Relations and Reconciliation",
-      "file": "batches/18-transportation-investment-corporation-and-more.md",
+      "number": "15",
+      "title": "Ministry of Housing and Municipal Affairs and Transportation Investment Corporation",
+      "file": "batches/15-housing-and-municipal-affairs-and-more.md",
       "parents": [
-        "transportation-investment-corporation",
-        "ministry-of-indigenous-relations-and-reconciliation-2017"
+        "ministry-of-housing-and-municipal-affairs-2024",
+        "transportation-investment-corporation"
       ],
       "items": [
+        "housing-targets-program",
+        "public-libraries-branch",
+        "short-term-rental-branch",
+        "building-and-safety-standards",
+        "residential-tenancy-branch",
+        "university-endowment-lands",
         "belleville-terminal-redevelopment",
         "broadway-subway-project",
         "fraser-river-tunnel-project",
         "pattullo-bridge-replacement",
         "steveston-interchange-project",
-        "surrey-langley-skytrain",
+        "surrey-langley-skytrain"
+      ]
+    },
+    {
+      "number": "16",
+      "title": "Ministry of Tourism, Arts, Culture and Sport",
+      "file": "batches/16-tourism-arts-culture-and-sport.md",
+      "parents": [
+        "ministry-of-tourism-arts-culture-and-sport-2020"
+      ],
+      "items": [
+        "heritage-branch",
+        "mountain-resorts-branch",
+        "office-of-the-bc-athletic-commissioner",
+        "physical-fitness-and-amateur-sports-fund",
+        "community-gaming-grants",
+        "lets-go-bc",
+        "bc-arts-and-culture-endowment"
+      ]
+    },
+    {
+      "number": "17",
+      "title": "Ministry of Agriculture and Food",
+      "file": "batches/17-agriculture-and-food.md",
+      "parents": [
+        "ministry-of-agriculture-and-food-2022"
+      ],
+      "items": [
+        "bc-agriculture-insurance-and-income-protection",
+        "agriservice-bc",
+        "animal-health-centre",
+        "feed-bc",
+        "liquor-and-cannabis-regulation-branch",
+        "bc-farm-industry-review-board",
+        "buy-bc"
+      ]
+    },
+    {
+      "number": "18",
+      "title": "Ministry of Emergency Management and Climate Readiness and Ministry of Indigenous Relations and Reconciliation",
+      "file": "batches/18-emergency-management-and-climate-readiness-and-more.md",
+      "parents": [
+        "ministry-of-emergency-management-and-climate-readiness-2022",
+        "ministry-of-indigenous-relations-and-reconciliation-2017"
+      ],
+      "items": [
+        "climatereadybc",
+        "disaster-resilience-division",
+        "emergency-support-services",
+        "emergencyinfobc",
+        "preparedbc",
+        "disaster-financial-assistance",
         "first-citizens-fund",
         "government-to-government-and-community-relations-division",
         "ministers-advisory-council-on-indigenous-women",
@@ -426,9 +426,9 @@
         "easebiz-bc",
         "trade-and-invest-british-columbia",
         "small-business-roundtable",
-        "building-bc",
         "heart-and-hearth",
         "bc-housing-licensing-and-consumer-services",
+        "building-bc",
         "bc-builds"
       ]
     },
@@ -445,9 +445,9 @@
         "fii-consulting-shanghai",
         "fii-consulting-india",
         "forestry-innovation-consulting-vietnam",
+        "real-property-division",
         "community-capital-development",
         "infrastructure-policy-and-partnerships",
-        "real-property-division",
         "employers-advisers-office",
         "employment-standards-branch",
         "workers-advisers-office",
@@ -642,7 +642,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "15"
+      "batch": "17"
     },
     {
       "id": "liquor-and-cannabis-regulation-branch",
@@ -683,7 +683,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "15"
+      "batch": "17"
     },
     {
       "id": "animal-health-centre",
@@ -723,7 +723,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "15"
+      "batch": "17"
     },
     {
       "id": "agriservice-bc",
@@ -763,7 +763,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "15"
+      "batch": "17"
     },
     {
       "id": "bc-agriculture-insurance-and-income-protection",
@@ -803,16 +803,14 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "15"
+      "batch": "17"
     },
     {
       "id": "buy-bc",
       "name": "Buy BC",
       "kind": "program",
-      "priority": 1,
+      "priority": 3,
       "tracks": [
-        "A",
-        "B",
         "C"
       ],
       "parent_today": "ministry-of-agriculture-and-food-2022",
@@ -829,21 +827,63 @@
       "source_today": "https://buybc.gov.bc.ca/",
       "description": "Provincial food-marketing program that helps British Columbians identify and choose food and beverages grown, raised or made in B.C.",
       "held": {
-        "established": null,
-        "established_meaning": null,
+        "established": "1993",
+        "established_meaning": "The government launched the Buy BC marketing program (a program launch, stated retrospectively in a June 2023 internal audit; a program, not an organisation)",
         "first_observed": null,
         "names": [],
-        "parents": [],
-        "events": []
+        "parents": [
+          {
+            "name": "Ministry of Agriculture and Food",
+            "from": null,
+            "to": null,
+            "observed_on": "2023-06",
+            "coverage": "observation_only",
+            "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/buy-bc-program-ministry-of-agriculture-and-food.pdf",
+            "locator": "PDF p. 5 / printed p. 3: 'Buy BC is delivered through the Food and Beverage Branch, within the Agriculture Resource Division' (audit of the Ministry of Agriculture and Food program, June 2023)"
+          }
+        ],
+        "events": [
+          {
+            "date": "1993",
+            "precision": "year",
+            "type": "established",
+            "title": "Buy BC: The government launched the Buy BC marketing program (a program launch, stated retrospectively in a June 2023 internal audit; a program, not an organisation)",
+            "sources": [
+              "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/buy-bc-program-ministry-of-agriculture-and-food.pdf"
+            ],
+            "locator": "PDF p. 6 / printed p. 4, Buy BC Program History: 'In 1993, the Government launched Buy BC to help increase demand and sales of B.C. agriculture and food, and seafood products'",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2002",
+            "precision": "year",
+            "type": "administration_transferred",
+            "title": "Buy BC: Government discontinued marketing funding and transferred management and delivery of the program to the BC Agricultural Council, an industry organization",
+            "sources": [
+              "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/buy-bc-program-ministry-of-agriculture-and-food.pdf"
+            ],
+            "locator": "PDF p. 6 / printed p. 4: 'In 2002, the Government discontinued funding for marketing and transferred the management and delivery of the program to the BC Agricultural Council'",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2018",
+            "precision": "year",
+            "type": "program_relaunched",
+            "title": "Buy BC: Government relaunched Buy BC",
+            "sources": [
+              "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/buy-bc-program-ministry-of-agriculture-and-food.pdf"
+            ],
+            "locator": "PDF p. 6 / printed p. 4: 'Starting in 2018, the Government relaunched the program'",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
-      "batch": "15"
+      "generic_questions": false,
+      "batch": "17"
     },
     {
       "id": "feed-bc",
@@ -883,7 +923,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "15"
+      "batch": "17"
     },
     {
       "id": "bc-prosecution-service",
@@ -1070,6 +1110,127 @@
         "parents": [],
         "events": [
           {
+            "date": "1860-03-08",
+            "precision": "day",
+            "type": "legislation_enacted",
+            "title": "Sheriff's Act, 1860 proclaimed in the Colony of British Columbia, regulating the office of High Sheriff",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/760034601"
+            ],
+            "locator": "Proclamation, PDF pp. 1-2, ss. 1-4 and issuing clause ('this eighth day of March ... 1860')",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1873-02-21",
+            "precision": "day",
+            "type": "legislation_assented",
+            "title": "Sheriffs Act, 1873 authorizes sheriffs for Vancouver Island, the City of New Westminster and Cariboo",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1447266216"
+            ],
+            "locator": "Official historical compilation, chapter 146, printed p. 648 / PDF p. 1, s. 1; s. 16 at printed pp. 651-652 / PDF pp. 4-5",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1878-04-10",
+            "precision": "day",
+            "type": "legislation_assented",
+            "title": "Sheriffs Act amendment of 1878 authorizes separate sheriffs for Nanaimo, Kootenay and Cassiar",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1730961900"
+            ],
+            "locator": "1878 c. 17, printed p. 75 / PDF p. 1, ss. 1-2",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1880-05-08",
+            "precision": "day",
+            "type": "legislation_assented",
+            "title": "Sheriffs and Registrars Act, 1880 provides for a sheriff for the Clinton Judicial District",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/227067487"
+            ],
+            "locator": "1880 c. 24, printed pp. 71-72 / PDF pp. 1-2, ss. 1, 7, 8",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1888-04-28",
+            "precision": "day",
+            "type": "office_retitled",
+            "title": "Six sheriffs continued under county titles: Vancouver Island becomes Victoria, City of New Westminster becomes Westminster, Clinton Judicial District becomes Yale, and Kootenay, Nanaimo and Cariboo become counties of those names",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1075263863"
+            ],
+            "locator": "Sheriffs Amendment Act 1888, c. 33, printed pp. 103-104 / PDF pp. 1-2, ss. 1-3 ('shall, on the passage of this Act, respectively, be the Sheriff for the County of ...')",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1892-04-23",
+            "precision": "day",
+            "type": "legislation_assented",
+            "title": "Sheriffs Act Amendment Act, 1892 provides for a Sheriff for the County of Vancouver, taking its territory out of Westminster",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1326665558"
+            ],
+            "locator": "1892 c. 41, printed pp. 237-238 / PDF pp. 1-2, ss. 2-5",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1892-10-26",
+            "precision": "day",
+            "type": "executive_appointment",
+            "title": "Thomas Joseph Armstrong appointed Acting Sheriff for the County of Vancouver",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0427_1892"
+            ],
+            "locator": "OIC 427/1892, PDF pp. 1, 4; approval date 26 October 1892 cross-referenced in OIC 241/1893, p. 1",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1893-07-03",
+            "precision": "day",
+            "type": "executive_appointment",
+            "title": "James Deacon Hall appointed Sheriff for the County of Vancouver; the acting appointment cancelled",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0241_1893"
+            ],
+            "locator": "OIC 241/1893, PDF p. 3 (signed order, Government House, 3 July)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1895-10-01",
+            "precision": "day",
+            "type": "statute_in_force",
+            "title": "Counties Definition Act, 1895 set to come into force, replacing the separate court and sheriff districts with common counties",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0346_1895"
+            ],
+            "locator": "OIC 346/1895, approved 2 September 1895, PDF pp. 1-2; Act (R4B-046) printed pp. 33-34, ss. 5, 8, 10",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1905-03-08",
+            "precision": "day",
+            "type": "statute_in_force",
+            "title": "County of Atlin defined from the territory of the County of Vancouver",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0121_1905"
+            ],
+            "locator": "OIC 121/1905, PDF p. 1; Act 1903-04 c. 13 (R4B-055), PDF pp. 1-2, ss. 2-4",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1920-04-17",
+            "precision": "day",
+            "type": "legislation_assented",
+            "title": "References to the County of Atlin become references to the County of Prince Rupert",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/588059714"
+            ],
+            "locator": "Counties Definition Amendment Act 1920, c. 20, printed p. 75 / PDF p. 1, ss. 1-3 ('Assented to 17th April, 1920')",
+            "status": "source_reported_past"
+          },
+          {
             "date": "1973-07-05",
             "precision": "day",
             "type": "roster_observed",
@@ -1101,13 +1262,35 @@
             ],
             "locator": "SBC 1974 c. 87, s. 35",
             "status": "source_reported_past"
+          },
+          {
+            "date": "1978-07",
+            "precision": "month",
+            "type": "administrative_placement",
+            "title": "Sheriff Services observed as one of three services administered by the Director of Court Services, with regional sheriffs reporting to the managers of six justice regions",
+            "sources": [
+              "https://www.ojp.gov/pdffiles1/Digitization/88577NCJRS.pdf"
+            ],
+            "locator": "Taskforce on Municipal Policing Costs in British Columbia, Preliminary Report (July 1978), Appendix 12, section D, printed p. 356 / PDF p. 242",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2011-08-15",
+            "precision": "day",
+            "type": "symbol_granted",
+            "title": "Arms, supporters, flag and badge granted to the Sheriff Service",
+            "sources": [
+              "https://www.gg.ca/en/heraldry/public-register/project/2209"
+            ],
+            "locator": "Public Register of Arms, Flags and Badges, project 2209, vol. VI p. 64",
+            "status": "source_reported_past"
           }
         ]
       },
       "review_status": "not_researched",
       "questions": [
         "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "B. Start: 16 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
@@ -2528,7 +2711,7 @@
       "name": "Connectivity in B.C.",
       "shortName": "Connectivity",
       "kind": "program",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -2550,18 +2733,30 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
+        "first_observed": "2021-04-07",
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "2021-04-07",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "Connectivity in B.C.: the name first seen in this review's sources",
+            "sources": [
+              "https://news.gov.bc.ca/releases/2021CITZ0025-000648"
+            ],
+            "locator": "Release 2021CITZ0025-000648, 7 April 2021, Learn More: 'Connectivity in B.C.: https://www2.gov.bc.ca/gov/content/governments/connectivity-in-bc'",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "A. It is already seen in 2021-04-07. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
+      "generic_questions": false,
       "batch": "04"
     },
     {
@@ -3180,7 +3375,7 @@
       "name": "British Columbia Training and Education Savings Program",
       "shortName": "BCTESP",
       "kind": "program",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -3202,18 +3397,52 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
+        "first_observed": "2013-03-20",
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "2013-03-20",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "British Columbia Training and Education Savings Program: the name first seen in this review's sources",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0173_2013"
+            ],
+            "locator": "OIC 173/2013, approved and ordered 20 March 2013, PDF pp. 1-2; regulation s. 1",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2014-06-23",
+            "precision": "day",
+            "type": "special_account_continued",
+            "title": "British Columbia Training and Education Savings Program: The Children's Education Fund special account is continued as the British Columbia Training and Education Savings Program special account",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/lc/regulationbulletin/2014bull23"
+            ],
+            "locator": "BC Regulations Bulletin 23 (24 June 2014), entry for OIC 389/2014; the Act text is 2014 c. 14 s. 50, PDF p. 18",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2015-08-15",
+            "precision": "day",
+            "type": "applications_scheduled_to_open",
+            "title": "British Columbia Training and Education Savings Program: The replacement program regulation fixes 15 August 2015 as the 'application commencement date'",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0389_2014"
+            ],
+            "locator": "OIC 389/2014, PDF p. 2, regulation s. 1 (definition of application commencement date)",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "A. It is already seen in 2013-03-20. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
+      "generic_questions": false,
       "batch": "08"
     },
     {
@@ -3255,17 +3484,15 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "16"
+      "batch": "18"
     },
     {
       "id": "disaster-financial-assistance",
       "name": "Disaster Financial Assistance",
       "shortName": "DFA",
       "kind": "program",
-      "priority": 1,
+      "priority": 3,
       "tracks": [
-        "A",
-        "B",
         "C"
       ],
       "parent_today": "ministry-of-emergency-management-and-climate-readiness-2022",
@@ -3282,21 +3509,64 @@
       "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
       "description": "Financial help for homeowners, renters, businesses and local governments recovering from uninsurable disaster losses under the Emergency and Disaster Management Act.",
       "held": {
-        "established": null,
-        "established_meaning": null,
+        "established": "1995",
+        "established_meaning": "The provincial Disaster Financial Assistance program was established, as stated retrospectively in a July 2016 government bulletin (a program start, not an organisation)",
         "first_observed": null,
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "1995",
+            "precision": "year",
+            "type": "established",
+            "title": "Disaster Financial Assistance: The provincial Disaster Financial Assistance program was established, as stated retrospectively in a July 2016 government bulletin (a program start, not an organisation)",
+            "sources": [
+              "https://news.gov.bc.ca/releases/2016TRAN0185-001237"
+            ],
+            "locator": "Information bulletin 2016TRAN0185-001237, 7 July 2016, paragraph beginning 'Disaster Financial Assistance has consistently provided a helping hand': 'since it was established in 1995'",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1995-03-30",
+            "precision": "day",
+            "type": "regulation_made",
+            "title": "Disaster Financial Assistance: OIC 310/1995 makes the Compensation and Disaster Financial Assistance Regulation under the Emergency Program Act, ss. 19, 20 and 28",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0310_1995"
+            ],
+            "locator": "OIC 310/1995, PDF p. 1 (approval stamp)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1995-03-31",
+            "precision": "day",
+            "type": "regulation_deposited",
+            "title": "Disaster Financial Assistance: The Compensation and Disaster Financial Assistance Regulation is deposited as B.C. Reg. 124/95",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/124_95"
+            ],
+            "locator": "B.C. Reg. 124/95, consolidation header (deposited 31 March 1995)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2016-07-07",
+            "precision": "day",
+            "type": "administration_observed",
+            "title": "Disaster Financial Assistance: A Ministry of Transportation and Infrastructure bulletin describes the program as run by Emergency Management BC",
+            "sources": [
+              "https://news.gov.bc.ca/releases/2016TRAN0185-001237"
+            ],
+            "locator": "Bulletin 2016TRAN0185-001237, ministry header and main text",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
-      "batch": "16"
+      "generic_questions": false,
+      "batch": "18"
     },
     {
       "id": "preparedbc",
@@ -3336,7 +3606,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "16"
+      "batch": "18"
     },
     {
       "id": "emergencyinfobc",
@@ -3376,7 +3646,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "16"
+      "batch": "18"
     },
     {
       "id": "climatereadybc",
@@ -3416,7 +3686,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "16"
+      "batch": "18"
     },
     {
       "id": "disaster-resilience-division",
@@ -3456,7 +3726,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "16"
+      "batch": "18"
     },
     {
       "id": "climate-action-secretariat",
@@ -3519,7 +3789,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "12"
+      "batch": "11"
     },
     {
       "id": "cleanbc",
@@ -3567,7 +3837,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "12"
+      "batch": "11"
     },
     {
       "id": "bc-output-based-pricing-system",
@@ -3630,7 +3900,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "12"
+      "batch": "11"
     },
     {
       "id": "cleanbc-industry-fund",
@@ -3670,7 +3940,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "12"
+      "batch": "11"
     },
     {
       "id": "low-carbon-fuel-standard",
@@ -3710,7 +3980,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "12"
+      "batch": "11"
     },
     {
       "id": "innovative-clean-energy-fund",
@@ -3751,7 +4021,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "12"
+      "batch": "11"
     },
     {
       "id": "first-nations-clean-energy-business-fund",
@@ -3791,7 +4061,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "12"
+      "batch": "11"
     },
     {
       "id": "climate-solutions-council",
@@ -3831,7 +4101,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "12"
+      "batch": "11"
     },
     {
       "id": "bc-parks",
@@ -3859,7 +4129,7 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": "2015",
+        "first_observed": "1957-04-01",
         "names": [
           {
             "name": "BC Parks",
@@ -3878,9 +4148,28 @@
             "coverage": "observation_only",
             "source": "https://www.bcbudget.gov.bc.ca/2020/pdf/2020_Estimates.pdf",
             "locator": "Printed p. 79; PDF p. 87 (1-based)"
+          },
+          {
+            "name": "Provincial Parks Branch",
+            "from": "1957-04-01",
+            "to": null,
+            "observed_on": null,
+            "coverage": "start_documented_end_unknown",
+            "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+            "locator": "Report 1957, Provincial Parks history (before II 24)"
           }
         ],
-        "parents": [],
+        "parents": [
+          {
+            "name": "Department of Recreation and Conservation",
+            "from": "1957-04-01",
+            "to": null,
+            "observed_on": null,
+            "coverage": "start_documented_end_unknown",
+            "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+            "locator": "Report 1957, Provincial Parks history and Introduction (II 7)"
+          }
+        ],
         "events": [
           {
             "date": "1911-03-01",
@@ -3938,6 +4227,17 @@
             "status": "source_reported_past"
           },
           {
+            "date": "1948",
+            "precision": "year",
+            "type": "retrospective_claim",
+            "title": "BC Parks: The 1957 report says the Parks and Recreation Division was established in 1948",
+            "sources": [
+              "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514"
+            ],
+            "locator": "Report 1957, Provincial Parks history: 'The Parks and Recreation Division established in 1948'",
+            "status": "source_reported_past"
+          },
+          {
             "date": "1948-05",
             "precision": "month",
             "type": "legal_name_change",
@@ -3990,6 +4290,28 @@
               "https://search.bcarchives.gov.bc.ca/british-columbia-parks-branch-3"
             ],
             "locator": "History field (Parks Branch record, 'As of March 28, 1957...')",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1957-04-01",
+            "precision": "day",
+            "type": "administrative_transfer_and_rename",
+            "title": "BC Parks: The Parks and Recreation Division of the Forest Service enters the new Department of Recreation and Conservation and becomes the Provincial Parks Branch",
+            "sources": [
+              "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514"
+            ],
+            "locator": "Report 1957, Introduction (printed II 7) and Provincial Parks history (before II 24); page image not retrieved, library full text read",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1957-04-01",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "BC Parks: the name first seen in this review's sources",
+            "sources": [
+              "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514"
+            ],
+            "locator": "Department of Recreation and Conservation, Report 1957, Provincial Parks history (between the II 21 section cover and II 24): 'The Parks and Recreation Division entered the newly established Department of Recreation and Conservation on April 1st, 1957, and became known as the Provincial Parks Branch'",
             "status": "source_reported_past"
           },
           {
@@ -4079,28 +4401,17 @@
             ],
             "locator": "History field",
             "status": "source_reported_past"
-          },
-          {
-            "date": "2015",
-            "precision": "year",
-            "type": "name_first_observed",
-            "title": "BC Parks: the name first seen in this review's sources",
-            "sources": [
-              "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf"
-            ],
-            "locator": "Printed p. 77; PDF p. 87 (1-based)",
-            "status": "source_reported_past"
           }
         ]
       },
       "review_status": "documented_partial",
       "questions": [
-        "A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
-        "B. Start: 19 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "A. It is already seen in 1957-04-01. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 21 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "17"
+      "batch": "14"
     },
     {
       "id": "conservation-officer-service",
@@ -4129,7 +4440,7 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": "2015",
+        "first_observed": "1980-09-18",
         "names": [
           {
             "name": "Conservation Officer Service",
@@ -4150,7 +4461,26 @@
             "locator": "Printed p. 80; PDF p. 88 (1-based)"
           }
         ],
-        "parents": [],
+        "parents": [
+          {
+            "name": "Ministry of Environment",
+            "from": null,
+            "to": null,
+            "observed_on": "1980-09-18",
+            "coverage": "observation_only",
+            "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2085_1980",
+            "locator": "OIC 2085/1980, regulation s. 1: 'Conservation Officer Service, Ministry of Environment'"
+          },
+          {
+            "name": "Ministry of Environment",
+            "from": null,
+            "to": null,
+            "observed_on": "1981",
+            "coverage": "observation_only",
+            "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0372122",
+            "locator": "Ministry of Environment Annual Report 1980/81 (1 January 1980-31 March 1981), printed pp. 57-58: Conservation Officer Service under Regional Operations Division"
+          }
+        ],
         "events": [
           {
             "date": "1905",
@@ -4230,6 +4560,17 @@
             "status": "source_reported_past"
           },
           {
+            "date": "1957-04-01",
+            "precision": "day",
+            "type": "administrative_transfer_and_rename",
+            "title": "Conservation Officer Service: The Game Commission becomes part of the new Department of Recreation and Conservation; its present title is the Fish and Game Branch",
+            "sources": [
+              "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514"
+            ],
+            "locator": "Report 1957, Fish and Game Branch history (from II 9): 'The Game Commission remained until the organization became part of the Department of Recreation and Conservation on April 1st, 1957. The present title is \"Fish and Game Branch.\"'",
+            "status": "source_reported_past"
+          },
+          {
             "date": "1966",
             "precision": "year",
             "type": "legal_name_change",
@@ -4249,6 +4590,28 @@
               "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/program_names.pdf"
             ],
             "locator": "table row '1980'",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1980",
+            "precision": "year",
+            "type": "reorganization_observed",
+            "title": "Conservation Officer Service: A conservation officer writes that the Conservation Officer Service \"(as it is now called) has been removed from the Fish and Wildlife Branch and has become a separate enforcement agency for the entire Ministry\" of Environment",
+            "sources": [
+              "https://waves-vagues.dfo-mpo.gc.ca/Library/170964-1980.pdf"
+            ],
+            "locator": "The Sounder (Fisheries and Oceans staff newsletter), vol. VIII no. 3, April-May 1980, printed pp. 10-11 / bound PDF pp. 46-47; issue cover PDF p. 37",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1980-09-18",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "Conservation Officer Service: the name first seen in this review's sources",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2085_1980"
+            ],
+            "locator": "OIC 2085/1980, approved and ordered 18 September 1980, PDF pp. 1-2, regulation s. 1",
             "status": "source_reported_past"
           },
           {
@@ -4307,17 +4670,6 @@
             "status": "source_reported_past"
           },
           {
-            "date": "2015",
-            "precision": "year",
-            "type": "name_first_observed",
-            "title": "Conservation Officer Service: the name first seen in this review's sources",
-            "sources": [
-              "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf"
-            ],
-            "locator": "Printed p. 78; PDF p. 88 (1-based)",
-            "status": "source_reported_past"
-          },
-          {
             "date": "2015-11-04",
             "precision": "day",
             "type": "retrospective_origin_claim",
@@ -4332,12 +4684,12 @@
       },
       "review_status": "documented_partial",
       "questions": [
-        "A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
-        "B. Start: 16 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "A. It is already seen in 1980-09-18. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 18 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "17"
+      "batch": "14"
     },
     {
       "id": "environmental-assessment-office",
@@ -4497,7 +4849,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "17"
+      "batch": "14"
     },
     {
       "id": "recreation-sites-and-trails-bc",
@@ -4538,7 +4890,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "17"
+      "batch": "14"
     },
     {
       "id": "report-all-poachers-and-polluters",
@@ -4579,7 +4931,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "17"
+      "batch": "14"
     },
     {
       "id": "park-enhancement-fund",
@@ -4619,7 +4971,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "17"
+      "batch": "14"
     },
     {
       "id": "sustainable-environment-fund",
@@ -4681,7 +5033,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "17"
+      "batch": "14"
     },
     {
       "id": "treasury-board-staff",
@@ -4914,7 +5266,7 @@
       "id": "provincial-treasury",
       "name": "Provincial Treasury",
       "kind": "division",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -4936,18 +5288,79 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
-        "parents": [],
-        "events": []
+        "first_observed": "1986-04-10",
+        "names": [
+          {
+            "name": "Provincial Treasury Division",
+            "from": null,
+            "to": null,
+            "observed_on": "1985-06-28",
+            "coverage": "observation_only",
+            "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/618061891",
+            "locator": "S.B.C. 1985 c. 52, s. 84, printed p. 275"
+          },
+          {
+            "name": "Provincial Treasury",
+            "from": null,
+            "to": null,
+            "observed_on": "1986-04-10",
+            "coverage": "observation_only",
+            "source": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19850301-report-auditor-general-1985.pdf",
+            "locator": "Printed p. 16 para. 3.19: 'officials of the Provincial Treasury, Ministry of Finance'"
+          }
+        ],
+        "parents": [
+          {
+            "name": "Ministry of Finance",
+            "from": null,
+            "to": null,
+            "observed_on": "1986-04-10",
+            "coverage": "observation_only",
+            "source": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19850301-report-auditor-general-1985.pdf",
+            "locator": "Printed p. 16 para. 3.19 / PDF p. 22: 'Provincial Treasury, Ministry of Finance'"
+          },
+          {
+            "name": "Ministry of Finance and Corporate Relations",
+            "from": null,
+            "to": null,
+            "observed_on": "1996-07-29",
+            "coverage": "observation_only",
+            "source": "https://api.lims.leg.bc.ca/hdms/file/Debates/36th1st/19960729pm2-Hansard-v2n7.htm",
+            "locator": "Hansard (Committee of Supply), 29 July 1996, printed p. 1077: the Minister of Finance and Corporate Relations introduces 'Chris Trumpy, ADM, provincial treasury' among his ministry staff"
+          }
+        ],
+        "events": [
+          {
+            "date": "1985-06-28",
+            "precision": "day",
+            "type": "named_in_assented_statute",
+            "title": "Provincial Treasury: Miscellaneous Statutes Amendment Act (No. 3), 1985, s. 84, adds 'Provincial Treasury Division' to a public-service exclusion provision",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/618061891"
+            ],
+            "locator": "S.B.C. 1985 c. 52, PDF p. 21 / printed p. 275, s. 84; assent on the first page",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1986-04-10",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "Provincial Treasury: the name first seen in this review's sources",
+            "sources": [
+              "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19850301-report-auditor-general-1985.pdf"
+            ],
+            "locator": "Transmittal letter dated 10 April 1986, PDF p. 3; printed p. 16 para. 3.19 and p. 20 para. 3.41 / PDF pp. 22, 26. The file name says 1985; the document is the 1986 report on the year ended 31 March 1985",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
-        "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
+        "A. It is already seen in 1986-04-10. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "C. Names and parents: extend what is on file; fill the years between observations."
       ],
-      "generic_questions": true,
+      "generic_questions": false,
       "batch": "03"
     },
     {
@@ -6194,6 +6607,39 @@
             "status": "source_reported_past"
           },
           {
+            "date": "1892-07-09",
+            "precision": "day",
+            "type": "executive_appointment",
+            "title": "John Chapman Davie appointed Health Officer for the Province under the Health Act",
+            "sources": [
+              "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0063376"
+            ],
+            "locator": "Sessional Papers 1893, Return of rules, orders and regulations under the \"Health Act\", printed p. 255: Provincial Secretary's Office notice, 9 July 1892",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1892-08-22",
+            "precision": "day",
+            "type": "executive_departure",
+            "title": "Repealing Health Rules, 1892: the appointing order is repealed and Davie discharged; the Health Officer's powers devolve to municipal health officers and local boards",
+            "sources": [
+              "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0063376"
+            ],
+            "locator": "Sessional Papers 1893, printed p. 265, Repealing Health Rules, 1892; date as given in the 1894 return (R3H-102, appointment table: \"22nd Aug ... Rescinded\")",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1892-09-30",
+            "precision": "day",
+            "type": "executive_appointment",
+            "title": "John Chapman Davie appointed Health Officer for the Province again",
+            "sources": [
+              "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0063376"
+            ],
+            "locator": "Sessional Papers 1893, printed p. 268: Provincial Secretary's Office notice, 30 September 1892",
+            "status": "source_reported_past"
+          },
+          {
             "date": "1911",
             "precision": "year",
             "type": "legislation_enacted",
@@ -6202,6 +6648,17 @@
               "https://search.bcarchives.gov.bc.ca/british-columbia-provincial-health-officer"
             ],
             "locator": "History field para 3",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1994-09-10",
+            "precision": "day",
+            "type": "commencement_order_approved",
+            "title": "OIC 1164/1994 brings sections 4 to 8 and 16 of the Health Statutes Amendment Act, 1994 into force, including s. 6 on the Provincial Health Officer's independent advice and public reporting",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1164_1994"
+            ],
+            "locator": "OIC 1164/1994, operative clause; approval stamp \"SEP 10 1994\"",
             "status": "source_reported_past"
           },
           {
@@ -6242,11 +6699,11 @@
       "review_status": "documented_partial",
       "questions": [
         "A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
-        "B. Start: 5 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "B. Start: 9 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "medical-services-plan",
@@ -6373,7 +6830,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "bc-pharmacare",
@@ -6468,7 +6925,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "healthlink-bc",
@@ -6527,7 +6984,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "health-connect-registry",
@@ -6567,7 +7024,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "office-of-the-seniors-advocate",
@@ -6676,7 +7133,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "office-of-indigenous-health",
@@ -6716,7 +7173,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "patient-care-quality-review-boards",
@@ -6757,7 +7214,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "helpstartshere",
@@ -6797,7 +7254,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "residential-tenancy-branch",
@@ -6909,7 +7366,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "16"
+      "batch": "15"
     },
     {
       "id": "short-term-rental-branch",
@@ -6949,13 +7406,13 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "16"
+      "batch": "15"
     },
     {
       "id": "building-and-safety-standards",
       "name": "Building and Safety Standards",
       "kind": "division",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -6977,19 +7434,51 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
-        "parents": [],
-        "events": []
+        "first_observed": "2014-05-20",
+        "names": [
+          {
+            "name": "Building and Safety Standards Branch",
+            "from": null,
+            "to": null,
+            "observed_on": "2014-05-20",
+            "coverage": "observation_only",
+            "source": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/construction-industry/building-codes-and-standards/reports/modern_building_regulatory_system_-_2014_update.pdf",
+            "locator": "p. 3, text and contact block"
+          }
+        ],
+        "parents": [
+          {
+            "name": "Ministry of Natural Gas Development and Minister Responsible for Housing",
+            "from": null,
+            "to": null,
+            "observed_on": "2014-05-20",
+            "coverage": "observation_only",
+            "source": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/construction-industry/building-codes-and-standards/reports/modern_building_regulatory_system_-_2014_update.pdf",
+            "locator": "p. 3 contact block: Building and Safety Standards Branch / Office of Housing and Construction Standards / Ministry of Natural Gas Development and Minister Responsible for Housing"
+          }
+        ],
+        "events": [
+          {
+            "date": "2014-05-20",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "Building and Safety Standards: the name first seen in this review's sources",
+            "sources": [
+              "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/construction-industry/building-codes-and-standards/reports/modern_building_regulatory_system_-_2014_update.pdf"
+            ],
+            "locator": "Modern Building Regulatory System, 2014 update (20 May 2014), p. 3: 'The Building and Safety Standards Branch of the Office of Housing and Construction Standards is leading this initiative'",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "A. It is already seen in 2014-05-20. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
-      "batch": "16"
+      "generic_questions": false,
+      "batch": "15"
     },
     {
       "id": "public-libraries-branch",
@@ -7029,7 +7518,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "16"
+      "batch": "15"
     },
     {
       "id": "university-endowment-lands",
@@ -7137,7 +7626,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "16"
+      "batch": "15"
     },
     {
       "id": "housing-targets-program",
@@ -7177,7 +7666,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "16"
+      "batch": "15"
     },
     {
       "id": "declaration-act-secretariat",
@@ -7472,7 +7961,7 @@
       "id": "community-capital-development",
       "name": "Community Capital Development",
       "kind": "division",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -7494,15 +7983,47 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
-        "parents": [],
-        "events": []
+        "first_observed": "2025-03-17",
+        "names": [
+          {
+            "name": "Community Capital Development Division",
+            "from": null,
+            "to": null,
+            "observed_on": "2025-03-17",
+            "coverage": "observation_only",
+            "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+            "locator": "PDF pp. 17-18"
+          }
+        ],
+        "parents": [
+          {
+            "name": "Ministry of Infrastructure",
+            "from": null,
+            "to": null,
+            "observed_on": "2025-03-17",
+            "coverage": "observation_only",
+            "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+            "locator": "PDF pp. 17-18, organisation description and Appendix 1"
+          }
+        ],
+        "events": [
+          {
+            "date": "2025-03-17",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "Community Capital Development: the name first seen in this review's sources",
+            "sources": [
+              "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf"
+            ],
+            "locator": "Ministry of Infrastructure Estimates Notes 2025, PDF pp. 17-18 (organisation description; Appendix 1, staff allocations as of 17 March 2025)",
+            "status": "source_reported_past"
+          }
+        ]
       },
       "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "A. It is already seen in 2025-03-17. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
@@ -7512,7 +8033,7 @@
       "id": "infrastructure-policy-and-partnerships",
       "name": "Policy and Partnerships",
       "kind": "division",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -7534,15 +8055,47 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
-        "parents": [],
-        "events": []
+        "first_observed": "2025-03-17",
+        "names": [
+          {
+            "name": "Infrastructure Policy and Partnerships Division",
+            "from": null,
+            "to": null,
+            "observed_on": "2025-03-17",
+            "coverage": "observation_only",
+            "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+            "locator": "PDF pp. 17-18"
+          }
+        ],
+        "parents": [
+          {
+            "name": "Ministry of Infrastructure",
+            "from": null,
+            "to": null,
+            "observed_on": "2025-03-17",
+            "coverage": "observation_only",
+            "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+            "locator": "PDF pp. 17-18, organisation description and Appendix 1"
+          }
+        ],
+        "events": [
+          {
+            "date": "2025-03-17",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "Policy and Partnerships: the name first seen in this review's sources",
+            "sources": [
+              "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf"
+            ],
+            "locator": "Ministry of Infrastructure Estimates Notes 2025, PDF pp. 17-18 (organisation description; Appendix 1, staff allocations as of 17 March 2025)",
+            "status": "source_reported_past"
+          }
+        ]
       },
       "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "A. It is already seen in 2025-03-17. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
@@ -8664,13 +9217,13 @@
         "parents": [],
         "events": []
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
         "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
         "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
+      "generic_questions": false,
       "batch": "09"
     },
     {
@@ -8875,7 +9428,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "bc-corrections",
@@ -9024,7 +9577,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "civil-forfeiture-office",
@@ -9082,13 +9635,13 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "community-safety-and-victim-services",
       "name": "Community Safety and Victim Services",
       "kind": "division",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -9110,19 +9663,60 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
-        "parents": [],
-        "events": []
+        "first_observed": "2024",
+        "names": [
+          {
+            "name": "Community Safety and Victim Services Branch",
+            "from": null,
+            "to": null,
+            "observed_on": "2024",
+            "coverage": "observation_only",
+            "source": "https://docs.openinfo.gov.bc.ca/Ministry_of_Public_Safety_and_Solicitor_General_Transition_Binder_2024.pdf",
+            "locator": "PDF p. 6, executive organisation chart"
+          },
+          {
+            "name": "Community Safety and Victim Services",
+            "from": null,
+            "to": null,
+            "observed_on": "2025",
+            "coverage": "observation_only",
+            "source": "https://docs.openinfo.gov.bc.ca/Public_Safety_and_Solicitor_General_Estimates_Notes_2025.pdf",
+            "locator": "PSSG Estimates Notes 2025, PDF pp. 149-152, branch contents page and notes"
+          }
+        ],
+        "parents": [
+          {
+            "name": "Ministry of Public Safety and Solicitor General",
+            "from": null,
+            "to": null,
+            "observed_on": "2024",
+            "coverage": "observation_only",
+            "source": "https://docs.openinfo.gov.bc.ca/Ministry_of_Public_Safety_and_Solicitor_General_Transition_Binder_2024.pdf",
+            "locator": "PDF p. 6, executive chart (branch under the Deputy Solicitor General)"
+          }
+        ],
+        "events": [
+          {
+            "date": "2024",
+            "precision": "year",
+            "type": "name_first_observed",
+            "title": "Community Safety and Victim Services: the name first seen in this review's sources",
+            "sources": [
+              "https://docs.openinfo.gov.bc.ca/Ministry_of_Public_Safety_and_Solicitor_General_Transition_Binder_2024.pdf"
+            ],
+            "locator": "PSSG Transition Binder 2024, PDF p. 6 / ministry profile p. 4 of 6, executive organisation chart",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
-        "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
+        "A. It is already seen in 2024. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "C. Names and parents: extend what is on file; fill the years between observations."
       ],
-      "generic_questions": true,
-      "batch": "06"
+      "generic_questions": false,
+      "batch": "05"
     },
     {
       "id": "victimlinkbc",
@@ -9162,7 +9756,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "office-of-the-fire-commissioner",
@@ -9270,7 +9864,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "policing-and-security-branch",
@@ -9311,7 +9905,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "roadsafetybc",
@@ -9391,7 +9985,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "security-programs",
@@ -9431,7 +10025,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "criminal-records-review-program",
@@ -9471,7 +10065,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "compliance-and-enforcement-collaborative",
@@ -9511,7 +10105,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "workbc",
@@ -9624,7 +10218,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "13"
+      "batch": "12"
     },
     {
       "id": "employment-and-assistance-appeal-tribunal",
@@ -9723,7 +10317,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "13"
+      "batch": "12"
     },
     {
       "id": "accessibility-directorate",
@@ -9763,7 +10357,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "13"
+      "batch": "12"
     },
     {
       "id": "provincial-accessibility-committee",
@@ -9803,7 +10397,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "13"
+      "batch": "12"
     },
     {
       "id": "bc-employment-and-assistance",
@@ -9843,7 +10437,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "13"
+      "batch": "12"
     },
     {
       "id": "my-self-serve",
@@ -9883,7 +10477,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "13"
+      "batch": "12"
     },
     {
       "id": "bc-bus-pass-program",
@@ -9945,7 +10539,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "13"
+      "batch": "12"
     },
     {
       "id": "single-parent-employment-initiative",
@@ -9985,7 +10579,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "13"
+      "batch": "12"
     },
     {
       "id": "community-gaming-grants",
@@ -10065,7 +10659,7 @@
         "C. Names and parents: extend what is on file; fill the years between observations."
       ],
       "generic_questions": false,
-      "batch": "14"
+      "batch": "16"
     },
     {
       "id": "office-of-the-bc-athletic-commissioner",
@@ -10105,7 +10699,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "14"
+      "batch": "16"
     },
     {
       "id": "heritage-branch",
@@ -10145,7 +10739,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "14"
+      "batch": "16"
     },
     {
       "id": "mountain-resorts-branch",
@@ -10185,13 +10779,13 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "14"
+      "batch": "16"
     },
     {
       "id": "lets-go-bc",
       "name": "Let's Go BC",
       "kind": "program",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -10213,28 +10807,49 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
+        "first_observed": "2025-04-23",
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "2025-04-23",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "Let's Go BC: the name first seen in this review's sources",
+            "sources": [
+              "https://www.ic.gc.ca/opic-cipo/tmj/eng/23Apr2025_en.pdf?edition=04-23&year=2025"
+            ],
+            "locator": "Trademarks Journal, 23 April 2025, p. 2673, application 928917 (official mark; held by His Majesty in right of British Columbia, represented by the Minister of Finance, Government Communications and Public Engagement)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2025-09-19",
+            "precision": "day",
+            "type": "campaign_use_observed",
+            "title": "Let's Go BC: A Ministry of Tourism, Arts, Culture and Sport email discusses Let's Go BC scarves for a UBCM presentation",
+            "sources": [
+              "https://vancouver.ca/files/cov/2025-684-release.pdf"
+            ],
+            "locator": "City of Vancouver FOI 2025-684 release, PDF p. 4 / released p. 2, email of 19 September 2025",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "A. It is already seen in 2025-04-23. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
-      "batch": "14"
+      "generic_questions": false,
+      "batch": "16"
     },
     {
       "id": "bc-arts-and-culture-endowment",
       "name": "BC Arts and Culture Endowment",
       "kind": "program",
-      "priority": 1,
+      "priority": 3,
       "tracks": [
-        "A",
-        "B",
         "C"
       ],
       "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
@@ -10251,21 +10866,42 @@
       "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
       "description": "Special account holding the BC150 Cultural Fund and Arts Legacy Fund.",
       "held": {
-        "established": null,
-        "established_meaning": null,
+        "established": "2008-03-31",
+        "established_meaning": "The BC Arts and Culture Endowment special account is established by s. 113 of the Budget Measures Implementation Act, 2008, in force retroactively to 31 March 2008 (s. 126, item 48); it continues the Olympic Arts Fund as the Arts Legacy Fund Subaccount and adds the BC150 Cultural Fund Subaccount. A statutory special account, not a corporation",
         "first_observed": null,
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "2008-03-31",
+            "precision": "day",
+            "type": "established",
+            "title": "BC Arts and Culture Endowment: The BC Arts and Culture Endowment special account is established by s. 113 of the Budget Measures Implementation Act, 2008, in force retroactively to 31 March 2008 (s. 126, item 48); it continues the Olympic Arts Fund as the Arts Legacy Fund Subaccount and adds the BC150 Cultural Fund Subaccount. A statutory special account, not a corporation",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1326825188"
+            ],
+            "locator": "S.B.C. 2008 c. 10, PDF/printed pp. 42-43, s. 113 ('The BC Arts and Culture Endowment special account is established'); p. 50, s. 126 table item 48",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2008-05-01",
+            "precision": "day",
+            "type": "legislation_assented",
+            "title": "BC Arts and Culture Endowment: The Budget Measures Implementation Act, 2008, which establishes the special account, receives Royal Assent",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1326825188"
+            ],
+            "locator": "S.B.C. 2008 c. 10, PDF p. 1: 'Assented to May 1, 2008'",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
-      "batch": "14"
+      "generic_questions": false,
+      "batch": "16"
     },
     {
       "id": "physical-fitness-and-amateur-sports-fund",
@@ -10305,7 +10941,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "14"
+      "batch": "16"
     },
     {
       "id": "drivebc",
@@ -11769,6 +12405,15 @@
             "coverage": "observation_only",
             "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
             "locator": "Printed p. 40; PDF p. 50 (1-based)"
+          },
+          {
+            "name": "Hospital Appeal Board",
+            "from": null,
+            "to": null,
+            "observed_on": "1997-04-21",
+            "coverage": "observation_only",
+            "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/638385389",
+            "locator": "Table of Legislative Changes to 31 December 1998, PDF p. 32 / printed p. 27: FOIPPA Schedule 2, RS1996 (Supp.) c. 165 s. 1(h), in force 21 April 1997 by 1998-19-8(2), superseding B.C. Reg. 135/97; with the Supplement itself, R4H-016 p. 1 s. 1(h)"
           }
         ],
         "parents": [],
@@ -11782,6 +12427,17 @@
               "https://www.bchab.ca/home/about/"
             ],
             "locator": "Mandate; original Medical Appeal Board",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1997-04-21",
+            "precision": "day",
+            "type": "legislation_in_force",
+            "title": "Hospital Appeal Board: Schedule-name history only. Not the board's creation, not the date its name changed under the Hospital Act, and not the date regional health boards or councils entered FOIPPA.",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/638385389"
+            ],
+            "locator": "PDF p. 32 / printed p. 27, FOIPPA Schedule 2 row",
             "status": "source_reported_past"
           },
           {
@@ -12502,7 +13158,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "06"
+      "batch": "05"
     },
     {
       "id": "disciplinary-and-professional-conduct-board",
@@ -12567,7 +13223,7 @@
       "id": "health-care-practitioners-special-committee-for-audit-hearings",
       "name": "Health Care Practitioners Special Committee for Audit Hearings",
       "kind": "tribunal",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -12589,29 +13245,39 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
+        "first_observed": "2024-06-30",
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "2024-06-30",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "Health Care Practitioners Special Committee for Audit Hearings: the name first seen in this review's sources",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0367_2024"
+            ],
+            "locator": "OIC 367/2024, PDF p. 1",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "A. It is already seen in 2024-06-30. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
-      "batch": "05"
+      "generic_questions": false,
+      "batch": "06"
     },
     {
       "id": "medical-services-commission",
       "name": "Medical Services Commission",
       "shortName": "MSC",
       "kind": "board",
-      "priority": 2,
+      "priority": 3,
       "tracks": [
-        "A",
-        "B",
         "C"
       ],
       "parent_today": "ministry-of-health-2011",
@@ -12628,17 +13294,94 @@
       "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf",
       "description": "Manages the Medical Services Plan under the Medicare Protection Act, ensuring reasonable access to medical care and managing payment for medical services.",
       "held": {
-        "established": null,
-        "established_meaning": null,
+        "established": "1967-03-24",
+        "established_meaning": "the day fixed for the Medical Services Act, 1967 (s. 3 constitutes the Commission) to come into force; the first members took office the same day (OIC 965/1967)",
         "first_observed": null,
         "names": [],
         "parents": [],
         "events": [
           {
+            "date": "1967-03-23",
+            "precision": "day",
+            "type": "enabling_statute_assented",
+            "title": "Medical Services Commission: The Medical Services Act (S.B.C. 1967, c. 24) receives Royal Assent; s. 3 constitutes a Medical Services Commission and s. 13 leaves commencement to proclamation",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/30844302"
+            ],
+            "locator": "Original Act, printed p. 111 / PDF p. 1 ('Assented to 23rd March, 1967'), s. 3; printed p. 115 / PDF p. 5, s. 13",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1967-03-24",
+            "precision": "day",
+            "type": "established",
+            "title": "Medical Services Commission: the day fixed for the Medical Services Act, 1967 (s. 3 constitutes the Commission) to come into force; the first members took office the same day (OIC 965/1967)",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0964_1967"
+            ],
+            "locator": "OIC 964/1967, approved 23 March 1967, PDF p. 1",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1967-03-24",
+            "precision": "day",
+            "type": "initial_members_appointed",
+            "title": "Medical Services Commission: Geoffrey Alexander Stewart appointed member and Chairman, and Peter John Banks and Gerald Stewart Bryson members, of the Medical Services Commission",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0965_1967"
+            ],
+            "locator": "OIC 965/1967, PDF p. 1: 'this order shall come into operation on the 24th day of March, 1967'",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1967-03-25",
+            "precision": "day",
+            "type": "provision_in_force_authorized",
+            "title": "Medical Services Commission: OIC 966/1967 directs a separate proclamation bringing s. 9 (administrative services for, and staff transfers from, specified medical-insurance carriers) into force on 25 March 1967",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0966_1967"
+            ],
+            "locator": "OIC 966/1967, PDF p. 1",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1967-03-25",
+            "precision": "day",
+            "type": "staff_establishment_set",
+            "title": "Medical Services Commission: The Commission's civil-service organisation establishment is set, effective 25 March 1967",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0967_1967"
+            ],
+            "locator": "OIC 967/1967, approved 23 March 1967, PDF p. 1: 'effective March 25th, 1967'",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1968-05-15",
+            "precision": "day",
+            "type": "staff_establishment_increased",
+            "title": "Medical Services Commission: Three positions added to the Commission's organisation",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1518_1968"
+            ],
+            "locator": "OIC 1518/1968, PDF p. 1",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1968-06-06",
+            "precision": "day",
+            "type": "public_announcement_observed",
+            "title": "Medical Services Commission: A full-page notice issued by the Medical Services Commission and its chairman G. A. Stewart tells residents about Medicare coverage beginning 1 July 1968",
+            "sources": [
+              "https://saltspringarchives.com/driftwood/1968/June6-1968.pdf"
+            ],
+            "locator": "Gulf Islands Driftwood, 6 June 1968, p. 11",
+            "status": "source_reported_past"
+          },
+          {
             "date": "1968-07-01",
             "precision": "day",
-            "type": "legal_establishment",
-            "title": "Medical Services Commission established under the Medical Service Act",
+            "type": "retrospective_origin_claim",
+            "title": "Later financial statements say the Medical Services Commission was established on 1 July 1968 under the Medical Service Act",
             "sources": [
               "https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/medical-services-plan/bluebook2002.pdf"
             ],
@@ -12647,14 +13390,12 @@
           }
         ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "emergency-medical-assistants-licensing-board",
@@ -12695,7 +13436,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": true,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "health-professions-and-occupations-regulatory-oversight-office",
@@ -12731,7 +13472,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
-      "batch": "05"
+      "batch": "06"
     },
     {
       "id": "property-assessment-review-panels",
@@ -13013,7 +13754,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": false,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "bc-centre-for-disease-control",
@@ -13042,8 +13783,18 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
+        "first_observed": "2010",
+        "names": [
+          {
+            "name": "BC Centre for Disease Control",
+            "from": null,
+            "to": null,
+            "observed_on": "2010",
+            "coverage": "observation_only",
+            "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+            "locator": "PDF/printed p. 9"
+          }
+        ],
         "parents": [],
         "events": [
           {
@@ -13146,6 +13897,17 @@
             "status": "source_reported_past"
           },
           {
+            "date": "2010",
+            "precision": "year",
+            "type": "name_first_observed",
+            "title": "BC Centre for Disease Control: the name first seen in this review's sources",
+            "sources": [
+              "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf"
+            ],
+            "locator": "Ministry of Health Services 2009/10 Annual Service Plan Report, PDF/printed p. 9, list of PHSA agencies",
+            "status": "source_reported_past"
+          },
+          {
             "date": "2018-04-01",
             "precision": "day",
             "type": "legal_status_change",
@@ -13158,14 +13920,14 @@
           }
         ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: 10 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 11 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": false,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "bc-childrens-hospital",
@@ -13194,10 +13956,108 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
+        "first_observed": "2010",
+        "names": [
+          {
+            "name": "BC Children's Hospital and Sunny Hill Health Centre for Children",
+            "from": null,
+            "to": null,
+            "observed_on": "2010",
+            "coverage": "observation_only",
+            "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+            "locator": "PDF/printed p. 9"
+          }
+        ],
         "parents": [],
         "events": [
+          {
+            "date": "1925-05-06",
+            "precision": "day",
+            "type": "registration",
+            "title": "Women's Institute Hospital Association for Crippled Children registered as a society (S0001435), later British Columbia's Children's Hospital",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2122231/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3067628 (Event:CONVSCREGI)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1931-07-29",
+            "precision": "day",
+            "type": "registration",
+            "title": "The Vancouver Preventorium registered as a society (S0001949), later Sunny Hill Health Centre for Children",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2122743/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3068735 (Event:CONVSCREGI)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1932-02-03",
+            "precision": "day",
+            "type": "legal_name_change",
+            "title": "Society S0001435 renamed The Crippled Childrens' Hospital",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2122231/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3067656 (Event:CONVSCNC)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1947-03-31",
+            "precision": "day",
+            "type": "legal_name_change",
+            "title": "Society S0001435 renamed Children's Hospital",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2122231/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3067733 (Event:CONVSCNC)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1961-09-11",
+            "precision": "day",
+            "type": "legal_name_change",
+            "title": "Society S0001949 renamed Sunny Hill Hospital for Children",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2122743/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3068768 (Event:CONVSCNC)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1988-10-24",
+            "precision": "day",
+            "type": "legal_name_change",
+            "title": "Society S0001435 renamed British Columbia's Children's Hospital",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2122231/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3067766 (Event:CONVSCNC)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1993-11-29",
+            "precision": "day",
+            "type": "legal_name_change",
+            "title": "Society S0001949 renamed Sunny Hill Health Centre for Children",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2122743/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3068919 (Event:CONVSCNC)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1997-06-24",
+            "precision": "day",
+            "type": "designation_order_made",
+            "title": "Three corporations designated as hospitals, and the Children's and Women's Health Centre of British Columbia to be designated on amalgamation (M249/1997)",
+            "sources": [
+              "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0249_1997"
+            ],
+            "locator": "M249/1997 (Hospital Act s. 1), clauses 1-2; \"This Order made the 24 day of June, 1997\"",
+            "status": "source_reported_past"
+          },
           {
             "date": "1997-07-15",
             "precision": "day",
@@ -13208,17 +14068,61 @@
             ],
             "locator": "BC Corporate Registry credential history",
             "status": "source_reported_past"
+          },
+          {
+            "date": "1997-07-15",
+            "precision": "day",
+            "type": "dissolution",
+            "title": "British Columbia's Children's Hospital (S0001435) shown dissolved in the registry",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2122231/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3067789 (Event:CONVSDIS, status historical)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1997-07-15",
+            "precision": "day",
+            "type": "dissolution",
+            "title": "Sunny Hill Health Centre for Children (S0001949) shown dissolved in the registry",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2122743/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3068974 (Event:CONVSDIS, status historical)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2004-04-22",
+            "precision": "day",
+            "type": "asset_grant",
+            "title": "The Province grants the Oak Street land and premises to the Children's & Women's Health Centre of British Columbia Branch",
+            "sources": [
+              "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/sup-e/provincial-health-services-authority-fs-2004-05.pdf"
+            ],
+            "locator": "PHSA consolidated financial statements 2004/05, PDF p. 12 / printed p. 10, note 5 (continued)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2010",
+            "precision": "year",
+            "type": "name_first_observed",
+            "title": "BC Children's Hospital and Sunny Hill Health Centre: the name first seen in this review's sources",
+            "sources": [
+              "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf"
+            ],
+            "locator": "Ministry of Health Services 2009/10 Annual Service Plan Report, PDF/printed p. 9, list of PHSA agencies",
+            "status": "source_reported_past"
           }
         ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 13 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": false,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "bc-womens-hospital",
@@ -13247,8 +14151,18 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
+        "first_observed": "2010",
+        "names": [
+          {
+            "name": "BC Women's Hospital and Health Centre",
+            "from": null,
+            "to": null,
+            "observed_on": "2010",
+            "coverage": "observation_only",
+            "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+            "locator": "PDF/printed p. 9"
+          }
+        ],
         "parents": [],
         "events": [
           {
@@ -13274,6 +14188,17 @@
             "status": "source_reported_past"
           },
           {
+            "date": "1994-02-25",
+            "precision": "day",
+            "type": "registration",
+            "title": "A first British Columbia's Women's Hospital and Health Centre Society registered (S0031644); dissolved on 31 March 1994, the day the amalgamated society (S0031783) began",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2151851/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credentials 3128397 (Event:CONVSCREGI) and 3128457 (Event:CONVSDIS, 1994-03-31)",
+            "status": "source_reported_past"
+          },
+          {
             "date": "1994-03-31",
             "precision": "day",
             "type": "legal_establishment",
@@ -13283,17 +14208,39 @@
             ],
             "locator": "Our Story: milestones and memories, 1994",
             "status": "source_reported_past"
+          },
+          {
+            "date": "1997-07-15",
+            "precision": "day",
+            "type": "dissolution",
+            "title": "British Columbia's Women's Hospital and Health Centre Society (S0031783) shown dissolved in the registry",
+            "sources": [
+              "https://orgbook.gov.bc.ca/api/v4/topic/2151993/credential-set"
+            ],
+            "locator": "BC Corporate Registry credential history via OrgBook BC, credential 3128672 (Event:CONVSDIS, status historical)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2010",
+            "precision": "year",
+            "type": "name_first_observed",
+            "title": "BC Women's Hospital + Health Centre: the name first seen in this review's sources",
+            "sources": [
+              "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf"
+            ],
+            "locator": "Ministry of Health Services 2009/10 Annual Service Plan Report, PDF/printed p. 9, list of PHSA agencies",
+            "status": "source_reported_past"
           }
         ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 6 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": false,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "bc-mental-health-and-substance-use-services",
@@ -13322,8 +14269,18 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
+        "first_observed": "2015-12-17",
+        "names": [
+          {
+            "name": "BC Mental Health & Substance Use Services",
+            "from": null,
+            "to": null,
+            "observed_on": "2015-12-17",
+            "coverage": "observation_only",
+            "source": "https://news.gov.bc.ca/releases/2015MNGD0086-002113",
+            "locator": "Quotes section, Lynn Pelletier attribution"
+          }
+        ],
         "parents": [],
         "events": [
           {
@@ -13336,17 +14293,28 @@
             ],
             "locator": "BC Corporate Registry credential history",
             "status": "source_reported_past"
+          },
+          {
+            "date": "2015-12-17",
+            "precision": "day",
+            "type": "name_first_observed",
+            "title": "BC Mental Health and Substance Use Services: the name first seen in this review's sources",
+            "sources": [
+              "https://news.gov.bc.ca/releases/2015MNGD0086-002113"
+            ],
+            "locator": "Release 2015MNGD0086-002113, 17 December 2015, quotes section, attribution for Lynn Pelletier",
+            "status": "source_reported_past"
           }
         ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "A. It is already seen in 2015-12-17. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": false,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "bc-renal",
@@ -13396,6 +14364,17 @@
             ],
             "locator": "Organizational structure; founding year",
             "status": "source_reported_past"
+          },
+          {
+            "date": "2002-03-31",
+            "precision": "day",
+            "type": "roster_observed",
+            "title": "The British Columbia Provincial Renal Agency is listed among the health entities PHSA was formed from, in its statements for the year to 31 March 2002",
+            "sources": [
+              "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-public-bodies-fia.pdf"
+            ],
+            "locator": "Public Accounts 2002/03, Summary of audited financial statements of public bodies reporting under the Financial Information Act, for the year ended 31 March 2002, PDF p. 5 footnote 5",
+            "status": "source_reported_past"
           }
         ]
       },
@@ -13404,7 +14383,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": false,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "bc-transplant",
@@ -13446,6 +14425,28 @@
         "parents": [],
         "events": [
           {
+            "date": "1985",
+            "precision": "year",
+            "type": "function_origin",
+            "title": "The Health minister dates the Pacific organ retrieval program to 1985",
+            "sources": [
+              "https://lims.leg.bc.ca/hdms/file/Debates/34th2nd/34p_02s_880609a.htm"
+            ],
+            "locator": "Hansard, 9 June 1988 morning sitting (Ministry of Health estimates), printed p. 4951, statement of Minister Dueck; the online text renders the acronym \"PORF\"",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1985",
+            "precision": "year",
+            "type": "establishment_claim",
+            "title": "BC Transplant: Competes with the Corporate Registry registration of 1 April 1986 (S0021154) and the 2007 news release's 1986. Kept as a claim; neither is chosen here.",
+            "sources": [
+              "https://lims.leg.bc.ca/hdms/file/Debates/34th2nd/34p_02s_880427p.htm"
+            ],
+            "locator": "Hansard, 27 April 1988, printed p. 4096, statement of Minister Dueck",
+            "status": "source_reported_past"
+          },
+          {
             "date": "1986",
             "precision": "year",
             "type": "established",
@@ -13466,15 +14467,49 @@
             ],
             "locator": "BC Corporate Registry credential history",
             "status": "source_reported_past"
+          },
+          {
+            "date": "1987-04-27",
+            "precision": "day",
+            "type": "funding_observed",
+            "title": "The Pacific Organ Retrieval for Transplantation program is described as funded by the Ministry of Health",
+            "sources": [
+              "https://lims.leg.bc.ca/hdms/file/Debates/34th1st/34p_01s_870427p.htm"
+            ],
+            "locator": "Hansard, 27 April 1987 afternoon sitting, printed p. 787, statement of Minister Dueck (Organ Donor Awareness Week)",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1988-04-27",
+            "precision": "day",
+            "type": "relationship_observed",
+            "title": "The Health minister describes PORT as a program the B.C. Transplant Society initiated, coordinating organ retrieval across the province",
+            "sources": [
+              "https://lims.leg.bc.ca/hdms/file/Debates/34th2nd/34p_02s_880427p.htm"
+            ],
+            "locator": "Hansard, 27 April 1988 afternoon sitting, printed p. 4096, statement of Minister Dueck",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1991-04",
+            "precision": "month",
+            "type": "relationship_observed",
+            "title": "A research article describes the Pacific Organ Retrieval for Transplantation System as part of the British Columbia Transplant Society",
+            "sources": [
+              "https://www.jci.org/articles/view/115143/files/pdf"
+            ],
+            "locator": "A. M. J. Buchan, J Clin Invest 87 (April 1991), printed p. 1382, Methods, Cell isolation; DOI 10.1172/JCI115143",
+            "status": "source_reported_past"
           }
         ]
       },
-      "review_status": "documented_partial",
+      "review_status": "requires_reconciliation",
       "questions": [
-        "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
+        "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.",
+        "D. Reconcile: the review found competing dates. Find the instrument that settles it; do not choose between them yourself — record every claim with its source."
       ],
       "generic_questions": false,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "cardiac-services-bc",
@@ -13514,14 +14549,14 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": true,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "perinatal-services-bc",
       "name": "Perinatal Services BC",
       "shortName": "PSBC",
       "kind": "agency",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -13543,19 +14578,41 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
-        "names": [],
+        "first_observed": "2010",
+        "names": [
+          {
+            "name": "Perinatal Services BC",
+            "from": null,
+            "to": null,
+            "observed_on": "2010",
+            "coverage": "observation_only",
+            "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+            "locator": "PDF/printed p. 9"
+          }
+        ],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "2010",
+            "precision": "year",
+            "type": "name_first_observed",
+            "title": "Perinatal Services BC: the name first seen in this review's sources",
+            "sources": [
+              "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf"
+            ],
+            "locator": "Ministry of Health Services 2009/10 Annual Service Plan Report, PDF/printed p. 9, list of PHSA agencies",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
-      "generic_questions": true,
-      "batch": "11"
+      "generic_questions": false,
+      "batch": "13"
     },
     {
       "id": "provincial-laboratory-medicine-services",
@@ -13592,16 +14649,14 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": false,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "trans-care-bc",
       "name": "Trans Care BC",
       "kind": "agency",
-      "priority": 2,
+      "priority": 3,
       "tracks": [
-        "A",
-        "B",
         "C"
       ],
       "parent_today": "provincial-health-services-authority",
@@ -13618,12 +14673,23 @@
       "source_today": "https://www.phsa.ca/our-services/programs-services/trans-care-bc",
       "description": "Provincial clinical program that sets direction and provides leadership for trans health services across B.C.",
       "held": {
-        "established": null,
-        "established_meaning": null,
+        "established": "2015",
+        "established_meaning": "Trans Care BC was established as a program of the Provincial Health Services Authority in fall 2015 (season stated by the source; held at year precision, no month inferred). A program, stated retrospectively in April 2018",
         "first_observed": null,
         "names": [],
         "parents": [],
         "events": [
+          {
+            "date": "2015",
+            "precision": "year",
+            "type": "established",
+            "title": "Trans Care BC: Trans Care BC was established as a program of the Provincial Health Services Authority in fall 2015 (season stated by the source; held at year precision, no month inferred). A program, stated retrospectively in April 2018",
+            "sources": [
+              "https://www.phsa.ca/transcarebc-archive/Documents/About/Trans-Care-BC-progress-update-2018.pdf"
+            ],
+            "locator": "Trans Care BC Program Update, April 2018, p. 3, 'What is Trans Care BC?': 'Trans Care BC was established as a program of the Provincial Health Services Authority (PHSA) in fall 2015'",
+            "status": "source_reported_past"
+          },
           {
             "date": "2015",
             "precision": "year",
@@ -13650,12 +14716,10 @@
       },
       "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": false,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "health-emergency-management-bc",
@@ -13696,7 +14760,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": true,
-      "batch": "11"
+      "batch": "13"
     },
     {
       "id": "powerex",
@@ -14196,7 +15260,7 @@
       "id": "building-bc",
       "name": "Building BC",
       "kind": "program",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -14218,18 +15282,41 @@
       "held": {
         "established": null,
         "established_meaning": null,
-        "first_observed": null,
+        "first_observed": "2019",
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "2018-02",
+            "precision": "month",
+            "type": "retrospective_claim",
+            "title": "Building BC: BC Housing reports initiating four Building BC funding programs since February 2018 (Community Housing, Women's Transition Housing, Indigenous Housing and Supportive Housing Funds, funded by Budget 2018)",
+            "sources": [
+              "https://www.bcbudget.gov.bc.ca/Annual_Reports/2018_2019/pdf/agency/bch.pdf"
+            ],
+            "locator": "p. 5 (achievements since February 2018) and Operating Environment paragraph",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2019",
+            "precision": "year",
+            "type": "name_first_observed",
+            "title": "Building BC: the name first seen in this review's sources",
+            "sources": [
+              "https://www.bcbudget.gov.bc.ca/Annual_Reports/2018_2019/pdf/agency/bch.pdf"
+            ],
+            "locator": "BC Housing Annual Report 2018/19, p. 5: 'Initiated four Building BC affordable housing funding programs' (achievements since February 2018)",
+            "status": "source_reported_past"
+          }
+        ]
       },
-      "review_status": "not_researched",
+      "review_status": "documented_partial",
       "questions": [
-        "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "A. It is already seen in 2019. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
+        "B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
-      "generic_questions": true,
+      "generic_questions": false,
       "batch": "20"
     },
     {
@@ -14752,7 +15839,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": true,
-      "batch": "18"
+      "batch": "15"
     },
     {
       "id": "broadway-subway-project",
@@ -14792,7 +15879,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": true,
-      "batch": "18"
+      "batch": "15"
     },
     {
       "id": "surrey-langley-skytrain",
@@ -14832,7 +15919,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": true,
-      "batch": "18"
+      "batch": "15"
     },
     {
       "id": "fraser-river-tunnel-project",
@@ -14872,7 +15959,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": true,
-      "batch": "18"
+      "batch": "15"
     },
     {
       "id": "steveston-interchange-project",
@@ -14912,7 +15999,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": true,
-      "batch": "18"
+      "batch": "15"
     },
     {
       "id": "belleville-terminal-redevelopment",
@@ -14952,7 +16039,7 @@
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": true,
-      "batch": "18"
+      "batch": "15"
     },
     {
       "id": "bcliquor",

@@ -1141,6 +1141,15 @@
           "source_id": "FIN-2025",
           "locator": "Printed p. 40; PDF p. 50 (1-based)",
           "checked": "2026-10-01"
+        },
+        {
+          "name": "Hospital Appeal Board",
+          "observed_on": "1997-04-21",
+          "coverage": "observation_only",
+          "evidence": "statute",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/638385389",
+          "source_id": "R4H-020",
+          "locator": "Table of Legislative Changes to 31 December 1998, PDF p. 32 / printed p. 27: FOIPPA Schedule 2, RS1996 (Supp.) c. 165 s. 1(h), in force 21 April 1997 by 1998-19-8(2), superseding B.C. Reg. 135/97; with the Supplement itself, R4H-016 p. 1 s. 1(h)"
         }
       ],
       "parents": [],
@@ -1153,8 +1162,21 @@
         "checked": "2026-09-26"
       },
       "evidence_status": "documented_partial",
-      "note": "The original name is documented, but the transition date to Hospital Appeal Board was not found. A historical-name observation is retained without pretending its open end means it is still the current name. Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent.",
-      "research_events": [],
+      "note": "The original name is documented, but the transition date to Hospital Appeal Board was not found. A historical-name observation is retained without pretending its open end means it is still the current name. Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent. Round 4 (R4HC-008): the FOIPPA Schedule 2 entry was renamed with effect from 21 April 1997. That date shows the new name in a statute by then; the Hospital Act rename itself is not dated. The 1997 dates must not be used for the regional health boards and councils (13 July 1995).",
+      "research_events": [
+        {
+          "type": "legislation_in_force",
+          "date": "1997-04-21",
+          "precision": "day",
+          "meaning": "FOIPPA Schedule 2 entry \"Medical Appeal Board (Hospital Act)\" replaced by \"Hospital Appeal Board (Hospital Act)\" (RS1996 Supp. s. 1(h)); in force 21 April 1997 retrospectively under SBC 1998 c. 19 s. 8(2) (assent 30 June 1998), superseding the 15 April 1997 date first ordered by OIC 414/1997 (B.C. Reg. 135/97)",
+          "evidence": "statute",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/638385389",
+          "source_id": "R4H-020",
+          "locator": "PDF p. 32 / printed p. 27, FOIPPA Schedule 2 row",
+          "checked": "2026-10-21",
+          "summary": "Schedule-name history only. Not the board's creation, not the date its name changed under the Hospital Act, and not the date regional health boards or councils entered FOIPPA."
+        }
+      ],
       "date_claims": [],
       "first_observed": {
         "date": "2020",
@@ -1167,12 +1189,11 @@
         "meaning": "Named in the 2020 Estimates as \"Hospital Appeal Board\"; the earliest of six checkpoints read, not a founding date"
       },
       "review": {
-        "checked": "2026-10-01",
-        "scope": "selected historical claims only; Six Estimates checkpoints, selected name-bearing passages per ministry",
+        "checked": "2026-10-21",
+        "scope": "selected historical claims only; Six Estimates checkpoints, selected name-bearing passages per ministry; RS1996 FOIPPA Supplement p. 1; 1998 Table of Legislative Changes p. 27",
         "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
         "unresolved_fields": [
-          "parents",
-          "relations"
+          "names (Hospital Act rename date)"
         ],
         "full_history_complete": false,
         "sources_checked": [
@@ -1199,7 +1220,7 @@
             "outcome": "found_name"
           }
         ],
-        "by": "ChatGPT (six-checkpoint historical research, release 1.0)"
+        "by": "ChatGPT (six-checkpoint historical research, release 1.0); Round 4 health module, integrated 2026-10-21"
       }
     },
     {
@@ -2567,21 +2588,36 @@
       "parents": [],
       "relations": [],
       "legal_basis": null,
-      "evidence_status": "documented_partial",
-      "note": "Society creation is distinct from the first provincial organ transplant in 1968. The date of transition to the current BC Transplant operating name was not established.",
+      "evidence_status": "requires_reconciliation",
+      "note": "Society creation is distinct from the first provincial organ transplant in 1968. The date of transition to the current BC Transplant operating name was not established. Round 4 (health module, R4HC-002 to R4HC-006): the 1987-1991 sources describe the Pacific Organ Retrieval for Transplantation (PORT) program as funded by the Ministry of Health, initiated by and part of the Transplant Society. None shows PORT as a registered corporate name. The 1987 statement names a \"B.C. Heart Transplant Society\", unresolved. The program is a program, not this body's founding.",
       "research_events": [],
-      "date_claims": [],
+      "date_claims": [
+        {
+          "type": "establishment_claim",
+          "date": "1985",
+          "precision": "year",
+          "meaning": "The Health minister's 1988 statement that the provincial government and the medical community established the B.C. Transplant Society in 1985; a retrospective account, not a registration",
+          "evidence": "secondary",
+          "source": "https://lims.leg.bc.ca/hdms/file/Debates/34th2nd/34p_02s_880427p.htm",
+          "source_id": "R4H-003",
+          "locator": "Hansard, 27 April 1988, printed p. 4096, statement of Minister Dueck",
+          "checked": "2026-10-21",
+          "summary": "Competes with the Corporate Registry registration of 1 April 1986 (S0021154) and the 2007 news release's 1986. Kept as a claim; neither is chosen here."
+        }
+      ],
       "first_observed": null,
       "review": {
-        "checked": "2026-09-26",
-        "scope": "selected historical claims only",
+        "checked": "2026-10-21",
+        "scope": "selected historical claims only; Hansard 27 Apr 1987, 27 Apr 1988, 9 Jun 1988; J Clin Invest April 1991",
         "baseline_metadata": "Copied from the uploaded template; not comprehensively reverified.",
         "unresolved_fields": [
-          "parents",
-          "relations",
+          "established",
+          "names",
           "legal_basis"
         ],
-        "full_history_complete": false
+        "full_history_complete": false,
+        "sources_checked": [],
+        "by": "Round 4 health module, integrated 2026-10-21"
       }
     },
     {
@@ -7141,7 +7177,16 @@
       "official_url": "https://www.phsa.ca/our-services/programs-services/trans-care-bc",
       "source_today": "https://www.phsa.ca/our-services/programs-services/trans-care-bc",
       "description": "Provincial clinical program that sets direction and provides leadership for trans health services across B.C.",
-      "established": null,
+      "established": {
+        "date": "2015",
+        "precision": "year",
+        "meaning": "Trans Care BC was established as a program of the Provincial Health Services Authority in fall 2015 (season stated by the source; held at year precision, no month inferred). A program, stated retrospectively in April 2018",
+        "evidence": "official_webpage",
+        "source": "https://www.phsa.ca/transcarebc-archive/Documents/About/Trans-Care-BC-progress-update-2018.pdf",
+        "source_id": "r4-r4b-052",
+        "locator": "Trans Care BC Program Update, April 2018, p. 3, 'What is Trans Care BC?': 'Trans Care BC was established as a program of the Provincial Health Services Authority (PHSA) in fall 2015'",
+        "checked": "2026-10-21"
+      },
       "ended": null,
       "first_observed": null,
       "names": [],
@@ -7176,13 +7221,17 @@
       "date_claims": [],
       "legal_basis": null,
       "evidence_status": "documented_partial",
-      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open.",
+      "note": "Targeted claims from the 2026-09-30 worked review; the full history is open. A PHSA program, not an agency. Agrees with the PHSA web retrospective already held (fall 2015) and stays apart from the April 2015 planned transfer.",
       "review": {
-        "checked": "2026-09-30",
+        "checked": "2026-10-21",
         "sources_checked": [],
-        "scope": "Worked queue review, 2026-09-30: targeted claims only",
-        "by": "ChatGPT (worked queue review)",
-        "full_history_complete": false
+        "scope": "Worked queue review, 2026-09-30: targeted claims only; Round 4 branches claims checked against the module raw downloads",
+        "by": "ChatGPT (worked queue review); Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false,
+        "unresolved_fields": [
+          "exact_start",
+          "kind"
+        ]
       }
     },
     {
@@ -10287,14 +10336,14 @@
       "established": null,
       "ended": null,
       "first_observed": {
-        "date": "2015",
-        "precision": "year",
-        "evidence": "estimates",
-        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
-        "source_id": "FIN-2015",
-        "locator": "Printed p. 77; PDF p. 87 (1-based)",
-        "checked": "2026-10-01",
-        "meaning": "Named in the 2015 Estimates as \"BC Parks\"; the earliest of six checkpoints read, not a founding date"
+        "date": "1957-04-01",
+        "precision": "day",
+        "meaning": "The Provincial Parks Branch, BC Parks' predecessor name in the atlas's parks lineage, began in the Department of Recreation and Conservation this day. A sighting under the earlier name, not BC Parks' founding",
+        "evidence": "annual_report",
+        "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+        "source_id": "r4-r4b-013",
+        "locator": "Department of Recreation and Conservation, Report 1957, Provincial Parks history (between the II 21 section cover and II 24): 'The Parks and Recreation Division entered the newly established Department of Recreation and Conservation on April 1st, 1957, and became known as the Provincial Parks Branch'",
+        "checked": "2026-10-21"
       },
       "names": [
         {
@@ -10316,17 +10365,70 @@
           "source_id": "FIN-2020",
           "locator": "Printed p. 79; PDF p. 87 (1-based)",
           "checked": "2026-10-01"
+        },
+        {
+          "name": "Provincial Parks Branch",
+          "from": "1957-04-01",
+          "to": null,
+          "from_precision": "day",
+          "to_precision": null,
+          "coverage": "start_documented_end_unknown",
+          "evidence": "annual_report",
+          "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+          "source_id": "r4-r4b-013",
+          "locator": "Report 1957, Provincial Parks history (before II 24)",
+          "checked": "2026-10-21"
         }
       ],
-      "parents": [],
+      "parents": [
+        {
+          "ministry_as_printed": "Department of Recreation and Conservation",
+          "relation": "part_of",
+          "from": "1957-04-01",
+          "to": null,
+          "from_precision": "day",
+          "to_precision": null,
+          "coverage": "start_documented_end_unknown",
+          "evidence": "annual_report",
+          "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+          "source_id": "r4-r4b-013",
+          "locator": "Report 1957, Provincial Parks history and Introduction (II 7)",
+          "checked": "2026-10-21"
+        }
+      ],
       "relations": [],
-      "research_events": [],
+      "research_events": [
+        {
+          "type": "administrative_transfer_and_rename",
+          "summary": "The Parks and Recreation Division of the Forest Service enters the new Department of Recreation and Conservation and becomes the Provincial Parks Branch",
+          "date": "1957-04-01",
+          "precision": "day",
+          "meaning": "Effective day stated by the department's first annual report (period 1 April-31 December 1957). The same report dates the Act creating the department to 28 March 1957, the date the BC Archives record gives for the change; the implementing instrument was not found",
+          "evidence": "annual_report",
+          "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+          "source_id": "r4-r4b-013",
+          "locator": "Report 1957, Introduction (printed II 7) and Provincial Parks history (before II 24); page image not retrieved, library full text read",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "retrospective_claim",
+          "summary": "The 1957 report says the Parks and Recreation Division was established in 1948",
+          "date": "1948",
+          "precision": "year",
+          "meaning": "Retrospective; the BC Archives authority record instead has the Parks Division in May 1948, renamed Parks and Recreation Division in 1949. Both are kept",
+          "evidence": "annual_report",
+          "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+          "source_id": "r4-r4b-013",
+          "locator": "Report 1957, Provincial Parks history: 'The Parks and Recreation Division established in 1948'",
+          "checked": "2026-10-21"
+        }
+      ],
       "date_claims": [],
       "legal_basis": null,
       "evidence_status": "documented_partial",
-      "note": "Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent.",
+      "note": "Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent. The 1957 report supplies the effective day of the Parks Branch transfer; the end of the Department period (1975 reorganisation onward) is left open here.",
       "review": {
-        "checked": "2026-10-01",
+        "checked": "2026-10-21",
         "sources_checked": [
           {
             "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
@@ -10351,9 +10453,14 @@
             "outcome": "found_name"
           }
         ],
-        "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry",
-        "by": "ChatGPT (six-checkpoint historical research, release 1.0)",
-        "full_history_complete": false
+        "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry; Round 4 branches claims checked against the module raw downloads",
+        "by": "ChatGPT (six-checkpoint historical research, release 1.0); Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false,
+        "unresolved_fields": [
+          "established",
+          "parks_branch_1957_instrument",
+          "parent_after_1957"
+        ]
       }
     },
     {
@@ -10368,14 +10475,14 @@
       "established": null,
       "ended": null,
       "first_observed": {
-        "date": "2015",
-        "precision": "year",
-        "evidence": "estimates",
-        "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
-        "source_id": "FIN-2015",
-        "locator": "Printed p. 78; PDF p. 88 (1-based)",
-        "checked": "2026-10-01",
-        "meaning": "Named in the 2015 Estimates as \"Conservation Officer Service\"; the earliest of six checkpoints read, not a founding date"
+        "date": "1980-09-18",
+        "precision": "day",
+        "meaning": "OIC 2085/1980 confers statutory powers on listed employees of the 'Conservation Officer Service, Ministry of Environment': the earliest instrument naming the service found. A sighting, not the 1980 separation instrument",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2085_1980",
+        "source_id": "r4-r4b-051",
+        "locator": "OIC 2085/1980, approved and ordered 18 September 1980, PDF pp. 1-2, regulation s. 1",
+        "checked": "2026-10-21"
       },
       "names": [
         {
@@ -10399,15 +10506,63 @@
           "checked": "2026-10-01"
         }
       ],
-      "parents": [],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Environment",
+          "relation": "part_of",
+          "observed_on": "1980-09-18",
+          "coverage": "observation_only",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2085_1980",
+          "source_id": "r4-r4b-051",
+          "locator": "OIC 2085/1980, regulation s. 1: 'Conservation Officer Service, Ministry of Environment'",
+          "checked": "2026-10-21"
+        },
+        {
+          "ministry_as_printed": "Ministry of Environment",
+          "relation": "part_of",
+          "observed_on": "1981",
+          "coverage": "observation_only",
+          "evidence": "annual_report",
+          "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0372122",
+          "source_id": "r4-r4b-014",
+          "locator": "Ministry of Environment Annual Report 1980/81 (1 January 1980-31 March 1981), printed pp. 57-58: Conservation Officer Service under Regional Operations Division",
+          "checked": "2026-10-21"
+        }
+      ],
       "relations": [],
-      "research_events": [],
+      "research_events": [
+        {
+          "type": "reorganization_observed",
+          "summary": "A conservation officer writes that the Conservation Officer Service \"(as it is now called) has been removed from the Fish and Wildlife Branch and has become a separate enforcement agency for the entire Ministry\" of Environment",
+          "date": "1980",
+          "precision": "year",
+          "meaning": "Observed in the April-May 1980 issue (vol. VIII no. 3) as already done; the separation directive and its day are not found",
+          "evidence": "secondary",
+          "source": "https://waves-vagues.dfo-mpo.gc.ca/Library/170964-1980.pdf",
+          "source_id": "r4-r4b-003",
+          "locator": "The Sounder (Fisheries and Oceans staff newsletter), vol. VIII no. 3, April-May 1980, printed pp. 10-11 / bound PDF pp. 46-47; issue cover PDF p. 37",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "administrative_transfer_and_rename",
+          "summary": "The Game Commission becomes part of the new Department of Recreation and Conservation; its present title is the Fish and Game Branch",
+          "date": "1957-04-01",
+          "precision": "day",
+          "meaning": "Effective day stated by the department's 1957 report; the Commission had answered through the Department of the Attorney-General",
+          "evidence": "annual_report",
+          "source": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+          "source_id": "r4-r4b-013",
+          "locator": "Report 1957, Fish and Game Branch history (from II 9): 'The Game Commission remained until the organization became part of the Department of Recreation and Conservation on April 1st, 1957. The present title is \"Fish and Game Branch.\"'",
+          "checked": "2026-10-21"
+        }
+      ],
       "date_claims": [],
       "legal_basis": null,
       "evidence_status": "documented_partial",
-      "note": "Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent.",
+      "note": "Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent. Bounds the 1980 separation already held as a year-only event (cos-1980-unit-established): observed by April-May 1980, named in an order by 18 September 1980, in Regional Operations Division in the 1980/81 report.",
       "review": {
-        "checked": "2026-10-01",
+        "checked": "2026-10-21",
         "sources_checked": [
           {
             "source": "https://www.bcbudget.gov.bc.ca/2015/estimates/2015_Estimates.pdf",
@@ -10432,9 +10587,13 @@
             "outcome": "found_name"
           }
         ],
-        "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry",
-        "by": "ChatGPT (six-checkpoint historical research, release 1.0)",
-        "full_history_complete": false
+        "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry; Round 4 branches claims checked against the module raw downloads",
+        "by": "ChatGPT (six-checkpoint historical research, release 1.0); Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false,
+        "unresolved_fields": [
+          "separation_instrument_1980",
+          "parent_history"
+        ]
       }
     },
     {
@@ -11068,17 +11227,49 @@
       "description": "Develops policy, programs and legislation for provincial vertical capital infrastructure projects.",
       "established": null,
       "ended": null,
-      "first_observed": null,
-      "names": [],
-      "parents": [],
+      "first_observed": {
+        "date": "2025-03-17",
+        "precision": "day",
+        "meaning": "The Infrastructure Policy and Partnerships Division is listed in the Ministry of Infrastructure staff allocations as of 17 March 2025. A sighting, not a founding; not backdated to the ministry's creation",
+        "evidence": "official_webpage",
+        "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+        "source_id": "r4-r4b-006",
+        "locator": "Ministry of Infrastructure Estimates Notes 2025, PDF pp. 17-18 (organisation description; Appendix 1, staff allocations as of 17 March 2025)",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "Infrastructure Policy and Partnerships Division",
+          "observed_on": "2025-03-17",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+          "source_id": "r4-r4b-006",
+          "locator": "PDF pp. 17-18",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Infrastructure",
+          "relation": "part_of",
+          "observed_on": "2025-03-17",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+          "source_id": "r4-r4b-006",
+          "locator": "PDF pp. 17-18, organisation description and Appendix 1",
+          "checked": "2026-10-21"
+        }
+      ],
       "relations": [],
       "research_events": [],
       "date_claims": [],
       "legal_basis": null,
       "evidence_status": "documented_partial",
-      "note": "Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent.",
+      "note": "Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent. Released estimates briefing notes, not the Estimates. The division's start is not stated.",
       "review": {
-        "checked": "2026-10-01",
+        "checked": "2026-10-21",
         "sources_checked": [
           {
             "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
@@ -11093,9 +11284,12 @@
             "note": "functional budget heading; normalized label match identity unverified"
           }
         ],
-        "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry",
-        "by": "ChatGPT (six-checkpoint historical research, release 1.0)",
-        "full_history_complete": false
+        "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry; Round 4 branches claims checked against the module raw downloads",
+        "by": "ChatGPT (six-checkpoint historical research, release 1.0); Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false,
+        "unresolved_fields": [
+          "established"
+        ]
       }
     },
     {
@@ -11109,17 +11303,49 @@
       "description": "Plans, procures and manages capital projects for schools, child care, hospitals and post-secondary facilities.",
       "established": null,
       "ended": null,
-      "first_observed": null,
-      "names": [],
-      "parents": [],
+      "first_observed": {
+        "date": "2025-03-17",
+        "precision": "day",
+        "meaning": "The Community Capital Development Division is listed in the Ministry of Infrastructure staff allocations as of 17 March 2025. A sighting, not a founding; not backdated to the ministry's creation",
+        "evidence": "official_webpage",
+        "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+        "source_id": "r4-r4b-006",
+        "locator": "Ministry of Infrastructure Estimates Notes 2025, PDF pp. 17-18 (organisation description; Appendix 1, staff allocations as of 17 March 2025)",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "Community Capital Development Division",
+          "observed_on": "2025-03-17",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+          "source_id": "r4-r4b-006",
+          "locator": "PDF pp. 17-18",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Infrastructure",
+          "relation": "part_of",
+          "observed_on": "2025-03-17",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://docs.openinfo.gov.bc.ca/Infrastructure_Estimates_Notes_2025.pdf",
+          "source_id": "r4-r4b-006",
+          "locator": "PDF pp. 17-18, organisation description and Appendix 1",
+          "checked": "2026-10-21"
+        }
+      ],
       "relations": [],
       "research_events": [],
       "date_claims": [],
       "legal_basis": null,
       "evidence_status": "documented_partial",
-      "note": "Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent.",
+      "note": "Budget sightings from the six-checkpoint historical research (2002, 2005, 2010, 2015, 2020, 2025). A sighting is presence in that year's Estimates, not a founding date or proof of the years between; the ministry it was printed under is budget presentation, not a parent. Released estimates briefing notes, not the Estimates. The division's start is not stated.",
       "review": {
-        "checked": "2026-10-01",
+        "checked": "2026-10-21",
         "sources_checked": [
           {
             "source": "https://www.bcbudget.gov.bc.ca/2025/pdf/2025_Estimates.pdf",
@@ -11134,9 +11360,12 @@
             "note": "functional budget heading; normalized label match identity unverified"
           }
         ],
-        "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry",
-        "by": "ChatGPT (six-checkpoint historical research, release 1.0)",
-        "full_history_complete": false
+        "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry; Round 4 branches claims checked against the module raw downloads",
+        "by": "ChatGPT (six-checkpoint historical research, release 1.0); Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false,
+        "unresolved_fields": [
+          "established"
+        ]
       }
     },
     {
@@ -11196,6 +11425,1156 @@
         ],
         "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry",
         "by": "ChatGPT (six-checkpoint historical research, release 1.0)",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "buy-bc",
+      "name": "Buy BC",
+      "kind": "program",
+      "parent_today": "ministry-of-agriculture-and-food-2022",
+      "parent_today_name": "Ministry of Agriculture and Food",
+      "official_url": "https://buybc.gov.bc.ca/",
+      "source_today": "https://buybc.gov.bc.ca/",
+      "description": "Provincial food-marketing program that helps British Columbians identify and choose food and beverages grown, raised or made in B.C.",
+      "established": {
+        "date": "1993",
+        "precision": "year",
+        "meaning": "The government launched the Buy BC marketing program (a program launch, stated retrospectively in a June 2023 internal audit; a program, not an organisation)",
+        "evidence": "official_webpage",
+        "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/buy-bc-program-ministry-of-agriculture-and-food.pdf",
+        "source_id": "r4-r4b-018",
+        "locator": "PDF p. 6 / printed p. 4, Buy BC Program History: 'In 1993, the Government launched Buy BC to help increase demand and sales of B.C. agriculture and food, and seafood products'",
+        "checked": "2026-10-21"
+      },
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Agriculture and Food",
+          "relation": "part_of",
+          "observed_on": "2023-06",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/buy-bc-program-ministry-of-agriculture-and-food.pdf",
+          "source_id": "r4-r4b-018",
+          "locator": "PDF p. 5 / printed p. 3: 'Buy BC is delivered through the Food and Beverage Branch, within the Agriculture Resource Division' (audit of the Ministry of Agriculture and Food program, June 2023)",
+          "checked": "2026-10-21"
+        }
+      ],
+      "relations": [],
+      "research_events": [
+        {
+          "type": "administration_transferred",
+          "summary": "Government discontinued marketing funding and transferred management and delivery of the program to the BC Agricultural Council, an industry organization",
+          "date": "2002",
+          "precision": "year",
+          "meaning": "Delivery by a non-government body from 2002; not an end of the program, not ownership, not ministry membership",
+          "evidence": "official_webpage",
+          "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/buy-bc-program-ministry-of-agriculture-and-food.pdf",
+          "source_id": "r4-r4b-018",
+          "locator": "PDF p. 6 / printed p. 4: 'In 2002, the Government discontinued funding for marketing and transferred the management and delivery of the program to the BC Agricultural Council'",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "program_relaunched",
+          "summary": "Government relaunched Buy BC",
+          "date": "2018",
+          "precision": "year",
+          "meaning": "Government relaunch after industry delivery; not a new founding",
+          "evidence": "official_webpage",
+          "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/internal-corporate-services/internal-audits/buy-bc-program-ministry-of-agriculture-and-food.pdf",
+          "source_id": "r4-r4b-018",
+          "locator": "PDF p. 6 / printed p. 4: 'Starting in 2018, the Government relaunched the program'",
+          "checked": "2026-10-21"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "A program, not an incorporated agency or branch. 1993 is its launch as stated retrospectively by a 2023 audit; no contemporary 1993 instrument or release was read (the September 2000 Buy BC Month release returned HTTP 503). The 2002 transfer to the BC Agricultural Council is administration by an industry body, not an end; whether the program ran continuously from 2002 to 2018 is not stated.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "contemporary_1993_launch_document",
+          "administration_2002_2018",
+          "parent_before_2023"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-training-and-education-savings-program",
+      "name": "British Columbia Training and Education Savings Program",
+      "kind": "program",
+      "parent_today": "ministry-of-education-and-child-care-2022",
+      "parent_today_name": "Ministry of Education and Child Care",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Provincial education savings program run through a special account under the Special Accounts Appropriation and Control Act.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2013-03-20",
+        "precision": "day",
+        "meaning": "The British Columbia Training and Education Savings Program Regulation (B.C. Reg. 132/2013) was made by OIC 173/2013 this day: the first legal appearance of the named program found. A sighting, not a launch",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0173_2013",
+        "source_id": "r4-r4b-026",
+        "locator": "OIC 173/2013, approved and ordered 20 March 2013, PDF pp. 1-2; regulation s. 1",
+        "checked": "2026-10-21"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "type": "special_account_continued",
+          "summary": "The Children's Education Fund special account is continued as the British Columbia Training and Education Savings Program special account",
+          "date": "2014-06-23",
+          "precision": "day",
+          "meaning": "Commencement of Miscellaneous Statutes Amendment Act 2014 c. 14 s. 50 (new s. 9.4(2) of the Special Accounts Appropriation and Control Act) as recorded in the regulations bulletin; OIC 389/2014 was approved 20 June 2014. A statutory special account, not a separate corporation",
+          "evidence": "regulation",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/regulationbulletin/2014bull23",
+          "source_id": "r4-r4b-016",
+          "locator": "BC Regulations Bulletin 23 (24 June 2014), entry for OIC 389/2014; the Act text is 2014 c. 14 s. 50, PDF p. 18",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "applications_scheduled_to_open",
+          "summary": "The replacement program regulation fixes 15 August 2015 as the 'application commencement date'",
+          "date": "2015-08-15",
+          "precision": "day",
+          "meaning": "The day the regulation fixed for applications to begin; not an observation that they opened, and not the program's first legal appearance",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0389_2014",
+          "source_id": "r4-r4b-015",
+          "locator": "OIC 389/2014, PDF p. 2, regulation s. 1 (definition of application commencement date)",
+          "checked": "2026-10-21"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": {
+        "citation": "Special Accounts Appropriation and Control Act, s. 9.4; British Columbia Training and Education Savings Program Regulation, B.C. Reg. 132/2013 (OIC 173/2013), replaced under OIC 389/2014",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0173_2013",
+        "locator": "OIC 173/2013, PDF p. 1"
+      },
+      "evidence_status": "documented_partial",
+      "note": "Two entities share the name: the program and the statutory special account that pays it (continued from the Children's Education Fund on 23 June 2014). The 2013 regulation planned an October 2014 application date that was replaced before it arrived. The 2013 regulation's deposit is recorded in the BC Gazette (R4B-025, screened but not used by the handback) and is not applied here.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "launch_announcement",
+          "parent_history"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "disaster-financial-assistance",
+      "name": "Disaster Financial Assistance",
+      "kind": "program",
+      "parent_today": "ministry-of-emergency-management-and-climate-readiness-2022",
+      "parent_today_name": "Ministry of Emergency Management and Climate Readiness",
+      "official_url": "https://www2.gov.bc.ca/gov/content/safety/emergency-management/preparedbc/evacuation-recovery/disaster-financial-assistance",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Financial help for homeowners, renters, businesses and local governments recovering from uninsurable disaster losses under the Emergency and Disaster Management Act.",
+      "established": {
+        "date": "1995",
+        "precision": "year",
+        "meaning": "The provincial Disaster Financial Assistance program was established, as stated retrospectively in a July 2016 government bulletin (a program start, not an organisation)",
+        "evidence": "news_release",
+        "source": "https://news.gov.bc.ca/releases/2016TRAN0185-001237",
+        "source_id": "r4-r4b-042",
+        "locator": "Information bulletin 2016TRAN0185-001237, 7 July 2016, paragraph beginning 'Disaster Financial Assistance has consistently provided a helping hand': 'since it was established in 1995'",
+        "checked": "2026-10-21"
+      },
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "type": "regulation_made",
+          "summary": "OIC 310/1995 makes the Compensation and Disaster Financial Assistance Regulation under the Emergency Program Act, ss. 19, 20 and 28",
+          "date": "1995-03-30",
+          "precision": "day",
+          "meaning": "The order approving the regulation; distinct from its deposit and from the year-only program start",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0310_1995",
+          "source_id": "r4-r4b-043",
+          "locator": "OIC 310/1995, PDF p. 1 (approval stamp)",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "regulation_deposited",
+          "summary": "The Compensation and Disaster Financial Assistance Regulation is deposited as B.C. Reg. 124/95",
+          "date": "1995-03-31",
+          "precision": "day",
+          "meaning": "Deposit of the regulation, not the program's first payment or opening",
+          "evidence": "regulation",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/124_95",
+          "source_id": "r4-r4b-069",
+          "locator": "B.C. Reg. 124/95, consolidation header (deposited 31 March 1995)",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "administration_observed",
+          "summary": "A Ministry of Transportation and Infrastructure bulletin describes the program as run by Emergency Management BC",
+          "date": "2016-07-07",
+          "precision": "day",
+          "meaning": "Administration by EMBC, then within the Ministry of Transportation and Infrastructure, on this date only; today's news-site navigation is not historical parent evidence",
+          "evidence": "news_release",
+          "source": "https://news.gov.bc.ca/releases/2016TRAN0185-001237",
+          "source_id": "r4-r4b-042",
+          "locator": "Bulletin 2016TRAN0185-001237, ministry header and main text",
+          "checked": "2026-10-21"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": {
+        "citation": "Compensation and Disaster Financial Assistance Regulation, B.C. Reg. 124/95 (OIC 310/1995), under the Emergency Program Act",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0310_1995",
+        "locator": "OIC 310/1995, PDF p. 1"
+      },
+      "evidence_status": "documented_partial",
+      "note": "A program. The 1995 start is a 2016 retrospective; the 30 March 1995 order and 31 March 1995 deposit of its regulation agree with the year and are kept as separate legal events. The federal DFAA (1970) is a different program and is not this start.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "parent_history",
+          "first_payment_or_opening"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "provincial-treasury",
+      "name": "Provincial Treasury",
+      "kind": "division",
+      "parent_today": "ministry-of-finance-2001",
+      "parent_today_name": "Ministry of Finance",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/provincial-treasury",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/provincial-treasury",
+      "description": "Handles the Province's borrowing, debt management, banking and cash management.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "1986-04-10",
+        "precision": "day",
+        "meaning": "The Auditor General's 1986 Report (transmitted 10 April 1986) describes officials and branches of Provincial Treasury, Ministry of Finance. A sighting, not a founding",
+        "evidence": "annual_report",
+        "source": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19850301-report-auditor-general-1985.pdf",
+        "source_id": "r4-r4b-027",
+        "locator": "Transmittal letter dated 10 April 1986, PDF p. 3; printed p. 16 para. 3.19 and p. 20 para. 3.41 / PDF pp. 22, 26. The file name says 1985; the document is the 1986 report on the year ended 31 March 1985",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "Provincial Treasury Division",
+          "observed_on": "1985-06-28",
+          "coverage": "observation_only",
+          "evidence": "statute",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/618061891",
+          "source_id": "r4-r4b-028",
+          "locator": "S.B.C. 1985 c. 52, s. 84, printed p. 275",
+          "checked": "2026-10-21"
+        },
+        {
+          "name": "Provincial Treasury",
+          "observed_on": "1986-04-10",
+          "coverage": "observation_only",
+          "evidence": "annual_report",
+          "source": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19850301-report-auditor-general-1985.pdf",
+          "source_id": "r4-r4b-027",
+          "locator": "Printed p. 16 para. 3.19: 'officials of the Provincial Treasury, Ministry of Finance'",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Finance",
+          "relation": "part_of",
+          "observed_on": "1986-04-10",
+          "coverage": "observation_only",
+          "evidence": "annual_report",
+          "source": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19850301-report-auditor-general-1985.pdf",
+          "source_id": "r4-r4b-027",
+          "locator": "Printed p. 16 para. 3.19 / PDF p. 22: 'Provincial Treasury, Ministry of Finance'",
+          "checked": "2026-10-21"
+        },
+        {
+          "ministry_as_printed": "Ministry of Finance and Corporate Relations",
+          "relation": "part_of",
+          "observed_on": "1996-07-29",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://api.lims.leg.bc.ca/hdms/file/Debates/36th1st/19960729pm2-Hansard-v2n7.htm",
+          "source_id": "r4-r4b-002",
+          "locator": "Hansard (Committee of Supply), 29 July 1996, printed p. 1077: the Minister of Finance and Corporate Relations introduces 'Chris Trumpy, ADM, provincial treasury' among his ministry staff",
+          "checked": "2026-10-21"
+        }
+      ],
+      "relations": [],
+      "research_events": [
+        {
+          "type": "named_in_assented_statute",
+          "summary": "Miscellaneous Statutes Amendment Act (No. 3), 1985, s. 84, adds 'Provincial Treasury Division' to a public-service exclusion provision",
+          "date": "1985-06-28",
+          "precision": "day",
+          "meaning": "Assent of a statute that names the division; not its first day and not that section's commencement (the amendment has a delayed-commencement provision)",
+          "evidence": "statute",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/618061891",
+          "source_id": "r4-r4b-028",
+          "locator": "S.B.C. 1985 c. 52, PDF p. 21 / printed p. 275, s. 84; assent on the first page",
+          "checked": "2026-10-21"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Two observations of the division inside the finance ministry of the day; the years between are not each confirmed, and no founding instrument was found. The 1985 statute is the earliest mention of the name in this research, kept as an event rather than a sighting because its commencement is not established.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established",
+          "parent_history_1986_1996_and_after_2001"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "building-and-safety-standards",
+      "name": "Building and Safety Standards",
+      "kind": "division",
+      "parent_today": "ministry-of-housing-and-municipal-affairs-2024",
+      "parent_today_name": "Ministry of Housing and Municipal Affairs",
+      "official_url": "https://www2.gov.bc.ca/gov/content/industry/construction-industry/building-codes-standards",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/housing",
+      "description": "Oversees the BC Building, Plumbing and Fire Codes, the Building Act and technical safety standards.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2014-05-20",
+        "precision": "day",
+        "meaning": "The Building and Safety Standards Branch is named as the lead of the building regulatory initiative in a dated May 2014 consultation update. A sighting, not a founding",
+        "evidence": "official_webpage",
+        "source": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/construction-industry/building-codes-and-standards/reports/modern_building_regulatory_system_-_2014_update.pdf",
+        "source_id": "r4-r4b-030",
+        "locator": "Modern Building Regulatory System, 2014 update (20 May 2014), p. 3: 'The Building and Safety Standards Branch of the Office of Housing and Construction Standards is leading this initiative'",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "Building and Safety Standards Branch",
+          "observed_on": "2014-05-20",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/construction-industry/building-codes-and-standards/reports/modern_building_regulatory_system_-_2014_update.pdf",
+          "source_id": "r4-r4b-030",
+          "locator": "p. 3, text and contact block",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Natural Gas Development and Minister Responsible for Housing",
+          "relation": "part_of",
+          "observed_on": "2014-05-20",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/construction-industry/building-codes-and-standards/reports/modern_building_regulatory_system_-_2014_update.pdf",
+          "source_id": "r4-r4b-030",
+          "locator": "p. 3 contact block: Building and Safety Standards Branch / Office of Housing and Construction Standards / Ministry of Natural Gas Development and Minister Responsible for Housing",
+          "checked": "2026-10-21"
+        }
+      ],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The branch sat inside the Office of Housing and Construction Standards in that ministry in May 2014; today's parent is not projected backward.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established",
+          "parent_history"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "community-safety-and-victim-services",
+      "name": "Community Safety and Victim Services",
+      "kind": "division",
+      "parent_today": "ministry-of-public-safety-and-solicitor-general-2017",
+      "parent_today_name": "Ministry of Public Safety and Solicitor General",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Supports victims of crime, including financial assistance and counselling, and funds community crime prevention.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2024",
+        "precision": "year",
+        "meaning": "The Community Safety and Victim Services Branch appears in the executive organisation chart of the 2024 PSSG transition binder. A sighting, not a founding or a rename date",
+        "evidence": "official_webpage",
+        "source": "https://docs.openinfo.gov.bc.ca/Ministry_of_Public_Safety_and_Solicitor_General_Transition_Binder_2024.pdf",
+        "source_id": "r4-r4b-038",
+        "locator": "PSSG Transition Binder 2024, PDF p. 6 / ministry profile p. 4 of 6, executive organisation chart",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "Community Safety and Victim Services Branch",
+          "observed_on": "2024",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://docs.openinfo.gov.bc.ca/Ministry_of_Public_Safety_and_Solicitor_General_Transition_Binder_2024.pdf",
+          "source_id": "r4-r4b-038",
+          "locator": "PDF p. 6, executive organisation chart",
+          "checked": "2026-10-21"
+        },
+        {
+          "name": "Community Safety and Victim Services",
+          "observed_on": "2025",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://docs.openinfo.gov.bc.ca/Public_Safety_and_Solicitor_General_Estimates_Notes_2025.pdf",
+          "source_id": "r4-r4b-039",
+          "locator": "PSSG Estimates Notes 2025, PDF pp. 149-152, branch contents page and notes",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Ministry of Public Safety and Solicitor General",
+          "relation": "part_of",
+          "observed_on": "2024",
+          "coverage": "observation_only",
+          "evidence": "official_webpage",
+          "source": "https://docs.openinfo.gov.bc.ca/Ministry_of_Public_Safety_and_Solicitor_General_Transition_Binder_2024.pdf",
+          "source_id": "r4-r4b-038",
+          "locator": "PDF p. 6, executive chart (branch under the Deputy Solicitor General)",
+          "checked": "2026-10-21"
+        }
+      ],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The rename from Community Safety and Crime Prevention Branch is not dated by this research.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [
+          {
+            "source": "https://docs.openinfo.gov.bc.ca/Public_Safety_and_Solicitor_General_Estimates_Notes_2025.pdf",
+            "year": "2025",
+            "listed": true,
+            "outcome": "found_name",
+            "ministry_as_printed": "Ministry of Public Safety and Solicitor General",
+            "scope": "Estimates Notes 2025, PDF pp. 149-152",
+            "searched_for": [
+              "Community Safety and Victim Services"
+            ]
+          }
+        ],
+        "unresolved_fields": [
+          "established",
+          "rename_from_community_safety_and_crime_prevention"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "safe-campuses-bc",
+      "name": "Safe Campuses BC",
+      "kind": "program",
+      "parent_today": "ministry-of-post-secondary-education-and-future-skills-2022",
+      "parent_today_name": "Ministry of Post-Secondary Education and Future Skills",
+      "official_url": "https://www2.gov.bc.ca/gov/content/safe-campuses-bc",
+      "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/post-secondary-education-and-future-skills",
+      "description": "Initiative to make post-secondary campuses safe for everyone.",
+      "established": null,
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The 29 August 2019 release links to https://www2.gov.bc.ca/gov/content/safe-campuses-bc under the label 'Preventing sexualized violence on B.C. campuses'. The name 'Safe Campuses BC' is in the address only, so this is recorded as a related label, not a first sighting of the name. A public information resource, not a branch.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [
+          {
+            "source": "https://news.gov.bc.ca/releases/2019AEST0088-001672",
+            "year": "2019",
+            "listed": null,
+            "outcome": "related_label_identity_unresolved",
+            "ministry_as_printed": null,
+            "scope": "Release 2019AEST0088-001672, Learn More section",
+            "searched_for": [
+              "Safe Campuses BC",
+              "safe-campuses-bc"
+            ]
+          }
+        ],
+        "unresolved_fields": [
+          "first_observed",
+          "established"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "connectivity-in-bc",
+      "name": "Connectivity in B.C.",
+      "kind": "program",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "parent_today_name": "Ministry of Citizens’ Services",
+      "official_url": "https://www2.gov.bc.ca/gov/content/governments/connectivity-in-bc",
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Funds and coordinates expansion of high-speed internet and highway cellular coverage in rural, remote and Indigenous communities.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2021-04-07",
+        "precision": "day",
+        "meaning": "A government release links to the 'Connectivity in B.C.' web resource. A sighting of the named public information resource, not of a branch, and not of the separate Connecting British Columbia funding program listed beside it",
+        "evidence": "news_release",
+        "source": "https://news.gov.bc.ca/releases/2021CITZ0025-000648",
+        "source_id": "r4-r4b-053",
+        "locator": "Release 2021CITZ0025-000648, 7 April 2021, Learn More: 'Connectivity in B.C.: https://www2.gov.bc.ca/gov/content/governments/connectivity-in-bc'",
+        "checked": "2026-10-21"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The record is a web resource. Its queue description (funds and coordinates internet expansion) describes the connectivity program and branch, a different entity; the identity needs an editorial decision before the date is drawn as more than the resource.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established",
+          "entity_identity"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "lets-go-bc",
+      "name": "Let's Go BC",
+      "kind": "program",
+      "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
+      "parent_today_name": "Ministry of Tourism, Arts, Culture and Sport",
+      "official_url": "https://letsgobc.ca/",
+      "source_today": "https://letsgobc.ca/",
+      "description": "Program for hosting major sporting events in B.C. and building lasting legacies from them.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2025-04-23",
+        "precision": "day",
+        "meaning": "Public notice of the adoption and use of the LET'S GO BC design as an official mark of the Province. A brand sighting, not a launch and not a body",
+        "evidence": "gazette",
+        "source": "https://www.ic.gc.ca/opic-cipo/tmj/eng/23Apr2025_en.pdf?edition=04-23&year=2025",
+        "source_id": "r4-r4b-049",
+        "locator": "Trademarks Journal, 23 April 2025, p. 2673, application 928917 (official mark; held by His Majesty in right of British Columbia, represented by the Minister of Finance, Government Communications and Public Engagement)",
+        "checked": "2026-10-21"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "type": "campaign_use_observed",
+          "summary": "A Ministry of Tourism, Arts, Culture and Sport email discusses Let's Go BC scarves for a UBCM presentation",
+          "date": "2025-09-19",
+          "precision": "day",
+          "meaning": "Campaign use by the Tourism, Arts, Culture and Sport ministry on this date; not a branch and not a parent",
+          "evidence": "official_webpage",
+          "source": "https://vancouver.ca/files/cov/2025-684-release.pdf",
+          "source_id": "r4-r4b-050",
+          "locator": "City of Vancouver FOI 2025-684 release, PDF p. 4 / released p. 2, email of 19 September 2025",
+          "checked": "2026-10-21"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "A campaign brand. The official mark's holder (Finance, GCPE) is a rights holder, not an administrative parent.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established",
+          "launch_date"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-arts-and-culture-endowment",
+      "name": "BC Arts and Culture Endowment",
+      "kind": "program",
+      "parent_today": "ministry-of-tourism-arts-culture-and-sport-2020",
+      "parent_today_name": "Ministry of Tourism, Arts, Culture and Sport",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
+      "description": "Special account holding the BC150 Cultural Fund and Arts Legacy Fund.",
+      "established": {
+        "date": "2008-03-31",
+        "precision": "day",
+        "meaning": "The BC Arts and Culture Endowment special account is established by s. 113 of the Budget Measures Implementation Act, 2008, in force retroactively to 31 March 2008 (s. 126, item 48); it continues the Olympic Arts Fund as the Arts Legacy Fund Subaccount and adds the BC150 Cultural Fund Subaccount. A statutory special account, not a corporation",
+        "evidence": "statute",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1326825188",
+        "source_id": "r4-r4b-022",
+        "locator": "S.B.C. 2008 c. 10, PDF/printed pp. 42-43, s. 113 ('The BC Arts and Culture Endowment special account is established'); p. 50, s. 126 table item 48",
+        "checked": "2026-10-21"
+      },
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "type": "legislation_assented",
+          "summary": "The Budget Measures Implementation Act, 2008, which establishes the special account, receives Royal Assent",
+          "date": "2008-05-01",
+          "precision": "day",
+          "meaning": "Assent; the section establishing the account is in force retroactively from 31 March 2008",
+          "evidence": "statute",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1326825188",
+          "source_id": "r4-r4b-022",
+          "locator": "S.B.C. 2008 c. 10, PDF p. 1: 'Assented to May 1, 2008'",
+          "checked": "2026-10-21"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": {
+        "citation": "Budget Measures Implementation Act, 2008, S.B.C. 2008, c. 10, s. 113",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1326825188",
+        "locator": "pp. 42-43, s. 113"
+      },
+      "evidence_status": "documented_partial",
+      "note": "The BC Arts Council recommends BC150 payments from the account (new s. 9(5)(b)); that is a recommendation role, not ownership or parentage.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "parent_history"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "medical-services-commission",
+      "name": "Medical Services Commission",
+      "kind": "board",
+      "parent_today": "ministry-of-health-2011",
+      "parent_today_name": "Ministry of Health",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/hlth.pdf",
+      "description": "Manages the Medical Services Plan under the Medicare Protection Act, ensuring reasonable access to medical care and managing payment for medical services.",
+      "established": {
+        "date": "1967-03-24",
+        "precision": "day",
+        "meaning": "The Medical Services Act, 1967 constitutes the Commission (s. 3); OIC 964/1967 directs a proclamation bringing every provision except s. 9 into force on 24 March 1967. Legal establishment on the day fixed for commencement; the proclamation itself and its Gazette publication were not retrieved",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0964_1967",
+        "source_id": "r4-r4b-072",
+        "locator": "OIC 964/1967, approved 23 March 1967, PDF p. 1: 'a Proclamation do issue bringing all of the provisions of the Medical Services Act, except section 9, into force and effect on the 24th day of March, 1967'",
+        "checked": "2026-10-21"
+      },
+      "ended": null,
+      "first_observed": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "type": "enabling_statute_assented",
+          "summary": "The Medical Services Act (S.B.C. 1967, c. 24) receives Royal Assent; s. 3 constitutes a Medical Services Commission and s. 13 leaves commencement to proclamation",
+          "date": "1967-03-23",
+          "precision": "day",
+          "meaning": "Assent, not commencement",
+          "evidence": "statute",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/30844302",
+          "source_id": "r4-r4b-070",
+          "locator": "Original Act, printed p. 111 / PDF p. 1 ('Assented to 23rd March, 1967'), s. 3; printed p. 115 / PDF p. 5, s. 13",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "initial_members_appointed",
+          "summary": "Geoffrey Alexander Stewart appointed member and Chairman, and Peter John Banks and Gerald Stewart Bryson members, of the Medical Services Commission",
+          "date": "1967-03-24",
+          "precision": "day",
+          "meaning": "The order was approved 23 March 1967 and comes into operation 24 March 1967; appointments by the Lieutenant Governor in Council under s. 3",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0965_1967",
+          "source_id": "r4-r4b-071",
+          "locator": "OIC 965/1967, PDF p. 1: 'this order shall come into operation on the 24th day of March, 1967'",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "provision_in_force_authorized",
+          "summary": "OIC 966/1967 directs a separate proclamation bringing s. 9 (administrative services for, and staff transfers from, specified medical-insurance carriers) into force on 25 March 1967",
+          "date": "1967-03-25",
+          "precision": "day",
+          "meaning": "Commencement date fixed by the order (approved 23 March 1967); proclamation not retrieved",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0966_1967",
+          "source_id": "r4-r4b-073",
+          "locator": "OIC 966/1967, PDF p. 1",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "staff_establishment_set",
+          "summary": "The Commission's civil-service organisation establishment is set, effective 25 March 1967",
+          "date": "1967-03-25",
+          "precision": "day",
+          "meaning": "An operating administrative establishment; not a ministerial designation (a signature on the order is not one)",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0967_1967",
+          "source_id": "r4-r4b-078",
+          "locator": "OIC 967/1967, approved 23 March 1967, PDF p. 1: 'effective March 25th, 1967'",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "staff_establishment_increased",
+          "summary": "Three positions added to the Commission's organisation",
+          "date": "1968-05-15",
+          "precision": "day",
+          "meaning": "Confirms the Commission existed before the 1 July 1968 Medicare start",
+          "evidence": "order_in_council",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1518_1968",
+          "source_id": "r4-r4b-074",
+          "locator": "OIC 1518/1968, PDF p. 1",
+          "checked": "2026-10-21"
+        },
+        {
+          "type": "public_announcement_observed",
+          "summary": "A full-page notice issued by the Medical Services Commission and its chairman G. A. Stewart tells residents about Medicare coverage beginning 1 July 1968",
+          "date": "1968-06-06",
+          "precision": "day",
+          "meaning": "The Commission was issuing public instructions before the plan's 1 July 1968 operating start",
+          "evidence": "news_release",
+          "source": "https://saltspringarchives.com/driftwood/1968/June6-1968.pdf",
+          "source_id": "r4-r4b-075",
+          "locator": "Gulf Islands Driftwood, 6 June 1968, p. 11",
+          "checked": "2026-10-21"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": {
+        "citation": "Medical Services Act, S.B.C. 1967, c. 24, s. 3",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/30844302",
+        "locator": "printed p. 111 / PDF p. 1, s. 3(1)"
+      },
+      "evidence_status": "requires_reconciliation",
+      "note": "The atlas already holds a 1 July 1968 'legal_establishment' event from the Commission's 2002 financial statements (note 1); the 2004 statements (R4B-076, p. 6, note 1) say the same, 'established July 1, 1968 ... under the Medical Service Act'. That later wording is the Medical Services Plan's operating start and conflicts with the 1967 orders if read as the Commission's constitution; whether a 1968 statute re-constituted the Commission was not checked. Members are appointed by the Lieutenant Governor in Council (s. 3); the Act makes the Commission a Crown agent, gives Finance inspection, requires a Comptroller-General audit and routes its annual report through the designated Minister (ss. 6-8). The Minister first designated under the Act was not found, so no 1967 parent is recorded. The Financial Administration Act applies to the Commission 'as though it were a division' of the health ministry (2003/04) for that Act only; it is not an ordinary parent.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "minister_designated_1967",
+          "proclamation_gazette_1967",
+          "parent_history",
+          "relation_to_1968_medical_service_act"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-centre-for-disease-control",
+      "name": "BC Centre for Disease Control",
+      "kind": "agency",
+      "parent_today": "provincial-health-services-authority",
+      "parent_today_name": "Provincial Health Services Authority",
+      "official_url": "https://www.phsa.ca/our-services/programs-services/bc-centre-for-disease-control",
+      "source_today": "https://www.phsa.ca/our-services/programs-services/bc-centre-for-disease-control",
+      "description": "Provides provincial and national public health leadership through surveillance, detection, treatment, prevention and consultation services.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "BC Centre for Disease Control listed among the agencies through which PHSA delivers province-wide programs in the Ministry of Health Services 2009/10 Annual Service Plan Report (year ended 31 March 2010; published 2010). A service-node sighting, not a founding",
+        "evidence": "annual_report",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+        "source_id": "r4-r3h-099",
+        "locator": "Ministry of Health Services 2009/10 Annual Service Plan Report, PDF/printed p. 9, list of PHSA agencies",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "BC Centre for Disease Control",
+          "observed_on": "2010",
+          "coverage": "observation_only",
+          "evidence": "annual_report",
+          "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+          "source_id": "r4-r3h-099",
+          "locator": "PDF/printed p. 9",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Evidence first gathered by the Round 3 health module (R3H-099), reused by the Round 4 branches module. The atlas may already hold earlier dated events for this body (societies, renames); this sighting does not replace them. PHSA is not recorded as a ministry parent.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established",
+          "parent_history"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-childrens-hospital",
+      "name": "BC Children's Hospital and Sunny Hill Health Centre",
+      "kind": "division",
+      "parent_today": "provincial-health-services-authority",
+      "parent_today_name": "Provincial Health Services Authority",
+      "official_url": "https://www.phsa.ca/our-services/programs-services/bc-childrens-hospital-and-sunny-hill-health-centre-for-children",
+      "source_today": "https://www.phsa.ca/our-services/programs-services/bc-childrens-hospital-and-sunny-hill-health-centre-for-children",
+      "description": "BC's major treatment, teaching and research facilities for child health, caring for the most seriously ill or injured children in the province.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "BC Children's Hospital and Sunny Hill Health Centre for Children listed among the agencies through which PHSA delivers province-wide programs in the Ministry of Health Services 2009/10 Annual Service Plan Report (year ended 31 March 2010; published 2010). A service-node sighting, not a founding",
+        "evidence": "annual_report",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+        "source_id": "r4-r3h-099",
+        "locator": "Ministry of Health Services 2009/10 Annual Service Plan Report, PDF/printed p. 9, list of PHSA agencies",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "BC Children's Hospital and Sunny Hill Health Centre for Children",
+          "observed_on": "2010",
+          "coverage": "observation_only",
+          "evidence": "annual_report",
+          "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+          "source_id": "r4-r3h-099",
+          "locator": "PDF/printed p. 9",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Evidence first gathered by the Round 3 health module (R3H-099), reused by the Round 4 branches module. The atlas may already hold earlier dated events for this body (societies, renames); this sighting does not replace them. PHSA is not recorded as a ministry parent.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established",
+          "parent_history"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-womens-hospital",
+      "name": "BC Women's Hospital + Health Centre",
+      "kind": "division",
+      "parent_today": "provincial-health-services-authority",
+      "parent_today_name": "Provincial Health Services Authority",
+      "official_url": "https://www.phsa.ca/our-services/programs-services/bc-womens-hospital-health-centre",
+      "source_today": "https://www.phsa.ca/our-services/programs-services/bc-womens-hospital-health-centre",
+      "description": "The only facility in B.C. devoted primarily to the health of women, newborns and families, and the only source of tertiary maternity care in the province.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "BC Women's Hospital and Health Centre listed among the agencies through which PHSA delivers province-wide programs in the Ministry of Health Services 2009/10 Annual Service Plan Report (year ended 31 March 2010; published 2010). A service-node sighting, not a founding",
+        "evidence": "annual_report",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+        "source_id": "r4-r3h-099",
+        "locator": "Ministry of Health Services 2009/10 Annual Service Plan Report, PDF/printed p. 9, list of PHSA agencies",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "BC Women's Hospital and Health Centre",
+          "observed_on": "2010",
+          "coverage": "observation_only",
+          "evidence": "annual_report",
+          "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+          "source_id": "r4-r3h-099",
+          "locator": "PDF/printed p. 9",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Evidence first gathered by the Round 3 health module (R3H-099), reused by the Round 4 branches module. The atlas may already hold earlier dated events for this body (societies, renames); this sighting does not replace them. PHSA is not recorded as a ministry parent.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established",
+          "parent_history"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "perinatal-services-bc",
+      "name": "Perinatal Services BC",
+      "kind": "agency",
+      "parent_today": "provincial-health-services-authority",
+      "parent_today_name": "Provincial Health Services Authority",
+      "official_url": "https://www.phsa.ca/our-services/programs-services/perinatal-services-bc",
+      "source_today": "https://www.phsa.ca/our-services/programs-services/perinatal-services-bc",
+      "description": "Provides leadership, support and coordination for the strategic planning of perinatal services and is the province's central source of perinatal information.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2010",
+        "precision": "year",
+        "meaning": "Perinatal Services BC listed among the agencies through which PHSA delivers province-wide programs in the Ministry of Health Services 2009/10 Annual Service Plan Report (year ended 31 March 2010; published 2010). A service-node sighting, not a founding",
+        "evidence": "annual_report",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+        "source_id": "r4-r3h-099",
+        "locator": "Ministry of Health Services 2009/10 Annual Service Plan Report, PDF/printed p. 9, list of PHSA agencies",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "Perinatal Services BC",
+          "observed_on": "2010",
+          "coverage": "observation_only",
+          "evidence": "annual_report",
+          "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2009_2010/hs/hs.pdf",
+          "source_id": "r4-r3h-099",
+          "locator": "PDF/printed p. 9",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Evidence first gathered by the Round 3 health module (R3H-099), reused by the Round 4 branches module. The atlas may already hold earlier dated events for this body (societies, renames); this sighting does not replace them. PHSA is not recorded as a ministry parent.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established",
+          "parent_history"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "health-care-practitioners-special-committee-for-audit-hearings",
+      "name": "Health Care Practitioners Special Committee for Audit Hearings",
+      "kind": "tribunal",
+      "parent_today": "ministry-of-health-2011",
+      "parent_today_name": "Ministry of Health",
+      "official_url": "https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/msp/health-care-practitioners-special-committee-audit-hearings",
+      "source_today": "https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/tribunal-sector",
+      "description": "Hears practitioners and decides whether the Medical Services Commission should recover payments after audits of health care practitioners.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2024-06-30",
+        "precision": "day",
+        "meaning": "An order appointing members of the Health Care Practitioners Special Committee for Audit Hearings, effective 30 June 2024, names the committee. A sighting, not its first establishment",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0367_2024",
+        "source_id": "r4-r3t-036",
+        "locator": "OIC 367/2024, PDF p. 1",
+        "checked": "2026-10-21"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "Evidence first gathered by the Round 3 tribunals module (R3T-036; claims R3T-C053-054). The committee's statutory basis and appointment rule belong to that module.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established",
+          "legal_basis"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-mental-health-and-substance-use-services",
+      "name": "BC Mental Health and Substance Use Services",
+      "kind": "agency",
+      "parent_today": "provincial-health-services-authority",
+      "parent_today_name": "Provincial Health Services Authority",
+      "official_url": "https://www.phsa.ca/our-services/programs-services/bc-mental-health-substance-use-services",
+      "source_today": "https://www.phsa.ca/our-services/programs-services/bc-mental-health-substance-use-services",
+      "description": "Treats people with the most complex mental health and substance use needs referred by the regional health authorities or the courts.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2015-12-17",
+        "precision": "day",
+        "meaning": "A government release names Lynn Pelletier as vice president of BC Mental Health & Substance Use Services: a sighting of the current name. Not the date of the rename from BC Mental Health and Addiction Services",
+        "evidence": "news_release",
+        "source": "https://news.gov.bc.ca/releases/2015MNGD0086-002113",
+        "source_id": "r4-r4b-054",
+        "locator": "Release 2015MNGD0086-002113, 17 December 2015, quotes section, attribution for Lynn Pelletier",
+        "checked": "2026-10-21"
+      },
+      "names": [
+        {
+          "name": "BC Mental Health & Substance Use Services",
+          "observed_on": "2015-12-17",
+          "coverage": "observation_only",
+          "evidence": "news_release",
+          "source": "https://news.gov.bc.ca/releases/2015MNGD0086-002113",
+          "source_id": "r4-r4b-054",
+          "locator": "Quotes section, Lynn Pelletier attribution",
+          "checked": "2026-10-21"
+        }
+      ],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "The service has older roots (the BC Mental Health Society registered 1987, already in the atlas); this is a current-name sighting only.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "rename_date",
+          "established"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "building-bc",
+      "name": "Building BC",
+      "kind": "program",
+      "parent_today": "bc-housing",
+      "parent_today_name": "British Columbia Housing Management Commission",
+      "official_url": null,
+      "source_today": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bch.pdf",
+      "description": "BC Housing program for increasing the supply of housing, named alongside BC Builds in its 2026/27 service plan.",
+      "established": null,
+      "ended": null,
+      "first_observed": {
+        "date": "2019",
+        "precision": "year",
+        "meaning": "BC Housing's 2018/19 annual report (year ended 31 March 2019) says it initiated four Building BC affordable housing funding programs. A program-family sighting held at the report's year end; the four funds are not given one launch date",
+        "evidence": "annual_report",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2018_2019/pdf/agency/bch.pdf",
+        "source_id": "r4-r4b-007",
+        "locator": "BC Housing Annual Report 2018/19, p. 5: 'Initiated four Building BC affordable housing funding programs' (achievements since February 2018)",
+        "checked": "2026-10-21"
+      },
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [
+        {
+          "type": "retrospective_claim",
+          "summary": "BC Housing reports initiating four Building BC funding programs since February 2018 (Community Housing, Women's Transition Housing, Indigenous Housing and Supportive Housing Funds, funded by Budget 2018)",
+          "date": "2018-02",
+          "precision": "month",
+          "meaning": "The period the report covers begins in February 2018; not one launch day for all four programs",
+          "evidence": "annual_report",
+          "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2018_2019/pdf/agency/bch.pdf",
+          "source_id": "r4-r4b-007",
+          "locator": "p. 5 (achievements since February 2018) and Operating Environment paragraph",
+          "checked": "2026-10-21"
+        }
+      ],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": "documented_partial",
+      "note": "A program family administered by BC Housing (a Crown corporation); program administration is not a ministry-branch relation. Budget 2018 itself was not read.",
+      "review": {
+        "checked": "2026-10-21",
+        "sources_checked": [],
+        "unresolved_fields": [
+          "established"
+        ],
+        "scope": "Round 4 branches claims checked against the module raw downloads",
+        "by": "Round 4 branches module (handback of 21 October 2026), integrated by Claude",
         "full_history_complete": false
       }
     }

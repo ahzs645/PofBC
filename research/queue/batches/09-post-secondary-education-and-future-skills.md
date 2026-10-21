@@ -86,9 +86,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/post-secondary-education-and-future-skills
 - **What it does:** Initiative to make post-secondary campuses safe for everyone.
 - **Held:** no start date
-- **Review:** not yet researched
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Safe Campuses BC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 7. StudentAid BC (SABC)
 

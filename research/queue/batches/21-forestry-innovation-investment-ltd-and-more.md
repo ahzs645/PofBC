@@ -60,35 +60,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Forestry Innovation Consulting (Vietnam) Ltd."
 - **Questions:** A, B and C, as above.
 
-### 4. Community Capital Development
-
-- **id** `community-capital-development` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Infrastructure.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Plans, procures and manages capital projects for schools, child care, hospitals and post-secondary facilities.
-- **Held:** no start date
-- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Community Capital Development"
-- **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
-
-### 5. Policy and Partnerships
-
-- **id** `infrastructure-policy-and-partnerships` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Infrastructure.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Develops policy, programs and legislation for provincial vertical capital infrastructure projects.
-- **Held:** no start date
-- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Policy and Partnerships"
-- **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
-
-### 6. Real Property Division
+### 4. Real Property Division
 
 - **id** `real-property-division` · division · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Infrastructure. Official site: https://www2.gov.bc.ca/gov/content/governments/services-for-government/real-estate-space
@@ -98,6 +70,36 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Review:** not yet researched
 - **Search for:** "Real Property Division"
 - **Questions:** A, B and C, as above.
+
+### 5. Community Capital Development
+
+- **id** `community-capital-development` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Infrastructure.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Plans, procures and manages capital projects for schools, child care, hospitals and post-secondary facilities.
+- **Held:** no start date; first seen 2025-03-17; names on file: Community Capital Development Division (seen 2025-03-17); parents on file: Ministry of Infrastructure (seen 2025-03-17)
+- **Events on file:** 2025-03-17 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Community Capital Development", "Community Capital Development Division"
+- **Questions:**
+  - A. It is already seen in 2025-03-17. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 6. Policy and Partnerships
+
+- **id** `infrastructure-policy-and-partnerships` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Infrastructure.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Develops policy, programs and legislation for provincial vertical capital infrastructure projects.
+- **Held:** no start date; first seen 2025-03-17; names on file: Infrastructure Policy and Partnerships Division (seen 2025-03-17); parents on file: Ministry of Infrastructure (seen 2025-03-17)
+- **Events on file:** 2025-03-17 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Policy and Partnerships", "Infrastructure Policy and Partnerships Division"
+- **Questions:**
+  - A. It is already seen in 2025-03-17. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 7. Employers' Advisers Office (EAO)
 
@@ -250,6 +252,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
+      "id": "real-property-division",
+      "name": "Real Property Division",
+      "kind": "division",
+      "parent_today": "ministry-of-infrastructure-2024",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 21",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
       "id": "community-capital-development",
       "name": "Community Capital Development",
       "kind": "division",
@@ -277,31 +304,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "infrastructure-policy-and-partnerships",
       "name": "Policy and Partnerships",
-      "kind": "division",
-      "parent_today": "ministry-of-infrastructure-2024",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 21",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "real-property-division",
-      "name": "Real Property Division",
       "kind": "division",
       "parent_today": "ministry-of-infrastructure-2024",
       "established": null,

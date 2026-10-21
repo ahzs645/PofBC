@@ -57,18 +57,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Connected Services BC", "CSBC"
 - **Questions:** A, B and C, as above.
 
-### 4. Connectivity in B.C. (Connectivity)
-
-- **id** `connectivity-in-bc` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/connectivity-in-bc
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Funds and coordinates expansion of high-speed internet and highway cellular coverage in rural, remote and Indigenous communities.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Connectivity in B.C.", "Connectivity"
-- **Questions:** A, B and C, as above.
-
-### 5. Product Distribution Centre
+### 4. Product Distribution Centre
 
 - **id** `product-distribution-centre` · office · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Citizens’ Services.
@@ -79,7 +68,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Product Distribution Centre"
 - **Questions:** A, B and C, as above.
 
-### 6. BC Bid
+### 5. BC Bid
 
 - **id** `bc-bid` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/content?id=C8A3B1B982304D88B87FD75473A62B14
@@ -94,7 +83,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 7. BC OnLine
+### 6. BC OnLine
 
 - **id** `bc-online` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/bc-online
@@ -109,7 +98,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 8. BC Stats
+### 7. BC Stats
 
 - **id** `bc-stats` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www.bcstats.gov.bc.ca/
@@ -123,6 +112,21 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 4 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 8. Connectivity in B.C. (Connectivity)
+
+- **id** `connectivity-in-bc` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/connectivity-in-bc
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Funds and coordinates expansion of high-speed internet and highway cellular coverage in rural, remote and Indigenous communities.
+- **Held:** no start date; first seen 2021-04-07
+- **Events on file:** 2021-04-07 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Connectivity in B.C.", "Connectivity"
+- **Questions:**
+  - A. It is already seen in 2021-04-07. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 9. King's Printer
 
@@ -251,31 +255,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "connectivity-in-bc",
-      "name": "Connectivity in B.C.",
-      "kind": "program",
-      "parent_today": "ministry-of-citizens-services-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 04",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "product-distribution-centre",
       "name": "Product Distribution Centre",
       "kind": "office",
@@ -354,6 +333,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "bc-stats",
       "name": "BC Stats",
       "kind": "office",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 04",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "connectivity-in-bc",
+      "name": "Connectivity in B.C.",
+      "kind": "program",
       "parent_today": "ministry-of-citizens-services-2017",
       "established": null,
       "first_observed": null,

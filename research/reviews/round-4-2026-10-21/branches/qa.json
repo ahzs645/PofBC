@@ -1,0 +1,41 @@
+{
+  "checked": "2026-10-21",
+  "claims": 88,
+  "claims_by_role": {
+    "substantive_historical_finding": 84,
+    "archival_lead": 2,
+    "negative_evidence": 1,
+    "conflicting_source_statement": 1
+  },
+  "claims_by_novelty": {
+    "new_evidence_not_in_round3_branches": 79,
+    "prior_cross_module_integration": 9
+  },
+  "sources": 81,
+  "source_categories": {
+    "unusable_retrieval": 3,
+    "accepted_original": 50,
+    "screened_only": 24,
+    "diagnostic_or_lead_original": 2,
+    "prior_original_reused": 2
+  },
+  "baseline_records": 33,
+  "new_dated_records": 16,
+  "prior_cross_module_integrations": 5,
+  "records_now_dated": 21,
+  "remaining_undated": 12,
+  "full_original_bytes_for_cited_sources": 241083645,
+  "compact_bytes_for_cited_sources": 20821931,
+  "errors": [],
+  "checks": [
+    "Unique claim and source IDs",
+    "Every claim source resolves",
+    "Every retained original exists and SHA-256 matches",
+    "Every compact source exists and SHA-256 matches",
+    "Exact baseline partitions total33 without overlap",
+    "Repository sheriff body ID normalized to bc-sheriff-services",
+    "Arts recommendation citation corrected to s9(5)(b)",
+    "1986 report date uses cover letter rather than misleading1985 filename",
+    "Medical Services Commission dates visually checked against originals"
+  ]
+}

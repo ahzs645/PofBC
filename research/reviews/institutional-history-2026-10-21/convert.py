@@ -31,6 +31,11 @@ top, and wins where it gives a fact: original designation dates replace `firstSe
 renaming orders become `names` periods, the follow-up's ministry intervals become `responsible`,
 the societies end on their 15 February 2002 registry dissolution, and the Nisga'a council and the
 predecessors of the four 1997 councils are added.
+
+Round 4 (research/reviews/round-4-2026-10-21) is applied last, from its overrides.json: the
+original designation days of the councils the 1996 orders folded, the Capital Health Board's
+corrected start, and the retyped and annotated events it supersedes. Its own convert.py writes
+that file; this one only reads it, so each generator still owns the files it writes.
 """
 
 import json
@@ -38,6 +43,52 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
+ROUND4 = ROOT / 'research/reviews/round-4-2026-10-21/overrides.json'
+OVERRIDES = json.loads(ROUND4.read_text()) if ROUND4.exists() else {}
+
+
+def apply(row, field, value):
+    """One Round 4 change to a row. `field` is a field to set (None removes it), or
+    `<field>_add` (add sources to a list, or a sentence to a text, unless already there),
+    `<field>_replace` ({old text: new text}), or `<list>[<n>].<field>`. "unchanged" changes nothing."""
+    if value == 'unchanged':
+        return
+    if field.endswith('_add'):
+        name = field[:-4]
+        if isinstance(value, list):
+            row[name] = row.get(name, []) + [v for v in value if v not in row.get(name, [])]
+        elif value not in (row.get(name) or ''):
+            row[name] = f"{row[name]} {value}" if row.get(name) else value
+    elif field.endswith('_replace'):
+        name = field[:-8]
+        for old, new in value.items():
+            if old not in row[name] and new not in row[name]:
+                raise SystemExit(f'Round 4: {row["id"]}.{name} has no "{old}"')
+            row[name] = row[name].replace(old, new)
+    elif m := re.fullmatch(r'(\w+)\[(\d+)\]\.(\w+)', field):
+        row[m[1]][int(m[2])][m[3]] = value
+    elif value is None:
+        row.pop(field, None)
+    else:
+        row[field] = value
+
+
+def override(rows, file, partial=False):
+    """Apply Round 4's changes to the rows this script writes to `file`: each named row gets its
+    `set` changes (see apply) and loses its `remove` fields. A row Round 4 names that is not here
+    is an error, unless `partial` (an early pass, before every row exists)."""
+    changes = {id: change for id, change in OVERRIDES.get(file, {}).items()}
+    by_id = {row['id']: row for row in rows}
+    for id, change in changes.items():
+        if id not in by_id:
+            if partial:
+                continue
+            raise SystemExit(f'Round 4 overrides {file}#{id}, which this script does not write')
+        for field, value in change.get('set', {}).items():
+            apply(by_id[id], field, value)
+        for field in change.get('remove', []):
+            by_id[id].pop(field, None)
+    return rows
 HERE = Path(__file__).resolve().parent
 MAP = json.loads((HERE / 'health_lineage_map.json').read_text())
 
@@ -469,6 +520,9 @@ for name, order in [('Simon Fraser Health Board', 'M199/1994'), ('Burnaby Health
     record['description'] = record['description'].replace(' When it was first designated is not yet found.', '')
     record['otherSources'] = [order_url(order)]
 
+# Round 4's designation days first, so a council it dates gets its period from that day.
+override(records, 'history/bodies-health-lineage.json', partial=True)
+
 # The councils and boards folded into others before 1997 answered to the minister under the 1993
 # Act as the later ones did: from their designation, or from the first sight of them, to their end.
 for record in records:
@@ -503,6 +557,7 @@ records.append({
 ids = [record['id'] for record in records]
 assert len(ids) == len(set(ids)), 'duplicate ids'
 assert len(records) == 44 + 7 + 43 + 3 + 9 + 1, len(records)
+override(records, 'history/bodies-health-lineage.json')
 
 bodies = {
     'note': ('Predecessors of the five geographic health authorities, from the institutional-history research of '
@@ -678,7 +733,7 @@ institutional_file = {
         'produced_by': 'research/reviews/institutional-history-2026-10-21/convert.py',
         'conventions': {'date_precision': 'kept as stated by the source; a year is never 1 January'},
     },
-    'events': institutional,
+    'events': override(institutional, 'atlas/events-institutional-history.json'),
 }
 (ROOT / 'research/atlas/events-institutional-history.json').write_text(json.dumps(institutional_file, indent=2, ensure_ascii=False) + '\n')
 print(f'{len(institutional)} further events')
