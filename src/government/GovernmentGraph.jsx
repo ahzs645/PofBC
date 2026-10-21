@@ -11,6 +11,7 @@ import {
   sealPath, territoryPath, toPoint, UNIT, VIEWBOX
 } from './layout.js'
 import { colourOf, fillOf, mix } from './theme.js'
+import { pathToPeople } from './snapshot.js'
 
 const DURATION = 750
 const DISC = BAND_INNER
@@ -345,12 +346,15 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
     return { ...toPoint(angle, position.radius), angle, radius: position.radius, size: position.size }
   }
 
-  const selectedEdges = useMemo(
-    () => (selectedId
-      ? government.edges.filter((edge) => (edge.from === selectedId || edge.to === selectedId) && !hiddenRelations.has(edge.kind))
-      : []),
-    [government.edges, selectedId, hiddenRelations]
-  )
+  // What the chosen body is connected to, and the whole of its line up to the people — not only
+  // the first step of it.
+  const selectedEdges = useMemo(() => {
+    if (!selectedId) return []
+    const path = pathToPeople(government, selectedId)
+    const near = government.edges.filter((edge) => edge.from === selectedId || edge.to === selectedId)
+    return [...near, ...path.filter((step) => !near.some((edge) => edge.from === step.from && edge.to === step.to && edge.kind === step.kind))]
+      .filter((edge) => !hiddenRelations.has(edge.kind))
+  }, [government, selectedId, hiddenRelations])
   const connected = useMemo(() => new Set(selectedEdges.flatMap((edge) => [edge.from, edge.to])), [selectedEdges])
 
   const selected = selectedId ? byId.get(selectedId) : null

@@ -1048,6 +1048,24 @@ lane; and a start the review could not settle (WorkBC, Powertech) says so — BC
 by a recorded decision. The brief listing what is still missing for every sub-agency
 (`research/sub-agencies/BRIEF.md`) is regenerated from the data by `npm run build:research-brief`.
 
+**The health authorities have their own ancestry.** Following the institutional-history research of
+2026-10-21, the five geographic authorities no longer share one generic "1997 regional boards"
+predecessor: each came from the boards and councils Schedule A of B.C. Reg. 293/2001 names (3, 17,
+13, 5 and 6 of them), and those boards from the councils the December 1996 orders folded into them —
+Prince George's council into Northern Interior, Northern Interior into Northern Health. The seven
+community health services societies passed their services on rather than amalgamating, so the
+Cariboo society's went to both Interior and Northern. A body whose start no source gives is drawn
+from the first day a source shows it, and says so; one with neither stays in its successor's
+"Came from" list without being drawn. PHSA is a society of its own (12 December 2001), not a sixth
+successor of the boards.
+
+**Every body's line to the people.** Choosing a body draws its whole line of accountability, not
+only its nearest connections — a health authority to its ministry, the ministry's minister to the
+Premier, the Premier to the Assembly whose confidence they hold, the Assembly to those who elect it
+— and the panel lists each step, marking any the sources do not state for that year. Partnerships,
+funding and the rest are not part of it, and FNHA, the Crown and the courts have none. The people
+are described as more than the electors, and a year before 1949 says whom the franchise left out.
+
 **An atlas, not just an org chart.** Following the BC government atlas research package of
 2026-09-25 (its model notes and acceptance cases are what the tests in
 `src/government/atlas.test.js` check):

@@ -17,8 +17,8 @@
   },
   "counts": {
     "total": 238,
-    "p1": 138,
-    "p2": 59,
+    "p1": 135,
+    "p2": 62,
     "p3": 41
   },
   "batches": [
@@ -30,10 +30,10 @@
         "ministry-of-attorney-general-2017"
       ],
       "items": [
-        "bc-sheriff-services",
         "family-justice-services-division",
         "legal-services-branch",
         "multiculturalism-and-anti-racism-branch",
+        "bc-sheriff-services",
         "bc-ferry-commission",
         "bc-review-board",
         "building-code-appeal-board",
@@ -124,10 +124,10 @@
         "health-care-practitioners-special-committee-for-audit-hearings",
         "health-connect-registry",
         "helpstartshere",
-        "medical-services-commission",
         "office-of-indigenous-health",
         "patient-care-quality-review-boards",
         "bc-pharmacare",
+        "medical-services-commission",
         "medical-services-plan",
         "office-of-the-provincial-health-officer",
         "health-professions-and-occupations-regulatory-oversight-office",
@@ -241,11 +241,11 @@
       "items": [
         "bc-childrens-hospital",
         "bc-mental-health-and-substance-use-services",
-        "bc-womens-hospital",
         "cardiac-services-bc",
         "health-emergency-management-bc",
         "perinatal-services-bc",
         "bc-centre-for-disease-control",
+        "bc-womens-hospital",
         "trans-care-bc",
         "bc-cancer",
         "bc-renal",
@@ -1043,7 +1043,7 @@
       "id": "bc-sheriff-services",
       "name": "BC Sheriff Services",
       "kind": "office",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -1068,15 +1068,27 @@
         "first_observed": null,
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "1974",
+            "precision": "year",
+            "type": "amalgamation",
+            "title": "Nine county sheriff offices amalgamated into one provincial Sheriff Service",
+            "sources": [
+              "https://news.gov.bc.ca/releases/2024AG0027-000679"
+            ],
+            "locator": "Information Bulletin 2024AG0027-000679, 6 May 2024, paragraph beginning \"The event coincided\"",
+            "status": "source_reported_past"
+          }
+        ]
       },
       "review_status": "not_researched",
       "questions": [
         "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
+      "generic_questions": false,
       "batch": "01"
     },
     {
@@ -6393,6 +6405,28 @@
         ],
         "events": [
           {
+            "date": "1974",
+            "precision": "year",
+            "type": "operational_start",
+            "title": "PharmaCare begins under the Ministry of Human Resources",
+            "sources": [
+              "https://www2.gov.bc.ca/assets/gov/health/health-drug-coverage/pharmacare/pharmacare_trends_2022_2023.pdf"
+            ],
+            "locator": "PharmaCare Trends 2022/23, history, printed pp. 7-9",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1987",
+            "precision": "year",
+            "type": "functions_transferred",
+            "title": "PharmaCare's administration moves from Human Resources to Health",
+            "sources": [
+              "https://www2.gov.bc.ca/assets/gov/health/health-drug-coverage/pharmacare/pharmacare_trends_2022_2023.pdf"
+            ],
+            "locator": "PharmaCare Trends 2022/23, history, printed pp. 7-9",
+            "status": "source_reported_past"
+          },
+          {
             "date": "2003",
             "precision": "year",
             "type": "name_first_observed",
@@ -6408,7 +6442,7 @@
       "review_status": "documented_partial",
       "questions": [
         "A. It is already seen in 2003. Look earlier: the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.",
-        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
       "generic_questions": false,
@@ -12552,7 +12586,7 @@
       "name": "Medical Services Commission",
       "shortName": "MSC",
       "kind": "board",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -12577,15 +12611,27 @@
         "first_observed": null,
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "1968-07-01",
+            "precision": "day",
+            "type": "legal_establishment",
+            "title": "Medical Services Commission established under the Medical Service Act",
+            "sources": [
+              "https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/medical-services-plan/bluebook2002.pdf"
+            ],
+            "locator": "MSC financial statements 2002 (Blue Book), printed p. 6, Note 1",
+            "status": "source_reported_past"
+          }
+        ]
       },
       "review_status": "not_researched",
       "questions": [
         "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches."
       ],
-      "generic_questions": true,
+      "generic_questions": false,
       "batch": "05"
     },
     {
@@ -12957,6 +13003,39 @@
         "parents": [],
         "events": [
           {
+            "date": "1955",
+            "precision": "year",
+            "type": "co_location",
+            "title": "Special Health and Treatment Services divisions in Vancouver brought under one roof, each keeping its own operations",
+            "sources": [
+              "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf"
+            ],
+            "locator": "BCCDC Annual Report 2013, History, printed p. 7",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1977",
+            "precision": "year",
+            "type": "administrative_consolidation",
+            "title": "The divisions brought under one administration as the Vancouver Bureau",
+            "sources": [
+              "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf"
+            ],
+            "locator": "BCCDC Annual Report 2013, History, printed p. 7",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1986",
+            "precision": "year",
+            "type": "name_change",
+            "title": "The Vancouver Bureau becomes the BC Centre for Disease Control",
+            "sources": [
+              "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf"
+            ],
+            "locator": "BCCDC Annual Report 2013, History, printed p. 7",
+            "status": "source_reported_past"
+          },
+          {
             "date": "1997",
             "precision": "year",
             "type": "name_first_observed",
@@ -12968,6 +13047,17 @@
             "status": "source_reported_past"
           },
           {
+            "date": "1997",
+            "precision": "year",
+            "type": "governance_transferred",
+            "title": "BCCDC becomes a society, its governance moving from the ministry to the Vancouver/Richmond Health Board",
+            "sources": [
+              "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf"
+            ],
+            "locator": "BCCDC Annual Report 2013, History, printed p. 7",
+            "status": "source_reported_past"
+          },
+          {
             "date": "1999-07-15",
             "precision": "day",
             "type": "name_observed",
@@ -12976,6 +13066,17 @@
               "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/records-management/orcs/communicable-disease-control.pdf"
             ],
             "locator": "PDF p. 8 (executive summary); schedule 122350 approved 1999-07-15",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "2001-12",
+            "precision": "month",
+            "type": "governance_transferred",
+            "title": "BCCDC becomes part of the Provincial Health Services Authority",
+            "sources": [
+              "https://www.bccdc.ca/About-Site/Documents/Annual-Reports/BCCDCReport2013V4.pdf"
+            ],
+            "locator": "BCCDC Annual Report 2013, History, printed p. 7",
             "status": "source_reported_past"
           },
           {
@@ -12994,7 +13095,7 @@
       "review_status": "not_researched",
       "questions": [
         "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
+        "B. Start: 8 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
       "generic_questions": false,
@@ -13046,7 +13147,7 @@
       "name": "BC Women's Hospital + Health Centre",
       "shortName": "BC Women's",
       "kind": "division",
-      "priority": 1,
+      "priority": 2,
       "tracks": [
         "A",
         "B",
@@ -13071,15 +13172,49 @@
         "first_observed": null,
         "names": [],
         "parents": [],
-        "events": []
+        "events": [
+          {
+            "date": "1927-10-02",
+            "precision": "day",
+            "type": "operational_start",
+            "title": "Grace Hospital opens in Vancouver, run by the Salvation Army",
+            "sources": [
+              "https://www.bcwomens.ca/about/who-we-are/our-unique-role/our-story"
+            ],
+            "locator": "Our Story: milestones and memories, 1927",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1994-02",
+            "precision": "month",
+            "type": "governance_transferred",
+            "title": "The Salvation Army transfers responsibility for Grace Hospital to the provincial government; an interim board is set up",
+            "sources": [
+              "https://www.bcwomens.ca/about/who-we-are/our-unique-role/our-story"
+            ],
+            "locator": "Our Story: milestones and memories, 1994",
+            "status": "source_reported_past"
+          },
+          {
+            "date": "1994-03-31",
+            "precision": "day",
+            "type": "legal_establishment",
+            "title": "British Columbia's Women's Hospital and Health Centre Society formed, joining the hospital and the Women's Health Centre",
+            "sources": [
+              "https://www.bcwomens.ca/about/who-we-are/our-unique-role/our-story"
+            ],
+            "locator": "Our Story: milestones and memories, 1994",
+            "status": "source_reported_past"
+          }
+        ]
       },
       "review_status": "not_researched",
       "questions": [
         "A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.",
-        "B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.",
+        "B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.",
         "C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period."
       ],
-      "generic_questions": true,
+      "generic_questions": false,
       "batch": "11"
     },
     {

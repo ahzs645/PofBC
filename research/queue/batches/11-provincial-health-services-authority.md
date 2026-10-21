@@ -42,18 +42,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "BC Mental Health and Substance Use Services", "BCMHSUS"
 - **Questions:** A, B and C, as above.
 
-### 3. BC Women's Hospital + Health Centre (BC Women's)
-
-- **id** `bc-womens-hospital` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/bc-womens-hospital-health-centre
-- **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-womens-hospital-health-centre
-- **What it does:** The only facility in B.C. devoted primarily to the health of women, newborns and families, and the only source of tertiary maternity care in the province.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC Women's Hospital + Health Centre", "BC Women's"
-- **Questions:** A, B and C, as above.
-
-### 4. Cardiac Services BC
+### 3. Cardiac Services BC
 
 - **id** `cardiac-services-bc` · agency · **P1 — disappears before today, nothing on file**
 - **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/cardiac-services-bc
@@ -64,7 +53,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Cardiac Services BC"
 - **Questions:** A, B and C, as above.
 
-### 5. Health Emergency Management BC (HEMBC)
+### 4. Health Emergency Management BC (HEMBC)
 
 - **id** `health-emergency-management-bc` · agency · **P1 — disappears before today, nothing on file**
 - **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/health-emergency-management-bc
@@ -75,7 +64,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Health Emergency Management BC", "HEMBC"
 - **Questions:** A, B and C, as above.
 
-### 6. Perinatal Services BC (PSBC)
+### 5. Perinatal Services BC (PSBC)
 
 - **id** `perinatal-services-bc` · agency · **P1 — disappears before today, nothing on file**
 - **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/perinatal-services-bc
@@ -86,16 +75,31 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Perinatal Services BC", "PSBC"
 - **Questions:** A, B and C, as above.
 
-### 7. BC Centre for Disease Control (BCCDC)
+### 6. BC Centre for Disease Control (BCCDC)
 
 - **id** `bc-centre-for-disease-control` · agency · **P2 — undated, but some history on file**
 - **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/bc-centre-for-disease-control
 - **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-centre-for-disease-control
 - **What it does:** Provides provincial and national public health leadership through surveillance, detection, treatment, prevention and consultation services.
 - **Held:** no start date
-- **Events on file:** 1997 name first observed; 1999-07-15 name observed; 2018-04-01 legal status change
+- **Events on file:** 1955 co location; 1977 administrative consolidation; 1986 name change; 1997 name first observed; 1997 governance transferred; 1999-07-15 name observed; 2001-12 governance transferred; 2018-04-01 legal status change
 - **Review:** not yet researched
 - **Search for:** "BC Centre for Disease Control", "BCCDC"
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: 8 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
+
+### 7. BC Women's Hospital + Health Centre (BC Women's)
+
+- **id** `bc-womens-hospital` · division · **P2 — undated, but some history on file**
+- **Today:** under Provincial Health Services Authority. Official site: https://www.phsa.ca/our-services/programs-services/bc-womens-hospital-health-centre
+- **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-womens-hospital-health-centre
+- **What it does:** The only facility in B.C. devoted primarily to the health of women, newborns and families, and the only source of tertiary maternity care in the province.
+- **Held:** no start date
+- **Events on file:** 1927-10-02 operational start; 1994-02 governance transferred; 1994-03-31 legal establishment
+- **Review:** not yet researched
+- **Search for:** "BC Women's Hospital + Health Centre", "BC Women's"
 - **Questions:**
   - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
   - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
@@ -226,31 +230,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "bc-womens-hospital",
-      "name": "BC Women's Hospital + Health Centre",
-      "kind": "division",
-      "parent_today": "provincial-health-services-authority",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 11",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
       "id": "cardiac-services-bc",
       "name": "Cardiac Services BC",
       "kind": "agency",
@@ -329,6 +308,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "bc-centre-for-disease-control",
       "name": "BC Centre for Disease Control",
       "kind": "agency",
+      "parent_today": "provincial-health-services-authority",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 11",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "bc-womens-hospital",
+      "name": "BC Women's Hospital + Health Centre",
+      "kind": "division",
       "parent_today": "provincial-health-services-authority",
       "established": null,
       "first_observed": null,

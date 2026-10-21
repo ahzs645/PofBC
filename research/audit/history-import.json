@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 2190,
+    "accepted": 2284,
     "unresolved_unmapped": 168,
     "intentionally_excluded": 4,
     "conflicting": 1
@@ -22946,8 +22946,11 @@
         "becameId": null,
         "predecessorIds": [],
         "responsible": [],
-        "description": "Crown corporation established in 1993 under the Transportation Act to plan, acquire, build and hold transportation infrastructure.",
-        "source": "https://www2.gov.bc.ca/gov/content/transportation/transportation-reports-and-reference/ministry-reporting/bctfa"
+        "description": "Crown corporation established in 1993 under the Build BC Act (the Transportation Act replaced it as its basis on 31 December 2004) to plan, acquire, build and hold transportation infrastructure. It owns BC Railway Company (from 1 April 2010) and Transportation Investment Corporation (from 1 April 2018).",
+        "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/sup-e/bc-transportation-financing-authority-fs-2025-26.pdf",
+        "otherSources": [
+          "https://www2.gov.bc.ca/gov/content/transportation/transportation-reports-and-reference/ministry-reporting/bctfa"
+        ]
       }
     },
     {
@@ -23118,25 +23121,6 @@
       }
     },
     {
-      "origin": "bodies.json#regional-health-boards-1997",
-      "disposition": "accepted",
-      "input": {
-        "id": "regional-health-boards-1997",
-        "name": "Regional health boards, community health councils and community health services societies",
-        "kind": "health-authority",
-        "established": "1997",
-        "ended": "2001-12",
-        "becameId": null,
-        "predecessorIds": [],
-        "responsible": [],
-        "description": "Under the 1997 amendments to the Health Authorities Act, 52 local health authorities (11 regional health boards, 34 community health councils, 7 community health services societies) ran health services until they were amalgamated into five regional authorities in December 2001.",
-        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1564394/",
-        "otherSources": [
-          "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
-        ]
-      }
-    },
-    {
       "origin": "bodies.json#industry-training-and-apprenticeship-commission",
       "disposition": "accepted",
       "input": {
@@ -23275,15 +23259,16 @@
         "name": "Fraser Health Authority",
         "shortName": "Fraser Health",
         "kind": "health-authority",
-        "established": "2001-12",
+        "established": "2001-12-12",
         "ended": null,
         "becameId": null,
-        "predecessorIds": [
-          "regional-health-boards-1997"
-        ],
+        "predecessorIds": [],
         "responsible": [],
-        "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated the Fraser Valley, Simon Fraser and South Fraser health regions.",
-        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+        "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates three regional boards into it: the Fraser Valley, Simon Fraser and South Fraser health regions.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+        ]
       }
     },
     {
@@ -23294,15 +23279,16 @@
         "name": "Interior Health Authority",
         "shortName": "Interior Health",
         "kind": "health-authority",
-        "established": "2001-12",
+        "established": "2001-12-12",
         "ended": null,
         "becameId": null,
-        "predecessorIds": [
-          "regional-health-boards-1997"
-        ],
+        "predecessorIds": [],
         "responsible": [],
-        "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated about 20 former health regions and councils in the southern Interior.",
-        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+        "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates seventeen bodies into it: the Thompson, North Okanagan and Okanagan Similkameen health regions and fourteen councils and transitional authorities of the Kootenays and Cariboo. The East Kootenay, Kootenay Boundary and most of the Cariboo community health services societies’ services passed to it at the same time.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+        ]
       }
     },
     {
@@ -23313,15 +23299,16 @@
         "name": "Northern Health Authority",
         "shortName": "Northern Health",
         "kind": "health-authority",
-        "established": "2001-12",
+        "established": "2001-12-12",
         "ended": null,
         "becameId": null,
-        "predecessorIds": [
-          "regional-health-boards-1997"
-        ],
+        "predecessorIds": [],
         "responsible": [],
-        "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated the Northern Interior Regional Health Board and northern health councils.",
-        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+        "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates thirteen bodies into it: the Northern Interior Regional Health Board and twelve northwest, northeast and Quesnel councils. The North West and Peace Liard societies’ services, and the Cariboo society’s in Quesnel, passed to it at the same time.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+        ]
       }
     },
     {
@@ -23332,15 +23319,16 @@
         "name": "Vancouver Coastal Health Authority",
         "shortName": "Vancouver Coastal Health",
         "kind": "health-authority",
-        "established": "2001-12",
+        "established": "2001-12-12",
         "ended": null,
         "becameId": null,
-        "predecessorIds": [
-          "regional-health-boards-1997"
-        ],
+        "predecessorIds": [],
         "responsible": [],
-        "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated the Vancouver/Richmond Health Board, North Shore Health Region and coastal community health councils.",
-        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+        "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates five bodies into it: the Vancouver/Richmond Health Board, the North Shore Health Region and the Powell River, Sea to Sky and Sunshine Coast councils; the Coast Garibaldi society’s services passed to it. The Bella Coola and Central Coast areas joined it from Interior and Vancouver Island on 18 March 2002.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+        ]
       }
     },
     {
@@ -23351,15 +23339,16 @@
         "name": "Vancouver Island Health Authority",
         "shortName": "Island Health",
         "kind": "health-authority",
-        "established": "2001-12",
+        "established": "2001-12-12",
         "ended": null,
         "becameId": null,
-        "predecessorIds": [
-          "regional-health-boards-1997"
-        ],
+        "predecessorIds": [],
         "responsible": [],
-        "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated the Capital Health Region, Central Vancouver Island Health Region and island health councils.",
-        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+        "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates six bodies into it: the Capital and Central Vancouver Island health regions and four councils and transitional authorities of the north island and Central Coast; the Upper Island/Central Coast society’s services passed to it. The Central Coast area moved to Vancouver Coastal on 18 March 2002.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+        ]
       }
     },
     {
@@ -23370,15 +23359,17 @@
         "name": "Provincial Health Services Authority",
         "shortName": "PHSA",
         "kind": "health-authority",
-        "established": "2001-12",
+        "established": "2001-12-12",
         "ended": null,
         "becameId": null,
-        "predecessorIds": [
-          "regional-health-boards-1997"
-        ],
+        "predecessorIds": [],
         "responsible": [],
-        "description": "Province-wide health authority created in December 2001 to run specialized provincial services such as BC Cancer, BCCDC and BC Emergency Health Services; its mandate was refocused after a 2025 review.",
-        "source": "https://en.wikipedia.org/wiki/Provincial_Health_Services_Authority"
+        "description": "Province-wide health authority, incorporated under the Society Act on 12 December 2001 to coordinate specialized provincial services: the BC Cancer Agency, BC Centre for Disease Control, BC Provincial Renal Agency, BC Transplant Society, Children’s and Women’s Health Centre, Riverview Hospital, Forensic Psychiatric Services and others. It is not a successor of the regional boards; its agencies each have their own history, and their branch societies were amalgamated with it into one society on 1 April 2018. Its mandate was refocused after a 2025 review.",
+        "source": "https://www.phsa.ca/about-site/Documents/PHSA%20Consolidated%20FS.pdf",
+        "otherSources": [
+          "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm",
+          "https://en.wikipedia.org/wiki/Provincial_Health_Services_Authority"
+        ]
       }
     },
     {
@@ -23844,12 +23835,2062 @@
         "becameId": null,
         "predecessorIds": [],
         "responsible": [],
-        "description": "Standalone shared-services organization, announced in December 2025 after the health-authority review and formally established on 1 April 2026 within the Health Employers Association of BC, to centralize corporate and administrative services for all health authorities.",
-        "source": "https://www.heu.org/shared-health-services-updates",
+        "description": "Stand-alone shared-services society, announced in December 2025 after the health-authority review and incorporated on 1 April 2026, to provide corporate and administrative services to the health authorities. It is a member of the Health Employers Association of BC, not a part of it, and its functions move to it in waves after incorporation.",
+        "source": "https://free.bcpublications.ca/civix/document/id/corpreg/corpreg/soc0409soc0526",
         "otherSources": [
+          "https://hsabc.org/BCSHS_townhall_questions",
+          "https://www.heu.org/shared-health-services-updates",
           "https://news.gov.bc.ca/releases/2025HLTH0103-001195",
-          "https://en.wikipedia.org/wiki/Provincial_Health_Services_Authority"
+          "https://www.bcbudget.gov.bc.ca/Annual_Reports/2025_2026/pdf/ministry/hlth.pdf"
         ]
+      }
+    },
+    {
+      "origin": "bodies.json#fraser-valley-health-region",
+      "disposition": "accepted",
+      "input": {
+        "id": "fraser-valley-health-region",
+        "name": "Fraser Valley Health Region",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "fraser-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. The December 1996 orders call it the Fraser Valley Regional Health Board. Those orders provided for 4 community health councils to amalgamate into it. Amalgamated into the Fraser Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). That the 1996 and 2001 names are one body rests on the orders continuing it; the renaming instrument is not yet found. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1996-12-19",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "locator": "M441/1996, section 2: continued"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#simon-fraser-health-region",
+      "disposition": "accepted",
+      "input": {
+        "id": "simon-fraser-health-region",
+        "name": "Simon Fraser Health Region",
+        "kind": "health-authority",
+        "established": "1996-12-16",
+        "ended": "2001-12-12",
+        "becameId": "fraser-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. The December 1996 orders call it the Simon Fraser/Burnaby Health Board. Those orders provided for 3 community health councils to amalgamate into it. Amalgamated into the Fraser Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). That the 1996 and 2001 names are one body rests on the orders continuing it; the renaming instrument is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "establishedMeaning": "designated by M432/1996, combining the Simon Fraser and Burnaby health boards"
+      }
+    },
+    {
+      "origin": "bodies.json#south-fraser-health-region",
+      "disposition": "accepted",
+      "input": {
+        "id": "south-fraser-health-region",
+        "name": "South Fraser Health Region",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "fraser-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. The December 1996 orders call it the South Fraser Valley Regional Health Board. Those orders provided for 5 community health councils to amalgamate into it. Amalgamated into the Fraser Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). That the 1996 and 2001 names are one body rests on the orders continuing it; the renaming instrument is not yet found. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1996-12-19",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "locator": "M441/1996, section 3: continued"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#arrow-lakes-upper-slocan-valley-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "arrow-lakes-upper-slocan-valley-health-council",
+        "name": "Arrow Lakes/Upper Slocan Valley Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Kootenay Boundary Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Kootenay Boundary Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#bella-coola-and-district-transitional-health-authority",
+      "disposition": "accepted",
+      "input": {
+        "id": "bella-coola-and-district-transitional-health-authority",
+        "name": "Bella Coola and District Transitional Health Authority",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Transitional health authority, on the council side of the Health Authorities Act framework. Its area was one of those served by the Cariboo Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Cariboo Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#boundary-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "boundary-health-council",
+        "name": "Boundary Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Kootenay Boundary Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Kootenay Boundary Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#castlegar-and-district-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "castlegar-and-district-health-council",
+        "name": "Castlegar and District Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Kootenay Boundary Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Kootenay Boundary Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#central-cariboo-chilcotin-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "central-cariboo-chilcotin-health-council",
+        "name": "Central Cariboo Chilcotin Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Cariboo Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Cariboo Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#columbia-valley-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "columbia-valley-health-council",
+        "name": "Columbia Valley Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the East Kootenay Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the East Kootenay Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#cranbrook-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "cranbrook-health-council",
+        "name": "Cranbrook Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the East Kootenay Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the East Kootenay Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#creston-and-district-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "creston-and-district-health-council",
+        "name": "Creston and District Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the East Kootenay Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the East Kootenay Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#elk-valley-and-south-country-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "elk-valley-and-south-country-health-council",
+        "name": "Elk Valley and South Country Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the East Kootenay Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the East Kootenay Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#golden-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "golden-health-council",
+        "name": "Golden Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the East Kootenay Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the East Kootenay Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#greater-trail-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "greater-trail-community-health-council",
+        "name": "Greater Trail Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Kootenay Boundary Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Kootenay Boundary Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#kimberley-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "kimberley-community-health-council",
+        "name": "Kimberley Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the East Kootenay Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the East Kootenay Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#nelson-and-area-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "nelson-and-area-health-council",
+        "name": "Nelson and Area Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Kootenay Boundary Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Kootenay Boundary Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#north-okanagan-health-region",
+      "disposition": "accepted",
+      "input": {
+        "id": "north-okanagan-health-region",
+        "name": "North Okanagan Health Region",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. The December 1996 orders call it the North Okanagan Regional Health Board. Those orders provided for 4 community health councils to amalgamate into it. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). That the 1996 and 2001 names are one body rests on the orders continuing it; the renaming instrument is not yet found. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1996-12-19",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+          "locator": "M444/1996, section 3: continued"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#okanagan-similkameen-health-region",
+      "disposition": "accepted",
+      "input": {
+        "id": "okanagan-similkameen-health-region",
+        "name": "Okanagan Similkameen Health Region",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. The December 1996 orders call it the South Okanagan Similkameen Health Board. Those orders provided for 6 community health councils to amalgamate into it. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). That the 1996 and 2001 names are one body rests on the orders continuing it; the renaming instrument is not yet found. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1996-12-16",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+          "locator": "M432/1996, section 5: continued"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#south-cariboo-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "south-cariboo-community-health-council",
+        "name": "South Cariboo Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Cariboo Community Health Services Society. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Cariboo Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#thompson-health-region",
+      "disposition": "accepted",
+      "input": {
+        "id": "thompson-health-region",
+        "name": "Thompson Health Region",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "interior-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. The December 1996 orders call it the Thompson Regional Health Board. Those orders provided for 9 community health councils to amalgamate into it. Amalgamated into the Interior Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). That the 1996 and 2001 names are one body rests on the orders continuing it; the renaming instrument is not yet found. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1996-12-19",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "locator": "M441/1996, section 4: continued"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#bulkley-valley-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "bulkley-valley-health-council",
+        "name": "Bulkley Valley Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the North West Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the North West Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#fort-nelson-liard-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "fort-nelson-liard-health-council",
+        "name": "Fort Nelson-Liard Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Peace Liard Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Peace Liard Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#kitimat-and-area-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "kitimat-and-area-health-council",
+        "name": "Kitimat and Area Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the North West Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the North West Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#north-coast-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "north-coast-community-health-council",
+        "name": "North Coast Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the North West Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the North West Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#north-peace-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "north-peace-health-council",
+        "name": "North Peace Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Peace Liard Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Peace Liard Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#northern-interior-regional-health-board",
+      "disposition": "accepted",
+      "input": {
+        "id": "northern-interior-regional-health-board",
+        "name": "Northern Interior Regional Health Board",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. Those orders provided for 5 community health councils to amalgamate into it. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1298_1994",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1994-10-13",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1298_1994",
+          "locator": "OIC 1298/1994, Schedule section 9: in the Health Board Regulation, with members appointed by the Lakes District, Omineca, Mackenzie, Robson Valley and Prince George councils. Evidence of existence by that day, not of its creation"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#queen-charlotte-islands-haida-gwaii-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "queen-charlotte-islands-haida-gwaii-community-health-council",
+        "name": "Queen Charlotte Islands/Haida Gwaii Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the North West Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the North West Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#quesnel-and-district-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "quesnel-and-district-community-health-council",
+        "name": "Quesnel and District Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Cariboo Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Cariboo Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#snow-country-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "snow-country-health-council",
+        "name": "Snow Country Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the North West Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the North West Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#south-peace-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "south-peace-health-council",
+        "name": "South Peace Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Peace Liard Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Peace Liard Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#stikine-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "stikine-health-council",
+        "name": "Stikine Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the North West Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the North West Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#terrace-and-area-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "terrace-and-area-health-council",
+        "name": "Terrace and Area Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the North West Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the North West Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#upper-skeena-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "upper-skeena-community-health-council",
+        "name": "Upper Skeena Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "northern-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the North West Community Health Services Society. Amalgamated into the Northern Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the North West Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#north-shore-health-region",
+      "disposition": "accepted",
+      "input": {
+        "id": "north-shore-health-region",
+        "name": "North Shore Health Region",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-coastal-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. Amalgamated into the Vancouver Coastal Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1996-12-16",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+          "locator": "M432/1996: the North Shore board continued"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#powell-river-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "powell-river-community-health-council",
+        "name": "Powell River Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-coastal-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Coast Garibaldi Community Health Services Society. Amalgamated into the Vancouver Coastal Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Coast Garibaldi Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#sea-to-sky-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "sea-to-sky-community-health-council",
+        "name": "Sea to Sky Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-coastal-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Coast Garibaldi Community Health Services Society. Amalgamated into the Vancouver Coastal Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Coast Garibaldi Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#sunshine-coast-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "sunshine-coast-community-health-council",
+        "name": "Sunshine Coast Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-coastal-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Coast Garibaldi Community Health Services Society. Amalgamated into the Vancouver Coastal Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Coast Garibaldi Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#vancouver-richmond-health-board",
+      "disposition": "accepted",
+      "input": {
+        "id": "vancouver-richmond-health-board",
+        "name": "Vancouver/Richmond Health Board",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-coastal-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. The December 1996 orders call it the Vancouver Health Board. Amalgamated into the Vancouver Coastal Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0007_1997",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1997-01-09",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0007_1997",
+          "locator": "M7/1997, sections 1-2: the Vancouver Health Board continued and known as the Vancouver/Richmond Health Board"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#campbell-river-nootka-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "campbell-river-nootka-community-health-council",
+        "name": "Campbell River/Nootka Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-island-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Upper Island/Central Coast Community Health Services Society. Amalgamated into the Vancouver Island Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Upper Island/Central Coast Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#capital-health-region",
+      "disposition": "accepted",
+      "input": {
+        "id": "capital-health-region",
+        "name": "Capital Health Region",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-island-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. The December 1996 orders call it the Capital Health Board. Those orders provided for 1 community health councils to amalgamate into it. Amalgamated into the Vancouver Island Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). That the 1996 and 2001 names are one body rests on the orders continuing it; the renaming instrument is not yet found. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1996-12-19",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "locator": "M441/1996, section 7: continued"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#central-coast-transitional-health-authority",
+      "disposition": "accepted",
+      "input": {
+        "id": "central-coast-transitional-health-authority",
+        "name": "Central Coast Transitional Health Authority",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-island-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Transitional health authority, on the council side of the Health Authorities Act framework. Its area was one of those served by the Upper Island/Central Coast Community Health Services Society. Amalgamated into the Vancouver Island Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Upper Island/Central Coast Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#central-vancouver-island-health-region",
+      "disposition": "accepted",
+      "input": {
+        "id": "central-vancouver-island-health-region",
+        "name": "Central Vancouver Island Health Region",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-island-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board under the Health Authorities Act. The December 1996 orders call it the Central Vancouver Island Regional Health Board. Those orders provided for 6 community health councils to amalgamate into it. Amalgamated into the Vancouver Island Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). That the 1996 and 2001 names are one body rests on the orders continuing it; the renaming instrument is not yet found. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1996-12-19",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+          "locator": "M441/1996, section 5: continued"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#comox-valley-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "comox-valley-community-health-council",
+        "name": "Comox Valley Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-island-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Upper Island/Central Coast Community Health Services Society. Amalgamated into the Vancouver Island Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Upper Island/Central Coast Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#mount-waddington-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "mount-waddington-health-council",
+        "name": "Mount Waddington Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": "vancouver-island-health",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council under the Health Authorities Act. Its area was one of those served by the Upper Island/Central Coast Community Health Services Society. Amalgamated into the Vancouver Island Health Authority on 12 December 2001 under the Regional Health Boards Regulation, B.C. Reg. 293/2001, which names it in Schedule A (signed 11 December, deposited 12 December). When it was first designated is not yet found; it is drawn from February 2000, when B.C. Reg. 76/2000 shows its area.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, Schedule A: the council area associated with the Upper Island/Central Coast Community Health Services Society"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#east-kootenay-community-health-services-society",
+      "disposition": "accepted",
+      "input": {
+        "id": "east-kootenay-community-health-services-society",
+        "name": "East Kootenay Community Health Services Society",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": null,
+        "predecessorIds": [],
+        "serviceSuccessorIds": [
+          "interior-health"
+        ],
+        "responsible": [],
+        "description": "Community health services society serving the areas of 6 community health councils. Its services passed to the Interior Health Authority in the December 2001 reorganization, when its board was replaced by the new authority's appointees (M298-M305/2001, effective 12 December). It is not in Schedule A of B.C. Reg. 293/2001: this is a passing of services, not an amalgamation, and when the society was dissolved or its assets conveyed is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001"
+        ],
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, section 7 and Schedule A"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#kootenay-boundary-community-health-services-society",
+      "disposition": "accepted",
+      "input": {
+        "id": "kootenay-boundary-community-health-services-society",
+        "name": "Kootenay Boundary Community Health Services Society",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": null,
+        "predecessorIds": [],
+        "serviceSuccessorIds": [
+          "interior-health"
+        ],
+        "responsible": [],
+        "description": "Community health services society serving the areas of 5 community health councils. Its services passed to the Interior Health Authority in the December 2001 reorganization, when its board was replaced by the new authority's appointees (M298-M305/2001, effective 12 December). The 2001 announcement calls it \"Central Kootenay\"; this is the name in B.C. Reg. 76/2000, section 7. It is not in Schedule A of B.C. Reg. 293/2001: this is a passing of services, not an amalgamation, and when the society was dissolved or its assets conveyed is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001"
+        ],
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, section 7 and Schedule A"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#cariboo-community-health-services-society",
+      "disposition": "accepted",
+      "input": {
+        "id": "cariboo-community-health-services-society",
+        "name": "Cariboo Community Health Services Society",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": null,
+        "predecessorIds": [],
+        "serviceSuccessorIds": [
+          "interior-health",
+          "northern-health"
+        ],
+        "responsible": [],
+        "description": "Community health services society serving the areas of 4 community health councils. Its services passed to the Interior Health Authority and the Northern Health Authority in the December 2001 reorganization, when its board was replaced by the new authority's appointees (M298-M305/2001, effective 12 December). Its territory was split: the Quesnel council went to Northern Health, the others to Interior Health; Bella Coola moved on to Vancouver Coastal in March 2002. It is not in Schedule A of B.C. Reg. 293/2001: this is a passing of services, not an amalgamation, and when the society was dissolved or its assets conveyed is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001"
+        ],
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, section 7 and Schedule A"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#north-west-community-health-services-society",
+      "disposition": "accepted",
+      "input": {
+        "id": "north-west-community-health-services-society",
+        "name": "North West Community Health Services Society",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": null,
+        "predecessorIds": [],
+        "serviceSuccessorIds": [
+          "northern-health"
+        ],
+        "responsible": [],
+        "description": "Community health services society serving the areas of 8 community health councils. Its services passed to the Northern Health Authority in the December 2001 reorganization, when its board was replaced by the new authority's appointees (M298-M305/2001, effective 12 December). It is not in Schedule A of B.C. Reg. 293/2001: this is a passing of services, not an amalgamation, and when the society was dissolved or its assets conveyed is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001"
+        ],
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, section 7 and Schedule A"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#peace-liard-community-health-services-society",
+      "disposition": "accepted",
+      "input": {
+        "id": "peace-liard-community-health-services-society",
+        "name": "Peace Liard Community Health Services Society",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": null,
+        "predecessorIds": [],
+        "serviceSuccessorIds": [
+          "northern-health"
+        ],
+        "responsible": [],
+        "description": "Community health services society serving the areas of 3 community health councils. Its services passed to the Northern Health Authority in the December 2001 reorganization, when its board was replaced by the new authority's appointees (M298-M305/2001, effective 12 December). It is not in Schedule A of B.C. Reg. 293/2001: this is a passing of services, not an amalgamation, and when the society was dissolved or its assets conveyed is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001"
+        ],
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, section 7 and Schedule A"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#coast-garibaldi-community-health-services-society",
+      "disposition": "accepted",
+      "input": {
+        "id": "coast-garibaldi-community-health-services-society",
+        "name": "Coast Garibaldi Community Health Services Society",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": null,
+        "predecessorIds": [],
+        "serviceSuccessorIds": [
+          "vancouver-coastal-health"
+        ],
+        "responsible": [],
+        "description": "Community health services society serving the areas of 3 community health councils. Its services passed to the Vancouver Coastal Health Authority in the December 2001 reorganization, when its board was replaced by the new authority's appointees (M298-M305/2001, effective 12 December). It is not in Schedule A of B.C. Reg. 293/2001: this is a passing of services, not an amalgamation, and when the society was dissolved or its assets conveyed is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001"
+        ],
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, section 7 and Schedule A"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#upper-island-central-coast-community-health-services-society",
+      "disposition": "accepted",
+      "input": {
+        "id": "upper-island-central-coast-community-health-services-society",
+        "name": "Upper Island/Central Coast Community Health Services Society",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "2001-12-12",
+        "becameId": null,
+        "predecessorIds": [],
+        "serviceSuccessorIds": [
+          "vancouver-island-health"
+        ],
+        "responsible": [],
+        "description": "Community health services society serving the areas of 4 community health councils. Its services passed to the Vancouver Island Health Authority in the December 2001 reorganization, when its board was replaced by the new authority's appointees (M298-M305/2001, effective 12 December). Its Central Coast territory moved to Vancouver Coastal in March 2002. It is not in Schedule A of B.C. Reg. 293/2001: this is a passing of services, not an amalgamation, and when the society was dissolved or its assets conveyed is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001"
+        ],
+        "firstSeen": {
+          "date": "2000-02-28",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0076_2000",
+          "locator": "B.C. Reg. 76/2000, section 7 and Schedule A"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#new-westminster-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "new-westminster-health-council",
+        "name": "New Westminster Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "simon-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M432/1996 (December 1996) provided for it to amalgamate into the Simon Fraser/Burnaby Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#tri-cities-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "tri-cities-health-council",
+        "name": "Tri-Cities Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "simon-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M432/1996 (December 1996) provided for it to amalgamate into the Simon Fraser/Burnaby Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#ridge-meadows-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "ridge-meadows-community-health-council",
+        "name": "Ridge Meadows Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "simon-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M432/1996 (December 1996) provided for it to amalgamate into the Simon Fraser/Burnaby Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#oliver-osoyoos-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "oliver-osoyoos-health-council",
+        "name": "Oliver Osoyoos Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "okanagan-similkameen-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M432/1996 (December 1996) provided for it to amalgamate into the South Okanagan Similkameen Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#penticton-and-area-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "penticton-and-area-health-council",
+        "name": "Penticton and Area Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "okanagan-similkameen-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M432/1996 (December 1996) provided for it to amalgamate into the South Okanagan Similkameen Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#south-similkameen-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "south-similkameen-community-health-council",
+        "name": "South Similkameen Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "okanagan-similkameen-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M432/1996 (December 1996) provided for it to amalgamate into the South Okanagan Similkameen Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#princeton-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "princeton-health-council",
+        "name": "Princeton Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "okanagan-similkameen-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M432/1996 (December 1996) provided for it to amalgamate into the South Okanagan Similkameen Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#central-okanagan-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "central-okanagan-community-health-council",
+        "name": "Central Okanagan Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "okanagan-similkameen-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M432/1996 (December 1996) provided for it to amalgamate into the South Okanagan Similkameen Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#summerland-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "summerland-health-council",
+        "name": "Summerland Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "okanagan-similkameen-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M432/1996 (December 1996) provided for it to amalgamate into the South Okanagan Similkameen Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#abbotsford-matsqui-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "abbotsford-matsqui-health-council",
+        "name": "Abbotsford/Matsqui Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "fraser-valley-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Fraser Valley Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#chilliwack-kent-harrison-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "chilliwack-kent-harrison-health-council",
+        "name": "Chilliwack/Kent/Harrison Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "fraser-valley-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Fraser Valley Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#hope-and-district-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "hope-and-district-health-council",
+        "name": "Hope and District Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "fraser-valley-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Fraser Valley Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#mission-and-district-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "mission-and-district-community-health-council",
+        "name": "Mission and District Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "fraser-valley-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Fraser Valley Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#delta-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "delta-health-council",
+        "name": "Delta Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "south-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the South Fraser Valley Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#the-langleys-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "the-langleys-health-council",
+        "name": "The Langleys’ Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "south-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the South Fraser Valley Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#peace-arch-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "peace-arch-community-health-council",
+        "name": "Peace Arch Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "south-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the South Fraser Valley Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#surrey-central-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "surrey-central-community-health-council",
+        "name": "Surrey Central Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "south-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the South Fraser Valley Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#surrey-north-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "surrey-north-community-health-council",
+        "name": "Surrey North Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "south-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the South Fraser Valley Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#barriere-and-district-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "barriere-and-district-community-health-council",
+        "name": "Barriere and District Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "thompson-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Thompson Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#clearwater-and-district-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "clearwater-and-district-community-health-council",
+        "name": "Clearwater and District Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "thompson-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Thompson Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#east-thompson-north-shuswap-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "east-thompson-north-shuswap-health-council",
+        "name": "East Thompson/North Shuswap Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "thompson-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Thompson Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#kamloops-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "kamloops-community-health-council",
+        "name": "Kamloops Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "thompson-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Thompson Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#logan-lake-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "logan-lake-health-council",
+        "name": "Logan Lake Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "thompson-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Thompson Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#nicola-valley-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "nicola-valley-health-council",
+        "name": "Nicola Valley Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "thompson-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Thompson Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#saint-bartholomews-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "saint-bartholomews-health-council",
+        "name": "Saint Bartholomew’s Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "thompson-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Thompson Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#lillooet-district-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "lillooet-district-health-council",
+        "name": "Lillooet District Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "thompson-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Thompson Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#south-cariboo-health-council-1996",
+      "disposition": "accepted",
+      "input": {
+        "id": "south-cariboo-health-council-1996",
+        "name": "South Cariboo Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "thompson-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Thompson Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997. Not the South Cariboo Community Health Council of 2001 (100 Mile House): similar names are not proof of one body.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#alberni-valley-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "alberni-valley-health-council",
+        "name": "Alberni Valley Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "central-vancouver-island-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Central Vancouver Island Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#cowichan-communities-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "cowichan-communities-health-council",
+        "name": "Cowichan Communities Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "central-vancouver-island-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Central Vancouver Island Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#district-69-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "district-69-community-health-council",
+        "name": "District 69 Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "central-vancouver-island-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Central Vancouver Island Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#nanaimo-and-area-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "nanaimo-and-area-community-health-council",
+        "name": "Nanaimo and Area Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "central-vancouver-island-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Central Vancouver Island Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#oyster-district-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "oyster-district-community-health-council",
+        "name": "Oyster District Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "central-vancouver-island-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Central Vancouver Island Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#west-coast-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "west-coast-community-health-council",
+        "name": "West Coast Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "central-vancouver-island-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Central Vancouver Island Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#southern-gulf-islands-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "southern-gulf-islands-community-health-council",
+        "name": "Southern Gulf Islands Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "capital-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M441/1996 (December 1996) provided for it to amalgamate into the Capital Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#lakes-district-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "lakes-district-health-council",
+        "name": "Lakes District Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "northern-interior-regional-health-board",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M444/1996 (December 1996) provided for it to amalgamate into the Northern Interior Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1995",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+          "locator": "M444/1996, section 2(g): names B.C. Reg. 89/95 as its regulation"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#omineca-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "omineca-health-council",
+        "name": "Omineca Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "northern-interior-regional-health-board",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M444/1996 (December 1996) provided for it to amalgamate into the Northern Interior Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1995",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+          "locator": "M444/1996, section 2(g): names B.C. Reg. 161/95 as its regulation"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#prince-george-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "prince-george-health-council",
+        "name": "Prince George Health Council",
+        "kind": "health-authority",
+        "established": "1995-03-24",
+        "ended": "1997",
+        "becameId": "northern-interior-regional-health-board",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M444/1996 (December 1996) provided for it to amalgamate into the Northern Interior Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0178_1995",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "establishedMeaning": "designated by M178/1995; a 1994 board-composition order already names a council of this name"
+      }
+    },
+    {
+      "origin": "bodies.json#mackenzie-and-area-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "mackenzie-and-area-health-council",
+        "name": "MacKenzie and Area Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "northern-interior-regional-health-board",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M444/1996 (December 1996) provided for it to amalgamate into the Northern Interior Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1994",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+          "locator": "M444/1996, section 2(g): names B.C. Reg. 458/94 as its regulation"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#robson-valley-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "robson-valley-health-council",
+        "name": "Robson Valley Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "northern-interior-regional-health-board",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M444/1996 (December 1996) provided for it to amalgamate into the Northern Interior Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ],
+        "firstSeen": {
+          "date": "1994",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+          "locator": "M444/1996, section 2(g): names B.C. Reg. 314/94 as its regulation"
+        }
+      }
+    },
+    {
+      "origin": "bodies.json#revelstoke-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "revelstoke-community-health-council",
+        "name": "Revelstoke Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "north-okanagan-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M444/1996 (December 1996) provided for it to amalgamate into the North Okanagan Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#shuswap-community-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "shuswap-community-health-council",
+        "name": "Shuswap Community Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "north-okanagan-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M444/1996 (December 1996) provided for it to amalgamate into the North Okanagan Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#greater-vernon-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "greater-vernon-health-council",
+        "name": "Greater Vernon Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "north-okanagan-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M444/1996 (December 1996) provided for it to amalgamate into the North Okanagan Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#armstrong-enderby-and-spallumcheen-health-council",
+      "disposition": "accepted",
+      "input": {
+        "id": "armstrong-enderby-and-spallumcheen-health-council",
+        "name": "Armstrong, Enderby and Spallumcheen Health Council",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "north-okanagan-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Community health council. M444/1996 (December 1996) provided for it to amalgamate into the North Okanagan Regional Health Board, rescinding its designation on amalgamation. The day the amalgamation was carried out is not yet found; the regional reform took effect through 1997.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+        "otherSources": [
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#simon-fraser-health-board",
+      "disposition": "accepted",
+      "input": {
+        "id": "simon-fraser-health-board",
+        "name": "Simon Fraser Health Board",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "simon-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board. M432/1996 designated the Simon Fraser/Burnaby Health Board from it and the Burnaby Health Board, rescinding the old designations on amalgamation. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996"
+      }
+    },
+    {
+      "origin": "bodies.json#burnaby-health-board",
+      "disposition": "accepted",
+      "input": {
+        "id": "burnaby-health-board",
+        "name": "Burnaby Health Board",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997",
+        "becameId": "simon-fraser-health-region",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board. M432/1996 designated the Simon Fraser/Burnaby Health Board from it and the Simon Fraser Health Board, rescinding the old designations on amalgamation. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996"
+      }
+    },
+    {
+      "origin": "bodies.json#richmond-health-board",
+      "disposition": "accepted",
+      "input": {
+        "id": "richmond-health-board",
+        "name": "Richmond Health Board",
+        "kind": "health-authority",
+        "established": null,
+        "ended": "1997-01-09",
+        "becameId": "vancouver-richmond-health-board",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Regional health board. M7/1997 (9 January 1997) rescinded its designation, continuing the Vancouver Health Board as the Vancouver/Richmond Health Board. When it was first designated is not yet found.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0007_1997"
       }
     },
     {
@@ -27974,31 +30015,6 @@
         "to": null,
         "source": "https://www.bcartscouncil.ca/about/",
         "note": "The council's publications page links this ministry's 2022/23–2026/27 service plans."
-      }
-    },
-    {
-      "origin": "responsible-2.json#regional-health-boards-1997",
-      "disposition": "accepted",
-      "input": {
-        "ministry": "Ministry of Health and Ministry Responsible for Seniors",
-        "from": "1997",
-        "to": "2001-06-05",
-        "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-ministry-of-health-1976-2001",
-        "also": [
-          "https://pmc.ncbi.nlm.nih.gov/articles/PMC1564394/"
-        ],
-        "note": "The ministry had this name from 1996 (OIC 203/96) until it was split in 2001. The attribution is inferred: the boards were created under the Health Authorities Act, which this ministry administered. No source names the boards' minister directly."
-      }
-    },
-    {
-      "origin": "responsible-2.json#regional-health-boards-1997",
-      "disposition": "accepted",
-      "input": {
-        "ministry": "Ministry of Health Services",
-        "from": "2001-06-05",
-        "to": "2001-12",
-        "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-ministry-of-health-services-2001-2005",
-        "note": "After the 2001 split, this ministry was responsible for standards and direction for health authorities."
       }
     },
     {

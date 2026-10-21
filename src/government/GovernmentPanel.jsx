@@ -6,7 +6,7 @@ import { CURRENT_AS_OF } from './currentData.js'
 import { changesIn, predecessorsOf, successorsOf } from './episodes.js'
 import { currentMarkFor, identityFor, renderEraMark } from './eraMark.js'
 import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
-import { officeHoldersTo, PEOPLE_ID, PRESENT_YEAR } from './snapshot.js'
+import { officeHoldersTo, pathToPeople, PEOPLE_ID, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
 import { PENDING_ELECTION, PREMIERS } from './timelineData.js'
@@ -141,10 +141,20 @@ const BodyLineage = ({ label, bodies, onJump, end }) => bodies.length > 0 && (
     <ul>
       {bodies.map((body) => (
         <li key={body.id}>
-          <button type="button" className="gov-link-card" onClick={() => onJump(body, end)}>
-            <span>{body.name}</span>
-            {body.established && <span className="gov-muted">{span(body.established, body.ended)}</span>}
-          </button>
+          {body.established || body.firstSeen
+            ? (
+              <button type="button" className="gov-link-card" onClick={() => onJump(body, end)}>
+                <span>{body.name}</span>
+                <span className="gov-muted">{body.established ? span(body.established, body.ended) : `seen ${String(body.firstSeen).slice(0, 4)}${body.ended ? `–${String(body.ended).slice(0, 4)}` : ''}`}</span>
+              </button>
+              )
+            : (
+              // No source gives when it began, so there is no year to show it in.
+              <span className="gov-link-card gov-link-card--still">
+                <span>{body.name}</span>
+                <span className="gov-muted">start unknown{body.ended ? `, to ${String(body.ended).slice(0, 4)}` : ''}</span>
+              </span>
+              )}
         </li>
       ))}
     </ul>
@@ -307,6 +317,64 @@ const Connections = ({ node, government, onSelect }) => {
   )
 }
 
+const STEP = {
+  part: 'is part of',
+  responsible: 'answers to',
+  appoints: 'is appointed by',
+  confidence: 'governs with the confidence of',
+  elects: 'is elected by'
+}
+
+/**
+ * How the chosen body answers to the people, step by step, along the lines the diagram draws.
+ * Only accountability lines count: a partnership, a grant or a report tabled is not one.
+ */
+const PathToPeople = ({ node, government, onSelect }) => {
+  const steps = useMemo(() => pathToPeople(government, node.id), [government, node.id])
+  const byId = new Map(government.nodes.map((entry) => [entry.id, entry]))
+  if (node.kind === 'people') return null
+  if (!steps.length) {
+    const why = node.kind === 'court'
+      ? 'Courts are independent of the government: judges are appointed, but do not answer to a minister for their decisions.'
+      : node.kind === 'crown'
+        ? 'The Crown acts on the advice of ministers who hold the Assembly’s confidence; it does not answer to the people through an election.'
+        : node.unattached
+          ? `No source names a ministry that answered for it in ${government.year}, so no line to the people is drawn.`
+          : (government.edges.some((edge) => edge.kind === 'partner' && edge.to === node.id)
+              ? 'It works with a ministry as a partner rather than answering to one; its own governance is its line of accountability.'
+              : null)
+    return why && (
+      <section className="gov-card">
+        <h2 className="gov-card__heading">How it answers to the people</h2>
+        <p className="gov-muted">{why}</p>
+      </section>
+    )
+  }
+  return (
+    <section className="gov-card">
+      <h2 className="gov-card__heading">How it answers to the people</h2>
+      <ol className="gov-path">
+        {steps.map((step) => {
+          const from = byId.get(step.to)
+          const to = byId.get(step.from)
+          return (
+            <li key={`${step.from}-${step.to}`}>
+              <span>{from?.shortName ?? from?.name}</span>{' '}
+              <span className="gov-muted">{from?.kind === 'ministry' && step.kind === 'appoints' ? 'has its minister chosen by' : STEP[step.kind]}</span>{' '}
+              <button type="button" className="gov-link-button" onClick={() => onSelect(step.from)}>{to?.shortName ?? to?.name}</button>
+              {step.inferred && <span className="gov-muted"> (inferred: no source names it for {government.year})</span>}
+            </li>
+          )
+        })}
+      </ol>
+      <p className="gov-muted">
+        Only the lines drawn: who answers for, appoints or includes it. Funding, regulation, audit and
+        complaints routes are other relations, and are not part of this path.
+      </p>
+    </section>
+  )
+}
+
 export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBody, onOpenInGenerator }) => {
   const { year, present, day } = government
   const isBody = !['ministry', 'assembly', 'crown', 'premier', 'people'].includes(node.kind)
@@ -329,6 +397,12 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
           </p>
         )}
         {node.description && <p className="gov-description">{node.description}</p>}
+        {node.franchise && (
+          <p className="gov-notice">
+            In {year} the provincial franchise excluded {node.franchise.excluded.join(', ').replace(/, ([^,]*)$/, ' and $1')}.{' '}
+            <a href={node.franchise.source.url} target="_blank" rel="noreferrer">{node.franchise.source.title}</a>
+          </p>
+        )}
         {node.operatingName && (
           <p className="gov-muted">
             Operating as {node.operatingName.name} since {node.operatingName.from} · legal name {node.name}
@@ -417,6 +491,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
           <>
             <BodyLineage label="Came from" bodies={node.cameFrom ?? []} onJump={onJumpBody} end="end" />
             <BodyLineage label="Became" bodies={node.became ? [node.became] : []} onJump={onJumpBody} end="start" />
+            <BodyLineage label="Its services passed to" bodies={node.passedTo ?? []} onJump={onJumpBody} end="start" />
           </>
         )}
 
@@ -435,6 +510,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
       {isMinistry && <MarkCard node={node} year={year} theme={theme} onOpenInGenerator={onOpenInGenerator} />}
       <StaffingCard rows={node.staffing} year={year} />
       {node.kind === 'assembly' && <ParliamentCard parliament={node.parliament} />}
+      <PathToPeople node={node} government={government} onSelect={onSelect} />
       <Connections node={node} government={government} onSelect={onSelect} />
       <RelationsCard relations={node.relations} />
       <EvidenceCard node={node} />

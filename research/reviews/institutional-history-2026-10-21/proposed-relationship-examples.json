@@ -1,0 +1,471 @@
+{
+  "purpose": "Sourced research examples for review; not direct imports into the existing repository schema.",
+  "notes": [
+    "Names must be matched to stable legal identities and existing repository IDs.",
+    "Effective_date=null means unknown start, not nonexistence.",
+    "For ownership/administration/member_of records, predecessors and successors denote relationship endpoints, not corporate succession.",
+    "The separate health_lineage_map.json contains the full44 statutory,7 society and43 earlier-council mappings."
+  ],
+  "events": [
+    {
+      "id": "bctfa-bcrc-ownership",
+      "type": "ownership_started",
+      "predecessors": [
+        "BC Transportation Financing Authority"
+      ],
+      "successors": [
+        "British Columbia Railway Company"
+      ],
+      "effective_date": "2010-04-01",
+      "date_precision": "day",
+      "scope": "BCRC became a wholly owned subsidiary of BCTFA; political accountability remains a separate relationship.",
+      "source_ids": [
+        "CB-008",
+        "CB-009"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "bctfa-ticorp-ownership",
+      "type": "ownership_started",
+      "predecessors": [
+        "BC Transportation Financing Authority"
+      ],
+      "successors": [
+        "Transportation Investment Corporation"
+      ],
+      "effective_date": "2018-04-01",
+      "date_precision": "day",
+      "scope": "TI Corp became a wholly owned subsidiary of BCTFA.",
+      "source_ids": [
+        "CB-008"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "ferry-authority-voting-ownership",
+      "type": "voting_ownership_structure",
+      "predecessors": [
+        "B.C. Ferry Authority (2003 body)"
+      ],
+      "successors": [
+        "BC Ferry Services Inc."
+      ],
+      "effective_date": "2003",
+      "date_precision": "year",
+      "scope": "Modern Authority is sole voting shareholder; distinguish from earlier same-named Crown operator.",
+      "source_ids": [
+        "CB-010"
+      ],
+      "qualification": "Obtain original commencement instrument before asserting a day; Province preferred shares and service contract are separate edges.",
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "prhc-administration",
+      "type": "administered_by",
+      "predecessors": [
+        "Provincial Rental Housing Corporation"
+      ],
+      "successors": [
+        "British Columbia Housing Management Commission"
+      ],
+      "effective_date": null,
+      "date_precision": "unknown_start",
+      "scope": "BC Housing administers PRHC, which holds social/low-cost housing property.",
+      "source_ids": [
+        "CB-013"
+      ],
+      "qualification": "Observed in current official organization account; do not infer ownership or start date.",
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "hpo-housing-transfer",
+      "type": "functions_transferred",
+      "predecessors": [
+        "Homeowner Protection Office"
+      ],
+      "successors": [
+        "British Columbia Housing Management Commission"
+      ],
+      "effective_date": "2010-04-01",
+      "date_precision": "day",
+      "scope": "Residential builder/envelope renovator licensing, owner-builder authorization, research and education.",
+      "source_ids": [
+        "CB-014",
+        "CB-015"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "hpo-finance-transfer",
+      "type": "functions_transferred",
+      "predecessors": [
+        "Homeowner Protection Office"
+      ],
+      "successors": [
+        "Ministry of Finance"
+      ],
+      "effective_date": "2010-04-01",
+      "date_precision": "day",
+      "scope": "Administration of the Reconstruction Program; not the whole former office.",
+      "source_ids": [
+        "CB-014",
+        "CB-015"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "pharmacare-health-transfer",
+      "type": "program_responsibility_transferred",
+      "predecessors": [
+        "Ministry of Human Resources"
+      ],
+      "successors": [
+        "Ministry of Health"
+      ],
+      "effective_date": "1987",
+      "date_precision": "year",
+      "scope": "Responsibility for the PharmaCare program.",
+      "source_ids": [
+        "PM48"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "health-planning-2004-transfer",
+      "type": "functions_transferred_and_body_disestablished",
+      "predecessors": [
+        "Ministry of Health Planning"
+      ],
+      "successors": [
+        "Ministry of Health Services"
+      ],
+      "effective_date": "2004-01-26",
+      "date_precision": "day",
+      "scope": "Functions transferred under OIC37/2004; Health Planning disestablished.",
+      "source_ids": [
+        "PM41",
+        "PM42"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "healthy-living-2010-health",
+      "type": "functions_transferred",
+      "predecessors": [
+        "Ministry of Healthy Living and Sport"
+      ],
+      "successors": [
+        "Ministry of Health Services"
+      ],
+      "effective_date": "2010-10-25",
+      "date_precision": "day",
+      "scope": "Remaining health functions after separately specified transfers.",
+      "source_ids": [
+        "PM44"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "healthy-living-2010-sport",
+      "type": "functions_transferred",
+      "predecessors": [
+        "Ministry of Healthy Living and Sport"
+      ],
+      "successors": [
+        "Ministry of Community, Sport and Cultural Development"
+      ],
+      "effective_date": "2010-10-25",
+      "date_precision": "day",
+      "scope": "Sport functions, rather than whole-body succession.",
+      "source_ids": [
+        "PM44"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "healthy-living-2010-environment",
+      "type": "functions_transferred",
+      "predecessors": [
+        "Ministry of Healthy Living and Sport"
+      ],
+      "successors": [
+        "Ministry of Environment"
+      ],
+      "effective_date": "2010-10-25",
+      "date_precision": "day",
+      "scope": "Specified human-health advice concerning air and water quality.",
+      "source_ids": [
+        "PM44"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "bccdc-1997-governance",
+      "type": "governance_transferred",
+      "predecessors": [
+        "Ministry of Health"
+      ],
+      "successors": [
+        "Vancouver/Richmond Health Board"
+      ],
+      "effective_date": "1997",
+      "date_precision": "year",
+      "scope": "Governance of BCCDC; society establishment is a separate claim.",
+      "source_ids": [
+        "PM06"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "bccdc-2001-phsa",
+      "type": "governance_transferred",
+      "predecessors": [
+        "Vancouver/Richmond Health Board"
+      ],
+      "successors": [
+        "Provincial Health Services Authority"
+      ],
+      "effective_date": "2001-12",
+      "date_precision": "month",
+      "scope": "Governance of BCCDC; other programs of Vancouver/Richmond did not all move to PHSA.",
+      "source_ids": [
+        "PM06",
+        "PM01"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "bcehs-2013-continuation",
+      "type": "legal_continuation_and_name",
+      "predecessors": [
+        "Emergency and Health Services Commission"
+      ],
+      "successors": [
+        "British Columbia Emergency Health Services"
+      ],
+      "effective_date": "2013-04-01",
+      "date_precision": "day",
+      "scope": "Statute continues the commission as BCEHS; BC Ambulance Service remains an operational identity.",
+      "source_ids": [
+        "PM18",
+        "PM19"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "phsa-branches-2018",
+      "type": "society_amalgamation",
+      "predecessors": [
+        "British Columbia Cancer Agency Branch",
+        "British Columbia Centre for Disease Control and Prevention Society Branch",
+        "British Columbia Mental Health Society Branch",
+        "British Columbia Transplant Society Branch",
+        "Children’s & Women’s Health Centre of British Columbia Branch",
+        "Provincial Health Services Authority"
+      ],
+      "successors": [
+        "Provincial Health Services Authority"
+      ],
+      "effective_date": "2018-04-01",
+      "date_precision": "day",
+      "scope": "Branches and PHSA formed one society.",
+      "source_ids": [
+        "PM52"
+      ],
+      "qualification": "Five branch names are explicitly evidenced; this is not a certificate proving an exhaustive participant count. Do not assert seven branch societies.",
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "bccss-phsa-2018",
+      "type": "society_amalgamation",
+      "predecessors": [
+        "BC Clinical and Support Services Society",
+        "Provincial Health Services Authority"
+      ],
+      "successors": [
+        "Provincial Health Services Authority"
+      ],
+      "effective_date": "2018-06-29",
+      "date_precision": "day",
+      "scope": "Separate legal event from the April2018 branch amalgamation.",
+      "source_ids": [
+        "PM05"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "bcshs-2026-formation",
+      "type": "incorporated",
+      "predecessors": [],
+      "successors": [
+        "BC Shared Health Services"
+      ],
+      "effective_date": "2026-04-01",
+      "date_precision": "day",
+      "scope": "BC society S0085000; phased functional transfers require their own dates.",
+      "source_ids": [
+        "PM29",
+        "PM28"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "bcshs-heabc-membership",
+      "type": "member_of",
+      "predecessors": [
+        "BC Shared Health Services"
+      ],
+      "successors": [
+        "Health Employers Association of British Columbia"
+      ],
+      "effective_date": null,
+      "date_precision": "unknown_start",
+      "scope": "Employer-association membership, not parent/subsidiary relationship.",
+      "source_ids": [
+        "PM30"
+      ],
+      "qualification": "Observed in2026 answers supplied by BCSHS and published by HSA; precise membership commencement not established.",
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "sheriffs-1974",
+      "type": "administrative_consolidation",
+      "predecessors": [
+        "Nine county sheriff offices (individual identities to be verified)"
+      ],
+      "successors": [
+        "BC Sheriff Service"
+      ],
+      "effective_date": "1974",
+      "date_precision": "year",
+      "scope": "Provincial service formed by amalgamating nine offices; first sheriff appointment in1857 is a distinct milestone.",
+      "source_ids": [
+        "CB-026"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "nursing-2018",
+      "type": "regulator_amalgamation",
+      "predecessors": [
+        "College of Registered Nurses of British Columbia",
+        "College of Licensed Practical Nurses of British Columbia",
+        "College of Registered Psychiatric Nurses of British Columbia"
+      ],
+      "successors": [
+        "British Columbia College of Nursing Professionals"
+      ],
+      "effective_date": "2018-09-04",
+      "date_precision": "day",
+      "scope": "Three professional regulators amalgamated.",
+      "source_ids": [
+        "R01"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "nursing-midwifery-2020",
+      "type": "regulator_amalgamation",
+      "predecessors": [
+        "British Columbia College of Nursing Professionals",
+        "College of Midwives of British Columbia"
+      ],
+      "successors": [
+        "British Columbia College of Nurses and Midwives"
+      ],
+      "effective_date": "2020-09-01",
+      "date_precision": "day",
+      "scope": "Nursing and midwifery regulators amalgamated.",
+      "source_ids": [
+        "R01"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "oral-health-2022",
+      "type": "regulator_amalgamation",
+      "predecessors": [
+        "College of Dental Hygienists of British Columbia",
+        "College of Dental Surgeons of British Columbia",
+        "College of Dental Technicians of British Columbia",
+        "College of Denturists of British Columbia"
+      ],
+      "successors": [
+        "British Columbia College of Oral Health Professionals"
+      ],
+      "effective_date": "2022-09-01",
+      "date_precision": "day",
+      "scope": "Four oral-health regulators amalgamated.",
+      "source_ids": [
+        "R02"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "health-care-professionals-2024",
+      "type": "regulator_amalgamation",
+      "predecessors": [
+        "College of Dietitians of British Columbia",
+        "College of Occupational Therapists of British Columbia",
+        "College of Optometrists of British Columbia",
+        "College of Opticians of British Columbia",
+        "College of Physical Therapists of British Columbia",
+        "College of Psychologists of British Columbia",
+        "College of Speech and Hearing Health Professionals of British Columbia"
+      ],
+      "successors": [
+        "College of Health and Care Professionals of British Columbia"
+      ],
+      "effective_date": "2024-06-28",
+      "date_precision": "day",
+      "scope": "Seven professional regulators amalgamated.",
+      "source_ids": [
+        "R03",
+        "R05"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    },
+    {
+      "id": "complementary-health-2024",
+      "type": "regulator_amalgamation",
+      "predecessors": [
+        "College of Chiropractors of British Columbia",
+        "College of Massage Therapists of British Columbia",
+        "College of Naturopathic Physicians of British Columbia",
+        "College of Traditional Chinese Medicine Practitioners and Acupuncturists of British Columbia"
+      ],
+      "successors": [
+        "College of Complementary Health Professionals of British Columbia"
+      ],
+      "effective_date": "2024-06-28",
+      "date_precision": "day",
+      "scope": "Four professional regulators amalgamated.",
+      "source_ids": [
+        "R04",
+        "R05"
+      ],
+      "qualification": null,
+      "status": "research_proposal_requires_repository_identity_matching"
+    }
+  ]
+}
