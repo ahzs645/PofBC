@@ -9,7 +9,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Card, CardSection, KindIcon } from './PanelCards.jsx'
 import { SALARY_INDEX, SALARY_YEARS } from './salaryIndex.js'
 import { PUBLIC_SERVICE, salaryKeyOf } from './salaries.js'
-import { personKey } from '../salaries/people.js'
+import { displayName, personKey } from '../salaries/people.js'
 
 const PAGE = 12
 const fetched = new Map()
@@ -115,7 +115,7 @@ export const Salaries = ({ node, year }) => {
             <Card
               key={`${name}-${position}-${index}`}
               icon={<KindIcon person branch={node.branch ?? 'executive'} />}
-              title={name ?? 'Name not given'}
+              title={displayName(name) ?? 'Name not given'}
               lines={[[position, department].filter(Boolean).join(' · ') || null, expenses ? `Expenses ${money(expenses)}` : null]}
               aside={money(pay)}
               onClick={name ? () => followPerson(name) : undefined}

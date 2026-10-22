@@ -1548,3 +1548,22 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__year-label { margin: 0; font-size: 13px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 .salaries__link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
 .salaries__source { margin: 0; font-size: 12px; line-height: 1.5; color: var(--ink-faint); max-width: 80ch; }
+.salaries__name[data-missing] { color: var(--ink-faint); font-style: italic; }
+.salaries__search--one { grid-template-columns: 1fr; margin-bottom: 12px; }
+.salaries__sector { margin-top: 8px; }
+.salaries__sector > summary { cursor: pointer; padding: 6px 0; font-size: 15px; font-weight: 600; color: var(--ink); }
+.salaries__sector > summary .salaries__meta { display: inline; margin-left: 6px; font-weight: 400; }
+.salaries__years-switch { display: inline-flex; gap: 2px; padding: 2px; border-radius: 10px; background: var(--hover); justify-self: start; }
+.salaries__years-switch button { padding: 5px 10px; border: 0; border-radius: 8px; background: none; color: var(--ink-faint); font: inherit; font-size: 13px; cursor: pointer; }
+.salaries__years-switch button[aria-pressed='true'] { background: var(--surface); color: var(--ink); box-shadow: 0 0 0 1px var(--mid); }
+.salaries__years-switch button:disabled { opacity: 0.4; cursor: default; }
+.salaries__tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 4px 0 0; }
+@media (max-width: 560px) { .salaries__tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.salaries__tiles div { padding: 10px 12px; border-radius: 10px; background: var(--hover); }
+.salaries__tiles dt { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
+.salaries__tiles dd { margin: 2px 0 0; font-size: 18px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.salaries__position { display: grid; gap: 4px; align-content: start; }
+.salaries__position[data-open] { grid-column: 1 / -1; }
+.salaries__holders { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2px 16px; margin: 0; padding: 6px 12px 10px 30px; list-style: none; font-size: 13px; }
+.salaries__holders li { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; border-bottom: 1px solid var(--hover); font-variant-numeric: tabular-nums; }
+.salaries__holders--page { padding: 0; }

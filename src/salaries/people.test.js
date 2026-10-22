@@ -39,3 +39,18 @@ test('the index’s slices hold every row it counts, each under its surname', ()
   assert.ok(total > 350000)
   assert.deepEqual(index.years, ['2017/18', '2020/21', '2023/24'])
 })
+
+test('a name is shown as a person is called, and a position however it was spelled is one', async () => {
+  const { displayName, positionKey } = await import('./people.js')
+  assert.equal(displayName('Moa, Belaid'), 'Belaid Moa')
+  assert.equal(displayName('Hilde, C'), 'C. Hilde')
+  assert.equal(displayName('SMITH, JOHN A'), 'John A. Smith')
+  assert.equal(positionKey('Correction Serv 18 ADLT CUST'), positionKey('Correction Serv 18 Adlt Cust.'))
+})
+
+test('a year the files only repeat is left out', () => {
+  const index = JSON.parse(readFileSync(new URL('../../public/salaries/employers/index.json', import.meta.url)))
+  const hydro = index.employers.find((entry) => entry.slug === 'bc-hydro')
+  assert.deepEqual(hydro.repeated, ['2020/21'])
+  assert.equal(hydro.counts[1], 0)
+})

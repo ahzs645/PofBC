@@ -36,3 +36,23 @@ export const personKey = (name) => {
   const { surname, given } = readName(name)
   return `${surname}|${given}`
 }
+
+const titleCase = (word) => word.replace(/[A-Za-z][A-Za-z']*/g, (part) => part[0].toUpperCase() + part.slice(1).toLowerCase())
+
+/**
+ * A disclosed name as a person is called: "Moa, Belaid" as "Belaid Moa", "Hilde, C" as "C. Hilde",
+ * "Wong, Christine, OnPui" as "Christine OnPui Wong". A name set all in capitals is set in title case;
+ * any other is kept as the employer wrote it.
+ */
+export const displayName = (name) => {
+  if (!name) return null
+  const [surname, ...rest] = String(name).split(',').map((part) => part.trim()).filter(Boolean)
+  const given = rest.join(' ').split(/\s+/).filter(Boolean)
+    .map((part) => (/^[A-Za-z]$/.test(part) ? `${part.toUpperCase()}.` : part))
+  const shout = (text) => text === text.toUpperCase() && /[A-Z]{2}/.test(text)
+  const tidy = (text) => (shout(text) ? titleCase(text) : text)
+  return [...given.map(tidy), tidy(surname ?? '')].filter(Boolean).join(' ')
+}
+
+/** One position however its employer spelled it from row to row: case, spacing and stops set aside. */
+export const positionKey = (position) => String(position ?? '').toLowerCase().replace(/[^a-z0-9&/+ ]+/g, ' ').replace(/\s+/g, ' ').trim()
