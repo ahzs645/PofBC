@@ -859,7 +859,10 @@ details.gov-list__section[open] { padding-bottom: 12px; }
   white-space: nowrap;
   font-size: 15px;
   font-weight: 600;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
 }
+.gov-sheet__title[data-shown] { opacity: 1; }
 
 .gov-sheet__body {
   flex: 1;

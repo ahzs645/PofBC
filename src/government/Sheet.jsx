@@ -12,11 +12,22 @@ const CLOSE_BELOW = 0.6
 export const Sheet = ({ label, title, tools, onClose, children }) => {
   const [full, setFull] = useState(false)
   const [drag, setDrag] = useState(null)
+  // The bar names the body only once the panel's own heading has scrolled out from under it, so
+  // the name is never on screen twice.
+  const [named, setNamed] = useState(false)
   const sheet = useRef(null)
   const body = useRef(null)
 
   // A new body starts at the top of its panel.
   useEffect(() => { body.current?.scrollTo({ top: 0 }) }, [title])
+
+  useEffect(() => {
+    const heading = body.current?.querySelector('h1')
+    if (!heading) return undefined
+    const observer = new IntersectionObserver(([entry]) => setNamed(!entry.isIntersecting), { root: body.current })
+    observer.observe(heading)
+    return () => observer.disconnect()
+  }, [title])
 
   useEffect(() => {
     const listen = (event) => { if (event.key === 'Escape') onClose() }
@@ -65,7 +76,7 @@ export const Sheet = ({ label, title, tools, onClose, children }) => {
           onClick={(event) => { if (event.detail === 0) setFull((value) => !value) }}
         />
         <div className="gov-sheet__head">
-          <strong className="gov-sheet__title">{title}</strong>
+          <strong className="gov-sheet__title" data-shown={named || undefined} aria-hidden={!named || undefined}>{title}</strong>
           {tools}
           <button type="button" className="gov-button gov-button--icon" onClick={onClose} aria-label="Close">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
