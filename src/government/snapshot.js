@@ -12,6 +12,7 @@ import { EVENT_SOURCES, eventsFor, operatingNameIn } from './events.js'
 import { LIEUTENANT_GOVERNORS_OFFICIAL, PARLIAMENT_43, STAFFING } from './atlasData.js'
 import { CURRENT_MINISTRIES, episodesIn, fold, forerunnerIn, MINISTRY_EPISODES, predecessorsOf, slugify, successorsOf } from './episodes.js'
 import { ELECTIONS, LIEUTENANT_GOVERNORS, PENDING_ELECTION, PREMIERS } from './timelineData.js'
+import { CROWN_CATEGORY_SOURCES, crownCategoryOf } from './crownCategories.js'
 import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, OFFICE_HOLDERS, SUB_AGENCIES, LOCAL_BODIES } from './historyData.js'
 
 /** The BC Archives diagram every ministry episode comes from. */
@@ -734,6 +735,17 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     if (!stands(partner.from, null) || !drawn.has(partner.body)) continue
     const ministry = standing.find((episode) => fold(episode.name) === fold(partner.ministry))
     if (ministry) link(ministry.id, partner.body, 'partner')
+  }
+
+  // What kind of Crown corporation each is, from the year the Budget's list is for (crownCategories.js).
+  for (const node of nodes) {
+    const category = crownCategoryOf(node, year)
+    if (!category) continue
+    node.crownCategory = category
+    const { list } = CROWN_CATEGORY_SOURCES
+    node.evidence = [...(node.evidence ?? []), claim(
+      category === 'commercial' ? `A commercial Crown corporation in Budget 2025’s fiscal plan` : `Not among the commercial Crown corporations in Budget 2025’s fiscal plan, so a service delivery Crown corporation`,
+      { url: list.url, title: list.title }, { note: list.locator, checked: list.checked })]
   }
 
   return { year, day, present, premier, lieutenantGovernor, election, dissolved, nodes, edges }

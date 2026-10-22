@@ -784,7 +784,9 @@ const Caption = ({ text: full, colour, theme, x, y, chars = 72 }) => {
 }
 
 const Tooltip = ({ node, point, theme, box = VIEWBOX }) => {
-  const text = fit(node.shortName ?? node.name, 54)
+  // The full name, with the short form after it when there is room: “BCMHSUS” alone says nothing.
+  const full = node.shortName && node.shortName !== node.name ? `${node.name} (${node.shortName})` : node.name
+  const text = fit(full.length <= 54 ? full : node.name, 54)
   const width = text.length * 6.4 + 14
   const x = Math.min(Math.max(point.x, box.x + width / 2 + 4), box.x + box.width - width / 2 - 4)
   const y = point.y - point.size - 16

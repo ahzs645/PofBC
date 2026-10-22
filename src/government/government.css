@@ -977,6 +977,10 @@ details.gov-list__section[open] { padding-bottom: 12px; }
   box-shadow: 0 0 0 1px var(--gov-surface);
 }
 
+.gov-subs { display: grid; gap: 4px; margin-top: 6px; }
+.gov-subs__kind { margin: 4px 0 0; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gov-ink-3); }
+.gov-list__note { padding: 2px 10px 6px; font-size: 12px; line-height: 1.4; list-style: none; }
+
 .gov-lineage-chart__group { margin: 8px 0 0; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gov-ink-3); }
 .gov-lineage-chart__note { margin: 2px 2px 0; font-size: 12px; }
 /* A name or a ministry whose end no source gives fades out where the next row takes over. */

@@ -6,6 +6,7 @@ import { CURRENT_AS_OF } from './currentData.js'
 import { changesIn, episodeById, predecessorsOf, successorsOf } from './episodes.js'
 import { currentMarkFor, identityFor, renderEraMark } from './eraMark.js'
 import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
+import { CROWN_CATEGORIES, CROWN_CATEGORY_SOURCES } from './crownCategories.js'
 import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, PEOPLE_ID, periodsOf, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
@@ -153,6 +154,46 @@ const Holders = ({ label, holders: all, current, limit = 5 }) => {
           {expanded ? 'Show fewer' : `Show all ${holders.length}`}
         </button>
       )}
+    </div>
+  )
+}
+
+/** What each kind of sub-agency is called, in the order they are listed. */
+const SUB_TYPES = [
+  ['agency', 'Agencies'], ['division', 'Divisions'], ['office', 'Offices'], ['program', 'Programs'],
+  ['board', 'Boards'], ['committee', 'Committees'], ['tribunal', 'Tribunals'], ['subsidiary', 'Subsidiaries']
+]
+
+/**
+ * A body's sub-agencies, drawn round it as dots, named here and grouped by kind, so the cluster can
+ * be read: PHSA's agencies, a ministry's divisions, a Crown's subsidiaries. Each is a way to it.
+ */
+const SubAgencies = ({ parent, nodes, onSelect }) => {
+  const subs = nodes.filter((node) => node.ring === 'sub' && node.parent === parent.id)
+  if (!subs.length) return null
+  const known = new Set(SUB_TYPES.map(([type]) => type))
+  const groups = [...SUB_TYPES, ['other', 'Others']]
+    .map(([type, label]) => [label, subs.filter((node) => (type === 'other' ? !known.has(node.subType) : node.subType === type))
+      .sort((a, b) => a.name.localeCompare(b.name))])
+    .filter(([, list]) => list.length)
+  return (
+    <div className="gov-lineage">
+      <h3 className="gov-card__subheading">Its sub-agencies <span className="gov-muted">{subs.length}</span></h3>
+      {groups.map(([label, list]) => (
+        <div key={label} className="gov-subs">
+          {groups.length > 1 && <p className="gov-subs__kind">{label} <span className="gov-muted">{list.length}</span></p>}
+          <ul>
+            {list.map((node) => (
+              <li key={node.id}>
+                <button type="button" className="gov-link-card" onClick={() => onSelect(node.id)}>
+                  <span>{node.name}{node.inferredParent ? <span className="gov-muted"> (placed by inference)</span> : null}</span>
+                  {node.shortName && node.shortName !== node.name && <span className="gov-muted">{node.shortName}</span>}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   )
 }
@@ -558,7 +599,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
   const isMinistry = node.kind === 'ministry'
   // A local body is drawn in the executive's sector for room, but is not part of the executive.
   const breadcrumb = node.local ? 'Local' : node.branch ? BRANCH_LABELS[node.branch] : 'Everyone'
-  const kindLabel = KINDS[node.kind]?.label
+  const kindLabel = node.crownCategory ? CROWN_CATEGORIES[node.crownCategory].label : KINDS[node.kind]?.label
 
   return (
     <>
@@ -573,6 +614,13 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
           </p>
         )}
         {node.description && <p className="gov-description">{node.description}</p>}
+        {node.crownCategory && (
+          <p className="gov-notice">
+            {CROWN_CATEGORIES[node.crownCategory].label}: {CROWN_CATEGORIES[node.crownCategory].definition.replace(/^./, (c) => c.toLowerCase())}{' '}
+            <a href={CROWN_CATEGORY_SOURCES.list.url} target="_blank" rel="noreferrer">Budget 2025</a>,{' '}
+            <a href={CROWN_CATEGORY_SOURCES.definitions.url} target="_blank" rel="noreferrer">definitions</a>.
+          </p>
+        )}
         {node.franchise && (
           <p className="gov-notice">
             In {year} the provincial franchise excluded {node.franchise.excluded.join(', ').replace(/, ([^,]*)$/, ' and $1')}.{' '}
@@ -666,6 +714,8 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
             <BodyLineage label="Its services passed to" bodies={node.passedTo ?? []} onJump={onJumpBody} end="start" />
           </>
         )}
+
+        <SubAgencies parent={node} nodes={government.nodes} onSelect={onSelect} />
 
         {holders.length > 0 && <Holders label={node.kind === 'assembly' ? 'Speakers' : 'Holders'} holders={holders} current={node.head} />}
 

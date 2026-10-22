@@ -277,3 +277,21 @@ test('a period with no recorded end runs to the next row, and a style of the sam
   assert.equal(division.until, '2015')
   assert.equal(division.endUnknown, true)
 })
+
+test('Crown corporations are commercial or service delivery from Budget 2025’s list, and not before', () => {
+  const today = governmentIn(PRESENT_YEAR).nodes.filter((node) => node.kind === 'crown-corporation')
+  assert.ok(today.length > 0 && today.every((node) => node.crownCategory))
+  assert.deepEqual(today.filter((node) => node.crownCategory === 'commercial').map((node) => node.id).sort(),
+    ['bc-hydro', 'bc-railway-company', 'bclc', 'columbia-power', 'icbc'])
+  assert.equal(find(PRESENT_YEAR, 'bc-housing').crownCategory, 'service-delivery')
+  assert.ok(find(PRESENT_YEAR, 'icbc').evidence.some((row) => /Budget 2025/.test(row.claim)))
+  // Not carried back: the table is 2025's.
+  assert.equal(find(2020, 'icbc').crownCategory, undefined)
+})
+
+test('a sub-agency has its full name beside its short one, so a cluster can be read', () => {
+  const sub = find(PRESENT_YEAR, 'sub-bc-mental-health-and-substance-use-services')
+  assert.equal(sub.parent, 'provincial-health-services-authority')
+  assert.equal(sub.name, 'BC Mental Health and Substance Use Services')
+  assert.equal(sub.shortName, 'BCMHSUS')
+})
