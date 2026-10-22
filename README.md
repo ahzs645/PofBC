@@ -481,7 +481,9 @@ lists a design once per photograph it appears in; Patcher merges those into one 
 arch, seen in five photographs, is one card), and the viewer links every photograph. Some designs use a better drawing supplied to Patcher in
 place of the atlas's (the Parks Branch elk roundel, the Recreation and Conservation arch, the scenic
 arch's landscape, the BC Parks flag patches, which take this site's own flag badge, and the B.C. Hydro
-Security shield, which takes this site's BC Hydro symbol). The Lands
+Security shield, which takes this site's BC Hydro symbol). The British Columbia / SPCA roundel
+(S56-O38) is redrawn from a supplied photograph with concentric circles, a heavier cross and revised
+lettering; its source and construction are in `vendor/patcher/library/supplied/bc-spca-roundel/`. The Lands
 Department pine-bough seal is a printed seal, not a patch, so it is left out there and kept in
 Internal Logos. The atlas's Forest Service and Wildfire Service ovals are replaced by this site's own
 Forest Ovals (Internal Logos → Forests): five cards (the tree oval, the Forests and long ministry-name
