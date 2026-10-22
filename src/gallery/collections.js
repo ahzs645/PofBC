@@ -18,6 +18,7 @@
 import { BCTS_ENTRIES, ONE_OFFS } from './oneOffs.js'
 import { COLLECTION_ERAS, TIMELINES, timelineKeyOf } from './timelines.js'
 import { CURRENT_VARIANT_ORDER, CURRENT_VARIANTS } from '../hydro/hydroMarks.js'
+import { COLLECTED_COLLECTIONS } from './collectedCollections.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
 
@@ -27,6 +28,9 @@ export const PROVENANCE = {
   extracted_from_official_vector: 'Extracted from official vector',
   extracted_from_published_artwork: 'Extracted from published artwork',
   archival_raster: 'Archival image',
+  published_vector: 'Published vector artwork',
+  published_raster: 'Published image',
+  third_party_reconstruction: 'Third-party reconstruction',
   reconstructed: 'Reconstructed',
   synthetic_name_variant: 'Generated name variant'
 }
@@ -43,6 +47,7 @@ export const FIDELITY = {
 export const APPLICABILITY = {
   documented_adoption: 'Date documented',
   first_observation: 'Date first seen',
+  dated_specimen: 'Dated specimen',
   estimated_era: 'Date estimated',
   unknown: 'Date unknown'
 }
@@ -1012,6 +1017,11 @@ export const GALLERY_COLLECTIONS = [
     entries: ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id)).map(provincial)
   }
 ]
+
+// Collections recovered by the acquisition pass use source files directly. Existing researched
+// histories remain authoritative for bodies that already have a collection.
+GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
+  !GALLERY_COLLECTIONS.some((held) => held.graphNode === candidate.graphNode)))
 
 export const COLLECTIONS_ON_SHELF = (shelf) => GALLERY_COLLECTIONS.filter((collection) => collection.shelf === shelf)
 

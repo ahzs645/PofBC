@@ -36,6 +36,8 @@ import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { renderCurrentSvg } from '../current/currentMarks.js'
 import { darkPageInks, renderSuppliedSvg } from './renderSupplied.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
+import { CollectedMarkView } from './CollectedMarkView.jsx'
+import { assetUrl, COLLECTION_RESEARCH, researchLabel } from './collectedCollections.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -176,6 +178,9 @@ const PROVENANCE_SENTENCES = {
   extracted_from_official_vector: 'Extracted from vector artwork in an official document of the body’s own.',
   extracted_from_published_artwork: 'Extracted from artwork as it was published, not redrawn.',
   archival_raster: 'An archival image, not vector artwork.',
+  published_vector: 'Vector artwork recovered from a published source, with that source recorded.',
+  published_raster: 'An image recovered from a published source, with that source recorded.',
+  third_party_reconstruction: 'An existing third-party redraw, retained with its attribution. It is not an original historical master.',
   reconstructed: 'Reconstructed: redrawn by this project from pictures or written rules, not taken from ' +
     'original artwork.',
   synthetic_name_variant: 'A generated interpretation — a name set in a style it never had — and not an ' +
@@ -193,6 +198,7 @@ const FIDELITY_SENTENCES = {
 const DATE_SENTENCES = {
   documented_adoption: (years) => `${years}, from a record of its adoption.`,
   first_observation: (years) => `First seen ${years}.`,
+  dated_specimen: (years) => `Seen in the cited specimen dated ${years}.`,
   estimated_era: (years) => `Estimated: ${years}.`,
   unknown: () => 'Unknown. That is not to say it was never in use.'
 }
@@ -380,6 +386,10 @@ const Detail = ({ entry, onClose }) => {
  * BC Hydro's current colourways, each of which is defined by what it sits on.
  */
 const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
+  if (entry.kind === 'collected') {
+    const escape = (value) => String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    return `<img class="gallery__collected-image" src="${escape(assetUrl(entry.asset.preview || entry.asset.file))}" alt="${escape(entry.label)}" loading="lazy" data-dark="${entry.asset.darkBackground ? 'true' : 'false'}" />`
+  }
   if (entry.kind === 'artwork') {
     const printed = ONE_OFF_MARKS[entry.mark].printed
     return renderOneOffSvg({ id: entry.mark, colours: pageColoursFor(printed, theme), sun: 'glow', clearSpaceFactor: 0.02 }).svg
@@ -431,7 +441,7 @@ const Tile = ({ entry, onOpen, theme, said = [] }) => (
       // Built by this project's own renderers; every value is escaped where written.
       dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }}
     />
-    <span className="gallery__label">{entry.label}</span>
+    <span className="gallery__label">{entry.label}{entry.kind === 'collected' && <span className="gallery__asset-format"> · {entry.asset.format.toUpperCase()}</span>}</span>
     <span className="gallery__note">{entry.note}</span>
     <Chips labels={chipsOf(entry.identity).filter((label) => !said.includes(label))} title={FIDELITY[entry.identity.fidelity]} />
   </button>
@@ -479,7 +489,9 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
         dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }}
       />
       <span className="gallery__label">
-        {entry.kind === 'current' ? 'Open in the generator' : 'Open to recolour, or to see it as published'}
+        {entry.kind === 'current' ? 'Open in the generator'
+          : entry.kind === 'collected' ? 'View artwork and download the source file'
+            : 'Open to recolour, or to see it as published'}
       </span>
     </button>
     <GraphLink node={entry.graphNode} onOpenGovernment={onOpenGovernment} />
@@ -502,7 +514,7 @@ const CollectionCard = ({ collection, onOpen, theme }) => {
         <span className="gallery__collection-title">{collection.label}</span>
         <span className="gallery__note">{collection.body}</span>
         <span className="gallery__years">
-          {collection.years} · {count} {count === 1 ? 'mark' : 'marks'}
+          {collection.years} · {count} {collection.fileCollection ? (count === 1 ? 'artwork file' : 'artwork files') : (count === 1 ? 'mark' : 'marks')}
           {collection.eras ? ` · ${collection.eras.length} eras` : ''}
         </span>
         <Chips labels={collectionChips(collection)} />
@@ -695,6 +707,7 @@ const CollectingShelf = ({ onChoose, onOpenGovernment }) => {
     <ul className="gallery__collecting-list">
       {bodies.map((body) => {
         const collection = held.get(body.id)
+        const research = COLLECTION_RESEARCH.get(body.id)
         const marks = collection ? entriesOf(collection).length : 0
         return (
           <li key={body.id} className="gallery__collecting-row" data-held={collection ? true : undefined}>
@@ -703,8 +716,8 @@ const CollectingShelf = ({ onChoose, onOpenGovernment }) => {
               <span className="gallery__collecting-years">{body.shortName ? `${body.shortName} · ` : ''}{years(body)}{body.untraced ? ', end not traced' : ''}</span>
             </span>
             {collection
-              ? <button type="button" className="gallery__collecting-status" onClick={() => onChoose(collection.id)}>{marks} {marks === 1 ? 'mark' : 'marks'} <span aria-hidden="true">→</span></button>
-              : <span className="gallery__collecting-status">Wanted</span>}
+              ? <button type="button" className="gallery__collecting-status" onClick={() => onChoose(collection.id)}>{marks} {collection.fileCollection ? (marks === 1 ? 'file' : 'files') : (marks === 1 ? 'mark' : 'marks')} <span aria-hidden="true">→</span></button>
+              : <span className="gallery__collecting-status" title={research?.notes}>{researchLabel(research)}</span>}
             {onOpenGovernment && (
               <button type="button" className="gallery__collecting-graph" onClick={() => onOpenGovernment(body.id, yearIn(body))} title={`${body.name} in the government graph`}>
                 Graph <span aria-hidden="true">→</span>
@@ -895,7 +908,9 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ? <HydroMarkView mark={open.mark} variant={open.variant} />
             : open.kind === 'supplied'
               ? <SuppliedMarkView key={open.id} entry={open} />
-              : <Detail entry={open} />}
+              : open.kind === 'collected'
+                ? <CollectedMarkView key={open.id} entry={open} />
+                : <Detail entry={open} />}
         {markTimeline && (
           <section className="gallery__history" aria-labelledby="mark-history">
             <h2 id="mark-history" className="gallery__shelf-title">{markTimeline.label} through time</h2>
