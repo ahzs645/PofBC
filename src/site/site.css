@@ -1121,6 +1121,36 @@ input.share__url {
 }
 
 .gallery__art--cover svg { width: 100%; max-height: 120px; height: auto; }
+.gallery__collected-image {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+  border-radius: var(--radius-sm);
+}
+.gallery__collected-image[data-dark="true"] { background: #243449; }
+.gallery__art--cover .gallery__collected-image { height: 120px; }
+.gallery__recovered { display: grid; gap: 16px; }
+.gallery__recovered h2, .gallery__recovered p { margin: 0; }
+.gallery__recovered-preview {
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  padding: 40px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.gallery__recovered-preview[data-dark] { background: #243449; }
+.gallery__recovered-preview img { max-width: 100%; width: auto; max-height: 420px; object-fit: contain; }
+.gallery__asset-format { font-size: 13px; color: var(--ink-muted); }
+.gallery__asset-downloads { flex-wrap: wrap; }
+.gallery__asset-source { margin: 0; display: grid; gap: 10px; font-size: 14px; }
+.gallery__asset-source > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; }
+.gallery__asset-source dt { font-weight: 600; }
+.gallery__asset-source dd { margin: 0; overflow-wrap: anywhere; }
 .gallery__collection-text { display: grid; gap: 2px; }
 .gallery__collection-title { font-size: 18px; font-weight: 600; }
 
