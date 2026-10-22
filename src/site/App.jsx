@@ -16,6 +16,7 @@ const SignsView = lazy(() => import('../signs/SignsView.jsx').then((module) => (
 // The patch library and digitizer come from the Patcher submodule (vendor/patcher).
 const PatchesView = lazy(() => import('../patches/PatchesView.jsx').then((module) => ({ default: module.PatchesView })))
 const GuidesView = lazy(() => import('../guides/GuidesView.jsx').then((module) => ({ default: module.GuidesView })))
+const SalariesView = lazy(() => import('../salaries/SalariesView.jsx').then((module) => ({ default: module.SalariesView })))
 import { generatorPatchFor } from '../government/eraMark.js'
 import {
   FLAG_PALETTE_ORDER, FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_SWATCHES
@@ -261,6 +262,12 @@ export const App = () => {
       {view === 'guides' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the visual guides…</p>}>
           <GuidesView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'salaries' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the salaries…</p>}>
+          <SalariesView key={visit} onOpenGovernment={openInGovernment} />
         </Suspense>
       )}
 

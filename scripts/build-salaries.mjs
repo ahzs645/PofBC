@@ -13,11 +13,18 @@
 // bodies the atlas draws, and the index says how many rows of each were left out. The provincial
 // public service is disclosed as one employer, not by ministry, so it is kept as one.
 //
+// It also writes the salary search's index (public/salaries/people/): every named row of every
+// employer in the files — cities, schools and universities too — grouped by the first two letters
+// of the surname and gzipped, so a search loads only the slice its surname falls in, and a person
+// can be followed from one year's disclosure to the next.
+//
 // Run: npm run build:salaries -- <folder holding the data/ directory>
 
 import { readFileSync, readdirSync, statSync, writeFileSync, mkdirSync, rmSync } from 'node:fs'
 import { resolve, dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { gzipSync } from 'node:zlib'
+import { surnameShard } from '../src/salaries/people.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const source = process.argv[2]
@@ -134,7 +141,20 @@ const median = (values) => {
 rmSync(out, { recursive: true, force: true })
 const index = { source: 'pssdb public-sector salary disclosures, as supplied 2026-10-22', years: YEARS.map(({ label, slug }) => ({ label, slug })), bodies: {}, unmatched: {} }
 
-for (const year of YEARS) {
+// The search index: employers as a table, people by surname.
+const employers = []
+const employerIndex = new Map()
+const employerOf = (name, sector) => {
+  const key = `${name}\u0000${sector}`
+  if (!employerIndex.has(key)) {
+    employerIndex.set(key, employers.length)
+    employers.push([name, sector, BODIES[name] ?? null])
+  }
+  return employerIndex.get(key)
+}
+const shards = new Map()
+
+for (const [yearIndex, year] of YEARS.entries()) {
   const byBody = new Map()
   for (const file of year.files.flatMap((path) => filesOf(resolve(source, path)))) {
     const rows = csvRows(readFileSync(file, 'utf8').replace(/^﻿/, ''))
@@ -143,6 +163,15 @@ for (const year of YEARS) {
     for (const row of rows) {
       const agency = row[at('agency')]?.trim()
       const id = BODIES[agency]
+      const name = row[at('name')]?.trim()
+      const pay = money(row[at('remuneration')])
+      if (name && pay !== null) {
+        const shard = surnameShard(name)
+        if (!shards.has(shard)) shards.set(shard, [])
+        const position = row[at('position')]?.trim() || null
+        const department = at('department') >= 0 ? row[at('department')]?.trim() || null : null
+        shards.get(shard).push([name, [position, department].filter(Boolean).join(' · ') || null, pay, money(row[at('expenses')]), employerOf(agency, row[at('sector')]?.trim() ?? ''), yearIndex])
+      }
       if (!id) {
         const sector = row[at('sector')]?.trim() ?? ''
         const key = `${agency} (${sector})`
@@ -169,6 +198,22 @@ for (const year of YEARS) {
   }
   console.log(`${year.label}: ${byBody.size} bodies, ${[...byBody.values()].reduce((sum, body) => sum + body.rows.length, 0)} rows`)
 }
+
+mkdirSync(resolve(out, 'people'), { recursive: true })
+const counts = {}
+for (const [shard, rows] of [...shards].sort(([a], [b]) => a.localeCompare(b))) {
+  rows.sort((a, b) => a[0].localeCompare(b[0]) || a[5] - b[5] || b[2] - a[2])
+  // Node writes no timestamp into the gzip header, so the same rows always make the same bytes.
+  writeFileSync(resolve(out, 'people', `${shard}.json.gzip`), gzipSync(JSON.stringify(rows), { level: 9 }))
+  counts[shard] = rows.length
+}
+writeFileSync(resolve(out, 'people', 'index.json'), JSON.stringify({
+  note: 'Rows: [name, position, remuneration, expenses, employer, year]; employer is an index into employers, year into years.',
+  years: YEARS.map(({ label }) => label),
+  employers,
+  shards: counts
+}) + '\n')
+console.log(`people: ${Object.values(counts).reduce((a, b) => a + b, 0)} rows in ${shards.size} slices, ${employers.length} employers`)
 
 index.unmatched = Object.fromEntries(Object.entries(index.unmatched).sort((a, b) => b[1] - a[1]))
 writeFileSync(resolve(out, 'index.json'), JSON.stringify(index, null, 1) + '\n')

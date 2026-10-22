@@ -9,12 +9,23 @@ import { useEffect, useMemo, useState } from 'react'
 import { Card, CardSection, KindIcon } from './PanelCards.jsx'
 import { SALARY_INDEX, SALARY_YEARS } from './salaryIndex.js'
 import { PUBLIC_SERVICE, salaryKeyOf } from './salaries.js'
+import { personKey } from '../salaries/people.js'
 
 const PAGE = 12
 const fetched = new Map()
 
 const money = (value) => (value === null || value === undefined ? null : `$${Math.round(value).toLocaleString('en-CA')}`)
 const compact = (value) => (value >= 1e9 ? `$${(value / 1e9).toFixed(2)}B` : value >= 1e6 ? `$${(value / 1e6).toFixed(1)}M` : money(value))
+
+/** Opens the salary search on a person, to follow their name through the other years. */
+const followPerson = (name) => {
+  const url = new URL(globalThis.location.href)
+  for (const key of [...url.searchParams.keys()]) url.searchParams.delete(key)
+  url.searchParams.set('view', 'salaries')
+  url.searchParams.set('q', name)
+  url.searchParams.set('person', personKey(name))
+  globalThis.location.assign(url)
+}
 
 /** The disclosure year nearest the year on screen, among those this body has. */
 const nearest = (slugs, year) => {
@@ -107,6 +118,7 @@ export const Salaries = ({ node, year }) => {
               title={name ?? 'Name not given'}
               lines={[[position, department].filter(Boolean).join(' · ') || null, expenses ? `Expenses ${money(expenses)}` : null]}
               aside={money(pay)}
+              onClick={name ? () => followPerson(name) : undefined}
             />
           ))}
         </CardSection>
