@@ -977,6 +977,16 @@ details.gov-list__section[open] { padding-bottom: 12px; }
   box-shadow: 0 0 0 1px var(--gov-surface);
 }
 
+.gov-lineage-chart__group { margin: 8px 0 0; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gov-ink-3); }
+.gov-lineage-chart__note { margin: 2px 2px 0; font-size: 12px; }
+/* A name or a ministry whose end no source gives fades out where the next row takes over. */
+.gov-lineage-chart__bar[data-open] { background: linear-gradient(to right, color-mix(in srgb, var(--gov-executive) 45%, transparent) 55%, transparent); }
+.gov-lineage-chart__row[data-self] .gov-lineage-chart__bar[data-open] { background: linear-gradient(to right, var(--gov-executive) 55%, transparent); }
+.gov-lineage-chart__seen { position: absolute; top: 1px; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: var(--gov-executive); }
+.gov-lineage-chart__joins { margin: 4px 0 2px; background: none; border-top: 1px dashed var(--gov-hover); height: 10px; border-radius: 0; }
+.gov-lineage-chart__join { position: absolute; top: -5px; width: 9px; height: 9px; margin-left: -4.5px; transform: rotate(45deg); background: var(--gov-executive); box-shadow: 0 0 0 2px var(--gov-surface); }
+.gov-lineage-chart__join-list { margin: 12px 0 0; padding: 0 2px; list-style: none; display: grid; gap: 6px; font-size: 13px; line-height: 1.35; }
+
 .gov-lineage-chart__cursor {
   position: absolute;
   top: 18px;

@@ -1,0 +1,162 @@
+{
+  "note": "Parks' names and ministries over time, from the BC Archives authority records already read for the atlas (research/atlas/events-divisions.json, observed 2026-09-25). Not re-fetched: search.bcarchives.gov.bc.ca returned 503 on 2026-10-22. Only what the records state is given; where they give no ministry (1945-1949, 1975-1978, after 1978) none is supplied.",
+  "sources": [
+    {
+      "id": "bca-parks-outdoor-recreation-division",
+      "url": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-and-outdoor-recreation-division-2",
+      "title": "British Columbia. Parks and Outdoor Recreation Division (authority record)",
+      "evidence": "archival_description",
+      "checked": "2026-09-25",
+      "access_mode": "page_text"
+    },
+    {
+      "id": "bca-parks-branch",
+      "url": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-branch-3",
+      "title": "British Columbia. Parks Branch (authority record)",
+      "evidence": "archival_description",
+      "checked": "2026-09-25",
+      "access_mode": "page_text"
+    }
+  ],
+  "records": [
+    {
+      "id": "bc-parks",
+      "first_observed": {
+        "date": "1939",
+        "precision": "year",
+        "meaning": "The Parks Section of the Forest Branch, the unit BC Archives traces the Parks and Outdoor Recreation Division from, began this year. A sighting under its first name, not BC Parks' founding",
+        "evidence": "archival_description",
+        "source": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-and-outdoor-recreation-division-2",
+        "source_id": "bca-parks-outdoor-recreation-division",
+        "locator": "History field: 'first established in 1939 as the Parks Section of the British Columbia Forest Branch'",
+        "checked": "2026-09-25"
+      },
+      "names": [
+        {
+          "name": "Parks Section",
+          "from": "1939",
+          "to": "1948-05",
+          "from_precision": "year",
+          "to_precision": "month",
+          "coverage": "documented_period",
+          "evidence": "archival_description",
+          "source": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-and-outdoor-recreation-division-2",
+          "source_id": "bca-parks-outdoor-recreation-division",
+          "locator": "History field: 'first established in 1939 as the Parks Section of the British Columbia Forest Branch'; 'In May 1948 it was renamed the Parks Division'",
+          "checked": "2026-09-25"
+        },
+        {
+          "name": "Parks Division",
+          "from": "1948-05",
+          "to": "1949",
+          "from_precision": "month",
+          "to_precision": "year",
+          "coverage": "documented_period",
+          "evidence": "archival_description",
+          "source": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-and-outdoor-recreation-division-2",
+          "source_id": "bca-parks-outdoor-recreation-division",
+          "locator": "History field: 'In May 1948 it was renamed the Parks Division as part of the Forest Service'; 'in 1949 it became the Parks and Recreation Division, Forest Service'",
+          "checked": "2026-09-25"
+        },
+        {
+          "name": "Parks and Recreation Division",
+          "from": "1949",
+          "to": "1957-04-01",
+          "from_precision": "year",
+          "to_precision": "day",
+          "coverage": "documented_period",
+          "evidence": "archival_description",
+          "source": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-and-outdoor-recreation-division-2",
+          "source_id": "bca-parks-outdoor-recreation-division",
+          "locator": "History field: 'in 1949 it became the Parks and Recreation Division, Forest Service'. The end is the day the department's 1957 report gives for its entry into Recreation and Conservation as the Provincial Parks Branch (r4-r4b-013); BC Archives' Parks Branch record gives 28 March 1957, the Act's date",
+          "checked": "2026-09-25",
+          "note": "The 1957 report and a Forest Service timeline put the Parks and Recreation Division in 1948, BC Archives in 1949: both are held (research_events), and the name is drawn from 1949, the archival record that gives the sequence."
+        },
+        {
+          "name": "Parks and Outdoor Recreation Department",
+          "from": "1979-01",
+          "to": "1979-05",
+          "from_precision": "month",
+          "to_precision": "month",
+          "coverage": "documented_period",
+          "evidence": "archival_description",
+          "source": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-and-outdoor-recreation-division-2",
+          "source_id": "bca-parks-outdoor-recreation-division",
+          "locator": "History field: 'In January 1979 the name changed again to the Parks and Outdoor Recreation Dept.'; 'in May of that year, it changed back to its earlier name, Parks and Outdoor Recreation Division'",
+          "checked": "2026-09-25"
+        },
+        {
+          "name": "Parks and Outdoor Recreation Division",
+          "from": "1979-05",
+          "to": null,
+          "from_precision": "month",
+          "to_precision": null,
+          "coverage": "start_documented_end_unknown",
+          "evidence": "archival_description",
+          "source": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-and-outdoor-recreation-division-2",
+          "source_id": "bca-parks-outdoor-recreation-division",
+          "locator": "History field: 'in May of that year, it changed back to its earlier name, Parks and Outdoor Recreation Division'",
+          "checked": "2026-09-25",
+          "note": "How long the name stood is not in the record; a Parks Division of 1991 (BC Archives, Parks and Protected Areas Branch) is not said to be this division."
+        }
+      ],
+      "parents": [
+        {
+          "ministry_as_printed": "Department of Lands",
+          "from": "1939",
+          "to": null,
+          "from_precision": "year",
+          "to_precision": null,
+          "coverage": "start_documented_end_unknown",
+          "evidence": "archival_description",
+          "source": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-and-outdoor-recreation-division-2",
+          "source_id": "bca-parks-outdoor-recreation-division",
+          "locator": "History field: 'the Parks Section of the British Columbia Forest Branch' (the Forest Branch of the Department of Lands)",
+          "checked": "2026-09-25",
+          "relation": "part_of"
+        },
+        {
+          "ministry_as_printed": "Department of Lands and Forests",
+          "from": "1949",
+          "to": "1957-04-01",
+          "from_precision": "year",
+          "to_precision": "day",
+          "coverage": "documented_period",
+          "evidence": "archival_description",
+          "source": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-and-outdoor-recreation-division-2",
+          "source_id": "bca-parks-outdoor-recreation-division",
+          "locator": "History field: the record for the Parks and Recreation Division gives 1949-1957 and places it in the Forest Branch, Department of Lands and Forests",
+          "checked": "2026-09-25",
+          "relation": "part_of"
+        },
+        {
+          "ministry_as_printed": "Ministry of Lands, Parks and Housing",
+          "from": "1978-12-05",
+          "to": null,
+          "from_precision": "day",
+          "to_precision": null,
+          "coverage": "start_documented_end_unknown",
+          "evidence": "archival_description",
+          "source": "https://search.bcarchives.gov.bc.ca/british-columbia-parks-branch-3",
+          "source_id": "bca-parks-branch",
+          "locator": "History field: 'On December 5, 1978, the Parks Branch was amalgamated with the Land Management Branch and the housing function of the Ministry of Municipal Affairs and Housing to form the Ministry of Lands, Parks and Housing'",
+          "checked": "2026-09-25",
+          "relation": "part_of"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-22",
+        "by": "parks lineage (research/reviews/parks-lineage-2026-10-22)",
+        "scope": "BC Archives authority records A75, A76 as held in events-divisions.json",
+        "full_history_complete": false,
+        "unresolved_fields": [
+          "parents 1945-1949",
+          "parents 1975-1978",
+          "parents 1986-2024",
+          "names after 1979",
+          "relationship of the 1991 Parks Division"
+        ]
+      }
+    }
+  ]
+}

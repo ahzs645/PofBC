@@ -283,6 +283,13 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     setSelectedId(episode.id)
   }, [])
 
+  /** Moves the timeline to `target` with `id` chosen, as the lineage chart's rows do. */
+  const go = useCallback((target, id) => {
+    setPlaying(false)
+    setYear(Math.min(PRESENT_YEAR, Math.max(FIRST_YEAR, target)))
+    setSelectedId(id)
+  }, [])
+
   /** Moves the timeline to a year a body stood — its first, or its last — and chooses it. */
   const jumpBody = useCallback((body, end) => {
     // Its last year is the one before its end, the last a source shows it in if its end is
@@ -423,7 +430,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
       <div className="gov__panel" ref={panel}>
 
         {selected
-          ? <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} />
+          ? <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onGo={go} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} />
           : <OverviewCard government={government} onSelect={setSelectedId} />}
         <ChangesCard year={year} onSelect={setSelectedId} onJump={jump} />
 

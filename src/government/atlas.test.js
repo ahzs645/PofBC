@@ -5,7 +5,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { compareYears } from './compare.js'
 import { EVENTS, electionStages, eventsInYear, formatEventDate, operatingNameIn, typeOf } from './events.js'
-import { governmentIn, lifeOf, PRESENT_YEAR } from './snapshot.js'
+import { governmentIn, lifeOf, periodsOf, PRESENT_YEAR } from './snapshot.js'
 
 const find = (year, id, options) => governmentIn(year, options).nodes.find((node) => node.id === id)
 
@@ -245,4 +245,35 @@ test('WorkBC starts with the 2007 launch, by recorded decision; the 2012 centres
   assert.ok(!find(2006, 'sub-workbc'))
   assert.equal(find(2007, 'sub-workbc').established, '2007-04-27')
   assert.ok(lifeOf('sub-workbc').events.some((event) => event.date.start === '2012-04-02'))
+})
+
+test('Parks is held only by the ministries its sources name, and called what they call it', () => {
+  // BC Archives: the Parks Section of the Forest Branch (1939), in Lands and Forests from 1949, into
+  // Recreation and Conservation on 1 April 1957, amalgamated into Lands, Parks and Housing in 1978.
+  assert.equal(find(1940, 'sub-bc-parks').parent, 'department-of-lands-1908')
+  assert.equal(find(1940, 'sub-bc-parks').name, 'Parks Section')
+  assert.equal(find(1960, 'sub-bc-parks').parent, 'department-of-recreation-and-conservation-1957')
+  assert.equal(find(1960, 'sub-bc-parks').name, 'Provincial Parks Branch')
+  assert.equal(find(1980, 'sub-bc-parks').parent, 'ministry-of-lands-parks-and-housing-1978')
+  // A ministry named in 1939 or 1978 is not followed into what it became, or into a near name.
+  assert.ok(find(1946, 'sub-bc-parks').unplacedSub)
+  assert.ok(find(1977, 'sub-bc-parks').unplacedSub)
+  assert.ok(find(1990, 'sub-bc-parks').unplacedSub)
+  // A name whose end is not recorded gives way to a later one, and today's is today's.
+  assert.equal(find(1985, 'sub-bc-parks').name, 'Parks and Outdoor Recreation Division')
+  assert.equal(find(PRESENT_YEAR, 'sub-bc-parks').name, 'BC Parks')
+})
+
+test('a period with no recorded end runs to the next row, and a style of the same name is no row', () => {
+  const rows = [
+    { name: 'Provincial Parks Branch', from: '1957-04-01', to: null, coverage: 'start_documented_end_unknown' },
+    { name: 'Parks and Outdoor Recreation Division', from: '1979-05', to: null, coverage: 'start_documented_end_unknown' },
+    { name: 'PARKS AND OUTDOOR RECREATION DIVISION.', observedOn: '1990', coverage: 'observation_only' },
+    { name: 'BC Parks', observedOn: '2015', coverage: 'observation_only' }
+  ]
+  const [branch, division] = periodsOf(rows)
+  assert.equal(branch.until, '1979-05')
+  assert.equal(branch.endUnknown, false)
+  assert.equal(division.until, '2015')
+  assert.equal(division.endUnknown, true)
 })

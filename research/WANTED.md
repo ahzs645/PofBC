@@ -281,6 +281,18 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   directive (Ministry of Environment GR series at BC Archives; 1980 news releases); the 1905, 1961
   and 2002 COS instruments; the 1965 Park Act; the order renaming the Wildfire Management Branch; the
   Surveyor General's 2019 division.
+- [ ] **F4a (P2) Parks' ministries and names over time.** Drawn now from BC Archives' two
+  authority records (`reviews/parks-lineage-2026-10-22`): the Parks Section of the Forest Branch from
+  1939 (Department of Lands), Parks Division (May 1948), Parks and Recreation Division (1949, in Lands
+  and Forests; the 1957 report and a Forest Service timeline say 1948), Provincial Parks Branch
+  (1 April 1957, Recreation and Conservation), Parks and Outdoor Recreation Department and Division
+  (1979), in Lands, Parks and Housing from 5 December 1978. Open, and drawn as gaps: its ministry
+  1945-1949, 1975-1978 (the archives say unknown, not absent) and from 1986 (the Ministry of
+  Environment and Parks, the Ministry of Parks, Environment, Lands and Parks and Water, Land and Air
+  Protection are all plausible, none stated); its name from 1979 until "BC Parks" (seen 2015); whether
+  the 1991 Parks Division is this division renamed; the receiving branch of the 2007 transfer of
+  duties. *Where:* the Estimates' vote structure and ministry annual reports, 1980-2005; BC Archives'
+  ministry hierarchy records once its search is back (it returned 503 on 22 October 2026).
 - [ ] **F5 (P2) Bodies that are gone, with a successor still drawn.** The Game Commission now ends
   1 April 1957, as the Fish and Game Branch. The Liquor Control and Licensing Branch's statutory start
   (31 December 1976) is known: wanted, the order or Act that renamed or ended it (the 2018 Cannabis

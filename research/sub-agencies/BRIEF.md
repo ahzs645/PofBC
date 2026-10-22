@@ -16,7 +16,7 @@ In any year other than today, a sub-agency is drawn only if it is known to have 
 | 2010 | 92 | 192 |
 | 2000 | 14 | 150 |
 | 1990 | 11 | 82 |
-| 1980 | 7 | 71 |
+| 1980 | 8 | 72 |
 
 That is deliberate — an undated body can't be placed in 1990 without claiming it existed in 1990 (the Liquor and Cannabis Regulation Branch did not) — but it means the history of the public service below ministry level is almost empty. This brief lists what is needed to fill it.
 
@@ -133,7 +133,7 @@ These have origin/rename events in `eventsData.js` (from the atlas package), but
 - **Innovative Clean Energy Fund** (Ministry of Energy and Climate Solutions): 2010 name first observed
 - **First Nations Clean Energy Business Fund** (Ministry of Energy and Climate Solutions): 2015 name first observed
 - **Climate Solutions Council** (Ministry of Energy and Climate Solutions): 2023-03-31 name first observed
-- **BC Parks** (Ministry of Environment and Parks): 1911-03-01 function milestone; 1913 function milestone; 1939 unit established; 1939 functions transferred; 1948 unit established; 1948 retrospective claim; 1948-05 legal name change; 1949 legal name change; 1957 functions transferred; 1957 organizational milestone; 1957 retrospective claim; 1957-03-28 reorganization; 1957-03-28 royal assent; 1957-04-01 administrative transfer and rename; 1957-04-01 name first observed; 1965 legislation enacted; 1965-03-26 royal assent; 1978-12-05 amalgamation; 1979-01 legal name change; 1979-05 legal name change; 1991 unit established; 1995 legislation enacted; 2002 unit established; 2010 legal name change
+- **BC Parks** (Ministry of Environment and Parks): 1911-03-01 function milestone; 1913 function milestone; 1939 unit established; 1939 functions transferred; 1939 name first observed; 1948 unit established; 1948 retrospective claim; 1948-05 legal name change; 1949 legal name change; 1957 functions transferred; 1957 organizational milestone; 1957 retrospective claim; 1957-03-28 reorganization; 1957-03-28 royal assent; 1957-04-01 administrative transfer and rename; 1965 legislation enacted; 1965-03-26 royal assent; 1978-12-05 amalgamation; 1979-01 legal name change; 1979-05 legal name change; 1991 unit established; 1995 legislation enacted; 2002 unit established; 2010 legal name change
 - **Conservation Officer Service** (Ministry of Environment and Parks): 1905 function origin; 1905-04-08 royal assent; 1905-07-01 predecessor organized; 1909 functions transferred; 1918 reorganization; 1926 unit established; 1929 reorganization; 1934 unit established; 1957 reorganization; 1957-04-01 administrative transfer and rename; 1961-03-27 royal assent; 1966 legal name change; 1980 unit established; 1980 reorganization observed; 1980 retrospective claim; 1980-09-18 name first observed; 1988 reorganization; 1990 legal name change; 1994 amalgamation; 2002 legal status change; 2002-05-09 statutory establishment; 2004-02-20 symbol granted; 2015-11-04 retrospective origin claim
 - **Recreation Sites and Trails BC** (Ministry of Environment and Parks): 2010 name first observed
 - **Report All Poachers and Polluters** (Ministry of Environment and Parks): 2005 name first observed; 2006-03 communications rollout

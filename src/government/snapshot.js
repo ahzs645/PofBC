@@ -151,6 +151,44 @@ const ministryKey = (name) => String(name).toLowerCase().normalize('NFD').replac
   .replace(/[‘’ʼ']/g, '').replace(/&/g, ' and ').replace(/-/g, ' ')
   .replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter((word) => word && !STOP.has(word)).join(' ')
 
+/** The ministry of `name` standing in `year`: by its name, or the one near name containing the other. */
+export const ministryAt = (name, year) => {
+  const standing = episodesIn(year)
+  const key = ministryKey(name)
+  const exact = standing.find((episode) => ministryKey(episode.name) === key)
+  if (exact) return exact.id
+  const mine = new Set(key.split(' '))
+  const near = standing.filter((episode) => {
+    const words = new Set(ministryKey(episode.name).split(' '))
+    return [...words].every((word) => mine.has(word)) || [...mine].every((word) => words.has(word))
+  })
+  return near.length === 1 ? near[0].id : null
+}
+
+const rowDate = (row) => (row.coverage === 'observation_only' ? row.observedOn : row.from)
+// Two styles of one name ("BC" and "British Columbia", capitals, stops) are not a change of name.
+const sameName = (a, b) => {
+  const plain = (name) => fold(name).replace(/[^a-z0-9]+/g, ' ').trim().replace(/\bbritish columbia\b/g, 'bc').replace(/\bb c\b/g, 'bc')
+  return plain(a) === plain(b)
+}
+const earlier = (a, b) => (startOf(a) < startOf(b) ? -1 : 1)
+
+/**
+ * A sub-agency's dated names or parents, read as one line through time. A period whose end its
+ * source does not give runs only until the next later row says otherwise (a later period, or a
+ * sighting under another name or parent), never on to today by default; `until` is that day, and
+ * `endUnknown` says no dated period follows to end it. Sightings are not periods and are left out.
+ */
+export const periodsOf = (rows = []) => {
+  const dated = rows.filter((row) => rowDate(row))
+  return dated.filter((row) => row.coverage !== 'observation_only').map((row) => {
+    if (row.to) return { ...row, until: row.to, endUnknown: false }
+    const next = dated.filter((other) => !sameName(other.name, row.name) && startOf(rowDate(other)) > startOf(row.from)).sort((a, b) => earlier(rowDate(a), rowDate(b)))[0] ?? null
+    // A later dated period is the end of this one; a later sighting only shows it had ended by then.
+    return { ...row, until: next ? rowDate(next) : null, endUnknown: !next || next.coverage === 'observation_only' }
+  }).sort((a, b) => earlier(a.from, b.from))
+}
+
 export const premierOn = (day) => holderOn(PREMIERS, day)
 /**
  * The Lieutenant Governor — or an administrator acting between two — on `day`, from the Legislative
@@ -538,7 +576,8 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
   }
   const yearOf = (value) => Number(String(value).slice(0, 4))
   const observedIn = (row) => row.coverage === 'observation_only' && row.observedOn && yearOf(row.observedOn) === year
-  const coversDay = (row) => row.coverage !== 'observation_only' && stands(row.from ?? '1871', row.to)
+  // The latest period standing on the day (see periodsOf).
+  const periodOn = (rows) => periodsOf(rows).filter((row) => stands(row.from, row.until)).at(-1) ?? null
   const subById = new Map(SUB_AGENCIES.map((entry) => [entry.id, entry]))
   const brief = (entry) => entry && ({ id: entry.id, name: entry.name, established: entry.established, ended: entry.ended ?? null })
   const SUB_AS_BODY = { tribunal: 'tribunal', board: 'agency', subsidiary: 'crown-corporation' }
@@ -559,8 +598,13 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     if (presence === 'unconfirmed' && !(includeUndated && undated)) continue
 
     // Where it sat in the year.
-    const statedRow = (entry.parents ?? []).filter(coversDay).at(-1) ?? (entry.parents ?? []).find(observedIn) ?? null
-    const statedId = statedRow ? nodeNamed(statedRow.name) : null
+    const statedRow = periodOn(entry.parents) ?? (entry.parents ?? []).find(observedIn) ?? null
+    // A stated ministry is the one of that name when the period begins, and holds only while that
+    // ministry stands: a source that names the Department of Lands does not name what it became.
+    // A body named exactly (an authority, a Crown) is that body.
+    const statedBody = statedRow ? nodes.find((node) => node.kind !== 'ministry' && fold(node.name) === fold(statedRow.name))?.id ?? null : null
+    const statedAt = statedRow && !statedBody && statedRow.coverage !== 'observation_only' ? ministryAt(statedRow.name, yearOf(statedRow.from)) : null
+    const statedId = statedBody ?? (statedAt ? (drawn.has(statedAt) ? statedAt : null) : statedRow ? nodeNamed(statedRow.name) : null)
     const datedParents = (entry.parents ?? []).some((row) => row.coverage !== 'observation_only' && row.from)
     let parentId = null
     let placement = null
@@ -580,7 +624,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     if ((!parent || !parent.branch) && presence === 'unconfirmed') continue
 
     // What it was called in the year: a dated name, or one observed in this very year.
-    const nameRow = (entry.names ?? []).filter(coversDay).at(-1) ?? (entry.names ?? []).find(observedIn) ?? null
+    const nameRow = present ? null : periodOn(entry.names) ?? (entry.names ?? []).find(observedIn) ?? null
     const name = nameRow?.name ?? entry.name
     const renamed = name !== entry.name
 
