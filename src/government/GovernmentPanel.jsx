@@ -7,6 +7,8 @@ import { changesIn, episodeById, predecessorsOf, successorsOf } from './episodes
 import { currentMarkFor, identityFor, renderEraMark } from './eraMark.js'
 import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
 import { CROWN_CATEGORIES, CROWN_CATEGORY_SOURCES } from './crownCategories.js'
+import { Card, CardSection, KindIcon } from './PanelCards.jsx'
+import { Salaries } from './Salaries.jsx'
 import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, PEOPLE_ID, periodsOf, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
@@ -159,70 +161,52 @@ const Holders = ({ label, holders: all, current, limit = 5 }) => {
 }
 
 /** What each kind of sub-agency is called, in the order they are listed. */
-const SUB_TYPES = [
-  ['agency', 'Agencies'], ['division', 'Divisions'], ['office', 'Offices'], ['program', 'Programs'],
-  ['board', 'Boards'], ['committee', 'Committees'], ['tribunal', 'Tribunals'], ['subsidiary', 'Subsidiaries']
-]
+const SUB_TYPES = { agency: 'Agency', division: 'Division', office: 'Office', program: 'Program', board: 'Board', committee: 'Committee', tribunal: 'Tribunal', subsidiary: 'Subsidiary' }
+const SUB_ORDER = Object.keys(SUB_TYPES)
 
 /**
- * A body's sub-agencies, drawn round it as dots, named here and grouped by kind, so the cluster can
- * be read: PHSA's agencies, a ministry's divisions, a Crown's subsidiaries. Each is a way to it.
+ * A body's sub-agencies, the dots that open round it when it is chosen: named here, each with what
+ * kind it is, and each a way to it — PHSA's agencies, a ministry's divisions, a Crown's subsidiaries.
  */
 const SubAgencies = ({ parent, nodes, onSelect }) => {
   const subs = nodes.filter((node) => node.ring === 'sub' && node.parent === parent.id)
+    .sort((a, b) => (SUB_ORDER.indexOf(a.subType) + 1 || 99) - (SUB_ORDER.indexOf(b.subType) + 1 || 99) || a.name.localeCompare(b.name))
   if (!subs.length) return null
-  const known = new Set(SUB_TYPES.map(([type]) => type))
-  const groups = [...SUB_TYPES, ['other', 'Others']]
-    .map(([type, label]) => [label, subs.filter((node) => (type === 'other' ? !known.has(node.subType) : node.subType === type))
-      .sort((a, b) => a.name.localeCompare(b.name))])
-    .filter(([, list]) => list.length)
   return (
-    <div className="gov-lineage">
-      <h3 className="gov-card__subheading">Its sub-agencies <span className="gov-muted">{subs.length}</span></h3>
-      {groups.map(([label, list]) => (
-        <div key={label} className="gov-subs">
-          {groups.length > 1 && <p className="gov-subs__kind">{label} <span className="gov-muted">{list.length}</span></p>}
-          <ul>
-            {list.map((node) => (
-              <li key={node.id}>
-                <button type="button" className="gov-link-card" onClick={() => onSelect(node.id)}>
-                  <span>{node.name}{node.inferredParent ? <span className="gov-muted"> (placed by inference)</span> : null}</span>
-                  {node.shortName && node.shortName !== node.name && <span className="gov-muted">{node.shortName}</span>}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
+    <CardSection title="Sub-agencies" meta={subs.length}>
+      {subs.map((node) => (
+        <Card
+          key={node.id}
+          icon={<KindIcon kind="sub" branch={node.branch} />}
+          title={node.name}
+          lines={[[SUB_TYPES[node.subType], node.shortName && node.shortName !== node.name ? node.shortName : null, node.inferredParent ? 'placed by inference' : null].filter(Boolean).join(' · ')]}
+          onClick={() => onSelect(node.id)}
+        />
       ))}
-    </div>
+    </CardSection>
   )
 }
 
 /** Bodies this one came from, or became: each a way to the years it stood. */
 const BodyLineage = ({ label, bodies, onJump, end }) => bodies.length > 0 && (
-  <div className="gov-lineage">
-    <h3 className="gov-card__subheading">{label}</h3>
-    <ul>
-      {bodies.map((body) => (
-        <li key={body.id}>
-          {body.established || body.firstSeen
-            ? (
-              <button type="button" className="gov-link-card" onClick={() => onJump(body, end)}>
-                <span>{body.name}</span>
-                <span className="gov-muted">{body.established ? span(body.established, body.ended) : `seen ${String(body.firstSeen).slice(0, 4)}${body.ended ? `–${String(body.ended).slice(0, 4)}` : ''}`}</span>
-              </button>
-              )
-            : (
-              // No source gives when it began, so there is no year to show it in.
-              <span className="gov-link-card gov-link-card--still">
-                <span>{body.name}</span>
-                <span className="gov-muted">start unknown{body.ended ? `, to ${String(body.ended).slice(0, 4)}` : ''}</span>
-              </span>
-              )}
-        </li>
-      ))}
-    </ul>
-  </div>
+  <CardSection title={label} meta={bodies.length > 1 ? bodies.length : null}>
+    {bodies.map((body) => {
+      const known = body.established || body.firstSeen
+      const years = body.established ? span(body.established, body.ended)
+        : body.firstSeen ? `seen ${String(body.firstSeen).slice(0, 4)}${body.ended ? `–${String(body.ended).slice(0, 4)}` : ''}`
+          // No source gives when it began, so there is no year to show it in.
+          : `start unknown${body.ended ? `, to ${String(body.ended).slice(0, 4)}` : ''}`
+      return (
+        <Card
+          key={body.id}
+          icon={<KindIcon kind={body.kind ?? 'agency'} branch="executive" />}
+          title={body.name}
+          lines={[years]}
+          onClick={known ? () => onJump(body, end) : undefined}
+        />
+      )
+    })}
+  </CardSection>
 )
 
 /**
@@ -722,6 +706,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
         {node.kind === 'premier' && <PremierList year={year} />}
       </section>
 
+      <Salaries key={node.id} node={node} year={year} />
       <EventsCard events={node.events} day={day} />
       {isMinistry && <MinistryTimeline node={node} year={year} onJump={onJump} />}
       {isBody && onGo && <BodyTimeline node={node} year={year} onJump={onJump} onGo={onGo} />}

@@ -375,7 +375,19 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
   // on beneath it — so a hover is only honoured while its body is still drawn.
   const hovered = byId.has(pointed) ? pointed : null
 
-  const layout = useMemo(() => layoutGovernment(nodes.filter((node) => node.branch), geometry), [nodes, geometry])
+  // Sub-agencies are folded into their parent until it is chosen — or one of them is — and then laid
+  // out round it, the cog growing to hold them, as the model opens a department's own bodies.
+  const expanded = useMemo(() => {
+    const chosen = selectedId ? byId.get(selectedId) : null
+    if (!chosen) return null
+    return chosen.ring === 'sub' ? chosen.parent : chosen.id
+  }, [selectedId, byId])
+  const folded = useMemo(() => {
+    const counts = new Map()
+    for (const node of nodes) if (node.ring === 'sub' && node.parent !== expanded) counts.set(node.parent, (counts.get(node.parent) ?? 0) + 1)
+    return counts
+  }, [nodes, expanded])
+  const layout = useMemo(() => layoutGovernment(nodes.filter((node) => node.branch && (node.ring !== 'sub' || node.parent === expanded)), geometry), [nodes, geometry, expanded])
 
   // The body the disc turns to. A head's own body stands in for it, and the people turn nothing.
   const pivot = selectedId && layout.positions[selectedId] ? layout.positions[selectedId].angle : null
@@ -741,6 +753,15 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
                       vectorEffect: 'non-scaling-stroke'
                     })}
                   </g>
+                  {/* How many sub-agencies are folded into it, until it is chosen. */}
+                  {folded.has(node.id) && !hiddenKinds.has('sub') && (() => {
+                    const badge = toPoint(point.angle, point.radius + size + (head ? 10 : 7))
+                    return (
+                      <text className="gov-graph__folded" x={badge.x} y={badge.y} fill={colour} aria-hidden="true">
+                        +{folded.get(node.id)}
+                      </text>
+                    )
+                  })()}
                 </g>
               )
             })}

@@ -1113,3 +1113,71 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-path { margin: 0 0 8px; padding-left: 20px; display: grid; gap: 6px; font-size: 14px; line-height: 1.4; }
 .gov-path .gov-link-button { font-size: inherit; }
 .gov-path__also { display: block; color: var(--gov-ink-4); font-size: 13px; }
+
+/* The count of sub-agencies folded into a body, until it is chosen and they open round it. */
+.gov-graph__folded { font-size: 7px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; pointer-events: none; opacity: 0.8; }
+
+
+/* ── The panel's lists as cards (PanelCards.jsx) ──────────────────────────────────────────── */
+
+.gov-cards { container-type: inline-size; display: grid; gap: 8px; margin-top: 20px; }
+.gov-cards__head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.gov-cards__title { margin: 0; font-size: 15px; font-weight: 600; color: var(--gov-ink); }
+.gov-cards__meta { margin: 0; font-size: 13px; color: var(--gov-ink-4); text-align: right; }
+.gov-cards__grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+@container (min-width: 420px) { .gov-cards__grid { grid-template-columns: 1fr 1fr; } }
+.gov-cards__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  height: 100%;
+  padding: 8px 14px 8px 10px;
+  border: 1px solid var(--gov-outline);
+  border-radius: 12px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+.gov-cards__card:hover, .gov-cards__card[aria-current] { background: var(--gov-hover); }
+.gov-cards__card--still, .gov-cards__card--still:hover { cursor: default; background: none; }
+.gov-cards__lead { flex: none; width: 1em; height: 1em; margin-top: 0.2em; }
+.gov-cards__icon { display: block; width: 1em; height: 1em; overflow: visible; }
+.gov-cards__text { display: grid; gap: 2px; flex: 1; min-width: 0; }
+.gov-cards__name { line-height: 1.25; color: var(--gov-ink); overflow-wrap: anywhere; }
+.gov-cards__line { font-size: 12px; line-height: 1.3; color: var(--gov-ink-4); }
+.gov-cards__aside { flex: none; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--gov-ink); }
+.gov-cards__more { justify-self: start; }
+
+/* ── Salaries (Salaries.jsx) ─────────────────────────────────────────────────────────────── */
+
+.gov-salaries__about { margin: 4px 0 12px; font-size: 13px; line-height: 1.45; }
+.gov-salaries__years { display: inline-flex; gap: 2px; margin-bottom: 12px; padding: 2px; border-radius: 10px; background: var(--gov-hover); }
+.gov-salaries__years button {
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--gov-ink-4);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.gov-salaries__years button[aria-pressed='true'] { background: var(--gov-surface); color: var(--gov-ink); box-shadow: 0 0 0 1px var(--gov-outline); }
+.gov-salaries__search {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 12px;
+  padding: 9px 12px;
+  border: 1px solid var(--gov-outline);
+  border-radius: 10px;
+  background: var(--gov-surface);
+  color: var(--gov-ink);
+  font: inherit;
+  font-size: 16px;
+}
+.gov-salaries__source { margin: 16px 0 0; font-size: 12px; line-height: 1.45; }
+.gov-salaries .gov-cards { margin-top: 16px; }
