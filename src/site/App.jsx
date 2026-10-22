@@ -169,13 +169,15 @@ export const App = () => {
   }
   // A mark in the gallery leads to the body it stands for in the government diagram, which reads
   // its body from the address bar when it opens.
-  const openInGovernment = (node) => {
+  // A body that no longer stands opens in a year it did, which the caller passes.
+  const openInGovernment = (node, year) => {
     const url = new URL(globalThis.location.href)
     url.searchParams.delete('logos')
     url.searchParams.delete('mark')
     url.searchParams.set('view', 'government')
     url.searchParams.set('node', node)
-    url.searchParams.delete('year')
+    if (year) url.searchParams.set('year', String(year))
+    else url.searchParams.delete('year')
     globalThis.history?.replaceState(null, '', url)
     setView('government')
   }

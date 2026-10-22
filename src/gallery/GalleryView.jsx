@@ -21,6 +21,7 @@ import {
   findGalleryEntry, timelineOf
 } from './collections.js'
 import { ASSET_STATUS, WANTED, WANTED_AS_OF } from './wanted.js'
+import { COLLECTING } from './collectingData.js'
 import { HydroStudio } from '../hydro/HydroStudio.jsx'
 import { HydroMarkView } from '../hydro/HydroMarkView.jsx'
 import { renderCurrentHydroSvg, renderHydroMarkSvg } from '../hydro/hydroMarks.js'
@@ -674,6 +675,76 @@ const GraphLink = ({ node, onOpenGovernment }) => node && onOpenGovernment && (
 )
 
 /**
+ * Every Crown corporation and health authority the government atlas holds, so the gallery can be
+ * filled body by body: each says whether its marks are collected here, and leads to it in the
+ * diagram, in a year it stood. Today's are listed open; former ones are folded away, since there
+ * are a hundred and forty of them, most the health system's boards and councils of the 1990s.
+ */
+const CollectingShelf = ({ onChoose, onOpenGovernment }) => {
+  const held = new Map(GALLERY_COLLECTIONS.filter((collection) => collection.graphNode).map((collection) => [collection.graphNode, collection]))
+  const groups = [
+    { id: 'crowns-today', label: 'Crown corporations today', bodies: COLLECTING.filter((body) => body.current && body.kind === 'crown-corporation') },
+    { id: 'health-today', label: 'Health authorities today', bodies: COLLECTING.filter((body) => body.current && body.kind === 'health-authority') },
+    { id: 'crowns-former', label: 'Former Crown corporations', folded: true, bodies: COLLECTING.filter((body) => !body.current && body.kind === 'crown-corporation') },
+    { id: 'health-former', label: 'Former health authorities, boards and councils', folded: true, bodies: COLLECTING.filter((body) => !body.current && body.kind === 'health-authority') }
+  ]
+  const years = (body) => `${body.from ?? '?'}–${body.current ? '' : body.to ?? '?'}`
+  // A former body opens in its last year; one whose end is untraced, in its first.
+  const yearIn = (body) => (body.current ? null : body.to ? body.to - 1 : body.from)
+  const list = (bodies) => (
+    <ul className="gallery__collecting-list">
+      {bodies.map((body) => {
+        const collection = held.get(body.id)
+        const marks = collection ? entriesOf(collection).length : 0
+        return (
+          <li key={body.id} className="gallery__collecting-row" data-held={collection ? true : undefined}>
+            <span className="gallery__collecting-name">
+              {body.name}
+              <span className="gallery__collecting-years">{body.shortName ? `${body.shortName} · ` : ''}{years(body)}{body.untraced ? ', end not traced' : ''}</span>
+            </span>
+            {collection
+              ? <button type="button" className="gallery__collecting-status" onClick={() => onChoose(collection.id)}>{marks} {marks === 1 ? 'mark' : 'marks'} <span aria-hidden="true">→</span></button>
+              : <span className="gallery__collecting-status">Wanted</span>}
+            {onOpenGovernment && (
+              <button type="button" className="gallery__collecting-graph" onClick={() => onOpenGovernment(body.id, yearIn(body))} title={`${body.name} in the government graph`}>
+                Graph <span aria-hidden="true">→</span>
+              </button>
+            )}
+          </li>
+        )
+      })}
+    </ul>
+  )
+  return (
+    <section className="gallery__shelf" aria-labelledby="shelf-collecting">
+      <h2 id="shelf-collecting" className="gallery__shelf-title">Collecting: every Crown corporation and health authority</h2>
+      <p className="gallery__intro gallery__shelf-intro">
+        The government atlas’s {COLLECTING.filter((body) => body.current).length} standing today and{' '}
+        {COLLECTING.filter((body) => !body.current).length} before. Those with marks here lead to them; the rest are
+        wanted — artwork, or a dated sighting of one, fills a gap.
+      </p>
+      {groups.map((group) => {
+        const count = group.bodies.filter((body) => held.has(body.id)).length
+        const heading = <>{group.label} <span className="gallery__collecting-count">{count} of {group.bodies.length} collected</span></>
+        return group.folded
+          ? (
+            <details key={group.id} className="gallery__collecting-group">
+              <summary className="gallery__collecting-heading">{heading}</summary>
+              {list(group.bodies)}
+            </details>
+            )
+          : (
+            <div key={group.id} className="gallery__collecting-group">
+              <h3 className="gallery__collecting-heading">{heading}</h3>
+              {list(group.bodies)}
+            </div>
+            )
+      })}
+    </section>
+  )
+}
+
+/**
  * A body whose mark has not been obtained. Deliberately unlike a mark's card: an outline with
  * nothing inside it where the artwork would be, and no way to open it, because there is nothing to
  * open. What it does carry is how far the search has got.
@@ -856,6 +927,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
         </section>
+        <CollectingShelf onChoose={choose} onOpenGovernment={onOpenGovernment} />
         {/* Shown only while a body is still sought: an empty shelf would read as one still to fill. */}
         {WANTED.length > 0 && (
           <section className="gallery__shelf" aria-labelledby="shelf-wanted">

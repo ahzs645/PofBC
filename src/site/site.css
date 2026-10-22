@@ -1399,6 +1399,47 @@ input.share__url {
    surface card, and an empty dashed slot where the artwork would be — unmistakably not a mark. */
 .gallery__shelf-intro { padding-top: 0; font-size: 14px; }
 
+.gallery__collecting-group { display: grid; gap: 8px; margin-top: 8px; }
+.gallery__collecting-heading { margin: 0; font-size: 15px; font-weight: 600; cursor: default; }
+details.gallery__collecting-group > summary { cursor: pointer; }
+.gallery__collecting-count { margin-left: 6px; font-size: 13px; font-weight: 400; color: var(--ink-faint); }
+.gallery__collecting-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* A body still wanted is dashed, like the gallery's other empty slots; one collected is a card. */
+.gallery__collecting-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px dashed var(--mid);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+}
+.gallery__collecting-row[data-held] { border-style: solid; background: var(--surface); }
+.gallery__collecting-name { display: grid; gap: 1px; min-width: 0; }
+.gallery__collecting-years { font-size: 12px; color: var(--ink-faint); }
+.gallery__collecting-status { font-size: 12px; font-weight: 500; color: var(--ink-faint); white-space: nowrap; }
+button.gallery__collecting-status, .gallery__collecting-graph {
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--hover, var(--mid));
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.gallery__collecting-graph { background: transparent; color: var(--ink-2); }
+.gallery__collecting-graph:hover, button.gallery__collecting-status:hover { background: var(--mid); }
+
 .gallery__wanted {
   display: grid;
   align-content: start;
