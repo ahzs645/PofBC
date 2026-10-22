@@ -8,7 +8,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   aroundCentre, arcPath, BAND_INNER, CENTRE, lerpAngle, layoutGovernment, readsReversed, RIM, rimAt, RINGS, rotationToBottom,
-  sealPath, territoryPath, toPoint, UNIT, VIEWBOX
+  SEAM, sealPath, territoryPath, toPoint, UNIT, VIEWBOX
 } from './layout.js'
 import { colourOf, fillOf, mix } from './theme.js'
 import { pathToPeople } from './snapshot.js'
@@ -290,9 +290,17 @@ export const MarkerPath = ({ kind, colour, fill }) => kind && (
  * A bean round the Assembly: a stadium lying along the ring, like the pill the model draws round
  * the two chambers of Congress. BC's Legislature has one elected chamber, so the bean holds one.
  */
-const beanPath = ({ angle, radius, size }) => {
-  const reach = (size * 1.9) / radius
-  const thick = size + 9
+const beanPath = ({ angle, radius, size }, sector = null) => {
+  let reach = (size * 1.9) / radius
+  let thick = size + 9
+  // Kept inside its branch: each round end stays clear of the seam (a parallel-sided band half a
+  // seam either side of the sector's edge), so the bean never reaches into the executive's band.
+  if (sector) {
+    const margin = SEAM / 2 + 3
+    const room = Math.min(angle - sector.start, sector.end - angle)
+    thick = Math.max(size + 2, Math.min(thick, radius * Math.sin(Math.max(0, room)) - margin))
+    reach = Math.max(0, Math.min(reach, room - Math.asin(Math.min(1, (thick + margin) / radius))))
+  }
   const a = toPoint(angle - reach, radius + thick)
   const b = toPoint(angle + reach, radius + thick)
   const c = toPoint(angle + reach, radius - thick)
@@ -383,6 +391,12 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
   const selected = selectedId ? byId.get(selectedId) : null
   const r = frame.rotation
   const teethOf = (sectorId) => frame.teeth.filter((tooth) => tooth.sector === sectorId)
+  // A branch's territory, its band and teeth together, inset by half a seam at every radius.
+  const territoryOf = (sector) => territoryPath(
+    { start: sector.start + r, end: sector.end + r },
+    teethOf(sector.id).map((tooth) => ({ ...tooth, start: tooth.start + r, end: tooth.end + r }))
+  )
+  const executiveSector = frame.sectors.find((sector) => sector.id === 'executive')
   // The executive's family of bodies with no stated ministry, when it is wide enough to name.
   const unattachedLane = frame.teeth.find((tooth) => tooth.sector === 'executive' && tooth.group === 'none' && tooth.end - tooth.start > 0.18) ?? null
   // The local bodies' lane, when they are shown.
@@ -396,13 +410,14 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
   // The Legislature's bean, drawn round the Assembly as the model draws Congress round its chambers.
   const assemblyPoint = at('legislative-assembly')
   const legislature = assemblyPoint ? { ...assemblyPoint } : null
+  const legislativeSector = frame.sectors.find((sector) => sector.id === 'legislative')
+  const legislativeBounds = legislativeSector ? { start: legislativeSector.start + r, end: legislativeSector.end + r } : null
 
   // The ministries' band: an arc across the span the cabinet occupies, drawn as one thick stroke.
   const ministries = nodes.filter((node) => node.ring === 'cabinet').map((node) => frame.positions[node.id]).filter(Boolean)
   const cabinetSpan = ministries.length
     ? [Math.min(...ministries.map((p) => p.angle)) + r, Math.max(...ministries.map((p) => p.angle)) + r]
     : null
-
   // Keyboard order: the people, then round the disc clockwise from twelve o'clock. One body is
   // the tab stop — the chosen one, else the Premier — and the arrow keys move between the rest.
   const order = useMemo(() => [
@@ -450,19 +465,24 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
             {frame.sectors.map((sector) => (
               <path
                 key={sector.id}
-                d={territoryPath(
-                  { start: sector.start + r, end: sector.end + r },
-                  teethOf(sector.id).map((tooth) => ({ ...tooth, start: tooth.start + r, end: tooth.end + r }))
-                )}
+                d={territoryOf(sector)}
                 fill={mix(theme.branch[sector.id], theme.canvas, theme.territoryAlpha)}
               />
             ))}
             {[RINGS.inner, RINGS.oversight, RINGS.outer].map((ring) => (
               <circle key={ring} cx={CENTRE.x} cy={CENTRE.y} r={ring * UNIT} fill="none" stroke={theme.seam} strokeDasharray="4 3" />
             ))}
+            {/* The ministries' band is clipped to the executive's own territory, so its round ends
+                never reach across a seam into the Legislature's band. */}
+            {executiveSector && (
+              <clipPath id="gov-executive-territory">
+                <path d={territoryOf(executiveSector)} />
+              </clipPath>
+            )}
             {cabinetSpan && (
               <path
                 d={arcPath(cabinetSpan[0] - 0.04, cabinetSpan[1] + 0.04, RINGS.cabinet * UNIT)}
+                clipPath="url(#gov-executive-territory)"
                 fill="none"
                 stroke={mix(theme.branch.executive, theme.canvas, theme.territoryAlpha + theme.pillAlpha)}
                 strokeWidth={44}
@@ -471,7 +491,7 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
             )}
             {legislature && (
               <path
-                d={beanPath(legislature)}
+                d={beanPath(legislature, legislativeBounds)}
                 fill={mix(theme.branch.legislative, theme.canvas, theme.territoryAlpha + theme.pillAlpha)}
                 stroke={theme.branch.legislative}
                 strokeWidth={1.5}
