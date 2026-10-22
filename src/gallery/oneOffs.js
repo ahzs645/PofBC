@@ -78,6 +78,27 @@ export const ONE_OFFS = [
     ]
   },
   artwork({
+    id: 'bc-parks-banner',
+    label: '“BCParks” beside the shaded sun',
+    body: 'BC Parks',
+    years: '2005–2007',
+    note: 'The shaded sun and mountains without “British Columbia”, then “BCParks” in white Garamond, on the ' +
+      'forest photograph of the ministry’s web banner.',
+    caveat: 'Put together from the gallery’s Best Place on Earth mark and the Province’s Garamond, as the ' +
+      'archived banner shows it; the green is the photograph’s, averaged, and not part of the mark.',
+    publishedLabel: 'As on the banner'
+  }),
+  artwork({
+    id: 'bc-parks-best-place',
+    label: 'Beside the Best Place on Earth mark',
+    body: 'BC Parks',
+    years: '2010–2016',
+    note: 'The Best Place on Earth mark, a thin gold divider its full height, and “BCParks” in blue ' +
+      'Garamond on the mark’s baseline — the arrangement of WorkBC’s and WelcomeBC’s marks.',
+    caveat: 'Put together from the gallery’s Best Place on Earth mark and the Province’s Garamond, placed as ' +
+      'in the archived picture.'
+  }),
+  artwork({
     id: 'welcome-bc',
     label: 'WelcomeBC',
     body: 'WelcomeBC',

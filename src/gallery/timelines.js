@@ -773,7 +773,7 @@ export const COLLECTION_ERAS = {
     },
     {
       id: 'parks-shaded-banner',
-      status: 'sought',
+      status: 'held',
       years: '2005–2007',
       label: '“BCParks” beside the shaded sun',
       note: 'The shaded sun and mountains, then “BCParks” set solid in white serif, on the ministry’s web ' +
@@ -784,7 +784,7 @@ export const COLLECTION_ERAS = {
     },
     {
       id: 'parks-best-place',
-      status: 'sought',
+      status: 'held',
       years: '2010–2016',
       label: 'Beside the Best Place on Earth mark',
       note: 'The shaded-sun BC mark with its tagline, a thin gold rule, and “BCParks” in dark blue serif — ' +
@@ -814,7 +814,7 @@ export const COLLECTION_ERAS = {
     },
     {
       id: 'parks-current',
-      status: 'sought',
+      status: 'held',
       years: '2023–present',
       label: 'The BC Parks logo',
       note: 'One lockup: the flat sun and mountains with “British Columbia”, a gold upright bar, and “BC ' +
@@ -1174,12 +1174,13 @@ export const COLLECTION_ERAS = {
   'bc-transit': [
     {
       id: 'bct-flag',
-      status: 'sought',
+      status: 'held',
       years: 'by 2007–2008',
       label: 'The flag',
       note: 'The provincial flag, waving, with the name: above it on the covers of the 2007 and 2008 service ' +
         'plans, and beside it in white on red in a supplied picture that nothing dates. Which came first, ' +
-        'and whether both were in use at once, is not known. No vector of either has been obtained.',
+        'and whether both were in use at once, is not known. The one above the name is held, from a service ' +
+        'plan’s cover; the one beside it on red has not been obtained.',
       applicability: {
         kind: 'first_observation',
         years: 'by 2007–2008',

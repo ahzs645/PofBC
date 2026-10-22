@@ -99,7 +99,19 @@ const SUPPLIED_FIDELITY = 'Every shape is the supplied file’s own. Where and w
 const UNDATED = (note) => ({ kind: 'unknown', years: 'undated', note })
 
 /** The identity of each of the Province's marks, by the id oneOffs.js gives it. */
+const PARKS_COMPOSED = (years, note) => ({
+  provenance: 'reconstructed',
+  fidelity: 'partially compared',
+  fidelityNote: 'Put together from the gallery’s Best Place on Earth mark and letters of the same Garamond the ' +
+    'Province published (WorkBC’s “BC” and “k”, the tagline’s “P”, “a”, “r” and “s”), placed as in the ' +
+    'archived picture. The picture is small, so the spacing and placing are read off it, not measured.',
+  applicability: DATED_BY_TIMELINE('first_observation', years, note),
+  rights: PROVINCE_RIGHTS
+})
+
 const ONE_OFF_IDENTITY = {
+  'bc-parks-banner': PARKS_COMPOSED('2005–2007', 'Seen on its site from November 2005 to February 2007.'),
+  'bc-parks-best-place': PARKS_COMPOSED('2010–2016', 'Seen on its site from January 2010 to November 2016.'),
   'bc-parks': {
     provenance: 'reconstructed',
     fidelity: 'partially compared',
@@ -657,6 +669,24 @@ const BCT_RIGHTS = { status: 'unresolved', note: `BC Transit’s mark. ${NO_PERM
 const BCT_LOOP_DATES = DATED_BY_TIMELINE('first_observation', 'by 2009', 'On the service plan tabled in February 2009.')
 
 const BCT_ENTRIES = {
+  'bct-flag': [
+    supplied({
+      provenance: 'extracted_from_published_artwork',
+      fidelity: 'partially compared',
+      fidelityNote: 'The paths of a selection from a service plan’s cover, supplied as SVG: the angled flag above the ' +
+        'name, the arrangement of the 2007 and 2008 plans. Only the rest of the page was cropped away; its grey is ' +
+        'kept as the ground, since the type and the flag’s keyline are white. Which plan the selection came from is ' +
+        'not recorded with it.',
+      applicability: DATED_BY_TIMELINE('first_observation', 'by 2007–2008', 'On the service plans of 2007 and February 2008.'),
+      rights: BCT_RIGHTS
+    })({
+      id: 'bct-flag',
+      label: 'The flag above the name',
+      years: 'by 2007–2008',
+      note: 'The provincial flag, angled and waving inside a white keyline, above “BCTransit” in white, on the cover’s grey.',
+      reverse: 'bct-flag-white'
+    })
+  ],
   'bct-loop': [
     // The package classes this derivative as reconstructed, and so does the gallery: its paths are the
     // supplied file's, but it is not the file as supplied.
@@ -694,18 +724,48 @@ const BCT_ENTRIES = {
   ]
 }
 
+// ── BC Parks' logo of 2023 ───────────────────────────────────────────────────────────────────────
+//
+// The two files bcparks.ca serves, both its “Primary Reversed”: white type and a gold bar, for its
+// navy header. They are shown on that navy, which is the site's and not part of the mark; the files
+// as served, without it, are the dark-page form.
+
+const BCP_RIGHTS = { status: 'unresolved', note: `The Province’s mark for BC Parks. ${NO_PERMISSION}` }
+
+const BCP_2023 = (id, label, note, reverse) => supplied({
+  provenance: 'extracted_from_official_vector',
+  fidelity: 'source compared',
+  fidelityNote: 'The SVG bcparks.ca serves, fetched on 22 October 2026: every path is the file’s own, its stylesheet ' +
+    'written out as fills. The navy behind it is the site header’s (#003366), not part of the file.',
+  applicability: DATED_BY_TIMELINE('first_observation', '2023–present', 'On bcparks.ca from 2 February 2023.'),
+  rights: BCP_RIGHTS
+})({ id, label, years: '2023–present', note, reverse })
+
+const BCP_ENTRIES = {
+  'parks-current': [
+    BCP_2023('bcp-2023', 'The logo, as on its site', 'The flat sun and mountains with “British Columbia”, a gold upright bar, ' +
+      'and “BC Parks” in serif, reversed on the site’s navy.', 'bcp-2023-white'),
+    BCP_2023('bcp-2023-vertical', 'Stacked', 'The same parts stacked, the mark above the name.', 'bcp-2023-vertical-white')
+  ]
+}
+
 /**
  * Which one-offs stand for a body the government diagram draws, so a card can lead to it. The
  * Province's marks that name a campaign or a slogan rather than a body have none.
  */
 const GRAPH_NODES = {
   'bc-parks': 'sub-bc-parks',
+  'bc-parks-banner': 'sub-bc-parks',
+  'bc-parks-best-place': 'sub-bc-parks',
   'work-bc': 'sub-workbc',
   'bc-stats': 'sub-bc-stats',
   'bc-wildfire-service': 'sub-bc-wildfire-service',
   'bc-wildfire-service-one-line': 'sub-bc-wildfire-service',
   'public-service': 'bc-public-service-agency'
 }
+
+/** BC Parks' marks, which its own collection holds rather than the Province's shelf. */
+const PARKS_ONE_OFFS = ['bc-parks', 'bc-parks-banner', 'bc-parks-best-place']
 
 const withNode = (entry) => (GRAPH_NODES[entry.id] ? { ...entry, graphNode: GRAPH_NODES[entry.id] } : entry)
 
@@ -916,8 +976,8 @@ export const GALLERY_COLLECTIONS = [
     graphNode: 'bc-transit',
     cover: 'bct-loop-colour',
     intro: 'BC Transit’s two families of mark since it took the name in 1982: the provincial flag with the ' +
-      'name, seen in two arrangements that have not been obtained as artwork, then by 2009 the blue-and-green ' +
-      'loop, which it still uses. Its bus liveries changed in 2007 and 2024; neither is a new logo.',
+      'name, seen in two arrangements — the one above the name is here, from a service plan’s cover — then by ' +
+      '2009 the blue-and-green loop, which it still uses. Its bus liveries changed in 2007 and 2024; neither is a new logo.',
     eras: withMarks(COLLECTION_ERAS['bc-transit'], BCT_ENTRIES)
   },
   {
@@ -929,10 +989,14 @@ export const GALLERY_COLLECTIONS = [
     graphNode: 'sub-bc-parks',
     cover: 'bc-parks',
     intro: 'BC Parks’ marks, oldest first: its badge from the flag years — the flag symbol in a rounded ' +
-      'frame with “Parks” set at the size of “BC”, which opens to recolour — then the marks that followed ' +
-      'it on the Province’s sun, which the gallery does not have yet.',
+      'frame with “Parks” set at the size of “BC” — then “BCParks” beside the shaded sun, and beside the ' +
+      'Best Place on Earth mark, both put together here from the Province’s own artwork and lettering, ' +
+      'and today’s logo as bcparks.ca serves it. The first three open to recolour.',
     eras: withMarks(COLLECTION_ERAS['bc-parks'], {
-      'parks-badge': ONE_OFFS.filter((entry) => entry.id === 'bc-parks').map(provincial)
+      'parks-badge': ONE_OFFS.filter((entry) => entry.id === 'bc-parks').map(provincial),
+      'parks-shaded-banner': ONE_OFFS.filter((entry) => entry.id === 'bc-parks-banner').map(provincial),
+      'parks-best-place': ONE_OFFS.filter((entry) => entry.id === 'bc-parks-best-place').map(provincial),
+      ...BCP_ENTRIES
     })
   },
   {
@@ -945,7 +1009,7 @@ export const GALLERY_COLLECTIONS = [
     intro: 'Names set beside the BC mark, each drawn once for one body, program or campaign, following ' +
       'no pattern that generalises — so they sit here rather than in the generator, which is built on ' +
       'patterns. Open one to recolour it.',
-    entries: ONE_OFFS.filter((entry) => entry.id !== 'bc-parks').map(provincial)
+    entries: ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id)).map(provincial)
   }
 ]
 

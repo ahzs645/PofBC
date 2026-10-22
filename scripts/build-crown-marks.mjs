@@ -1,5 +1,5 @@
-// Packages the Crown corporations' and agencies' marks — ICBC, BCLC, BC Ferries, WorkSafeBC and BC
-// Transit — from the research packages' SVGs, drawn as supplied.
+// Packages the Crown corporations' and agencies' marks — ICBC, BCLC, BC Ferries, WorkSafeBC, BC
+// Transit and BC Parks — from the research packages' SVGs, drawn as supplied.
 //
 // Unlike the one-offs these are not lifted into parts: each file is already one mark, tightly
 // cropped, and each says in its own <title> and <desc> what it is — a supplied vector, a declared
@@ -51,8 +51,14 @@ const MARKS = {
   'wcb-1983': 'artwork/worksafebc/wcb-1983-family-reconstruction.svg',
   'wcb-1983-symbol': 'artwork/worksafebc/wcb-1983-symbol-reconstruction.svg',
   'worksafebc': 'artwork/worksafebc/worksafebc-current-reconstruction.svg',
+  'bct-flag': 'artwork/bc-transit/bc-transit-flag-on-grey.svg',
+  'bct-flag-white': 'artwork/bc-transit/bc-transit-flag.svg',
   'bct-loop-colour': 'artwork/bc-transit/bc-transit-loop-colour-flat.svg',
-  'bct-loop-navy': 'artwork/bc-transit/bc-transit-loop-navy.svg'
+  'bct-loop-navy': 'artwork/bc-transit/bc-transit-loop-navy.svg',
+  'bcp-2023': 'artwork/bc-parks/bc-parks-2023-on-navy.svg',
+  'bcp-2023-white': 'artwork/bc-parks/bc-parks-2023.svg',
+  'bcp-2023-vertical': 'artwork/bc-parks/bc-parks-2023-vertical-on-navy.svg',
+  'bcp-2023-vertical-white': 'artwork/bc-parks/bc-parks-2023-vertical.svg'
 }
 
 /** Attributes on the root that its children inherit, and so must survive it being replaced. */
