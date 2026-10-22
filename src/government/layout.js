@@ -124,9 +124,9 @@ export const allocateSectors = (counts) => {
  * Evenly spaced angles for `count` nodes across [start, end], centred, never further apart than
  * MAX_STEP — so three bodies in a wide sector gather in its middle instead of flying to its edges.
  */
-export const spreadAngles = (count, start, end) => {
+export const spreadAngles = (count, start, end, padding = EDGE_PADDING) => {
   if (count <= 0) return []
-  const width = end - start - EDGE_PADDING * 2
+  const width = end - start - padding * 2
   const step = count > 1 ? Math.min(MAX_STEP, width / (count - 1)) : 0
   const middle = (start + end) / 2
   return Array.from({ length: count }, (_, index) => middle + (index - (count - 1) / 2) * step)
@@ -300,7 +300,11 @@ export const layoutGovernment = (nodes, geometry = GEOMETRY) => {
 
     for (const ring of ['inner', 'cabinet', 'oversight']) {
       const onRing = members.filter((node) => node.ring === ring)
-      spreadAngles(onRing.length, sector.start, sector.end).forEach((angle, index) => {
+      // The end bodies stay clear of the seam by their own width (with the tab above a glyph), not
+      // by a fixed angle, which on an inner ring is narrower than a ministry.
+      const widest = Math.max(0, ...onRing.map(nodeSize))
+      const padding = Math.max(EDGE_PADDING, (widest * 1.45 + SEAM / 2 + 4) / geometry.ring[ring])
+      spreadAngles(onRing.length, sector.start, sector.end, padding).forEach((angle, index) => {
         const node = onRing[index]
         positions[node.id] = { angle, radius: geometry.ring[ring], size: nodeSize(node) }
       })
