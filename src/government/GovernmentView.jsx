@@ -16,6 +16,7 @@ import { GovernmentList } from './GovernmentList.jsx'
 import { CompareView, CoverageCard, ResearchCard } from './AtlasCards.jsx'
 import { EVENT_SOURCES } from './events.js'
 import { Legend } from './Legend.jsx'
+import { Sheet } from './Sheet.jsx'
 import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
 import { useSiteTheme } from '../site/useTheme.js'
@@ -226,10 +227,6 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   const { name: themeName, toggle } = useSiteTheme()
   const theme = THEMES[themeName]
   const narrow = useNarrow()
-  const panel = useRef(null)
-  const stage = useRef(null)
-  const diagram = useRef(null)
-  const [stageAway, setStageAway] = useState(false)
 
   const government = useMemo(() => governmentIn(year, { includeUndated, includeLocal }), [year, includeUndated, includeLocal])
   const selected = government.nodes.find((node) => node.id === selectedId) ?? null
@@ -240,19 +237,10 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     writeParams({ year, node: selected ? selectedId : null, mode, compare: compareYear, undated: includeUndated, local: includeLocal })
   }, [year, selectedId, selected, mode, compareYear, includeUndated, includeLocal])
 
-  // On a phone the panel is below the diagram, so choosing a body brings its panel into view.
-  const chooseFromGraph = (id) => {
-    setSelectedId(id)
-    if (narrow && id) requestAnimationFrame(() => panel.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
-  }
-
-  // On a phone, whether the diagram has been scrolled out of sight — reading the panel below it.
-  useEffect(() => {
-    if (!narrow || !diagram.current) return undefined
-    const observer = new IntersectionObserver(([entry]) => setStageAway(!entry.isIntersecting))
-    observer.observe(diagram.current)
-    return () => observer.disconnect()
-  }, [narrow])
+  // On a phone the chosen body opens in a sheet over the foot of the diagram (Sheet.jsx), so the
+  // diagram stays where it is to choose the next one.
+  const sheeted = narrow && Boolean(selected)
+  const close = useCallback(() => setSelectedId(null), [])
 
   // Playing runs the years forward, a little over two a second, and stops at today.
   useEffect(() => {
@@ -333,13 +321,6 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     setSelectedId(siblings[(index + direction + siblings.length) % siblings.length].id)
   }
 
-  // The dock's arrows change the panel being read, so its new body is brought to the top of it.
-  const stepInPanel = (direction) => {
-    step(direction)
-    requestAnimationFrame(() => panel.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
-  }
-  const docked = narrow && stageAway && Boolean(selected)
-
   const present = useMemo(() => [...new Set(government.nodes.map((node) => node.kind))], [government])
   // A legend row can stand for several kinds; it hides them together, or shows them together.
   const toggleKinds = (kinds) => setHidden((current) => {
@@ -366,8 +347,12 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     </button>
   )
 
+  const entityCard = selected && (
+    <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onGo={go} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} />
+  )
+
   return (
-    <div className="gov" data-theme={themeName} data-docked={docked || undefined}>
+    <div className="gov" data-theme={themeName} data-sheeted={sheeted || undefined}>
       <nav className="gov-card gov-breadcrumb" aria-label="Breadcrumb">
         <SunGlyph fill={theme.people} />
         <strong className="gov-breadcrumb__site">Province of BC</strong>
@@ -378,7 +363,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
         {selected?.branch && <span className="gov-muted gov-breadcrumb__branch">/ {selected.branch[0].toUpperCase() + selected.branch.slice(1)}</span>}
         {narrow && <span className="gov-breadcrumb__tools">{themeButton}</span>}
       </nav>
-      <div className="gov__stage" ref={stage}>
+      <div className="gov__stage">
         <div className="gov__overlay gov__overlay--top">
           <Search onPick={pick} />
           <div className="gov__tools">
@@ -390,11 +375,11 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
           </div>
         </div>
 
-        <div className="gov__graph" data-mode={mode} ref={diagram}>
+        <div className="gov__graph" data-mode={mode}>
           {mode === 'graph'
-            ? <GovernmentGraph government={government} selectedId={selected ? selectedId : null} onSelect={chooseFromGraph} hiddenKinds={hidden} hiddenRelations={hiddenRelations} theme={theme} compact={narrow} />
+            ? <GovernmentGraph government={government} selectedId={selected ? selectedId : null} onSelect={setSelectedId} hiddenKinds={hidden} hiddenRelations={hiddenRelations} theme={theme} compact={narrow} />
             : mode === 'list'
-              ? <GovernmentList government={government} selectedId={selected ? selectedId : null} onSelect={chooseFromGraph} hiddenKinds={hidden} compact={narrow} />
+              ? <GovernmentList government={government} selectedId={selected ? selectedId : null} onSelect={setSelectedId} hiddenKinds={hidden} compact={narrow} />
               : (
                 <CompareView
                   year={year}
@@ -427,12 +412,12 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
 
         <TimelineBar year={year} onYear={changeYear} playing={playing} onPlay={play} life={life} />
       </div>
-      <div className="gov__panel" ref={panel}>
+      <div className="gov__panel">
 
         {selected
-          ? <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onGo={go} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} />
+          ? !sheeted && entityCard
           : <OverviewCard government={government} onSelect={setSelectedId} />}
-        <ChangesCard year={year} onSelect={setSelectedId} onJump={jump} />
+        <ChangesCard key={year} year={year} onSelect={setSelectedId} onJump={jump} />
 
         <details className="gov-card gov-sources">
           <summary>Sources and caveats</summary>
@@ -469,17 +454,20 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
         </details>
       </div>
 
-      {/* On a phone, once the diagram is scrolled away: the chosen body, the way back up to it, and
-          the same previous and next as the diagram's own arrows. */}
-      {docked && (
-        <div className="gov-dock" role="group" aria-label="Chosen body">
-          <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => stepInPanel(-1)} aria-label="Previous of this kind"><ChevronIcon direction={-1} /></button>
-          <button type="button" className="gov-dock__name" onClick={() => stage.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
-            <span>{selected.name}</span>
-            <span className="gov-muted">Back to the diagram ↑</span>
-          </button>
-          <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => stepInPanel(1)} aria-label="Next of this kind"><ChevronIcon direction={1} /></button>
-        </div>
+      {sheeted && (
+        <Sheet
+          label="Chosen body"
+          title={selected.name}
+          onClose={close}
+          tools={(
+            <span className="gov-button-group">
+              <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => step(-1)} aria-label="Previous of this kind"><ChevronIcon direction={-1} /></button>
+              <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => step(1)} aria-label="Next of this kind"><ChevronIcon direction={1} /></button>
+            </span>
+          )}
+        >
+          {entityCard}
+        </Sheet>
       )}
     </div>
   )
