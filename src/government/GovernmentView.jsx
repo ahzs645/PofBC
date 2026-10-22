@@ -17,6 +17,7 @@ import { CompareView, CoverageCard, ResearchCard } from './AtlasCards.jsx'
 import { EVENT_SOURCES } from './events.js'
 import { Legend } from './Legend.jsx'
 import { Sheet } from './Sheet.jsx'
+import { StoryText } from './StoryText.jsx'
 import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
 import { useSiteTheme } from '../site/useTheme.js'
@@ -28,6 +29,22 @@ import { CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
 import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, LOCAL_BODIES } from './historyData.js'
 import { TIMELINE_SOURCES } from './timelineData.js'
 import './government.css'
+
+// What the view is drawn from, and how far to trust it: read in steps under Sources and caveats.
+const SOURCES_NOTE = `
+  Ministries and their lineage from the BC Archives’ ministry history diagram (to December 2024),
+  corrected where it leaves ends open and extended since. Ministers from the Legislative Library’s
+  Executive Council Appointments 1871–1986 and its cabinet lists since; former Crown corporations and
+  agencies, and past Speakers, officers and chief justices, from BC Archives, the Library, Orders in
+  Council and Wikipedia. Which ministry answered for a body is shown where a source states it, and
+  otherwise inferred and marked so. Present-day officials as checked on ${CURRENT_AS_OF} against the
+  Province’s and each body’s own pages. Staff are 2025/26 full-time equivalents from the Public
+  Accounts. The dates of the four identities are estimates, most of all the crest’s. Typed events —
+  origins, name and logo changes, appointments, the 2026 election’s schedule — come from the BC
+  government atlas research package of 25 September 2026 and the research that followed it
+  (${EVENT_SOURCES.length} sources). A date is shown only as precisely as its source gives it; an
+  unknown start is not treated as proof a body did not exist.
+`.replace(/\s+/g, ' ').trim()
 
 const validYear = (value) => Number.isInteger(value) && value >= FIRST_YEAR && value <= PRESENT_YEAR
 
@@ -422,19 +439,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
         <details className="gov-card gov-sources">
           <summary>Sources and caveats</summary>
           <p className="gov-muted">
-            Ministries and their lineage from the BC Archives’ ministry history diagram (to December
-            2024), corrected where it leaves ends open and extended since. Ministers from the
-            Legislative Library’s Executive Council Appointments 1871–1986 and its cabinet lists since;
-            former Crown corporations and agencies, and past Speakers, officers and chief justices, from
-            BC Archives, the Library, Orders in Council and Wikipedia. Which ministry answered for a body
-            is shown where a source states it, and otherwise inferred and marked so. Present-day officials as
-            checked on {CURRENT_AS_OF} against the Province’s and each body’s own pages. Staff are
-            2025/26 full-time equivalents from the Public Accounts. The dates of the four identities are
-            estimates, most of all the crest’s. Typed events — origins, name and logo changes,
-            appointments, the 2026 election’s schedule — come from the BC government atlas research
-            package of 25 September 2026 and the research that followed it ({EVENT_SOURCES.length} sources).
-            A date is shown only as precisely as its source gives it; an unknown start is not treated as
-            proof a body did not exist.
+            <StoryText label="Sources and caveats" text={SOURCES_NOTE} />
           </p>
           <CoverageCard />
           <ResearchCard />

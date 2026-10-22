@@ -1238,3 +1238,61 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 }
 .gov-salaries__source { margin: 16px 0 0; font-size: 12px; line-height: 1.45; }
 .gov-salaries .gov-cards { margin-top: 16px; }
+
+/* ── A long note read a step at a time (StoryText.jsx) ─────────────────────────────────────── */
+
+.gov-story { display: block; }
+.gov-story:not(.gov-story--plain) { display: grid; gap: 6px; }
+/* Every step in one cell, so the box is as tall as the longest and does not jump between them. */
+.gov-story__steps { display: grid; }
+.gov-story__step { grid-area: 1 / 1; visibility: hidden; opacity: 0; transition: opacity 160ms ease-out; }
+.gov-story__step[data-shown] { visibility: visible; opacity: 1; }
+
+.gov-story__nav { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--gov-ink-4); }
+.gov-story__arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--gov-outline);
+  border-radius: 8px;
+  background: var(--gov-hover);
+  color: var(--gov-ink-2);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+.gov-story__arrow:hover:not(:disabled) { background: var(--gov-mid); }
+.gov-story__arrow:disabled { opacity: 0.4; cursor: default; }
+.gov-story__dots { display: flex; flex-wrap: wrap; gap: 4px; }
+/* A dot is small to see and large enough to hit. */
+.gov-story__dot {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.gov-story__dot::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: auto;
+  border-radius: 3px;
+  background: var(--gov-mid);
+  transition: width 160ms ease-out, background 160ms ease-out;
+}
+.gov-story__dot[aria-current]::before { width: 14px; background: var(--gov-ink-3); }
+.gov-story__count { font-variant-numeric: tabular-nums; margin-left: auto; }
+
+@media (pointer: coarse) {
+  .gov-story__arrow { width: 32px; height: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gov-story__step, .gov-story__dot::before { transition: none; }
+}

@@ -9,6 +9,7 @@ import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
 import { CROWN_CATEGORIES, CROWN_CATEGORY_SOURCES } from './crownCategories.js'
 import { Card, CardSection, KindIcon } from './PanelCards.jsx'
 import { Salaries } from './Salaries.jsx'
+import { StoryText } from './StoryText.jsx'
 import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, PEOPLE_ID, periodsOf, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
@@ -597,7 +598,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
             {node.employees ? ` · ${node.employees.toLocaleString('en-CA')} FTE staff, 2025/26` : ''}
           </p>
         )}
-        {node.description && <p className="gov-description">{node.description}</p>}
+        {node.description && <p className="gov-description"><StoryText text={node.description} label="About it" /></p>}
         {node.crownCategory && (
           <p className="gov-notice">
             {CROWN_CATEGORIES[node.crownCategory].label}: {CROWN_CATEGORIES[node.crownCategory].definition.replace(/^./, (c) => c.toLowerCase())}{' '}
