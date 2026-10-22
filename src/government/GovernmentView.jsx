@@ -188,7 +188,9 @@ const Search = ({ onPick }) => {
         aria-label="Search the government"
       />
       {query && (
-        <ul className="gov-search__results">
+        // A tap on a result must not take focus from the input first: iOS Safari does not focus a
+        // tapped button, so the blur would close the results before the tap's click arrives.
+        <ul className="gov-search__results" onMouseDown={(event) => event.preventDefault()}>
           {results.length === 0 && <li className="gov-muted">Nothing by that name. Try “Forests”, “Hydro” or “Ombudsperson”.</li>}
           {results.map((result) => (
             <li key={result.id}>

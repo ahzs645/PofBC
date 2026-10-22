@@ -191,7 +191,7 @@ const packFamilies = (sector, outer, placed, subsOf) => {
       const angle = family.start + (column + 0.5) * columnAngle
       const size = nodeSize(node)
       positions[node.id] = { angle, radius: base, size }
-      const dots = placeDots(subsOf(node.id), angle, base + size + DOTS.clearance)
+      const dots = placeDots(subsOf(node.id), angle, base + size + DOTS.clearance, sector)
       Object.assign(positions, dots.positions)
       top = Math.max(top, dots.reach + 12)
     })
@@ -214,10 +214,21 @@ const packFamilies = (sector, outer, placed, subsOf) => {
  * along the ring as that takes, centred on the parent's angle — the model's rows of three. Returns
  * where each sits and how far out the last row reaches.
  */
-const placeDots = (subs, angle, radius) => {
+const placeDots = (subs, angle, radius, bounds = null, room = Infinity) => {
   const positions = {}
-  const rows = Math.min(DOTS.rows, subs.length)
-  const columns = Math.ceil(subs.length / Math.max(1, rows))
+  // Rows of three, as the model draws them, unless that is wider than the parent's share of the
+  // ring (`room`, an angle): then as many columns as fit, and the rows go further out.
+  const fit = Math.max(1, Math.floor((room * radius - DOTS.size * 2) / DOTS.column) + 1)
+  const columns = Math.min(Math.ceil(subs.length / Math.min(DOTS.rows, subs.length || 1)), fit)
+  const rows = Math.ceil(subs.length / Math.max(1, columns))
+  // Kept inside the parent's sector: a parent near its edge has its dots shifted in, rather than
+  // spilling them into the next branch.
+  if (bounds) {
+    const half = (((columns - 1) / 2) * DOTS.column + DOTS.size + DOTS.clearance) / radius
+    const low = bounds.start + half
+    const high = bounds.end - half
+    angle = low <= high ? Math.min(high, Math.max(low, angle)) : (bounds.start + bounds.end) / 2
+  }
   subs.forEach((node, index) => {
     const column = Math.floor(index / rows)
     const row = index % rows
@@ -279,14 +290,23 @@ export const layoutGovernment = (nodes) => {
     teeth.push(...packed.teeth)
   }
 
-  // Every other parent's dots — a ministry's divisions, an officer's offices — just beyond it.
+  // Every other parent's dots — a ministry's divisions, an officer's offices — just beyond it, each
+  // in its share of the ring: no wider than the space to the next parent on the same ring.
+  const ringParents = [...subsByParent.keys()].map((id) => ({ id, node: nodes.find((entry) => entry.id === id), at: positions[id] })).filter((entry) => entry.at && entry.node)
+  const shareOf = (parentId) => {
+    const me = ringParents.find((entry) => entry.id === parentId)
+    if (!me) return Infinity
+    const gaps = ringParents.filter((entry) => entry.id !== parentId && entry.node.ring === me.node.ring && entry.node.branch === me.node.branch)
+      .map((entry) => Math.abs(entry.at.angle - me.at.angle))
+    return gaps.length ? Math.min(...gaps) * 0.9 : Infinity
+  }
   for (const [parentId, subs] of subsByParent) {
     const parent = positions[parentId]
     const waiting = subs.filter((node) => !positions[node.id])
     if (!parent || !waiting.length) continue
     const node = nodes.find((entry) => entry.id === parentId)
     const from = node?.ring === 'cabinet' ? RINGS.cabinet * UNIT + 22 + DOTS.clearance : parent.radius + parent.size + DOTS.clearance
-    Object.assign(positions, placeDots(waiting, parent.angle, from).positions)
+    Object.assign(positions, placeDots(waiting, parent.angle, from, sectors.find((sector) => sector.id === node?.branch) ?? null, shareOf(parentId)).positions)
   }
 
   return { sectors, positions, teeth }
