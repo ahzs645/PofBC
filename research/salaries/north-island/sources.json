@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "north-island-college-sofi-2021",
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "sector": "Colleges",
+      "year": "2020/21",
+      "slug": "2020-21",
+      "file": "2020-21.json.gzip",
+      "title": "North Island College Statement of Financial Information, year ended March 31, 2021",
+      "sourceUrl": "https://nic.bc.ca/_resources/pdf/statement-of-financial-information-2020-21.pdf",
+      "sourceIndexUrl": "https://nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+      "sha256": "e6f8d92e4ea6b821e63494f27bf46d755e83a088f7248c831d1e683427f8d513",
+      "dataSha256": "fa62f249ee52e700871a02291f6b085f859e3c50c604af75778e6114f4eb182c",
+      "normalizedSha256": "792226d87fcc126babdaa395bcee7734c435507b9de244d9a0af2a72720f825b",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 145,
+      "totalRemuneration": 14487889,
+      "totalExpenses": 149323,
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-22",
+      "validation": {
+        "remunerationSubtotalExact": true,
+        "expensesSubtotalExact": true,
+        "publishedRemunerationSubtotal": 14487889,
+        "publishedExpensesSubtotal": 149323,
+        "layoutCorrections": [
+          {
+            "pdfPage": 11,
+            "name": "Paquet-Combe, Marie-France",
+            "position": "Inst, Health Care Assistant",
+            "reason": "Inserted the rendered name/position column boundary; no source letters or monetary values changed."
+          }
+        ]
+      },
+      "compiledDuplicationEvidence": {
+        "baselineSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+        "compiledRows": 290,
+        "uniqueCompiledRows": 145,
+        "copiesOfEveryRecord": 2,
+        "verifiedPrimaryRows": 145,
+        "matchedNamePayExpenseRecords": 145,
+        "reviewedCompilerNameCorrections": {
+          "Naugler, Diane Dean": "Naugler, Diane",
+          "Petteplace, Lindsa": "Petteplace, Lindsay"
+        },
+        "sourceYearIsCorrect": true
+      },
+      "notes": [
+        "Official employee schedule replaces 290 compiled rows with 145 verified rows; every compiled record appeared twice.",
+        "Both remuneration and expense sums exactly equal the source's named-employee subtotals. Board and under-threshold aggregate rows are excluded.",
+        "The institution's reporting page incorrectly sends its 2020-21 link to the 2019-20 PDF. This import uses the separately accessible actual 2020-21 report, whose cover and employee pages state March 31, 2021.",
+        "Primary-source names repair two compiler field errors: Naugler, Diane Dean becomes Naugler, Diane with Dean in the position; Petteplace, Lindsa becomes Petteplace, Lindsay."
+      ]
+    }
+  ]
+}

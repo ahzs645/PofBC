@@ -1,0 +1,58 @@
+{
+  "verifiedOn": "2026-10-22",
+  "baseCommit": "eabe55708952f945cf2b0733230db31d48146d88",
+  "output": {
+    "rows": 616443,
+    "namedRows": 611204,
+    "employers": 130,
+    "atlasBodies": 44,
+    "years": [
+      "2006/07",
+      "2007/08",
+      "2008/09",
+      "2009/10",
+      "2010/11",
+      "2011/12",
+      "2012/13",
+      "2013/14",
+      "2014/15",
+      "2015/16",
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "availableEmployerYears": 384
+  },
+  "officialRows": 290520,
+  "retainedCompiledRows": 325923,
+  "normalizedSources": 70,
+  "crossViewReconciliation": "passed: every employer/person/atlas row and official normalized input; source IDs, year indices, module metadata, totals, coverage and orphan files",
+  "rebuildIdempotence": {
+    "passed": true,
+    "files": 749,
+    "sha256OfSortedFileHashes": "19b6652663b60d602727507dc48535d838225de7f911e3aed989fae411bfe3b8"
+  },
+  "automatedTests": {
+    "npmTestFiles": 44,
+    "npmTestFilesPassed": 44,
+    "publicAccountsRegressionTests": 8,
+    "northernHealthRegressionTests": 5,
+    "hydroExtractionRegressionChecks": "passed"
+  },
+  "salaryProductionBundle": "passed; Vite salary surface build, 19 modules",
+  "fullProductionBuild": {
+    "status": "blocked-by-existing-environment-requirement",
+    "reason": "The licensed macOS Helvetica source required by the logo pipeline is not available in this Linux environment."
+  },
+  "browserRendering": {
+    "status": "not-verified",
+    "reason": "Connected browser could not reach the workspace preview server."
+  }
+}

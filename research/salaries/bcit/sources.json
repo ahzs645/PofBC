@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses"
+  ],
+  "sources": [
+    {
+      "id": "bcit-sofi-2017-18-employees",
+      "employerSlug": "bcit",
+      "employerName": "British Columbia Institute of Technology",
+      "sector": "Education",
+      "year": "2017/18",
+      "title": "BCIT Financial Information Act Return 2017/18: Exhibit B",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2018.pdf",
+      "sha256": "31f9f6cf0f6faaab8d3953ccc064b8335e65b8aca87156e9b2ec14386ffaacc3",
+      "dataSha256": "e995da9cb2ea6c237010715c2f287bdb6d8b4b851cef429bb4e11eb97eda6d11",
+      "normalizedSha256": "5a5667702da0775c0f3963513fd33566bd2beb4b3d01fbe41b0a22e8d174086f",
+      "file": "2017-18-employees.json.gzip",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "scopeDescription": "Named employees earning $75,000 or more, Exhibit B",
+      "threshold": 75000,
+      "rowCount": 970,
+      "totalRemuneration": 96590156,
+      "totalDisclosedExpenses": 3409363,
+      "status": "verified",
+      "verifiedOn": "2026-10-22",
+      "notes": [
+        "Exhibit B lists employees. Board of Governors payments and the aggregate below $75,000 are excluded.",
+        "Salary may include overtime, allowances, part-time and termination settlement, as stated in the source.",
+        "Dash expenses are retained as missing, and one reported expense recovery of -$443 is retained.",
+        "The sum of displayed named salaries plus the below-threshold aggregate exceeds the printed total by $19; displayed expenses exceed the printed total by $3. These small residuals are compatible with dollar rounding, but the PDF does not explain them. Individual published values are preserved."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          36,
+          57
+        ],
+        "printedPages": [
+          6,
+          27
+        ],
+        "internalFiscalYearEnd": 2018,
+        "rowCountChecked": true,
+        "sourceFingerprintLocked": true,
+        "summaryTotalReconciled": false,
+        "namedRemunerationSum": 96590156,
+        "underThresholdAggregateExcluded": 75557234,
+        "printedAllEmployeeRemuneration": 172147371,
+        "remunerationResidual": 19,
+        "namedExpensesSum": 3409363,
+        "printedAllEmployeeExpenses": 3409360,
+        "expensesResidual": 3,
+        "negativeExpenseRows": 1,
+        "unparsedNumericLines": 0
+      }
+    }
+  ]
+}

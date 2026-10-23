@@ -1,31 +1,24 @@
-// The salary search: every public-sector employee whose pay was disclosed, by name, followed from one
-// year's disclosure to the next, and every employer's positions.
+// Search the remuneration records imported here, with explicit employer/year coverage and sources.
 //
-// The disclosures are each employer's list of everyone it paid over $75,000 (and every elected
-// official), in 2017/18, 2020/21 and 2023/24, as compiled in the pssdb files. A search loads one
+// Disclosures differ in reporting period, threshold and scope. A search loads one
 // slice of the index — the surnames that start with the same two letters (scripts/build-salaries.mjs)
 // — and groups its rows into the people they appear to be. Opening one lines their years up. An
 // employer's page loads that employer's rows and sets out the positions in it: how many held each,
 // what they were paid, and who.
 //
-// A name in two years' disclosures is not proof of one person. Each year beside a person says what
-// joins it to the others: the same full name at the same employer, the same name elsewhere, or only
-// an initial that agrees. Two people with one name in one year are shown as that, not merged.
+// A name in two years' disclosures is not proof of one person. Multiple rows may be different people,
+// multiple payments to one person, or source duplicates; none of these is inferred from a name alone.
 
 import { useEffect, useMemo, useState } from 'react'
-import { displayName, nameMatch, personKey, positionKey, readName, surnameShard } from './people.js'
+import { displayName, matchesNameQuery, nameMatch, personKey, positionKey, readName, surnameShard } from './people.js'
+import { coverageAt, expenseLabel, filterEmployers, missingYearMessage, rowCoverage } from './coverage.js'
+import { DisclosureEvidence, SourceLink } from './DisclosureEvidence.jsx'
+import { formatMoney as money, medianMoney as median } from './money.js'
 
 const BASE = import.meta.env?.BASE_URL ?? '/'
 const loaded = new Map()
 
-const money = (value) => (value === null || value === undefined ? '—' : `$${Math.round(value).toLocaleString('en-CA')}`)
 const count = (value, one, many) => `${value.toLocaleString('en-CA')} ${value === 1 ? one : many}`
-
-const median = (values) => {
-  const sorted = [...values].sort((a, b) => a - b)
-  const middle = Math.floor(sorted.length / 2)
-  return sorted.length % 2 ? sorted[middle] : Math.round((sorted[middle - 1] + sorted[middle]) / 2)
-}
 
 /** A gzipped file, decompressed here; or plain JSON, if the server already undid the gzip. */
 const loadJson = (path) => {
@@ -38,7 +31,7 @@ const loadJson = (path) => {
         return JSON.parse(await new Response(stream).text())
       }
       return JSON.parse(new TextDecoder().decode(bytes))
-    }))
+    }).catch((error) => { loaded.delete(path); throw error }))
   }
   return loaded.get(path)
 }
@@ -85,6 +78,13 @@ const Role = () => (
   </svg>
 )
 
+const describeNameGroup = (key, list) => {
+  const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && row[2] > best[2]) ? row : best))
+  const years = [...new Set(list.map((row) => row[5]))].sort((a, b) => a - b)
+  const shared = years.some((each) => list.filter((row) => row[5] === each).length > 1)
+  return { key, name: latest[0], latest, years, rows: list, shared }
+}
+
 /**
  * @param {object} props
  * @param {(node: string, year?: number) => void} [props.onOpenGovernment]  To a body in the diagram.
@@ -93,6 +93,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const [index, setIndex] = useState(null)
   const [employersIndex, setEmployersIndex] = useState(null)
   const [failed, setFailed] = useState(false)
+  const [loadVersion, setLoadVersion] = useState(0)
   const initial = readPlace()
   const [query, setQuery] = useState(initial.q)
   const [person, setPerson] = useState(initial.person)
@@ -105,7 +106,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
   useEffect(() => {
     loadJson('salaries/people/index.json').then(setIndex, () => setFailed(true))
     loadJson('salaries/employers/index.json').then(setEmployersIndex, () => setFailed(true))
-  }, [])
+  }, [loadVersion])
 
   // What was typed, read as a name: a surname, and perhaps the start of a given name after a comma
   // or a space ("smith, j", "smith john").
@@ -113,8 +114,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
     const text = query.trim()
     if (!text) return null
     const [surname, ...given] = text.includes(',') ? text.split(',') : text.split(/\s+/)
-    const name = readName(`${surname},${given.join(' ')}`)
-    return name.surname.length >= 2 ? { ...name, typedGiven: given.join(' ').trim().toLowerCase().replace(/[^a-z]/g, '') } : null
+    const typedName = `${surname},${given.join(' ')}`
+    const name = readName(typedName)
+    return name.surname.length >= 2 ? { ...name, typedName } : null
   }, [query])
   const shard = wanted ? surnameShard(`${wanted.surname},`) : null
 
@@ -124,7 +126,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
     let live = true
     loadJson(`salaries/people/${shard}.json.gzip`).then((list) => live && setRows({ shard, list }), () => live && setFailed(true))
     return () => { live = false }
-  }, [shard, index])
+  }, [shard, index, loadVersion])
 
   useEffect(() => { writePlace({ q: query.trim(), person, employer }) }, [query, person, employer])
 
@@ -134,9 +136,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const people = useMemo(() => {
     if (!wanted || rows.shard !== shard || !index) return []
     const matching = rows.list.filter((row) => {
-      const name = readName(row[0])
-      if (!name.surname.startsWith(wanted.surname)) return false
-      if (wanted.typedGiven && !name.given.startsWith(wanted.typedGiven)) return false
+      if (!matchesNameQuery(row[0], wanted.typedName, index.sources?.[row[6]]?.nameDisclosure)) return false
       if (year !== 'all' && String(row[5]) !== year) return false
       if (sector !== 'all' && index.employers[row[4]][1] !== sector) return false
       return true
@@ -147,20 +147,20 @@ export const SalariesView = ({ onOpenGovernment }) => {
       if (!groups.has(key)) groups.set(key, [])
       groups.get(key).push(row)
     }
-    return [...groups.entries()].map(([key, list]) => {
-      const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && row[2] > best[2]) ? row : best))
-      const years = [...new Set(list.map((row) => row[5]))].sort()
-      // More than one row in a year: more than one person shares the name.
-      const shared = years.some((each) => list.filter((row) => row[5] === each).length > 1)
-      return { key, name: latest[0], latest, years, rows: list, shared }
-    }).sort((a, b) => b.years.length - a.years.length || b.latest[2] - a.latest[2])
+    return [...groups.entries()].map(([key, list]) => describeNameGroup(key, list))
+      .sort((a, b) => b.years.length - a.years.length || b.latest[2] - a.latest[2])
   }, [rows, shard, wanted, year, sector, index])
 
-  const chosen = person ? people.find((each) => each.key === person) ?? null : null
+  // Filters narrow the search results, not the history of a name opened from one of those results.
+  const chosen = useMemo(() => {
+    if (!person || rows.shard !== shard) return null
+    const list = rows.list.filter((row) => personKey(row[0]) === person)
+    return list.length ? describeNameGroup(person, list) : null
+  }, [person, rows, shard])
   const openEmployer = (slug) => { setEmployer(slug); setPerson(null); globalThis.scrollTo?.({ top: 0 }) }
   const openPerson = (name) => { setEmployer(null); setQuery(name); setPerson(personKey(name)); globalThis.scrollTo?.({ top: 0 }) }
 
-  if (failed) return <p className="gallery__intro">The salary index could not be loaded.</p>
+  if (failed) return <p className="gallery__intro">The requested salary records could not be loaded. <button type="button" onClick={() => { setFailed(false); setLoadVersion((value) => value + 1) }}>Retry</button></p>
   if (!index || !employersIndex) return <p className="gallery__intro" role="status">Loading the salary index…</p>
 
   const employerOf = (row) => index.employers[row[4]]
@@ -168,8 +168,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const total = Object.values(index.shards).reduce((a, b) => a + b, 0)
 
   if (employer) {
-    const entry = employersIndex.employers.find((each) => each.slug === employer)
-    if (entry) return <EmployerPage entry={entry} years={employersIndex.years} onBack={() => setEmployer(null)} onPerson={openPerson} onOpenGovernment={onOpenGovernment} />
+    const canonical = employersIndex.aliases?.[employer] ?? employer
+    const entry = employersIndex.employers.find((each) => each.slug === canonical)
+    if (entry) return <EmployerPage key={entry.slug} entry={entry} years={employersIndex.years} sources={employersIndex.sources ?? index.sources} initialYear={year} onBack={() => setEmployer(null)} onPerson={openPerson} onOpenGovernment={onOpenGovernment} />
   }
 
   return (
@@ -177,10 +178,10 @@ export const SalariesView = ({ onOpenGovernment }) => {
       <section className="salaries__intro">
         <h2 className="salaries__heading">Public-sector salaries</h2>
         <p>
-          Everyone a British Columbia public employer disclosed paying over $75,000, and every elected official,
-          in {index.years.join(', ')}: {total.toLocaleString('en-CA')} named rows from {employersIndex.employers.length} employers
-          — the Province’s public service, Crown corporations, health authorities, cities, school districts, universities
-          and police. Search a surname to follow a person from year to year, or open an employer to see its positions.
+          Search {total.toLocaleString('en-CA')} named remuneration records from {employersIndex.employers.length} British Columbia public employers,
+          spanning {index.years[0]}–{index.years.at(-1)}. Coverage varies by employer and reporting period; some records
+          cover executives only. Search a surname to compare disclosed names across years, or open an employer to see
+          its records, reported positions and sources.
         </p>
       </section>
 
@@ -205,10 +206,11 @@ export const SalariesView = ({ onOpenGovernment }) => {
       {chosen && (
         <section className="salaries__person" aria-labelledby="salaries-person">
           <button type="button" className="salaries__back" onClick={() => setPerson(null)}>← All “{query.trim()}” results</button>
-          <h2 id="salaries-person" className="salaries__heading">{displayName(chosen.name)}</h2>
+          <h2 id="salaries-person" className="salaries__heading">{displayName(chosen.name, index.sources?.[chosen.latest[6]]?.nameDisclosure)}</h2>
           <p className="salaries__note">
             Disclosed as “{chosen.name}” in {chosen.years.length} of {index.years.length} years.
-            {chosen.shared ? ' More than one person has this name in a year, so these rows are not all one person.' : ''}
+            {' A matching name does not verify that records concern the same person.'}
+            {chosen.shared ? ' Multiple records share this name in a year; they can represent different people, multiple payments or source duplicates.' : ''}
           </p>
           <PersonTimeline chosen={chosen} all={rows.list} index={index} onEmployer={openEmployer} onOpenGovernment={onOpenGovernment} />
         </section>
@@ -225,7 +227,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
               <button key={each.key} type="button" className="salaries__card" onClick={() => setPerson(each.key)}>
                 <span className="salaries__lead"><Person /></span>
                 <span className="salaries__text">
-                  <span className="salaries__name">{displayName(each.name)}</span>
+                  <span className="salaries__name">{displayName(each.name, index.sources?.[each.latest[6]]?.nameDisclosure)}</span>
                   <span className="salaries__line">{[each.latest[1], employerOf(each.latest)[0]].filter(Boolean).join(' · ')}</span>
                   <span className="salaries__years">
                     {index.years.map((label, at) => (
@@ -245,23 +247,23 @@ export const SalariesView = ({ onOpenGovernment }) => {
         </section>
       )}
 
-      {!wanted && <EmployerList employers={employersIndex.employers} years={employersIndex.years} sector={sector} onOpen={openEmployer} />}
+      {!wanted && <EmployerList employers={employersIndex.employers} years={employersIndex.years} sector={sector} year={year} onOpen={openEmployer} />}
 
       <p className="salaries__source">
-        Disclosed by each employer under the Financial Information Act and the Public Sector Employers Act; compiled
-        in the pssdb public-sector salary files. Pay is the year’s remuneration, not a salary rate, and some employers
-        report a calendar year. A name in two years is not proof of one person.
+        These are the disclosures imported into this collection. Pay is the period’s reported remuneration or
+        compensation, not a salary rate. Reporting thresholds, calendar years, fiscal years and executive-only
+        disclosures differ. Missing records do not establish whether someone was employed or paid.
       </p>
     </div>
   )
 }
 
 /** Every employer, by sector, each a way to its positions. */
-const EmployerList = ({ employers, years, sector, onOpen }) => {
-  const latest = (entry) => entry.counts.reduce((best, value, at) => (value ? at : best), 0)
+const EmployerList = ({ employers, years, sector, year, onOpen }) => {
+  const selectedYear = (entry) => year !== 'all' ? Number(year) : entry.counts.reduce((best, value, at) => (value ? at : best), 0)
+  const visible = filterEmployers(employers, sector, year)
   const bySector = new Map()
-  for (const entry of employers) {
-    if (sector !== 'all' && entry.sector !== sector) continue
+  for (const entry of visible) {
     if (!bySector.has(entry.sector)) bySector.set(entry.sector, [])
     bySector.get(entry.sector).push(entry)
   }
@@ -269,7 +271,7 @@ const EmployerList = ({ employers, years, sector, onOpen }) => {
     <section aria-labelledby="salaries-employers">
       <div className="salaries__head">
         <h2 id="salaries-employers" className="salaries__title">Employers</h2>
-        <p className="salaries__meta">{count(employers.length, 'employer', 'employers')}</p>
+        <p className="salaries__meta">{count(visible.length, 'employer', 'employers')}{year !== 'all' ? ` with imported records for ${years[Number(year)]}` : ''}</p>
       </div>
       {[...bySector].sort(([a], [b]) => a.localeCompare(b)).map(([name, list]) => (
         <details key={name} className="salaries__sector" open={sector !== 'all' || undefined}>
@@ -284,7 +286,7 @@ const EmployerList = ({ employers, years, sector, onOpen }) => {
                     {years.map((label, at) => <span key={label} data-seen={entry.counts[at] > 0 || undefined}>{label}</span>)}
                   </span>
                 </span>
-                <span className="salaries__aside">{entry.counts[latest(entry)].toLocaleString('en-CA')}<span className="salaries__line">{years[latest(entry)]}</span></span>
+                <span className="salaries__aside">{entry.counts[selectedYear(entry)].toLocaleString('en-CA')}<span className="salaries__line">records · {years[selectedYear(entry)]}</span></span>
               </button>
             ))}
           </div>
@@ -298,27 +300,32 @@ const EmployerList = ({ employers, years, sector, onOpen }) => {
  * An employer's positions in a year: each with how many held it and their pay, most held first, and
  * opened, who held it. Spellings of one position (capitals, stops, spacing) are counted as one.
  */
-const EmployerPage = ({ entry, years, onBack, onPerson, onOpenGovernment }) => {
+const EmployerPage = ({ entry, years, sources, initialYear, onBack, onPerson, onOpenGovernment }) => {
   const seen = years.map((_, at) => at).filter((at) => entry.counts[at] > 0)
-  const [chosenYear, setYear] = useState(null)
+  const [chosenYear, setYear] = useState(initialYear !== 'all' ? Number(initialYear) : null)
   const [rows, setRows] = useState(null)
+  const [failed, setFailed] = useState(false)
+  const [loadVersion, setLoadVersion] = useState(0)
   const [filter, setFilter] = useState('')
   const [open, setOpen] = useState(null)
   const [shown, setShown] = useState(40)
 
   useEffect(() => {
     let live = true
-    loadJson(`salaries/employers/${entry.slug}.json.gzip`).then((list) => live && setRows(list), () => live && setRows([]))
+    setFailed(false)
+    setRows(null)
+    loadJson(`salaries/employers/${entry.slug}.json.gzip`).then((list) => live && setRows(list), () => live && setFailed(true))
     return () => { live = false }
-  }, [entry.slug])
+  }, [entry.slug, loadVersion])
 
   // How much of each year's disclosure names positions: some employers give them one year and not the
-  // next. The page opens on the latest year that does, unless a year is chosen.
+  // next. The page opens on the latest available year, regardless of whether positions are supplied.
   const named = useMemo(() => years.map((_, at) => {
     const list = rows ? rows.filter((row) => row[4] === at) : []
     return list.length ? list.filter((row) => row[1]).length / list.length : 0
   }), [rows, years])
-  const year = chosenYear ?? ([...seen].reverse().find((at) => named[at] >= 0.5) ?? seen.at(-1) ?? 0)
+  const year = chosenYear ?? seen.at(-1) ?? 0
+  const coverage = coverageAt({ ...entry, years }, year)
 
   const positions = useMemo(() => {
     if (!rows) return []
@@ -357,45 +364,48 @@ const EmployerPage = ({ entry, years, onBack, onPerson, onOpenGovernment }) => {
         </p>
         {entry.repeated?.length > 0 && (
           <p className="salaries__note">
-            Its {entry.repeated.join(', ')} rows in the files repeat the year before’s, name for name and dollar for dollar, so
-            they are left out.
+            Compiled records for {entry.repeated.join(', ')} were excluded after extensive repetition of names and pay
+            from an earlier collection. Sources and any verified replacements are listed for each year below.
           </p>
         )}
         <div className="salaries__years-switch" role="group" aria-label="Disclosure year">
           {years.map((label, at) => (
-            <button key={label} type="button" aria-pressed={at === year} disabled={!entry.counts[at]} title={entry.counts[at] && rows && named[at] < 0.5 ? 'Names and pay, without positions' : undefined} onClick={() => { setYear(at); setOpen(null); setShown(40) }}>
-              {label}{entry.counts[at] && rows && named[at] < 0.5 ? ' ·' : ''}
+            <button key={label} type="button" aria-pressed={at === year} title={!entry.counts[at] ? 'No usable records imported; select to see coverage information' : rows && named[at] < 0.5 ? 'Most records do not include a position' : undefined} onClick={() => { setYear(at); setOpen(null); setFilter(''); setShown(40) }}>
+              {label}{!entry.counts[at] ? ' —' : rows && named[at] < 0.5 ? ' ·' : ''}
             </button>
           ))}
         </div>
-        {rows && (
+        <DisclosureEvidence coverage={coverage} sources={sources} />
+        {!entry.counts[year] && <p className="salaries__note">{coverage.status === 'excluded' ? 'These records were excluded following a data-quality check.' : 'No records have been imported for this employer and period.'} This does not mean the employer had no staff or made no payments.</p>}
+        {rows && entry.counts[year] > 0 && (
           <dl className="salaries__tiles">
-            <div><dt>People</dt><dd>{people.length.toLocaleString('en-CA')}</dd></div>
-            <div><dt>Positions</dt><dd>{positions.filter((position) => position.label).length.toLocaleString('en-CA')}</dd></div>
+            <div><dt>Records</dt><dd>{people.length.toLocaleString('en-CA')}</dd></div>
+            <div><dt>Reported positions</dt><dd>{positions.filter((position) => position.label).length.toLocaleString('en-CA')}</dd></div>
             <div><dt>Median</dt><dd>{pay.length ? money(median(pay)) : '—'}</dd></div>
             <div><dt>Highest</dt><dd>{pay.length ? money(Math.max(...pay)) : '—'}</dd></div>
           </dl>
         )}
       </section>
 
-      {!rows && <p className="salaries__hint" role="status">Loading its rows…</p>}
-      {rows && named[year] < 0.5 && (
+      {failed && <p className="salaries__hint" role="alert">The employer’s records could not be loaded. <button type="button" onClick={() => setLoadVersion((value) => value + 1)}>Retry</button></p>}
+      {!rows && !failed && <p className="salaries__hint" role="status">Loading its records…</p>}
+      {rows && entry.counts[year] > 0 && named[year] < 0.5 && (
         <section aria-labelledby="salaries-people">
           <p className="salaries__note">
-            Its {years[year]} disclosure gives names and pay, not positions
-            {years.some((_, at) => named[at] >= 0.5) ? ` — positions are given for ${years.filter((_, at) => named[at] >= 0.5).join(', ')}` : ''}.
+            Most imported records for {years[year]} do not include a position. Position availability can differ
+            from the original disclosure and from other years in this collection.
           </p>
           <div className="salaries__head">
             <h2 id="salaries-people" className="salaries__title">Highest paid</h2>
-            <p className="salaries__meta">{count(people.length, 'person', 'people')} · {years[year]}</p>
+            <p className="salaries__meta">{count(people.length, 'record', 'records')} · {years[year]}</p>
           </div>
           <ul className="salaries__holders salaries__holders--page">
             {[...people].sort((a, b) => b[2] - a[2]).slice(0, shown).map((row, at) => (
               <li key={at}>
                 {row[0]
-                  ? <button type="button" className="salaries__link" onClick={() => onPerson(row[0])}>{displayName(row[0])}</button>
+                  ? <button type="button" className="salaries__link" onClick={() => onPerson(row[0])}>{displayName(row[0], sources?.[row[5]]?.nameDisclosure)}</button>
                   : <span className="salaries__line">Name not given</span>}
-                <span>{money(row[2])}</span>
+                <span>{money(row[2])} <SourceLink sourceId={row[5]} sources={sources} /></span>
               </li>
             ))}
           </ul>
@@ -406,7 +416,7 @@ const EmployerPage = ({ entry, years, onBack, onPerson, onOpenGovernment }) => {
           )}
         </section>
       )}
-      {rows && named[year] >= 0.5 && (
+      {rows && entry.counts[year] > 0 && named[year] >= 0.5 && (
         <section aria-labelledby="salaries-positions">
           <div className="salaries__search salaries__search--one">
             <input type="search" value={filter} placeholder="Find a position" aria-label="Find a position" onChange={(event) => { setFilter(event.target.value); setShown(40) }} />
@@ -423,7 +433,7 @@ const EmployerPage = ({ entry, years, onBack, onPerson, onOpenGovernment }) => {
                   <span className="salaries__text">
                     <span className="salaries__name" data-missing={!position.label || undefined}>{position.label ?? 'Position not given'}</span>
                     <span className="salaries__line">
-                      {count(position.rows.length, 'person', 'people')}
+                      {count(position.rows.length, 'record', 'records')}
                       {position.rows.length > 1 ? ` · ${money(position.low)}–${money(position.high)}` : ''}
                     </span>
                   </span>
@@ -434,9 +444,9 @@ const EmployerPage = ({ entry, years, onBack, onPerson, onOpenGovernment }) => {
                     {position.rows.map((row, at) => (
                       <li key={at}>
                         {row[0]
-                          ? <button type="button" className="salaries__link" onClick={() => onPerson(row[0])}>{displayName(row[0])}</button>
+                          ? <button type="button" className="salaries__link" onClick={() => onPerson(row[0])}>{displayName(row[0], sources?.[row[5]]?.nameDisclosure)}</button>
                           : <span className="salaries__line">Name not given</span>}
-                        <span>{money(row[2])}</span>
+                        <span>{money(row[2])} <SourceLink sourceId={row[5]} sources={sources} /></span>
                       </li>
                     ))}
                   </ul>
@@ -456,39 +466,39 @@ const EmployerPage = ({ entry, years, onBack, onPerson, onOpenGovernment }) => {
 }
 
 /**
- * A person's years: every row with their name, and, after it, rows elsewhere in the slice whose name
- * agrees only by initial — each said for what it is. The card leads with the position, since the name
+ * A disclosed name's years, with compatible abbreviated names clearly marked as possible matches.
+ * These are search results, not a verified employment history. The card leads with the position, since the name
  * is the page's; a row's own spelling of the name is shown only where it differs.
  */
 const PersonTimeline = ({ chosen, all, index, onEmployer, onOpenGovernment }) => {
-  const near = all.filter((row) => !chosen.rows.includes(row) && nameMatch(row[0], chosen.name) === 'initial')
+  const near = all.filter((row) => !chosen.rows.includes(row))
+    .map((row) => ({ row, link: nameMatch(row[0], chosen.name) }))
+    .filter(({ link }) => link === 'initial' || link === 'partial')
   const employerKey = (row) => index.employers[row[4]][3]
+  const associatedEmployers = [...new Set(chosen.rows.map(employerKey))]
   const entries = [
     ...chosen.rows.map((row) => ({ row, link: 'name' })),
-    ...near.map((row) => ({ row, link: 'initial' }))
+    ...near
   ].sort((a, b) => a.row[5] - b.row[5] || b.row[2] - a.row[2])
-  const byYear = index.years.map((label, at) => ({ label, entries: entries.filter(({ row }) => row[5] === at) }))
-  let previous = null
+  const byYear = index.years.map((label, at) => ({ label, yearIndex: at, entries: entries.filter(({ row }) => row[5] === at) }))
   return (
     <ol className="salaries__timeline">
-      {byYear.map(({ label, entries: list }) => {
-        const named = list.filter(({ link }) => link === 'name')
-        const change = named.length === 1 && previous ? (named[0].row[2] - previous) / previous : null
-        if (named.length === 1) previous = named[0].row[2]
+      {byYear.map(({ label, yearIndex, entries: list }) => {
         return (
           <li key={label} className="salaries__year">
             <p className="salaries__year-label">{label}</p>
-            {list.length === 0 && <p className="salaries__line">Not in this year’s disclosures.</p>}
+            {list.length === 0 && <p className="salaries__line">{missingYearMessage(index.coverage, associatedEmployers, yearIndex)}</p>}
             <div className="salaries__grid">
               {list.map(({ row, link }, at) => {
                 const [employerName, sectorName, body, slug] = index.employers[row[4]]
                 const why = link === 'initial'
-                  ? 'Same surname and initial only'
-                  : chosen.rows.some((other) => other !== row && other[5] !== row[5] && employerKey(other) === employerKey(row)) ? 'Same name, same employer' : 'Same name'
+                  ? 'Possible match: surname and compatible initials only; identity unverified'
+                  : link === 'partial' ? 'Possible match: compatible but incomplete given names; identity unverified'
+                    : chosen.rows.some((other) => other !== row && other[5] !== row[5] && employerKey(other) === employerKey(row)) ? 'Same disclosed name and employer; identity unverified' : 'Same disclosed name; identity unverified'
                 return (
-                  <div key={at} className="salaries__card salaries__card--still" data-weak={link === 'initial' || undefined}>
+                  <div key={at} className="salaries__card salaries__card--still" data-weak={link !== 'name' || undefined}>
                     <span className="salaries__lead"><Role /></span>
-                    <span className="salaries__text">
+                    <div className="salaries__text">
                       <span className="salaries__name" data-missing={!row[1] || undefined}>{row[1] ?? 'Position not given'}</span>
                       <span className="salaries__line">
                         <button type="button" className="salaries__link" onClick={() => onEmployer(slug)}>{employerName}</button>
@@ -499,13 +509,11 @@ const PersonTimeline = ({ chosen, all, index, onEmployer, onOpenGovernment }) =>
                       </span>
                       {row[0] !== chosen.name && <span className="salaries__line">As “{row[0]}”</span>}
                       <span className="salaries__why">{why}</span>
-                    </span>
+                      <DisclosureEvidence coverage={rowCoverage(index.coverage?.[slug]?.[yearIndex], row[6], index.sources)} sources={index.sources} />
+                    </div>
                     <span className="salaries__aside">
                       {money(row[2])}
-                      {link === 'name' && change !== null && named.length === 1 && (
-                        <span className="salaries__line" data-up={change >= 0 || undefined}>{change >= 0 ? '+' : '−'}{Math.abs(change * 100).toFixed(1)}%</span>
-                      )}
-                      {row[3] ? <span className="salaries__line">Expenses {money(row[3])}</span> : null}
+                      {row[3] ? <span className="salaries__line">{expenseLabel(row[6], index.sources)} {money(row[3])}</span> : null}
                     </span>
                   </div>
                 )

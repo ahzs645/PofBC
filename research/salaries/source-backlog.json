@@ -1,0 +1,755 @@
+{
+  "version": 1,
+  "verifiedOn": "2026-10-22",
+  "purpose": "Official sources recovered in this work and actionable remaining disclosure gaps. Imported entries point to accepted manifests; a source-found status does not mean an imported or complete employer-year.",
+  "statusDefinitions": {
+    "source-found-awaiting-extraction": "Official PDF downloaded or directly linked by official index; employee rows not yet accepted into build.",
+    "official-source-indexed-awaiting-validation": "Official URL discovered in indexed content; full file/scope/period approval still to verify.",
+    "employee-schedule-not-yet-located": "Specific employee disclosure not located in checked sources; does not assert unavailability.",
+    "scope-review-required": "Known mixed or partial cohort requiring explicit scope treatment.",
+    "official-archive-found-awaiting-document-selection": "Primary archive verified, specific salary documents need selection.",
+    "official-archive-found-awaiting-extraction": "Primary archive and sample schedule URLs verified; historical extraction remains.",
+    "imported": "Accepted normalized employee records are included in the build; the linked manifest records validation, scope and any preserved source discrepancies."
+  },
+  "sources": [
+    {
+      "id": "bc-transit-sofi-2025-26",
+      "employerSlug": "bc-transit",
+      "year": "2025/26",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2026",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/2026/09/BC-Transit-Statement-of-Financial-Information-2026-Final-with-Financial-Statements.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2024-25",
+      "employerSlug": "bc-transit",
+      "year": "2024/25",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2025",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/2025/09/Statement-of-Financial-Information-FY2025-Final-with-FS.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2023-24",
+      "employerSlug": "bc-transit",
+      "year": "2023/24",
+      "priority": 3,
+      "title": "Statement of Financial Information PDF – 2024",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/2024/09/Statement-of-Financial-Information-FY2024-Final-with-FS.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Validate and replace the existing compiled snapshot with source-level provenance. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2022-23",
+      "employerSlug": "bc-transit",
+      "year": "2022/23",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2023",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/1006/812/BC-Transit-Statement-of-Financial-Information-FY2023-Final-with-FS-39e74d15-139d-46c3-824c-c0e8644c0bda.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2021-22",
+      "employerSlug": "bc-transit",
+      "year": "2021/22",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2022",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/430/747/BC-Transit-FY2022-Statement-of-Financial-Information-Final-with-FS.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2020-21",
+      "employerSlug": "bc-transit",
+      "year": "2020/21",
+      "priority": 1,
+      "title": "Statement of Financial Information PDF – 2021",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/9/159/2021-07-30-FY2021-Statement-of-Financial-Information-Final-with-FS-Image.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "imported",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": true,
+        "sha256": "f9d752695330689e2f2e20d37f13a16be9473c0ccf5c6c77d576765cf4279409",
+        "bytes": 16672822,
+        "textExtractable": false,
+        "pdfPages": 52,
+        "periodVerifiedFromCover": "2021-03-31"
+      },
+      "nextAction": "Imported with source-specific validation and documented subtotal residuals; see the accepted source manifest.",
+      "notes": [
+        "The missing 2020/21 report exists. It was downloaded and its 31 March 2021 period was visually checked. Extraction and reconciliation remain unfinished."
+      ],
+      "expectedThresholdToVerify": 75000,
+      "acceptedManifest": "bc-transit/sources.json",
+      "acceptedSourceId": "bc-transit-sofi-2021",
+      "acceptedRows": 385
+    },
+    {
+      "id": "bc-transit-sofi-2019-20",
+      "employerSlug": "bc-transit",
+      "year": "2019/20",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2020",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/419/1002/Statement-of-FInancial-Information-2020-PDF-a7eaf646-0e84-4977-8c34-4f96f13e96fb.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2018-19",
+      "employerSlug": "bc-transit",
+      "year": "2018/19",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2019",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/727/648/2019-10-08-FY2019-Statement-of-Financial-Information.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2017-18",
+      "employerSlug": "bc-transit",
+      "year": "2017/18",
+      "priority": 3,
+      "title": "Statement of Financial Information PDF – 2018",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/611/838/BC-Transit-SOFI-17-18-Final-Flattened.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Validate and replace the existing compiled snapshot with source-level provenance. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2016-17",
+      "employerSlug": "bc-transit",
+      "year": "2016/17",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2017",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/101/576/1_FIR0.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2015-16",
+      "employerSlug": "bc-transit",
+      "year": "2015/16",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2016",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/110/41/BC-Transit-2015-16-Approved-Statement-of-Financial-Information.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2014-15",
+      "employerSlug": "bc-transit",
+      "year": "2014/15",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2015",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/778/905/Statement-of-Financial-Information-PDF-20150.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2013-14",
+      "employerSlug": "bc-transit",
+      "year": "2013/14",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2014",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/438/597/2014-03-31-Statement-of-Financial-Information-Revised-Nov-2014.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2012-13",
+      "employerSlug": "bc-transit",
+      "year": "2012/13",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2013",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/498/897/Corporate-Reports-Statement-Financial-Info-20130.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-transit-sofi-2011-12",
+      "employerSlug": "bc-transit",
+      "year": "2011/12",
+      "priority": 2,
+      "title": "Statement of Financial Information PDF – 2012",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/625/1019/Corporate-Reports-Statement-Financial-Info-20120.pdf",
+      "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "downloaded": false
+      },
+      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "northern-health-sofi-2020-21",
+      "employerSlug": "northern-health",
+      "year": "2020/21",
+      "priority": 2,
+      "title": "Northern Health employee remuneration and expenses 2020/21",
+      "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2020-21.pdf",
+      "indexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "verification": {
+        "downloaded": true,
+        "sha256": "9d551d4fe50c52ed1a832ae324baac8a26e5e37b3cb0eedaabb133f4c6106338",
+        "bytes": 954979,
+        "textExtractable": true,
+        "pdfPages": 53,
+        "officialIndexLinkChecked": true,
+        "periodVerifiedFromHeading": "2021-03-31",
+        "allRowsCheckedAgainstPdfCoordinates": true,
+        "namedRemunerationResidual": 27,
+        "namedExpensesResidual": 64,
+        "summaryTotalReconciled": false
+      },
+      "nextAction": "No extraction work remains for this schedule; accepted normalized rows include physical PDF page provenance.",
+      "notes": [
+        "The text-readable official employee schedule was downloaded; this is not merely an audited financial statement.",
+        "Remuneration includes taxable benefits, overtime, on-call premiums, retroactive pay, vacation payouts and retiring allowances as defined in the source.",
+        "Expenses include travel, tuition, registration, relocation and professional membership costs."
+      ],
+      "acceptedManifest": "research/salaries/northern-health/sources.json",
+      "acceptedSourceId": "northern-health-sofi-2020-21",
+      "acceptedRows": 2500
+    },
+    {
+      "id": "northern-health-sofi-2021-22",
+      "employerSlug": "northern-health",
+      "year": "2021/22",
+      "priority": 1,
+      "title": "Northern Health employee remuneration and expenses 2021/22",
+      "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2021-22.pdf",
+      "indexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "verification": {
+        "downloaded": true,
+        "sha256": "cc479e28a8a90e7f51b665a4c08dab7e759c1c08da2f999e655dc7ad6071edbd",
+        "bytes": 487646,
+        "textExtractable": true,
+        "pdfPages": 61,
+        "officialIndexLinkChecked": true,
+        "periodVerifiedFromHeading": "2022-03-31",
+        "allRowsCheckedAgainstPdfCoordinates": true,
+        "namedRemunerationResidual": 3,
+        "namedExpensesResidual": 53,
+        "summaryTotalReconciled": false
+      },
+      "nextAction": "No extraction work remains for this schedule; accepted normalized rows include physical PDF page provenance.",
+      "notes": [
+        "The text-readable official employee schedule was downloaded; this is not merely an audited financial statement.",
+        "Remuneration includes taxable benefits, overtime, on-call premiums, retroactive pay, vacation payouts and retiring allowances as defined in the source.",
+        "Expenses include travel, tuition, registration, relocation and professional membership costs."
+      ],
+      "acceptedManifest": "research/salaries/northern-health/sources.json",
+      "acceptedSourceId": "northern-health-sofi-2021-22",
+      "acceptedRows": 2755
+    },
+    {
+      "id": "northern-health-sofi-2022-23",
+      "employerSlug": "northern-health",
+      "year": "2022/23",
+      "priority": 1,
+      "title": "Northern Health employee remuneration and expenses 2022/23",
+      "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2022-23.pdf",
+      "indexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "verification": {
+        "downloaded": true,
+        "sha256": "8fded11f668f7c1fe6cb05bd6a67903a5db62000fd1dd21614ffb1ccb68fb894",
+        "bytes": 646917,
+        "textExtractable": true,
+        "pdfPages": 63,
+        "officialIndexLinkChecked": true,
+        "periodVerifiedFromHeading": "2023-03-31",
+        "allRowsCheckedAgainstPdfCoordinates": true,
+        "namedRemunerationResidual": 23,
+        "namedExpensesResidual": 90,
+        "summaryTotalReconciled": false
+      },
+      "nextAction": "No extraction work remains for this schedule; accepted normalized rows include physical PDF page provenance.",
+      "notes": [
+        "The text-readable official employee schedule was downloaded; this is not merely an audited financial statement.",
+        "Remuneration includes taxable benefits, overtime, on-call premiums, retroactive pay, vacation payouts and retiring allowances as defined in the source.",
+        "Expenses include travel, tuition, registration, relocation and professional membership costs."
+      ],
+      "acceptedManifest": "research/salaries/northern-health/sources.json",
+      "acceptedSourceId": "northern-health-sofi-2022-23",
+      "acceptedRows": 2842
+    },
+    {
+      "id": "northern-health-sofi-2023-24",
+      "employerSlug": "northern-health",
+      "year": "2023/24",
+      "priority": 2,
+      "title": "Northern Health employee remuneration and expenses 2023/24",
+      "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2023-24.pdf",
+      "indexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "verification": {
+        "downloaded": true,
+        "sha256": "65a05177684e0d8cdb7727dc5b82d528993bf21c2879cea872bdd17e41a9dfd8",
+        "bytes": 941220,
+        "textExtractable": true,
+        "pdfPages": 82,
+        "officialIndexLinkChecked": true,
+        "periodVerifiedFromHeading": "2024-03-31",
+        "allRowsCheckedAgainstPdfCoordinates": true,
+        "namedRemunerationResidual": 60,
+        "namedExpensesResidual": 114,
+        "summaryTotalReconciled": false
+      },
+      "nextAction": "No extraction work remains for this schedule; accepted normalized rows include physical PDF page provenance.",
+      "notes": [
+        "The text-readable official employee schedule was downloaded; this is not merely an audited financial statement.",
+        "Remuneration includes taxable benefits, overtime, on-call premiums, retroactive pay, vacation payouts and retiring allowances as defined in the source.",
+        "Expenses include travel, tuition, registration, relocation and professional membership costs."
+      ],
+      "acceptedManifest": "research/salaries/northern-health/sources.json",
+      "acceptedSourceId": "northern-health-sofi-2023-24",
+      "acceptedRows": 3645,
+      "originalPreliminaryIncompletenessCheck": {
+        "status": "preliminary-extraction-awaiting-row-review",
+        "compiledLabel": "2023/24",
+        "compiledRows": 3285,
+        "officialParsedNamedRows": 3645,
+        "exactNamePayPairsMatched": 3284,
+        "parsedNamedRowsAbsentFromCompiled": 361,
+        "compiledPairsNotMatched": 1,
+        "minimumParsedRemuneration": 75001,
+        "officialPrintedNamedSubtotal": 413792713,
+        "parsedDisplayedNamedSubtotal": 413792773,
+        "displayedSumResidual": 60,
+        "sourceSha256": "65a05177684e0d8cdb7727dc5b82d528993bf21c2879cea872bdd17e41a9dfd8",
+        "compiledGeneratedFileSha256": "afbb592740581bec01d41d5d51b291d004ba31157abe979389b28fe4af0b4039",
+        "method": "pdftotext -layout; comma-formatted named rows only, excluding TOTAL and GRAND TOTAL lines; exact surname/given normalized full-name boundary and remuneration matching. This preliminary comparison is not a validated import.",
+        "nextAction": "Review all name and pay lines and reconcile missing/extra pairs before replacing the compiled snapshot."
+      },
+      "validatedBaselineComparison": {
+        "baselineFile": "research/salaries/compiled-baseline.json.gzip",
+        "baselineSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+        "compiledLabel": "2023/24",
+        "compiledRows": 3285,
+        "acceptedSourceRows": 3645,
+        "exactNamePayPairsMatched": 3284,
+        "sourceNamePayPairsAbsentFromCompiled": 361,
+        "compiledNamePayPairsNotMatched": 1,
+        "compiledRowsNotMatched": [
+          {
+            "name": "McKinnon, Niamh Grace",
+            "position": null,
+            "remuneration": 83246,
+            "expenses": 2962
+          }
+        ],
+        "matching": "Exact normalized surname/given-name tuple and remuneration; no nickname or approximate matches.",
+        "reviewedShortenedName": {
+          "compiledName": "McKinnon, Niamh Grace",
+          "publishedName": "McKinnon, Niamh Grace, Marg",
+          "remuneration": 83246,
+          "expenses": 2962,
+          "physicalPdfPage": 50,
+          "decision": "Preserve the complete name as published in the SOFI; no identity merge is applied."
+        },
+        "additionalSourceRowsBeyondReviewedNameDifference": 360
+      }
+    },
+    {
+      "id": "northern-health-sofi-2024-25",
+      "employerSlug": "northern-health",
+      "year": "2024/25",
+      "priority": 1,
+      "title": "Northern Health employee remuneration and expenses 2024/25",
+      "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2024-25.pdf",
+      "indexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "verification": {
+        "downloaded": true,
+        "sha256": "6d608e1715f8fb5866c80ce16283c22650e90451cfb54e5ba15ddb4a8739b81f",
+        "bytes": 1041204,
+        "textExtractable": true,
+        "pdfPages": 103,
+        "officialIndexLinkChecked": true,
+        "periodVerifiedFromHeading": "2025-03-31",
+        "allRowsCheckedAgainstPdfCoordinates": true,
+        "namedRemunerationResidual": 13,
+        "namedExpensesResidual": 231,
+        "summaryTotalReconciled": false
+      },
+      "nextAction": "No extraction work remains for this schedule; accepted normalized rows include physical PDF page provenance.",
+      "notes": [
+        "The text-readable official employee schedule was downloaded; this is not merely an audited financial statement.",
+        "Remuneration includes taxable benefits, overtime, on-call premiums, retroactive pay, vacation payouts and retiring allowances as defined in the source.",
+        "Expenses include travel, tuition, registration, relocation and professional membership costs."
+      ],
+      "acceptedManifest": "research/salaries/northern-health/sources.json",
+      "acceptedSourceId": "northern-health-sofi-2024-25",
+      "acceptedRows": 4379
+    },
+    {
+      "id": "unbc-sofi-2024-25",
+      "employerSlug": "university-of-northern-bc",
+      "year": "2024/25",
+      "priority": 1,
+      "title": "UNBC Statement of Financial Information 2024/25",
+      "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/finance/unbc-sofi-2025-final-submission-be-uploaded-website.pdf",
+      "indexUrl": "https://www.unbc.ca/finance/financial-statements",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "verification": {
+        "downloaded": true,
+        "sha256": "9f51790f023f8f817af5574e92eccc87dd84b4c9a0bca5a72e66967931c702de",
+        "bytes": 3582346,
+        "textExtractable": true,
+        "pdfPages": 45,
+        "officialIndexLinkChecked": true,
+        "employeeSchedulePrintedPages": [
+          29,
+          35
+        ],
+        "periodVerifiedFromHeading": "2025-03-31"
+      },
+      "nextAction": "Imported with source-specific validation and documented subtotal residuals; see the accepted source manifest.",
+      "notes": [
+        "The named employee schedule is a distinct section from the audited consolidated financial statements and board schedule."
+      ],
+      "acceptedManifest": "unbc/sources.json",
+      "acceptedSourceId": "unbc-sofi-2024-25-employees",
+      "acceptedRows": 457
+    },
+    {
+      "id": "unbc-board-sofi-2017-18",
+      "employerSlug": "university-of-northern-bc",
+      "year": "2017/18",
+      "priority": 2,
+      "title": "UNBC board package containing SOFI 2017/18",
+      "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/governance/20180914boardpublicsessionmeetingpackagenominutes.pdf",
+      "indexUrl": "https://www.unbc.ca/finance/financial-statements",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "official-source-indexed-awaiting-validation",
+      "verification": {
+        "downloaded": false,
+        "indexedContentsShowSofi": true
+      },
+      "nextAction": "Verify the SOFI report period, complete employee table and final approval. Extract and reconcile only the employee schedule; board agenda proposals alone are not final disclosures."
+    },
+    {
+      "id": "unbc-board-sofi-2021-22",
+      "employerSlug": "university-of-northern-bc",
+      "year": "2021/22",
+      "priority": 2,
+      "title": "UNBC board package containing SOFI 2021/22",
+      "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf",
+      "indexUrl": "https://www.unbc.ca/finance/financial-statements",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "official-source-indexed-awaiting-validation",
+      "verification": {
+        "downloaded": false,
+        "indexedContentsShowSofi": true
+      },
+      "nextAction": "Verify the SOFI report period, complete employee table and final approval. Extract and reconcile only the employee schedule; board agenda proposals alone are not final disclosures."
+    },
+    {
+      "id": "unbc-board-sofi-2025-26",
+      "employerSlug": "university-of-northern-bc",
+      "year": "2025/26",
+      "priority": 2,
+      "title": "UNBC board package containing SOFI 2025/26",
+      "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/university-secretary/board-governors/2026-09-18-board-public-package-minus-minutescompressed_1.pdf",
+      "indexUrl": "https://www.unbc.ca/finance/financial-statements",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "official-source-indexed-awaiting-validation",
+      "verification": {
+        "downloaded": false,
+        "indexedContentsShowSofi": true
+      },
+      "nextAction": "Verify the SOFI report period, complete employee table and final approval. Extract and reconcile only the employee schedule; board agenda proposals alone are not final disclosures."
+    },
+    {
+      "id": "bcit-sofi-2013-14",
+      "employerSlug": "bcit",
+      "year": "2013/14",
+      "priority": 2,
+      "title": "BCIT Financial Information Act Return FYE2014",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2014.pdf",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "official-source-indexed-awaiting-validation",
+      "verification": {
+        "downloaded": false,
+        "accessResult": "Download returned HTML rather than PDF; indexed official URL remains a lead."
+      },
+      "nextAction": "Retrieve the actual PDF from the official site or its official archive, confirm the period, then adapt the validated 2017/18 importer to the employee schedule.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bcit-sofi-2014-15",
+      "employerSlug": "bcit",
+      "year": "2014/15",
+      "priority": 2,
+      "title": "BCIT Financial Information Act Return FYE2015",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2015.pdf",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "official-source-indexed-awaiting-validation",
+      "verification": {
+        "downloaded": false,
+        "accessResult": "Download returned HTML rather than PDF; indexed official URL remains a lead."
+      },
+      "nextAction": "Retrieve the actual PDF from the official site or its official archive, confirm the period, then adapt the validated 2017/18 importer to the employee schedule.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bcit-sofi-2016-17",
+      "employerSlug": "bcit",
+      "year": "2016/17",
+      "priority": 2,
+      "title": "BCIT Financial Information Act Return FYE2017",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2017.pdf",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "official-source-indexed-awaiting-validation",
+      "verification": {
+        "downloaded": false,
+        "accessResult": "Download returned HTML rather than PDF; indexed official URL remains a lead."
+      },
+      "nextAction": "Retrieve the actual PDF from the official site or its official archive, confirm the period, then adapt the validated 2017/18 importer to the employee schedule.",
+      "expectedThresholdToVerify": 75000
+    },
+    {
+      "id": "bc-pension-employee-history",
+      "employerSlug": "bc-pension-corporation",
+      "years": [
+        "2017/18",
+        "2023/24"
+      ],
+      "priority": 2,
+      "title": "BC Pension Corporation employee disclosures: source gap remains",
+      "sourceUrl": "https://www.bcpensioncorp.ca/publications",
+      "scope": "employee-remuneration",
+      "threshold": null,
+      "status": "employee-schedule-not-yet-located",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "annualReport2023_24Downloaded": true,
+        "employeeScheduleVerified": false
+      },
+      "relatedSourceUrl": "https://www.bcpensioncorp.ca/documents/1050273/1050320/2023-24%2BAnnual%2BReport.pdf/6efc8b9f-ab51-84ab-c17c-41b09ce0d784?t=1727793100679",
+      "nextAction": "Locate the full employee remuneration disclosure or SOFI. The retrieved annual report contains board and executive material and must not be represented as an employee list.",
+      "notes": [
+        "Not located is not the same as not published. Earlier and latest employee coverage remain unresolved."
+      ]
+    },
+    {
+      "id": "bci-executive-scope",
+      "employerSlug": "bc-investment-management-corporation",
+      "year": "2023/24",
+      "priority": 1,
+      "title": "BCI 2023/24 executive compensation scope",
+      "sourceUrl": "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf",
+      "scope": "executive-compensation",
+      "threshold": null,
+      "status": "scope-review-required",
+      "verification": {
+        "downloaded": false,
+        "officialSourceIndexed": true
+      },
+      "contextUrl": "https://www2.gov.bc.ca/gov/content/governments/services-for-government/public-sector-management/compensation/executive-compensation-disclosures",
+      "nextAction": "Label the five-person 2023/24 compiled cohort as executive disclosure after row validation; do not compare it to the 363-person 2017/18 cohort as a workforce-pay change. Locate any full employee disclosure separately.",
+      "notes": [
+        "Top executive disclosure and employee remuneration are different cohorts. Missing full employee disclosure cannot be filled by an executive table."
+      ]
+    },
+    {
+      "id": "public-accounts-before-2006-07",
+      "employerSlug": "public-service",
+      "yearRange": [
+        "1999/2000",
+        "2005/06"
+      ],
+      "priority": 2,
+      "title": "BC Public Accounts searchable digital archive",
+      "sourceUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "scope": "mixed-public-accounts",
+      "threshold": null,
+      "status": "official-archive-found-awaiting-document-selection",
+      "verification": {
+        "officialIndexLinkChecked": true
+      },
+      "nextAction": "Select CRF Detailed Schedules of Payments for each earlier fiscal year and recover the individual remuneration schedules; verify each year’s threshold and scope before normalizing.",
+      "notes": [
+        "The official archive explicitly covers 1999/2000 onward; PDF availability must be checked document by document."
+      ]
+    },
+    {
+      "id": "historical-public-accounts-legislative-library",
+      "employerSlug": "public-service",
+      "priority": 3,
+      "title": "Historical BC Public Accounts preserved by the Legislative Library",
+      "sourceUrl": "https://www.llbc.leg.bc.ca/public/pubdocs/bcdocs2015_2/164239/index.htm",
+      "scope": "historical-public-accounts",
+      "threshold": null,
+      "status": "official-archive-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "resourceCount": 126
+      },
+      "examples": [
+        {
+          "year": "1984/85",
+          "title": "Volume2 Schedule of Payments",
+          "url": "https://www.llbc.leg.bc.ca/public/PubDocs/bcdocs2015_2/164239/Public_accounts/164239_PA_1984_1985_v2.pdf",
+          "observedBytes": 95967188
+        },
+        {
+          "year": "1978/79",
+          "title": "Volume2 Schedule of Payments",
+          "url": "https://www.llbc.leg.bc.ca/public/PubDocs/bcdocs2015_2/164239/Public_accounts/164239_PA_1978_79_v2.pdf",
+          "observedBytes": 223962071
+        }
+      ],
+      "nextAction": "Review historical schedule structure and reporting thresholds before OCR. Treat fiscal-calendar changes and incomplete scans explicitly; do not assume modern disclosure scope.",
+      "notes": [
+        "The index includes nineteenth-century records and payment-schedule volumes through 1984/85. The two sample PDFs are large and exceeded the web text fetch limit. They were not downloaded or parsed in this work."
+      ]
+    }
+  ]
+}

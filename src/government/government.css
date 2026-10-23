@@ -1212,7 +1212,7 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 /* ── Salaries (Salaries.jsx) ─────────────────────────────────────────────────────────────── */
 
 .gov-salaries__about { margin: 4px 0 12px; font-size: 13px; line-height: 1.45; }
-.gov-salaries__years { display: inline-flex; gap: 2px; margin-bottom: 12px; padding: 2px; border-radius: 10px; background: var(--gov-hover); }
+.gov-salaries__years { display: inline-flex; flex-wrap: wrap; max-width: 100%; gap: 2px; margin-bottom: 12px; padding: 2px; border-radius: 10px; background: var(--gov-hover); }
 .gov-salaries__years button {
   padding: 5px 10px;
   border: 0;
