@@ -10,9 +10,11 @@ import { Card, CardSection, KindIcon } from './PanelCards.jsx'
 import * as salaryData from './salaryIndex.js'
 import { PUBLIC_SERVICE, salaryKeyOf } from './salaries.js'
 import { displayName, personKey } from '../salaries/people.js'
-import { DisclosureEvidence } from '../salaries/DisclosureEvidence.jsx'
+import { DisclosureSummary } from '../salaries/DisclosureEvidence.jsx'
 import { expenseLabel } from '../salaries/coverage.js'
 import { formatMoney } from '../salaries/money.js'
+import { YearPicker } from '../salaries/parts.jsx'
+import { SiteLink, searchFor, useNavigate } from '../site/navigation.jsx'
 
 const { SALARY_INDEX, SALARY_YEARS, SALARY_SOURCES = {} } = salaryData
 
@@ -21,16 +23,6 @@ const fetched = new Map()
 
 const money = (value) => formatMoney(value, null)
 const compact = (value) => (value >= 1e9 ? `$${(value / 1e9).toFixed(2)}B` : value >= 1e6 ? `$${(value / 1e6).toFixed(1)}M` : money(value))
-
-/** Opens the salary search on a person, to follow their name through the other years. */
-const followPerson = (name) => {
-  const url = new URL(globalThis.location.href)
-  for (const key of [...url.searchParams.keys()]) url.searchParams.delete(key)
-  url.searchParams.set('view', 'salaries')
-  url.searchParams.set('q', name)
-  url.searchParams.set('person', personKey(name))
-  globalThis.location.assign(url)
-}
 
 /** The disclosure year nearest the year on screen, among those this body has. */
 const nearest = (slugs, year) => {
@@ -47,14 +39,18 @@ const load = (slug, key) => {
 }
 
 export const Salaries = ({ node, year }) => {
+  const navigate = useNavigate()
   const key = salaryKeyOf(node)
   const years = key ? SALARY_YEARS.filter(({ slug }) => SALARY_INDEX[key]?.[slug]) : []
+  // Every collection year, so the picker shows the gaps too; choosing one without records says so.
+  const counts = SALARY_YEARS.map(({ slug }) => (key ? SALARY_INDEX[key]?.[slug]?.count ?? 0 : 0))
   const [slug, setSlug] = useState(() => (years.length ? nearest(years.map((each) => each.slug), year) : null))
   const [state, setState] = useState({ status: 'idle', rows: [] })
   const [query, setQuery] = useState('')
   const [shown, setShown] = useState(PAGE)
   const [loadVersion, setLoadVersion] = useState(0)
-  const selectedSlug = years.some((each) => each.slug === slug) ? slug : nearest(years.map((each) => each.slug), year)
+  const selectedSlug = SALARY_YEARS.some((each) => each.slug === slug) ? slug : nearest(years.map((each) => each.slug), year)
+  const totals = key ? SALARY_INDEX[key]?.[selectedSlug] : null
 
   useEffect(() => {
     setSlug(nearest(years.map((each) => each.slug), year) ?? null)
@@ -62,7 +58,7 @@ export const Salaries = ({ node, year }) => {
   }, [key, year])
 
   useEffect(() => {
-    if (!key || !selectedSlug) return undefined
+    if (!key || !selectedSlug || !totals) return undefined
     let live = true
     setState({ status: 'loading', rows: [] })
     load(selectedSlug, key).then(
@@ -70,7 +66,7 @@ export const Salaries = ({ node, year }) => {
       () => live && setState({ status: 'failed', rows: [] })
     )
     return () => { live = false }
-  }, [key, selectedSlug, loadVersion])
+  }, [key, selectedSlug, loadVersion, totals])
 
   const matches = useMemo(() => {
     const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean)
@@ -82,63 +78,72 @@ export const Salaries = ({ node, year }) => {
   }, [state.rows, query])
 
   if (!key || !years.length) return null
-  const totals = SALARY_INDEX[key][selectedSlug]
-  const label = years.find((each) => each.slug === selectedSlug)?.label
+  const label = SALARY_YEARS.find((each) => each.slug === selectedSlug)?.label
+  // A source shown once in the summary is not repeated on every card.
+  const oneSource = new Set(state.rows.map((row) => row[4])).size <= 1
+  const personLink = (name) => ({ view: 'salaries', q: name, person: personKey(name) })
+  const follow = (name) => (navigate ? navigate(personLink(name)) : globalThis.location.assign(searchFor(personLink(name))))
 
   return (
     <section className="gov-card gov-salaries" aria-labelledby={`salaries-${node.id}`}>
-      <h2 id={`salaries-${node.id}`} className="gov-card__heading">Salaries</h2>
+      <div className="gov-salaries__head">
+        <h2 id={`salaries-${node.id}`} className="gov-card__heading">Salaries</h2>
+        <SiteLink className="gov-salaries__open" to={{ view: 'salaries', employer: key }}>All years in Salaries →</SiteLink>
+      </div>
       <p className="gov-muted gov-salaries__about">
         {key === PUBLIC_SERVICE
-          ? 'The Province reports these records for its public service as a whole; this panel includes all ministries represented in the imported disclosure.'
-          : `Imported remuneration records for ${node.shortName ?? node.name}${totals.agencies?.length ? `, filed as “${totals.agencies.join('”, “')}”` : ''}.`}
+          ? 'The Province discloses its public service as one employer, so every ministry shows the same records.'
+          : `Disclosed pay for ${node.shortName ?? node.name}${totals?.agencies?.length ? `, filed as “${totals.agencies.join('”, “')}”` : ''}.`}
       </p>
-      {years.length > 1 && (
-        <div className="gov-salaries__years" role="group" aria-label="Disclosure year">
-          {years.map((each) => (
-            <button key={each.slug} type="button" aria-pressed={each.slug === selectedSlug} onClick={() => { setSlug(each.slug); setShown(PAGE) }}>{each.label}</button>
-          ))}
-        </div>
-      )}
-      <dl className="gov-tiles">
-        <div><dt>Records</dt><dd>{totals.count.toLocaleString('en-CA')}</dd></div>
-        <div><dt>Disclosed total</dt><dd>{compact(totals.total)}</dd></div>
-        <div><dt>Median</dt><dd>{money(totals.median)}</dd></div>
-      </dl>
-      <input
-        type="search"
-        className="gov-salaries__search"
-        placeholder="Search a name or a position"
-        aria-label={`Search ${label} salaries`}
-        value={query}
-        onChange={(event) => { setQuery(event.target.value); setShown(PAGE) }}
-      />
-      {state.status === 'loading' && <p className="gov-muted">Loading {label}…</p>}
-      {state.status === 'failed' && <p className="gov-muted">The {label} records could not be loaded. <button type="button" onClick={() => setLoadVersion((value) => value + 1)}>Retry</button></p>}
-      {state.status === 'ready' && (
-        <CardSection
-          title={query ? 'Matching' : 'Highest paid'}
-          meta={`${matches.length.toLocaleString('en-CA')} ${matches.length === 1 ? 'record' : 'records'} · ${label}`}
-          footer={matches.length > shown && (
-            <button type="button" className="gov-show-more gov-cards__more" onClick={() => setShown((count) => count + PAGE * 2)}>
-              Show {Math.min(PAGE * 2, matches.length - shown)} more
-            </button>
+      <YearPicker years={SALARY_YEARS.map((each) => each.label)} counts={counts} value={SALARY_YEARS.findIndex((each) => each.slug === selectedSlug)} onChange={(at) => { setSlug(SALARY_YEARS[at].slug); setShown(PAGE) }} />
+      {!totals && <p className="gov-muted gov-salaries__about">No records have been imported for {label}. That does not mean no one was employed or paid.</p>}
+      {totals && (
+        <>
+          <dl className="gov-tiles">
+            <div><dt>Records</dt><dd>{totals.count.toLocaleString('en-CA')}</dd></div>
+            <div><dt>Disclosed total</dt><dd>{compact(totals.total)}</dd></div>
+            <div><dt>Median</dt><dd>{money(totals.median)}</dd></div>
+          </dl>
+          <DisclosureSummary
+            coverage={{ status: 'available', ...totals }}
+            sources={SALARY_SOURCES}
+            className="gov-salaries__disclosure"
+            more={<p>Figures are the records’ remuneration or compensation for the reporting period. Record counts are not verified headcounts, and the disclosed total is not necessarily the employer’s full payroll.</p>}
+          />
+          <input
+            type="search"
+            className="gov-salaries__search"
+            placeholder="Search a name or a position"
+            aria-label={`Search ${label} salaries`}
+            value={query}
+            onChange={(event) => { setQuery(event.target.value); setShown(PAGE) }}
+          />
+          {state.status === 'loading' && <p className="gov-muted">Loading {label}…</p>}
+          {state.status === 'failed' && <p className="gov-muted">The {label} records could not be loaded. <button type="button" onClick={() => setLoadVersion((value) => value + 1)}>Retry</button></p>}
+          {state.status === 'ready' && (
+            <CardSection
+              title={query ? 'Matching' : 'Highest paid'}
+              meta={`${matches.length.toLocaleString('en-CA')} ${matches.length === 1 ? 'record' : 'records'} · ${label}`}
+              footer={matches.length > shown && (
+                <button type="button" className="gov-show-more gov-cards__more" onClick={() => setShown((count) => count + PAGE * 2)}>
+                  Show {Math.min(PAGE * 2, matches.length - shown)} more
+                </button>
+              )}
+            >
+              {matches.slice(0, shown).map(([name, position, pay, expenses, sourceId], index) => (
+                <Card
+                  key={`${name}-${position}-${index}`}
+                  icon={<KindIcon person branch={node.branch ?? 'executive'} />}
+                  title={displayName(name, SALARY_SOURCES[sourceId]?.nameDisclosure) ?? 'Name not given'}
+                  lines={[position, expenses ? `${expenseLabel(sourceId, SALARY_SOURCES)} ${money(expenses)}` : null, !oneSource && sourceId ? SALARY_SOURCES[sourceId]?.title : null]}
+                  aside={money(pay)}
+                  onClick={name ? () => follow(name) : undefined}
+                />
+              ))}
+            </CardSection>
           )}
-        >
-          {matches.slice(0, shown).map(([name, position, pay, expenses, sourceId], index) => (
-            <Card
-              key={`${name}-${position}-${index}`}
-              icon={<KindIcon person branch={node.branch ?? 'executive'} />}
-              title={displayName(name, SALARY_SOURCES[sourceId]?.nameDisclosure) ?? 'Name not given'}
-              lines={[position, expenses ? `${expenseLabel(sourceId, SALARY_SOURCES)} ${money(expenses)}` : null, sourceId ? SALARY_SOURCES[sourceId]?.title : null]}
-              aside={money(pay)}
-              onClick={name ? () => followPerson(name) : undefined}
-            />
-          ))}
-        </CardSection>
+        </>
       )}
-      <DisclosureEvidence coverage={{ status: 'available', ...totals }} sources={SALARY_SOURCES} className="gov-muted gov-salaries__source" />
-      <p className="gov-muted gov-salaries__source">Figures are the imported records’ remuneration or compensation for the reporting period. Record counts are not verified headcounts, and the disclosed total is not necessarily the employer’s full payroll.</p>
     </section>
   )
 }

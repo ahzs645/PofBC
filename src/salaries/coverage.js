@@ -60,3 +60,37 @@ export const missingYearMessage = (coverage, employers, year) => {
 /** Count only employers with records in the selected collection year and sector. */
 export const filterEmployers = (employers, sector = 'all', year = 'all') => employers.filter((entry) =>
   (sector === 'all' || entry.sector === sector) && (year === 'all' || entry.counts[Number(year)] > 0))
+
+/**
+ * Why a disclosed name has no record in a year, as a short reason a run of such years can share:
+ * the associated employers have no records imported then ('no-coverage'), disclosed only executives
+ * ('executive-only'), are covered only in part ('partial'), or are covered and the name is not in it
+ * ('not-found'). The same cases missingYearMessage explains at length.
+ */
+export const gapReason = (coverage, employers, year) => {
+  if (!coverage) return 'not-found'
+  const entries = employers.map((slug) => coverage?.[slug]?.[year])
+  if (entries.length && entries.every((entry) => !entry || entry.status !== 'available')) return 'no-coverage'
+  if (entries.some((entry) => entry?.scope === 'executive-only')) return 'executive-only'
+  if (entries.some((entry) => !entry || entry.status !== 'available')) return 'partial'
+  return 'not-found'
+}
+
+export const GAP_LABELS = {
+  'no-coverage': 'No records imported for this employer',
+  'executive-only': 'Only executives disclosed',
+  partial: 'Not found; some employers not covered',
+  'not-found': 'Not in that year’s disclosure'
+}
+
+/** Consecutive years sharing a reason, as runs: [{ from, to, reason }], from and to inclusive. */
+export const gapRuns = (years, reasonOf) => {
+  const runs = []
+  for (const year of years) {
+    const reason = reasonOf(year)
+    const last = runs.at(-1)
+    if (last && last.to === year - 1 && last.reason === reason) last.to = year
+    else runs.push({ from: year, to: year, reason })
+  }
+  return runs
+}

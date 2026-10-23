@@ -1212,18 +1212,6 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 /* ── Salaries (Salaries.jsx) ─────────────────────────────────────────────────────────────── */
 
 .gov-salaries__about { margin: 4px 0 12px; font-size: 13px; line-height: 1.45; }
-.gov-salaries__years { display: inline-flex; flex-wrap: wrap; max-width: 100%; gap: 2px; margin-bottom: 12px; padding: 2px; border-radius: 10px; background: var(--gov-hover); }
-.gov-salaries__years button {
-  padding: 5px 10px;
-  border: 0;
-  border-radius: 8px;
-  background: none;
-  color: var(--gov-ink-4);
-  font: inherit;
-  font-size: 13px;
-  cursor: pointer;
-}
-.gov-salaries__years button[aria-pressed='true'] { background: var(--gov-surface); color: var(--gov-ink); box-shadow: 0 0 0 1px var(--gov-outline); }
 .gov-salaries__search {
   box-sizing: border-box;
   width: 100%;
@@ -1236,7 +1224,17 @@ details.gov-list__section[open] { padding-bottom: 12px; }
   font: inherit;
   font-size: 16px;
 }
-.gov-salaries__source { margin: 16px 0 0; font-size: 12px; line-height: 1.45; }
+/* The shared picker and summary (src/salaries/parts.jsx) in this view's colours. */
+.gov-salaries { --sp-ink: var(--gov-executive); --sp-mid: var(--gov-mid); --sp-faint: var(--gov-ink-4); --sp-hover: var(--gov-hover); --sp-surface: var(--gov-surface); --sp-text: var(--gov-ink); }
+.gov-salaries .salaries-picker, .gov-salaries .salaries-disclosure { --sp-ink: inherit; --sp-mid: inherit; --sp-faint: inherit; --sp-hover: inherit; --sp-surface: inherit; --sp-text: inherit; }
+.gov-salaries__head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.gov-salaries__head .gov-card__heading { margin: 0; }
+.gov-salaries__open { font-size: 13px; color: var(--gov-ink-3); white-space: nowrap; }
+.gov-salaries .gov-tiles { margin-top: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+/* A dollar total in a third of a phone's sheet: smaller, so it fits its tile. */
+@media (max-width: 480px) { .gov-salaries .gov-tiles dd { font-size: 17px; } }
+.gov-salaries__disclosure { margin-top: 10px; }
+.gov-salaries__disclosure .salaries-disclosure__more { color: var(--gov-ink-4); }
 .gov-salaries .gov-cards { margin-top: 16px; }
 
 /* ── A long note read a step at a time (StoryText.jsx) ─────────────────────────────────────── */

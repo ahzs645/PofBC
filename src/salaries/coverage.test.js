@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { coverageAt, disclosurePeriod, expenseLabel, filterEmployers, missingYearMessage, rowCoverage, scopeLabel } from './coverage.js'
+import { coverageAt, disclosurePeriod, expenseLabel, filterEmployers, gapReason, gapRuns, missingYearMessage, rowCoverage, scopeLabel } from './coverage.js'
 
 test('missing or excluded employer data cannot imply no employment', () => {
   const coverage = { hydro: [{ status: 'excluded' }], school: [{ status: 'missing' }] }
@@ -43,4 +43,18 @@ test('employer filters honor both sector and selected collection year', () => {
   assert.deepEqual(filterEmployers(employers, 'Government', '1').map((entry) => entry.slug), ['b'])
   assert.deepEqual(filterEmployers(employers, 'all', '0').map((entry) => entry.slug), ['a', 'c'])
   assert.equal(filterEmployers(employers).length, 3)
+})
+
+test('a gap year gets the same reason as its long explanation', () => {
+  assert.equal(gapReason({ hydro: [{ status: 'excluded' }] }, ['hydro'], 0), 'no-coverage')
+  assert.equal(gapReason({ hydro: [{ status: 'available', scope: 'executive-only' }] }, ['hydro'], 0), 'executive-only')
+  assert.equal(gapReason({ hydro: [{ status: 'available' }], school: [] }, ['hydro', 'school'], 0), 'partial')
+  assert.equal(gapReason({ hydro: [{ status: 'available' }] }, ['hydro'], 0), 'not-found')
+})
+
+test('consecutive gap years with one reason are one run', () => {
+  const reasons = ['a', 'a', 'b', 'a']
+  assert.deepEqual(gapRuns([0, 1, 2, 3, 5], (year) => reasons[year] ?? 'a'), [
+    { from: 0, to: 1, reason: 'a' }, { from: 2, to: 2, reason: 'b' }, { from: 3, to: 3, reason: 'a' }, { from: 5, to: 5, reason: 'a' }
+  ])
 })
