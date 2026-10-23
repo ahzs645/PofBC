@@ -106,3 +106,22 @@ export const validateRow = (row, context) => {
   }
   if (!row.sourceId) throw new Error(`${context}: missing provenance`)
 }
+
+/** A small executive/deputy cohort must never silently replace an employee partition. */
+export const validateReplacementScopes = (baseline, official, sources, decisions = []) => {
+  const previous = new Set(baseline.map((row) => `${row.slug}|${row.year}`))
+  const partitions = new Map()
+  for (const row of official) {
+    const key = `${row.slug}|${row.year}`
+    if (!previous.has(key)) continue
+    if (!partitions.has(key)) partitions.set(key, new Set())
+    partitions.get(key).add(row.sourceId)
+  }
+  for (const [key, ids] of partitions) {
+    if ([...ids].some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id]?.scope))) continue
+    const [employer, year] = key.split('|')
+    const decision = decisions.find((entry) => entry.kind === 'replace-partition-scope' && entry.employer === employer && entry.year === year)
+    if (decision?.reason?.trim() && Array.isArray(decision.sourceIds) && [...ids].every((id) => decision.sourceIds.includes(id))) continue
+    throw new Error(`${key}: partial disclosure cannot replace a compiled employee partition without an explicit reviewed scope decision`)
+  }
+}

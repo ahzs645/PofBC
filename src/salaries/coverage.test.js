@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { coverageAt, disclosurePeriod, expenseLabel, filterEmployers, gapReason, gapRuns, missingYearMessage, rowCoverage, scopeLabel } from './coverage.js'
+import { coverageAt, coverageStatus, disclosurePeriod, expenseLabel, filterEmployers, gapReason, gapRuns, missingYearMessage, rowCoverage, scopeLabel, sourceHref, thresholdLabel, yearAvailability } from './coverage.js'
 
 test('missing or excluded employer data cannot imply no employment', () => {
   const coverage = { hydro: [{ status: 'excluded' }], school: [{ status: 'missing' }] }
@@ -57,4 +57,35 @@ test('consecutive gap years with one reason are one run', () => {
   assert.deepEqual(gapRuns([0, 1, 2, 3, 5], (year) => reasons[year] ?? 'a'), [
     { from: 0, to: 1, reason: 'a' }, { from: 2, to: 2, reason: 'b' }, { from: 3, to: 3, reason: 'a' }, { from: 5, to: 5, reason: 'a' }
   ])
+})
+
+test('source leads and held reports are distinct from accepted source data', () => {
+  assert.equal(coverageStatus({ status: 'excluded' }).kind, 'held')
+  assert.equal(coverageStatus({ status: 'source-found' }).kind, 'found')
+  assert.equal(coverageStatus({ status: 'missing' }).kind, 'missing')
+  assert.equal(coverageStatus({ status: 'available', sourceIds: ['compiled'], sourceLeads: [{ url: 'https://example.org/report.pdf' }] }, {
+    compiled: { scope: 'compiled-unverified' }
+  }).kind, 'compiled')
+  assert.equal(coverageStatus({ status: 'available', sourceIds: ['official'] }, {
+    official: { scope: 'employee-remuneration', url: 'https://example.org/report.pdf' }
+  }).kind, 'primary')
+  assert.match(yearAvailability({ status: 'excluded' }, 0), /held/)
+  assert.match(yearAvailability({ status: 'source-found' }, 0), /source found/)
+  assert.equal(yearAvailability({ status: 'available' }, 1000), '1,000 records')
+})
+
+test('source links open the physical PDF page without guessing absent page data', () => {
+  const source = { url: 'https://example.org/report.PDF?download=true#old' }
+  assert.equal(sourceHref(source, 12), 'https://example.org/report.PDF?download=true#page=12')
+  assert.equal(sourceHref(source, null), source.url)
+  assert.equal(sourceHref(source, -1), source.url)
+  assert.equal(sourceHref({ url: 'https://example.org/report.csv' }, 12), 'https://example.org/report.csv')
+  assert.equal(sourceHref({ url: 'javascript:alert(1)' }, 12), null)
+})
+
+test('inclusive and strict disclosure thresholds keep their source meaning', () => {
+  assert.equal(thresholdLabel({ threshold: 75000, thresholdComparison: '>=' }), 'at least $75,000')
+  assert.equal(thresholdLabel({ threshold: 75000, thresholdComparison: '>' }), 'over $75,000')
+  assert.equal(thresholdLabel({ threshold: 75000 }), 'threshold $75,000')
+  assert.equal(thresholdLabel({ threshold: null }), null)
 })

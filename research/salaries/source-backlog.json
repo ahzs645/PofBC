@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "verifiedOn": "2026-10-22",
+  "verifiedOn": "2026-10-23",
   "purpose": "Official sources recovered in this work and actionable remaining disclosure gaps. Imported entries point to accepted manifests; a source-found status does not mean an imported or complete employer-year.",
   "statusDefinitions": {
     "source-found-awaiting-extraction": "Official PDF downloaded or directly linked by official index; employee rows not yet accepted into build.",
@@ -9,7 +9,9 @@
     "scope-review-required": "Known mixed or partial cohort requiring explicit scope treatment.",
     "official-archive-found-awaiting-document-selection": "Primary archive verified, specific salary documents need selection.",
     "official-archive-found-awaiting-extraction": "Primary archive and sample schedule URLs verified; historical extraction remains.",
-    "imported": "Accepted normalized employee records are included in the build; the linked manifest records validation, scope and any preserved source discrepancies."
+    "imported": "Accepted normalized employee records are included in the build; the linked manifest records validation, scope and any preserved source discrepancies.",
+    "requires-ocr": "Official source located; scanned employee rows require OCR, complete row review and subtotal validation before acceptance.",
+    "held-for-review": "A source is located but its employee records have failed or await a required validation check; no accepted rows are inferred."
   },
   "sources": [
     {
@@ -17,18 +19,50 @@
       "employerSlug": "bc-transit",
       "year": "2025/26",
       "priority": 2,
-      "title": "Statement of Financial Information PDF – 2026",
+      "title": "British Columbia Transit Statement of Financial Information, year ended March 31, 2026",
       "sourceUrl": "https://www.bctransit.com/wp-content/uploads/2026/09/BC-Transit-Statement-of-Financial-Information-2026-Final-with-Financial-Statements.pdf",
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
-      "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "threshold": 75000,
+      "status": "imported",
       "verification": {
-        "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "eed86ed7c36372eb87f8309c366fb010efde8a749ee4c5a195dccbd414336e98",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true,
+        "bytes": 8564129,
+        "pdfPages": 73,
+        "employeePagesLocated": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "employeeScheduleNativeText": false
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "periodStart": "2025-04-01",
+      "periodEnd": "2026-03-31",
+      "acceptedManifest": "research/salaries/bc-transit/sources.json",
+      "acceptedSourceId": "bc-transit-sofi-2026",
+      "acceptedRows": 1000
     },
     {
       "id": "bc-transit-sofi-2024-25",
@@ -40,13 +74,42 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "5b158f3c281bf3594950d2691a475943ec4519225d3811df2c298808bdf4b2f6",
+        "bytes": 17379201,
+        "pdfPages": 67,
+        "employeePagesLocated": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "employeeScheduleNativeText": false,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "bc-transit-sofi-2023-24",
@@ -58,13 +121,41 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "2f18d9aa1dd308501c9d02ec6813d00f5407ae514f149b2400919c91a3be61eb",
+        "bytes": 16302838,
+        "pdfPages": 64,
+        "employeePagesLocated": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "employeeScheduleNativeText": false,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Validate and replace the existing compiled snapshot with source-level provenance. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "bc-transit-sofi-2022-23",
@@ -76,13 +167,35 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "527f4928ddd17be59edcd086d6a4bce15de46ae5a238097770351f8229887dc8",
+        "bytes": 14377615,
+        "pdfPages": 58,
+        "employeePagesLocated": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "employeeScheduleNativeText": false,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "bc-transit-sofi-2021-22",
@@ -94,60 +207,112 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "bdaff55528158896bece27f0d2a8cc5bd14fbd6995b86f3b87779bbd4e71a389",
+        "bytes": 14187599,
+        "pdfPages": 55,
+        "employeePagesLocated": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "employeeScheduleNativeText": false,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "bc-transit-sofi-2020-21",
       "employerSlug": "bc-transit",
       "year": "2020/21",
       "priority": 1,
-      "title": "Statement of Financial Information PDF – 2021",
+      "title": "British Columbia Transit Statement of Financial Information, year ended March 31, 2021",
       "sourceUrl": "https://www.bctransit.com/wp-content/uploads/9/159/2021-07-30-FY2021-Statement-of-Financial-Information-Final-with-FS-Image.pdf",
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
-      "threshold": null,
+      "threshold": 75000,
       "status": "imported",
       "verification": {
-        "officialIndexLinkChecked": true,
         "downloaded": true,
         "sha256": "f9d752695330689e2f2e20d37f13a16be9473c0ccf5c6c77d576765cf4279409",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true,
         "bytes": 16672822,
-        "textExtractable": false,
         "pdfPages": 52,
-        "periodVerifiedFromCover": "2021-03-31"
+        "employeePagesLocated": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "employeeScheduleNativeText": false
       },
-      "nextAction": "Imported with source-specific validation and documented subtotal residuals; see the accepted source manifest.",
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
       "notes": [
         "The missing 2020/21 report exists. It was downloaded and its 31 March 2021 period was visually checked. Extraction and reconciliation remain unfinished."
       ],
-      "expectedThresholdToVerify": 75000,
-      "acceptedManifest": "bc-transit/sources.json",
+      "acceptedManifest": "research/salaries/bc-transit/sources.json",
       "acceptedSourceId": "bc-transit-sofi-2021",
-      "acceptedRows": 385
+      "acceptedRows": 385,
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31"
     },
     {
       "id": "bc-transit-sofi-2019-20",
       "employerSlug": "bc-transit",
       "year": "2019/20",
       "priority": 2,
-      "title": "Statement of Financial Information PDF – 2020",
+      "title": "British Columbia Transit Statement of Financial Information, year ended March 31, 2020",
       "sourceUrl": "https://www.bctransit.com/wp-content/uploads/419/1002/Statement-of-FInancial-Information-2020-PDF-a7eaf646-0e84-4977-8c34-4f96f13e96fb.pdf",
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
-      "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "threshold": 75000,
+      "status": "imported",
       "verification": {
-        "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "36c8c3a689f9ee1f43248d9e6edb1ccbd77fb1ed396d246dc99fe6c8581de1e0",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true,
+        "bytes": 4922121,
+        "pdfPages": 53,
+        "employeePagesLocated": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "employeeScheduleNativeText": false
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "periodStart": "2019-04-01",
+      "periodEnd": "2020-03-31",
+      "acceptedManifest": "research/salaries/bc-transit/sources.json",
+      "acceptedSourceId": "bc-transit-sofi-2020",
+      "acceptedRows": 359
     },
     {
       "id": "bc-transit-sofi-2018-19",
@@ -159,13 +324,29 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "201e1adbb580b5a30dc965177f620669b24d7fdb5f105c4eda6ae2ebbff82813",
+        "bytes": 4508383,
+        "pdfPages": 51,
+        "employeePagesLocated": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "employeeScheduleNativeText": false,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "bc-transit-sofi-2017-18",
@@ -177,49 +358,90 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "333224b271f7e89f2dd1456513299dc00f78c72a7d1947486213361e28f9fb89",
+        "bytes": 13853720,
+        "pdfPages": 48,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Validate and replace the existing compiled snapshot with source-level provenance. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "bc-transit-sofi-2016-17",
       "employerSlug": "bc-transit",
       "year": "2016/17",
       "priority": 2,
-      "title": "Statement of Financial Information PDF – 2017",
+      "title": "British Columbia Transit Statement of Financial Information, year ended March 31, 2017",
       "sourceUrl": "https://www.bctransit.com/wp-content/uploads/101/576/1_FIR0.pdf",
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
-      "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "threshold": 75000,
+      "status": "imported",
       "verification": {
-        "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "e1dcab2b0ca1bb6d73714f08fcd18628a4e48617e1cfdbb970f547593df698b8",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true,
+        "bytes": 3753705,
+        "pdfPages": 50,
+        "employeePagesLocated": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "employeeScheduleNativeText": true
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "acceptedManifest": "research/salaries/bc-transit/sources.json",
+      "acceptedSourceId": "bc-transit-sofi-2017",
+      "acceptedRows": 219
     },
     {
       "id": "bc-transit-sofi-2015-16",
       "employerSlug": "bc-transit",
       "year": "2015/16",
       "priority": 2,
-      "title": "Statement of Financial Information PDF – 2016",
+      "title": "British Columbia Transit Statement of Financial Information, year ended March 31, 2016",
       "sourceUrl": "https://www.bctransit.com/wp-content/uploads/110/41/BC-Transit-2015-16-Approved-Statement-of-Financial-Information.pdf",
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
-      "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "threshold": 75000,
+      "status": "imported",
       "verification": {
-        "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "96ac6b1e3db5d8ee92964aec1d4616b6a856565240b122b2f0caa1f4ef41c079",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true,
+        "bytes": 1384771,
+        "pdfPages": 53,
+        "employeePagesLocated": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "employeeScheduleNativeText": false
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "periodStart": "2015-04-01",
+      "periodEnd": "2016-03-31",
+      "acceptedManifest": "research/salaries/bc-transit/sources.json",
+      "acceptedSourceId": "bc-transit-sofi-2016",
+      "acceptedRows": 177
     },
     {
       "id": "bc-transit-sofi-2014-15",
@@ -231,13 +453,20 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "1da505d37d823b6d19e9b4fec85b6fceda7bcda1810ec6df6a6a8864b23b7b0c",
+        "bytes": 3448383,
+        "pdfPages": 53,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "bc-transit-sofi-2013-14",
@@ -249,13 +478,20 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "7a115eef5d8818053ffea294355a896cd525435718c6bc849480abba98b3eead",
+        "bytes": 1954618,
+        "pdfPages": 49,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "bc-transit-sofi-2012-13",
@@ -267,13 +503,20 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "50b2748043dacdf2e3094b792ac327e70a986b1fcd15d193dcce28dfe7e4dc44",
+        "bytes": 1827102,
+        "pdfPages": 48,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "bc-transit-sofi-2011-12",
@@ -285,13 +528,20 @@
       "indexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "downloaded": false
+        "downloaded": true,
+        "sha256": "2aa5e7fa7be728b2c40859c776f3410fefa029a8484a1f12e36f74dab2e8350f",
+        "bytes": 2398260,
+        "pdfPages": 51,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Fill an absent employer/year with the employee schedule. Separate employee rows from board, contractor and aggregate schedules; verify period, threshold and totals.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Review complete employee page images, compare independent OCR passes, verify actual fiscal period and source subtotals, and retain explicit corrections before accepting records.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The complete PDF has been downloaded and fingerprinted. Source discovery is complete; employee extraction and full validation remain."
+      ]
     },
     {
       "id": "northern-health-sofi-2020-21",
@@ -612,47 +862,76 @@
       "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2014.pdf",
       "scope": "employee-remuneration",
       "threshold": null,
-      "status": "official-source-indexed-awaiting-validation",
+      "status": "requires-ocr",
       "verification": {
-        "downloaded": false,
-        "accessResult": "Download returned HTML rather than PDF; indexed official URL remains a lead."
+        "sha256": "ff34c33d3b0f33c5d544721b2e9ff0f12791602b097f69d9f85ceec09378eb4c",
+        "bytes": 4277744,
+        "pdfPages": 67,
+        "periodEnd": "2014-03-31",
+        "periodVerifiedFromCover": true,
+        "textExtractable": false,
+        "visualReviewPdfPages": [
+          1
+        ],
+        "downloaded": true,
+        "checkedOn": "2026-10-23"
       },
-      "nextAction": "Retrieve the actual PDF from the official site or its official archive, confirm the period, then adapt the validated 2017/18 importer to the employee schedule.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Locate employee Exhibit B pages, OCR all rows, independently verify names and monetary cells, verify schedule-year headers, and reconcile printed aggregates before importing.",
+      "expectedThresholdToVerify": 75000,
+      "notes": [
+        "The official URL now returns a PDF, resolving the earlier HTML-response retrieval blocker.",
+        "Only the cover period was visually verified; no employee rows or threshold have been accepted."
+      ]
     },
     {
       "id": "bcit-sofi-2014-15",
       "employerSlug": "bcit",
       "year": "2014/15",
       "priority": 2,
-      "title": "BCIT Financial Information Act Return FYE2015",
+      "title": "BCIT Financial Information Act Return 2014/15: Exhibit B",
       "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2015.pdf",
       "scope": "employee-remuneration",
-      "threshold": null,
-      "status": "official-source-indexed-awaiting-validation",
+      "threshold": 75000,
+      "status": "imported",
       "verification": {
-        "downloaded": false,
-        "accessResult": "Download returned HTML rather than PDF; indexed official URL remains a lead."
+        "downloaded": true,
+        "sha256": "d550a79b252e0cf9fc059f71ad1aaf6bc42d79c667860a9dc83acea92ea80c8d",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
       },
-      "nextAction": "Retrieve the actual PDF from the official site or its official archive, confirm the period, then adapt the validated 2017/18 importer to the employee schedule.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "indexUrl": "https://www.bcit.ca/financial-services/financial-reports/",
+      "periodStart": "2014-04-01",
+      "periodEnd": "2015-03-31",
+      "acceptedManifest": "research/salaries/bcit/sources.json",
+      "acceptedSourceId": "bcit-sofi-2014-15-employees",
+      "acceptedRows": 861
     },
     {
       "id": "bcit-sofi-2016-17",
       "employerSlug": "bcit",
       "year": "2016/17",
       "priority": 2,
-      "title": "BCIT Financial Information Act Return FYE2017",
+      "title": "BCIT Financial Information Act Return 2016/17: Exhibit B",
       "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2017.pdf",
       "scope": "employee-remuneration",
-      "threshold": null,
-      "status": "official-source-indexed-awaiting-validation",
+      "threshold": 75000,
+      "status": "imported",
       "verification": {
-        "downloaded": false,
-        "accessResult": "Download returned HTML rather than PDF; indexed official URL remains a lead."
+        "downloaded": true,
+        "sha256": "5f19ce45defa7ca2a50ea72cdfc63e78d86d691a2e9a7fa6a62f7bc30d6018f5",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
       },
-      "nextAction": "Retrieve the actual PDF from the official site or its official archive, confirm the period, then adapt the validated 2017/18 importer to the employee schedule.",
-      "expectedThresholdToVerify": 75000
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "indexUrl": "https://www.bcit.ca/financial-services/financial-reports/",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "acceptedManifest": "research/salaries/bcit/sources.json",
+      "acceptedSourceId": "bcit-sofi-2016-17-employees",
+      "acceptedRows": 923
     },
     {
       "id": "bc-pension-employee-history",
@@ -750,6 +1029,771 @@
       "notes": [
         "The index includes nineteenth-century records and payment-schedule volumes through 1984/85. The two sample PDFs are large and exceeded the web text fetch limit. They were not downloaded or parsed in this work."
       ]
+    },
+    {
+      "id": "bcit-sofi-2017-18-employees",
+      "employerSlug": "bcit",
+      "year": "2017/18",
+      "priority": 1,
+      "title": "BCIT Financial Information Act Return 2017/18: Exhibit B",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2018.pdf",
+      "indexUrl": "https://www.bcit.ca/financial-services/financial-reports/",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "acceptedManifest": "research/salaries/bcit/sources.json",
+      "acceptedSourceId": "bcit-sofi-2017-18-employees",
+      "acceptedRows": 970,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "31f9f6cf0f6faaab8d3953ccc064b8335e65b8aca87156e9b2ec14386ffaacc3",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "bcit-sofi-2018-19-employees",
+      "employerSlug": "bcit",
+      "year": "2018/19",
+      "priority": 1,
+      "title": "BCIT Financial Information Act Return 2018/19: Exhibit B",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2019.pdf",
+      "indexUrl": "https://www.bcit.ca/financial-services/financial-reports/",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2018-04-01",
+      "periodEnd": "2019-03-31",
+      "acceptedManifest": "research/salaries/bcit/sources.json",
+      "acceptedSourceId": "bcit-sofi-2018-19-employees",
+      "acceptedRows": 1024,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "50c34b8e7ca711d1c6548010095f0a855906a37e9c733ec35935461ecf7480a6",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "bcit-sofi-2020-21-employees",
+      "employerSlug": "bcit",
+      "year": "2020/21",
+      "priority": 1,
+      "title": "BCIT Financial Information Act Return 2020/21: Exhibit B",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy21-bcit-fia-report-signed.pdf",
+      "indexUrl": "https://www.bcit.ca/financial-services/financial-reports/",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "acceptedManifest": "research/salaries/bcit/sources.json",
+      "acceptedSourceId": "bcit-sofi-2020-21-employees",
+      "acceptedRows": 1246,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "8547d8d867ed14e3cffe658ecaa1579ae5190e4fbae7f76190fc7ccb7f7552e5",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "bcit-sofi-2021-22-employees",
+      "employerSlug": "bcit",
+      "year": "2021/22",
+      "priority": 1,
+      "title": "BCIT Financial Information Act Return 2021/22: Exhibit B",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy22-bcit-fia-report-signed.pdf",
+      "indexUrl": "https://www.bcit.ca/financial-services/financial-reports/",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "acceptedManifest": "research/salaries/bcit/sources.json",
+      "acceptedSourceId": "bcit-sofi-2021-22-employees",
+      "acceptedRows": 1272,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "9c23914f61fc4351152e166a80ca156e1677e844c5cd172e1012e5533dc4f6f3",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "bcit-sofi-2022-23-employees",
+      "employerSlug": "bcit",
+      "year": "2022/23",
+      "priority": 1,
+      "title": "BCIT Financial Information Act Return 2022/23: Exhibit B",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy23-bcit-fia-report-signed.pdf",
+      "indexUrl": "https://www.bcit.ca/financial-services/financial-reports/",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "acceptedManifest": "research/salaries/bcit/sources.json",
+      "acceptedSourceId": "bcit-sofi-2022-23-employees",
+      "acceptedRows": 1298,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "58703c9c41d50381e4a3b7ba5e0aa98c9f13c719cab09d291be3f246f26869c8",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "bcit-sofi-2023-24-employees",
+      "employerSlug": "bcit",
+      "year": "2023/24",
+      "priority": 1,
+      "title": "BCIT Financial Information Act Return 2023/24: Exhibit B",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy24-bcit-fia-report-signed.pdf",
+      "indexUrl": "https://www.bcit.ca/financial-services/financial-reports/",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "acceptedManifest": "research/salaries/bcit/sources.json",
+      "acceptedSourceId": "bcit-sofi-2023-24-employees",
+      "acceptedRows": 1435,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "1123fc01a872cf5a74422297a2aa7b03c02978eb4bcf50752b8cdda0f4729ad3",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "bcit-sofi-2024-25-employees",
+      "employerSlug": "bcit",
+      "year": "2024/25",
+      "priority": 1,
+      "title": "BCIT Financial Information Act Return 2024/25: Exhibit B",
+      "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy25-bcit-fia-report-signed.pdf",
+      "indexUrl": "https://www.bcit.ca/financial-services/financial-reports/",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "acceptedManifest": "research/salaries/bcit/sources.json",
+      "acceptedSourceId": "bcit-sofi-2024-25-employees",
+      "acceptedRows": 1595,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "b61dfadcd52dded07a237e2a1fbe12d09b5c5347db551bd57e957b06541b579c",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2015-16",
+      "employerSlug": "fraser-health",
+      "year": "2015/16",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2015/16: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2016/2016EmployeeRenumeration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2015-04-01",
+      "periodEnd": "2016-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2015-16",
+      "acceptedRows": 6219,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "e6564e341b0dfc576cdf6bcc7a3aa8ff2809d4d3e29a1e4139a71858fc2b1575",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2016-17",
+      "employerSlug": "fraser-health",
+      "year": "2016/17",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2016/17: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2017/20171030_employee_remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2016-17",
+      "acceptedRows": 6606,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "44536e19f38d708ed2cba456269f80a2fbb65cf2b199f6fa835f6ede51ac1ea4",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2017-18",
+      "employerSlug": "fraser-health",
+      "year": "2017/18",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2017/18: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2018/20181031_EE_Remuneration_Schedule.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2017-18",
+      "acceptedRows": 6938,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "0125b00e4c76b8de69d8d1f7835260b4074bc23aae6f938b920a72f445de10d9",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2018-19",
+      "employerSlug": "fraser-health",
+      "year": "2018/19",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2018/19: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2019/2019_11_Summary_of_Remuneration_and_Expenses.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2018-04-01",
+      "periodEnd": "2019-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2018-19",
+      "acceptedRows": 7527,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "b78ab4ed653bf0682e3e96385046558ff4a950967031fbfd38eddc2cee0135e4",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2019-20",
+      "employerSlug": "fraser-health",
+      "year": "2019/20",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2019/20: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2020/Employee-remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2019-04-01",
+      "periodEnd": "2020-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2019-20",
+      "acceptedRows": 8080,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "13621a601da6cc412ede2bb39b95024510a897caa6351c9eb81602a2ec0868b0",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2020-21",
+      "employerSlug": "fraser-health",
+      "year": "2020/21",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2020/21: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2021/Employee-remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2020-21",
+      "acceptedRows": 10072,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "e6265fac988bea5034b257f9e057c95845c314a40b578b928e7124e5e374a9bf",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2021-22",
+      "employerSlug": "fraser-health",
+      "year": "2021/22",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2021/22: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2022/Employee_remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2021-22",
+      "acceptedRows": 10782,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "65897bdbaadd4ec5ebf56303d757432364a3c1f83ba041b850a288dd6bce2af9",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2022-23",
+      "employerSlug": "fraser-health",
+      "year": "2022/23",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2022/23: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2023/Employee-remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2022-23",
+      "acceptedRows": 11289,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "5b8a991c3ff69c6176489418c2d1f5ba29a3b5991d840050344a0a03300940cb",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2023-24",
+      "employerSlug": "fraser-health",
+      "year": "2023/24",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2023/24: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2024/Employee-remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2023-24",
+      "acceptedRows": 14921,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "4aa5874dce2f261f1f0224c296ea30d1534e9984020a69f16bd99292008bb0f2",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "fraser-health-sofi-2024-25",
+      "employerSlug": "fraser-health",
+      "year": "2024/25",
+      "priority": 1,
+      "title": "Fraser Health Statement of Financial Information 2024/25: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2025/Employee_Remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "scope": "employee-remuneration",
+      "threshold": 75000,
+      "status": "imported",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "acceptedManifest": "research/salaries/fraser-health/sources.json",
+      "acceptedSourceId": "fraser-health-sofi-2024-25",
+      "acceptedRows": 17278,
+      "nextAction": "Accepted normalized records are included in the build; consult the source manifest for validation, reporting scope and preserved discrepancies.",
+      "verification": {
+        "downloaded": true,
+        "sha256": "b5d0435cfd67f3f327a2dcb6f2947d637b03aa0c6653ca72054f0ab06c595465",
+        "checkedOn": "2026-10-23",
+        "acceptedBySourceImporter": true,
+        "physicalPageProvenance": true
+      }
+    },
+    {
+      "id": "provincial-health-services-authority-2024-25-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2024/25",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2024/25: Employee remuneration greater than $75,000 (PHSA)",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "provincial-health-services-authority-2023-24-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2023/24",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2023/24: Employee remuneration greater than $75,000 (PHSA)",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "provincial-health-services-authority-2022-23-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2022/23",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2022/23: Employee remuneration greater than $75,000 (PHSA)",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2023-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "provincial-health-services-authority-2021-22-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2021/22",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2021/22: Employee remuneration greater than $75,000 (PHSA)",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2022%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "provincial-health-services-authority-2020-21-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2020/21",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2020/21: Employee remuneration greater than $75,000 (PHSA)",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20remuneration%20greater%20than%20$75%2c000%20%28PHSA%29.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "provincial-health-services-authority-2019-20-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2019/20",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2019/20: Employee remuneration greater than $75,000 (PHSA)",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2020.PDF",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "provincial-health-services-authority-2018-19-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2018/19",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2018/19: Employee remuneration greater than $75,000 (PHSA)",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2019.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "provincial-health-services-authority-2017-18-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2017/18",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2017/18: Employee remuneration greater than $75,000 (PHSA)",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%2018%20PHSA%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "provincial-health-services-authority-2016-17-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2016/17",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2016/17: Employee remuneration greater than $75,000",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "provincial-health-services-authority-2015-16-employee-source",
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2015/16",
+      "priority": 1,
+      "title": "Provincial Health Services Authority 2015/16: Employee remuneration greater than $75,000",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2016%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000%20FINAL.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2024-25-employee-source",
+      "employerSlug": "island-health",
+      "year": "2024/25",
+      "priority": 1,
+      "title": "Island Health 2024/25: Statement of Financial Information - Year Ended March 31, 2025",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/statement-of-financial-information-2024-2025.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2023-24-employee-source",
+      "employerSlug": "island-health",
+      "year": "2023/24",
+      "priority": 1,
+      "title": "Island Health 2023/24: Statement of Financial Information - Year Ended March 31, 2024",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/financial-statement-info-23-24.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2022-23-employee-source",
+      "employerSlug": "island-health",
+      "year": "2022/23",
+      "priority": 1,
+      "title": "Island Health 2022/23: Statement of Financial Information - Year Ended March 31, 2023",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/financial-statement-info-22-23.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2021-22-employee-source",
+      "employerSlug": "island-health",
+      "year": "2021/22",
+      "priority": 1,
+      "title": "Island Health 2021/22: Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/employee-remuneration-2021-2022.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2020-21-employee-source",
+      "employerSlug": "island-health",
+      "year": "2020/21",
+      "priority": 1,
+      "title": "Island Health 2020/21: Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/employee-remuneration-2020-2021.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2019-20-employee-source",
+      "employerSlug": "island-health",
+      "year": "2019/20",
+      "priority": 1,
+      "title": "Island Health 2019/20: Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/employee-remuneration-2019-2020.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2018-19-employee-source",
+      "employerSlug": "island-health",
+      "year": "2018/19",
+      "priority": 1,
+      "title": "Island Health 2018/19: Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2019-10/Employee-remuneration-expenses.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2017-18-employee-source",
+      "employerSlug": "island-health",
+      "year": "2017/18",
+      "priority": 1,
+      "title": "Island Health 2017/18: Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2018-10/employee-remuneration-expenses.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2016-17-employee-source",
+      "employerSlug": "island-health",
+      "year": "2016/17",
+      "priority": 1,
+      "title": "Island Health 2016/17: Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2018-04/employee-remuneration-expenses-2016-2017.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "island-health-2015-16-employee-source",
+      "employerSlug": "island-health",
+      "year": "2015/16",
+      "priority": 1,
+      "title": "Island Health 2015/16: Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2018-04/schedule-remuneration-expenses-employees-2015-2016.pdf",
+      "indexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "scope": "employee-remuneration",
+      "status": "source-found-awaiting-extraction",
+      "verification": {
+        "officialIndexLinkChecked": true,
+        "checkedOn": "2026-10-23",
+        "downloaded": false
+      },
+      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
     }
   ]
 }

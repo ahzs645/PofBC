@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync, readdirSync } from 'node:fs'
 import { gunzipSync } from 'node:zlib'
-import { matchesNameQuery, nameMatch, personKey, readName, surnameShard } from './people.js'
+import { matchesNameQuery, nameMatch, personKey, readName, readNameQuery, surnameShard } from './people.js'
 
 const DIR = new URL('../../public/salaries/people/', import.meta.url)
 
@@ -36,6 +36,29 @@ test('all disclosed given names remain separate and can be searched as token pre
   assert.equal(matchesNameQuery('Smith, John A', 'Smith, John B'), false)
   assert.ok(matchesNameQuery('Mo, BL', 'Mo, B. L.', 'surname-and-initials'))
   assert.equal(matchesNameQuery('Mo, BL', 'Mo, Belaid', 'surname-and-initials'), false)
+})
+
+test('surname-first search accepts compound surnames without guessing identity', () => {
+  const matches = (name, query) => readNameQuery(query)?.queries.some((candidate) => matchesNameQuery(name, candidate)) ?? false
+  for (const query of ['van der meer', 'van der meer j', 'van der meer, j']) {
+    assert.ok(matches('Van der Meer, Jane A', query), query)
+    assert.equal(readNameQuery(query).shard, 'va')
+  }
+  assert.ok(matches('O Brien, Ann Marie', 'O Brien'))
+  assert.ok(matches('O Brien, Ann Marie', 'O Brien Ann M'))
+  assert.equal(readNameQuery('O Brien').shard, 'ob')
+  assert.ok(matches('Tremblay, Émilie', 'Tremblay Emi'))
+  assert.ok(matches('Smith, John A', 'Smith John A'))
+  assert.equal(matches('Smith, John A', 'Smith John B'), false)
+  assert.equal(matches('Smith, John', 'John Smith'), false)
+  // A comma chooses a precise surname boundary, rather than another alternative.
+  assert.equal(matches('Van der Meer, Jane', 'Van, der Meer'), false)
+  assert.ok(matches('O, Jane', 'O, J'))
+  assert.equal(readNameQuery('O, J').shard, 'o_')
+  assert.equal(readNameQuery('O'), null)
+  assert.equal(readNameQuery(''), null)
+  assert.equal(readNameQuery(',Jane'), null)
+  assert.notEqual(personKey('Van der Meer, Jane A'), personKey('Van der Meer, Jane B'))
 })
 
 test('the index’s slices hold every row it counts, each under its surname', () => {

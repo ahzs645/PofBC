@@ -6,7 +6,7 @@ import { gunzipSync } from 'node:zlib'
 import { createHash } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { resolve, dirname, join } from 'node:path'
-import { SALARY_YEARS, SALARY_INDEX, SALARY_SOURCES } from '../src/government/salaryIndex.js'
+import { SALARY_YEARS, SALARY_INDEX, SALARY_SOURCES, SALARY_COVERAGE } from '../src/government/salaryIndex.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const published = join(root, 'public/salaries')
@@ -34,6 +34,7 @@ assert.deepEqual(atlas.sources, employers.sources)
 assert.deepEqual(SALARY_YEARS, atlas.years, 'Generated atlas module has stale years')
 assert.deepEqual(SALARY_INDEX, atlas.bodies, 'Generated atlas module has stale counts or metadata')
 assert.deepEqual(SALARY_SOURCES, atlas.sources, 'Generated atlas module has stale sources')
+assert.deepEqual(SALARY_COVERAGE, atlas.coverage, 'Generated atlas module has stale coverage')
 assert.deepEqual(people.employers.map((entry) => entry[3]), employers.employers.map((entry) => entry.slug))
 
 let totalRows = 0; let namedRows = 0; let officialRows = 0; let duplicateRows = 0
@@ -44,22 +45,24 @@ for (const employer of employers.employers) {
   const file = `${employer.slug}.json.gzip`
   employerFiles.add(file)
   const rows = gzip(join(published, 'employers', file))
+  if (employer.body) assert.deepEqual(atlas.coverage[employer.body], employer.coverage, `Atlas coverage differs for ${employer.body}`)
   totalRows += rows.length
   const byYear = years.map(() => [])
   for (const row of rows) {
-    const [name, position, pay, expenses, year, sourceId] = row
-    assert.equal(row.length, 6, `${employer.slug}: row schema`)
+    const [name, position, pay, expenses, year, sourceId, page] = row
+    assert.equal(row.length, 7, `${employer.slug}: row schema`)
+    assert.ok(page === null || (Number.isInteger(page) && page > 0), `${employer.slug}: physical PDF page`)
     assert.ok(Number.isInteger(year) && year >= 0 && year < years.length, `${employer.slug}: year index`)
     assert.ok(employers.sources[sourceId], `${employer.slug}: missing source ${sourceId}`)
     assert.ok(Number.isFinite(pay) && (expenses === null || Number.isFinite(expenses)), `${employer.slug}: money`)
     byYear[year].push(row)
-    const key = JSON.stringify([employer.slug, years[year], name, position, pay, expenses, sourceId])
+    const key = JSON.stringify([employer.slug, years[year], name, position, pay, expenses, sourceId, page])
     if (name !== null) { namedRows += 1; add(named, key) }
     if (employers.sources[sourceId].scope !== 'compiled-unverified') { officialRows += 1; add(official, key) }
     if (employer.body) {
       const bodyKey = `${years[year]}|${employer.body}`
       if (!bodyRows.has(bodyKey)) bodyRows.set(bodyKey, [])
-      bodyRows.get(bodyKey).push([name, position, pay, expenses, sourceId])
+      bodyRows.get(bodyKey).push([name, position, pay, expenses, sourceId, page])
     }
   }
   for (const [year, rowsForYear] of byYear.entries()) {
@@ -81,10 +84,12 @@ assert.deepEqual(new Set(readdirSync(join(published, 'employers')).filter((file)
 for (const [shard, expected] of Object.entries(people.shards)) {
   const rows = gzip(join(published, 'people', `${shard}.json.gzip`))
   assert.equal(rows.length, expected, `People shard ${shard}: count`)
-  for (const [name, position, pay, expenses, employer, year, sourceId] of rows) {
+  for (const row of rows) {
+    const [name, position, pay, expenses, employer, year, sourceId, page] = row
+    assert.equal(row.length, 8, `People shard ${shard}: row schema`)
     assert.ok(Number.isInteger(employer) && people.employers[employer], 'Unknown employer in person record')
     const slug = people.employers[employer][3]
-    consume(named, JSON.stringify([slug, years[year], name, position, pay, expenses, sourceId]), `People shard ${shard}`)
+    consume(named, JSON.stringify([slug, years[year], name, position, pay, expenses, sourceId, page]), `People shard ${shard}`)
   }
 }
 assert.equal(named.size, 0, 'Named employer rows are absent from the people index')
@@ -124,8 +129,8 @@ for (const collection of json(join(research, 'collections.json')).collections) {
     const hash = createHash('sha256').update(readFileSync(file)).digest('hex')
     assert.equal(hash, source.dataSha256 ?? source.normalizedSha256, `${source.id}: normalized hash`)
     const data = gzip(file)
-    for (const [slug, name, position, pay, expenses] of Array.isArray(data) ? data : data.rows) {
-      consume(official, JSON.stringify([canonical(slug), source.year ?? source.label, name, position, pay, expenses, source.id]), `Official schedule ${source.id}`)
+    for (const [slug, name, position, pay, expenses, page] of Array.isArray(data) ? data : data.rows) {
+      consume(official, JSON.stringify([canonical(slug), source.year ?? source.label, name, position, pay, expenses, source.id, page ?? null]), `Official schedule ${source.id}`)
     }
     sourceFiles += 1
   }
@@ -137,6 +142,16 @@ assert.equal(audit.output.availableEmployerYears, availableEmployerYears)
 assert.equal(audit.officialRows, officialRows)
 assert.equal(audit.legacyRowsRetained + officialRows, totalRows)
 assert.equal(audit.duplicates.reduce((sum, entry) => sum + entry.duplicateRows, 0), duplicateRows)
+for (const entry of audit.sourceCatalog ?? []) {
+  assert.ok(employers.employers.some((employer) => employer.slug === entry.employerSlug), `Source catalog: unknown employer ${entry.employerSlug}`)
+  if (entry.status === 'imported') {
+    assert.ok(employers.sources[entry.acceptedSourceId], `Source catalog: accepted source missing ${entry.acceptedSourceId}`)
+    assert.equal(employers.sources[entry.acceptedSourceId].url, entry.url, 'Source catalog: accepted source URL differs')
+    assert.equal(employers.sources[entry.acceptedSourceId].year, entry.year, 'Source catalog: accepted source year differs')
+    const employer = employers.employers.find((employer) => employer.slug === entry.employerSlug)
+    assert.ok(employer.coverage[years.indexOf(entry.year)]?.sourceIds.includes(entry.acceptedSourceId), 'Source catalog: imported employer/year has no published records from the claimed source')
+  }
+}
 
 if (process.argv.includes('--write-inventory')) {
   const escape = (value) => String(value).replaceAll('|', '\\|').replaceAll('\n', ' ')
@@ -163,6 +178,7 @@ if (process.argv.includes('--write-inventory')) {
     const officialYears = []; const compiledYears = []; const flags = []
     employer.coverage.forEach((entry, at) => {
       if (entry.status === 'excluded') flags.push(`${years[at]} held`)
+      if (entry.status === 'source-found') flags.push(`${years[at]} source found; extraction pending`)
       if (entry.status !== 'available') return
       ;(entry.sourceIds.some((id) => employers.sources[id].scope === 'compiled-unverified') ? compiledYears : officialYears).push(years[at])
       if (entry.scope === 'executive-only') flags.push(`${years[at]} executive only`)
@@ -173,5 +189,20 @@ if (process.argv.includes('--write-inventory')) {
   }
   lines.push('', 'Source leads and extraction status: [source-backlog.json](source-backlog.json). Methodology and prioritized findings: [README.md](README.md).', '')
   writeFileSync(join(research, 'coverage-inventory.md'), lines.join('\n'))
+  const catalog = audit.sourceCatalog ?? []
+  const statuses = Object.fromEntries([...new Set(catalog.map((entry) => entry.status))].sort().map((status) => [status, catalog.filter((entry) => entry.status === status).length]))
+  const sourceLines = ['# Salary source inventory', '',
+    'Generated from accepted source manifests and the source backlog by `npm run build:salaries && npm run check:salaries`. A located document is not an accepted employee schedule. One report may be accepted for one employer and held for another.', '',
+    '| Source status | Employer/source/period entries |', '|---|---:|',
+    ...Object.entries(statuses).map(([status, total]) => `| ${status} | ${total} |`), '',
+    '| Employer | Period | Status | Accepted rows | Source | Next action |', '|---|---|---|---:|---|---|',
+    ...catalog.map((entry) => {
+      const employer = employers.employers.find((item) => item.slug === entry.employerSlug)
+      const title = escape(entry.title).replaceAll('[', '\\[').replaceAll(']', '\\]')
+      const source = entry.url ? `[${title}](${entry.url.replaceAll(' ', '%20').replaceAll('(', '%28').replaceAll(')', '%29')})` : title
+      return `| ${escape(employer?.names.at(-1) ?? entry.employerSlug)} | ${entry.year ?? 'Historical / multiple'} | ${entry.status} | ${entry.status === 'imported' && entry.rows != null ? count(entry.rows) : '—'} | ${source} | ${escape(entry.nextAction)} |`
+    }), '',
+    'Employers and periods without a source entry still require source discovery; see [coverage-inventory.md](coverage-inventory.md). Source metadata never invents employee records or establishes that an employer had no employees.', '']
+  writeFileSync(join(research, 'source-inventory.md'), sourceLines.join('\n'))
 }
 console.log(JSON.stringify({ status: 'passed', rows: totalRows, namedRows, officialRows, retainedCompiledRows: totalRows - officialRows, employers: employers.employers.length, availableEmployerYears, atlasFiles, peopleShards: Object.keys(people.shards).length, sourceFiles, duplicateLookingExtras: duplicateRows }, null, 2))

@@ -24,6 +24,26 @@ export const readName = (name) => {
 export const surnameShard = (name) => readName(name).surname.slice(0, 2).padEnd(2, '_') || '__'
 
 /**
+ * A search stays surname-first. A comma fixes the boundary before given names;
+ * without one, each word boundary may end a compound surname. These are search
+ * alternatives only: they never change a disclosed name or its grouping key.
+ */
+export const readNameQuery = (query) => {
+  const text = String(query ?? '').trim()
+  if (!text) return null
+  const explicit = text.includes(',')
+  const words = text.split(/\s+/)
+  const queries = (explicit ? [text] : words.map((_, at) => `${words.slice(0, at + 1).join(' ')},${words.slice(at + 1).join(' ')}`))
+    .filter((candidate) => {
+      const { surname } = readName(candidate)
+      return surname.length >= 2 || (explicit && surname.length === 1)
+    })
+  // All valid alternatives share the same first two surname letters. A true
+  // one-letter surname still needs a comma to distinguish it from a prefix.
+  return queries.length ? { shard: surnameShard(queries[0]), queries } : null
+}
+
+/**
  * Name agreement, never proof of identity. Full disclosed names produce 'name'; an abbreviated
  * first name produces 'initial'; compatible but incomplete middle names produce 'partial'.
  * Conflicting disclosed middle names/initials do not match. Unseparated names are not guessed.
