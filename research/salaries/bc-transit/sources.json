@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "bc-transit-sofi-2021",
+      "employerSlug": "bc-transit",
+      "employerName": "BC Transit",
+      "sector": "Crown corporations",
+      "year": "2020/21",
+      "slug": "2020-21",
+      "file": "2020-21.json.gzip",
+      "title": "British Columbia Transit Statement of Financial Information, year ended March 31, 2021",
+      "sourceUrl": "https://www.bctransit.com/wp-content/uploads/9/159/2021-07-30-FY2021-Statement-of-Financial-Information-Final-with-FS-Image.pdf",
+      "sourceIndexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+      "sha256": "f9d752695330689e2f2e20d37f13a16be9473c0ccf5c6c77d576765cf4279409",
+      "dataSha256": "23add2414dfffec0720548d30a8de06a021841bd29a74d7391d30dc09283c161",
+      "normalizedSha256": "adb2ef47ff18f885f004a1d93a6319c6e033de6939fd5f2ce54cd307a0407682",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "rowCount": 385,
+      "totalRemuneration": 36243255,
+      "totalExpenses": 320215,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-22",
+      "validation": {
+        "method": "Two OCR renderings, explicit image-reviewed corrections, complete page review and printed-subtotal reconciliation",
+        "fullEmployeePagesReviewed": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "ocrPassesAgreeAfterReviewedCorrections": true,
+        "printedRemunerationSubtotal": 36243253,
+        "printedExpensesSubtotal": 320208,
+        "remunerationDifference": 2,
+        "expensesDifference": 7,
+        "remunerationSubtotalExact": false,
+        "expensesSubtotalExact": false,
+        "wholeDollarRoundingUpperBound": 193.0,
+        "withinWholeDollarRoundingBound": true,
+        "printedNamedPlusBelowEqualsGrandTotals": true,
+        "reviewFile": "review/2020-21-ocr-review.json",
+        "reviewSha256": "7653911d3dda80b40d86db17ce1680cd5083bc5583d6eba70760d74d36186ffd"
+      },
+      "notes": [
+        "Recovered 385 named employees from the official image-only 2020/21 employee schedule, PDF pages 6\u201313. Board payments, below-threshold aggregates and suppliers are excluded.",
+        "Named row sums are $36,243,255 remuneration and $320,215 expenses. Printed named subtotals are $36,243,253 and $320,208. The +$2 and +$7 variances are within whole-dollar rounding bounds; source row values are preserved without balancing adjustments.",
+        "The report states that 2021 remuneration covers 27 pay periods, compared with 26 in 2020, and includes gross pay, taxable benefits and banked-time payouts. Year-to-year changes therefore are not simply changes in salary rates.",
+        "The source publishes names and amounts but no employee positions. Dashes in the expense column are recorded as zero; position is null."
+      ]
+    }
+  ]
+}

@@ -7,10 +7,12 @@
 // and what only the present records says when it was checked; an unknown is reported as unknown.
 
 import { HISTORICAL_CENSUSES, IMPORT_COUNTS } from './researchData.js'
-import { useMemo, useState } from 'react'
+import { Fragment, useMemo, useState } from 'react'
 import { compareYears } from './compare.js'
 import { EVENT_SOURCES, formatEventDate, isAhead, typeOf } from './events.js'
 import { MINISTRY_EPISODES, standsIn } from './episodes.js'
+import { StoryText } from './StoryText.jsx'
+import { storySteps } from './storySteps.js'
 import { governmentIn, PRESENT_YEAR, FIRST_YEAR } from './snapshot.js'
 import { HISTORICAL_BODIES, MINISTERS, SUB_AGENCIES } from './historyData.js'
 
@@ -47,16 +49,25 @@ export const EventsCard = ({ events, day, title = 'Origins and changes' }) => {
                   {event.status !== 'source_reported_past' && <span className="gov-chip" data-type="scheduled">{event.status === 'conflicting' ? 'Conflicting evidence' : event.status === 'planned' ? 'Planned' : 'Scheduled'}</span>}
                 </span>
                 <span className="gov-events__title">{event.title}</span>
-                {event.notes && <span className="gov-events__note">{event.notes}</span>}
-                {(event.evidence ?? [{ sources: event.sources, locator: event.locator, reviewed: event.reviewed }]).map((entry, ordinal) => (
-                  <span className="gov-events__sources" key={ordinal}>
-                    {entry.sources.map((index) => <SourceLink key={index} source={EVENT_SOURCES[index]} />)}
-                    {entry.locator && <span className="gov-muted"> · {String(entry.locator)}</span>}
-                    <span className="gov-muted"> · {entry.reviewed ? `Reviewed ${entry.reviewed}` : 'Review date not supplied'}</span>
-                    {entry.title && entry.title !== event.title && <span className="gov-muted"> · {entry.title}</span>}
-                    {entry.notes && entry.notes !== event.notes && <span className="gov-muted"> · {entry.notes}</span>}
-                  </span>
-                ))}
+                {event.notes && <StoryText text={event.notes} label="Note" className="gov-events__note" />}
+                {(event.evidence ?? [{ sources: event.sources, locator: event.locator, reviewed: event.reviewed }]).map((entry, ordinal) => {
+                  // A source's own note runs on in its line when it is short, and is read in steps
+                  // under it when it is not.
+                  const note = entry.notes && entry.notes !== event.notes ? entry.notes : null
+                  const long = note && storySteps(note).length > 1
+                  return (
+                    <Fragment key={ordinal}>
+                      <span className="gov-events__sources">
+                        {entry.sources.map((index) => <SourceLink key={index} source={EVENT_SOURCES[index]} />)}
+                        {entry.locator && <span className="gov-muted"> · {String(entry.locator)}</span>}
+                        <span className="gov-muted"> · {entry.reviewed ? `Reviewed ${entry.reviewed}` : 'Review date not supplied'}</span>
+                        {entry.title && entry.title !== event.title && <span className="gov-muted"> · {entry.title}</span>}
+                        {note && !long && <span className="gov-muted"> · {note}</span>}
+                      </span>
+                      {long && <StoryText text={note} label="Source note" className="gov-events__note" />}
+                    </Fragment>
+                  )
+                })}
               </span>
             </li>
           )
@@ -88,7 +99,7 @@ export const EvidenceCard = ({ node }) => {
         <span aria-hidden="true">{open ? '−' : '+'}</span>
       </button>
       {caveats.map((text) => <p key={text} className="gov-notice">{text}</p>)}
-      {open && research && <p className="gov-muted gov-evidence__note">Research note{node.checked ? ` (${node.checked})` : ''}: {node.note}</p>}
+      {open && research && <p className="gov-muted gov-evidence__note"><StoryText text={node.note} label="Research note" lead={`Research note${node.checked ? ` (${node.checked})` : ''}: `} /></p>}
       {open && (
         <ul className="gov-evidence__list">
           {claims.map((entry, index) => (

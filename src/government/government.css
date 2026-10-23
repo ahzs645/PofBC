@@ -92,7 +92,18 @@
 @media (min-width: 1024px) {
   .gov { grid-template-rows: auto 1fr; }
   .gov-breadcrumb { grid-column: 1; grid-row: 1; }
-  .gov__panel { grid-column: 1; grid-row: 2; align-self: start; }
+  /* The panel scrolls in its own column, beside the diagram, so the page is the screen and no
+     taller: the breadcrumb (44px), the gap and the page's margins are all that is left over. */
+  .gov__panel {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    max-height: calc(100dvh - 88px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    border-radius: 12px;
+  }
   .gov__stage { grid-column: 2; grid-row: 1 / span 2; }
 }
 
@@ -783,46 +794,92 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 }
 .gov-breadcrumb__year:hover { background: var(--gov-hover); color: var(--gov-ink); }
 
-/* ── The dock ─────────────────────────────────────────────────────────────────────────────────── */
+/* ── The sheet ────────────────────────────────────────────────────────────────────────────────── */
 
-/* A phone's way back to the diagram from the panel under it (GovernmentView): fixed to the foot of
-   the screen, and room left beneath the page so it covers nothing at the end. */
-.gov-dock {
+/* A phone's panel for the chosen body (Sheet.jsx): fixed to the foot of the screen over the lower
+   part of the diagram, half open or pulled up to fill it, and room left beneath the page so the end
+   of it can be scrolled clear. */
+.gov-sheet {
+  --gov-sheet-half: 45dvh;
   position: fixed;
-  left: 16px;
-  right: 16px;
-  bottom: calc(12px + env(safe-area-inset-bottom));
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 30;
   display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 6px;
-  border-radius: 14px;
-  background: var(--gov-surface);
+  flex-direction: column;
+  height: var(--gov-sheet-half);
+  border-radius: 16px 16px 0 0;
+  background: var(--gov-background);
   box-shadow: var(--gov-menu-shadow);
-  animation: gov-enter 160ms ease-out;
+  transition: height 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: gov-sheet-in 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+.gov-sheet[data-full] { height: calc(100dvh - 24px); }
+.gov-sheet[data-dragging] { transition: none; }
 
-.gov-dock__name {
+@keyframes gov-sheet-in { from { transform: translateY(100%); } }
+
+.gov-sheet__bar {
+  flex: none;
+  padding: 0 8px 4px;
+  touch-action: none;
+  cursor: grab;
+}
+.gov-sheet[data-dragging] .gov-sheet__bar { cursor: grabbing; }
+
+/* The grip, and a tall enough target to catch a thumb. */
+.gov-sheet__handle {
+  display: block;
+  width: 100%;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: inherit;
+}
+.gov-sheet__handle::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin: 8px auto 0;
+  border-radius: 3px;
+  background: var(--gov-mid);
+}
+.gov-sheet__handle:focus-visible { outline: none; }
+.gov-sheet__handle:focus-visible::before { background: var(--gov-ink-4); }
+
+.gov-sheet__head { display: flex; align-items: center; gap: 4px; padding-left: 12px; }
+.gov-sheet__title {
   flex: 1;
   min-width: 0;
-  display: grid;
-  padding: 4px 8px;
-  border: 0;
-  border-radius: 8px;
-  background: none;
-  color: var(--gov-ink);
-  font: inherit;
-  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
   font-weight: 600;
-  text-align: center;
-  cursor: pointer;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+.gov-sheet__title[data-shown] { opacity: 1; }
+
+.gov-sheet__body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 4px 16px calc(16px + env(safe-area-inset-bottom));
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
-.gov-dock__name span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.gov-dock__name .gov-muted { font-size: 12px; font-weight: 400; }
-.gov-dock .gov-button--icon { width: 44px; height: 44px; background: var(--gov-hover); }
-.gov[data-docked] { padding-bottom: calc(88px + env(safe-area-inset-bottom)); }
+.gov[data-sheeted] { padding-bottom: calc(45dvh + 16px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .gov-sheet { transition: none; animation: none; }
+}
 .gov__stage, .gov__panel { scroll-margin-top: 16px; }
 
 /* ── The timeline ─────────────────────────────────────────────────────────────────────────────── */
@@ -1155,18 +1212,6 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 /* ── Salaries (Salaries.jsx) ─────────────────────────────────────────────────────────────── */
 
 .gov-salaries__about { margin: 4px 0 12px; font-size: 13px; line-height: 1.45; }
-.gov-salaries__years { display: inline-flex; gap: 2px; margin-bottom: 12px; padding: 2px; border-radius: 10px; background: var(--gov-hover); }
-.gov-salaries__years button {
-  padding: 5px 10px;
-  border: 0;
-  border-radius: 8px;
-  background: none;
-  color: var(--gov-ink-4);
-  font: inherit;
-  font-size: 13px;
-  cursor: pointer;
-}
-.gov-salaries__years button[aria-pressed='true'] { background: var(--gov-surface); color: var(--gov-ink); box-shadow: 0 0 0 1px var(--gov-outline); }
 .gov-salaries__search {
   box-sizing: border-box;
   width: 100%;
@@ -1179,5 +1224,73 @@ details.gov-list__section[open] { padding-bottom: 12px; }
   font: inherit;
   font-size: 16px;
 }
-.gov-salaries__source { margin: 16px 0 0; font-size: 12px; line-height: 1.45; }
+/* The shared picker and summary (src/salaries/parts.jsx) in this view's colours. */
+.gov-salaries { --sp-ink: var(--gov-executive); --sp-mid: var(--gov-mid); --sp-faint: var(--gov-ink-4); --sp-hover: var(--gov-hover); --sp-surface: var(--gov-surface); --sp-text: var(--gov-ink); }
+.gov-salaries .salaries-picker, .gov-salaries .salaries-disclosure { --sp-ink: inherit; --sp-mid: inherit; --sp-faint: inherit; --sp-hover: inherit; --sp-surface: inherit; --sp-text: inherit; }
+.gov-salaries__head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.gov-salaries__head .gov-card__heading { margin: 0; }
+.gov-salaries__open { font-size: 13px; color: var(--gov-ink-3); white-space: nowrap; }
+.gov-salaries .gov-tiles { margin-top: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+/* A dollar total in a third of a phone's sheet: smaller, so it fits its tile. */
+@media (max-width: 480px) { .gov-salaries .gov-tiles dd { font-size: 17px; } }
+.gov-salaries__disclosure { margin-top: 10px; }
+.gov-salaries__disclosure .salaries-disclosure__more { color: var(--gov-ink-4); }
 .gov-salaries .gov-cards { margin-top: 16px; }
+
+/* ── A long note read a step at a time (StoryText.jsx) ─────────────────────────────────────── */
+
+.gov-story { display: block; }
+.gov-story:not(.gov-story--plain) { display: grid; gap: 6px; }
+/* Every step in one cell, so the box is as tall as the longest and does not jump between them. */
+.gov-story__steps { display: grid; }
+.gov-story__step { grid-area: 1 / 1; visibility: hidden; opacity: 0; transition: opacity 160ms ease-out; }
+.gov-story__step[data-shown] { visibility: visible; opacity: 1; }
+
+.gov-story__nav { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--gov-ink-4); }
+.gov-story__arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--gov-outline);
+  border-radius: 8px;
+  background: var(--gov-hover);
+  color: var(--gov-ink-2);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+.gov-story__arrow:hover:not(:disabled) { background: var(--gov-mid); }
+.gov-story__arrow:disabled { opacity: 0.4; cursor: default; }
+.gov-story__dots { display: flex; flex-wrap: wrap; gap: 4px; }
+/* A dot is small to see and large enough to hit. */
+.gov-story__dot {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.gov-story__dot::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: auto;
+  border-radius: 3px;
+  background: var(--gov-mid);
+  transition: width 160ms ease-out, background 160ms ease-out;
+}
+.gov-story__dot[aria-current]::before { width: 14px; background: var(--gov-ink-3); }
+.gov-story__count { font-variant-numeric: tabular-nums; margin-left: auto; }
+
+@media (pointer: coarse) {
+  .gov-story__arrow { width: 32px; height: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gov-story__step, .gov-story__dot::before { transition: none; }
+}

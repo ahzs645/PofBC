@@ -23,8 +23,10 @@ const parentMatrix = (svg, element) => {
  * by the ink itself — a badge's lettering and the cigarette crossing it, say, whose boxes overlap.
  * Returns the id under the pointer.
  *
- * With `spotlight`, hovering a region dims everything in the drawing except the region's `layer`
- * (any selector, any depth) and any ids in `spotlight.keep`.
+ * With `spotlight`, the open region — or, while the pointer is over one, the region under it — dims
+ * everything in the drawing except that region's `layer` (any selector, any depth) and any ids in
+ * `spotlight.keep`. Following the open part as well as the pointer keeps it isolated through the
+ * story and after a click, once the zoom has moved the drawing out from under the pointer.
  */
 export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spotlight } = {}) => {
   const [hover, setHover] = useState(null)
@@ -110,7 +112,7 @@ export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spo
     if (!svg || !spotlight) return
     for (const el of dimmed.current) el.style.opacity = ''
     dimmed.current.clear()
-    const region = regions.find((r) => r.id === hover)
+    const region = regions.find((r) => r.id === (hover ?? active))
     if (!region?.layer) return
     const lit = [...svg.querySelectorAll(region.layer)]
     if (!lit.length) return
@@ -126,7 +128,7 @@ export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spo
       }
     }
     walk(svg)
-  }, [svg, hover, regions, spotlight])
+  }, [svg, hover, active, regions, spotlight])
 
   return hover
 }

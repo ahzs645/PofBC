@@ -9,6 +9,7 @@ import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
 import { CROWN_CATEGORIES, CROWN_CATEGORY_SOURCES } from './crownCategories.js'
 import { Card, CardSection, KindIcon } from './PanelCards.jsx'
 import { Salaries } from './Salaries.jsx'
+import { StoryText } from './StoryText.jsx'
 import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, PEOPLE_ID, periodsOf, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
@@ -597,7 +598,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
             {node.employees ? ` · ${node.employees.toLocaleString('en-CA')} FTE staff, 2025/26` : ''}
           </p>
         )}
-        {node.description && <p className="gov-description">{node.description}</p>}
+        {node.description && <p className="gov-description"><StoryText text={node.description} label="About it" /></p>}
         {node.crownCategory && (
           <p className="gov-notice">
             {CROWN_CATEGORIES[node.crownCategory].label}: {CROWN_CATEGORIES[node.crownCategory].definition.replace(/^./, (c) => c.toLowerCase())}{' '}
@@ -808,58 +809,67 @@ export const OverviewCard = ({ government, onSelect }) => {
 
 const CHANGE_LABELS = { established: 'Established', renamed: 'Renamed', merged: 'Merged', split: 'Split', dissolved: 'Ended' }
 
-export const ChangesCard = ({ year, onSelect, onJump }) => {
+export const ChangesCard = ({ year, onSelect, onJump, limit = 5 }) => {
+  const [expanded, setExpanded] = useState(false)
   const changes = changesIn(year)
   const premiers = PREMIERS.filter((premier) => premier.from.startsWith(String(year)))
   // Dated events of the year — origins, renamings, new logos, appointments, the election's stages —
   // each at the precision its source gives.
   const events = eventsInYear(year)
   const shortName = (name) => name.replace(/^Ministry of (the )?/, '').replace(/^Department of (the )?/, 'Dept. of ')
+  const items = [
+    ...premiers.map((premier) => (
+      <li key={premier.name} className="gov-feed__item">
+        <span className="gov-chip" data-type="premier">Premier</span>
+        <span><strong>{premier.name}</strong> <span className="gov-muted">({premier.party})</span> took office on {formatDate(premier.from)}.</span>
+      </li>
+    )),
+    ...changes.map((change, index) => (
+      <li key={`change-${index}`} className="gov-feed__item">
+        <span className="gov-chip" data-type={change.type}>{CHANGE_LABELS[change.type]}</span>
+        <span className="gov-feed__names">
+          {change.predecessors.length > 0 && (
+            <span className="gov-feed__out">
+              {change.predecessors.map((episode) => (
+                <button key={episode.id} type="button" className="gov-link-button" onClick={() => onJump(episode, 'end')}>{shortName(episode.name)}</button>
+              ))}
+            </span>
+          )}
+          {change.predecessors.length > 0 && change.successors.length > 0 && <span aria-hidden="true"> → </span>}
+          {change.successors.length > 0 && (
+            <span className="gov-feed__in">
+              {change.successors.map((episode) => (
+                <button key={episode.id} type="button" className="gov-link-button" onClick={() => onSelect(episode.id)}>{shortName(episode.name)}</button>
+              ))}
+            </span>
+          )}
+        </span>
+      </li>
+    )),
+    ...events.map((event) => (
+      <li key={event.id} className="gov-feed__item">
+        <span className="gov-chip" data-type={typeOf(event).kind === 'election' && event.status !== 'source_reported_past' ? 'scheduled' : 'event'}>{typeOf(event).label}</span>
+        <span className="gov-feed__names">
+          {event.subject.startsWith('symbol:')
+            ? <span>{event.title}</span>
+            : <button type="button" className="gov-link-button" onClick={() => onSelect(event.subject)}>{event.title}</button>}
+          <span className="gov-muted"> · {formatEventDate(event.date)}</span>
+        </span>
+      </li>
+    ))
+  ]
+  // A busy year — 2026 has a dozen events — would otherwise make this the longest thing on the page.
+  // The view keys this card by year, so a new year starts folded again.
   return (
     <section className="gov-card">
       <h2 className="gov-card__heading">What changed in {year}</h2>
-      {!changes.length && !premiers.length && !events.length && <p className="gov-muted">No change to the ministries, and no new premier.</p>}
-      <ul className="gov-feed">
-        {premiers.map((premier) => (
-          <li key={premier.name} className="gov-feed__item">
-            <span className="gov-chip" data-type="premier">Premier</span>
-            <span><strong>{premier.name}</strong> <span className="gov-muted">({premier.party})</span> took office on {formatDate(premier.from)}.</span>
-          </li>
-        ))}
-        {changes.map((change, index) => (
-          <li key={index} className="gov-feed__item">
-            <span className="gov-chip" data-type={change.type}>{CHANGE_LABELS[change.type]}</span>
-            <span className="gov-feed__names">
-              {change.predecessors.length > 0 && (
-                <span className="gov-feed__out">
-                  {change.predecessors.map((episode) => (
-                    <button key={episode.id} type="button" className="gov-link-button" onClick={() => onJump(episode, 'end')}>{shortName(episode.name)}</button>
-                  ))}
-                </span>
-              )}
-              {change.predecessors.length > 0 && change.successors.length > 0 && <span aria-hidden="true"> → </span>}
-              {change.successors.length > 0 && (
-                <span className="gov-feed__in">
-                  {change.successors.map((episode) => (
-                    <button key={episode.id} type="button" className="gov-link-button" onClick={() => onSelect(episode.id)}>{shortName(episode.name)}</button>
-                  ))}
-                </span>
-              )}
-            </span>
-          </li>
-        ))}
-        {events.map((event) => (
-          <li key={event.id} className="gov-feed__item">
-            <span className="gov-chip" data-type={typeOf(event).kind === 'election' && event.status !== 'source_reported_past' ? 'scheduled' : 'event'}>{typeOf(event).label}</span>
-            <span className="gov-feed__names">
-              {event.subject.startsWith('symbol:')
-                ? <span>{event.title}</span>
-                : <button type="button" className="gov-link-button" onClick={() => onSelect(event.subject)}>{event.title}</button>}
-              <span className="gov-muted"> · {formatEventDate(event.date)}</span>
-            </span>
-          </li>
-        ))}
-      </ul>
+      {!items.length && <p className="gov-muted">No change to the ministries, and no new premier.</p>}
+      <ul className="gov-feed">{expanded ? items : items.slice(0, limit)}</ul>
+      {items.length > limit && (
+        <button type="button" className="gov-show-more" aria-expanded={expanded} onClick={() => setExpanded((value) => !value)}>
+          {expanded ? 'Show fewer' : `Show all ${items.length}`}
+        </button>
+      )}
     </section>
   )
 }
