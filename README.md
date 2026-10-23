@@ -13,6 +13,24 @@ npm run dev
 
 Already cloned without `--recurse-submodules`? `git submodule update --init --recursive`.
 
+## Salary data and coverage
+
+The salary search (`?view=salaries`) combines verified official remuneration schedules with
+explicitly labelled, retained compiled disclosures. Reporting periods, source links, disclosure
+scope and remaining gaps are attached to the records. The original three compiled editions are
+not a complete annual history or a workforce census.
+
+The [salary audit and source recovery report](research/salaries/README.md) explains the corrected
+Hydro-group and public-service years, duplicated records, earlier history, remaining source work,
+and the limits of name matching. The [employer coverage inventory](research/salaries/coverage-inventory.md)
+lists every employer; [the source backlog](research/salaries/source-backlog.json) records official
+documents found for further recovery.
+
+Rebuild all salary views offline with `npm run build:salaries`, then reconcile their rows and
+refresh the inventory with `npm run check:salaries`. The accepted normalized schedules, source
+hashes and immutable compiled baseline are committed under `research/salaries/`; the original
+external CSV directory is no longer required for the default build.
+
 ---
 
 ## Four identities

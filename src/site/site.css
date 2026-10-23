@@ -1525,7 +1525,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__line[data-up] { color: #2e7d4f; }
 .salaries__why { font-size: 11px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
 .salaries__aside { flex: none; display: grid; justify-items: end; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
-.salaries__years { display: flex; gap: 4px; margin-top: 4px; }
+.salaries__years { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
 .salaries__years span { padding: 1px 6px; border-radius: 999px; font-size: 11px; color: var(--ink-faint); border: 1px dashed var(--mid); }
 .salaries__years span[data-seen] { border-style: solid; border-color: var(--salaries-ink); color: var(--ink); }
 .salaries__more, .salaries__back {
@@ -1548,12 +1548,13 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__year-label { margin: 0; font-size: 13px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 .salaries__link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
 .salaries__source { margin: 0; font-size: 12px; line-height: 1.5; color: var(--ink-faint); max-width: 80ch; }
+.salaries__source p { margin: 0.35em 0; }
 .salaries__name[data-missing] { color: var(--ink-faint); font-style: italic; }
 .salaries__search--one { grid-template-columns: 1fr; margin-bottom: 12px; }
 .salaries__sector { margin-top: 8px; }
 .salaries__sector > summary { cursor: pointer; padding: 6px 0; font-size: 15px; font-weight: 600; color: var(--ink); }
 .salaries__sector > summary .salaries__meta { display: inline; margin-left: 6px; font-weight: 400; }
-.salaries__years-switch { display: inline-flex; gap: 2px; padding: 2px; border-radius: 10px; background: var(--hover); justify-self: start; }
+.salaries__years-switch { display: inline-flex; flex-wrap: wrap; max-width: 100%; gap: 2px; padding: 2px; border-radius: 10px; background: var(--hover); justify-self: start; }
 .salaries__years-switch button { padding: 5px 10px; border: 0; border-radius: 8px; background: none; color: var(--ink-faint); font: inherit; font-size: 13px; cursor: pointer; }
 .salaries__years-switch button[aria-pressed='true'] { background: var(--surface); color: var(--ink); box-shadow: 0 0 0 1px var(--mid); }
 .salaries__years-switch button:disabled { opacity: 0.4; cursor: default; }

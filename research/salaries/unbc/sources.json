@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "unbc-sofi-2024-25-employees",
+      "employerSlug": "university-of-northern-bc",
+      "employerName": "University of Northern British Columbia",
+      "sector": "Universities and colleges",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "file": "2024-25.json.gzip",
+      "title": "UNBC Statement of Financial Information 2024/25: employee remuneration",
+      "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/finance/unbc-sofi-2025-final-submission-be-uploaded-website.pdf",
+      "sourceIndexUrl": "https://www.unbc.ca/finance/financial-statements",
+      "sha256": "9f51790f023f8f817af5574e92eccc87dd84b4c9a0bca5a72e66967931c702de",
+      "dataSha256": "449d12cb4431bab5a97098e5cbbdc088a93736c3e138bc8d34f3f0538e64a1b2",
+      "normalizedSha256": "56cc549dede850f774e16941c1819794581ccbbc7a4276e5c2353e5d42a7eef2",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "scopeDescription": "Named employees with remuneration over $75,000; board payments and aggregate rows excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 457,
+      "totalRemuneration": 55345679.32,
+      "totalExpenses": 2588416.01,
+      "totalDisclosedExpenses": 2588416.01,
+      "pages": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "printedPages": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-22",
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "rowCountsByPdfPage": {
+          "31": 67,
+          "32": 68,
+          "33": 68,
+          "34": 68,
+          "35": 68,
+          "36": 68,
+          "37": 50
+        },
+        "allMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "pdftotext layout rows compared cell-for-cell to pdfplumber character-coordinate extraction",
+        "summaryTotalReconciled": false,
+        "remunerationSubtotalExact": false,
+        "expensesSubtotalExact": true,
+        "publishedNamedRemuneration": 55345679.31,
+        "sumOfDisplayedNamedRemuneration": 55345679.32,
+        "remunerationResidual": 0.01,
+        "publishedNamedExpenses": 2588416.01,
+        "expensesResidual": 0,
+        "unparsedMonetaryLines": 0,
+        "expenseDashesRetainedAsMissing": 99,
+        "visualReviewPdfPages": [
+          31,
+          36,
+          37
+        ],
+        "visualReview": "Verified the first employee page, long name/position boundaries, final employee rows, all printed subtotals and the remuneration definition. No row values were changed."
+      },
+      "excludedAggregates": {
+        "belowThresholdRemuneration": 30075406.1,
+        "belowThresholdExpenses": 275664.11,
+        "grandTotalRemuneration": 85421085.41,
+        "grandTotalExpenses": 2864080.12,
+        "boardSchedulePdfPage": 30
+      },
+      "notes": [
+        "The complete named employee schedule on printed pages 29-35 is imported with positions and original cents. Board payments, below-threshold aggregates and grand totals are not employee rows.",
+        "Displayed employee remuneration totals $55,345,679.32, one cent above the printed $55,345,679.31 subtotal. Independent extraction agrees with every displayed monetary cell. The report does not explain the residual; published row values are preserved without adjustment.",
+        "Disclosed expenses sum exactly to the printed named subtotal of $2,588,416.01. The 99 dash expense cells are retained as missing rather than assumed zero.",
+        "The source excludes employer payments for non-taxable benefits, CPP, EI and WCB, and excludes payments under severance agreements; accounting-basis differences also affect comparisons with financial-statement salary and benefit totals."
+      ]
+    }
+  ]
+}
