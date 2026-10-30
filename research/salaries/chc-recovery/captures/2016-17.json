@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "sourceId": "chc-fia-2017",
+  "employer": "Columbia Hydro Constructors Ltd.",
+  "proposedEmployerSlug": "columbia-hydro-constructors",
+  "employerMappingStatus": "not-integrated",
+  "fiscalYear": "2016/17",
+  "periodStart": "2016-04-01",
+  "periodEnd": "2017-03-31",
+  "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/BC-Hydro-FIA-F17.pdf",
+  "sourceTitle": "BC Hydro Financial Information Act Return, year ended March 31, 2017",
+  "captureDate": "2026-10-23",
+  "captureMethod": "Manual transcription of complete employee-table rows from the web reader of the official publisher PDF; not downloaded PDF bytes and not a visual transcription. Trailing Report ID page-join text was separated from the last employee row.",
+  "expectedPdfSha256FromEarlierPackage": "e43fac9216dbf3683d4b79dfb9044f5d98143ea152d6dba17aa32cbbae244cc6",
+  "pdfHashVerifiedThisRun": false,
+  "pdfVisuallyReviewedThisRun": false,
+  "captureType": "named-employee-candidates",
+  "currency": "CAD",
+  "amountPrecision": "whole-dollar",
+  "threshold": 75000,
+  "thresholdRule": "over",
+  "nameDisclosure": "initials-and-surname",
+  "positionDisclosure": "not-published",
+  "pages": [
+    {
+      "pdfPage": 170,
+      "sheet": 1,
+      "sheets": 2,
+      "firstSourceTextLine": 10717,
+      "rowsText": "RB Coleman 87,824 8,994\nRA Danyluk 92,123 6,675\nL Harpe 92,906 4,734\nRM Martiniuk 85,999 4,892\nJD Verney 126,245 5,378\n",
+      "employerHeader": "COLUMBIA HYDRO CONSTRUCTORS LTD.",
+      "periodHeader": "on Behalf of Employees During the Year Ended March 31, 2017",
+      "scheduleHeader": "Schedule of Remuneration Paid to Employees and Expenses Paid to or"
+    },
+    {
+      "pdfPage": 171,
+      "sheet": 2,
+      "sheets": 2,
+      "firstSourceTextLine": null,
+      "rowsText": "",
+      "employerHeader": "COLUMBIA HYDRO CONSTRUCTORS LTD.",
+      "periodHeader": "on Behalf of Employees During the Year Ended March 31, 2017",
+      "scheduleHeader": "Schedule of Remuneration Paid to Employees and Expenses Paid to or"
+    }
+  ],
+  "controls": {
+    "totalRemuneration": 2632718,
+    "totalExpenses": 200209,
+    "belowThresholdRemuneration": 2147620,
+    "belowThresholdExpenses": 169537,
+    "employerCppEi": 147780
+  },
+  "controlsPdfPage": 171,
+  "controlsRawWebText": "L10731: Receiver General for Canada (employer portion of EI and CPP) 147,780\nL10732: Total 2,632,718\nL10733: Consolidated total of other employees with remuneration of $75,000 or less 169,537\nL10734: 200,209\nL10735: 2,147,620\nL10736: REMUNERATION EXPENSES",
+  "controlsInterpretationStatus": "provisional-column-assignment-awaiting-rendered-PDF-check",
+  "scopeNote": "Named payments are not base salaries or a workforce census. Employer CPP/EI and below-threshold aggregates are not individual employee rows."
+}

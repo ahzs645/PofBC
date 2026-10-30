@@ -23,13 +23,18 @@ not a complete annual history or a workforce census.
 The [salary audit and source recovery report](research/salaries/README.md) explains the corrected
 Hydro-group and public-service years, duplicated records, earlier history, remaining source work,
 and the limits of name matching. The [employer coverage inventory](research/salaries/coverage-inventory.md)
-lists every employer; [the source backlog](research/salaries/source-backlog.json) records official
-documents found for further recovery.
+lists every employer; [the source inventory](research/salaries/source-inventory.md) distinguishes
+accepted reports from located sources awaiting extraction or review. The current build has 692,951
+records, including 401,641 with official-source provenance. The
+[23 October follow-up](research/salaries/interface-review-2026-10-23.md) adds Fraser Health history,
+eight BCIT schedules, four BC Transit schedules and salary-interface corrections.
 
 Rebuild all salary views offline with `npm run build:salaries`, then reconcile their rows and
 refresh the inventory with `npm run check:salaries`. The accepted normalized schedules, source
 hashes and immutable compiled baseline are committed under `research/salaries/`; the original
-external CSV directory is no longer required for the default build.
+external CSV directory is no longer required for the default build. Run `npm run preview:salaries`
+for a salary-only development preview without the separate licensed artwork/font build. Use
+`npm run preview:salaries -- --build` to verify its production bundle.
 
 ---
 

@@ -3,6 +3,7 @@
 
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
+import { bodyFamily } from './bodyFamily.js'
 import { EVENTS } from './events.js'
 import { HISTORICAL_BODIES } from './historyData.js'
 import { aroundCentre, CENTRE, SEAL_CLEARANCE } from './layout.js'
@@ -50,6 +51,40 @@ test('a council is drawn from its designation, and is still what its board came 
 test('the boundary change of March 2002 is its own event, not a rewrite of the 2001 destinations', () => {
   assert.equal(HISTORICAL_BODIES.find((body) => body.id === 'central-coast-transitional-health-authority').became, 'island-health')
   assert.ok(EVENTS.some((event) => event.subject === 'vancouver-coastal-health' && event.date.start === '2002-03-18'))
+})
+
+test('Northern Health’s family reaches through its boards to the councils that formed them', () => {
+  const { formedFrom } = bodyFamily('northern-health')
+  const nearest = formedFrom.filter((row) => row.depth === 1)
+  assert.equal(nearest.filter((row) => row.how === 'became').length, 13)
+  assert.deepEqual(nearest.filter((row) => row.how === 'services').map((row) => row.id).sort(),
+    ['cariboo-community-health-services-society', 'north-west-community-health-services-society', 'peace-liard-community-health-services-society'])
+  const board = formedFrom.find((row) => row.id === 'northern-interior-regional-health-board')
+  assert.equal(board.count, 5)
+  const princeGeorge = formedFrom.find((row) => row.id === 'prince-george-health-council')
+  assert.equal(princeGeorge.depth, 2)
+  assert.equal(princeGeorge.parent, 'northern-interior-regional-health-board')
+})
+
+test('a body that went two ways says so in both families', () => {
+  const cariboo = bodyFamily('cariboo-community-health-services-society')
+  assert.deepEqual(cariboo.wentTo.map((row) => [row.id, row.how]), [['interior-health', 'services'], ['northern-health', 'services']])
+  const inNorthern = bodyFamily('northern-health').formedFrom.find((row) => row.id === 'cariboo-community-health-services-society')
+  assert.deepEqual(inNorthern.elsewhere.map((row) => row.id), ['interior-health'])
+  const inInterior = bodyFamily('interior-health').formedFrom.find((row) => row.id === 'cariboo-community-health-services-society')
+  assert.deepEqual(inInterior.elsewhere.map((row) => row.id), ['northern-health'])
+  // Bella Coola's council was amalgamated into Interior Health; its area then moved to Vancouver Coastal.
+  const bella = bodyFamily('bella-coola-and-district-transitional-health-authority').wentTo
+  assert.deepEqual(bella.map((row) => [row.id, row.how]), [['interior-health', 'became'], ['vancouver-coastal-health', 'area']])
+})
+
+test('a move of area is the body’s own, and does not bring the other authority’s family with it', () => {
+  const coastal = bodyFamily('vancouver-coastal-health').formedFrom
+  const interior = coastal.find((row) => row.id === 'interior-health')
+  assert.equal(interior.how, 'area')
+  assert.equal(interior.count, 0)
+  assert.ok(!coastal.some((row) => row.id === 'thompson-health-region'))
+  assert.ok(!bodyFamily('prince-george-health-council').wentTo.some((row) => row.how === 'area'))
 })
 
 test('a health authority answers to the people through its ministry, the Premier and the Assembly', () => {

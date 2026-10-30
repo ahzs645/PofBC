@@ -10,13 +10,14 @@ import { Card, CardSection, KindIcon } from './PanelCards.jsx'
 import * as salaryData from './salaryIndex.js'
 import { PUBLIC_SERVICE, salaryKeyOf } from './salaries.js'
 import { displayName, personKey } from '../salaries/people.js'
-import { DisclosureSummary } from '../salaries/DisclosureEvidence.jsx'
+import { DisclosureSummary, SourceLink } from '../salaries/DisclosureEvidence.jsx'
 import { expenseLabel } from '../salaries/coverage.js'
 import { formatMoney } from '../salaries/money.js'
 import { YearPicker } from '../salaries/parts.jsx'
+import { hasExpenseAmount } from '../salaries/viewState.js'
 import { SiteLink, searchFor, useNavigate } from '../site/navigation.jsx'
 
-const { SALARY_INDEX, SALARY_YEARS, SALARY_SOURCES = {} } = salaryData
+const { SALARY_INDEX, SALARY_YEARS, SALARY_SOURCES = {}, SALARY_COVERAGE = {} } = salaryData
 
 const PAGE = 12
 const fetched = new Map()
@@ -57,6 +58,8 @@ export const Salaries = ({ node, year }) => {
     setShown(PAGE)
   }, [key, year])
 
+  useEffect(() => { setQuery('') }, [key])
+
   useEffect(() => {
     if (!key || !selectedSlug || !totals) return undefined
     let live = true
@@ -79,6 +82,8 @@ export const Salaries = ({ node, year }) => {
 
   if (!key || !years.length) return null
   const label = SALARY_YEARS.find((each) => each.slug === selectedSlug)?.label
+  const selectedIndex = SALARY_YEARS.findIndex((each) => each.slug === selectedSlug)
+  const coverage = SALARY_COVERAGE[key]?.[selectedIndex]
   // A source shown once in the summary is not repeated on every card.
   const oneSource = new Set(state.rows.map((row) => row[4])).size <= 1
   const personLink = (name) => ({ view: 'salaries', q: name, person: personKey(name) })
@@ -88,15 +93,18 @@ export const Salaries = ({ node, year }) => {
     <section className="gov-card gov-salaries" aria-labelledby={`salaries-${node.id}`}>
       <div className="gov-salaries__head">
         <h2 id={`salaries-${node.id}`} className="gov-card__heading">Salaries</h2>
-        <SiteLink className="gov-salaries__open" to={{ view: 'salaries', employer: key }}>All years in Salaries →</SiteLink>
+        <SiteLink className="gov-salaries__open" to={{ view: 'salaries', employer: key, 'employer-year': label }}>All years in Salaries →</SiteLink>
       </div>
       <p className="gov-muted gov-salaries__about">
         {key === PUBLIC_SERVICE
           ? 'The Province discloses its public service as one employer, so every ministry shows the same records.'
           : `Disclosed pay for ${node.shortName ?? node.name}${totals?.agencies?.length ? `, filed as “${totals.agencies.join('”, “')}”` : ''}.`}
       </p>
-      <YearPicker years={SALARY_YEARS.map((each) => each.label)} counts={counts} value={SALARY_YEARS.findIndex((each) => each.slug === selectedSlug)} onChange={(at) => { setSlug(SALARY_YEARS[at].slug); setShown(PAGE) }} />
-      {!totals && <p className="gov-muted gov-salaries__about">No records have been imported for {label}. That does not mean no one was employed or paid.</p>}
+      <YearPicker years={SALARY_YEARS.map((each) => each.label)} counts={counts} coverage={SALARY_COVERAGE[key]} value={selectedIndex} onChange={(at) => { setSlug(SALARY_YEARS[at].slug); setShown(PAGE) }} />
+      {!totals && <>
+        <p className="gov-muted gov-salaries__about">No records have been imported for {label}. That does not mean no one was employed or paid.</p>
+        {coverage && <DisclosureSummary coverage={coverage} sources={SALARY_SOURCES} className="gov-salaries__disclosure" />}
+      </>}
       {totals && (
         <>
           <dl className="gov-tiles">
@@ -105,7 +113,7 @@ export const Salaries = ({ node, year }) => {
             <div><dt>Median</dt><dd>{money(totals.median)}</dd></div>
           </dl>
           <DisclosureSummary
-            coverage={{ status: 'available', ...totals }}
+            coverage={{ ...coverage, status: 'available', ...totals }}
             sources={SALARY_SOURCES}
             className="gov-salaries__disclosure"
             more={<p>Figures are the records’ remuneration or compensation for the reporting period. Record counts are not verified headcounts, and the disclosed total is not necessarily the employer’s full payroll.</p>}
@@ -118,8 +126,8 @@ export const Salaries = ({ node, year }) => {
             value={query}
             onChange={(event) => { setQuery(event.target.value); setShown(PAGE) }}
           />
-          {state.status === 'loading' && <p className="gov-muted">Loading {label}…</p>}
-          {state.status === 'failed' && <p className="gov-muted">The {label} records could not be loaded. <button type="button" onClick={() => setLoadVersion((value) => value + 1)}>Retry</button></p>}
+          {state.status === 'loading' && <p className="gov-muted" role="status">Loading {label}…</p>}
+          {state.status === 'failed' && <p className="gov-muted" role="alert">The {label} records could not be loaded. <button type="button" onClick={() => setLoadVersion((value) => value + 1)}>Retry</button></p>}
           {state.status === 'ready' && (
             <CardSection
               title={query ? 'Matching' : 'Highest paid'}
@@ -130,15 +138,18 @@ export const Salaries = ({ node, year }) => {
                 </button>
               )}
             >
-              {matches.slice(0, shown).map(([name, position, pay, expenses, sourceId], index) => (
+              {matches.length === 0 && <p className="gov-muted">No imported records match “{query.trim()}”. Try a surname or position.</p>}
+              {matches.slice(0, shown).map(([name, position, pay, expenses, sourceId, pdfPage], index) => (
+                <div key={`${name}-${position}-${index}`} className="gov-salaries__record">
                 <Card
-                  key={`${name}-${position}-${index}`}
                   icon={<KindIcon person branch={node.branch ?? 'executive'} />}
                   title={displayName(name, SALARY_SOURCES[sourceId]?.nameDisclosure) ?? 'Name not given'}
-                  lines={[position, expenses ? `${expenseLabel(sourceId, SALARY_SOURCES)} ${money(expenses)}` : null, !oneSource && sourceId ? SALARY_SOURCES[sourceId]?.title : null]}
+                  lines={[position, hasExpenseAmount(expenses) ? `${expenseLabel(sourceId, SALARY_SOURCES)} ${money(expenses)}` : null, !oneSource && sourceId ? SALARY_SOURCES[sourceId]?.title : null]}
                   aside={money(pay)}
                   onClick={name ? () => follow(name) : undefined}
                 />
+                {pdfPage && <p className="salaries__source"><SourceLink sourceId={sourceId} sources={SALARY_SOURCES} pdfPage={pdfPage} /></p>}
+                </div>
               ))}
             </CardSection>
           )}

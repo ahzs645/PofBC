@@ -1,0 +1,323 @@
+{
+  "version": 1,
+  "publisher": "BC Hydro (Columbia Hydro Constructors Ltd. schedule)",
+  "verifiedAt": "2026-10-30",
+  "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+  "rowSchema": [
+    "employer slug",
+    "disclosed name (surname, initials)",
+    "position (not published)",
+    "remuneration",
+    "expenses",
+    "physical PDF page"
+  ],
+  "sources": [
+    {
+      "id": "chc-fia-2013",
+      "year": "2012/13",
+      "file": "2012-13.json.gzip",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "title": "BC Hydro Financial Information Act Return, year ended March 31, 2013: Columbia Hydro Constructors Ltd. employee schedule",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/openness-accountability/financial-information-act-return-march-31-2013.pdf",
+      "indexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "4cb92883d196474fc16b2c19ff9f483deae29bfa415a5d0cc94bc209d6e78572",
+      "dataSha256": "81d16acb9d65a592dd52f721391e462d5830ac056e0fa31fffca6c6b9e4125a4",
+      "periodStart": "2012-04-01",
+      "periodEnd": "2013-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Named employees paid over $75,000, from the Columbia Hydro Constructors schedule in BC Hydro’s return; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "thresholdRule": "over",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 190,
+      "totalRemuneration": 19718574,
+      "totalExpenses": 1089407,
+      "status": "verified",
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "physicalPdfPages": [
+          172,
+          173,
+          174,
+          175
+        ],
+        "summaryPdfPage": 175,
+        "reportedTotal": [
+          40922411,
+          2357191
+        ],
+        "reportedUnderThreshold": [
+          21203838,
+          1267784
+        ],
+        "employerCppEiNotInTotal": 2113093,
+        "residual": [
+          1,
+          0
+        ],
+        "evidence": "research/salaries/chc-recovery/pdf-verification/2012-13.json",
+        "review": "research/salaries/chc-recovery/pdf-verification/review.json"
+      },
+      "notes": [
+        "Columbia Hydro Constructors Ltd., a BC Hydro subsidiary, files its own employee schedule inside BC Hydro’s Financial Information Act return. Its rows are not part of BC Hydro’s.",
+        "Names are surnames and initials as published, not resolved identities; repeated names are kept as separate rows.",
+        "Named rows are reconciled with the printed total less the at-or-below-threshold aggregate; differences of a few dollars are left as published."
+      ]
+    },
+    {
+      "id": "chc-fia-2014",
+      "year": "2013/14",
+      "file": "2013-14.json.gzip",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "title": "BC Hydro Financial Information Act Return, year ended March 31, 2014: Columbia Hydro Constructors Ltd. employee schedule",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/openness-accountability/financial-information-act-return-20140331.pdf",
+      "indexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "c86436fea6058d643d2338b95214d62557eef104653cb9e16b4142b031c15d51",
+      "dataSha256": "bc3026450a1c366b293d0fa964df6b801e21f923b8f56cf8bc309a555f022e4c",
+      "periodStart": "2013-04-01",
+      "periodEnd": "2014-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Named employees paid over $75,000, from the Columbia Hydro Constructors schedule in BC Hydro’s return; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "thresholdRule": "over",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 226,
+      "totalRemuneration": 23588724,
+      "totalExpenses": 1369304,
+      "status": "verified",
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "physicalPdfPages": [
+          163,
+          164,
+          165,
+          166,
+          167
+        ],
+        "summaryPdfPage": 167,
+        "reportedTotal": [
+          50978707,
+          3196062
+        ],
+        "reportedUnderThreshold": [
+          27389986,
+          1826756
+        ],
+        "employerCppEiNotInTotal": 2642054,
+        "residual": [
+          3,
+          -2
+        ],
+        "evidence": "research/salaries/chc-recovery/pdf-verification/2013-14.json",
+        "review": "research/salaries/chc-recovery/pdf-verification/review.json"
+      },
+      "notes": [
+        "Columbia Hydro Constructors Ltd., a BC Hydro subsidiary, files its own employee schedule inside BC Hydro’s Financial Information Act return. Its rows are not part of BC Hydro’s.",
+        "Names are surnames and initials as published, not resolved identities; repeated names are kept as separate rows.",
+        "Named rows are reconciled with the printed total less the at-or-below-threshold aggregate; differences of a few dollars are left as published."
+      ]
+    },
+    {
+      "id": "chc-fia-2015",
+      "year": "2014/15",
+      "file": "2014-15.json.gzip",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "title": "BC Hydro Financial Information Act Return, year ended March 31, 2015: Columbia Hydro Constructors Ltd. employee schedule",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/openness-accountability/financial-information-act-return-march-31-2015.pdf",
+      "indexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "70ed4ba2aeb2632cd953953c34fb80335cbfb2b5c8032be373a0b036b85c0e0b",
+      "dataSha256": "bd276052c6c9707b775402f67194dff55558619e1ca4bd135d0d23adc30c1bfb",
+      "periodStart": "2014-04-01",
+      "periodEnd": "2015-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Named employees paid over $75,000, from the Columbia Hydro Constructors schedule in BC Hydro’s return; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "thresholdRule": "over",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 239,
+      "totalRemuneration": 25533054,
+      "totalExpenses": 1370304,
+      "status": "verified",
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "physicalPdfPages": [
+          167,
+          168,
+          169,
+          170,
+          171
+        ],
+        "summaryPdfPage": 171,
+        "reportedTotal": [
+          54049437,
+          3048133
+        ],
+        "reportedUnderThreshold": [
+          28516380,
+          1677831
+        ],
+        "employerCppEiNotInTotal": 2640383,
+        "residual": [
+          -3,
+          2
+        ],
+        "evidence": "research/salaries/chc-recovery/pdf-verification/2014-15.json",
+        "review": "research/salaries/chc-recovery/pdf-verification/review.json"
+      },
+      "notes": [
+        "Columbia Hydro Constructors Ltd., a BC Hydro subsidiary, files its own employee schedule inside BC Hydro’s Financial Information Act return. Its rows are not part of BC Hydro’s.",
+        "Names are surnames and initials as published, not resolved identities; repeated names are kept as separate rows.",
+        "Named rows are reconciled with the printed total less the at-or-below-threshold aggregate; differences of a few dollars are left as published."
+      ]
+    },
+    {
+      "id": "chc-fia-2016",
+      "year": "2015/16",
+      "file": "2015-16.json.gzip",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "title": "BC Hydro Financial Information Act Return, year ended March 31, 2016: Columbia Hydro Constructors Ltd. employee schedule",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/openness-accountability/financial-information-act-return-march-31-2016.pdf",
+      "indexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "c8ac8b1c538a60d15e32d060f77136627560670800ba331dde65c20c0727bd4f",
+      "dataSha256": "ff23e9bf4ec15e02dc9b57a10926dddd487168b9e62613ccca3668f89a3de66a",
+      "periodStart": "2015-04-01",
+      "periodEnd": "2016-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Named employees paid over $75,000, from the Columbia Hydro Constructors schedule in BC Hydro’s return; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "thresholdRule": "over",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 63,
+      "totalRemuneration": 6651654,
+      "totalExpenses": 394765,
+      "status": "verified",
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "physicalPdfPages": [
+          169,
+          170
+        ],
+        "summaryPdfPage": 170,
+        "reportedTotal": [
+          14851954,
+          833341
+        ],
+        "reportedUnderThreshold": [
+          8200303,
+          438573
+        ],
+        "employerCppEiNotInTotal": 659689,
+        "residual": [
+          3,
+          -3
+        ],
+        "evidence": "research/salaries/chc-recovery/pdf-verification/2015-16.json",
+        "review": "research/salaries/chc-recovery/pdf-verification/review.json"
+      },
+      "notes": [
+        "Columbia Hydro Constructors Ltd., a BC Hydro subsidiary, files its own employee schedule inside BC Hydro’s Financial Information Act return. Its rows are not part of BC Hydro’s.",
+        "Names are surnames and initials as published, not resolved identities; repeated names are kept as separate rows.",
+        "Named rows are reconciled with the printed total less the at-or-below-threshold aggregate; differences of a few dollars are left as published."
+      ]
+    },
+    {
+      "id": "chc-fia-2017",
+      "year": "2016/17",
+      "file": "2016-17.json.gzip",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "title": "BC Hydro Financial Information Act Return, year ended March 31, 2017: Columbia Hydro Constructors Ltd. employee schedule",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/BC-Hydro-FIA-F17.pdf",
+      "indexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "e43fac9216dbf3683d4b79dfb9044f5d98143ea152d6dba17aa32cbbae244cc6",
+      "dataSha256": "b93fdbc7c8a2f2c344faf3aa5a8ebf229423e818ec28cadcd496bf10ce57a295",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Named employees paid over $75,000, from the Columbia Hydro Constructors schedule in BC Hydro’s return; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "thresholdRule": "over",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 5,
+      "totalRemuneration": 485097,
+      "totalExpenses": 30673,
+      "status": "verified",
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "physicalPdfPages": [
+          170,
+          171
+        ],
+        "summaryPdfPage": 171,
+        "reportedTotal": [
+          2632718,
+          200209
+        ],
+        "reportedUnderThreshold": [
+          2147620,
+          169537
+        ],
+        "employerCppEiNotInTotal": 147780,
+        "residual": [
+          -1,
+          1
+        ],
+        "evidence": "research/salaries/chc-recovery/pdf-verification/2016-17.json",
+        "review": "research/salaries/chc-recovery/pdf-verification/review.json"
+      },
+      "notes": [
+        "Columbia Hydro Constructors Ltd., a BC Hydro subsidiary, files its own employee schedule inside BC Hydro’s Financial Information Act return. Its rows are not part of BC Hydro’s.",
+        "Names are surnames and initials as published, not resolved identities; repeated names are kept as separate rows.",
+        "Named rows are reconciled with the printed total less the at-or-below-threshold aggregate; differences of a few dollars are left as published."
+      ]
+    }
+  ],
+  "aggregateOnlyPeriods": [
+    {
+      "year": "2017/18",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/bch-fia-f18.pdf",
+      "pdfPage": 175,
+      "reportedTotal": [
+        208410,
+        12021
+      ],
+      "reportedUnderThreshold": [
+        208410,
+        12021
+      ],
+      "note": "The schedule names no employee over $75,000; all its employee remuneration is in the at-or-below-threshold aggregate. No rows are imported, and this is not a year without employees."
+    }
+  ],
+  "coverageNotes": [
+    "Accepted on the PDF verification recorded in research/salaries/chc-recovery/pdf-verification/; see that folder’s review.json."
+  ]
+}

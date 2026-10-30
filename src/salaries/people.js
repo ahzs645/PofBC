@@ -57,6 +57,60 @@ export const matchesNameQuery = (name, query, nameDisclosure) => {
   return candidate.surname.startsWith(wanted.surname) && wanted.given.every((part, at) => candidate.given[at]?.startsWith(part))
 }
 
+/**
+ * How closely a disclosed name answers a search, best first: 0 the surname typed and every given name
+ * typed in full; 1 a surname or given name that only begins as typed ("smit, jo"); 2 the surname typed
+ * with initials alone that agree with the given names typed ("Smith, J" for "smith john"), which may
+ * or may not be the person meant. null where it does not answer.
+ */
+export const nameQueryTier = (name, query, nameDisclosure) => {
+  const candidate = partsOf(name)
+  const wanted = partsOf(query)
+  if (!wanted.surname || !candidate.surname.startsWith(wanted.surname)) return null
+  const sameSurname = candidate.surname === wanted.surname
+  if (matchesNameQuery(name, query, nameDisclosure)) {
+    const given = nameDisclosure === 'surname-and-initials' ? [candidate.given.join('')] : candidate.given
+    const typed = nameDisclosure === 'surname-and-initials' ? [wanted.given.join('')].filter(Boolean) : wanted.given
+    return sameSurname && typed.every((part, at) => given[at] === part) ? 0 : 1
+  }
+  if (!sameSurname || !wanted.given.length || !candidate.given.length) return null
+  const initials = nameDisclosure === 'surname-and-initials' ? [...candidate.given.join('')] : candidate.given
+  if (!initials.every((part) => part.length === 1)) return null
+  return wanted.given.every((part, at) => !initials[at] || initials[at] === part[0]) ? 2 : null
+}
+
+/**
+ * The ways a typed name can be read, most likely first. With a comma it is "surname, given names" and
+ * nothing else (so "O, J" can name a one-letter surname). Without one, "smith john" is read surname
+ * first, then "john smith" surname last, then surnames of more than one word ("de la cruz maria",
+ * "maria de la cruz"), and last the whole of it as a surname ("O Brien"). A search tries each in
+ * turn. Each is { surname, given, typed }, typed as "surname,given" for the matchers above. These are
+ * search alternatives only: they never change a disclosed name or its grouping key.
+ */
+export const nameReadings = (text) => {
+  const value = String(text ?? '').trim()
+  if (!value) return []
+  const read = (surname, given) => ({ surname: surname.trim(), given: given.trim(), typed: `${surname.trim()},${given.trim()}` })
+  if (value.includes(',')) {
+    const [surname, ...given] = value.split(',')
+    return letters(surname).length >= 1 ? [read(surname, given.join(' '))] : []
+  }
+  const words = value.split(/\s+/)
+  const readings = []
+  for (let size = 1; size < Math.max(2, words.length); size += 1) {
+    readings.push(read(words.slice(0, size).join(' '), words.slice(size).join(' ')))
+    if (words.length > 1) readings.push(read(words.slice(-size).join(' '), words.slice(0, -size).join(' ')))
+  }
+  if (words.length > 1) readings.push(read(value, ''))
+  const seen = new Set()
+  return readings.filter((reading) => {
+    const key = `${letters(reading.surname)}|${reading.given.toLowerCase()}`
+    if (letters(reading.surname).length < 2 || seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
+
 const titleCase = (word) => word.replace(/[A-Za-z][A-Za-z']*/g, (part) => part[0].toUpperCase() + part.slice(1).toLowerCase())
 
 /**
