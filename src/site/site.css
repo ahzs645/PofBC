@@ -1548,8 +1548,10 @@ button.gallery__collecting-status, .gallery__collecting-graph {
    grid of bordered cards, each led by a person's head and shoulders. */
 
 .salaries { --salaries-ink: #2f5f9e; display: grid; gap: 16px; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .salaries { --salaries-ink: #6d97e0; } }
-:root[data-theme='dark'] .salaries { --salaries-ink: #6d97e0; }
+/* The period chooser also opens inside the government view, which has no salaries page around it. */
+.salaries-range { --salaries-ink: #2f5f9e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) :is(.salaries, .salaries-range) { --salaries-ink: #6d97e0; } }
+:root[data-theme='dark'] :is(.salaries, .salaries-range) { --salaries-ink: #6d97e0; }
 .salaries__intro { padding: 20px; border-radius: var(--radius); background: var(--surface); }
 .salaries__intro p { margin: 8px 0 0; max-width: 70ch; font-size: 15px; line-height: 1.5; color: var(--ink-muted); }
 .salaries__heading { margin: 0; font-size: 22px; font-weight: 600; color: var(--ink); }
@@ -1609,19 +1611,43 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   display: grid; gap: 10px; padding: 14px; border: 1px solid var(--outline); border-radius: 16px;
   background: var(--surface); box-shadow: var(--menu-shadow-token);
 }
+.salaries-range__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 12px; }
+.salaries-range__chosen { margin: 0; font-size: 16px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 .salaries-range__hint { margin: 0; font-size: 13px; color: var(--ink-faint); }
-.salaries-range__panel .salaries-picker button[data-edge] { background: color-mix(in srgb, var(--salaries-ink) 18%, transparent); color: var(--ink); }
-.salaries-range__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px 16px; font-size: 14px; }
+.salaries-range__quick { display: flex; flex-wrap: wrap; gap: 6px; }
+.salaries-range__quick button {
+  padding: 6px 12px; border: 1px solid var(--mid); border-radius: 999px; background: var(--surface);
+  color: var(--ink); font: inherit; font-size: 13px; cursor: pointer;
+}
+.salaries-range__quick button[aria-pressed='true'] { border-color: var(--ink); background: var(--ink); color: var(--surface); }
+.salaries-range__group { display: grid; gap: 6px; }
+.salaries-range__group-title { margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
+.salaries-range__group-title span { margin-left: 6px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+/* Each period a chip: its year, and under it a bar as long as its share of the records. Chips in
+   the range are tinted, its two ends filled. */
+.salaries-range__chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 4px; }
+.salaries-range__chip {
+  display: grid; gap: 5px; min-height: 44px; padding: 7px 8px 6px; border: 1px solid var(--mid); border-radius: 8px;
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 13px; text-align: left; cursor: pointer;
+}
+.salaries-range__chip:hover { border-color: var(--salaries-ink); }
+.salaries-range__chip:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--salaries-ink) 25%, transparent); }
+.salaries-range__chip[data-empty] { color: var(--ink-faint); }
+.salaries-range__chip[aria-pressed='true'] { border-color: color-mix(in srgb, var(--salaries-ink) 55%, var(--mid)); background: color-mix(in srgb, var(--salaries-ink) 14%, var(--surface)); }
+.salaries-range__chip[data-edge] { border-color: var(--salaries-ink); background: var(--salaries-ink); color: #fff; }
+.salaries-range__year { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.salaries-range__bar { display: block; height: 3px; border-radius: 2px; background: color-mix(in srgb, var(--mid) 60%, transparent); }
+.salaries-range__bar span { display: block; height: 100%; border-radius: inherit; background: var(--salaries-ink); opacity: 0.7; }
+.salaries-range__chip[data-edge] .salaries-range__bar { background: rgb(255 255 255 / 0.3); }
+.salaries-range__chip[data-edge] .salaries-range__bar span { background: #fff; opacity: 1; }
+.salaries-range__actions { display: flex; justify-content: flex-end; }
 .salaries-range__actions .salaries__more { margin: 0; }
 @media (max-width: 639px) {
-  /* A phone: a sheet at the foot of the screen, and the periods as a grid of labelled chips, since
-     thirty-odd bars across a phone are too narrow to tap. */
-  .salaries-range__panel { position: fixed; left: 16px; right: 16px; top: auto; bottom: 16px; width: auto; max-height: 70vh; overflow-y: auto; }
-  .salaries-range__panel .salaries-picker { grid-auto-flow: row; grid-template-columns: repeat(auto-fill, minmax(68px, 1fr)); gap: 4px; }
-  .salaries-range__panel .salaries-picker button { grid-template-rows: auto; align-content: center; min-height: 44px; border: 1px solid var(--mid); }
-  .salaries-range__panel .salaries-picker .salaries-picker__bar { display: none; }
-  .salaries-range__panel .salaries-picker button:nth-child(n) .salaries-picker__label { visibility: visible; font-size: 13px; }
-  .salaries-range__panel .salaries-picker button[aria-pressed='true'] { border-color: var(--salaries-ink); }
+  /* A phone: a sheet at the foot of the screen, scrolling within, with Done kept in reach. */
+  .salaries-range__panel { position: fixed; left: 12px; right: 12px; top: auto; bottom: 12px; width: auto; max-height: min(78vh, 640px); overflow-y: auto; padding: 14px 12px 0; }
+  .salaries-range__chips { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+  .salaries-range__actions { position: sticky; bottom: 0; margin: 0 -12px; padding: 10px 12px 12px; background: var(--surface); border-top: 1px solid var(--hover); }
+  .salaries-range__actions .salaries__more { width: 100%; padding: 10px; }
 }
 
 /* Pages under a list of cards. */
@@ -1832,7 +1858,9 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 /* The years as bars that pick one. A year without records is a dashed stub. */
 .salaries-picker-wrap { container-type: inline-size; min-width: 0; }
 .salaries-picker-select { display: none; gap: 4px; margin-bottom: 8px; font-size: 13px; color: var(--sp-faint, var(--ink-faint)); }
-.salaries-picker-select select { box-sizing: border-box; width: 100%; min-width: 0; padding: 10px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; font-size: 16px; }
+.salaries-picker-select .salaries-range__trigger { width: 100%; }
+/* Inside a page (an employer's, the government panel) the chooser opens from its trigger's left. */
+@media (min-width: 640px) { .salaries-range--single .salaries-range__panel { left: 0; right: 0; width: auto; } }
 @container (max-width: 640px) { .salaries-picker-select { display: grid; } }
 .salaries-picker { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 2px; align-items: end; }
 .salaries-picker button {
@@ -1900,15 +1928,8 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 /* A disclosure's scope, period, threshold and source in a line; the rest folded. */
 .salaries-disclosure { font-size: 13px; line-height: 1.5; color: var(--sp-faint); }
 .salaries-disclosure__line { margin: 0; }
-.salaries-disclosure__status { width: fit-content; margin: 0 0 4px; padding: 2px 7px; border: 1px solid var(--sp-mid); border-radius: 5px; font-size: 12px; color: var(--sp-text); }
-.salaries-disclosure__status[data-kind='held'] { border-color: #aa6b2e; }
-.salaries-disclosure__status[data-kind='primary'], .salaries-disclosure__status[data-kind='found'] { border-color: var(--sp-ink); }
-.salaries-disclosure__leads { margin-top: 10px; }
 .salaries-disclosure__line strong { color: var(--sp-text); font-weight: 600; }
-.salaries-disclosure a, .salaries-disclosure__more a { color: inherit; }
-.salaries-disclosure__more { font-size: 13px; line-height: 1.5; color: var(--ink-faint); }
-.salaries-disclosure__more > summary { cursor: pointer; width: fit-content; margin-top: 2px; color: var(--ink-faint); }
-.salaries-disclosure__more p { margin: 6px 0 0; max-width: 80ch; }
+.salaries-disclosure a { color: inherit; }
 
 /* Records as rows: rank, who, and pay with its expenses and source under it. */
 .salaries-rows { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 0 24px; margin: 0; padding: 0; list-style: none; }

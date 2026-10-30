@@ -40,12 +40,19 @@ export const YearPicker = ({ years, counts, coverage = [], value, onChange, labe
   const visible = new Set([...relevantYearIndexes(years, coverage, counts), value])
   return (
     <div className="salaries-picker-wrap">
-      <label className="salaries-picker-select">
+      {/* Too narrow for a bar a period (a phone, the government panel): the period chooser instead. */}
+      <div className="salaries-picker-select">
         <span>{label}</span>
-        <select value={value} onChange={(event) => onChange(Number(event.target.value))}>
-          {years.map((year, at) => visible.has(at) ? <option key={year} value={at}>{reportingYearLabel(year)} · {yearAvailability(coverage[at], counts[at] ?? 0)}</option> : null)}
-        </select>
-      </label>
+        <PeriodRange
+          single
+          years={years}
+          counts={counts}
+          value={[value, value]}
+          onChange={(range) => onChange(range[0])}
+          only={[...visible]}
+          describe={(at) => yearAvailability(coverage[at], counts[at] ?? 0)}
+        />
+      </div>
     <div className="salaries-picker" role="group" aria-label={label}>
       {years.map((year, at) => {
         if (!visible.has(at)) return null
@@ -108,12 +115,17 @@ export const rangeLabel = (years, range) => (!range ? 'Every period'
   : range[0] === range[1] ? reportingYearLabel(years[range[0]]) : `${years[range[0]]} – ${years[range[1]]}`)
 
 /**
- * The periods to search, as a button that opens the bar picker the employer pages use: a tap picks a
- * period, a second tap the other end of a range. It closes on Done, Escape or a tap outside.
+ * The periods to search, as a button that opens a panel of them: fiscal years and calendar years
+ * apart, each a chip with a bar as long as its share of the records. A tap picks a period; a second
+ * tap, the other end of a range, previewed as the pointer moves. Quick picks cover the usual cases.
+ * It closes on Done, Escape or a tap outside; on a phone it is a sheet at the foot of the screen.
+ * `single` chooses one period and closes on it; `only` limits the periods offered; `describe` says
+ * what each holds, in place of its record count.
  */
-export const PeriodRange = ({ years, counts, value, onChange }) => {
+export const PeriodRange = ({ years, counts, value, onChange, single = false, only, describe }) => {
   const [open, setOpen] = useState(false)
   const [anchor, setAnchor] = useState(null)
+  const [hover, setHover] = useState(null)
   const root = useRef(null)
   useEffect(() => {
     if (!open) return undefined
@@ -124,39 +136,67 @@ export const PeriodRange = ({ years, counts, value, onChange }) => {
     return () => { document.removeEventListener('pointerdown', away); document.removeEventListener('keydown', key) }
   }, [open])
   const most = Math.max(1, ...counts)
+  const calendar = (label) => /^\d{4}$/.test(label)
+  const offered = only ? new Set(only) : null
+  const indexes = years.map((_, at) => at).filter((at) => !offered || offered.has(at))
+  const groups = [
+    { kind: 'fiscal', title: 'Fiscal years', note: 'April to March', indexes: indexes.filter((at) => !calendar(years[at])) },
+    { kind: 'calendar', title: 'Calendar years', note: 'January to December', indexes: indexes.filter((at) => calendar(years[at])) }
+  ].filter((group) => group.indexes.length)
+  const says = (at) => `${reportingYearLabel(years[at])}: ${describe ? describe(at) : `${(counts[at] ?? 0).toLocaleString('en-CA')} records`}`
+  // While a range is being chosen, the pointer's period is its other end.
+  const shown = !single && anchor !== null && hover !== null ? [Math.min(anchor, hover), Math.max(anchor, hover)] : value
+  const inside = (at) => Boolean(shown) && at >= shown[0] && at <= shown[1]
+  const edge = (at) => Boolean(shown) && (at === shown[0] || at === shown[1])
   const pick = (at) => {
-    if (anchor === null) { setAnchor(at); onChange([at, at]) } else { onChange([Math.min(anchor, at), Math.max(anchor, at)]); setAnchor(null) }
+    if (single) { onChange([at, at]); setOpen(false) } else if (anchor === null) { setAnchor(at); onChange([at, at]) } else { onChange([Math.min(anchor, at), Math.max(anchor, at)]); setAnchor(null) }
   }
-  const inside = (at) => Boolean(value) && at >= value[0] && at <= value[1]
+  const quick = (range) => { onChange(range); setAnchor(null) }
+  const fiscal = groups.find((group) => group.kind === 'fiscal')?.indexes ?? []
+  const lastFive = fiscal.length >= 5 ? [fiscal.at(-5), years.length - 1] : null
   return (
-    <div className="salaries-range" ref={root}>
+    <div className={`salaries-range${single ? ' salaries-range--single' : ''}`} ref={root}>
       <button type="button" className="salaries-range__trigger" aria-haspopup="dialog" aria-expanded={open} onClick={() => { setOpen((now) => !now); setAnchor(null) }}>
         <span className="salaries-range__label">{rangeLabel(years, value)}</span>
         <svg width="10" height="10" viewBox="0 0 18 10" aria-hidden="true" style={{ transform: open ? 'rotate(180deg)' : undefined }}><path d="M1.64 0.74 0.74 1.64 8.55 9.45 9 9.88 9.45 9.45 17.26 1.64 16.36 0.74 9 8.1 1.64 0.74Z" fill="currentColor" /></svg>
       </button>
       {open && (
         <div className="salaries-range__panel" role="dialog" aria-label="Reporting periods">
-          <p className="salaries-range__hint">{anchor === null ? 'Choose a period, or the first of a range.' : `Now the last period of the range from ${years[anchor]}.`}</p>
-          <div className="salaries-picker" role="group" aria-label="Periods">
-            {years.map((year, at) => (
-              <button
-                key={year}
-                type="button"
-                aria-pressed={inside(at)}
-                data-edge={(value && (at === value[0] || at === value[1])) || undefined}
-                data-empty={!counts[at] || undefined}
-                aria-label={`${reportingYearLabel(year)}: ${(counts[at] ?? 0).toLocaleString('en-CA')} records`}
-                title={`${reportingYearLabel(year)}: ${(counts[at] ?? 0).toLocaleString('en-CA')} records`}
-                onClick={() => pick(at)}
-              >
-                <span className="salaries-picker__bar"><span style={{ height: counts[at] ? `${Math.max(8, (counts[at] / most) * 100)}%` : undefined }} /></span>
-                <span className="salaries-picker__label">{shortYear(year)}</span>
-              </button>
-            ))}
+          <div className="salaries-range__head">
+            <p className="salaries-range__chosen" aria-live="polite">{rangeLabel(years, shown)}</p>
+            <p className="salaries-range__hint">{single ? 'Tap a period.' : anchor === null ? 'Tap a period, or the first of a range.' : `Now the last period, from ${years[anchor]}.`}</p>
           </div>
+          {!single && <div className="salaries-range__quick" role="group" aria-label="Quick picks">
+            <button type="button" aria-pressed={!value} onClick={() => quick(null)}>Every period</button>
+            {lastFive && <button type="button" aria-pressed={value?.[0] === lastFive[0] && value?.[1] === lastFive[1]} onClick={() => quick(lastFive)}>Last five years</button>}
+            <button type="button" aria-pressed={value?.[0] === years.length - 1 && value?.[1] === years.length - 1} onClick={() => quick([years.length - 1, years.length - 1])}>Latest</button>
+          </div>}
+          {groups.map((group) => (
+            <section key={group.kind} className="salaries-range__group" aria-label={group.title}>
+              <h3 className="salaries-range__group-title">{group.title} <span>{group.note}</span></h3>
+              <div className="salaries-range__chips" onPointerLeave={() => setHover(null)}>
+                {group.indexes.map((at) => (
+                  <button
+                    key={years[at]}
+                    type="button"
+                    className="salaries-range__chip"
+                    aria-pressed={inside(at)}
+                    data-edge={edge(at) || undefined}
+                    data-empty={!counts[at] || undefined}
+                    aria-label={says(at)}
+                    title={says(at)}
+                    onPointerEnter={() => setHover(at)}
+                    onFocus={() => setHover(at)}
+                    onClick={() => pick(at)}
+                  >
+                    <span className="salaries-range__year">{years[at]}</span>
+                    <span className="salaries-range__bar" aria-hidden="true"><span style={{ width: counts[at] ? `${Math.max(6, (counts[at] / most) * 100)}%` : 0 }} /></span>
+                  </button>
+                ))}
+              </div>
+            </section>
+          ))}
           <div className="salaries-range__actions">
-            <button type="button" className="salaries__link" onClick={() => { onChange(null); setAnchor(null) }}>Every period</button>
-            <button type="button" className="salaries__link" onClick={() => { onChange([years.length - 1, years.length - 1]); setAnchor(null) }}>Latest only</button>
             <button type="button" className="salaries__more" onClick={() => setOpen(false)}>Done</button>
           </div>
         </div>

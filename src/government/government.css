@@ -1242,7 +1242,6 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 /* A dollar total in a third of a phone's sheet: smaller, so it fits its tile. */
 @media (max-width: 480px) { .gov-salaries .gov-tiles dd { font-size: 17px; } }
 .gov-salaries__disclosure { margin-top: 10px; }
-.gov-salaries__disclosure .salaries-disclosure__more { color: var(--gov-ink-4); }
 .gov-salaries .gov-cards { margin-top: 16px; }
 .gov-cards__card--linked { position: relative; }
 .gov-cards__stretch { padding: 0; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
@@ -1250,7 +1249,7 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-cards__stretch:focus-visible { outline: none; }
 .gov-cards__card--linked:has(.gov-cards__stretch:focus-visible) { box-shadow: 0 0 0 2px var(--gov-executive); }
 .gov-cards__link a { position: relative; z-index: 1; color: inherit; }
-.gov-salaries .salaries-picker-select select { background: var(--gov-surface); border-color: var(--gov-outline); color: var(--gov-ink); }
+.gov-salaries .salaries-range__trigger { background: var(--gov-surface); border-color: var(--gov-outline); color: var(--gov-ink); }
 
 /* ── A long note read a step at a time (StoryText.jsx) ─────────────────────────────────────── */
 

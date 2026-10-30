@@ -178,11 +178,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
             </select>
           </label>
         )}
-        <DisclosureSummary
-          coverage={coverage}
-          sources={sources}
-          more={entry.repeated?.length > 0 && <p>Compiled records for {entry.repeated.join(', ')} were excluded after extensive repetition of names and pay from an earlier collection.</p>}
-        />
+        <DisclosureSummary coverage={coverage} sources={sources} />
         {!entry.counts[year] && <p className="salaries__hint">{coverage.status === 'aggregate-only' ? 'The verified report publishes aggregate payroll without named employee records.' : coverage.status === 'excluded' ? 'These records are held for review because source checks have not passed.' : coverage.status === 'source-found' ? 'A report has been located, but its employee records have not yet passed extraction and validation.' : 'No records have been imported for this employer in this year.'} That does not mean it had no staff or made no payments.</p>}
         {rows && entry.counts[year] > 0 && (
           <dl className="salaries__tiles">
