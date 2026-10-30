@@ -1,0 +1,176 @@
+{
+  "title": "PofBC organization inventory reconciliation",
+  "baselineDate": "2026-10-22",
+  "researchDate": "2026-10-30",
+  "organizationCount": 183,
+  "baselineCounts": {
+    "has-vector": 28,
+    "no-artwork": 110,
+    "raster-only": 40,
+    "separate-established-collection": 5
+  },
+  "afterResearchAvailableCounts": {
+    "has-vector": 41,
+    "no-artwork": 110,
+    "raster-only": 27,
+    "separate-established-collection": 5
+  },
+  "categoryDefinitions": {
+    "has-vector": "At least one asset marked isVector=true in baseline, or a verified vector recovered in this pass. Does not imply a complete logo history or every variant is vector.",
+    "raster-only": "One or more collected artwork files but none marked as genuine vector. Includes hybrid/wrapped assets explicitly marked non-vector.",
+    "no-artwork": "No asset files in the acquisition inventory.",
+    "separate-established-collection": "An existingCollection entry is present. Its separate collection is not folded into this vector audit."
+  },
+  "recoveredOrganizationCount": 13,
+  "recoveredFromBaselineCategory": {
+    "raster-only": 13
+  },
+  "recoveredVectorFileCount": 20,
+  "recoveredPrimaryVectorFileCount": 20,
+  "excludedSupplementalVectorFileCount": 1,
+  "recoveredOrganizations": [
+    {
+      "id": "bc-housing",
+      "name": "British Columbia Housing Management Commission",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 2,
+      "filenames": [
+        "bc-housing-research-centre-source-vector.svg",
+        "bc-housing-corporate-component-source-vector.svg"
+      ]
+    },
+    {
+      "id": "columbia-power",
+      "name": "Columbia Power Corporation",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 1,
+      "filenames": [
+        "columbia-power-2024-reversed-source-vector.svg"
+      ]
+    },
+    {
+      "id": "infrastructure-bc",
+      "name": "Infrastructure BC Inc.",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 2,
+      "filenames": [
+        "infrastructure-bc-2026-colour-source-vector.svg",
+        "infrastructure-bc-2026-reversed-source-vector.svg"
+      ]
+    },
+    {
+      "id": "community-living-bc",
+      "name": "Community Living British Columbia",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 2,
+      "filenames": [
+        "community-living-bc-2023-colour-source-vector.svg",
+        "community-living-bc-2014-reversed-source-vector.svg"
+      ]
+    },
+    {
+      "id": "bc-infrastructure-benefits",
+      "name": "BC Infrastructure Benefits Inc.",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 2,
+      "filenames": [
+        "bcib-2022-horizontal-reversed-source-vector.svg",
+        "bcib-2025-tagline-reversed-source-vector.svg"
+      ]
+    },
+    {
+      "id": "bc-family-maintenance-agency",
+      "name": "BC Family Maintenance Agency Ltd.",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 1,
+      "filenames": [
+        "bcfma-2021-source-vector.svg"
+      ]
+    },
+    {
+      "id": "bc-council-for-international-education",
+      "name": "British Columbia Council for International Education",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 1,
+      "filenames": [
+        "bccie-2022-source-vector.svg"
+      ]
+    },
+    {
+      "id": "interior-health",
+      "name": "Interior Health",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 1,
+      "filenames": [
+        "interior-health-blue-horizontal-source-extraction.svg"
+      ]
+    },
+    {
+      "id": "provincial-health-services-authority",
+      "name": "Provincial Health Services Authority",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 2,
+      "filenames": [
+        "phsa-black-source-extraction.svg",
+        "phsa-white-source-extraction.svg"
+      ]
+    },
+    {
+      "id": "first-nations-health-authority",
+      "name": "First Nations Health Authority",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 3,
+      "filenames": [
+        "fnha-logo-colour.svg",
+        "fnha-logo-white.svg",
+        "fnha-icon.svg"
+      ]
+    },
+    {
+      "id": "oil-and-gas-commission",
+      "name": "BC Oil and Gas Commission",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 1,
+      "filenames": [
+        "bc-oil-gas-commission-2014.svg"
+      ]
+    },
+    {
+      "id": "partnerships-bc",
+      "name": "Partnerships British Columbia",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 1,
+      "filenames": [
+        "partnerships-bc-2012.svg"
+      ]
+    },
+    {
+      "id": "bc-transmission-corporation",
+      "name": "British Columbia Transmission Corporation",
+      "baselineCategory": "raster-only",
+      "vectorFileCount": 1,
+      "filenames": [
+        "bc-transmission-2009.svg"
+      ]
+    }
+  ],
+  "individuallySearchedOrganizationCount": 150,
+  "notIndividuallySearchedOrganizationCount": 33,
+  "searchedByBaselineCategory": {
+    "no-artwork": 110,
+    "raster-only": 40
+  },
+  "missingVectorBodyCountAtBaseline": 150,
+  "formerHealthMissingVectorBodies": 112,
+  "formerHealthMissingVectorBodiesIndividuallySearched": 112,
+  "formerHealthMissingVectorBodiesNotIndividuallySearched": 0,
+  "notIndividuallySearchedFormerHealthIds": [],
+  "scope": "This is the complete 183-body acquisition inventory. Delivered recovered-file counts and lists include primary assets only; the supplemental Interior Health CAD extraction is excluded and noted. Separate timeline identity slots are outside these counts. After-research categories describe locally recovered assets, not a deployed update to the live gallery. Each organization is counted once regardless of how many logo files it has.",
+  "sourceFiles": [
+    "repo/research/identity/collection-2026-10-22/inventory.json",
+    "current_crown_findings.json",
+    "historical_crown_findings.json",
+    "health_findings.json"
+  ],
+  "csvFile": "organization-inventory.csv"
+}

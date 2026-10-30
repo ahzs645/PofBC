@@ -2,6 +2,10 @@
 
 **Acquisition date: 22 October 2026**
 
+A vector search of 30 October 2026 added published vector artwork for 13 of these bodies and for
+five one-off programs; see [`../vector-search-2026-10-30/`](../vector-search-2026-10-30/README.md).
+This inventory is unchanged: the gallery reads both records.
+
 This pass collected **110 artwork files** for **68 previously uncollected organizations**. The inventory accounts for the 183 organizations in the supplied collecting list. Five already had gallery collections; those existing artworks were not duplicated in this package.
 
 ## Coverage

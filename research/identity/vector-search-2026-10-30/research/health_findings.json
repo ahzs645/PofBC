@@ -1,0 +1,2673 @@
+{
+  "title": "PofBC health organization vector-logo research",
+  "researchDate": "2026-10-30",
+  "inventorySource": "research-inputs-not-bundled/repo/research/identity/collection-2026-10-22/inventory.json",
+  "summary": {
+    "newlyVerifiedOrganizations": 3,
+    "primarySVGFiles": 6,
+    "supplementalSVGFiles": 1,
+    "formerHealthOrganizationsInInventory": 114,
+    "formerHealthOrganizationsMissingVectors": 112,
+    "formerHealthGapsIndividuallySearched": 112,
+    "formerHealthGapsNotIndividuallySearched": 0,
+    "newHistoricalVectorsVerified": 0,
+    "broadSearchQueries": [
+      "\"Community Health Council\" \"logo\" \"British Columbia\""
+    ],
+    "coverageCaveat": "All 112 former-health vector gaps received individual, bounded public-source artwork searches. Promising sources were inspected when accessible. This does not establish that no logo or vector exists outside the sources searched.",
+    "additionalFormerHealthSearchPasses": [
+      "health_tail_1.json",
+      "health_tail_2.json",
+      "health_tail_3.json"
+    ],
+    "additionalFormerHealthLoggedQueries": 127
+  },
+  "rows": [
+    {
+      "id": "interior-health",
+      "organization": "Interior Health",
+      "status": "verified-vector-recovered",
+      "notes": "Verified original vector logo from page 22 of the official Climate Change and Sustainability Roadmap 2023–2028. The primary SVG contains the 17 original blue logo paths plus one clip definition, with all other page content removed. Supplemental black stacked signage specimen also recovered, but it uses CAD hatching and is less suitable as a clean master.",
+      "searchQueries": [
+        "\"Interior Health\" logo vector",
+        "site:interiorhealth.ca logo filetype:pdf",
+        "\"Interior Health\" \"logo\" \"brand\"",
+        "Interior Health climate change sustainability roadmap 2023 2028"
+      ],
+      "assets": [
+        {
+          "file": "research-inputs-not-bundled/health/vectors/interior-health-black-stacked-source-extraction.svg",
+          "bytes": 77331,
+          "sha256": "42277e3ed5668a071d497d91fea3326e892ecf38a87692954abe38176f4f7ed2",
+          "paths": 401,
+          "images": 0,
+          "texts": 0,
+          "viewBox": "0 0 175 93.5",
+          "bodyId": "interior-health",
+          "method": "isolate original vector PDF title-block logo by removing all non-logo content before cropping; embedded font outlined by MuPDF, no traced geometry",
+          "sourceFile": "research-inputs-not-bundled/health/ih-wayfinding.pdf",
+          "sourcePage": "https://www.interiorhealth.ca/about-ih/business-centre/construction",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/ih-wayfinding-signage-guideline.pdf",
+          "sourcePdfPage": 1,
+          "cropBox": [
+            998.0,
+            34.0,
+            1173.0,
+            127.5
+          ],
+          "originalVectorDrawingsInRegion": 200,
+          "sourceDate": "2024-06-07 guideline; drawing sheet date 04.05.2026",
+          "dateMeaning": "document/sheet dates, not logo adoption date",
+          "caveat": "Published CAD/signage specimen rendered as hatched vector geometry. Stronger stand-alone curve master is still preferred. The enclosing title-block rules and other page contents were removed, not merely clipped.",
+          "sourceSha256": "de48fb1ca2cde73877576592d9f29b0b579e6c6252860c50cfa16ca6befda7a4",
+          "retrievedDate": "2026-10-30",
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "evidenceType": "faithful-vector-extraction-from-primary-source",
+          "priority": "supplemental",
+          "darkBackground": false,
+          "validation": {
+            "file": "research-inputs-not-bundled/health/vectors/interior-health-black-stacked-source-extraction.svg",
+            "xmlElementCounts": {
+              "svg": 1,
+              "defs": 1,
+              "clipPath": 10,
+              "path": 401,
+              "g": 17,
+              "use": 15
+            },
+            "embeddedImages": 0,
+            "externalResourceHrefs": [],
+            "sourceSha256": "de48fb1ca2cde73877576592d9f29b0b579e6c6252860c50cfa16ca6befda7a4",
+            "renderComparison": "Source PDF logo region visually compared to output; CAD hatching retained. Supplemental, not preferred primary asset."
+          }
+        },
+        {
+          "file": "vectors/interior-health/interior-health-blue-horizontal-source-extraction.svg",
+          "bytes": 5358,
+          "sha256": "49df1519c3628d381fe35a7072d4ba73b628b9c94595707abd7bfaeb8b6067c4",
+          "paths": 18,
+          "images": 0,
+          "texts": 0,
+          "viewBox": "47 739.5 134 29.5",
+          "bodyId": "interior-health",
+          "method": "retain only the original 17-path logo group from converted PDF page 22; no tracing, redrawing or recolouring",
+          "sourceFile": "research-inputs-not-bundled/health/ih-climate-roadmap.pdf",
+          "sourcePage": "https://www.interiorhealth.ca/about-ih/climate-change-and-sustainability/climate-change-and-sustainability-roadmap-2023-2028",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/interior-health-climate-change-sustainability-roadmap-2023-2028.pdf",
+          "sourcePdfPage": 22,
+          "cropBox": [
+            47,
+            739.5,
+            181,
+            769
+          ],
+          "originalVectorDrawingsInRegion": 17,
+          "sourceDate": "2023",
+          "dateMeaning": "report period starts in 2023; this is not an adoption date",
+          "caveat": "Faithful extraction from a published report, not a separate standalone master. Source PDF colours rendered to sRGB by MuPDF.",
+          "sourceSha256": "4cd5bf112bcd0e9a895572ae8adac3af199485427feb9d466c2289f974604b63",
+          "retrievedDate": "2026-10-30",
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "evidenceType": "faithful-vector-extraction-from-primary-source",
+          "priority": "primary",
+          "darkBackground": false,
+          "validation": {
+            "file": "vectors/interior-health/interior-health-blue-horizontal-source-extraction.svg",
+            "xmlElementCounts": {
+              "svg": 1,
+              "title": 1,
+              "desc": 1,
+              "defs": 1,
+              "clipPath": 1,
+              "path": 18,
+              "g": 1
+            },
+            "embeddedImages": 0,
+            "externalResourceHrefs": [],
+            "sourceSha256": "4cd5bf112bcd0e9a895572ae8adac3af199485427feb9d466c2289f974604b63",
+            "allSelectedGeometryUnchanged": true,
+            "renderSize": [
+              536,
+              118
+            ],
+            "renderMaximumDifferencePerChannel": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "renderComparison": "Whole PDF page converted by MuPDF and viewed in matching logo region matches the selected-only SVG exactly; page background lies outside the logo region."
+          },
+          "logoGeometryPaths": 17,
+          "clipDefinitionPaths": 1
+        }
+      ]
+    },
+    {
+      "id": "provincial-health-services-authority",
+      "organization": "Provincial Health Services Authority",
+      "status": "verified-vector-recovered",
+      "notes": "Verified black and white parent PHSA groups from the public PHSA/GSC combination marks in the Genome Sciences Centre branding bundle v1.0.4. Extracted only the intact original PHSA group and its definitions; 40 paths plus five polygons. These are faithful extractions, not standalone masters independently supplied by PHSA.",
+      "searchQueries": [
+        "\"PHSA\" logo SVG",
+        "\"Provincial Health Services Authority\" logo vector",
+        "PHSA GSC branding logo"
+      ],
+      "assets": [
+        {
+          "file": "vectors/provincial-health-services-authority/phsa-black-source-extraction.svg",
+          "bytes": 18827,
+          "sha256": "7e7c757fdf1521d5bc2e15b31274dbb6a1bbc1fb18c3ba1835ea096abe662f49",
+          "paths": 40,
+          "images": 0,
+          "texts": 0,
+          "viewBox": "12.0992 17.0589 128.5033 34.9387",
+          "bodyId": "provincial-health-services-authority",
+          "method": "isolated original SVG group; new tight viewBox only",
+          "sourceFile": "research-inputs-not-bundled/health/gsc/gsc-logo/1.0.4/rgb/svg/phsa-gsc-logo-black-combinationmark-vc-rgb.svg",
+          "sourcePage": "https://mk.bcgsc.ca/branding/",
+          "sourceUrl": "https://mk.bcgsc.ca/branding/files/logo/1.0.4/rgb/svg/phsa-gsc-logo-black-combinationmark-vc-rgb.svg",
+          "publishedDate": "2026-07-15",
+          "dateMeaning": "asset bundle version date, not logo adoption date",
+          "sourceSha256": "4d5045e8c1d61a911714434bcc8f950b9b01d33706147657e1b990b6342ebd92",
+          "retrievedDate": "2026-10-30",
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "evidenceType": "faithful-vector-extraction-from-primary-source",
+          "priority": "primary",
+          "darkBackground": false,
+          "validation": {
+            "file": "vectors/provincial-health-services-authority/phsa-black-source-extraction.svg",
+            "xmlElementCounts": {
+              "svg": 1,
+              "title": 1,
+              "desc": 1,
+              "defs": 1,
+              "style": 1,
+              "g": 1,
+              "path": 40,
+              "polygon": 5
+            },
+            "embeddedImages": 0,
+            "externalResourceHrefs": [],
+            "sourceSha256": "4d5045e8c1d61a911714434bcc8f950b9b01d33706147657e1b990b6342ebd92",
+            "allSelectedGeometryUnchanged": true,
+            "renderSize": [
+              515,
+              140
+            ],
+            "renderMaximumDifferencePerChannel": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "renderComparison": "Original full SVG, viewed in identical tight viewBox, matches selected-only extraction exactly."
+          }
+        },
+        {
+          "file": "vectors/provincial-health-services-authority/phsa-white-source-extraction.svg",
+          "bytes": 19501,
+          "sha256": "71e9bc14b3d457ec69d21dfb7fd07fbf8ba4f02bd75534d1b288bf109e3dde02",
+          "paths": 40,
+          "images": 0,
+          "texts": 0,
+          "viewBox": "12.0992 17.0589 128.5033 34.9387",
+          "bodyId": "provincial-health-services-authority",
+          "method": "isolated original SVG group; new tight viewBox only",
+          "sourceFile": "research-inputs-not-bundled/health/gsc/gsc-logo/1.0.4/rgb/svg/phsa-gsc-logo-white-combinationmark-vc-rgb.svg",
+          "sourcePage": "https://mk.bcgsc.ca/branding/",
+          "sourceUrl": "https://mk.bcgsc.ca/branding/files/logo/1.0.4/rgb/svg/phsa-gsc-logo-white-combinationmark-vc-rgb.svg",
+          "publishedDate": "2026-07-15",
+          "dateMeaning": "asset bundle version date, not logo adoption date",
+          "sourceSha256": "912d365cfc59b72a414da2f21a258d098880333ca64a9d6cf5e7a1498083e212",
+          "retrievedDate": "2026-10-30",
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "evidenceType": "faithful-vector-extraction-from-primary-source",
+          "priority": "primary",
+          "darkBackground": true,
+          "validation": {
+            "file": "vectors/provincial-health-services-authority/phsa-white-source-extraction.svg",
+            "xmlElementCounts": {
+              "svg": 1,
+              "title": 1,
+              "desc": 1,
+              "defs": 1,
+              "style": 1,
+              "g": 1,
+              "path": 40,
+              "polygon": 5
+            },
+            "embeddedImages": 0,
+            "externalResourceHrefs": [],
+            "sourceSha256": "912d365cfc59b72a414da2f21a258d098880333ca64a9d6cf5e7a1498083e212",
+            "allSelectedGeometryUnchanged": true,
+            "renderSize": [
+              515,
+              140
+            ],
+            "renderMaximumDifferencePerChannel": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "renderComparison": "Original full SVG, viewed in identical tight viewBox, matches selected-only extraction exactly."
+          }
+        }
+      ]
+    },
+    {
+      "id": "first-nations-health-authority",
+      "organization": "First Nations Health Authority",
+      "status": "verified-vector-recovered",
+      "notes": "Verified three byte-for-byte original SVGs from the official annualreport.fnha.ca microsite: stacked colour wordmark, colour symbol with white lettering, and symbol alone. All lettering is outlined. The white-lettering variant requires a dark preview background.",
+      "searchQueries": [
+        "\"First Nations Health Authority\" logo vector",
+        "site:fnha.ca \"logo\" \"standards\"",
+        "FNHA annual report logo"
+      ],
+      "assets": [
+        {
+          "file": "vectors/first-nations-health-authority/fnha-logo-colour.svg",
+          "bytes": 29666,
+          "sha256": "61f7becb41d30ae82d09e47d80545040c3e231ab8379df6d9f0380a37acf6eef",
+          "paths": 74,
+          "images": 0,
+          "texts": 0,
+          "viewBox": "0 0 235.527 119.95",
+          "bodyId": "first-nations-health-authority",
+          "method": "byte-for-byte original SVG download",
+          "sourceFile": "research-inputs-not-bundled/health/fnha-logo-colour.svg",
+          "sourcePage": "https://annualreport.fnha.ca/",
+          "sourceUrl": "https://annualreport.fnha.ca/wp-content/themes/fnhaimpactreport/images/fnha-logo-vector.svg",
+          "dateMeaning": "retrieved 2026-10-30; no first-use date implied",
+          "sourceSha256": "61f7becb41d30ae82d09e47d80545040c3e231ab8379df6d9f0380a37acf6eef",
+          "retrievedDate": "2026-10-30",
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "evidenceType": "official-website-original",
+          "priority": "primary",
+          "darkBackground": false,
+          "validation": {
+            "file": "vectors/first-nations-health-authority/fnha-logo-colour.svg",
+            "xmlElementCounts": {
+              "svg": 1,
+              "defs": 1,
+              "clipPath": 1,
+              "rect": 5,
+              "g": 1,
+              "path": 74
+            },
+            "embeddedImages": 0,
+            "externalResourceHrefs": [],
+            "sourceSha256": "61f7becb41d30ae82d09e47d80545040c3e231ab8379df6d9f0380a37acf6eef",
+            "sourceBytesIdentical": true
+          }
+        },
+        {
+          "file": "vectors/first-nations-health-authority/fnha-logo-white.svg",
+          "bytes": 32806,
+          "sha256": "14708519a9a6f75bee3970da283c66929ff4086daa7a7878c365c1253653580c",
+          "paths": 74,
+          "images": 0,
+          "texts": 0,
+          "viewBox": "0 0 256.527 130.644",
+          "bodyId": "first-nations-health-authority",
+          "method": "byte-for-byte original SVG download",
+          "sourceFile": "research-inputs-not-bundled/health/fnha-logo-white.svg",
+          "sourcePage": "https://annualreport.fnha.ca/",
+          "sourceUrl": "https://annualreport.fnha.ca/wp-content/themes/fnhaimpactreport/images/fnha-logo-white.svg",
+          "dateMeaning": "retrieved 2026-10-30; no first-use date implied",
+          "sourceSha256": "14708519a9a6f75bee3970da283c66929ff4086daa7a7878c365c1253653580c",
+          "retrievedDate": "2026-10-30",
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "evidenceType": "official-website-original",
+          "priority": "primary",
+          "darkBackground": true,
+          "validation": {
+            "file": "vectors/first-nations-health-authority/fnha-logo-white.svg",
+            "xmlElementCounts": {
+              "svg": 1,
+              "g": 1,
+              "path": 74,
+              "rect": 4
+            },
+            "embeddedImages": 0,
+            "externalResourceHrefs": [],
+            "sourceSha256": "14708519a9a6f75bee3970da283c66929ff4086daa7a7878c365c1253653580c",
+            "sourceBytesIdentical": true
+          }
+        },
+        {
+          "file": "vectors/first-nations-health-authority/fnha-icon.svg",
+          "bytes": 18869,
+          "sha256": "4b1a8013bc37847171e8d55681c6ac3b8cf943c7763bf13ccf36413c9d4c3cb8",
+          "paths": 30,
+          "images": 0,
+          "texts": 0,
+          "viewBox": "0 0 107.791 69.749",
+          "bodyId": "first-nations-health-authority",
+          "method": "byte-for-byte original SVG download",
+          "sourceFile": "research-inputs-not-bundled/health/fnha-icon.svg",
+          "sourcePage": "https://annualreport.fnha.ca/",
+          "sourceUrl": "https://annualreport.fnha.ca/wp-content/uploads/2024/12/fnha-icon.svg",
+          "dateMeaning": "retrieved 2026-10-30; no first-use date implied",
+          "sourceSha256": "4b1a8013bc37847171e8d55681c6ac3b8cf943c7763bf13ccf36413c9d4c3cb8",
+          "retrievedDate": "2026-10-30",
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "evidenceType": "official-website-original",
+          "priority": "primary",
+          "darkBackground": false,
+          "validation": {
+            "file": "vectors/first-nations-health-authority/fnha-icon.svg",
+            "xmlElementCounts": {
+              "svg": 1,
+              "g": 1,
+              "path": 30
+            },
+            "embeddedImages": 0,
+            "externalResourceHrefs": [],
+            "sourceSha256": "4b1a8013bc37847171e8d55681c6ac3b8cf943c7763bf13ccf36413c9d4c3cb8",
+            "sourceBytesIdentical": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "capital-health-region",
+      "searchQueries": [
+        "\"Capital Health Region\" \"logo\""
+      ],
+      "notes": "No new vector verified. Period newspaper sources give additional 1999 printed-logo leads; their logo regions were not validated as vector. Excluded unrelated Capital Health / Alberta branding.",
+      "sources": [
+        {
+          "sourceURL": "https://saltspringarchives.com/driftwood/1999/v41n7Feb17-1999.pdf",
+          "date": "1999-02-17",
+          "status": "archival-print-lead-not-vector-verified"
+        },
+        {
+          "sourceURL": "https://saltspringarchives.com/driftwood/1999/v41n4Jan27-1999.pdf",
+          "date": "1999-01-27",
+          "status": "archival-print-lead-not-vector-verified"
+        }
+      ],
+      "organization": "Capital Health Region",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "fraser-valley-health-region",
+      "searchQueries": [
+        "\"Fraser Valley Health Region\" \"logo\""
+      ],
+      "notes": "No original historic vector found. A directory page using the historical name displays successor Fraser Health branding and was rejected.",
+      "sources": [
+        {
+          "sourceURL": "https://veddercrossingplaza.com/map/fraser-valley-health-region/",
+          "status": "rejected-successor-branding"
+        }
+      ],
+      "organization": "Fraser Valley Health Region",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "northern-interior-regional-health-board",
+      "searchQueries": [
+        "\"Northern Interior\" \"health\" \"logo\"",
+        "\"Northern Interior Regional Health Board\" logo"
+      ],
+      "notes": "No historic vector verified. Results included directories using modern Northern Health branding and official text-only announcements; neither establishes the former board artwork.",
+      "sources": [
+        {
+          "sourceURL": "https://archive.news.gov.bc.ca/releases/archive/pre2001/2000/157.asp",
+          "status": "historical-text-only-source"
+        }
+      ],
+      "organization": "Northern Interior Regional Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "south-fraser-health-region",
+      "searchQueries": [
+        "\"South Fraser Health Region\" logo"
+      ],
+      "notes": "Period dental journal poster reference surfaced, but it is an existing inventory lead and no new vector logo was verified.",
+      "sources": [
+        {
+          "sourceURL": "https://www.cdha.ca/pdfs/career/volume36_4_page19.pdf",
+          "status": "existing-inventory-period-source-not-new-vector"
+        }
+      ],
+      "organization": "South Fraser Health Region",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "vancouver-richmond-health-board",
+      "searchQueries": [
+        "\"Vancouver/Richmond Health Board\" logo"
+      ],
+      "notes": "FOI period artwork source already in the inventory; no new vector verified. Richmond archive reference listings also mention the 1997–98 inaugural health plan, an archival research lead rather than a downloadable logo.",
+      "sources": [
+        {
+          "sourceURL": "https://docs.openinfo.gov.bc.ca/Response_Package_HTH-2017-72113.pdf",
+          "status": "existing-inventory-raster-source"
+        }
+      ],
+      "organization": "Vancouver/Richmond Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "okanagan-similkameen-health-region",
+      "searchQueries": [
+        "\"Okanagan Similkameen Health Region\" logo"
+      ],
+      "notes": "Period thesis MQ49217 source already in inventory surfaced again; no new vector verified.",
+      "sources": [],
+      "organization": "Okanagan Similkameen Health Region",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "simon-fraser-health-region",
+      "searchQueries": [
+        "\"Simon Fraser Health Region\" logo"
+      ],
+      "notes": "Period recruiting advertisement already used in the inventory surfaced again; no new vector verified. This is the Health Region, not the earlier Simon Fraser Health Board.",
+      "sources": [
+        {
+          "sourceURL": "https://ojs.library.dal.ca/DMJ/article/download/4299/3898",
+          "status": "existing-inventory-period-source-not-new-vector"
+        }
+      ],
+      "organization": "Simon Fraser Health Region",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "north-shore-health-region",
+      "searchQueries": [
+        "\"North Shore Health Region\" logo OR \"annual report\""
+      ],
+      "notes": "No original vector found. A secondary teaching page refers to its balanced scorecard, but is not an original artwork source.",
+      "sources": [
+        {
+          "sourceURL": "https://twuonline.github.io/ldrs634/u9.html",
+          "status": "secondary-text-reference-not-artwork"
+        }
+      ],
+      "organization": "North Shore Health Region",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "thompson-health-region",
+      "searchQueries": [
+        "\"Thompson Health Region\" logo OR \"annual report\""
+      ],
+      "notes": "A search-indexed 1998 Merritt council agenda contains a letter introducing the first annual report. The linked PDF returned HTTP 404 when downloaded, so this remains an unverified archival lead; neither logo presence nor vector content is claimed.",
+      "sources": [
+        {
+          "sourceURL": "https://www.merritt.ca/wp-content/uploads/archives/meetings/1998/1998-11-10%20RC%20agenda.pdf",
+          "date": "1998-11-10",
+          "status": "search-indexed-source-current-download-404"
+        }
+      ],
+      "organization": "Thompson Health Region",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "richmond-health-board",
+      "searchQueries": [
+        "\"Richmond Health Board\" logo OR \"annual report\""
+      ],
+      "notes": "No independently attributable original vector found in this targeted search. Do not substitute Vancouver/Richmond Health Board or modern Vancouver Coastal Health artwork.",
+      "sources": [],
+      "organization": "Richmond Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "assets": []
+    },
+    {
+      "id": "abbotsford-matsqui-health-council",
+      "organization": "Abbotsford/Matsqui Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact-name searches returned geographically related South Fraser/Abbotsford material without an attributable council logo. No logo candidate verified. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Abbotsford/Matsqui Health Council\" (logo OR \"annual report\")",
+        "\"Abbotsford/Matsqui Health Council\" logo"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "alberni-valley-health-council",
+      "organization": "Alberni Valley Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact-name logo/report searches yielded no attributable organization-specific artwork or usable report source. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Alberni Valley Health Council\" (logo OR \"annual report\")",
+        "\"Alberni Valley Health Council\" logo annual report"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "armstrong-enderby-and-spallumcheen-health-council",
+      "organization": "Armstrong, Enderby and Spallumcheen Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Results were a related society entry and charity-directory references. No logo source for this exact council was identified. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Armstrong, Enderby and Spallumcheen Health Council\" (logo OR \"annual report\")",
+        "\"Armstrong Enderby Spallumcheen\" \"Health Council\" logo"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0175_1997",
+          "citationRef": "turn69search8",
+          "kind": "identity-record",
+          "notes": "Primary order names Armstrong, Enderby & Spallumcheen Community Health Society; related-name context only, not logo attribution."
+        }
+      ]
+    },
+    {
+      "id": "arrow-lakes-upper-slocan-valley-health-council",
+      "organization": "Arrow Lakes/Upper Slocan Valley Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official 1999 funding release and appointment/amalgamation records surfaced; no council artwork source. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Arrow Lakes/Upper Slocan Valley Health Council\" (logo OR \"annual report\")",
+        "\"Arrow Lakes\" \"Upper Slocan\" \"Health Council\" logo"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1999/214.asp",
+          "citationRef": "turn69search1",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "barriere-and-district-community-health-council",
+      "organization": "Barriere and District Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Only related Barriere health-society/directory material surfaced, not an attributable council logo. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Barriere and District Community Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "boundary-health-council",
+      "organization": "Boundary Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official amalgamation records and successor Interior Health pages surfaced; successor artwork was not substituted. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Boundary Health Council\" logo \"annual report\""
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001",
+          "citationRef": "turn70search2",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "burnaby-health-board",
+      "organization": "Burnaby Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Historical board appears in a secondary charity directory. Burnaby Hospital Foundation and its branding are distinct and excluded. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Burnaby Health Board\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://opengovca.com/charity/106819295RR0001",
+          "citationRef": "turn71search0",
+          "kind": "secondary-directory",
+          "notes": "Secondary directory mentions Burnaby Health Board as historical recipient; Burnaby Hospital Foundation is a distinct entity and its artwork was not substituted."
+        }
+      ]
+    },
+    {
+      "id": "cariboo-regional-health-board",
+      "organization": "Cariboo Regional Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No attributable logo or organization-specific report surfaced for the exact regional-board name; no Cariboo Community Health Services Society or successor mark substituted. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Cariboo Regional Health Board\" logo report"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "castlegar-and-district-health-council",
+      "organization": "Castlegar and District Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official amalgamation records and medical-governance lists surfaced; no artwork lead. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Castlegar and District Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001",
+          "citationRef": "turn72search0",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "chilliwack-kent-harrison-health-council",
+      "organization": "Chilliwack/Kent/Harrison Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No attributable artwork or usable organization-specific report surfaced for the exact Chilliwack/Kent/Harrison council name. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Chilliwack/Kent/Harrison Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "clearwater-and-district-community-health-council",
+      "organization": "Clearwater and District Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No attributable artwork or usable organization-specific report surfaced for the exact Clearwater and District council name. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Clearwater and District Community Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "coast-garibaldi-regional-health-board",
+      "organization": "Coast Garibaldi Regional Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No attributable artwork source surfaced for the regional-board name. Coast Garibaldi Community Health Services Society is separately recorded and not treated as the same logo. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Coast Garibaldi Regional Health Board\" logo report"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "columbia-valley-health-council",
+      "organization": "Columbia Valley Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official amalgamation and labour-agreement lists surfaced; no attributed logo or native-vector publication. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Columbia Valley Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001",
+          "citationRef": "turn74search2",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "cranbrook-health-council",
+      "organization": "Cranbrook Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official appointment records, carrier listings and labour agreements surfaced; no council artwork source. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Cranbrook Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume11",
+          "citationRef": "turn77search4",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "creston-and-district-health-council",
+      "organization": "Creston and District Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official 2000 appointment order and labour records surfaced; no council artwork source. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Creston and District Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0071_2000",
+          "citationRef": "turn77search5",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "delta-health-council",
+      "organization": "Delta Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "1995 legislative index references Delta Health Council management. No attributable artwork located; contemporary Delta health branding excluded. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Delta Health Council\" logo \"annual report\" British Columbia"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://lims.leg.bc.ca/hdms/file/Index/35th4th/r.htm",
+          "citationRef": "turn77search3",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "east-kootenay-regional-health-board",
+      "organization": "East Kootenay Regional Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Search results primarily concerned modern East Kootenay Foundation for Health, hospital district and Interior Health. These are distinct entities, so their artwork was excluded. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"East Kootenay Regional Health Board\" logo report"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "east-thompson-north-shuswap-health-council",
+      "organization": "East Thompson/North Shuswap Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No attributable artwork or usable organization-specific report surfaced for the exact East Thompson/North Shuswap council name. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"East Thompson/North Shuswap Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "elk-valley-and-south-country-health-council",
+      "organization": "Elk Valley and South Country Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official amalgamation records surfaced. WildSafeBC Elk Valley/South Country report was an unrelated result and excluded. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Elk Valley and South Country Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001",
+          "citationRef": "turn83search0",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "golden-health-council",
+      "organization": "Golden Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Results identify the historical council through ministerial appointments, regulations and a business listing. No logo vector was found.",
+      "searchQueries": [
+        "\"Golden Health Council\" logo OR \"annual report\"",
+        "\"Golden Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0075_1999",
+          "status": "historical-text-only",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://www.yellowpages.ca/bus/British-Columbia/Golden/Golden-Health-Council/2293490.html",
+          "status": "directory-no-verified-logo",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "greater-trail-community-health-council",
+      "organization": "Greater Trail Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "HEABC annual reports name a council governor; regulations and a clinic directory also name the council. These are identity references, not recovered logo artwork.",
+      "searchQueries": [
+        "\"Greater Trail Community Health Council\" logo OR \"annual report\"",
+        "\"Greater Trail Community Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.heabc.bc.ca/public/AboutUs/AR1998-1999.pdf",
+          "status": "period-report-text-reference",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://www.heabc.bc.ca/public/AboutUs/AR1999-2000.pdf",
+          "status": "period-report-text-reference",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "hope-and-district-health-council",
+      "organization": "Hope and District Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact historical-name logo/report search produced no attributable original artwork. Modern general health-report results are not this council's identity.",
+      "searchQueries": [
+        "\"Hope and District Health Council\" logo OR report"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": []
+    },
+    {
+      "id": "hudsons-hope-health-council",
+      "organization": "Hudson’s Hope Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact-name logo search produced no attributable original artwork. Unrelated Hudson's Hope community listings were disregarded.",
+      "searchQueries": [
+        "\"Hudson's Hope Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": []
+    },
+    {
+      "id": "kamloops-community-health-council",
+      "organization": "Kamloops Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact-name logo/annual-report search did not identify an original council logo or downloadable vector.",
+      "searchQueries": [
+        "\"Kamloops Community Health Council\" logo OR \"annual report\""
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": []
+    },
+    {
+      "id": "kimberley-community-health-council",
+      "organization": "Kimberley Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Historical regulation and charity-directory entries name the council. No original logo vector was found.",
+      "searchQueries": [
+        "\"Kimberley Community Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v45n03_38-2002",
+          "status": "historical-text-only",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://opengovca.com/charity?postal=V1A",
+          "status": "directory-name-reference",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "lillooet-district-health-council",
+      "organization": "Lillooet District Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "The apparent visual-brand result shows Lillooet Tribal Council and Interior Health on a 2014 FNHA document. These are different organizations; rejected as artwork for Lillooet District Health Council.",
+      "searchQueries": [
+        "\"Lillooet District Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.fnha.ca/Documents/Interior_iRWHP_June2014.pdf",
+          "status": "rejected-different-organizations",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "logan-lake-health-council",
+      "organization": "Logan Lake Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Results show District of Logan Lake municipal branding and a modern Interior Health service presentation. Neither supplies the former Logan Lake Health Council identity.",
+      "searchQueries": [
+        "\"Logan Lake Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://loganlake.civicweb.net/document/4298/",
+          "status": "rejected-municipal-brand",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://loganlake.ca/wp-content/uploads/2024/02/Logan-Lake-Current-Services-Interior-Health-Feb-7-24.pdf",
+          "status": "rejected-successor-service-presentation",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "mackenzie-and-area-health-council",
+      "organization": "MacKenzie and Area Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "District of Mackenzie municipal branding and the current Northern Health hospital listing are different entities. A biography mentions earlier health-board roles but supplies no artwork. No council vector found.",
+      "searchQueries": [
+        "\"MacKenzie and Area Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://districtofmackenzie.ca/business-development/branding/",
+          "status": "rejected-municipal-brand",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://boabc.org/stephanie-killam/",
+          "status": "secondary-text-only-reference",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "mission-and-district-community-health-council",
+      "organization": "Mission and District Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact historical-name logo/report search did not identify an attributable original artwork file or vector source.",
+      "searchQueries": [
+        "\"Mission and District Community Health Council\" logo report"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": []
+    },
+    {
+      "id": "mount-waddington-health-council",
+      "organization": "Mount Waddington Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A September 20, 2000 government news release and appointment orders identify the historical council. No council logo master or native-vector specimen was located.",
+      "searchQueries": [
+        "\"Mount Waddington Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://archive.news.gov.bc.ca/releases/archive/pre2001/2000/250.asp",
+          "status": "historical-text-only",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "nelson-and-area-health-council",
+      "organization": "Nelson and Area Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "1999 appointment orders and a charity listing identify Nelson and Area Health Council; no original vector artwork found.",
+      "searchQueries": [
+        "\"Nelson and Area Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1999resume12",
+          "status": "historical-text-only",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://opengovca.com/charity?postal=V1L",
+          "status": "directory-name-reference",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "new-westminster-health-council",
+      "organization": "New Westminster Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Modern Fraser Health board/community-profile material surfaced, but it is not evidence for the former New Westminster Health Council logo. No original vector found.",
+      "searchQueries": [
+        "\"New Westminster Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.fraserhealth.ca/about-us/leadership/board-of-directors/",
+          "status": "rejected-successor-branding",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "nicola-valley-health-council",
+      "organization": "Nicola Valley Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A February 13, 1996 Merritt agenda contains a Community Health Council presentation and Nicola Valley health-care discussion. Retained as a period documentary lead; no council logo or vector structure was verified.",
+      "searchQueries": [
+        "\"Nicola Valley Health Council\" logo report"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.merritt.ca/wp-content/uploads/archives/meetings/1996/1996-02-13%20RC%20agenda.pdf",
+          "status": "search-indexed-period-document-lead",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "north-coast-community-health-council",
+      "organization": "North Coast Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "New period lead: Canadian Nurse January 2002 recruiting advertisement for North Coast Community Health Council. Cached text inspected; original signed PDF URL returns HTTP 403, so logo presence and vector geometry remain unverified. No logo from modern Northern Health was substituted.",
+      "searchQueries": [
+        "\"North Coast Community Health Council\" logo report",
+        "\"North Coast Community Health Council\" \"2002\" nurse"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/b55f4c47-5f0a-0e51-bcee-b3d61388a55e_file.pdf",
+          "status": "period-ad-candidate-download-403",
+          "notes": "Canadian Nurse January 2002 volume 98 number 1. Search cached text names the council and jobs@ncchc.hnetbc.ca. Source byte structure not verified.",
+          "temporarySigningParametersOmittedFrom": [
+            "sourceURL"
+          ]
+        },
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1999resume06",
+          "status": "historical-text-only",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "north-west-regional-health-board",
+      "organization": "North West Regional Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact historical-name logo query found no attributable original logo. References to the later North West Community Health Services Society or modern Northern Health were not treated as this board's artwork.",
+      "searchQueries": [
+        "\"North West Regional Health Board\" logo British Columbia"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": []
+    },
+    {
+      "id": "peace-arch-community-health-council",
+      "organization": "Peace Arch Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "1995 legislative discussion identifies Peace Arch Community Health Council. Peace Arch Hospital/Foundation listings belong to distinct entities and were not used as logo substitutes. No original council vector found.",
+      "searchQueries": [
+        "\"Peace Arch Community Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://lims.leg.bc.ca/hdms/file/Debates/35th4th/19950516pm-Hansard-v20n2.htm",
+          "status": "historical-text-only",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://opengovca.com/charity/127311348RR0001",
+          "status": "rejected-hospital-foundation-identity",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "powell-river-community-health-council",
+      "organization": "Powell River Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No historical vector verified. Official directory and amalgamation-list results identify the council but provide no attributable artwork. A 2004 women’s-health literature review cites a 2000 council publication, retained as a bibliographic lead only.",
+      "searchQueries": [
+        "\"Powell River Community Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Powell River Community Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-1.json",
+        "research-inputs-not-bundled/health-tail-3-search-4.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/pharmacare-for-bc-residents/what-we-cover/diabetes-supplies/alcohol-wipes-lancets-ketone-strips/decs",
+          "status": "historical-text-only-source",
+          "notes": "Directory retains council name; no historical logo established."
+        },
+        {
+          "sourceURL": "https://cewh.ca/wp-content/uploads/2012/05/2004_Advancing-Health-Girls-Women.pdf",
+          "status": "bibliographic-lead-not-artwork-verified",
+          "notes": "Bibliography cites Specialized Victim Support Services(2000), Working Together For Women’s Health, Violence Against Women: Improving the Health Care Response, Powell River Community Health Council."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "ridge-meadows-community-health-council",
+      "organization": "Ridge Meadows Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No individually attributable original vector surfaced. Current municipal/business-plan and modern health references were not treated as the historical council logo.",
+      "searchQueries": [
+        "\"Ridge Meadows Community Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Ridge Meadows Community Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-2.json",
+        "research-inputs-not-bundled/health-tail-3-search-5.json"
+      ],
+      "sources": [],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "robson-valley-health-council",
+      "organization": "Robson Valley Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No council vector verified. A Robson Valley Region logo standards manual belongs to the geographic/regional-district identity and was excluded. The 1997 Canada Gazette supplies a historical name record, not artwork.",
+      "searchQueries": [
+        "\"Robson Valley Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Robson Valley Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-3.json",
+        "research-inputs-not-bundled/health-tail-3-search-6.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.rdffg.ca/media/file/ds-20-02-rvr-logo-standards",
+          "status": "rejected-unrelated-identity",
+          "notes": "Robson Valley Region brand, not Health Council."
+        },
+        {
+          "sourceURL": "https://www.publications.gc.ca/Pilot/Gazette/part1/vol131no48/gaz13148.pdf",
+          "status": "historical-text-only-source",
+          "notes": "1997 Gazette lists the council; not an artwork source."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "saint-bartholomews-health-council",
+      "organization": "Saint Bartholomew’s Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact formal name and St. Bartholomew spelling variation searched. No attributable BC council vector found; UK St. Bartholomew’s/NHS archival results are unrelated.",
+      "searchQueries": [
+        "\"Saint Bartholomew’s Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Saint Bartholomew’s Health Council\" logo",
+        "\"St. Bartholomew\" \"Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-3.json",
+        "research-inputs-not-bundled/health-tail-3-search-6.json"
+      ],
+      "sources": [],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "sea-to-sky-community-health-council",
+      "organization": "Sea to Sky Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No historical vector verified. Official 1999 appointment records identify the council; modern Sea to Sky Community Services and successor VCH marks are different.",
+      "searchQueries": [
+        "\"Sea to Sky Community Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Sea to Sky Community Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-3.json",
+        "research-inputs-not-bundled/health-tail-3-search-6.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0183_1999",
+          "status": "historical-text-only-source",
+          "notes": "Official 1999 appointment order, not council artwork."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "shuswap-community-health-council",
+      "organization": "Shuswap Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No independently attributable original vector surfaced. Results were broader health-governance references or other Shuswap organizations; no substitute was used.",
+      "searchQueries": [
+        "\"Shuswap Community Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Shuswap Community Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-3.json",
+        "research-inputs-not-bundled/health-tail-3-search-6.json"
+      ],
+      "sources": [],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "simon-fraser-health-board",
+      "organization": "Simon Fraser Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A newly located primary letter dated 10 April 1997, signed by the Board chair, was downloaded from UFV SACDA and visually inspected. Its logo explicitly reads Simon Fraser Health region. The page is a 3400 × 4677 raster with zero native drawings. It supports a dated Region specimen but does not establish a distinct earlier Board mark or native vector. A companion 15 April 1997 Region letter is also raster.",
+      "searchQueries": [
+        "\"Simon Fraser Health Board\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-7.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://sacda.ufv.ca/collections/2022_15_03_02_006",
+          "status": "downloaded-verified-raster-region-specimen",
+          "notes": "Primary 10 April 1997 Board-chair letter; inspected logo says Simon Fraser Health region."
+        },
+        {
+          "sourceURL": "https://sacda.ufv.ca/sites/default/files/2026-09/2022_15_03_02_006.pdf",
+          "status": "verified-raster-different-period-attribution",
+          "notes": "Page 1 full-page 3400 × 4677 raster;0 native drawings."
+        },
+        {
+          "sourceURL": "https://sacda.ufv.ca/collections/2022_15_03_02_005",
+          "status": "verified-raster-region-specimen",
+          "notes": "Companion 15 April 1997 Region letter; also downloaded and structurally raster."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "south-cariboo-community-health-council",
+      "organization": "South Cariboo Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. KMBR Architects identifies the council as client for South Cariboo Health Centre, but a project/client credit is not an artwork source. Current Interior Health links were excluded.",
+      "searchQueries": [
+        "\"South Cariboo Community Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-7.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.kmbr.com/portfolio/south-cariboo-health-centre/",
+          "status": "project-reference-not-logo",
+          "notes": "Architect’s project identifies council client; no original council logo verified."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "south-cariboo-health-council-1996",
+      "organization": "South Cariboo Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No independently attributable original vector verified for this separate 1996 record. Results predominantly name South Cariboo Community Health Council; the two inventory records were not merged or given each other’s assumed artwork.",
+      "searchQueries": [
+        "\"South Cariboo Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-8.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1999resume06",
+          "status": "related-entity-text-only",
+          "notes": "Names Community Health Council; does not resolve separate 1996 identity."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "south-similkameen-community-health-council",
+      "organization": "South Similkameen Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. Current South Similkameen Health Centre and South Okanagan Similkameen healthcare material do not establish this former council’s mark.",
+      "searchQueries": [
+        "\"South Similkameen Community Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-8.json"
+      ],
+      "sources": [],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "sunshine-coast-community-health-council",
+      "organization": "Sunshine Coast Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. Official 2001 funding release provides text context. ThesisMQ59442 includes council minutes and an UpBeat staff newsletter appendix; its indexed text was inspected, but downloading the PDF returned HTTP 403, so logo presence/native artwork remains unverified.",
+      "searchQueries": [
+        "\"Sunshine Coast Community Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-9.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://archive.news.gov.bc.ca/releases/archive/pre2001/2001/077.asp",
+          "status": "historical-text-only-source",
+          "notes": "Official 2001 funding release; no council mark verified."
+        },
+        {
+          "sourceURL": "https://www.collectionscanada.gc.ca/obj/s4/f2/dsk3/ftp04/MQ59442.pdf",
+          "status": "candidate-download-403",
+          "notes": "Indexed 122-page thesis; AppendixI council minutes and AppendixJ UpBeat newsletter. Download 403; logo/vector unverified."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "surrey-central-community-health-council",
+      "organization": "Surrey Central Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No independently attributable original vector surfaced. Broad Surrey healthcare/municipal references do not establish the historical council artwork.",
+      "searchQueries": [
+        "\"Surrey Central Community Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-9.json"
+      ],
+      "sources": [],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "surrey-north-community-health-council",
+      "organization": "Surrey North Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. South Riverdale Community Health Centre branding and Surrey North Community Health Centre references are different organizations/identities and were excluded.",
+      "searchQueries": [
+        "\"Surrey North Community Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-10.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.srchc.ca/legal-and-governance/annual-reports/",
+          "status": "rejected-unrelated-organization",
+          "notes": "South Riverdale Community Health Centre is unrelated."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "the-langleys-health-council",
+      "organization": "The Langleys’ Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact name including punctuation and a plain-spelling alternative searched. A 1995 official order names The Langleys’ Health Council in a statutory list but provides no corporate artwork. No vector verified.",
+      "searchQueries": [
+        "\"The Langleys’ Health Council\" (\"logo\" OR \"annual report\")",
+        "\"The Langleys\" \"Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-10.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1012_1995",
+          "status": "historical-text-only-source",
+          "notes": "Official 1995 order contains historical name; no logo."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "tri-cities-health-council",
+      "organization": "Tri-Cities Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. Current Fraser Health Tri-Cities service presentations are later successor material and were not substituted.",
+      "searchQueries": [
+        "\"Tri-Cities Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-10.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.fraserhealth.ca/about-us/leadership/board-of-directors",
+          "status": "rejected-successor-branding",
+          "notes": "Modern Tri-Cities presentations; successor content excluded."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "upper-island-central-coast-regional-health-board",
+      "organization": "Upper Island/Central Coast Regional Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact full name and shortened Upper Island/Regional Health Board query searched. A 1997 provincial public-health report names the board and chair but supplies no independently attributable logo. No vector verified; the later Community Health Services Society is a separate inventory record.",
+      "searchQueries": [
+        "\"Upper Island/Central Coast Regional Health Board\" (\"logo\" OR \"annual report\")",
+        "\"Upper Island\" \"Regional Health Board\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-11.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/professional-regulation/environmental_public_health_inspection_nov_1997.pdf",
+          "status": "historical-text-only-source",
+          "notes": "1997 report lists board/chair; text reference only."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "west-kootenay-boundary-regional-health-board",
+      "organization": "West Kootenay-Boundary Regional Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. A 1997 Canada Gazette list identifies the former Health Board; current West Kootenay-Boundary Regional Hospital District branding is a different body and was excluded.",
+      "searchQueries": [
+        "\"West Kootenay-Boundary Regional Health Board\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-12.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.publications.gc.ca/Pilot/Gazette/part1/vol131no48/gaz13148.pdf",
+          "status": "historical-text-only-source",
+          "notes": "1997 Gazette lists the Health Board; not artwork."
+        },
+        {
+          "sourceURL": "https://www.rdck.ca/corporate/wkbr-hospital-district/",
+          "status": "rejected-different-entity",
+          "notes": "Current Hospital District is a different legal/visual identity."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "bella-coola-and-district-transitional-health-authority",
+      "organization": "Bella Coola and District Transitional Health Authority",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official 1999 appointment release and later amalgamation records surfaced; no logo source. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Bella Coola and District Transitional Health Authority\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1999/267.asp",
+          "citationRef": "turn70search1",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "campbell-river-and-area-health-council",
+      "organization": "Campbell River and Area Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "1995 designation/employer record includes the exact historical name. Campbell River/Nootka artwork is a later/different name and was not assigned to this row. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Campbell River and Area Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1012_1995",
+          "citationRef": "turn73search6",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "central-cariboo-chilcotin-health-council",
+      "organization": "Central Cariboo Chilcotin Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official appointment records and Ombudsman statistics surfaced; no council logo source. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Central Cariboo Chilcotin Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1999resume06",
+          "citationRef": "turn72search2",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "central-coast-transitional-health-authority",
+      "organization": "Central Coast Transitional Health Authority",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official amalgamation records and labour/medical-governance references surfaced; no authority-specific logo lead. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Central Coast Transitional Health Authority\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001",
+          "citationRef": "turn72search0",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "central-okanagan-community-health-council",
+      "organization": "Central Okanagan Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact council appears in a 1995 order and a thesis referencing 1993–1997 minutes/reports. These yielded institutional history, not attributable vector artwork. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Central Okanagan Community Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1012_1995",
+          "citationRef": "turn73search6",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        },
+        {
+          "url": "https://www.collectionscanada.gc.ca/obj/s4/f2/dsk1/tape4/PQDD_0019/NQ48624.pdf",
+          "citationRef": "turn73search8",
+          "kind": "research-reference",
+          "notes": "Thesis references council minutes/reports from 1993–1997; no logo evidence surfaced and PDF was not structurally inspected."
+        }
+      ]
+    },
+    {
+      "id": "chetwynd-health-council",
+      "organization": "Chetwynd Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Results concern Chetwynd Hospital and later South Peace governance. Neither establishes a logo for the historical Chetwynd Health Council. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Chetwynd Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1998/145.asp",
+          "citationRef": "turn73search2",
+          "kind": "successor-context",
+          "notes": "Government release attributes later Chetwynd services to South Peace council. Not evidence of the predecessor Chetwynd Health Council logo."
+        }
+      ]
+    },
+    {
+      "id": "comox-valley-community-health-council",
+      "organization": "Comox Valley Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official amalgamation, boundary and legislative records surfaced; no council-specific logo source. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Comox Valley Community Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001",
+          "citationRef": "turn74search2",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "cowichan-communities-health-council",
+      "organization": "Cowichan Communities Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "The exact council appears in a 1995 official employer order; no attributable artwork or vector report surfaced. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Cowichan Communities Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1012_1995",
+          "citationRef": "turn73search6",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "district-69-community-health-council",
+      "organization": "District 69 Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No attributable artwork or usable organization-specific report surfaced for District 69 Community Health Council. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"District 69 Community Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": []
+    },
+    {
+      "id": "fort-nelson-liard-health-council",
+      "organization": "Fort Nelson-Liard Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official amalgamation records and a charity listing surfaced. Fort Nelson First Nation and Liard First Nation are distinct and their artwork was excluded. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Fort Nelson-Liard Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001",
+          "citationRef": "turn83search0",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "fort-st-john-and-district-health-council",
+      "organization": "Fort St. John and District Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact-name searches did not identify an original logo asset. Near matches refer to North Peace Health Council / Fort St John Hospital Society and were not substituted for this predecessor.",
+      "searchQueries": [
+        "\"Fort St. John and District Health Council\" logo OR \"annual report\"",
+        "\"Fort St. John and District Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://opengovca.com/charity?postal=V1J",
+          "status": "near-name-records-not-artwork",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "greater-vernon-health-council",
+      "organization": "Greater Vernon Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Two exact-name searches produced no attributable original logo or vector download. Irrelevant modern annual-report results were not treated as evidence.",
+      "searchQueries": [
+        "\"Greater Vernon Health Council\" logo OR \"annual report\"",
+        "\"Greater Vernon Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": []
+    },
+    {
+      "id": "houston-health-council",
+      "organization": "Houston Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A 1995 provincial order names Houston Health Council, but no original logo source was found. Modern Houston Health Centre references were not substituted.",
+      "searchQueries": [
+        "\"Houston Health Council\" British Columbia logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1012_1995",
+          "status": "historical-text-only",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "kitimat-and-area-health-council",
+      "organization": "Kitimat and Area Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "The 1999 legislative debate documents the council and its appointment process, but supplies no original logo artwork. No vector verified.",
+      "searchQueries": [
+        "\"Kitimat and Area Health Council\" logo report"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://lims.leg.bc.ca/hdms/file/Debates/36th3rd/19990705pm-Hansard-v16n16.htm",
+          "status": "historical-text-only",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "lakes-district-health-council",
+      "organization": "Lakes District Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A 1995 provincial order lists Lakes District Health Council. Search results also include the modern Lakes District Hospital and Health Centre, which does not establish the former council's logo. No vector found.",
+      "searchQueries": [
+        "\"Lakes District Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1012_1995",
+          "status": "historical-text-only",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/pharmacare-for-bc-residents/what-we-cover/diabetes-supplies/alcohol-wipes-lancets-ketone-strips/decs",
+          "status": "modern-facility-list-not-council-artwork",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "nanaimo-and-area-community-health-council",
+      "organization": "Nanaimo and Area Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact historical-name logo/report query did not identify an original artwork or vector file. No modern Island Health identity was substituted.",
+      "searchQueries": [
+        "\"Nanaimo and Area Community Health Council\" logo OR report"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": []
+    },
+    {
+      "id": "nisgaa-community-health-council",
+      "organization": "Nisga’a Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "The 1999 ministerial order deleting the council from the regulation surfaced. It supplies legal text, not the council's artwork. No vector found.",
+      "searchQueries": [
+        "\"Nisga'a Community Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0366_1999",
+          "status": "historical-text-only",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "nootka-community-health-council",
+      "organization": "Nootka Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Results reference Nootka Area Community Health Council and later Campbell River/Nootka Community Health Council. A 2002 sponsor logo belongs to the combined council and was not substituted for the separate Nootka council.",
+      "searchQueries": [
+        "\"Nootka Community Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://opengovca.com/charity?postal=V0P",
+          "status": "directory-historical-name-reference",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://www.wordsonthewater.ca/uploads/3/9/4/2/39427837/wow2002.pdf",
+          "status": "different-combined-council-artwork",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "oliver-osoyoos-health-council",
+      "organization": "Oliver Osoyoos Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A UVic thesis cites Oliver-Osoyoos Health Council correspondence dated June 27, 1996, and a 1995 HEU newsletter mentions its chair. These are period research leads; no original vector was established.",
+      "searchQueries": [
+        "\"Oliver Osoyoos Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://dspace.library.uvic.ca/bitstreams/f0f03071-0d55-4219-81bb-53f8e760497f/download",
+          "status": "period-document-reference-not-vector",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://heu.org/sites/default/files/uploads/Guardian_Vol_13_No_2_March_April_1995web.pdf",
+          "status": "period-newsletter-reference-not-vector",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "omineca-health-council",
+      "organization": "Omineca Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Brandfetch's apparent Omineca vector entry is for ominecafab.com, and the medical-clinic site is a separate provider. Both were rejected as identities for Omineca Health Council. No original vector found.",
+      "searchQueries": [
+        "\"Omineca Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://brandfetch.com/ominecafab.com",
+          "status": "rejected-different-company",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://www.ominecamedicalclinic.com/index.html",
+          "status": "rejected-different-medical-provider",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "oyster-district-community-health-council",
+      "organization": "Oyster District Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact-name search did not locate original artwork. The council is named in a 1995 provincial order already encountered in this search pass, but that is text evidence only.",
+      "searchQueries": [
+        "\"Oyster District Community Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1012_1995",
+          "status": "historical-text-only",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "peace-river-south-east-health-council",
+      "organization": "Peace River South East Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact historical-name search did not locate an original logo or vector asset. Results for South Peace Health Council are not enough to establish this earlier council's artwork.",
+      "searchQueries": [
+        "\"Peace River South East Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": []
+    },
+    {
+      "id": "peace-river-liard-regional-health-board",
+      "organization": "Peace River-Liard Regional Health Board",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact historical-name search did not locate an original logo or vector asset. Later Peace Liard society and Northern Health references were not substituted for this regional board.",
+      "searchQueries": [
+        "\"Peace River-Liard Regional Health Board\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": []
+    },
+    {
+      "id": "penticton-and-area-health-council",
+      "organization": "Penticton and Area Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No historical graphic or vector was located. Results were predominantly modern Interior Health regional listings and geographic boundary material; those marks do not establish this council identity.",
+      "searchQueries": [
+        "\"Penticton and Area Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Penticton and Area Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-1.json",
+        "research-inputs-not-bundled/health-tail-3-search-4.json"
+      ],
+      "sources": [],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "prince-george-health-council",
+      "organization": "Prince George Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No historical vector verified. Returned 2014 PHSA community profiles and present-day Northern Health facilities are later/different identities; excluded.",
+      "searchQueries": [
+        "\"Prince George Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Prince George Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-1.json",
+        "research-inputs-not-bundled/health-tail-3-search-4.json"
+      ],
+      "sources": [],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "princeton-health-council",
+      "organization": "Princeton Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No historical vector verified. A Penn Medicine Princeton Health branding manual is for an unrelated US organization and was excluded.",
+      "searchQueries": [
+        "\"Princeton Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Princeton Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-1.json",
+        "research-inputs-not-bundled/health-tail-3-search-4.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.princetonhcs.org/brandcentral/Uploads/1003/November2022UpdateBranding_Guidelines.pdf",
+          "status": "rejected-unrelated-organization",
+          "notes": "Unrelated Penn Medicine Princeton Health; rejected."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "queen-charlotte-islands-haida-gwaii-community-health-council",
+      "organization": "Queen Charlotte Islands/Haida Gwaii Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Exact-name statutory and directory records were found, but no original vector artwork. A modern Haida Gwaii Health directory is not proof of this historical council’s identity.",
+      "searchQueries": [
+        "\"Queen Charlotte Islands/Haida Gwaii Community Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Queen Charlotte Islands/Haida Gwaii Community Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-2.json",
+        "research-inputs-not-bundled/health-tail-3-search-5.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+          "status": "historical-text-only-source",
+          "notes": "Historical statutory list, not logo."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "quesnel-and-district-community-health-council",
+      "organization": "Quesnel and District Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No historical vector verified. Exact-name results include government appointment and amalgamation records; current Quesnel school district/chamber logos were excluded.",
+      "searchQueries": [
+        "\"Quesnel and District Community Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Quesnel and District Community Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-2.json",
+        "research-inputs-not-bundled/health-tail-3-search-5.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2000resume03",
+          "status": "historical-text-only-source",
+          "notes": "Exact-name appointment record, no artwork."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "revelstoke-community-health-council",
+      "organization": "Revelstoke Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No individually attributable historical artwork source surfaced. Broader results concern current services, health policy or unrelated reference material; no vector verified.",
+      "searchQueries": [
+        "\"Revelstoke Community Health Council\" (logo OR \"annual report\" OR letterhead)",
+        "\"Revelstoke Community Health Council\" logo"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-2.json",
+        "research-inputs-not-bundled/health-tail-3-search-5.json"
+      ],
+      "sources": [],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "smithers-and-area-health-council",
+      "organization": "Smithers and Area Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No independently attributable original artwork or vector surfaced. Regional health lists and broader northern-health material do not establish this council’s logo.",
+      "searchQueries": [
+        "\"Smithers and Area Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-7.json"
+      ],
+      "sources": [],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "snow-country-health-council",
+      "organization": "Snow Country Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector found. Exact-name appointment, charity-directory and amalgamation references are text-only identity evidence.",
+      "searchQueries": [
+        "\"Snow Country Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-7.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2000resume03",
+          "status": "historical-text-only-source",
+          "notes": "2000 appointment record; no artwork."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "southern-gulf-islands-community-health-council",
+      "organization": "Southern Gulf Islands Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A 30 August 1995 Driftwood article discusses designation of the council. This is a period archival lead, not a verified logo/vector source; no downloadable vector surfaced.",
+      "searchQueries": [
+        "\"Southern Gulf Islands Community Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-8.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://saltspringarchives.com/driftwood/1995/v36n35August30-1995A.pdf",
+          "status": "archival-print-lead-not-vector-verified",
+          "notes": "Period 30 August 1995 article discusses designation. Not downloaded for structural inspection; no vector claim."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "stikine-health-council",
+      "organization": "Stikine Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. Official lists establish the council name and area; current Stikine regional/local-government material is a different identity.",
+      "searchQueries": [
+        "\"Stikine Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-9.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001",
+          "status": "historical-text-only-source",
+          "notes": "Official council/area listing; no artwork."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "summerland-health-council",
+      "organization": "Summerland Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. Search results were dominated by District of Summerland annual reports, a municipal identity excluded from this council record.",
+      "searchQueries": [
+        "\"Summerland Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-9.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.summerland.ca/your-city-hall/reports-studies/",
+          "status": "rejected-municipal-identity",
+          "notes": "Municipal annual reports; different identity."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "terrace-and-area-health-council",
+      "organization": "Terrace and Area Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Downloaded and visually inspected The Terrace Standard,10 November 1999, pageA 12. The council’s appointment advertisement uses an ordinary typeset title; no distinct logo was identified there. Page 12 is one 3052 × 5413 raster with zero native drawings. No vector verified.",
+      "searchQueries": [
+        "\"Terrace and Area Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-10.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://fileserver-az.core.ac.uk/download/141716730.pdf",
+          "status": "verified-raster-page-no-distinct-logo",
+          "notes": "The Terrace Standard,10 November 1999,A 12. Inspected full-page bitmap; council ad has plain typeset title."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "tumbler-ridge-health-council",
+      "organization": "Tumbler Ridge Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. Tumbler Ridge district annual reports, coat of arms and Visit Tumbler Ridge branding are municipal/tourism identities and were excluded.",
+      "searchQueries": [
+        "\"Tumbler Ridge Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-11.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://districtoftumblerridge.ca/p/-coat-of-arms-district-logo",
+          "status": "rejected-municipal-identity",
+          "notes": "Municipal crest/logo, not Health Council."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "upper-skeena-community-health-council",
+      "organization": "Upper Skeena Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. Official appointment/amalgamation references identify the council; no native artwork download surfaced.",
+      "searchQueries": [
+        "\"Upper Skeena Community Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-11.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2000resume03",
+          "status": "historical-text-only-source",
+          "notes": "Official 2000 appointment record; no artwork."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "west-coast-community-health-council",
+      "organization": "West Coast Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A current ACRD director biography recalls the 1994 council-designation submission, a route to a historical document rather than artwork. Current Island Health/community-service identities were excluded; no vector verified.",
+      "searchQueries": [
+        "\"West Coast Community Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-12.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://www.acrd.bc.ca/district-board-members",
+          "status": "historical-document-lead",
+          "notes": "Director biography identifies 1994 submission requesting distinct council area; historical-document lead only."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "bulkley-valley-health-council",
+      "organization": "Bulkley Valley Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official 2001 appointment release and directory profile surfaced; no logo asset or vector report. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Bulkley Valley Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/2001/097.asp",
+          "citationRef": "turn70search6",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "campbell-river-nootka-community-health-council",
+      "organization": "Campbell River/Nootka Community Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A new attributed historical logo sighting was found in the 2002 Words on the Water festival programme. Recovered its archived original PDF and inspected all 8 pages: each is one JPEG image, zero vector drawings. Page 5 contains the CR/NCHC mark and council name. Native raster crop preserved as evidence; no tracing, no vector claim. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Campbell River/Nootka Community Health Council\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.wordsonthewater.ca/uploads/3/9/4/2/39427837/wow2002.pdf",
+          "citationRef": "turn71search4",
+          "kind": "historical-logo-publication",
+          "notes": "2002 festival programme p5 visibly attributes a CR/NCHC logo to Campbell River/Nootka Community Health Council. Original URL now 404. Archived original PDF inspected: all 8 pages raster, zero drawings; not a vector source."
+        },
+        {
+          "url": "https://web.archive.org/web/20240125023008/https://www.wordsonthewater.ca/uploads/3/9/4/2/39427837/wow2002.pdf",
+          "citationRef": null,
+          "kind": "archived-original",
+          "notes": "Public 2024-01-25 archive capture downloaded and structurally/visually inspected. Native PDF is 1,076,391 bytes; all pages contain one raster image each."
+        }
+      ],
+      "rasterEvidence": {
+        "file": "research-inputs-not-bundled/current-crown-sources/campbell-nootka-2002-raster-logo.png",
+        "attributionFile": "research-inputs-not-bundled/current-crown-sources/campbell-nootka-2002-raster-attribution.png",
+        "sourceFile": "research-inputs-not-bundled/current-crown-sources/campbell-nootka-wow2002.pdf",
+        "sourceUrl": "https://www.wordsonthewater.ca/uploads/3/9/4/2/39427837/wow2002.pdf",
+        "retrievalUrl": "https://web.archive.org/web/20240125023008/https://www.wordsonthewater.ca/uploads/3/9/4/2/39427837/wow2002.pdf",
+        "sourceDate": "2002 programme; archived capture 2024-01-25",
+        "sourcePage": 5,
+        "sourceSha256": "65cef8fb5fbad9135f81a04bdad0e1e1f5d9aa2bcc4d839c93a4e4211292dea0",
+        "sourceImageXref": 15,
+        "sourceImagePixels": [
+          838,
+          678
+        ],
+        "rotation": "90 degrees clockwise, exact pixel transpose",
+        "uprightCropPixels": [
+          370,
+          522,
+          489,
+          632
+        ],
+        "resultPixels": [
+          119,
+          110
+        ],
+        "sha256": "8c72f5ebee6fdb52bced64dbceb37a10759db3c666b0aa1ea1dd38e7f6e0e372",
+        "isVector": false,
+        "reconstruction": false,
+        "notes": "Original sponsor advertisement attributes CR/NCHC mark to Campbell River/Nootka Community Health Council. Native JPEG image decoded, rotated by exact quarter-turn and cropped; no scaling, cleanup or tracing. Entire PDF page is raster."
+      }
+    },
+    {
+      "id": "cariboo-community-health-services-society",
+      "organization": "Cariboo Community Health Services Society",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official privacy-commissioner order and employer lists mention the society; no logo source identified. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Cariboo Community Health Services Society\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.oipc.bc.ca/documents/orders/743?Lang=ita",
+          "citationRef": "turn71search6",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "coast-garibaldi-community-health-services-society",
+      "organization": "Coast Garibaldi Community Health Services Society",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official funding and Vancouver Coastal amalgamation releases mention the society. No society-specific logo located; successor branding excluded. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"Coast Garibaldi Community Health Services Society\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0003-000131.htm",
+          "citationRef": "turn74search4",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        },
+        {
+          "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1999/358.asp",
+          "citationRef": "turn74search5",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "east-kootenay-community-health-services-society",
+      "organization": "East Kootenay Community Health Services Society",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Official legislation, 2001 appointments and historical funding references surfaced; no society-specific artwork. Bounded targeted web search; this does not establish that an original logo never existed.",
+      "searchQueries": [
+        "\"East Kootenay Community Health Services Society\" logo report"
+      ],
+      "assets": [],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "citationRef": "turn82search2",
+          "kind": "identity-record",
+          "notes": "Search result documents the named historical body; no attributable logo/vector asset identified."
+        }
+      ]
+    },
+    {
+      "id": "kootenay-boundary-community-health-services-society",
+      "organization": "Kootenay Boundary Community Health Services Society",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Existing 1998 FOI letterhead source surfaced again. New period lead: Canadian Nurse, September 2001, printed page 56, recruiting advertisement headed Kootenay/Boundary Community Health Services. Cached text was inspected; the signed PDF download returned HTTP 403. Logo presence and native-vector structure therefore remain unverified. No new vector delivered.",
+      "searchQueries": [
+        "\"Kootenay Boundary Community Health Services Society\" logo",
+        "\"Kootenay\" \"Community Health Services\" \"2001\" nurse logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://docs.openinfo.gov.bc.ca/Response_Package_TRA-2017-70554.pdf",
+          "status": "existing-inventory-period-raster-source",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/8de47524-f9d6-87da-7be2-8a87771997ec_file.pdf",
+          "status": "period-ad-candidate-download-403",
+          "notes": "Canadian Nurse September 2001, volume 97 number 8, printed page 56. Indexed/cached PDF text is available; signed download URL has expired or denies access.",
+          "temporarySigningParametersOmittedFrom": [
+            "sourceURL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "north-peace-health-council",
+      "organization": "North Peace Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "Appointment orders and a charity record name North Peace Health Council/Health Centre. No original logo asset or vector file found.",
+      "searchQueries": [
+        "\"North Peace Health Council\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2000resume03",
+          "status": "historical-text-only",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://opengovca.com/charity/890226665RR0001",
+          "status": "directory-name-reference",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "north-west-community-health-services-society",
+      "organization": "North West Community Health Services Society",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A directory labels an image as the society's logo. Following the image link proves it is the site's generic company-logo-placeholder.png, so it was rejected. No original vector found.",
+      "searchQueries": [
+        "\"North West Community Health Services Society\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://www.britishcolumbialocal.ca/biz/3965/north-west-community-health-services-society",
+          "status": "rejected-generic-placeholder",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://d37eqgiie3raai.cloudfront.net/static/website/images/default-biz-logos/company-logo-placeholder.png",
+          "status": "verified-generic-directory-placeholder",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://www.bclaws.gov.bc.ca/civix/document/id/consol24/consol24/96165_08",
+          "status": "historical-text-only",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "peace-liard-community-health-services-society",
+      "organization": "Peace Liard Community Health Services Society",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "A charity record provides historic program descriptions, and a provincial regulation names the society. Neither is an original logo source. No vector found.",
+      "searchQueries": [
+        "\"Peace Liard Community Health Services Society\" logo"
+      ],
+      "assets": [],
+      "individuallySearched": true,
+      "checkedOn": "2026-10-30",
+      "sources": [
+        {
+          "sourceURL": "https://opengovca.com/charity/891926768RR0001",
+          "status": "directory-text-reference",
+          "notes": ""
+        },
+        {
+          "sourceURL": "https://free.bcpublications.ca/civix/document/id/loo65/loo65/233_99",
+          "status": "historical-text-only",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "south-peace-health-council",
+      "organization": "South Peace Health Council",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. An official 28 February 2000 appointment announcement and charity record identify the body but provide no logo artwork.",
+      "searchQueries": [
+        "\"South Peace Health Council\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-8.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://archive.news.gov.bc.ca/releases/archive/pre2001/2000/047.asp",
+          "status": "historical-text-only-source",
+          "notes": "Official 28 February 2000 appointment announcement."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    },
+    {
+      "id": "upper-island-central-coast-community-health-services-society",
+      "organization": "Upper Island/Central Coast Community Health Services Society",
+      "status": "targeted-search-no-new-vector-verified",
+      "notes": "No original vector verified. Exact-name charity, public-accounts and government-announcement references supply institutional context only. Current Upper Island Counselling/Mental Health Recovery Partners artwork is different.",
+      "searchQueries": [
+        "\"Upper Island/Central Coast Community Health Services Society\" (\"logo\" OR \"annual report\")"
+      ],
+      "assets": [],
+      "researchDate": "2026-10-30",
+      "searchLogFiles": [
+        "research-inputs-not-bundled/health-tail-3-search-11.json"
+      ],
+      "sources": [
+        {
+          "sourceURL": "https://archive.news.gov.bc.ca/releases/archive/pre2001/2000/013.asp",
+          "status": "historical-text-only-source",
+          "notes": "2000 government release names society contact; no council artwork."
+        },
+        {
+          "sourceURL": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-public-bodies-fia.pdf",
+          "status": "historical-text-only-source",
+          "notes": "Public accounts list former constituent bodies; no separate logo established."
+        }
+      ],
+      "originalInventoryStatus": "unresolved",
+      "limits": "Bounded indexed-web artwork search, with primary-source follow-up on promising hits. Not exhaustive archival retrieval and not proof that no logo/vector exists."
+    }
+  ],
+  "additionalSources": [
+    {
+      "sourceURL": "https://fnha.ca/wp-content/uploads/FNHA_Annual_Report_2012-13.pdf",
+      "localFile": "research-inputs-not-bundled/health/fnha-annual-2012-13.pdf",
+      "sha256": "ba173c6a8f85d0f194447fe9abca559803a5389bd511ae1badf91a746aa3a0ce",
+      "sourcePdfPage": 12,
+      "printedPage": 10,
+      "finding": "FNHA reports unveiling the new branding in late 2012; identifies Andrew (Enpaauk) Dexel, a Nlaka’pamux artist, as the logo designer. Supports brand history, not independent first-use dating of every configuration.",
+      "status": "downloaded-and-text-verified"
+    },
+    {
+      "sourceURL": "https://mk.bcgsc.ca/branding/files/logo/gsc-logo-1.0.4.zip",
+      "localFile": "research-inputs-not-bundled/health/gsc-logo-1.0.4.zip",
+      "sha256": "163d42d2760508e360780459db81824430109b9a896cbef8555f791b1a7653d2",
+      "finding": "README states version 1.0.4, 15 July 2026. Archive contains original PHSA/GSC combinations in SVG and PDF.",
+      "status": "downloaded-and-verified"
+    },
+    {
+      "sourceURL": "https://www.fnha.ca/Documents/Appendix-E-FNHA-Logo.pdf",
+      "finding": "Search-cached visual standards source, but live migrated destination returned 404. Not counted as a downloaded vector.",
+      "status": "candidate-unavailable",
+      "webRefs": [
+        "turn11view0",
+        "turn39search36"
+      ]
+    },
+    {
+      "sourceURL": "https://www.interiorhealth.ca/sites/default/files/PDFS/ac0100-brand-and-visual-identity.pdf",
+      "finding": "Downloaded policy PDF contains a raster logo; rejected as a vector source.",
+      "status": "inspected-raster-logo"
+    },
+    {
+      "sourceURL": "https://www.fnha.ca/Documents/FNHA-Evaluation-of-the-First-Nations-Health-Authority-2019-2024.pdf",
+      "finding": "Downloaded evaluation report uses raster FNHA logo images; rejected as a vector source.",
+      "status": "inspected-raster-logo"
+    },
+    {
+      "sourceURL": "https://seeklogo.com/vector-logo/424316/phsa",
+      "finding": "Third-party SVG advertised, with uploader/designer attribution inconsistent with original institutional authorship. Not used because primary GSC artwork was verified.",
+      "status": "secondary-not-used"
+    }
+  ],
+  "validation": {
+    "manifest": "research-inputs-not-bundled/health/vector-manifest.json",
+    "checks": "research-inputs-not-bundled/health/validation/checks.json",
+    "comparisonImage": "research-inputs-not-bundled/health/validation/source-vs-vector-comparison.png",
+    "extractionScript": "research-inputs-not-bundled/health/extract_health_vectors.py",
+    "validationScript": "research-inputs-not-bundled/health/validate_health_vectors.py",
+    "method": "Parse delivered SVG XML to rule out embedded raster images/external resources; retain exact original PHSA and IH selected group geometry; compare source-region and isolated SVG renders channel by channel. FNHA delivered bytes equal the original downloads. No tracing or newly drawn logo geometry."
+  },
+  "changeScope": "Local research and derivative assets only; no live project/repository writes, organization contacts, or claims that all historical gaps have been individually searched.",
+  "scopeNote": "All three current-health vector gaps and all 112 former-health vector gaps individually researched. Recovered files remain three current organizations, six preferred SVGs and one excluded supplemental SVG."
+}
