@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "bccss-employee-remuneration-2017-18",
+      "employerSlug": "bc-clinical-and-support-services-society",
+      "employerName": "BC Clinical and Support Services Society",
+      "sector": "Health authorities",
+      "year": "2017/18",
+      "slug": "2017-18",
+      "periodType": "fiscal",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "title": "BC Clinical and Support Services Society employee remuneration and expenses, fiscal year ended 31 March 2018",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%2018%20BCCSS%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sha256": "8c74494d2b3fb201f48fa8243af20dd92070fb5cab5750728f86d77976522140",
+      "file": "2017-18.json.gzip",
+      "dataSha256": "d3a6ce750ba61445754b28159275dc4bdb5e038ce6d46ab4ac19377cd71f02de",
+      "normalizedSha256": "d2e4a440a237f8ee6536ad403e56f3981edc106a403161775277b78074226842",
+      "status": "verified",
+      "verifiedOn": "2026-10-30",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Named BCCSS employees whose remuneration exceeds $75,000; separate from PHSA employee schedules",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "rowCount": 346,
+      "totalRemuneration": 33202601,
+      "totalExpenses": 1352527,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "validation": {
+        "sourceFormat": "image-only PDF",
+        "pdfSha256Verified": true,
+        "sourcePdfPages": 11,
+        "ocrEvidenceFile": "review/2017-18-ocr-passes.json.gzip",
+        "ocrEvidenceSha256": "ae6bcfc8cf5b041d5a11def0c74ecb5b3ddff90afd2f62c1365cff4c3ff95dcf",
+        "reviewFile": "review/2017-18-review.json",
+        "reviewedOcrConfigurations": [
+          {
+            "dpi": 250,
+            "psm": 6
+          },
+          {
+            "dpi": 300,
+            "psm": 4
+          }
+        ],
+        "ocrEngine": "Tesseract 5.3.4",
+        "sameEngineLimitation": "Different resolution/segmentation passes can share OCR errors; full-page visual review resolved shared errors.",
+        "rowsComparedAcrossCorrectedPasses": 346,
+        "correctedPassesEqual": true,
+        "explicitCorrectionOccurrences": 21,
+        "distinctRowsWithExplicitCorrections": 17,
+        "visuallyReviewedPhysicalPages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "rowsByPhysicalPage": {
+          "2": 35,
+          "3": 35,
+          "4": 35,
+          "5": 35,
+          "6": 35,
+          "7": 35,
+          "8": 35,
+          "9": 35,
+          "10": 35,
+          "11": 31
+        },
+        "publishedNamedEmployeeCount": 346,
+        "publishedRemunerationSubtotal": 33202601,
+        "publishedExpensesSubtotal": 1352527,
+        "remunerationSubtotalExact": true,
+        "expensesSubtotalExact": true,
+        "remunerationResidual": 0,
+        "expensesResidual": 0,
+        "missingExpenseRows": 59,
+        "explicitZeroExpenseRows": 0,
+        "exactDuplicateSourceRows": 0,
+        "outOfOrderFinalEmployeePreserved": true
+      },
+      "notes": [
+        "Separate BCCSS employer; records are not appended to the PHSA employer merely because PHSA hosts the PDF.",
+        "The source states a cash-receipts basis: money physically received by or paid on behalf of the employee; remuneration includes salaries/wages, taxable benefits, bonuses and stipends.",
+        "This source uses strictly greater than $75,000. The adjacent 2016/17 BCCSS schedule has its own inclusive threshold and must not supply this year's rule.",
+        "Expense dashes remain missing, not zero. Positions are not published. Names are not unique personal identifiers.",
+        "Both OCR passes contain shared recognition errors. Explicit corrections are tied to the original page image and complete before/after row text; no value was chosen to force totals.",
+        "The source adds Van Gogh, Justin after the Z names. The final employee row is retained despite its position outside the alphabetical run."
+      ]
+    }
+  ]
+}

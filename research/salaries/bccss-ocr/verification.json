@@ -1,0 +1,50 @@
+{
+  "reviewedOn": "2026-10-30",
+  "sourcePdfSha256": "8c74494d2b3fb201f48fa8243af20dd92070fb5cab5750728f86d77976522140",
+  "acceptedRows": 346,
+  "printedNamedRemuneration": 33202601,
+  "printedNamedExpenses": 1352527,
+  "allChecksPassed": true,
+  "checks": [
+    {
+      "check": "Unreviewed OCR letter token in money fails",
+      "passed": true
+    },
+    {
+      "check": "Unreviewed decimal separator in whole-dollar money fails",
+      "passed": true
+    },
+    {
+      "check": "Missing expense and explicit zero remain distinct",
+      "passed": true
+    },
+    {
+      "check": "Changed correction context fails",
+      "passed": true
+    },
+    {
+      "check": "Final out-of-order employee cannot be omitted",
+      "passed": true
+    },
+    {
+      "check": "Duplicate physical page fails",
+      "passed": true
+    },
+    {
+      "check": "Subtotal changes fail without adjusting rows",
+      "passed": true
+    },
+    {
+      "check": "Changed original PDF fingerprint fails",
+      "passed": true
+    },
+    {
+      "check": "Deterministic normalized and manifest bytes on offline rebuild",
+      "passed": true
+    }
+  ],
+  "artifacts": {
+    "research/salaries/bccss-ocr/sources.json": "41e8a830411417f5cb2f2cfc84cae3f9e31979ff7e4cf11fbf13207e38d27a56",
+    "research/salaries/bccss-ocr/2017-18.json.gzip": "d3a6ce750ba61445754b28159275dc4bdb5e038ce6d46ab4ac19377cd71f02de"
+  }
+}

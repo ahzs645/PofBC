@@ -1,0 +1,90 @@
+{
+  "verifiedOn": "2026-10-30",
+  "sourcePdfs": 12,
+  "publishedRowsIndependentlyCompared": 10759,
+  "acceptedRecords": 10710,
+  "blankPayRowsExcluded": 4,
+  "explicitDeputyOverlapsExcluded": 45,
+  "unitTestsPassed": 9,
+  "offlineImporterPassed": true,
+  "deterministicReproductionPassed": true,
+  "matchedFiles": [
+    {
+      "file": "2006-07.json.gzip",
+      "sha256": "12a306d634d4964584ebee28690a8c6e1e46378125044be2a58c385f92a0f7fe",
+      "bytes": 14176
+    },
+    {
+      "file": "2007-08.json.gzip",
+      "sha256": "da5de15a1737f11fed6b1f3d50f6c89f1a9f3a5391fe8f7f272bcaa8e915548c",
+      "bytes": 12747
+    },
+    {
+      "file": "2008-09.json.gzip",
+      "sha256": "b235669796d78e4ea0389d03fa4fb3701edc987306fede3f7374c6b478b370fa",
+      "bytes": 17516
+    },
+    {
+      "file": "2009-10.json.gzip",
+      "sha256": "f707c0dd3dce184ff943d3d411be7f96697e6c94bc5c7cc1ea065e97b7a908cd",
+      "bytes": 16285
+    },
+    {
+      "file": "2010-11.json.gzip",
+      "sha256": "a9932e60915e58aa6ce4b95207e6b3f5e616eecd3bfd8d13c3f43ff2aabd6b7c",
+      "bytes": 15682
+    },
+    {
+      "file": "2011-12.json.gzip",
+      "sha256": "a81b69befa42b811bb000c06b69ca0059bda32f774376538d0e052ebad483517",
+      "bytes": 16883
+    },
+    {
+      "file": "2012-13.json.gzip",
+      "sha256": "b98be4406f199e28bf76721acbe47af8977ce2a632d807ace9022fd535190dd7",
+      "bytes": 16949
+    },
+    {
+      "file": "2013-14.json.gzip",
+      "sha256": "8e56c4bdea821ff627c5ab3805d57d4b19352bf2d78fd0fcc191ff09f6cfc556",
+      "bytes": 10138
+    },
+    {
+      "file": "2014-15.json.gzip",
+      "sha256": "8b978787fd0f9fcb2f6911c878fa474a7c975c87ace0778aee0648dff9e7244c",
+      "bytes": 12326
+    },
+    {
+      "file": "2015-16.json.gzip",
+      "sha256": "809fd151d279766b2d23b759044509b90232dd3a99a103a7b770e40d12a07dc0",
+      "bytes": 13459
+    },
+    {
+      "file": "2016-17.json.gzip",
+      "sha256": "45be2797f1856366ad4175657f8fd59e93b597fd4d1a3840bf6974dfb0e6f0fd",
+      "bytes": 13174
+    },
+    {
+      "file": "2017-18.json.gzip",
+      "sha256": "c3e02700e75971c5a71af4cbd783b9732b360dd6dba4d99f27cc3fe07f03207e",
+      "bytes": 16695
+    },
+    {
+      "file": "review/source-extraction.json.gzip",
+      "sha256": "adf4c5668787c8d3818454f5925435ae50b17381fa9e1daba9d3625a31718a49",
+      "bytes": 173525
+    },
+    {
+      "file": "sources.json",
+      "sha256": "1b9b1a83c64a61eae86cfe6b540c7db540b3b1f53d7f7b907346cbdd7889b178",
+      "bytes": 101537
+    }
+  ],
+  "limitations": [
+    "2007/08 printed source rows exceed thousands-rounded summary by $1,244; unresolved source discrepancy retained.",
+    "Four 2011/12 OIC/deputy annual amounts differ by $1; specialized deputy values retained through enumerated table preferences.",
+    "OIC travel not separately attributed.",
+    "2017/18 inferred employee travel join for Davidson,Heather needs the guarded build correction specified in invalidatedTravelJoins.",
+    "The 2011/12 report does not explicitly state that the deputy and OIC tables overlap; 45 exclusions are enumerated, evidence-supported table preferences, with all source observations preserved."
+  ]
+}

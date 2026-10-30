@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "verifiedOn": "2026-10-23",
+  "verifiedOn": "2026-10-30",
   "purpose": "Official sources recovered in this work and actionable remaining disclosure gaps. Imported entries point to accepted manifests; a source-found status does not mean an imported or complete employer-year.",
   "statusDefinitions": {
     "source-found-awaiting-extraction": "Official PDF downloaded or directly linked by official index; employee rows not yet accepted into build.",
@@ -1464,13 +1464,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+        "pdfPages": 284,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "provincial-health-services-authority-2023-24-employee-source",
@@ -1481,13 +1487,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "89cf82dd1701081e4073408fc38006a08b5033e151d5a0cb2a4ff0c096594ab7",
+        "pdfPages": 284,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "provincial-health-services-authority-2022-23-employee-source",
@@ -1498,13 +1510,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2023-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+        "pdfPages": 217,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "provincial-health-services-authority-2021-22-employee-source",
@@ -1515,13 +1533,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2022%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+        "pdfPages": 188,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "provincial-health-services-authority-2020-21-employee-source",
@@ -1532,13 +1556,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20remuneration%20greater%20than%20$75%2c000%20%28PHSA%29.pdf",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "pdfPages": 148,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "provincial-health-services-authority-2019-20-employee-source",
@@ -1549,13 +1579,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2020.PDF",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+        "pdfPages": 121,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "provincial-health-services-authority-2018-19-employee-source",
@@ -1566,13 +1602,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2019.pdf",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+        "pdfPages": 111,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "provincial-health-services-authority-2017-18-employee-source",
@@ -1583,13 +1625,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%2018%20PHSA%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "1971861d325c81e48083e56e45edbb62c6446fa2c387ce786a2b4e0aa5cdc006",
+        "pdfPages": 139,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "provincial-health-services-authority-2016-17-employee-source",
@@ -1600,13 +1648,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+        "pdfPages": 144,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "provincial-health-services-authority-2015-16-employee-source",
@@ -1617,13 +1671,19 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/2016%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000%20FINAL.pdf",
       "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
       "scope": "employee-remuneration",
-      "status": "source-found-awaiting-extraction",
+      "status": "requires-ocr",
       "verification": {
         "officialIndexLinkChecked": true,
-        "checkedOn": "2026-10-23",
-        "downloaded": false
+        "checkedOn": "2026-10-30",
+        "downloaded": true,
+        "sha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+        "pdfPages": 128,
+        "extractableTextCharacters": 0
       },
-      "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
+      "notes": [
+        "Downloaded original supplied in the PHSA source archive. No PHSA rows accepted from these scans in the October 30 processing pass."
+      ]
     },
     {
       "id": "island-health-2024-25-employee-source",
@@ -1794,6 +1854,97 @@
         "downloaded": false
       },
       "nextAction": "Download the employee schedule, verify its fiscal heading and threshold, check every name and monetary cell, and reconcile printed subtotals before replacing compiled data or adding records."
+    },
+    {
+      "id": "bci-executives-2025-26",
+      "employerSlug": "bc-investment-management-corporation",
+      "year": "2025/26",
+      "title": "bci executives 2025 26",
+      "sourceUrl": "https://www.bci.ca/wp-content/uploads/2026/10/bci-corporate-annual-report-2025-2026.pdf",
+      "scope": "executive-only",
+      "status": "scope-review-required",
+      "verification": {
+        "downloaded": true,
+        "sha256": "6fc5588d4e9bf1fbaba5b8b9375f6994e5819dbede8cb9295885bbc980a0c769",
+        "physicalPdfPage": 53,
+        "reviewedExecutiveRows": 5,
+        "acceptedEmployeeRows": 0
+      },
+      "nextAction": "Preserve the reviewed component rows in executive-staging. Obtain a separate employee schedule or implement an explicitly separate executive-components view with row currencies before publication.",
+      "notes": [
+        "Current-period top-five executive rows only; comparative prior-year rows are not a complete historical cohort.",
+        "Incentives are attributed to their performance year and may be paid in a later fiscal year. This is not a cash-paid employee remuneration schedule.",
+        "Published component/total residuals are preserved, not balanced. Currency stays on each row; no CAD/USD sum or conversion is made."
+      ]
+    },
+    {
+      "id": "bci-executives-2017-18",
+      "employerSlug": "bc-investment-management-corporation",
+      "year": "2017/18",
+      "title": "bci executives 2017 18",
+      "sourceUrl": "https://www.bci.ca/wp-content/uploads/2018/01/17-18-corporate-annual-report-2018.pdf",
+      "scope": "executive-only",
+      "status": "scope-review-required",
+      "verification": {
+        "downloaded": true,
+        "sha256": "e5e8d4629a7247a12fa9a9fc81fa7f30a023be8a4a09b6253bd3f8eb6d811acd",
+        "physicalPdfPage": 46,
+        "reviewedExecutiveRows": 5,
+        "acceptedEmployeeRows": 0
+      },
+      "nextAction": "Preserve the reviewed component rows in executive-staging. Obtain a separate employee schedule or implement an explicitly separate executive-components view with row currencies before publication.",
+      "notes": [
+        "Current-period top-five executive rows only; comparative prior-year rows are not a complete historical cohort.",
+        "Incentives are attributed to their performance year and may be paid in a later fiscal year. This is not a cash-paid employee remuneration schedule.",
+        "Published component/total residuals are preserved, not balanced. Currency stays on each row; no CAD/USD sum or conversion is made."
+      ]
+    },
+    {
+      "id": "bc-pension-executives-2025-26",
+      "employerSlug": "bc-pension-corporation",
+      "year": "2025/26",
+      "title": "bc pension executives 2025 26",
+      "sourceUrl": "https://www.bcpensioncorp.ca/documents/d/corporate/bcpc-annual-report-2026-25",
+      "scope": "executive-base-salary-and-pension",
+      "status": "scope-review-required",
+      "verification": {
+        "downloaded": true,
+        "sha256": "74d0ddf9410fc5707d7d9ff76123a8a2e12b07695a2973a1a23e24c46831876c",
+        "physicalPdfPage": 56,
+        "reviewedExecutiveRows": 7,
+        "acceptedEmployeeRows": 0
+      },
+      "nextAction": "Preserve the reviewed component rows in executive-staging. Obtain a separate employee schedule or implement an explicitly separate executive-components view with row currencies before publication.",
+      "notes": [
+        "Base salary and employer pension contributions are separate components. No complete remuneration amount is supplied.",
+        "The footnote identifies other benefits, vehicle allowances and possible unused-vacation payments; no unreported amounts are inferred."
+      ]
+    },
+    {
+      "id": "vancouver-council-source-2020-21",
+      "employerSlug": "city-of-vancouver",
+      "year": "2020/21",
+      "scope": "elected-officials",
+      "title": "Vancouver mayor and council: retained compiled edition 2020/21",
+      "sourceUrl": "https://opendata.vancouver.ca/explore/dataset/council-budget-and-expenses/",
+      "status": "held-for-review",
+      "nextAction": "Obtain the original council remuneration/SOFI report and verify the 11 retained records and their actual calendar period. Tested linked CSV archive downloads returned HTTP 403.",
+      "notes": [
+        "The compiled label is deliberately unverified. The employee-calendar match does not establish council dates or amounts."
+      ]
+    },
+    {
+      "id": "vancouver-council-source-2023-24",
+      "employerSlug": "city-of-vancouver",
+      "year": "2023/24",
+      "scope": "elected-officials",
+      "title": "Vancouver mayor and council: retained compiled edition 2023/24",
+      "sourceUrl": "https://opendata.vancouver.ca/explore/dataset/council-budget-and-expenses/",
+      "status": "held-for-review",
+      "nextAction": "Obtain the original council remuneration/SOFI report and verify the 11 retained records and their actual calendar period. Tested linked CSV archive downloads returned HTTP 403.",
+      "notes": [
+        "The compiled label is deliberately unverified. The employee-calendar match does not establish council dates or amounts."
+      ]
     }
   ]
 }

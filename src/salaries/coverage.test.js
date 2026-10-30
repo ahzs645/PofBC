@@ -1,6 +1,28 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { coverageAt, coverageStatus, disclosurePeriod, expenseLabel, filterEmployers, gapReason, gapRuns, missingYearMessage, rowCoverage, scopeLabel, sourceHref, thresholdLabel, yearAvailability } from './coverage.js'
+import { coverageAt, categoryCoverage, shortYearLabel, reportingYearLabel, relevantYearIndexes, samePeriodKinds, coverageStatus, disclosurePeriod, expenseLabel, filterEmployers, gapReason, gapRuns, missingYearMessage, rowCoverage, scopeLabel, sourceHref, thresholdLabel, yearAvailability } from './coverage.js'
+
+test('calendar labels stay distinct and elected officials do not inherit employee thresholds', () => {
+  assert.equal(shortYearLabel('2020'), '2020')
+  assert.equal(shortYearLabel('2020/21'), '20/21')
+  assert.equal(reportingYearLabel('2020'), '2020 (calendar year)')
+  const sources = { staff: { scope: 'employee-remuneration', threshold: 75000, thresholdComparison: '>', periodType: 'calendar' },
+    council: { scope: 'elected-officials', threshold: null, sourceKind: 'compiled', periodType: 'unverified' } }
+  const filtered = categoryCoverage({ scope: 'mixed-disclosure', sourceIds: ['staff', 'council'], threshold: 75000 }, 'elected-officials', sources)
+  assert.deepEqual(filtered.sourceIds, ['council'])
+  assert.equal(filtered.threshold, null)
+  assert.equal(filtered.periodType, 'unverified')
+  assert.equal(coverageStatus({ ...filtered, status: 'available' }, sources).kind, 'compiled')
+})
+test('calendar imports do not invent gaps between every fiscal disclosure', () => {
+  const years = ['2019', '2019/20', '2020', '2020/21', '2021', '2021/22']
+  const coverage = years.map((label) => label.includes('/') ? { status: 'available', periodType: 'fiscal' } : { status: 'not-applicable' })
+  assert.deepEqual(relevantYearIndexes(years, coverage, [0, 10, 0, 20, 0, 30]), [1, 3, 5])
+  assert.deepEqual(samePeriodKinds(years, [1, 5]), [1, 3, 5])
+  assert.deepEqual(samePeriodKinds(years, [0, 4]), [0, 2, 4])
+  assert.equal(coverageStatus({ status: 'aggregate-only' }).label, 'Verified aggregate disclosure')
+  assert.equal(yearAvailability({ status: 'not-applicable' }, 0), 'different reporting-period type')
+})
 
 test('missing or excluded employer data cannot imply no employment', () => {
   const coverage = { hydro: [{ status: 'excluded' }], school: [{ status: 'missing' }] }

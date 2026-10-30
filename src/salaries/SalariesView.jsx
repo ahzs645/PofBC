@@ -11,7 +11,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { displayName, matchesNameQuery, nameMatch, personKey, positionKey, readNameQuery } from './people.js'
-import { coverageAt, expenseLabel, filterEmployers, GAP_LABELS, gapReason, gapRuns, missingYearMessage, sourceHref } from './coverage.js'
+import { coverageAt, categoryCoverage, scopeLabel, reportingYearLabel, samePeriodKinds, expenseLabel, filterEmployers, GAP_LABELS, gapReason, gapRuns, missingYearMessage, sourceHref } from './coverage.js'
 import { DisclosureSummary, SourceLink } from './DisclosureEvidence.jsx'
 import { formatMoney as money, medianMoney as median } from './money.js'
 import { PayChart, YearPicker, YearStrip, yearSpan } from './parts.jsx'
@@ -90,7 +90,7 @@ const EmployerCard = ({ entry, years, year, onOpen }) => {
       <span className="salaries__text">
         <span className="salaries__name">{entry.names.at(-1)}</span>
         <span className="salaries__line">{count(entry.counts[at], 'record', 'records')} in {years[at]}</span>
-        <YearStrip years={years} seen={seenYears(entry)} />
+        <YearStrip years={years} seen={seenYears(entry)} coverage={entry.coverage} />
       </span>
     </button>
   )
@@ -224,8 +224,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
           onChange={(event) => search(event.target.value)}
         />
         <select value={year} onChange={(event) => setYearLabel(event.target.value === 'all' ? 'all' : index.years[Number(event.target.value)])} aria-label="Year">
-          <option value="all">Every year</option>
-          {index.years.map((label, at) => <option key={label} value={String(at)}>{label}</option>)}
+          <option value="all">Every reporting period</option>
+          {index.years.map((label, at) => <option key={label} value={String(at)}>{reportingYearLabel(label)}</option>)}
         </select>
       </div>
       <p id="salaries-name-help" className="salaries__hint salaries__hint--small">For people, enter the surname first. Use a comma before given names, as in “Van der Meer, J”.</p>
@@ -298,8 +298,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
 
       <p className="salaries__source">
         These are the disclosures imported into this collection. Pay is the period’s reported remuneration or
-        compensation, not a salary rate. Reporting thresholds, calendar years, fiscal years and executive-only
-        disclosures differ. Missing records do not establish whether someone was employed or paid.
+        compensation, not a salary rate. Calendar reports use their actual year (for example, 2023);
+        fiscal reports retain their fiscal label (2023/24). Retained compilation labels remain unverified.
+        Reporting thresholds and disclosure categories differ. Missing records do not establish whether someone was employed or paid.
       </p>
     </div>
   )
@@ -380,6 +381,7 @@ const EmployerPage = ({ entry, years, sources, initialYear, selectedYear, onYear
   const [open, setOpen] = useState(null)
   const [openShown, setOpenShown] = useState(50)
   const [shown, setShown] = useState(40)
+  const [category, setCategory] = useState(null)
 
   useEffect(() => {
     let live = true
@@ -391,8 +393,13 @@ const EmployerPage = ({ entry, years, sources, initialYear, selectedYear, onYear
 
   const chosenYear = salaryYearIndex(selectedYear, years)
   const year = chosenYear !== 'all' ? Number(chosenYear) : initialYear !== 'all' ? Number(initialYear) : seen.at(-1) ?? 0
-  const coverage = coverageAt({ ...entry, years }, year)
-  const people = useMemo(() => (rows ? rows.filter((row) => row[4] === year) : []), [rows, year])
+  const wholeCoverage = coverageAt({ ...entry, years }, year)
+  const periodRows = useMemo(() => (rows ? rows.filter((row) => row[4] === year) : []), [rows, year])
+  const categories = [...new Set(periodRows.map((row) => sources[row[5]]?.scope ?? 'compiled-unverified'))]
+  const defaultCategory = categories.includes('elected-officials') && categories.includes('employee-remuneration') ? 'employee-remuneration' : 'all'
+  const chosenCategory = category && (category === 'all' || categories.includes(category)) ? category : defaultCategory
+  const people = useMemo(() => periodRows.filter((row) => chosenCategory === 'all' || sources[row[5]]?.scope === chosenCategory), [periodRows, chosenCategory, sources])
+  const coverage = categoryCoverage(wholeCoverage, chosenCategory, sources, people)
   // Whether the year's disclosure names positions: some employers give them one year and not the next.
   const positionedRecords = people.filter((row) => row[1]).length
   const withPositions = people.length > 0 && positionedRecords / people.length >= 0.5
@@ -425,7 +432,7 @@ const EmployerPage = ({ entry, years, sources, initialYear, selectedYear, onYear
   const matchingPeople = ranked.filter((row) => matchesRecordQuery(row, filter))
   const pay = people.map((row) => row[2])
   const positionCount = positions.filter((position) => position.label).length
-  const pick = (at) => { onYearChange(years[at]); setOpen(null); setShown(40) }
+  const pick = (at) => { onYearChange(years[at]); setCategory(null); setOpen(null); setShown(40) }
 
   return (
     <div className="salaries">
@@ -440,13 +447,20 @@ const EmployerPage = ({ entry, years, sources, initialYear, selectedYear, onYear
           )}
         </p>
         <YearPicker years={years} counts={entry.counts} coverage={entry.coverage} value={year} onChange={pick} />
-        <h3 className="salaries__year-title">{years[year]}</h3>
+        <h3 className="salaries__year-title">{reportingYearLabel(years[year])}</h3>
+        {categories.length > 1 && <label className="salaries__note">
+          Disclosure category{' '}
+          <select value={chosenCategory} onChange={(event) => { setCategory(event.target.value); setOpen(null); setShown(40) }}>
+            <option value="all">All disclosed categories</option>
+            {categories.map((scope) => <option key={scope} value={scope}>{scopeLabel(scope)}</option>)}
+          </select>
+        </label>}
         <DisclosureSummary
           coverage={coverage}
           sources={sources}
           more={entry.repeated?.length > 0 && <p>Compiled records for {entry.repeated.join(', ')} were excluded after extensive repetition of names and pay from an earlier collection.</p>}
         />
-        {!entry.counts[year] && <p className="salaries__hint">{coverage.status === 'excluded' ? 'These records are held for review because source checks have not passed.' : coverage.status === 'source-found' ? 'A report has been located, but its employee records have not yet passed extraction and validation.' : 'No records have been imported for this employer in this year.'} That does not mean it had no staff or made no payments.</p>}
+        {!entry.counts[year] && <p className="salaries__hint">{coverage.status === 'aggregate-only' ? 'The verified report publishes aggregate payroll without named employee records.' : coverage.status === 'excluded' ? 'These records are held for review because source checks have not passed.' : coverage.status === 'source-found' ? 'A report has been located, but its employee records have not yet passed extraction and validation.' : 'No records have been imported for this employer in this year.'} That does not mean it had no staff or made no payments.</p>}
         {rows && entry.counts[year] > 0 && (
           <dl className={`salaries__tiles${positionCount ? '' : ' salaries__tiles--three'}`}>
             <div><dt>Records</dt><dd>{people.length.toLocaleString('en-CA')}</dd></div>
@@ -580,7 +594,7 @@ const PersonPage = ({ chosen, all, index, query, onBack, onEmployer, onOpenGover
   // The chart plots a year's highest record: where a name has more than one in a year, the table
   // shows them all.
   const points = chosen.years.map((at) => ({ year: at, pay: Math.max(...chosen.rows.filter((row) => row[5] === at).map((row) => row[2])) }))
-  const missing = index.years.map((_, at) => at).filter((at) => !chosen.years.includes(at))
+  const missing = samePeriodKinds(index.years, chosen.years).filter((at) => !chosen.years.includes(at))
   const runs = gapRuns(missing, (at) => gapReason(index.coverage, associated, at))
   const lines = [
     ...chosen.years.map((at) => ({ at, rows: chosen.rows.filter((row) => row[5] === at).sort((a, b) => b[2] - a[2]) })),
@@ -626,7 +640,7 @@ const PersonPage = ({ chosen, all, index, query, onBack, onEmployer, onOpenGover
             {employer.body && onOpenGovernment && <> (<button type="button" className="salaries__link" onClick={() => onOpenGovernment(employer.body, Number(index.years[chosen.latest[5]].slice(0, 4)))}>in Government</button>)</>}
           </span>
         ))}
-        {' '}· {yearLabels.length} {yearLabels.length === 1 ? 'year' : 'years'}, {yearSpan(yearLabels)} · disclosed as “{chosen.name}”
+        {' '}· {yearLabels.length} {yearLabels.length === 1 ? 'disclosure period' : 'disclosure periods'}, {yearSpan(yearLabels)} · disclosed as “{chosen.name}”
       </p>
       <p className="salaries__hint salaries__hint--small">
         Records are grouped by the disclosed name only, so they may not all concern one person.
@@ -637,7 +651,7 @@ const PersonPage = ({ chosen, all, index, query, onBack, onEmployer, onOpenGover
       <dl className="salaries__tiles salaries__tiles--three">
         <div><dt>Latest</dt><dd>{money(chosen.latest[2])}</dd><dd className="salaries__line">{index.years[chosen.latest[5]]}</dd></div>
         <div><dt>Highest</dt><dd>{money(Math.max(...points.map((point) => point.pay)))}</dd><dd className="salaries__line">{index.years[points.reduce((best, point) => (point.pay > best.pay ? point : best)).year]}</dd></div>
-        <div><dt>Years</dt><dd>{yearLabels.length}</dd><dd className="salaries__line">of {index.years.length} in the collection</dd></div>
+        <div><dt>Periods</dt><dd>{yearLabels.length}</dd><dd className="salaries__line">of {samePeriodKinds(index.years, chosen.years).length} corresponding periods</dd></div>
       </dl>
 
       {points.length > 1 && <PayChart years={index.years} points={points} multiple={chosen.shared} />}

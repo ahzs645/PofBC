@@ -1,17 +1,22 @@
 # Salary audit, source recovery and remaining gaps
 
-Updated **23 October 2026**. Original audit baseline: commit
+Updated **30 October 2026**. Original audit baseline: commit
 [`eabe55708952f945cf2b0733230db31d48146d88`](https://github.com/ahzs645/PofBC/commit/eabe55708952f945cf2b0733230db31d48146d88).
 
 The original salary setup contained three compiled editions, not a continuous annual history.
 This recovery replaces demonstrably incorrect employer/years with official schedules, adds earlier
 and intervening years, and makes the remaining uncertainty visible in the search, employer and
 government-atlas views. **A populated year is a set of disclosed payment records, not a verified
-workforce census.** The catalog now spans 2006/07–2025/26, but coverage differs substantially by
-employer.
+workforce census.** The catalog contains 20 fiscal periods (2006/07–2025/26) and 18 calendar
+years (2008–2025). These are overlapping reporting-period labels, not 38 elapsed years. Coverage
+differs substantially by employer.
 
 ## Where to inspect the results
 
+- [October 30 processing review](processing-review-2026-10-30.md): accepted imports, reporting-period
+  decisions, unresolved controls, originals, request drafts and implementation status.
+- [October 30 validation](validation-2026-10-30.json): current counts, baseline differences, tests,
+  deterministic rebuild, archive integrity and browser-review limitation.
 - [Every employer and its coverage](coverage-inventory.md): a complete inventory of all employer
   histories, current counts for the three original edition labels, accepted official years and remaining review flags.
 - [Machine-readable coverage and audit](../../public/salaries/coverage.json): all employer/years,
@@ -29,23 +34,58 @@ employer.
 <!-- SUMMARY:START -->
 | Measure | Original retained dataset | Current recovered dataset |
 |---|---:|---:|
-| Catalog year labels | 3 | 20 (2006/07–2025/26) |
-| Disclosure rows | 383,163 | 692,951 |
-| Named disclosure rows | 378,068 | 687,712 |
-| Official-source rows with attached provenance | 0 | 401,641 |
-| Retained compiled rows still requiring primary-source review | 383,163 | 291,310 |
-| Canonical employers | 131 | 130 |
-| Populated employer/year cells | 330 | 401 |
+| Catalog period labels | 3 | 38 (20 fiscal + 18 calendar) |
+| Disclosure rows | 383,163 | 832,864 |
+| Named disclosure rows | 378,068 | 827,625 |
+| Official-source rows with attached provenance | 0 | 581,925 |
+| Retained compiled rows still requiring primary-source review | 383,163 | 250,939 |
+| Canonical employers | 131 | 133 |
+| Populated employer/period cells | 330 | 445 |
 | Duplicate-looking extra rows flagged | 456 | 311 |
 
-The recovery adds **309,788 net disclosure rows** relative to the immutable original snapshot,
-after replacements and the proved duplicate-block correction. Its **92 accepted normalized source
-files** cover **10 employers**; **120 employers** still have no accepted original-source schedule.
-Approximately **42.0% of published rows remain compiled and unverified**. The source and coverage
+The recovery adds **449,701 net disclosure rows** relative to the immutable original snapshot,
+after replacements and the proved duplicate-block correction. Its **160 accepted normalized source
+files** cover **16 employers**; **117 employers** still have no accepted original-source schedule.
+Approximately **30.1% of published rows remain compiled and unverified**. The source and coverage
 inventories make the remaining work explicit.
 <!-- SUMMARY:END -->
 
-## Follow-up: interface and source recovery, 23 October 2026
+## Follow-up: source processing, 30 October 2026
+
+This pass builds on the reviewed Fraser/BCIT/Transit update at
+`261b5265595cd4422b079505d31f12aead792936`: 692,951 rows, 401,641 official-source rows,
+291,310 compiled rows, 130 employers and 92 accepted source files. It adds **180,284 official-source
+rows**, replaces **40,371 compiled rows**, and adds **139,913 net disclosure rows**. It is a local,
+reviewable update; no push, merge, deployment or source request has been sent.
+
+| Collection | Accepted official rows in this pass | Periods and treatment |
+|---|---:|---|
+| [Vancouver](vancouver/README.md) | 49,742 | Calendar 2008–2025; replaces 9,824 wrongly labelled compiled employee rows |
+| [Interior Health](interior-health/README.md) | 65,364 | All eleven fiscal years, 2014/15–2024/25; existing compiled periods were correct |
+| [Provincial OIC](public-accounts-oic/README.md) | 10,710 | Missing appointee schedules for 2006/07–2017/18 recovered from original PDFs |
+| [Prince George](prince-george/README.md) | 2,478 | 2,420 employees and 58 elected officials; calendar 2019–2022, 2024 and 2025 |
+| [BCCSS](bccss/README.md) and [its OCR report](bccss-ocr/README.md) | 652 | Fiscal 2016/17 and 2017/18; separate employer from PHSA |
+| [Columbia Hydro Constructors](columbia-hydro-constructors/README.md) | 723 | Five named schedules, 2012/13–2016/17; 2017/18 verified aggregate-only |
+| [Island Health](island-health/README.md) | 50,615 | Eight accepted years; 2022/23 count and 2023/24 expense controls remain held |
+
+Calendar reports now use their actual `YYYY` labels; fiscal reports retain `YYYY/YY`. The correction
+does not automatically shift other municipalities. Vancouver's 22 compiled mayor/councillor records
+remain separately classified under their original **unverified** edition labels until the council
+reports are obtained. Its official employee CSV/JSON/API checks agree, but reconciliation to every
+authoritative SOFI PDF remains outstanding because tested downloads returned HTTP 403.
+
+The CHC original-PDF hold is resolved. BCCSS's second report passed complete OCR/page review and
+exact named controls. PHSA's ten originals are downloaded but remain scanned, unaccepted sources;
+the spreadsheet request is drafted. Seventeen BCI/BC Pension executive records are structured in
+[executive staging](executive-staging/README.md), outside the employee build. One inferred employee
+travel join is cleared after the recovered OIC cohort makes the disclosed name non-unique.
+See the [full review](processing-review-2026-10-30.md) for source-specific exceptions and residuals,
+and [request drafts](requests/source-requests-2026-10-30.md) for the remaining acquisition routes.
+
+## Historical follow-up: interface and source recovery, 23 October 2026
+
+**This section records the preceding October 23 pass. Its incremental counts and then-pending
+source status are historical; the current October 30 results appear above.**
 
 This follow-up starts from main commit
 [`cc3539464d22f0c195f3cc0d486573120841302d`](https://github.com/ahzs645/PofBC/commit/cc3539464d22f0c195f3cc0d486573120841302d),
@@ -125,15 +165,16 @@ evidence are in [`public-accounts/sources.json`](public-accounts/sources.json), 
 The replacement draws from separately sourced ordinary-employee, deputy/associate-deputy and
 appointee schedules. The verified 2020/21 union contains **13,273 payment records**: 12,444 ordinary
 employees, 47 deputies/associate deputies and 782 appointee payments. The full import contains
-**209,396 rows across all 20 fiscal years from 2006/07 through 2025/26**, in 48 accepted source
-schedules. The [Province's Public Accounts archive](https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive)
-and DataBC resource URLs are recorded in the manifest.
+**220,106 rows across all 20 fiscal years from 2006/07 through 2025/26**, in 60 accepted source
+schedules: the preceding 209,396 rows/48 schedules plus 10,710 rows/12 recovered OIC PDFs.
+The [Province's Public Accounts archive](https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive),
+DataBC resource URLs and archived originals are recorded in the two collection manifests.
 
 The sources themselves have defects that must not be propagated:
 
 - Twelve purported appointee resources for years ending 2007–2018 serve byte-identical copies of
-  the ordinary-employee CSV. They are recorded as excluded sources, not imported twice. Those
-  early appointee cohorts therefore remain incomplete.
+  the ordinary-employee CSV. They remain excluded resources, not imported twice. The corresponding
+  early appointee cohorts have now been recovered from original PDFs in `public-accounts-oic/`.
 - The 2018/19 appointee CSV has a 2018 heading. All 815 name/position/pay records were corroborated
   in the actual 2018/19 detailed-payments PDF before acceptance.
 - One 2023/24 Associate Deputy Minister payment appears in both deputy and appointee schedules.
@@ -209,10 +250,10 @@ The remaining gaps fall into different categories and need different fixes:
 
 | Gap | What has changed | What still needs work |
 |---|---|---|
-| Only three edition snapshots | Annual official history is imported where recovered; the catalog spans 20 fiscal years | Most employers still have only the retained compiled editions; use the inventory rather than assuming all employers have annual coverage |
+| Only three edition snapshots | Annual official history is imported where recovered; the catalog has 20 fiscal and 18 calendar labels | Most employers still have only the retained compiled editions; use the inventory rather than assuming all employers have annual coverage |
 | Wrong or unverified reporting periods | Verified sources carry actual start/end dates; known wrong years are replaced | Remaining compiler edition labels need checking against each employer's cover and employee schedule |
-| Unknown source provenance | Accepted official rows have a source ID, URL, fiscal period and content hashes | Retained compiled rows still lack an attached employer-issued report and remain labelled unverified |
-| Mixed disclosure scope | Employee, deputy, appointee, executive-only and compiled scopes are visible | Historical source cohorts and thresholds must be reviewed before comparing totals |
+| Unknown source provenance | Accepted official rows have a source ID, URL, actual reporting period and content hashes | Retained compiled rows still lack an attached employer-issued report and remain labelled unverified |
+| Mixed disclosure scope | Employee, elected-official, deputy, appointee, executive-only, aggregate-only and compiled scopes are visible | Historical source cohorts and thresholds must be reviewed before comparing totals |
 | Executive lists presented alongside workforce lists | BCI 2023/24 is explicitly labelled executive-only: five records | Its 363-record 2017/18 cohort is not a comparable workforce-pay series; a full later employee disclosure has not been located |
 | Repeated rows and copied years | Source-proven block duplication is fixed; remaining duplicate-looking rows are flagged | Same-name, same-pay observations can be distinct people; they cannot be deleted automatically |
 | Name-only person linking | All given-name tokens are preserved in grouping; conflicting middle initials no longer merge | Exact names still do not establish identity; initials and incomplete names remain suggestions, not confirmed career histories |
@@ -253,9 +294,11 @@ remaining work is:
    links SOFIs for years ending 2012 through 2026. Exact URLs are in the backlog. Each employee
    schedule must be separated from board members, suppliers and aggregates and checked against
    the actual report period. The inventory shows which recovered years have been accepted.
-4. **Extract the located PHSA and Island Health employee schedules.** Their official indexes link
-   ten annual schedules each, 2015/16–2024/25. Exact links are in the backlog; fiscal headings,
-   thresholds, complete employee rows and totals still need validation.
+4. **Obtain PHSA spreadsheets and resolve Island Health's two held controls.** All ten PHSA
+   originals for 2015/16–2024/25 are downloaded scans (1,764 pages). The existing-tabular-file
+   request is drafted; otherwise complete OCR/page review is required. Eight Island Health
+   schedules are accepted. Its 2022/23 employee count is 12 below the declaration and its 2023/24
+   expense sum is $45,772 below the printed control. Both candidates remain held.
 5. **Extend BCIT and UNBC beyond the accepted reports.** Older BCIT leads and UNBC board packages
    are recorded. A board agenda containing a draft SOFI is not automatically a final approved
    disclosure. The [UNBC financial index](https://www.unbc.ca/finance/financial-statements) also
@@ -275,9 +318,10 @@ remaining work is:
    fiscal-calendar review, OCR and validation. The existence of nineteenth-century accounts in
    the archive does not by itself establish a comparable named-salary dataset.
 
-Other Hydro subsidiaries, including Columbia Hydro Constructors and Powertech USA where present,
-need separate employer mappings and schedule reviews. A suppliers-only subsidiary schedule is not
-an employee disclosure. The current atlas links 44 employer bodies; salary employers outside its
+Columbia Hydro Constructors now has its own verified schedules under the existing subsidiary id.
+Other Hydro subsidiaries, including Powertech USA where present, still need source-specific
+employer mappings and schedule reviews. A suppliers-only subsidiary schedule is not
+an employee disclosure. The current atlas links 45 employer bodies; salary employers outside its
 model remain searchable without inventing a government relationship.
 
 ## Build, validation and user-facing behaviour
@@ -285,11 +329,13 @@ model remain searchable without inventing a government relationship.
 The default salary build is now reproducible **offline**, using the immutable compiled snapshot
 plus the accepted normalized source collections listed in [`collections.json`](collections.json).
 Each required collection must exist. Each accepted gzip must match its recorded hash, contain valid
-money and fiscal-year values, use an allowed employer, and agree with its declared row count and
+money and reporting-period values, use an allowed employer, and agree with its declared row count and
 remuneration and disclosed-expense sums before any published output is changed. Accepted sources
 must declare their disclosure scope; an unclassified schedule cannot default to employee coverage.
 
-An accepted official source replaces the entire legacy employer/year partition. Multiple reviewed
+An accepted official source normally replaces the entire legacy employer/period partition.
+Vancouver's cross-period employee correction is a separate, exact-hash/count-guarded rule that
+preserves council records and requires the matching accepted employee source. Multiple reviewed
 source cohorts, such as public-service employees and deputies, are combined explicitly. A future
 partial executive-only import must not replace a fuller employee partition without a separate
 reviewed scope decision. The compiler snapshot remains unchanged for provenance and comparison.

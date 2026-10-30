@@ -38,7 +38,7 @@ export const DisclosureEvidence = ({ coverage, sources = {}, className = 'salari
     <div className={className}>
       <p>
         <strong>{scopeLabel(coverage?.scope)}.</strong>{' '}
-        {period ? `Reporting period: ${date(period[0])} – ${date(period[1])}.` : 'The exact reporting period has not been verified; a collection year can include calendar-year and fiscal-year reports.'}
+        {period ? `Reporting period: ${date(period[0])} – ${date(period[1])}.` : 'The exact reporting period has not been verified; this is a retained compilation label.'}
         {thresholdLabel(coverage) ? ` Reporting ${thresholdLabel(coverage)}.` : ''}
       </p>
       {ids.length > 0 ? (
@@ -87,7 +87,7 @@ export const DisclosureSummary = ({ coverage, sources = {}, className = '', more
       <p className="salaries-disclosure__status" data-kind={status.kind}>{status.label}</p>
       <p className="salaries-disclosure__line">
         <strong>{coverage?.scope ? scopeLabel(coverage.scope) : 'Disclosure details not yet verified'}</strong>
-        {period ? <> · {month(period[0])} – {month(period[1])}</> : ' · reporting period not verified'}
+        {period ? <> · {coverage?.periodType === 'calendar' ? 'Calendar year · ' : ''}{month(period[0])} – {month(period[1])}</> : ' · reporting period not verified'}
         {thresholdLabel(coverage) ? ` · ${thresholdLabel(coverage)}` : ''}
         {linked.length > 0 && <> · {linked.map((source, at) => (
           <span key={source.url}>{at > 0 ? ', ' : ''}<a href={source.url} target="_blank" rel="noreferrer" title={source.title}>{linked.length > 1 ? `Source ${at + 1}` : 'Source'}</a></span>
