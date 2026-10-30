@@ -1,6 +1,6 @@
 # Salary audit, source recovery and remaining gaps
 
-Reviewed **22 October 2026**. Baseline: commit
+Updated **23 October 2026**. Original audit baseline: commit
 [`eabe55708952f945cf2b0733230db31d48146d88`](https://github.com/ahzs645/PofBC/commit/eabe55708952f945cf2b0733230db31d48146d88).
 
 The original salary setup contained three compiled editions, not a continuous annual history.
@@ -16,6 +16,7 @@ employer.
   histories, current counts for the three original edition labels, accepted official years and remaining review flags.
 - [Machine-readable coverage and audit](../../public/salaries/coverage.json): all employer/years,
   source collections, corrections, held sources, duplicate flags and import totals.
+- [All accepted and pending sources](source-inventory.md): generated source register with employer, period, acceptance state and next action.
 - [Official-source backlog](source-backlog.json): exact source URLs, verification status and the next
   extraction or scope check. Finding a document and importing its employee schedule are separate
   statuses.
@@ -26,23 +27,53 @@ employer.
   snapshot; their saved exclusion counts remain available.
 
 <!-- SUMMARY:START -->
-| Measure | Original retained dataset | Recovered dataset |
+| Measure | Original retained dataset | Current recovered dataset |
 |---|---:|---:|
 | Catalog year labels | 3 | 20 (2006/07–2025/26) |
-| Disclosure rows | 383,163 | 616,443 |
-| Named disclosure rows | 378,068 | 611,204 |
-| Official-source rows with attached provenance | 0 | 290,520 |
-| Retained compiled rows still requiring primary-source review | 383,163 | 325,923 |
+| Disclosure rows | 383,163 | 692,951 |
+| Named disclosure rows | 378,068 | 687,712 |
+| Official-source rows with attached provenance | 0 | 401,641 |
+| Retained compiled rows still requiring primary-source review | 383,163 | 291,310 |
 | Canonical employers | 131 | 130 |
-| Populated employer/year cells | 330 | 384 |
+| Populated employer/year cells | 330 | 401 |
 | Duplicate-looking extra rows flagged | 456 | 311 |
 
-The recovery adds **233,280 net disclosure rows**, after replacements and the proved duplicate-block
-correction. Its **70 accepted normalized source files** cover **9 employers**; **121 employers**
-still have no accepted original-source schedule in this change. Approximately **52.9% of published
-rows remain compiled and unverified**. That remaining work is visible in the inventory rather
-than being hidden behind a claim of province-wide completeness.
+The recovery adds **309,788 net disclosure rows** relative to the immutable original snapshot,
+after replacements and the proved duplicate-block correction. Its **92 accepted normalized source
+files** cover **10 employers**; **120 employers** still have no accepted original-source schedule.
+Approximately **42.0% of published rows remain compiled and unverified**. The source and coverage
+inventories make the remaining work explicit.
 <!-- SUMMARY:END -->
+
+## Follow-up: interface and source recovery, 23 October 2026
+
+This follow-up starts from main commit
+[`cc3539464d22f0c195f3cc0d486573120841302d`](https://github.com/ahzs645/PofBC/commit/cc3539464d22f0c195f3cc0d486573120841302d),
+which already contained the Hydro, Public Accounts, Northern Health, North Island, UNBC and initial
+BCIT/Transit recovery described below. It adds **76,508 net records**, not a second recovery of
+those earlier changes. See [the interface and source review](interface-review-2026-10-23.md).
+
+| Collection extended | Accepted source history now | Official rows in that history | Net additional published rows in this follow-up |
+|---|---|---:|---:|
+| [Fraser Health](fraser-health/README.md) | Every year, 2015/16–2024/25 | 99,712 | 67,780 |
+| [BCIT](bcit/README.md) | 2014/15, 2016/17–2018/19, 2020/21–2024/25 | 10,624 | 6,973 |
+| [BC Transit](bc-transit/README.md) | 2015/16, 2016/17, 2019/20, 2020/21, 2025/26 | 2,140 | 1,755 |
+
+The three importers retain physical PDF pages, published names, missing/zero/negative expense
+semantics and source residuals. Fraser and BCIT include exactly $75,000; their UI threshold now
+says **at least $75,000**. BCIT's truncated 2020/21 names remain truncated and carry a caveat.
+
+The interface now supports compound-surname searches and finding names within position groups,
+persists year and sector choices in links, offers a compact year selector on narrow screens,
+shows disclosed zero expenses, and distinguishes accepted, compiled, located, held and missing
+data. Employer, person and atlas records link to the actual PDF page where available. The
+headline includes anonymous records instead of silently counting only named people.
+
+The [source inventory](source-inventory.md) is generated from accepted manifests and the
+[backlog](source-backlog.json). It includes **20 additional exact employee-report links** from
+PHSA and Island Health, with extraction still pending, and correctly records the earlier Hydro
+and BCIT scans as needing OCR. Finding a PDF never certifies its employee records.
+
 
 The employer count changes from 131 to 130 because **“Langley City” and “City of Langley” are merged
 as aliases of the same municipality**, preserving the old slug as an alias. The [City's official
@@ -222,18 +253,21 @@ remaining work is:
    links SOFIs for years ending 2012 through 2026. Exact URLs are in the backlog. Each employee
    schedule must be separated from board members, suppliers and aggregates and checked against
    the actual report period. The inventory shows which recovered years have been accepted.
-4. **Extend BCIT and UNBC beyond the accepted reports.** Older BCIT leads and UNBC board packages
+4. **Extract the located PHSA and Island Health employee schedules.** Their official indexes link
+   ten annual schedules each, 2015/16–2024/25. Exact links are in the backlog; fiscal headings,
+   thresholds, complete employee rows and totals still need validation.
+5. **Extend BCIT and UNBC beyond the accepted reports.** Older BCIT leads and UNBC board packages
    are recorded. A board agenda containing a draft SOFI is not automatically a final approved
    disclosure. The [UNBC financial index](https://www.unbc.ca/finance/financial-statements) also
    distinguishes consolidated statements from the fuller SOFI containing employee names.
-5. **Locate full employee disclosures for BC Pension and BCI.** Finding an annual report with
+6. **Locate full employee disclosures for BC Pension and BCI.** Finding an annual report with
    executive compensation does not fill a workforce disclosure gap. The backlog uses “employee
    schedule not yet located,” not “unavailable.”
-6. **Extend provincial public-service history before 2006/07.** The [official Public Accounts
+7. **Extend provincial public-service history before 2006/07.** The [official Public Accounts
    archive](https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive) has
    searchable digital reports from 1999/2000. The 1999/2000–2005/06 detailed-payment PDFs are the
    next practical source series. Earlier thresholds and categories require year-specific checks.
-7. **Review older historical payment volumes.** The [Legislative Library's official archive](https://www.llbc.leg.bc.ca/public/pubdocs/bcdocs2015_2/164239/index.htm)
+8. **Review older historical payment volumes.** The [Legislative Library's official archive](https://www.llbc.leg.bc.ca/public/pubdocs/bcdocs2015_2/164239/index.htm)
    indexes earlier accounts, including explicit Schedule of Payments volumes for
    [1984/85](https://www.llbc.leg.bc.ca/public/PubDocs/bcdocs2015_2/164239/Public_accounts/164239_PA_1984_1985_v2.pdf)
    and [1978/79](https://www.llbc.leg.bc.ca/public/PubDocs/bcdocs2015_2/164239/Public_accounts/164239_PA_1978_79_v2.pdf).
@@ -257,7 +291,8 @@ The default salary build is now reproducible **offline**, using the immutable co
 plus the accepted normalized source collections listed in [`collections.json`](collections.json).
 Each required collection must exist. Each accepted gzip must match its recorded hash, contain valid
 money and fiscal-year values, use an allowed employer, and agree with its declared row count and
-remuneration sum before any published output is changed.
+remuneration and disclosed-expense sums before any published output is changed. Accepted sources
+must declare their disclosure scope; an unclassified schedule cannot default to employee coverage.
 
 An accepted official source replaces the entire legacy employer/year partition. Multiple reviewed
 source cohorts, such as public-service employees and deputies, are combined explicitly. A future
@@ -265,8 +300,9 @@ partial executive-only import must not replace a fuller employee partition witho
 reviewed scope decision. The compiler snapshot remains unchanged for provenance and comparison.
 
 All four public representations are rebuilt together: employer histories, surname-sharded person
-records, government-atlas summaries, and a position-title index (`public/salaries/positions/`). Row-level source IDs remain attached throughout. Normalized
-PDF input rows also retain physical page numbers where extracted. Money retains cents and published
+records, government-atlas summaries, and a position-title index (`public/salaries/positions/`).
+Row-level source IDs remain attached throughout. Normalized PDF input rows retain physical page
+numbers through all exports, and row links open those pages where extracted. Money retains cents and published
 negative recoveries; null is not converted to zero. Anonymous records stay with their employer and
 do not appear as named people.
 
@@ -285,7 +321,8 @@ The interface shows source links, source scope, reporting dates, thresholds, dup
 why a year is missing or held. It defaults to the most recent available employer year. Year and
 sector filters apply to employer lists, while selecting a name preserves the full disclosed name
 history rather than hiding records under the search filters. Failed requests display a retry
-state rather than an empty-data claim. Twenty-year selectors wrap for narrow screens.
+state rather than an empty-data claim. A compact year dropdown supplements the desktop year buttons
+on narrow screens. Shared links retain year labels, sector filters and the selected employer year.
 
 A typed name without a comma is read surname first, then surname last, then as a longer surname;
 the search shows the first reading that finds a full name, says so when it is not the first, and
@@ -307,14 +344,25 @@ jobs are the same.
 npm run build:salaries
 npm run check:salaries
 npm test
-python scripts/test_import_public_accounts.py
+python3 -m unittest discover -s scripts -p 'test_*.py'
 python scripts/extract-hydro-salaries.py --self-test
 ```
 
 `check:salaries` independently reconciles every named employer record with the person shards,
 every positioned record with the title index, every atlas row and total with the employer exports, and every accepted official record with its
 normalized source file, preserving multiplicities. It verifies year indices, source IDs, coverage
-counts, duplicate flags and orphan files, then refreshes `coverage-inventory.md`.
+counts, duplicate flags, physical page references and orphan files, then refreshes
+`coverage-inventory.md` and `source-inventory.md`.
+
+Use `npm run preview:salaries` to inspect the actual salary components and the committed data
+without the separate artwork/font build. `/mobile.html` embeds a 390-pixel viewport for narrow-screen
+review. `npm run preview:salaries -- --build` produces a static verification bundle under the ignored
+`dist-salaries/` directory. This preview is local and does not deploy the site. The existing full
+site build still requires its licensed macOS Helvetica source.
+
+The salary CI workflow runs parser fixtures, salary behavior tests, an offline rebuild, complete
+export reconciliation and a salary-interface bundle build. It rejects stale generated exports.
+Original PDF downloads and OCR remain explicit source-review tasks rather than CI network inputs.
 
 Source extractors live under `scripts/`. Their manifests record source URLs and SHA-256 hashes;
 reviewed scripts include fiscal-header checks, column/page completeness checks and reconciliation

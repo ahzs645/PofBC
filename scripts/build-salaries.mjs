@@ -8,7 +8,8 @@ import { gzipSync, gunzipSync } from 'node:zlib'
 import { surnameShard } from '../src/salaries/people.js'
 import { titleKey, titleShard } from '../src/salaries/positions.js'
 import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSlug, sectorOf } from './lib/salary-employers.mjs'
-import { csvRows, money, median, sha256, yearSlug, sumMoney, duplicateStats, repeatedCandidates, validateRow } from './lib/salary-data.mjs'
+import { csvRows, money, median, sha256, yearSlug, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes } from './lib/salary-data.mjs'
+import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const args = process.argv.slice(2)
@@ -93,13 +94,14 @@ for (const [at, row] of baseline.entries()) validateRow(row, `legacy row ${at + 
 
 // Only reviewed source decisions can quarantine a partition. Similar pay alone is insufficient.
 const reviewed = existsSync(join(research, 'reviewed-decisions.json')) ? readJson(join(research, 'reviewed-decisions.json')).decisions : []
-const knownExclusions = [...snapshot.repeated.map((entry) => ({ ...entry, reason: 'Compiled later-year rows repeat an earlier disclosure; original source period is unreliable.' })), ...reviewed]
+const knownExclusions = [...snapshot.repeated.map((entry) => ({ ...entry, reason: 'Compiled later-year rows repeat an earlier disclosure; original source period is unreliable.' })), ...reviewed.filter((entry) => entry.kind !== 'replace-partition-scope')]
 const excluded = new Set(knownExclusions.map((entry) => `${entry.employer}|${entry.year}`))
 const official = []
 const importedPartitions = new Set()
 const deferred = []
 const importStats = []
 const sourceCollections = []
+const manifests = []
 const collectionConfig = join(research, 'collections.json')
 const requiredCollections = existsSync(collectionConfig) ? readJson(collectionConfig).collections : null
 for (const directory of requiredCollections ?? readdirSync(research).sort()) {
@@ -109,12 +111,14 @@ for (const directory of requiredCollections ?? readdirSync(research).sort()) {
     continue
   }
   const manifest = readJson(manifestPath)
+  manifests.push({ collection: directory, manifest })
   sourceCollections.push({ collection: directory, coverageNotes: manifest.coverageNotes ?? manifest.notes ?? [], excludedSources: manifest.excludedSources ?? [], unparsedSources: manifest.unparsedSources ?? [], compiledYearCorrection: manifest.compiledYearCorrection ?? null })
   deferred.push(...(manifest.deferredEmployers ?? manifest.deferred ?? []).map((entry) => ({ collection: directory, ...entry })))
   for (const source of manifest.sources ?? []) {
     if (source.status && !['accepted', 'verified', 'imported'].includes(source.status)) { deferred.push(source); continue }
     if (!source.file) continue
     if (!source.id || sources[source.id]) throw new Error(`${manifestPath}: missing or duplicate source id ${source.id}`)
+    if (!source.category && !source.scope) throw new Error(`${source.id}: explicit disclosure scope is required before import`)
     const year = source.year ?? source.label
     yearSlug(year)
     deferred.push(...(source.deferredEmployers ?? []).map((entry) => ({ collection: directory, sourceId: source.id, year, sourceUrl: source.sourceUrl, ...entry })))
@@ -133,7 +137,8 @@ for (const directory of requiredCollections ?? readdirSync(research).sort()) {
       const [slug_, name, position, pay, expenses, page] = fields
       const slug = canonicalSlug(slug_)
       if (!allowed.includes(slug_)) throw new Error(`${source.id}: unexpected employer ${slug_}`)
-      const row = { slug, year, name, position, pay, expenses, sourceId: source.id, page: Number.isInteger(page) ? page : null }
+      if (page != null && (!Number.isInteger(page) || page < 1)) throw new Error(`${source.id}: invalid physical PDF page on row ${at + 1}`)
+      const row = { slug, year, name, position, pay, expenses, sourceId: source.id, page: page ?? null }
       validateRow(row, `${source.id} row ${at + 1}`)
       accepted.push(row)
       importedPartitions.add(`${slug}|${year}`)
@@ -144,13 +149,18 @@ for (const directory of requiredCollections ?? readdirSync(research).sort()) {
       const partition = accepted.filter((row) => row.slug === canonicalSlug(employer.slug ?? employer.employerSlug))
       if (employer.rowCount !== undefined && partition.length !== employer.rowCount) throw new Error(`${source.id}: ${employer.slug} row count mismatch`)
       if (employer.totalRemuneration !== undefined && Math.abs(sumMoney(partition.map((row) => row.pay)) - employer.totalRemuneration) > 0.011) throw new Error(`${source.id}: ${employer.slug} total mismatch`)
+      const expectedExpenses = employer.totalExpenses ?? employer.totalDisclosedExpenses
+      if (expectedExpenses !== undefined && Math.abs(sumMoney(partition.map((row) => row.expenses ?? 0)) - expectedExpenses) > 0.011) throw new Error(`${source.id}: ${employer.slug} expenses total mismatch`)
     }
     if (source.rowCount !== undefined && accepted.length !== source.rowCount) throw new Error(`${source.id}: row count mismatch`)
     if (source.totalRemuneration !== undefined && Math.abs(sumMoney(accepted.map((row) => row.pay)) - source.totalRemuneration) > 0.011) throw new Error(`${source.id}: imported remuneration total mismatch`)
+    const expectedExpenses = source.totalExpenses ?? source.totalDisclosedExpenses
+    if (expectedExpenses !== undefined && Math.abs(sumMoney(accepted.map((row) => row.expenses ?? 0)) - expectedExpenses) > 0.011) throw new Error(`${source.id}: imported expenses total mismatch`)
     sources[source.id] = {
       id: source.id, title: source.title ?? source.sourceTitle ?? `${source.employerName ?? directory} ${year} ${source.category ?? 'remuneration'}`,
       url: source.sourceUrl ?? source.url, year, periodStart: source.periodStart ?? null, periodEnd: source.periodEnd ?? null,
-      scope: source.category ?? source.scope ?? 'employee-remuneration', scopeDescription: source.scopeDescription ?? source.scope ?? null, threshold: source.threshold ?? null,
+      scope: source.category ?? source.scope, scopeDescription: source.scopeDescription ?? source.scope ?? null, threshold: source.threshold ?? null,
+      thresholdComparison: source.thresholdComparison ?? (source.thresholdRule === 'at-least' ? '>=' : source.thresholdRule === 'over' ? '>' : null),
       provenance: 'Official published schedule; independently downloaded and validated by the source importer.',
       sha256: source.sha256 ?? source.pdfSha256, dataSha256: sha256(bytes), notes: source.notes ?? [],
       validation: source.validation ?? null, nameDisclosure: source.nameDisclosure ?? null, positionDisclosure: source.positionDisclosure ?? null,
@@ -160,10 +170,13 @@ for (const directory of requiredCollections ?? readdirSync(research).sort()) {
     importStats.push({ id: source.id, year, rows: accepted.length, employers: [...new Set(accepted.map((row) => row.slug))], totalRemuneration: sumMoney(accepted.map((row) => row.pay)) })
   }
 }
+validateReplacementScopes(baseline, official, sources, reviewed)
+const backlogPath = join(research, 'source-backlog.json')
+const catalog = sourceCatalog(existsSync(backlogPath) ? readJson(backlogPath) : {}, manifests)
 const legacyRetained = baseline.filter((row) => !importedPartitions.has(`${row.slug}|${row.year}`) && !excluded.has(`${row.slug}|${row.year}`))
 const rows = [...legacyRetained, ...official]
 if (!rows.length) throw new Error('No salary rows; refusing to replace the published data')
-const labels = [...new Set([...LEGACY.map(({ label }) => label), ...rows.map((row) => row.year)])].sort()
+const labels = [...new Set([...LEGACY.map(({ label }) => label), ...rows.map((row) => row.year), ...catalog.map((entry) => entry.year).filter(Boolean)])].sort()
 const years = labels.map((label) => ({ label, slug: yearSlug(label) }))
 const yearAt = new Map(labels.map((label, at) => [label, at]))
 const bySlug = new Map()
@@ -173,7 +186,7 @@ const audit = {
   imports: importStats, legacyRowsRetained: legacyRetained.length, officialRows: official.length,
   replacedLegacyRows: baseline.length - legacyRetained.length,
   corrections: knownExclusions.map((entry) => ({ ...entry, status: importedPartitions.has(`${entry.employer}|${entry.year}`) ? 'replaced-from-official-source' : 'excluded' })),
-  deferred, sourceCollections, anonymousLabels, repeatedCandidates: repeatedCandidates(rows), duplicates: [],
+  deferred, sourceCollections, sourceCatalog: catalog, anonymousLabels, repeatedCandidates: repeatedCandidates(rows), duplicates: [],
   notes: ['An absent record does not establish unemployment or below-threshold pay.', 'Exact duplicate-looking rows remain flagged unless an official replacement resolves them; shared names can be different people.', 'Legacy edition labels are unverified reporting periods.']
 }
 const index = { source: 'Official remuneration schedules with retained, explicitly unverified pssdb snapshots', years, sources, bodies: {}, unmatched: {}, repeated: audit.corrections.filter((entry) => entry.status === 'excluded'), corrections: audit.corrections }
@@ -193,11 +206,13 @@ try {
     const info = employerInfo.get(slug)
     const coverage = labels.map((label) => {
       const subset = list.filter((row) => row.year === label)
+      const sourceLeads = sourceLeadsFor(catalog, slug, label)
       if (!subset.length) {
         const held = deferred.filter((entry) => (entry.slug ?? entry.employerSlug) === slug && entry.year === label)
-        return { status: held.length || excluded.has(`${slug}|${label}`) ? 'excluded' : 'missing', sourceIds: held.map((entry) => entry.sourceId).filter((id) => sources[id]), scope: held.length ? 'employee-remuneration' : undefined,
+        const heldLeads = sourceLeads.filter((entry) => entry.status === 'held-for-review')
+        return { status: held.length || heldLeads.length || excluded.has(`${slug}|${label}`) ? 'excluded' : hasLocatedSource(sourceLeads) ? 'source-found' : 'missing', sourceIds: held.map((entry) => entry.sourceId).filter((id) => sources[id]), sourceLeads, scope: held.length || hasLocatedSource(sourceLeads) ? 'employee-remuneration' : undefined,
           rows: 0, namedRows: 0, positions: 0, duplicateRows: 0,
-          notes: held.length ? held.map((entry) => entry.reason ?? 'The source was found but held for reconciliation; its records are not published here.') : ['No imported records for this employer and year; this is not evidence that it had no employees.'] }
+          notes: held.length ? held.map((entry) => entry.reason ?? 'The source was found but held for reconciliation; its records are not published here.') : heldLeads.length ? heldLeads.map((entry) => entry.nextAction) : hasLocatedSource(sourceLeads) ? ['A potential official source has been located, but its employee records have not yet passed extraction and validation.'] : ['No imported records for this employer and year; this is not evidence that it had no employees.'] }
       }
       const sourceIds = [...new Set(subset.map((row) => row.sourceId))].sort()
       const details = sourceIds.map((id) => sources[id])
@@ -207,6 +222,7 @@ try {
       if (duplicates.duplicateRows) audit.duplicates.push({ employer: slug, year: label, ...duplicates })
       const periods = new Set(details.map((detail) => JSON.stringify([detail.periodStart, detail.periodEnd])))
       const thresholds = new Set(details.map((detail) => detail.threshold))
+      const thresholdComparisons = new Set(details.map((detail) => detail.thresholdComparison ?? null))
       const notes = [...new Set([
         ...(isLegacy ? compiledNotes : []), ...details.flatMap((detail) => detail.notes ?? []),
         ...(scope === 'executive-only' ? ['Only five executive positions are present; this is not a full employee disclosure.'] : []),
@@ -214,11 +230,12 @@ try {
         ...(subset.some((row) => row.name && !row.name.includes(',')) ? ['Some source names lack a verified surname/given-name separator; matches across years may be incomplete.'] : []),
         ...(scope === 'mixed-disclosure' ? ['Includes separate official employee and senior/appointee schedules; disclosure thresholds differ by schedule.'] : [])
       ])]
-      return { status: 'available', scope, sourceIds, periodStart: periods.size === 1 ? details[0].periodStart ?? null : null, periodEnd: periods.size === 1 ? details[0].periodEnd ?? null : null,
+      return { status: 'available', scope, sourceIds, sourceLeads, periodStart: periods.size === 1 ? details[0].periodStart ?? null : null, periodEnd: periods.size === 1 ? details[0].periodEnd ?? null : null,
         threshold: thresholds.size === 1 ? details[0].threshold : null, rows: subset.length, namedRows: subset.filter((row) => row.name).length,
+        thresholdComparison: thresholds.size === 1 && thresholdComparisons.size === 1 ? details[0].thresholdComparison ?? null : null,
         positions: subset.filter((row) => row.position).length, ...duplicates, notes }
     })
-    const exported = list.map((row) => [row.name, row.position, row.pay, row.expenses, yearAt.get(row.year), row.sourceId])
+    const exported = list.map((row) => [row.name, row.position, row.pay, row.expenses, yearAt.get(row.year), row.sourceId, row.page ?? null])
       .sort((a, b) => a[4] - b[4] || b[2] - a[2] || String(a[0]).localeCompare(String(b[0])) || String(a[1]).localeCompare(String(b[1])))
     write(`employers/${slug}.json.gzip`, exported, true)
     employerList.push({ ...info, counts: coverage.map((entry) => entry.rows), repeated: index.repeated.filter((entry) => entry.employer === slug).map((entry) => entry.year), coverage })
@@ -226,28 +243,28 @@ try {
       const subset = list.filter((row) => row.year === year.label)
       if (!subset.length) continue
       if (!info.body) { index.unmatched[slug] = (index.unmatched[slug] ?? 0) + subset.length; continue }
-      const bodyRows = exported.filter((row) => row[4] === at).map((row) => [row[0], row[1], row[2], row[3], row[5]])
+      const bodyRows = exported.filter((row) => row[4] === at).map((row) => [row[0], row[1], row[2], row[3], row[5], row[6]])
       const details = coverage[at]
       write(`${year.slug}/${info.body}.json`, { ...details, year: year.label, agencies: info.names, rows: bodyRows })
       ;(index.bodies[info.body] ??= {})[year.slug] = { count: bodyRows.length, total: sumMoney(subset.map((row) => row.pay)), median: median(subset.map((row) => row.pay)), max: Math.max(...subset.map((row) => row.pay)), agencies: info.names, sourceIds: details.sourceIds, scope: details.scope, notes: details.notes, periodStart: details.periodStart, periodEnd: details.periodEnd, threshold: details.threshold, duplicateRows: details.duplicateRows }
     }
   }
   const coverage = Object.fromEntries(employerList.map((entry) => [entry.slug, entry.coverage]))
-  write('employers/index.json', { note: 'Rows: [disclosed name, position, remuneration, expenses, year index, source id]. Counts are disclosure rows, not a workforce census.', years: labels, sources, aliases: EMPLOYER_ALIASES, employers: employerList })
+  write('employers/index.json', { schemaVersion: 2, note: 'Rows: [disclosed name, position, remuneration, expenses, year index, source id, physical PDF page or null]. Counts are disclosure rows, not a workforce census.', years: labels, sources, aliases: EMPLOYER_ALIASES, employers: employerList })
   const employerAt = new Map(employerList.map((employer, at) => [employer.slug, at]))
   const shards = new Map()
   for (const row of rows) {
     if (!row.name) continue
     const shard = surnameShard(row.name)
     if (!shards.has(shard)) shards.set(shard, [])
-    shards.get(shard).push([row.name, row.position, row.pay, row.expenses, employerAt.get(row.slug), yearAt.get(row.year), row.sourceId])
+    shards.get(shard).push([row.name, row.position, row.pay, row.expenses, employerAt.get(row.slug), yearAt.get(row.year), row.sourceId, row.page ?? null])
   }
   const shardCounts = {}
   for (const [shard, list] of [...shards].sort(([a], [b]) => a.localeCompare(b))) {
     list.sort((a, b) => a[0].localeCompare(b[0]) || a[5] - b[5] || b[2] - a[2] || a[4] - b[4])
     write(`people/${shard}.json.gzip`, list, true); shardCounts[shard] = list.length
   }
-  write('people/index.json', { note: 'Rows: [disclosed name, position, remuneration, expenses, employer index, year index, source id]. Names are not personal identifiers.', years: labels, sources, coverage, employers: employerList.map(({ slug, names, sector, body }) => [names.at(-1), sector, body, slug]), shards: shardCounts })
+  write('people/index.json', { schemaVersion: 2, note: 'Rows: [disclosed name, position, remuneration, expenses, employer index, year index, source id, physical PDF page or null]. Names are not personal identifiers.', years: labels, sources, coverage, employers: employerList.map(({ slug, names, sector, body }) => [names.at(-1), sector, body, slug]), shards: shardCounts })
   // Every position title across employers (src/salaries/positions.js reads one title however it was
   // spelled): a list to search, then each title's employers and years in slices by its first letters.
   const titles = new Map()
@@ -281,8 +298,9 @@ try {
   write('positions/index.json.gzip', { note: 'Titles: [most common spelling, rows, employers, first year index, last year index]. Slices by key: cells [employer index in employers/index.json, year index, rows, mean, median, lowest, highest]. Rows are disclosure records, not positions filled.', years: labels, titles: titleList, shards: [...titleShards.keys()].sort() }, true)
   audit.output = { rows: rows.length, namedRows: Object.values(shardCounts).reduce((sum, count) => sum + count, 0), employers: employerList.length, atlasBodies: Object.keys(index.bodies).length, years: labels, availableEmployerYears: employerList.reduce((sum, entry) => sum + entry.coverage.filter((year) => year.status === 'available').length, 0) }
   write('coverage.json', { ...audit, employers: employerList.map(({ slug, names, sector, coverage }) => ({ slug, names, sector, coverage })) })
+  index.coverage = Object.fromEntries(employerList.filter((entry) => entry.body).map((entry) => [entry.body, entry.coverage]))
   write('index.json', index)
-  const generated = `// Generated by scripts/build-salaries.mjs — do not edit.\n// Counts and totals describe the imported disclosure rows, not a full workforce census.\nexport const SALARY_YEARS = ${JSON.stringify(years)}\nexport const SALARY_INDEX = ${JSON.stringify(index.bodies)}\nexport const SALARY_SOURCES = ${JSON.stringify(sources)}\n`
+  const generated = `// Generated by scripts/build-salaries.mjs — do not edit.\n// Counts and totals describe the imported disclosure rows, not a full workforce census.\nexport const SALARY_YEARS = ${JSON.stringify(years)}\nexport const SALARY_INDEX = ${JSON.stringify(index.bodies)}\nexport const SALARY_SOURCES = ${JSON.stringify(sources)}\nexport const SALARY_COVERAGE = ${JSON.stringify(index.coverage)}\n`
   // Keep a backup until both the directory and generated module have been replaced successfully.
   const backup = `${out}.previous-build`
   if (existsSync(backup)) throw new Error(`Previous backup exists: ${backup}; inspect before rebuilding`)

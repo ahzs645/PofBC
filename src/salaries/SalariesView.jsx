@@ -18,8 +18,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } from './people.js'
 import { keyedTitles, titleMatcher } from './positions.js'
+import { filterEmployers } from './coverage.js'
 import { formatMoney as money } from './money.js'
 import { YearStrip } from './parts.jsx'
+import { salaryYearIndex } from './viewState.js'
 import { count, latestYear, loadJson, More, PersonIcon, readPlace, RoleIcon, seenYears, toTop, wordsOf, writePlace } from './common.jsx'
 import { EmployerPage } from './EmployerPage.jsx'
 import { PersonPage } from './PersonPage.jsx'
@@ -37,7 +39,6 @@ const shardOfKey = (key) => key.split('|')[0].slice(0, 2).padEnd(2, '_')
 /** A reading as it is written in the disclosures: "smith john" read surname first is "Smith, John". */
 const asDisclosed = (reading) => [reading.surname, reading.given].filter(Boolean).join(', ')
   .replace(/(^|[\s,-])(\p{L})/gu, (_, before, letter) => `${before}${letter.toUpperCase()}`)
-const yearSlug = (label) => label.replace('/', '-')
 
 /** An employer as a card: its name, the years it has records in, and its latest count. */
 const EmployerCard = ({ entry, years, year, onOpen }) => {
@@ -81,19 +82,23 @@ export const SalariesView = ({ onOpenGovernment }) => {
   // The pages opened on the way here, newest last, each with the name its back button gives it.
   const [trail, setTrail] = useState([])
   const heading = useRef(null)
-  const [filterYear, setFilterYear] = useState('all')
-  const [sector, setSector] = useState('all')
   const [shards, setShards] = useState({})
   const [reading, setReading] = useState(null)
   const [shown, setShown] = useState(24)
   const [employersShown, setEmployersShown] = useState(6)
   const [titlesShown, setTitlesShown] = useState(9)
   const query = place.q
+  const sector = place.sector
+  const setSector = (value) => setPlace((current) => ({ ...current, sector: value }))
 
   useEffect(() => {
     loadJson('salaries/people/index.json').then(setIndex, () => setFailed(true))
     loadJson('salaries/employers/index.json').then(setEmployersIndex, () => setFailed(true))
   }, [loadVersion])
+
+  // The year filter is kept as a label, so a shared link survives older years being added.
+  const filterYear = salaryYearIndex(place.year, index?.years ?? [])
+  const setFilterYear = (value) => setPlace((current) => ({ ...current, year: value === 'all' ? 'all' : index.years[Number(value)] }))
 
   // The ways what was typed can be read as a name, and the index slices they need.
   const readings = useMemo(() => nameReadings(query), [query])
@@ -105,7 +110,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
     for (const shard of needed) {
       if (shards[shard]) continue
       if (!index.shards[shard]) { setShards((current) => ({ ...current, [shard]: [] })); continue }
-      loadJson(`salaries/people/${shard}.json.gzip`).then((list) => live && setShards((current) => ({ ...current, [shard]: list })), () => live && setFailed(true))
+      // A slice that fails leaves the employer and position results standing, with its own retry.
+      loadJson(`salaries/people/${shard}.json.gzip`).then((list) => live && setShards((current) => ({ ...current, [shard]: list })), () => live && setShards((current) => ({ ...current, [shard]: 'failed' })))
     }
     return () => { live = false }
   }, [needed, index, loadVersion]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -126,6 +132,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
     return readings.map((each) => {
       const list = shards[shardOf(each)]
       if (!list) return { reading: each, loading: true, groups: [] }
+      if (list === 'failed') return { reading: each, loading: false, failed: true, groups: [], full: 0 }
       const groups = new Map()
       for (const row of list) {
         const tier = nameQueryTier(row[0], each.typed, index.sources?.[row[6]]?.nameDisclosure)
@@ -143,6 +150,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
       return { reading: each, loading: false, groups: described, full: described.filter((group) => group.tier < 2).length }
     })
   }, [readings, shards, filterYear, sector, index])
+  const nameSearchFailed = found.some((each) => each.failed)
+  const retryNames = () => { setShards((current) => Object.fromEntries(Object.entries(current).filter(([, list]) => list !== 'failed'))); setLoadVersion((value) => value + 1) }
   const settled = found.findIndex((each) => each.loading)
   const automatic = (() => {
     const done = settled < 0 ? found : found.slice(0, settled)
@@ -186,14 +195,14 @@ export const SalariesView = ({ onOpenGovernment }) => {
   if (!index || !employersIndex) return <p className="gallery__intro" role="status">Loading the salary index…</p>
 
   const years = index.years
-  const yearAt = place.fy ? years.findIndex((label) => yearSlug(label) === place.fy) : -1
+  const yearAt = place.employerYear ? years.indexOf(place.employerYear) : -1
   const pageYear = yearAt >= 0 ? yearAt : null
   const rootLabel = query.trim() ? `All “${query.trim()}” results` : 'Salaries'
 
   // Going somewhere remembers where from, under the name of the page being left.
   const go = (next) => {
     setTrail((current) => [...current, { place, label: place.person || place.employer || place.title ? heading.current : rootLabel }])
-    setPlace({ q: place.q, person: null, employer: null, role: null, title: null, show: null, fy: place.fy, ...next })
+    setPlace({ ...place, person: null, employer: null, role: null, title: null, show: null, ...next })
     toTop()
   }
   const goBack = () => {
@@ -205,14 +214,14 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const backLabel = trail.at(-1)?.label ?? rootLabel
   const back = <button type="button" className="salaries__back" onClick={goBack}>← {backLabel}</button>
   const remember = (label) => { heading.current = label }
-  const setYear = (at) => setPlace((current) => ({ ...current, fy: yearSlug(years[at]) }))
-  const fyFromFilter = filterYear !== 'all' ? yearSlug(years[Number(filterYear)]) : place.fy
+  const setYear = (at) => setPlace((current) => ({ ...current, employerYear: years[at] }))
+  const yearFromFilter = filterYear !== 'all' ? years[Number(filterYear)] : place.employerYear
 
-  const openEmployer = (slug) => go({ employer: slug, fy: fyFromFilter })
+  const openEmployer = (slug) => go({ employer: slug, employerYear: yearFromFilter })
   const openPerson = (name) => go({ q: name, person: personKey(name) })
   const openPersonKey = (key) => go({ person: key })
-  const openTitle = (key) => go({ title: key, fy: fyFromFilter })
-  const openRole = (slug, key, at) => go({ employer: slug, role: key, fy: at !== undefined && at !== null && at >= 0 ? yearSlug(years[at]) : place.fy })
+  const openTitle = (key) => go({ title: key, employerYear: yearFromFilter })
+  const openRole = (slug, key, at) => go({ employer: slug, role: key, employerYear: at !== undefined && at !== null && at >= 0 ? years[at] : place.employerYear })
   const search = (text) => {
     setPlace((current) => ({ ...current, q: text, person: null }))
     setReading(null); setShown(24); setEmployersShown(6); setTitlesShown(9)
@@ -279,7 +288,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
     )
   }
 
-  const total = Object.values(index.shards).reduce((a, b) => a + b, 0)
+  // Every record, named or not: the people index holds only the named ones.
+  const total = employersIndex.employers.reduce((sum, entry) => sum + entry.counts.reduce((a, b) => a + b, 0), 0)
   const sectors = [...new Set(employersIndex.employers.map((entry) => entry.sector))].filter(Boolean).sort()
   const typed = query.trim()
   const peopleSettled = result && !result.loading
@@ -301,6 +311,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
           value={query}
           placeholder="A name, an employer or a position, like “Smith, J”, “Transit” or “Nurse”"
           aria-label="Search a name, an employer or a position"
+          aria-describedby="salaries-name-help"
           onChange={(event) => search(event.target.value)}
         />
         <select value={filterYear} onChange={(event) => setFilterYear(event.target.value)} aria-label="Year">
@@ -308,6 +319,16 @@ export const SalariesView = ({ onOpenGovernment }) => {
           {years.map((label, at) => <option key={label} value={String(at)}>{label}</option>)}
         </select>
       </div>
+
+      <p id="salaries-name-help" className="salaries__hint salaries__hint--small">
+        A name is read surname first, then the other way round. A comma fixes where given names begin, as in “Van der Meer, J”.
+      </p>
+      {filtered && (
+        <p className="salaries__hint">
+          {filterYear !== 'all' ? years[Number(filterYear)] : 'Every year'} · {sector === 'all' ? 'All sectors' : sector}{' '}
+          <button type="button" className="salaries__link" onClick={() => setPlace((current) => ({ ...current, year: 'all', sector: 'all' }))}>Clear filters</button>
+        </p>
+      )}
 
       <div className="salaries__chips" role="group" aria-label="Sector">
         <button type="button" aria-pressed={sector === 'all'} onClick={() => setSector('all')}>All sectors</button>
@@ -335,12 +356,15 @@ export const SalariesView = ({ onOpenGovernment }) => {
             </section>
           )}
 
-          {readings.length > 0 && !(peopleSettled && !people.length && (employerMatches.length > 0 || titleMatches.length > 0)) && (
+          {readings.length > 0 && !(peopleSettled && !nameSearchFailed && !people.length && (employerMatches.length > 0 || titleMatches.length > 0)) && (
             <section aria-labelledby="salaries-results">
               <div className="salaries__head">
                 <h2 id="salaries-results" className="salaries__title">People</h2>
-                <p className="salaries__meta">{peopleSettled ? count(fullPeople.length, 'name', 'names') : 'Loading…'}</p>
+                <p className="salaries__meta" role="status">{nameSearchFailed && !people.length ? 'Search unavailable' : peopleSettled ? count(fullPeople.length, 'name', 'names') : 'Loading…'}</p>
               </div>
+              {nameSearchFailed && (
+                <p className="salaries__hint" role="alert">Some name records could not be loaded. Employer and position results are still available. <button type="button" onClick={retryNames}>Retry name search</button></p>
+              )}
               {peopleSettled && readings.length > 1 && (
                 <p className="salaries__hint salaries__hint--small">
                   {shownReading !== 0 && reading === null
@@ -355,7 +379,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
                   ))}
                 </p>
               )}
-              {peopleSettled && people.length === 0 && !(titleQuery && !titlesIndex) && (
+              {peopleSettled && !nameSearchFailed && people.length === 0 && !(titleQuery && !titlesIndex) && (
                 <p className="salaries__hint">No disclosed name matches “{typed}”{filtered ? ' with these filters' : ''}. Try the surname alone.</p>
               )}
               {peopleSettled && fullPeople.length === 0 && initialsOnly.length > 0 && (
@@ -412,7 +436,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
  */
 const PREVIEW = 4
 const EmployerList = ({ employers, years, sector, year, onOpen, onSector }) => {
-  const visible = employers.filter((entry) => (sector === 'all' || entry.sector === sector) && (year === 'all' || entry.counts[Number(year)] > 0))
+  const visible = filterEmployers(employers, sector, year)
   const bySector = new Map()
   for (const entry of visible) {
     if (!bySector.has(entry.sector)) bySector.set(entry.sector, [])
@@ -424,6 +448,7 @@ const EmployerList = ({ employers, years, sector, year, onOpen, onSector }) => {
         <h2 id="salaries-employers" className="salaries__title">Employers</h2>
         <p className="salaries__meta">{count(visible.length, 'employer', 'employers')}{year !== 'all' ? ` with records for ${years[Number(year)]}` : ''}</p>
       </div>
+      {visible.length === 0 && <p className="salaries__hint">No employers have imported records with these filters. Choose another year or clear the filters above.</p>}
       {[...bySector].sort(([a], [b]) => a.localeCompare(b)).map(([name, list]) => {
         const sorted = [...list].sort((a, b) => Math.max(...b.counts) - Math.max(...a.counts))
         const preview = sector === 'all' ? sorted.slice(0, PREVIEW) : sorted

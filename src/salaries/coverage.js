@@ -26,11 +26,49 @@ export const rowCoverage = (coverage, sourceId, sources = {}) => {
   return {
     ...coverage, sourceIds: [sourceId], scope: source.scope === 'compiled-unverified' ? (coverage?.scope ?? source.scope) : (source.scope ?? coverage?.scope),
     periodStart: source.periodStart ?? null, periodEnd: source.periodEnd ?? null,
-    threshold: source.threshold ?? null, duplicateRows: 0, notes: []
+    threshold: source.threshold ?? null, thresholdComparison: source.thresholdComparison ?? null, duplicateRows: 0, notes: []
   }
 }
 
 export const expenseLabel = (sourceId, sources = {}) => sources[sourceId]?.travelSource ? 'Travel expenses' : 'Expenses'
+
+/** Do not change an inclusive threshold into a strict one, or infer an unstated comparison. */
+export const thresholdLabel = (coverage) => {
+  if (coverage?.threshold == null) return null
+  const amount = `$${Number(coverage.threshold).toLocaleString('en-CA')}`
+  return coverage.thresholdComparison === '>=' ? `at least ${amount}` : coverage.thresholdComparison === '>' ? `over ${amount}` : `threshold ${amount}`
+}
+
+/** An issuer report awaiting review is a lead, not an accepted source for the published rows. */
+export const coverageStatus = (coverage, sources = {}) => {
+  if (coverage?.status === 'excluded') return { kind: 'held', label: 'Held for source review' }
+  if (['source-found', 'located', 'awaiting-extraction'].includes(coverage?.status)) return { kind: 'found', label: 'Source found · records not yet imported' }
+  if (coverage?.status !== 'available') return { kind: 'missing', label: 'No records imported' }
+  const ids = coverage.sourceIds ?? []
+  const primary = ids.length > 0 && ids.every((id) => sources[id]?.url && sources[id]?.scope !== 'compiled-unverified')
+  return primary
+    ? { kind: 'primary', label: 'Employer-issued sources' }
+    : { kind: 'compiled', label: 'Compiled records · source review pending' }
+}
+
+export const yearAvailability = (coverage, count) => {
+  if (count > 0) return `${count.toLocaleString('en-CA')} records`
+  if (coverage?.status === 'excluded') return 'held for source review'
+  if (['source-found', 'located', 'awaiting-extraction'].includes(coverage?.status)) return 'source found; records not yet imported'
+  return 'no records imported'
+}
+
+/** Add a physical PDF page only when supplied by the parser; never infer it from row order. */
+export const sourceHref = (source, pdfPage) => {
+  if (!source?.url || !/^https?:\/\//i.test(source.url)) return null
+  if (!Number.isInteger(pdfPage) || pdfPage < 1) return source.url
+  try {
+    const url = new URL(source.url)
+    if (!/\.pdf$/i.test(url.pathname)) return source.url
+    url.hash = `page=${pdfPage}`
+    return url.href
+  } catch { return null }
+}
 
 export const disclosurePeriod = (coverage, sources = {}) => {
   if (coverage?.periodStart && coverage?.periodEnd) return [coverage.periodStart, coverage.periodEnd]

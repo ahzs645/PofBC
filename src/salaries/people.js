@@ -81,9 +81,11 @@ export const nameQueryTier = (name, query, nameDisclosure) => {
 
 /**
  * The ways a typed name can be read, most likely first. With a comma it is "surname, given names" and
- * nothing else. Without one, "smith john" is read surname first, then "john smith" surname last, then
- * surnames of more than one word ("de la cruz maria", "maria de la cruz"). A search tries each in turn.
- * Each is { surname, given, typed }, typed as "surname,given" for the matchers above.
+ * nothing else (so "O, J" can name a one-letter surname). Without one, "smith john" is read surname
+ * first, then "john smith" surname last, then surnames of more than one word ("de la cruz maria",
+ * "maria de la cruz"), and last the whole of it as a surname ("O Brien"). A search tries each in
+ * turn. Each is { surname, given, typed }, typed as "surname,given" for the matchers above. These are
+ * search alternatives only: they never change a disclosed name or its grouping key.
  */
 export const nameReadings = (text) => {
   const value = String(text ?? '').trim()
@@ -91,7 +93,7 @@ export const nameReadings = (text) => {
   const read = (surname, given) => ({ surname: surname.trim(), given: given.trim(), typed: `${surname.trim()},${given.trim()}` })
   if (value.includes(',')) {
     const [surname, ...given] = value.split(',')
-    return letters(surname).length >= 2 ? [read(surname, given.join(' '))] : []
+    return letters(surname).length >= 1 ? [read(surname, given.join(' '))] : []
   }
   const words = value.split(/\s+/)
   const readings = []
@@ -99,6 +101,7 @@ export const nameReadings = (text) => {
     readings.push(read(words.slice(0, size).join(' '), words.slice(size).join(' ')))
     if (words.length > 1) readings.push(read(words.slice(-size).join(' '), words.slice(0, -size).join(' ')))
   }
+  if (words.length > 1) readings.push(read(value, ''))
   const seen = new Set()
   return readings.filter((reading) => {
     const key = `${letters(reading.surname)}|${reading.given.toLowerCase()}`

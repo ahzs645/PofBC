@@ -83,7 +83,9 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
   const overall = pool(chosen)
   const points = years.map((_, at) => ({ year: at, pooled: pool(inSector.filter((cell) => cell.year === at)) }))
     .filter(({ pooled }) => pooled).map(({ year: at, pooled }) => ({ year: at, pay: pooled.mean }))
-  const sectors = [...new Set(cells.map((cell) => cell.entry.sector))].sort()
+  // The sector a search was narrowed to stays offered even where this title has none in it, so it can
+  // be cleared here.
+  const sectors = [...new Set([...cells.map((cell) => cell.entry.sector), ...(sector !== 'all' ? [sector] : [])])].sort()
   const label = detail?.spellings?.[0] ? titleLabel(detail.spellings[0][0]) : key
   remember?.(label)
   const related = useMemo(() => (index ? relatedTitles(keyedTitles(index), key) : null), [index, key])
@@ -117,6 +119,9 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
               </button>
             ))}
           </div>
+        )}
+        {detail && cells.length > 0 && !inSector.length && (
+          <p className="salaries__hint">No employer in {sector.toLowerCase()} disclosed this title. <button type="button" className="salaries__link" onClick={() => onSector('all')}>Show all sectors</button></p>
         )}
         {detail && inSector.length > 0 && (
           <>

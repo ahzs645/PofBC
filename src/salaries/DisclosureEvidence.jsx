@@ -1,15 +1,31 @@
-import { disclosurePeriod, scopeLabel } from './coverage.js'
+import { coverageStatus, disclosurePeriod, scopeLabel, sourceHref, thresholdLabel } from './coverage.js'
 
 const date = (value) => new Intl.DateTimeFormat('en-CA', {
   day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'
 }).format(new Date(`${value}T00:00:00Z`))
 
-export const SourceLink = ({ sourceId, sources = {} }) => {
+export const SourceLink = ({ sourceId, sources = {}, pdfPage, label }) => {
   const source = sources[sourceId]
-  return source?.url && /^https?:\/\//.test(source.url)
-    ? <a href={source.url} target="_blank" rel="noreferrer" title={source.title}>Source</a>
+  const href = sourceHref(source, pdfPage)
+  const page = Number.isInteger(pdfPage) && pdfPage > 0 && href?.includes('#page=')
+  return href
+    ? <a href={href} target="_blank" rel="noreferrer" title={source.title}>{label ?? (page ? `Source · p. ${pdfPage}` : 'Source')}</a>
     : null
 }
+
+const SourceLeads = ({ coverage }) => (coverage?.sourceLeads?.length > 0 ? (
+  <div className="salaries-disclosure__leads">
+    <p><strong>Located reports awaiting extraction or review</strong></p>
+    {coverage.sourceLeads.map((lead, at) => (
+      <p key={`${lead.id ?? lead.url}-${at}`}>
+        {sourceHref(lead) ? <a href={lead.url} target="_blank" rel="noreferrer">{lead.title ?? lead.id ?? 'Located report'}</a> : (lead.title ?? lead.id ?? 'Located report')}
+        {lead.nextAction ? ` — ${lead.nextAction}` : ''}
+        {lead.notes ? ` ${Array.isArray(lead.notes) ? lead.notes.join(' ') : lead.notes}` : ''}
+      </p>
+    ))}
+    <p>These reports have not supplied accepted records for the figures shown here.</p>
+  </div>
+) : null)
 
 /** The evidence and reporting boundaries attached to the records currently on screen. */
 export const DisclosureEvidence = ({ coverage, sources = {}, className = 'salaries__source' }) => {
@@ -23,7 +39,7 @@ export const DisclosureEvidence = ({ coverage, sources = {}, className = 'salari
       <p>
         <strong>{scopeLabel(coverage?.scope)}.</strong>{' '}
         {period ? `Reporting period: ${date(period[0])} – ${date(period[1])}.` : 'The exact reporting period has not been verified; a collection year can include calendar-year and fiscal-year reports.'}
-        {coverage?.threshold != null ? ` Reporting threshold: $${Number(coverage.threshold).toLocaleString('en-CA')}.` : ''}
+        {thresholdLabel(coverage) ? ` Reporting ${thresholdLabel(coverage)}.` : ''}
       </p>
       {ids.length > 0 ? (
         <p>
@@ -45,6 +61,7 @@ export const DisclosureEvidence = ({ coverage, sources = {}, className = 'salari
       </p>)}
       {coverage?.duplicateRows > 0 && <p>{coverage.duplicateRows.toLocaleString('en-CA')} repeated rows are flagged for source review; record counts may exceed the number of people.</p>}
       {notes.map((note, at) => <p key={at}>{note}</p>)}
+      <SourceLeads coverage={coverage} />
     </div>
   )
 }
@@ -61,19 +78,21 @@ export const DisclosureSummary = ({ coverage, sources = {}, className = '', more
   const ids = [...new Set(coverage?.sourceIds ?? [])]
   const linked = ids.map((id) => sources[id]).filter((source) => source?.url && /^https?:\/\//.test(source.url))
   const notes = coverage?.notes ?? []
+  const status = coverageStatus(coverage, sources)
   const expenseEvidence = [...new Map(ids.map((id) => sources[id]).filter((source) => source?.expensesNote || source?.travelSource)
     .map((source) => [`${source.expensesNote ?? ''}|${source.travelSource?.url ?? ''}`, source])).values()]
-  const folded = notes.length || expenseEvidence.length || coverage?.duplicateRows > 0 || more || (ids.length && !linked.length)
+  const folded = Boolean(notes.length || expenseEvidence.length || coverage?.duplicateRows > 0 || coverage?.sourceLeads?.length || more || (ids.length && !linked.length))
   return (
     <div className={`salaries-disclosure ${className}`}>
+      <p className="salaries-disclosure__status" data-kind={status.kind}>{status.label}</p>
       <p className="salaries-disclosure__line">
-        <strong>{scopeLabel(coverage?.scope)}</strong>
+        <strong>{coverage?.scope ? scopeLabel(coverage.scope) : 'Disclosure details not yet verified'}</strong>
         {period ? <> · {month(period[0])} – {month(period[1])}</> : ' · reporting period not verified'}
-        {coverage?.threshold != null ? ` · over $${Number(coverage.threshold).toLocaleString('en-CA')}` : ''}
+        {thresholdLabel(coverage) ? ` · ${thresholdLabel(coverage)}` : ''}
         {linked.length > 0 && <> · {linked.map((source, at) => (
           <span key={source.url}>{at > 0 ? ', ' : ''}<a href={source.url} target="_blank" rel="noreferrer" title={source.title}>{linked.length > 1 ? `Source ${at + 1}` : 'Source'}</a></span>
         ))}</>}
-        {!ids.length && ' · no source document attached'}
+        {!ids.length && (coverage?.sourceLeads?.length ? ' · located source links below' : ' · no source document attached')}
       </p>
       {folded && (
         <details className="salaries-disclosure__more">
@@ -94,6 +113,7 @@ export const DisclosureSummary = ({ coverage, sources = {}, className = '', more
           </p>)}
           {coverage?.duplicateRows > 0 && <p>{coverage.duplicateRows.toLocaleString('en-CA')} repeated rows are flagged for source review; record counts may exceed the number of people.</p>}
           {notes.map((note, at) => <p key={at}>{note}</p>)}
+          <SourceLeads coverage={coverage} />
           {more}
         </details>
       )}

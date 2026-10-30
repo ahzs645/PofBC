@@ -14,6 +14,7 @@ import { DisclosureSummary } from './DisclosureEvidence.jsx'
 import { formatMoney as money, medianMoney as median } from './money.js'
 import { PayChart, YearPicker, shortYear } from './parts.jsx'
 import { count, loadJson, More, RecordRow, RoleIcon, seenYears, wordsOf } from './common.jsx'
+import { filterPositionGroups, matchesRecordQuery } from './viewState.js'
 
 const SHOWS = ['positions', 'people', 'everyone']
 
@@ -76,12 +77,14 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
   const positions = useMemo(() => groupTitles(people), [people])
 
   const words = wordsOf(filter)
-  const has = (text) => words.every((word) => String(text ?? '').toLowerCase().includes(word))
   const named = positions.filter((position) => position.label)
-  const matchingPositions = named.filter((position) => has(position.label)).sort(POSITION_ORDER[order])
+  // A search in positions finds a position by its title or by the people in it: "Jane Smith" finds
+  // her position, with one of its records matching.
+  const matchingPositions = filterPositionGroups(named, filter).sort(POSITION_ORDER[order])
   const unpositioned = positions.find((position) => !position.label)
   const ranked = useMemo(() => [...people].sort((a, b) => b[2] - a[2]), [people])
-  const matchingPeople = ranked.filter((row) => has(`${row[0] ?? ''} ${row[1] ?? ''}`))
+  const matchingPeople = ranked.filter((row) => matchesRecordQuery(row, filter))
+  const positionedRecords = people.filter((row) => row[1]).length
   const pay = people.map((row) => row[2])
 
   // Everyone under a name across the years: one row a name, one column a year with records.
@@ -105,7 +108,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
     name: (a, b) => a.key.localeCompare(b.key)
   }[tableOrder]
   const matchingEveryone = useMemo(
-    () => everyone.filter((group) => has(`${group.name} ${group.latest[1] ?? ''}`)).sort(tableSort),
+    () => everyone.filter((group) => matchesRecordQuery([group.name, group.latest[1]], filter)).sort(tableSort),
     [everyone, filter, tableOrder, year]
   )
   const unnamed = rows ? rows.filter((row) => !row[0]).length : 0
@@ -136,14 +139,14 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
             <> · <button type="button" className="salaries__link" onClick={() => onOpenGovernment(entry.body, Number(years[year].slice(0, 4)))}>See it in Government</button></>
           )}
         </p>
-        <YearPicker years={years} counts={entry.counts} value={year} onChange={pick} />
+        <YearPicker years={years} counts={entry.counts} coverage={entry.coverage} value={year} onChange={pick} />
         <h3 className="salaries__year-title">{years[year]}</h3>
         <DisclosureSummary
           coverage={coverage}
           sources={sources}
           more={entry.repeated?.length > 0 && <p>Compiled records for {entry.repeated.join(', ')} were excluded after extensive repetition of names and pay from an earlier collection.</p>}
         />
-        {!entry.counts[year] && <p className="salaries__hint">{coverage.status === 'excluded' ? 'These records were excluded after a data-quality check.' : 'No records have been imported for this employer in this year.'} That does not mean it had no staff or made no payments.</p>}
+        {!entry.counts[year] && <p className="salaries__hint">{coverage.status === 'excluded' ? 'These records are held for review because source checks have not passed.' : coverage.status === 'source-found' ? 'A report has been located, but its employee records have not yet passed extraction and validation.' : 'No records have been imported for this employer in this year.'} That does not mean it had no staff or made no payments.</p>}
         {rows && entry.counts[year] > 0 && (
           <dl className="salaries__tiles">
             <div><dt>Records</dt><dd>{people.length.toLocaleString('en-CA')}</dd></div>
@@ -187,7 +190,11 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
           {view === 'everyone' && (
             <Segmented compact ariaLabel="Order names" value={tableOrder} onChange={setTableOrder} options={[{ value: 'pay', label: `${years[year]} pay` }, { value: 'years', label: 'Most years' }, { value: 'name', label: 'A–Z' }]} />
           )}
-          {view === 'people' && !withPositions && people.length > 0 && <p className="salaries__hint salaries__hint--small">This year’s records do not name positions.</p>}
+          {view === 'people' && !withPositions && people.length > 0 && (
+            <p className="salaries__hint salaries__hint--small">
+              {positionedRecords ? `${positionedRecords.toLocaleString('en-CA')} of this year’s ${people.length.toLocaleString('en-CA')} records name positions; they are shown where supplied.` : 'This year’s records do not name positions.'}
+            </p>
+          )}
           {view !== 'everyone' && !people.length && <p className="salaries__hint">No records in {years[year]}. Choose a year with records above, or see all years.</p>}
           {words.length > 0 && list.length === 0 && <p className="salaries__hint">Nothing {view === 'everyone' ? '' : `in ${years[year]} `}matches “{filter.trim()}”.</p>}
 
@@ -200,11 +207,12 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
                     <span className="salaries__name">{position.label}</span>
                     <span className="salaries__line">
                       {count(position.rows.length, 'record', 'records')}
-                      {position.rows.length > 1 ? ` · ${money(position.low)}–${money(position.high)}` : ''}
+                      {position.rows.length < position.totalRows ? ` of ${position.totalRows.toLocaleString('en-CA')} match` : ''}
+                      {position.totalRows > 1 ? ` · ${money(position.low)}–${money(position.high)}` : ''}
                     </span>
-                    {position.rows.length > 1 && <span className="salaries__line">Median {money(position.median)}</span>}
+                    {position.totalRows > 1 && <span className="salaries__line">Median {money(position.median)}</span>}
                   </span>
-                  <span className="salaries__aside">{money(position.mean)}<span className="salaries__line">{position.rows.length > 1 ? 'average' : 'paid'}</span></span>
+                  <span className="salaries__aside">{money(position.mean)}<span className="salaries__line">{position.totalRows > 1 ? 'average' : 'paid'}</span></span>
                 </button>
               ))}
             </div>
@@ -226,8 +234,9 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
                   pay={row[2]}
                   expenses={row[3]}
                   expenseText={expenseLabel(row[5], sources)}
-                  sourceId={oneSource ? null : row[5]}
+                  sourceId={oneSource && !row[6] ? null : row[5]}
                   sources={sources}
+                  pdfPage={row[6]}
                   nameDisclosure={sources?.[row[5]]?.nameDisclosure}
                   onPerson={onPerson}
                 />
@@ -398,8 +407,9 @@ const RolePage = ({ entry, years, sources, rows, failed, roleKey, wantedYear, ba
                 pay={row[2]}
                 expenses={row[3]}
                 expenseText={expenseLabel(row[5], sources)}
-                sourceId={oneSource ? null : row[5]}
+                sourceId={oneSource && !row[6] ? null : row[5]}
                 sources={sources}
+                pdfPage={row[6]}
                 nameDisclosure={sources?.[row[5]]?.nameDisclosure}
                 onPerson={onPerson}
               />

@@ -1244,6 +1244,11 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-salaries__disclosure { margin-top: 10px; }
 .gov-salaries__disclosure .salaries-disclosure__more { color: var(--gov-ink-4); }
 .gov-salaries .gov-cards { margin-top: 16px; }
+.gov-salaries__record { display: grid; gap: 3px; align-content: start; min-width: 0; }
+.gov-salaries__record .gov-cards__card { width: 100%; }
+.gov-salaries__record .salaries__source { padding-left: 12px; color: var(--gov-ink-4); }
+.gov-salaries__record .salaries__source a { color: inherit; }
+.gov-salaries .salaries-picker-select select { background: var(--gov-surface); border-color: var(--gov-outline); color: var(--gov-ink); }
 
 /* ── A long note read a step at a time (StoryText.jsx) ─────────────────────────────────────── */
 

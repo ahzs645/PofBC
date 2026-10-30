@@ -1,0 +1,4792 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "fraser-health-sofi-2015-16",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2015/16",
+      "title": "Fraser Health Statement of Financial Information 2015/16: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2016/2016EmployeeRenumeration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "e6564e341b0dfc576cdf6bcc7a3aa8ff2809d4d3e29a1e4139a71858fc2b1575",
+      "file": "2015-16.json.gzip",
+      "dataSha256": "2797df32b3c89f0cb1032bf823f36dede7edfc86ab5ac4926b5571b32db0fa6b",
+      "normalizedSha256": "b55ff79f0d44f018dacdc0f9ff37adabdc616a00d10787d6bb5e3aebde395874",
+      "periodStart": "2015-04-01",
+      "periodEnd": "2016-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 6219,
+      "totalRemuneration": 575856593,
+      "totalDisclosedExpenses": 4542045,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          149
+        ],
+        "rowsPerPhysicalPage": [
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          3
+        ],
+        "summaryPhysicalPdfPages": [
+          149
+        ],
+        "internalFiscalYearEnd": 2016,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 575856515,
+        "printedNamedExpenses": 4542036,
+        "underThresholdRemunerationExcluded": 753621437,
+        "underThresholdExpensesExcluded": 6247993,
+        "printedAllEmployeeRemuneration": 1329477952,
+        "printedAllEmployeeExpenses": 10790028,
+        "printedSubtotalRemunerationResidual": 0,
+        "printedSubtotalExpenseResidual": 1,
+        "printedSubtotalsReconcileExactly": false,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "GILL,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KENNEDY,HEATHER",
+            "rows": 2
+          },
+          {
+            "name": "LAM,KITTY",
+            "rows": 2
+          },
+          {
+            "name": "MINHAS,RAVINDER",
+            "rows": 2
+          },
+          {
+            "name": "SMITH,KAREN",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 6219,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 575856593,
+        "namedExpensesSum": 4542045,
+        "remunerationResidual": 78,
+        "expensesResidual": 9,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 3110.0,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "missingExpenseRows": 3101,
+        "thresholdComparison": ">="
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $78; the corresponding expense difference is $9. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    },
+    {
+      "id": "fraser-health-sofi-2016-17",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2016/17",
+      "title": "Fraser Health Statement of Financial Information 2016/17: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2017/20171030_employee_remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "44536e19f38d708ed2cba456269f80a2fbb65cf2b199f6fa835f6ede51ac1ea4",
+      "file": "2016-17.json.gzip",
+      "dataSha256": "0a4bb5f328b71b97b485091127a1d749d5f8195a8fde6cd2a47f173025225815",
+      "normalizedSha256": "c8fff80c58d106f1e2494f4541541c2a1ede4a8d69a24dd425ab585056056dcc",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 6606,
+      "totalRemuneration": 622509766,
+      "totalDisclosedExpenses": 4606903,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          158
+        ],
+        "rowsPerPhysicalPage": [
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          12
+        ],
+        "summaryPhysicalPdfPages": [
+          158
+        ],
+        "internalFiscalYearEnd": 2017,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 622509617,
+        "printedNamedExpenses": 4606740,
+        "underThresholdRemunerationExcluded": 756169415,
+        "underThresholdExpensesExcluded": 6320411,
+        "printedAllEmployeeRemuneration": 1378679033,
+        "printedAllEmployeeExpenses": 10927151,
+        "printedSubtotalRemunerationResidual": -1,
+        "printedSubtotalExpenseResidual": 0,
+        "printedSubtotalsReconcileExactly": false,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "GILL,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KENNEDY,HEATHER",
+            "rows": 2
+          },
+          {
+            "name": "LAM,KITTY",
+            "rows": 2
+          },
+          {
+            "name": "LEE,MELISSA",
+            "rows": 2
+          },
+          {
+            "name": "MINHAS,RAVINDER",
+            "rows": 2
+          },
+          {
+            "name": "SMITH,KAREN",
+            "rows": 2
+          },
+          {
+            "name": "THOMAS,ASHA",
+            "rows": 2
+          },
+          {
+            "name": "WONG,DENISE",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 6606,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 622509766,
+        "namedExpensesSum": 4606903,
+        "remunerationResidual": 149,
+        "expensesResidual": 163,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 3303.5,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "missingExpenseRows": 3449,
+        "thresholdComparison": ">="
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $149; the corresponding expense difference is $163. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    },
+    {
+      "id": "fraser-health-sofi-2017-18",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2017/18",
+      "title": "Fraser Health Statement of Financial Information 2017/18: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2018/20181031_EE_Remuneration_Schedule.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "0125b00e4c76b8de69d8d1f7835260b4074bc23aae6f938b920a72f445de10d9",
+      "file": "2017-18.json.gzip",
+      "dataSha256": "a2d3d14121a31496f841620c101fb88e42099bd8d267aa41172700984f386eca",
+      "normalizedSha256": "656fa17b4247a88f34b5b39a931a8daf8728e3215b91fc0dcac0ae2a0df303f7",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 6938,
+      "totalRemuneration": 656117414,
+      "totalDisclosedExpenses": 5070506,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          170
+        ],
+        "rowsPerPhysicalPage": [
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          41,
+          43,
+          43,
+          43,
+          43,
+          43,
+          43,
+          38,
+          0
+        ],
+        "summaryPhysicalPdfPages": [
+          169,
+          170
+        ],
+        "internalFiscalYearEnd": 2018,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 656117309,
+        "printedNamedExpenses": 5070457,
+        "underThresholdRemunerationExcluded": 759714669,
+        "underThresholdExpensesExcluded": 6763265,
+        "printedAllEmployeeRemuneration": 1415831977,
+        "printedAllEmployeeExpenses": 11833722,
+        "printedSubtotalRemunerationResidual": 1,
+        "printedSubtotalExpenseResidual": 0,
+        "printedSubtotalsReconcileExactly": false,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "BRAR,RAMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "LEE,ALEXANDRA",
+            "rows": 2
+          },
+          {
+            "name": "LUM,MATTHEW",
+            "rows": 2
+          },
+          {
+            "name": "MATHEW,LIJI",
+            "rows": 2
+          },
+          {
+            "name": "MINHAS,RAVINDER",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,KAMALDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SERBAN,CARMEN",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,RAMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "WONG,DENISE",
+            "rows": 2
+          },
+          {
+            "name": "WONG,MICHELLE",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 6938,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 656117414,
+        "namedExpensesSum": 5070506,
+        "remunerationResidual": 105,
+        "expensesResidual": 49,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 3469.5,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 1,
+        "explicitZeroExpenseRows": 0,
+        "missingExpenseRows": 3477,
+        "thresholdComparison": ">=",
+        "visuallyReviewedExpenseRows": [
+          {
+            "name": "CANOSA,SANDEE",
+            "remuneration": 81287,
+            "expenses": -459,
+            "physicalPdfPage": 22
+          }
+        ],
+        "visuallyReviewedSummaryPages": [
+          169,
+          170
+        ],
+        "compiledBaselineComparison": {
+          "baselineFile": "research/salaries/compiled-baseline.json.gzip",
+          "baselineSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+          "compiledLabel": "2017/18",
+          "compiledRows": 6952,
+          "officialRows": 6938,
+          "exactNormalizedNamePayMatches": 6749,
+          "compiledNamePayPairsNotInOfficialSchedule": 203,
+          "officialNamePayPairsNotInCompiledSnapshot": 189,
+          "method": "Multiplicity-preserving name/pay comparison after removing name case, spacing and punctuation; no fuzzy, nickname or identity matching."
+        }
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $105; the corresponding expense difference is $49. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    },
+    {
+      "id": "fraser-health-sofi-2018-19",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2018/19",
+      "title": "Fraser Health Statement of Financial Information 2018/19: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2019/2019_11_Summary_of_Remuneration_and_Expenses.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "b78ab4ed653bf0682e3e96385046558ff4a950967031fbfd38eddc2cee0135e4",
+      "file": "2018-19.json.gzip",
+      "dataSha256": "1cbe27e668a66d1f27b3ba4dff44b15b2594c1663cfd9f23a26fc23d628a4719",
+      "normalizedSha256": "064d188ddb0288c74a1c1c5c68cc470549b4fdf3c6530c03197b4de400b182fe",
+      "periodStart": "2018-04-01",
+      "periodEnd": "2019-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 7527,
+      "totalRemuneration": 721267111,
+      "totalDisclosedExpenses": 4973596,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          154
+        ],
+        "rowsPerPhysicalPage": [
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          30
+        ],
+        "summaryPhysicalPdfPages": [
+          154
+        ],
+        "internalFiscalYearEnd": 2019,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 721267029,
+        "printedNamedExpenses": 4973546,
+        "underThresholdRemunerationExcluded": 759861636,
+        "underThresholdExpensesExcluded": 6775600,
+        "printedAllEmployeeRemuneration": 1481128666,
+        "printedAllEmployeeExpenses": 11749146,
+        "printedSubtotalRemunerationResidual": -1,
+        "printedSubtotalExpenseResidual": 0,
+        "printedSubtotalsReconcileExactly": false,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "DHALIWAL,JASDEEP",
+            "rows": 2
+          },
+          {
+            "name": "FABBRO,URSZULA",
+            "rows": 2
+          },
+          {
+            "name": "GILL,AMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,AMAN",
+            "rows": 2
+          },
+          {
+            "name": "JOHAL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "MATHEW,LIJI",
+            "rows": 2
+          },
+          {
+            "name": "MINHAS,RAVINDER",
+            "rows": 2
+          },
+          {
+            "name": "RANDHAWA,JASPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,KAMALDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SERBAN,CARMEN",
+            "rows": 2
+          },
+          {
+            "name": "THOMAS,ASHA",
+            "rows": 2
+          },
+          {
+            "name": "WONG,MICHELLE",
+            "rows": 2
+          },
+          {
+            "name": "WOO,JENNIFER",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 7527,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 721267111,
+        "namedExpensesSum": 4973596,
+        "remunerationResidual": 82,
+        "expensesResidual": 50,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 3764.0,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 1,
+        "explicitZeroExpenseRows": 0,
+        "missingExpenseRows": 4057,
+        "thresholdComparison": ">=",
+        "visuallyReviewedExpenseRows": [
+          {
+            "name": "JEONG,JANELLE",
+            "remuneration": 82030,
+            "expenses": -47,
+            "physicalPdfPage": 64
+          }
+        ]
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $82; the corresponding expense difference is $50. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    },
+    {
+      "id": "fraser-health-sofi-2019-20",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2019/20",
+      "title": "Fraser Health Statement of Financial Information 2019/20: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2020/Employee-remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "13621a601da6cc412ede2bb39b95024510a897caa6351c9eb81602a2ec0868b0",
+      "file": "2019-20.json.gzip",
+      "dataSha256": "cba594decd9729dfc1251a502798466ffe21f3ca5141f2b90509c7315ed9ccd7",
+      "normalizedSha256": "88094ba56204fbdc8cb9e44d6c1fd62f04ab35183224b758bc5decda4991d023",
+      "periodStart": "2019-04-01",
+      "periodEnd": "2020-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 8080,
+      "totalRemuneration": 793671551,
+      "totalDisclosedExpenses": 5089367,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          166
+        ],
+        "rowsPerPhysicalPage": [
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          42,
+          2
+        ],
+        "summaryPhysicalPdfPages": [
+          166
+        ],
+        "internalFiscalYearEnd": 2020,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 793671441,
+        "printedNamedExpenses": 5089309,
+        "underThresholdRemunerationExcluded": 782698147,
+        "underThresholdExpensesExcluded": 7534520,
+        "printedAllEmployeeRemuneration": 1576369587,
+        "printedAllEmployeeExpenses": 12623828,
+        "printedSubtotalRemunerationResidual": 1,
+        "printedSubtotalExpenseResidual": 1,
+        "printedSubtotalsReconcileExactly": false,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "GILL,GURPREET",
+            "rows": 4
+          },
+          {
+            "name": "GILL,PARMINDER",
+            "rows": 2
+          },
+          {
+            "name": "GILL,SUKHDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,AMAN",
+            "rows": 2
+          },
+          {
+            "name": "JOHAL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "MATHEW,LIJI",
+            "rows": 2
+          },
+          {
+            "name": "RANDHAWA,JASPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "ROBINSON,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,KAMALDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SERBAN,CARMEN",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,RAMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "WHITE,DAVID",
+            "rows": 2
+          },
+          {
+            "name": "WONG,DENISE",
+            "rows": 2
+          },
+          {
+            "name": "WONG,MICHELLE",
+            "rows": 2
+          },
+          {
+            "name": "WOO,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "WRIGHT,LISA",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 8080,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 793671551,
+        "namedExpensesSum": 5089367,
+        "remunerationResidual": 110,
+        "expensesResidual": 58,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 4040.5,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 2,
+        "explicitZeroExpenseRows": 0,
+        "missingExpenseRows": 4392,
+        "thresholdComparison": ">=",
+        "visuallyReviewedExpenseRows": [
+          {
+            "name": "CHOHAN,GURMANGAL",
+            "remuneration": 97525,
+            "expenses": -85,
+            "physicalPdfPage": 27
+          },
+          {
+            "name": "MCNEIL,ROSEMARY",
+            "remuneration": 100621,
+            "expenses": -99,
+            "physicalPdfPage": 99
+          }
+        ]
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $110; the corresponding expense difference is $58. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    },
+    {
+      "id": "fraser-health-sofi-2020-21",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2020/21",
+      "title": "Fraser Health Statement of Financial Information 2020/21: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2021/Employee-remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "e6265fac988bea5034b257f9e057c95845c314a40b578b928e7124e5e374a9bf",
+      "file": "2020-21.json.gzip",
+      "dataSha256": "fb3a982d696ead5c88d7a84fedb661e837c58c4263f35deb26b491679f136ea8",
+      "normalizedSha256": "428701ff429fe2d147a2393566108e14d20a1005581f1afb0cb462a2e19b3b30",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 10072,
+      "totalRemuneration": 1022135521,
+      "totalDisclosedExpenses": 5243498,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          206
+        ],
+        "rowsPerPhysicalPage": [
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          27
+        ],
+        "summaryPhysicalPdfPages": [
+          206
+        ],
+        "internalFiscalYearEnd": 2021,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 1022135501,
+        "printedNamedExpenses": 5243504,
+        "underThresholdRemunerationExcluded": 802630825,
+        "underThresholdExpensesExcluded": 8756786,
+        "printedAllEmployeeRemuneration": 1824766326,
+        "printedAllEmployeeExpenses": 14000290,
+        "printedSubtotalRemunerationResidual": 0,
+        "printedSubtotalExpenseResidual": 0,
+        "printedSubtotalsReconcileExactly": true,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "BRAR,RUPINDER",
+            "rows": 2
+          },
+          {
+            "name": "CHU,KATHLEEN",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,GURMINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANDEEP",
+            "rows": 3
+          },
+          {
+            "name": "DHALIWAL,MANINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "FABBRO,URSZULA",
+            "rows": 2
+          },
+          {
+            "name": "GILL,GURPREET",
+            "rows": 3
+          },
+          {
+            "name": "GILL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,SUKHDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,AMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "JOHAL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,MANDEEP",
+            "rows": 3
+          },
+          {
+            "name": "LAM,ESTHER",
+            "rows": 2
+          },
+          {
+            "name": "MANN,NAVJOT",
+            "rows": 2
+          },
+          {
+            "name": "MATHEW,LIJI",
+            "rows": 2
+          },
+          {
+            "name": "PARMAR,SONIA",
+            "rows": 2
+          },
+          {
+            "name": "PETERSON,MICHELLE",
+            "rows": 2
+          },
+          {
+            "name": "RAI,PARAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "RANDHAWA,JASPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "ROBINSON,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,JASMINE",
+            "rows": 3
+          },
+          {
+            "name": "SANDHU,KAMALDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,KIRANJIT",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,MOHINDER",
+            "rows": 2
+          },
+          {
+            "name": "WHITE,DAVID",
+            "rows": 2
+          },
+          {
+            "name": "WONG,DENISE",
+            "rows": 2
+          },
+          {
+            "name": "WOO,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "YOUNG,JENNIFER",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 10072,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 1022135521,
+        "namedExpensesSum": 5243498,
+        "remunerationResidual": 20,
+        "expensesResidual": -6,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 5036.5,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "missingExpenseRows": 6402,
+        "thresholdComparison": ">=",
+        "compiledBaselineComparison": {
+          "baselineFile": "research/salaries/compiled-baseline.json.gzip",
+          "baselineSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+          "compiledLabel": "2020/21",
+          "compiledRows": 10072,
+          "officialRows": 10072,
+          "exactNormalizedNamePayMatches": 10066,
+          "compiledNamePayPairsNotInOfficialSchedule": 6,
+          "officialNamePayPairsNotInCompiledSnapshot": 6,
+          "method": "Multiplicity-preserving name/pay comparison after removing name case, spacing and punctuation; no fuzzy, nickname or identity matching."
+        }
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $20; the corresponding expense difference is $-6. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    },
+    {
+      "id": "fraser-health-sofi-2021-22",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2021/22",
+      "title": "Fraser Health Statement of Financial Information 2021/22: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2022/Employee_remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "65897bdbaadd4ec5ebf56303d757432364a3c1f83ba041b850a288dd6bce2af9",
+      "file": "2021-22.json.gzip",
+      "dataSha256": "7c17aeb01c7f40e6f94c18556a9cbbe1f93772ad64fb681fa25a2eda694537e5",
+      "normalizedSha256": "cb1d6c7194d8a399079600720f6d23cdf612999154c5178e2c83b4a47f4c9d6e",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 10782,
+      "totalRemuneration": 1114704375,
+      "totalDisclosedExpenses": 5726328,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          221
+        ],
+        "rowsPerPhysicalPage": [
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          2
+        ],
+        "summaryPhysicalPdfPages": [
+          221
+        ],
+        "internalFiscalYearEnd": 2022,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 1114704344,
+        "printedNamedExpenses": 5726268,
+        "underThresholdRemunerationExcluded": 879334323,
+        "underThresholdExpensesExcluded": 9215511,
+        "printedAllEmployeeRemuneration": 1994038666,
+        "printedAllEmployeeExpenses": 14941779,
+        "printedSubtotalRemunerationResidual": 1,
+        "printedSubtotalExpenseResidual": 0,
+        "printedSubtotalsReconcileExactly": false,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "ANDERSON,HEATHER",
+            "rows": 2
+          },
+          {
+            "name": "BRAR,RUPINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,BALPREET",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANPREET",
+            "rows": 3
+          },
+          {
+            "name": "DHALIWAL,PARVINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,SANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "FABBRO,URSZULA",
+            "rows": 2
+          },
+          {
+            "name": "GILL,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GILL,GURPREET",
+            "rows": 3
+          },
+          {
+            "name": "GILL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GILL,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,SUKHDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,PARMINDER",
+            "rows": 3
+          },
+          {
+            "name": "JOHAL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,JASVIR",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,KARAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,MANDEEP",
+            "rows": 4
+          },
+          {
+            "name": "KAUR,PRABHJIT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,SANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KHAN,MOHAMMED",
+            "rows": 2
+          },
+          {
+            "name": "KIM,MARIA",
+            "rows": 2
+          },
+          {
+            "name": "KIM,MIN JEONG",
+            "rows": 2
+          },
+          {
+            "name": "LAM,ESTHER",
+            "rows": 2
+          },
+          {
+            "name": "MANN,SANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "MATHEW,LIJI",
+            "rows": 2
+          },
+          {
+            "name": "MINHAS,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "NG,CARMEN",
+            "rows": 2
+          },
+          {
+            "name": "PANDHER,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "PARMAR,SONIA",
+            "rows": 2
+          },
+          {
+            "name": "RAI,PARAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "RANDHAWA,JASPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "ROBINSON,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,JASMINE",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,KIRANJIT",
+            "rows": 3
+          },
+          {
+            "name": "SANDHU,SANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SHARMA,NAMRATA",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,MANPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,MOHINDER",
+            "rows": 2
+          },
+          {
+            "name": "SMITH,ANDREA",
+            "rows": 2
+          },
+          {
+            "name": "THOMAS,ASHA",
+            "rows": 2
+          },
+          {
+            "name": "WONG,GRACE",
+            "rows": 2
+          },
+          {
+            "name": "WOO,JENNIFER",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 10782,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 1114704375,
+        "namedExpensesSum": 5726328,
+        "remunerationResidual": 31,
+        "expensesResidual": 60,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 5391.5,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 0,
+        "explicitZeroExpenseRows": 1,
+        "missingExpenseRows": 6781,
+        "thresholdComparison": ">=",
+        "visuallyReviewedExpenseRows": [
+          {
+            "name": "BRAR,RAMAN",
+            "remuneration": 126803,
+            "expenses": 0,
+            "physicalPdfPage": 24
+          }
+        ]
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $31; the corresponding expense difference is $60. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    },
+    {
+      "id": "fraser-health-sofi-2022-23",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2022/23",
+      "title": "Fraser Health Statement of Financial Information 2022/23: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2023/Employee-remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "5b8a991c3ff69c6176489418c2d1f5ba29a3b5991d840050344a0a03300940cb",
+      "file": "2022-23.json.gzip",
+      "dataSha256": "8ac1a7394e024768f2543a9b3ae2f379a8beebb14711f173c982cc9d88bb94e6",
+      "normalizedSha256": "73c1a7685b808406179e468fed4a8068ecf7c053d221bc4e7dcfadfaeb3b13aa",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 11289,
+      "totalRemuneration": 1174137118,
+      "totalDisclosedExpenses": 6165257,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          231
+        ],
+        "rowsPerPhysicalPage": [
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          19
+        ],
+        "summaryPhysicalPdfPages": [
+          231
+        ],
+        "internalFiscalYearEnd": 2023,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 1174136879,
+        "printedNamedExpenses": 6165243,
+        "underThresholdRemunerationExcluded": 896985990,
+        "underThresholdExpensesExcluded": 10237153,
+        "printedAllEmployeeRemuneration": 2071122870,
+        "printedAllEmployeeExpenses": 16402396,
+        "printedSubtotalRemunerationResidual": -1,
+        "printedSubtotalExpenseResidual": 0,
+        "printedSubtotalsReconcileExactly": false,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "ADAMS,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "ATWAL,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "BRAUN,NICOLE",
+            "rows": 2
+          },
+          {
+            "name": "CHAN,LEANNE",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,BALPREET",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,PARVINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,SANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,MANDEEP",
+            "rows": 3
+          },
+          {
+            "name": "FABBRO,URSZULA",
+            "rows": 2
+          },
+          {
+            "name": "GILL,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GILL,GURPREET",
+            "rows": 3
+          },
+          {
+            "name": "GILL,HARJIT",
+            "rows": 2
+          },
+          {
+            "name": "GILL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,MANDEEP",
+            "rows": 5
+          },
+          {
+            "name": "GILL,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,PARMINDER",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,AMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,PARMINDER",
+            "rows": 2
+          },
+          {
+            "name": "JOHAL,HARPREET",
+            "rows": 3
+          },
+          {
+            "name": "KALER,RAVNEET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,AMANPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,JASVIR",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,KARAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,MANDEEP",
+            "rows": 4
+          },
+          {
+            "name": "KAUR,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,SUKHWINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,TAJINDER",
+            "rows": 2
+          },
+          {
+            "name": "KIM,MARIA",
+            "rows": 2
+          },
+          {
+            "name": "KIM,MIN JEONG",
+            "rows": 2
+          },
+          {
+            "name": "MANN,GURMEET",
+            "rows": 2
+          },
+          {
+            "name": "MANN,INDERJEET",
+            "rows": 2
+          },
+          {
+            "name": "MANN,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "MATHEW,LIJI",
+            "rows": 2
+          },
+          {
+            "name": "MINHAS,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "NG,CARMEN",
+            "rows": 2
+          },
+          {
+            "name": "RANDHAWA,JASPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "ROBINSON,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,JASMINE",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,KIRANJIT",
+            "rows": 2
+          },
+          {
+            "name": "SHARMA,VANDANA",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,MANPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,MOHINDER",
+            "rows": 2
+          },
+          {
+            "name": "SINGH,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "SMITH,ANDREA",
+            "rows": 2
+          },
+          {
+            "name": "THOMAS,ASHA",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 11289,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 1174137118,
+        "namedExpensesSum": 6165257,
+        "remunerationResidual": 239,
+        "expensesResidual": 14,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 5645.0,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "missingExpenseRows": 7032,
+        "thresholdComparison": ">="
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $239; the corresponding expense difference is $14. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    },
+    {
+      "id": "fraser-health-sofi-2023-24",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2023/24",
+      "title": "Fraser Health Statement of Financial Information 2023/24: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2024/Employee-remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "4aa5874dce2f261f1f0224c296ea30d1534e9984020a69f16bd99292008bb0f2",
+      "file": "2023-24.json.gzip",
+      "dataSha256": "00ec1903d6298fb8c49ee1bc8d1cc92f2d0bf29d7f24faf54eab486253731eb0",
+      "normalizedSha256": "57b54c83171dde3ef783176bf0fd70b0ea84ab7a6bc7910372706aa3dbe4b8ef",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 14921,
+      "totalRemuneration": 1715733845,
+      "totalDisclosedExpenses": 21092362,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          305
+        ],
+        "rowsPerPhysicalPage": [
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          25
+        ],
+        "summaryPhysicalPdfPages": [
+          305
+        ],
+        "internalFiscalYearEnd": 2024,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 1715733801,
+        "printedNamedExpenses": 21091937,
+        "underThresholdRemunerationExcluded": 903815318,
+        "underThresholdExpensesExcluded": 14304899,
+        "printedAllEmployeeRemuneration": 2619549119,
+        "printedAllEmployeeExpenses": 35396836,
+        "printedSubtotalRemunerationResidual": 0,
+        "printedSubtotalExpenseResidual": 0,
+        "printedSubtotalsReconcileExactly": true,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "ARORA,KAMAL",
+            "rows": 2
+          },
+          {
+            "name": "ATWAL,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "BAINS,RAMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "BAL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "BRAR,JASPREET",
+            "rows": 2
+          },
+          {
+            "name": "BRAR,RAMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "BRAUN,NICOLE",
+            "rows": 2
+          },
+          {
+            "name": "CHAN,LEANNE",
+            "rows": 2
+          },
+          {
+            "name": "CHEEMA,SIMRAN",
+            "rows": 2
+          },
+          {
+            "name": "CRAWFORD,SUSAN",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,BALPREET",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANDEEP",
+            "rows": 3
+          },
+          {
+            "name": "DHALIWAL,MANINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANPREET",
+            "rows": 3
+          },
+          {
+            "name": "DHALIWAL,NAVDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,PARVINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,SANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,HARPREET",
+            "rows": 3
+          },
+          {
+            "name": "DHILLON,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,MANJIT",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,MANPREET",
+            "rows": 3
+          },
+          {
+            "name": "FABBRO,URSZULA",
+            "rows": 2
+          },
+          {
+            "name": "FERGUSON,KIMBERLY",
+            "rows": 2
+          },
+          {
+            "name": "GILL,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GILL,AMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GILL,BHUPINDER",
+            "rows": 2
+          },
+          {
+            "name": "GILL,GURNEET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,GURPREET",
+            "rows": 5
+          },
+          {
+            "name": "GILL,HARPREET",
+            "rows": 3
+          },
+          {
+            "name": "GILL,JASHANPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,MANDEEP",
+            "rows": 6
+          },
+          {
+            "name": "GILL,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,MANPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GILL,NAVJOT",
+            "rows": 2
+          },
+          {
+            "name": "GILL,NAVNEET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,RUPINDER KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GOSAL,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,AMANDEEP KAUR",
+            "rows": 3
+          },
+          {
+            "name": "GREWAL,PARAMJIT KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,PARMINDER",
+            "rows": 3
+          },
+          {
+            "name": "GREWAL,RUPINDER",
+            "rows": 2
+          },
+          {
+            "name": "JOHAL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "JOHAL,KAREN",
+            "rows": 2
+          },
+          {
+            "name": "JOHAL,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "KALER,RAVNEET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,AMANDEEP",
+            "rows": 4
+          },
+          {
+            "name": "KAUR,AMANPREET",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,GAGANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,GURLEEN",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,GURPINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,JASHANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,JASVIR",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,KARAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,MANDEEP",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,MANMEET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,NAVJOT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,RAJWINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,RAMANPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,SATWINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,SUKHWINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,TAJINDER",
+            "rows": 2
+          },
+          {
+            "name": "KENNEDY,HEATHER",
+            "rows": 2
+          },
+          {
+            "name": "KHAN,MOHAMMED",
+            "rows": 2
+          },
+          {
+            "name": "KIM,MARIA",
+            "rows": 2
+          },
+          {
+            "name": "KIM,MIN JEONG",
+            "rows": 2
+          },
+          {
+            "name": "MACLEOD,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "MANGAT,PARMEET",
+            "rows": 2
+          },
+          {
+            "name": "MANN,BIKRAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "MANN,GURMEET",
+            "rows": 2
+          },
+          {
+            "name": "MANN,INDERJEET",
+            "rows": 2
+          },
+          {
+            "name": "MANN,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "MANN,NAVJOT",
+            "rows": 2
+          },
+          {
+            "name": "MATHEW,LIJI",
+            "rows": 2
+          },
+          {
+            "name": "MINHAS,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "NG,CARMEN",
+            "rows": 3
+          },
+          {
+            "name": "RAI,PARAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "RANDHAWA,JASPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "ROBINSON,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "SAMRA,RAJWINDER",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,HARPREET",
+            "rows": 3
+          },
+          {
+            "name": "SANDHU,JASMINE",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,JASPREET",
+            "rows": 3
+          },
+          {
+            "name": "SANDHU,KIRANJIT",
+            "rows": 3
+          },
+          {
+            "name": "SANDHU,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,NAVJEET",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,RAJDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,RAVINDER",
+            "rows": 2
+          },
+          {
+            "name": "SHARMA,VANDANA",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,HARDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,MANPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,RAMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "SINGH,ANITA",
+            "rows": 2
+          },
+          {
+            "name": "SINGH,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "THANDI,MANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "THOMAS,ASHA",
+            "rows": 2
+          },
+          {
+            "name": "TUNG,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "UPPAL,KAMALJIT",
+            "rows": 2
+          },
+          {
+            "name": "WATT,SYDNEY",
+            "rows": 2
+          },
+          {
+            "name": "WHITE,DAVID",
+            "rows": 2
+          },
+          {
+            "name": "WONG,MEGAN",
+            "rows": 2
+          },
+          {
+            "name": "WONG,MICHELLE",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 14921,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 1715733845,
+        "namedExpensesSum": 21092362,
+        "remunerationResidual": 44,
+        "expensesResidual": 425,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 7461.0,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "missingExpenseRows": 3054,
+        "thresholdComparison": ">=",
+        "compiledBaselineComparison": {
+          "baselineFile": "research/salaries/compiled-baseline.json.gzip",
+          "baselineSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+          "compiledLabel": "2023/24",
+          "compiledRows": 14908,
+          "officialRows": 14921,
+          "exactNormalizedNamePayMatches": 14896,
+          "compiledNamePayPairsNotInOfficialSchedule": 12,
+          "officialNamePayPairsNotInCompiledSnapshot": 25,
+          "method": "Multiplicity-preserving name/pay comparison after removing name case, spacing and punctuation; no fuzzy, nickname or identity matching."
+        }
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $44; the corresponding expense difference is $425. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    },
+    {
+      "id": "fraser-health-sofi-2024-25",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "year": "2024/25",
+      "title": "Fraser Health Statement of Financial Information 2024/25: employee remuneration and expenses",
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2025/Employee_Remuneration.pdf",
+      "indexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "sha256": "b5d0435cfd67f3f327a2dcb6f2947d637b03aa0c6653ca72054f0ab06c595465",
+      "file": "2024-25.json.gzip",
+      "dataSha256": "d225da842b7b4a3b35c146145452626143a64a26bcc0483f6c2b4cd7df1bcbb4",
+      "normalizedSha256": "1f42dfceac826536e2ddc25313f80df0703f4eb0954d599b5336f061ab53f85c",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "scopeDescription": "Named employee payments equal to or greater than $75,000; employee schedule only",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "named",
+      "rowCount": 17278,
+      "totalRemuneration": 2009600438,
+      "totalDisclosedExpenses": 19619483,
+      "status": "verified",
+      "verifiedOn": "2026-10-23",
+      "validation": {
+        "physicalPdfPages": [
+          1,
+          353
+        ],
+        "rowsPerPhysicalPage": [
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          30
+        ],
+        "summaryPhysicalPdfPages": [
+          353
+        ],
+        "internalFiscalYearEnd": 2025,
+        "allFiscalHeadersChecked": true,
+        "allPageFootersSequential": true,
+        "unparsedEmployeeLines": 0,
+        "printedNamedRemuneration": 2009600126,
+        "printedNamedExpenses": 19620205,
+        "underThresholdRemunerationExcluded": 977221622,
+        "underThresholdExpensesExcluded": 14095610,
+        "printedAllEmployeeRemuneration": 2986821748,
+        "printedAllEmployeeExpenses": 33715815,
+        "printedSubtotalRemunerationResidual": 0,
+        "printedSubtotalExpenseResidual": 0,
+        "printedSubtotalsReconcileExactly": true,
+        "printedSubtotalRoundingCompatibilityBound": 1.5,
+        "repeatedDisclosedNames": [
+          {
+            "name": "ANDERSON,HEATHER",
+            "rows": 2
+          },
+          {
+            "name": "ARORA,KAMAL",
+            "rows": 2
+          },
+          {
+            "name": "BAINS,RAMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "BAL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "BRAR,BALWINDER",
+            "rows": 2
+          },
+          {
+            "name": "BRAR,HARPREET",
+            "rows": 3
+          },
+          {
+            "name": "BRAR,JASPREET",
+            "rows": 2
+          },
+          {
+            "name": "BRAR,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "BRAR,RAMANDEEP",
+            "rows": 4
+          },
+          {
+            "name": "CHAN,LEANNE",
+            "rows": 2
+          },
+          {
+            "name": "CHAUHAN,SANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "CHEEMA,SIMRAN",
+            "rows": 2
+          },
+          {
+            "name": "CRAWFORD,SUSAN",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,BALPREET",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,GURMINDER",
+            "rows": 3
+          },
+          {
+            "name": "DHALIWAL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,INDERJEET",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,KAMALPREET",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANDEEP",
+            "rows": 3
+          },
+          {
+            "name": "DHALIWAL,MANINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,MANPREET",
+            "rows": 3
+          },
+          {
+            "name": "DHALIWAL,NAVDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,PARVINDER",
+            "rows": 2
+          },
+          {
+            "name": "DHALIWAL,SANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,GURDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,HARDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,HARPREET",
+            "rows": 3
+          },
+          {
+            "name": "DHILLON,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,MANJIT",
+            "rows": 2
+          },
+          {
+            "name": "DHILLON,MANPREET",
+            "rows": 3
+          },
+          {
+            "name": "ENS,SARAH",
+            "rows": 2
+          },
+          {
+            "name": "FABBRO,URSZULA",
+            "rows": 2
+          },
+          {
+            "name": "FERGUSON,KIMBERLY",
+            "rows": 2
+          },
+          {
+            "name": "GILL,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GILL,AMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GILL,AMRIT",
+            "rows": 3
+          },
+          {
+            "name": "GILL,BEANT",
+            "rows": 2
+          },
+          {
+            "name": "GILL,BHUPINDER",
+            "rows": 2
+          },
+          {
+            "name": "GILL,GURJIT",
+            "rows": 2
+          },
+          {
+            "name": "GILL,GURNEET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,GURPREET",
+            "rows": 4
+          },
+          {
+            "name": "GILL,HARJIT",
+            "rows": 3
+          },
+          {
+            "name": "GILL,HARPREET",
+            "rows": 4
+          },
+          {
+            "name": "GILL,HARSIMRAN",
+            "rows": 2
+          },
+          {
+            "name": "GILL,JASHANPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,JASMEEN",
+            "rows": 2
+          },
+          {
+            "name": "GILL,KOMAL",
+            "rows": 2
+          },
+          {
+            "name": "GILL,MANDEEP",
+            "rows": 6
+          },
+          {
+            "name": "GILL,MANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GILL,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "GILL,MANPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GILL,NARINDERPAL",
+            "rows": 2
+          },
+          {
+            "name": "GILL,NAVNEET",
+            "rows": 3
+          },
+          {
+            "name": "GILL,PARMINDER",
+            "rows": 2
+          },
+          {
+            "name": "GILL,RAMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GOSAL,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,AMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,GURDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,HARPREET",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,KIRANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "GREWAL,PARMINDER",
+            "rows": 3
+          },
+          {
+            "name": "GREWAL,RUPINDER",
+            "rows": 2
+          },
+          {
+            "name": "JANZEN,SARA",
+            "rows": 2
+          },
+          {
+            "name": "JOHAL,HARPREET",
+            "rows": 3
+          },
+          {
+            "name": "JOHAL,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "JOHAL,SANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KALER,MANJIT",
+            "rows": 2
+          },
+          {
+            "name": "KALER,RAVNEET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,AMANDEEP",
+            "rows": 5
+          },
+          {
+            "name": "KAUR,AMANPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,ARSHDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,BALJINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,GAGANDEEP",
+            "rows": 5
+          },
+          {
+            "name": "KAUR,GURLEEN",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,GURPINDER",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,HARPREET",
+            "rows": 4
+          },
+          {
+            "name": "KAUR,JASHANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,JASPREET",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,JASVIR",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,KAMALJIT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,KARAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,KIRANJIT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,MANDEEP",
+            "rows": 6
+          },
+          {
+            "name": "KAUR,MANJINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,MANJOT",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,MANPREET",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,NAVJOT",
+            "rows": 5
+          },
+          {
+            "name": "KAUR,PARDEEP",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,PARMINDER",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,PAWANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,PRABHJIT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,PRABHJOT",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,PRABHPREET",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,RAJWINDER",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,RAMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,RAMANPREET",
+            "rows": 4
+          },
+          {
+            "name": "KAUR,RAVINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,RUPINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,SANDEEP",
+            "rows": 3
+          },
+          {
+            "name": "KAUR,SATVIR",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,SATWINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,SUKHWINDER",
+            "rows": 2
+          },
+          {
+            "name": "KAUR,VIPANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "KENNEDY,HEATHER",
+            "rows": 2
+          },
+          {
+            "name": "KHAN,MOHAMMED",
+            "rows": 2
+          },
+          {
+            "name": "KIM,MARIA",
+            "rows": 2
+          },
+          {
+            "name": "KIM,MIN JEONG",
+            "rows": 2
+          },
+          {
+            "name": "LAM,ESTHER",
+            "rows": 2
+          },
+          {
+            "name": "LANG,MEGAN",
+            "rows": 2
+          },
+          {
+            "name": "LEE,PHILLIP",
+            "rows": 2
+          },
+          {
+            "name": "MANGAT,PARMEET",
+            "rows": 2
+          },
+          {
+            "name": "MANN,BIKRAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "MANN,GURMEET",
+            "rows": 2
+          },
+          {
+            "name": "MANN,INDERJEET",
+            "rows": 2
+          },
+          {
+            "name": "MANN,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "MANN,PARMINDER",
+            "rows": 2
+          },
+          {
+            "name": "MANN,SANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "MANPREET,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "MATHEW,LIJI",
+            "rows": 2
+          },
+          {
+            "name": "MINHAS,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "NG,CARMEN",
+            "rows": 3
+          },
+          {
+            "name": "RAI,PARAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "RANDHAWA,JASPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "ROBINSON,JENNIFER",
+            "rows": 2
+          },
+          {
+            "name": "SAMRA,RAJWINDER",
+            "rows": 2
+          },
+          {
+            "name": "SAMSON,EMMANUEL",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,CHARANJEET",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,JASMINE",
+            "rows": 3
+          },
+          {
+            "name": "SANDHU,JASPREET",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,KIRANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,KIRANJIT",
+            "rows": 3
+          },
+          {
+            "name": "SANDHU,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,MANJIT",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,MANPREET",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,NAVJEET",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,RAJDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SANDHU,RAVINDER",
+            "rows": 2
+          },
+          {
+            "name": "SANGHA,PARMINDER",
+            "rows": 2
+          },
+          {
+            "name": "SEKHON,AMANDEEP",
+            "rows": 3
+          },
+          {
+            "name": "SHARMA,NAMRATA",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,AMANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,GURJIT",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,GURPREET",
+            "rows": 3
+          },
+          {
+            "name": "SIDHU,HARDEEP",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,KARAMJIT",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,MANPREET KAUR",
+            "rows": 2
+          },
+          {
+            "name": "SIDHU,RAMANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "SINGH,ANITA",
+            "rows": 2
+          },
+          {
+            "name": "SINGH,ARSHDEEP",
+            "rows": 3
+          },
+          {
+            "name": "SINGH,GURPREET",
+            "rows": 2
+          },
+          {
+            "name": "SINGH,HARMANPREET",
+            "rows": 2
+          },
+          {
+            "name": "SINGH,PARMINDER",
+            "rows": 2
+          },
+          {
+            "name": "SMITH,REBECCA",
+            "rows": 2
+          },
+          {
+            "name": "THANDI,MANDEEP KAUR",
+            "rows": 2
+          },
+          {
+            "name": "THOMAS,ASHA",
+            "rows": 2
+          },
+          {
+            "name": "TOOR,HARLEEN",
+            "rows": 2
+          },
+          {
+            "name": "TOOR,MANDEEP",
+            "rows": 2
+          },
+          {
+            "name": "TSE,KAREN",
+            "rows": 2
+          },
+          {
+            "name": "UPPAL,JASPREET",
+            "rows": 2
+          },
+          {
+            "name": "UPPAL,KAMALJIT",
+            "rows": 2
+          },
+          {
+            "name": "WALKER,SHANNON",
+            "rows": 2
+          },
+          {
+            "name": "WATT,SYDNEY",
+            "rows": 2
+          },
+          {
+            "name": "WHITE,DAVID",
+            "rows": 2
+          },
+          {
+            "name": "WILLIAMS,ANDREA",
+            "rows": 2
+          },
+          {
+            "name": "WILSON,LAURA",
+            "rows": 2
+          },
+          {
+            "name": "WONG,GRACE",
+            "rows": 2
+          },
+          {
+            "name": "WONG,MICHELLE",
+            "rows": 2
+          },
+          {
+            "name": "YOUNG,JENNIFER",
+            "rows": 2
+          }
+        ],
+        "exactDuplicateSourceRows": 0,
+        "rowsCheckedAgainstPdfWordCoordinates": 17278,
+        "sourceFingerprintLocked": true,
+        "namedRemunerationSum": 2009600438,
+        "namedExpensesSum": 19619483,
+        "remunerationResidual": 312,
+        "expensesResidual": -722,
+        "summaryTotalReconciled": false,
+        "displayedDollarRoundingCompatibilityBound": 8639.5,
+        "residualsWithinDisplayedDollarRoundingBound": true,
+        "negativeExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "missingExpenseRows": 5356,
+        "thresholdComparison": ">=",
+        "visuallyReviewedSummaryPages": [
+          353
+        ]
+      },
+      "notes": [
+        "Employee schedule only. The published threshold is inclusive: payments equal to or greater than $75,000. Under-threshold aggregates are excluded; job titles are not supplied.",
+        "The source states that the schedule is on a cash basis and is not directly reconcilable to accrual-basis financial statements. Employer benefit costs, contracted labour and physician fees are excluded from this schedule.",
+        "Names, including initials and punctuation, are retained as printed. Repeated names remain separate rows and do not establish a unique person.",
+        "Dash expense cells remain missing, not zero; printed negative recoveries and explicit zero amounts are preserved.",
+        "Displayed named remuneration minus its printed subtotal is $312; the corresponding expense difference is $-722. Both fit the recorded independent whole-dollar rounding bound; the cause is not established, no amount is adjusted and exact reconciliation is not claimed."
+      ]
+    }
+  ],
+  "coverageNotes": [
+    "Ten original employee schedules cover FY2015/16 through FY2024/25. FY2025/26 employee remuneration was not linked from the issuer's financial-reporting index when checked; executive and board reports are separate cohorts."
+  ]
+}

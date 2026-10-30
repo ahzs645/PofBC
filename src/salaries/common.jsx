@@ -1,9 +1,11 @@
 // What the salary pages share: loading their files, the card icons, a record as a row, and the place
-// (who or what is open) kept in the address bar.
+// (who or what is open) kept in the address bar (viewState.js).
 
 import { displayName } from './people.js'
+import { sourceHref } from './coverage.js'
 import { SourceLink } from './DisclosureEvidence.jsx'
 import { formatMoney as money } from './money.js'
+import { hasExpenseAmount, readSalaryPlace, salaryPlaceUrl } from './viewState.js'
 
 const BASE = import.meta.env?.BASE_URL ?? '/'
 const loaded = new Map()
@@ -30,24 +32,11 @@ export const loadJson = (path) => {
   return loaded.get(path)
 }
 
-// Where the salaries are lives in the address bar — the search typed, the person, employer, title or
-// employer's position open, how an employer's records are set out, and the year on screen ("2019-20")
-// — so a link opens there, and a person in a body's salary panel opens their years here.
-export const PLACE = ['q', 'person', 'employer', 'role', 'title', 'show', 'fy']
-
-export const readPlace = () => {
-  const params = new URLSearchParams(globalThis.location?.search ?? '')
-  return Object.fromEntries(PLACE.map((key) => [key, params.get(key) ?? (key === 'q' ? '' : null)]))
-}
+export const readPlace = () => readSalaryPlace(globalThis.location?.search ?? '')
 
 export const writePlace = (place) => {
   if (!globalThis.history?.replaceState) return
-  const url = new URL(globalThis.location.href)
-  for (const key of PLACE) {
-    if (place[key]) url.searchParams.set(key, place[key])
-    else url.searchParams.delete(key)
-  }
-  globalThis.history.replaceState(null, '', url)
+  globalThis.history.replaceState(null, '', salaryPlaceUrl(globalThis.location.href, place))
 }
 
 export const PersonIcon = () => (
@@ -73,8 +62,11 @@ export const RoleIcon = () => (
   </svg>
 )
 
-/** A record as a row: who or what on the left, the pay on the right, and its source under the pay. */
-export const RecordRow = ({ rank, name, position, pay, expenses, expenseText, sourceId, sources, onPerson, nameDisclosure }) => (
+/**
+ * A record as a row: who or what on the left, the pay on the right, and its source under the pay —
+ * opening at the record's page where the parser recorded one. A disclosed $0 expense is shown.
+ */
+export const RecordRow = ({ rank, name, position, pay, expenses, expenseText, sourceId, sources, pdfPage, onPerson, nameDisclosure }) => (
   <li className="salaries-row">
     {rank != null && <span className="salaries-row__rank">{rank}</span>}
     <span className="salaries-row__who">
@@ -85,11 +77,11 @@ export const RecordRow = ({ rank, name, position, pay, expenses, expenseText, so
     </span>
     <span className="salaries-row__pay">
       {money(pay)}
-      {(expenses || sourceId) && (
+      {(hasExpenseAmount(expenses) || sourceHref(sources?.[sourceId], pdfPage)) && (
         <span className="salaries__line">
-          {expenses ? `${expenseText} ${money(expenses)}` : ''}
-          {expenses && sourceId ? ' · ' : ''}
-          {sourceId && <SourceLink sourceId={sourceId} sources={sources} />}
+          {hasExpenseAmount(expenses) ? `${expenseText} ${money(expenses)}` : ''}
+          {hasExpenseAmount(expenses) && sourceHref(sources?.[sourceId], pdfPage) ? ' · ' : ''}
+          {sourceId && <SourceLink sourceId={sourceId} sources={sources} pdfPage={pdfPage} />}
         </span>
       )}
     </span>

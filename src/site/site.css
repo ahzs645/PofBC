@@ -1566,10 +1566,10 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   font-size: 16px;
 }
 .salaries__hint, .salaries__note { margin: 0; font-size: 14px; color: var(--ink-faint); }
-.salaries__head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.salaries__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 12px; margin-bottom: 8px; }
 .salaries__title { margin: 0; font-size: 15px; font-weight: 600; color: var(--ink); }
 .salaries__meta { margin: 0; font-size: 13px; color: var(--ink-faint); }
-.salaries__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 8px; }
+.salaries__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 8px; }
 @media (max-width: 400px) { .salaries__grid { grid-template-columns: 1fr; } }
 .salaries__card {
   display: flex;
@@ -1733,6 +1733,10 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-strip__text { font-size: 12px; color: var(--sp-faint); font-variant-numeric: tabular-nums; }
 
 /* The years as bars that pick one. A year without records is a dashed stub. */
+.salaries-picker-wrap { container-type: inline-size; min-width: 0; }
+.salaries-picker-select { display: none; gap: 4px; margin-bottom: 8px; font-size: 13px; color: var(--sp-faint, var(--ink-faint)); }
+.salaries-picker-select select { box-sizing: border-box; width: 100%; min-width: 0; padding: 10px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; font-size: 16px; }
+@container (max-width: 640px) { .salaries-picker-select { display: grid; } }
 .salaries-picker { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 2px; align-items: end; }
 .salaries-picker button {
   display: grid;
@@ -1751,6 +1755,8 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-picker__bar { display: flex; align-items: flex-end; justify-content: center; height: 100%; }
 .salaries-picker__bar span { display: block; width: min(16px, 70%); border-radius: 3px 3px 0 0; background: var(--sp-ink); opacity: 0.35; }
 .salaries-picker button[data-empty] .salaries-picker__bar span { height: 4px; border: 1px dashed var(--sp-mid); border-radius: 2px; background: none; opacity: 1; }
+.salaries-picker button[data-status='excluded'] .salaries-picker__bar span { border-color: #aa6b2e; }
+.salaries-picker button[data-status='source-found'] .salaries-picker__bar span { border-color: var(--sp-ink); }
 .salaries-picker button[aria-pressed='true'] { background: var(--sp-hover); color: var(--sp-text); font-weight: 600; }
 .salaries-picker button[aria-pressed='true'] .salaries-picker__bar span { opacity: 1; }
 .salaries-picker__label { font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -1793,6 +1799,10 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 /* A disclosure's scope, period, threshold and source in a line; the rest folded. */
 .salaries-disclosure { font-size: 13px; line-height: 1.5; color: var(--sp-faint); }
 .salaries-disclosure__line { margin: 0; }
+.salaries-disclosure__status { width: fit-content; margin: 0 0 4px; padding: 2px 7px; border: 1px solid var(--sp-mid); border-radius: 5px; font-size: 12px; color: var(--sp-text); }
+.salaries-disclosure__status[data-kind='held'] { border-color: #aa6b2e; }
+.salaries-disclosure__status[data-kind='primary'], .salaries-disclosure__status[data-kind='found'] { border-color: var(--sp-ink); }
+.salaries-disclosure__leads { margin-top: 10px; }
 .salaries-disclosure__line strong { color: var(--sp-text); font-weight: 600; }
 .salaries-disclosure a, .salaries-disclosure__more a { color: inherit; }
 .salaries-disclosure__more { font-size: 13px; line-height: 1.5; color: var(--ink-faint); }
@@ -1800,7 +1810,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-disclosure__more p { margin: 6px 0 0; max-width: 80ch; }
 
 /* Records as rows: rank, who, and pay with its expenses and source under it. */
-.salaries-rows { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 0 24px; margin: 0; padding: 0; list-style: none; }
+.salaries-rows { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 0 24px; margin: 0; padding: 0; list-style: none; }
 @media (max-width: 400px) { .salaries-rows { grid-template-columns: 1fr; } }
 .salaries-rows--inner { padding: 4px 12px 10px 30px; }
 .salaries__more--inner { margin: 0 0 8px 30px; }

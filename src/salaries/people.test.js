@@ -40,13 +40,13 @@ test('all disclosed given names remain separate and can be searched as token pre
 
 test('a typed name is read surname first, then surname last, then as a longer surname', () => {
   assert.deepEqual(nameReadings('smith').map((each) => each.typed), ['smith,'])
-  assert.deepEqual(nameReadings('john smith').map((each) => each.typed), ['john,smith', 'smith,john'])
+  assert.deepEqual(nameReadings('john smith').map((each) => each.typed), ['john,smith', 'smith,john', 'john smith,'])
   assert.deepEqual(nameReadings('Smith, J').map((each) => each.typed), ['Smith,J'])
   const longer = nameReadings('maria de la cruz').map((each) => each.typed)
   assert.equal(longer[0], 'maria,de la cruz')
   assert.equal(longer[1], 'cruz,maria de la')
   assert.ok(longer.includes('de la cruz,maria'))
-  assert.deepEqual(nameReadings('a b'), [])
+  assert.deepEqual(nameReadings('a b').map((each) => each.typed), ['a b,'], 'single letters only as one surname')
   assert.deepEqual(nameReadings('  '), [])
 })
 
@@ -63,6 +63,26 @@ test('a search ranks a full name before a beginning, and a beginning before init
   assert.equal(nameQueryTier('Mo, BL', 'mo,bl', 'surname-and-initials'), 0)
   assert.equal(nameQueryTier('Mo, BL', 'mo,b', 'surname-and-initials'), 1)
   assert.equal(nameQueryTier('Mo, BL', 'mo,belaid', 'surname-and-initials'), 2)
+})
+
+test('a surname of more than one word is found, and a comma fixes where the surname ends', () => {
+  const matches = (name, query) => nameReadings(query).some((reading) => matchesNameQuery(name, reading.typed))
+  for (const query of ['van der meer', 'van der meer j', 'van der meer, j']) assert.ok(matches('Van der Meer, Jane A', query), query)
+  assert.ok(matches('O Brien, Ann Marie', 'O Brien'))
+  assert.ok(matches('O Brien, Ann Marie', 'O Brien Ann M'))
+  assert.ok(matches('Tremblay, Émilie', 'Tremblay Emi'))
+  assert.ok(matches('Smith, John A', 'Smith John A'))
+  assert.equal(matches('Smith, John A', 'Smith John B'), false)
+  // "John Smith" is read surname first, and only after that the other way round.
+  assert.equal(matchesNameQuery('Smith, John', nameReadings('John Smith')[0].typed), false)
+  assert.ok(matches('Smith, John', 'John Smith'))
+  // A comma chooses a precise surname boundary, rather than another alternative.
+  assert.equal(matches('Van der Meer, Jane', 'Van, der Meer'), false)
+  assert.ok(matches('O, Jane', 'O, J'))
+  assert.equal(surnameShard(`${nameReadings('O, J')[0].surname},`), 'o_')
+  assert.deepEqual(nameReadings('O'), [])
+  assert.deepEqual(nameReadings(',Jane'), [])
+  assert.notEqual(personKey('Van der Meer, Jane A'), personKey('Van der Meer, Jane B'))
 })
 
 test('the index’s slices hold every row it counts, each under its surname', () => {
