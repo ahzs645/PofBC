@@ -675,7 +675,21 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
   return (
     <>
       <section className="gov-card">
-        <p className="gov-eyebrow">{breadcrumb}{kindLabel ? ` · ${kindLabel}` : ''}</p>
+        <p className="gov-eyebrow">
+          {breadcrumb}
+          {/* A Crown corporation's category names itself; what the category means, and where it is
+              defined, is a tooltip on the name, open on hover or focus and while the pointer is on it. */}
+          {node.crownCategory
+            ? <> · <span className="gov-tip">
+                <button type="button" className="gov-tip__trigger" aria-describedby={`crown-${node.id}`}>{kindLabel}</button>
+                <span role="tooltip" id={`crown-${node.id}`} className="gov-tip__text">
+                  {CROWN_CATEGORIES[node.crownCategory].label}: {CROWN_CATEGORIES[node.crownCategory].definition.replace(/^./, (c) => c.toLowerCase())}{' '}
+                  <a href={CROWN_CATEGORY_SOURCES.list.url} target="_blank" rel="noreferrer">Budget 2025</a>,{' '}
+                  <a href={CROWN_CATEGORY_SOURCES.definitions.url} target="_blank" rel="noreferrer">definitions</a>.
+                </span>
+              </span></>
+            : kindLabel ? ` · ${kindLabel}` : ''}
+        </p>
         <h1 className="gov-title">{node.name}</h1>
         {isMinistry && (
           <p className="gov-muted">
@@ -685,13 +699,6 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
           </p>
         )}
         {node.description && <p className="gov-description"><StoryText text={node.description} label="About it" /></p>}
-        {node.crownCategory && (
-          <p className="gov-notice">
-            {CROWN_CATEGORIES[node.crownCategory].label}: {CROWN_CATEGORIES[node.crownCategory].definition.replace(/^./, (c) => c.toLowerCase())}{' '}
-            <a href={CROWN_CATEGORY_SOURCES.list.url} target="_blank" rel="noreferrer">Budget 2025</a>,{' '}
-            <a href={CROWN_CATEGORY_SOURCES.definitions.url} target="_blank" rel="noreferrer">definitions</a>.
-          </p>
-        )}
         {node.franchise && (
           <p className="gov-notice">
             In {year} the provincial franchise excluded {node.franchise.excluded.join(', ').replace(/, ([^,]*)$/, ' and $1')}.{' '}

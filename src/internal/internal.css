@@ -81,9 +81,18 @@
   justify-content: center;
   height: 360px;
   padding: 20px;
-  background: #fff;
+  background: var(--tile, #fff);
   color: #57534e;
 }
+/* Dark mode (see InternalLogosView.jsx): a logo on plain white paper moves onto a dark tile. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .internal-logos__artwork[data-paper] { background: #2a2824; color: #b5aea4; }
+  :root:not([data-theme='light']) .internal-logos__artwork[data-paper][data-ink='mono'] .internal-logos__svg { filter: invert(1); }
+  :root:not([data-theme='light']) .internal-logos__artwork[data-paper][data-ink='colour'] .internal-logos__svg > svg { filter: drop-shadow(0 0 1px rgb(255 255 255 / 0.55)); }
+}
+:root[data-theme='dark'] .internal-logos__artwork[data-paper] { background: #2a2824; color: #b5aea4; }
+:root[data-theme='dark'] .internal-logos__artwork[data-paper][data-ink='mono'] .internal-logos__svg { filter: invert(1); }
+:root[data-theme='dark'] .internal-logos__artwork[data-paper][data-ink='colour'] .internal-logos__svg > svg { filter: drop-shadow(0 0 1px rgb(255 255 255 / 0.55)); }
 .internal-logos__svg { width: 100%; height: 100%; }
 .internal-logos__svg:empty { display: none; }
 .internal-logos__svg > svg { display: block; width: 100%; height: 100%; }

@@ -42,9 +42,75 @@ export const money = (value) => {
 }
 
 export const yearSlug = (label) => {
+  if (/^\d{4}$/.test(label)) return label
   const match = /^(\d{4})\/(\d{2})$/.exec(label)
   if (!match || String(Number(match[1]) + 1).slice(-2) !== match[2]) throw new Error(`Invalid disclosure year ${label}`)
   return label.replace('/', '-')
+}
+
+/** The label describes the source period; calendar disclosures are never filed under fiscal labels. */
+export const reportingPeriodType = (label) => {
+  yearSlug(label)
+  return /^\d{4}$/.test(label) ? 'calendar' : 'fiscal'
+}
+
+/**
+ * A reviewed employee-only replacement may leave elected officials in a compiled partition.
+ * Pin the exact selected rows, and require the replacement source to have reached this build.
+ * This prevents a future source change from silently deleting an unrelated cohort.
+ */
+export const applyCompiledReplacements = (baseline, official, sources, rules = []) => {
+  const removed = new Set()
+  const classified = new Map()
+  const corrections = []
+  for (const rule of rules) {
+    const { employerSlug, compiledYear, replacementYear, sourceIds, retainPositions = [] } = rule
+    yearSlug(compiledYear); yearSlug(replacementYear)
+    if (!rule.reason?.trim() || !sourceIds?.length || !Array.isArray(retainPositions)) throw new Error('Incomplete compiled replacement decision')
+    for (const id of sourceIds) {
+      if (!sources[id] || !official.some((row) => row.slug === employerSlug && row.year === replacementYear && row.sourceId === id)) {
+        throw new Error(`${employerSlug}|${compiledYear}: replacement source ${id} was not imported`)
+      }
+    }
+    if (!sourceIds.some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id].scope))) {
+      throw new Error(`${employerSlug}|${compiledYear}: partial disclosure cannot replace a compiled employee cohort across periods`)
+    }
+    const partition = baseline.filter((row) => row.slug === employerSlug && row.year === compiledYear)
+    const selected = partition.filter((row) => !retainPositions.includes(row.position))
+    const retained = partition.filter((row) => retainPositions.includes(row.position))
+    const digest = sha256(JSON.stringify(selected.map((row) => [row.name, row.position, row.pay, row.expenses])))
+    if (selected.length !== rule.expectedRows || retained.length !== rule.expectedRetainedRows || digest !== rule.selectedRowsSha256) {
+      throw new Error(`${employerSlug}|${compiledYear}: compiled replacement evidence no longer matches`)
+    }
+    for (const row of selected) {
+      if (removed.has(row)) throw new Error(`${employerSlug}|${compiledYear}: overlapping compiled replacement decisions`)
+      removed.add(row)
+    }
+    if (retained.length) {
+      if (!rule.retainedSource?.id || !rule.retainedSource?.scope || sources[rule.retainedSource.id]) throw new Error('Missing or duplicate retained cohort source')
+      sources[rule.retainedSource.id] = { ...sources[retained[0].sourceId], ...rule.retainedSource,
+        url: null, sourceKind: 'compiled', year: compiledYear, periodType: 'unverified', periodStart: null, periodEnd: null }
+      for (const row of retained) classified.set(row, rule.retainedSource.id)
+    }
+    corrections.push({ employer: employerSlug, year: compiledYear, correctedYear: replacementYear, rows: selected.length,
+      retainedRows: retained.length, kind: 'wrong-reporting-year', reason: rule.reason,
+      evidence: rule.evidence, sourceIds, status: 'replaced-from-official-source' })
+  }
+  return { rows: baseline.filter((row) => !removed.has(row)).map((row) => classified.has(row) ? { ...row, sourceId: classified.get(row) } : row), corrections }
+}
+
+/** A newly recovered cohort can invalidate an earlier name-only travel join. */
+export const applyTravelJoinCorrections = (rows, sources, decisions = []) => {
+  const replacements = new Map()
+  for (const decision of decisions) {
+    const { employeeSourceId, employerSlug, year, name, pay, previousExpenses, replacementExpenses, relatedOICSourceId, relatedOICName, relatedOICRemuneration } = decision
+    if (!decision.reason?.trim() || replacementExpenses !== null || !sources[employeeSourceId]?.travelSource) throw new Error('Invalid travel-join correction')
+    const employee = rows.filter((row) => row.sourceId === employeeSourceId && row.slug === employerSlug && row.year === year && row.name === name && row.pay === pay && row.expenses === previousExpenses)
+    const appointee = rows.filter((row) => row.sourceId === relatedOICSourceId && row.slug === employerSlug && row.year === year && row.name === relatedOICName && row.pay === relatedOICRemuneration)
+    if (employee.length !== 1 || appointee.length !== 1 || replacements.has(employee[0])) throw new Error('Travel-join correction evidence no longer matches')
+    replacements.set(employee[0], replacementExpenses)
+  }
+  return { rows: rows.map((row) => replacements.has(row) ? { ...row, expenses: replacements.get(row) } : row), corrections: decisions }
 }
 
 export const exactRowKey = (row) => JSON.stringify([row.name, row.position, row.pay, row.expenses])
@@ -124,4 +190,25 @@ export const validateReplacementScopes = (baseline, official, sources, decisions
     if (decision?.reason?.trim() && Array.isArray(decision.sourceIds) && [...ids].every((id) => decision.sourceIds.includes(id))) continue
     throw new Error(`${key}: partial disclosure cannot replace a compiled employee partition without an explicit reviewed scope decision`)
   }
+}
+
+// The landing page's view across every employer: each period's highest-paid named records. The
+// whole name index is hundreds of slices; this is one small file, and says it is only the top.
+export const TOP_PER_PERIOD = 500
+/** Person-index rows [name, position, pay, expenses, employer, year, source, page], the top `n` a period. */
+export const topRecords = (rows, n = TOP_PER_PERIOD) => {
+  const byYear = new Map()
+  for (const row of rows) {
+    if (!byYear.has(row[5])) byYear.set(row[5], [])
+    byYear.get(row[5]).push(row)
+  }
+  const order = (a, b) => b[2] - a[2] || String(a[0]).localeCompare(String(b[0])) || a[4] - b[4] || String(a[1]).localeCompare(String(b[1])) || String(a[6]).localeCompare(String(b[6]))
+  return [...byYear].sort(([a], [b]) => a - b).flatMap(([, list]) => list.sort(order).slice(0, n))
+}
+
+/** A title's average in one period across its employers: cells [employer, year, rows, mean, …]. */
+export const periodMean = (cells, year) => {
+  const chosen = cells.filter((cell) => cell[1] === year)
+  const records = chosen.reduce((sum, cell) => sum + cell[2], 0)
+  return records ? Math.round(chosen.reduce((sum, cell) => sum + cell[2] * cell[3], 0) / records) : null
 }

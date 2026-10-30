@@ -8,7 +8,7 @@ const notes = (value) => value == null ? [] : Array.isArray(value) ? value : [va
 const urlOf = (source) => source.sourceUrl ?? source.url ?? null
 const employersOf = (source) => source.employers?.map((entry) => typeof entry === 'string' ? entry : entry.slug ?? entry.employerSlug)
   ?? (source.employerSlug ? [source.employerSlug] : [])
-const keyOf = (source) => JSON.stringify([source.employerSlug, source.year, source.url])
+const keyOf = (source) => JSON.stringify([source.employerSlug, source.year, source.url, source.scope])
 const precedence = (status) => status === 'imported' ? 3 : status === 'held-for-review' ? 2 : 1
 
 export const hasLocatedSource = (leads = []) => leads.some((lead) => lead.url && [
@@ -41,6 +41,10 @@ export function sourceCatalog (backlog = {}, collections = []) {
       ? { status: 'source-found-awaiting-extraction', nextAction: 'Reconcile this source lead with an accepted source manifest.' } : {})
   }
   for (const { collection, manifest } of collections) {
+    for (const source of manifest.aggregateOnlySources ?? []) {
+      if (source.status === 'verified-aggregate-only') add(source, source.employerSlug, { collection, status: 'aggregate-only', scope: 'aggregate-only', rows: 0,
+        nextAction: 'Aggregate payroll and the absence of a named schedule were verified. No individual records are created from aggregate figures.' })
+    }
     for (const source of manifest.sources ?? []) {
       const accepted = source.file && (!source.status || acceptedStatuses.has(source.status))
       for (const employer of employersOf(source)) {
@@ -67,7 +71,12 @@ export function sourceCatalog (backlog = {}, collections = []) {
       add(source, source.employerSlug ?? source.slug, { collection, status: 'held-for-review', rows: 0 })
     }
   }
-  return [...byKey.values()].sort((a, b) => a.employerSlug.localeCompare(b.employerSlug) || String(a.year).localeCompare(String(b.year)) || String(a.url).localeCompare(String(b.url)))
+  const entries = [...byKey.values()]
+  // An unclassified document lead is satisfied by an accepted cohort from that
+  // document. Explicitly different cohorts and held sources remain separate.
+  return entries.filter((entry) => entry.scope || entry.status === 'imported' || entry.status === 'held-for-review' || !entries.some((accepted) =>
+    accepted.status === 'imported' && accepted.employerSlug === entry.employerSlug && accepted.year === entry.year && accepted.url === entry.url))
+    .sort((a, b) => a.employerSlug.localeCompare(b.employerSlug) || String(a.year).localeCompare(String(b.year)) || String(a.url).localeCompare(String(b.url)) || String(a.scope).localeCompare(String(b.scope)))
 }
 
 export const sourceLeadsFor = (catalog, employer, year) => catalog

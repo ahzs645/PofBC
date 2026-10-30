@@ -43,8 +43,25 @@ export const CardSection = ({ title, meta, children, footer }) => (
   </div>
 )
 
-/** One card: an icon, a name, and a line or two under it. A card with nowhere to go is not a button. */
-export const Card = ({ icon, title, lines = [], onClick, aside, current }) => {
+/**
+ * One card: an icon, a name, and a line or two under it. A card with nowhere to go is not a button.
+ * A card with a `link` of its own (a record's source) cannot be one button around a link, so its name
+ * is the button, stretched over the card, and the link sits above it.
+ */
+export const Card = ({ icon, title, lines = [], onClick, aside, current, link }) => {
+  if (onClick && link) {
+    return (
+      <div className="gov-cards__card gov-cards__card--linked" aria-current={current ? 'true' : undefined}>
+        <span className="gov-cards__lead">{icon}</span>
+        <span className="gov-cards__text">
+          <button type="button" className="gov-cards__name gov-cards__stretch" onClick={onClick}>{title}</button>
+          {lines.filter(Boolean).map((line, index) => <span key={index} className="gov-cards__line">{line}</span>)}
+          <span className="gov-cards__line gov-cards__link">{link}</span>
+        </span>
+        {aside && <span className="gov-cards__aside">{aside}</span>}
+      </div>
+    )
+  }
   const body = (
     <>
       <span className="gov-cards__lead">{icon}</span>

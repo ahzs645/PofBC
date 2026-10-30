@@ -27,6 +27,7 @@ export const BODIES = {
   'Powertech Labs. Inc.': 'sub-powertech-labs',
   'Columbia Hydro Constructors Ltd.': 'sub-columbia-hydro-constructors',
   'PowerTech': 'sub-powertech-labs',
+  'Columbia Hydro Constructors Ltd.': 'sub-columbia-hydro-constructors',
   'Royal B.C. Museum': 'royal-bc-museum',
   'Technical Safety B.C.': 'technical-safety-bc',
   'Worksafe B.C.': 'workers-compensation-board',

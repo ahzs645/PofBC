@@ -95,15 +95,11 @@ export const Salaries = ({ node, year }) => {
         <h2 id={`salaries-${node.id}`} className="gov-card__heading">Salaries</h2>
         <SiteLink className="gov-salaries__open" to={{ view: 'salaries', employer: key, 'employer-year': label }}>All years in Salaries →</SiteLink>
       </div>
-      <p className="gov-muted gov-salaries__about">
-        {key === PUBLIC_SERVICE
-          ? 'The Province discloses its public service as one employer, so every ministry shows the same records.'
-          : `Disclosed pay for ${node.shortName ?? node.name}${totals?.agencies?.length ? `, filed as “${totals.agencies.join('”, “')}”` : ''}.`}
-      </p>
+      {key === PUBLIC_SERVICE && <p className="gov-muted gov-salaries__about">The Province discloses its public service as one employer, so every ministry shows the same records.</p>}
       <YearPicker years={SALARY_YEARS.map((each) => each.label)} counts={counts} coverage={SALARY_COVERAGE[key]} value={selectedIndex} onChange={(at) => { setSlug(SALARY_YEARS[at].slug); setShown(PAGE) }} />
       {!totals && <>
-        <p className="gov-muted gov-salaries__about">No records have been imported for {label}. That does not mean no one was employed or paid.</p>
-        {coverage && <DisclosureSummary coverage={coverage} sources={SALARY_SOURCES} className="gov-salaries__disclosure" />}
+        <p className="gov-muted gov-salaries__about">{coverage?.status === 'aggregate-only' ? `The verified ${label} report publishes aggregate payroll without named employee records.` : `No records have been imported for ${label}.`} That does not mean no one was employed or paid.</p>
+        {coverage && <DisclosureSummary coverage={coverage} sources={SALARY_SOURCES} className="gov-salaries__disclosure" details={false} />}
       </>}
       {totals && (
         <>
@@ -116,7 +112,7 @@ export const Salaries = ({ node, year }) => {
             coverage={{ ...coverage, status: 'available', ...totals }}
             sources={SALARY_SOURCES}
             className="gov-salaries__disclosure"
-            more={<p>Figures are the records’ remuneration or compensation for the reporting period. Record counts are not verified headcounts, and the disclosed total is not necessarily the employer’s full payroll.</p>}
+            details={false}
           />
           <input
             type="search"
@@ -140,16 +136,15 @@ export const Salaries = ({ node, year }) => {
             >
               {matches.length === 0 && <p className="gov-muted">No imported records match “{query.trim()}”. Try a surname or position.</p>}
               {matches.slice(0, shown).map(([name, position, pay, expenses, sourceId, pdfPage], index) => (
-                <div key={`${name}-${position}-${index}`} className="gov-salaries__record">
                 <Card
+                  key={`${name}-${position}-${index}`}
                   icon={<KindIcon person branch={node.branch ?? 'executive'} />}
                   title={displayName(name, SALARY_SOURCES[sourceId]?.nameDisclosure) ?? 'Name not given'}
-                  lines={[position, hasExpenseAmount(expenses) ? `${expenseLabel(sourceId, SALARY_SOURCES)} ${money(expenses)}` : null, !oneSource && sourceId ? SALARY_SOURCES[sourceId]?.title : null]}
+                  lines={[position, hasExpenseAmount(expenses) ? `${expenseLabel(sourceId, SALARY_SOURCES)} ${money(expenses)}` : null, !oneSource && !pdfPage && sourceId ? SALARY_SOURCES[sourceId]?.title : null]}
                   aside={money(pay)}
                   onClick={name ? () => follow(name) : undefined}
+                  link={pdfPage ? <SourceLink sourceId={sourceId} sources={SALARY_SOURCES} pdfPage={pdfPage} /> : null}
                 />
-                {pdfPage && <p className="salaries__source"><SourceLink sourceId={sourceId} sources={SALARY_SOURCES} pdfPage={pdfPage} /></p>}
-                </div>
               ))}
             </CardSection>
           )}

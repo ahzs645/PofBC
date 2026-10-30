@@ -38,7 +38,7 @@ export const DisclosureEvidence = ({ coverage, sources = {}, className = 'salari
     <div className={className}>
       <p>
         <strong>{scopeLabel(coverage?.scope)}.</strong>{' '}
-        {period ? `Reporting period: ${date(period[0])} – ${date(period[1])}.` : 'The exact reporting period has not been verified; a collection year can include calendar-year and fiscal-year reports.'}
+        {period ? `Reporting period: ${date(period[0])} – ${date(period[1])}.` : 'The exact reporting period has not been verified; this is a retained compilation label.'}
         {thresholdLabel(coverage) ? ` Reporting ${thresholdLabel(coverage)}.` : ''}
       </p>
       {ids.length > 0 ? (
@@ -73,12 +73,16 @@ const month = (value) => new Intl.DateTimeFormat('en-CA', { month: 'short', year
  * threshold and where from, on one line; the notes, expense sources and caveats folded under it.
  * `more` adds to what is folded.
  */
-export const DisclosureSummary = ({ coverage, sources = {}, className = '', more = null }) => {
+export const DisclosureSummary = ({ coverage, sources = {}, className = '', more = null, details = true }) => {
   const period = disclosurePeriod(coverage, sources)
   const ids = [...new Set(coverage?.sourceIds ?? [])]
-  const linked = ids.map((id) => sources[id]).filter((source) => source?.url && /^https?:\/\//.test(source.url))
+  // One link a document: two disclosure categories (employees, mayor and council) can share a report.
+  const linked = [...new Map(ids.map((id) => sources[id]).filter((source) => source?.url && /^https?:\/\//.test(source.url)).map((source) => [source.url, source])).values()]
   const notes = coverage?.notes ?? []
   const status = coverageStatus(coverage, sources)
+  // Records still from the retained compilation have no report of their own to describe: their
+  // limits are in the salary documentation (research/salaries/README.md), not repeated on each page.
+  if (status.kind === 'compiled') return null
   const expenseEvidence = [...new Map(ids.map((id) => sources[id]).filter((source) => source?.expensesNote || source?.travelSource)
     .map((source) => [`${source.expensesNote ?? ''}|${source.travelSource?.url ?? ''}`, source])).values()]
   const folded = Boolean(notes.length || expenseEvidence.length || coverage?.duplicateRows > 0 || coverage?.sourceLeads?.length || more || (ids.length && !linked.length))
@@ -87,14 +91,14 @@ export const DisclosureSummary = ({ coverage, sources = {}, className = '', more
       <p className="salaries-disclosure__status" data-kind={status.kind}>{status.label}</p>
       <p className="salaries-disclosure__line">
         <strong>{coverage?.scope ? scopeLabel(coverage.scope) : 'Disclosure details not yet verified'}</strong>
-        {period ? <> · {month(period[0])} – {month(period[1])}</> : ' · reporting period not verified'}
+        {period ? <> · {coverage?.periodType === 'calendar' ? 'Calendar year · ' : ''}{month(period[0])} – {month(period[1])}</> : ' · reporting period not verified'}
         {thresholdLabel(coverage) ? ` · ${thresholdLabel(coverage)}` : ''}
         {linked.length > 0 && <> · {linked.map((source, at) => (
           <span key={source.url}>{at > 0 ? ', ' : ''}<a href={source.url} target="_blank" rel="noreferrer" title={source.title}>{linked.length > 1 ? `Source ${at + 1}` : 'Source'}</a></span>
         ))}</>}
         {!ids.length && (coverage?.sourceLeads?.length ? ' · located source links below' : ' · no source document attached')}
       </p>
-      {folded && (
+      {details && folded && (
         <details className="salaries-disclosure__more">
           <summary>About this disclosure</summary>
           {period && <p>Reporting period: {date(period[0])} – {date(period[1])}.</p>}

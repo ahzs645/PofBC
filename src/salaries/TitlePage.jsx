@@ -10,7 +10,8 @@ import { Segmented } from '../site/Segmented.jsx'
 import { keyedTitles, relatedTitles, titleLabel, titleShard } from './positions.js'
 import { formatMoney as money } from './money.js'
 import { PayChart, YearPicker, yearSpan } from './parts.jsx'
-import { count, loadJson, More, RoleIcon } from './common.jsx'
+import { count, LAYOUTS, loadJson, Paged, RoleIcon } from './common.jsx'
+import { DataTable } from './DataTable.jsx'
 
 const ORDER = {
   average: (a, b) => b.mean - a.mean || b.count - a.count,
@@ -30,18 +31,12 @@ const pool = (cells) => {
   }
 }
 
-/** Related titles as cards, a dozen at a time. */
-const TitleCards = ({ titles, years, onTitle }) => {
-  const [shown, setShown] = useState(12)
-  return (
-    <>
-      <div className="salaries__grid">
-        {titles.slice(0, shown).map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={onTitle} />)}
-      </div>
-      <More shown={shown} total={titles.length} step={24} onMore={() => setShown((value) => value + 24)} />
-    </>
-  )
-}
+/** Related titles as cards, a dozen a page. */
+const TitleCards = ({ titles, years, onTitle }) => (
+  <Paged list={titles} size={12} reset={titles.length}>
+    {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={onTitle} />)}</div>}
+  </Paged>
+)
 
 /** A title as a card: its commonest spelling, how widely it is used, and the years it spans. */
 export const TitleCard = ({ title, years, onOpen }) => (
@@ -52,16 +47,16 @@ export const TitleCard = ({ title, years, onOpen }) => (
       <span className="salaries__line">{count(title.employers, 'employer', 'employers')} · {count(title.rows, 'record', 'records')}</span>
       <span className="salaries__line">{yearSpan([years[title.first], years[title.last]].filter((label, at, all) => all.indexOf(label) === at))}</span>
     </span>
+    {title.mean != null && <span className="salaries__aside">{money(title.mean)}<span className="salaries__line">average {years[title.last]}</span></span>}
   </button>
 )
 
-export const TitlePage = ({ titleKey: key, employers, years, sector, year: wantedYear, back, onYear, onSector, onEmployerRole, onTitle, remember }) => {
+export const TitlePage = ({ titleKey: key, employers, years, sector, year: wantedYear, layout = 'cards', back, onYear, onLayout, onSector, onEmployerRole, onTitle, remember }) => {
   const [detail, setDetail] = useState(null)
   const [index, setIndex] = useState(null)
   const [failed, setFailed] = useState(false)
   const [loadVersion, setLoadVersion] = useState(0)
   const [order, setOrder] = useState('average')
-  const [shown, setShown] = useState(24)
 
   useEffect(() => {
     let live = true
@@ -90,6 +85,15 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
   remember?.(label)
   const related = useMemo(() => (index ? relatedTitles(keyedTitles(index), key) : null), [index, key])
   const employerCount = new Set(inSector.map((cell) => cell.entry.slug)).size
+  const employerColumns = useMemo(() => [
+    { id: 'name', header: 'Employer', accessorKey: 'name', cell: ({ row, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onEmployerRole(row.original.entry.slug, key, row.original.year)}>{getValue()}</button> },
+    { id: 'sector', header: 'Sector', accessorFn: (cell) => cell.entry.sector },
+    { id: 'count', header: 'Records', accessorKey: 'count', meta: { kind: 'number' } },
+    { id: 'mean', header: 'Average', accessorKey: 'mean', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    { id: 'median', header: 'Median', accessorKey: 'median', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    { id: 'low', header: 'Lowest', accessorKey: 'low', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    { id: 'high', header: 'Highest', accessorKey: 'high', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) }
+  ], [key, onEmployerRole])
 
   return (
     <div className="salaries">
@@ -125,7 +129,7 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
         )}
         {detail && inSector.length > 0 && (
           <>
-            <YearPicker years={years} counts={counts} value={year} onChange={(at) => { onYear(at); setShown(24) }} label="Year of this title’s records" />
+            <YearPicker years={years} counts={counts} value={year} onChange={onYear} label="Year of this title’s records" />
             <h3 className="salaries__year-title">{years[year]}</h3>
             {overall
               ? (
@@ -148,9 +152,18 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
             <h2 id="salaries-title-employers" className="salaries__title">Employers in {years[year]}</h2>
             <p className="salaries__meta">{count(chosen.length, 'employer', 'employers')}</p>
           </div>
-          <Segmented compact ariaLabel="Order employers" value={order} onChange={setOrder} options={[{ value: 'average', label: 'Highest average' }, { value: 'records', label: 'Most records' }, { value: 'name', label: 'A–Z' }]} />
-          <div className="salaries__grid salaries__grid--spaced">
-            {chosen.slice(0, shown).map((cell) => (
+          <div className="salaries__browse-bar">
+            {layout === 'cards'
+              ? <Segmented compact ariaLabel="Order employers" value={order} onChange={setOrder} options={[{ value: 'average', label: 'Highest average' }, { value: 'records', label: 'Most records' }, { value: 'name', label: 'A–Z' }]} />
+              : <span />}
+            <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />
+          </div>
+          {layout === 'table' && <DataTable data={chosen} columns={employerColumns} sorting={[{ id: 'mean', desc: true }]} label={`Employers in ${years[year]}`} />}
+          {layout === 'cards' && (
+          <Paged list={chosen} size={24} reset={`${year}|${order}|${sector}`}>
+            {(page) => (
+          <div className="salaries__grid">
+            {page.map((cell) => (
               <button key={cell.entry.slug} type="button" className="salaries__card" onClick={() => onEmployerRole(cell.entry.slug, key, year)}>
                 <span className="salaries__lead"><RoleIcon /></span>
                 <span className="salaries__text">
@@ -162,7 +175,9 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
               </button>
             ))}
           </div>
-          <More shown={shown} total={chosen.length} step={48} onMore={() => setShown((value) => value + 48)} />
+            )}
+          </Paged>
+          )}
         </section>
       )}
 

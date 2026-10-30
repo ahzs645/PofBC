@@ -18,11 +18,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } from './people.js'
 import { keyedTitles, titleMatcher } from './positions.js'
-import { filterEmployers } from './coverage.js'
 import { formatMoney as money } from './money.js'
-import { YearStrip } from './parts.jsx'
-import { salaryYearIndex } from './viewState.js'
-import { count, latestYear, loadJson, More, PersonIcon, readPlace, RoleIcon, seenYears, toTop, wordsOf, writePlace } from './common.jsx'
+import { PeriodRange, rangeLabel, YearStrip } from './parts.jsx'
+import { salaryYearRange, salaryYearValue } from './viewState.js'
+import { Segmented } from '../site/Segmented.jsx'
+import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Browse.jsx'
+import { count, LAYOUTS, loadJson, Paged, PersonIcon, readPlace, toTop, wordsOf, writePlace } from './common.jsx'
 import { EmployerPage } from './EmployerPage.jsx'
 import { PersonPage } from './PersonPage.jsx'
 import { TitleCard, TitlePage } from './TitlePage.jsx'
@@ -39,21 +40,6 @@ const shardOfKey = (key) => key.split('|')[0].slice(0, 2).padEnd(2, '_')
 /** A reading as it is written in the disclosures: "smith john" read surname first is "Smith, John". */
 const asDisclosed = (reading) => [reading.surname, reading.given].filter(Boolean).join(', ')
   .replace(/(^|[\s,-])(\p{L})/gu, (_, before, letter) => `${before}${letter.toUpperCase()}`)
-
-/** An employer as a card: its name, the years it has records in, and its latest count. */
-const EmployerCard = ({ entry, years, year, onOpen }) => {
-  const at = year !== 'all' ? Number(year) : latestYear(entry)
-  return (
-    <button type="button" className="salaries__card" onClick={() => onOpen(entry.slug)}>
-      <span className="salaries__lead"><RoleIcon /></span>
-      <span className="salaries__text">
-        <span className="salaries__name">{entry.names.at(-1)}</span>
-        <span className="salaries__line">{count(entry.counts[at], 'record', 'records')} in {years[at]}</span>
-        <YearStrip years={years} seen={seenYears(entry)} />
-      </span>
-    </button>
-  )
-}
 
 /** A name found by the search, as a card. */
 const PersonCard = ({ each, index, onOpen }) => (
@@ -84,9 +70,6 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const heading = useRef(null)
   const [shards, setShards] = useState({})
   const [reading, setReading] = useState(null)
-  const [shown, setShown] = useState(24)
-  const [employersShown, setEmployersShown] = useState(6)
-  const [titlesShown, setTitlesShown] = useState(9)
   const query = place.q
   const sector = place.sector
   const setSector = (value) => setPlace((current) => ({ ...current, sector: value }))
@@ -97,8 +80,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
   }, [loadVersion])
 
   // The year filter is kept as a label, so a shared link survives older years being added.
-  const filterYear = salaryYearIndex(place.year, index?.years ?? [])
-  const setFilterYear = (value) => setPlace((current) => ({ ...current, year: value === 'all' ? 'all' : index.years[Number(value)] }))
+  const range = salaryYearRange(place.year, index?.years ?? [])
+  const within = (at) => !range || (at >= range[0] && at <= range[1])
+  const setRange = (next) => setPlace((current) => ({ ...current, year: salaryYearValue(next, index.years) }))
 
   // The ways what was typed can be read as a name, and the index slices they need.
   const readings = useMemo(() => nameReadings(query), [query])
@@ -116,12 +100,13 @@ export const SalariesView = ({ onOpenGovernment }) => {
     return () => { live = false }
   }, [needed, index, loadVersion]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Position titles are searched once three letters are typed; their index is loaded then.
+  // Position titles are searched once three letters are typed, and browsed under Positions; their
+  // index is loaded then.
   const titleQuery = query.trim().replace(/[^A-Za-z0-9 ]/g, '').length >= 3 ? query.trim() : ''
   useEffect(() => {
-    if (!titleQuery && !place.title) return
+    if (!titleQuery && !place.title && place.browse !== 'positions') return
     loadJson('salaries/positions/index.json.gzip').then(setTitlesIndex, () => {})
-  }, [titleQuery, place.title])
+  }, [titleQuery, place.title, place.browse])
 
   useEffect(() => { writePlace(place) }, [place])
 
@@ -137,7 +122,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
       for (const row of list) {
         const tier = nameQueryTier(row[0], each.typed, index.sources?.[row[6]]?.nameDisclosure)
         if (tier === null) continue
-        if (filterYear !== 'all' && String(row[5]) !== filterYear) continue
+        if (!within(row[5])) continue
         if (sector !== 'all' && index.employers[row[4]][1] !== sector) continue
         const key = personKey(row[0])
         if (!groups.has(key)) groups.set(key, { tier, rows: [] })
@@ -149,7 +134,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
         .sort((a, b) => a.tier - b.tier || b.years.length - a.years.length || b.latest[2] - a.latest[2])
       return { reading: each, loading: false, groups: described, full: described.filter((group) => group.tier < 2).length }
     })
-  }, [readings, shards, filterYear, sector, index])
+  }, [readings, shards, place.year, sector, index]) // eslint-disable-line react-hooks/exhaustive-deps
   const nameSearchFailed = found.some((each) => each.failed)
   const retryNames = () => { setShards((current) => Object.fromEntries(Object.entries(current).filter(([, list]) => list !== 'failed'))); setLoadVersion((value) => value + 1) }
   const settled = found.findIndex((each) => each.loading)
@@ -174,11 +159,11 @@ export const SalariesView = ({ onOpenGovernment }) => {
     if (!words.length || !employersIndex) return []
     return employersIndex.employers.filter((entry) => {
       if (sector !== 'all' && entry.sector !== sector) return false
-      if (filterYear !== 'all' && !entry.counts[Number(filterYear)]) return false
+      if (range && !entry.counts.some((value, at) => value && within(at))) return false
       const text = entry.names.join(' ').toLowerCase()
       return words.every((word) => text.includes(word))
     }).sort((a, b) => Math.max(...b.counts) - Math.max(...a.counts))
-  }, [query, employersIndex, sector, filterYear])
+  }, [query, employersIndex, sector, place.year]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Titles answering what was typed: the same title first, then every title beginning with it or
   // holding its words, the most widely used first — so "nurse" finds Nurse, then the nursing titles
@@ -215,7 +200,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const back = <button type="button" className="salaries__back" onClick={goBack}>← {backLabel}</button>
   const remember = (label) => { heading.current = label }
   const setYear = (at) => setPlace((current) => ({ ...current, employerYear: years[at] }))
-  const yearFromFilter = filterYear !== 'all' ? years[Number(filterYear)] : place.employerYear
+  const yearFromFilter = range ? years[range[1]] : place.employerYear
 
   const openEmployer = (slug) => go({ employer: slug, employerYear: yearFromFilter })
   const openPerson = (name) => go({ q: name, person: personKey(name) })
@@ -224,7 +209,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const openRole = (slug, key, at) => go({ employer: slug, role: key, employerYear: at !== undefined && at !== null && at >= 0 ? years[at] : place.employerYear })
   const search = (text) => {
     setPlace((current) => ({ ...current, q: text, person: null }))
-    setReading(null); setShown(24); setEmployersShown(6); setTitlesShown(9)
+    setReading(null)
   }
 
   if (place.employer) {
@@ -241,6 +226,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
           year={pageYear}
           show={place.show}
           role={place.role}
+          layout={place.layout === 'table' ? 'table' : 'cards'}
+          onLayout={(next) => setPlace((current) => ({ ...current, layout: next }))}
           back={back}
           onYear={setYear}
           onShow={(show) => setPlace((current) => ({ ...current, show }))}
@@ -263,8 +250,10 @@ export const SalariesView = ({ onOpenGovernment }) => {
         years={years}
         sector={sector}
         year={pageYear}
+        layout={place.layout === 'table' ? 'table' : 'cards'}
         back={back}
         onYear={setYear}
+        onLayout={(next) => setPlace((current) => ({ ...current, layout: next }))}
         onSector={setSector}
         onEmployerRole={openRole}
         onTitle={openTitle}
@@ -293,39 +282,50 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const sectors = [...new Set(employersIndex.employers.map((entry) => entry.sector))].filter(Boolean).sort()
   const typed = query.trim()
   const peopleSettled = result && !result.loading
-  const filtered = filterYear !== 'all' || sector !== 'all'
+  const filtered = Boolean(range) || sector !== 'all'
+  const browse = ['employers', 'people', 'positions'].includes(place.browse) ? place.browse : 'employers'
+  const layout = place.layout === 'table' ? 'table' : 'cards'
+  const periodCounts = years.map((_, at) => employersIndex.employers.reduce((sum, entry) => sum + (entry.counts[at] ?? 0), 0))
+  // Records whose employer and period come from the employer's own published report, not the
+  // retained compilation.
+  const compiled = new Set(Object.entries(employersIndex.sources ?? {}).filter(([, source]) => source.scope === 'compiled-unverified' || source.sourceKind === 'compiled').map(([id]) => id))
+  const official = employersIndex.employers.reduce((sum, entry) => sum + entry.coverage.reduce((part, cell, at) => part + (cell?.status === 'available' && !(cell.sourceIds ?? []).some((id) => compiled.has(id)) ? entry.counts[at] : 0), 0), 0)
 
   return (
     <div className="salaries">
-      <section className="salaries__intro">
-        <h2 className="salaries__heading">Public-sector salaries</h2>
-        <p>
-          {total.toLocaleString('en-CA')} disclosed pay records from {employersIndex.employers.length} British Columbia public
-          employers, {years[0]} to {years.at(-1)}. Search for a person, an employer or a position.
-        </p>
+      <section className="salaries__intro" aria-labelledby="salaries-intro">
+        <h2 id="salaries-intro" className="salaries__heading">Public-sector salaries</h2>
+        <dl className="salaries__tiles">
+          <div><dt>Records</dt><dd>{total.toLocaleString('en-CA')}</dd><dd className="salaries__line">disclosed payments</dd></div>
+          <div><dt>Employers</dt><dd>{employersIndex.employers.length.toLocaleString('en-CA')}</dd><dd className="salaries__line">{sectors.length} sectors</dd></div>
+          <div><dt>Periods</dt><dd>{years.length}</dd><dd className="salaries__line">{years[0]} – {years.at(-1)}</dd></div>
+          <div><dt>From employer reports</dt><dd>{Math.round((official / total) * 100)}%</dd><dd className="salaries__line">{official.toLocaleString('en-CA')} records</dd></div>
+        </dl>
       </section>
 
       <div className="salaries__search">
-        <input
-          type="search"
-          value={query}
-          placeholder="A name, an employer or a position, like “Smith, J”, “Transit” or “Nurse”"
-          aria-label="Search a name, an employer or a position"
-          aria-describedby="salaries-name-help"
-          onChange={(event) => search(event.target.value)}
-        />
-        <select value={filterYear} onChange={(event) => setFilterYear(event.target.value)} aria-label="Year">
-          <option value="all">Every year</option>
-          {years.map((label, at) => <option key={label} value={String(at)}>{label}</option>)}
-        </select>
+        <span className="salaries__field">
+          <input
+            type="search"
+            value={query}
+            placeholder="A name, an employer or a position, like “Smith, J”, “Transit” or “Nurse”"
+            aria-label="Search a name, an employer or a position"
+            aria-describedby="salaries-name-help"
+            onChange={(event) => search(event.target.value)}
+          />
+          <span className="salaries__tip">
+            <button type="button" className="salaries__tip-button" aria-label="How names are searched" aria-describedby="salaries-name-help">i</button>
+            <span role="tooltip" id="salaries-name-help" className="salaries__tip-text">
+              A name is read surname first, then the other way round. A comma fixes where given names begin, as in “Van der Meer, J”.
+            </span>
+          </span>
+        </span>
+        <PeriodRange years={years} counts={periodCounts} value={range} onChange={setRange} />
       </div>
 
-      <p id="salaries-name-help" className="salaries__hint salaries__hint--small">
-        A name is read surname first, then the other way round. A comma fixes where given names begin, as in “Van der Meer, J”.
-      </p>
       {filtered && (
         <p className="salaries__hint">
-          {filterYear !== 'all' ? years[Number(filterYear)] : 'Every year'} · {sector === 'all' ? 'All sectors' : sector}{' '}
+          {rangeLabel(years, range)} · {sector === 'all' ? 'All sectors' : sector}{' '}
           <button type="button" className="salaries__link" onClick={() => setPlace((current) => ({ ...current, year: 'all', sector: 'all' }))}>Clear filters</button>
         </p>
       )}
@@ -347,12 +347,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
                 <h2 id="salaries-employer-results" className="salaries__title">Employers</h2>
                 <p className="salaries__meta">{count(employerMatches.length, 'employer', 'employers')}</p>
               </div>
-              <div className="salaries__grid">
-                {employerMatches.slice(0, employersShown).map((entry) => <EmployerCard key={entry.slug} entry={entry} years={employersIndex.years} year={filterYear} onOpen={openEmployer} />)}
-              </div>
-              {employerMatches.length > employersShown && (
-                <button type="button" className="salaries__more" onClick={() => setEmployersShown(Infinity)}>Show all {employerMatches.length}</button>
-              )}
+              <Paged list={employerMatches} size={9} reset={`${query}|${place.year}|${sector}`}>
+                {(page) => <div className="salaries__grid">{page.map((entry) => <EmployerCard key={entry.slug} entry={entry} years={employersIndex.years} range={range} onOpen={openEmployer} />)}</div>}
+              </Paged>
             </section>
           )}
 
@@ -372,7 +369,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
                     : <>Read as “{asDisclosed(result.reading)}”, surname first.</>}
                   {otherReadings.map((each) => (
                     <span key={each.at}>
-                      {' '}<button type="button" className="salaries__link" onClick={() => { setReading(each.at); setShown(24) }}>
+                      {' '}<button type="button" className="salaries__link" onClick={() => { setReading(each.at) }}>
                         “{asDisclosed(each.reading)}” finds {each.full ? count(each.full, 'name', 'names') : `${count(each.groups.length, 'name', 'names')} by initials`}
                       </button>.
                     </span>
@@ -385,10 +382,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
               {peopleSettled && fullPeople.length === 0 && initialsOnly.length > 0 && (
                 <p className="salaries__hint">No disclosed name matches “{typed}” in full.</p>
               )}
-              <div className="salaries__grid">
-                {fullPeople.slice(0, shown).map((each) => <PersonCard key={each.key} each={each} index={index} onOpen={openPersonKey} />)}
-              </div>
-              <More shown={shown} total={fullPeople.length} step={48} onMore={() => setShown((value) => value + 48)} />
+              <Paged list={fullPeople} size={24} reset={`${query}|${place.year}|${sector}|${shownReading}`}>
+                {(page) => <div className="salaries__grid">{page.map((each) => <PersonCard key={each.key} each={each} index={index} onOpen={openPersonKey} />)}</div>}
+              </Paged>
               {initialsOnly.length > 0 && (
                 <>
                   <h3 className="salaries__title salaries__title--spaced">Initials only</h3>
@@ -408,10 +404,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
                 <h2 id="salaries-title-results" className="salaries__title">Positions</h2>
                 <p className="salaries__meta">{count(titleMatches.length, 'title', 'titles')} across employers</p>
               </div>
-              <div className="salaries__grid">
-                {titleMatches.slice(0, titlesShown).map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={openTitle} />)}
-              </div>
-              <More shown={titlesShown} total={titleMatches.length} step={24} onMore={() => setTitlesShown((value) => value + 24)} />
+              <Paged list={titleMatches} size={9} reset={query}>
+                {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={openTitle} />)}</div>}
+              </Paged>
             </section>
           )}
 
@@ -419,51 +414,22 @@ export const SalariesView = ({ onOpenGovernment }) => {
         </>
       )}
 
-      {!typed && <EmployerList employers={employersIndex.employers} years={employersIndex.years} sector={sector} year={filterYear} onOpen={openEmployer} onSector={setSector} />}
-
-      <p className="salaries__source">
-        These are the disclosures imported into this collection. Pay is the period’s reported remuneration or
-        compensation, not a salary rate. Reporting thresholds, calendar years, fiscal years and executive-only
-        disclosures differ. Missing records do not establish whether someone was employed or paid.
-      </p>
-    </div>
-  )
-}
-
-/**
- * Every employer, by sector. With every sector shown, each lists its largest few and a way to the
- * rest; with one chosen, all of its employers.
- */
-const PREVIEW = 4
-const EmployerList = ({ employers, years, sector, year, onOpen, onSector }) => {
-  const visible = filterEmployers(employers, sector, year)
-  const bySector = new Map()
-  for (const entry of visible) {
-    if (!bySector.has(entry.sector)) bySector.set(entry.sector, [])
-    bySector.get(entry.sector).push(entry)
-  }
-  return (
-    <section aria-labelledby="salaries-employers" className="salaries__employers">
-      <div className="salaries__head">
-        <h2 id="salaries-employers" className="salaries__title">Employers</h2>
-        <p className="salaries__meta">{count(visible.length, 'employer', 'employers')}{year !== 'all' ? ` with records for ${years[Number(year)]}` : ''}</p>
-      </div>
-      {visible.length === 0 && <p className="salaries__hint">No employers have imported records with these filters. Choose another year or clear the filters above.</p>}
-      {[...bySector].sort(([a], [b]) => a.localeCompare(b)).map(([name, list]) => {
-        const sorted = [...list].sort((a, b) => Math.max(...b.counts) - Math.max(...a.counts))
-        const preview = sector === 'all' ? sorted.slice(0, PREVIEW) : sorted
-        return (
-          <div key={name} className="salaries__sector">
-            {sector === 'all' && <h3 className="salaries__sector-title">{name} <span className="salaries__meta">{list.length}</span></h3>}
-            <div className="salaries__grid">
-              {preview.map((entry) => <EmployerCard key={entry.slug} entry={entry} years={years} year={year} onOpen={onOpen} />)}
-            </div>
-            {preview.length < sorted.length && (
-              <button type="button" className="salaries__more" onClick={() => { onSector(name); toTop() }}>All {sorted.length} {name.toLowerCase()} →</button>
-            )}
+      {!typed && (
+        <section aria-label="Browse" className="salaries__records">
+          <div className="salaries__browse-bar">
+            <Segmented
+              ariaLabel="Browse"
+              value={browse}
+              onChange={(next) => setPlace((current) => ({ ...current, browse: next }))}
+              options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }]}
+            />
+            <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
           </div>
-        )
-      })}
-    </section>
+          {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); toTop() }} />}
+          {browse === 'people' && <PeopleBrowse index={index} sector={sector} range={range} layout={layout} onPerson={openPerson} onEmployer={openEmployer} />}
+          {browse === 'positions' && <PositionBrowse titlesIndex={titlesIndex} years={years} range={range} layout={layout} onTitle={openTitle} />}
+        </section>
+      )}
+    </div>
   )
 }

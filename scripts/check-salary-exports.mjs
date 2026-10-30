@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url'
 import { resolve, dirname, join } from 'node:path'
 import { SALARY_YEARS, SALARY_INDEX, SALARY_SOURCES, SALARY_COVERAGE } from '../src/government/salaryIndex.js'
 import { titleKey, titleShard } from '../src/salaries/positions.js'
+import { periodMean, topRecords } from './lib/salary-data.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const published = join(root, 'public/salaries')
@@ -64,7 +65,7 @@ for (const employer of employers.employers) {
       if (!titled.has(cell)) titled.set(cell, [])
       titled.get(cell).push(pay)
     }
-    if (employers.sources[sourceId].scope !== 'compiled-unverified') { officialRows += 1; add(official, key) }
+    if (employers.sources[sourceId].sourceKind !== 'compiled' && employers.sources[sourceId].scope !== 'compiled-unverified') { officialRows += 1; add(official, key) }
     if (employer.body) {
       const bodyKey = `${years[year]}|${employer.body}`
       if (!bodyRows.has(bodyKey)) bodyRows.set(bodyKey, [])
@@ -87,8 +88,10 @@ for (const employer of employers.employers) {
 }
 assert.deepEqual(new Set(readdirSync(join(published, 'employers')).filter((file) => file.endsWith('.gzip'))), employerFiles)
 
+const personRows = []
 for (const [shard, expected] of Object.entries(people.shards)) {
   const rows = gzip(join(published, 'people', `${shard}.json.gzip`))
+  personRows.push(...rows)
   assert.equal(rows.length, expected, `People shard ${shard}: count`)
   for (const row of rows) {
     const [name, position, pay, expenses, employer, year, sourceId, page] = row
@@ -99,18 +102,23 @@ for (const [shard, expected] of Object.entries(people.shards)) {
   }
 }
 assert.equal(named.size, 0, 'Named employer rows are absent from the people index')
-assert.deepEqual(new Set(readdirSync(join(published, 'people')).filter((file) => file.endsWith('.gzip'))), new Set(Object.keys(people.shards).map((shard) => `${shard}.json.gzip`)))
+// The landing page's highest-paid records are exactly each period's top of the named records.
+const top = gzip(join(published, 'people/top.json.gzip'))
+assert.deepEqual(top.rows, topRecords(personRows, top.perPeriod), 'Highest-paid records differ from the people index')
+assert.deepEqual(new Set(readdirSync(join(published, 'people')).filter((file) => file.endsWith('.gzip'))), new Set([...Object.keys(people.shards).map((shard) => `${shard}.json.gzip`), 'top.json.gzip']))
 
 // Each title's employer/years hold exactly the positioned rows read independently from the employer files.
 const positions = gzip(join(published, 'positions/index.json.gzip'))
 assert.deepEqual(positions.years, years, 'Position and employer year indices differ')
 const titleRows = new Map(positions.titles.map(([label, rows]) => [titleKey(label), rows]))
+const titleLast = new Map(positions.titles.map(([label, , , , last, mean]) => [titleKey(label), [last, mean]]))
 assert.equal(titleRows.size, positions.titles.length, 'A title is listed twice')
 for (const shard of positions.shards) {
   for (const [key, { spellings, cells }] of Object.entries(gzip(join(published, 'positions', `${shard}.json.gzip`)))) {
     assert.equal(titleShard(key), shard, `Title ${key}: shard`)
     assert.ok(spellings.every(([text]) => titleKey(text) === key), `Title ${key}: spelling of another title`)
     assert.equal(cells.reduce((sum, cell) => sum + cell[2], 0), titleRows.get(key), `Title ${key}: rows`)
+    assert.equal(titleLast.get(key)[1], periodMean(cells, titleLast.get(key)[0]), `Title ${key}: last-period average`)
     titleRows.delete(key)
     for (const [employer, year, count, mean, middle, low, high] of cells) {
       const pay = titled.get(`${key}|${employer}|${year}`)
@@ -146,12 +154,13 @@ assert.equal(bodyRows.size, 0, 'Employer rows are absent from the atlas')
 const actualAtlasPaths = new Set()
 for (const entry of readdirSync(published, { withFileTypes: true })) {
   if (!entry.isDirectory() || ['employers', 'people', 'positions'].includes(entry.name)) continue
-  assert.match(entry.name, /^\d{4}-\d{2}$/, 'Unexpected published salary directory')
+  assert.match(entry.name, /^\d{4}(?:-\d{2})?$/, 'Unexpected published salary directory')
   for (const file of readdirSync(join(published, entry.name))) actualAtlasPaths.add(`${entry.name}/${file}`)
 }
 assert.deepEqual(actualAtlasPaths, atlasPaths, 'Unindexed or missing atlas files')
 
 let sourceFiles = 0
+const consumedTravelCorrections = new Set()
 for (const collection of json(join(research, 'collections.json')).collections) {
   const manifest = json(join(research, collection, 'sources.json'))
   for (const source of manifest.sources) {
@@ -162,11 +171,20 @@ for (const collection of json(join(research, 'collections.json')).collections) {
     assert.equal(hash, source.dataSha256 ?? source.normalizedSha256, `${source.id}: normalized hash`)
     const data = gzip(file)
     for (const [slug, name, position, pay, expenses, page] of Array.isArray(data) ? data : data.rows) {
-      consume(official, JSON.stringify([canonical(slug), source.year ?? source.label, name, position, pay, expenses, source.id, page ?? null]), `Official schedule ${source.id}`)
+      const correction = (audit.travelJoinCorrections ?? []).find((entry) => entry.employeeSourceId === source.id && entry.employerSlug === canonical(slug) && entry.year === (source.year ?? source.label) && entry.name === name && entry.pay === pay)
+      if (correction) {
+        assert.equal(expenses, correction.previousExpenses, 'Travel correction does not match the original normalized source')
+        assert.equal(correction.replacementExpenses, null)
+        assert.ok(employers.sources[correction.relatedOICSourceId], 'Travel correction lacks the recovered appointee source')
+        assert.ok(!consumedTravelCorrections.has(correction), 'Travel correction matched multiple source rows')
+        consumedTravelCorrections.add(correction)
+      }
+      consume(official, JSON.stringify([canonical(slug), source.year ?? source.label, name, position, pay, correction ? correction.replacementExpenses : expenses, source.id, page ?? null]), `Official schedule ${source.id}`)
     }
     sourceFiles += 1
   }
 }
+assert.equal(consumedTravelCorrections.size, (audit.travelJoinCorrections ?? []).length, 'Unapplied travel correction')
 assert.equal(official.size, 0, 'Published official rows have no normalized source record')
 assert.equal(audit.output.rows, totalRows)
 assert.equal(audit.output.namedRows, namedRows)
@@ -192,7 +210,7 @@ if (process.argv.includes('--write-inventory')) {
     const groups = []
     for (const label of labels) {
       const last = groups.at(-1)
-      if (last && Number(label.slice(0, 4)) === Number(last.at(-1).slice(0, 4)) + 1) last.push(label)
+      if (last && label.includes('/') === last.at(-1).includes('/') && Number(label.slice(0, 4)) === Number(last.at(-1).slice(0, 4)) + 1) last.push(label)
       else groups.push([label])
     }
     return groups.map((group) => group.length > 1 ? `${group[0]}–${group.at(-1)}` : group[0]).join(', ') || 'None'
@@ -202,7 +220,7 @@ if (process.argv.includes('--write-inventory')) {
     'Generated by `node scripts/check-salary-exports.mjs --write-inventory` after reconciling all employer, person and atlas exports against the accepted normalized sources.', '',
     `The dataset contains **${count(totalRows)} disclosure rows**, including **${count(officialRows)} rows from official schedules**, across **${employers.employers.length} employers** and **${availableEmployerYears} populated employer/years**. There are **${count(duplicateRows)} duplicate-looking extra rows** still flagged for source review. These are records, not verified distinct people or a workforce census.`, '',
     'The three count columns are the original compiled edition labels. Official replacements use their verified reporting periods; retained compiled rows still have unverified reporting periods. A dash means no imported records. “Held” means a source was found but its records failed the stated validation gate. Blank cells and missing years do not establish that an employer had no employees. The earliest and latest years in the catalog do not establish an employer’s dates of existence.', '',
-    '“Official years” lists accepted source coverage, with the source-specific thresholds and cohorts in [coverage.json](../../public/salaries/coverage.json). It does not promise all payments or employees. Every year outside the listed official and retained compiled years remains an import gap within the catalog; historical periods before 2006/07 require separate source work.', '',
+    '“Official years” lists accepted source coverage, with the source-specific thresholds and cohorts in [coverage.json](../../public/salaries/coverage.json). It does not promise all payments or employees. Gaps are assessed within the employer’s corresponding calendar or fiscal periods; an incompatible period type is not an additional annual gap. Historical periods before 2006/07 require separate source work.', '',
     '| Employer | Sector | 2017/18 rows | 2020/21 rows | 2023/24 rows | Official years | Retained compiled years | Review flags |',
     '|---|---|---:|---:|---:|---|---|---|'
   ]
@@ -212,7 +230,8 @@ if (process.argv.includes('--write-inventory')) {
       if (entry.status === 'excluded') flags.push(`${years[at]} held`)
       if (entry.status === 'source-found') flags.push(`${years[at]} source found; extraction pending`)
       if (entry.status !== 'available') return
-      ;(entry.sourceIds.some((id) => employers.sources[id].scope === 'compiled-unverified') ? compiledYears : officialYears).push(years[at])
+      ;(entry.sourceIds.some((id) => employers.sources[id].sourceKind === 'compiled' || employers.sources[id].scope === 'compiled-unverified') ? compiledYears : officialYears).push(years[at])
+      if (entry.scope === 'elected-officials') flags.push(`${years[at]} mayor/council only`)
       if (entry.scope === 'executive-only') flags.push(`${years[at]} executive only`)
       if (entry.duplicateRows) flags.push(`${years[at]}: ${entry.duplicateRows} duplicate-looking extras`)
     })

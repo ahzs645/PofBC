@@ -26,11 +26,30 @@ const addMountainLines = (svg, artwork, ink) => {
   target.after(...lines)
 }
 
+// In dark mode a logo on the default white paper moves onto a dark tile. Artwork drawn only in black
+// and white is inverted there (exactly: black becomes white); colour artwork keeps its colours, with a
+// light edge so its black outlines still read (internal.css). A variant with a background of its own
+// keeps it.
+const PAPER = new Set(['#fff', '#ffffff', 'white'])
+const PLAIN = new Set(['#000', '#000000', 'black', '#fff', '#ffffff', 'white', 'none', 'transparent', 'currentcolor'])
+const inkOf = (colours) => ([...colours].every((colour) => PLAIN.has(colour.toLowerCase())) ? 'mono' : 'colour')
+const coloursOfMarkup = (markup) => new Set([...markup.matchAll(/(?:fill|stroke)(?:="|:\s*)(#[0-9a-fA-F]{3,6}|[a-z]+)/g)].map((match) => match[1]))
+const coloursOfElement = (root) => {
+  const colours = new Set()
+  for (const element of root.querySelectorAll('*')) {
+    for (const attribute of ['fill', 'stroke']) if (element.getAttribute(attribute)) colours.add(element.getAttribute(attribute))
+    for (const match of (element.getAttribute('style') ?? '').matchAll(/(?:fill|stroke)\s*:\s*([^;]+)/g)) colours.add(match[1].trim())
+  }
+  return colours
+}
+const tile = (background, ink) => ({ style: { '--tile': background }, 'data-paper': PAPER.has(String(background).toLowerCase()) || undefined, 'data-ink': ink ?? undefined })
+
 // Render the reference presets directly, without the editor, its options or browser drafts.
 const OvalLogo = ({ preset, name, decorative = false, theme, colours, composition, background = '#fff' }) => {
   const host = useRef(null)
   const [status, setStatus] = useState('loading')
   const [attempt, setAttempt] = useState(0)
+  const [ink, setInk] = useState(null)
   useEffect(() => {
     let disposed = false
     setStatus('loading')
@@ -79,6 +98,7 @@ const OvalLogo = ({ preset, name, decorative = false, theme, colours, compositio
       svg.setAttribute('aria-label', `${name} oval logo`)
       svg.setAttribute('focusable', 'false')
       host.current.replaceChildren(svg)
+      setInk(inkOf(coloursOfElement(svg)))
       setStatus('ready')
     }
     render().catch(() => { if (!disposed) setStatus('error') })
@@ -86,7 +106,7 @@ const OvalLogo = ({ preset, name, decorative = false, theme, colours, compositio
   }, [preset, name, attempt, theme, colours, composition])
 
   return (
-    <div className="internal-logos__artwork" style={{ background }} aria-hidden={decorative || undefined}>
+    <div className="internal-logos__artwork" {...tile(background, ink)} aria-hidden={decorative || undefined}>
       <div className="internal-logos__svg" ref={host} />
       {status === 'loading' && <span role="status">Loading logo…</span>}
       {status === 'error' && (decorative ? <span>Logo unavailable</span> : <div role="alert">Could not load this logo. <button type="button" onClick={() => setAttempt((value) => value + 1)}>Retry</button></div>)}
@@ -134,8 +154,9 @@ const DrawingLogo = ({ artwork, recolour, padding, name, decorative = false, bac
   const [attempt, setAttempt] = useState(0)
   const { svg, failed } = useDrawing(artwork, attempt)
   const markup = useMemo(() => svg && drawingMarkup({ svg, recolour, name, prefix }), [svg, recolour, name, prefix])
+  const ink = useMemo(() => (markup ? inkOf(coloursOfMarkup(markup)) : null), [markup])
   return (
-    <div className="internal-logos__artwork" style={{ background }} aria-hidden={decorative || undefined}>
+    <div className="internal-logos__artwork" {...tile(background, ink)} aria-hidden={decorative || undefined}>
       {markup && <div className="internal-logos__svg" style={{ padding }} dangerouslySetInnerHTML={{ __html: markup }} />}
       {!markup && !failed && <span role="status">Loading logo…</span>}
       {failed && (decorative ? <span>Logo unavailable</span> : <div role="alert">Could not load this logo. <button type="button" onClick={() => setAttempt((value) => value + 1)}>Retry</button></div>)}
