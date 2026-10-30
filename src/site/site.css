@@ -827,12 +827,20 @@ input.share__url {
 .view-switcher__trigger:hover { background: var(--menu-hover); }
 .view-switcher__trigger svg { color: var(--menu-muted); transition: transform 150ms; }
 
+/* Wide, the menu hangs from the trigger and sets the views out in two columns, read down the first
+   and then the second; it is never taller than the room under the trigger (ViewSwitcher.jsx sets
+   --menu-room), and scrolls inside that. */
 .view-switcher__menu {
+  --menu-columns: 2;
   position: absolute;
   top: calc(100% + 8px);
   left: -4px;
   z-index: 50;
-  width: min(300px, calc(100vw - 48px));
+  box-sizing: border-box;
+  width: min(620px, calc(100vw - 32px));
+  max-height: var(--menu-room, 70vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 8px;
   border: 1px solid var(--menu-border);
   border-radius: 16px;
@@ -843,6 +851,17 @@ input.share__url {
   letter-spacing: 0;
   white-space: normal;
 }
+
+.view-switcher__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(var(--menu-rows, 5), auto);
+  grid-auto-flow: column;
+  gap: 2px 4px;
+}
+
+/* The page behind a phone's sheet is dimmed, and a tap on it closes the menu. */
+.view-switcher__backdrop { display: none; }
 
 .view-switcher__heading {
   padding: 8px 12px 6px;
@@ -868,9 +887,10 @@ input.share__url {
 }
 
 .view-switcher__item:hover, .view-switcher__item:focus-visible { background: var(--menu-hover); outline: none; }
+.view-switcher__item[aria-checked='true'] { background: var(--menu-hover); }
 .view-switcher__text { flex: 1; min-width: 0; display: grid; }
 .view-switcher__label { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; }
-.view-switcher__description { font-size: 12px; color: var(--menu-muted); }
+.view-switcher__description { font-size: 12px; line-height: 1.4; color: var(--menu-muted); }
 .view-switcher__check { flex: none; width: 14px; }
 
 .view-switcher__badge {
@@ -882,6 +902,31 @@ input.share__url {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+/* A phone: one column, as a sheet across the screen just under the masthead. Each view keeps its
+   one-line description, cut short rather than wrapped, so all ten fit on most screens; the rest
+   scroll within the sheet. */
+@media (max-width: 639px) {
+  .view-switcher__menu {
+    --menu-columns: 1;
+    position: fixed;
+    top: var(--menu-top, 72px);
+    left: 12px;
+    right: 12px;
+    width: auto;
+    padding: 6px;
+  }
+  .view-switcher__list { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; gap: 0; }
+  .view-switcher__backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 49;
+    background: rgb(0 0 0 / 0.28);
+  }
+  .view-switcher__item { padding: 9px 10px; }
+  .view-switcher__description { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 }
 
 /* ── The gallery view ──────────────────────────────────────────────────────────────────────── */
