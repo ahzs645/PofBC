@@ -382,6 +382,31 @@ to the dollar because it is computed, not disclosed. `check:salaries` reconciles
 the positioned rows of the employer files. Shared titles do not establish that two employers'
 jobs are the same.
 
+### Reading the salary pages
+
+These notes used to be repeated on the pages themselves; they apply to every record shown.
+
+- **What pay means.** Pay is the reported remuneration or compensation for the period, not a
+  salary rate. Thresholds, reporting periods and the scope of each disclosure differ; each record
+  links to the document it comes from, at its page where the parser recorded one.
+- **Periods.** Calendar reports use their actual year (for example, 2023); fiscal reports keep
+  their fiscal label (2023/24). A period filter can be one period or a range of them.
+- **Compiled records.** Records still from the supplied pssdb compilation (the retained export
+  snapshot of 22 October 2026) show no source summary. Their edition labels are not verified
+  employer reporting periods, and their completeness and disclosure categories have not been
+  checked against the employers' own reports. The coverage inventory lists which employer/years
+  they are.
+- **Missing years.** A year without a record for a name is a statement about coverage, not about
+  the person. Where no usable records are imported for the associated employers in a period, that
+  gap does not establish whether the person was employed or paid. Each gap on a person's page
+  gives its reason on hover.
+- **Names.** A typed name is read surname first, then the other way round; a comma fixes where
+  given names begin ("Van der Meer, J"). A shared name is not proof of one person, and missing
+  records do not establish whether someone was employed or paid.
+- **Highest paid across employers.** The People view before a search lists each period's 500
+  highest-paid named records across every employer (`public/salaries/people/top.json.gzip`);
+  `check:salaries` rebuilds that list from the person index and compares it.
+
 ### Reproduce and check the published dataset
 
 ```sh

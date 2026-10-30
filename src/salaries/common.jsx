@@ -1,6 +1,7 @@
 // What the salary pages share: loading their files, the card icons, a record as a row, and the place
 // (who or what is open) kept in the address bar (viewState.js).
 
+import { useState } from 'react'
 import { displayName } from './people.js'
 import { sourceHref } from './coverage.js'
 import { SourceLink } from './DisclosureEvidence.jsx'
@@ -88,7 +89,46 @@ export const RecordRow = ({ rank, name, position, pay, expenses, expenseText, so
   </li>
 )
 
-/** "Show 80 more", under a list cut short. */
-export const More = ({ shown, total, step, onMore, inner = false }) => (total > shown
-  ? <button type="button" className={`salaries__more${inner ? ' salaries__more--inner' : ''}`} onClick={onMore}>Show {Math.min(step, total - shown).toLocaleString('en-CA')} more of {total.toLocaleString('en-CA')}</button>
-  : null)
+/**
+ * A list in pages: `items` is the page on screen, `pager` the control under it (none for one page).
+ * The page returns to the first whenever `reset` changes — a new filter, year or order.
+ */
+export const usePages = (list, size, reset) => {
+  const [state, setState] = useState({ page: 1, reset })
+  const page = state.reset === reset ? state.page : 1
+  const pages = Math.max(1, Math.ceil(list.length / size))
+  const at = Math.min(page, pages)
+  const go = (next) => setState({ page: next, reset })
+  return {
+    items: list.slice((at - 1) * size, at * size),
+    pager: pages > 1 ? <Pager page={at} pages={pages} total={list.length} size={size} onPage={go} /> : null
+  }
+}
+
+/** Numbered pages: the first, the last, and the two either side of the one on screen. */
+export const Pager = ({ page, pages, total, size, onPage }) => {
+  const shown = [...new Set([1, page - 2, page - 1, page, page + 1, page + 2, pages])].filter((at) => at >= 1 && at <= pages).sort((a, b) => a - b)
+  const turn = (at) => { onPage(at); globalThis.requestAnimationFrame?.(() => globalThis.document?.activeElement?.closest?.('section')?.scrollIntoView?.({ block: 'start' })) }
+  return (
+    <nav className="salaries-pager" aria-label="Pages">
+      <button type="button" disabled={page === 1} onClick={() => turn(page - 1)} aria-label="Previous page">‹</button>
+      {shown.map((at, index) => (
+        <span key={at} className="salaries-pager__slot">
+          {index > 0 && at - shown[index - 1] > 1 && <span className="salaries-pager__gap" aria-hidden="true">…</span>}
+          <button type="button" aria-current={at === page ? 'page' : undefined} onClick={() => turn(at)}>{at}</button>
+        </span>
+      ))}
+      <button type="button" disabled={page === pages} onClick={() => turn(page + 1)} aria-label="Next page">›</button>
+      <span className="salaries-pager__range">{((page - 1) * size + 1).toLocaleString('en-CA')}–{Math.min(total, page * size).toLocaleString('en-CA')} of {total.toLocaleString('en-CA')}</span>
+    </nav>
+  )
+}
+
+/** `usePages` where a hook cannot go: `children(items)` draws the page on screen. */
+export const Paged = ({ list, size, reset, children }) => {
+  const { items, pager } = usePages(list, size, reset)
+  return <>{children(items)}{pager}</>
+}
+
+/** Cards or a table: the choice offered above every list that has both. */
+export const LAYOUTS = [{ value: 'cards', label: 'Cards' }, { value: 'table', label: 'Table' }]

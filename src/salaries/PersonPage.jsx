@@ -129,11 +129,6 @@ export const PersonPage = ({ chosen, all, index, back, onEmployer, onRole, onOpe
         </>
       )}
 
-      <details className="salaries-disclosure__more">
-        <summary>About missing years</summary>
-        <p>{missingYearMessage(index.coverage, associated, missing.find((at) => gapReason(index.coverage, associated, at) === 'not-found') ?? missing[0] ?? 0)}</p>
-        <p>Pay is the reported remuneration for the period, not a salary rate. Thresholds, reporting periods and the scope of each disclosure differ; each record links to the document it comes from.</p>
-      </details>
     </section>
   )
 }

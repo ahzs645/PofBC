@@ -4,7 +4,7 @@
 // labels, not positions in an index that can grow when older sources arrive. `employerYear` is the
 // year on an employer's or a title's page.
 const PARAMETERS = {
-  q: 'q', person: 'person', employer: 'employer', role: 'role', title: 'title', show: 'show',
+  q: 'q', person: 'person', employer: 'employer', role: 'role', title: 'title', show: 'show', browse: 'browse', layout: 'layout',
   year: 'salary-year', sector: 'salary-sector', employerYear: 'employer-year'
 }
 
@@ -51,3 +51,18 @@ export const filterPositionGroups = (positions, query) => positions.map((positio
 
 /** A zero amount is a disclosed value. Null and undefined are missing, not zero. */
 export const hasExpenseAmount = (value) => value !== null && value !== undefined && Number.isFinite(value)
+
+/**
+ * A period filter as [first, last] indexes, or null for every period. It is written as one label
+ * ("2020/21") or a range ("2018/19..2023/24"); a label no longer in the catalog is dropped rather
+ * than emptying the view, and a range given backwards is read forwards.
+ */
+export const salaryYearRange = (value, years) => {
+  if (!value || value === 'all') return null
+  const [from, to = from] = String(value).split('..').map((label) => years.indexOf(label))
+  if (from < 0 || to < 0) return null
+  return [Math.min(from, to), Math.max(from, to)]
+}
+
+/** The address form of a range: one label when it is one period. */
+export const salaryYearValue = (range, years) => (range ? (range[0] === range[1] ? years[range[0]] : `${years[range[0]]}..${years[range[1]]}`) : 'all')

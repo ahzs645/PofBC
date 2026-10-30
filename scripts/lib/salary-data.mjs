@@ -191,3 +191,24 @@ export const validateReplacementScopes = (baseline, official, sources, decisions
     throw new Error(`${key}: partial disclosure cannot replace a compiled employee partition without an explicit reviewed scope decision`)
   }
 }
+
+// The landing page's view across every employer: each period's highest-paid named records. The
+// whole name index is hundreds of slices; this is one small file, and says it is only the top.
+export const TOP_PER_PERIOD = 500
+/** Person-index rows [name, position, pay, expenses, employer, year, source, page], the top `n` a period. */
+export const topRecords = (rows, n = TOP_PER_PERIOD) => {
+  const byYear = new Map()
+  for (const row of rows) {
+    if (!byYear.has(row[5])) byYear.set(row[5], [])
+    byYear.get(row[5]).push(row)
+  }
+  const order = (a, b) => b[2] - a[2] || String(a[0]).localeCompare(String(b[0])) || a[4] - b[4] || String(a[1]).localeCompare(String(b[1])) || String(a[6]).localeCompare(String(b[6]))
+  return [...byYear].sort(([a], [b]) => a - b).flatMap(([, list]) => list.sort(order).slice(0, n))
+}
+
+/** A title's average in one period across its employers: cells [employer, year, rows, mean, …]. */
+export const periodMean = (cells, year) => {
+  const chosen = cells.filter((cell) => cell[1] === year)
+  const records = chosen.reduce((sum, cell) => sum + cell[2], 0)
+  return records ? Math.round(chosen.reduce((sum, cell) => sum + cell[2] * cell[3], 0) / records) : null
+}

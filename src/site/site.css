@@ -1554,6 +1554,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__intro p { margin: 8px 0 0; max-width: 70ch; font-size: 15px; line-height: 1.5; color: var(--ink-muted); }
 .salaries__heading { margin: 0; font-size: 22px; font-weight: 600; color: var(--ink); }
 .salaries__search { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+@media (max-width: 560px) { .salaries__search { grid-template-columns: 1fr; } .salaries-range__trigger { width: 100%; } }
 .salaries__search input, .salaries__search select {
   box-sizing: border-box;
   min-width: 0;
@@ -1565,6 +1566,85 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   font: inherit;
   font-size: 16px;
 }
+/* Search fields take the salaries' own blue when focused, as a soft ring rather than the browser's
+   bright outline. */
+.salaries input[type='search']:focus, .salaries input[type='number']:focus, .salaries select:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--salaries-ink) 70%, var(--mid));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--salaries-ink) 20%, transparent);
+}
+.salaries input[type='search']:focus:not(:focus-visible) { box-shadow: none; }
+
+/* The search box with its name tip: an "i" inside the box's end that shows the tip on hover or focus. */
+.salaries__field { position: relative; display: grid; min-width: 0; }
+.salaries__field input { width: 100%; padding-right: 44px; }
+.salaries__tip { position: absolute; top: 50%; right: 8px; transform: translateY(-50%); }
+.salaries__tip-button {
+  display: grid; place-items: center; width: 24px; height: 24px; padding: 0;
+  border: 1px solid var(--mid); border-radius: 50%; background: var(--surface); color: var(--ink-faint);
+  font: italic 600 12px/1 Georgia, serif; cursor: help;
+}
+.salaries__tip-button:hover, .salaries__tip-button:focus-visible { border-color: var(--salaries-ink); color: var(--salaries-ink); outline: none; }
+.salaries__tip-text {
+  position: absolute; right: -8px; top: calc(100% + 10px); z-index: 30; width: min(320px, 80vw);
+  padding: 10px 12px; border-radius: 10px; background: var(--ink); color: var(--surface);
+  font-size: 13px; line-height: 1.45; box-shadow: var(--menu-shadow-token);
+  opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 120ms, transform 120ms, visibility 120ms;
+}
+.salaries__tip:hover .salaries__tip-text, .salaries__tip:focus-within .salaries__tip-text { opacity: 1; visibility: visible; transform: none; }
+
+/* The period picker: a button the height of the search box, opening the bar picker in a panel. */
+.salaries-range { position: relative; }
+.salaries-range__trigger {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; height: 100%; min-width: 11em;
+  padding: 10px 12px; border: 1px solid var(--mid); border-radius: 10px; background: var(--surface); color: var(--ink);
+  font: inherit; font-size: 15px; cursor: pointer; white-space: nowrap;
+}
+.salaries-range__trigger:hover { background: var(--hover); }
+.salaries-range__trigger:focus-visible { outline: none; border-color: var(--salaries-ink); box-shadow: 0 0 0 3px color-mix(in srgb, var(--salaries-ink) 20%, transparent); }
+.salaries-range__trigger svg { color: var(--ink-faint); flex: none; transition: transform 150ms; }
+.salaries-range__panel {
+  --sp-ink: var(--salaries-ink); --sp-mid: var(--mid); --sp-faint: var(--ink-faint); --sp-hover: var(--hover); --sp-text: var(--ink);
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 40; box-sizing: border-box; width: min(720px, calc(100vw - 32px));
+  display: grid; gap: 10px; padding: 14px; border: 1px solid var(--outline); border-radius: 16px;
+  background: var(--surface); box-shadow: var(--menu-shadow-token);
+}
+.salaries-range__hint { margin: 0; font-size: 13px; color: var(--ink-faint); }
+.salaries-range__panel .salaries-picker button[data-edge] { background: color-mix(in srgb, var(--salaries-ink) 18%, transparent); color: var(--ink); }
+.salaries-range__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px 16px; font-size: 14px; }
+.salaries-range__actions .salaries__more { margin: 0; }
+@media (max-width: 639px) {
+  /* A phone: a sheet at the foot of the screen, and the periods as a grid of labelled chips, since
+     thirty-odd bars across a phone are too narrow to tap. */
+  .salaries-range__panel { position: fixed; left: 16px; right: 16px; top: auto; bottom: 16px; width: auto; max-height: 70vh; overflow-y: auto; }
+  .salaries-range__panel .salaries-picker { grid-auto-flow: row; grid-template-columns: repeat(auto-fill, minmax(68px, 1fr)); gap: 4px; }
+  .salaries-range__panel .salaries-picker button { grid-template-rows: auto; align-content: center; min-height: 44px; border: 1px solid var(--mid); }
+  .salaries-range__panel .salaries-picker .salaries-picker__bar { display: none; }
+  .salaries-range__panel .salaries-picker button:nth-child(n) .salaries-picker__label { visibility: visible; font-size: 13px; }
+  .salaries-range__panel .salaries-picker button[aria-pressed='true'] { border-color: var(--salaries-ink); }
+}
+
+/* Pages under a list of cards. */
+.salaries-pager { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-top: 12px; font-size: 14px; }
+.salaries-pager button {
+  min-width: 36px; height: 36px; padding: 0 10px; border: 0; border-radius: 999px;
+  background: var(--hover); color: var(--ink); font: inherit; font-variant-numeric: tabular-nums; cursor: pointer;
+}
+.salaries-pager button:disabled { opacity: 0.4; cursor: default; }
+.salaries-pager button[aria-current='page'] { background: var(--ink); color: var(--surface); font-weight: 600; }
+.salaries-pager__slot { display: inline-flex; align-items: center; gap: 4px; }
+.salaries-pager__gap { color: var(--ink-faint); padding: 0 2px; }
+.salaries-pager__range { margin-left: auto; color: var(--ink-faint); font-size: 13px; font-variant-numeric: tabular-nums; }
+@media (max-width: 480px) { .salaries-pager__range { flex-basis: 100%; margin: 4px 0 0; } }
+
+/* What is shown, and how: the tabs on the left, cards or a table on the right. */
+.salaries__browse-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.salaries__browse-bar > .field { margin: 0; width: auto; max-width: 100%; }
+.salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 320px; max-width: 520px; }
+.salaries__browse-bar .segmented { --track: var(--mid); --segment: var(--surface); }
+.salaries__browse-bar .segmented button { white-space: nowrap; }
+.salaries__intro .salaries__tiles { margin-top: 12px; }
+
 .salaries__hint, .salaries__note { margin: 0; font-size: 14px; color: var(--ink-faint); }
 .salaries__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 12px; margin-bottom: 8px; }
 .salaries__title { margin: 0; font-size: 15px; font-weight: 600; color: var(--ink); }
@@ -1682,7 +1762,24 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   background: var(--surface);
   overscroll-behavior-x: contain;
 }
-.salaries-table:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.salaries-table:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--salaries-ink) 20%, transparent); }
+/* The records table (DataTable.jsx): as tall as the window allows, scrolling inside itself; money
+   and counts to the right; under each header, its filter. */
+.salaries-table--scroll { width: auto; max-height: min(70vh, 720px); overflow: auto; }
+.salaries-table--scroll table { width: 100%; }
+.salaries-table.salaries-table--scroll th, .salaries-table.salaries-table--scroll td { text-align: left; }
+.salaries-table.salaries-table--scroll [data-kind='money'], .salaries-table.salaries-table--scroll [data-kind='number'] { text-align: right; }
+.salaries-table--scroll thead th { vertical-align: bottom; }
+.salaries-datatable { display: grid; gap: 6px; min-width: 0; }
+.salaries-datatable__count { margin: 0; }
+.salaries-datatable__sort { display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: inherit; cursor: pointer; white-space: nowrap; }
+.salaries-datatable__sort:hover { color: var(--ink); }
+.salaries-datatable__filter {
+  box-sizing: border-box; width: 100%; min-width: 6em; margin-top: 4px; padding: 4px 6px;
+  border: 1px solid var(--mid); border-radius: 6px; background: var(--surface); color: var(--ink);
+  font: inherit; font-size: 13px; font-weight: 400; text-align: inherit;
+}
+.salaries-datatable__empty { padding: 12px; }
 .salaries-table table { border-collapse: separate; border-spacing: 0; font-size: 13px; font-variant-numeric: tabular-nums; }
 .salaries-table th, .salaries-table td { padding: 7px 10px; border-bottom: 1px solid var(--hover); text-align: right; white-space: nowrap; vertical-align: top; }
 .salaries-table thead th { position: sticky; top: 0; z-index: 1; background: var(--surface); font-size: 12px; font-weight: 600; color: var(--ink-faint); }

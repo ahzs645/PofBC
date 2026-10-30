@@ -65,12 +65,13 @@ export const meanMoney = (values) => (values.length ? Math.round(values.reduce((
 const keyed = new WeakMap()
 
 /**
- * The position index's titles, each with its key: { key, label, rows, employers, first, last }, in the
- * index's order (most records first). Worked out once an index.
+ * The position index's titles, each with its key: { key, label, rows, employers, first, last, mean },
+ * in the index's order (most records first); `mean` is the average in its last period. Worked out
+ * once an index.
  */
 export const keyedTitles = (index) => {
   if (!keyed.has(index)) {
-    keyed.set(index, index.titles.map(([spelling, rows, employers, first, last]) => ({ key: titleKey(spelling), label: titleLabel(spelling), rows, employers, first, last })))
+    keyed.set(index, index.titles.map(([spelling, rows, employers, first, last, mean = null]) => ({ key: titleKey(spelling), label: titleLabel(spelling), rows, employers, first, last, mean })))
   }
   return keyed.get(index)
 }

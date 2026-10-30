@@ -3,6 +3,7 @@
 // year. Each is styled in site.css (.salaries-strip, .salaries-picker, .salaries-chart) with the
 // government view's colours where it sits inside that view.
 
+import { useEffect, useRef, useState } from 'react'
 import { formatMoney } from './money.js'
 import { yearAvailability, shortYearLabel, reportingYearLabel, relevantYearIndexes, samePeriodKinds } from './coverage.js'
 
@@ -101,3 +102,65 @@ export const PayChart = ({ years, points, label = 'Disclosed pay by year', multi
 
 /** "$123k", for labels over bars. */
 export const compactMoney = (value) => (value >= 1e6 ? `$${(value / 1e6).toFixed(1)}M` : value >= 1e3 ? `$${Math.round(value / 1e3)}k` : formatMoney(value))
+
+/** "2018/19 – 2023/24", one period's own label, or every period. */
+export const rangeLabel = (years, range) => (!range ? 'Every period'
+  : range[0] === range[1] ? reportingYearLabel(years[range[0]]) : `${years[range[0]]} – ${years[range[1]]}`)
+
+/**
+ * The periods to search, as a button that opens the bar picker the employer pages use: a tap picks a
+ * period, a second tap the other end of a range. It closes on Done, Escape or a tap outside.
+ */
+export const PeriodRange = ({ years, counts, value, onChange }) => {
+  const [open, setOpen] = useState(false)
+  const [anchor, setAnchor] = useState(null)
+  const root = useRef(null)
+  useEffect(() => {
+    if (!open) return undefined
+    const away = (event) => { if (!root.current?.contains(event.target)) setOpen(false) }
+    const key = (event) => { if (event.key === 'Escape') setOpen(false) }
+    document.addEventListener('pointerdown', away)
+    document.addEventListener('keydown', key)
+    return () => { document.removeEventListener('pointerdown', away); document.removeEventListener('keydown', key) }
+  }, [open])
+  const most = Math.max(1, ...counts)
+  const pick = (at) => {
+    if (anchor === null) { setAnchor(at); onChange([at, at]) } else { onChange([Math.min(anchor, at), Math.max(anchor, at)]); setAnchor(null) }
+  }
+  const inside = (at) => Boolean(value) && at >= value[0] && at <= value[1]
+  return (
+    <div className="salaries-range" ref={root}>
+      <button type="button" className="salaries-range__trigger" aria-haspopup="dialog" aria-expanded={open} onClick={() => { setOpen((now) => !now); setAnchor(null) }}>
+        <span className="salaries-range__label">{rangeLabel(years, value)}</span>
+        <svg width="10" height="10" viewBox="0 0 18 10" aria-hidden="true" style={{ transform: open ? 'rotate(180deg)' : undefined }}><path d="M1.64 0.74 0.74 1.64 8.55 9.45 9 9.88 9.45 9.45 17.26 1.64 16.36 0.74 9 8.1 1.64 0.74Z" fill="currentColor" /></svg>
+      </button>
+      {open && (
+        <div className="salaries-range__panel" role="dialog" aria-label="Reporting periods">
+          <p className="salaries-range__hint">{anchor === null ? 'Choose a period, or the first of a range.' : `Now the last period of the range from ${years[anchor]}.`}</p>
+          <div className="salaries-picker" role="group" aria-label="Periods">
+            {years.map((year, at) => (
+              <button
+                key={year}
+                type="button"
+                aria-pressed={inside(at)}
+                data-edge={(value && (at === value[0] || at === value[1])) || undefined}
+                data-empty={!counts[at] || undefined}
+                aria-label={`${reportingYearLabel(year)}: ${(counts[at] ?? 0).toLocaleString('en-CA')} records`}
+                title={`${reportingYearLabel(year)}: ${(counts[at] ?? 0).toLocaleString('en-CA')} records`}
+                onClick={() => pick(at)}
+              >
+                <span className="salaries-picker__bar"><span style={{ height: counts[at] ? `${Math.max(8, (counts[at] / most) * 100)}%` : undefined }} /></span>
+                <span className="salaries-picker__label">{shortYear(year)}</span>
+              </button>
+            ))}
+          </div>
+          <div className="salaries-range__actions">
+            <button type="button" className="salaries__link" onClick={() => { onChange(null); setAnchor(null) }}>Every period</button>
+            <button type="button" className="salaries__link" onClick={() => { onChange([years.length - 1, years.length - 1]); setAnchor(null) }}>Latest only</button>
+            <button type="button" className="salaries__more" onClick={() => setOpen(false)}>Done</button>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}

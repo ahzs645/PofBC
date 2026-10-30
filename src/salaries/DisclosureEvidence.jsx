@@ -80,6 +80,9 @@ export const DisclosureSummary = ({ coverage, sources = {}, className = '', more
   const linked = [...new Map(ids.map((id) => sources[id]).filter((source) => source?.url && /^https?:\/\//.test(source.url)).map((source) => [source.url, source])).values()]
   const notes = coverage?.notes ?? []
   const status = coverageStatus(coverage, sources)
+  // Records still from the retained compilation have no report of their own to describe: their
+  // limits are in the salary documentation (research/salaries/README.md), not repeated on each page.
+  if (status.kind === 'compiled') return null
   const expenseEvidence = [...new Map(ids.map((id) => sources[id]).filter((source) => source?.expensesNote || source?.travelSource)
     .map((source) => [`${source.expensesNote ?? ''}|${source.travelSource?.url ?? ''}`, source])).values()]
   const folded = Boolean(notes.length || expenseEvidence.length || coverage?.duplicateRows > 0 || coverage?.sourceLeads?.length || more || (ids.length && !linked.length))

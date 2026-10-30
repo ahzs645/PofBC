@@ -87,7 +87,8 @@ test('a surname of more than one word is found, and a comma fixes where the surn
 
 test('the index’s slices hold every row it counts, each under its surname', () => {
   const index = JSON.parse(readFileSync(new URL('index.json', DIR)))
-  const files = readdirSync(DIR).filter((name) => name.endsWith('.json.gzip'))
+  // top.json.gzip is the landing page's highest-paid list, not a surname slice.
+  const files = readdirSync(DIR).filter((name) => name.endsWith('.json.gzip') && name !== 'top.json.gzip')
   assert.equal(files.length, Object.keys(index.shards).length)
   let total = 0
   for (const file of files) {

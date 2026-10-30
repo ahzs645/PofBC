@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url'
 import { resolve, dirname, join } from 'node:path'
 import { SALARY_YEARS, SALARY_INDEX, SALARY_SOURCES, SALARY_COVERAGE } from '../src/government/salaryIndex.js'
 import { titleKey, titleShard } from '../src/salaries/positions.js'
+import { periodMean, topRecords } from './lib/salary-data.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const published = join(root, 'public/salaries')
@@ -87,8 +88,10 @@ for (const employer of employers.employers) {
 }
 assert.deepEqual(new Set(readdirSync(join(published, 'employers')).filter((file) => file.endsWith('.gzip'))), employerFiles)
 
+const personRows = []
 for (const [shard, expected] of Object.entries(people.shards)) {
   const rows = gzip(join(published, 'people', `${shard}.json.gzip`))
+  personRows.push(...rows)
   assert.equal(rows.length, expected, `People shard ${shard}: count`)
   for (const row of rows) {
     const [name, position, pay, expenses, employer, year, sourceId, page] = row
@@ -99,18 +102,23 @@ for (const [shard, expected] of Object.entries(people.shards)) {
   }
 }
 assert.equal(named.size, 0, 'Named employer rows are absent from the people index')
-assert.deepEqual(new Set(readdirSync(join(published, 'people')).filter((file) => file.endsWith('.gzip'))), new Set(Object.keys(people.shards).map((shard) => `${shard}.json.gzip`)))
+// The landing page's highest-paid records are exactly each period's top of the named records.
+const top = gzip(join(published, 'people/top.json.gzip'))
+assert.deepEqual(top.rows, topRecords(personRows, top.perPeriod), 'Highest-paid records differ from the people index')
+assert.deepEqual(new Set(readdirSync(join(published, 'people')).filter((file) => file.endsWith('.gzip'))), new Set([...Object.keys(people.shards).map((shard) => `${shard}.json.gzip`), 'top.json.gzip']))
 
 // Each title's employer/years hold exactly the positioned rows read independently from the employer files.
 const positions = gzip(join(published, 'positions/index.json.gzip'))
 assert.deepEqual(positions.years, years, 'Position and employer year indices differ')
 const titleRows = new Map(positions.titles.map(([label, rows]) => [titleKey(label), rows]))
+const titleLast = new Map(positions.titles.map(([label, , , , last, mean]) => [titleKey(label), [last, mean]]))
 assert.equal(titleRows.size, positions.titles.length, 'A title is listed twice')
 for (const shard of positions.shards) {
   for (const [key, { spellings, cells }] of Object.entries(gzip(join(published, 'positions', `${shard}.json.gzip`)))) {
     assert.equal(titleShard(key), shard, `Title ${key}: shard`)
     assert.ok(spellings.every(([text]) => titleKey(text) === key), `Title ${key}: spelling of another title`)
     assert.equal(cells.reduce((sum, cell) => sum + cell[2], 0), titleRows.get(key), `Title ${key}: rows`)
+    assert.equal(titleLast.get(key)[1], periodMean(cells, titleLast.get(key)[0]), `Title ${key}: last-period average`)
     titleRows.delete(key)
     for (const [employer, year, count, mean, middle, low, high] of cells) {
       const pay = titled.get(`${key}|${employer}|${year}`)
