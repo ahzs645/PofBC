@@ -18,7 +18,7 @@
 import { BCTS_ENTRIES, ONE_OFFS } from './oneOffs.js'
 import { COLLECTION_ERAS, TIMELINES, timelineKeyOf } from './timelines.js'
 import { CURRENT_VARIANT_ORDER, CURRENT_VARIANTS } from '../hydro/hydroMarks.js'
-import { COLLECTED_COLLECTIONS } from './collectedCollections.js'
+import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS } from './collectedCollections.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
 
@@ -1022,6 +1022,8 @@ export const GALLERY_COLLECTIONS = [
 // histories remain authoritative for bodies that already have a collection.
 GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => held.graphNode === candidate.graphNode)))
+// The one-off programs' published specimens, reached from their timelines' eras.
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS)
 
 export const COLLECTIONS_ON_SHELF = (shelf) => GALLERY_COLLECTIONS.filter((collection) => collection.shelf === shelf)
 

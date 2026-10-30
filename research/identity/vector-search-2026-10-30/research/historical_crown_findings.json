@@ -1,0 +1,664 @@
+{
+  "title": "Historical Crown corporation missing-vector search",
+  "checkedOn": "2026-10-30",
+  "scope": "All 24 historical Crown corporations with neither a recorded vector nor a separate existing collection in supplied repository inventory.",
+  "summary": {
+    "organizationsSearched": 24,
+    "verifiedVectorsExtracted": 3,
+    "stillWithoutNewVerifiedVector": 21
+  },
+  "method": "Indexed-web source searches followed by downloads of promising official PDFs, inspection of logo-region native paths and image placements, native-path-only SVG extraction and 4x raster comparison. No tracing and no corporate successor substitution.",
+  "rows": [
+    {
+      "id": "pacific-great-eastern-railway",
+      "name": "Pacific Great Eastern Railway Company",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 2,
+      "searchQueries": [
+        "\"Pacific Great Eastern\" \"svg\"",
+        "\"Pacific Great Eastern\" \"logo\" \"vector\""
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "New valuable non-vector source: Greg M. Kennelly, Logos of the Pacific Great Eastern Railway, in The Cariboo Issue 3. Discusses and dates multiple early designs, expanding his 1986 Coupler employee-newsletter articles. Do not count a scanned magazine as native vector.",
+      "newSources": [
+        {
+          "sourceUrl": "https://www.cwrailway.ca/sites/default/files/Cariboo/Cariboo%20-%20Issue%203.pdf",
+          "status": "historical-evidence-not-vector",
+          "description": "Logo-history article by Greg M. Kennelly."
+        }
+      ]
+    },
+    {
+      "id": "bc-power-commission",
+      "name": "British Columbia Power Commission",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"British Columbia Power Commission\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "bc-toll-highways-and-bridges-authority",
+      "name": "British Columbia Toll Highways and Bridges Authority",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "source-found",
+      "originalRasterAssetCount": 0,
+      "searchQueries": [
+        "\"British Columbia Toll Highways and Bridges Authority\" logo"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "bc-electric-company-crown",
+      "name": "British Columbia Electric Company (provincially owned)",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "source-found",
+      "originalRasterAssetCount": 0,
+      "searchQueries": [
+        "\"British Columbia Electric\" \"vector\"",
+        "\"British Columbia Electric\" \"logo\""
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "Commons and Flickr return the 1915 British Columbia Electric Railway emblem as PNG. Wrong period and wrong legal identity for the 1961-62 Crown interval; rejected as a substitute.",
+      "newSources": []
+    },
+    {
+      "id": "bc-ferry-authority",
+      "name": "British Columbia Ferry Authority",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "source-found",
+      "originalRasterAssetCount": 0,
+      "searchQueries": [
+        "\"British Columbia Ferry Authority\" \"vector\""
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "bc-development-corporation",
+      "name": "British Columbia Development Corporation",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 2,
+      "searchQueries": [
+        "\"British Columbia Development Corporation\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "Search finds Lonsdale Quay/Westminster Quay trademarks owned by the corporation; these are property brands and cannot fill its corporate-logo gap.",
+      "newSources": []
+    },
+    {
+      "id": "bc-petroleum-corporation",
+      "name": "British Columbia Petroleum Corporation",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"British Columbia Petroleum Corporation\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "ocean-falls-corporation",
+      "name": "Ocean Falls Corporation",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"Ocean Falls Corporation\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "bc-steamship-company",
+      "name": "British Columbia Steamship Company (1975) Ltd.",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"British Columbia Steamship\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "Search results mix the Crown company with Canadian Pacific Coast Steamship and the earlier 1944 British Columbia Steamship/Northland Navigation company. Those logos and house flags are not acceptable substitutes.",
+      "newSources": []
+    },
+    {
+      "id": "bc-buildings-corporation",
+      "name": "British Columbia Buildings Corporation",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"British Columbia Buildings Corporation\" \"logo\"",
+        "\"British Columbia Buildings Corporation\" \"logo\" eps",
+        "\"BC Buildings Corporation\" logo filetype:pdf",
+        "site:bcbudget.gov.bc.ca \"British Columbia Buildings Corporation\" 2004"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "Downloaded and inspected official 2004 service plan. Cover logo is a 100 x 274 px raster (vertical lockup); no native vector improvement in that specimen.",
+      "newSources": []
+    },
+    {
+      "id": "bc-heritage-trust",
+      "name": "British Columbia Heritage Trust",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"British Columbia Heritage Trust\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "bc-resources-investment-corporation",
+      "name": "British Columbia Resources Investment Corporation",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 2,
+      "searchQueries": [
+        "\"British Columbia Resources Investment Corporation\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "New primary brochure source located through UFV SACDA, A share in BCRIC; useful for variant/history research, not verified as vector.",
+      "newSources": [
+        {
+          "sourceUrl": "https://sacda.ufv.ca/collections/2021_03_01_03_003",
+          "assetUrl": "https://sacda.ca/media/collectiveaccess/images/4/7/9194_ca_object_representations_media_4701_original.pdf",
+          "status": "new-historical-source-unverified-vector",
+          "description": "Original A share in BCRIC brochure."
+        }
+      ]
+    },
+    {
+      "id": "bc-systems-corporation",
+      "name": "British Columbia Systems Corporation",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"British Columbia Systems Corporation\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "urban-transit-authority",
+      "name": "Urban Transit Authority",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"Urban Transit Authority\" \"svg\"",
+        "\"Urban Transit Authority\" \"logo\" vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No original UTA vector verified. Commons has newly uploaded BUS and FastBUS SVGs but they belong to the Bureau of Transit Services predecessor, not UTA; uploader says own work, so treat as third-party reconstructions.",
+      "newSources": []
+    },
+    {
+      "id": "bc-place-ltd",
+      "name": "British Columbia Place Ltd.",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"British Columbia Place\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "Located Canadian Museum of History PDF with original British Columbia Place corporate branding and 1982 newspaper advertisements. These are scan/history leads, not verified vectors; modern stadium branding is not a substitute.",
+      "newSources": [
+        {
+          "sourceUrl": "https://www.historymuseum.ca/ke/_resources/5807325/2023-F0003-24.pdf",
+          "status": "historical-evidence-not-vector",
+          "description": "Original publication with British Columbia Place corporate logo and board of directors."
+        }
+      ]
+    },
+    {
+      "id": "metro-transit-operating-company",
+      "name": "Metro Transit Operating Company",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "source-found",
+      "originalRasterAssetCount": 0,
+      "searchQueries": [
+        "\"Metro Transit Operating Company\" logo"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "wlc-developments",
+      "name": "W.L.C. Developments Ltd.",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "unresolved",
+      "originalRasterAssetCount": 0,
+      "searchQueries": [
+        "\"W.L.C. Developments\" logo"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "bc-enterprise-corporation",
+      "name": "British Columbia Enterprise Corporation",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"British Columbia Enterprise Corporation\" logo vector"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "oil-and-gas-commission",
+      "name": "BC Oil and Gas Commission",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 2,
+      "searchQueries": [
+        "\"BC Oil and Gas Commission\" logo svg eps",
+        "\"BC Oil\" \"logo\" \"svg\"",
+        "site:bcbudget.gov.bc.ca \"Oil and Gas Commission\" \"2020/21\"",
+        "site:bc-er.ca \"Annual Report\" \"2018\" \"pdf\"",
+        "site:bc-er.ca \"Oil\" \"style guide\"",
+        "\"BC Oil and Gas Commission\" \"brand\" logo"
+      ],
+      "status": "verified-native-pdf-vector-extracted",
+      "notes": "Exact paths from the official print version of the 2014 Water Use report; publication route lists 3 July 2015. Source is an authentic published specimen, not an issuer-supplied master. Later green/color treatments should be compared before replacing any dated 2019/2021 variant.",
+      "newSources": [
+        {
+          "sourceUrl": "https://www.bc-er.ca/files/reports/Water-Management/2014-annual-report-water-use-oil-and-gas-activityprint-version.pdf",
+          "format": "pdf",
+          "page": 1,
+          "label": "BC Oil & Gas Commission: crescent, green circle and wordmark",
+          "sourceDate": "2014 annual report, published 2015",
+          "vectorVerified": true,
+          "extractedAsset": "vectors/oil-and-gas-commission/bc-oil-gas-commission-2014.svg",
+          "validation": {
+            "name": "bc-oil-gas-commission-2014",
+            "file": "vectors/oil-and-gas-commission/bc-oil-gas-commission-2014.svg",
+            "source_pdf": "research-inputs-not-bundled/historical-pdfs/ogc-water-2014.pdf",
+            "source_url": "https://www.bc-er.ca/files/reports/Water-Management/2014-annual-report-water-use-oil-and-gas-activityprint-version.pdf",
+            "page": 1,
+            "bbox": [
+              629.0,
+              55.0,
+              766.0,
+              116.0
+            ],
+            "native_path_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "native_path_count": 21,
+            "raster_images_in_logo_region": 0,
+            "color_conversions": [],
+            "sha256": "9cc125d0da2ab3e1e8747e98b73e0a5343ab586647eabb49b2353310a757fcd9",
+            "visual_comparison": {
+              "source_pixels": [
+                548,
+                244
+              ],
+              "output_pixels": [
+                548,
+                244
+              ],
+              "mean_absolute_channel_difference_0_255": [
+                0.012003410314706234,
+                0.013708567667823381,
+                0.013955366758406126
+              ],
+              "max_channel_difference_0_255": [
+                [
+                  0,
+                  7
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  8
+                ]
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "bc-assets-and-land-corporation",
+      "name": "British Columbia Assets and Land Corporation",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"British Columbia Assets and Land Corporation\" logo"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "No new genuine vector file verified in this indexed-web pass. Existing raster evidence or unresolved status remains; this is not proof that no logo or vector exists.",
+      "newSources": []
+    },
+    {
+      "id": "land-and-water-bc",
+      "name": "Land and Water British Columbia Inc.",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"Land and Water\" \"British Columbia\" logo eps",
+        "\"Land and Water British Columbia\" logo pdf",
+        "\"Land and Water BC\" logo filetype:pdf"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "Downloaded 2003 and 2004 official service plans. Covers contain a typeset corporate title and layout rectangles, not the separately evidenced LWBC symbol. No logo vector claimed from them.",
+      "newSources": []
+    },
+    {
+      "id": "partnerships-bc",
+      "name": "Partnerships British Columbia",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"Partnerships BC\" logo vector",
+        "\"Partnerships\" \"BC\" \"logo\" \"eps\"",
+        "\"Partnerships BC\" logo filetype:pdf"
+      ],
+      "status": "verified-native-pdf-vector-extracted",
+      "notes": "Native outlined lettering from the 2012/13 report cover. Print colors converted to source-rendered sRGB, recorded in validation. This does not establish the first use of the design.",
+      "newSources": [
+        {
+          "sourceUrl": "https://www.bcbudget.gov.bc.ca/annual_reports/2012_2013/pdf/agency/pbc.pdf",
+          "format": "pdf",
+          "page": 1,
+          "label": "Partnerships British Columbia: blue wordmark with green subtitle",
+          "sourceDate": "2012/2013 annual report",
+          "vectorVerified": true,
+          "extractedAsset": "vectors/partnerships-bc/partnerships-bc-2012.svg",
+          "validation": {
+            "name": "partnerships-bc-2012",
+            "file": "vectors/partnerships-bc/partnerships-bc-2012.svg",
+            "source_pdf": "research-inputs-not-bundled/historical-pdfs/pbc-2012.pdf",
+            "source_url": "https://www.bcbudget.gov.bc.ca/annual_reports/2012_2013/pdf/agency/pbc.pdf",
+            "page": 1,
+            "bbox": [
+              68.0,
+              62.0,
+              242.0,
+              95.0
+            ],
+            "native_path_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27
+            ],
+            "native_path_count": 27,
+            "raster_images_in_logo_region": 0,
+            "color_conversions": [
+              {
+                "source_drawing_rgb": [
+                  0.0,
+                  0.48699167370796204,
+                  0.7629968523979187
+                ],
+                "rendered_srgb": [
+                  26,
+                  124,
+                  191
+                ]
+              },
+              {
+                "source_drawing_rgb": [
+                  0.4269932210445404,
+                  0.7519951462745667,
+                  0.4119935929775238
+                ],
+                "rendered_srgb": [
+                  111,
+                  192,
+                  104
+                ]
+              }
+            ],
+            "sha256": "152ab2d35c6c87f6ae7078bbb7f154d7b13650d0f6e580ccaa7ecfd75a93a44e",
+            "visual_comparison": {
+              "source_pixels": [
+                696,
+                132
+              ],
+              "output_pixels": [
+                696,
+                132
+              ],
+              "mean_absolute_channel_difference_0_255": [
+                0.046357976314872866,
+                0.04255921281783351,
+                0.04383272378962034
+              ],
+              "max_channel_difference_0_255": [
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "bc-transmission-corporation",
+      "name": "British Columbia Transmission Corporation",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "asset-collected",
+      "originalRasterAssetCount": 1,
+      "searchQueries": [
+        "\"BC Transmission Corporation\" logo vector",
+        "\"BC Transmission\" \"logo\" vector",
+        "\"BCTC\" logo \"vector\""
+      ],
+      "status": "verified-native-pdf-vector-extracted",
+      "notes": "The 2009 lockup is a dated specimen, not proof of adoption in 2009. Its short-name lettering differs from the raster 2004/2006 specimens. Native filled paths extracted; all letters outlined.",
+      "newSources": [
+        {
+          "sourceUrl": "https://www.bcbudget.gov.bc.ca/2009/sp/pdf/agency/bctc.pdf",
+          "format": "pdf",
+          "page": 1,
+          "label": "BC Transmission Corporation: 2009 wordmark with green grid symbol",
+          "sourceDate": "2009-02",
+          "vectorVerified": true,
+          "extractedAsset": "vectors/bc-transmission-corporation/bc-transmission-2009.svg",
+          "validation": {
+            "name": "bc-transmission-2009",
+            "file": "vectors/bc-transmission-corporation/bc-transmission-2009.svg",
+            "source_pdf": "research-inputs-not-bundled/historical-pdfs/bctc-2009.pdf",
+            "source_url": "https://www.bcbudget.gov.bc.ca/2009/sp/pdf/agency/bctc.pdf",
+            "page": 1,
+            "bbox": [
+              389.0,
+              33.0,
+              578.0,
+              97.0
+            ],
+            "native_path_indices": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43
+            ],
+            "native_path_count": 32,
+            "raster_images_in_logo_region": 0,
+            "color_conversions": [],
+            "sha256": "8834713e46e147d0b6894ed305bcf7efe4e3a3bc6c34ed626cd4701c387a2c96",
+            "visual_comparison": {
+              "source_pixels": [
+                756,
+                256
+              ],
+              "output_pixels": [
+                756,
+                256
+              ],
+              "mean_absolute_channel_difference_0_255": [
+                0.000568369708994709,
+                0.00047019675925925923,
+                0.0004495287698412698
+              ],
+              "max_channel_difference_0_255": [
+                [
+                  0,
+                  8
+                ],
+                [
+                  0,
+                  7
+                ],
+                [
+                  0,
+                  7
+                ]
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "bc-harbours-board",
+      "name": "British Columbia Harbours Board",
+      "checkedOn": "2026-10-30",
+      "originalStatus": "unresolved",
+      "originalRasterAssetCount": 0,
+      "searchQueries": [
+        "\"British Columbia Harbours Board\" logo"
+      ],
+      "status": "searched-no-native-vector-verified",
+      "notes": "Found 1971 Harbours Board Railway timetable listing; useful source route only, not a verified logo or vector.",
+      "newSources": [
+        {
+          "sourceUrl": "https://www.traingeek.ca/wp/rail-documentation/bc-rail-timetables/",
+          "status": "catalogue-only",
+          "description": "British Columbia Harbours Board Railway timetable 2, 28 June 1971."
+        }
+      ]
+    }
+  ],
+  "optionalSeparateCollectionLeads": [
+    {
+      "id": "bc-bureau-of-transit-services-bus",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BC_Bureau_of_Transit_Services_%22BUS%22_Logo.svg",
+      "format": "svg",
+      "status": "third-party-reconstruction-listed-not-downloaded",
+      "notes": "Own work uploaded 19 September 2026 by Akana-tel. Historical year and 1979/1983/1985 claims in uploader notes need primary verification. Not a UTA replacement."
+    },
+    {
+      "id": "bc-bureau-of-transit-services-fastbus",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BC_Bureau_of_Transit_Services_%22FastBUS%22_Logo.svg",
+      "format": "svg",
+      "status": "third-party-reconstruction-listed-not-downloaded",
+      "notes": "Same predecessor agency issue; optional separate collection only."
+    }
+  ],
+  "extractionScript": "research-inputs-not-bundled/extract_historical_vectors.py",
+  "validationFile": "research-inputs-not-bundled/historical-vectors/extraction-validation.json"
+}
