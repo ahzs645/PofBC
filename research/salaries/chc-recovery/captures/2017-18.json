@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "sourceId": "chc-fia-2018",
+  "employer": "Columbia Hydro Constructors Ltd.",
+  "proposedEmployerSlug": "columbia-hydro-constructors",
+  "employerMappingStatus": "not-integrated",
+  "fiscalYear": "2017/18",
+  "periodStart": "2017-04-01",
+  "periodEnd": "2018-03-31",
+  "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/bch-fia-f18.pdf",
+  "sourceTitle": "BC Hydro Financial Information Act Return, year ended March 31, 2018",
+  "captureDate": "2026-10-23",
+  "captureMethod": "Manual transcription of complete employee-table rows from the web reader of the official publisher PDF; not downloaded PDF bytes and not a visual transcription. Trailing Report ID page-join text was separated from the last employee row.",
+  "expectedPdfSha256FromEarlierPackage": "0664039543287c31d8d67b06eaef227ab0b3878213917874f147ef4d108fe28f",
+  "pdfHashVerifiedThisRun": false,
+  "pdfVisuallyReviewedThisRun": false,
+  "captureType": "aggregate-only-employee-schedule",
+  "currency": "CAD",
+  "amountPrecision": "whole-dollar",
+  "threshold": 75000,
+  "thresholdRule": "over",
+  "nameDisclosure": "initials-and-surname",
+  "positionDisclosure": "not-published",
+  "pages": [
+    {
+      "pdfPage": 175,
+      "sheet": 1,
+      "sheets": 1,
+      "firstSourceTextLine": null,
+      "rowsText": "",
+      "employerHeader": "COLUMBIA HYDRO CONSTRUCTORS LTD.",
+      "periodHeader": "on Behalf of Employees During the Year Ended March 31, 2018",
+      "scheduleHeader": "Schedule of Remuneration Paid to Employees and Expenses Paid to or"
+    }
+  ],
+  "controls": {
+    "totalRemuneration": 208410,
+    "totalExpenses": 12021,
+    "belowThresholdRemuneration": 208410,
+    "belowThresholdExpenses": 12021,
+    "employerCppEi": 14732
+  },
+  "controlsPdfPage": 175,
+  "controlsRawWebText": "L11081: Receiver General for Canada (employer portion of EI and CPP) 14,732\nL11082: Total 208,410\nL11083: Consolidated total of other employees with remuneration of $75,000 or less 12,021\nL11084: 12,021\nL11085: 208,410\nL11086: REMUNERATION EXPENSES",
+  "controlsInterpretationStatus": "provisional-column-assignment-awaiting-rendered-PDF-check",
+  "scopeNote": "Named payments are not base salaries or a workforce census. Employer CPP/EI and below-threshold aggregates are not individual employee rows."
+}
