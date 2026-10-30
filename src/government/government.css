@@ -1244,10 +1244,12 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-salaries__disclosure { margin-top: 10px; }
 .gov-salaries__disclosure .salaries-disclosure__more { color: var(--gov-ink-4); }
 .gov-salaries .gov-cards { margin-top: 16px; }
-.gov-salaries__record { display: grid; gap: 3px; align-content: start; min-width: 0; }
-.gov-salaries__record .gov-cards__card { width: 100%; }
-.gov-salaries__record .salaries__source { padding-left: 12px; color: var(--gov-ink-4); }
-.gov-salaries__record .salaries__source a { color: inherit; }
+.gov-cards__card--linked { position: relative; }
+.gov-cards__stretch { padding: 0; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
+.gov-cards__stretch::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+.gov-cards__stretch:focus-visible { outline: none; }
+.gov-cards__card--linked:has(.gov-cards__stretch:focus-visible) { box-shadow: 0 0 0 2px var(--gov-executive); }
+.gov-cards__link a { position: relative; z-index: 1; color: inherit; }
 .gov-salaries .salaries-picker-select select { background: var(--gov-surface); border-color: var(--gov-outline); color: var(--gov-ink); }
 
 /* ── A long note read a step at a time (StoryText.jsx) ─────────────────────────────────────── */
@@ -1307,3 +1309,24 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 @media (prefers-reduced-motion: reduce) {
   .gov-story__step, .gov-story__dot::before { transition: none; }
 }
+
+/* A term in the panel with its definition as a tooltip (a Crown corporation's category): dotted under
+   the term, and the tip below it, open on hover or focus and while the pointer is on it, so its
+   links can be followed. */
+.gov-tip { position: relative; display: inline-block; }
+.gov-tip__trigger {
+  padding: 0; border: 0; background: none; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit;
+  text-decoration: underline dotted; text-underline-offset: 3px; cursor: help;
+}
+.gov-tip__trigger:focus-visible { outline: 2px solid var(--gov-executive); outline-offset: 2px; border-radius: 3px; }
+.gov-tip__text {
+  position: absolute; left: 0; top: 100%; z-index: 30; box-sizing: border-box; width: min(340px, calc(100vw - 48px));
+  margin-top: 6px; padding: 10px 12px; border: 1px solid var(--gov-outline); border-radius: 10px;
+  background: var(--gov-surface); color: var(--gov-ink); box-shadow: var(--gov-menu-shadow);
+  font-size: 13px; font-weight: 400; letter-spacing: 0; line-height: 1.45; text-transform: none; white-space: normal;
+  opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 120ms, transform 120ms, visibility 120ms;
+}
+/* A bridge over the gap, so the pointer can move from the term to the tip without closing it. */
+.gov-tip__text::before { content: ''; position: absolute; left: 0; right: 0; top: -8px; height: 8px; }
+.gov-tip:hover .gov-tip__text, .gov-tip:focus-within .gov-tip__text { opacity: 1; visibility: visible; transform: none; }
+.gov-tip__text a { color: inherit; }

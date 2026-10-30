@@ -1856,7 +1856,10 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-picker button[data-status='source-found'] .salaries-picker__bar span { border-color: var(--sp-ink); }
 .salaries-picker button[aria-pressed='true'] { background: var(--sp-hover); color: var(--sp-text); font-weight: 600; }
 .salaries-picker button[aria-pressed='true'] .salaries-picker__bar span { opacity: 1; }
-.salaries-picker__label { font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* A label can be wider than its bar (twenty years in a narrow panel): the button's one column stays
+   the button's width, so the bar is centred on it, and the label is centred over it on its own. */
+.salaries-picker button { grid-template-columns: minmax(0, 1fr); }
+.salaries-picker__label { justify-self: start; width: max-content; margin-left: 50%; transform: translateX(-50%); font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
 /* Twenty years' labels need about 640px; narrower — a phone, or the government view's panel — every
    other one is shown, and the chosen one always. */
 .salaries-picker { container-type: inline-size; }

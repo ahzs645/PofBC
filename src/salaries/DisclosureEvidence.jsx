@@ -73,7 +73,7 @@ const month = (value) => new Intl.DateTimeFormat('en-CA', { month: 'short', year
  * threshold and where from, on one line; the notes, expense sources and caveats folded under it.
  * `more` adds to what is folded.
  */
-export const DisclosureSummary = ({ coverage, sources = {}, className = '', more = null }) => {
+export const DisclosureSummary = ({ coverage, sources = {}, className = '', more = null, details = true }) => {
   const period = disclosurePeriod(coverage, sources)
   const ids = [...new Set(coverage?.sourceIds ?? [])]
   // One link a document: two disclosure categories (employees, mayor and council) can share a report.
@@ -98,7 +98,7 @@ export const DisclosureSummary = ({ coverage, sources = {}, className = '', more
         ))}</>}
         {!ids.length && (coverage?.sourceLeads?.length ? ' · located source links below' : ' · no source document attached')}
       </p>
-      {folded && (
+      {details && folded && (
         <details className="salaries-disclosure__more">
           <summary>About this disclosure</summary>
           {period && <p>Reporting period: {date(period[0])} – {date(period[1])}.</p>}
