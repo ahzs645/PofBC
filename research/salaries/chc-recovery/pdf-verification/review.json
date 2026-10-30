@@ -1,0 +1,91 @@
+{
+ "reviewedOn": "2026-10-30",
+ "pdfAcquisition": "Each original PDF downloaded from its official bchydro.com URL on 2026-10-30; every SHA-256 equals the hash recorded by the earlier Hydro recovery (captures/*.json expectedPdfSha256FromEarlierPackage).",
+ "rowComparison": "scripts/check_chc_pdf.py run against each original PDF: PyMuPDF and Poppler both reconstruct every named row, with no missing rows, no extra rows and no unparsed monetary lines. Results: pdf-verification/<year>.json. The two readers share reconstruction code, so this is not two independent extractions; the visual review below covers that limit.",
+ "comparatorFix": "Poppler copies a BEL control character from the 2013/14 cover page into its XML, which the comparator now strips before parsing; no schedule text contains control characters.",
+ "summaryColumns": "Read from word coordinates on each summary page: REMUNERATION header spans x 416-492 and amounts end at x 492; EXPENSES header spans x 523-570 and amounts end at x 570. Rows: consolidated total of employees at $75,000 or less, then Total; the employer EI/CPP line sits below Total, in the remuneration column only, and is not part of Total. These confirm the capture controls exactly.",
+ "controls": {
+  "2012-13": {
+   "pdfPage": 175,
+   "belowThresholdRemuneration": 21203838,
+   "belowThresholdExpenses": 1267784,
+   "totalRemuneration": 40922411,
+   "totalExpenses": 2357191,
+   "employerCppEi": 2113093,
+   "pages": [
+    172,
+    173,
+    174,
+    175
+   ]
+  },
+  "2013-14": {
+   "pdfPage": 167,
+   "belowThresholdRemuneration": 27389986,
+   "belowThresholdExpenses": 1826756,
+   "totalRemuneration": 50978707,
+   "totalExpenses": 3196062,
+   "employerCppEi": 2642054,
+   "pages": [
+    163,
+    164,
+    165,
+    166,
+    167
+   ]
+  },
+  "2014-15": {
+   "pdfPage": 171,
+   "belowThresholdRemuneration": 28516380,
+   "belowThresholdExpenses": 1677831,
+   "totalRemuneration": 54049437,
+   "totalExpenses": 3048133,
+   "employerCppEi": 2640383,
+   "pages": [
+    167,
+    168,
+    169,
+    170,
+    171
+   ]
+  },
+  "2015-16": {
+   "pdfPage": 170,
+   "belowThresholdRemuneration": 8200303,
+   "belowThresholdExpenses": 438573,
+   "totalRemuneration": 14851954,
+   "totalExpenses": 833341,
+   "employerCppEi": 659689,
+   "pages": [
+    169,
+    170
+   ]
+  },
+  "2016-17": {
+   "pdfPage": 171,
+   "belowThresholdRemuneration": 2147620,
+   "belowThresholdExpenses": 169537,
+   "totalRemuneration": 2632718,
+   "totalExpenses": 200209,
+   "employerCppEi": 147780,
+   "pages": [
+    170,
+    171
+   ]
+  },
+  "2017-18": {
+   "pdfPage": 175,
+   "belowThresholdRemuneration": 208410,
+   "belowThresholdExpenses": 12021,
+   "totalRemuneration": 208410,
+   "totalExpenses": 12021,
+   "employerCppEi": 14732,
+   "pages": [
+    175
+   ]
+  }
+ },
+ "visualReview": "All 19 schedule pages rendered at 90 dpi (pdftoppm) and inspected: typeset two-column tables, initials then surname, page sequences complete (1 of N to N of N) for every year, summary pages as above. Spot comparisons of rendered values with the candidates agreed, including the two separate JW Anderson rows of 2014/15 and explicit $0 expenses. The 2017/18 schedule has no named rows: its only employee figures are the at-or-below-threshold aggregate, which equals its total.",
+ "residuals": "Named rows minus (Total less the consolidated aggregate) are within $3 for remuneration and expenses in every year, as in the accepted BC Hydro schedules; they are left as published.",
+ "decision": "Accepted for 2012/13 to 2016/17 as research/salaries/columbia-hydro-constructors (scripts/accept-chc-salaries.py). 2017/18 publishes no named rows and is not imported; it is not a year without employees."
+}

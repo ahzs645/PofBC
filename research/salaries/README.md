@@ -278,11 +278,11 @@ remaining work is:
 Other Hydro subsidiaries, including Columbia Hydro Constructors and Powertech USA where present,
 need separate employer mappings and schedule reviews. A suppliers-only subsidiary schedule is not
 an employee disclosure. Columbia Hydro Constructors' named schedules for 2012/13–2016/17 (723
-candidate rows; 2017/18 is aggregate-only) are staged in [`chc-recovery/`](chc-recovery/README.md)
-from the 23 October 2026 source-gap package. They are **not** in `collections.json` and add no
-published rows until the original PDFs are compared (`scripts/check_chc_pdf.py`) and the employer
-mapping is approved. Rebuild and test the staging with `python3 scripts/stage_chc_recovery.py` and
-`python3 -m unittest discover -s scripts -p 'test_chc_recovery.py'`. The current atlas links 44 employer bodies; salary employers outside its
+rows) are published as their own employer, linked to the atlas's BC Hydro subsidiary, from
+[`columbia-hydro-constructors/`](columbia-hydro-constructors/README.md). They were staged in
+[`chc-recovery/`](chc-recovery/README.md) on 23 October and accepted on 30 October after the
+original-PDF check recorded in `chc-recovery/pdf-verification/`. Its 2017/18 schedule names nobody
+and is shown as aggregate-only. The current atlas links 44 employer bodies; salary employers outside its
 model remain searchable without inventing a government relationship.
 
 ## Build, validation and user-facing behaviour

@@ -99,6 +99,7 @@ const excluded = new Set(knownExclusions.map((entry) => `${entry.employer}|${ent
 const official = []
 const importedPartitions = new Set()
 const deferred = []
+const aggregateOnly = []
 const importStats = []
 const sourceCollections = []
 const manifests = []
@@ -114,6 +115,8 @@ for (const directory of requiredCollections ?? readdirSync(research).sort()) {
   manifests.push({ collection: directory, manifest })
   sourceCollections.push({ collection: directory, coverageNotes: manifest.coverageNotes ?? manifest.notes ?? [], excludedSources: manifest.excludedSources ?? [], unparsedSources: manifest.unparsedSources ?? [], compiledYearCorrection: manifest.compiledYearCorrection ?? null })
   deferred.push(...(manifest.deferredEmployers ?? manifest.deferred ?? []).map((entry) => ({ collection: directory, ...entry })))
+  // A year whose schedule names nobody, all its pay in the below-threshold aggregate: no rows, but said so.
+  aggregateOnly.push(...(manifest.aggregateOnlyPeriods ?? []).map((entry) => ({ employerSlug: manifest.sources?.[0]?.employerSlug, ...entry })))
   for (const source of manifest.sources ?? []) {
     if (source.status && !['accepted', 'verified', 'imported'].includes(source.status)) { deferred.push(source); continue }
     if (!source.file) continue
@@ -212,7 +215,7 @@ try {
         const heldLeads = sourceLeads.filter((entry) => entry.status === 'held-for-review')
         return { status: held.length || heldLeads.length || excluded.has(`${slug}|${label}`) ? 'excluded' : hasLocatedSource(sourceLeads) ? 'source-found' : 'missing', sourceIds: held.map((entry) => entry.sourceId).filter((id) => sources[id]), sourceLeads, scope: held.length || hasLocatedSource(sourceLeads) ? 'employee-remuneration' : undefined,
           rows: 0, namedRows: 0, positions: 0, duplicateRows: 0,
-          notes: held.length ? held.map((entry) => entry.reason ?? 'The source was found but held for reconciliation; its records are not published here.') : heldLeads.length ? heldLeads.map((entry) => entry.nextAction) : hasLocatedSource(sourceLeads) ? ['A potential official source has been located, but its employee records have not yet passed extraction and validation.'] : ['No imported records for this employer and year; this is not evidence that it had no employees.'] }
+          notes: held.length ? held.map((entry) => entry.reason ?? 'The source was found but held for reconciliation; its records are not published here.') : heldLeads.length ? heldLeads.map((entry) => entry.nextAction) : hasLocatedSource(sourceLeads) ? ['A potential official source has been located, but its employee records have not yet passed extraction and validation.'] : aggregateOnly.some((entry) => canonicalSlug(entry.employerSlug) === slug && entry.year === label) ? aggregateOnly.filter((entry) => canonicalSlug(entry.employerSlug) === slug && entry.year === label).map((entry) => entry.note) : ['No imported records for this employer and year; this is not evidence that it had no employees.'] }
       }
       const sourceIds = [...new Set(subset.map((row) => row.sourceId))].sort()
       const details = sourceIds.map((id) => sources[id])

@@ -95,7 +95,9 @@ def main() -> int:
                 'words':[tuple(w[:5]) for w in page.get_text('words')]}
         proc=subprocess.run(['pdftotext','-bbox-layout','-enc','UTF-8',str(args.pdf),'-'],
             check=True,capture_output=True,timeout=180)
-        tree=ET.fromstring(proc.stdout)
+        # Poppler copies control characters from the PDF's text into its XML (the 2013/14 return has a
+        # BEL on its cover page), which XML forbids. They are never part of a name or an amount.
+        tree=ET.fromstring(re.sub(rb'[\x00-\x08\x0b\x0c\x0e-\x1f]',b'',proc.stdout))
         elements=[x for x in tree.iter() if x.tag.rsplit('}',1)[-1]=='page']
         if len(elements)!=len(document): raise ValidationError('PDF reader page counts disagree')
         pop={}

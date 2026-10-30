@@ -1,5 +1,16 @@
 # PofBC: source-gap recovery, 23 October 2026
 
+> **Accepted 30 October 2026.** The original PDFs were downloaded from bchydro.com and match the
+> recorded hashes; `scripts/check_chc_pdf.py` found every named row in both readers with nothing
+> missing or extra; the summary columns were settled from page coordinates; and all 19 schedule
+> pages were rendered and reviewed. The record is in [`pdf-verification/`](pdf-verification/review.json).
+> The 723 rows for 2012/13–2016/17 are published as the accepted collection
+> [`../columbia-hydro-constructors/`](../columbia-hydro-constructors/README.md), built by
+> `scripts/accept-chc-salaries.py`. 2017/18 names nobody and is shown as aggregate-only. The
+> staging below is kept as the record of how the rows were captured; its "not accepted" statements
+> describe the state on 23 October. The comparator files in `pdf-verification/` report
+> `acceptedForPublication: false` because the comparator never accepts anything itself.
+
 ## Delivered result
 
 **723 real employee-payment candidate rows** have been captured and parsed from Columbia Hydro Constructors Ltd. schedules embedded in BC Hydro's official Financial Information Act returns. The captures cover all named rows in the web-reader text for 2012/13–2016/17. The sixth period, 2017/18, has an aggregate-only employee schedule. It is not represented as an empty workforce.
