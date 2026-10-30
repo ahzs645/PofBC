@@ -264,8 +264,8 @@ source cohorts, such as public-service employees and deputies, are combined expl
 partial executive-only import must not replace a fuller employee partition without a separate
 reviewed scope decision. The compiler snapshot remains unchanged for provenance and comparison.
 
-All three public representations are rebuilt together: employer histories, surname-sharded person
-records, and government-atlas summaries. Row-level source IDs remain attached throughout. Normalized
+All four public representations are rebuilt together: employer histories, surname-sharded person
+records, government-atlas summaries, and a position-title index (`public/salaries/positions/`). Row-level source IDs remain attached throughout. Normalized
 PDF input rows also retain physical page numbers where extracted. Money retains cents and published
 negative recoveries; null is not converted to zero. Anonymous records stay with their employer and
 do not appear as named people.
@@ -287,6 +287,20 @@ sector filters apply to employer lists, while selecting a name preserves the ful
 history rather than hiding records under the search filters. Failed requests display a retry
 state rather than an empty-data claim. Twenty-year selectors wrap for narrow screens.
 
+A typed name without a comma is read surname first, then surname last, then as a longer surname;
+the search shows the first reading that finds a full name, says so when it is not the first, and
+offers the others. Within a reading, full names rank before names that only begin as typed, and
+names disclosed with initials alone are listed apart as possible matches.
+
+Position titles are grouped by `src/salaries/positions.js`: capitals, stops, plurals, a short list
+of unambiguous abbreviations (Sr, Asst, Mgr …), bracketed notes and the department the compiled
+records append after " · " are set aside, and nothing more. "Teacher" and "Teacher Elementary"
+remain two titles; the title page lists the second as a related title instead of merging it. The
+index gives each title's records, mean, median and range by employer and year; the mean is shown
+to the dollar because it is computed, not disclosed. `check:salaries` reconciles every cell with
+the positioned rows of the employer files. Shared titles do not establish that two employers'
+jobs are the same.
+
 ### Reproduce and check the published dataset
 
 ```sh
@@ -298,7 +312,7 @@ python scripts/extract-hydro-salaries.py --self-test
 ```
 
 `check:salaries` independently reconciles every named employer record with the person shards,
-every atlas row and total with the employer exports, and every accepted official record with its
+every positioned record with the title index, every atlas row and total with the employer exports, and every accepted official record with its
 normalized source file, preserving multiplicities. It verifies year indices, source IDs, coverage
 counts, duplicate flags and orphan files, then refreshes `coverage-inventory.md`.
 

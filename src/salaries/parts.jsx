@@ -60,8 +60,9 @@ export const YearPicker = ({ years, counts, value, onChange, label = 'Disclosure
 /**
  * Pay by year as bars, from the first year with a record to the last; a year between with none is
  * left empty rather than drawn as zero. The table under it carries the same figures for reading.
+ * `label` says what the pay is: a person's disclosed pay, or a position's average.
  */
-export const PayChart = ({ years, points }) => {
+export const PayChart = ({ years, points, label = 'Disclosed pay by year' }) => {
   const indexes = points.map((point) => point.year)
   if (!indexes.length) return null
   const first = Math.min(...indexes)
@@ -69,7 +70,7 @@ export const PayChart = ({ years, points }) => {
   const most = Math.max(...points.map((point) => point.pay))
   const span = years.slice(first, last + 1).map((label, offset) => ({ label, point: points.find((point) => point.year === first + offset) }))
   return (
-    <figure className="salaries-chart" aria-label={`Disclosed pay by year, ${years[first]} to ${years[last]}; the figures are in the table below`}>
+    <figure className="salaries-chart" aria-label={`${label}, ${years[first]} to ${years[last]}; the figures are in the list below`}>
       <div className="salaries-chart__bars" aria-hidden="true">
         {span.map(({ label, point }) => (
           <div key={label} className="salaries-chart__column" data-empty={!point || undefined} title={point ? `${label}: ${formatMoney(point.pay)}` : `${label}: no record`}>

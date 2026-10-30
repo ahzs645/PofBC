@@ -7,6 +7,7 @@ import { createHash } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { resolve, dirname, join } from 'node:path'
 import { SALARY_YEARS, SALARY_INDEX, SALARY_SOURCES } from '../src/government/salaryIndex.js'
+import { titleKey, titleShard } from '../src/salaries/positions.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const published = join(root, 'public/salaries')
@@ -38,7 +39,7 @@ assert.deepEqual(people.employers.map((entry) => entry[3]), employers.employers.
 
 let totalRows = 0; let namedRows = 0; let officialRows = 0; let duplicateRows = 0
 let availableEmployerYears = 0; let atlasFiles = 0
-const named = new Map(); const official = new Map(); const bodyRows = new Map()
+const named = new Map(); const official = new Map(); const bodyRows = new Map(); const titled = new Map()
 const employerFiles = new Set()
 for (const employer of employers.employers) {
   const file = `${employer.slug}.json.gzip`
@@ -55,6 +56,11 @@ for (const employer of employers.employers) {
     byYear[year].push(row)
     const key = JSON.stringify([employer.slug, years[year], name, position, pay, expenses, sourceId])
     if (name !== null) { namedRows += 1; add(named, key) }
+    if (position && titleKey(position)) {
+      const cell = `${titleKey(position)}|${employers.employers.indexOf(employer)}|${year}`
+      if (!titled.has(cell)) titled.set(cell, [])
+      titled.get(cell).push(pay)
+    }
     if (employers.sources[sourceId].scope !== 'compiled-unverified') { officialRows += 1; add(official, key) }
     if (employer.body) {
       const bodyKey = `${years[year]}|${employer.body}`
@@ -90,6 +96,32 @@ for (const [shard, expected] of Object.entries(people.shards)) {
 assert.equal(named.size, 0, 'Named employer rows are absent from the people index')
 assert.deepEqual(new Set(readdirSync(join(published, 'people')).filter((file) => file.endsWith('.gzip'))), new Set(Object.keys(people.shards).map((shard) => `${shard}.json.gzip`)))
 
+// Each title's employer/years hold exactly the positioned rows read independently from the employer files.
+const positions = gzip(join(published, 'positions/index.json.gzip'))
+assert.deepEqual(positions.years, years, 'Position and employer year indices differ')
+const titleRows = new Map(positions.titles.map(([label, rows]) => [titleKey(label), rows]))
+assert.equal(titleRows.size, positions.titles.length, 'A title is listed twice')
+for (const shard of positions.shards) {
+  for (const [key, { spellings, cells }] of Object.entries(gzip(join(published, 'positions', `${shard}.json.gzip`)))) {
+    assert.equal(titleShard(key), shard, `Title ${key}: shard`)
+    assert.ok(spellings.every(([text]) => titleKey(text) === key), `Title ${key}: spelling of another title`)
+    assert.equal(cells.reduce((sum, cell) => sum + cell[2], 0), titleRows.get(key), `Title ${key}: rows`)
+    titleRows.delete(key)
+    for (const [employer, year, count, mean, middle, low, high] of cells) {
+      const pay = titled.get(`${key}|${employer}|${year}`)
+      assert.ok(pay, `Title ${key}: unexpected employer/year`)
+      titled.delete(`${key}|${employer}|${year}`)
+      assert.equal(count, pay.length, `Title ${key}: count`)
+      assert.equal(low, Math.min(...pay)); assert.equal(high, Math.max(...pay))
+      assert.ok(Math.abs(cents(mean) - pay.reduce((sum, value) => sum + cents(value), 0) / pay.length) <= 0.5, `Title ${key}: mean`)
+      assert.ok(middle >= low && middle <= high, `Title ${key}: median`)
+    }
+  }
+}
+assert.equal(titleRows.size, 0, 'Listed titles are missing from their slices')
+assert.equal(titled.size, 0, 'Positioned rows are missing from the position index')
+assert.deepEqual(new Set(readdirSync(join(published, 'positions'))), new Set(['index.json.gzip', ...positions.shards.map((shard) => `${shard}.json.gzip`)]))
+
 const atlasPaths = new Set()
 for (const [body, periods] of Object.entries(atlas.bodies)) {
   for (const [yearSlug, summary] of Object.entries(periods)) {
@@ -108,7 +140,7 @@ for (const [body, periods] of Object.entries(atlas.bodies)) {
 assert.equal(bodyRows.size, 0, 'Employer rows are absent from the atlas')
 const actualAtlasPaths = new Set()
 for (const entry of readdirSync(published, { withFileTypes: true })) {
-  if (!entry.isDirectory() || ['employers', 'people'].includes(entry.name)) continue
+  if (!entry.isDirectory() || ['employers', 'people', 'positions'].includes(entry.name)) continue
   assert.match(entry.name, /^\d{4}-\d{2}$/, 'Unexpected published salary directory')
   for (const file of readdirSync(join(published, entry.name))) actualAtlasPaths.add(`${entry.name}/${file}`)
 }

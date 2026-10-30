@@ -6,6 +6,7 @@ import { resolve, dirname, join, relative, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { gzipSync, gunzipSync } from 'node:zlib'
 import { surnameShard } from '../src/salaries/people.js'
+import { titleKey, titleShard } from '../src/salaries/positions.js'
 import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSlug, sectorOf } from './lib/salary-employers.mjs'
 import { csvRows, money, median, sha256, yearSlug, sumMoney, duplicateStats, repeatedCandidates, validateRow } from './lib/salary-data.mjs'
 
@@ -247,6 +248,37 @@ try {
     write(`people/${shard}.json.gzip`, list, true); shardCounts[shard] = list.length
   }
   write('people/index.json', { note: 'Rows: [disclosed name, position, remuneration, expenses, employer index, year index, source id]. Names are not personal identifiers.', years: labels, sources, coverage, employers: employerList.map(({ slug, names, sector, body }) => [names.at(-1), sector, body, slug]), shards: shardCounts })
+  // Every position title across employers (src/salaries/positions.js reads one title however it was
+  // spelled): a list to search, then each title's employers and years in slices by its first letters.
+  const titles = new Map()
+  for (const row of rows) {
+    const key = row.position ? titleKey(row.position) : ''
+    if (!key) continue
+    if (!titles.has(key)) titles.set(key, { spellings: new Map(), cells: new Map(), employers: new Set(), rows: 0 })
+    const title = titles.get(key)
+    const cell = `${employerAt.get(row.slug)}|${yearAt.get(row.year)}`
+    title.rows += 1
+    title.employers.add(row.slug)
+    title.spellings.set(row.position, (title.spellings.get(row.position) ?? 0) + 1)
+    if (!title.cells.has(cell)) title.cells.set(cell, [])
+    title.cells.get(cell).push(row.pay)
+  }
+  const titleList = []
+  const titleShards = new Map()
+  for (const [key, title] of [...titles].sort(([a], [b]) => a.localeCompare(b))) {
+    const spellings = [...title.spellings].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    const cells = [...title.cells].map(([cell, pay]) => {
+      const [employer, year] = cell.split('|').map(Number)
+      return [employer, year, pay.length, Math.round(sumMoney(pay) / pay.length * 100) / 100, median(pay), Math.min(...pay), Math.max(...pay)]
+    }).sort((a, b) => a[1] - b[1] || a[0] - b[0])
+    titleList.push([spellings[0][0], title.rows, title.employers.size, cells[0][1], cells.at(-1)[1]])
+    const shard = titleShard(key)
+    if (!titleShards.has(shard)) titleShards.set(shard, {})
+    titleShards.get(shard)[key] = { spellings: spellings.slice(0, 12), cells }
+  }
+  titleList.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  for (const [shard, entries] of titleShards) write(`positions/${shard}.json.gzip`, entries, true)
+  write('positions/index.json.gzip', { note: 'Titles: [most common spelling, rows, employers, first year index, last year index]. Slices by key: cells [employer index in employers/index.json, year index, rows, mean, median, lowest, highest]. Rows are disclosure records, not positions filled.', years: labels, titles: titleList, shards: [...titleShards.keys()].sort() }, true)
   audit.output = { rows: rows.length, namedRows: Object.values(shardCounts).reduce((sum, count) => sum + count, 0), employers: employerList.length, atlasBodies: Object.keys(index.bodies).length, years: labels, availableEmployerYears: employerList.reduce((sum, entry) => sum + entry.coverage.filter((year) => year.status === 'available').length, 0) }
   write('coverage.json', { ...audit, employers: employerList.map(({ slug, names, sector, coverage }) => ({ slug, names, sector, coverage })) })
   write('index.json', index)

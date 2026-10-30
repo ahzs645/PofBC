@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync, readdirSync } from 'node:fs'
 import { gunzipSync } from 'node:zlib'
-import { matchesNameQuery, nameMatch, personKey, readName, surnameShard } from './people.js'
+import { matchesNameQuery, nameMatch, nameQueryTier, nameReadings, personKey, readName, surnameShard } from './people.js'
 
 const DIR = new URL('../../public/salaries/people/', import.meta.url)
 
@@ -36,6 +36,33 @@ test('all disclosed given names remain separate and can be searched as token pre
   assert.equal(matchesNameQuery('Smith, John A', 'Smith, John B'), false)
   assert.ok(matchesNameQuery('Mo, BL', 'Mo, B. L.', 'surname-and-initials'))
   assert.equal(matchesNameQuery('Mo, BL', 'Mo, Belaid', 'surname-and-initials'), false)
+})
+
+test('a typed name is read surname first, then surname last, then as a longer surname', () => {
+  assert.deepEqual(nameReadings('smith').map((each) => each.typed), ['smith,'])
+  assert.deepEqual(nameReadings('john smith').map((each) => each.typed), ['john,smith', 'smith,john'])
+  assert.deepEqual(nameReadings('Smith, J').map((each) => each.typed), ['Smith,J'])
+  const longer = nameReadings('maria de la cruz').map((each) => each.typed)
+  assert.equal(longer[0], 'maria,de la cruz')
+  assert.equal(longer[1], 'cruz,maria de la')
+  assert.ok(longer.includes('de la cruz,maria'))
+  assert.deepEqual(nameReadings('a b'), [])
+  assert.deepEqual(nameReadings('  '), [])
+})
+
+test('a search ranks a full name before a beginning, and a beginning before initials alone', () => {
+  assert.equal(nameQueryTier('Smith, John', 'smith,john'), 0)
+  assert.equal(nameQueryTier('Smith, John A', 'smith,john'), 0)
+  assert.equal(nameQueryTier('Smith, Mary', 'smith,'), 0)
+  assert.equal(nameQueryTier('Smith, Johnny', 'smith,john'), 1)
+  assert.equal(nameQueryTier('Smithers, John', 'smith,john'), 1)
+  assert.equal(nameQueryTier('Smith, J', 'smith,john'), 2)
+  assert.equal(nameQueryTier('Smith, J B', 'smith,john a'), null)
+  assert.equal(nameQueryTier('Smith, Jane', 'smith,john'), null)
+  assert.equal(nameQueryTier('Smithers, J', 'smith,john'), null)
+  assert.equal(nameQueryTier('Mo, BL', 'mo,bl', 'surname-and-initials'), 0)
+  assert.equal(nameQueryTier('Mo, BL', 'mo,b', 'surname-and-initials'), 1)
+  assert.equal(nameQueryTier('Mo, BL', 'mo,belaid', 'surname-and-initials'), 2)
 })
 
 test('the index’s slices hold every row it counts, each under its surname', () => {
