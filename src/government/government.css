@@ -1046,6 +1046,14 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-lineage-chart__seen { position: absolute; top: 1px; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: var(--gov-executive); }
 .gov-lineage-chart__joins { margin: 4px 0 2px; background: none; border-top: 1px dashed var(--gov-hover); height: 10px; border-radius: 0; }
 .gov-lineage-chart__join { position: absolute; top: -5px; width: 9px; height: 9px; margin-left: -4.5px; transform: rotate(45deg); background: var(--gov-executive); box-shadow: 0 0 0 2px var(--gov-surface); }
+/* A body's family (bodyFamily.js): a row each, tighter than the body's own, and the generations
+   before the nearest indented under the body they formed, each marked as such. */
+.gov-lineage-chart__row[data-depth] { padding: 4px 0; gap: 3px; }
+.gov-lineage-chart__row[data-depth] .gov-lineage-chart__label { font-size: 12.5px; }
+.gov-lineage-chart__row:is([data-depth='2'], [data-depth='3'], [data-depth='4']) .gov-lineage-chart__label::before { content: '↳ '; color: var(--gov-ink-4); }
+.gov-lineage-chart__row:is([data-depth='2'], [data-depth='3'], [data-depth='4']) .gov-lineage-chart__track { height: 6px; }
+.gov-lineage-chart__group .gov-muted { margin-left: 4px; font-weight: 400; letter-spacing: 0; }
+.gov-lineage-chart__more { justify-self: start; margin: 2px 2px 0; font-size: 12px; }
 .gov-lineage-chart__join-list { margin: 12px 0 0; padding: 0 2px; list-style: none; display: grid; gap: 6px; font-size: 13px; line-height: 1.35; }
 
 .gov-lineage-chart__cursor {

@@ -1,7 +1,9 @@
-// The panel beside the diagram: what the chosen body is, who leads it, where it came from — and,
+// The panel beside the diagram: what the chosen body is, who leads it, where it came from and what
+// it went into, generation by generation (bodyFamily.js) — and,
 // for a ministry, its mark as it would have been set in the year on screen.
 
 import { useMemo, useState } from 'react'
+import { bodyFamily, elsewhereLine, groupTitle } from './bodyFamily.js'
 import { CURRENT_AS_OF } from './currentData.js'
 import { changesIn, episodeById, predecessorsOf, successorsOf } from './episodes.js'
 import { currentMarkFor, identityFor, renderEraMark } from './eraMark.js'
@@ -189,7 +191,7 @@ const SubAgencies = ({ parent, nodes, onSelect }) => {
 }
 
 /** Bodies this one came from, or became: each a way to the years it stood. */
-const BodyLineage = ({ label, bodies, onJump, end }) => bodies.length > 0 && (
+const BodyLineage = ({ label, bodies, onJump, end, linesOf }) => bodies.length > 0 && (
   <CardSection title={label} meta={bodies.length > 1 ? bodies.length : null}>
     {bodies.map((body) => {
       const known = body.established || body.firstSeen
@@ -202,13 +204,38 @@ const BodyLineage = ({ label, bodies, onJump, end }) => bodies.length > 0 && (
           key={body.id}
           icon={<KindIcon kind={body.kind ?? 'agency'} branch="executive" />}
           title={body.name}
-          lines={[years]}
+          lines={[years, ...(linesOf?.(body) ?? [])]}
           onClick={known ? () => onJump(body, end) : undefined}
         />
       )
     })}
   </CardSection>
 )
+
+/**
+ * A body's nearest family, one way: the bodies it was formed from, or went into, grouped by how —
+ * amalgamated, services passed on, area moved — each saying where else it went, so a body shared
+ * between two families says so in both. The generations before and after are in the Lineage chart.
+ */
+const BodyFamily = ({ rows, direction, onJump }) => {
+  const nearest = rows.filter((row) => row.depth === 1)
+  const groups = [...new Set(nearest.map((row) => row.how))].map((how) => ({ how, rows: nearest.filter((row) => row.how === how) }))
+  const linesOf = (row) => [
+    row.how === 'area' && row.date ? `Moved ${formatDate(row.date)}` : null,
+    direction === 'formedFrom' && row.count ? `Formed from ${row.count} earlier ${row.count === 1 ? 'body' : 'bodies'}` : null,
+    direction === 'formedFrom' ? elsewhereLine(row) : null
+  ]
+  return groups.map(({ how, rows: group }) => (
+    <BodyLineage
+      key={how}
+      label={groupTitle(direction, how, group.length > 1)}
+      bodies={group}
+      onJump={onJump}
+      end={direction === 'formedFrom' ? 'end' : 'start'}
+      linesOf={linesOf}
+    />
+  ))
+}
 
 /**
  * A ministry's family, as rows through time: two generations of forerunners, the ministry itself,
@@ -313,7 +340,7 @@ const MinistryTimeline = ({ node, year, onJump }) => {
 }
 
 /** Events that join a body to others or part it from them: what "combining or splitting" means here. */
-const JOINS = new Set(['amalgamation', 'merger', 'merged', 'split', 'functions_transferred', 'administrative_transfer_and_rename', 'reorganization', 'transfer', 'absorbed', 'replaced'])
+const JOINS = new Set(['amalgamation', 'merger', 'merged', 'split', 'functions_transferred', 'administrative_transfer_and_rename', 'reorganization', 'transfer', 'absorbed', 'replaced', 'territory_transferred'])
 
 const yearIn = (value) => Number(String(value).slice(0, 4))
 const decimalOf = (value) => {
@@ -327,7 +354,8 @@ const decimalOf = (value) => {
  * gives (see periodsOf): a stretch with no ministry is one no source names, and a name whose end is
  * not recorded fades out where the next row takes over.
  */
-const BodyTimeline = ({ node, year, onJump, onGo }) => {
+const BodyTimeline = ({ node, family, year, onJump, onJumpBody, onGo }) => {
+  const [deep, setDeep] = useState(false)
   const chart = useMemo(() => {
     const names = periodsOf(node.names ?? [])
     const seen = (node.names ?? []).filter((row) => row.coverage === 'observation_only' && row.observedOn && !names.some((period) => period.name === row.name))
@@ -339,12 +367,19 @@ const BodyTimeline = ({ node, year, onJump, onGo }) => {
       return { ...row, episode, until: clipped ? String(episode.to) : row.until, endUnknown: row.endUnknown && !clipped }
     })
     const joins = (node.events ?? []).filter((event) => JOINS.has(event.type) && event.date?.start)
-    const starts = [...names.map((row) => row.from), ...ministries.map((row) => row.from), ...joins.map((event) => event.date.start), ...seen.map((row) => row.observedOn)].filter(Boolean)
+    const relatives = family.formedFrom.length || family.wentTo.length
+      ? [...family.formedFrom, ...family.wentTo].map((row) => row.established ?? row.firstSeen).concat(node.established ?? null)
+      : []
+    const starts = [...names.map((row) => row.from), ...ministries.map((row) => row.from), ...joins.map((event) => event.date.start), ...seen.map((row) => row.observedOn), ...relatives].filter(Boolean)
     const start = Math.min(...starts.map(yearIn))
     return { names, sightings, ministries, joins, start }
-  }, [node])
+  }, [node, family])
   const { names, sightings, ministries, joins, start } = chart
-  if (names.length + ministries.length < 2 && !joins.length) return null
+  // A large family (Interior Health's reaches 39 bodies back) shows its nearest generation, and the
+  // ones before on request.
+  const folded = family.formedFrom.length > 14 && !deep
+  const formedFrom = folded ? family.formedFrom.filter((row) => row.depth === 1) : family.formedFrom
+  if (names.length + ministries.length < 2 && !joins.length && !family.formedFrom.length && !family.wentTo.length) return null
   const end = PRESENT_YEAR + 1
   const span = Math.max(1, end - start)
   const at = (value) => `${((value - start) / span) * 100}%`
@@ -354,23 +389,43 @@ const BodyTimeline = ({ node, year, onJump, onGo }) => {
   for (let tick = Math.ceil(start / step) * step; tick < end; tick += step) ticks.push(tick)
   const shown = (from, until) => yearIn(from) <= year && (!until || yearIn(until) > year || (yearIn(until) === year && decimalOf(until) > year))
   const label = (from, until, endUnknown) => `${yearIn(from)}–${endUnknown ? '' : until ? yearIn(until) : 'today'}`
-  // Years no stated ministry covers, before today's.
+  // Years no stated ministry covers, before today's, within the body's own life: its family's years
+  // are not its own. With no ministry row at all, nothing is said rather than a gap across its life.
   const gaps = []
-  let cursor = start
+  const own = [...names.map((row) => row.from), ...ministries.map((row) => row.from), node.established].filter(Boolean)
+  let cursor = own.length ? Math.max(start, Math.min(...own.map(yearIn))) : start
   for (const row of [...ministries].sort((a, b) => decimalOf(a.from) - decimalOf(b.from))) {
     if (decimalOf(row.from) - cursor >= 1) gaps.push([Math.ceil(cursor), Math.floor(decimalOf(row.from))])
     cursor = Math.max(cursor, row.until ? decimalOf(row.until) : end)
   }
-  if (PRESENT_YEAR - cursor >= 1) gaps.push([Math.ceil(cursor), PRESENT_YEAR - 1])
+  if (ministries.length && PRESENT_YEAR - cursor >= 1 && (!node.ended || yearIn(node.ended) > cursor)) gaps.push([Math.ceil(cursor), Math.min(PRESENT_YEAR, node.ended ? yearIn(node.ended) : PRESENT_YEAR) - 1])
 
-  const Row = ({ text, years: note, from, until, endUnknown, current, onClick, title }) => (
-    <button type="button" className="gov-lineage-chart__row" data-self={current || undefined} aria-current={current ? 'true' : undefined} onClick={onClick} title={title}>
-      <span className="gov-lineage-chart__label">{text}<span className="gov-muted"> {note}</span></span>
+  const Row = ({ text, years: note, from, until, endUnknown, current, onClick, title, depth = 0 }) => (
+    <button type="button" className="gov-lineage-chart__row" data-self={current || undefined} data-depth={depth || undefined} aria-current={current ? 'true' : undefined} onClick={onClick} title={title}>
+      <span className="gov-lineage-chart__label" style={depth > 1 ? { paddingLeft: `${(depth - 1) * 14}px` } : undefined}>{text}<span className="gov-muted"> {note}</span></span>
       <span className="gov-lineage-chart__track">
-        <span className="gov-lineage-chart__bar" data-open={endUnknown || undefined} style={{ left: at(decimalOf(from)), width: width(decimalOf(from), until ? decimalOf(until) : end) }} />
+        {from && <span className="gov-lineage-chart__bar" data-open={endUnknown || undefined} style={{ left: at(decimalOf(from)), width: width(decimalOf(from), until ? decimalOf(until) : end) }} />}
       </span>
     </button>
   )
+  // A relative as a row: indented by generation, its bar its life, and where else it went.
+  const relativeRow = (row, direction) => {
+    const from = row.established ?? row.firstSeen
+    const how = { became: '', predecessor: '', services: 'services', area: `part of its area${row.date ? `, ${yearIn(row.date)}` : ''}` }[row.how]
+    const also = direction === 'formedFrom' && row.elsewhere.length ? `also ${row.elsewhere.map((each) => each.name.replace(/ Authority$/, '')).join(', ')}` : ''
+    return (
+      <Row
+        key={`${direction}-${row.id}`}
+        text={row.name}
+        years={[from ? label(from, row.ended, false) : 'start unknown', how, also].filter(Boolean).join(' · ')}
+        from={from}
+        until={row.ended}
+        depth={row.depth}
+        onClick={() => onJumpBody(row, direction === 'formedFrom' ? 'end' : 'start')}
+        title={`Go to ${row.name}`}
+      />
+    )
+  }
 
   return (
     <section className="gov-card gov-timeline-card">
@@ -379,7 +434,7 @@ const BodyTimeline = ({ node, year, onJump, onGo }) => {
         <div className="gov-lineage-chart__axis" aria-hidden="true">
           {ticks.map((tick) => <span key={tick} style={{ left: at(tick) }}>{tick}</span>)}
         </div>
-        <h3 className="gov-lineage-chart__group">Names</h3>
+        {(names.length > 0 || sightings.length > 0) && <h3 className="gov-lineage-chart__group">Names</h3>}
         {names.map((row) => (
           <Row
             key={`name-${row.name}-${row.from}`}
@@ -401,7 +456,7 @@ const BodyTimeline = ({ node, year, onJump, onGo }) => {
             </span>
           </button>
         ))}
-        <h3 className="gov-lineage-chart__group">Held by</h3>
+        {ministries.length > 0 && <h3 className="gov-lineage-chart__group">Held by</h3>}
         {ministries.map((row) => (
           <Row
             key={`parent-${row.name}-${row.from}`}
@@ -422,6 +477,36 @@ const BodyTimeline = ({ node, year, onJump, onGo }) => {
           <p className="gov-muted gov-lineage-chart__note">
             No source names its ministry for {gaps.map(([from, to]) => (from === to ? `${from}` : `${from}–${to}`)).join(', ')}.
           </p>
+        )}
+        {family.formedFrom.length > 0 && (
+          <>
+            <h3 className="gov-lineage-chart__group">Came from <span className="gov-muted">{family.formedFrom.length}</span></h3>
+            {formedFrom.map((row) => relativeRow(row, 'formedFrom'))}
+            {family.formedFrom.length > 14 && (
+              <button type="button" className="gov-link-button gov-lineage-chart__more" onClick={() => setDeep((value) => !value)}>
+                {deep ? 'Only the bodies it was formed from' : `And the ${family.formedFrom.length - formedFrom.length} bodies before them`}
+              </button>
+            )}
+          </>
+        )}
+        {(family.formedFrom.length > 0 || family.wentTo.length > 0) && node.established && (
+          // The body itself, between what formed it and what it went into: their bars end where its
+          // begins, and its own where theirs take over.
+          <Row
+            text={node.name}
+            years={label(node.established, node.ended, false)}
+            from={node.established}
+            until={node.ended}
+            current
+            onClick={() => onGo(yearIn(node.established), node.id)}
+            title={`Go to ${yearIn(node.established)}`}
+          />
+        )}
+        {family.wentTo.length > 0 && (
+          <>
+            <h3 className="gov-lineage-chart__group">Went into</h3>
+            {family.wentTo.map((row) => relativeRow(row, 'wentTo'))}
+          </>
         )}
         {joins.length > 0 && (
           <>
@@ -582,6 +667,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
   const officeId = node.kind === 'assembly' ? 'speaker' : node.id
   const holders = ['officer', 'court', 'assembly'].includes(node.kind) ? officeHoldersTo(officeId, day) : []
   const isMinistry = node.kind === 'ministry'
+  const family = useMemo(() => (isBody ? bodyFamily(node.id) : { formedFrom: [], wentTo: [] }), [isBody, node.id])
   // A local body is drawn in the executive's sector for room, but is not part of the executive.
   const breadcrumb = node.local ? 'Local' : node.branch ? BRANCH_LABELS[node.branch] : 'Everyone'
   const kindLabel = node.crownCategory ? CROWN_CATEGORIES[node.crownCategory].label : KINDS[node.kind]?.label
@@ -694,9 +780,8 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
 
         {isBody && (
           <>
-            <BodyLineage label="Came from" bodies={node.cameFrom ?? []} onJump={onJumpBody} end="end" />
-            <BodyLineage label="Became" bodies={node.became ? [node.became] : []} onJump={onJumpBody} end="start" />
-            <BodyLineage label="Its services passed to" bodies={node.passedTo ?? []} onJump={onJumpBody} end="start" />
+            <BodyFamily rows={family.formedFrom} direction="formedFrom" onJump={onJumpBody} />
+            <BodyFamily rows={family.wentTo} direction="wentTo" onJump={onJumpBody} />
           </>
         )}
 
@@ -710,7 +795,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
       <Salaries key={node.id} node={node} year={year} />
       <EventsCard events={node.events} day={day} />
       {isMinistry && <MinistryTimeline node={node} year={year} onJump={onJump} />}
-      {isBody && onGo && <BodyTimeline node={node} year={year} onJump={onJump} onGo={onGo} />}
+      {isBody && onGo && <BodyTimeline node={node} family={family} year={year} onJump={onJump} onJumpBody={onJumpBody} onGo={onGo} />}
       {isMinistry && node.ministers?.length > 0 && (
         <section className="gov-card">
           <Holders label="Ministers" holders={[...node.ministers].reverse()} current={node.head} />
