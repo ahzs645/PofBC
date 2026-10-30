@@ -1,0 +1,275 @@
+{
+  "reviewedOn": "2026-10-30",
+  "branch": "codex/salary-source-processing-2026-10-30",
+  "baseCommit": "261b5265595cd4422b079505d31f12aead792936",
+  "executionStatus": {
+    "localImplementationComplete": true,
+    "pushed": false,
+    "merged": false,
+    "deployed": false,
+    "requestsSent": false
+  },
+  "reportingPolicy": {
+    "calendar": "Actual YYYY labels with January 1–December 31 dates",
+    "fiscal": "Actual YYYY/YY labels",
+    "unverifiedCompiled": "Retained edition labels with explicit unverified provenance; no automatic relabelling of other municipalities"
+  },
+  "baseline": {
+    "rows": 692951,
+    "namedRows": 687712,
+    "employers": 130,
+    "atlasBodies": 44,
+    "years": [
+      "2006/07",
+      "2007/08",
+      "2008/09",
+      "2009/10",
+      "2010/11",
+      "2011/12",
+      "2012/13",
+      "2013/14",
+      "2014/15",
+      "2015/16",
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "availableEmployerYears": 401,
+    "officialRows": 401641,
+    "retainedCompiledRows": 291310,
+    "acceptedSourceFiles": 92
+  },
+  "output": {
+    "rows": 832864,
+    "namedRows": 827625,
+    "employers": 133,
+    "atlasBodies": 45,
+    "years": [
+      "2006/07",
+      "2007/08",
+      "2008",
+      "2008/09",
+      "2009",
+      "2009/10",
+      "2010",
+      "2010/11",
+      "2011",
+      "2011/12",
+      "2012",
+      "2012/13",
+      "2013",
+      "2013/14",
+      "2014",
+      "2014/15",
+      "2015",
+      "2015/16",
+      "2016",
+      "2016/17",
+      "2017",
+      "2017/18",
+      "2018",
+      "2018/19",
+      "2019",
+      "2019/20",
+      "2020",
+      "2020/21",
+      "2021",
+      "2021/22",
+      "2022",
+      "2022/23",
+      "2023",
+      "2023/24",
+      "2024",
+      "2024/25",
+      "2025",
+      "2025/26"
+    ],
+    "availableEmployerYears": 445,
+    "officialRows": 581925,
+    "retainedCompiledRows": 250939,
+    "acceptedSourceFiles": 160,
+    "officialEmployers": 16,
+    "duplicateLookingExtras": 311
+  },
+  "increment": {
+    "netRows": 139913,
+    "officialRowsAdded": 180284,
+    "compiledRowsReplaced": 40371,
+    "acceptedSourceFilesAdded": 68
+  },
+  "checks": {
+    "javascript": {
+      "command": "npm test",
+      "passed": true,
+      "testFiles": 47,
+      "failed": 0,
+      "logSha256": "4cab0aab4769c6906d87098c0ccafc300a359adc91fbea492b1b977a87888a9d"
+    },
+    "python": {
+      "command": "python3 -m unittest discover -s scripts -p test_*.py",
+      "passed": true,
+      "testCases": 78,
+      "failed": 0,
+      "logSha256": "22085aab429fd7bbc0ec013bc24a2c47342235d76398f57cf0d33a9b56a61ea7"
+    },
+    "salaryBuild": {
+      "command": "npm run build:salaries",
+      "passed": true
+    },
+    "exportReconciliation": {
+      "command": "npm run check:salaries",
+      "passed": true,
+      "rows": 832864,
+      "acceptedSourceFiles": 160,
+      "atlasFiles": 184,
+      "personShards": 464
+    },
+    "determinism": {
+      "passed": true,
+      "publicFilesCompared": 785,
+      "salaryModuleByteIdentical": true,
+      "method": "Second offline build into a separate directory; exact relative file set and SHA-256 comparison."
+    },
+    "previewBuild": {
+      "command": "npm run preview:salaries -- --build --out /tmp/pofbc-oct30-processing/salary-preview",
+      "passed": true
+    },
+    "interactiveBrowserReview": {
+      "passed": null,
+      "status": "unavailable",
+      "reason": "The originating connected browser session was unavailable. No interactive or visual browser approval is claimed."
+    },
+    "diffWhitespace": {
+      "command": "git diff --check",
+      "passed": true
+    }
+  },
+  "originalArchives": {
+    "preparedOn": "2026-10-30",
+    "archives": [
+      {
+        "filename": "PofBC-original-salary-sources-2026-10-30.zip",
+        "byteSize": 130414065,
+        "sha256": "33cf2a17acf9fbc3f99ccf6df34d3303d1de337e2049e770c8f9823a30e43fd9",
+        "zipMembers": 58,
+        "validation": "All expected ZIP members, CRCs, source sizes and SHA-256 hashes passed; all PDF signatures and document page counts checked.",
+        "manifestJson": "PofBC-original-salary-sources-2026-10-30-manifest.json",
+        "manifestCsv": "PofBC-original-salary-sources-2026-10-30-manifest.csv",
+        "sourceReferences": 56,
+        "uniqueOriginalFiles": 55,
+        "uniquePdfFiles": 51,
+        "uniqueSourceBytes": 167616124,
+        "collections": {
+          "interior-health": 11,
+          "island-health": 10,
+          "bccss": 2,
+          "prince-george": 6,
+          "columbia-hydro-constructors": 6,
+          "public-accounts-oic": 12,
+          "bci": 2,
+          "bc-pension-corporation": 1,
+          "vancouver": 4,
+          "historic-public-accounts-context": 2
+        },
+        "deduplicatedReferences": 1
+      },
+      {
+        "filename": "PofBC-PHSA-original-reports-2026-10-30.zip",
+        "byteSize": 262985519,
+        "sha256": "2756208f2ba8b92ec8d42510f97c51058d90b5d41679d0ce0f5b54d8ae0d3a90",
+        "zipMembers": 13,
+        "validation": "All expected ZIP members, CRCs, source sizes and SHA-256 hashes passed; all PDF signatures and document page counts checked.",
+        "manifestJson": "PofBC-PHSA-original-reports-2026-10-30-manifest.json",
+        "manifestCsv": "PofBC-PHSA-original-reports-2026-10-30-manifest.csv",
+        "sourceReferences": 10,
+        "uniqueOriginalFiles": 10,
+        "uniquePdfFiles": 10,
+        "uniqueSourceBytes": 277510838,
+        "collections": {
+          "phsa": 10
+        },
+        "deduplicatedReferences": 0
+      }
+    ],
+    "missingRequestedFiles": [],
+    "httpErrorBodiesIncluded": false
+  },
+  "remainingHolds": [
+    {
+      "employer": "Vancouver",
+      "periods": [
+        "2020/21",
+        "2023/24"
+      ],
+      "scope": "compiled elected officials",
+      "rowsRetained": 22,
+      "reason": "Original calendar dates and remuneration schedules remain unverified; official council downloads returned 403."
+    },
+    {
+      "employer": "Vancouver",
+      "periods": "2008–2025",
+      "scope": "accepted official employee open data",
+      "reason": "CSV/JSON/API consistency verified; authoritative annual SOFI PDF reconciliation not completed because tested downloads returned 403."
+    },
+    {
+      "employer": "Prince George",
+      "periods": [
+        "2023"
+      ],
+      "reason": "Official attachment returned 403; no import."
+    },
+    {
+      "employer": "Island Health",
+      "periods": [
+        "2022/23"
+      ],
+      "candidateRows": 8252,
+      "declaredRows": 8264,
+      "reason": "Unresolved named-employee count discrepancy; held."
+    },
+    {
+      "employer": "Island Health",
+      "periods": [
+        "2023/24"
+      ],
+      "candidateRows": 10884,
+      "expenseSum": 14592431,
+      "printedExpenseSubtotal": 14638203,
+      "reason": "Unresolved 45772 expense difference; prior compiled partition retained."
+    },
+    {
+      "employer": "PHSA",
+      "periods": "2015/16–2024/25",
+      "downloadedPdfs": 10,
+      "pages": 1764,
+      "textCharacters": 0,
+      "reason": "Await existing electronic tables or full OCR/page review/reconciliation; no accepted OCR import."
+    },
+    {
+      "employer": "BCI and BC Pension",
+      "stagedExecutiveRows": 17,
+      "acceptedEmployeeRowsAdded": 0,
+      "reason": "Executive-only disclosures, mixed BCI currencies and partial Pension remuneration components cannot replace employee partitions."
+    },
+    {
+      "employer": "Provincial historical archives",
+      "reason": "Earlier archive leads remain research evidence, not accepted employee imports. Threshold/scope/page-level review still required."
+    }
+  ],
+  "retainedSourceQualifications": [
+    "OIC 2007/08 displayed paid rows exceed the summary amount in thousands by 1244; cause remains unexplained.",
+    "OIC 2011/12 excludes 45 reviewed deputy-table overlaps based on cohort evidence, not an explicit provincial overlap instruction; all original observations retained.",
+    "One previously inferred 16000 employee travel assignment is cleared after the recovered OIC cohort makes the disclosed name non-unique.",
+    "Prince George 2025 all-employees other-compensation aggregate differs from component subtotals by 104064.87; named controls reconcile exactly.",
+    "BCCSS 2017/18 two OCR configurations use the same Tesseract engine; complete visual review and explicit corrections supplement them.",
+    "Some accepted health sources lack named controls or contain wording conflicts and rounding-compatible residuals, all preserved in source manifests.",
+    "CHC 2017/18 is verified aggregate-only coverage: 208410 remuneration and 12021 expenses, with no invented named rows."
+  ]
+}

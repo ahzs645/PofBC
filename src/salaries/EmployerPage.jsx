@@ -9,7 +9,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Segmented } from '../site/Segmented.jsx'
 import { displayName, personKey } from './people.js'
 import { meanMoney, titleKey, titleLabel } from './positions.js'
-import { coverageAt, expenseLabel } from './coverage.js'
+import { categoryCoverage, coverageAt, expenseLabel, reportingYearLabel, scopeLabel } from './coverage.js'
 import { DisclosureSummary } from './DisclosureEvidence.jsx'
 import { formatMoney as money, medianMoney as median } from './money.js'
 import { PayChart, YearPicker, shortYear } from './parts.jsx'
@@ -55,6 +55,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
   const [order, setOrder] = useState('records')
   const [tableOrder, setTableOrder] = useState('pay')
   const [shown, setShown] = useState(40)
+  const [category, setCategory] = useState(null)
 
   useEffect(() => {
     let live = true
@@ -67,8 +68,15 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
   const year = wantedYear ?? seen.at(-1) ?? 0
   const name = entry.names.at(-1)
   remember?.(name)
-  const coverage = coverageAt({ ...entry, years }, year)
-  const people = useMemo(() => (rows ? rows.filter((row) => row[4] === year) : []), [rows, year])
+  // A period can combine disclosure categories (Prince George's employees and its mayor and council):
+  // employees are shown by default, and each category can be chosen on its own.
+  const wholeCoverage = coverageAt({ ...entry, years }, year)
+  const periodRows = useMemo(() => (rows ? rows.filter((row) => row[4] === year) : []), [rows, year])
+  const categories = [...new Set(periodRows.map((row) => sources?.[row[5]]?.scope ?? 'compiled-unverified'))]
+  const defaultCategory = categories.includes('elected-officials') && categories.includes('employee-remuneration') ? 'employee-remuneration' : 'all'
+  const chosenCategory = category && (category === 'all' || categories.includes(category)) ? category : defaultCategory
+  const people = useMemo(() => periodRows.filter((row) => chosenCategory === 'all' || sources?.[row[5]]?.scope === chosenCategory), [periodRows, chosenCategory, sources])
+  const coverage = categoryCoverage(wholeCoverage, chosenCategory, sources, people)
   // Whether the year's disclosure names positions: some employers give them one year and not the next.
   const withPositions = people.length > 0 && people.filter((row) => row[1]).length / people.length >= 0.5
   const view = SHOWS.includes(show) ? (show === 'positions' && !withPositions ? 'people' : show) : (withPositions ? 'positions' : 'people')
@@ -113,7 +121,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
   )
   const unnamed = rows ? rows.filter((row) => !row[0]).length : 0
 
-  const pick = (at) => { onYear(at); setShown(40) }
+  const pick = (at) => { onYear(at); setCategory(null); setShown(40) }
   const switchTo = (next) => { onShow(next); setShown(40) }
 
   if (role) {
@@ -140,13 +148,22 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
           )}
         </p>
         <YearPicker years={years} counts={entry.counts} coverage={entry.coverage} value={year} onChange={pick} />
-        <h3 className="salaries__year-title">{years[year]}</h3>
+        <h3 className="salaries__year-title">{reportingYearLabel(years[year])}</h3>
+        {categories.length > 1 && (
+          <label className="salaries__note salaries__category">
+            Disclosure category{' '}
+            <select value={chosenCategory} onChange={(event) => { setCategory(event.target.value); setShown(40) }}>
+              <option value="all">All disclosed categories</option>
+              {categories.map((scope) => <option key={scope} value={scope}>{scopeLabel(scope)}</option>)}
+            </select>
+          </label>
+        )}
         <DisclosureSummary
           coverage={coverage}
           sources={sources}
           more={entry.repeated?.length > 0 && <p>Compiled records for {entry.repeated.join(', ')} were excluded after extensive repetition of names and pay from an earlier collection.</p>}
         />
-        {!entry.counts[year] && <p className="salaries__hint">{coverage.status === 'excluded' ? 'These records are held for review because source checks have not passed.' : coverage.status === 'source-found' ? 'A report has been located, but its employee records have not yet passed extraction and validation.' : 'No records have been imported for this employer in this year.'} That does not mean it had no staff or made no payments.</p>}
+        {!entry.counts[year] && <p className="salaries__hint">{coverage.status === 'aggregate-only' ? 'The verified report publishes aggregate payroll without named employee records.' : coverage.status === 'excluded' ? 'These records are held for review because source checks have not passed.' : coverage.status === 'source-found' ? 'A report has been located, but its employee records have not yet passed extraction and validation.' : 'No records have been imported for this employer in this year.'} That does not mean it had no staff or made no payments.</p>}
         {rows && entry.counts[year] > 0 && (
           <dl className="salaries__tiles">
             <div><dt>Records</dt><dd>{people.length.toLocaleString('en-CA')}</dd></div>
@@ -353,7 +370,7 @@ const RolePage = ({ entry, years, sources, rows, failed, roleKey, wantedYear, ba
         {group && (
           <>
             <YearPicker years={years} counts={counts} value={year} onChange={onYear} label="Year of this position’s records" />
-            <h3 className="salaries__year-title">{years[year]}</h3>
+            <h3 className="salaries__year-title">{reportingYearLabel(years[year])}</h3>
             {stats[year]
               ? (
                 <dl className="salaries__tiles">

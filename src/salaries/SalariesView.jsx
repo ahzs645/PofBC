@@ -18,7 +18,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } from './people.js'
 import { keyedTitles, titleMatcher } from './positions.js'
-import { filterEmployers } from './coverage.js'
+import { filterEmployers, reportingYearLabel } from './coverage.js'
 import { formatMoney as money } from './money.js'
 import { YearStrip } from './parts.jsx'
 import { salaryYearIndex } from './viewState.js'
@@ -49,7 +49,7 @@ const EmployerCard = ({ entry, years, year, onOpen }) => {
       <span className="salaries__text">
         <span className="salaries__name">{entry.names.at(-1)}</span>
         <span className="salaries__line">{count(entry.counts[at], 'record', 'records')} in {years[at]}</span>
-        <YearStrip years={years} seen={seenYears(entry)} />
+        <YearStrip years={years} seen={seenYears(entry)} coverage={entry.coverage} />
       </span>
     </button>
   )
@@ -315,8 +315,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
           onChange={(event) => search(event.target.value)}
         />
         <select value={filterYear} onChange={(event) => setFilterYear(event.target.value)} aria-label="Year">
-          <option value="all">Every year</option>
-          {years.map((label, at) => <option key={label} value={String(at)}>{label}</option>)}
+          <option value="all">Every reporting period</option>
+          {years.map((label, at) => <option key={label} value={String(at)}>{reportingYearLabel(label)}</option>)}
         </select>
       </div>
 
@@ -325,7 +325,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
       </p>
       {filtered && (
         <p className="salaries__hint">
-          {filterYear !== 'all' ? years[Number(filterYear)] : 'Every year'} · {sector === 'all' ? 'All sectors' : sector}{' '}
+          {filterYear !== 'all' ? reportingYearLabel(years[Number(filterYear)]) : 'Every reporting period'} · {sector === 'all' ? 'All sectors' : sector}{' '}
           <button type="button" className="salaries__link" onClick={() => setPlace((current) => ({ ...current, year: 'all', sector: 'all' }))}>Clear filters</button>
         </p>
       )}
@@ -423,8 +423,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
 
       <p className="salaries__source">
         These are the disclosures imported into this collection. Pay is the period’s reported remuneration or
-        compensation, not a salary rate. Reporting thresholds, calendar years, fiscal years and executive-only
-        disclosures differ. Missing records do not establish whether someone was employed or paid.
+        compensation, not a salary rate. Calendar reports use their actual year (for example, 2023);
+        fiscal reports keep their fiscal label (2023/24). Retained compilation labels remain unverified.
+        Reporting thresholds and disclosure categories differ. Missing records do not establish whether someone was employed or paid.
       </p>
     </div>
   )

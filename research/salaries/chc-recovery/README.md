@@ -6,7 +6,8 @@
 > pages were rendered and reviewed. The record is in [`pdf-verification/`](pdf-verification/review.json).
 > The 723 rows for 2012/13–2016/17 are published as the accepted collection
 > [`../columbia-hydro-constructors/`](../columbia-hydro-constructors/README.md), built by
-> `scripts/accept-chc-salaries.py`. 2017/18 names nobody and is shown as aggregate-only. The
+> `scripts/verify-columbia-hydro-salaries.py`. A separate check made the same day, recorded here,
+> produced byte-identical rows. 2017/18 names nobody and is shown as aggregate-only. The
 > staging below is kept as the record of how the rows were captured; its "not accepted" statements
 > describe the state on 23 October. The comparator files in `pdf-verification/` report
 > `acceptedForPublication: false` because the comparator never accepts anything itself.

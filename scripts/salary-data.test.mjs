@@ -5,10 +5,55 @@ import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { gzipSync, gunzipSync } from 'node:zlib'
 import { spawnSync } from 'node:child_process'
-import { csvRows, money, sumMoney, median, duplicateStats, repeatedCandidates, sha256, validateReplacementScopes } from './lib/salary-data.mjs'
+import { csvRows, money, sumMoney, median, duplicateStats, repeatedCandidates, sha256, validateReplacementScopes, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 
 const row = (name, pay = 100000.01, year = '2017/18') => ({ slug: 'bc-hydro', year, name, position: null, pay, expenses: null })
+test('calendar and fiscal reporting periods retain distinct labels and output paths', () => {
+  assert.equal(yearSlug('2020'), '2020')
+  assert.equal(yearSlug('2020/21'), '2020-21')
+  assert.equal(reportingPeriodType('2020'), 'calendar')
+  assert.equal(reportingPeriodType('2020/21'), 'fiscal')
+  assert.throws(() => yearSlug('2020/22'), /Invalid disclosure year/)
+  assert.throws(() => yearSlug('2020-21'), /Invalid disclosure year/)
+})
+test('a pinned calendar correction preserves council and fails closed when source evidence changes', () => {
+  const employee = { ...row('Employee, A', 100000, '2020/21'), sourceId: 'compiled' }
+  const mayor = { ...row('Mayor, B', 150000, '2020/21'), position: 'Mayor', sourceId: 'compiled' }
+  const original = [employee, mayor]
+  const rule = { employerSlug: 'bc-hydro', compiledYear: '2020/21', replacementYear: '2020', sourceIds: ['official'],
+    expectedRows: 1, expectedRetainedRows: 1, selectedRowsSha256: sha256(JSON.stringify([[employee.name, employee.position, employee.pay, employee.expenses]])),
+    retainPositions: ['Mayor'], reason: 'Verified source calendar period and exact cohort comparison.',
+    retainedSource: { id: 'compiled-council', scope: 'elected-officials' } }
+  const sources = () => ({ compiled: { scope: 'compiled-unverified', sourceKind: 'compiled' }, official: { scope: 'employee-remuneration' } })
+  const official = [{ ...employee, year: '2020', sourceId: 'official' }]
+  const registry = sources()
+  const result = applyCompiledReplacements(original, official, registry, [rule])
+  assert.equal(result.rows.length, 1)
+  assert.equal(result.rows[0].name, mayor.name)
+  assert.equal(result.rows[0].year, '2020/21')
+  assert.equal(registry['compiled-council'].sourceKind, 'compiled')
+  assert.equal(registry['compiled-council'].periodType, 'unverified')
+  assert.equal(result.corrections[0].correctedYear, '2020')
+  assert.throws(() => applyCompiledReplacements(original, [], sources(), [rule]), /not imported/)
+  assert.throws(() => applyCompiledReplacements([{ ...employee, pay: 100001 }, mayor], official, sources(), [rule]), /evidence no longer matches/)
+  assert.throws(() => applyCompiledReplacements(original, official, sources(), [{ ...rule, retainPositions: [] }]), /evidence no longer matches/)
+  assert.throws(() => applyCompiledReplacements(original, official, { ...sources(), official: { scope: 'executive-only' } }, [rule]), /partial disclosure/)
+})
+test('a recovered cohort clears only an exactly reviewed ambiguous travel assignment', () => {
+  const employee = { ...row('Example,Pat', 90000, '2017/18'), sourceId: 'employees', expenses: 16000 }
+  const appointee = { ...row('EXAMPLE,PAT', 150000, '2017/18'), sourceId: 'appointees' }
+  const decision = { employeeSourceId: 'employees', employerSlug: 'bc-hydro', year: '2017/18', name: 'Example,Pat', pay: 90000,
+    previousExpenses: 16000, replacementExpenses: null, relatedOICSourceId: 'appointees', relatedOICName: 'EXAMPLE,PAT', relatedOICRemuneration: 150000,
+    reason: 'Newly recovered schedule makes the disclosed name non-unique.' }
+  const sources = { employees: { travelSource: { url: 'https://example.test/travel.csv' } }, appointees: {} }
+  const result = applyTravelJoinCorrections([employee, appointee], sources, [decision])
+  assert.equal(result.rows[0].expenses, null)
+  assert.equal(result.rows[1].expenses, null)
+  assert.equal(employee.expenses, 16000)
+  assert.throws(() => applyTravelJoinCorrections([employee], sources, [decision]), /evidence no longer matches/)
+  assert.throws(() => applyTravelJoinCorrections([employee, appointee], sources, [{ ...decision, previousExpenses: 16001 }]), /evidence no longer matches/)
+})
 test('money retains cents, distinguishes missing from zero, and permits published recoveries', () => {
   assert.equal(money('$100,000.01'), 100000.01)
   assert.equal(money('0'), 0)
@@ -165,6 +210,15 @@ test('partial executive imports cannot erase an employee disclosure without a re
   assert.throws(() => validateReplacementScopes(before, after, { executives: { scope: 'executive-only' } }), /partial disclosure/)
   assert.doesNotThrow(() => validateReplacementScopes(before, after, { executives: { scope: 'employee-remuneration' } }))
   assert.doesNotThrow(() => validateReplacementScopes(before, after, { executives: { scope: 'executive-only' } }, [{ kind: 'replace-partition-scope', employer: 'bcit', year: '2020/21', sourceIds: ['executives'], reason: 'Reviewed replacement scope.' }]))
+})
+
+test('employee and elected cohorts in one report retain distinct source-catalog entries', () => {
+  const shared = { employerSlug: 'city-of-prince-george', year: '2025', file: 'data.gzip', sourceUrl: 'https://example.test/sofi.pdf' }
+  const sources = [{ ...shared, id: 'staff', category: 'employee-remuneration', rowCount: 531 }, { ...shared, id: 'council', category: 'elected-officials', rowCount: 9 }]
+  const catalog = sourceCatalog({ sources: [{ ...shared, id: 'lead', file: undefined }] }, [{ collection: 'municipal', manifest: { sources } }])
+  assert.equal(catalog.length, 2)
+  assert.deepEqual(catalog.map((entry) => entry.acceptedSourceId).sort(), ['council', 'staff'])
+  assert.deepEqual(catalog.map((entry) => entry.scope).sort(), ['elected-officials', 'employee-remuneration'])
 })
 
 test('incorrect expense totals reject an import before changing published data', () => {

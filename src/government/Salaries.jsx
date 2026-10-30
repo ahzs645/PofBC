@@ -102,7 +102,7 @@ export const Salaries = ({ node, year }) => {
       </p>
       <YearPicker years={SALARY_YEARS.map((each) => each.label)} counts={counts} coverage={SALARY_COVERAGE[key]} value={selectedIndex} onChange={(at) => { setSlug(SALARY_YEARS[at].slug); setShown(PAGE) }} />
       {!totals && <>
-        <p className="gov-muted gov-salaries__about">No records have been imported for {label}. That does not mean no one was employed or paid.</p>
+        <p className="gov-muted gov-salaries__about">{coverage?.status === 'aggregate-only' ? `The verified ${label} report publishes aggregate payroll without named employee records.` : `No records have been imported for ${label}.`} That does not mean no one was employed or paid.</p>
         {coverage && <DisclosureSummary coverage={coverage} sources={SALARY_SOURCES} className="gov-salaries__disclosure" />}
       </>}
       {totals && (

@@ -4,7 +4,7 @@
 
 import { displayName, nameMatch } from './people.js'
 import { titleKey } from './positions.js'
-import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, sourceHref } from './coverage.js'
+import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, samePeriodKinds, sourceHref } from './coverage.js'
 import { SourceLink } from './DisclosureEvidence.jsx'
 import { formatMoney as money } from './money.js'
 import { PayChart, yearSpan } from './parts.jsx'
@@ -28,7 +28,9 @@ export const PersonPage = ({ chosen, all, index, back, onEmployer, onRole, onOpe
   // The chart plots a year's highest record: where a name has more than one in a year, the table
   // shows them all.
   const points = chosen.years.map((at) => ({ year: at, pay: Math.max(...chosen.rows.filter((row) => row[5] === at).map((row) => row[2])) }))
-  const missing = index.years.map((_, at) => at).filter((at) => !chosen.years.includes(at))
+  // Gaps are counted only among periods of the kinds the name appears in: a name in calendar-year
+  // reports has no gap at every fiscal label.
+  const missing = samePeriodKinds(index.years, chosen.years).filter((at) => !chosen.years.includes(at))
   const runs = gapRuns(missing, (at) => gapReason(index.coverage, associated, at))
   const lines = [
     ...chosen.years.map((at) => ({ at, rows: chosen.rows.filter((row) => row[5] === at).sort((a, b) => b[2] - a[2]) })),
@@ -79,7 +81,7 @@ export const PersonPage = ({ chosen, all, index, back, onEmployer, onRole, onOpe
             {employer.body && onOpenGovernment && <> (<button type="button" className="salaries__link" onClick={() => onOpenGovernment(employer.body, Number(index.years[chosen.latest[5]].slice(0, 4)))}>in Government</button>)</>}
           </span>
         ))}
-        {' '}· {yearLabels.length} {yearLabels.length === 1 ? 'year' : 'years'}, {yearSpan(yearLabels)} · disclosed as “{chosen.name}”
+        {' '}· {yearLabels.length} {yearLabels.length === 1 ? 'disclosure period' : 'disclosure periods'}, {yearSpan(yearLabels)} · disclosed as “{chosen.name}”
       </p>
       <p className="salaries__hint salaries__hint--small">
         Records are grouped by the disclosed name only, so they may not all concern one person.
@@ -90,7 +92,7 @@ export const PersonPage = ({ chosen, all, index, back, onEmployer, onRole, onOpe
       <dl className="salaries__tiles salaries__tiles--three">
         <div><dt>Latest</dt><dd>{money(chosen.latest[2])}</dd><dd className="salaries__line">{index.years[chosen.latest[5]]}</dd></div>
         <div><dt>Highest</dt><dd>{money(Math.max(...points.map((point) => point.pay)))}</dd><dd className="salaries__line">{index.years[points.reduce((best, point) => (point.pay > best.pay ? point : best)).year]}</dd></div>
-        <div><dt>Years</dt><dd>{yearLabels.length}</dd><dd className="salaries__line">of {index.years.length} in the collection</dd></div>
+        <div><dt>Periods</dt><dd>{yearLabels.length}</dd><dd className="salaries__line">of {samePeriodKinds(index.years, chosen.years).length} corresponding periods</dd></div>
       </dl>
 
       {points.length > 1 && <PayChart years={index.years} points={points} multiple={chosen.shared} />}
