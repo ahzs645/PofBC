@@ -1661,7 +1661,12 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-pager__slot { display: inline-flex; align-items: center; gap: 4px; }
 .salaries-pager__gap { color: var(--ink-faint); padding: 0 2px; }
 .salaries-pager__range { margin-left: auto; color: var(--ink-faint); font-size: 13px; font-variant-numeric: tabular-nums; }
-@media (max-width: 480px) { .salaries-pager__range { flex-basis: 100%; margin: 4px 0 0; } }
+@media (max-width: 480px) {
+  .salaries-pager { gap: 3px; }
+  .salaries-pager button { min-width: 34px; height: 34px; padding: 0 8px; }
+  .salaries-pager__slot { gap: 3px; }
+  .salaries-pager__range { flex-basis: 100%; margin: 4px 0 0; }
+}
 
 /* What is shown, and how: the tabs on the left, cards or a table on the right. */
 .salaries__browse-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
