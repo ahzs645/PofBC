@@ -1,0 +1,2467 @@
+{
+  "date": "2026-10-30",
+  "timezone": "America/Creston",
+  "summary": {
+    "bodiesRevisited": 21,
+    "crownBodiesRevisited": 8,
+    "healthBodiesRevisited": 13,
+    "newVectorFiles": 0,
+    "additionalRasterFiles": 2,
+    "newlyRepresentedBodies": 0
+  },
+  "note": "Targeted continuation. Some prior sources were rechecked for access or duplication. Coverage is limited to the explicitly named bodies; catalogue/index leads and failed downloads are not treated as inspected artwork. Downloaded publications are linked with hashes rather than redistributed in full.",
+  "groups": {
+    "crown": {
+      "research_date": "2026-10-30",
+      "timezone": "America/Creston",
+      "pass": "4",
+      "group": "former Crown organizations",
+      "scope": {
+        "remaining_rows_at_start": 17,
+        "rows_revisited": 8,
+        "revisited_ids": [
+          "bc-development-corporation",
+          "bc-enterprise-corporation",
+          "bc-place-ltd",
+          "bc-harbours-board",
+          "bc-toll-highways-and-bridges-authority",
+          "metro-transit-operating-company",
+          "urban-transit-authority",
+          "wlc-developments"
+        ],
+        "new_verified_original_vectors": 0,
+        "new_accepted_existing_third_party_vectors": 0,
+        "new_accepted_rasters": 0,
+        "new_downloaded_pdfs": 5,
+        "note": "Focused continuation only. Three bodies share a single archive-index route; WLC is a duplicate-material confirmation. No claim that all 17 unresolved Crown rows were re-searched."
+      },
+      "policy": "Only source geometry with verified entity and period could qualify. No tracing, redrawing, source-logo reconstruction, contacting people or repository edits. Raster/text/line objects were inspected separately. PR #9 overlaps are not new findings.",
+      "sources": [
+        {
+          "source_id": "bcec-index-locators",
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/records-management/orcs/bcec_orcs_170469.pdf",
+          "sha256": "a6011d01d97931628a718e6f0b9a011f8ee7a897531c39c3695eaef7963d75ad",
+          "bytes": 383159,
+          "pages": 19,
+          "source_title": "British Columbia Enterprise Corporation Operational Records Classification System",
+          "source_date": "2017-05-27",
+          "reused_source": true,
+          "inspection_scope": "PDF pp.4, 9–10; printed EXEC SUMMARY-1 and SECT 1-3 / 1-4.",
+          "result": "Classification 20000-02 identifies creator indexes in accession 93-4720 boxes 1–4 and accession 90-1769 box 24, for transfer to Government Records Service accession files. These are indexes, not identified artwork boxes. Use them to locate final marketing records under 20000-20. Related references: ARCS 306-20 branding management, ARCS 295-30 marketing files, ARCS 400 annual reports. Page 4 includes pre-1973 Harbours Board records transferred to BCDC custody.",
+          "status": "more_precise_locator_only"
+        },
+        {
+          "source_id": "bcarchives-catalogue-access",
+          "url": "https://search-bcarchives.royalbcmuseum.bc.ca/",
+          "downloaded": false,
+          "status": "temporarily_inaccessible",
+          "result": "Web retrieval returned 502; direct public HTTPS request returned 503. Exact-accession searches returned the schedule, not a digitized file list. This does not establish absence of the records."
+        },
+        {
+          "source_id": "harbours-cuthbert-correspondence",
+          "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/Special-Report-No-03-The-Cuthbert-Case.pdf",
+          "bytes": 1618617,
+          "sha256": "8b5ce4eccefef568b67402d6a73e000c41c96e2441ba8bca3df222683af60701",
+          "pages": 56,
+          "source_title": "The Cuthbert Case, Special Report No. 3",
+          "source_date": "1981",
+          "inspection_scope": "PDF pp. 47 and 51 (printed 43 and 47), letters dated 1980-10-06 and 1981-01-22; full-document object inventory.",
+          "result": "Board chairman correspondence uses provincial Ministry of Industry and Small Business Development letterhead. No separate Harbours Board emblem was found on the inspected letters.",
+          "vector_proof": {
+            "page47_images": 1,
+            "page47_drawings": 0,
+            "page51_images": 1,
+            "page51_drawings": 0,
+            "image_placement": "A single image spans each inspected page.",
+            "document_summary": "All 56 pages contain one image; 55 pages have zero drawing objects and one page has one incidental drawing."
+          },
+          "status": "no_distinct_body_logo_in_inspected_letters",
+          "evidence_images": [
+            "pass4/crown/sources/harbours-cuthbert.pdf-p47.png",
+            "pass4/crown/sources/harbours-cuthbert.pdf-p51.png"
+          ]
+        },
+        {
+          "source_id": "harbours-lac-file-locator",
+          "url": "https://data2.archives.ca/pdf/pdf002/66-11_43861_open.pdf",
+          "bytes": 18175905,
+          "sha256": "d57b6c088cc3cb633d86ad24f391a66bbbcb4186689848a85389312a63bdf5e6",
+          "pages": 30,
+          "source_title": "Finding aid 66-11, Ports Canada, RG 66",
+          "source_date": "1988-01",
+          "inspection_scope": "PDF pp.1 and7; printed finding-aid page 6.",
+          "catalogue_locator": {
+            "finding_aid": "66-11",
+            "record_group": "Ports Canada, RG 66",
+            "accession": "V-85-86/395",
+            "volume": "14 (499999)",
+            "subject": "British Columbia Harbours Board",
+            "date_range": "1967–1970",
+            "location_as_recorded_in_1988_aid": "Vancouver Records Centre"
+          },
+          "result": "File list locates correspondence about the provincial Harbours Board within federal Ports Canada records. The contents were not digitized in this finding aid. Federal Ports Canada/National Harbours Board artwork must not be assigned to the provincial body.",
+          "vector_proof": {
+            "pages": 30,
+            "images_per_page": 1,
+            "drawings_all_pages": 0
+          },
+          "status": "physical_file_locator_only",
+          "evidence_images": [
+            "pass4/crown/sources/harbours-lac-finding-aid.pdf-p7.png"
+          ]
+        },
+        {
+          "source_id": "toll-foi-report-table",
+          "url": "https://docs.openinfo.gov.bc.ca/Response_Package_TRA-2018-88109.pdf",
+          "bytes": 65556306,
+          "sha256": "1090569772fa0a924410de32b4f82a3f6f2de3b926bf9c3445fce369743f70de",
+          "pages": 267,
+          "source_title": "TRA-2018-88109 response package, Tsawwassen road report and supporting documents",
+          "source_date": "2018",
+          "inspection_scope": "All 267 pages inventoried and contact-sheet reviewed; 44 selected pages OCR inspected; PDF p. 185 enlarged and rotated solely for inspection. Release footer says 185 of 268 although downloaded file has 267 pages.",
+          "source_locator": "PDF p. 185 reproduces Highways Report 1959/60 tables (visible printed F18 and adjacent report table).",
+          "result": "Search hit is a table headed with the exact Toll Authority name, listing Second Narrows Bridge and Tsawwassen/Swartz Bay ferry terminals. It is ordinary heading text, not a distinct emblem or brochure.",
+          "vector_proof": {
+            "pages": 267,
+            "images_per_page": 1,
+            "drawing_objects_all_pages": 0,
+            "image_placement": "Full-page bitmap on every page.",
+            "native_text_all_pages": false
+          },
+          "status": "raster_report_table_no_logo",
+          "evidence_images": [
+            "pass4/crown/sources/toll-p185-rotated-for-inspection.png"
+          ]
+        },
+        {
+          "source_id": "wlc-blank-seal-alternate-copy",
+          "url": "https://pub-rmow.escribemeetings.com/filestream.ashx?DocumentId=16279",
+          "bytes": 50196004,
+          "sha256": "9226271e80aaa803c34672cea2e83733464f5166ae19b5c556f9e0f2323ccd4e",
+          "pages": 107,
+          "source_title": "Whistler land-use amendment and covenant bundle including W.L.C. Developments Ltd.",
+          "source_date": "1988",
+          "inspection_scope": "PDF p. 8, printed 5, WLC and Bosa execution fields; other WLC text hits reviewed.",
+          "result": "The WLC seal field is blank. This 107-page bundle corresponds to the previously inspected material under DocumentId 14101 in PR #9; the alternate URL confirms the earlier negative and is not counted as new material.",
+          "vector_proof": {
+            "page8_images": 4,
+            "page8_drawings": 4,
+            "explanation": "The substantive page is a 3443×4433 full-page raster; other image objects are 1×1 masks/overlays. Small incidental drawing objects do not supply a seal or logo."
+          },
+          "status": "duplicate_negative_blank_seal",
+          "prior_source_url": "https://pub-rmow.escribemeetings.com/filestream.ashx?DocumentId=14101",
+          "evidence_images": [
+            "pass4/crown/sources/wlc-bosa-agreement.pdf-p8.png"
+          ]
+        },
+        {
+          "source_id": "mtoc-ubc-map-holdings",
+          "url": "https://ubc-lib-geo.github.io/development-of-vancouver-maps/additional-maps.html",
+          "downloaded": false,
+          "source_title": "Maps of the Development of Vancouver: Additional Maps",
+          "inspection_scope": "Catalogue table entries for 1981 Vancouver and 1982 Downtown Metro Vancouver transit guides.",
+          "catalogue_locators": [
+            {
+              "title": "Transit Guide for Vancouver",
+              "creator": "Metro Transit Operating Company",
+              "date": "1981",
+              "call_number": "624.9gm Vancouver 1981 B",
+              "catalogue_url": "http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=2803624"
+            },
+            {
+              "title": "Transit Guide for Downtown Metro Vancouver",
+              "creator": "Metro Transit Operating Company",
+              "date": "1982",
+              "call_number": "624.9gm 1982 M",
+              "catalogue_url": "http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=2802583"
+            }
+          ],
+          "result": "Precise contemporary holdings. UBC says this additional-map list covers material it could not include in the exhibit because permissions were not obtained within the project timeframe. The 1981 catalogue resolver was inaccessible to the web tool. No original map image inspected or vector inferred.",
+          "status": "physical_map_holdings_only"
+        },
+        {
+          "source_id": "mtoc-coquitlam-1973-map",
+          "url": "https://searcharchives.coquitlam.ca/index.php/the-new-coquitlam-bus-and-fastbus-service-map",
+          "downloaded": false,
+          "source_title": "The New Coquitlam Bus and Fastbus Service Map",
+          "source_date": "1973",
+          "result": "The linked map item is dated 1973, before MTOC. Its creator authority page includes later Metro Transit history, which does not date the map to the MTOC period. Rejected as a new MTOC identity source.",
+          "status": "wrong_period"
+        },
+        {
+          "source_id": "mtoc-water-agenda-false-positive",
+          "url": "https://metrovancouver.org/boards/Water/WAT-2026-04-08-AGE.pdf",
+          "bytes": 20476513,
+          "sha256": "a636f779891ce30f97207b65505244c0a97408fc7f688f00b10a59365b86e73b",
+          "pages": 145,
+          "source_title": "Metro Vancouver Water Committee agenda, April 8, 2026",
+          "source_date": "2026-04-08",
+          "inspection_scope": "Text inspection and contact sheets for 145 pages; cover and end-of-report branding identified.",
+          "result": "Search described a Metro Transit logo, but the downloaded packet is modern Metro Vancouver water material. Visible branding belongs to Metro Vancouver. No MTOC logo accepted. Native paths elsewhere in this file do not support the historic transit identity.",
+          "status": "wrong_entity_false_positive",
+          "evidence_images": [
+            "pass4/crown/sources/metro-water-contact-1.jpg",
+            "pass4/crown/sources/metro-water-contact-81.jpg"
+          ]
+        },
+        {
+          "source_id": "uta-manual-catalogue-recheck",
+          "url": "https://trid.trb.org/View/165550",
+          "downloaded": false,
+          "source_title": "Graphic Standards Manual",
+          "catalogue_locator": "TRID 165550; TRIS accession 00334369; corporate author Urban Transit Authority, 844 Courtney Street, Victoria.",
+          "result": "Full-file searches still surfaced the existing TRID catalogue description, not the manual. Publication date is listed as 0; September 16, 1981 is record creation, not a verified publication date.",
+          "status": "known_catalogue_no_download_found"
+        }
+      ],
+      "findings": [
+        {
+          "id": "bc-development-corporation",
+          "name": "British Columbia Development Corporation",
+          "work_scope": "Focused accession/index search and existing schedule reread.",
+          "source_ids": [
+            "bcec-index-locators",
+            "bcarchives-catalogue-access"
+          ],
+          "query_keys": [
+            "crown4_s1",
+            "crown4_s2",
+            "crown4_s4",
+            "crown4_s6",
+            "crown4_s7"
+          ],
+          "new_verified_vector": false,
+          "new_assets": [],
+          "baseline_not_recounted": [
+            "1985 annual-report raster"
+          ],
+          "conclusion": "No new vector. Exact index accessions narrow the next archival search.",
+          "remaining_lead": "Use the recorded subject indexes to locate 20000-20 artwork files; item-level listing and actual artwork still needed."
+        },
+        {
+          "id": "bc-enterprise-corporation",
+          "name": "British Columbia Enterprise Corporation",
+          "work_scope": "Focused accession/index search and existing schedule reread.",
+          "source_ids": [
+            "bcec-index-locators",
+            "bcarchives-catalogue-access"
+          ],
+          "query_keys": [
+            "crown4_s1",
+            "crown4_s2",
+            "crown4_s4",
+            "crown4_s6",
+            "crown4_s7"
+          ],
+          "new_verified_vector": false,
+          "new_assets": [],
+          "baseline_not_recounted": [
+            "1988 prospectus raster"
+          ],
+          "conclusion": "No new vector. Exact index accessions narrow the next archival search.",
+          "remaining_lead": "Use the recorded subject indexes to locate 20000-20 artwork files; item-level listing and actual artwork still needed."
+        },
+        {
+          "id": "bc-place-ltd",
+          "name": "British Columbia Place Ltd.",
+          "work_scope": "Focused accession/index search and existing schedule reread.",
+          "source_ids": [
+            "bcec-index-locators",
+            "bcarchives-catalogue-access"
+          ],
+          "query_keys": [
+            "crown4_s1",
+            "crown4_s2",
+            "crown4_s4",
+            "crown4_s6",
+            "crown4_s7"
+          ],
+          "new_verified_vector": false,
+          "new_assets": [],
+          "baseline_not_recounted": [
+            "1983 annual-report raster"
+          ],
+          "conclusion": "No new vector. Exact index accessions narrow the next archival search.",
+          "remaining_lead": "Use the recorded subject indexes to locate 20000-20 artwork files; item-level listing and actual artwork still needed."
+        },
+        {
+          "id": "bc-harbours-board",
+          "name": "British Columbia Harbours Board",
+          "work_scope": "Original correspondence PDF inspection, LAC finding-aid locator, BCEC custodial route.",
+          "source_ids": [
+            "harbours-cuthbert-correspondence",
+            "harbours-lac-file-locator",
+            "bcec-index-locators"
+          ],
+          "query_keys": [
+            "crown4_s2"
+          ],
+          "new_verified_vector": false,
+          "new_assets": [],
+          "baseline_not_recounted": [
+            "Railway timetables, CP-equipment photographs, statutory common-seal provisions."
+          ],
+          "conclusion": "No distinct vector or newly accepted raster. Correspondence uses provincial ministry letterhead; finding aid identifies an uninspected physical file.",
+          "remaining_lead": "RG 66, V-85-86/395, volume 14 (499999), Harbours Board 1967–1970 subject file; BCEC indexes may also locate pre-1973 transferred records."
+        },
+        {
+          "id": "bc-toll-highways-and-bridges-authority",
+          "name": "British Columbia Toll Highways and Bridges Authority",
+          "work_scope": "New FOI packet retrieved, fully inventoried and selected original report pages inspected.",
+          "source_ids": [
+            "toll-foi-report-table"
+          ],
+          "query_keys": [
+            "crown4_s3"
+          ],
+          "new_verified_vector": false,
+          "new_assets": [],
+          "baseline_not_recounted": [
+            "PR #9 Daily Colonist 1960-06-15, p. 7 ferry-service emblem raster."
+          ],
+          "conclusion": "No new vector. Exact hit is an ordinary report-table heading; the entire downloaded packet is flattened raster.",
+          "remaining_lead": "Original Authority period publications or production artwork; this FOI packet does not supply a master."
+        },
+        {
+          "id": "metro-transit-operating-company",
+          "name": "Metro Transit Operating Company",
+          "work_scope": "Contemporary map catalogue leads and verification of apparent PDF-logo hit.",
+          "source_ids": [
+            "mtoc-ubc-map-holdings",
+            "mtoc-coquitlam-1973-map",
+            "mtoc-water-agenda-false-positive"
+          ],
+          "query_keys": [
+            "crown4_s3",
+            "crown4_s4",
+            "crown4_s5",
+            "crown4_s7"
+          ],
+          "new_verified_vector": false,
+          "new_assets": [],
+          "baseline_not_recounted": [
+            "PR #9 Buzzer mastheads and ordinary publisher line; MOV vendor graphic; prior annual-report titles."
+          ],
+          "conclusion": "No new vector. Two precisely catalogued MTOC guides remain physical holdings; 1973 map and 2026 water branding fail period/entity checks.",
+          "remaining_lead": "Inspect original 1981 and 1982 MTOC guides at the recorded UBC call numbers if digitized copies become available."
+        },
+        {
+          "id": "urban-transit-authority",
+          "name": "Urban Transit Authority",
+          "work_scope": "Targeted full-manual and identification-system searches.",
+          "source_ids": [
+            "uta-manual-catalogue-recheck"
+          ],
+          "query_keys": [
+            "crown4_s1",
+            "crown4_s3",
+            "crown4_s5",
+            "crown4_s6",
+            "crown4_more2",
+            "crown4_s7"
+          ],
+          "new_verified_vector": false,
+          "new_assets": [],
+          "baseline_not_recounted": [
+            "PR #9 original 1979 and 1980 Daily Colonist rasters; existing modern reconstruction; predecessor BUS/FastBUS SVGs."
+          ],
+          "conclusion": "No new vector or full manual. Catalogue lead retained with its date limitation.",
+          "remaining_lead": "Actual manual associated with TRIS accession 00334369."
+        },
+        {
+          "id": "wlc-developments",
+          "name": "W.L.C. Developments Ltd.",
+          "work_scope": "Alternate public contract bundle retrieved and execution field inspected; compared with PR #9 source inventory.",
+          "source_ids": [
+            "wlc-blank-seal-alternate-copy"
+          ],
+          "query_keys": [
+            "crown4_s1"
+          ],
+          "new_verified_vector": false,
+          "new_assets": [],
+          "baseline_not_recounted": [
+            "Previously inspected 107-page contract under DocumentId 14101; Whistler Village Land Company identities."
+          ],
+          "conclusion": "Alternate access confirmed an already-known blank seal field; no new art or recovery count.",
+          "remaining_lead": "An executed original showing a seal imprint or actual company letterhead; this copy remains blank."
+        }
+      ],
+      "accepted_assets": [],
+      "searchLog": {
+        "research_date": "2026-10-30",
+        "search_batches": [
+          {
+            "key": "crown4_s1",
+            "engine": "system2",
+            "queries": [
+              "\"BC Enterprise Corporation\" archives marketing logos",
+              "\"British Columbia Development Corporation\" \"GR-\" archives",
+              "\"Urban Transit Authority\" \"Graphic Standards Manual\"",
+              "\"W.L.C. Developments\" logo"
+            ]
+          },
+          {
+            "key": "crown4_s2",
+            "engine": "system1",
+            "queries": [
+              "\"British Columbia Enterprise Corporation\" site:search-bcarchives.royalbcmuseum.bc.ca",
+              "\"British Columbia Development Corporation\" site:search-bcarchives.royalbcmuseum.bc.ca",
+              "\"93-4720\" OR \"90-1769\"",
+              "\"British Columbia Harbours Board\" archives"
+            ]
+          },
+          {
+            "key": "crown4_s3",
+            "engine": "system2",
+            "queries": [
+              "\"Metro Transit Operating Company\" logo",
+              "\"British Columbia Toll Highways and Bridges Authority\" brochure",
+              "\"Urban Transit Authority\" manual Victoria logo pdf"
+            ]
+          },
+          {
+            "key": "crown4_s4",
+            "engine": "system1",
+            "queries": [
+              "\"BC Enterprise\" archives accession",
+              "\"British Columbia Development Corporation\" archival records",
+              "\"93-4720\" archives",
+              "\"Metro Transit\" \"graphic\" logo British Columbia"
+            ]
+          },
+          {
+            "key": "crown4_s5",
+            "engine": "system2",
+            "queries": [
+              "\"Metro Transit\" Vancouver 1981 logo filetype:pdf",
+              "\"Urban Transit Authority\" \"identity\" designer",
+              "\"Urban Transit Authority\" \"manual\" library Canada"
+            ]
+          },
+          {
+            "key": "crown4_s6",
+            "engine": "system1",
+            "queries": [
+              "\"Urban Transit Authority\" \"Graphic Standards\" library",
+              "\"20000-20\" \"Corporation\" archives",
+              "\"90-1769\" \"Enterprise\""
+            ]
+          },
+          {
+            "key": "crown4_more2",
+            "engine": "system2",
+            "queries": [
+              "\"Urban Transit Authority\" \"double arrow\" logo",
+              "\"Urban Transit Authority\" \"graphic standards\" -\"TRID\" -\"TRB\"",
+              "\"BC Enterprise\" \"logos\" archive"
+            ]
+          },
+          {
+            "key": "crown4_s7",
+            "engine": "system2",
+            "queries": [
+              "\"graphic standards manual\" \"Urban Transit Authority\" worldcat",
+              "\"93-4720\" \"boxes\""
+            ]
+          }
+        ],
+        "source_results": [
+          {
+            "source_id": "bcec-index-locators",
+            "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/records-management/orcs/bcec_orcs_170469.pdf",
+            "status": "more_precise_locator_only",
+            "result": "Classification 20000-02 identifies creator indexes in accession 93-4720 boxes 1–4 and accession 90-1769 box 24, for transfer to Government Records Service accession files. These are indexes, not identified artwork boxes. Use them to locate final marketing records under 20000-20. Related references: ARCS 306-20 branding management, ARCS 295-30 marketing files, ARCS 400 annual reports. Page 4 includes pre-1973 Harbours Board records transferred to BCDC custody."
+          },
+          {
+            "source_id": "bcarchives-catalogue-access",
+            "url": "https://search-bcarchives.royalbcmuseum.bc.ca/",
+            "status": "temporarily_inaccessible",
+            "result": "Web retrieval returned 502; direct public HTTPS request returned 503. Exact-accession searches returned the schedule, not a digitized file list. This does not establish absence of the records."
+          },
+          {
+            "source_id": "harbours-cuthbert-correspondence",
+            "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/Special-Report-No-03-The-Cuthbert-Case.pdf",
+            "status": "no_distinct_body_logo_in_inspected_letters",
+            "result": "Board chairman correspondence uses provincial Ministry of Industry and Small Business Development letterhead. No separate Harbours Board emblem was found on the inspected letters."
+          },
+          {
+            "source_id": "harbours-lac-file-locator",
+            "url": "https://data2.archives.ca/pdf/pdf002/66-11_43861_open.pdf",
+            "status": "physical_file_locator_only",
+            "result": "File list locates correspondence about the provincial Harbours Board within federal Ports Canada records. The contents were not digitized in this finding aid. Federal Ports Canada/National Harbours Board artwork must not be assigned to the provincial body."
+          },
+          {
+            "source_id": "toll-foi-report-table",
+            "url": "https://docs.openinfo.gov.bc.ca/Response_Package_TRA-2018-88109.pdf",
+            "status": "raster_report_table_no_logo",
+            "result": "Search hit is a table headed with the exact Toll Authority name, listing Second Narrows Bridge and Tsawwassen/Swartz Bay ferry terminals. It is ordinary heading text, not a distinct emblem or brochure."
+          },
+          {
+            "source_id": "wlc-blank-seal-alternate-copy",
+            "url": "https://pub-rmow.escribemeetings.com/filestream.ashx?DocumentId=16279",
+            "status": "duplicate_negative_blank_seal",
+            "result": "The WLC seal field is blank. This 107-page bundle corresponds to the previously inspected material under DocumentId 14101 in PR #9; the alternate URL confirms the earlier negative and is not counted as new material."
+          },
+          {
+            "source_id": "mtoc-ubc-map-holdings",
+            "url": "https://ubc-lib-geo.github.io/development-of-vancouver-maps/additional-maps.html",
+            "status": "physical_map_holdings_only",
+            "result": "Precise contemporary holdings. UBC says this additional-map list covers material it could not include in the exhibit because permissions were not obtained within the project timeframe. The 1981 catalogue resolver was inaccessible to the web tool. No original map image inspected or vector inferred."
+          },
+          {
+            "source_id": "mtoc-coquitlam-1973-map",
+            "url": "https://searcharchives.coquitlam.ca/index.php/the-new-coquitlam-bus-and-fastbus-service-map",
+            "status": "wrong_period",
+            "result": "The linked map item is dated 1973, before MTOC. Its creator authority page includes later Metro Transit history, which does not date the map to the MTOC period. Rejected as a new MTOC identity source."
+          },
+          {
+            "source_id": "mtoc-water-agenda-false-positive",
+            "url": "https://metrovancouver.org/boards/Water/WAT-2026-04-08-AGE.pdf",
+            "status": "wrong_entity_false_positive",
+            "result": "Search described a Metro Transit logo, but the downloaded packet is modern Metro Vancouver water material. Visible branding belongs to Metro Vancouver. No MTOC logo accepted. Native paths elsewhere in this file do not support the historic transit identity."
+          },
+          {
+            "source_id": "uta-manual-catalogue-recheck",
+            "url": "https://trid.trb.org/View/165550",
+            "status": "known_catalogue_no_download_found",
+            "result": "Full-file searches still surfaced the existing TRID catalogue description, not the manual. Publication date is listed as 0; September 16, 1981 is record creation, not a verified publication date."
+          }
+        ]
+      }
+    },
+    "councils": {
+      "pass": "fourth targeted follow-up",
+      "research_date": "2026-10-30",
+      "research_timezone": "America/Creston",
+      "scope": {
+        "actually_revisited_count": 9,
+        "actual_revisited_ids": [
+          "quesnel-and-district-community-health-council",
+          "sea-to-sky-community-health-council",
+          "kitimat-and-area-health-council",
+          "terrace-and-area-health-council",
+          "central-cariboo-chilcotin-health-council",
+          "south-cariboo-community-health-council",
+          "cranbrook-health-council",
+          "nelson-and-area-health-council",
+          "greater-trail-community-health-council"
+        ],
+        "not_a_complete_new_sweep": true,
+        "other_rows": "Not revisited in this targeted pass; prior checklist status retained."
+      },
+      "summary": {
+        "new_verified_vector_bodies": 0,
+        "newly_represented_bodies": 0,
+        "new_artwork_assets": 0,
+        "indexed_search_queries": 38,
+        "pdf_sources_downloaded": 2,
+        "pdf_pages_structurally_inspected": 147,
+        "visually_inspected_pdf_pages": 3,
+        "visual_inspection_scope": "Kitimat collective agreement PDF pages 114 and 128; Quesnel minutes PDF page 4. Other pages were text searched and inventoried, not individually visually reviewed."
+      },
+      "baseline_comparison": {
+        "sources": [
+          "deliverables/PofBC-historical-logo-followup-2026-10-31/research-checklist.json",
+          "pass3/councils/findings.json",
+          "pass4/pr9-inventory-reference.json"
+        ],
+        "pr9_note": "Open PR 9 is a read-only reference and not assumed merged. It already documented Sea-to-Sky's July 2001 ad and BiblioBoard migration; these are access rechecks. No artwork in this pass is claimed novel against either baseline."
+      },
+      "accepted_assets": [],
+      "uncertain_assets_excluded_from_logo_count": [],
+      "body_findings": [
+        {
+          "body_id": "quesnel-and-district-community-health-council",
+          "name": "Quesnel and District Community Health Council",
+          "query_log_ids": [
+            "c4_q1",
+            "c4_q2",
+            "c4_q3",
+            "c4_q5",
+            "c4_q6",
+            "c4_q7",
+            "c4_q8"
+          ],
+          "inspection_depth": "period-domain capture and selected municipal-PDF page visually inspected",
+          "notes": "A September 2001 Canadian Nurse recruitment advertisement, available as indexed text only, supplies the period email domain qdchc.com. The pre-2003 successful-capture index returned only the 21 April 2001 homepage. Actual archived HTML is the generic IIS Under Construction page and contains no council artwork; the domain today belongs to an unrelated conveyor supplier and its current graphics were excluded. Downloaded 11-page Quesnel minutes dated 9 April 2001; all text searched and PDF page 4 visually inspected. It refers to council fact sheets within the 6 April information package but does not reproduce those sheets or their letterhead.",
+          "sources": [
+            {
+              "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/8de47524-f9d6-87da-7be2-8a87771997ec_file.pdf",
+              "assessment": "Indexed recruitment-ad text from September 2001 Volume 97 Number 8 establishes a period-domain clue. Actual issue not downloaded or visually inspected; expired signed URL parameters omitted.",
+              "access": "index-only"
+            },
+            {
+              "url": "https://web.archive.org/cdx/search/cdx?url=%2A.qdchc.com%2F%2A&output=json&filter=statuscode%3A200&collapse=urlkey&fl=timestamp%2Coriginal%2Cmimetype&to=2002&limit=500",
+              "assessment": "One pre-2003 successful URL returned: http://qdchc.com:80/, captured 20010421234818.",
+              "sha256": "833bb993330914393251e8c51c0d978162c6200b276d7c63eddfb2672fbc60bf"
+            },
+            {
+              "url": "https://web.archive.org/web/20010421234818id_/http://qdchc.com:80/",
+              "assessment": "Actual archived HTML inspected: generic server Under Construction page, no council name or mark.",
+              "sha256": "57a31738e63f4233395c41eda15c3a5f1bdd5c32127e03a605ad2f55c6bd9d9a"
+            },
+            {
+              "url": "https://quesnel.civicweb.net/document/848/",
+              "assessment": "11-page 9 April 2001 minutes. Page 4 references fact sheets and board changes; ordinary council-minute typography, no attached health-council correspondence.",
+              "sha256": "5500b6f43a2162df7874614a7f3e0b3a1d282f60d9115e0cafacb9c5f4790bc5",
+              "pdf_pages": 11,
+              "visually_inspected_pdf_pages": [
+                4
+              ]
+            }
+          ],
+          "remaining_leads": [
+            "Original 6 April 2001 Quesnel council information package / referenced health-council fact sheets; not obtained in this pass."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false
+        },
+        {
+          "body_id": "sea-to-sky-community-health-council",
+          "name": "Sea to Sky Community Health Council",
+          "query_log_ids": [
+            "c4_q1",
+            "c4_q2",
+            "c4_q3",
+            "c4_q5",
+            "c4_q6",
+            "c4_q7",
+            "c4_q8"
+          ],
+          "inspection_depth": "archive migration and access recheck; no actual advertisement artwork obtained",
+          "notes": "Rechecked indexed 3 July 2001 Squamish Chief recruitment ad, printed page 23. The old PDF endpoint resolves to explicit Access to Memory suspended-host HTML (680 bytes), and the exact-file Wayback availability request returned no snapshot. Official Squamish Library page now points to BiblioBoard. The landing page loads JavaScript only to text tools; an ordinary unauthenticated read of the public application's exposed collection route returned HTTP 401. No credentials or bypass were used. Comparison with open PR 9 shows the July 2001 ad and BiblioBoard migration were already documented; these are access rechecks, not new logo leads.",
+          "sources": [
+            {
+              "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/2/22841/20010703_The_Chief.pdf",
+              "assessment": "Indexed July 2001 recruitment ad; downloaded response is HTML, not a PDF.",
+              "sha256": "ec55676337dba67e7cd19a22c3af202a89ac25151aa60b505cd60eabbc19e371",
+              "resolved_url": "https://redirect.accesstomemory.org/suspended/uploads/r/squamish-public-library/2/2/22841/20010703_The_Chief.pdf",
+              "access": "suspended-host-html"
+            },
+            {
+              "url": "https://squamishlibrary.ca/local-history/",
+              "assessment": "Official library page links digitized newspapers 1948–2001 to BiblioBoard.",
+              "access": "read"
+            },
+            {
+              "url": "https://library.biblioboard.com/curation/squamish-history-archives",
+              "assessment": "Current official collection landing page returns a JavaScript application shell, without newspaper pages in retrieved HTML.",
+              "access": "application-shell"
+            },
+            {
+              "url": "https://api.biblioboard.com/curations/squamish-history-archives",
+              "assessment": "Ordinary unauthenticated GET to collection route exposed by the site's public application returned 401 Not Authenticated. This does not establish that the public archive requires a paid account; no attempt was made to circumvent the response.",
+              "access": "http-401"
+            }
+          ],
+          "remaining_leads": [
+            "PR 9 identified the exact 8 February 2000 issue at https://library.biblioboard.com/content/ed2344e7-0caa-48da-a8f6-68ebfb8cba09 but reported a persistent service error. This exact content page was not re-opened here.",
+            "No advertisement images have been verified from either issue."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false
+        },
+        {
+          "body_id": "kitimat-and-area-health-council",
+          "name": "Kitimat and Area Health Council",
+          "query_log_ids": [
+            "c4_q1",
+            "c4_q2",
+            "c4_q3",
+            "c4_q8",
+            "c4_q10"
+          ],
+          "inspection_depth": "full PDF text/object inventory; selected council-occurrence pages visually inspected",
+          "notes": "Downloaded the 136-page collective agreement previously known only as a name-bearing lead. Searched its text and inventoried path and image objects across all pages. Visually inspected PDF pages 114 and 128 (printed 104 and 118): the organization appears as ordinary typography in an HEABC memorandum employer list and an affiliate list. These pages have respectively 80 and 65 raster image instances, including fragments; path objects are not evidence of a council vector. No Kitimat corporate artwork recovered. A Canadian Nurse recruitment-ad result was indexed, but this pass did not repeat the already-failed CNA download routes.",
+          "sources": [
+            {
+              "url": "https://negotech.service.canada.ca/eng/agreements/10/1033101a.pdf",
+              "assessment": "Actual council-name occurrences visually inspected; no mark in those regions.",
+              "sha256": "0cb6477d5e2da04c2bb1fd60ff7f1ffa91cbb0524553e30b2d21f19c6caa2a70",
+              "pdf_pages": 136,
+              "visually_inspected_pdf_pages": [
+                114,
+                128
+              ]
+            },
+            {
+              "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/c448426e-17d4-1d22-44c9-cc9795c38bd8_file.pdf",
+              "assessment": "Indexed recruiting advertisement says Kitimat and Area Health Council invites applications. Actual issue/page/graphic unverified; expired signed URL parameters removed.",
+              "access": "index-only"
+            }
+          ],
+          "remaining_leads": [
+            "Original council recruitment-ad artwork or contemporary corporate report, distinct from employer-list typography."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false
+        },
+        {
+          "body_id": "terrace-and-area-health-council",
+          "name": "Terrace and Area Health Council",
+          "query_log_ids": [
+            "c4_q3",
+            "c4_q7"
+          ],
+          "inspection_depth": "new domain/journal queries plus incidental PDF name occurrence visually inspected",
+          "notes": "New HealthNet-domain and CMAJ queries did not identify a recoverable corporate asset or period council domain. In the newly downloaded collective agreement, PDF page 114 lists Terraceview Lodge and Mills Memorial Hospital with the health council name in parentheses. The name is ordinary employer-list typography, visually confirmed. This did not revisit the previously rejected November 1999 newspaper title artwork.",
+          "sources": [
+            {
+              "url": "https://negotech.service.canada.ca/eng/agreements/10/1033101a.pdf",
+              "assessment": "PDF page 114 (printed 104) employer names only; no Terrace corporate mark in the relevant region.",
+              "sha256": "0cb6477d5e2da04c2bb1fd60ff7f1ffa91cbb0524553e30b2d21f19c6caa2a70",
+              "visually_inspected_pdf_pages": [
+                114
+              ]
+            }
+          ],
+          "remaining_leads": [
+            "Original council-authored correspondence or native recruitment art; no new period domain established."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false
+        },
+        {
+          "body_id": "central-cariboo-chilcotin-health-council",
+          "name": "Central Cariboo Chilcotin Health Council",
+          "query_log_ids": [
+            "c4_q1",
+            "c4_q4",
+            "c4_q9"
+          ],
+          "inspection_depth": "indexed source research",
+          "notes": "Period-domain/contact and 1999 publication searches returned financial/statutory references and client lists without identity artwork. The 2001 Patients First report's indexed appendix names Tracy MacDonald for Central Cariboo-Chilcotin Community Health Council, submission 33, at Quesnel on 19 October 2001. This is a concrete original-submission lead, not recovered council letterhead; the original brief has not been obtained.",
+          "sources": [
+            {
+              "url": "https://lims.leg.bc.ca/pcms/file/14438/Rpt-HEALTH-37-2-PatientsFirst-2001-DEC-10.pdf",
+              "assessment": "Indexed appendix identifies council submission 33; report name-list does not verify artwork.",
+              "access": "index-only"
+            },
+            {
+              "url": "https://www.cpmsnational.com/clients/our-client-list",
+              "assessment": "Indexed client-name list; no original period council artwork obtained.",
+              "access": "index-only"
+            }
+          ],
+          "remaining_leads": [
+            "Original submission 33 to the 2001 Select Standing Committee on Health; not the final report's appendix.",
+            "No new graphic or trustworthy historical council web domain located."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false
+        },
+        {
+          "body_id": "south-cariboo-community-health-council",
+          "name": "South Cariboo Community Health Council",
+          "query_log_ids": [
+            "c4_q4",
+            "c4_q9"
+          ],
+          "inspection_depth": "indexed source research",
+          "notes": "New 1999 and email/domain searches did not yield a council-authored logo source. Government schedules, present-day health-service pages and unrelated organizations were excluded. Compared with PR 9: the architectural client credit and CRN Tool Kit were already inspected leads and were not re-counted or re-downloaded.",
+          "sources": [],
+          "remaining_leads": [
+            "Original council annual report, recruitment ad or correspondence. No new verifiable artwork source established."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false
+        },
+        {
+          "body_id": "cranbrook-health-council",
+          "name": "Cranbrook Health Council",
+          "query_log_ids": [
+            "c4_q4",
+            "c4_q5",
+            "c4_q7",
+            "c4_q8",
+            "c4_q9",
+            "c4_q10"
+          ],
+          "inspection_depth": "indexed source research",
+          "notes": "Native-PDF, period website, BCMJ and email searches did not yield an attributable vector. A Canadian Nurse indexed issue mentions Cranbrook Health Council but source issue/date/page and artwork remain unverified. It was not fetched through the already-failed CNA routes. Current directories and biographies are name sightings only; no successor or hospital mark was substituted.",
+          "sources": [
+            {
+              "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/8a5c775b-020d-5481-e8ae-f4d14464ab68_file.pdf",
+              "assessment": "Cranbrook council named in indexed journal text. Actual document and relevant page not obtained; do not treat a nearby search-snippet email as the council's address without source context.",
+              "access": "index-only"
+            }
+          ],
+          "remaining_leads": [
+            "Identify the exact Canadian Nurse issue and original recruitment-ad page using a working public archive; artwork still unverified."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false
+        },
+        {
+          "body_id": "nelson-and-area-health-council",
+          "name": "Nelson and Area Health Council",
+          "query_log_ids": [
+            "c4_q4",
+            "c4_q5",
+            "c4_q6",
+            "c4_q9",
+            "c4_q10"
+          ],
+          "inspection_depth": "indexed publication research and selected PDF employer-list occurrence visually inspected",
+          "notes": "Searched for an original annual publication and the council's submission to the Romanow Commission. Results established name-list leads only, not the submitted brief. The newly downloaded collective agreement's PDF page 114 names Victorian Hospital of Kaslo with Nelson and Area Health Council in parentheses; this is ordinary employer-list typography. The original 2001 Health Campus Business Case remains an earlier unresolved lead; no artwork from it was obtained.",
+          "sources": [
+            {
+              "url": "https://negotech.service.canada.ca/eng/agreements/10/1033101a.pdf",
+              "assessment": "PDF page 114 names Victorian Hospital of Kaslo and Nelson and Area Health Council as ordinary list text, with no council logo in that region.",
+              "sha256": "0cb6477d5e2da04c2bb1fd60ff7f1ffa91cbb0524553e30b2d21f19c6caa2a70",
+              "visually_inspected_pdf_pages": [
+                114
+              ]
+            },
+            {
+              "url": "https://www2.gov.bc.ca/assets/gov/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer/reports-publications/annual-reports/phoannual1999.pdf",
+              "assessment": "1999 PHO annual-report indexed list names the council; no corporate artwork established by this index result.",
+              "access": "index-only"
+            }
+          ],
+          "remaining_leads": [
+            "Original Nelson submission to the 2001–2002 Romanow Commission; no original brief URL established.",
+            "Original Health Campus Business Case noted in the 2001 legislative journals, already a baseline lead."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false
+        },
+        {
+          "body_id": "greater-trail-community-health-council",
+          "name": "Greater Trail Community Health Council",
+          "query_log_ids": [
+            "c4_q10"
+          ],
+          "inspection_depth": "new municipal-record leads and failed direct public downloads",
+          "notes": "Found indexed Montrose minutes dated 6 November and 3 December 2001 naming Greater Trail council and correspondence. Both direct public PDF requests returned HTTP 503, so no actual pages or artwork were inspected. Indexed excerpts refer to letters and meeting business; they do not prove attached letterheads. Did not repeat the earlier 190-page remedial-options report inspection.",
+          "sources": [
+            {
+              "url": "https://dev.montrose.ca/wp-content/uploads/2024/08/11_nov6-2001.pdf",
+              "assessment": "Indexed council correspondence reference; download failed HTTP 503.",
+              "access": "http-503"
+            },
+            {
+              "url": "https://dev.montrose.ca/wp-content/uploads/2024/08/12_dec3-2001.pdf",
+              "assessment": "Indexed draft letter/council reference; download failed HTTP 503.",
+              "access": "http-503"
+            }
+          ],
+          "remaining_leads": [
+            "Recover actual November/December 2001 Montrose record files or original health-council correspondence; current indexed names do not verify a mark."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false
+        }
+      ],
+      "shared_failed_route": {
+        "url": "https://web.archive.org/cdx/search/cdx?url=*.hnet.bc.ca/*&output=json&filter=statuscode:200&filter=mimetype:application/pdf&collapse=urlkey&fl=timestamp,original,mimetype&to=2002&limit=1000",
+        "result": "Timed out after 35 seconds with zero bytes; no index coverage claim."
+      },
+      "limits": [
+        "This pass revisited nine named bodies, not all remaining historical health bodies.",
+        "A failed URL, empty index, name-only list or ordinary title does not establish that the organization never had a logo.",
+        "Native text and PDF rule paths were not counted as corporate vector artwork. Raster instances were inspected with get_image_info() as well as page path inventory.",
+        "No tracing, redrawing, recolouring or successor-logo substitution was performed.",
+        "No private account access, contacting people, repository edits or access-control bypass was attempted.",
+        "Raw downloaded PDFs/HTML and page images are research evidence only; no logo assets were accepted."
+      ],
+      "searchLog": {
+        "date": "2026-10-30",
+        "timezone": "America/Creston",
+        "query_count": 38,
+        "note": "Titles/URLs only. Expired signed S3 query strings removed; indexed CNA results are leads and were not fetched in this pass.",
+        "batches": [
+          {
+            "batch": "c4_q1",
+            "engine": "system2",
+            "queries": [
+              "\"Quesnel and District Community Health Council\" (\"www\" OR \"@\" OR \"website\")",
+              "\"Sea to Sky Community Health Council\" (\"www\" OR \"@\" OR \"website\")",
+              "\"Kitimat and Area Health Council\" (\"www\" OR \"@\" OR \"website\")",
+              "\"Central Cariboo Chilcotin Health Council\" (\"www\" OR \"@\" OR \"website\")"
+            ],
+            "sources": []
+          },
+          {
+            "batch": "c4_q2",
+            "engine": "system1",
+            "queries": [
+              "\"Quesnel\" \"Health Council\" \"www\"",
+              "\"Sea to Sky\" \"Health Council\" website",
+              "\"Kitimat\" \"Health Council\" \"www\""
+            ],
+            "sources": [
+              {
+                "title": "Vol. 45 No. 3 — 38/2002",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v45n03_38-2002"
+              },
+              {
+                "title": "Regional Health Boards Regulation",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001"
+              },
+              {
+                "title": "Brian Kines: Executive Director | Divisions of Family Practice",
+                "url": "https://divisionsbc.ca/surrey-north-delta-menu/brian-kines-executive-director"
+              },
+              {
+                "title": "Patient Resources | Sea to Sky Division",
+                "url": "https://www.seatoskydivision.com/patient-resources"
+              },
+              {
+                "title": "Healthcare | City of Quesnel",
+                "url": "https://www.quesnel.ca/our-community/moving-quesnel/healthcare"
+              },
+              {
+                "title": "Businesses - Downtown Quesnel",
+                "url": "https://www.downtownquesnel.com/businesses/profile/67/quesnel_public_health_unit/"
+              },
+              {
+                "title": "Vol. 44 No. 25 — 293/2001",
+                "url": "https://free.bcpublications.ca/civix/document/id/bcgaz2/bcgaz2/v44n25_293-2001"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 27, No. 19)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2000resume19"
+              },
+              {
+                "title": "Regional health authorities - Province of British Columbia",
+                "url": "https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/partners/health-authorities/regional-health-authorities"
+              },
+              {
+                "title": "Kitimat General Hospital and Health Centre | HealthLink BC",
+                "url": "https://www.healthlinkbc.ca/find-care/find-health-services/program/kitimat-general-hospital-and-health-centre"
+              },
+              {
+                "title": "Quesnel Urgent and Primary Care Centre | HealthLink BC",
+                "url": "https://www.healthlinkbc.ca/find-care/find-health-services/program/quesnel-urgent-and-primary-care-centre"
+              }
+            ]
+          },
+          {
+            "batch": "c4_q3",
+            "engine": "system2",
+            "queries": [
+              "\"Quesnel\" \"health council\" logo",
+              "\"Sea to Sky\" \"Health Council\" -site:bclaws.gov.bc.ca -site:free.bcpublications.ca",
+              "\"Terrace\" \"Health Council\" \"hnet\"",
+              "\"Kitimat\" \"Health Council\" \"hnet\""
+            ],
+            "sources": [
+              {
+                "title": "..............",
+                "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/2/22841/20010703_The_Chief.pdf"
+              },
+              {
+                "title": "..................",
+                "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/2/22472/20000208_The_Chief_Squamish_B_C.pdf"
+              },
+              {
+                "title": "Southern Stl’atl’imx Health Society",
+                "url": "https://www.fnha.ca/Documents/SSHS_HD_posting.pdf"
+              },
+              {
+                "title": "Hansard -- Volume 19, Number 21 -- Thursday, May 18, 2000",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th4th/20000518pm-Hansard-v19n21.htm"
+              },
+              {
+                "title": "Reference Guidelines for Safe Patient Handling HSAH None |",
+                "url": "https://www.mtpinnacle.com/pdfs/safe_patient_handling-guidelines.pdf"
+              },
+              {
+                "title": "...............................................",
+                "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/1/21838/19970909_The_Chief_Squamish_B_C.pdf"
+              },
+              {
+                "title": "MEETING NO",
+                "url": "https://quesnel.civicweb.net/document/848/"
+              },
+              {
+                "title": "Brian Kines: Executive Director | Divisions of Family Practice",
+                "url": "https://divisionsbc.ca/surrey-north-delta-menu/brian-kines-executive-director"
+              },
+              {
+                "title": "South Peace Health Council · 11100 - 13th Street, Dawson Creek, BC V1G 3W8",
+                "url": "https://opengovca.com/charity/868654336RR0001"
+              },
+              {
+                "title": "Hansard -- Volume 20, Number 9 -- Thursday, May 25, 1995",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/35th4th/19950525pm-Hansard-v20n9.htm"
+              },
+              {
+                "title": "Our Clients",
+                "url": "https://www.cpmsnational.com/clients/our-client-list"
+              },
+              {
+                "title": "Children and Youth — Issue No. 10 — Wednesday, June 11, 2014 (HTML)",
+                "url": "https://lims.leg.bc.ca/hdms/file/Committees/40th2nd/cay/20140611am-ChildrenYouth-Vancouver-n10.htm"
+              },
+              {
+                "title": "Quesnel & District Hospice Palliative Care Association · Box 4537, Quesnel, BC V2J 3J8",
+                "url": "https://opengovca.com/charity/119107753RR0001"
+              },
+              {
+                "title": "About Us: Board of Directors",
+                "url": "https://www.heabc.bc.ca/Page1696.aspx"
+              },
+              {
+                "title": "Browse Supports | HelpStartsHere",
+                "url": "https://helpstartshere.gov.bc.ca/resources?from=word_cloud&key=Wellness&latlon_1%5Bvalue%5D=&latlon_2%5Bsource_configuration%5D%5Borigin%5D%5Blat%5D=54.226707764386695&latlon_2%5Bsource_configuration%5D%5Borigin%5D%5Blon%5D=-125.99121093750001&latlon_2%5Bvalue%5D=50000&latlon_boundary%5Blat_north_east%5D=58.676937672586924&latlon_boundary%5Blat_south_west%5D=49.23912083246701&latlon_boundary%5Blng_north_east%5D=-116.9384765625&latlon_boundary%5Blng_south_west%5D=-135.04394531250003&page=5%2C8%2C6&tab_id=articles"
+              },
+              {
+                "title": "Regional Health Boards Regulation",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001"
+              },
+              {
+                "title": "Reaching for the Top: A Report by the Advisor on Healthy Children and Youth [Health Canada, 2007] - Canada.ca",
+                "url": "https://www.canada.ca/en/health-canada/services/healthy-living/reports-publications/children/reaching-top-report-advisor-healthy-children-youth.html"
+              },
+              {
+                "title": "Browse Supports | HelpStartsHere",
+                "url": "https://helpstartshere.gov.bc.ca/resources?from=word_cloud&key=Wellness&latlon_1%5Bvalue%5D=&latlon_2%5Bsource_configuration%5D%5Borigin%5D%5Blat%5D=54.226707764386695&latlon_2%5Bsource_configuration%5D%5Borigin%5D%5Blon%5D=-125.99121093750001&latlon_2%5Bvalue%5D=50000&latlon_boundary%5Blat_north_east%5D=58.676937672586924&latlon_boundary%5Blat_south_west%5D=49.23912083246701&latlon_boundary%5Blng_north_east%5D=-116.9384765625&latlon_boundary%5Blng_south_west%5D=-135.04394531250003&page=%2C8%2C4&tab_id=articles"
+              },
+              {
+                "title": "Vol. 44 No. 25 — 293/2001",
+                "url": "https://free.bcpublications.ca/civix/document/id/bcgaz2/bcgaz2/v44n25_293-2001"
+              },
+              {
+                "title": "Quesnel & District Seniors' Society - 461 Carson Ave, Quesnel, BC",
+                "url": "https://www.yellowpages.ca/bus/British-Columbia/Quesnel/Quesnel-District-Seniors-Society/1290846.html"
+              },
+              {
+                "title": "NEWS RELEASE",
+                "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/2000/305.asp"
+              },
+              {
+                "title": "Vol. 45 No. 3 — 38/2002",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v45n03_38-2002"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 28, No. 12)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume12"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 27, No. 3)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2000resume03"
+              },
+              {
+                "title": "Avery Health Clinic The - Opening Hours - 644 Front, Quesnel, BC",
+                "url": "https://www.yellowpages.ca/bus/British-Columbia/Quesnel/Avery-Health-Clinic-The/6093451.html"
+              },
+              {
+                "title": "Chris Kempling and the BCCT – CERC",
+                "url": "https://catholiceducation.org/en/education/chris-kempling-and-the-bcct.html"
+              },
+              {
+                "title": "Katalinic B Z Dr - Opening Hours - 545 Front St, Quesnel, BC",
+                "url": "https://www.yellowpages.ca/bus/British-Columbia/Quesnel/Katalinic-B-Z-Dr/4009915.html"
+              },
+              {
+                "title": "Search the Quesnel Directory of Local Business Listings | YellowPages.ca",
+                "url": "https://www.yellowpages.ca/locations/British-Columbia/Quesnel"
+              }
+            ]
+          },
+          {
+            "batch": "c4_q4",
+            "engine": "system2",
+            "queries": [
+              "\"Cranbrook Health Council\" filetype:pdf -site:bclaws.gov.bc.ca -site:negotech.service.canada.ca",
+              "\"Nelson and Area Health Council\" filetype:pdf -site:bclaws.gov.bc.ca -site:negotech.service.canada.ca",
+              "\"Central Cariboo Chilcotin Health Council\" \"1999\" -site:bclaws.gov.bc.ca",
+              "\"South Cariboo\" \"Health Council\" \"1999\" -site:bclaws.gov.bc.ca"
+            ],
+            "sources": [
+              {
+                "title": "Public Accounts",
+                "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-public-bodies-fia.pdf"
+              },
+              {
+                "title": "The Hough Memorial Cancer Fund Society · Po Box 4311, Williams Lake, BC V2G 2V4",
+                "url": "https://opengovca.com/charity/119237915RR0001"
+              },
+              {
+                "title": "A meeting of the North Cariboo Joint Planning Committee was held on Wednesday, June 15, 2005 commencing at 7:05 p",
+                "url": "https://quesnel.civicweb.net/document/141/"
+              },
+              {
+                "title": "Hansard -- Volume 18, Number 9 -- Thursday, March 30, 2000",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th4th/20000330pm-Hansard-v18n9.htm"
+              },
+              {
+                "title": "Ministerial Order 240/1997",
+                "url": "https://free.bcpublications.ca/civix/document/id/mo/hmo/m0240_1997"
+              },
+              {
+                "title": "Microsoft Word - CMDB HFPI 2004.doc",
+                "url": "https://publications.gc.ca/Collection/H115-17-2002E.pdf"
+              },
+              {
+                "title": "Canadian M",
+                "url": "https://publications.gc.ca/collections/Collection-R/H115-17-2001E.pdf"
+              },
+              {
+                "title": "Hansard -- Volume 16, Number 14 -- Tuesday, June 29, 1999",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th3rd/19990629am-Hansard-v16n14.htm"
+              },
+              {
+                "title": "Postal V2C - Canadian Charity Organizations",
+                "url": "https://opengovca.com/charity?postal=V2C"
+              },
+              {
+                "title": "Vol. 44 No. 25 — 293/2001",
+                "url": "https://free.bcpublications.ca/civix/document/id/bcgaz2/bcgaz2/v44n25_293-2001"
+              },
+              {
+                "title": "Consolidated Revenue Fund Detailed Schedules of Payments - rodeo",
+                "url": "https://doczz.net/doc/2652865/consolidated-revenue-fund-detailed-schedules-of-payments"
+              },
+              {
+                "title": "Regional Health Boards Regulation",
+                "url": "https://free.bcpublications.ca/civix/document/id/loo89/loo89/293_2001"
+              },
+              {
+                "title": "The Cariboo Family Enrichment Centre Society · Box 2427, 100 Mile House, BC V0K 2E0",
+                "url": "https://opengovca.com/charity/126175413RR0001"
+              },
+              {
+                "title": "Hansard -- Volume 11, Number 24 -- Friday, July 17, 1998",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th3rd/19980717am-Hansard-v11n24.htm"
+              },
+              {
+                "title": "Display Location: Mount Saint Francis Seniors Home - Urban Exploration Resource",
+                "url": "https://www.uer.ca/locations/show.asp?locid=32883"
+              },
+              {
+                "title": "Display Location: Mount Saint Francis Seniors Home - Urban Exploration Resource",
+                "url": "https://www.uer.ca/locations/show.asp?locid=32883&pp="
+              },
+              {
+                "title": "HEALTH GOALS APPROVED FOR BRITISH COLUMBIA",
+                "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1998/027.asp"
+              },
+              {
+                "title": "Hansard -- Volume 2, Number 15, Part 2 -- Wednesday, August 7, 1996",
+                "url": "https://api.lims.leg.bc.ca/hdms/file/Debates/36th1st/19960807pm2-Hansard-v2n15.htm"
+              },
+              {
+                "title": "Our Clients",
+                "url": "https://www.cpmsnational.com/clients/our-client-list"
+              },
+              {
+                "title": "Postal V1L - Canadian Charity Organizations",
+                "url": "https://opengovca.com/charity?postal=V1L"
+              },
+              {
+                "title": "Hansard -- Volume 20, Number 17 -- Tuesday, June 27, 2000",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th4th/20000627pm-Hansard-v20n17.htm"
+              },
+              {
+                "title": "Medicine Hat News Newspaper Archives, Aug 8, 2000, p. 1",
+                "url": "https://newspaperarchive.com/medicine-hat-news-aug-08-2000-p-1/"
+              },
+              {
+                "title": "Hansard -- Volume 21, Number 2 -- Thursday, December 7, 2000",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th4th/20001207pm-Hansard-v21n2.htm"
+              },
+              {
+                "title": "Synod of The Diocese of Kootenay · St Michael and All Angels Church · 701 Ward Street, Nelson, BC V1L 1T3",
+                "url": "https://opengovca.com/charity/129144549RR0004"
+              },
+              {
+                "title": "Future of Health Care in Canada | PDF | Medicare (United States) | Canada",
+                "url": "https://www.scribd.com/document/86057587/Building-on-Values"
+              },
+              {
+                "title": "Obituary of Enid Rhoda Barnhardt |",
+                "url": "https://www.e-know.ca/announcements/obituary/obituary-of-enid-rhoda-barnhardt/"
+              },
+              {
+                "title": "Hansard -- Volume 5, Number 6 -- Wednesday, April 3, 2002",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/37th3rd/20020403pm-Hansard-v5n6.htm"
+              },
+              {
+                "title": "Hansard -- Monday, March 8, 2004 p.m. -- Vol. 21, No. 9 (HTML)",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/37th5th/20040308pm-Hansard-v21n9.htm"
+              },
+              {
+                "title": "Health Information & Services near Elk Valley & South Country Health Council Fernie BC | YellowPages.ca™",
+                "url": "https://www.yellowpages.ca/search/si/1/Health%2BInformation%2B%26%2BServices/Elk%2BValley%2B%26%2BSouth%2BCountry%2BHealth%2BCouncil%2BFernie%2BBC"
+              },
+              {
+                "title": "Hansard — Thursday, April 11, 2024 p.m. — Number 413 (HTML)",
+                "url": "https://api.lims.leg.bc.ca/hdms/file/Debates/42nd5th/20240411pm-Hansard-n413.html"
+              },
+              {
+                "title": "Debates (Hansard) No. 128 - September 26, 2003 (37-2) - House of Commons of Canada",
+                "url": "https://www.noscommunes.ca/documentviewer/en/37-2/house/sitting-128/hansard"
+              },
+              {
+                "title": "Concrete Actions for Systemic Change",
+                "url": "https://paperzz.com/doc/7166300/concrete-actions-for-systemic-change"
+              },
+              {
+                "title": "Canada Health Act Annual Report 2022-2023 - Canada.ca",
+                "url": "https://www.canada.ca/en/health-canada/services/publications/health-system-services/canada-health-act-annual-report-2022-2023.html"
+              },
+              {
+                "title": "Hansard — Wednesday, May 8, 2024, p.m., Issue 432",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/42nd5th/20240508pm-Hansard-n432.html"
+              },
+              {
+                "title": "Hansard — Monday, April 24, 2023 p.m. — Number 311 (HTML)",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/42nd4th/20230424pm-Hansard-n311.html"
+              },
+              {
+                "title": "Controls Control Systems & Regulators près de Nelson And Area Health Council Nelson BC | PagesJaunes.ca(MC)",
+                "url": "https://www.pagesjaunes.ca/search/si/1/Controls%2C%2BControl%2BSystems%2B%26%2BRegulators/Nelson%2BAnd%2BArea%2BHealth%2BCouncil%2BNelson%2BBC"
+              }
+            ]
+          },
+          {
+            "batch": "c4_q5",
+            "engine": "system2",
+            "queries": [
+              "\"Nelson and Area Health Council\" Romanow",
+              "Squamish library historical newspapers digital collections archive",
+              "\"Quesnel\" \"health council\" \"hnet.bc.ca\"",
+              "\"Cranbrook\" \"health council\" website 2001"
+            ],
+            "sources": [
+              {
+                "title": "Local History | Squamish Public Library",
+                "url": "https://squamishlibrary.ca/local-history/"
+              },
+              {
+                "title": "Squamish Public Library",
+                "url": "https://squamishlibrary.ca/"
+              },
+              {
+                "title": "Points to the Past | Squamish Public Library",
+                "url": "https://squamishlibrary.ca/online-resources/points-to-the-past/"
+              },
+              {
+                "title": "PLGR - Squamish Public Library - 2024",
+                "url": "https://www2.gov.bc.ca/assets/gov/residents/sports-and-recreation/arts-culture/public-libraries/public-library-grant-reports/2024/plgr_-_squamish_public_library_-_2024.pdf"
+              },
+              {
+                "title": "Newspapers - British Columbia | Surrey Libraries",
+                "url": "https://surreylibraries.ca/family-history/newspapers-british-columbia"
+              },
+              {
+                "title": "Newspapers - Current & Historical | Vancouver Public Library",
+                "url": "https://www.vpl.ca/borrowing/collections/newspapers"
+              },
+              {
+                "title": "Online Library | Surrey Libraries",
+                "url": "https://www.surreylibraries.ca/services/online-library"
+              },
+              {
+                "title": "Books & Media | Surrey Libraries",
+                "url": "https://www.surreylibraries.ca/books-media"
+              },
+              {
+                "title": "Online Resources | Squamish Public Library",
+                "url": "https://squamishlibrary.ca/online-resources/"
+              },
+              {
+                "title": "Newspapers - Indigenous | Surrey Libraries",
+                "url": "https://www.surreylibraries.ca/family-history/newspapers-indigenous"
+              },
+              {
+                "title": "Magazines and Newspapers | Libraries",
+                "url": "https://westvancouverschools.ca/libraries/magazines-and-newspapers"
+              },
+              {
+                "title": "Digitization Station | Squamish Public Library",
+                "url": "https://squamishlibrary.ca/digitization-station/"
+              },
+              {
+                "title": "Archives & Cultural Collection - Squamish Nation",
+                "url": "https://www.squamish.net/divisions/territory-culture-services/language-cultural-affairs/archives-cultural-collection/"
+              },
+              {
+                "title": "SQUAMISH PUBLIC LIBRARY                                                                 LIBRARY COLLECTIONS POLICY",
+                "url": "https://squamishlibrary.ca/wp-content/uploads/2025/12/5.5-Selections-of-Periodicals-and-Newspapers.pdf"
+              },
+              {
+                "title": "Squamish Public Library",
+                "url": "https://squamish.ca/assets/real-estate/FINAL-SPL-future-needs-study-January-24-2020.pdf"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 28, No. 11)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume11"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 28, No. 8)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume08"
+              },
+              {
+                "title": "Microfilmed and bound/boxed newspaper holdings of the British Columbia",
+                "url": "https://www.royalbcmuseum.bc.ca/archives/tools/guides-indexes-and-inventories/mirconewspapers2024"
+              },
+              {
+                "title": "A Guide to Researching Family History",
+                "url": "https://www.surreylibraries.ca/sites/default/files/IndigenousMetisGuide.pdf"
+              },
+              {
+                "title": "Digitization Assistant",
+                "url": "https://squamishlibrary.ca/wp-content/uploads/2024/03/Squamish-Public-Library-Digitization-Assistant.pdf"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 26, No. 6)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1999resume06"
+              },
+              {
+                "title": "Vol. 44 No. 25 — 293/2001",
+                "url": "https://free.bcpublications.ca/civix/document/id/bcgaz2/bcgaz2/v44n25_293-2001"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 26, No. 12)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1999resume12"
+              },
+              {
+                "title": "Hansard -- Volume 19, Number 19 -- Wednesday, May 17, 2000",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th4th/20000517pm-Hansard-v19n19.htm"
+              },
+              {
+                "title": "Display Location: Mount Saint Francis Seniors Home - Urban Exploration Resource",
+                "url": "https://www.uer.ca/locations/show.asp?locid=32883"
+              },
+              {
+                "title": "MINISTER ANNOUNCES NEW SENIORS' ADVISORY COUNCIL MEMBERS",
+                "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1998/158.asp"
+              },
+              {
+                "title": "Display Location: Mount Saint Francis Seniors Home - Urban Exploration Resource",
+                "url": "https://www.uer.ca/locations/show.asp?locid=32883&pp="
+              },
+              {
+                "title": "Synod of The Diocese of Kootenay · St Michael and All Angels Church · 701 Ward Street, Nelson, BC V1L 1T3",
+                "url": "https://opengovca.com/charity/129144549RR0004"
+              },
+              {
+                "title": "Postal V1L - Canadian Charity Organizations",
+                "url": "https://opengovca.com/charity?postal=V1L"
+              },
+              {
+                "title": "Regional Health Boards Regulation",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/statreg/293_2001"
+              },
+              {
+                "title": "HEALTH GOALS APPROVED FOR BRITISH COLUMBIA",
+                "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1998/027.asp"
+              },
+              {
+                "title": "Hansard -- Monday, October 18, 2004 a.m. -- Vol. 26, No. 8 (HTML)",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/37th5th/20041018am-Hansard-v26n8.htm"
+              },
+              {
+                "title": "Vol. 45 No. 3 — 38/2002",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v45n03_38-2002"
+              },
+              {
+                "title": "British Columbia Society for The Prevention of Cruelty To Animals Nelson Branch · Box 66, Nelson, BC V1L 5P7",
+                "url": "https://opengovca.com/charity/887265197RR0001"
+              },
+              {
+                "title": "Hansard -- Monday, March 29, 2004 a.m. -- Vol. 22, No. 10 (HTML)",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/37th5th/20040329am-Hansard-v22n10.htm"
+              },
+              {
+                "title": "Future of Health Care in Canada | PDF | Medicare (United States) | Canada",
+                "url": "https://www.scribd.com/document/86057587/Building-on-Values"
+              },
+              {
+                "title": "Consolidated Revenue Fund Detailed Schedules of Payments - rodeo",
+                "url": "https://doczz.net/doc/2652865/consolidated-revenue-fund-detailed-schedules-of-payments"
+              },
+              {
+                "title": "R.P. et al. v. H.P. et al. ([2004] B.C.T.C. 740 (SC),2004 BCSC 740) - vLex Canada",
+                "url": "https://ca.vlex.com/vid/r-p-v-h-681444041"
+              },
+              {
+                "title": "List of defunct newspapers of Canada",
+                "url": "https://en.wikipedia.org/wiki/List_of_defunct_newspapers_of_Canada"
+              },
+              {
+                "title": "High-res scans of every back issue of the Sun and Province with your library card",
+                "url": "https://www.reddit.com/r/vancouver/comments/mfu2ye",
+                "ref": "turn280reddit43"
+              },
+              {
+                "title": "St. Marys Library highlights countywide borrowing, expanded digital access",
+                "url": "https://www.stratfordtoday.ca/local-news/st-marys-library-highlights-countywide-borrowing-expanded-digital-access-12729311",
+                "ref": "turn280news44"
+              },
+              {
+                "title": "Newspapers in the United States",
+                "url": "https://en.wikipedia.org/wiki/Newspapers_in_the_United_States"
+              },
+              {
+                "title": "List of newspaper archives",
+                "url": "https://en.wikipedia.org/wiki/List_of_newspaper_archives"
+              },
+              {
+                "title": "Xwi7xwa Library",
+                "url": "https://en.wikipedia.org/wiki/Xwi7xwa_Library"
+              },
+              {
+                "title": "Surrey Libraries",
+                "url": "https://en.wikipedia.org/wiki/Surrey_Libraries"
+              },
+              {
+                "title": "Accessing archived newspapers from Canada in USA",
+                "url": "https://www.reddit.com/r/research/comments/1t5p487/accessing_archived_newspapers_from_canada_in_usa/",
+                "ref": "turn280reddit49"
+              }
+            ]
+          },
+          {
+            "batch": "c4_q6",
+            "engine": "system2",
+            "queries": [
+              "site:library.biblioboard.com \"Squamish\" \"2001\"",
+              "\"Nelson\" \"Health Council\" \"Romanow\" submission",
+              "\"Quesnel\" \"Health Council\" \"2001\" letter"
+            ],
+            "sources": [
+              {
+                "title": "Resume of Orders in Council (Vol. 28, No. 12)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume12"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 26, No. 6)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1999resume06"
+              },
+              {
+                "title": "Vol. 44 No. 25 — 293/2001",
+                "url": "https://free.bcpublications.ca/civix/document/id/bcgaz2/bcgaz2/v44n25_293-2001"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 27, No. 3)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2000resume03"
+              },
+              {
+                "title": "Regional Health Boards Regulation",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001"
+              },
+              {
+                "title": "Hansard -- Volume 20, Number 17 -- Tuesday, June 27, 2000",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th4th/20000627pm-Hansard-v20n17.htm"
+              },
+              {
+                "title": "Hansard -- Volume 16, Number 16 -- Monday, July 5, 1999",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th3rd/19990705pm-Hansard-v16n16.htm"
+              },
+              {
+                "title": "Hansard -- Volume 16, Number 14 -- Tuesday, June 29, 1999",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th3rd/19990629am-Hansard-v16n14.htm"
+              },
+              {
+                "title": "John Kurvink Email & Phone Number | Town of Oliver - ContactOut",
+                "url": "https://contactout.com/John-Kurvink-15885906"
+              },
+              {
+                "title": "Quesnel & District Hospice Palliative Care Association · Box 4537, Quesnel, BC V2J 3J8",
+                "url": "https://opengovca.com/charity/119107753RR0001"
+              },
+              {
+                "title": "Canada's universal health-care system: achieving its potential - PMC",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/7138369/"
+              },
+              {
+                "title": "Canada's universal health-care system: achieving its potential - ScienceDirect",
+                "url": "https://www.sciencedirect.com/science/article/abs/pii/S0140673618301818"
+              }
+            ]
+          },
+          {
+            "batch": "c4_q7",
+            "engine": "system1",
+            "queries": [
+              "\"Sea to Sky\" \"Health Council\" logo -site:bclaws.gov.bc.ca -site:free.bcpublications.ca",
+              "\"Quesnel\" \"health council\" filetype:pdf -site:bclaws.gov.bc.ca -site:free.bcpublications.ca -site:gov.bc.ca",
+              "\"Cranbrook\" \"health council\" \"bcmj\"",
+              "\"Terrace\" \"health council\" \"cmaj\""
+            ],
+            "sources": [
+              {
+                "title": "Regional Health Boards Regulation",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001"
+              },
+              {
+                "title": "Vol. 44 No. 25 — 293/2001",
+                "url": "https://free.bcpublications.ca/civix/document/id/bcgaz2/bcgaz2/v44n25_293-2001"
+              },
+              {
+                "title": "Ombuds2001ARforPDF",
+                "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/2001-Annual-Report-of-the-Ombudsman.pdf"
+              },
+              {
+                "title": "Woodlot1",
+                "url": "https://lims.leg.bc.ca/pcms/file/14438/Rpt-HEALTH-37-2-PatientsFirst-2001-DEC-10.pdf"
+              },
+              {
+                "title": "Vol. 45 No. 3 — 38/2002",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v45n03_38-2002"
+              },
+              {
+                "title": "SEPTEMBER 2001 VOLUME 97 NUMBER 8",
+                "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/8de47524-f9d6-87da-7be2-8a87771997ec_file.pdf"
+              },
+              {
+                "title": "Hansard -- Volume 19, Number 21 -- Thursday, May 18, 2000",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th4th/20000518pm-Hansard-v19n21.htm"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 27, No. 19)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2000resume19"
+              },
+              {
+                "title": "EXCERPT FROM FEBRUARY 23, 1998 COUNCIL MEETING:",
+                "url": "https://quesnel.civicweb.net/document/1150/"
+              }
+            ]
+          },
+          {
+            "batch": "c4_q8",
+            "engine": "system2",
+            "queries": [
+              "\"qdchc.com\"",
+              "\"Cranbrook\" \"Health Council\" \"E-mail\"",
+              "\"Kitimat\" \"Health Council\" \"E-mail\"",
+              "\"Sea to Sky\" \"Health Council\" \"E-mail\""
+            ],
+            "sources": [
+              {
+                "title": "QINGDAO CHC, QDCHC, China Conveyor Belt Manufacturer, Rubbber Conveyor Belts, Conveyor belts, China Conveyor Belts Manufacturer, Rubber Sheets, Rubber profiles, rubber products, warehouse tents, container shelters, Valves, FRP Guarding, FRP Grating,15092067529",
+                "url": "https://qdchc.com/"
+              },
+              {
+                "title": "QINGDAO CHC, QDCHC, Конвейерные ленты, China Conveyor Belt Manufacturer, Rubbber Conveyor Belts, Conveyor belts, China Conveyor Belts Manufacturer, Rubber Sheets, Rubber profiles, rubber products, warehouse tents, container shelters, Valves, FRP Guarding, FRP Grating,15092067529; Composite Hose;BS EN 13765; GB∕T 37997 ; ISO 27126",
+                "url": "https://www.qdchc.com/"
+              },
+              {
+                "title": "Qingdao CHC Industry and Trade Co., Ltd",
+                "url": "https://www.qdchc.com/contact-us.html"
+              },
+              {
+                "title": "About us, CHC, QDCHC",
+                "url": "https://www.qdchc.com/about-us.html"
+              },
+              {
+                "title": "The CRN Tool Kit",
+                "url": "https://bccrns.ca/wp-content/uploads/2019/09/Community_Response_Network_Tool_Kit_2001.pdf"
+              },
+              {
+                "title": "ON-'Nommor",
+                "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/c448426e-17d4-1d22-44c9-cc9795c38bd8_file.pdf"
+              },
+              {
+                "title": "Southern Stl’atl’imx Health Society",
+                "url": "https://www.fnha.ca/Documents/SSHS_HD_posting.pdf"
+              },
+              {
+                "title": "170.106.96.0/19 - bgp.he.net",
+                "url": "https://bgp.he.net/net/170.106.96.0/19"
+              },
+              {
+                "title": "uPI :I5P11iI:II4I]",
+                "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/8a5c775b-020d-5481-e8ae-f4d14464ab68_file.pdf"
+              },
+              {
+                "title": "SPECIAL INSIGH T",
+                "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/feffc54d-a302-ed72-cb02-f3b4389e3a5e_file.pdf"
+              }
+            ]
+          },
+          {
+            "batch": "c4_q9",
+            "engine": "system1",
+            "queries": [
+              "\"Cranbrook Health Council\" \"@\"",
+              "\"Central Cariboo\" \"Health Council\" \"@\"",
+              "\"South Cariboo\" \"Health Council\" \"@\"",
+              "\"Nelson and Area Health Council\" \"@\""
+            ],
+            "sources": [
+              {
+                "title": "City of Cranbrook - Contact Us",
+                "url": "https://cranbrook.ca/contact/contact-us"
+              },
+              {
+                "title": "Contact - Ktunaxa Nation",
+                "url": "https://ktunaxa.org/contact/"
+              },
+              {
+                "title": "Home | Cariboo Regional District",
+                "url": "https://www.cariboord.ca/"
+              },
+              {
+                "title": "QUICK REFERENCE CONTACT LIST",
+                "url": "https://www.cariboord.ca/media/bxfjdkgy/guide-crd.pdf"
+              },
+              {
+                "title": "Contact Us - CMHA Cariboo Chilcotin BC",
+                "url": "https://cariboo.cmha.bc.ca/staff/"
+              },
+              {
+                "title": "Connect Parent Group | HealthLink BC",
+                "url": "https://www.healthlinkbc.ca/find-care/find-health-services/program/connect-parent-group"
+              },
+              {
+                "title": "Pathways | Take a Break Support Group - For Caregivers of Children and Youth with Mental Health or Substance Use Issues",
+                "url": "https://nanaimo.pathwaysbc.ca/programs/542"
+              },
+              {
+                "title": "Canadian Mental Health Association (CMHA) - Cariboo Chilcotin Branch - Agency Details - 211 British Columbia",
+                "url": "https://bc.211.ca/agency-details/canadian-mental-health-association-cmha-cariboo-chilcotin-branch-9490116/"
+              },
+              {
+                "title": "POHN Community Resources – Contact Sheet",
+                "url": "https://www.bcchildrens.ca/sites/g/files/qpdaav156/files/2025-01/community-care-team-williams-lake.pdf"
+              },
+              {
+                "title": "Update Listing - Update Listing - 211 British Columbia",
+                "url": "https://bc.211.ca/update/?id=95372062"
+              },
+              {
+                "title": "Contact Us",
+                "url": "https://www.bccdc.ca/contact"
+              }
+            ]
+          },
+          {
+            "batch": "c4_q10",
+            "engine": "system2",
+            "queries": [
+              "\"Cranbrook Health Council\" -site:bclaws.gov.bc.ca -site:free.bcpublications.ca -site:gov.bc.ca -site:negotech.service.canada.ca",
+              "\"Greater Trail Community Health Council\" letter pdf -site:bclaws.gov.bc.ca",
+              "\"Nelson and Area Health Council\" \"annual\"",
+              "\"Kitimat and Area Health Council\" logo letterhead annual report"
+            ],
+            "sources": [
+              {
+                "title": "THE CORPORATION OF THE VILLAGE OF MONTROSE",
+                "url": "https://dev.montrose.ca/wp-content/uploads/2024/08/11_nov6-2001.pdf"
+              },
+              {
+                "title": "THE CORPORATION OF THE VILLAGE OF MONTROSE",
+                "url": "https://dev.montrose.ca/wp-content/uploads/2024/08/12_dec3-2001.pdf"
+              },
+              {
+                "title": "A Report on the Health of British Columbians",
+                "url": "https://www2.gov.bc.ca/assets/gov/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer/reports-publications/annual-reports/phoannual1999.pdf"
+              },
+              {
+                "title": "Vol. 44 No. 25 — 293/2001",
+                "url": "https://free.bcpublications.ca/civix/document/id/bcgaz2/bcgaz2/v44n25_293-2001"
+              },
+              {
+                "title": "ON-'Nommor",
+                "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/c448426e-17d4-1d22-44c9-cc9795c38bd8_file.pdf"
+              },
+              {
+                "title": "ORDER OF THE MI",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0278_1999"
+              },
+              {
+                "title": "--- | -",
+                "url": "https://bcombudsperson.ca/assets/media/2001-Annual-Report-of-the-Ombudsman.pdf"
+              },
+              {
+                "title": "Obituary of Enid Rhoda Barnhardt |",
+                "url": "https://www.e-know.ca/announcements/obituary/obituary-of-enid-rhoda-barnhardt/"
+              },
+              {
+                "title": "Postal V1L - Canadian Charity Organizations",
+                "url": "https://opengovca.com/charity?postal=V1L"
+              },
+              {
+                "title": "Regional Health Boards Regulation",
+                "url": "https://free.bcpublications.ca/civix/document/id/loo89/loo89/293_2001"
+              },
+              {
+                "title": "Hansard -- Volume 16, Number 16 -- Monday, July 5, 1999",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th3rd/19990705pm-Hansard-v16n16.htm"
+              },
+              {
+                "title": "Regional Health Boards Regulation",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/14_293_2001"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 28, No. 11)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume11"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 26, No. 6)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1999resume06"
+              },
+              {
+                "title": "ServiceRating - Medical Doctor - Greater Trail Community Health Council",
+                "url": "https://mds.servicerating.ca/office/greater-trail-community-health-council"
+              },
+              {
+                "title": "Medicine Hat News Newspaper Archives, Aug 8, 2000, p. 1",
+                "url": "https://newspaperarchive.com/medicine-hat-news-aug-08-2000-p-1/"
+              },
+              {
+                "title": "Resume of Orders in Council (Vol. 26, No. 23)",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1999resume23"
+              },
+              {
+                "title": "Synod of The Diocese of Kootenay · St Michael and All Angels Church · 701 Ward Street, Nelson, BC V1L 1T3",
+                "url": "https://opengovca.com/charity/129144549RR0004"
+              },
+              {
+                "title": "Vol. 45 No. 3 — 38/2002",
+                "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v45n03_38-2002"
+              },
+              {
+                "title": "Health Information & Services near Elk Valley & South Country Health Council Fernie BC | YellowPages.ca™",
+                "url": "https://www.yellowpages.ca/search/si/1/Health%2BInformation%2B%26%2BServices/Elk%2BValley%2B%26%2BSouth%2BCountry%2BHealth%2BCouncil%2BFernie%2BBC"
+              },
+              {
+                "title": "British Columbia Society for The Prevention of Cruelty To Animals Nelson Branch · Box 66, Nelson, BC V1L 5P7",
+                "url": "https://opengovca.com/charity/887265197RR0001"
+              },
+              {
+                "title": "Greater Trail Community Health Council - Drug pipelines, Patents, Clinical trials - Synapse",
+                "url": "https://synapse.patsnap.com/organization/38d4fcac7bd32d24ba3252202f4ff811"
+              },
+              {
+                "title": "The Best medical clinic in Cranbrook | YellowPages.ca™",
+                "url": "https://www.yellowpages.ca/search/si/1/medical%2Bclinic/Cranbrook%2BBC"
+              },
+              {
+                "title": "Helder Ponte - Helder Ponte Economy Building Strategies | LinkedIn",
+                "url": "https://ca.linkedin.com/in/helder-ponte-4921138a"
+              },
+              {
+                "title": "BC Legislature -- 1998-99 Hansard Subject-Speaker Index",
+                "url": "https://lims.leg.bc.ca/hdms/file/Index/36th3rd/98f-99sh.htm"
+              },
+              {
+                "title": "Greater Trail Community Health Council - Government Agencies & Offices in Trail ▷ 1200 HOSPITAL BENCH, Trail, BC, V1R 4M1 | Firmania",
+                "url": "https://firmania.ca/trail/greater-trail-community-health-council-462018"
+              },
+              {
+                "title": "Grocery Stores near Cranbrook Health Council Cranbrook BC | YellowPages.ca™",
+                "url": "https://www.yellowpages.ca/search/si/1/Grocery%2BStores/Cranbrook%2BHealth%2BCouncil%2BBC"
+              },
+              {
+                "title": "Consignment Shops near Cranbrook Health Council Cranbrook BC | YellowPages.ca™",
+                "url": "https://www.yellowpages.ca/search/si/1/Consignment%2BShops/Cranbrook%2BHealth%2BCouncil%2BBC"
+              },
+              {
+                "title": "Compressors near Cranbrook Health Council Cranbrook BC | YellowPages.ca™",
+                "url": "https://www.yellowpages.ca/search/si/1/Compressors/Cranbrook%2BHealth%2BCouncil%2BCranbrook%2BBC"
+              },
+              {
+                "title": "List of Charities - CanadaHelps",
+                "url": "https://www.canadahelps.org/en/charities/?page=934"
+              },
+              {
+                "title": "Consolidated Revenue Fund Detailed Schedules of Payments - rodeo",
+                "url": "https://doczz.net/doc/2652865/consolidated-revenue-fund-detailed-schedules-of-payments"
+              },
+              {
+                "title": "wowapr24master",
+                "url": "https://myemail.constantcontact.com/wowapr24master.html?aid=UaZm8JOpaAU&soid=1107205830254"
+              },
+              {
+                "title": "wowmay1master",
+                "url": "https://myemail.constantcontact.com/wowmay1master.html?aid=lAvPW5QD0wI&soid=1107205830254"
+              },
+              {
+                "title": "Hansard -- Volume 19, Number 19 -- Wednesday, May 17, 2000",
+                "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th4th/20000517pm-Hansard-v19n19.htm"
+              },
+              {
+                "title": "Laundry Equipment & Supplies near Cranbrook Health Council Cranbrook BC | YellowPages.ca™",
+                "url": "https://www.yellowpages.ca/search/si/1/Laundry%2BEquipment%2B%26%2BSupplies/Cranbrook%2BHealth%2BCouncil%2BCranbrook%2BBC"
+              },
+              {
+                "title": "Discover Health Care and Social Assistance companies in British Columbia, Canada - Dun & Bradstreet",
+                "url": "https://www.dnb.com/business-directory/company-information.health_care_and_social_assistance.ca.british_columbia.html"
+              },
+              {
+                "title": "Magasins de vetements pour hommes near Cranbrook Health Council Cranbrook BC | YellowPages.ca™",
+                "url": "https://www.yellowpages.ca/search/si/1/Magasins%2Bde%2Bvetements%2Bpour%2Bhommes/Cranbrook%2BHealth%2BCouncil%2BCranbrook%2BBC"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "regions": {
+      "pass": "fourth targeted follow-up",
+      "research_date": "2026-10-30",
+      "research_timezone": "America/Creston",
+      "scope": {
+        "actually_revisited_ids": [
+          "simon-fraser-health-region",
+          "north-shore-health-region",
+          "fraser-valley-health-region",
+          "okanagan-similkameen-health-region"
+        ],
+        "actually_revisited_count": 4,
+        "not_a_complete_new_sweep": true,
+        "other_rows": "Other unresolved regions/societies not revisited in this bounded continuation. Prior checklist outcomes remain; no inferred coverage."
+      },
+      "summary": {
+        "new_verified_vector_bodies": 0,
+        "new_verified_vector_files": 0,
+        "additional_original_raster_files": 2,
+        "newly_represented_bodies": 0,
+        "actual_revisited_count": 4,
+        "web_queries_executed": 34,
+        "new_sfhr_pdf_sources_downloaded": 2,
+        "new_sfhr_pdf_pages_structurally_inspected": 217,
+        "supporting_bibliography_pdf_downloaded": 1,
+        "visual_inspection_scope": "SFHR Health Profile cover; January 2001 Continuum first/last pages; original colour JPEG/GIF; original 1943×990 image mask and final display-normalized PNG; page 12 header crop. Structural-page counts are not page-by-page visual-review claims."
+      },
+      "accepted_assets": [
+        {
+          "id": "simon-fraser-health-region-original-web-colour-2001",
+          "body_id": "simon-fraser-health-region",
+          "name": "Simon Fraser Health Region — original colour website logo",
+          "label": "Purple and cyan original website logo, archived August 25, 2001",
+          "format": "jpg",
+          "is_vector": false,
+          "isVector": false,
+          "asset_bytes": 13661,
+          "asset_sha256": "4cec9352db0342e4505e42fe31c63349b977d91e1fa737815c8b88de4ba0ac70",
+          "dimensions": [
+            435,
+            219
+          ],
+          "dark_background": false,
+          "source_url": "https://web.archive.org/web/20010825010851id_/http://sfhr.com/inter_ccaboutsfhr/images/sfhr_logo2co.jpg",
+          "source_page_url": "https://web.archive.org/web/20011109164705id_/http://www.sfhr.com/inter_ccaboutsfhr/",
+          "origin_url": "http://www.sfhr.com/inter_ccaboutsfhr/images/sfhr_logo2co.jpg",
+          "publisher": "Simon Fraser Health Region; original website preserved by Internet Archive",
+          "source_sha256": "4cec9352db0342e4505e42fe31c63349b977d91e1fa737815c8b88de4ba0ac70",
+          "source_date": null,
+          "archive_capture_date": "2001-08-25",
+          "archive_capture_timestamp": "20010825010851",
+          "linking_page_archive_capture_date": "2001-11-09",
+          "observed_date": "2026-10-30",
+          "observed_timezone": "America/Creston",
+          "date_note": "August 25, 2001 is the archive capture date of the original image, not a printed publication date or adoption date. The image is directly linked by the original About SFHR page captured November 9, 2001. No first-use or full-usage-period claim.",
+          "extraction": {
+            "method": "Downloaded original JPEG from its archived website URL and copied bytes unchanged. No conversion, crop, enlargement, resampling, cleanup, recolouring, tracing or reconstruction.",
+            "source_image_dimensions": [
+              435,
+              219
+            ],
+            "byte_identical_to_source": true
+          },
+          "visual_validation": "Original downloaded JPEG viewed and confirmed to read SIMON FRASER HEALTH region with purple emblem/wordmark and cyan script. The original About SFHR page identifies the historical region and links this exact image.",
+          "fidelity_note": "Byte-for-byte original 435×219 JPEG. Source compression artefacts and edge clipping retained. Raster, not vector.",
+          "baseline_novelty": "Distinct original website colour specimen. Latest main already holds a 2003 Dalhousie scanned advertisement, and existing PR #9 proposes the April 1997 monochrome letterhead. This is not a newly represented body and does not close the vector gap."
+        },
+        {
+          "id": "simon-fraser-health-region-continuum-2001-monochrome",
+          "body_id": "simon-fraser-health-region",
+          "name": "Simon Fraser Health Region — original high-resolution monochrome newsletter logo",
+          "label": "January 2001 Continuum running-header logo",
+          "format": "png",
+          "is_vector": false,
+          "isVector": false,
+          "asset_bytes": 16612,
+          "asset_sha256": "8c8899dabc6f3f6912474d7cde5946a1b1ebd13f7516853b1e3c83dc0e8c6a12",
+          "dimensions": [
+            1943,
+            990
+          ],
+          "dark_background": false,
+          "source_url": "https://web.archive.org/web/20030527161646id_/http://www.sfhr.com/ccregionalnews/Newsletters/January%202001%20Continuum.pdf",
+          "source_page_url": "https://web.archive.org/web/20011123165919id_/http://www.sfhr.com/ccregionalnews/Newsletters/Default.htm",
+          "origin_url": "http://www.sfhr.com/ccregionalnews/Newsletters/January%202001%20Continuum.pdf",
+          "publisher": "Simon Fraser Health Region, Continuum newsletter; original PDF preserved by Internet Archive",
+          "source_sha256": "2b25a8ee6f42082b0f5f427beb9466b8b064caaa108c2b250a9345f3724fee44",
+          "pdf_page": 12,
+          "source_date": "2001-01",
+          "archive_capture_date": "2003-05-27",
+          "archive_capture_timestamp": "20030527161646",
+          "observed_date": "2026-10-30",
+          "observed_timezone": "America/Creston",
+          "date_note": "January 2001 is printed throughout the 12-page newsletter and agrees with its January 11, 2001 creation metadata. The PDF title field is a stale April 2000 template label and is not used for dating. May 27, 2003 is the archive capture date. No adoption-date or full-usage-period claim.",
+          "extraction": {
+            "method": "Lossless decoding of original CCITTFaxDecode image mask at xref 256. The raw mask sample polarity was inverted to black ink on white to match the original black-paint form and page 12 header. Saved as 1-bit PNG at the embedded 1943×990 dimensions. No resampling, new crop, smoothing, tracing, redrawing or colour reconstruction.",
+            "source_pdf_page": 12,
+            "source_image_xref": 256,
+            "source_image_dimensions": [
+              1943,
+              990
+            ],
+            "bits_per_component": 1,
+            "source_filter": "CCITTFaxDecode",
+            "source_is_image_mask": true,
+            "source_bbox_pdf_points": [
+              544.0,
+              15.749988555908203,
+              576.0,
+              32.04998779296875
+            ],
+            "native_drawing_paths_in_logo": 0,
+            "original_opi_filename": "SFHR logo.tif",
+            "raw_mask_sha256": "0f1fedf6e67ee570b910a5638f345729a5bb0b95f162d8fe4e64c0eb75b1ea02"
+          },
+          "visual_validation": "Passed: original page 12, its enlarged running-header crop, raw mask and final black-on-whitePNG were independently viewed. Emblem, all lettering, script region, polarity and orientation match the published header.",
+          "fidelity_note": "Original 1943×990 monochrome bitmap. A display-polarity normalization maps the one-bit mask to the PDF’s black ink on white. Existing source roughness retained. Raster, not vector.",
+          "baseline_novelty": "Distinct original January 2001 newsletter image at substantially larger native bitmap dimensions than the existing scan crops. An additional specimen for an already represented body; no new vector or new-body claim."
+        }
+      ],
+      "body_findings": [
+        {
+          "body_id": "simon-fraser-health-region",
+          "name": "Simon Fraser Health Region",
+          "status": "two-additional-original-rasters-no-new-vector",
+          "scope": "New alternative original host sfhr.com found via a period bibliography; original HTML hierarchy followed; linked PDFs retrieved where available; both retrieved SFHR PDFs structurally inspected with get_image_info including inline images and get_drawings. Selected relevant pages and artwork visually inspected.",
+          "outcome": "The original sfhr.com host and inter_ccaboutsfhr path were not the exhausted sfhr.bc.ca route. Health Profile 2000 and January 2001 Continuum PDFs recovered. Both use raster corporate logos; no native vector verified. One byte-preserved 435×219 colour websiteJPEG and one 1943×990 original one-bit newsletter image accepted as additional rasters.",
+          "new_assets": [
+            "pass4/regions/raster-references/simon-fraser-health-region-original-web-colour-2001.jpg",
+            "pass4/regions/raster-references/simon-fraser-health-region-continuum-2001-monochrome.png"
+          ],
+          "sources": [
+            {
+              "url": "https://dspace.library.uvic.ca/server/api/core/bitstreams/f5b5421f-eff6-44f4-ae29-9b787b09bf65/content",
+              "pdf_page": 123,
+              "source_sha256": "7083cce6dbea7ad2d5013c936ea3514e9e0379660a843bf6d0670e601dfed354",
+              "status": "bibliography-route-confirmed",
+              "notes": "138-page thesis cites the SFHR Mental Health Services 1998–1999 annual report at http://www.sfhr.com/Inter_MentalHealth/profile/main.htm, retrieved December 18, 2002. Text citation inspected; thesis is a discovery route, not artwork evidence."
+            },
+            {
+              "url": "https://web.archive.org/web/20010925002740id_/http://www.sfhr.com/",
+              "status": "original-html-inspected",
+              "notes": "Names Simon Fraser Health Region and its Burnaby/New Westminster/Tri-Cities/Maple Ridge service area. Links About, Corporate Services and Regional News."
+            },
+            {
+              "url": "https://web.archive.org/web/20011109164705id_/http://www.sfhr.com/inter_ccaboutsfhr/",
+              "status": "original-html-links-inspected",
+              "notes": "Links Health Profile 2000, Aboriginal profile, directional plan and four annual reports, including previously unrecovered 2000/2001 report. Exact linked documents except Health Profile were 404. Two once-decoded old annual-report forms also 404. A separate archive-availability request for the 2000/2001 annual report returned empty archived_snapshots."
+            },
+            {
+              "url": "https://web.archive.org/web/20030507230446id_/http://www.sfhr.com/inter_ccaboutsfhr/health_profile.pdf",
+              "status": "pdf-retrieved-raster-logo",
+              "pdf_pages": 205,
+              "logo_pages": [
+                1,
+                197
+              ],
+              "notes": "Cover and appendix cover contain 68×34 bitmap logos (xrefs 2 and 5014); get_image_info verified. Full 205 pages structurally inspected. Cover visually inspected; no new vector."
+            },
+            {
+              "url": "https://web.archive.org/web/20030118122939id_/http://www.sfhr.com/Inter_MentalHealth/profile/main.htm",
+              "status": "original-html-report-inspected",
+              "notes": "July 1999 mental-health annual report is an HTML page with bitmap image references, not a downloadable native vector report."
+            },
+            {
+              "url": "https://web.archive.org/web/20011108105522id_/http://www.sfhr.com/corporatecommunications/",
+              "status": "original-html-links-inspected",
+              "notes": "Publications, standards/policies and services subpages linked from this original page all returned 404."
+            },
+            {
+              "url": "https://web.archive.org/web/20011109164723id_/http://www.sfhr.com/ccregionalnews/",
+              "status": "original-html-links-inspected",
+              "notes": "Linked three Healthful magazine PDFs, strategic-directions brochure, and Continuum index. Magazine/brochure requests all returned 404; known archives redirect for fall 1999 also ended 404."
+            },
+            {
+              "url": "https://web.archive.org/web/20011123165919id_/http://www.sfhr.com/ccregionalnews/Newsletters/Default.htm",
+              "status": "original-html-links-inspected",
+              "notes": "Eight 2001 newsletter links attempted. January issue retrieved; seven other issues returned 404, including a redirect to archivedFebruary 2001 file that ended 404."
+            },
+            {
+              "url": "https://web.archive.org/web/20030527161646id_/http://www.sfhr.com/ccregionalnews/Newsletters/January%202001%20Continuum.pdf",
+              "status": "pdf-retrieved-two-raster-logo-objects",
+              "pdf_pages": 12,
+              "notes": "1943×990 one-bit mask xref 256 appears in running headers.139×71 colour masthead JPEG at xref 266 on page 1. get_image_info catches both; no vector corporate logo. Source uses TIFF images according to OPI metadata. January printed date overrides stale PDF title April 2000."
+            },
+            {
+              "url": "https://web.archive.org/web/20010825010851id_/http://sfhr.com/inter_ccaboutsfhr/images/sfhr_logo2co.jpg",
+              "status": "accepted-original-colour-raster",
+              "notes": "Original 435×219 JPEG, bytes preserved."
+            }
+          ],
+          "archive_index_limit": "Three distinct CDX catalogue scopes (broad domain, PDFs only and bounded About-path prefix) each returned 503. This is an access/retrieval failure, not evidence that no archived files exist. Direct archived links were followed instead."
+        },
+        {
+          "body_id": "north-shore-health-region",
+          "name": "North Shore Health Region",
+          "status": "new-bibliographic-leads-no-new-vector",
+          "scope": "Targeted original-domain/publication-title searches and bibliography review. No newly downloaded North Shore agency PDF successfully inspected in this pass.",
+          "outcome": "Period bibliography supplies specific 2000 health-services-plan and 2001 balanced-scorecard targets, but no original downloadable files recovered. A rediscovered Health Canada quality-plan report is already inspected in existing PR #9 and was excluded from new evidence.",
+          "new_assets": [],
+          "sources": [
+            {
+              "url": "https://twuonline.github.io/ldrs634/u9.html",
+              "status": "secondary-bibliography-lead-only",
+              "notes": "Cites North Shore Health Region 2000 Health Services Plan for 2000–2003, Balanced Scorecard Version 1.1 (2001), and B. A. O’Connor Community Health Profile 2000. No logo verified from this page."
+            },
+            {
+              "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Social-Plan/Social-Plan-Background.pdf",
+              "status": "search-indexed-bibliography-lead-only",
+              "notes": "Citation to June 1997 North Shore Community Health Profile. Source file not downloaded or visually inspected in this pass."
+            },
+            {
+              "url": "https://publications.gc.ca/collections/collection_2012/sc-hc/H39-288-2000-eng.pdf",
+              "status": "duplicate-prior-review-excluded",
+              "notes": "Search service exposes 304-page Quest for Quality report and North Shore plan pp 138,279–291. Local retrieval returned archived-information notice HTML even after ordinary cookie/referrer following. Root confirmed existing PR #9 had already inspected actual PDF and found no agency mark. Not counted as a new document inspection."
+            }
+          ],
+          "excluded_prior_evidence": "November 1999 CJNS advertisement and trail donor-panel raster already known; nshr.hnet.bc.ca email-domain archive query already attempted in pass 3 and not repeated."
+        },
+        {
+          "body_id": "fraser-valley-health-region",
+          "name": "Fraser Valley Health Region",
+          "status": "new-business-case-catalogue-lead-no-new-vector",
+          "scope": "Specific 2001 business-case search, public Internet Archive catalogue and item metadata review; no new artwork or source-PDF visual inspection.",
+          "outcome": "Located a 2001 business-case catalogue route. Internet Archive identifies its available version as microfiche. CanadaCommons describes an apparently related 114-page document, while IA describes xvii+182 pages; these versions were not assumed identical. No downloadable native source or verified new logo was recovered.",
+          "new_assets": [],
+          "sources": [
+            {
+              "url": "https://canadacommons.ca/artifacts/52101310/business-case-for-the-fraser-valley-health-centre-and-eastern-fraser-valley-cancer-centre/52999927/",
+              "status": "search-indexed-catalogue-only",
+              "notes": "Title Business Case for the Fraser Valley Health Centre and Eastern Fraser Valley Cancer Centre; catalogue date February 8, 2001;114 pages and listed corporate authors. Direct web open returned 403. Page notes AI-enriched metadata. Actual file not inspected."
+            },
+            {
+              "url": "https://archive.org/details/micro_IA40243303_2999",
+              "metadata_url": "https://archive.org/metadata/micro_IA40243303_2999",
+              "status": "catalogue-and-metadata-inspected",
+              "notes": "2001 business case, Fraser Valley Health Region et al.; Victoria: Health Services Group; source explicitly Microfiche. 200 scanned images and 28,990,150-byte generatedTextPDF listed. PDF itself not downloaded; no logo claim."
+            },
+            {
+              "url": "https://www.mfcr.cz/assets/attachments/PPP-Canada-Executive-Summary.pdf",
+              "status": "related-prior-project-report-route-only",
+              "notes": "September 27, 2000 project-definition appendix, not established as the 2001 business case. Existing 78×78 FVHR emblem from its contents/cover file was not duplicated."
+            }
+          ]
+        },
+        {
+          "body_id": "okanagan-similkameen-health-region",
+          "name": "Okanagan Similkameen Health Region",
+          "status": "additional-period-source-leads-no-new-vector",
+          "scope": "Targeted annual-report/original-domain/logo searches; no new source PDF downloaded or artwork visually inspected.",
+          "outcome": "Search found an additional 1999 newspaper notice naming the Region and a distinct Kelowna thesis citing 1999 OSHR policy. Neither source has been inspected as a potential vector; kept as unverified leads. Previously inspectedMQ 49217 and original oshr.org archive route were not repeated.",
+          "new_assets": [],
+          "sources": [
+            {
+              "url": "https://princetonbcmuseum.com/wp-content/uploads/2023/11/SNL19990831.pdf",
+              "status": "search-indexed-period-advertisement-lead-only",
+              "notes": "August 31, 1999 Similkameen News Leader issue. Search index identifies an OSHR logo in the Princeton Community Health Advisory Committee nomination notice. PDF not downloaded or visually/structurally inspected. No vector or improved-raster claim."
+            },
+            {
+              "url": "https://www.collectionscanada.gc.ca/obj/s4/f2/dsk3/ftp04/MQ59418.pdf",
+              "status": "search-indexed-period-policy-citation-lead-only",
+              "notes": "Breaking Down the Silos Towards... cites OSHR Corporate Vision April 1999 and Policy Manual AD 10. Different from already inspectedMQ 49217, but no document artwork was checked here."
+            }
+          ],
+          "excluded_prior_evidence": "MQ 49217 pp 73/96 scan specimens and archivedoshr.org 1999 unavailable-site page already examined; later Interior Health and regional hospital district logos excluded as different identities."
+        }
+      ],
+      "queries": [
+        "\"sfhrar.pdf\"",
+        "\"Simon Fraser Health Region\" \"annual report\"",
+        "\"North Shore Health Region\" \"http\"",
+        "\"Fraser Valley Health Region\" \"annual report\"",
+        "\"sfhr.com\" \"Health\"",
+        "\"North Shore Health Region\" \"balanced scorecard\"",
+        "\"Fraser Valley Health Region\" \"www\"",
+        "\"Okanagan Similkameen\" \"annual report\"",
+        "site:vch.ca \"North Shore Health Region\" filetype:pdf",
+        "site:fraserhealth.ca \"Simon Fraser Health Region\" filetype:pdf",
+        "site:interiorhealth.ca \"Okanagan Similkameen\" filetype:pdf",
+        "\"North Shore Health Region\" (\"www.nshr\" OR \"nshealth\" OR \"health plan\")",
+        "\"North Shore Health Region\" \"Health Services Plan\"",
+        "\"North Shore Health Region\" \"Community Health Profile\"",
+        "\"Fraser Valley Health Region\" logo pdf",
+        "\"Okanagan Similkameen Health Region\" report pdf",
+        "\"Business Case\" \"Fraser Valley Health Centre\" filetype:pdf",
+        "\"sfhr.com\" \"pdf\"",
+        "\"North Shore Community Health Profile\" pdf",
+        "\"Okanagan Similkameen Health Region\" \"logo\"",
+        "\"Fraser Valley\" \"business case\" \"2001\" pdf",
+        "\"North Shore Health Region\" \"www.\" -site:quizlet.com -site:coursehero.com -site:studocu.com",
+        "\"North Shore Health Region\" \"Balanced scorecard\" pdf",
+        "\"sfhrAR00-01\"",
+        "\"sfhrar.pdf\" \"Fraser\"",
+        "\"Okanagan Similkameen Health Region\" (www OR http) filetype:pdf",
+        "\"Fraser Valley Health Region\" \"business case\" \"pdf\"",
+        "\"Fraser Valley\" \"Business Case\" \"2001\" site:mf.gov.cz",
+        "\"Fraser Valley\" \"Business Case\" filetype:pdf -site:researchgate.net -site:publications.gc.ca -site:pppcouncil.ca -site:bcbudget.gov.bc.ca -site:lims.leg.bc.ca",
+        "\"Simon Fraser Health Region\" \"logo\" -site:facebook.com",
+        "\"Business Case\" \"Fraser Valley\" site:infrastructurebc.com",
+        "\"Fraser Valley\" \"Business Case\" \"pdf\" \"2000\" -site:canadacommons.ca -site:pppcouncil.ca -site:bcbudget.gov.bc.ca -site:lims.leg.bc.ca -site:researchgate.net -site:publications.gc.ca -site:mfcr.cz",
+        "\"North Shore Health Region\" \"Health Services Plan\" \"2000\" -site:twuonline.github.io",
+        "\"North Shore Health Region\" \"Community Health Profile\" \"2000\" -site:twuonline.github.io"
+      ],
+      "download_records": [
+        {
+          "file": "sfhr-com-cdx.json",
+          "url": "https://web.archive.org/cdx/search/cdx?url=sfhr.com/*&output=json&filter=statuscode:200&collapse=urlkey&fl=timestamp,original,mimetype&to=2004&limit=2000",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 503\n"
+        },
+        {
+          "file": "uvic-domain-reference.pdf",
+          "url": "https://dspace.library.uvic.ca/server/api/core/bitstreams/f5b5421f-eff6-44f4-ae29-9b787b09bf65/content",
+          "exit": 0,
+          "error": "",
+          "bytes": 1484347,
+          "sha256": "7083cce6dbea7ad2d5013c936ea3514e9e0379660a843bf6d0670e601dfed354"
+        },
+        {
+          "file": "sfhr-com-pdf-index.json",
+          "url": "https://web.archive.org/cdx/search/cdx?url=www.sfhr.com/*&output=json&filter=statuscode:200&filter=mimetype:application/pdf&collapse=urlkey&fl=timestamp,original,mimetype&to=2005&limit=300",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 503\n",
+          "resolved_url": "https://web.archive.org/cdx/search/cdx?url=www.sfhr.com/*&output=json&filter=statuscode:200&filter=mimetype:application/pdf&collapse=urlkey&fl=timestamp,original,mimetype&to=2005&limit=300"
+        },
+        {
+          "file": "sfhr-com-home.html",
+          "url": "https://web.archive.org/web/20011201000000id_/http://www.sfhr.com/",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20010925002740id_/http://www.sfhr.com/",
+          "bytes": 3985,
+          "sha256": "555a120d0547132e64d0d3975f40808f703edaae9a19e10e0ceb7d65977c283c"
+        },
+        {
+          "file": "sfhr-com-mental-profile.html",
+          "url": "https://web.archive.org/web/20021218000000id_/http://www.sfhr.com/Inter_MentalHealth/profile/main.htm",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20030118122939id_/http://www.sfhr.com/Inter_MentalHealth/profile/main.htm",
+          "bytes": 35755,
+          "sha256": "71dbaa3460ead273f2cd03059c5395a3809c23fd582e0d2fc2be01fda2b2dd60"
+        },
+        {
+          "file": "sfhr-com-about.html",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/inter_ccaboutsfhr",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20011109164705id_/http://www.sfhr.com/inter_ccaboutsfhr/",
+          "bytes": 4327,
+          "sha256": "b6e3e142255ca039fc35391024b658c7f8b920a124ee43827cebe639dc49f6ea"
+        },
+        {
+          "file": "sfhr-com-corporate.html",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/CorporateServices/default.htm",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20010924085713id_/http://www.sfhr.com/CorporateServices/default.htm",
+          "bytes": 1901,
+          "sha256": "a87757f6ee53ff877e7a7aa896d264104869780fb5d104419cebc203cbefec5d"
+        },
+        {
+          "file": "fv-business-ia-query.json",
+          "url": "https://archive.org/advancedsearch.php?q=title%3A%28Fraser%20Valley%20Health%20Centre%29&output=json&rows=20",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://archive.org/advancedsearch.php?q=title%3A%28Fraser%20Valley%20Health%20Centre%29&output=json&rows=20",
+          "bytes": 2632,
+          "sha256": "ea14f156f4a4fd34db75394cbe9fa59e7a815b1419bb50c189a79b38ee9ca8cc"
+        },
+        {
+          "file": "north-shore-quality-framework-2000.html",
+          "url": "https://publications.gc.ca/collections/collection_2012/sc-hc/H39-288-2000-eng.pdf",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://publications.gc.ca/site/archivee-archived.html?url=https%3A%2F%2Fpublications.gc.ca%2Fcollections%2Fcollection_2012%2Fsc-hc%2FH39-288-2000-eng.pdf",
+          "bytes": 18515,
+          "sha256": "0cd0ca52c9523fe4893b23bd86a381dfdc787f9c9f1049ba5378243fd7343982",
+          "inspection_note": "Returned public archived-information notice HTML, not the source PDF. A normal cookie/referrer follow attempt had the same outcome; no bypass attempted."
+        },
+        {
+          "file": "sfhr-annual-2001.pdf",
+          "url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/Annual%20Report/sfhrAR00-01%20.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/Annual%20Report/sfhrAR00-01%20.pdf"
+        },
+        {
+          "file": "sfhr-annual-2000.pdf",
+          "url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/Annual%20Report/sfhrar.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/Annual%20Report/sfhrar.pdf"
+        },
+        {
+          "file": "sfhr-directional-plan.pdf",
+          "url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/Directional%20Plan.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/Directional%20Plan.pdf"
+        },
+        {
+          "file": "sfhr-health-profile.pdf",
+          "url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/health_profile.pdf",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20030507230446id_/http://www.sfhr.com/inter_ccaboutsfhr/health_profile.pdf",
+          "bytes": 2063234,
+          "sha256": "7f4674f5faca6cd900598609a2101ab9f4de0e6efa957d85c2e163f427d36933",
+          "pdf": true
+        },
+        {
+          "file": "sfhr-annual-1999.pdf",
+          "url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/annual%2520report%252099.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/annual%2520report%252099.pdf"
+        },
+        {
+          "file": "sfhr-annual-1998.pdf",
+          "url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/97%2520annual%2520report2.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/97%2520annual%2520report2.pdf"
+        },
+        {
+          "file": "north-shore-quality-framework-2000-follow-link.html",
+          "url": "https://publications.gc.ca/collections/collection_2012/sc-hc/H39-288-2000-eng.pdf",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://publications.gc.ca/site/archivee-archived.html?url=https%3A%2F%2Fpublications.gc.ca%2Fcollections%2Fcollection_2012%2Fsc-hc%2FH39-288-2000-eng.pdf",
+          "method": "normal follow redirects with cookie jar and auto-referrer",
+          "bytes": 18515,
+          "sha256": "0cd0ca52c9523fe4893b23bd86a381dfdc787f9c9f1049ba5378243fd7343982",
+          "pdf": false,
+          "inspection_note": "Returned public archived-information notice HTML, not the source PDF. A normal cookie/referrer follow attempt had the same outcome; no bypass attempted."
+        },
+        {
+          "file": "sfhr-com-about-index.json",
+          "url": "https://web.archive.org/cdx/search/cdx?url=www.sfhr.com/inter_ccaboutsfhr/&matchType=prefix&output=json&filter=statuscode:200&collapse=urlkey&fl=timestamp,original,mimetype&to=2005&limit=300",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 503\n",
+          "resolved_url": "https://web.archive.org/cdx/search/cdx?url=www.sfhr.com/inter_ccaboutsfhr/&matchType=prefix&output=json&filter=statuscode:200&collapse=urlkey&fl=timestamp,original,mimetype&to=2005&limit=300"
+        },
+        {
+          "file": "sfhr-annual-1999-decoded.pdf",
+          "url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/annual%20report%2099.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/annual%20report%2099.pdf"
+        },
+        {
+          "file": "sfhr-annual-1998-decoded.pdf",
+          "url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/97%20annual%20report2.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/97%20annual%20report2.pdf"
+        },
+        {
+          "file": "sfhr-com-communications.html",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/corporatecommunications",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20011108105522id_/http://www.sfhr.com/corporatecommunications/",
+          "bytes": 2371,
+          "sha256": "de59a15ab58d32cabc7f4a0c0a58864270329af9d1248e581a2e480458fee5a9",
+          "magic": "b'<html>\\r\\n'"
+        },
+        {
+          "file": "sfhr-aboriginal-profile.pdf",
+          "url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/Aboriginal_Profile/aboriginal_profile.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20020101000000id_/http://www.sfhr.com/inter_ccaboutsfhr/Aboriginal_Profile/aboriginal_profile.pdf"
+        },
+        {
+          "file": "sfhr-logo250.gif",
+          "url": "https://web.archive.org/web/20010925002740id_/http://www.sfhr.com/images/logo250.gif",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20020324204119id_/http://sfhr.com/images/logo250.gif",
+          "bytes": 7497,
+          "sha256": "3246b27f061101a22bd16273dd8cc58b2c08e67fde3e5884013a562a94222047",
+          "magic": "b'GIF89a\\xfa\\x00'"
+        },
+        {
+          "file": "sfhr-logo-colour.jpg",
+          "url": "https://web.archive.org/web/20011109164705id_/http://www.sfhr.com/inter_ccaboutsfhr/images/sfhr_logo2co.jpg",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20010825010851id_/http://sfhr.com/inter_ccaboutsfhr/images/sfhr_logo2co.jpg",
+          "bytes": 13661,
+          "sha256": "4cec9352db0342e4505e42fe31c63349b977d91e1fa737815c8b88de4ba0ac70",
+          "magic": "b'\\xff\\xd8\\xff\\xe0\\x00\\x10JF'"
+        },
+        {
+          "file": "sfhr-com-publications.html",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/corporatecommunications/communications%20publications.htm",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/corporatecommunications/communications%20publications.htm"
+        },
+        {
+          "file": "sfhr-com-standards.html",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/corporatecommunications/standards%20and%20policies.htm",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/corporatecommunications/standards%20and%20policies.htm"
+        },
+        {
+          "file": "sfhr-com-services.html",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/corporatecommunications/communications%20services.htm",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/corporatecommunications/communications%20services.htm"
+        },
+        {
+          "file": "sfhr-com-news.html",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20011109164723id_/http://www.sfhr.com/ccregionalnews/",
+          "bytes": 1866,
+          "sha256": "03146de9d7afeb690b3bb3ca4fe3ea36df0ec18d11af3dba1cb8777acad39d25"
+        },
+        {
+          "file": "sfhr-annual2001-availability.json",
+          "url": "https://archive.org/wayback/available?url=http%3A%2F%2Fsfhr.com%2Finter_ccaboutsfhr%2FAnnual%2520Report%2FsfhrAR00-01%2520.pdf&timestamp=20020101",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://archive.org/wayback/available?url=http%3A%2F%2Fsfhr.com%2Finter_ccaboutsfhr%2FAnnual%2520Report%2FsfhrAR00-01%2520.pdf&timestamp=20020101",
+          "bytes": 130,
+          "sha256": "5de647dfb52d983223bb52293c38d264249c17f895cb10aed11346654f2f70e9"
+        },
+        {
+          "file": "fv-business-metadata.json",
+          "url": "https://archive.org/metadata/micro_IA40243303_2999",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://archive.org/metadata/micro_IA40243303_2999",
+          "bytes": 80695,
+          "sha256": "b94f70a84026097ba2093fa58c20aac958d39951f9c0ddfa7a846707a20baa22"
+        },
+        {
+          "file": "sfhr-healthful-fall1999.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Healthful%20magazine%20pages.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20030614222105id_/http://www.sfhr.com/ccregionalnews/Healthful%20magazine%20pages.pdf"
+        },
+        {
+          "file": "sfhr-healthful-spring2000.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Healthfull.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Healthfull.pdf"
+        },
+        {
+          "file": "sfhr-healthful-fall2000.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Healthful%20-%20Fall%202000.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Healthful%20-%20Fall%202000.pdf"
+        },
+        {
+          "file": "sfhr-strategic-directions.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Strategic%20directions%20brochure.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Strategic%20directions%20brochure.pdf"
+        },
+        {
+          "file": "sfhr-continuum-index.html",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/Default.htm",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20011123165919id_/http://www.sfhr.com/ccregionalnews/Newsletters/Default.htm",
+          "bytes": 1769,
+          "sha256": "3923f66a8f25445c5279a98821b6977d5263b801c5b0fdbf0c82efbebb2232ca",
+          "magic": "b'<html>\\r\\n'"
+        },
+        {
+          "file": "sfhr-continuum-1.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/September%202001%20Continuum.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/September%202001%20Continuum.pdf"
+        },
+        {
+          "file": "sfhr-continuum-2.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/Continuum_July-August_2001.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/Continuum_July-August_2001.pdf"
+        },
+        {
+          "file": "sfhr-continuum-3.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/Continuum_June_2001.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/Continuum_June_2001.pdf"
+        },
+        {
+          "file": "sfhr-continuum-4.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/Continuum_May_2001.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/Continuum_May_2001.pdf"
+        },
+        {
+          "file": "sfhr-continuum-5.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/Continuum_April_2001.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/Continuum_April_2001.pdf"
+        },
+        {
+          "file": "sfhr-continuum-6.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/March%202001%20Continuum.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/March%202001%20Continuum.pdf"
+        },
+        {
+          "file": "sfhr-continuum-7.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/February%202001%20Continuum.pdf",
+          "exit": 22,
+          "error": "curl: (22) The requested URL returned error: 404\n",
+          "resolved_url": "https://web.archive.org/web/20030707204248id_/http://www.sfhr.com/ccregionalnews/Newsletters/February%202001%20Continuum.pdf"
+        },
+        {
+          "file": "sfhr-continuum-8.pdf",
+          "url": "https://web.archive.org/web/20011101000000id_/http://www.sfhr.com/ccregionalnews/Newsletters/January%202001%20Continuum.pdf",
+          "exit": 0,
+          "error": "",
+          "resolved_url": "https://web.archive.org/web/20030527161646id_/http://www.sfhr.com/ccregionalnews/Newsletters/January%202001%20Continuum.pdf",
+          "bytes": 1083706,
+          "sha256": "2b25a8ee6f42082b0f5f427beb9466b8b064caaa108c2b250a9345f3724fee44",
+          "magic": "b'%PDF-1.3'"
+        }
+      ],
+      "limits": [
+        "No new native vector verified. Both accepted assets are original raster specimens of an already represented historical body.",
+        "Failed archive retrieval is not proof that the file never existed or has no capture.",
+        "No successor artwork substituted; no tracing, redrawing or external contact.",
+        "Original JPEG capture date and original newsletter printed date are explicitly distinguished.",
+        "No original source dates inferred from stale PDF title metadata, archive dates or page catalogue metadata.",
+        "The PDF has a malformed colour profile warning in its low-resolution colour masthead. The accepted one-bit monochrome mask has no colour profile and was independently validated against the black printed header."
+      ]
+    }
+  }
+}
