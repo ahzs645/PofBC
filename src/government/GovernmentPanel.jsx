@@ -18,6 +18,7 @@ import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
 import { PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { partyColour } from './theme.js'
+import { areaById, healthMapLink } from '../health/healthStoryData.js'
 
 const BRANCH_LABELS = { legislative: 'Legislative', executive: 'Executive', judicial: 'Judicial' }
 
@@ -720,6 +721,9 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
         )}
         {node.officialUrl && (
           <p className="gov-links"><a href={node.officialUrl} target="_blank" rel="noreferrer">Official website</a></p>
+        )}
+        {areaById(node.id) && (
+          <p className="gov-links"><a href={healthMapLink(node.id)}>Explore this area in the historical health map →</a></p>
         )}
 
         {node.kind === 'assembly' && (
