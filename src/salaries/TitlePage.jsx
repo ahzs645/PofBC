@@ -12,6 +12,8 @@ import { formatMoney as money } from './money.js'
 import { PayChart, YearPicker, yearSpan } from './parts.jsx'
 import { count, LAYOUTS, loadJson, Paged, RoleIcon } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
+import { formatRate, pooledGrowth, seriesGrowth } from './growth.js'
+import { GrowthTiles, rateColumn } from './Growth.jsx'
 
 const ORDER = {
   average: (a, b) => b.mean - a.mean || b.count - a.count,
@@ -38,8 +40,11 @@ const TitleCards = ({ titles, years, onTitle }) => (
   </Paged>
 )
 
-/** A title as a card: its commonest spelling, how widely it is used, and the years it spans. */
-export const TitleCard = ({ title, years, onOpen }) => (
+/**
+ * A title as a card: its commonest spelling, how widely it is used, and the years it spans; at its
+ * side its latest average, or with `measure` ('growth' or 'raise') how fast its pay moved.
+ */
+export const TitleCard = ({ title, years, onOpen, measure }) => (
   <button type="button" className="salaries__card" onClick={() => onOpen(title.key)}>
     <span className="salaries__lead"><RoleIcon /></span>
     <span className="salaries__text">
@@ -47,7 +52,14 @@ export const TitleCard = ({ title, years, onOpen }) => (
       <span className="salaries__line">{count(title.employers, 'employer', 'employers')} · {count(title.rows, 'record', 'records')}</span>
       <span className="salaries__line">{yearSpan([years[title.first], years[title.last]].filter((label, at, all) => all.indexOf(label) === at))}</span>
     </span>
-    {title.mean != null && <span className="salaries__aside">{money(title.mean)}<span className="salaries__line">average {years[title.last]}</span></span>}
+    {measure && title[measure]
+      ? (
+        <span className="salaries__aside">
+          {formatRate(title[measure].rate, '')}
+          <span className="salaries__line">{measure === 'growth' ? `a year, ${years[title.growth.from]}–${years[title.growth.to]}` : `a year, ${count(title.raise.pairs, 'raise', 'raises')}`}</span>
+        </span>
+      )
+      : title.mean != null && <span className="salaries__aside">{money(title.mean)}<span className="salaries__line">average {years[title.last]}</span></span>}
   </button>
 )
 
@@ -84,6 +96,19 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
   const label = detail?.spellings?.[0] ? titleLabel(detail.spellings[0][0]) : key
   remember?.(label)
   const related = useMemo(() => (index ? relatedTitles(keyedTitles(index), key) : null), [index, key])
+  // Each employer's own series of this title, for how its pay moved there and across them.
+  const series = useMemo(() => {
+    const byEmployer = new Map()
+    for (const cell of inSector) {
+      if (!byEmployer.has(cell.entry.slug)) byEmployer.set(cell.entry.slug, [])
+      byEmployer.get(cell.entry.slug).push(cell)
+    }
+    return [...byEmployer]
+  }, [cells, sector]) // eslint-disable-line react-hooks/exhaustive-deps
+  const growth = useMemo(() => pooledGrowth(series, years), [series, years])
+  const growthAt = useMemo(() => new Map(series.map(([slug, list]) => [slug, seriesGrowth(list, years)])), [series, years])
+  // The typical raise is measured over every employer by the build (positions/index.json.gzip).
+  const raise = useMemo(() => (index ? keyedTitles(index).find((title) => title.key === key)?.raise ?? null : null), [index, key])
   const employerCount = new Set(inSector.map((cell) => cell.entry.slug)).size
   const employerColumns = useMemo(() => [
     { id: 'name', header: 'Employer', accessorKey: 'name', cell: ({ row, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onEmployerRole(row.original.entry.slug, key, row.original.year)}>{getValue()}</button> },
@@ -92,8 +117,9 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
     { id: 'mean', header: 'Average', accessorKey: 'mean', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
     { id: 'median', header: 'Median', accessorKey: 'median', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
     { id: 'low', header: 'Lowest', accessorKey: 'low', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
-    { id: 'high', header: 'Highest', accessorKey: 'high', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) }
-  ], [key, onEmployerRole])
+    { id: 'high', header: 'Highest', accessorKey: 'high', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    rateColumn('growth', 'Average growth', (cell) => growthAt.get(cell.entry.slug)?.rate)
+  ], [key, onEmployerRole, growthAt])
 
   return (
     <div className="salaries">
@@ -142,6 +168,11 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
               )
               : <p className="salaries__hint">No employer disclosed this title in {years[year]}; the bars above show the years with records.</p>}
             {points.length > 1 && <PayChart years={years} points={points} label="Average pay by year, all employers together" />}
+            <GrowthTiles
+              id="salaries-title-growth" growth={growth} raise={sector === 'all' ? raise : null} years={years}
+              raiseNote={sector === 'all' ? undefined : 'measured across all sectors only'}
+              extra={growth && <div><dt>Employers measured</dt><dd>{growth.employers.toLocaleString('en-CA')}</dd><dd className="salaries__line">{count(growth.weight, 'record weighs', 'records weigh')} it</dd></div>}
+            />
           </>
         )}
       </section>
@@ -170,6 +201,7 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
                   <span className="salaries__name">{cell.name}</span>
                   <span className="salaries__line">{cell.entry.sector} · {count(cell.count, 'record', 'records')}</span>
                   {cell.count > 1 && <span className="salaries__line">Median {money(cell.median)} · {money(cell.low)}–{money(cell.high)}</span>}
+                  {growthAt.get(cell.entry.slug) && <span className="salaries__line">Average {formatRate(growthAt.get(cell.entry.slug).rate)}</span>}
                 </span>
                 <span className="salaries__aside">{money(cell.mean)}<span className="salaries__line">{cell.count > 1 ? 'average' : 'paid'}</span></span>
               </button>

@@ -14,6 +14,8 @@ import { rangeLabel, YearStrip } from './parts.jsx'
 import { count, loadJson, Paged, RecordRow, RoleIcon, seenYears } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
 import { TitleCard } from './TitlePage.jsx'
+import { GrowthTip, rateColumn } from './Growth.jsx'
+import { Segmented } from '../site/Segmented.jsx'
 
 const within = (range) => (at) => !range || (at >= range[0] && at <= range[1])
 
@@ -132,27 +134,55 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
   )
 }
 
-/** Every position title across employers, with its average in the last period it was disclosed. */
+/** Titles ranked by how fast their pay moved need this much behind the measure (growth.js). */
+const MEASURED = { growth: (title) => title.growth?.weight >= 10, raise: (title) => title.raise?.pairs >= 10 }
+const TITLE_ORDERS = [
+  { value: 'used', label: 'Most used' },
+  { value: 'growth', label: 'Fastest growth' },
+  { value: 'raise', label: 'Biggest raises' }
+]
+
+/**
+ * Every position title across employers, with its average in the last period it was disclosed; or,
+ * ordered by how fast its pay moved, only the titles with enough records to say.
+ */
 export const PositionBrowse = ({ titlesIndex, years, range, layout, onTitle }) => {
+  const [order, setOrder] = useState('used')
   const titles = useMemo(() => (titlesIndex ? keyedTitles(titlesIndex) : []), [titlesIndex])
-  const visible = useMemo(() => titles.filter((title) => !range || (title.first <= range[1] && title.last >= range[0]))
-    .sort((a, b) => b.employers - a.employers || b.rows - a.rows), [titles, range])
+  const visible = useMemo(() => titles.filter((title) => (!range || (title.first <= range[1] && title.last >= range[0])) && (order === 'used' || MEASURED[order](title)))
+    .sort(order === 'used' ? (a, b) => b.employers - a.employers || b.rows - a.rows : (a, b) => b[order].rate - a[order].rate), [titles, range, order])
   const columns = useMemo(() => [
     { id: 'title', header: 'Position', accessorKey: 'label', cell: ({ row, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onTitle(row.original.key)}>{getValue()}</button> },
     { id: 'employers', header: 'Employers', accessorKey: 'employers', meta: { kind: 'number', filter: false } },
     { id: 'rows', header: 'Records', accessorKey: 'rows', meta: { kind: 'number', filter: false }, cell: ({ getValue }) => getValue().toLocaleString('en-CA') },
     { id: 'periods', header: 'Periods', accessorFn: (title) => (title.first === title.last ? years[title.first] : `${years[title.first]}–${years[title.last]}`) },
-    { id: 'mean', header: 'Latest average', accessorKey: 'mean', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) }
+    { id: 'mean', header: 'Latest average', accessorKey: 'mean', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    rateColumn('growth', 'Average growth', (title) => title.growth?.rate),
+    rateColumn('raise', 'Typical raise', (title) => title.raise?.rate),
+    { id: 'raises', header: 'Raises', accessorFn: (title) => title.raise?.pairs ?? 0, meta: { kind: 'number' } }
   ], [years, onTitle])
 
   if (!titlesIndex) return <p className="salaries__hint" role="status">Loading the positions…</p>
-  const note = <p className="salaries__hint salaries__hint--small">Each title gathers its spellings across employers; the average is for the last period it was disclosed.</p>
-  if (layout === 'table') return <>{note}<DataTable data={visible} columns={columns} sorting={[{ id: 'employers', desc: true }]} label="Positions across employers" /></>
+  const note = (
+    <div className="salaries__browse-bar">
+      <Segmented compact ariaLabel="Order positions" value={order} onChange={setOrder} options={TITLE_ORDERS} />
+      <p className="salaries__hint salaries__hint--small salaries__order-note">
+        {order === 'used'
+          ? 'Each title gathers its spellings across employers; the average is for the last period it was disclosed.'
+          : order === 'growth'
+            ? 'Titles whose average could be followed over 10 or more records, fastest first.'
+            : 'Titles with 10 or more raises of a name kept under them, largest first.'}
+        {order !== 'used' && <GrowthTip id="salaries-positions-growth" />}
+      </p>
+    </div>
+  )
+  const sorting = [order === 'used' ? { id: 'employers', desc: true } : { id: order, desc: true }]
+  if (layout === 'table') return <>{note}<DataTable key={order} data={visible} columns={columns} sorting={sorting} label="Positions across employers" /></>
   return (
     <>
       {note}
-      <Paged list={visible} size={24} reset={String(range)}>
-        {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={onTitle} />)}</div>}
+      <Paged list={visible} size={24} reset={`${range}|${order}`}>
+        {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={onTitle} measure={order === 'used' ? null : order} />)}</div>}
       </Paged>
     </>
   )

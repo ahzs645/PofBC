@@ -1,7 +1,7 @@
 // What the salary pages share: loading their files, the card icons, a record as a row, and the place
 // (who or what is open) kept in the address bar (viewState.js).
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { displayName } from './people.js'
 import { sourceHref } from './coverage.js'
 import { SourceLink } from './DisclosureEvidence.jsx'
@@ -105,9 +105,29 @@ export const usePages = (list, size, reset) => {
   }
 }
 
-/** Numbered pages: the first, the last, and the two either side of the one on screen. */
+/** Whether the screen is a phone's width, kept current as it turns. */
+const useNarrow = (query = '(max-width: 480px)') => {
+  const [narrow, setNarrow] = useState(() => globalThis.matchMedia?.(query).matches ?? false)
+  useEffect(() => {
+    const list = globalThis.matchMedia?.(query)
+    if (!list) return undefined
+    const change = () => setNarrow(list.matches)
+    change()
+    list.addEventListener('change', change)
+    return () => list.removeEventListener('change', change)
+  }, [query])
+  return narrow
+}
+
+/**
+ * Numbered pages on one line: the first, the last, and the two either side of the one on screen —
+ * one either side on a phone, where five would not fit beside the arrows, and none on the narrowest.
+ */
 export const Pager = ({ page, pages, total, size, onPage }) => {
-  const shown = [...new Set([1, page - 2, page - 1, page, page + 1, page + 2, pages])].filter((at) => at >= 1 && at <= pages).sort((a, b) => a - b)
+  const narrow = useNarrow()
+  const narrowest = useNarrow('(max-width: 359px)')
+  const reach = narrowest ? 0 : narrow ? 1 : 2
+  const shown = [...new Set([1, ...Array.from({ length: reach * 2 + 1 }, (_, at) => page - reach + at), pages])].filter((at) => at >= 1 && at <= pages).sort((a, b) => a - b)
   const turn = (at) => { onPage(at); globalThis.requestAnimationFrame?.(() => globalThis.document?.activeElement?.closest?.('section')?.scrollIntoView?.({ block: 'start' })) }
   return (
     <nav className="salaries-pager" aria-label="Pages">
