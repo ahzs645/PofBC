@@ -1,0 +1,492 @@
+{
+  "schema": "pofbc-review/model-audit-1",
+  "reviewed_head": "0dbdb18cfebfb27e5529ce5940850e96eb9a995c",
+  "baseline": "0f1587c5e982135f155ba6660af5192509351511",
+  "reviewed_on": "2026-10-21",
+  "repo": "/workspace/scratch/a5ca1a8fd90b/round5/repo",
+  "repo_mutated": false,
+  "findings": [
+    {
+      "id": "M1",
+      "priority": "P1",
+      "origin": "existing_model_limitation",
+      "title": "Unknown ends cannot be represented without indefinite presence",
+      "locations": [
+        {
+          "path": "src/government/snapshot.js",
+          "lines": [
+            312,
+            315,
+            417,
+            435,
+            634,
+            648
+          ]
+        },
+        {
+          "path": "scripts/build-government-history.mjs",
+          "lines": [
+            177,
+            204
+          ]
+        },
+        {
+          "path": "src/government/GovernmentView.jsx",
+          "lines": [
+            99,
+            105,
+            275,
+            281
+          ]
+        },
+        {
+          "path": "src/government/TimelineBar.jsx",
+          "lines": [
+            50,
+            51,
+            72,
+            73
+          ]
+        },
+        {
+          "path": "src/government/GovernmentPanel.jsx",
+          "lines": [
+            424,
+            427
+          ]
+        },
+        {
+          "path": "research/reviews/round-4-2026-10-21/integration/health.json",
+          "lines": [
+            2459,
+            2460
+          ]
+        }
+      ],
+      "finding": "Null end means indefinite existence; historical search also excludes null-ended records. A status-only fix would leave navigation, timeline and panel misleading.",
+      "recommendation": "Add distinct legal/operational ending claims and evidence of presence; use a shared resolver in builder, snapshots, search, navigation and panels. Import seven proved board identities without claiming current existence or proved extinction.",
+      "confidence": "high"
+    },
+    {
+      "id": "M2",
+      "priority": "P1",
+      "origin": "inherited_behavior_exposed_by_current_data",
+      "title": "Subsidiary relation becomes accountability path",
+      "locations": [
+        {
+          "path": "research/history/sub-agencies-researched.json",
+          "lines": [
+            2150,
+            2195,
+            2201
+          ]
+        },
+        {
+          "path": "src/government/snapshot.js",
+          "lines": [
+            541,
+            543,
+            570,
+            572,
+            594,
+            609
+          ]
+        },
+        {
+          "path": "scripts/build-government-history.mjs",
+          "lines": [
+            234,
+            255
+          ]
+        }
+      ],
+      "finding": "Powertech parents have relation subsidiary_of; snapshot emits part, which pathToPeople traverses. Direct 2026 probe returns a complete uninferred path through BC Hydro.",
+      "recommendation": "Preserve subsidiary_of/owned_by and exclude it from accountability traversal. Require a distinct sourced responsibility edge. Use separate board-appointment type from the traversable appoints edge.",
+      "reproduced": {
+        "year": 2026,
+        "subject": "sub-powertech-labs",
+        "first_edge": {
+          "from": "bc-hydro",
+          "to": "sub-powertech-labs",
+          "kind": "part",
+          "inferred": false
+        },
+        "main_path_kinds": [
+          "part",
+          "responsible",
+          "appoints",
+          "confidence",
+          "elects"
+        ],
+        "reaches_people": true
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "M3",
+      "priority": "P2",
+      "origin": "new_proposal_wording",
+      "title": "Local-register description overstates uniform non-operation and elected trustees",
+      "locations": [
+        {
+          "path": "research/reviews/round-4-2026-10-21/integration/root.json",
+          "lines": [
+            615
+          ]
+        }
+      ],
+      "finding": "The blanket statement that neither district type runs a hospital is too strong. Original Fort Nelson and 100 Mile House instruments assign hospital board-of-management roles to the district trustees plus a Hospital Act appointee. Fort Nelson's first trustees were appointed, with later elections.",
+      "recommendation": "State body-specific functions and dated governance. Financial-assistance objects alone do not prove hospital operation; hospital-management clauses must not be erased. Do not infer the legal hospital operator solely from shared trustees.",
+      "evidence": [
+        {
+          "source_id": "R4R-154",
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1373_1958",
+          "locator": "PDF p.5, clauses 5-7",
+          "local_file": "round4/root/raw/R4R-154.pdf",
+          "review": "re-read extracted original clauses"
+        },
+        {
+          "source_id": "R4R-165",
+          "claim_id": "R4RC-193",
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2195_1960",
+          "locator": "OIC approved 27 September 1960, added clause 5A",
+          "local_file": "round4/root/raw/R4R-165.pdf",
+          "review": "re-read extracted original instrument"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "M4",
+      "priority": "P1",
+      "origin": "new_proposal_scope_existing_consumer_limitations",
+      "title": "A register excluded from all diagram consumption does not complete local history",
+      "locations": [
+        {
+          "path": "research/reviews/round-4-2026-10-21/integration/root.json",
+          "lines": [
+            608,
+            625
+          ]
+        },
+        {
+          "path": "src/government/GovernmentPanel.jsx",
+          "lines": [
+            336,
+            345
+          ]
+        }
+      ],
+      "finding": "Separate local identities are correct, but the proposal explicitly makes the register unread by the diagram build. No-ministry status is not no local democratic accountability.",
+      "recommendation": "Read local records into shared identity/search/event/panel resolvers. Add optional local/regional layer with own governance and electorate profiles; do not force ministerial parenting. Replace no-ministry-only explanation for local records.",
+      "confidence": "high"
+    },
+    {
+      "id": "M5",
+      "priority": "P2",
+      "origin": "new_proposal_rule",
+      "title": "Recommendation-only minister role discards precise statutory relationships",
+      "locations": [
+        {
+          "path": "research/reviews/round-4-2026-10-21/integration/root.json",
+          "lines": [
+            514,
+            519,
+            625
+          ]
+        }
+      ],
+      "finding": "The proposal forbids minister roles beyond recommendation despite held evidence for capital approval and inspection powers.",
+      "recommendation": "Keep approvals, inspection and appointments as typed, dated relationships without converting them to responsibility. Preserve the 2026 current-law checkpoint as an observation rather than backdating it.",
+      "evidence": [
+        {
+          "claim_id": "R4RC-104",
+          "source_id": "R4R-001",
+          "locator": "Hospital District Act ss.8,17,32,45; current-law checkpoint on 2026-10-21"
+        },
+        {
+          "claim_id": "R4RC-072",
+          "source_id": "R4R-003",
+          "locator": "OIC1549/1995 Schedule A; powers restricted from 1995-12-31"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "M6",
+      "priority": "P2",
+      "origin": "inherited_behavior",
+      "title": "Date precision and end-event meaning are collapsed",
+      "locations": [
+        {
+          "path": "src/government/snapshot.js",
+          "lines": [
+            41,
+            49
+          ]
+        },
+        {
+          "path": "scripts/build-government-events.mjs",
+          "lines": [
+            185,
+            190
+          ]
+        },
+        {
+          "path": "research/reviews/round-4-2026-10-21/integration/health.json",
+          "lines": [
+            2499,
+            2500,
+            2631
+          ]
+        }
+      ],
+      "finding": "Year-only 1997 becomes January 1 internally and sub-agency ends become dissolved events regardless of their meaning. 43 council execution days remain untraced.",
+      "recommendation": "Preserve date precision and eventKind. Treat any rendering cutoff separately from a factual legal end. Do not turn conditional amalgamation authority into proof of execution.",
+      "counts": {
+        "folded_councils": 43,
+        "newly_dated": 42,
+        "already_dated_prince_george": 1,
+        "all_health_lineage_rows_ended_1997": 45,
+        "other_two": "Simon Fraser Health Board and Burnaby Health Board"
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "M7",
+      "priority": "P2",
+      "origin": "existing_builder_limitation_affecting_new_evidence",
+      "title": "Related event subjects are dropped",
+      "locations": [
+        {
+          "path": "scripts/build-government-events.mjs",
+          "lines": [
+            115,
+            138
+          ]
+        },
+        {
+          "path": "research/atlas/events-round4.json",
+          "lines": [
+            2611,
+            2640
+          ]
+        }
+      ],
+      "finding": "atlas:round4-gvrhd-dissolved-1999 carries recipient related_subject_ids, but the event builder omits that field. District events use ministry subjects because the actual local corporations have no register consumer.",
+      "recommendation": "Preserve primary and related subject IDs and explicit roles; index events to real transferors and recipients, independent of whether their nodes are currently drawn.",
+      "example": {
+        "event_id": "atlas:round4-gvrhd-dissolved-1999",
+        "input_subject": "ministry-of-health-1976",
+        "input_related_subjects": [
+          "south-fraser-health-region",
+          "vancouver-richmond-health-board"
+        ],
+        "actual_transferor": "rhd-greater-vancouver-1967"
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "M8",
+      "priority": "P1",
+      "origin": "existing_model_limitation_highlighted_by_new_decisions",
+      "title": "Single ended field mixes operational cessation and legal dissolution",
+      "locations": [
+        {
+          "path": "scripts/build-government-history.mjs",
+          "lines": [
+            186,
+            188
+          ]
+        },
+        {
+          "path": "src/government/snapshot.js",
+          "lines": [
+            101,
+            108,
+            312,
+            315
+          ]
+        },
+        {
+          "path": "src/government/lineage.test.js",
+          "lines": [
+            126,
+            130
+          ]
+        }
+      ],
+      "finding": "New endedMeaning improves wording only. MTOC stops on operational transfer, while health societies remain until legal registry dissolution after service transfer.",
+      "recommendation": "Represent both ends. Let the selected operating/legal view define visibility and clearly mark continuing legal shells. Do not drop legal history or imply delivery continued until dissolution.",
+      "confidence": "high"
+    }
+  ],
+  "good_decisions": [
+    "Do not convert the seven rural boards into the 1997 societies without a source connecting legal identities.",
+    "Do not use repeal of board-composition regulations as corporate dissolution.",
+    "Keep regional hospital districts distinct from health boards and same-named corporations incorporated at different dates.",
+    "Preserve approval versus commencement, restricted powers versus dissolution, deadline versus actual transfer, and multiple asset recipients.",
+    "Keep current-law observations from being backdated into historical governance.",
+    "Retain servicesPassedTo separately from legal becameId.",
+    "Keep FNHA partnership outside the ministry accountability route.",
+    "Keep People central and distinguish eligible electors from all people served."
+  ],
+  "schema_recommendation": {
+    "strategy": "Additive lifecycle block; retain current IDs and legacy fields as compatibility projection only. One shared presence/lifetime resolver for every consumer.",
+    "end_statuses": {
+      "known": "Dated end with eventKind, date precision and evidence",
+      "occurred_date_unknown": "Positive evidence an ending occurred, but date unknown",
+      "untraced": "No established ending; neither ongoing existence nor extinction implied",
+      "not_applicable": "Only when justified by entity/episode type"
+    },
+    "example": {
+      "id": "west-kootenay-boundary-regional-health-board",
+      "established": "1994-10-14",
+      "establishedMeaning": "designated, order effective that day",
+      "lifecycle": {
+        "legalEnd": {
+          "status": "untraced"
+        },
+        "operationalEnd": {
+          "status": "untraced"
+        },
+        "attestations": [
+          {
+            "on": "1994-10-14",
+            "precision": "day",
+            "scope": "designation in force",
+            "source": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0306_1994",
+            "locator": "operative effective date"
+          }
+        ],
+        "currentConfirmation": null
+      }
+    },
+    "known_end_shape": {
+      "status": "known",
+      "eventKind": "dissolved or operations_ceased or legal_amalgamation etc.",
+      "date": {
+        "value": "source date at its true precision",
+        "precision": "day|month|year|range",
+        "notBefore": "only when source supplies a lower bound",
+        "before": "only when source supplies an upper bound"
+      },
+      "source": "source ID or URL",
+      "locator": "pinpoint"
+    },
+    "presence_states": [
+      "confirmed",
+      "observed_during_year",
+      "uncertain",
+      "outside_known_span"
+    ],
+    "presence_policy": [
+      "A record is searchable irrespective of whether snapshot presence is known.",
+      "Untraced historical ends do not get infinite solid lifetime bars or current existence by default.",
+      "Show source-supported observation points or intervals; a last observation is not a dissolution.",
+      "An observation earlier in a year is not by itself proof of standing on December 31.",
+      "Operational and legal views use different bounds while preserving both claims.",
+      "Current confirmation is evidence at a date, not an unlimited future interval."
+    ],
+    "relations": {
+      "accountability": "Use explicit evidenced responsibility/electoral/constitutional routes; do not infer from structural placement.",
+      "non_accountability_types": [
+        "owned_by",
+        "subsidiary_of",
+        "administered_by",
+        "member_of",
+        "board_appointed_by",
+        "funded_by",
+        "regulated_by",
+        "overseen_by",
+        "may_inspect",
+        "approves_capital_bylaws",
+        "assets_transferred_to",
+        "services_transferred_to"
+      ],
+      "required_fields": [
+        "subject",
+        "object or label",
+        "type",
+        "dated coverage or observation",
+        "source",
+        "locator",
+        "scope/conditions when needed"
+      ]
+    },
+    "local_register": {
+      "scope": "local",
+      "kinds": [
+        "regional-hospital-district",
+        "hospital-improvement-district"
+      ],
+      "consumers": [
+        "identity resolver",
+        "search",
+        "evidence panel",
+        "events",
+        "lineage",
+        "optional local/regional layer"
+      ],
+      "do_not_infer": [
+        "ministry parent",
+        "universal provincial electorate",
+        "historical governance from current statute",
+        "legal successor from asset transfer",
+        "corporate operation solely from shared trustees"
+      ]
+    }
+  },
+  "seven_board_starts": [
+    {
+      "name": "West Kootenay-Boundary Regional Health Board",
+      "date": "1994-10-14",
+      "order": "M306/1994"
+    },
+    {
+      "name": "East Kootenay Regional Health Board",
+      "date": "1994-10-28",
+      "order": "M328/1994"
+    },
+    {
+      "name": "Cariboo Regional Health Board",
+      "date": "1994-11-03",
+      "order": "M339/1994"
+    },
+    {
+      "name": "Upper Island and Mid-Coast Regional Health Board",
+      "date": "1994-11-23",
+      "order": "M366/1994"
+    },
+    {
+      "name": "North West Regional Health Board",
+      "date": "1994-12-12",
+      "order": "M422/1994"
+    },
+    {
+      "name": "Coast Garibaldi Regional Health Board",
+      "date": "1994-12-16",
+      "order": "M448/1994"
+    },
+    {
+      "name": "Peace River-Liard Regional Health Board",
+      "date": "1995-02-02",
+      "order": "M74/1995"
+    }
+  ],
+  "verification": [
+    "Read actual checkout at exact head and relevant baseline diff.",
+    "No AGENTS.md found in checkout or ancestors.",
+    "Direct Node governmentIn/pathToPeople/lifeOf probes for 1995,1997,2001,2002,2020,2026.",
+    "Counted 43 folded councils plus two health boards among 45 year-1997 end records.",
+    "Re-read original extracted clauses of R4R-154 PDF p.5 and R4R-165.",
+    "Inspected related_subject_ids input and actual event builder projection.",
+    "No broad test suite run by this sub-review; no repository edits."
+  ],
+  "limitations": [
+    "No new rural-board end instrument located in this model audit.",
+    "No new council amalgamation execution day or asset-transfer closing day claimed.",
+    "The proposed schema is a review recommendation, not an implemented repository change."
+  ],
+  "report_file": "/workspace/scratch/a5ca1a8fd90b/round5/audit/model.md"
+}

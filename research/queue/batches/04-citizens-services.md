@@ -26,60 +26,20 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ### 1. Asset Investment Recovery
 
-- **id** `asset-investment-recovery` · office · **P1 — disappears before today, nothing on file**
+- **id** `asset-investment-recovery` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www.bcauction.ca/open.dll/welcome
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/citz.pdf
 - **What it does:** Disposes of surplus government assets, including through the BC Auction website.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2006; parents on file: Ministry of Labour and Citizens’ Services (seen 2006)
+- **Events on file:** 2006 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Asset Investment Recovery"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 2. BC Registries and Online Services (BC Registries)
-
-- **id** `bc-registries-and-online-services` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/citizens-services/bc-registries-online-services
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/citizens-services/bc-registries-online-services
-- **What it does:** Administers registrations of businesses, societies, cooperatives, personal property and manufactured homes.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "BC Registries and Online Services", "BC Registries"
-- **Questions:** A, B and C, as above.
-
-### 3. Connected Services BC (CSBC)
-
-- **id** `connected-services-bc` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/csbc
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/citz.pdf
-- **What it does:** Leads strategy, policy and standards for government telecommunications, information technology, IT security and the IM/IT investment portfolio.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Connected Services BC", "CSBC"
-- **Questions:** A, B and C, as above.
-
-### 4. Connectivity in B.C. (Connectivity)
-
-- **id** `connectivity-in-bc` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/connectivity-in-bc
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Funds and coordinates expansion of high-speed internet and highway cellular coverage in rural, remote and Indigenous communities.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Connectivity in B.C.", "Connectivity"
-- **Questions:** A, B and C, as above.
-
-### 5. Product Distribution Centre
-
-- **id** `product-distribution-centre` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Citizens’ Services.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/citz.pdf
-- **What it does:** Full cost-recovery warehousing and product distribution service for ministries and the broader public sector.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Product Distribution Centre"
-- **Questions:** A, B and C, as above.
-
-### 6. BC Bid
+### 2. BC Bid
 
 - **id** `bc-bid` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/content?id=C8A3B1B982304D88B87FD75473A62B14
@@ -94,7 +54,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 7. BC OnLine
+### 3. BC OnLine
 
 - **id** `bc-online` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/bc-online
@@ -109,13 +69,28 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 8. BC Stats
+### 4. BC Registries and Online Services (BC Registries)
+
+- **id** `bc-registries-and-online-services` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/citizens-services/bc-registries-online-services
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/citizens-services/bc-registries-online-services
+- **What it does:** Administers registrations of businesses, societies, cooperatives, personal property and manufactured homes.
+- **Held:** no start date; first seen 2023; parents on file: Ministry of Citizens’ Services (seen 2023)
+- **Events on file:** 2023 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "BC Registries and Online Services", "BC Registries"
+- **Questions:**
+  - A. It is already seen in 2023. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 5. BC Stats
 
 - **id** `bc-stats` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www.bcstats.gov.bc.ca/
 - **Collected from:** https://www.bcstats.gov.bc.ca/
 - **What it does:** The provincial government's statistical office, providing statistics, economic research and analysis under the Statistics Act.
-- **Held:** no start date; first seen 2002; names on file: BC Stats (seen 2002), BC Stats (seen 2005), BC Stats (seen 2010), BC Stats (seen 2015), BC Stats (seen 2020)
+- **Held:** no start date; first seen 2002; names on file: BC Stats (seen 2002), BC Stats (seen 2005), BC Stats (seen 2010), BC Stats (seen 2015), BC Stats (seen 2020); parents on file: Service BC (seen 2006)
 - **Events on file:** 1894-04-11 legislation enacted; 1937 unit established; 2002 name first observed; 2002 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Stats"
@@ -124,37 +99,67 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 4 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 9. King's Printer
+### 6. Connectivity in B.C. (Connectivity)
+
+- **id** `connectivity-in-bc` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/connectivity-in-bc
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Funds and coordinates expansion of high-speed internet and highway cellular coverage in rural, remote and Indigenous communities.
+- **Held:** no start date; first seen 2021-04-07
+- **Events on file:** 2021-04-07 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Connectivity in B.C.", "Connectivity"
+- **Questions:**
+  - A. It is already seen in 2021-04-07. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 7. King's Printer
 
 - **id** `kings-printer` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/citz.pdf
 - **What it does:** Full cost-recovery publishing service for government, including official print and publication services.
-- **Held:** no start date
-- **Events on file:** 1859 institutional origin claim
+- **Held:** no start date; first seen 2006; names on file: Queen’s Printer (seen 2006); parents on file: Procurement and Supply Services (seen 2006)
+- **Events on file:** 1859 institutional origin claim; 2006 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "King's Printer"
+- **Search for:** "King's Printer", "Queen’s Printer"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 8. Product Distribution Centre
+
+- **id** `product-distribution-centre` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Citizens’ Services.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/citz.pdf
+- **What it does:** Full cost-recovery warehousing and product distribution service for ministries and the broader public sector.
+- **Held:** no start date; first seen 2006; parents on file: Ministry of Labour and Citizens’ Services (seen 2006)
+- **Events on file:** 2006 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Product Distribution Centre"
+- **Questions:**
+  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 10. Service BC
+### 9. Service BC
 
 - **id** `service-bc` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/citizens-services/servicebc
 - **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/citizens-services/servicebc
 - **What it does:** Government's front door for in-person, phone and online services, from driver's licences and health cards to business registration.
-- **Held:** no start date
-- **Events on file:** 1859-09-07 function origin; 2004 name first observed; 2013 name observed
+- **Held:** no start date; first seen 2006; parents on file: Ministry of Labour and Citizens’ Services (seen 2006)
+- **Events on file:** 1859-09-07 function origin; 2004 name first observed; 2006 name first observed; 2013 name observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Service BC"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 3 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 4 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 11. BC Services Card
+### 10. BC Services Card
 
 - **id** `bc-services-card` · program · **P3 — dated; history over time**
 - **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/government-id/bc-services-card
@@ -164,6 +169,19 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Events on file:** 2013-02-15 established
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Services Card"
+- **Questions:**
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 11. Connected Services BC (CSBC)
+
+- **id** `connected-services-bc` · division · **P3 — dated; history over time**
+- **Today:** under Ministry of Citizens’ Services. Official site: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/csbc
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/citz.pdf
+- **What it does:** Leads strategy, policy and standards for government telecommunications, information technology, IT security and the IM/IT investment portfolio.
+- **Held:** began 2025-10-01 (Official history dates the beginning of Connected Services BC to1 October 2025, bringing together former information-management branches, ministry/sector IT teams, OCIO and Service BC.)
+- **Events on file:** 2025-10-01 established
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Connected Services BC", "CSBC"
 - **Questions:**
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
@@ -178,106 +196,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "asset-investment-recovery",
       "name": "Asset Investment Recovery",
-      "kind": "office",
-      "parent_today": "ministry-of-citizens-services-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 04",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "bc-registries-and-online-services",
-      "name": "BC Registries and Online Services",
-      "kind": "division",
-      "parent_today": "ministry-of-citizens-services-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 04",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "connected-services-bc",
-      "name": "Connected Services BC",
-      "kind": "division",
-      "parent_today": "ministry-of-citizens-services-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 04",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "connectivity-in-bc",
-      "name": "Connectivity in B.C.",
-      "kind": "program",
-      "parent_today": "ministry-of-citizens-services-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 04",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "product-distribution-centre",
-      "name": "Product Distribution Centre",
       "kind": "office",
       "parent_today": "ministry-of-citizens-services-2017",
       "established": null,
@@ -351,6 +269,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
+      "id": "bc-registries-and-online-services",
+      "name": "BC Registries and Online Services",
+      "kind": "division",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 04",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
       "id": "bc-stats",
       "name": "BC Stats",
       "kind": "office",
@@ -376,8 +319,58 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
+      "id": "connectivity-in-bc",
+      "name": "Connectivity in B.C.",
+      "kind": "program",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 04",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
       "id": "kings-printer",
       "name": "King's Printer",
+      "kind": "office",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 04",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "product-distribution-centre",
+      "name": "Product Distribution Centre",
       "kind": "office",
       "parent_today": "ministry-of-citizens-services-2017",
       "established": null,
@@ -429,6 +422,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "bc-services-card",
       "name": "BC Services Card",
       "kind": "program",
+      "parent_today": "ministry-of-citizens-services-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 04",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "connected-services-bc",
+      "name": "Connected Services BC",
+      "kind": "division",
       "parent_today": "ministry-of-citizens-services-2017",
       "established": null,
       "first_observed": null,

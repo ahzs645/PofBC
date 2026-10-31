@@ -14,11 +14,14 @@ const roleFills = (svg) => Object.fromEntries(
 // BCTS's earlier wordmark is set without the BC mark.
 const WITHOUT_MARK = ['bcts-wordmark-earlier']
 
+// Set beside the symbol alone, without “British Columbia”, as BC Parks' banner of 2005–2007 was.
+const SYMBOL_ONLY = ['bc-parks-banner']
+
 test('every mark has a sun, mountains and the wordmark, lifted from its artwork', () => {
   for (const [id, mark] of Object.entries(ONE_OFF_MARKS)) {
     if (WITHOUT_MARK.includes(id)) continue
     const roles = rolesOf(id)
-    for (const role of ['sun', 'mountains', 'wordmark']) assert.ok(roles.includes(role), `${id} has no ${role}`)
+    for (const role of SYMBOL_ONLY.includes(id) ? ['sun', 'mountains'] : ['sun', 'mountains', 'wordmark']) assert.ok(roles.includes(role), `${id} has no ${role}`)
     for (const { role } of mark.shapes) assert.ok(ONE_OFF_ROLES.includes(role), `${id}: unknown part ${role}`)
     assert.ok(mark.width > 0 && mark.height > 0)
   }
@@ -172,4 +175,18 @@ test('PreparedBC is remade in the current identity, every letter from the minist
   assert.deepEqual(unsupported(entry.text), [])
   const svg = renderCurrentSvg({ text: entry.text })
   assert.match(svg, /^<svg /)
+})
+
+test('BC Parks’ two marks of 2005–2016 are put together from the Best Place on Earth mark', () => {
+  const source = ONE_OFF_MARKS['best-place-on-earth']
+  const symbol = (id) => ONE_OFF_MARKS[id].shapes.filter(({ role }) => ['sun', 'rays', 'core', 'mountains'].includes(role)).length
+  assert.equal(symbol('bc-parks-banner'), symbol('best-place-on-earth'))
+  assert.deepEqual(rolesOf('bc-parks-banner'), ['sun', 'rays', 'core', 'mountains', 'name'])
+  assert.deepEqual(rolesOf('bc-parks-best-place'), ['sun', 'rays', 'core', 'mountains', 'wordmark', 'rule', 'tagline', 'divider', 'name'])
+  // The glow is the source's: same stops, the same sun.
+  assert.deepEqual(ONE_OFF_MARKS['bc-parks-best-place'].gradients, source.gradients)
+  assert.equal(ONE_OFF_MARKS['bc-parks-best-place'].sun.r, source.sun.r)
+  // “BCParks” is seven letters.
+  const name = ONE_OFF_MARKS['bc-parks-banner'].shapes.find(({ role }) => role === 'name').d
+  assert.ok((name.match(/M/g) ?? []).length >= 7)
 })

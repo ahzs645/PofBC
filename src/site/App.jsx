@@ -18,6 +18,8 @@ const PatchesView = lazy(() => import('../patches/PatchesView.jsx').then((module
 const GuidesView = lazy(() => import('../guides/GuidesView.jsx').then((module) => ({ default: module.GuidesView })))
 // The stationery brings brandkit's template engine and studio (vendor/brandkit).
 const StationeryView = lazy(() => import('../stationery/StationeryView.jsx').then((module) => ({ default: module.StationeryView })))
+const SalariesView = lazy(() => import('../salaries/SalariesView.jsx').then((module) => ({ default: module.SalariesView })))
+const HealthStoryView = lazy(() => import('../health/HealthStoryView.jsx').then((module) => ({ default: module.HealthStoryView })))
 import { generatorPatchFor } from '../government/eraMark.js'
 import {
   FLAG_PALETTE_ORDER, FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_SWATCHES
@@ -139,7 +141,7 @@ const initialView = () => {
 const writeView = (view) => {
   if (!globalThis.history?.replaceState) return
   const url = new URL(globalThis.location.href)
-  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'area', 'chapter']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   globalThis.history.replaceState(null, '', url)
 }
@@ -171,13 +173,15 @@ export const App = () => {
   }
   // A mark in the gallery leads to the body it stands for in the government diagram, which reads
   // its body from the address bar when it opens.
-  const openInGovernment = (node) => {
+  // A body that no longer stands opens in a year it did, which the caller passes.
+  const openInGovernment = (node, year) => {
     const url = new URL(globalThis.location.href)
     url.searchParams.delete('logos')
     url.searchParams.delete('mark')
     url.searchParams.set('view', 'government')
     url.searchParams.set('node', node)
-    url.searchParams.delete('year')
+    if (year) url.searchParams.set('year', String(year))
+    else url.searchParams.delete('year')
     globalThis.history?.replaceState(null, '', url)
     setView('government')
   }
@@ -267,6 +271,18 @@ export const App = () => {
       {view === 'stationery' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the stationery…</p>}>
           <StationeryView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'health-map' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the historical health maps…</p>}>
+          <HealthStoryView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'salaries' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the salaries…</p>}>
+          <SalariesView key={visit} onOpenGovernment={openInGovernment} />
         </Suspense>
       )}
 
@@ -652,28 +668,6 @@ export const App = () => {
       </div>
       )}
 
-      {/* The rights and capabilities notes concern the generator's mark and the gallery's; the
-          other views (posters, patches, guides…) carry their own sources. */}
-      {(view === 'generator' || view === 'gallery') && (
-        <>
-          <p className="footnote">
-            The mark is reproduced from the supplied artwork and is a provincial symbol; use of it is
-            governed by the Government of British Columbia. The typeface is embedded in exports under
-            whatever licence covers the copy this site was built with.
-            {view === 'gallery' && (
-              <> The gallery also holds other public bodies’ marks, such as BC Hydro’s, which are theirs
-                and are reconstructed here from historical material, not supplied by them.</>
-            )}
-          </p>
-
-          {/* Linked rather than only sitting at a path, so it is reachable from the page itself —
-              by a person wondering what the generator can do, and by an agent reading the document. */}
-          <p className="footnote">
-            Every option this generator offers is listed in{' '}
-            <a href={`${import.meta.env.BASE_URL}capabilities.json`}>capabilities.json</a>.
-          </p>
-        </>
-      )}
     </div>
     </NavigationContext.Provider>
   )

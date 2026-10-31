@@ -1,0 +1,209 @@
+{
+  "status": "proposed_design_not_implemented",
+  "wanted_items": [
+    "G1",
+    "G6",
+    "G5",
+    "G7"
+  ],
+  "source_ids": [
+    "R3R-278",
+    "R3R-279",
+    "R3R-280",
+    "R3R-001",
+    "R3R-223",
+    "R3E-101",
+    "R3E-103"
+  ],
+  "central_node": "People of British Columbia",
+  "views": [
+    "Representation and ministerial responsibility",
+    "Independent scrutiny and remedies",
+    "Services and regulation",
+    "Institutional history"
+  ],
+  "entities_to_keep_distinct": [
+    "People",
+    "Dated qualified electorate",
+    "Constituency",
+    "Person",
+    "Ministerial office",
+    "Ministry organization",
+    "Statutory board",
+    "Legal corporation",
+    "Program",
+    "Facility or site",
+    "Geographic service area",
+    "First Nations government"
+  ],
+  "edge_types": [
+    {
+      "type": "elects",
+      "from_kind": "Qualified electorate",
+      "to_kind": "Representative",
+      "evidence_required": "Election return and franchise at date",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": true
+    },
+    {
+      "type": "represents",
+      "from_kind": "Representative",
+      "to_kind": "Constituency or constituents",
+      "evidence_required": "Electoral district and member record",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": true
+    },
+    {
+      "type": "holds_office",
+      "from_kind": "Person",
+      "to_kind": "Public office",
+      "evidence_required": "Dated appointment or tenure record",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "answers_to_assembly",
+      "from_kind": "Minister or Executive Council",
+      "to_kind": "Legislative Assembly",
+      "evidence_required": "Parliamentary responsibility authority",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": true
+    },
+    {
+      "type": "responsible_minister",
+      "from_kind": "Body or enactment",
+      "to_kind": "Ministerial office",
+      "evidence_required": "Responsibility order or statute",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": true
+    },
+    {
+      "type": "reports_to",
+      "from_kind": "Body or officer",
+      "to_kind": "Report recipient",
+      "evidence_required": "Specific statutory or dated reporting requirement",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": true
+    },
+    {
+      "type": "owned_by",
+      "from_kind": "Corporation",
+      "to_kind": "Owner",
+      "evidence_required": "Share or ownership evidence",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "shares_held_by",
+      "from_kind": "Share interest",
+      "to_kind": "Holder for principal",
+      "evidence_required": "Statute or register",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "administered_by",
+      "from_kind": "Body or program",
+      "to_kind": "Administrator",
+      "evidence_required": "Agreement,statute or dated report",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "member_of",
+      "from_kind": "Member",
+      "to_kind": "Membership organization",
+      "evidence_required": "Governance instrument",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "board_appointed_by",
+      "from_kind": "Board position",
+      "to_kind": "Appointor",
+      "evidence_required": "Appointment provision or order",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "nominated_by",
+      "from_kind": "Candidate or position",
+      "to_kind": "Nominating body",
+      "evidence_required": "Nomination provision",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "funded_by",
+      "from_kind": "Recipient",
+      "to_kind": "Funder",
+      "evidence_required": "Financial agreement or appropriation",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "regulated_by",
+      "from_kind": "Regulated person or activity",
+      "to_kind": "Regulator",
+      "evidence_required": "Enabling jurisdiction",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "audited_by",
+      "from_kind": "Body or financial statements",
+      "to_kind": "Auditor",
+      "evidence_required": "Executed audit; plan kept separately",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "subject_to_administrative_scrutiny",
+      "from_kind": "Body or administrative act",
+      "to_kind": "Scrutiny officer",
+      "evidence_required": "Statutory class or direct named evidence",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "appealable_to",
+      "from_kind": "Specified decision",
+      "to_kind": "Appeal body",
+      "evidence_required": "Applicable appeal provision",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "reviewable_by",
+      "from_kind": "Specified decision",
+      "to_kind": "Court or review body",
+      "evidence_required": "Applicable review jurisdiction",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "serves",
+      "from_kind": "Service body",
+      "to_kind": "Defined population",
+      "evidence_required": "Mandate or program evidence",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    },
+    {
+      "type": "treaty_partner",
+      "from_kind": "Government",
+      "to_kind": "Government",
+      "evidence_required": "Executed agreement",
+      "eligible_for_political_or_reporting_path_only_with_separate_semantic_validation": false
+    }
+  ],
+  "edge_required_fields": [
+    "subject_id",
+    "relationship_type",
+    "object_id",
+    "valid_from",
+    "valid_to",
+    "observed_at",
+    "date_precision",
+    "date_kind",
+    "source_id",
+    "locator",
+    "evidence_status",
+    "scope",
+    "unknowns"
+  ],
+  "safeguards": [
+    "A sighting proves presence at an observed date or period,not original creation or uninterrupted existence.",
+    "Unknown legal end must not imply current operational presence.",
+    "Present-day statutory rules are observations unless historical versions establish an interval.",
+    "Ownership,administration,appointment,funding,membership and regulation are not interchangeable with ministerial responsibility.",
+    "An enabling statute’s minister is not automatically every listed corporation’s owner.",
+    "First Nations treaty governments are partners in their own right,not provincial ministries.",
+    "Do not exclude non-voters from the People node.",
+    "A proposed audit is not an executed audit; a named FOI head is not a general parent.",
+    "Statutory officeholder coverage does not manufacture a corporate board or unlimited organizational coverage.",
+    "The modern2003 B.C.Ferry Authority must not reuse the1964–1977 repository identity.",
+    "Nomination,polling,membership,oath,caucus change and dissolution remain distinct events."
+  ]
+}

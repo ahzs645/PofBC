@@ -1,0 +1,1124 @@
+{
+  "repository_commit": "0f1587c5e982135f155ba6660af5192509351511",
+  "repository_branch": "claude/compassionate-bohr-octofh",
+  "research_date": "2026-10-21",
+  "scope": "E 1–E 11 coverage of this completed Crown package, with explicit cross-references to root D1/G 2 and prior integrated evidence. No new research was added for this synthesis.",
+  "completion_caution": "Each top-level item remains partially_resolved because its complete requested scope has remaining gaps. resolved_specific_subquestion applies only to the exact described fact. Current observations are not historical intervals; neither 25 Wikipedia foundations nor 65 year-only starts is claimed complete.",
+  "source_catalogue_audit": {
+    "catalogue_file": "round3/crowns/sources.json",
+    "catalogue_records": 182,
+    "distinct_requested_urls": 181,
+    "distinct_recorded_final_urls_excluding_absent": 180,
+    "usable_records": 180,
+    "distinct_usable_requested_urls": 179,
+    "distinct_usable_content_sha256": 179,
+    "unusable_response_records": 2,
+    "unusable_source_ids": [
+      "R3E-132",
+      "R3E-144"
+    ],
+    "original_path_count": 182,
+    "existing_original_paths": 182,
+    "missing_original_source_ids": [],
+    "hashes_checked": 182,
+    "hash_mismatch_source_ids": [],
+    "records_with_existing_text_extract": 181,
+    "usable_records_with_existing_text_extract": 179,
+    "usable_original_without_text_extract": [
+      {
+        "source_id": "R3E-128",
+        "path": "/workspace/scratch/a5ca1a8fd90b/round3/crowns/raw/0517_2002.raw",
+        "review_scope": "Entire one-page original instrument visually checked."
+      }
+    ],
+    "duplicate_requested_urls": [
+      {
+        "url": "https://www2.gov.bc.ca/assets/gov/driving-and-transportation/passenger/coastal-ferries/cfs_contract_amend_agreement_no-03.pdf",
+        "source_ids": [
+          "R3E-050",
+          "R3E-150"
+        ]
+      }
+    ],
+    "source_class_counts": {
+      "primary": 144,
+      "official_registry": 36,
+      "unusable_response": 2
+    },
+    "interpretation": "182 catalogued responses are 180 usable records at 179 distinct usable URLs; the duplicate is ferry amendment 3(R3E-050/R3E-150). R3E-132is an access/outage page;R3E-144is HTML instead of the requested PDF. R3E-128is the preserved, visually reviewed original OIC 517/2002 with no text_path. Counts do not imply independent sources, independent findings or complete-page review."
+  },
+  "items": [
+    {
+      "id": "E1",
+      "title": "E1 (P1) Which ministry answered for these bodies, by period",
+      "request": "(body-years with none in\n  brackets): Provincial Rental Housing Corporation (54), Workmen's Compensation Board 1917-1973 (57),\n  Emergency Health Services Commission (31), Civil Service Commission (26), Royal BC Museum (23), BC\n  Games Society (23), Employment Standards Tribunal (22; Labour and Attorney General disagree), BC\n  Film Commission (21), BC Steamship Company (1975) (17), BC Housing (16), BC Railway Company\n  1972-2003 (16), First Peoples' Cultural Council (14), Liquor Distribution Branch (13, and 39 more\n  inferred), BC Pavilion Corporation (12), WLC Developments (12), Labour Relations Board (11), Open\n  Learning Agency (10), Coal and Petroleum Control Board (9), Science Council of BC (23 inferred), the\n  Homeowner Protection Office after June 2001 (9 inferred). The Workers' Compensation Review Board,\n  Appeal Division and WCAT (61 together) and BC Cancer and BC Transplant before PHSA (42) are also\n  unplaced. *Where:* orders in council assigning statutes, the Estimates' votes, annual reports.\n  BC Archives authority pages for WCB, the Civil Service Commission and EHSC failed in round 2; try\n  them first. *Hand back:* `responsible-*.json`.",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-003",
+        "R3E-004",
+        "R3E-005",
+        "R3E-015",
+        "R3E-016",
+        "R3E-042",
+        "R3E-044",
+        "R3E-046",
+        "R3E-088",
+        "R3E-112",
+        "R3E-113",
+        "R3E-135",
+        "R3E-136",
+        "R3E-137",
+        "R3E-138",
+        "R3E-141",
+        "R3E-169",
+        "R3E-181"
+      ],
+      "remaining_records": [
+        "Join root D1 ministry_transfer_clauses.json and original cabinet-assignment orders, including OIC 897/1999 s 23 (housing), s 25 (HPO), OIC 652/2010 ss 15–16 (Games/Film), OIC 596/2024 and OIC 377/2025. Preserve the printed Provincial Rental Housing Commission wording where the source uses it.",
+        "For WCB 1917–1973, inspect annual Workmen's Compensation Board reports, Labour departmental reports and the contemporaneous Workers Compensation Act administration/assignment provisions.",
+        "For PRHC from 1973 and EHSC from 1974, inspect annual-report organization charts, Estimates vote descriptions, original department transfer orders and share/administration agreements.",
+        "For the Civil/Public Service transition, retrieve the commencement order under Public Service Act SBC 1973 c 143 s 78. Opened OIC 3664/1973 merely transmits a bill and is not commencement.",
+        "Recover the three BC Archives authority texts listed in search_ledger.json; supplement rather than replace statutory and annual-report evidence."
+      ],
+      "findings": [
+        "Nine bounded responsibility records are supplied in responsible-crowns.json. They are observations or a specifically dated transfer, not continuous histories for all unplaced body-years.",
+        "The Civil Service Act expressly assigns administration to the Provincial Secretary in the 1948 consolidation, s 7, and the 1960 consolidation, s 8. These observations have year precision; they do not establish a fabricated 1 January boundary.",
+        "LDB financial Note 1 states a transfer to Agriculture and Food effective 17 July 2025. Financial-note checkpoints also identify BCIB under Finance in 2021/22 and Infrastructure in 2025/26, BC Railway under Transportation and Transit in 2025/26, and PavCo through Tourism, Arts, Culture and Sport.",
+        "The Museum 2025/26 note prints Tourism, Arts and Culture. Retain that source wording; root D1 OIC 596/2024 Appendix B item 423 supplies the normalized Tourism, Arts, Culture and Sport portfolio. Do not mistake a shortened financial-note label for a different ministry.",
+        "EHSC legal establishment is 30 May 1974, from the original Act and contemporary default commencement rule; this solves a legal-start subquestion, not the requested complete ministry chronology. OIC 2305/1974 separately sets ambulance arrangements from 1 July 1974.",
+        "BC Archives authority pages for WCB, Civil Service Commission and EHSC were attempted directly and through both search engines but not recovered. These failures are documented."
+      ],
+      "remaining_gaps": [
+        "The 54 PRHC, 57 WCB and 31 EHSC unplaced body-years are not all resolved. Most other early periods named in WANTED remain incomplete in this Crown package.",
+        "Employment Standards Tribunal Labour/Attorney General conflict, BC Games, BC Film Commission, Steamship Company, WLC Developments, Labour Relations Board, Coal and Petroleum Control Board, Science Council, HPO and earlier health agencies need their own dated responsibility evidence.",
+        "A current statutory reference to the responsible minister does not identify the historical ministry; a funding route, auditor addressee, tabling practice or reporting checkpoint cannot alone establish a continuous responsible-ministry interval."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/responsible-crowns.json",
+        "round3/crowns/typed_relationships.json",
+        "round3/root/ministry_transfer_clauses.json"
+      ],
+      "claim_ids": [
+        "R3E-C064",
+        "R3E-C065",
+        "R3E-C066",
+        "R3E-C067",
+        "R3E-C068",
+        "R3E-C078"
+      ],
+      "full_requested_history_complete": false,
+      "subquestions": [
+        {
+          "topic": "EHSC statutory establishment",
+          "status": "resolved_specific_subquestion",
+          "finding": "30 May 1974; original EHSC Act s 2 and RSBC 1960 Interpretation Act s 6. No deferred commencement clause, so no missing establishment proclamation is inferred.",
+          "source_ids": [
+            "R3E-137",
+            "R3E-181"
+          ]
+        },
+        {
+          "topic": "Named historical ministry intervals",
+          "status": "partially_resolved",
+          "finding": "Nine local responsibility observations/transfers; join root D1 orders for further evidence.",
+          "source_ids": [
+            "R3E-112",
+            "R3E-113",
+            "R3E-044"
+          ],
+          "remaining": "Do not mark all requested body-years placed."
+        }
+      ],
+      "relationship_ids": [
+        "R3E-R010",
+        "R3E-R099",
+        "R3E-R104",
+        "R3E-R105",
+        "R3E-R112",
+        "R3E-R113",
+        "R3E-R123",
+        "R3E-R124",
+        "R3E-R125"
+      ]
+    },
+    {
+      "id": "E2",
+      "title": "E2 (P1) Ownership, administration and control, typed.",
+      "request": "For each Crown corporation: who holds\n  its shares (or that it has none), who appoints its board (statute and section), who administers\n  it under agreement, and from when. Known so far, as events only: BCTFA owns BC Railway Company\n  (2010) and TI Corp (2018); the B.C. Ferry Authority is the sole voting shareholder of BC Ferry\n  Services, with the Province's preferred shares; BC Housing administers PRHC and has controlled it\n  since 26 January 2024; BCSHS is a member of HEABC. Needs the line types in G1.",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-005",
+        "R3E-007",
+        "R3E-009",
+        "R3E-015",
+        "R3E-016",
+        "R3E-021",
+        "R3E-028",
+        "R3E-029",
+        "R3E-039",
+        "R3E-042",
+        "R3E-044",
+        "R3E-046",
+        "R3E-047",
+        "R3E-085",
+        "R3E-086",
+        "R3E-087",
+        "R3E-088",
+        "R3E-089",
+        "R3E-090",
+        "R3E-091",
+        "R3E-092",
+        "R3E-093",
+        "R3E-094",
+        "R3E-095",
+        "R3E-096",
+        "R3E-097",
+        "R3E-098",
+        "R3E-099",
+        "R3E-100",
+        "R3E-101",
+        "R3E-102",
+        "R3E-103",
+        "R3E-104",
+        "R3E-105",
+        "R3E-106",
+        "R3E-108",
+        "R3E-109",
+        "R3E-110",
+        "R3E-111",
+        "R3E-112",
+        "R3E-113",
+        "R3E-124",
+        "R3E-131",
+        "R3E-133",
+        "R3E-137",
+        "R3E-139",
+        "R3E-140",
+        "R3E-167",
+        "R3E-168"
+      ],
+      "remaining_records": [
+        "For each corporate entity, retrieve dated memorandum/articles, share register and transfer/subscription documents, and compare them to the statutory shareholder provisions.",
+        "Retrieve each employer association's constitution/bylaws and ministerial approvals under Public Sector Employers Act ss 7 and 9 for the specific year being drawn.",
+        "Retrieve the Museum Act s 6 prescribed-date regulation and historical Coastal Ferry Act ss 5,7 amendments before extending those appointment rows backward.",
+        "Join D1 statute-assignment orders only where an edge refers to a generic responsible minister; retain the relation type."
+      ],
+      "findings": [
+        "126 source-specific typed relationship rows cover 51 subjects, including shares, legal form, appointment, nomination, administration, membership, agency status, regulation and service populations.",
+        "The matrix gives governing statutory sections and qualifications. It distinguishes government ownership of the corporate share from pension-client assets, minister nomination from final appointment, accounting control from a documented share transfer, and corporate ownership from contractual administration.",
+        "WorkSafeBC president is appointed by the board, while WCAT chair is appointed by LGIC and its vice-chairs/extraordinary members by the chair after ministerial consultation. Employer associations have mixed government/member arrangements governed by approved bylaws.",
+        "R3E-R057–R060 use the statutory B.C. Ferry Authority name for the modern 2003 authority. The repository id bc-ferry-authority belongs to the 1964–1977 entity and must not be reused.",
+        "All typed rows explicitly decline to treat ownership, appointment, administration, funding or regulation alone as a complete accountability path to the people."
+      ],
+      "remaining_gaps": [
+        "The matrix does not cover every Crown throughout every year. Most current statute observations have no proven historic start, and must not be backdated to incorporation.",
+        "Historic board-composition amendments, business-corporation articles/share registers, employer-association dated bylaws and some original administration agreements remain missing.",
+        "The Museum Act conditional nomination split needs the prescribed-date regulation. Ferry board composition changed, so today's four LGIC positions cannot be inserted into the original 2003 board."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/typed_relationships.json",
+        "round3/crowns/typed_relationship_matrix.md"
+      ],
+      "claim_ids": [
+        "R3E-C049",
+        "R3E-C050",
+        "R3E-C051",
+        "R3E-C052",
+        "R3E-C070",
+        "R3E-C072"
+      ],
+      "full_requested_history_complete": false,
+      "subquestions": [
+        {
+          "topic": "Current statutory and dated financial relationships",
+          "status": "resolved_specific_subquestion",
+          "finding": "126 reviewed relationship records, each with its own date/conditions. This resolves those specified observations, not complete historical intervals.",
+          "source_ids": [
+            "R3E-005",
+            "R3E-007",
+            "R3E-009",
+            "R3E-015",
+            "R3E-016",
+            "R3E-021",
+            "R3E-028",
+            "R3E-029",
+            "R3E-039",
+            "R3E-042",
+            "R3E-044",
+            "R3E-046",
+            "R3E-047",
+            "R3E-085",
+            "R3E-086",
+            "R3E-087",
+            "R3E-088",
+            "R3E-089",
+            "R3E-090",
+            "R3E-091",
+            "R3E-092",
+            "R3E-093",
+            "R3E-094",
+            "R3E-095",
+            "R3E-096",
+            "R3E-097",
+            "R3E-098",
+            "R3E-099",
+            "R3E-100",
+            "R3E-101",
+            "R3E-102",
+            "R3E-103",
+            "R3E-104",
+            "R3E-105",
+            "R3E-106",
+            "R3E-108",
+            "R3E-109",
+            "R3E-110",
+            "R3E-111",
+            "R3E-112",
+            "R3E-113",
+            "R3E-124",
+            "R3E-131",
+            "R3E-133",
+            "R3E-137",
+            "R3E-139",
+            "R3E-140",
+            "R3E-167",
+            "R3E-168"
+          ]
+        },
+        {
+          "topic": "Complete dated ownership and governance histories for every Crown",
+          "status": "unresolved",
+          "finding": "No claim of all-Crown or all-year completeness.",
+          "source_ids": [
+            "R3E-101",
+            "R3E-102",
+            "R3E-103",
+            "R3E-111"
+          ],
+          "remaining": "Historic instruments and private corporate records still required."
+        }
+      ]
+    },
+    {
+      "id": "E3",
+      "title": "E3 (P2) PRHC.",
+      "request": "The 1973 acquisition (day and instrument: share purchase, order in council or\n  statute), the 1961 incorporation certificate, the start of BC Housing's administration, and\n  which minister answered for it from 1973.",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-139",
+        "R3E-140",
+        "R3E-142",
+        "R3E-143",
+        "R3E-145",
+        "R3E-166"
+      ],
+      "remaining_records": [
+        "Obtain historical company 52129 incorporation and share-transfer files, including the original 1961 certificate and 1973 vendor/purchaser subscription or sale documents.",
+        "Inspect 1973 Housing Department/Crown financial transaction records and OIC schedules for the Pemco acquisition; distinguish authorization from closing.",
+        "Retrieve the first PRHC–BC Housing administration agreement and subsequent amendments.",
+        "Join root D1 housing responsibility orders, retaining observed dates and printed entity-name errors."
+      ],
+      "findings": [
+        "The 2004/05 BC Housing annual report, printed p 13, states that the housing minister is PRHC's sole shareholder, BC Housing administers PRHC, and BC Housing officers/directors serve it. This proves an arrangement by that checkpoint, not its first day.",
+        "The already integrated prior-package Registrar notices remain controlling: Pemco Holdings Ltd., company 52129, incorporated 13 December 1961; BC Housing Corporation name 7 May 1976; PRHC name 21 December 1976. These are not re-counted as new discoveries.",
+        "The report's 1973 incorporation shorthand is not substituted for the 1961 corporate event. The 2024 control change and later accounting consolidation remain separate from share transfer.",
+        "OIC 178/1974 authorizes Woodbridge and up to $5.8 million housing-company share purchases, but does not name Dunhill or certify completion; it is not a substitute for a PRHC purchase instrument."
+      ],
+      "remaining_gaps": [
+        "The central requested 1973 purchase day and instrument remain unresolved.",
+        "The original 1961 incorporation certificate, first BC Housing administration agreement and full ministry chronology from 1973 are still missing."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/typed_relationships.json"
+      ],
+      "claim_ids": [],
+      "full_requested_history_complete": false,
+      "subquestions": [
+        {
+          "topic": "1973 share purchase instrument and day",
+          "status": "unresolved",
+          "finding": "Not located; 1973 remains a year-level acquisition claim from earlier evidence.",
+          "source_ids": [
+            "R3E-139",
+            "R3E-140"
+          ]
+        },
+        {
+          "topic": "2005 ownership/administration checkpoint",
+          "status": "resolved_specific_subquestion",
+          "finding": "Housing minister sole shareholder; BC Housing administrator by the 2004/05 report.",
+          "source_ids": [
+            "R3E-139"
+          ]
+        }
+      ],
+      "relationship_ids": [
+        "R3E-R109",
+        "R3E-R110",
+        "R3E-R111"
+      ]
+    },
+    {
+      "id": "E4",
+      "title": "E4 (P2) The modern ferry structure.",
+      "request": "The coastal ferry services contract (first contract and\n  renewals), the Province's preferred shares (instrument, date), the BC Ferries Commissioner (2003\n  start, statute), and BC Ferry Services Inc.'s 2 April 2003 conversion.",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-083",
+        "R3E-103",
+        "R3E-125",
+        "R3E-130",
+        "R3E-131",
+        "R3E-146",
+        "R3E-147",
+        "R3E-148",
+        "R3E-149",
+        "R3E-150",
+        "R3E-151",
+        "R3E-152",
+        "R3E-153",
+        "R3E-154",
+        "R3E-155",
+        "R3E-156",
+        "R3E-157",
+        "R3E-158",
+        "R3E-159",
+        "R3E-160",
+        "R3E-161",
+        "R3E-162",
+        "R3E-163",
+        "R3E-164",
+        "R3E-165"
+      ],
+      "remaining_records": [
+        "Obtain BCFS's executed amended memorandum and share redemption/subscription registers dated 2 April 2003.",
+        "Retrieve the first Commissioner appointment OIC and first annual report; keep office commencement distinct from the individual's appointment.",
+        "For each requested contract change, use the signed amendment's operative commencement clause, not the unofficial consolidation alone."
+      ],
+      "findings": [
+        "Coastal Ferry Act was assented to 27 March 2003 and expressly commenced 1 April 2003 under s 89. The modern B.C. Ferry Authority is established by s 2; the Commissioner's office by s 35.",
+        "The operator converted on 2 April 2003. Crown-agent cessation is Coastal Ferry Act s 19(3), correcting the earlier package's erroneous s 20(3) citation.",
+        "Audited company Note 8(b), PDF p. 57 / printed p. 55, records amendment of the memorandum and issue on 2 April 2003 of one voting Class B common share and 75,477 Class C preferred shares; the Authority holds common and the Province preferred. Preferred terms are $1,000 par and 8% cumulative.",
+        "Original Coastal Ferry Services Contract began 1 April 2003 with a sixty-year term. Four-year performance terms are not renewals of the whole agreement; PT 6 is 1 April 2024–31 March 2028.",
+        "All 18 published contract amendments are preserved in a ledger distinguishing reference, execution and effective dates. The modern authority needs a separate node from the repository's historical 1964–1977 Ferry Authority."
+      ],
+      "remaining_gaps": [
+        "Executed amended memorandum and original subscription/share records remain absent, though audited statements prove their date and described effect.",
+        "The first Commissioner's personal appointment order is still needed if modelling the officeholder rather than the office.",
+        "Route/payment-specific changes require operative-clause reading; the amendment ledger does not assert every clause has the agreement's reference date."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/ferry_amendment_ledger.json",
+        "round3/crowns/claims.json",
+        "round3/crowns/typed_relationships.json"
+      ],
+      "claim_ids": [
+        "R3E-C047",
+        "R3E-C070",
+        "R3E-C071",
+        "R3E-C072",
+        "R3E-C073"
+      ],
+      "full_requested_history_complete": false,
+      "subquestions": [
+        {
+          "topic": "Authority/Commissioner office and operator conversion dates",
+          "status": "resolved_specific_subquestion",
+          "finding": "Authority and statutory office 1 April 2003; operator conversion 2 April 2003.",
+          "source_ids": [
+            "R3E-103",
+            "R3E-083"
+          ]
+        },
+        {
+          "topic": "First contract and performance-term distinction",
+          "status": "resolved_specific_subquestion",
+          "finding": "Original 60-year agreement and 18 published amendments preserved.",
+          "source_ids": [
+            "R3E-146",
+            "R3E-147",
+            "R3E-130"
+          ]
+        },
+        {
+          "topic": "Share issue day and legal instrument described",
+          "status": "resolved_specific_subquestion",
+          "finding": "AuditedNote 8(b) identifies memorandum amendment and issue 2 April 2003.",
+          "source_ids": [
+            "R3E-131"
+          ],
+          "remaining": "Executed corporate original remains desirable."
+        }
+      ],
+      "relationship_ids": [
+        "R3E-R057",
+        "R3E-R058",
+        "R3E-R059",
+        "R3E-R060",
+        "R3E-R061",
+        "R3E-R062",
+        "R3E-R063",
+        "R3E-R064"
+      ]
+    },
+    {
+      "id": "E5",
+      "title": "E5 (P2) Pensions and land titles.",
+      "request": "BCI and the BC Pension Corporation: corporate ownership\n  apart from the pension boards and the assets they manage (Public Sector Pension Plans Act ss.\n  5-8, 16-20). LTSA (2005): a non-share corporation, government agent only for specified purposes.",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-101",
+        "R3E-102"
+      ],
+      "remaining_records": [
+        "Retrieve 1999/2000 commencement orders for Public Sector Pension Plans Act corporate provisions and subsequent board amendments.",
+        "Retrieve LTSA establishment/commencement order for the 2005 transition and original operating agreement, then amendments affecting agency powers or ministerial administration.",
+        "Match historic nominations/appointments to the version of the statute then in force."
+      ],
+      "findings": [
+        "Public Sector Pension Plans Act ss 5–8 establishes Pension Corporation ownership, agency status, administration and pension-board representation. Sections 16–20 separately establish BCI and its corporate share, board, investment-agent capacity and functions.",
+        "The government's corporate share does not make the pension/client funds ordinary assets of a ministry or imply pension boards own BCI shares.",
+        "LTSA is a non-profit non-share corporation; government-agent status is limited to Crown grants and agreement-defined purposes. Sections 6–7 distinguish stakeholder nomination and appointment by continuing directors; government nominates two positions.",
+        "LTSA s 41 exceptional ministerial administration under agreement is a separate mechanism from ordinary board appointment."
+      ],
+      "remaining_gaps": [
+        "Original commencement instruments and changes in board composition have not all been traced. Current consolidated provisions are not complete dated historical intervals.",
+        "Original and amended LTSA operating agreements are needed to define its agency purposes for each period."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/typed_relationships.json",
+        "round3/crowns/typed_relationship_matrix.md"
+      ],
+      "claim_ids": [],
+      "full_requested_history_complete": false,
+      "subquestions": [
+        {
+          "topic": "Current corporate ownership, board mechanisms and LTSA limited agency",
+          "status": "resolved_specific_subquestion",
+          "finding": "Statutory sections are recorded in the typed matrix.",
+          "source_ids": [
+            "R3E-101",
+            "R3E-102"
+          ]
+        },
+        {
+          "topic": "Original commencement and every historical governance change",
+          "status": "unresolved",
+          "finding": "Not all original orders or version-specific amendments recovered.",
+          "source_ids": [
+            "R3E-101",
+            "R3E-102"
+          ]
+        }
+      ],
+      "relationship_ids": [
+        "R3E-R043",
+        "R3E-R044",
+        "R3E-R045",
+        "R3E-R046",
+        "R3E-R047",
+        "R3E-R048",
+        "R3E-R049",
+        "R3E-R050",
+        "R3E-R051",
+        "R3E-R052",
+        "R3E-R053",
+        "R3E-R054",
+        "R3E-R055",
+        "R3E-R056"
+      ]
+    },
+    {
+      "id": "E6",
+      "title": "E6 (P2) The 2026 service-plan exemption list (20 entries) and the Public Accounts'\n  reporting-entity list.",
+      "request": "For each entry: its statute, legal form, registry status and whether it\n  still exists. Includes PRHC, the employer associations, Rapid Transit Project 2000 and Canadian\n  Blood Services. BC Enterprise Corporation: ceased, continued elsewhere, or a stale listing (its\n  Act was repealed 13 March 2023).",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-009",
+        "R3E-025",
+        "R3E-031",
+        "R3E-046",
+        "R3E-051",
+        "R3E-052",
+        "R3E-053",
+        "R3E-054",
+        "R3E-055",
+        "R3E-056",
+        "R3E-057",
+        "R3E-058",
+        "R3E-059",
+        "R3E-060",
+        "R3E-061",
+        "R3E-062",
+        "R3E-063",
+        "R3E-074",
+        "R3E-105",
+        "R3E-109",
+        "R3E-110",
+        "R3E-111",
+        "R3E-125",
+        "R3E-126",
+        "R3E-127",
+        "R3E-129",
+        "R3E-139",
+        "R3E-140"
+      ],
+      "remaining_records": [
+        "Join exemption_entity_matrix.json to root auditor_general_coverage.json and Public Accounts evidence by legal identity and observation date, not name alone.",
+        "For dissolved entries, obtain liquidation/asset-transfer records only if tracing successors; do not retain a live node merely because the exemption persists.",
+        "Retrieve original society amalgamation documents and dated bylaws where constituent/member relationships are required."
+      ],
+      "findings": [
+        "All 20 permanent entries are reconciled:19 named entries in s 1 and BC Railway Company plus subsidiaries in s 3. Fiscal-year-limited exemptions in ss 4–7 are not extra current permanent roster members.",
+        "Seven retained names are demonstrably dissolved:552513 BC 31 March 2008; BCIF 13 February 2012; BC Enterprise 27 March 2023; RTP 200029 September 2015; LEEF 19 November 2013; BC PNP Fast Track 13 June 2008; BC Trade and Invest 18 January 2018.",
+        "BC Enterprise statutory repeal 13 March 2023 and registry dissolution 27 March 2023 are separate events; a stale exemption does not prove continuing corporate existence.",
+        "Legal forms and status evidence are recorded for all 20. Employer associations are societies; Canadian Blood Services is a federal non-share corporation, incorporated 16 February 1998, continued 7 May 2014; BC extra-provincial registration 3 September 1998 is distinct.",
+        "Registry effective dates use British Columbia local calendar dates, with original credentials/event codes retained."
+      ],
+      "remaining_gaps": [
+        "The Crown package does not itself complete all Public Accounts government-reporting-entity memberships; those are in root's independent OAG/Public Accounts work.",
+        "Some original society amalgamation constituents, full subsidiary rosters and liquidation/asset dispositions remain unresolved."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/exemption_entity_matrix.json",
+        "round3/crowns/exemption_entity_matrix.md",
+        "round3/crowns/registry_event_ledger_verified.json",
+        "round3/root/auditor_general_coverage.json"
+      ],
+      "claim_ids": [
+        "R3E-C001",
+        "R3E-C002",
+        "R3E-C003",
+        "R3E-C004",
+        "R3E-C005",
+        "R3E-C006",
+        "R3E-C007",
+        "R3E-C008",
+        "R3E-C009",
+        "R3E-C010",
+        "R3E-C011",
+        "R3E-C012",
+        "R3E-C013",
+        "R3E-C014",
+        "R3E-C015",
+        "R3E-C016",
+        "R3E-C017",
+        "R3E-C018",
+        "R3E-C019",
+        "R3E-C020",
+        "R3E-C021",
+        "R3E-C022",
+        "R3E-C023",
+        "R3E-C024",
+        "R3E-C025",
+        "R3E-C059",
+        "R3E-C060"
+      ],
+      "full_requested_history_complete": false,
+      "subquestions": [
+        {
+          "topic": "20-entry permanent exemption/status reconciliation",
+          "status": "resolved_specific_subquestion",
+          "finding": "Every roster entry is covered; seven stale dissolved names identified.",
+          "source_ids": [
+            "R3E-129",
+            "R3E-125"
+          ]
+        },
+        {
+          "topic": "Complete reporting-entity membership and successor assets",
+          "status": "partially_resolved",
+          "finding": "GRE is a separate classification and is cross-referenced to root work.",
+          "source_ids": [
+            "R3E-129"
+          ],
+          "remaining": "Do not infer current GRE or audit membership from exemption."
+        }
+      ]
+    },
+    {
+      "id": "E7",
+      "title": "E7 (P2) Primary sources for the 25 bodies that rest on Wikipedia:",
+      "request": "Liquor Distribution\n  Branch, BC Ferry Services Inc., BC Electric (Crown), BC Games Society, BC Film Commission, First\n  Peoples' Cultural Council, Columbia Basin Trust, BC Arts Council, Tourism BC, BC Human Rights\n  Commission, TransLink (both), Oil and Gas Commission, BCI, BC Pension Corporation, Partnerships BC,\n  BC Transmission Corporation, Royal BC Museum, Industry Training Authority, BC Innovation Council,\n  Community Living BC, TI Corp, Creative BC, Innovate BC, SkilledTradesBC. Enabling Acts, their\n  commencement, and BC Archives authority records.",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-013",
+        "R3E-016",
+        "R3E-029",
+        "R3E-039",
+        "R3E-072",
+        "R3E-073",
+        "R3E-083",
+        "R3E-085",
+        "R3E-090",
+        "R3E-091",
+        "R3E-092",
+        "R3E-093",
+        "R3E-094",
+        "R3E-096",
+        "R3E-097",
+        "R3E-098",
+        "R3E-101",
+        "R3E-103",
+        "R3E-106",
+        "R3E-125",
+        "R3E-170"
+      ],
+      "remaining_records": [
+        "Construct a one-body/one-event audit against the 25 listed names, using the earliest enabling Act and its commencement provision/OIC, then original corporate registrations where applicable.",
+        "Retrieve historic legal instruments for the outstanding LDB, BC Electric, Film Commission, Arts Council, Tourism, Human Rights, TransLink, Partnerships/Infrastructure BC and Transmission Corporation histories.",
+        "For renames/continuations, obtain the amending Act and commencement order, retaining the same legal identity only where the instrument supports continuity."
+      ],
+      "findings": [
+        "New primary registry/legal/financial evidence supports selected foundation or continuity facts for Games, Creative BC, CLBC, ITA/SkilledTradesBC, ferry operator/modern Authority, PavCo and FPCC operational commencement.",
+        "Current Acts provide direct legal-form/appointment evidence for several other listed entities, including FPCC, CBT, BCI, Pension Corporation, Museum, TI Corp, Innovate BC and SkilledTradesBC.",
+        "Legal incorporation, statutory establishment, name continuation and operational commencement remain separate. The 14 claims tagged E7 are event/observation records, not a claim that 14 of 25 complete founding histories are solved."
+      ],
+      "remaining_gaps": [
+        "All 25 Wikipedia-dependent foundation histories are not complete. LDB, Crown BC Electric, Film Commission, BC Arts Council, Tourism BC, Human Rights Commission, both TransLink versions, Partnerships BC, Transmission Corporation and several original commencement/rename chains remain incomplete.",
+        "FPCC 1 April 1991 is an operations date; ITA 2 January 2004 is supported by audited historical notes. Original commencement instruments remain preferable for legal foundation boundaries."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/claims.json",
+        "round3/crowns/typed_relationships.json"
+      ],
+      "claim_ids": [
+        "R3E-C032",
+        "R3E-C033",
+        "R3E-C034",
+        "R3E-C035",
+        "R3E-C036",
+        "R3E-C047",
+        "R3E-C052",
+        "R3E-C054",
+        "R3E-C055",
+        "R3E-C056",
+        "R3E-C057",
+        "R3E-C058",
+        "R3E-C069",
+        "R3E-C070"
+      ],
+      "full_requested_history_complete": false
+    },
+    {
+      "id": "E8",
+      "title": "E8 (P3) Day-level starts for the 65 bodies dated to a year.",
+      "request": "The enabling Act's commencement\n  or the incorporation day.",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-013",
+        "R3E-016",
+        "R3E-028",
+        "R3E-029",
+        "R3E-039",
+        "R3E-064",
+        "R3E-065",
+        "R3E-066",
+        "R3E-067",
+        "R3E-068",
+        "R3E-072",
+        "R3E-073",
+        "R3E-074",
+        "R3E-075",
+        "R3E-082",
+        "R3E-093",
+        "R3E-125",
+        "R3E-137",
+        "R3E-138",
+        "R3E-170",
+        "R3E-181"
+      ],
+      "remaining_records": [
+        "Join the selected claims to the repository's 65 year-only-start inventory by legal identity and event type; preserve year precision for unmatched rows.",
+        "For each remaining statutory body, obtain the original establishment provision and commencement order; for incorporated entities, obtain the original registry certificate/history.",
+        "Use dated first sightings only as lower-confidence presence evidence, not invented exact legal starts."
+      ],
+      "findings": [
+        "Selected exact incorporation/name/commencement events are supplied, including BCIB 16 July 2018, FES 16 February 2016, FII 31 March 2003, BCFMA 17 June 2019, BCCIE 7 May 1991, Games 26 June 1987, Creative BC predecessor 18 September 1987, BCR Properties 18 May 1984, CLBC 1 July 2005 and EHSC 30 May 1974.",
+        "The 29 claims tagged E8 include multiple events per body and different event types. They are not 29 distinct solved start dates out of 65.",
+        "BCFMAoperations 1 November 2019, Creative BC 2013 rename, statutory establishment, registry registration and operational ancestry are separately labelled; an observed date never silently becomes incorporation."
+      ],
+      "remaining_gaps": [
+        "All 65 year-only starts are not resolved. Some exact dates recovered are renames, acquisitions, operational starts or legal ends rather than foundations.",
+        "A current statutory registration in OrgBook is not assumed to be the original statutory creation day."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/claims.json",
+        "round3/crowns/registry_event_ledger_verified.json"
+      ],
+      "claim_ids": [
+        "R3E-C026",
+        "R3E-C027",
+        "R3E-C028",
+        "R3E-C029",
+        "R3E-C030",
+        "R3E-C031",
+        "R3E-C032",
+        "R3E-C033",
+        "R3E-C034",
+        "R3E-C035",
+        "R3E-C036",
+        "R3E-C037",
+        "R3E-C038",
+        "R3E-C039",
+        "R3E-C040",
+        "R3E-C043",
+        "R3E-C044",
+        "R3E-C045",
+        "R3E-C046",
+        "R3E-C052",
+        "R3E-C053",
+        "R3E-C054",
+        "R3E-C055",
+        "R3E-C056",
+        "R3E-C057",
+        "R3E-C058",
+        "R3E-C066",
+        "R3E-C067",
+        "R3E-C069"
+      ],
+      "full_requested_history_complete": false
+    },
+    {
+      "id": "E9",
+      "title": "E9 (P2) Open questions already recorded in `history/bodies.json`:",
+      "request": "the Merit Commissioner's\n  dissolution in-force day (2026); OGC to BC Energy Regulator in-force day (2023); when the Liquor\n  Administration Branch became the Liquor Distribution Branch; BC Transit's start (1982 rename or\n  1983 merger) and MTOC's end; BC Hydro 1961 or 1962; Pacific Carbon Trust's wind-up day; Land and\n  Water BC's end (2005); the Provincial Capital Commission's dissolution (2014?); Legal Aid BC's\n  operating-name date; Expo 86 Corporation's dates.",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-081",
+        "R3E-082",
+        "R3E-085",
+        "R3E-089",
+        "R3E-098",
+        "R3E-100",
+        "R3E-114",
+        "R3E-115",
+        "R3E-116",
+        "R3E-117",
+        "R3E-118",
+        "R3E-119",
+        "R3E-120",
+        "R3E-122",
+        "R3E-123",
+        "R3E-125"
+      ],
+      "remaining_records": [
+        "Retrieve the original LDB branch renaming/administrative order and contemporaneous organization statement.",
+        "Retrieve BC Transit and MTOC 1982/1983 commencement and asset/undertaking transfer orders; separately retrieve Hydro 1961 acquisition and 1962 amalgamation/establishment instruments.",
+        "Retrieve Expo 86 Corporation original incorporation/establishment and dissolution orders and corporate history.",
+        "Locate a dated executed public launch record for Legal Aid BC; retain Legal Services Society legal continuity."
+      ],
+      "findings": [
+        "Resolved specific boundaries: Merit Commissioner independent office dissolves 30 June 2026 (order 5 June); OGC corporate name becomes BC Energy Regulator 17 February 2023, distinct from Act-title change 1 September 2023.",
+        "Pacific Carbon Trust registry dissolution 13 November 2014; Land and Water BC dissolution 31 March 2006; Provincial Capital Commission statutory dissolution 25 March 2014, distinct from 24 March assent.",
+        "Legal Aid BC official 2020 brand announcement is preserved, while the continuing legal corporation remains Legal Services Society."
+      ],
+      "remaining_gaps": [
+        "LDB administrative name-change instrument, BC Transit/MTOC 1982–83 mechanisms, BC Hydro 1961 acquisition versus 1962 incorporation, and Expo 86 legal start/end remain unresolved in this pass.",
+        "Exact Legal Aid BCpublic brand launch day is unproved. A planned mid-March launch is not treated as execution.",
+        "Merit Commissioner final annual-statute PDF would improve preservation; the original commencement OIC and Gazette regulation are already recovered."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/claims.json",
+        "round3/crowns/registry_event_ledger_verified.json"
+      ],
+      "claim_ids": [
+        "R3E-C041",
+        "R3E-C042",
+        "R3E-C043",
+        "R3E-C044",
+        "R3E-C045",
+        "R3E-C046",
+        "R3E-C061",
+        "R3E-C062",
+        "R3E-C063"
+      ],
+      "full_requested_history_complete": false,
+      "subquestions": [
+        {
+          "topic": "Merit Commissioner office end",
+          "status": "resolved_specific_subquestion",
+          "finding": "30 June 2026 by OIC 227/Reg 94; function continues through agency head.",
+          "source_ids": [
+            "R3E-114",
+            "R3E-115",
+            "R3E-116"
+          ]
+        },
+        {
+          "topic": "BC Energy Regulator corporate rename",
+          "status": "resolved_specific_subquestion",
+          "finding": "17 February 2023; separate Act-title commencement 1 September.",
+          "source_ids": [
+            "R3E-117",
+            "R3E-118"
+          ]
+        },
+        {
+          "topic": "Pacific Carbon Trust / Land and Water BC corporate ends",
+          "status": "resolved_specific_subquestion",
+          "finding": "13 November 2014 and 31 March 2006; not earlier operational closures.",
+          "source_ids": [
+            "R3E-081",
+            "R3E-082"
+          ]
+        },
+        {
+          "topic": "Provincial Capital Commission legal end",
+          "status": "resolved_specific_subquestion",
+          "finding": "25 March 2014.",
+          "source_ids": [
+            "R3E-119",
+            "R3E-120",
+            "R3E-122"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "title": "E10 (P3) Bodies left out for want of a date:",
+      "request": "the Environmental Assessment Office (1995\n  Act or 2002), Law Reform Commission (end), Alcohol and Drug Commission (end), BC Harbours Board\n  (end), Land Settlement Board (1917, end), BC Housing Corporation, Dunhill Development Corporation,\n  Southern Interior Development Initiative Trust, BC Film + Media, BC Council for International\n  Education, BC Family Maintenance Agency, Forest Enhancement Society, Forestry Innovation\n  Investment (incorporated 31 March 2003 per the Forest Service timeline: confirm), BC\n  Infrastructure Benefits.",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-028",
+        "R3E-064",
+        "R3E-065",
+        "R3E-066",
+        "R3E-067",
+        "R3E-068",
+        "R3E-069",
+        "R3E-070",
+        "R3E-071",
+        "R3E-073",
+        "R3E-125",
+        "R3E-142",
+        "R3E-143",
+        "R3E-166",
+        "R3E-171",
+        "R3E-172",
+        "R3E-173",
+        "R3E-174",
+        "R3E-175",
+        "R3E-176",
+        "R3E-177",
+        "R3E-178",
+        "R3E-179"
+      ],
+      "remaining_records": [
+        "Retrieve EAO establishment provisions in the original 1994 Act and their 1995 commencement order; do not substitute the 2002 replacement Act.",
+        "Retrieve commencement orders under Alcohol and Drug Commission Repeal Act, SBC 1983 c 12 and British Columbia Harbours Board Repeal Act, SBC 1983 c 5 ss 2–3, plus separate ss 4–5 asset-transfer orders.",
+        "Retrieve the 1917 Land Settlement Board foundation provision/order, and the 1997 Law Reform Commission closing administrative records without presuming statutory abolition.",
+        "Retrieve SIDIT enabling-Act commencement; its registry statutory registration is not treated as creation.",
+        "Trace 1974 Dunhill/Woodbridge purchase records by company identifier and closing documents; compare with the 1976 namesake before merging."
+      ],
+      "findings": [
+        "Land Settlement Board expressly abolished 6 April 1968; original 1917 foundation remains separate.",
+        "Alcohol and Drug Commission enabling Act repeal commenced 26 October 1983, after 21 Octoberassent. Recorded as repeal, since the repeal Act has no separately worded dissolution clause.",
+        "BC Harbours Board express dissolution on repeal 30 May 1985;1983 assent and separately scheduled asset transfers are distinct.",
+        "Law Reform Commission ceased operations in 1997 according to successor history, but current Act s 2 still continues it. No statutory dissolution is invented.",
+        "EAO predates 2002:1996 Act s 58 continues the office. Original 1994/1995 commencement is not recovered here.",
+        "Selected exact starts now cover Creative BC/BC Film + Media predecessor, BCCIE, BCFMA, FES, FII and BCIB. BC Housing Corporation is already a documented PRHC historical name from the prior package."
+      ],
+      "remaining_gaps": [
+        "EAO original 1995 creation/commencement, Land Settlement Board 1917 start, Law Reform Commission exact operational end, and Southern Interior Development Initiative Trust statutory commencement remain unresolved.",
+        "Alcohol/Drug and Harbours original commencement OICs remain missing despite official tables proving effective dates; Harbours asset-transfer orders remain separate gaps.",
+        "Dunhill acquired in 1974 is not safely identified with the registry namesake renamed from WKP Construction in 1976. Exact acquisition company identifiers/share instruments remain open.",
+        "BC Film Commission operational history and the full historical ministry/board arrangements for newly dated bodies remain incomplete."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/claims.json",
+        "round3/crowns/registry_event_ledger_verified.json"
+      ],
+      "claim_ids": [
+        "R3E-C026",
+        "R3E-C027",
+        "R3E-C028",
+        "R3E-C029",
+        "R3E-C030",
+        "R3E-C031",
+        "R3E-C035",
+        "R3E-C036",
+        "R3E-C053",
+        "R3E-C074",
+        "R3E-C075",
+        "R3E-C076",
+        "R3E-C077"
+      ],
+      "full_requested_history_complete": false,
+      "subquestions": [
+        {
+          "topic": "Land Settlement Board legal end",
+          "status": "resolved_specific_subquestion",
+          "finding": "6 April 1968; original repeal Act s 6.",
+          "source_ids": [
+            "R3E-173",
+            "R3E-176"
+          ]
+        },
+        {
+          "topic": "Alcohol and Drug Commission Act repeal day",
+          "status": "resolved_specific_subquestion",
+          "finding": "26 October 1983 from official repeal table.",
+          "source_ids": [
+            "R3E-171",
+            "R3E-174"
+          ],
+          "remaining": "Original commencement order still required for complete instrument preservation."
+        },
+        {
+          "topic": "BC Harbours Board legal end",
+          "status": "resolved_specific_subquestion",
+          "finding": "30 May 1985; express dissolution tied to repeal.",
+          "source_ids": [
+            "R3E-172",
+            "R3E-175"
+          ],
+          "remaining": "Original commencement and separate asset-transfer orders still missing."
+        },
+        {
+          "topic": "Selected society/company starts",
+          "status": "resolved_specific_subquestion",
+          "finding": "Registry/financial-note events for Creative BC, BCCIE, BCFMA, FES, FII, BCIB are separately typed.",
+          "source_ids": [
+            "R3E-073",
+            "R3E-068",
+            "R3E-067",
+            "R3E-065",
+            "R3E-066",
+            "R3E-064"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E11",
+      "title": "E11 (P3) Older Crown histories:",
+      "request": "BC Rail Ltd. (1984 operating subsidiary), BCR Properties\n  Ltd., Vancouver Wharves; Forest Renewal BC's end (14 or 27 June 2002).",
+      "status": "partially_resolved",
+      "source_ids": [
+        "R3E-001",
+        "R3E-002",
+        "R3E-007",
+        "R3E-074",
+        "R3E-075",
+        "R3E-076",
+        "R3E-077",
+        "R3E-078",
+        "R3E-079",
+        "R3E-080",
+        "R3E-125",
+        "R3E-128"
+      ],
+      "remaining_records": [
+        "Obtain 22 May 1984 share purchase and 12 June 1984 rail/property conveyance documents; use the EAB decision's corporate-history findings as leads.",
+        "Trace Vancouver Wharves registry identifiers 44407,59694,176504,1282745 and 284435 through amalgamation/continuation certificates and BCRC 1993 acquisition records.",
+        "No further instrument is needed to settle Forest Renewal BC's statutory 27 June 2002 end; preserve assent/order/deposit/effective dates distinctly."
+      ],
+      "findings": [
+        "BC Rail Ltd.legal predecessor S.C. Holdings incorporated 15 January 1969; BCR Properties incorporated 18 May 1984; shares acquired 22 May 1984; BC Rail name 28 May; rail/property assets transferred 12 June 1984. Historical share split 25%BCRC/75%BCR Properties is a period-specific finding.",
+        "BC Rail continuation out of BC 9 December 2004 is not dissolution. Registry and EAB decision findings supply a coherent identity/transaction sequence.",
+        "Forest Renewal BC dissolved 27 June 2002 under SBC 2002 c 7 s 28, following OIC 517 approved 26 June and Reg 158 deposited/effective 27 June. The 14 versus 27 June statutory-end question is resolved.",
+        "Five Vancouver Wharves registry histories are preserved, but same-name amalgamations/continuations are not collapsed into one corporation."
+      ],
+      "remaining_gaps": [
+        "Underlying 1984 purchase/asset-transfer agreements and reconciliation of other June administrative reorganization dates remain missing.",
+        "Vancouver Wharves complete identity chain and exact 1993 provincial acquisition day/instrument remain unresolved."
+      ],
+      "files": [
+        "round3/crowns/report.md",
+        "round3/crowns/search_ledger.json",
+        "round3/crowns/unresolved.md",
+        "round3/crowns/sources.json",
+        "round3/crowns/claims.json",
+        "round3/crowns/registry_event_ledger_verified.json"
+      ],
+      "claim_ids": [
+        "R3E-C037",
+        "R3E-C038",
+        "R3E-C039",
+        "R3E-C040",
+        "R3E-C048",
+        "R3E-C049",
+        "R3E-C050",
+        "R3E-C051"
+      ],
+      "full_requested_history_complete": false,
+      "subquestions": [
+        {
+          "topic": "1984 rail legal/transaction chronology",
+          "status": "resolved_specific_subquestion",
+          "finding": "Specific incorporation, acquisition, rename and asset-transfer dates proved in registry/EABfindings.",
+          "source_ids": [
+            "R3E-007",
+            "R3E-074",
+            "R3E-075"
+          ],
+          "remaining": "Underlying executed agreements and other administrative dates remain separate gaps."
+        },
+        {
+          "topic": "Vancouver Wharves identity and 1993 purchase",
+          "status": "partially_resolved",
+          "finding": "Registry branches preserved; complete chain and transaction day not yet proved.",
+          "source_ids": [
+            "R3E-076",
+            "R3E-077",
+            "R3E-078",
+            "R3E-079",
+            "R3E-080"
+          ]
+        },
+        {
+          "topic": "Forest Renewal BC end",
+          "status": "resolved_specific_subquestion",
+          "finding": "27 June 2002;26 June approval is distinct.",
+          "source_ids": [
+            "R3E-001",
+            "R3E-002",
+            "R3E-128"
+          ]
+        }
+      ]
+    }
+  ]
+}

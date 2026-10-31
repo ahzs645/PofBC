@@ -1,0 +1,66 @@
+{
+  "schema": "pofbc.complete-handoff-validation.v1",
+  "checked_on": "2026-10-21",
+  "reviewed_commit": "0dbdb18cfebfb27e5529ce5940850e96eb9a995c",
+  "components_exactly_equal_consolidated_payloads": 103,
+  "source_catalogue_exactly_equal_consolidated_payload": true,
+  "unique_source_ids": 1492,
+  "prior_component_filename_collision_corrected": true,
+  "all_14_explicit_missing_source_dataset_groups_mapped": true,
+  "all_56_claim_source_ids_have_literal_catalogue_urls": true,
+  "original_gates_and_supersessions_preserved": true,
+  "derived_batch_validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "derived_batch_preservation_verification": {
+    "existing_record_preservation_violations": [],
+    "established_dates_unchanged_for_existing_records": true,
+    "evidence_status_unchanged_for_existing_records": true,
+    "existing_unresolved_fields_preserved": true,
+    "existing_scope_by_preserved": true,
+    "existing_full_history_complete_preserved": true,
+    "first_merge_log_lines": 300,
+    "second_merge_log": [],
+    "research_byte_identical_after_in_memory_replay": true,
+    "source_catalogue_byte_identical_after_in_memory_replay": true,
+    "first_result_research_sha256": "0afaee85ba108b23e223a526898a412079dff393d88bc49338422a1c9d227bdb",
+    "first_result_catalogue_sha256": "d3c83a1a9b52921204f698434e67e7fcb5008cdfc64b57d13005cb8dd8b82953"
+  },
+  "branch_atlas_metrics": {
+    "before": {
+      "total": 251,
+      "starts": 48,
+      "sightings_only": 65,
+      "undated": 138
+    },
+    "after": {
+      "total": 251,
+      "starts": 51,
+      "sightings_only": 176,
+      "undated": 24
+    },
+    "newly_dated": 114
+  },
+  "baseline_full_test_counts": {
+    "tests": 435,
+    "pass": 421,
+    "fail": 0,
+    "skipped": 14
+  },
+  "derived_import_focused_test_counts": {
+    "tests": 91,
+    "pass": 91,
+    "fail": 0,
+    "skipped": 0
+  },
+  "baseline_government_build_reproduces": true,
+  "derived_import_and_build_replay": {
+    "scope": "src/government and research history/atlas/audit/queue/sub-agencies outputs",
+    "files_checked": 94,
+    "changed_after_second_import_and_build": [],
+    "byte_idempotent": true
+  },
+  "no_public_branch_mutation": true,
+  "errors": []
+}

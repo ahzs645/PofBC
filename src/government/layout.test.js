@@ -1,9 +1,10 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import {
-  allocateSectors, arcPath, bandPath, layoutGovernment, lerpAngle, normaliseAngle, RIM, rimAt, territoryPath,
-  rotationToBottom, SECTOR_GAP, SECTORS, spreadAngles
+  allocateSectors, arcPath, bandPath, COMPACT_GEOMETRY, GEOMETRY, layoutGovernment, lerpAngle, normaliseAngle, RIM, rimAt,
+  territoryPath, rotationToBottom, SEAM, SECTOR_GAP, SECTORS, spreadAngles
 } from './layout.js'
+import { FIRST_YEAR, governmentIn, PRESENT_YEAR } from './snapshot.js'
 
 const TAU = Math.PI * 2
 const close = (actual, expected, message) => assert.ok(Math.abs(actual - expected) < 1e-9, message ?? `${actual} ≉ ${expected}`)
@@ -101,4 +102,23 @@ test('a parent’s sub-agencies sit beyond it as dots, and a Crown’s raise its
   assert.ok(Math.abs(positions.wildfire.angle - positions.forests.angle) < 0.05)
   assert.ok(positions['hydro-g'].radius > positions.hydro.radius)
   assert.ok(teeth[0].top > positions['hydro-g'].radius)
+})
+
+test('no body is drawn across a seam or past the rim, in any year, wide or on a phone', () => {
+  for (const geometry of [GEOMETRY, COMPACT_GEOMETRY]) {
+    for (let year = FIRST_YEAR; year <= PRESENT_YEAR; year += 1) {
+      const nodes = governmentIn(year).nodes.filter((node) => node.branch)
+      const { positions, sectors, teeth } = layoutGovernment(nodes, geometry)
+      for (const node of nodes) {
+        const at = positions[node.id]
+        if (!at) continue
+        const sector = sectors.find((entry) => entry.id === node.branch)
+        // A glyph's reach, with the tab drawn above it; a dot is only itself.
+        const reach = node.ring === 'sub' ? at.size + 1 : at.size * 1.45
+        const rim = rimAt(at.angle, teeth.filter((tooth) => tooth.sector === node.branch), geometry.rim)
+        assert.ok(at.radius + reach <= rim - 2, `${year}: ${node.id} reaches past the rim`)
+        assert.ok(Math.min(at.angle - sector.start, sector.end - at.angle) * at.radius >= SEAM / 2 + reach, `${year}: ${node.id} crosses a seam`)
+      }
+    }
+  }
 })

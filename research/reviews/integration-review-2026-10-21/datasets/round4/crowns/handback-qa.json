@@ -1,0 +1,172 @@
+{
+  "schema": "pofbc.round4.crown-final-handback-review.v1",
+  "reviewer": "/root/crowns_round4",
+  "reviewed_at_utc": "2026-10-21T20:23:46.955744+00:00",
+  "scope": [
+    "Authored front matter and E9/E10 remaining_replacements in round4/build_deliverable.py",
+    "Crown summary factual dates and identity qualifications against final Crown claims/sources",
+    "Full Crown-module packaging inputs for accidental non-public credentials",
+    "Prior independent root report review and 1998 hospital-district source review"
+  ],
+  "no_new_research": true,
+  "source_or_build_script_edits_performed": false,
+  "front_matter_result": "Core Crown dates and identities pass. Preserve the caveats listed below in the current front-facing remaining-record lists.",
+  "factual_checks": [
+    {
+      "topic": "Transit",
+      "result": "UTA 20 July 1978, MTOC 18 January 1980 and BC Transit name 12 August 1982 supported. MTOC ultimate legal end remains open.",
+      "source_ids": [
+        "R4E-003",
+        "R4E-005",
+        "R4E-006",
+        "R4E-007",
+        "R4E-008",
+        "R4E-009"
+      ]
+    },
+    {
+      "topic": "Hydro",
+      "result": "1962 original scheme, 1964 authority, 20 August 1965 amalgamation and 23 August 1965 formal BC Electric cancellation are properly distinguished. The judgment date is contemporary-annual-report evidence, not a retrieved full judgment.",
+      "source_ids": [
+        "R4E-029",
+        "R4E-030",
+        "R4E-031",
+        "R4E-033",
+        "R4E-035",
+        "R4E-036",
+        "R4E-037",
+        "R4E-039",
+        "R4E-040",
+        "R4E-041"
+      ]
+    },
+    {
+      "topic": "Dunhill",
+      "result": "7 June 1974 direct provincial ownership supported. Agreement date, indirect acquisition/Crown-status milestone and direct ownership are distinct. Original agreement and Woodbridge winding-up instrument not recovered.",
+      "source_ids": [
+        "R4E-001",
+        "R4E-002"
+      ]
+    },
+    {
+      "topic": "Harbours Board",
+      "result": "30 May 1985 dissolution supported; 1983 assent is not the dissolution date. Separate asset-transfer orders remain missing.",
+      "source_ids": [
+        "R4E-047",
+        "R4E-048",
+        "R4E-017"
+      ]
+    },
+    {
+      "topic": "Counts",
+      "result": "46 Crown claims includes 44 accepted new specific details/instruments, one prior corroboration and one held candidate. Not 46 new dates. Front matter expressly makes this distinction."
+    }
+  ],
+  "recommended_corrections": [
+    {
+      "id": "CROWN-HANDBACK-QA-001",
+      "target": "remaining_replacements E9 liquor sentence",
+      "correction": "Specify branch-establishing provisions (section 2) rather than unqualified statutory provisions; the LCLB commencement order excepts other sections.",
+      "source_ids": [
+        "R4E-020",
+        "R4E-021",
+        "R4E-022",
+        "R4E-025"
+      ],
+      "status": "incorporated_by_root_in_build_generator"
+    },
+    {
+      "id": "CROWN-HANDBACK-QA-002",
+      "target": "remaining_replacements E9",
+      "correction": "Retain missing full Hydro judgment and any separate original 1975 administrative liquor split instrument. These remain unresolved in module coverage.",
+      "source_ids": [
+        "R4E-033"
+      ],
+      "status": "incorporated_by_root_in_build_generator"
+    },
+    {
+      "id": "CROWN-HANDBACK-QA-003",
+      "target": "remaining_replacements E10",
+      "correction": "Retain the original Dunhill parent precise legal end and the executed 25 January 1974 agreement as missing. Public Accounts proves the agreement date, not retrieval of the instrument.",
+      "source_ids": [
+        "R4E-001"
+      ],
+      "status": "incorporated_by_root_in_build_generator"
+    }
+  ],
+  "archive_security_review": {
+    "files_scanned": 695,
+    "bytes_in_reviewed_module": 278684665,
+    "symlinks": 0,
+    "scope": "All module file bytes, plus file inventory, download-domain inventory and research scripts. Raw PDFs and page images were created from public research sources; no private transfer helpers present.",
+    "patterns_checked": [
+      "private keys",
+      "AWS access keys",
+      "GitHub tokens",
+      "OpenAI-style API keys",
+      "Slack tokens",
+      "JWTs",
+      "Authorization headers",
+      "Cookie/Set-Cookie headers",
+      "credential/password assignments",
+      "signed download URLs"
+    ],
+    "private_credentials_detected": false,
+    "finding": "A public Cornell CDN redirect URL carries a temporary download signature in two ledger copies. It is not an account credential, but the query is unnecessary in the distributed research archive.",
+    "locations": [
+      "round4/crowns/discovery_ledger.json[5].final_url",
+      "round4/crowns/download_ledger.json[16].final_url"
+    ],
+    "domain": "cf003.cdn.4science.cloud",
+    "recommended_action": "Strip the final_url query string in both records before packaging; retain the canonical public ecommons URL, public download path and existing downloaded-file hash. Do not reproduce signature values in QA output.",
+    "status": "signed_queries_removed_from_both_ledger_fields_as_authorized_by_root",
+    "limit": "Pattern and provenance review is not a guarantee against every conceivable embedded secret; no indication of private-source material was found.",
+    "action_performed": "Removed signed query strings only from the two final_url fields and added metadata notes. Original downloaded files, canonical source URLs and downloaded-file SHA-256 values unchanged.",
+    "ledger_changes": [
+      {
+        "file": "round4/crowns/discovery_ledger.json",
+        "record_index": 5,
+        "prior_file_sha256": "45ca2139c596164bfed81fe2fe3b7aa98a4b4cce42cc00001aeba5f502a1a420",
+        "updated_file_sha256": "2ce7b894acb180f93585cc9d4e6f2e7eedf85656c5ca0200b4b37fb0768ab700",
+        "downloaded_file_sha256_unchanged": true,
+        "canonical_public_url_unchanged": true,
+        "signed_query_expired_at_utc": "2026-10-21T19:44:22+00:00"
+      },
+      {
+        "file": "round4/crowns/download_ledger.json",
+        "record_index": 16,
+        "prior_file_sha256": "fbd8c0754412ce9a7af17a1c79aca869d8f1be9f2fd24586dc0ecde19fac5dde",
+        "updated_file_sha256": "8f32f5ddfeb6a7c8c6a0958e4d70d8b77b9b01b60a8f5f88299d0bcf8dc81921",
+        "downloaded_file_sha256_unchanged": true,
+        "canonical_public_url_unchanged": true,
+        "signed_query_expired_at_utc": "2026-10-21T19:44:22+00:00"
+      }
+    ],
+    "manifest_hash_checks": [
+      {
+        "file": "evidence_manifest.json",
+        "old_ledger_hash_references": 0,
+        "refresh_required": false
+      },
+      {
+        "file": "validation.json",
+        "old_ledger_hash_references": 0,
+        "refresh_required": false
+      }
+    ]
+  },
+  "earlier_root_report_review": {
+    "artifact": "round4/root/check-rhd-1998.json",
+    "root_report_totals": {
+      "regional_hospital_districts": 43,
+      "hospital_improvement_districts": 25,
+      "used_source_references_resolved": 110
+    },
+    "result": "No essential date/identity contradiction found. Earlier VGH contingent-vesting omission corrected. Gulf Islands proxy criterion must use qualifying-land location, not residence; root confirms generator fixed and underlying data already correct.",
+    "scope_limit": "Targeted originals and report/catalogue cross-check, not independent re-verification of every instrument."
+  },
+  "metadata_edits_performed": [
+    "discovery_ledger.json final_url query removal and note",
+    "download_ledger.json final_url query removal and note"
+  ]
+}

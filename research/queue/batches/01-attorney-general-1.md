@@ -26,55 +26,20 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ### 1. BC Sheriff Services
 
-- **id** `bc-sheriff-services` · office · **P1 — disappears before today, nothing on file**
+- **id** `bc-sheriff-services` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Attorney General.
 - **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart
 - **What it does:** Provides court security, prisoner escort, document service and warrant services under the Sheriff Act.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 1975
+- **Events on file:** 1860-03-08 legislation enacted; 1873-02-21 legislation assented; 1878-04-10 legislation assented; 1880-05-08 legislation assented; 1888-04-28 office retitled; 1892-04-23 legislation assented; 1892-10-26 executive appointment; 1893-07-03 executive appointment; 1895-10-01 statute in force; 1905-03-08 statute in force; 1920-04-17 legislation assented; 1973-07-05 roster observed; 1973-12 expansion planning; 1974 amalgamation; 1974-04-01 duties expanded; 1974-06-20 legislation assented; 1974-07-05 training milestone; 1975 name first observed; 1975-01-01 staffing snapshot; 1976-06-30 royal assent; 1978-07 administrative placement; 2011-08-15 symbol granted
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Sheriff Services"
-- **Questions:** A, B and C, as above.
-
-### 2. Family Justice Services Division
-
-- **id** `family-justice-services-division` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/life-events/divorce/family-justice/who-can-help/family-justice-services-division
-- **Collected from:** https://www2.gov.bc.ca/gov/content/life-events/divorce/family-justice/who-can-help/family-justice-services-division
-- **What it does:** Promotes the timely and just resolution of family disputes through information, dispute resolution and parenting programs, and runs the Justice Access Centres.
-- **Held:** no start date
-- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Family Justice Services Division"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
+  - A. It is already seen in 1975. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 22 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 3. Legal Services Branch
-
-- **id** `legal-services-branch` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/justice/for-legal-professionals/articled-student-program/articles-with-legal-services-branch
-- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart
-- **What it does:** Government's in-house law office, giving legal advice, conducting civil litigation for the Province and drafting legislation through the Office of Legislative Counsel.
-- **Held:** no start date
-- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
-- **Search for:** "Legal Services Branch"
-- **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
-  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
-
-### 4. Multiculturalism and Anti-Racism Branch
-
-- **id** `multiculturalism-and-anti-racism-branch` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/governments/multiculturalism-anti-racism
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Delivers multiculturalism and anti-racism programs, including support for the Resilience BC Anti-Racism Network.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Multiculturalism and Anti-Racism Branch"
-- **Questions:** A, B and C, as above.
-
-### 5. British Columbia Ferry Commission
+### 2. British Columbia Ferry Commission
 
 - **id** `bc-ferry-commission` · agency · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www.bcferrycommission.ca/
@@ -89,7 +54,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 6. British Columbia Review Board (BCRB)
+### 3. British Columbia Review Board (BCRB)
 
 - **id** `bc-review-board` · tribunal · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www.bcrb.ca/
@@ -104,7 +69,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 7. Building Code Appeal Board
+### 4. Building Code Appeal Board
 
 - **id** `building-code-appeal-board` · board · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/industry/construction-industry/building-codes-standards/building-code-appeal-board
@@ -119,7 +84,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 8. Community Care and Assisted Living Appeal Board (CCALAB)
+### 5. Community Care and Assisted Living Appeal Board (CCALAB)
 
 - **id** `community-care-and-assisted-living-appeal-board` · board · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www.bcccalab.ca/
@@ -134,7 +99,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
-### 9. Court Services Branch
+### 6. Court Services Branch
 
 - **id** `court-services-branch` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/justice/courthouse-services
@@ -149,7 +114,22 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 10. Indigenous Justice Secretariat
+### 7. Family Justice Services Division
+
+- **id** `family-justice-services-division` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/life-events/divorce/family-justice/who-can-help/family-justice-services-division
+- **Collected from:** https://www2.gov.bc.ca/gov/content/life-events/divorce/family-justice/who-can-help/family-justice-services-division
+- **What it does:** Promotes the timely and just resolution of family disputes through information, dispute resolution and parenting programs, and runs the Justice Access Centres.
+- **Held:** no start date; first seen 2020; parents on file: Ministry of Attorney General (seen 2020)
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Family Justice Services Division"
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 8. Indigenous Justice Secretariat
 
 - **id** `indigenous-justice-secretariat` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Attorney General.
@@ -162,6 +142,36 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Questions:**
   - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 9. Legal Services Branch
+
+- **id** `legal-services-branch` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/justice/for-legal-professionals/articled-student-program/articles-with-legal-services-branch
+- **Collected from:** https://www2.gov.bc.ca/gov/content/justice/about-bcs-justice-system/publications/ag-org-chart
+- **What it does:** Government's in-house law office, giving legal advice, conducting civil litigation for the Province and drafting legislation through the Office of Legislative Counsel.
+- **Held:** no start date; first seen 2002; parents on file: Ministry of Attorney General and Minister Responsible for Treaty Negotiations (seen 2002)
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Legal Services Branch"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 10. Multiculturalism and Anti-Racism Branch
+
+- **id** `multiculturalism-and-anti-racism-branch` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Attorney General. Official site: https://www2.gov.bc.ca/gov/content/governments/multiculturalism-anti-racism
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Delivers multiculturalism and anti-racism programs, including support for the Resilience BC Anti-Racism Network.
+- **Held:** no start date; first seen 2021; parents on file: Ministry of Attorney General and Minister Responsible for Housing (seen 2021)
+- **Events on file:** 2020-11-26 transferred; 2021 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Multiculturalism and Anti-Racism Branch"
+- **Questions:**
+  - A. It is already seen in 2021. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 11. Passenger Transportation Board (PTB)
@@ -236,81 +246,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "bc-sheriff-services",
       "name": "BC Sheriff Services",
       "kind": "office",
-      "parent_today": "ministry-of-attorney-general-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 01",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "family-justice-services-division",
-      "name": "Family Justice Services Division",
-      "kind": "division",
-      "parent_today": "ministry-of-attorney-general-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 01",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "legal-services-branch",
-      "name": "Legal Services Branch",
-      "kind": "division",
-      "parent_today": "ministry-of-attorney-general-2017",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 01",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "multiculturalism-and-anti-racism-branch",
-      "name": "Multiculturalism and Anti-Racism Branch",
-      "kind": "division",
       "parent_today": "ministry-of-attorney-general-2017",
       "established": null,
       "first_observed": null,
@@ -458,9 +393,84 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
+      "id": "family-justice-services-division",
+      "name": "Family Justice Services Division",
+      "kind": "division",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 01",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
       "id": "indigenous-justice-secretariat",
       "name": "Indigenous Justice Secretariat",
       "kind": "office",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 01",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "legal-services-branch",
+      "name": "Legal Services Branch",
+      "kind": "division",
+      "parent_today": "ministry-of-attorney-general-2017",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 01",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "multiculturalism-and-anti-racism-branch",
+      "name": "Multiculturalism and Anti-Racism Branch",
+      "kind": "division",
       "parent_today": "ministry-of-attorney-general-2017",
       "established": null,
       "first_observed": null,

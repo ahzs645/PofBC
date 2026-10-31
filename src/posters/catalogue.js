@@ -26,6 +26,12 @@ export const SERIES = [
     title: 'B. C. Forest Service badges',
     kind: 'Fire prevention',
     posters: ['dont-drop-it', 'dont-gamble-with-fire']
+  },
+  {
+    id: 'bc-ferries',
+    title: 'British Columbia Ferries',
+    kind: 'Car decals',
+    posters: ['go-bc-ferries', 'queen-of-sidney']
   }
 ]
 
@@ -77,6 +83,24 @@ export const POSTERS = {
     when: 'Undated',
     view: { x: 0, y: 0, w: 1233, h: 1233 },
     page: { w: 12, h: 12 },
+    background: null
+  },
+  'go-bc-ferries': {
+    id: 'go-bc-ferries',
+    series: 'bc-ferries',
+    title: 'GO B.C. FERRIES',
+    when: '1960–64, from its wording',
+    view: { x: 0, y: 0, w: 1354, h: 1161 },
+    page: { w: 5.4, h: 4.63 },
+    background: null
+  },
+  'queen-of-sidney': {
+    id: 'queen-of-sidney',
+    series: 'bc-ferries',
+    title: 'Queen of Sidney',
+    when: 'Undated',
+    view: { x: 0, y: 0, w: 1305, h: 1206 },
+    page: { w: 5.2, h: 4.81 },
     background: null
   }
 }

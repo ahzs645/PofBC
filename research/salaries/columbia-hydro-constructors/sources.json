@@ -1,0 +1,527 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "chc-fia-2013",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "year": "2012/13",
+      "slug": "2012-13",
+      "title": "Columbia Hydro Constructors Ltd. employee remuneration, 2012/13",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/openness-accountability/financial-information-act-return-march-31-2013.pdf",
+      "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "4cb92883d196474fc16b2c19ff9f483deae29bfa415a5d0cc94bc209d6e78572",
+      "periodStart": "2012-04-01",
+      "periodEnd": "2013-03-31",
+      "periodType": "fiscal",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 190,
+      "totalRemuneration": 19718574,
+      "totalExpenses": 1089407,
+      "pages": [
+        172,
+        173,
+        174,
+        175
+      ],
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "pdfSha256Verified": true,
+        "sourcePdfPageCount": 193,
+        "sourcePages": [
+          172,
+          173,
+          174,
+          175
+        ],
+        "employeeScheduleSheetsComplete": true,
+        "popplerLayoutRows": 190,
+        "pyMuPdfCoordinateRows": 190,
+        "independentReadersMultisetEqual": true,
+        "priorStagingMultisetEqual": true,
+        "everySchedulePageVisuallyReviewedOn": "2026-10-30",
+        "visuallyReviewedPhysicalPages": [
+          172,
+          173,
+          174,
+          175
+        ],
+        "aggregateColumnsVerifiedAgainstOriginalPdf": true,
+        "sourceControls": {
+          "belowThresholdRemuneration": 21203838,
+          "belowThresholdExpenses": 1267784,
+          "totalRemuneration": 40922411,
+          "totalExpenses": 2357191,
+          "employerCppEi": 2113093
+        },
+        "namedRemunerationSum": 19718574,
+        "namedExpensesSum": 1089407,
+        "remunerationResidual": 1,
+        "expensesResidual": 0,
+        "exactAggregateReconciliation": false,
+        "hypotheticalWholeDollarRoundingBound": 96.0,
+        "residualExplanation": "Cause unknown; individual values preserved. Compatibility with rounding is not evidence of its cause.",
+        "rowsByPhysicalPage": {
+          "172": 68,
+          "173": 70,
+          "174": 52,
+          "175": 0
+        },
+        "explicitZeroExpenseRows": 6,
+        "exactDuplicateSourceRows": 0
+      },
+      "notes": [
+        "Separate legal employer mapped to the existing government-atlas subsidiary id; not combined with BC Hydro employees.",
+        "Source initials are retained, moved after the surname for consistent name ordering; given names and unique identities are not inferred.",
+        "The under-threshold aggregate and employer CPP/EI payment are not individual employee records.",
+        "Original PDF bytes, all named rows and aggregate columns have now been checked. Source residuals remain unadjusted."
+      ],
+      "status": "verified",
+      "file": "2012-13.json.gzip",
+      "dataSha256": "a28bbc1aaccc37cb9f79755173d654c49d1bd3b77edfc503ec2d9792ddf4db2d",
+      "normalizedSha256": "5dc3b72f4608afbd01679bcc709d651ddea68400bd86b0fcd4c32a2780d0dfaa"
+    },
+    {
+      "id": "chc-fia-2014",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "year": "2013/14",
+      "slug": "2013-14",
+      "title": "Columbia Hydro Constructors Ltd. employee remuneration, 2013/14",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/openness-accountability/financial-information-act-return-20140331.pdf",
+      "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "c86436fea6058d643d2338b95214d62557eef104653cb9e16b4142b031c15d51",
+      "periodStart": "2013-04-01",
+      "periodEnd": "2014-03-31",
+      "periodType": "fiscal",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 226,
+      "totalRemuneration": 23588724,
+      "totalExpenses": 1369304,
+      "pages": [
+        163,
+        164,
+        165,
+        166,
+        167
+      ],
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "pdfSha256Verified": true,
+        "sourcePdfPageCount": 188,
+        "sourcePages": [
+          163,
+          164,
+          165,
+          166,
+          167
+        ],
+        "employeeScheduleSheetsComplete": true,
+        "popplerLayoutRows": 226,
+        "pyMuPdfCoordinateRows": 226,
+        "independentReadersMultisetEqual": true,
+        "priorStagingMultisetEqual": true,
+        "everySchedulePageVisuallyReviewedOn": "2026-10-30",
+        "visuallyReviewedPhysicalPages": [
+          163,
+          164,
+          165,
+          166,
+          167
+        ],
+        "aggregateColumnsVerifiedAgainstOriginalPdf": true,
+        "sourceControls": {
+          "belowThresholdRemuneration": 27389986,
+          "belowThresholdExpenses": 1826756,
+          "totalRemuneration": 50978707,
+          "totalExpenses": 3196062,
+          "employerCppEi": 2642054
+        },
+        "namedRemunerationSum": 23588724,
+        "namedExpensesSum": 1369304,
+        "remunerationResidual": 3,
+        "expensesResidual": -2,
+        "exactAggregateReconciliation": false,
+        "hypotheticalWholeDollarRoundingBound": 114.0,
+        "residualExplanation": "Cause unknown; individual values preserved. Compatibility with rounding is not evidence of its cause.",
+        "rowsByPhysicalPage": {
+          "163": 68,
+          "164": 70,
+          "165": 70,
+          "166": 18,
+          "167": 0
+        },
+        "explicitZeroExpenseRows": 5,
+        "exactDuplicateSourceRows": 0
+      },
+      "notes": [
+        "Separate legal employer mapped to the existing government-atlas subsidiary id; not combined with BC Hydro employees.",
+        "Source initials are retained, moved after the surname for consistent name ordering; given names and unique identities are not inferred.",
+        "The under-threshold aggregate and employer CPP/EI payment are not individual employee records.",
+        "Original PDF bytes, all named rows and aggregate columns have now been checked. Source residuals remain unadjusted."
+      ],
+      "status": "verified",
+      "file": "2013-14.json.gzip",
+      "dataSha256": "9f2a74a0b4cb94a2ce399955dc8f36a7ed610c3de3bba211dfb41d56a7f1e564",
+      "normalizedSha256": "feb8f534e8411fb03ea70a35a081e726d3be14520fd9ffcdfe63a93d73084e1e"
+    },
+    {
+      "id": "chc-fia-2015",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "year": "2014/15",
+      "slug": "2014-15",
+      "title": "Columbia Hydro Constructors Ltd. employee remuneration, 2014/15",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/openness-accountability/financial-information-act-return-march-31-2015.pdf",
+      "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "70ed4ba2aeb2632cd953953c34fb80335cbfb2b5c8032be373a0b036b85c0e0b",
+      "periodStart": "2014-04-01",
+      "periodEnd": "2015-03-31",
+      "periodType": "fiscal",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 239,
+      "totalRemuneration": 25533054,
+      "totalExpenses": 1370304,
+      "pages": [
+        167,
+        168,
+        169,
+        170,
+        171
+      ],
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "pdfSha256Verified": true,
+        "sourcePdfPageCount": 189,
+        "sourcePages": [
+          167,
+          168,
+          169,
+          170,
+          171
+        ],
+        "employeeScheduleSheetsComplete": true,
+        "popplerLayoutRows": 239,
+        "pyMuPdfCoordinateRows": 239,
+        "independentReadersMultisetEqual": true,
+        "priorStagingMultisetEqual": true,
+        "everySchedulePageVisuallyReviewedOn": "2026-10-30",
+        "visuallyReviewedPhysicalPages": [
+          167,
+          168,
+          169,
+          170,
+          171
+        ],
+        "aggregateColumnsVerifiedAgainstOriginalPdf": true,
+        "sourceControls": {
+          "belowThresholdRemuneration": 28516380,
+          "belowThresholdExpenses": 1677831,
+          "totalRemuneration": 54049437,
+          "totalExpenses": 3048133,
+          "employerCppEi": 2640383
+        },
+        "namedRemunerationSum": 25533054,
+        "namedExpensesSum": 1370304,
+        "remunerationResidual": -3,
+        "expensesResidual": 2,
+        "exactAggregateReconciliation": false,
+        "hypotheticalWholeDollarRoundingBound": 120.5,
+        "residualExplanation": "Cause unknown; individual values preserved. Compatibility with rounding is not evidence of its cause.",
+        "rowsByPhysicalPage": {
+          "167": 68,
+          "168": 70,
+          "169": 70,
+          "170": 31,
+          "171": 0
+        },
+        "explicitZeroExpenseRows": 7,
+        "exactDuplicateSourceRows": 0
+      },
+      "notes": [
+        "Separate legal employer mapped to the existing government-atlas subsidiary id; not combined with BC Hydro employees.",
+        "Source initials are retained, moved after the surname for consistent name ordering; given names and unique identities are not inferred.",
+        "The under-threshold aggregate and employer CPP/EI payment are not individual employee records.",
+        "Original PDF bytes, all named rows and aggregate columns have now been checked. Source residuals remain unadjusted."
+      ],
+      "status": "verified",
+      "file": "2014-15.json.gzip",
+      "dataSha256": "86d9d44589fe1b2cc3ac03e12cfd0bdc8da60828be48e66d9633c824eb213afc",
+      "normalizedSha256": "28a00bd68c5f0dcfcb9bca7bc406b3c9a9025f0b7dd28e8f84740a9ac0191a30"
+    },
+    {
+      "id": "chc-fia-2016",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "year": "2015/16",
+      "slug": "2015-16",
+      "title": "Columbia Hydro Constructors Ltd. employee remuneration, 2015/16",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/openness-accountability/financial-information-act-return-march-31-2016.pdf",
+      "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "c8ac8b1c538a60d15e32d060f77136627560670800ba331dde65c20c0727bd4f",
+      "periodStart": "2015-04-01",
+      "periodEnd": "2016-03-31",
+      "periodType": "fiscal",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 63,
+      "totalRemuneration": 6651654,
+      "totalExpenses": 394765,
+      "pages": [
+        169,
+        170
+      ],
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "pdfSha256Verified": true,
+        "sourcePdfPageCount": 188,
+        "sourcePages": [
+          169,
+          170
+        ],
+        "employeeScheduleSheetsComplete": true,
+        "popplerLayoutRows": 63,
+        "pyMuPdfCoordinateRows": 63,
+        "independentReadersMultisetEqual": true,
+        "priorStagingMultisetEqual": true,
+        "everySchedulePageVisuallyReviewedOn": "2026-10-30",
+        "visuallyReviewedPhysicalPages": [
+          169,
+          170
+        ],
+        "aggregateColumnsVerifiedAgainstOriginalPdf": true,
+        "sourceControls": {
+          "belowThresholdRemuneration": 8200303,
+          "belowThresholdExpenses": 438573,
+          "totalRemuneration": 14851954,
+          "totalExpenses": 833341,
+          "employerCppEi": 659689
+        },
+        "namedRemunerationSum": 6651654,
+        "namedExpensesSum": 394765,
+        "remunerationResidual": 3,
+        "expensesResidual": -3,
+        "exactAggregateReconciliation": false,
+        "hypotheticalWholeDollarRoundingBound": 32.5,
+        "residualExplanation": "Cause unknown; individual values preserved. Compatibility with rounding is not evidence of its cause.",
+        "rowsByPhysicalPage": {
+          "169": 63,
+          "170": 0
+        },
+        "explicitZeroExpenseRows": 0,
+        "exactDuplicateSourceRows": 0
+      },
+      "notes": [
+        "Separate legal employer mapped to the existing government-atlas subsidiary id; not combined with BC Hydro employees.",
+        "Source initials are retained, moved after the surname for consistent name ordering; given names and unique identities are not inferred.",
+        "The under-threshold aggregate and employer CPP/EI payment are not individual employee records.",
+        "Original PDF bytes, all named rows and aggregate columns have now been checked. Source residuals remain unadjusted."
+      ],
+      "status": "verified",
+      "file": "2015-16.json.gzip",
+      "dataSha256": "95958cae70f918b46d58d5c8754f56f9fc71e1739480b426cf8d3570301b3cb7",
+      "normalizedSha256": "32ce722edeb233faf42cf1bacc375f29e19396192bf9871be036b636ad9e3104"
+    },
+    {
+      "id": "chc-fia-2017",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "year": "2016/17",
+      "slug": "2016-17",
+      "title": "Columbia Hydro Constructors Ltd. employee remuneration, 2016/17",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/BC-Hydro-FIA-F17.pdf",
+      "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "e43fac9216dbf3683d4b79dfb9044f5d98143ea152d6dba17aa32cbbae244cc6",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "periodType": "fiscal",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 5,
+      "totalRemuneration": 485097,
+      "totalExpenses": 30673,
+      "pages": [
+        170,
+        171
+      ],
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "pdfSha256Verified": true,
+        "sourcePdfPageCount": 188,
+        "sourcePages": [
+          170,
+          171
+        ],
+        "employeeScheduleSheetsComplete": true,
+        "popplerLayoutRows": 5,
+        "pyMuPdfCoordinateRows": 5,
+        "independentReadersMultisetEqual": true,
+        "priorStagingMultisetEqual": true,
+        "everySchedulePageVisuallyReviewedOn": "2026-10-30",
+        "visuallyReviewedPhysicalPages": [
+          170,
+          171
+        ],
+        "aggregateColumnsVerifiedAgainstOriginalPdf": true,
+        "sourceControls": {
+          "belowThresholdRemuneration": 2147620,
+          "belowThresholdExpenses": 169537,
+          "totalRemuneration": 2632718,
+          "totalExpenses": 200209,
+          "employerCppEi": 147780
+        },
+        "namedRemunerationSum": 485097,
+        "namedExpensesSum": 30673,
+        "remunerationResidual": -1,
+        "expensesResidual": 1,
+        "exactAggregateReconciliation": false,
+        "hypotheticalWholeDollarRoundingBound": 3.5,
+        "residualExplanation": "Cause unknown; individual values preserved. Compatibility with rounding is not evidence of its cause.",
+        "rowsByPhysicalPage": {
+          "170": 5,
+          "171": 0
+        },
+        "explicitZeroExpenseRows": 0,
+        "exactDuplicateSourceRows": 0
+      },
+      "notes": [
+        "Separate legal employer mapped to the existing government-atlas subsidiary id; not combined with BC Hydro employees.",
+        "Source initials are retained, moved after the surname for consistent name ordering; given names and unique identities are not inferred.",
+        "The under-threshold aggregate and employer CPP/EI payment are not individual employee records.",
+        "Original PDF bytes, all named rows and aggregate columns have now been checked. Source residuals remain unadjusted."
+      ],
+      "status": "verified",
+      "file": "2016-17.json.gzip",
+      "dataSha256": "b01b1611759148f2ac411367b1a68c69e84bffd74279d2eb0ff0f48679e557fd",
+      "normalizedSha256": "e0bbd3a9dfb805035e05e17ec9205fe6fd599f9344b0805e4a040c255f92ab23"
+    }
+  ],
+  "aggregateOnlySources": [
+    {
+      "id": "chc-fia-2018",
+      "employerSlug": "sub-columbia-hydro-constructors",
+      "employerName": "Columbia Hydro Constructors Ltd.",
+      "sector": "Crown corporations",
+      "year": "2017/18",
+      "slug": "2017-18",
+      "title": "Columbia Hydro Constructors Ltd. employee remuneration, 2017/18",
+      "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/bch-fia-f18.pdf",
+      "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+      "sha256": "0664039543287c31d8d67b06eaef227ab0b3878213917874f147ef4d108fe28f",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "periodType": "fiscal",
+      "category": "employee-remuneration",
+      "scope": "aggregate-only-employee-schedule",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "rowCount": 0,
+      "totalRemuneration": 0,
+      "totalExpenses": 0,
+      "pages": [
+        175
+      ],
+      "verifiedOn": "2026-10-30",
+      "validation": {
+        "pdfSha256Verified": true,
+        "sourcePdfPageCount": 193,
+        "sourcePages": [
+          175
+        ],
+        "employeeScheduleSheetsComplete": true,
+        "popplerLayoutRows": 0,
+        "pyMuPdfCoordinateRows": 0,
+        "independentReadersMultisetEqual": true,
+        "priorStagingMultisetEqual": true,
+        "everySchedulePageVisuallyReviewedOn": "2026-10-30",
+        "visuallyReviewedPhysicalPages": [
+          175
+        ],
+        "aggregateColumnsVerifiedAgainstOriginalPdf": true,
+        "sourceControls": {
+          "belowThresholdRemuneration": 208410,
+          "belowThresholdExpenses": 12021,
+          "totalRemuneration": 208410,
+          "totalExpenses": 12021,
+          "employerCppEi": 14732
+        },
+        "namedRemunerationSum": 0,
+        "namedExpensesSum": 0,
+        "remunerationResidual": 0,
+        "expensesResidual": 0,
+        "exactAggregateReconciliation": true,
+        "hypotheticalWholeDollarRoundingBound": 1.0,
+        "residualExplanation": "Cause unknown; individual values preserved. Compatibility with rounding is not evidence of its cause.",
+        "rowsByPhysicalPage": {
+          "175": 0
+        },
+        "explicitZeroExpenseRows": 0,
+        "exactDuplicateSourceRows": 0
+      },
+      "notes": [
+        "Separate legal employer mapped to the existing government-atlas subsidiary id; not combined with BC Hydro employees.",
+        "Source initials are retained, moved after the surname for consistent name ordering; given names and unique identities are not inferred.",
+        "The under-threshold aggregate and employer CPP/EI payment are not individual employee records.",
+        "Original PDF bytes, all named rows and aggregate columns have now been checked. Source residuals remain unadjusted.",
+        "No named employee rows appear in the one-sheet 2017/18 schedule. This does not mean no employees or no payroll."
+      ],
+      "status": "verified-aggregate-only"
+    }
+  ]
+}

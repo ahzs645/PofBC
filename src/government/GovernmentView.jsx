@@ -9,24 +9,42 @@
 // Ministry of Forests and Lands open is a link that can be sent.
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { MINISTRY_EPISODES, standsIn } from './episodes.js'
+import { canonicalId, MINISTRY_EPISODES, standsIn } from './episodes.js'
 import { ChangesCard, EntityCard, OverviewCard } from './GovernmentPanel.jsx'
 import { GovernmentGraph } from './GovernmentGraph.jsx'
 import { GovernmentList } from './GovernmentList.jsx'
 import { CompareView, CoverageCard, ResearchCard } from './AtlasCards.jsx'
 import { EVENT_SOURCES } from './events.js'
 import { Legend } from './Legend.jsx'
+import { Sheet } from './Sheet.jsx'
+import { StoryText } from './StoryText.jsx'
 import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
 import { useSiteTheme } from '../site/useTheme.js'
 import { layoutGovernment } from './layout.js'
-import { FIRST_YEAR, governmentIn, lifeOf, PRESENT_YEAR } from './snapshot.js'
+import { FIRST_YEAR, governmentIn, lifeOf, lifespanOf, lifeYears, PRESENT_YEAR } from './snapshot.js'
 import { TimelineBar } from './TimelineBar.jsx'
 import { THEMES } from './theme.js'
 import { CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
-import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS } from './historyData.js'
+import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, LOCAL_BODIES } from './historyData.js'
 import { TIMELINE_SOURCES } from './timelineData.js'
 import './government.css'
+
+// What the view is drawn from, and how far to trust it: read in steps under Sources and caveats.
+const SOURCES_NOTE = `
+  Ministries and their lineage from the BC Archives’ ministry history diagram (to December 2024),
+  corrected where it leaves ends open and extended since. Ministers from the Legislative Library’s
+  Executive Council Appointments 1871–1986 and its cabinet lists since; former Crown corporations and
+  agencies, and past Speakers, officers and chief justices, from BC Archives, the Library, Orders in
+  Council and Wikipedia. Which ministry answered for a body is shown where a source states it, and
+  otherwise inferred and marked so. Present-day officials as checked on ${CURRENT_AS_OF} against the
+  Province’s and each body’s own pages. Staff are 2025/26 full-time equivalents from the Public
+  Accounts. The dates of the four identities are estimates, most of all the crest’s. Typed events —
+  origins, name and logo changes, appointments, the 2026 election’s schedule — come from the BC
+  government atlas research package of 25 September 2026 and the research that followed it
+  (${EVENT_SOURCES.length} sources). A date is shown only as precisely as its source gives it; an
+  unknown start is not treated as proof a body did not exist.
+`.replace(/\s+/g, ' ').trim()
 
 const validYear = (value) => Number.isInteger(value) && value >= FIRST_YEAR && value <= PRESENT_YEAR
 
@@ -37,11 +55,13 @@ const readParams = () => {
   const mode = params.get('mode')
   return {
     year: validYear(year) ? year : PRESENT_YEAR,
-    node: params.get('node'),
+    // A link made before a ministry's name was corrected names its old id.
+    node: params.get('node') ? canonicalId(params.get('node')) : null,
     mode: ['graph', 'list', 'compare'].includes(mode) ? mode : 'graph',
     compare: validYear(compare) ? compare : null,
-    // Unconfirmed bodies are drawn unless the link turns them off.
-    undated: params.get('undated') !== '0'
+    // Unconfirmed bodies are drawn unless the link turns them off; local bodies only when it asks.
+    undated: params.get('undated') !== '0',
+    local: params.get('local') === '1'
   }
 }
 
@@ -49,7 +69,7 @@ const readParams = () => {
  * Everything that decides what is on screen goes in the address bar — the year, the body, the view,
  * the year compared against, and whether unconfirmed bodies are drawn — so a copied link restores it.
  */
-const writeParams = ({ year, node, mode, compare, undated }) => {
+const writeParams = ({ year, node, mode, compare, undated, local }) => {
   if (!globalThis.history?.replaceState) return
   const url = new URL(globalThis.location.href)
   url.searchParams.set('view', 'government')
@@ -59,6 +79,7 @@ const writeParams = ({ year, node, mode, compare, undated }) => {
   set('mode', mode === 'graph' ? null : mode)
   set('compare', mode === 'compare' ? compare : null)
   set('undated', undated ? null : 0)
+  set('local', local ? 1 : null)
   globalThis.history.replaceState(null, '', url)
 }
 
@@ -95,15 +116,20 @@ const SEARCH_INDEX = (() => {
     year: episode.to === null ? PRESENT_YEAR : episode.to === episode.from ? episode.from : episode.to - 1,
     detail: episode.to ? `${episode.from}–${episode.to}` : `${episode.from}–`
   }))
-  // Former bodies, and every minister by name, so "Vander Zalm" or "BC Rail" finds its year.
-  const bodies = HISTORICAL_BODIES.filter((body) => !body.current && body.ended).map((body) => ({
-    id: body.id,
-    name: body.name,
-    alias: body.shortName,
-    year: Number(String(body.established).slice(0, 4)),
-    detail: `${String(body.established).slice(0, 4)}–${String(body.ended).slice(0, 4)}`,
-    body
-  }))
+  // Former bodies, and every minister by name, so "Vander Zalm" or "BC Rail" finds its year. A body
+  // is found whatever is known of its life: an untraced end, a start known only by a sighting.
+  const bodies = [...HISTORICAL_BODIES.filter((body) => !body.current && body.name), ...LOCAL_BODIES].filter((body) => lifespanOf(body).from).map((body) => {
+    const life = lifespanOf(body)
+    return {
+      id: body.id,
+      name: body.name,
+      alias: body.shortName,
+      year: Number(String(life.from).slice(0, 4)),
+      detail: `${lifeYears(life)}${body.kind === 'regional-hospital-district' || body.kind === 'hospital-improvement-district' ? ' · local' : ''}`,
+      body,
+      ...(LOCAL_BODIES.includes(body) ? { local: true } : {})
+    }
+  })
   const ministers = Object.entries(MINISTERS).flatMap(([episodeId, rows]) => rows.map(([person, from, to, title]) => {
     const episode = MINISTRY_EPISODES.find((entry) => entry.id === episodeId)
     const start = Math.max(Number(String(from).slice(0, 4)), episode?.from ?? 0)
@@ -180,7 +206,9 @@ const Search = ({ onPick }) => {
         aria-label="Search the government"
       />
       {query && (
-        <ul className="gov-search__results">
+        // A tap on a result must not take focus from the input first: iOS Safari does not focus a
+        // tapped button, so the blur would close the results before the tap's click arrives.
+        <ul className="gov-search__results" onMouseDown={(event) => event.preventDefault()}>
           {results.length === 0 && <li className="gov-muted">Nothing by that name. Try “Forests”, “Hydro” or “Ombudsperson”.</li>}
           {results.map((result) => (
             <li key={result.id}>
@@ -210,38 +238,26 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   const [mode, setMode] = useState(initial.mode)
   const [compareYear, setCompareYear] = useState(initial.compare ?? Math.max(FIRST_YEAR, initial.year - 25))
   const [includeUndated, setIncludeUndated] = useState(initial.undated)
+  const [includeLocal, setIncludeLocal] = useState(initial.local)
   const [playing, setPlaying] = useState(false)
   // The site's one theme: the toggle here and the one in the generator's masthead are the same.
   const { name: themeName, toggle } = useSiteTheme()
   const theme = THEMES[themeName]
   const narrow = useNarrow()
-  const panel = useRef(null)
-  const stage = useRef(null)
-  const diagram = useRef(null)
-  const [stageAway, setStageAway] = useState(false)
 
-  const government = useMemo(() => governmentIn(year, { includeUndated }), [year, includeUndated])
+  const government = useMemo(() => governmentIn(year, { includeUndated, includeLocal }), [year, includeUndated, includeLocal])
   const selected = government.nodes.find((node) => node.id === selectedId) ?? null
   // The chosen body's whole life, kept while the years move through ones it did not exist in.
   const life = useMemo(() => lifeOf(selectedId), [selectedId])
 
   useEffect(() => {
-    writeParams({ year, node: selected ? selectedId : null, mode, compare: compareYear, undated: includeUndated })
-  }, [year, selectedId, selected, mode, compareYear, includeUndated])
+    writeParams({ year, node: selected ? selectedId : null, mode, compare: compareYear, undated: includeUndated, local: includeLocal })
+  }, [year, selectedId, selected, mode, compareYear, includeUndated, includeLocal])
 
-  // On a phone the panel is below the diagram, so choosing a body brings its panel into view.
-  const chooseFromGraph = (id) => {
-    setSelectedId(id)
-    if (narrow && id) requestAnimationFrame(() => panel.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
-  }
-
-  // On a phone, whether the diagram has been scrolled out of sight — reading the panel below it.
-  useEffect(() => {
-    if (!narrow || !diagram.current) return undefined
-    const observer = new IntersectionObserver(([entry]) => setStageAway(!entry.isIntersecting))
-    observer.observe(diagram.current)
-    return () => observer.disconnect()
-  }, [narrow])
+  // On a phone the chosen body opens in a sheet over the foot of the diagram (Sheet.jsx), so the
+  // diagram stays where it is to choose the next one.
+  const sheeted = narrow && Boolean(selected)
+  const close = useCallback(() => setSelectedId(null), [])
 
   // Playing runs the years forward, a little over two a second, and stops at today.
   useEffect(() => {
@@ -272,10 +288,21 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     setSelectedId(episode.id)
   }, [])
 
+  /** Moves the timeline to `target` with `id` chosen, as the lineage chart's rows do. */
+  const go = useCallback((target, id) => {
+    setPlaying(false)
+    setYear(Math.min(PRESENT_YEAR, Math.max(FIRST_YEAR, target)))
+    setSelectedId(id)
+  }, [])
+
   /** Moves the timeline to a year a body stood — its first, or its last — and chooses it. */
   const jumpBody = useCallback((body, end) => {
-    const first = Number(String(body.established ?? PRESENT_YEAR).slice(0, 4))
-    const last = body.ended ? Math.max(first, Number(String(body.ended).slice(0, 4)) - 1) : PRESENT_YEAR
+    // Its last year is the one before its end, the last a source shows it in if its end is
+    // untraced, and today only if it continues.
+    const life = lifespanOf(body)
+    const first = Number(String(life.from ?? PRESENT_YEAR).slice(0, 4))
+    const last = life.toKind === 'ended' ? Math.max(first, Number(String(life.to).slice(0, 4)) - 1)
+      : life.toKind === 'open' ? PRESENT_YEAR : Number(String(life.lastSeen ?? life.from).slice(0, 4))
     setPlaying(false)
     setYear(Math.min(PRESENT_YEAR, Math.max(FIRST_YEAR, end === 'end' ? last : first)))
     setSelectedId(body.id)
@@ -288,7 +315,9 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
       setSelectedId(result.id)
       return
     }
-    if (result.body) return jumpBody(result.body, result.body.ended ? 'end' : 'start')
+    // A local body is found whether or not its layer is on, and choosing it turns the layer on.
+    if (result.local) setIncludeLocal(true)
+    if (result.body) return jumpBody(result.body, lifespanOf(result.body).toKind === 'open' ? 'start' : 'end')
     const episode = MINISTRY_EPISODES.find((entry) => entry.id === result.id)
     if (episode && !standsIn(episode, year)) jump(episode, 'end')
     else {
@@ -308,13 +337,6 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     const index = siblings.findIndex((node) => node.id === selectedId)
     setSelectedId(siblings[(index + direction + siblings.length) % siblings.length].id)
   }
-
-  // The dock's arrows change the panel being read, so its new body is brought to the top of it.
-  const stepInPanel = (direction) => {
-    step(direction)
-    requestAnimationFrame(() => panel.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
-  }
-  const docked = narrow && stageAway && Boolean(selected)
 
   const present = useMemo(() => [...new Set(government.nodes.map((node) => node.kind))], [government])
   // A legend row can stand for several kinds; it hides them together, or shows them together.
@@ -342,8 +364,12 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     </button>
   )
 
+  const entityCard = selected && (
+    <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onGo={go} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} />
+  )
+
   return (
-    <div className="gov" data-theme={themeName} data-docked={docked || undefined}>
+    <div className="gov" data-theme={themeName} data-sheeted={sheeted || undefined}>
       <nav className="gov-card gov-breadcrumb" aria-label="Breadcrumb">
         <SunGlyph fill={theme.people} />
         <strong className="gov-breadcrumb__site">Province of BC</strong>
@@ -354,7 +380,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
         {selected?.branch && <span className="gov-muted gov-breadcrumb__branch">/ {selected.branch[0].toUpperCase() + selected.branch.slice(1)}</span>}
         {narrow && <span className="gov-breadcrumb__tools">{themeButton}</span>}
       </nav>
-      <div className="gov__stage" ref={stage}>
+      <div className="gov__stage">
         <div className="gov__overlay gov__overlay--top">
           <Search onPick={pick} />
           <div className="gov__tools">
@@ -366,11 +392,11 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
           </div>
         </div>
 
-        <div className="gov__graph" data-mode={mode} ref={diagram}>
+        <div className="gov__graph" data-mode={mode}>
           {mode === 'graph'
-            ? <GovernmentGraph government={government} selectedId={selected ? selectedId : null} onSelect={chooseFromGraph} hiddenKinds={hidden} hiddenRelations={hiddenRelations} theme={theme} compact={narrow} />
+            ? <GovernmentGraph government={government} selectedId={selected ? selectedId : null} onSelect={setSelectedId} hiddenKinds={hidden} hiddenRelations={hiddenRelations} theme={theme} compact={narrow} />
             : mode === 'list'
-              ? <GovernmentList government={government} selectedId={selected ? selectedId : null} onSelect={chooseFromGraph} hiddenKinds={hidden} compact={narrow} />
+              ? <GovernmentList government={government} selectedId={selected ? selectedId : null} onSelect={setSelectedId} hiddenKinds={hidden} compact={narrow} />
               : (
                 <CompareView
                   year={year}
@@ -390,6 +416,8 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
               themeName={themeName}
               includeUndated={includeUndated}
               onToggleUndated={() => setIncludeUndated((value) => !value)}
+              includeLocal={includeLocal}
+              onToggleLocal={() => setIncludeLocal((value) => !value)}
             />
             <div className="gov-segmented" role="group" aria-label="Show as">
               <button type="button" aria-pressed={mode === 'graph'} onClick={() => setMode('graph')}>Graph</button>
@@ -401,29 +429,17 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
 
         <TimelineBar year={year} onYear={changeYear} playing={playing} onPlay={play} life={life} />
       </div>
-      <div className="gov__panel" ref={panel}>
+      <div className="gov__panel">
 
         {selected
-          ? <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} />
+          ? !sheeted && entityCard
           : <OverviewCard government={government} onSelect={setSelectedId} />}
-        <ChangesCard year={year} onSelect={setSelectedId} onJump={jump} />
+        <ChangesCard key={year} year={year} onSelect={setSelectedId} onJump={jump} />
 
         <details className="gov-card gov-sources">
           <summary>Sources and caveats</summary>
           <p className="gov-muted">
-            Ministries and their lineage from the BC Archives’ ministry history diagram (to December
-            2024), corrected where it leaves ends open and extended since. Ministers from the
-            Legislative Library’s Executive Council Appointments 1871–1986 and its cabinet lists since;
-            former Crown corporations and agencies, and past Speakers, officers and chief justices, from
-            BC Archives, the Library, Orders in Council and Wikipedia. Which ministry answered for a body
-            is shown where a source states it, and otherwise inferred and marked so. Present-day officials as
-            checked on {CURRENT_AS_OF} against the Province’s and each body’s own pages. Staff are
-            2025/26 full-time equivalents from the Public Accounts. The dates of the four identities are
-            estimates, most of all the crest’s. Typed events — origins, name and logo changes,
-            appointments, the 2026 election’s schedule — come from the BC government atlas research
-            package of 25 September 2026 and the research that followed it ({EVENT_SOURCES.length} sources).
-            A date is shown only as precisely as its source gives it; an unknown start is not treated as
-            proof a body did not exist.
+            <StoryText label="Sources and caveats" text={SOURCES_NOTE} />
           </p>
           <CoverageCard />
           <ResearchCard />
@@ -443,17 +459,20 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
         </details>
       </div>
 
-      {/* On a phone, once the diagram is scrolled away: the chosen body, the way back up to it, and
-          the same previous and next as the diagram's own arrows. */}
-      {docked && (
-        <div className="gov-dock" role="group" aria-label="Chosen body">
-          <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => stepInPanel(-1)} aria-label="Previous of this kind"><ChevronIcon direction={-1} /></button>
-          <button type="button" className="gov-dock__name" onClick={() => stage.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
-            <span>{selected.name}</span>
-            <span className="gov-muted">Back to the diagram ↑</span>
-          </button>
-          <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => stepInPanel(1)} aria-label="Next of this kind"><ChevronIcon direction={1} /></button>
-        </div>
+      {sheeted && (
+        <Sheet
+          label="Chosen body"
+          title={selected.name}
+          onClose={close}
+          tools={(
+            <span className="gov-button-group">
+              <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => step(-1)} aria-label="Previous of this kind"><ChevronIcon direction={-1} /></button>
+              <button type="button" className="gov-button gov-button--icon" disabled={siblings.length < 2} onClick={() => step(1)} aria-label="Next of this kind"><ChevronIcon direction={1} /></button>
+            </span>
+          )}
+        >
+          {entityCard}
+        </Sheet>
       )}
     </div>
   )

@@ -54,10 +54,13 @@ const words = (name) => String(name).toLowerCase().normalize('NFD').replace(/[̀
   .replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter((word) => word && !STOP.has(word))
 const key = (name) => words(name).join(' ')
 
-/** Old department names that differ from the portfolio that headed them. */
+/** Old department names that differ from the portfolio that headed them; a list where it had more than one style. */
 const ALIASES = {
   'railway': 'railways',
-  'treasury': 'finance',
+  // The Public Accounts set the Treasury Department under the Minister of Finance every year from
+  // 1899 to 1916, while the Executive Council appointed that minister "Minister of Finance and
+  // Agriculture" until June 1916 (Public Accounts 1899-1916; research/WANTED.md D2).
+  'treasury': ['finance', 'finance agriculture'],
   'fisheries': 'fisheries',
   'justice': 'justice attorney general'
 }
@@ -80,7 +83,7 @@ for (const term of terms) {
     return overlaps(from, to, start, end)
   })
   // Exact, then an alias, then the closest word set that contains the other.
-  let hits = candidates.filter((episode) => key(episode.name) === termKey || ALIASES[key(episode.name)] === termKey)
+  let hits = candidates.filter((episode) => key(episode.name) === termKey || [ALIASES[key(episode.name)] ?? []].flat().includes(termKey))
   if (!hits.length) {
     const mine = new Set(words(term.portfolio))
     const scored = candidates.map((episode) => {
@@ -164,7 +167,17 @@ const OMIT = new Set([
   'bc-ferry-services-inc', 'greater-vancouver-transportation-authority', 'south-coast-bc-transportation-authority', 'merit-commissioner'
 ])
 
-const researched = read('bodies.json').records
+/** The latest dated attestation of a body whose end is untraced: [date, source, locator, scope]. */
+const lastAttestation = (record) => {
+  if (record.endStatus !== 'untraced' && record.endStatus !== 'occurred_date_unknown') return null
+  const dated = (record.attestations ?? []).filter((row) => row.date).sort((a, b) => String(a.date).localeCompare(String(b.date)))
+  const last = dated.at(-1)
+  return last ? [String(last.date), sourceIndex(last.source ?? record.source), last.locator ?? null, last.scope ?? null] : null
+}
+
+// bodies.json, then every bodies-*.json, so a new round of research is a new file.
+const bodyFiles = ['bodies.json', ...readdirSync(SOURCE).filter((name) => /^bodies-.*\.json$/.test(name)).sort()]
+const researched = bodyFiles.flatMap((name) => read(name).records)
 for (const record of researched) accounting.record(`bodies.json#${record.id}`, OMIT.has(record.id) ? 'intentionally_excluded' : 'accepted', record, OMIT.has(record.id) ? { reason: 'Outside provincial diagram scope; original succession target retained' } : {})
 const idOf = (id) => SAME_AS[id] ?? id
 const bodies = researched
@@ -175,11 +188,33 @@ const bodies = researched
     ...(record.shortName ? { shortName: record.shortName } : {}),
     kind: record.kind,
     established: record.established ? String(record.established) : null,
+    ...(record.establishedMeaning ? { establishedMeaning: record.establishedMeaning } : {}),
+    // A body whose start is unknown, drawn from the earliest day a source shows it.
+    ...(!record.established && record.firstSeen?.date ? { firstSeen: [String(record.firstSeen.date), sourceIndex(record.firstSeen.source), record.firstSeen.locator ?? null] } : {}),
     ended: record.ended ? String(record.ended) : null,
-    predecessors: (record.predecessorIds ?? []).map(idOf),
+    // What its end was, where that is not plain: a rename, a transfer of its services, a dissolution.
+    ...(record.endedMeaning ? { endedMeaning: record.endedMeaning } : {}),
+    // A legal end no source gives is untraced, which is not a claim that it still stands; one known to
+    // have happened on a day not found is occurred_date_unknown. A known end needs neither.
+    ...(record.endStatus && record.endStatus !== 'known' ? { endStatus: record.endStatus } : {}),
+    // The day its operations passed elsewhere, where that is not its legal end: [date, meaning, source, locator].
+    ...(record.operationalEnd?.date ? { operationalEnd: [String(record.operationalEnd.date), record.operationalEnd.meaning ?? null, sourceIndex(record.operationalEnd.source ?? record.source), record.operationalEnd.locator ?? null] } : {}),
+    // The latest day a source shows it standing, for a body whose end is untraced: [date, source, locator, scope].
+    ...(lastAttestation(record) ? { lastSeen: lastAttestation(record) } : {}),
+    // The start's own source, where it is not the record's general one (BC Hydro's proclamation).
+    ...(record.establishedSource ? { establishedSource: sourceIndex(record.establishedSource), ...(record.establishedLocator ? { establishedLocator: record.establishedLocator } : {}) } : {}),
+    // The names it held, period by period, where an order renamed it: [name, from, to, source, locator].
+    ...(record.names?.length ? { names: record.names.map(({ name, from, to, source, locator }) => [name, from ? String(from) : null, to ? String(to) : null, sourceIndex(source ?? record.source), locator ?? null]) } : {}),
+    predecessors: [
+      ...(record.predecessorIds ?? []),
+      // A body whose services passed to this one, which is not an amalgamation: a society's to an authority.
+      ...researched.filter((other) => (other.serviceSuccessorIds ?? []).includes(record.id)).map((other) => other.id)
+    ].map(idOf),
+    ...(record.serviceSuccessorIds?.length ? { servicesPassedTo: record.serviceSuccessorIds.map(idOf) } : {}),
     successionClaims: { predecessorIds: record.predecessorIds ?? [], becameId: record.becameId ?? null },
     became: record.becameId && !OMIT.has(record.becameId) ? idOf(record.becameId) : null,
-    responsible: (record.responsible ?? []).map(({ ministry, from, to, source, locator }) => [ministry, from ? String(from) : null, to ? String(to) : null, sourceIndex(source ?? record.source), locator ?? null]),
+    // [ministry, from, to, source, locator, note]: the note says what bounds a period no source closes.
+    responsible: (record.responsible ?? []).map(({ ministry, from, to, source, locator, note }) => [ministry, from ? String(from) : null, to ? String(to) : null, sourceIndex(source ?? record.source), locator ?? null, ...(note ? [note] : [])]),
     description: record.description ?? null,
     source: sourceIndex(record.source),
     // Whether the present already draws it, from its own record.
@@ -204,7 +239,7 @@ for (const name of responsibleFiles) {
       if (!period?.ministry) { accounting.record(`${name}#${researchId}`, 'unresolved_unmapped', period, { reason: 'No ministry' }); continue }
       const competing = body.responsible.some((r) => r[0] === period.ministry && r[1] === period.from && r[2] !== (period.to ?? null))
       accounting.record(`${name}#${researchId}`, competing ? 'conflicting' : 'accepted', period)
-      const row = [period.ministry, period.from ? String(period.from) : null, period.to ? String(period.to) : null, sourceIndex(period.source), period.locator ?? null]
+      const row = [period.ministry, period.from ? String(period.from) : null, period.to ? String(period.to) : null, sourceIndex(period.source), period.locator ?? null, ...(period.note ? [period.note] : [])]
       if (!body.responsible.some((existing) => JSON.stringify(existing) === JSON.stringify(row))) {
         body.responsible.push(row)
         periods += 1
@@ -411,6 +446,34 @@ if (existsSync(resolve(SOURCE, RESEARCHED))) {
   }
 }
 
+// ── Local bodies (history/local-*.json) ─────────────────────────────────────────────────────────
+//
+// Local corporations under provincial statute (regional hospital districts, hospital improvement
+// districts), from their own register: searchable and shown on a layer of their own, never placed
+// under a ministry. Each keeps its research id, so same-named corporations stay apart.
+const localFiles = readdirSync(SOURCE).filter((name) => /^local-.*\.json$/.test(name)).sort()
+const localBodies = localFiles.flatMap((name) => read(name).records).map((record) => {
+  accounting.record(`${localFiles.find((name) => read(name).records.some((r) => r.id === record.id))}#${record.id}`, 'accepted', record)
+  return {
+    id: record.id,
+    name: record.name,
+    kind: record.kind,
+    established: record.established ?? null,
+    ...(record.establishedMeaning ? { establishedMeaning: record.establishedMeaning } : {}),
+    ended: record.ended ?? null,
+    ...(record.endedMeaning ? { endedMeaning: record.endedMeaning, endedSource: sourceIndex(record.endedSource ?? record.source) } : {}),
+    ...(record.endStatus && record.endStatus !== 'known' ? { endStatus: record.endStatus } : {}),
+    ...(lastAttestation(record) ? { lastSeen: lastAttestation(record) } : {}),
+    ...(record.names?.length ? { names: record.names.map(({ name, from, to, source, locator }) => [name, from ?? null, to ?? null, sourceIndex(source ?? record.source), locator ?? null]) } : {}),
+    // [from, rule, source, locator]: the board and its electors as each instrument set them.
+    governance: (record.governance ?? []).map(({ from, rule, source, locator }) => [String(from), rule, sourceIndex(source ?? record.source), locator ?? null]),
+    // [to, type, date, scope, conditions, source, locator]: an asset transfer, which is not succession.
+    transfers: (record.transfers ?? []).map(({ to, type, date, scope, conditions, source, locator }) => [to, type, date ?? null, scope ?? null, conditions ?? null, sourceIndex(source ?? record.source), locator ?? null]),
+    description: record.description ?? null,
+    source: sourceIndex(record.source)
+  }
+})
+
 // ── Write ─────────────────────────────────────────────────────────────────────────────────────────
 
 const json = (value) => JSON.stringify(value)
@@ -445,6 +508,13 @@ const lines = [
   ' *  exclusive end, names and parents as periods or single observations, and succession. */',
   'export const SUB_AGENCIES = [',
   ...subAgencies.map((entry) => `  ${json(entry)},`),
+  ']',
+  '',
+  '/** Local bodies (regional hospital districts, hospital improvement districts): their own register,',
+  ' *  shown on a layer of their own and never under a ministry. `governance` is [from, rule, source,',
+  ' *  locator]; `transfers` [to, type, date, scope, conditions, source, locator]. */',
+  'export const LOCAL_BODIES = [',
+  ...localBodies.map((body) => `  ${json(body)},`),
   ']',
   '',
   '/** Office-holders by office id: [name, from, to, acting, source]. */',

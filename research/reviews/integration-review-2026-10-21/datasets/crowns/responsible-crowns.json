@@ -1,0 +1,185 @@
+[
+  {
+    "relationship_id": "R3E-R010",
+    "subject": "BC Housing Management Commission",
+    "relationship": "reports_to",
+    "object": "Minister administering designated housing provisions",
+    "detail": "The regulation defines minister by administration of Ministry of Lands, Parks and Housing Act ss5(c),8.1,10; annual report goes to that minister.",
+    "source_ids": [
+      "R3E-088"
+    ],
+    "source_keys": [
+      "act_housing_reg"
+    ],
+    "locator": "ss1,7",
+    "observed_at": "2026-10-13",
+    "valid_from": null,
+    "valid_to": null,
+    "temporal_basis": "dated_observation",
+    "evidence": "direct",
+    "counts_as_accountability_path_to_people": false,
+    "caveat": "Do not turn a generic statutory minister into a named ministry without the relevant assignment order."
+  },
+  {
+    "relationship_id": "R3E-R099",
+    "subject": "B.C. Pavilion Corporation",
+    "relationship": "reports_through",
+    "object": "Minister of Tourism, Arts, Culture and Sport",
+    "detail": "Financial-statement statement of accountability through this minister.",
+    "source_ids": [
+      "R3E-016"
+    ],
+    "source_keys": [
+      "pa26_bc-pavilion-corporation"
+    ],
+    "locator": "PDF p11, Note 1",
+    "observed_at": "2026-03-31",
+    "valid_from": null,
+    "valid_to": null,
+    "temporal_basis": "dated_observation",
+    "evidence": "direct",
+    "counts_as_accountability_path_to_people": false
+  },
+  {
+    "relationship_id": "R3E-R104",
+    "subject": "BC Infrastructure Benefits Inc.",
+    "relationship": "accountable_to",
+    "object": "Minister of Infrastructure",
+    "detail": "Directly accountable to this minister as stated in the audited financial statements.",
+    "source_ids": [
+      "R3E-015"
+    ],
+    "source_keys": [
+      "pa26_bc-infrastructure-benefits"
+    ],
+    "locator": "2025/26 financial statements PDF p10, Note 1",
+    "observed_at": "2026-03-31",
+    "valid_from": null,
+    "valid_to": null,
+    "temporal_basis": "dated_observation",
+    "evidence": "direct",
+    "counts_as_accountability_path_to_people": false
+  },
+  {
+    "relationship_id": "R3E-R105",
+    "subject": "BC Infrastructure Benefits Inc.",
+    "relationship": "accountable_to",
+    "object": "Minister of Finance",
+    "detail": "Earlier financial statements name Finance; this is a checkpoint rather than an inferred continuous interval.",
+    "source_ids": [
+      "R3E-005"
+    ],
+    "source_keys": [
+      "bcib2021"
+    ],
+    "locator": "2021/22 financial statements, Note 1",
+    "observed_at": "2022-03-31",
+    "valid_from": null,
+    "valid_to": null,
+    "temporal_basis": "dated_observation",
+    "evidence": "direct",
+    "counts_as_accountability_path_to_people": false
+  },
+  {
+    "relationship_id": "R3E-R112",
+    "subject": "Civil Service Act / Civil Service Commission",
+    "relationship": "statute_administered_by",
+    "object": "Provincial Secretary",
+    "detail": "Explicit assignment in the revised statute.",
+    "source_ids": [
+      "R3E-112"
+    ],
+    "source_keys": [
+      "civil1948"
+    ],
+    "locator": "RSBC 1948 c51 s7",
+    "observed_at": "1948",
+    "valid_from": null,
+    "valid_to": null,
+    "temporal_basis": "dated_observation",
+    "evidence": "direct",
+    "counts_as_accountability_path_to_people": false
+  },
+  {
+    "relationship_id": "R3E-R113",
+    "subject": "Civil Service Act / Civil Service Commission",
+    "relationship": "statute_administered_by",
+    "object": "Provincial Secretary",
+    "detail": "Explicit assignment carried forward in revised statute.",
+    "source_ids": [
+      "R3E-113"
+    ],
+    "source_keys": [
+      "civil1960"
+    ],
+    "locator": "RSBC 1960 c56 s8",
+    "observed_at": "1960",
+    "valid_from": null,
+    "valid_to": null,
+    "temporal_basis": "dated_observation",
+    "evidence": "direct",
+    "counts_as_accountability_path_to_people": false
+  },
+  {
+    "relationship_id": "R3E-R123",
+    "subject": "Liquor Distribution Branch",
+    "relationship": "reports_to",
+    "object": "Ministry of Agriculture and Food",
+    "detail": "Audited financial statement explicitly gives the transfer date and names the previous portfolio, Public Safety and Solicitor General.",
+    "source_ids": [
+      "R3E-044"
+    ],
+    "source_keys": [
+      "pa26_bc-liquor-distribution-branch"
+    ],
+    "locator": "2025/26 audited financial statements, PDF p9, Note 1",
+    "observed_at": "2026-03-31",
+    "valid_from": "2025-07-17",
+    "valid_to": null,
+    "temporal_basis": "exact_event",
+    "evidence": "direct",
+    "counts_as_accountability_path_to_people": false
+  },
+  {
+    "relationship_id": "R3E-R124",
+    "subject": "British Columbia Railway Company",
+    "relationship": "under_supervision_of",
+    "object": "Ministry of Transportation and Transit",
+    "detail": "The audited statement identifies the ministry exercising supervision.",
+    "source_ids": [
+      "R3E-046"
+    ],
+    "source_keys": [
+      "pa26_bc-railway-company"
+    ],
+    "locator": "2025/26 audited financial statements, PDF p9, Note 1",
+    "observed_at": "2026-03-31",
+    "valid_from": null,
+    "valid_to": null,
+    "temporal_basis": "dated_observation",
+    "evidence": "direct",
+    "counts_as_accountability_path_to_people": false,
+    "caveat": "This is a contemporary observation, not a backdated assignment for 1972–2003."
+  },
+  {
+    "relationship_id": "R3E-R125",
+    "subject": "Royal British Columbia Museum Corporation",
+    "relationship": "reports_through",
+    "object": "Minister of Tourism, Arts and Culture",
+    "detail": "The audited note uses this ministerial label.",
+    "source_ids": [
+      "R3E-042"
+    ],
+    "source_keys": [
+      "pa26_royal-bc-museum-corporation"
+    ],
+    "locator": "2025/26 audited financial statements, PDF p11, Note 1",
+    "observed_at": "2026-03-31",
+    "valid_from": null,
+    "valid_to": null,
+    "temporal_basis": "dated_observation",
+    "evidence": "direct",
+    "counts_as_accountability_path_to_people": false,
+    "caveat": "The note may use a shortened or stale portfolio name; retain the source wording and reconcile with the applicable cabinet order."
+  }
+]

@@ -1,0 +1,179 @@
+{
+  "schema": "pofbc.round4.integration-code-audit.v1",
+  "reviewed_on": "2026-10-21",
+  "repository": "ahzs645/PofBC",
+  "head": "0dbdb18cfebfb27e5529ce5940850e96eb9a995c",
+  "baseline": "0f1587c5e982135f155ba6660af5192509351511",
+  "scope": "Read-only review; no repository edits, no external writes. Full suite/build and idempotence checks delegated to root.",
+  "findings": [
+    {
+      "id": "CODE-01",
+      "severity": "P2",
+      "category": "compatibility",
+      "title": "Retain the old 1978 ministry ID as an alias",
+      "locations": [
+        {
+          "path": "src/government/episodes.js",
+          "lines": [
+            62,
+            67,
+            145,
+            154
+          ]
+        },
+        {
+          "path": "src/government/GovernmentView.jsx",
+          "lines": [
+            34,
+            40,
+            224,
+            229
+          ]
+        }
+      ],
+      "observation": "The spelling correction changes the canonical node ID. episodeById(old ID) is null, while the new ID resolves. readParams accepts the old node verbatim; selection cannot find it and the URL effect removes the node parameter. Existing shared/bookmarked government links therefore lose their selected ministry.",
+      "old_id": "ministry-of-transportation-communication-and-highways-1978",
+      "canonical_id": "ministry-of-transportation-communications-and-highways-1978",
+      "recommendation": "Keep the correct plural name and new canonical ID, and add an explicit legacy-ID resolver at URL input and public identity lookup boundaries. Add one regression case proving that the legacy selection resolves and canonicalizes. Do not change the ministry span to make it appear in 1980.",
+      "evidence": "Nonmutating Node checks: old episodeById=null; new episode from 1978, to 1979; 1978 snapshot has correct plural ministry and minister title; successor is Transportation and Highways from1979."
+    },
+    {
+      "id": "CODE-02",
+      "severity": "P3",
+      "category": "measurement",
+      "title": "The advertised measurement command omits the zero-missing-minister metric",
+      "locations": [
+        {
+          "path": "scripts/measure-government.mjs",
+          "lines": [
+            14,
+            29,
+            41
+          ]
+        },
+        {
+          "path": "research/WANTED.md",
+          "lines": [
+            15,
+            25
+          ]
+        },
+        {
+          "path": "src/government/government.test.js",
+          "lines": [
+            150,
+            161
+          ]
+        }
+      ],
+      "observation": "WANTED includes ministry-years with no minister matched (17 to0) in the table attributed to measure-government.mjs, but the script has no minister-coverage accumulator or output row. The existing test only checks greater than 95% minister coverage.",
+      "recommendation": "Add the missing ministry-year metric to the command. Add a focused Treasury regression covering the Finance and Agriculture alias and the later Finance style; the broad existing 95% test does not protect this fix.",
+      "qualification": "This is a reproducibility/regression-gate gap. It does not contradict the current zero-missing result. Root is independently checking the full count."
+    }
+  ],
+  "accepted": [
+    {
+      "id": "CODE-PASS-01",
+      "title": "Treasury alias is appropriately constrained",
+      "locations": [
+        {
+          "path": "scripts/build-government-history.mjs",
+          "lines": [
+            57,
+            86
+          ]
+        }
+      ],
+      "finding": "The alias accepts both finance and finance agriculture while retaining episode/term date-overlap filtering. It adds the historical portfolio to Treasury rather than inventing minister tenures. The current department identity overlap remains a separate historical model question."
+    },
+    {
+      "id": "CODE-PASS-02",
+      "title": "All carried minister corroborations match their intended existing terms",
+      "locations": [
+        {
+          "path": "research/reviews/round-4-2026-10-21/convert.py",
+          "lines": [
+            169,
+            180
+          ]
+        }
+      ],
+      "finding": "Ten data_changes target nine Treasury/Finance term records plus Alex Fraser. All match assertions agree with current records. All 19 evidence additions are present: 18 Treasury transmittals and one Fraser appointment. Every extracted Treasury transmittal date lies within the matched tenure. The converter appends evidence and does not alter from/to."
+    },
+    {
+      "id": "CODE-PASS-03",
+      "title": "1978 name, minister and event use the corrected identity",
+      "locations": [
+        {
+          "path": "src/government/episodes.js",
+          "lines": [
+            62,
+            67
+          ]
+        },
+        {
+          "path": "research/atlas/events-round4.json",
+          "selector": "round4-oic-3018-1978-transportation-communications-highways"
+        }
+      ],
+      "finding": "The new canonical ID resolves. The episode is 1978–1979, with Highways and Public Works as predecessor and Transportation and Highways as successor. The1978 snapshot names Alex Fraser with the plural Communications title. Its absence in 1980 is expected; the 1979 year-end view has the successor."
+    },
+    {
+      "id": "CODE-PASS-04",
+      "title": "EAB, Powertech and MSC decisions are explicit and refreshed",
+      "locations": [
+        {
+          "path": "research/decisions.json",
+          "selectors": [
+            "msc-established-1967-03-24",
+            "eab-established-1982-01-01",
+            "powertech-established-1988-09-29"
+          ]
+        },
+        {
+          "path": "src/government/atlas.test.js",
+          "lines": [
+            199,
+            232
+          ]
+        },
+        {
+          "path": "research/reviews/round-4-2026-10-21/convert.py",
+          "lines": [
+            190,
+            198
+          ]
+        }
+      ],
+      "finding": "All three proposal IDs are unique, their stored records equal their proposal records, and all have decided=2026-10-21. EAB uses 1 January 1982; Powertech uses 29 September 1988 company incorporation and separately records 6 January 1989 naming. MSC retains the missing-proclamation and possible 1968 reconstitution qualifications. The changed tests assert accepted values and preserve BC Transplant as an unsettled example."
+    }
+  ],
+  "advisories": [
+    {
+      "id": "CODE-ADVICE-01",
+      "title": "Decision refresh is an authoritative replacement, not a merge",
+      "location": "research/reviews/round-4-2026-10-21/convert.py:190–198",
+      "finding": "An already-held decision is replaced wholesale by its proposal object. In the reviewed commit every expected field is present and no actual loss was found. A later hand-edit in decisions.json would be overwritten by replay; proposals must remain the maintained source or the converter needs an explicit divergence guard. The held-ID index is not updated when appending, so future duplicate new IDs across modules would be appended twice; no such duplicate exists now.",
+      "priority": "non-blocking maintenance note, not a current data-corruption finding"
+    },
+    {
+      "id": "CODE-ADVICE-02",
+      "title": "Interpret the minister metric as annual snapshot coverage",
+      "location": "src/government/snapshot.js; scripts/measure-government.mjs",
+      "finding": "A zero count of ministry-years with no matched minister confirms the annual snapshots. It does not prove uninterrupted day-by-day officeholder coverage or settle whether two historical department names represent separate concurrent legal/administrative bodies."
+    }
+  ],
+  "checks": {
+    "targeted_nonmutating_node_probes": true,
+    "minister_corroboration_change_rows": 10,
+    "treasury_evidence_additions": 18,
+    "other_evidence_additions": 1,
+    "all_match_keys_agree": true,
+    "all_extracted_transmittal_dates_within_tenure": true,
+    "all_evidence_additions_present": true,
+    "proposed_decision_ids_unique": true,
+    "all_proposed_decisions_match_stored_exactly": true,
+    "all_proposed_decisions_have_decided_date": true
+  },
+  "source_policy": "Direct comparison of the two commit objects and reviewed source files; previous round4/repo working-tree HEAD is 112b352... and was not used as the baseline."
+}

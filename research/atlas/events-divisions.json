@@ -925,12 +925,20 @@
      }
     ]
    },
-   "interpretation_notes": "Day-precision archival claim that refines package seed:parks-branch-1957 (year only, from bcparks.ca). Recorded as a separate claim from a different source, not a duplicate; keep the seed's year claim alongside.",
+   "interpretation_notes": "Day-precision archival claim that refines package seed:parks-branch-1957 (year only, from bcparks.ca). 28 March 1957 is the date of the Act creating the Department of Recreation and Conservation; the department's 1957 report gives 1 April 1957 as the day the division entered it and became the Provincial Parks Branch (now in the sub-agency research for bc-parks). Keep both.",
    "reviewed_on": "2026-09-25",
    "integration_status": "needs_local_id_mapping_and_review",
    "refines_seed": "seed:parks-branch-1957",
    "name_before": "Parks and Recreation Division",
-   "name_after": "Parks Branch (also called Provincial Parks Branch)"
+   "name_after": "Parks Branch (also called Provincial Parks Branch)",
+   "conflicts": [
+    {
+     "date": "1957-04-01",
+     "source_url": "https://oc-index.library.ubc.ca/collections/bcsessional/items/1.0354514",
+     "locator": "Department of Recreation and Conservation, Report 1957, Introduction (II 7) and Provincial Parks history (before II 24)",
+     "note": "The department's own first report dates the Act creating the department to 28 March 1957 and says the Parks and Recreation Division entered it, as the Provincial Parks Branch, on 1 April 1957."
+    }
+   ]
   },
   {
    "id": "atlas:parks-dept-rec-con-act-1957",

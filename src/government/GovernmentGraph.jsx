@@ -7,13 +7,13 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
-  arcPath, BAND_INNER, CENTRE, lerpAngle, layoutGovernment, readsReversed, RIM, rimAt, RINGS, rotationToBottom,
-  sealPath, territoryPath, toPoint, UNIT, VIEWBOX
+  aroundCentre, arcPath, CENTRE, COMPACT_GEOMETRY, frameAround, GEOMETRY, lerpAngle, layoutGovernment, readsReversed, rimAt,
+  rotationToBottom, SEAM, sealPath, territoryPath, toPoint, VIEWBOX
 } from './layout.js'
 import { colourOf, fillOf, mix } from './theme.js'
+import { pathToPeople } from './snapshot.js'
 
 const DURATION = 750
-const DISC = BAND_INNER
 
 const lerp = (a, b, t) => a + (b - a) * t
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
@@ -72,15 +72,30 @@ const useTween = (target) => {
   return frame
 }
 
+/**
+ * A fitted frame widened or deepened about its middle to the wide frame's proportions, which the
+ * page keeps for the diagram, so a phone's frame always spans the screen and the page below it
+ * never moves as the years go by. The 28 below the cog is room for the chosen body's name.
+ */
+const toAspect = (box) => {
+  const ratio = VIEWBOX.width / VIEWBOX.height
+  if (box.width / box.height < ratio) {
+    const width = box.height * ratio
+    return { ...box, x: box.x - (width - box.width) / 2, width }
+  }
+  const height = box.width / ratio
+  return { ...box, y: box.y - (height - box.height) / 2, height }
+}
+
 // ── Zoom ───────────────────────────────────────────────────────────────────────────────────────
 
 const MAX_ZOOM = 6
 const UNZOOMED = { s: 1, x: 0, y: 0 }
 
 /** Keeps the scale in range, and the drawing covering the whole frame — it is never panned off. */
-const bound = ({ s, x, y }) => {
+const bound = ({ s, x, y }, box) => {
   const scale = Math.min(MAX_ZOOM, Math.max(1, s))
-  const { x: left, y: top, width, height } = VIEWBOX
+  const { x: left, y: top, width, height } = box
   return {
     s: scale,
     x: Math.min(left - scale * left, Math.max(left + width - scale * (left + width), x)),
@@ -89,10 +104,10 @@ const bound = ({ s, x, y }) => {
 }
 
 /** The view after scaling by `factor` about `focus`, a point in the frame's own units. */
-const zoomAbout = (view, factor, focus) => {
+const zoomAbout = (view, factor, focus, box) => {
   const s = Math.min(MAX_ZOOM, Math.max(1, view.s * factor))
   const content = { x: (focus.x - view.x) / view.s, y: (focus.y - view.y) / view.s }
-  return bound({ s, x: focus.x - content.x * s, y: focus.y - content.y * s })
+  return bound({ s, x: focus.x - content.x * s, y: focus.y - content.y * s }, box)
 }
 
 /**
@@ -104,7 +119,7 @@ const zoomAbout = (view, factor, focus) => {
  * Native listeners, not React's, because they must be able to cancel the page's own scroll and
  * zoom, and iOS honours little of CSS touch-action. A drag that moved is not also a tap.
  */
-const useZoom = (svg) => {
+const useZoom = (svg, frameBox) => {
   const [view, setView] = useState(UNZOOMED)
   const live = useRef(view)
   live.current = view
@@ -148,14 +163,14 @@ const useZoom = (svg) => {
         const content = { x: (focus.x - was.x) / was.s, y: (focus.y - was.y) / was.s }
         const s = Math.min(MAX_ZOOM, Math.max(1, (was.s * distance(points[0], points[1])) / span))
         const now = middle(points[0], points[1])
-        setView(bound({ s, x: now.x - content.x * s, y: now.y - content.y * s }))
+        setView(bound({ s, x: now.x - content.x * s, y: now.y - content.y * s }, frameBox.current))
         moved = true
       } else if (gesture.kind === 'pan' && points.length === 1) {
         event.preventDefault()
         const [point] = points
         if (!moved && Math.hypot(point.cx - gesture.from.cx, point.cy - gesture.from.cy) < 6) return
         moved = true
-        setView(bound({ ...gesture.view, x: gesture.view.x + point.x - gesture.from.x, y: gesture.view.y + point.y - gesture.from.y }))
+        setView(bound({ ...gesture.view, x: gesture.view.x + point.x - gesture.from.x, y: gesture.view.y + point.y - gesture.from.y }, frameBox.current))
       }
     }
     const end = (event) => {
@@ -178,7 +193,7 @@ const useZoom = (svg) => {
     const wheel = (event) => {
       if (!event.ctrlKey) return
       event.preventDefault()
-      setView((current) => zoomAbout(current, Math.exp(-event.deltaY * 0.01), toFrame(event.clientX, event.clientY)))
+      setView((current) => zoomAbout(current, Math.exp(-event.deltaY * 0.01), toFrame(event.clientX, event.clientY), frameBox.current))
     }
     const noPageZoom = (event) => event.preventDefault()
 
@@ -198,11 +213,13 @@ const useZoom = (svg) => {
       element.removeEventListener('wheel', wheel)
       element.removeEventListener('gesturestart', noPageZoom)
     }
-  }, [svg])
+  }, [svg, frameBox])
 
   // The buttons zoom about the middle of what is on screen.
-  const centre = { x: VIEWBOX.x + VIEWBOX.width / 2, y: VIEWBOX.y + VIEWBOX.height / 2 }
-  const zoomBy = (factor) => setView((current) => zoomAbout(current, factor, centre))
+  const zoomBy = (factor) => setView((current) => {
+    const box = frameBox.current
+    return zoomAbout(current, factor, { x: box.x + box.width / 2, y: box.y + box.height / 2 }, box)
+  })
   return { view, zoomBy, reset: () => setView(UNZOOMED) }
 }
 
@@ -232,6 +249,7 @@ export const GLYPHS = {
   octagon: (size, props) => <polygon points={polygon(8, size * 0.9, Math.PI / 8)} {...props} />,
   pentagon: (size, props) => <polygon points={polygon(5, size * 0.9)} {...props} />,
   hexagon: (size, props) => <polygon points={polygon(6, size * 0.9)} {...props} />,
+  triangle: (size, props) => <polygon points={polygon(3, size)} {...props} />,
   // A sub-agency: a dot in its branch colour, without an outline, as the model draws its own.
   dot: (size, { stroke }) => <circle r={size} fill={stroke} fillOpacity={0.75} />
 }
@@ -248,7 +266,9 @@ export const KINDS = {
   tribunal: { glyph: 'pentagon', label: 'Tribunals', one: 'Tribunal' },
   'health-authority': { glyph: 'hexagon', label: 'Health authorities', one: 'Health authority' },
   court: { glyph: 'pentagon', label: 'Courts', one: 'Court' },
-  sub: { glyph: 'dot', label: 'Sub-agencies', one: 'Sub-agency' }
+  sub: { glyph: 'dot', label: 'Sub-agencies', one: 'Sub-agency' },
+  'regional-hospital-district': { glyph: 'triangle', label: 'Regional hospital districts', one: 'Regional hospital district (local)' },
+  'hospital-improvement-district': { glyph: 'triangle', label: 'Hospital improvement districts', one: 'Hospital improvement district (local)' }
 }
 
 /** Relationship kinds: how each is drawn, and what it is called in the legend and the panel. */
@@ -259,7 +279,9 @@ export const RELATIONS = {
   responsible: { label: 'Answers for', legend: 'Answers for', marker: 'chevrons', dash: null, curve: true },
   part: { label: 'Includes', legend: 'Part of', marker: null, dash: '4 2', curve: false },
   // Working with a ministry without answering to it, as the First Nations Health Authority does.
-  partner: { label: 'Partner of', legend: 'Partner of', marker: null, dash: '1.5 3', curve: true }
+  partner: { label: 'Partner of', legend: 'Partner of', marker: null, dash: '1.5 3', curve: true },
+  // Owning a subsidiary, which is not answering for it: not a line to the people.
+  owned: { label: 'Owns', legend: 'Owned by', marker: null, dash: '6 2 1 2', curve: false }
 }
 
 const MARKERS = {
@@ -284,9 +306,17 @@ export const MarkerPath = ({ kind, colour, fill }) => kind && (
  * A bean round the Assembly: a stadium lying along the ring, like the pill the model draws round
  * the two chambers of Congress. BC's Legislature has one elected chamber, so the bean holds one.
  */
-const beanPath = ({ angle, radius, size }) => {
-  const reach = (size * 1.9) / radius
-  const thick = size + 9
+const beanPath = ({ angle, radius, size }, sector = null) => {
+  let reach = (size * 1.9) / radius
+  let thick = size + 9
+  // Kept inside its branch: each round end stays clear of the seam (a parallel-sided band half a
+  // seam either side of the sector's edge), so the bean never reaches into the executive's band.
+  if (sector) {
+    const margin = SEAM / 2 + 3
+    const room = Math.min(angle - sector.start, sector.end - angle)
+    thick = Math.max(size + 2, Math.min(thick, radius * Math.sin(Math.max(0, room)) - margin))
+    reach = Math.max(0, Math.min(reach, room - Math.asin(Math.min(1, (thick + margin) / radius))))
+  }
   const a = toPoint(angle - reach, radius + thick)
   const b = toPoint(angle + reach, radius + thick)
   const c = toPoint(angle + reach, radius - thick)
@@ -298,6 +328,22 @@ const beanPath = ({ angle, radius, size }) => {
 
 const PEOPLE = 'people-of-british-columbia'
 const NO_RELATIONS = new Set()
+
+/** What a line says when pointed at, read the way it runs: who does what to whom. */
+export const edgeTitle = (edge, from, to) => {
+  const a = from?.shortName ?? from?.name ?? edge.from
+  const b = to?.shortName ?? to?.name ?? edge.to
+  switch (edge.kind) {
+    case 'elects': return `${a} elect the ${b}${edge.seats ? ` (${edge.seats} members)` : ''}`
+    case 'appoints': return to?.kind === 'ministry' ? `${a} chooses the minister of the ${b}` : `${a} appoints the ${b}`
+    case 'confidence': return `${b} governs with the confidence of the ${a}`
+    case 'responsible': return `${a} answers for ${b}`
+    case 'part': return `${b} is part of ${a}`
+    case 'partner': return `${b} is a partner of the ${a}`
+    case 'owned': return `${b} is a subsidiary of ${a}: owned, which is not answering to it`
+    default: return `${a} — ${b}`
+  }
+}
 const clockwise = (angle) => ((angle + Math.PI / 2) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2)
 
 /** Where a head — minister, chief justice, chair — hangs from its body: just outside it, facing out. */
@@ -318,7 +364,10 @@ const headPoint = (angle, radius, size) => toPoint(angle, radius + size * 0.95)
 export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds, hiddenRelations = NO_RELATIONS, theme, compact = false }) => {
   const [pointed, setHovered] = useState(null)
   const svg = useRef(null)
-  const { view, zoomBy, reset } = useZoom(svg)
+  // On a phone the disc is laid out smaller with the same glyphs, and framed (below) to run to the edges.
+  const geometry = compact ? COMPACT_GEOMETRY : GEOMETRY
+  const frameBox = useRef(VIEWBOX)
+  const { view, zoomBy, reset } = useZoom(svg, frameBox)
   const zoomed = view.s > 1
   const nodes = government.nodes
   const byId = useMemo(() => new Map(nodes.map((node) => [node.id, node])), [nodes])
@@ -326,7 +375,19 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
   // on beneath it — so a hover is only honoured while its body is still drawn.
   const hovered = byId.has(pointed) ? pointed : null
 
-  const layout = useMemo(() => layoutGovernment(nodes.filter((node) => node.branch)), [nodes])
+  // Sub-agencies are folded into their parent until it is chosen — or one of them is — and then laid
+  // out round it, the cog growing to hold them, as the model opens a department's own bodies.
+  const expanded = useMemo(() => {
+    const chosen = selectedId ? byId.get(selectedId) : null
+    if (!chosen) return null
+    return chosen.ring === 'sub' ? chosen.parent : chosen.id
+  }, [selectedId, byId])
+  const folded = useMemo(() => {
+    const counts = new Map()
+    for (const node of nodes) if (node.ring === 'sub' && node.parent !== expanded) counts.set(node.parent, (counts.get(node.parent) ?? 0) + 1)
+    return counts
+  }, [nodes, expanded])
+  const layout = useMemo(() => layoutGovernment(nodes.filter((node) => node.branch && (node.ring !== 'sub' || node.parent === expanded)), geometry), [nodes, geometry, expanded])
 
   // The body the disc turns to. A head's own body stands in for it, and the people turn nothing.
   const pivot = selectedId && layout.positions[selectedId] ? layout.positions[selectedId].angle : null
@@ -337,6 +398,10 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
     rotation: pivot === null ? 0 : rotationToBottom(pivot)
   }), [layout, pivot])
   const frame = useTween(target)
+  // A wide screen keeps one frame for every year; a phone's follows the cog as it grows and shrinks.
+  const fitted = compact ? frameAround(frame.teeth, frame.rotation, geometry) : null
+  const box = fitted ? toAspect({ ...fitted, height: fitted.height + 28 }) : VIEWBOX
+  frameBox.current = box
 
   const at = (id) => {
     const position = frame.positions[id]
@@ -345,35 +410,68 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
     return { ...toPoint(angle, position.radius), angle, radius: position.radius, size: position.size }
   }
 
-  const selectedEdges = useMemo(
-    () => (selectedId
-      ? government.edges.filter((edge) => (edge.from === selectedId || edge.to === selectedId) && !hiddenRelations.has(edge.kind))
-      : []),
-    [government.edges, selectedId, hiddenRelations]
-  )
+  // What the chosen body is connected to, and the whole of its line up to the people — not only
+  // the first step of it.
+  const selectedEdges = useMemo(() => {
+    if (!selectedId) return []
+    const path = pathToPeople(government, selectedId)
+    const near = government.edges.filter((edge) => edge.from === selectedId || edge.to === selectedId)
+    return [...near, ...path.filter((step) => !near.some((edge) => edge.from === step.from && edge.to === step.to && edge.kind === step.kind))]
+      .filter((edge) => !hiddenRelations.has(edge.kind))
+  }, [government, selectedId, hiddenRelations])
   const connected = useMemo(() => new Set(selectedEdges.flatMap((edge) => [edge.from, edge.to])), [selectedEdges])
+  // The people are lit whenever the chosen body's line reaches them, not only when they are chosen.
+  const peopleLit = selectedId === PEOPLE || connected.has(PEOPLE)
 
   const selected = selectedId ? byId.get(selectedId) : null
   const r = frame.rotation
   const teethOf = (sectorId) => frame.teeth.filter((tooth) => tooth.sector === sectorId)
+  // A branch's territory, its band and teeth together, inset by half a seam at every radius.
+  const territoryOf = (sector) => territoryPath(
+    { start: sector.start + r, end: sector.end + r },
+    teethOf(sector.id).map((tooth) => ({ ...tooth, start: tooth.start + r, end: tooth.end + r })),
+    geometry
+  )
+  const executiveSector = frame.sectors.find((sector) => sector.id === 'executive')
   // The executive's family of bodies with no stated ministry, when it is wide enough to name.
   const unattachedLane = frame.teeth.find((tooth) => tooth.sector === 'executive' && tooth.group === 'none' && tooth.end - tooth.start > 0.18) ?? null
+  // A lane's name, set along its tooth: the arc is lengthened past a narrow tooth (as on a phone's
+  // smaller disc) rather than the name being cut off where the arc ends.
+  // Where it would run into its branch's own name (a lane on the plain rim, as in 1900), it is set
+  // a line further out instead.
+  const laneArc = (lane, text) => {
+    let radius = Math.max(lane.top, geometry.rim) + 14
+    const middle = (lane.start + lane.end) / 2 + r
+    const length = text.length * 6.4 + 12
+    const sector = frame.sectors.find((entry) => entry.id === lane.sector)
+    if (sector) {
+      const named = (sector.start + sector.end) / 2 + r
+      const nameRadius = labelRadius(sector, named - r, Math.min((sector.end - sector.start) / 2, 0.5))
+      const nameLength = sector.label.length * 10.5
+      if (Math.abs(nameRadius - radius) < 14 && Math.abs(middle - named) * radius < (length + nameLength) / 2 + 8) radius = nameRadius + 14
+    }
+    const half = Math.max((lane.end - lane.start) / 2, length / 2 / radius)
+    return arcPath(middle - half, middle + half, radius)
+  }
+  // The local bodies' lane, when they are shown.
+  const localLane = frame.teeth.find((tooth) => tooth.group === 'local' && tooth.end - tooth.start > 0.12) ?? null
   // The branch label sits just beyond the highest part of the rim it spans.
   const labelRadius = (sector, middle, span) => {
-    let top = RIM
-    for (let angle = middle - span; angle <= middle + span; angle += 0.02) top = Math.max(top, rimAt(angle, teethOf(sector.id)))
+    let top = geometry.rim
+    for (let angle = middle - span; angle <= middle + span; angle += 0.02) top = Math.max(top, rimAt(angle, teethOf(sector.id), geometry.rim))
     return top + 16
   }
   // The Legislature's bean, drawn round the Assembly as the model draws Congress round its chambers.
   const assemblyPoint = at('legislative-assembly')
   const legislature = assemblyPoint ? { ...assemblyPoint } : null
+  const legislativeSector = frame.sectors.find((sector) => sector.id === 'legislative')
+  const legislativeBounds = legislativeSector ? { start: legislativeSector.start + r, end: legislativeSector.end + r } : null
 
   // The ministries' band: an arc across the span the cabinet occupies, drawn as one thick stroke.
   const ministries = nodes.filter((node) => node.ring === 'cabinet').map((node) => frame.positions[node.id]).filter(Boolean)
   const cabinetSpan = ministries.length
     ? [Math.min(...ministries.map((p) => p.angle)) + r, Math.max(...ministries.map((p) => p.angle)) + r]
     : null
-
   // Keyboard order: the people, then round the disc clockwise from twelve o'clock. One body is
   // the tab stop — the chosen one, else the Premier — and the arrow keys move between the rest.
   const order = useMemo(() => [
@@ -399,14 +497,14 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
   const executive = frame.sectors.find((sector) => sector.id === 'executive')
   const innerCrowded = cabinetSpan && nodes.some((node) => node.ring === 'inner' && node.branch === 'executive' &&
     frame.positions[node.id] && Math.abs(frame.positions[node.id].angle + r - (cabinetSpan[0] + 0.35)) < 0.55)
-  const cabinetLabelRadius = RINGS.cabinet * UNIT + (innerCrowded ? 29 : -30)
+  const cabinetLabelRadius = geometry.ring.cabinet + (innerCrowded ? 29 : -30)
 
   return (
     <>
       <svg
         ref={svg}
         className="gov-graph"
-        viewBox={`${VIEWBOX.x} ${VIEWBOX.y} ${VIEWBOX.width} ${VIEWBOX.height}`}
+        viewBox={`${box.x} ${box.y} ${box.width} ${box.height}`}
         role="group"
         aria-label={`The Government of British Columbia in ${government.year}`}
         data-zoomed={zoomed || undefined}
@@ -421,19 +519,24 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
             {frame.sectors.map((sector) => (
               <path
                 key={sector.id}
-                d={territoryPath(
-                  { start: sector.start + r, end: sector.end + r },
-                  teethOf(sector.id).map((tooth) => ({ ...tooth, start: tooth.start + r, end: tooth.end + r }))
-                )}
+                d={territoryOf(sector)}
                 fill={mix(theme.branch[sector.id], theme.canvas, theme.territoryAlpha)}
               />
             ))}
-            {[RINGS.inner, RINGS.oversight, RINGS.outer].map((ring) => (
-              <circle key={ring} cx={CENTRE.x} cy={CENTRE.y} r={ring * UNIT} fill="none" stroke={theme.seam} strokeDasharray="4 3" />
+            {[geometry.ring.inner, geometry.ring.oversight, geometry.ring.outer].map((radius) => (
+              <circle key={radius} cx={CENTRE.x} cy={CENTRE.y} r={radius} fill="none" stroke={theme.seam} strokeDasharray="4 3" />
             ))}
+            {/* The ministries' band is clipped to the executive's own territory, so its round ends
+                never reach across a seam into the Legislature's band. */}
+            {executiveSector && (
+              <clipPath id="gov-executive-territory">
+                <path d={territoryOf(executiveSector)} />
+              </clipPath>
+            )}
             {cabinetSpan && (
               <path
-                d={arcPath(cabinetSpan[0] - 0.04, cabinetSpan[1] + 0.04, RINGS.cabinet * UNIT)}
+                d={arcPath(cabinetSpan[0] - 0.04, cabinetSpan[1] + 0.04, geometry.ring.cabinet)}
+                clipPath="url(#gov-executive-territory)"
                 fill="none"
                 stroke={mix(theme.branch.executive, theme.canvas, theme.territoryAlpha + theme.pillAlpha)}
                 strokeWidth={44}
@@ -442,7 +545,7 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
             )}
             {legislature && (
               <path
-                d={beanPath(legislature)}
+                d={beanPath(legislature, legislativeBounds)}
                 fill={mix(theme.branch.legislative, theme.canvas, theme.territoryAlpha + theme.pillAlpha)}
                 stroke={theme.branch.legislative}
                 strokeWidth={1.5}
@@ -489,12 +592,12 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
               a body is chosen it turns to the bottom, and the names would only cross it. */}
           <g className="gov-graph__labels gov-graph__ring-names" data-hidden={selectedId ? true : undefined} aria-hidden="true">
             {[
-              { id: 'ring-inner', radius: BAND_INNER + 6, text: 'HIGHEST AUTHORITY' },
-              { id: 'ring-oversight', radius: RINGS.oversight * UNIT + 14, text: 'OVERSIGHT' },
-              { id: 'ring-outer', radius: RINGS.outer * UNIT - 16, text: 'CROWN CORPORATIONS AND AGENCIES' }
+              { id: 'ring-inner', radius: geometry.bandInner + 6, wide: GEOMETRY.bandInner + 6, text: 'HIGHEST AUTHORITY' },
+              { id: 'ring-oversight', radius: geometry.ring.oversight + 14, wide: GEOMETRY.ring.oversight + 14, text: 'OVERSIGHT' },
+              { id: 'ring-outer', radius: geometry.ring.outer - 16, wide: GEOMETRY.ring.outer - 16, text: 'CROWN CORPORATIONS AND AGENCIES' }
             ].map((ring) => (
               <g key={ring.id}>
-                <path id={ring.id} d={arcPath(Math.PI / 2 - 0.6, Math.PI / 2 + 0.6, ring.radius)} fill="none" />
+                <path id={ring.id} d={arcPath(Math.PI / 2 - (0.6 * ring.wide) / ring.radius, Math.PI / 2 + (0.6 * ring.wide) / ring.radius, ring.radius)} fill="none" />
                 <text className="gov-graph__ring-label gov-graph__ring-label--halo" fill={theme.inkMuted} stroke={theme.canvas}>
                   <textPath href={`#${ring.id}`} startOffset="50%" textAnchor="middle">{ring.text}</textPath>
                 </text>
@@ -504,9 +607,17 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
                 such along their tooth, rather than attached to a plausible ministry. */}
             {unattachedLane && (
               <g>
-                <path id="unattached-label" d={arcPath(unattachedLane.start + r, unattachedLane.end + r, Math.max(unattachedLane.top, RIM) + 14)} fill="none" />
+                <path id="unattached-label" d={laneArc(unattachedLane, 'NO MINISTRY ESTABLISHED')} fill="none" />
                 <text className="gov-graph__ring-label gov-graph__ring-label--lane" fill={theme.inkMuted}>
                   <textPath href="#unattached-label" startOffset="50%" textAnchor="middle">NO MINISTRY ESTABLISHED</textPath>
+                </text>
+              </g>
+            )}
+            {localLane && (
+              <g>
+                <path id="local-label" d={laneArc(localLane, 'LOCAL BODIES')} fill="none" />
+                <text className="gov-graph__ring-label gov-graph__ring-label--lane" fill={theme.inkMuted}>
+                  <textPath href="#local-label" startOffset="50%" textAnchor="middle">LOCAL BODIES</textPath>
                 </text>
               </g>
             )}
@@ -532,14 +643,22 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
               const dx = b.x - a.x
               const dy = b.y - a.y
               const length = Math.hypot(dx, dy) || 1
-              // Curved relations bow to one side, so they read apart from the straight ones.
+              // Curved relations bow to one side, so they read apart from the straight ones; a line
+              // that would cross the people bows round them instead.
               const bend = relation.curve ? 0.2 * length : 0
-              const cx = (a.x + b.x) / 2 - (dy / length) * bend
-              const cy = (a.y + b.y) / 2 + (dx / length) * bend
+              const around = aroundCentre(a, b)
+              const cx = around ? around.x : (a.x + b.x) / 2 - (dy / length) * bend
+              const cy = around ? around.y : (a.y + b.y) / 2 + (dx / length) * bend
               const mid = { x: 0.25 * a.x + 0.5 * cx + 0.25 * b.x, y: 0.25 * a.y + 0.5 * cy + 0.25 * b.y }
-              const tangent = Math.atan2(b.y - a.y + (relation.curve ? 0 : 0), b.x - a.x) * (180 / Math.PI)
+              // The marker follows the curve at its midpoint: along b − a for a symmetric bow, which
+              // is what the curve's own tangent there is.
+              const tangent = Math.atan2(b.y - a.y, b.x - a.x) * (180 / Math.PI)
+              const title = edgeTitle(edge, source, byId.get(edge.to))
               return (
                 <g key={`${edge.from}-${edge.to}-${edge.kind}`} className="gov-graph__edge">
+                  <title>{title}</title>
+                  {/* A wide clear stroke, so the line can be pointed at. */}
+                  <path d={`M${a.x},${a.y}Q${cx},${cy} ${b.x},${b.y}`} fill="none" stroke="transparent" strokeWidth={10} />
                   <path
                     d={`M${a.x},${a.y}Q${cx},${cy} ${b.x},${b.y}`}
                     fill="none"
@@ -568,12 +687,14 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
           >
             <path
               d={sealPath()}
-              fill={selectedId === 'people-of-british-columbia' ? theme.people : mix(theme.people, theme.blendBase, 0.3)}
+              fill={peopleLit ? theme.people : mix(theme.people, theme.blendBase, 0.3)}
               stroke={theme.people}
               strokeWidth={1.5}
             />
-            <text x={CENTRE.x} y={CENTRE.y - 3} className="gov-graph__seal-label" fill={selectedId === PEOPLE ? theme.sealInkSelected : theme.sealInk}>People of</text>
-            <text x={CENTRE.x} y={CENTRE.y + 11} className="gov-graph__seal-label" fill={selectedId === PEOPLE ? theme.sealInkSelected : theme.sealInk}>British Columbia</text>
+            {/* The label follows the fill: dark on the full sun, whether the people are chosen or
+                joined to what is, so it stays legible against the bright yellow. */}
+            <text x={CENTRE.x} y={CENTRE.y - 3}className="gov-graph__seal-label" fill={peopleLit ? theme.sealInkLit : theme.sealInk}>People of</text>
+            <text x={CENTRE.x} y={CENTRE.y + 11} className="gov-graph__seal-label" fill={peopleLit ? theme.sealInkLit : theme.sealInk}>British Columbia</text>
           </g>
 
           {/* Bodies. */}
@@ -634,6 +755,15 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
                       vectorEffect: 'non-scaling-stroke'
                     })}
                   </g>
+                  {/* How many sub-agencies are folded into it, until it is chosen. */}
+                  {folded.has(node.id) && !hiddenKinds.has('sub') && (() => {
+                    const badge = toPoint(point.angle, point.radius + size + (head ? 10 : 7))
+                    return (
+                      <text className="gov-graph__folded" x={badge.x} y={badge.y} fill={colour} aria-hidden="true">
+                        +{folded.get(node.id)}
+                      </text>
+                    )
+                  })()}
                 </g>
               )
             })}
@@ -641,11 +771,11 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
 
           {/* A tooltip for the body under the pointer, and a caption for the chosen one. */}
           {hovered && hovered !== selectedId && byId.get(hovered) && at(hovered) && (
-            <Tooltip node={byId.get(hovered)} point={at(hovered)} theme={theme} />
+            <Tooltip node={byId.get(hovered)} point={at(hovered)} theme={theme} box={box} />
           )}
         </g>
         {selected && selected.kind !== 'people' && (
-          <Caption text={selected.shortName ?? selected.name} colour={colourOf(selected, theme)} theme={theme} x={400} y={VIEWBOX.y + VIEWBOX.height - 20} />
+          <Caption text={selected.shortName ?? selected.name} colour={colourOf(selected, theme)} theme={theme} x={box.x + box.width / 2} y={box.y + box.height - 20} chars={Math.floor((box.width - 40) / 7.6)} />
         )}
       </svg>
       {/* On a phone, buttons for what a pinch does, so that it can be found; anywhere, a way back. */}
@@ -665,8 +795,8 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
 /** Shortens a label to what fits in `chars`, so no pill is ever narrower than its text. */
 const fit = (text, chars) => (text.length > chars ? `${text.slice(0, chars - 1).trimEnd()}…` : text)
 
-const Caption = ({ text: full, colour, theme, x, y }) => {
-  const text = fit(full, 72)
+const Caption = ({ text: full, colour, theme, x, y, chars = 72 }) => {
+  const text = fit(full, Math.min(72, chars))
   const width = text.length * 7.6 + 16
   return (
     <g className="gov-graph__caption" pointerEvents="none">
@@ -676,10 +806,12 @@ const Caption = ({ text: full, colour, theme, x, y }) => {
   )
 }
 
-const Tooltip = ({ node, point, theme }) => {
-  const text = fit(node.shortName ?? node.name, 54)
+const Tooltip = ({ node, point, theme, box = VIEWBOX }) => {
+  // The full name, with the short form after it when there is room: “BCMHSUS” alone says nothing.
+  const full = node.shortName && node.shortName !== node.name ? `${node.name} (${node.shortName})` : node.name
+  const text = fit(full.length <= 54 ? full : node.name, 54)
   const width = text.length * 6.4 + 14
-  const x = Math.min(Math.max(point.x, width / 2 + 4), VIEWBOX.width - width / 2 - 4)
+  const x = Math.min(Math.max(point.x, box.x + width / 2 + 4), box.x + box.width - width / 2 - 4)
   const y = point.y - point.size - 16
   return (
     <g className="gov-graph__tooltip" pointerEvents="none">

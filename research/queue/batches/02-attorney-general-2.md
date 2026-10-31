@@ -84,13 +84,12 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bceab.ca/
 - **Collected from:** https://www.bceab.ca/
 - **What it does:** Decides appeals of certain government decisions under nine provincial statutes on environmental issues such as water licences, contaminated sites, pesticides and hunting licences.
-- **Held:** began 1981; first seen 2020; names on file: Environmental Appeal Board (seen 2020), Environmental Appeal Board (seen 2025)
-- **Events on file:** 1981 legal basis year observed; 1982 establishment claim; 2020 name first observed
-- **Review:** partly reviewed (requires_reconciliation): extend the existing record, do not start again
+- **Held:** began 1982-01-01 (The day OIC 2603/1981 establishes the Environmental Appeal Board under s. 11 of the Environment Management Act, SBC 1981 c. 14 ('effective January 1, 1982, there be established an Environmental Appeal Board'); the order was approved 18 December 1981, which is not the start); first seen 2020; names on file: Environmental Appeal Board (seen 2020), Environmental Appeal Board (seen 2025)
+- **Events on file:** 1981 legal basis year observed; 1982 establishment claim; 1982-01-01 established; 1982-01-01 legislation in force; 1982-01-01 first members appointed; 1982-01-01 legislation in force; 1982-01-01 first members appointed; 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Environmental Appeal Board", "EAB"
 - **Questions:**
   - C. Names and parents: extend what is on file; fill the years between observations.
-  - D. Reconcile: the review found competing dates. Find the instrument that settles it; do not choose between them yourself — record every claim with its source.
 
 ### 6. Financial Services Tribunal (FST)
 
@@ -137,8 +136,8 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Today:** under Ministry of Attorney General. Official site: https://www.bchab.ca/
 - **Collected from:** https://www.bchab.ca/home/about/
 - **What it does:** Hears medical practitioners' appeals of hospital board of management decisions affecting hospital privileges under the Hospital Act.
-- **Held:** began 1973 (Body under its earlier name); first seen 2020; names on file: Medical Appeal Board (seen 1973), Hospital Appeal Board (seen 2020), Hospital Appeal Board (seen 2025)
-- **Events on file:** 1973 established; 2020 name first observed
+- **Held:** began 1973 (Body under its earlier name); first seen 2020; names on file: Medical Appeal Board (seen 1973), Hospital Appeal Board (seen 2020), Hospital Appeal Board (seen 2025), Hospital Appeal Board (seen 1997-04-21)
+- **Events on file:** 1973 established; 1997-04-21 legislation in force; 2020 name first observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Hospital Appeal Board", "HAB", "Medical Appeal Board"
 - **Questions:**

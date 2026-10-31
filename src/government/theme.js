@@ -20,7 +20,7 @@ export const THEMES = {
     branch: { legislative: '#c23e1d', executive: '#2f5f9e', judicial: '#8f6508' },
     people: '#e8a412',
     sealInk: '#6b4800',
-    sealInkSelected: '#2a1d00'
+    sealInkLit: '#2a1d00'
   },
   dark: {
     canvas: '#161310',
@@ -36,7 +36,7 @@ export const THEMES = {
     branch: { legislative: '#e2603c', executive: '#6d97e0', judicial: '#d6a52a' },
     people: '#fcba19',
     sealInk: '#fcd36b',
-    sealInkSelected: '#2a1d00'
+    sealInkLit: '#2a1d00'
   }
 }
 

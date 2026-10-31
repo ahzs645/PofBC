@@ -1,0 +1,235 @@
+{
+  "baselineFile": "research/salaries/compiled-baseline.json.gzip",
+  "baselineSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+  "method": "Multiset comparison across all ten source periods. Name keys normalize case, punctuation and whitespace, preserving the surname/given-name boundary. Whole-dollar ROUND_HALF_EVEN and ROUND_HALF_UP are comparison-only diagnostics; accepted source cents are never rounded. No fuzzy name or identity inference.",
+  "results": [
+    {
+      "compiledLabel": "2017/18",
+      "compiledRows": 4413,
+      "sourcePeriodComparisons": [
+        {
+          "sourcePeriod": "2015/16",
+          "sourceRows": 3824,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2016/17",
+          "sourceRows": 4229,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2017/18",
+          "sourceRows": 4413,
+          "exactNormalizedNamePayMatches": 53,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 4396,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 4413
+        },
+        {
+          "sourcePeriod": "2018/19",
+          "sourceRows": 5022,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2019/20",
+          "sourceRows": 5835,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2020/21",
+          "sourceRows": 7324,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2021/22",
+          "sourceRows": 7685,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2022/23",
+          "sourceRows": 8252,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2023/24",
+          "sourceRows": 10884,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2024/25",
+          "sourceRows": 12283,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        }
+      ]
+    },
+    {
+      "compiledLabel": "2020/21",
+      "compiledRows": 7280,
+      "sourcePeriodComparisons": [
+        {
+          "sourcePeriod": "2015/16",
+          "sourceRows": 3824,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2016/17",
+          "sourceRows": 4229,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2017/18",
+          "sourceRows": 4413,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2018/19",
+          "sourceRows": 5022,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2019/20",
+          "sourceRows": 5835,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2020/21",
+          "sourceRows": 7324,
+          "exactNormalizedNamePayMatches": 7273,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 7273,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 7273
+        },
+        {
+          "sourcePeriod": "2021/22",
+          "sourceRows": 7685,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2022/23",
+          "sourceRows": 8252,
+          "exactNormalizedNamePayMatches": 1,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 1,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 1
+        },
+        {
+          "sourcePeriod": "2023/24",
+          "sourceRows": 10884,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2024/25",
+          "sourceRows": 12283,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        }
+      ]
+    },
+    {
+      "compiledLabel": "2023/24",
+      "compiledRows": 10400,
+      "sourcePeriodComparisons": [
+        {
+          "sourcePeriod": "2015/16",
+          "sourceRows": 3824,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2016/17",
+          "sourceRows": 4229,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2017/18",
+          "sourceRows": 4413,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2018/19",
+          "sourceRows": 5022,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2019/20",
+          "sourceRows": 5835,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2020/21",
+          "sourceRows": 7324,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2021/22",
+          "sourceRows": 7685,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2022/23",
+          "sourceRows": 8252,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        },
+        {
+          "sourcePeriod": "2023/24",
+          "sourceRows": 10884,
+          "exactNormalizedNamePayMatches": 10400,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 10400,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 10400
+        },
+        {
+          "sourcePeriod": "2024/25",
+          "sourceRows": 12283,
+          "exactNormalizedNamePayMatches": 0,
+          "matchesAfterSourceWholeDollarRoundingForComparisonOnly": 0,
+          "matchesAfterSourceWholeDollarHalfUpForComparisonOnly": 0
+        }
+      ]
+    }
+  ]
+}

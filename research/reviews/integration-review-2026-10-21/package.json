@@ -1,0 +1,18 @@
+{
+  "schema": "pofbc.complete-research-handoff.v1",
+  "created": "2026-10-21",
+  "audited_commit": "0dbdb18cfebfb27e5529ce5940850e96eb9a995c",
+  "research_cutoff": "2026-10-21",
+  "source_consolidated_file": "PofBC-consolidated-research-round4-2026-10-21.json",
+  "source_consolidated_sha256": "82dcde468a2d93758f183729fa34df25ed52fcfe0ff5080719e1f52779620a8e",
+  "all_requested_information_recovered": false,
+  "import_policy": "Apply the supersession map and the per-claim identity/date/type gates. A sighting is not a start, a transfer deadline is not execution, and a null end is not proof of current survival. Held candidates, leads and negative checks do not become historical events.",
+  "source_count_policy": "Catalogue rows include screened candidates, indices, failed retrievals and guards; they are not all accepted sources. Formal claims include corroboration, prior integrations and held candidates; they are not all new dates or closed WANTED items.",
+  "counts": {
+    "sources": 1492,
+    "components": 103,
+    "prior_components": 66,
+    "round4_components": 37
+  },
+  "preservation": "Every component retains its exact original nested path; source statuses, claim gates and the supersession map are preserved. This is a corrected complete data handoff, not permission to bulk-import held or review-only claims."
+}

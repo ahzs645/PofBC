@@ -28,102 +28,138 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ### 1. British Columbia Geological Survey
 
-- **id** `british-columbia-geological-survey` · division · **P1 — disappears before today, nothing on file**
+- **id** `british-columbia-geological-survey` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Mining and Critical Minerals. Official site: https://www2.gov.bc.ca/gov/content/industry/mineral-exploration-mining/british-columbia-geological-survey
 - **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/mining
 - **What it does:** Provides geoscience data, surveys and mineral and coal resource information for B.C.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2010
+- **Events on file:** 2010 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "British Columbia Geological Survey"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2010. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 2. Critical Minerals Office
 
-- **id** `critical-minerals-office` · office · **P1 — disappears before today, nothing on file**
+- **id** `critical-minerals-office` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Mining and Critical Minerals. Official site: https://www2.gov.bc.ca/gov/content/industry/mineral-exploration-mining/criticalminerals/critical-minerals-office
 - **Collected from:** https://www2.gov.bc.ca/gov/content/industry/mineral-exploration-mining/criticalminerals/critical-minerals-office
 - **What it does:** Supports the advancement of B.C. critical minerals projects.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2025; parents on file: Ministry of Mining and Critical Minerals (seen 2025)
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Critical Minerals Office"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 3. Mineral Development Office
 
-- **id** `mineral-development-office` · office · **P1 — disappears before today, nothing on file**
+- **id** `mineral-development-office` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Mining and Critical Minerals. Official site: https://www2.gov.bc.ca/gov/content/industry/mineral-exploration-mining/british-columbia-geological-survey/mineral-development-office
 - **Collected from:** https://www2.gov.bc.ca/gov/content/industry/mineral-exploration-mining/british-columbia-geological-survey/mineral-development-office
 - **What it does:** Vancouver base of the BC Geological Survey that links it with the exploration and mining companies headquartered there.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Mineral Development Office"
-- **Questions:** A, B and C, as above.
+- **Held:** no start date; first seen 2014; names on file: BC Mineral Development Office (seen 2014); parents on file: British Columbia Geological Survey, Ministry of Energy and Mines (seen 2014)
+- **Events on file:** 2014 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Mineral Development Office", "BC Mineral Development Office"
+- **Questions:**
+  - A. It is already seen in 2014. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 4. Mineral Titles Online (MTO)
 
-- **id** `mineral-titles-online` · program · **P1 — disappears before today, nothing on file**
+- **id** `mineral-titles-online` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Mining and Critical Minerals. Official site: https://www.mtonline.gov.bc.ca/mtov/home.do
 - **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/mining
 - **What it does:** Online registry for acquiring and managing mineral, placer and coal titles.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2006
+- **Events on file:** 2006 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Mineral Titles Online", "MTO"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 5. Mines Health, Safety and Enforcement
 
-- **id** `mines-health-safety-and-enforcement` · division · **P1 — disappears before today, nothing on file**
+- **id** `mines-health-safety-and-enforcement` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Mining and Critical Minerals. Official site: https://www2.gov.bc.ca/gov/content/industry/mineral-exploration-mining/health-safety
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Oversees health, safety and reclamation at all mineral, coal and aggregate mines through inspections, investigations and enforcement.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020; parents on file: Ministry of Energy, Mines and Petroleum Resources (seen 2020)
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Mines Health, Safety and Enforcement"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 6. Arrow Lakes Power Corporation (ALPC)
 
-- **id** `arrow-lakes-power-corporation` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `arrow-lakes-power-corporation` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under Columbia Power Corporation.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/cpc.pdf
 - **What it does:** Columbia Power subsidiary that owns the Arrow Lakes Generating Station and its 48-kilometre transmission line to BC Hydro's Selkirk Substation.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Arrow Lakes Power Corporation", "ALPC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 7. Brilliant Expansion Power Corporation (BEPC)
 
-- **id** `brilliant-expansion-power-corporation` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `brilliant-expansion-power-corporation` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under Columbia Power Corporation.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/cpc.pdf
 - **What it does:** Columbia Power subsidiary that owns the Brilliant Expansion Generating Station.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2002
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Brilliant Expansion Power Corporation", "BEPC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 8. Brilliant Power Corporation (BPC)
 
-- **id** `brilliant-power-corporation` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `brilliant-power-corporation` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under Columbia Power Corporation.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/cpc.pdf
 - **What it does:** Columbia Power subsidiary that owns the Brilliant Dam and the Brilliant Terminal Station.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Brilliant Power Corporation", "BPC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 9. Waneta Expansion Power Corporation (WEPC)
 
-- **id** `waneta-expansion-power-corporation` · subsidiary · **P1 — disappears before today, nothing on file**
+- **id** `waneta-expansion-power-corporation` · subsidiary · **P2 — undated, but some history on file**
 - **Today:** under Columbia Power Corporation.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/cpc.pdf
 - **What it does:** Columbia Power subsidiary that owns the 335 MW Waneta Expansion Generating Station.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Waneta Expansion Power Corporation", "WEPC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ## Hand back
 

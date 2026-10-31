@@ -1,0 +1,391 @@
+{
+  "version": 1,
+  "sourceSha256": "f9d752695330689e2f2e20d37f13a16be9473c0ccf5c6c77d576765cf4279409",
+  "normalizedSha256": "adb2ef47ff18f885f004a1d93a6319c6e033de6939fd5f2ce54cd307a0407682",
+  "reviewedOn": "2026-10-22",
+  "tools": {
+    "tesseract": "5.3.4",
+    "pymupdf": "1.26.6"
+  },
+  "passes": [
+    {
+      "id": "300",
+      "dpi": 300,
+      "color": "RGB",
+      "pageSegmentationMode": 6
+    },
+    {
+      "id": "400",
+      "dpi": 400,
+      "color": "gray",
+      "pageSegmentationMode": 6
+    }
+  ],
+  "rawOcrFile": "2020-21-ocr-text.json.gzip",
+  "rawOcrSha256": "fc49874c7cf07239e4e695c305ccf5fa4700a7d10630e2415fd1edd0dc9003b4",
+  "pages": [
+    {
+      "pdfPage": 6,
+      "rowCount": 40,
+      "firstName": "Abraham, Eric",
+      "lastName": "Brilz, Grant",
+      "remunerationSum": 3851893,
+      "expensesSum": 22563,
+      "fullPageVisuallyReviewed": true
+    },
+    {
+      "pdfPage": 7,
+      "rowCount": 53,
+      "firstName": "Brown, Allan",
+      "lastName": "Dosanjh, Tarinder",
+      "remunerationSum": 4904425,
+      "expensesSum": 52829,
+      "fullPageVisuallyReviewed": true
+    },
+    {
+      "pdfPage": 8,
+      "rowCount": 53,
+      "firstName": "Drake, Ryan",
+      "lastName": "Henderson, W. Neil",
+      "remunerationSum": 5075760,
+      "expensesSum": 36761,
+      "fullPageVisuallyReviewed": true
+    },
+    {
+      "pdfPage": 9,
+      "rowCount": 53,
+      "firstName": "Henderson, William",
+      "lastName": "Loughran, Elizabeth",
+      "remunerationSum": 5023102,
+      "expensesSum": 29727,
+      "fullPageVisuallyReviewed": true
+    },
+    {
+      "pdfPage": 10,
+      "rowCount": 53,
+      "firstName": "Louis, Donald",
+      "lastName": "Neu, Darcy",
+      "remunerationSum": 4998407,
+      "expensesSum": 54183,
+      "fullPageVisuallyReviewed": true
+    },
+    {
+      "pdfPage": 11,
+      "rowCount": 53,
+      "firstName": "Nicol, Jesse",
+      "lastName": "Schubert, Kevin",
+      "remunerationSum": 5252859,
+      "expensesSum": 68153,
+      "fullPageVisuallyReviewed": true
+    },
+    {
+      "pdfPage": 12,
+      "rowCount": 53,
+      "firstName": "Schulz, Boyd",
+      "lastName": "Watson, William",
+      "remunerationSum": 4650668,
+      "expensesSum": 41520,
+      "fullPageVisuallyReviewed": true
+    },
+    {
+      "pdfPage": 13,
+      "rowCount": 27,
+      "firstName": "Weatherell, Timothy",
+      "lastName": "Zimmerman, Melissa",
+      "remunerationSum": 2486141,
+      "expensesSum": 14479,
+      "fullPageVisuallyReviewed": true
+    }
+  ],
+  "reviewedCorrections": {
+    "300": [
+      {
+        "pdfPage": 8,
+        "ocrLine": "Hamilton, Daryl 94 846 142",
+        "verifiedLine": "Hamilton, Daryl 94,846 142",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 11,
+        "ocrLine": "Rowden, lan 96,490 2,682",
+        "verifiedLine": "Rowden, Ian 96,490 2,682",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      }
+    ],
+    "400": [
+      {
+        "pdfPage": 6,
+        "ocrLine": "Abraham, Eric 114,305 \u00a7 -",
+        "verifiedLine": "Abraham, Eric 114,305 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 6,
+        "ocrLine": "Aveyard, Pauline 95,173 4591",
+        "verifiedLine": "Aveyard, Pauline 95,173 4,591",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 6,
+        "ocrLine": "Banerd, Christopher 89.402 -",
+        "verifiedLine": "Banerd, Christopher 89,402 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 6,
+        "ocrLine": "Booth, Lesley 19,262 -",
+        "verifiedLine": "Booth, Lesley 79,262 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 7,
+        "ocrLine": "Campbell, Ryan 86,018 4 431",
+        "verifiedLine": "Campbell, Ryan 86,018 4,431",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 7,
+        "ocrLine": "Conner, Gregory 187,379 5 725",
+        "verifiedLine": "Conner, Gregory 187,379 5,725",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 7,
+        "ocrLine": "Couch, Nigel 106,219 2,/59",
+        "verifiedLine": "Couch, Nigel 106,219 2,759",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 7,
+        "ocrLine": "Dillon, Amit 84,424 4041",
+        "verifiedLine": "Dillon, Amit 84,424 4,041",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 8,
+        "ocrLine": "Dyck, Jonathon 102,444 1,/98",
+        "verifiedLine": "Dyck, Jonathon 102,444 1,798",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 8,
+        "ocrLine": "Hall, Curtis 17,441 -",
+        "verifiedLine": "Hall, Curtis 77,441 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 8,
+        "ocrLine": "Hamilton, Gordon 92.116 -",
+        "verifiedLine": "Hamilton, Gordon 92,116 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 8,
+        "ocrLine": "Hart, Robert 93,032 4727",
+        "verifiedLine": "Hart, Robert 93,032 4,727",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 8,
+        "ocrLine": "Hegar, Mark 89,685 65/7",
+        "verifiedLine": "Hegar, Mark 89,685 657",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 8,
+        "ocrLine": "Henderson, W. Nell 124,081 -",
+        "verifiedLine": "Henderson, W. Neil 124,081 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 9,
+        "ocrLine": "Hissein, Aboubakar 84 466 -",
+        "verifiedLine": "Hissein, Aboubakar 84,466 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 9,
+        "ocrLine": "Huff, Norma 84.176 -",
+        "verifiedLine": "Huff, Norma 84,176 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 9,
+        "ocrLine": "Kendrew, Jeffrey 85,185 5 836",
+        "verifiedLine": "Kendrew, Jeffrey 85,185 5,836",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 9,
+        "ocrLine": "Kirby, Melissa 92,780 2,/98",
+        "verifiedLine": "Kirby, Melissa 92,780 2,798",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 9,
+        "ocrLine": "Lavoie, Jennifer 86,335 19",
+        "verifiedLine": "Lavoie, Jennifer 86,335 79",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Louis, Donald 98 554 258",
+        "verifiedLine": "Louis, Donald 98,554 258",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Maguire, Tristan 9? 056 -",
+        "verifiedLine": "Maguire, Tristan 92,056 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Maric, Goran 118,006 5 582",
+        "verifiedLine": "Maric, Goran 118,006 5,582",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Marson, Brooke 9? 493 -",
+        "verifiedLine": "Marson, Brooke 92,493 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Matsuno, Kevin 17,356 193",
+        "verifiedLine": "Matsuno, Kevin 77,356 193",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Mavrow, Marleen 93,649 4.2/6",
+        "verifiedLine": "Mavrow, Marleen 93,649 4,276",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "McKeracher, Kristen 94 990 4032",
+        "verifiedLine": "McKeracher, Kristen 94,990 4,032",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "MVicRae, Norma 81,306 -",
+        "verifiedLine": "McRae, Norma 81,306 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Megenbir, Levi 98 842 167",
+        "verifiedLine": "Megenbir, Levi 98,842 167",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Moar, Monika 17,823 -",
+        "verifiedLine": "Moar, Monika 77,823 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Mumeni, Anmed 88,316 4 600",
+        "verifiedLine": "Mumeni, Ahmed 88,316 4,600",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 10,
+        "ocrLine": "Neu, Darcy 95,674 3,2/8",
+        "verifiedLine": "Neu, Darcy 95,674 3,278",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 11,
+        "ocrLine": "Nicol, Jesse 13.333 -",
+        "verifiedLine": "Nicol, Jesse 75,333 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 11,
+        "ocrLine": "Rowden, lan 96,490 2,682",
+        "verifiedLine": "Rowden, Ian 96,490 2,682",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 12,
+        "ocrLine": "Sidhu, Gurvinder 85.151 -",
+        "verifiedLine": "Sidhu, Gurvinder 85,151 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 12,
+        "ocrLine": "Thompson, Aaron 76,647 995",
+        "verifiedLine": "Thompson, Aaron 76,647 595",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 12,
+        "ocrLine": "Wadsworth, James 109,282 3868",
+        "verifiedLine": "Wadsworth, James 109,282 868",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 13,
+        "ocrLine": "Williams, Shannon 87.477 -",
+        "verifiedLine": "Williams, Shannon 87,477 -",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 13,
+        "ocrLine": "Yeo, Inook 80,052 9,302",
+        "verifiedLine": "Yeo, Inook 80,052 5,302",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 13,
+        "ocrLine": "Zerbin, Taylor 93,/59 597",
+        "verifiedLine": "Zerbin, Taylor 93,759 597",
+        "evidence": "Verified against rendered source employee page; no inferred monetary values."
+      },
+      {
+        "pdfPage": 7,
+        "ocrLine": "T",
+        "verifiedLine": "7",
+        "evidence": "Rendered footer is page number 7; this is not an employee row."
+      }
+    ]
+  },
+  "publishedNamedSubtotals": {
+    "remuneration": 36243253,
+    "expenses": 320208
+  },
+  "namedRowSums": {
+    "remuneration": 36243255,
+    "expenses": 320215
+  },
+  "differenceRowsMinusPrinted": {
+    "remuneration": 2,
+    "expenses": 7
+  },
+  "roundingUpperBoundPerColumn": 193,
+  "roundingExplanation": "All row amounts and subtotals are printed in whole dollars. The observed variances are consistent with independent rounding (at most $0.50 for each of 385 rows and one subtotal). This explains a permissible bound, not a proof of the report author\u2019s exact rounding method. No row is changed to force agreement.",
+  "summaryAlsoReviewed": {
+    "belowThresholdRemuneration": 40707744,
+    "belowThresholdExpenses": 195532,
+    "allEmployeesRemuneration": 76950997,
+    "allEmployeesExpenses": 515740,
+    "namedPlusBelowEqualsGrandTotals": true
+  },
+  "periodEvidence": {
+    "approvalPages": [
+      1,
+      2
+    ],
+    "employeeScheduleStartPage": 6,
+    "employeeHeader": "For the Year Ended March 31, 2021",
+    "payPeriods": 27,
+    "priorYearPayPeriods": 26,
+    "payPeriodNotePage": 13
+  },
+  "scope": "Only named employees over $75,000, PDF pages 6\u201313; board, below-threshold aggregates, suppliers and financial statements excluded."
+}

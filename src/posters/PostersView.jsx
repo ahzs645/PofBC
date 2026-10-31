@@ -7,15 +7,20 @@ import dropThumb from './forest-service/dont-drop-it.svg?url'
 import gambleThumb from './forest-service/dont-gamble-with-fire.svg?url'
 import rewardThumb from './forest-service/reward-living-forest.svg?url'
 import enjoyThumb from './forest-service/enjoy-protect-forests.svg?url'
+import goFerriesThumb from './bc-ferries/go-bc-ferries.svg?url'
+import queenThumb from './bc-ferries/queen-of-sidney.svg?url'
 
 // Each poster's drawing and parts, fetched when it is opened.
 const forestService = (id) => () => import('./forest-service/index.js').then((module) => module.loaderFor(id)())
+const bcFerries = (id) => () => import('./bc-ferries/index.js').then((module) => module.loaderFor(id)())
 const LOADERS = {
   'coastal-forest': () => import('./coastal-forest/index.jsx').then((module) => module.load()),
   'dont-drop-it': forestService('dont-drop-it'),
   'dont-gamble-with-fire': forestService('dont-gamble-with-fire'),
   'reward-living-forest': forestService('reward-living-forest'),
-  'enjoy-protect-forests': forestService('enjoy-protect-forests')
+  'enjoy-protect-forests': forestService('enjoy-protect-forests'),
+  'go-bc-ferries': bcFerries('go-bc-ferries'),
+  'queen-of-sidney': bcFerries('queen-of-sidney')
 }
 
 const THUMBNAILS = {
@@ -23,7 +28,9 @@ const THUMBNAILS = {
   'dont-drop-it': dropThumb,
   'dont-gamble-with-fire': gambleThumb,
   'reward-living-forest': rewardThumb,
-  'enjoy-protect-forests': enjoyThumb
+  'enjoy-protect-forests': enjoyThumb,
+  'go-bc-ferries': goFerriesThumb,
+  'queen-of-sidney': queenThumb
 }
 
 const postersOf = (series) => series.posters

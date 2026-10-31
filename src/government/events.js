@@ -18,6 +18,12 @@ export const EVENT_TYPES = {
   established: { label: 'Established', kind: 'structure' },
   legal_establishment: { label: 'Established in law', kind: 'structure' },
   dissolved: { label: 'Dissolved', kind: 'structure' },
+  ended: { label: 'Ended', kind: 'structure' },
+  replaced: { label: 'Replaced', kind: 'structure' },
+  continued: { label: 'Continued under a new name', kind: 'name' },
+  renamed: { label: 'Renamed', kind: 'name' },
+  operations_transferred: { label: 'Operations transferred', kind: 'relationship' },
+  reported_end: { label: 'End, as a compilation reports it', kind: 'structure' },
   merged: { label: 'Merged', kind: 'structure' },
   split: { label: 'Split', kind: 'structure' },
   legal_name_change: { label: 'Legal name changed', kind: 'name' },
@@ -98,7 +104,7 @@ export const isAhead = (event, day) => event.status !== 'source_reported_past' &
 /** Events about any of these subjects, oldest first. */
 export const eventsFor = (subjects) => {
   const wanted = new Set(subjects)
-  return EVENTS.filter((event) => wanted.has(event.subject))
+  return EVENTS.filter((event) => wanted.has(event.subject) || (event.related ?? []).some((id) => wanted.has(id)))
 }
 
 /** Events that fall in `year` — a range counts in every year it touches. */

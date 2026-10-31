@@ -13,6 +13,29 @@ npm run dev
 
 Already cloned without `--recurse-submodules`? `git submodule update --init --recursive`.
 
+## Salary data and coverage
+
+The salary search (`?view=salaries`) combines verified official remuneration schedules with
+explicitly labelled, retained compiled disclosures. Reporting periods, source links, disclosure
+scope and remaining gaps are attached to the records. The original three compiled editions are
+not a complete annual history or a workforce census.
+
+The [salary audit and source recovery report](research/salaries/README.md) explains the corrected
+Hydro-group and public-service years, duplicated records, earlier history, remaining source work,
+and the limits of name matching. The [employer coverage inventory](research/salaries/coverage-inventory.md)
+lists every employer; [the source inventory](research/salaries/source-inventory.md) distinguishes
+accepted reports from located sources awaiting extraction or review. The current build has 692,951
+records, including 401,641 with official-source provenance. The
+[23 October follow-up](research/salaries/interface-review-2026-10-23.md) adds Fraser Health history,
+eight BCIT schedules, four BC Transit schedules and salary-interface corrections.
+
+Rebuild all salary views offline with `npm run build:salaries`, then reconcile their rows and
+refresh the inventory with `npm run check:salaries`. The accepted normalized schedules, source
+hashes and immutable compiled baseline are committed under `research/salaries/`; the original
+external CSV directory is no longer required for the default build. Run `npm run preview:salaries`
+for a salary-only development preview without the separate licensed artwork/font build. Use
+`npm run preview:salaries -- --build` to verify its production bundle.
+
 ---
 
 ## Four identities
@@ -70,7 +93,7 @@ A **Gallery** button opens the marks the generator does not make, grouped by who
 first collection is the Province's one-off marks — BC Parks and its like — which follow no pattern
 the generator can offer and so have nothing to be loaded into. Each still opens for recolouring, and
 each draws itself from the same renderer as everything else, so a card cannot drift from what it
-gives you. The second is **BC Hydro**, in all three of its identities (below); `src/gallery/collections.js` is where another body's
+gives you. On a dark page the cards show every mark in its reversal: a mark supplied with a reversed version takes it, and the Crown corporations' other marks (ICBC, BCLC, BC Ferries, WorkSafeBC, BC Transit) have their black and navy inks drawn white, their own colours kept, rather than sitting on a white plate; opened, each is still drawn exactly as supplied. The second is **BC Hydro**, in all three of its identities (below); `src/gallery/collections.js` is where another body's
 marks would go, and an entry's `kind` decides what opening it shows.
 
 **Every mark sits on a timeline.** BC Hydro's page runs through its three identities oldest first,
@@ -481,7 +504,9 @@ lists a design once per photograph it appears in; Patcher merges those into one 
 arch, seen in five photographs, is one card), and the viewer links every photograph. Some designs use a better drawing supplied to Patcher in
 place of the atlas's (the Parks Branch elk roundel, the Recreation and Conservation arch, the scenic
 arch's landscape, the BC Parks flag patches, which take this site's own flag badge, and the B.C. Hydro
-Security shield, which takes this site's BC Hydro symbol). The Lands
+Security shield, which takes this site's BC Hydro symbol). The British Columbia / SPCA roundel
+(S56-O38) is redrawn from a supplied photograph with concentric circles, a heavier cross and revised
+lettering; its source and construction are in `vendor/patcher/library/supplied/bc-spca-roundel/`. The Lands
 Department pine-bough seal is a printed seal, not a patch, so it is left out there and kept in
 Internal Logos. The atlas's Forest Service and Wildfire Service ovals are replaced by this site's own
 Forest Ovals (Internal Logos → Forests): five cards (the tree oval, the Forests and long ministry-name
@@ -593,10 +618,12 @@ kept in the address — `?view=posters&poster=dont-drop-it&part=credit` — so a
 | Ministry of Environment | **Coastal Forest** (1979–86), with its live crest-lockup studio |
 | British Columbia Forest Service | **REWARD — A Living Forest**, **Enjoy & Protect our Forests** |
 | B. C. Forest Service fire-prevention badges | **DON’T DROP IT!**, **Don’t gamble with FIRE** (set in the first one’s green) |
+| British Columbia Ferries car decals | **GO B.C. FERRIES** (1960–64, from its Toll Authority wording), **Queen of Sidney** |
 
 The panels link on: the emblem on either Forest Service poster opens the evergreen emblem in
 Internal Logos (which links back), a service credit opens the department the Forest Service sat in on
-the government diagram, and each poster links to the others in its series. Every claim that is not
+the government diagram, a decal's authority opens the Toll Authority or the Ferry Authority there and its
+flag BC Ferries' marks in Logos, and each poster links to the others in its series. Every claim that is not
 established — a date, a typeface, an ink — is said to be so.
 
 **Coastal Forest** was its own app, [coastal-forest-poster](https://github.com/ahzs645/coastal-forest-poster),
@@ -616,12 +643,47 @@ supplied reconstruction packages are in [`artwork/posters/`](artwork/posters/REA
 
 ---
 
+## Historical health maps
+
+Open **Health Maps** in the view menu, or link to `?view=health-map`. Six chapters connect the
+twenty earlier regions, the 1997 regional boards, community councils and service societies, the
+December 2001 consolidation, and modern boundary comparisons. The scrolling sidecar and chapter
+navigation come from the same pinned `geo-toolkit` source used by
+[PGMaps](https://github.com/ahzs645/PGMaps).
+
+The original Auditor General maps retain their numbered labels. The searchable index contains
+**52 source labels and 51 confirmed institutional links**, with the Nisga’a source area kept
+separate because its institutional identity is unresolved. A fourth original map, published by
+Statistics Canada in **April 2001**, depicts twenty statistical regions; it does not certify the
+1997 legal board boundaries. Each linked health organization also offers a route back to its map.
+
+The comparison chapter includes the existing PGMaps **89 Local Health Areas, 16 Health Service
+Delivery Areas and five geographic Health Authorities**, loaded on demand from local GeoJSON
+snapshots. Select a historical area, switch layers, fit its proposed modern candidates, or put
+the original page beside them. Selection and chapter links can be copied from the address bar.
+No historical overlap percentage is claimed: the source maps are page artwork, while the modern
+polygons have geographic coordinates. Candidate codes, sources and limitations are retained in
+the downloadable comparison file.
+
+The evidence preserves consequential differences: the old South Cariboo council follows the
+100 Mile House lineage; North Shore is smaller than today's North Shore/Coast Garibaldi service
+region; Northern Interior's candidate excludes Quesnel; and North West explicitly excludes Nisga’a.
+See [`research/health-geography/README.md`](research/health-geography/README.md) for dated sources,
+asset provenance and the comparison method. Rebuild the catalogue with `npm run build:health-map`.
+The boundary research script is documented in
+[`boundary-comparison-README.md`](research/health-geography/boundary-comparison-README.md).
+
 ## Requirements
 
 **Node 20.19+ or 22.12+**, **a copy of Helvetica**, and three git submodules. A copy of **Adobe
 Garamond Pro** is optional and widens the current era's alphabet.
 
 ### The submodules
+
+[`vendor/geo-toolkit`](https://github.com/ahzs645/geo-toolkit) supplies the historical health
+story's sidecar, chapter navigation and responsive workspace context. It is pinned to PGMaps's
+`e186e12005afb97c0b4470899bd2713c98336f36` revision. Vite imports the required source entry points
+directly; the toolkit's optional mapping dependencies and separate build toolchain are not installed.
 
 [`vendor/patcher`](https://github.com/ahzs645/patcher) is the patch library and embroidery
 digitizer behind **Patches** (above). It needs no build step: Vite compiles its source directly.
@@ -1093,6 +1155,33 @@ review dated a parent, a body is not placed under it outside that period (BC Ren
 lane; and a start the review could not settle (WorkBC, Powertech) says so — BC Timber Sales' was settled
 by a recorded decision. The brief listing what is still missing for every sub-agency
 (`research/sub-agencies/BRIEF.md`) is regenerated from the data by `npm run build:research-brief`.
+
+**The health authorities have their own ancestry.** Following the institutional-history research of
+2026-10-21, the five geographic authorities no longer share one generic "1997 regional boards"
+predecessor: each came from the boards and councils Schedule A of B.C. Reg. 293/2001 names (3, 17,
+13, 5 and 6 of them), and those boards from the councils the December 1996 orders folded into them —
+Prince George's council into Northern Interior, Northern Interior into Northern Health. The seven
+community health services societies passed their services on rather than amalgamating, so the
+Cariboo society's went to both Interior and Northern. A body whose start no source gives is drawn
+from the first day a source shows it, and says so; one with neither stays in its successor's
+"Came from" list without being drawn. PHSA is a society of its own (12 December 2001), not a sixth
+successor of the boards. A primary-evidence follow-up then dated every board and council from its
+original designation order (Northern Interior on 17 November 1994), drew each under the name it
+had that year (the Upper Fraser Valley Health Board of 1994 is the Fraser Valley Health Region of
+2001), and stated which ministry each answered to, so 1997 shows the 52 bodies of that system and
+the societies stand until the registry dissolved them in February 2002.
+
+**Every body's line to the people.** Choosing a body draws its whole line of accountability, not
+only its nearest connections, as [graph.civlab.org](https://graph.civlab.org) does: a health
+authority to its ministry, the ministry's minister to the Premier, the Premier to the Assembly whose
+confidence they hold, the Assembly to those who elect it. Every route is kept — beside the Assembly's
+confidence, the Lieutenant Governor's appointment of the Premier is drawn too, and the panel says
+the Crown is not elected. The people's sun lights up when the line reaches it; a line that would
+cross the centre bows round it; each line names itself when pointed at, the people's with the
+number of members they elect. The panel lists each step and marks any the sources do not state for
+that year. Partnerships, funding and the rest are not part of it, and FNHA, the Crown and the
+courts have no route. The people are described as more than the electors, and a year before 1949
+says whom the franchise left out.
 
 **An atlas, not just an org chart.** Following the BC government atlas research package of
 2026-09-25 (its model notes and acceptance cases are what the tests in

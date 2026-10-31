@@ -1,16 +1,24 @@
-// The panel beside the diagram: what the chosen body is, who leads it, where it came from — and,
+// The panel beside the diagram: what the chosen body is, who leads it, where it came from and what
+// it went into, generation by generation (bodyFamily.js) — and,
 // for a ministry, its mark as it would have been set in the year on screen.
 
 import { useMemo, useState } from 'react'
+import { bodyFamily, elsewhereLine, groupTitle } from './bodyFamily.js'
 import { CURRENT_AS_OF } from './currentData.js'
-import { changesIn, predecessorsOf, successorsOf } from './episodes.js'
+import { changesIn, episodeById, predecessorsOf, successorsOf } from './episodes.js'
 import { currentMarkFor, identityFor, renderEraMark } from './eraMark.js'
 import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
-import { officeHoldersTo, PEOPLE_ID, PRESENT_YEAR } from './snapshot.js'
+import { CROWN_CATEGORIES, CROWN_CATEGORY_SOURCES } from './crownCategories.js'
+import { Card, CardSection, KindIcon } from './PanelCards.jsx'
+import { LogoCard } from './LogoCard.jsx'
+import { Salaries } from './Salaries.jsx'
+import { StoryText } from './StoryText.jsx'
+import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, PEOPLE_ID, periodsOf, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
 import { PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { partyColour } from './theme.js'
+import { areaById, healthMapLink } from '../health/healthStoryData.js'
 
 const BRANCH_LABELS = { legislative: 'Legislative', executive: 'Executive', judicial: 'Judicial' }
 
@@ -81,6 +89,29 @@ const MarkCard = ({ node, year, theme, onOpenInGenerator }) => {
   )
 }
 
+/**
+ * When a body stood, saying only what the sources do: "Since 1973" only for one that continues, an
+ * untraced end as untraced, a start known only by a sighting as such, and operations that passed
+ * elsewhere before its legal end apart from that end.
+ */
+const LifeLine = ({ node, year }) => {
+  const life = lifespanOf(node)
+  const start = life.fromKind === 'firstSeen' ? `Known by ${formatDate(life.from)}; start unknown` : null
+  const text = life.toKind === 'ended'
+    ? (start ? `${start} · ended ${formatDate(life.to)}` : span(life.from, life.to))
+    : life.toKind === 'open'
+      ? (start ?? `Since ${formatDate(life.from)}`)
+      : `${start ?? `From ${formatDate(life.from)}`} · last shown standing ${life.lastSeen ? formatDate(life.lastSeen) : 'at its start'}; ${life.toKind === 'occurred_date_unknown' ? 'it ended later, on a day not found' : 'its later legal status is untraced'}`
+  return (
+    <>
+      <p className="gov-muted">{text}</p>
+      {life.operationalEnd && <p className="gov-muted">Operations passed elsewhere {formatDate(life.operationalEnd)}; that was not its legal end.</p>}
+      {node.uncertain && life.toKind !== 'open' && life.toKind !== 'ended' && <p className="gov-muted">Not shown by any source to be standing in {year}: drawn on the layer for bodies not confirmed that year.</p>}
+      {node.observedDuringYear && <p className="gov-muted">Shown standing during {year}, not at its end.</p>}
+    </>
+  )
+}
+
 /** A span of dates as precise as each end is known: "1986–1988", "May 1945 – 1962", "1973–". */
 const span = (from, to) => {
   const a = from ? formatDate(from) : '?'
@@ -134,22 +165,79 @@ const Holders = ({ label, holders: all, current, limit = 5 }) => {
   )
 }
 
-/** Bodies this one came from, or became: each a way to the years it stood. */
-const BodyLineage = ({ label, bodies, onJump, end }) => bodies.length > 0 && (
-  <div className="gov-lineage">
-    <h3 className="gov-card__subheading">{label}</h3>
-    <ul>
-      {bodies.map((body) => (
-        <li key={body.id}>
-          <button type="button" className="gov-link-card" onClick={() => onJump(body, end)}>
-            <span>{body.name}</span>
-            {body.established && <span className="gov-muted">{span(body.established, body.ended)}</span>}
-          </button>
-        </li>
+/** What each kind of sub-agency is called, in the order they are listed. */
+const SUB_TYPES = { agency: 'Agency', division: 'Division', office: 'Office', program: 'Program', board: 'Board', committee: 'Committee', tribunal: 'Tribunal', subsidiary: 'Subsidiary' }
+const SUB_ORDER = Object.keys(SUB_TYPES)
+
+/**
+ * A body's sub-agencies, the dots that open round it when it is chosen: named here, each with what
+ * kind it is, and each a way to it — PHSA's agencies, a ministry's divisions, a Crown's subsidiaries.
+ */
+const SubAgencies = ({ parent, nodes, onSelect }) => {
+  const subs = nodes.filter((node) => node.ring === 'sub' && node.parent === parent.id)
+    .sort((a, b) => (SUB_ORDER.indexOf(a.subType) + 1 || 99) - (SUB_ORDER.indexOf(b.subType) + 1 || 99) || a.name.localeCompare(b.name))
+  if (!subs.length) return null
+  return (
+    <CardSection title="Sub-agencies" meta={subs.length}>
+      {subs.map((node) => (
+        <Card
+          key={node.id}
+          icon={<KindIcon kind="sub" branch={node.branch} />}
+          title={node.name}
+          lines={[[SUB_TYPES[node.subType], node.shortName && node.shortName !== node.name ? node.shortName : null, node.inferredParent ? 'placed by inference' : null].filter(Boolean).join(' · ')]}
+          onClick={() => onSelect(node.id)}
+        />
       ))}
-    </ul>
-  </div>
+    </CardSection>
+  )
+}
+
+/** Bodies this one came from, or became: each a way to the years it stood. */
+const BodyLineage = ({ label, bodies, onJump, end, linesOf }) => bodies.length > 0 && (
+  <CardSection title={label} meta={bodies.length > 1 ? bodies.length : null}>
+    {bodies.map((body) => {
+      const known = body.established || body.firstSeen
+      const years = body.established ? span(body.established, body.ended)
+        : body.firstSeen ? `seen ${String(body.firstSeen).slice(0, 4)}${body.ended ? `–${String(body.ended).slice(0, 4)}` : ''}`
+          // No source gives when it began, so there is no year to show it in.
+          : `start unknown${body.ended ? `, to ${String(body.ended).slice(0, 4)}` : ''}`
+      return (
+        <Card
+          key={body.id}
+          icon={<KindIcon kind={body.kind ?? 'agency'} branch="executive" />}
+          title={body.name}
+          lines={[years, ...(linesOf?.(body) ?? [])]}
+          onClick={known ? () => onJump(body, end) : undefined}
+        />
+      )
+    })}
+  </CardSection>
 )
+
+/**
+ * A body's nearest family, one way: the bodies it was formed from, or went into, grouped by how —
+ * amalgamated, services passed on, area moved — each saying where else it went, so a body shared
+ * between two families says so in both. The generations before and after are in the Lineage chart.
+ */
+const BodyFamily = ({ rows, direction, onJump }) => {
+  const nearest = rows.filter((row) => row.depth === 1)
+  const groups = [...new Set(nearest.map((row) => row.how))].map((how) => ({ how, rows: nearest.filter((row) => row.how === how) }))
+  const linesOf = (row) => [
+    row.how === 'area' && row.date ? `Moved ${formatDate(row.date)}` : null,
+    direction === 'formedFrom' && row.count ? `Formed from ${row.count} earlier ${row.count === 1 ? 'body' : 'bodies'}` : null,
+    direction === 'formedFrom' ? elsewhereLine(row) : null
+  ]
+  return groups.map(({ how, rows: group }) => (
+    <BodyLineage
+      key={how}
+      label={groupTitle(direction, how, group.length > 1)}
+      bodies={group}
+      onJump={onJump}
+      end={direction === 'formedFrom' ? 'end' : 'start'}
+      linesOf={linesOf}
+    />
+  ))
+}
 
 /**
  * A ministry's family, as rows through time: two generations of forerunners, the ministry itself,
@@ -253,6 +341,199 @@ const MinistryTimeline = ({ node, year, onJump }) => {
   )
 }
 
+/** Events that join a body to others or part it from them: what "combining or splitting" means here. */
+const JOINS = new Set(['amalgamation', 'merger', 'merged', 'split', 'functions_transferred', 'administrative_transfer_and_rename', 'reorganization', 'transfer', 'absorbed', 'replaced', 'territory_transferred'])
+
+const yearIn = (value) => Number(String(value).slice(0, 4))
+const decimalOf = (value) => {
+  const [y, m] = String(value).split('-').map(Number)
+  return y + ((m || 1) - 1) / 12
+}
+
+/**
+ * A body's life as one chart across the years it is known: what it was called, which ministry held
+ * it, and where it was joined to others or parted from them. Built only from the dated rows a source
+ * gives (see periodsOf): a stretch with no ministry is one no source names, and a name whose end is
+ * not recorded fades out where the next row takes over.
+ */
+const BodyTimeline = ({ node, family, year, onJump, onJumpBody, onGo }) => {
+  const [deep, setDeep] = useState(false)
+  const chart = useMemo(() => {
+    const names = periodsOf(node.names ?? [])
+    const seen = (node.names ?? []).filter((row) => row.coverage === 'observation_only' && row.observedOn && !names.some((period) => period.name === row.name))
+    const sightings = [...new Set(seen.map((row) => row.name))].map((name) => ({ name, years: seen.filter((row) => row.name === name).map((row) => yearIn(row.observedOn)) }))
+    // A ministry holds the body only while that ministry stands (as the diagram draws it).
+    const ministries = periodsOf(node.parents ?? []).map((row) => {
+      const episode = episodeById(ministryAt(row.name, yearIn(row.from)))
+      const clipped = Boolean(episode?.to && (!row.until || episode.to < yearIn(row.until)))
+      return { ...row, episode, until: clipped ? String(episode.to) : row.until, endUnknown: row.endUnknown && !clipped }
+    })
+    const joins = (node.events ?? []).filter((event) => JOINS.has(event.type) && event.date?.start)
+    const relatives = family.formedFrom.length || family.wentTo.length
+      ? [...family.formedFrom, ...family.wentTo].map((row) => row.established ?? row.firstSeen).concat(node.established ?? null)
+      : []
+    const starts = [...names.map((row) => row.from), ...ministries.map((row) => row.from), ...joins.map((event) => event.date.start), ...seen.map((row) => row.observedOn), ...relatives].filter(Boolean)
+    const start = Math.min(...starts.map(yearIn))
+    return { names, sightings, ministries, joins, start }
+  }, [node, family])
+  const { names, sightings, ministries, joins, start } = chart
+  // A large family (Interior Health's reaches 39 bodies back) shows its nearest generation, and the
+  // ones before on request.
+  const folded = family.formedFrom.length > 14 && !deep
+  const formedFrom = folded ? family.formedFrom.filter((row) => row.depth === 1) : family.formedFrom
+  if (names.length + ministries.length < 2 && !joins.length && !family.formedFrom.length && !family.wentTo.length) return null
+  const end = PRESENT_YEAR + 1
+  const span = Math.max(1, end - start)
+  const at = (value) => `${((value - start) / span) * 100}%`
+  const width = (from, to) => `${Math.max(0.8, ((to - from) / span) * 100)}%`
+  const step = span > 60 ? 20 : span > 30 ? 10 : span > 12 ? 5 : 2
+  const ticks = []
+  for (let tick = Math.ceil(start / step) * step; tick < end; tick += step) ticks.push(tick)
+  const shown = (from, until) => yearIn(from) <= year && (!until || yearIn(until) > year || (yearIn(until) === year && decimalOf(until) > year))
+  const label = (from, until, endUnknown) => `${yearIn(from)}–${endUnknown ? '' : until ? yearIn(until) : 'today'}`
+  // Years no stated ministry covers, before today's, within the body's own life: its family's years
+  // are not its own. With no ministry row at all, nothing is said rather than a gap across its life.
+  const gaps = []
+  const own = [...names.map((row) => row.from), ...ministries.map((row) => row.from), node.established].filter(Boolean)
+  let cursor = own.length ? Math.max(start, Math.min(...own.map(yearIn))) : start
+  for (const row of [...ministries].sort((a, b) => decimalOf(a.from) - decimalOf(b.from))) {
+    if (decimalOf(row.from) - cursor >= 1) gaps.push([Math.ceil(cursor), Math.floor(decimalOf(row.from))])
+    cursor = Math.max(cursor, row.until ? decimalOf(row.until) : end)
+  }
+  if (ministries.length && PRESENT_YEAR - cursor >= 1 && (!node.ended || yearIn(node.ended) > cursor)) gaps.push([Math.ceil(cursor), Math.min(PRESENT_YEAR, node.ended ? yearIn(node.ended) : PRESENT_YEAR) - 1])
+
+  const Row = ({ text, years: note, from, until, endUnknown, current, onClick, title, depth = 0 }) => (
+    <button type="button" className="gov-lineage-chart__row" data-self={current || undefined} data-depth={depth || undefined} aria-current={current ? 'true' : undefined} onClick={onClick} title={title}>
+      <span className="gov-lineage-chart__label" style={depth > 1 ? { paddingLeft: `${(depth - 1) * 14}px` } : undefined}>{text}<span className="gov-muted"> {note}</span></span>
+      <span className="gov-lineage-chart__track">
+        {from && <span className="gov-lineage-chart__bar" data-open={endUnknown || undefined} style={{ left: at(decimalOf(from)), width: width(decimalOf(from), until ? decimalOf(until) : end) }} />}
+      </span>
+    </button>
+  )
+  // A relative as a row: indented by generation, its bar its life, and where else it went.
+  const relativeRow = (row, direction) => {
+    const from = row.established ?? row.firstSeen
+    const how = { became: '', predecessor: '', services: 'services', area: `part of its area${row.date ? `, ${yearIn(row.date)}` : ''}` }[row.how]
+    const also = direction === 'formedFrom' && row.elsewhere.length ? `also ${row.elsewhere.map((each) => each.name.replace(/ Authority$/, '')).join(', ')}` : ''
+    return (
+      <Row
+        key={`${direction}-${row.id}`}
+        text={row.name}
+        years={[from ? label(from, row.ended, false) : 'start unknown', how, also].filter(Boolean).join(' · ')}
+        from={from}
+        until={row.ended}
+        depth={row.depth}
+        onClick={() => onJumpBody(row, direction === 'formedFrom' ? 'end' : 'start')}
+        title={`Go to ${row.name}`}
+      />
+    )
+  }
+
+  return (
+    <section className="gov-card gov-timeline-card">
+      <h2 className="gov-card__heading">Lineage <span className="gov-muted">{start}–today</span></h2>
+      <div className="gov-lineage-chart">
+        <div className="gov-lineage-chart__axis" aria-hidden="true">
+          {ticks.map((tick) => <span key={tick} style={{ left: at(tick) }}>{tick}</span>)}
+        </div>
+        {(names.length > 0 || sightings.length > 0) && <h3 className="gov-lineage-chart__group">Names</h3>}
+        {names.map((row) => (
+          <Row
+            key={`name-${row.name}-${row.from}`}
+            text={row.name}
+            years={`${label(row.from, row.until, row.endUnknown)}${row.endUnknown ? ' · end not recorded' : ''}`}
+            from={row.from}
+            until={row.until}
+            endUnknown={row.endUnknown}
+            current={shown(row.from, row.until)}
+            onClick={() => onGo(yearIn(row.from), node.id)}
+            title={`Go to ${yearIn(row.from)}`}
+          />
+        ))}
+        {sightings.map(({ name, years: when }) => (
+          <button key={`seen-${name}`} type="button" className="gov-lineage-chart__row" onClick={() => onGo(when[0], node.id)} title={`Go to ${when[0]}`}>
+            <span className="gov-lineage-chart__label">{name}<span className="gov-muted"> seen {when.join(', ')}</span></span>
+            <span className="gov-lineage-chart__track">
+              {when.map((seenIn) => <span key={seenIn} className="gov-lineage-chart__seen" style={{ left: at(seenIn + 0.5) }} />)}
+            </span>
+          </button>
+        ))}
+        {ministries.length > 0 && <h3 className="gov-lineage-chart__group">Held by</h3>}
+        {ministries.map((row) => (
+          <Row
+            key={`parent-${row.name}-${row.from}`}
+            text={shortMinistry(row.episode?.name ?? row.name)}
+            years={label(row.from, row.until, row.endUnknown)}
+            from={row.from}
+            until={row.until}
+            endUnknown={row.endUnknown}
+            current={shown(row.from, row.until)}
+            onClick={() => (row.episode ? onJump(row.episode, 'start') : onGo(yearIn(row.from), node.id))}
+            title={row.episode ? `Go to ${row.episode.name}` : `Go to ${yearIn(row.from)}`}
+          />
+        ))}
+        {node.parentToday && node.present && (
+          <p className="gov-muted gov-lineage-chart__note">Today: {node.parentName ?? node.parentToday}.</p>
+        )}
+        {gaps.length > 0 && (
+          <p className="gov-muted gov-lineage-chart__note">
+            No source names its ministry for {gaps.map(([from, to]) => (from === to ? `${from}` : `${from}–${to}`)).join(', ')}.
+          </p>
+        )}
+        {family.formedFrom.length > 0 && (
+          <>
+            <h3 className="gov-lineage-chart__group">Came from <span className="gov-muted">{family.formedFrom.length}</span></h3>
+            {formedFrom.map((row) => relativeRow(row, 'formedFrom'))}
+            {family.formedFrom.length > 14 && (
+              <button type="button" className="gov-link-button gov-lineage-chart__more" onClick={() => setDeep((value) => !value)}>
+                {deep ? 'Only the bodies it was formed from' : `And the ${family.formedFrom.length - formedFrom.length} bodies before them`}
+              </button>
+            )}
+          </>
+        )}
+        {(family.formedFrom.length > 0 || family.wentTo.length > 0) && node.established && (
+          // The body itself, between what formed it and what it went into: their bars end where its
+          // begins, and its own where theirs take over.
+          <Row
+            text={node.name}
+            years={label(node.established, node.ended, false)}
+            from={node.established}
+            until={node.ended}
+            current
+            onClick={() => onGo(yearIn(node.established), node.id)}
+            title={`Go to ${yearIn(node.established)}`}
+          />
+        )}
+        {family.wentTo.length > 0 && (
+          <>
+            <h3 className="gov-lineage-chart__group">Went into</h3>
+            {family.wentTo.map((row) => relativeRow(row, 'wentTo'))}
+          </>
+        )}
+        {joins.length > 0 && (
+          <>
+            <h3 className="gov-lineage-chart__group">Joined and parted</h3>
+            <div className="gov-lineage-chart__track gov-lineage-chart__joins" aria-hidden="true">
+              {joins.map((event) => <span key={event.id} className="gov-lineage-chart__join" style={{ left: at(decimalOf(event.date.start)) }} title={event.title} />)}
+            </div>
+          </>
+        )}
+        <span className="gov-lineage-chart__cursor" style={{ left: at(year + 0.5) }} aria-hidden="true" />
+      </div>
+      {joins.length > 0 && (
+        <ul className="gov-lineage-chart__join-list">
+          {joins.map((event) => (
+            <li key={event.id}>
+              <button type="button" className="gov-link-button" onClick={() => onGo(yearIn(event.date.start), node.id)}>{formatEventDate(event.date)}</button>{' '}
+              {event.title.startsWith(`${node.laterName ?? node.name}: `) ? event.title.slice((node.laterName ?? node.name).length + 2) : event.title}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  )
+}
+
 const span2 = (from, to) => `${String(from).slice(0, 4)}–${to ? String(to).slice(0, 4) : ''}`
 
 const Lineage = ({ label, episodes, onJump }) => episodes.length > 0 && (
@@ -307,19 +588,110 @@ const Connections = ({ node, government, onSelect }) => {
   )
 }
 
-export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBody, onOpenInGenerator }) => {
+const STEP = {
+  part: 'is part of',
+  responsible: 'answers to',
+  appoints: 'is appointed by',
+  confidence: 'governs with the confidence of',
+  elects: 'is elected by'
+}
+
+/**
+ * How the chosen body answers to the people, step by step, along the lines the diagram draws.
+ * Only accountability lines count: a partnership, a grant or a report tabled is not one.
+ */
+const PathToPeople = ({ node, government, onSelect }) => {
+  const steps = useMemo(() => pathToPeople(government, node.id), [government, node.id])
+  const byId = new Map(government.nodes.map((entry) => [entry.id, entry]))
+  if (node.kind === 'people') return null
+  if (!steps.length) {
+    const why = node.kind === 'court'
+      ? 'Courts are independent of the government: judges are appointed, but do not answer to a minister for their decisions.'
+      : node.kind === 'crown'
+        ? 'The Crown acts on the advice of ministers who hold the Assembly’s confidence; it does not answer to the people through an election.'
+        : node.local
+          ? `A local corporation under provincial statute, not a provincial body: it answers to its own board and electors, not to a ministry.${node.governance ? ` As its instrument of ${node.governance[0]} set it: ${node.governance[1]}` : ' Who chose its board, and who could vote for it, is recorded here only where an instrument gives it.'} The atlas does not yet draw local electorates, so no line to the people is drawn.`
+        : government.edges.some((edge) => edge.kind === 'owned' && edge.to === node.id)
+          ? 'A source shows who owns it, and ownership is not a line of accountability: no source names a body or ministry that answers for it, so no line to the people is drawn.'
+          : node.unattached
+          ? `No source names a ministry that answered for it in ${government.year}, so no line to the people is drawn.`
+          : (government.edges.some((edge) => edge.kind === 'partner' && edge.to === node.id)
+              ? 'It works with a ministry as a partner rather than answering to one; its own governance is its line of accountability.'
+              : null)
+    return why && (
+      <section className="gov-card">
+        <h2 className="gov-card__heading">How it answers to the people</h2>
+        <p className="gov-muted">{why}</p>
+      </section>
+    )
+  }
+  return (
+    <section className="gov-card">
+      <h2 className="gov-card__heading">How it answers to the people</h2>
+      <ol className="gov-path">
+        {steps.filter((step) => step.route === 'main').map((step) => {
+          const from = byId.get(step.to)
+          const to = byId.get(step.from)
+          // Other lines into the same body: a second route, shown beside the step it sits with.
+          const also = steps.filter((other) => other.route === 'also' && other.to === step.to)
+          return (
+            <li key={`${step.from}-${step.to}`}>
+              <span>{from?.shortName ?? from?.name}</span>{' '}
+              <span className="gov-muted">{from?.kind === 'ministry' && step.kind === 'appoints' ? 'has its minister chosen by' : STEP[step.kind]}</span>{' '}
+              <button type="button" className="gov-link-button" onClick={() => onSelect(step.from)}>{to?.shortName ?? to?.name}</button>
+              {step.seats ? <span className="gov-muted"> — {step.seats} members</span> : null}
+              {step.inferred && <span className="gov-muted"> (inferred: no source names it for {government.year})</span>}
+              {also.map((other) => {
+                const by = byId.get(other.from)
+                return (
+                  <span key={other.from} className="gov-path__also">
+                    Also {STEP[other.kind].replace(/^is /, '')}{' '}
+                    <button type="button" className="gov-link-button" onClick={() => onSelect(other.from)}>{by?.shortName ?? by?.name}</button>
+                    {by?.kind === 'crown' ? ', who is not elected: the Crown acts on the advice of ministers who hold the Assembly’s confidence.' : '.'}
+                  </span>
+                )
+              })}
+            </li>
+          )
+        })}
+      </ol>
+      <p className="gov-muted">
+        Only the lines drawn: who answers for, appoints or includes it. Funding, regulation, audit and
+        complaints routes are other relations, and are not part of this path.
+      </p>
+    </section>
+  )
+}
+
+export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBody, onGo, onOpenInGenerator }) => {
   const { year, present, day } = government
   const isBody = !['ministry', 'assembly', 'crown', 'premier', 'people'].includes(node.kind)
   const officeId = node.kind === 'assembly' ? 'speaker' : node.id
   const holders = ['officer', 'court', 'assembly'].includes(node.kind) ? officeHoldersTo(officeId, day) : []
   const isMinistry = node.kind === 'ministry'
-  const breadcrumb = node.branch ? BRANCH_LABELS[node.branch] : 'Everyone'
-  const kindLabel = KINDS[node.kind]?.label
+  const family = useMemo(() => (isBody ? bodyFamily(node.id) : { formedFrom: [], wentTo: [] }), [isBody, node.id])
+  // A local body is drawn in the executive's sector for room, but is not part of the executive.
+  const breadcrumb = node.local ? 'Local' : node.branch ? BRANCH_LABELS[node.branch] : 'Everyone'
+  const kindLabel = node.crownCategory ? CROWN_CATEGORIES[node.crownCategory].label : KINDS[node.kind]?.label
 
   return (
     <>
       <section className="gov-card">
-        <p className="gov-eyebrow">{breadcrumb}{kindLabel ? ` · ${kindLabel}` : ''}</p>
+        <p className="gov-eyebrow">
+          {breadcrumb}
+          {/* A Crown corporation's category names itself; what the category means, and where it is
+              defined, is a tooltip on the name, open on hover or focus and while the pointer is on it. */}
+          {node.crownCategory
+            ? <> · <span className="gov-tip">
+                <button type="button" className="gov-tip__trigger" aria-describedby={`crown-${node.id}`}>{kindLabel}</button>
+                <span role="tooltip" id={`crown-${node.id}`} className="gov-tip__text">
+                  {CROWN_CATEGORIES[node.crownCategory].label}: {CROWN_CATEGORIES[node.crownCategory].definition.replace(/^./, (c) => c.toLowerCase())}{' '}
+                  <a href={CROWN_CATEGORY_SOURCES.list.url} target="_blank" rel="noreferrer">Budget 2025</a>,{' '}
+                  <a href={CROWN_CATEGORY_SOURCES.definitions.url} target="_blank" rel="noreferrer">definitions</a>.
+                </span>
+              </span></>
+            : kindLabel ? ` · ${kindLabel}` : ''}
+        </p>
         <h1 className="gov-title">{node.name}</h1>
         {isMinistry && (
           <p className="gov-muted">
@@ -328,17 +700,19 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
             {node.employees ? ` · ${node.employees.toLocaleString('en-CA')} FTE staff, 2025/26` : ''}
           </p>
         )}
-        {node.description && <p className="gov-description">{node.description}</p>}
+        {node.description && <p className="gov-description"><StoryText text={node.description} label="About it" /></p>}
+        {node.franchise && (
+          <p className="gov-notice">
+            In {year} the provincial franchise excluded {node.franchise.excluded.join(', ').replace(/, ([^,]*)$/, ' and $1')}.{' '}
+            <a href={node.franchise.source.url} target="_blank" rel="noreferrer">{node.franchise.source.title}</a>
+          </p>
+        )}
         {node.operatingName && (
           <p className="gov-muted">
             Operating as {node.operatingName.name} since {node.operatingName.from} · legal name {node.name}
           </p>
         )}
-        {isBody && node.established && (
-          <p className="gov-muted">
-            {node.ended ? `${span(node.established, node.ended)}` : `Since ${formatDate(node.established)}`}
-          </p>
-        )}
+        {isBody && (node.established || node.firstSeen) && <LifeLine node={node} year={year} />}
         {!node.description && isMinistry && !present && (
           <p className="gov-description gov-muted">
             A ministry of the {year} government, from the BC Archives’ ministry history, with its
@@ -347,6 +721,9 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
         )}
         {node.officialUrl && (
           <p className="gov-links"><a href={node.officialUrl} target="_blank" rel="noreferrer">Official website</a></p>
+        )}
+        {areaById(node.id) && (
+          <p className="gov-links"><a href={healthMapLink(node.id)}>Explore this area in the historical health map →</a></p>
         )}
 
         {node.kind === 'assembly' && (
@@ -398,7 +775,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
         )}
 
         {node.laterName && (
-          <p className="gov-notice">Known today as {node.laterName}.</p>
+          <p className="gov-notice">{node.ended ? `Later renamed the ${node.laterName}.` : `Known today as ${node.laterName}.`}</p>
         )}
 
         {node.inferredGroup && (
@@ -415,18 +792,23 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
 
         {isBody && (
           <>
-            <BodyLineage label="Came from" bodies={node.cameFrom ?? []} onJump={onJumpBody} end="end" />
-            <BodyLineage label="Became" bodies={node.became ? [node.became] : []} onJump={onJumpBody} end="start" />
+            <BodyFamily rows={family.formedFrom} direction="formedFrom" onJump={onJumpBody} />
+            <BodyFamily rows={family.wentTo} direction="wentTo" onJump={onJumpBody} />
           </>
         )}
+
+        <SubAgencies parent={node} nodes={government.nodes} onSelect={onSelect} />
 
         {holders.length > 0 && <Holders label={node.kind === 'assembly' ? 'Speakers' : 'Holders'} holders={holders} current={node.head} />}
 
         {node.kind === 'premier' && <PremierList year={year} />}
       </section>
 
+      {isBody && <LogoCard node={node} theme={theme} />}
+      <Salaries key={node.id} node={node} year={year} />
       <EventsCard events={node.events} day={day} />
       {isMinistry && <MinistryTimeline node={node} year={year} onJump={onJump} />}
+      {isBody && onGo && <BodyTimeline node={node} family={family} year={year} onJump={onJump} onJumpBody={onJumpBody} onGo={onGo} />}
       {isMinistry && node.ministers?.length > 0 && (
         <section className="gov-card">
           <Holders label="Ministers" holders={[...node.ministers].reverse()} current={node.head} />
@@ -435,6 +817,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
       {isMinistry && <MarkCard node={node} year={year} theme={theme} onOpenInGenerator={onOpenInGenerator} />}
       <StaffingCard rows={node.staffing} year={year} />
       {node.kind === 'assembly' && <ParliamentCard parliament={node.parliament} />}
+      <PathToPeople node={node} government={government} onSelect={onSelect} />
       <Connections node={node} government={government} onSelect={onSelect} />
       <RelationsCard relations={node.relations} />
       <EvidenceCard node={node} />
@@ -524,58 +907,67 @@ export const OverviewCard = ({ government, onSelect }) => {
 
 const CHANGE_LABELS = { established: 'Established', renamed: 'Renamed', merged: 'Merged', split: 'Split', dissolved: 'Ended' }
 
-export const ChangesCard = ({ year, onSelect, onJump }) => {
+export const ChangesCard = ({ year, onSelect, onJump, limit = 5 }) => {
+  const [expanded, setExpanded] = useState(false)
   const changes = changesIn(year)
   const premiers = PREMIERS.filter((premier) => premier.from.startsWith(String(year)))
   // Dated events of the year — origins, renamings, new logos, appointments, the election's stages —
   // each at the precision its source gives.
   const events = eventsInYear(year)
   const shortName = (name) => name.replace(/^Ministry of (the )?/, '').replace(/^Department of (the )?/, 'Dept. of ')
+  const items = [
+    ...premiers.map((premier) => (
+      <li key={premier.name} className="gov-feed__item">
+        <span className="gov-chip" data-type="premier">Premier</span>
+        <span><strong>{premier.name}</strong> <span className="gov-muted">({premier.party})</span> took office on {formatDate(premier.from)}.</span>
+      </li>
+    )),
+    ...changes.map((change, index) => (
+      <li key={`change-${index}`} className="gov-feed__item">
+        <span className="gov-chip" data-type={change.type}>{CHANGE_LABELS[change.type]}</span>
+        <span className="gov-feed__names">
+          {change.predecessors.length > 0 && (
+            <span className="gov-feed__out">
+              {change.predecessors.map((episode) => (
+                <button key={episode.id} type="button" className="gov-link-button" onClick={() => onJump(episode, 'end')}>{shortName(episode.name)}</button>
+              ))}
+            </span>
+          )}
+          {change.predecessors.length > 0 && change.successors.length > 0 && <span aria-hidden="true"> → </span>}
+          {change.successors.length > 0 && (
+            <span className="gov-feed__in">
+              {change.successors.map((episode) => (
+                <button key={episode.id} type="button" className="gov-link-button" onClick={() => onSelect(episode.id)}>{shortName(episode.name)}</button>
+              ))}
+            </span>
+          )}
+        </span>
+      </li>
+    )),
+    ...events.map((event) => (
+      <li key={event.id} className="gov-feed__item">
+        <span className="gov-chip" data-type={typeOf(event).kind === 'election' && event.status !== 'source_reported_past' ? 'scheduled' : 'event'}>{typeOf(event).label}</span>
+        <span className="gov-feed__names">
+          {event.subject.startsWith('symbol:')
+            ? <span>{event.title}</span>
+            : <button type="button" className="gov-link-button" onClick={() => onSelect(event.subject)}>{event.title}</button>}
+          <span className="gov-muted"> · {formatEventDate(event.date)}</span>
+        </span>
+      </li>
+    ))
+  ]
+  // A busy year — 2026 has a dozen events — would otherwise make this the longest thing on the page.
+  // The view keys this card by year, so a new year starts folded again.
   return (
     <section className="gov-card">
       <h2 className="gov-card__heading">What changed in {year}</h2>
-      {!changes.length && !premiers.length && !events.length && <p className="gov-muted">No change to the ministries, and no new premier.</p>}
-      <ul className="gov-feed">
-        {premiers.map((premier) => (
-          <li key={premier.name} className="gov-feed__item">
-            <span className="gov-chip" data-type="premier">Premier</span>
-            <span><strong>{premier.name}</strong> <span className="gov-muted">({premier.party})</span> took office on {formatDate(premier.from)}.</span>
-          </li>
-        ))}
-        {changes.map((change, index) => (
-          <li key={index} className="gov-feed__item">
-            <span className="gov-chip" data-type={change.type}>{CHANGE_LABELS[change.type]}</span>
-            <span className="gov-feed__names">
-              {change.predecessors.length > 0 && (
-                <span className="gov-feed__out">
-                  {change.predecessors.map((episode) => (
-                    <button key={episode.id} type="button" className="gov-link-button" onClick={() => onJump(episode, 'end')}>{shortName(episode.name)}</button>
-                  ))}
-                </span>
-              )}
-              {change.predecessors.length > 0 && change.successors.length > 0 && <span aria-hidden="true"> → </span>}
-              {change.successors.length > 0 && (
-                <span className="gov-feed__in">
-                  {change.successors.map((episode) => (
-                    <button key={episode.id} type="button" className="gov-link-button" onClick={() => onSelect(episode.id)}>{shortName(episode.name)}</button>
-                  ))}
-                </span>
-              )}
-            </span>
-          </li>
-        ))}
-        {events.map((event) => (
-          <li key={event.id} className="gov-feed__item">
-            <span className="gov-chip" data-type={typeOf(event).kind === 'election' && event.status !== 'source_reported_past' ? 'scheduled' : 'event'}>{typeOf(event).label}</span>
-            <span className="gov-feed__names">
-              {event.subject.startsWith('symbol:')
-                ? <span>{event.title}</span>
-                : <button type="button" className="gov-link-button" onClick={() => onSelect(event.subject)}>{event.title}</button>}
-              <span className="gov-muted"> · {formatEventDate(event.date)}</span>
-            </span>
-          </li>
-        ))}
-      </ul>
+      {!items.length && <p className="gov-muted">No change to the ministries, and no new premier.</p>}
+      <ul className="gov-feed">{expanded ? items : items.slice(0, limit)}</ul>
+      {items.length > limit && (
+        <button type="button" className="gov-show-more" aria-expanded={expanded} onClick={() => setExpanded((value) => !value)}>
+          {expanded ? 'Show fewer' : `Show all ${items.length}`}
+        </button>
+      )}
     </section>
   )
 }

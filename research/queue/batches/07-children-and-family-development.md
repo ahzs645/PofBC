@@ -45,22 +45,14 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
 - **What it does:** Early intervention, therapy, respite and family support for children and youth with support needs.
 - **Held:** no start date
-- **Review:** not yet researched
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Children and Youth with Support Needs"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
+  - B. Start: the Act, order in council, news release or annual report that created it, with the date at the precision the source gives. A first sighting is not a start.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 3. Early Childhood Development
-
-- **id** `early-childhood-development-mcfd` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Children and Family Development.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Funds early childhood development programs aimed at infants, young children and their families.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Early Childhood Development"
-- **Questions:** A, B and C, as above.
-
-### 4. Foster caregiving and kinship care
+### 3. Foster caregiving and kinship care
 
 - **id** `foster-caregiving-and-kinship-care` · program · **P1 — disappears before today, nothing on file**
 - **Today:** under Ministry of Children and Family Development. Official site: https://www2.gov.bc.ca/gov/content/family-social-supports/fostering
@@ -71,29 +63,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Search for:** "Foster caregiving and kinship care"
 - **Questions:** A, B and C, as above.
 
-### 5. Maples Adolescent Treatment Centre
-
-- **id** `maples-adolescent-treatment-centre` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Children and Family Development.
-- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
-- **What it does:** Adolescent mental health facility operated by the ministry, including services under the Mental Health Act.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Maples Adolescent Treatment Centre"
-- **Questions:** A, B and C, as above.
-
-### 6. Provincial Centralized Screening
-
-- **id** `mcfd-child-protection-reporting-line` · office · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Children and Family Development. Official site: https://www2.gov.bc.ca/gov/content/safety/public-safety/protecting-children/reporting-child-abuse
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/children-and-family-development
-- **What it does:** Around-the-clock line (1-800-663-9122) for reporting suspected abuse or neglect of a child or youth to a child welfare worker.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Provincial Centralized Screening"
-- **Questions:** A, B and C, as above.
-
-### 7. Child and Youth Mental Health Services (CYMH)
+### 4. Child and Youth Mental Health Services (CYMH)
 
 - **id** `child-and-youth-mental-health-services` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Children and Family Development. Official site: https://www2.gov.bc.ca/gov/content/health/managing-your-health/mental-health-substance-use/child-teen-mental-health
@@ -107,6 +77,51 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - A. It is already seen in 2015. Look earlier: the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
+
+### 5. Early Childhood Development
+
+- **id** `early-childhood-development-mcfd` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Children and Family Development.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Funds early childhood development programs aimed at infants, young children and their families.
+- **Held:** no start date; first seen 2002
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Early Childhood Development"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 6. Maples Adolescent Treatment Centre
+
+- **id** `maples-adolescent-treatment-centre` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Children and Family Development.
+- **Collected from:** https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf
+- **What it does:** Adolescent mental health facility operated by the ministry, including services under the Mental Health Act.
+- **Held:** no start date; first seen 2002; parents on file: Ministry of Children and Family Development (seen 2002)
+- **Events on file:** 2002 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Maples Adolescent Treatment Centre"
+- **Questions:**
+  - A. It is already seen in 2002. Look earlier: before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
+### 7. Provincial Centralized Screening
+
+- **id** `mcfd-child-protection-reporting-line` · office · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Children and Family Development. Official site: https://www2.gov.bc.ca/gov/content/safety/public-safety/protecting-children/reporting-child-abuse
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/children-and-family-development
+- **What it does:** Around-the-clock line (1-800-663-9122) for reporting suspected abuse or neglect of a child or youth to a child welfare worker.
+- **Held:** no start date; first seen 2017-08-15; parents on file: Service Delivery Division, Ministry of Children and Family Development (seen 2017-08-15)
+- **Events on file:** 2016-03-31 full implementation; 2017-08-15 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Provincial Centralized Screening"
+- **Questions:**
+  - A. It is already seen in 2017-08-15. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 8. Youth Justice Services
 
@@ -182,8 +197,8 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "early-childhood-development-mcfd",
-      "name": "Early Childhood Development",
+      "id": "foster-caregiving-and-kinship-care",
+      "name": "Foster caregiving and kinship care",
       "kind": "program",
       "parent_today": "ministry-of-children-and-family-development-2001",
       "established": null,
@@ -207,8 +222,33 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "foster-caregiving-and-kinship-care",
-      "name": "Foster caregiving and kinship care",
+      "id": "child-and-youth-mental-health-services",
+      "name": "Child and Youth Mental Health Services",
+      "kind": "program",
+      "parent_today": "ministry-of-children-and-family-development-2001",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 07",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "early-childhood-development-mcfd",
+      "name": "Early Childhood Development",
       "kind": "program",
       "parent_today": "ministry-of-children-and-family-development-2001",
       "established": null,
@@ -260,31 +300,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "mcfd-child-protection-reporting-line",
       "name": "Provincial Centralized Screening",
       "kind": "office",
-      "parent_today": "ministry-of-children-and-family-development-2001",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 07",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "child-and-youth-mental-health-services",
-      "name": "Child and Youth Mental Health Services",
-      "kind": "program",
       "parent_today": "ministry-of-children-and-family-development-2001",
       "established": null,
       "first_observed": null,

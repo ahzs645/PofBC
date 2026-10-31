@@ -39,6 +39,7 @@ These come from the atlas research package (`package/MODEL_NOTES.md`) and are ch
 |---|---|---|
 | `history/ministers-<era>.json` | Every cabinet appointment: `{portfolio, holder, from, to, premier, acting, party, source}` | `build:government-history` |
 | `history/bodies.json` | Crown corporations and agencies since 1871: `{id, name, kind, established, ended, becameId, predecessorIds, responsible: [{ministry, from, to}], description, source}` | `build:government-history` |
+| `history/bodies-*.json` | Further bodies in the same shape, one file per research round. Optional fields: `names: [{name, from, to, source, locator}]` for the names an order gave a body, period by period (drawn under the name of the year); `firstSeen: {date, source, locator}` for a body whose start is unknown (drawn from that day and marked as seen, not started), and `serviceSuccessorIds` for a body whose services passed to others without amalgamating (shown as "Its services passed to", never as `becameId`) | `build:government-history` |
 | `history/responsible-*.json` | Which ministry answered for a body, by period: `{records: [{<body id>: [{ministry, from, to, source, note}]}], gaps}` | `build:government-history` |
 | `history/holders.json` | Speakers, officers of the Legislature, chief justices: `{offices: [{id, title, holders: [{name, from, to, acting, source}]}]}` | `build:government-history` |
 | `history/sub-divisions.json`, `sub-tribunals.json`, `sub-subsidiaries.json` | Today's sub-agencies as collected: `{id, name, shortName, parent, kind, established, description, url, source}` | `build:government-history` |
@@ -175,3 +176,31 @@ relying on non-ASCII names. Extraction utilities live in `scripts/research/`; ra
 `tmp/research/raw/`. No catalogue date or publisher is promoted to an institutional date or parent.
 
 Full findings and remaining work: `reviews/round-3/REPORT.md`.
+
+## Institutional history (21 October 2026)
+
+`reviews/institutional-history-2026-10-21/` is the research package as delivered (report, three
+appendices, a 161-URL source register, the health lineage map and a backlog). Its `convert.py` writes
+`history/bodies-health-lineage.json` (the 44 constituents of the 2001 amalgamation, the seven
+community health services societies, the 43 councils the December 1996 orders folded into boards,
+and three earlier boards), `atlas/events-health-lineage.json` and
+`atlas/events-institutional-history.json`. What was applied, and what was left, is in its
+`INTEGRATION.md`; the open questions are in its `research_backlog.md`.
+
+`reviews/primary-evidence-2026-10-21/` is the follow-up that answered most of them from original
+orders, Gazettes and registry records (the 159 MB of evidence files are not committed; their hashes
+are in its `evidence_manifest.json`). Its `INTEGRATION.md` says what changed: designation dates for
+every board and council, names over time, the 1997 roster of 52, stated ministries, the societies'
+2002 dissolutions, the 1946 commencement, PHSA's registry identities, the sheriffs, HPO and PRHC.
+
+## Round 4 (21 October 2026)
+
+`reviews/round-4-2026-10-21/` answers the 59 items of `WANTED.md` in four modules (branches, crowns,
+health, root), kept as delivered less its 898 MB of original downloads, which are listed with their
+hashes in `excluded-evidence-manifest.json`. Each module was reviewed into a proposal
+(`integration/<module>.json`, with notes) that says, claim by claim, what was applied and what was
+set aside. Its `convert.py` writes `atlas/events-round4.json` and `history/bodies-round4.json`,
+corrects hand-kept files in place, and writes `overrides.json`, which the institutional-history
+converter applies to the files it owns; so run the two converters in that order, then
+`npm run build:government`. Its `INTEGRATION.md` says what changed. `WANTED.md` was rewritten after
+it, and `node scripts/measure-government.mjs` gives the measures at its top.

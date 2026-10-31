@@ -7,6 +7,7 @@
 
 import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { KINDS } from './GovernmentGraph.jsx'
+import { CROWN_CATEGORIES } from './crownCategories.js'
 
 const Item = ({ node, selected, onSelect, nested }) => (
   <li>
@@ -20,7 +21,7 @@ const Item = ({ node, selected, onSelect, nested }) => (
       <span className="gov-kind-dot" data-branch={node.branch ?? 'people'} />
       <span className="gov-list__name">
         {node.shortName ?? node.name}
-        <span className="gov-list__meta">{KINDS[node.kind]?.one ?? ''}</span>
+        <span className="gov-list__meta">{node.crownCategory ? CROWN_CATEGORIES[node.crownCategory].label : KINDS[node.kind]?.one ?? ''}</span>
       </span>
       {node.head?.person && <span className="gov-list__head">{node.head.person}</span>}
     </button>
@@ -50,7 +51,13 @@ export const GovernmentList = ({ government, selectedId, onSelect, hiddenKinds, 
         title: 'Answering to no ministry named in the sources',
         items: by((node) => node.branch === 'executive' && node.ring === 'outer' && !grouped.has(node.group)).map((node) => ({ node }))
       },
-      { title: 'Judicial', items: by((node) => node.branch === 'judicial').map((node) => ({ node })) }
+      { title: 'Judicial', items: by((node) => node.branch === 'judicial').map((node) => ({ node })) },
+      // Every Crown corporation again, by what kind it is, where the Budget's list reaches the year.
+      ...Object.entries(CROWN_CATEGORIES).map(([id, category]) => ({
+        title: category.plural,
+        note: category.definition,
+        items: by((node) => node.crownCategory === id).sort((a, b) => (a.shortName ?? a.name).localeCompare(b.shortName ?? b.name)).map((node) => ({ node }))
+      }))
     ].filter((section) => section.items.length)
   }, [government, hiddenKinds])
 
@@ -72,6 +79,7 @@ export const GovernmentList = ({ government, selectedId, onSelect, hiddenKinds, 
         const title = <h2 className="gov-list__title">{section.title} <span className="gov-muted">{section.items.length}</span></h2>
         const items = (
           <ul>
+            {section.note && <li className="gov-list__note gov-muted">{section.note}</li>}
             {section.items.map(({ node, nested }) => (
               <Item key={node.id} node={node} nested={nested} selected={node.id === selectedId} onSelect={onSelect} />
             ))}

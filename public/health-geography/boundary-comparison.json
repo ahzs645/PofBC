@@ -1,0 +1,1677 @@
+{
+  "schemaVersion": 1,
+  "preparedOn": "2026-10-31",
+  "sources": [
+    {
+      "id": "pgmaps",
+      "title": "Existing PGMaps BC Ministry of Health boundary snapshots",
+      "url": "https://pgmaps.ahmadjalil.com/data/boundaries/BCMoH/index.json",
+      "note": "Actual PGMaps layers, already simplified at 50 m (LHA), 75 m (HSDA), and 100 m (HA). Snapshot files do not declare an original historical vintage."
+    },
+    {
+      "id": "bc-lha",
+      "title": "BC Data Catalogue: Local Health Area Boundaries",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/local-health-area-boundaries",
+      "note": "Official service describes its data as the 2022 boundary configuration; 2019 involved code/name updates and some health geography changes. The historical-code field was null in every downloaded feature."
+    },
+    {
+      "id": "bc-hsda",
+      "title": "BC Data Catalogue: Health Service Delivery Area Boundaries",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/health-service-delivery-area-boundaries",
+      "note": "Official metadata: 2022 configuration with minor digitizing improvements; previous boundaries from 2003."
+    },
+    {
+      "id": "bc-ha",
+      "title": "BC Data Catalogue: Health Authority Boundaries",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/health-authority-boundaries",
+      "note": "Official metadata describes 2022 configuration. These are contemporary geographic authorities, not the 1997 system."
+    },
+    {
+      "id": "lha-crosswalk",
+      "title": "Ministry of Health 2019 LHA profile: old/new LHA code crosswalk",
+      "url": "https://divisionsbc.ca/sites/default/files/53401/lha-profile-greater-nanaimo_2019.pdf#page=75",
+      "note": "Appendix C, printed pp 73–75 / PDF pp 75–77. Codes and names only; no claim of unchanged historic geometry."
+    },
+    {
+      "id": "oag-1998",
+      "title": "Auditor General 1997/98 Report 3: Exhibits 3–5",
+      "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19980301-review-governance-and-accountability.pdf#page=28",
+      "note": "Contemporaneous administrative maps for 11 boards, 34 council/related labels, and 7 societies. The vector artwork has no supplied geographic coordinates."
+    },
+    {
+      "id": "pho-1998",
+      "title": "Provincial Health Officer Annual Report 1998: Appendix G",
+      "url": "https://www2.gov.bc.ca/assets/gov/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer/reports-publications/annual-reports/phoannual1998.pdf",
+      "note": "Printed G-2 distinguishes 20 analytical regions aggregated from LHAs from the new administrative system, and warns that regionalization involved boundary changes."
+    },
+    {
+      "id": "statcan-2002",
+      "title": "Statistics Canada: matching January 2000 and June 2002 BC health-region boundaries",
+      "url": "https://www150.statcan.gc.ca/n1/pub/82-221-x/01002/4061979-eng.htm",
+      "note": "The table identifies unchanged pairs for the two dated statistical systems. It does not certify their correspondence to 1997 administrative boundaries or today's polygons."
+    },
+    {
+      "id": "m432-1996",
+      "title": "Ministerial Order M432/1996: Regional Health Boards Regulation",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+      "note": "Legal descriptions for North Shore, Simon Fraser/Burnaby, and South Okanagan Similkameen."
+    },
+    {
+      "id": "m441-1996",
+      "title": "Ministerial Order M441/1996: regional board schedules",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+      "note": "Legal descriptions and amalgamating councils for Fraser Valley, South Fraser Valley, Thompson, Central Vancouver Island, Vancouver/Richmond, and Capital."
+    },
+    {
+      "id": "m444-1996",
+      "title": "Ministerial Order M444/1996: Northern Interior and North Okanagan",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+      "note": "Northern Interior legal description PDF pp 4–8; North Okanagan pp 9–12. The named constituent councils help select candidates but do not validate modern polygon edges."
+    },
+    {
+      "id": "m87-1997",
+      "title": "Ministerial Order M87/1997: community health council schedules",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0087_1997",
+      "note": "Continues the community health councils and gives their boundary schedules; Appendix 21 retains the name 100 Mile House & District. The later rename is M225/1997."
+    },
+    {
+      "id": "m225-1997",
+      "title": "Ministerial Order M225/1997: South Cariboo council rename",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0225_1997",
+      "note": "Made 23 May 1997; substitutes South Cariboo Community Health Council for 100 Mile House & District Community Health Council throughout B.C. Reg. 27/97. This establishes the name relationship, not unchanged modern geometry."
+    },
+    {
+      "id": "reg293-2001",
+      "title": "Original Regional Health Boards Regulation, B.C. Reg. 293/2001",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "note": "Schedule A lists constituent institutions in the December 2001 amalgamations; it does not make their earlier boundaries identical to modern LHAs."
+    },
+    {
+      "id": "central-coast-lrmp",
+      "title": "Central Coast Land and Coastal Resource Management Plan: phase 1 socioeconomic assessment",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/land-water-use/crown-land/land-use-plans-and-objectives/westcoast-region/centralcoast-lrmp/lcrmp_phase_1_sea.pdf",
+      "note": "Describes the 1999 Cariboo health region as including Bella Coola Valley; supports that regional association rather than a measured polygon equivalence."
+    }
+  ],
+  "datasets": {
+    "lha": {
+      "file": "display-lha.geojson",
+      "featureCount": 89,
+      "sourceId": "pgmaps",
+      "label": "Modern local health areas",
+      "geometryStatus": "modern-pgmaps-comparison",
+      "originalVintage": "not declared in the PGMaps snapshot",
+      "officialReferenceConfiguration": "2022",
+      "displayToleranceMetres": 200,
+      "sha256": "8577feb8eb24cb66c08ad36bf4d7ba5d093ec94de0b070d3965e2dc2a56e6a96"
+    },
+    "hsda": {
+      "file": "display-hsda.geojson",
+      "featureCount": 16,
+      "sourceId": "pgmaps",
+      "label": "Modern health service delivery areas",
+      "geometryStatus": "modern-pgmaps-comparison",
+      "originalVintage": "not declared in the PGMaps snapshot",
+      "officialReferenceConfiguration": "2022",
+      "displayToleranceMetres": 200,
+      "sha256": "2b58001c35e8f80bd7374806a40ce834d4e7c2c794384057c302e9dc9f385689"
+    },
+    "ha": {
+      "file": "display-ha.geojson",
+      "featureCount": 5,
+      "sourceId": "pgmaps",
+      "label": "Modern geographic health authorities",
+      "geometryStatus": "modern-pgmaps-comparison",
+      "originalVintage": "not declared in the PGMaps snapshot",
+      "officialReferenceConfiguration": "2022",
+      "displayToleranceMetres": 200,
+      "sha256": "ebc9d930be4d7c5ef9d21924867989584e0ee73df4d517766c96c79abe4ce556"
+    }
+  },
+  "bodyMatches": [
+    {
+      "bodyId": "north-okanagan-health-region",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 1,
+      "sourceLabel": "North Okanagan",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "135",
+        "136",
+        "139",
+        "141",
+        "142"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5903"
+      ],
+      "status": "modern-aggregation-candidate",
+      "label": "Modern LHA aggregation candidate",
+      "explanation": "The North Okanagan candidate combines Armstrong/Spallumcheen, Vernon, Enderby, Revelstoke and Salmon Arm. It spans today's Okanagan and Thompson Cariboo Shuswap HSDAs; either modern HSDA alone is the wrong extent.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m444-1996"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "okanagan-similkameen-health-region",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 2,
+      "sourceLabel": "Okanagan Similkameen",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "131",
+        "132",
+        "133",
+        "134",
+        "137",
+        "138"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5904"
+      ],
+      "status": "modern-aggregation-candidate",
+      "label": "Modern LHA aggregation candidate",
+      "explanation": "The candidate uses Southern Okanagan, Penticton, Keremeos, Princeton, Central Okanagan and Summerland. Today's Okanagan HSDA also includes northern areas that belonged to the separate North Okanagan board.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m432-1996"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "thompson-health-region",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 3,
+      "sourceLabel": "Thompson",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "143",
+        "145",
+        "147",
+        "148",
+        "149"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5905"
+      ],
+      "status": "modern-aggregation-candidate",
+      "label": "Modern LHA aggregation candidate",
+      "explanation": "The candidate uses Kamloops, North Thompson, Lillooet, South Cariboo LHA 148 and Merritt. The current Thompson Cariboo Shuswap HSDA includes additional Cariboo and Shuswap areas. Historical South Cariboo council around 100 Mile House is a different area.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996",
+        "m225-1997"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "fraser-valley-health-region",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 4,
+      "sourceLabel": "Fraser Valley",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "211",
+        "212",
+        "213",
+        "214",
+        "215"
+      ],
+      "candidateHsdaCodes": [
+        "21"
+      ],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5906"
+      ],
+      "status": "documented-statistical-correspondence-candidate",
+      "label": "Documented historical relationship; modern polygon candidate",
+      "explanation": "Fraser East is a strong comparison candidate: Statistics Canada explicitly equates January 2000 Fraser Valley with June 2002 Fraser Valley. This dated statistical correspondence still requires checking against the 1997 legal board boundary and modern changes.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "south-fraser-health-region",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 5,
+      "sourceLabel": "South Fraser",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "231",
+        "232",
+        "233",
+        "234"
+      ],
+      "candidateHsdaCodes": [
+        "23"
+      ],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5907"
+      ],
+      "status": "documented-statistical-correspondence-candidate",
+      "label": "Documented historical relationship; modern polygon candidate",
+      "explanation": "Fraser South is a strong comparison candidate supported by the January 2000-to-June 2002 statistical correspondence. Modern Surrey subdivisions do not establish unchanged historical board edges.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "simon-fraser-health-region",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 6,
+      "sourceLabel": "Simon Fraser",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "221",
+        "222",
+        "223",
+        "224"
+      ],
+      "candidateHsdaCodes": [
+        "22"
+      ],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5908",
+        "5917"
+      ],
+      "status": "documented-statistical-correspondence-candidate",
+      "label": "Documented historical relationship; modern polygon candidate",
+      "explanation": "The candidate combines Burnaby, New Westminster, Maple Ridge/Pitt Meadows and Tri-Cities. The 1997 board combined former Simon Fraser and Burnaby areas; Statistics Canada also documents this merged correspondence to the 2002 Simon Fraser HSDA.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m432-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "central-vancouver-island-health-region",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 7,
+      "sourceLabel": "Central Vancouver Island",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "421",
+        "422",
+        "423",
+        "424",
+        "425",
+        "426"
+      ],
+      "candidateHsdaCodes": [
+        "42"
+      ],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5910"
+      ],
+      "status": "modern-aggregation-candidate",
+      "label": "Modern LHA aggregation candidate",
+      "explanation": "Today's Central Vancouver Island HSDA is a useful geographic candidate, supported by its constituent place names. Its matching name is not proof that its legal edge equals the 1997 board; later Vancouver Island health boundaries changed.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "northern-interior-regional-health-board",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 8,
+      "sourceLabel": "Northern Interior",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "522",
+        "523",
+        "524"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5915"
+      ],
+      "status": "modern-aggregation-candidate",
+      "label": "Modern LHA aggregation candidate",
+      "explanation": "Use Burns Lake, Nechako and Prince George as the candidate. Do not automatically use all of current Northern Interior HSDA 52: it also includes Quesnel, which was in the separate Cariboo area and had its own council.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m444-1996",
+        "reg293-2001"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "vancouver-richmond-health-board",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 9,
+      "sourceLabel": "Vancouver/Richmond",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "311",
+        "321",
+        "322",
+        "323",
+        "324",
+        "325",
+        "326"
+      ],
+      "candidateHsdaCodes": [
+        "31",
+        "32"
+      ],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5916",
+        "5919"
+      ],
+      "status": "documented-statistical-correspondence-candidate",
+      "label": "Documented historical relationship; modern polygon candidate",
+      "explanation": "The candidate combines today's Vancouver and Richmond HSDAs. The historical institution amalgamated the predecessor Vancouver and Richmond regional health boards. Vancouver and Richmond remained separate labels in the 20-region statistical presentation. The 1996 legal schedule also incorporates specified electoral areas, so municipal names alone do not certify an exact match.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "north-shore-health-region",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 10,
+      "sourceLabel": "North Shore",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "331",
+        "332"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5918"
+      ],
+      "status": "modern-aggregation-candidate",
+      "label": "Modern LHA aggregation candidate",
+      "explanation": "North Vancouver and West Vancouver/Bowen Island form the modern candidate. Today's North Shore/Coast Garibaldi HSDA is broader. The dated statistical correspondence combines North Shore with Coast Garibaldi; it does not independently validate LHA 331 and LHA 332 as the historical board boundary.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m432-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "capital-health-region",
+      "mapId": "oag-1997-98-exhibit-3",
+      "sourceLegendNumber": 11,
+      "sourceLabel": "Capital",
+      "category": "regional-health-boards",
+      "candidateLhaCodes": [
+        "411",
+        "412",
+        "413",
+        "414"
+      ],
+      "candidateHsdaCodes": [
+        "41"
+      ],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5920"
+      ],
+      "status": "modern-aggregation-candidate",
+      "label": "Modern LHA aggregation candidate",
+      "explanation": "South Vancouver Island's Greater Victoria, Western Communities, Saanich Peninsula and Southern Gulf Islands provide the candidate. The legal 1996 schedule remains the authority for the historical edge.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "elk-valley-and-south-country-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 1,
+      "sourceLabel": "Elk Valley and South Country",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "111"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Fernie is a place-based candidate for Elk Valley and South Country; the current LHA label does not reproduce the historic legal description.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "cranbrook-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 2,
+      "sourceLabel": "Cranbrook",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "112"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Cranbrook is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "kimberley-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 3,
+      "sourceLabel": "Kimberley",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "113"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Kimberley is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "columbia-valley-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 4,
+      "sourceLabel": "Columbia Valley",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "114"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Windermere is the modern LHA covering the Columbia Valley candidate; the differing name is preserved.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "creston-and-district-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 5,
+      "sourceLabel": "Creston and District",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "115"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Creston is the direct place-name candidate; district-level extent is not certified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "nelson-and-area-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 6,
+      "sourceLabel": "Nelson and Area",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "121",
+        "122"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "scope-review-needed",
+      "label": "Candidate extent needs review",
+      "explanation": "Nelson plus Kootenay Lake is a candidate for Nelson and Area; the inclusion of all Kootenay Lake needs checking against the legal schedule.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "castlegar-and-district-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 7,
+      "sourceLabel": "Castlegar and District",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "123"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Castlegar is the direct place-name candidate; district-level extent is not certified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "arrow-lakes-upper-slocan-valley-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 8,
+      "sourceLabel": "Arrow Lakes/Upper Slocan Valley",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "124"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "scope-review-needed",
+      "label": "Candidate extent needs review",
+      "explanation": "Arrow Lakes is a starting candidate. Upper Slocan Valley is specifically named in the council and may not follow the modern Arrow Lakes LHA edge.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "greater-trail-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 9,
+      "sourceLabel": "Greater Trail",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "125"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Trail is the place-name candidate for Greater Trail; greater-area extent remains unverified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "boundary-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 10,
+      "sourceLabel": "Boundary",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "126",
+        "127"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Grand Forks plus Kettle Valley is the Boundary-area candidate; this is an inferred grouping of modern LHAs.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "golden-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 11,
+      "sourceLabel": "Golden",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "116"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Golden is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "south-cariboo-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 12,
+      "sourceLabel": "South Cariboo",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "144"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "documented-rename-candidate",
+      "label": "Historical rename resolved; boundary unverified",
+      "explanation": "This council was renamed from 100 Mile House & District. Use modern 100 Mile House LHA 144 as the candidate, not the differently located modern South Cariboo LHA 148.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m87-1997",
+        "m225-1997"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "central-cariboo-chilcotin-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 13,
+      "sourceLabel": "Central Cariboo Chilcotin",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "146"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Cariboo/Chilcotin is the geographic candidate for Central Cariboo Chilcotin; identical legal boundaries are not established.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "quesnel-and-district-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 14,
+      "sourceLabel": "Quesnel and District",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "521"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Quesnel is the direct place-name candidate. Its current placement in Northern Interior HSDA does not place the former council inside the old Northern Interior board.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "bella-coola-and-district-transitional-health-authority",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 15,
+      "sourceLabel": "Bella Coola Valley and District",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "336"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Bella Coola Valley is the place-name candidate. The source map and later transitional-authority identity are preserved as separate evidence.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "sunshine-coast-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 16,
+      "sourceLabel": "Sunshine Coast",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "333"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Sunshine Coast is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "powell-river-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 17,
+      "sourceLabel": "Powell River",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "334"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Powell River is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "sea-to-sky-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 18,
+      "sourceLabel": "Sea To Sky",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "335"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Howe Sound is the modern geographic candidate for the Sea To Sky council; the changed name is not a boundary-equivalence assertion.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "comox-valley-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 19,
+      "sourceLabel": "Comox Valley",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "431"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Comox Valley is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "campbell-river-nootka-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 20,
+      "sourceLabel": "Campbell River/Nootka",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "432",
+        "433"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Greater Campbell River plus Vancouver Island West is a candidate for Campbell River/Nootka; this is an inferred modern aggregation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "mount-waddington-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 21,
+      "sourceLabel": "Mount Waddington",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "434"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Vancouver Island North is the geographic candidate for Mount Waddington; the district name alone does not establish the historical edge.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "central-coast-transitional-health-authority",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 22,
+      "sourceLabel": "Central Coast",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "337"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Central Coast is the direct place-name candidate, including the mainland geography missing from a Vancouver-Island-only selection.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "south-peace-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 23,
+      "sourceLabel": "South Peace",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "531"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Peace River South is the modern place-name candidate for South Peace.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "north-peace-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 24,
+      "sourceLabel": "North Peace",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "532"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Peace River North is the modern place-name candidate for North Peace.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "fort-nelson-liard-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 25,
+      "sourceLabel": "Fort Nelson-Liard",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "533"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Fort Nelson is the modern geographic candidate for Fort Nelson-Liard.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "bulkley-valley-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 26,
+      "sourceLabel": "Bulkley Valley",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "514"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "scope-review-needed",
+      "label": "Candidate extent needs review",
+      "explanation": "Smithers is a starting candidate for Bulkley Valley. Coverage toward Houston and the old council's watershed limits must be checked; this is not a confirmed complete aggregation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "upper-skeena-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 27,
+      "sourceLabel": "Upper Skeena",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "513"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Upper Skeena is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "terrace-and-area-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 28,
+      "sourceLabel": "Terrace and Area",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "517"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "scope-review-needed",
+      "label": "Candidate extent needs review",
+      "explanation": "Terrace is a starting candidate; 'and Area' must be checked against the historic legal description, particularly neighbouring Nisga'a and Kitimat areas.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "kitimat-and-area-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 29,
+      "sourceLabel": "Kitimat and Area",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "515"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Kitimat is the place-name candidate; district-level extent is not certified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "north-coast-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 30,
+      "sourceLabel": "North Coast",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "512"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Prince Rupert is the modern geographic candidate for North Coast; do not equate a present regional-district name with this council.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "queen-charlotte-islands-haida-gwaii-community-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 31,
+      "sourceLabel": "Queen Charlotte Islands/Haida Gwaii",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "510"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "place-name-candidate",
+      "label": "Place-based modern candidate",
+      "explanation": "Haida Gwaii is the direct geographic candidate for Queen Charlotte Islands/Haida Gwaii; historical shore limits remain unverified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": null,
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 32,
+      "sourceLabel": "Nisga'a Health Authority",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "518"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "identity-unresolved",
+      "label": "Related geography; institutional identity unresolved",
+      "explanation": "This is related Nisga'a geography only. The map's 'Nisga'a Health Authority' identity is not confirmed equivalent to the repository's community-health-council record.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "snow-country-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 33,
+      "sourceLabel": "Snow Country",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "511",
+        "519"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "scope-review-needed",
+      "label": "Candidate extent needs review",
+      "explanation": "Snow Country LHA 511 and neighbouring Telegraph Creek LHA 519 are candidates requiring review. The historic council must not be assumed equal to either current area or their union solely from names.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "stikine-health-council",
+      "mapId": "oag-1997-98-exhibit-4",
+      "sourceLegendNumber": 34,
+      "sourceLabel": "Stikine",
+      "category": "community-health-councils",
+      "candidateLhaCodes": [
+        "516"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [],
+      "status": "scope-review-needed",
+      "label": "Candidate extent needs review",
+      "explanation": "Stikine LHA 516 is a starting candidate. Historical Stikine, Snow Country and Telegraph Creek subdivisions require legal-boundary comparison; names alone are insufficient.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "east-kootenay-community-health-services-society",
+      "mapId": "oag-1997-98-exhibit-5",
+      "sourceLegendNumber": 1,
+      "sourceLabel": "East Kootenay",
+      "category": "community-health-services-societies",
+      "candidateLhaCodes": [
+        "111",
+        "112",
+        "113",
+        "114",
+        "115",
+        "116"
+      ],
+      "candidateHsdaCodes": [
+        "11"
+      ],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5901"
+      ],
+      "status": "documented-statistical-correspondence-candidate",
+      "label": "Documented historical relationship; modern polygon candidate",
+      "explanation": "Today's East Kootenay HSDA is a strong candidate. Statistics Canada documents unchanged January 2000-to-June 2002 East Kootenay statistical geography. Society jurisdiction is related evidence, not a legal identity of all polygon edges.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "kootenay-boundary-community-health-services-society",
+      "mapId": "oag-1997-98-exhibit-5",
+      "sourceLegendNumber": 2,
+      "sourceLabel": "Central Kootenay",
+      "category": "community-health-services-societies",
+      "candidateLhaCodes": [
+        "121",
+        "122",
+        "123",
+        "124",
+        "125",
+        "126",
+        "127"
+      ],
+      "candidateHsdaCodes": [
+        "12"
+      ],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5902"
+      ],
+      "status": "documented-statistical-correspondence-candidate",
+      "label": "Documented historical relationship; modern polygon candidate",
+      "explanation": "The source map calls this society Central Kootenay. Today's Kootenay Boundary HSDA is a strong candidate; Statistics Canada connects the older West Kootenay-Boundary statistical region with the 2002 Kootenay/Boundary HSDA.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "coast-garibaldi-community-health-services-society",
+      "mapId": "oag-1997-98-exhibit-5",
+      "sourceLegendNumber": 3,
+      "sourceLabel": "Coast Garibaldi",
+      "category": "community-health-services-societies",
+      "candidateLhaCodes": [
+        "333",
+        "334",
+        "335"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5909"
+      ],
+      "status": "documented-statistical-correspondence-candidate",
+      "label": "Documented historical relationship; modern polygon candidate",
+      "explanation": "Sunshine Coast, Powell River and Howe Sound form the candidate. Do not use the whole present North Shore/Coast Garibaldi HSDA: North Shore was a separate board, and Bella Coola/Central Coast were associated with other former regions.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "upper-island-central-coast-community-health-services-society",
+      "mapId": "oag-1997-98-exhibit-5",
+      "sourceLegendNumber": 4,
+      "sourceLabel": "Upper Island/Central Coast",
+      "category": "community-health-services-societies",
+      "candidateLhaCodes": [
+        "431",
+        "432",
+        "433",
+        "434",
+        "337"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5911"
+      ],
+      "status": "modern-aggregation-candidate",
+      "label": "Modern LHA aggregation candidate",
+      "explanation": "The candidate combines the current North Vancouver Island LHAs with Central Coast LHA 337. The former society's mainland Central Coast component makes today's North Vancouver Island HSDA alone incomplete.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "cariboo-community-health-services-society",
+      "mapId": "oag-1997-98-exhibit-5",
+      "sourceLegendNumber": 5,
+      "sourceLabel": "Cariboo",
+      "category": "community-health-services-societies",
+      "candidateLhaCodes": [
+        "144",
+        "146",
+        "521",
+        "336"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5912"
+      ],
+      "status": "modern-aggregation-candidate",
+      "label": "Modern LHA aggregation candidate",
+      "explanation": "The candidate combines 100 Mile House, Cariboo/Chilcotin, Quesnel and Bella Coola Valley. These now span Interior, Northern and Vancouver Coastal health authorities. A contemporary Cariboo-labelled area is not an adequate substitute.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "central-coast-lrmp",
+        "reg293-2001"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "north-west-community-health-services-society",
+      "mapId": "oag-1997-98-exhibit-5",
+      "sourceLegendNumber": 6,
+      "sourceLabel": "North West",
+      "category": "community-health-services-societies",
+      "candidateLhaCodes": [
+        "510",
+        "511",
+        "512",
+        "513",
+        "514",
+        "515",
+        "516",
+        "517",
+        "519"
+      ],
+      "candidateHsdaCodes": [],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5913"
+      ],
+      "status": "scope-review-needed",
+      "label": "Source excludes Nisga'a; modern candidate",
+      "explanation": "The source society map explicitly excludes Nisga'a Health Authority. The modern candidate therefore uses Northwest LHAs except Nisga'a LHA 518; the whole Northwest HSDA 51 would incorrectly fill that exclusion. Using the modern Nisga'a edge to represent the historical exclusion remains unverified, and the old Northwest statistical region is not identical to this society's jurisdiction.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    },
+    {
+      "bodyId": "peace-liard-community-health-services-society",
+      "mapId": "oag-1997-98-exhibit-5",
+      "sourceLegendNumber": 7,
+      "sourceLabel": "Peace Liard",
+      "category": "community-health-services-societies",
+      "candidateLhaCodes": [
+        "531",
+        "532",
+        "533"
+      ],
+      "candidateHsdaCodes": [
+        "53"
+      ],
+      "candidateHaCodes": [],
+      "historicalFeatureCodes": [
+        "5914"
+      ],
+      "status": "documented-statistical-correspondence-candidate",
+      "label": "Documented historical relationship; modern polygon candidate",
+      "explanation": "Peace River South, Peace River North and Fort Nelson form the candidate. Statistics Canada documents the January 2000 Peace Liard to June 2002 Northeast statistical correspondence.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false,
+      "historicalOverlapMeasured": false,
+      "geometryCaveat": "Highlighted polygons are from the existing modern PGMaps dataset. No georeferenced 1997 administrative boundary has been used to measure overlap."
+    }
+  ],
+  "currentDataAudit": {
+    "lha": {
+      "comparison": "Existing PGMaps vs current official BC WFS; not a historical validation",
+      "file": "pgmaps-vs-official-current-lha.json",
+      "featureCount": 89,
+      "allPropertiesMatch": true,
+      "minIou": 0.9734845365896044,
+      "maxIou": 0.9998971526601275
+    },
+    "hsda": {
+      "comparison": "Existing PGMaps vs current official BC WFS; not a historical validation",
+      "file": "pgmaps-vs-official-current-hsda.json",
+      "featureCount": 16,
+      "allPropertiesMatch": true,
+      "minIou": 0.9883418943174764,
+      "maxIou": 0.9998933665844422
+    },
+    "ha": {
+      "comparison": "Existing PGMaps vs current official BC WFS; not a historical validation",
+      "file": "pgmaps-vs-official-current-ha.json",
+      "featureCount": 5,
+      "allPropertiesMatch": true,
+      "minIou": 0.9951288475739783,
+      "maxIou": 0.9997230015990941
+    }
+  },
+  "historicalGeometryStatus": "No independently reusable georeferenced 1997 administrative geometry was acquired; no historical area-overlap scores are claimed.",
+  "limitations": [
+    "The 1997/98 administrative maps, January 2000 statistical regions and modern health geography are three distinct layers of evidence.",
+    "Modern polygons are comparison candidates. A high overlap between two current datasets does not validate a historical boundary.",
+    "HistoricalFeatureCodes identify related January 2000 statistical labels only; this package contains no polygon dataset keyed by those codes.",
+    "The 18 regional candidate groups select 88 modern LHAs; Nisga'a LHA 518 is shown separately because the society map explicitly excludes Nisga'a Health Authority from North West. This construction does not prove historical legal boundaries.",
+    "Nisga'a's source map label retains unresolved institutional identity; no repository bodyId has been fabricated."
+  ]
+}

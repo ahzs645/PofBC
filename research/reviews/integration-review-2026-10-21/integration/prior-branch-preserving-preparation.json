@@ -1,0 +1,425 @@
+{
+  "schema": "pofbc-prior-batch-preparation/1",
+  "prepared_on": "2026-10-21",
+  "reviewed_head": "0dbdb18cfebfb27e5529ce5940850e96eb9a995c",
+  "repo_modified": false,
+  "original_file": "research/reviews/round-4-2026-10-21/branches/prior/handback-importable.json",
+  "original_sha256": "1f1e5dc05ee6c30e2e52811dc1711e9a20d45c39e114ba45636ea54beb9cc33f",
+  "derived_file": "/workspace/scratch/a5ca1a8fd90b/round5/audit/prior-branch-preserving-batch.json",
+  "derived_sha256": "b880feeb8366469825347ac14f7bdd71c555bc872074f5d023c63e09c2f6d713",
+  "strategy": "Keep all original historical facts and source objects; for already-held records omit incoming review.scope, review.by and review.unresolved_fields and carry the held full_history_complete Boolean. Keep review.checked and sources_checked. New records retain their original review metadata.",
+  "preserved": {
+    "records": 144,
+    "gone": 0,
+    "sources": 118,
+    "record_fields_except_review_unchanged": true,
+    "sources_unchanged": true,
+    "all_nonrecord_batch_fields_unchanged": true
+  },
+  "metadata_adjusted_records": [
+    {
+      "id": "buy-bc",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "legal-services-branch",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "family-justice-services-division",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "mcfd-adoption-services",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "service-bc",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "bc-online",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "bc-stats",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "bc-bid",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "kings-printer",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "commissioner-for-teacher-regulation",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "strongstart-bc",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "bc-training-and-education-savings-program",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "disaster-financial-assistance",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "first-nations-clean-energy-business-fund",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "bc-parks",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "conservation-officer-service",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "treasury-board-staff",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "office-of-the-comptroller-general",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "provincial-treasury",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "crown-agencies-secretariat",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "internal-audit-and-advisory-services",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "bc-timber-sales",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "residential-tenancy-branch",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "building-and-safety-standards",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "university-endowment-lands",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "first-citizens-fund",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "community-capital-development",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "infrastructure-policy-and-partnerships",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "bc-coroners-service",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "bc-corrections",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "community-safety-and-victim-services",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "bc-arts-and-culture-endowment",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "environmental-appeal-board",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "powertech-labs",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    },
+    {
+      "id": "building-bc",
+      "omitted_review_fields": [
+        "scope",
+        "by",
+        "unresolved_fields"
+      ],
+      "full_history_complete": false
+    }
+  ],
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "verification": {
+    "existing_record_preservation_violations": [],
+    "established_dates_unchanged_for_existing_records": true,
+    "evidence_status_unchanged_for_existing_records": true,
+    "existing_unresolved_fields_preserved": true,
+    "existing_scope_by_preserved": true,
+    "existing_full_history_complete_preserved": true,
+    "first_merge_log_lines": 300,
+    "second_merge_log": [],
+    "research_byte_identical_after_in_memory_replay": true,
+    "source_catalogue_byte_identical_after_in_memory_replay": true,
+    "first_result_research_sha256": "0afaee85ba108b23e223a526898a412079dff393d88bc49338422a1c9d227bdb",
+    "first_result_catalogue_sha256": "d3c83a1a9b52921204f698434e67e7fcb5008cdfc64b57d13005cb8dd8b82953"
+  },
+  "semantic_gates": [
+    {
+      "id": "PB1",
+      "severity": "decision_required_for_graph_identity",
+      "subject": "compliance-and-enforcement-collaborative",
+      "finding": "The 2012 start belongs to an inter-agency working group/community of practice, distinct from its supporting permanent C&E Secretariat. Existing queue kind=office and ministry placement are inherited; the batch supplies no correction.",
+      "action": "Accept the 2012 historical fact for the Collaborative. Decide/correct entity kind and supporting-secretariat relationship before treating it as a ministry office or dating the Secretariat from 2012.",
+      "source_id": "R3F-EXT-023",
+      "source": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies/compliance-enforcement-collaborative/terms-of-reference",
+      "locator": "Introduction paragraphs 2-3; Location"
+    },
+    {
+      "id": "PB2",
+      "severity": "existing_renderer_gate",
+      "subject": "six subsidiary observations",
+      "finding": "Six subsidiary_of observations remain correctly typed in research but current snapshot converts every parent relation to part and permits it in pathToPeople.",
+      "action": "Preserve ownership edges; do not imply political accountability from them. No claim of fully correct accountability graph follows from a clean import.",
+      "subjects": [
+        "bchpa-captive-insurance",
+        "tongass-power-and-light",
+        "bc-lottotech-international",
+        "fii-consulting-shanghai",
+        "forestry-innovation-consulting-vietnam",
+        "bcr-properties"
+      ],
+      "code": "src/government/snapshot.js:570-572,594,609"
+    },
+    {
+      "id": "PB3",
+      "severity": "qualification_required",
+      "subject": "observations versus periods",
+      "finding": "All 47 incoming parent rows are observation_only. First observations do not prove continuous existence, all intermediate years, a foundation date or a parent move day.",
+      "action": "Describe generated gains as dated sightings and three additional starts. Preserve uncertainty and current metadata, especially Finance identity_continuity questions. Do not describe F2 or full lifecycles as complete.",
+      "code": "src/government/snapshot.js:477-478,493-513"
+    },
+    {
+      "id": "PB4",
+      "severity": "qualification_required",
+      "subject": "retrospective and original-source distinction",
+      "finding": "Three new start claims have been re-read in retained official sources; 2012 Collaborative and 2015 Portal are retrospective year-level claims, while Connected Services dates an organizational beginning to 2025-10-01. No new corporate or statutory formation is asserted for a web portal/working group.",
+      "action": "Keep original meanings and precision; do not relabel all three as legal incorporation dates."
+    }
+  ],
+  "field_gate_audit": {
+    "incoming_top_level_identity_review_required_count": 0,
+    "incoming_top_level_import_status_count": 0,
+    "incoming_top_level_atlas_import_count": 0,
+    "incoming_record_field_keys": [
+      "id",
+      "name",
+      "established",
+      "first_observed",
+      "names",
+      "parents",
+      "relations",
+      "research_events",
+      "date_claims",
+      "legal_basis",
+      "evidence_status",
+      "note",
+      "review"
+    ],
+    "existing_identity_flagged_records_in_batch": [],
+    "note": "No explicit top-level import/identity flag in these 144 records is silently lost. Important unresolved_fields are preserved by this derivation. Entity-kind distinctions are carried in claim meanings; the old queue kind is not semantically validated by merge."
+  },
+  "provenance_note": "The original handback and its source/check datasets remain unmodified and retain the incoming review scope, reviewer and questions. This derived file is a metadata-safe input, not a statement that all source histories or all graph semantics are complete.",
+  "not_performed": [
+    "No repository edits or commits",
+    "No generated build in this sub-review; root performs fresh isolated build/tests",
+    "No complete re-audit of all 134 original sightings"
+  ]
+}

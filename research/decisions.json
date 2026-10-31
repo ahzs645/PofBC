@@ -52,6 +52,89 @@
         }
       ],
       "decided": "2026-09-26"
+    },
+    {
+      "id": "msc-established-1967-03-24",
+      "subject": "sub-agencies/medical-services-commission",
+      "field": "established",
+      "value": {
+        "date": "1967-03-24",
+        "precision": "day",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0964_1967",
+        "source_id": "r4-r4b-072",
+        "locator": "OIC 964/1967, approved 23 March 1967, PDF p. 1",
+        "checked": "2026-10-21",
+        "meaning": "the day fixed for the Medical Services Act, 1967 (s. 3 constitutes the Commission) to come into force; the first members took office the same day (OIC 965/1967)"
+      },
+      "status": "documented_partial",
+      "reason": "The Commission is constituted by s. 3 of the Medical Services Act, 1967 (assented 23 March 1967). OIC 964/1967 directs a proclamation bringing every provision but s. 9 into force on 24 March 1967; OIC 965/1967 appoints its three members from that day, and OIC 967/1967 sets its staff from 25 March. A 1968 staffing order and a June 1968 public notice in the Commission's name show it in existence before July 1968. The proclamation itself was not retrieved.",
+      "set_aside": [
+        {
+          "date": "1968-07-01",
+          "why": "The Commission's 2002 and 2004 financial statements (note 1) say it was established 1 July 1968 'under the Medical Service Act'. That is the Medical Services Plan's Medicare start, written decades later; the 1967 instruments are contemporary. Kept as a retrospective claim (atlas:institutional-history-msc-1968). Whether a 1968 statute re-constituted the Commission was not checked."
+        }
+      ],
+      "decided": "2026-10-21",
+      "proposed": "2026-10-21"
+    },
+    {
+      "id": "eab-established-1982-01-01",
+      "subject": "sub-agencies/environmental-appeal-board",
+      "field": "established",
+      "value": {
+        "date": "1982-01-01",
+        "precision": "day",
+        "meaning": "The day OIC 2603/1981 establishes the Environmental Appeal Board under s. 11 of the Environment Management Act, SBC 1981 c. 14 ('effective January 1, 1982, there be established an Environmental Appeal Board'); the order was approved 18 December 1981, which is not the start",
+        "evidence": "order_in_council",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2603_1981",
+        "source_id": "r4-r3f-ext-004",
+        "locator": "OIC 2603/1981, approved and ordered 18 December 1981, sole operative paragraph; PDF p. 1",
+        "checked": "2026-10-21"
+      },
+      "status": "documented_partial",
+      "reason": "OIC 2603/1981 establishes the Board 'effective January 1, 1982' under s. 11 of the Environment Management Act, SBC 1981 c. 14; OIC 2602/1981 brings ss. 11-12 into force that day and OIC 2604/1981 appoints the first members (chairman Francis A. Hillier) from it. All three were approved 18 December 1981. This settles the Round 2 proposal (reviews/round-2/decision-recommendations.json, proposed-environmental-appeal-board-established-1982) at day precision.",
+      "set_aside": [
+        {
+          "date": "1981",
+          "why": "The collected year and the Board's homepage: the year of the Environment Management Act, not of the Board. The orders were approved in December 1981 but take effect in 1982."
+        },
+        {
+          "date": "1982",
+          "why": "The Board's procedure manual (2019) at year precision; it agrees with the orders and is superseded by them."
+        }
+      ],
+      "decided": "2026-10-21",
+      "proposed": "2026-10-21"
+    },
+    {
+      "id": "powertech-established-1988-09-29",
+      "subject": "sub-agencies/powertech-labs",
+      "field": "established",
+      "value": {
+        "date": "1988-09-29",
+        "precision": "day",
+        "meaning": "Incorporation of the company registered as BC0352143, under the numbered name 352143 B.C. LTD.; it took the name Powertech Labs Inc. on 6 January 1989. A legal start, not the start of the laboratory's work",
+        "evidence": "official_webpage",
+        "source": "https://orgbook.gov.bc.ca/api/v4/topic/360507/credential-set",
+        "source_id": "r4-r3f-ext-006",
+        "locator": "BC Registries credential 493544 (BC0352143): registration_date and entity_name_effective 1988-09-29, reason Event:CONVICORP (converted legacy record)",
+        "checked": "2026-10-21"
+      },
+      "status": "documented_partial",
+      "reason": "The record is the company Powertech Labs Inc. (BC0352143), BC Hydro's subsidiary, so it starts when that company was incorporated: 29 September 1988, as 352143 B.C. Ltd., named Powertech Labs Inc. from 6 January 1989 (OrgBook BC credentials 493544 and 493593). The laboratory's own history is older and stays as events.",
+      "set_aside": [
+        {
+          "date": "1989",
+          "why": "BC Hydro's 2009 news release dates Powertech's service delivery from 1989: the laboratory's operations, probably the year it took its name; not the incorporation."
+        },
+        {
+          "date": "1979",
+          "why": "BC Hydro's 2020 service plan says Powertech has operated 'since its inception in 1979': a retrospective statement about the laboratory function, before the company existed."
+        }
+      ],
+      "decided": "2026-10-21",
+      "proposed": "2026-10-21"
     }
   ]
 }

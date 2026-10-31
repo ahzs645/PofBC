@@ -133,12 +133,13 @@ export const TIMELINES = {
       },
       {
         id: 'workbc-flat-rule',
-        status: 'sought',
+        status: 'held',
+        marks: ['vector-workbc-2016'],
         years: '2016–2018',
         label: 'The flat mark, with a gold rule',
         note: 'The BC mark with its sun drawn flat, a thin gold rule, then “Work” in blue and “BC” in gold — ' +
-          'the same template as WelcomeBC’s header of the same year. The header between 2012 and 2016 ' +
-          'was archived but has not been looked at.',
+          'the same template as WelcomeBC’s header of the same year. The gallery holds the archived header ' +
+          'file itself, byte for byte. The header between 2012 and 2016 was archived but has not been looked at.',
         applicability: {
           kind: 'first_observation',
           years: '2016–2018',
@@ -151,7 +152,8 @@ export const TIMELINES = {
       },
       {
         id: 'workbc-grey-rule',
-        status: 'sought',
+        status: 'held',
+        marks: ['vector-workbc-current'],
         years: '2018–present',
         label: 'The flat mark, with a grey rule',
         note: 'The flat sun at the left, a grey upright rule, and “Work” in blue with “BC” in gold, in the ' +
@@ -220,7 +222,8 @@ export const TIMELINES = {
       },
       {
         id: 'welcomebc-flat-rule',
-        status: 'sought',
+        status: 'held',
+        marks: ['vector-welcomebc-2016'],
         years: '2016–2025',
         label: 'The flat mark, with a gold rule',
         note: 'The BC mark with its sun drawn flat, a thin gold rule, then “Welcome” in blue and “BC” in ' +
@@ -237,11 +240,12 @@ export const TIMELINES = {
       },
       {
         id: 'welcomebc-2025',
-        status: 'sought',
+        status: 'held',
+        marks: ['vector-welcomebc-current'],
         years: '2025–present',
-        label: 'Stacked, with the program named',
-        note: 'Since the site’s redesign in September 2025: the flat BC mark and “WelcomeBC” stacked, with a ' +
-          'gold rule, in BC blue and gold.',
+        label: 'Endorsed, with the program named',
+        note: 'Since the site’s redesign in September 2025: the BC mark at the left, an upright gold rule, and ' +
+          '“WelcomeBC” to its right, in BC blue and gold — a horizontal endorsed arrangement, not a stacked one.',
         applicability: {
           kind: 'first_observation',
           years: '2025–present',
@@ -406,15 +410,19 @@ export const TIMELINES = {
       },
       {
         id: 'wiw-later',
-        status: 'sought',
+        status: 'held',
+        marks: ['vector-bc-public-service-where-ideas-work-2023-reverse'],
         years: 'by 2017–present',
         label: 'The later “Where ideas work” logo',
-        note: 'The brand is still in use — its 2023 corporate plan carries the name — under a logo of its ' +
-          'own on the Public Service’s career pages, archived but not yet looked at.',
+        note: 'The brand is still in use under a logo of its own: the BC mark with “BC Public Service”, a gold ' +
+          'rule, and “Where ideas work”. The gallery holds the reversed artwork of the 2023 corporate plan; ' +
+          'whether it is the same drawing as the 2018 career-page file has not been established.',
         applicability: { kind: 'first_observation', years: 'by 2017–present', note: 'Its logo files are first seen in 2017 and 2018.' },
         seenAt: ['https://whereideaswork.gov.bc.ca/wp-content/uploads/2018/03/wiw-pos-rgb.png'],
         sources: [
-          source('Where Ideas Work', 'https://whereideaswork.gov.bc.ca/', 'the logo file, uploaded March 2018, still served')
+          source('Where Ideas Work', 'https://whereideaswork.gov.bc.ca/', 'the logo file, uploaded March 2018, still served'),
+          source('BC Public Service corporate plan (2023)', 'https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/corporate-digital/corporateplan_2023.pdf',
+            'p. 11: the reverse lockup, from which the gallery’s file is extracted')
         ]
       }
     ]
@@ -445,13 +453,20 @@ export const TIMELINES = {
       },
       {
         id: 'gateway-starts-here',
-        status: 'sought',
+        status: 'held',
+        marks: ['vector-canada-starts-here-2012', 'vector-canada-starts-here-bc-jobs-plan-2012'],
         years: 'from 2011',
         label: '“Canada Starts Here”',
         note: 'Premier Clark’s government replaced the brand with “Canada Starts Here”, revealed at Prince ' +
-          'Rupert on 20 September 2011 — a logo of stacked shipping containers.',
+          'Rupert on 20 September 2011 — a logo of stacked shipping containers. The gallery holds the flat ' +
+          'artwork printed in the BC Jobs Plan of September 2012, alone and with the plan’s name, not the ' +
+          'three-dimensional containers of the launch photographs.',
         applicability: { kind: 'documented_adoption', years: 'from 2011', note: 'Its reveal is reported to the day.' },
-        sources: [TYEE_2011, GLOBAL_2011]
+        sources: [
+          TYEE_2011, GLOBAL_2011,
+          source('BC Jobs Plan, 11 Sep 2012 (hosted by AMSSA)', 'https://www.amssa.org/wp-content/uploads/2015/05/BC-Jobs-Plan.pdf',
+            'p. 24: the container mark and the Jobs Plan lockup, from which the gallery’s files are extracted')
+        ]
       }
     ]
   },
@@ -481,7 +496,11 @@ export const TIMELINES = {
       },
       {
         id: 'strongerbc-2022',
-        status: 'sought',
+        status: 'held',
+        marks: [
+          'vector-BCID_StrongerBC_RGB_pos', 'vector-BCID_StrongerBC_RGB_rev', 'vector-BCID_StrongerBC_Solid_pos', 'vector-BCID_StrongerBC_Solid_rev',
+          'vector-StrongerBC_RGB_pos', 'vector-StrongerBC_RGB_rev', 'vector-StrongerBC_Solid_pos', 'vector-StrongerBC_Solid_rev'
+        ],
         years: '2022–present',
         label: 'StrongerBC, the core brand',
         note: 'With the StrongerBC Economic Plan of February 2022 the name became “a core brand of the ' +
@@ -495,7 +514,7 @@ export const TIMELINES = {
         sources: [
           source('B.C. news release, 17 Feb 2022', 'https://news.gov.bc.ca/releases/2022JERI0004-000230'),
           source('Download the BC marks', 'https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/bc-visual-identity/download-marks',
-            'StrongerBC endorsed mark and wordmark')
+            'StrongerBC endorsed mark and wordmark: the packages the gallery’s eight SVG files come from')
         ]
       }
     ]
@@ -773,7 +792,7 @@ export const COLLECTION_ERAS = {
     },
     {
       id: 'parks-shaded-banner',
-      status: 'sought',
+      status: 'held',
       years: '2005–2007',
       label: '“BCParks” beside the shaded sun',
       note: 'The shaded sun and mountains, then “BCParks” set solid in white serif, on the ministry’s web ' +
@@ -784,7 +803,7 @@ export const COLLECTION_ERAS = {
     },
     {
       id: 'parks-best-place',
-      status: 'sought',
+      status: 'held',
       years: '2010–2016',
       label: 'Beside the Best Place on Earth mark',
       note: 'The shaded-sun BC mark with its tagline, a thin gold rule, and “BCParks” in dark blue serif — ' +
@@ -814,7 +833,7 @@ export const COLLECTION_ERAS = {
     },
     {
       id: 'parks-current',
-      status: 'sought',
+      status: 'held',
       years: '2023–present',
       label: 'The BC Parks logo',
       note: 'One lockup: the flat sun and mountains with “British Columbia”, a gold upright bar, and “BC ' +
@@ -1174,12 +1193,13 @@ export const COLLECTION_ERAS = {
   'bc-transit': [
     {
       id: 'bct-flag',
-      status: 'sought',
+      status: 'held',
       years: 'by 2007–2008',
       label: 'The flag',
       note: 'The provincial flag, waving, with the name: above it on the covers of the 2007 and 2008 service ' +
         'plans, and beside it in white on red in a supplied picture that nothing dates. Which came first, ' +
-        'and whether both were in use at once, is not known. No vector of either has been obtained.',
+        'and whether both were in use at once, is not known. The one above the name is held, from a service ' +
+        'plan’s cover; the one beside it on red has not been obtained.',
       applicability: {
         kind: 'first_observation',
         years: 'by 2007–2008',

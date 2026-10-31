@@ -15,6 +15,9 @@ export const CENTRE = { x: 400, y: 375 }
 /** One ring step. Every radius below is a multiple of it. */
 export const UNIT = 105
 
+/** The tallest a tooth may grow, so a very large family widens instead of towering. */
+const MAX_ROWS_TALL = 3
+
 /** The radius of each ring, as a multiple of UNIT. */
 export const RINGS = {
   seal: 0.5,
@@ -33,6 +36,31 @@ export const RINGS = {
 export const BAND_INNER = RINGS.inner * UNIT - 30
 export const RIM = RINGS.outer * UNIT + 22
 
+/**
+ * The rings' radii, and what follows from them. Bodies, dots and labels keep their size whatever
+ * the radii, so a smaller disc draws the same glyphs larger once it is fitted to a narrow screen,
+ * and its families pack deeper instead of being shrunk with everything else. The seal keeps its
+ * size, since it holds its words.
+ */
+export const geometryFor = (ring, rowsTall = MAX_ROWS_TALL) => ({
+  ring: { seal: RINGS.seal * UNIT, ...ring },
+  bandInner: ring.inner - 30,
+  rim: ring.outer + 22,
+  rowsTall
+})
+
+/** The layout drawn on a wide screen. */
+export const GEOMETRY = geometryFor({ inner: RINGS.inner * UNIT, cabinet: RINGS.cabinet * UNIT, oversight: RINGS.oversight * UNIT, outer: RINGS.outer * UNIT })
+
+/**
+ * The layout drawn on a phone. The gaps the inner rings need for what sits between them (the
+ * ministries' band, their dots, the oversight bodies) are kept; the room round the seal and the
+ * outer ring's radius give way, and the outer families may stack a row deeper to make up for the
+ * shorter ring.
+ */
+export const COMPACT_GEOMETRY = geometryFor({ inner: 116, cabinet: 162, oversight: 199, outer: 252 }, MAX_ROWS_TALL + 1)
+
+
 /** The canvas-coloured seam between two branches, in viewBox units: parallel-sided, not a wedge. */
 export const SEAM = 7
 
@@ -48,8 +76,6 @@ export const DOTS = { size: 3.8, column: 5.8, row: 6.4, rows: 3, clearance: 9 }
 /** The width of a tooth's rounded shoulder, where the rim rises to it. */
 export const SHOULDER = 16
 
-/** The tallest a tooth may grow, so a very large family widens instead of towering. */
-const MAX_ROWS_TALL = 3
 
 /** The Crown sits with the executive, which is where it acts; the branches read clockwise from the top. */
 export const SECTORS = [
@@ -98,9 +124,9 @@ export const allocateSectors = (counts) => {
  * Evenly spaced angles for `count` nodes across [start, end], centred, never further apart than
  * MAX_STEP — so three bodies in a wide sector gather in its middle instead of flying to its edges.
  */
-export const spreadAngles = (count, start, end) => {
+export const spreadAngles = (count, start, end, padding = EDGE_PADDING) => {
   if (count <= 0) return []
-  const width = end - start - EDGE_PADDING * 2
+  const width = end - start - padding * 2
   const step = count > 1 ? Math.min(MAX_STEP, width / (count - 1)) : 0
   const middle = (start + end) / 2
   return Array.from({ length: count }, (_, index) => middle + (index - (count - 1) / 2) * step)
@@ -136,13 +162,15 @@ const clamp = (value, low, high) => Math.min(high, Math.max(low, value))
  *
  * @returns {{positions: object, teeth: {sector, group, start, end, top}[]}}
  */
-const packFamilies = (sector, outer, placed, subsOf) => {
-  const base = RINGS.outer * UNIT
+const packFamilies = (sector, outer, placed, subsOf, geometry) => {
+  const base = geometry.ring.outer
   const families = []
   for (const node of outer) {
+    // A body under a placed parent joins its family; one in a lane of its own (the local bodies) its lane's.
     const group = node.group && placed[node.group] ? node.group : null
-    let family = families.find((entry) => entry.group === group)
-    if (!family) families.push(family = { group, members: [] })
+    const lane = group ? null : node.lane ?? null
+    let family = families.find((entry) => entry.group === group && entry.lane === lane)
+    if (!family) families.push(family = { group, lane, members: [] })
     family.members.push(node)
   }
   if (!families.length) return { positions: {}, teeth: [] }
@@ -154,7 +182,7 @@ const packFamilies = (sector, outer, placed, subsOf) => {
     // rest share columns up to three deep.
     family.parents = family.members.filter((node) => subsOf(node.id).length)
     family.rest = family.members.filter((node) => !subsOf(node.id).length)
-    family.rows = Math.max(1, Math.min(MAX_ROWS_TALL, family.rest.length))
+    family.rows = Math.max(1, Math.min(geometry.rowsTall, family.rest.length))
     family.columns = family.parents.length + Math.ceil(family.rest.length / family.rows)
     family.anchor = family.group ? placed[family.group].angle : Number.isFinite(lastAnchor) ? lastAnchor + 0.2 : middle
   }
@@ -189,7 +217,7 @@ const packFamilies = (sector, outer, placed, subsOf) => {
       const angle = family.start + (column + 0.5) * columnAngle
       const size = nodeSize(node)
       positions[node.id] = { angle, radius: base, size }
-      const dots = placeDots(subsOf(node.id), angle, base + size + DOTS.clearance)
+      const dots = placeDots(subsOf(node.id), angle, base + size + DOTS.clearance, sector)
       Object.assign(positions, dots.positions)
       top = Math.max(top, dots.reach + 12)
     })
@@ -202,7 +230,7 @@ const packFamilies = (sector, outer, placed, subsOf) => {
         size: nodeSize(node)
       }
     })
-    teeth.push({ sector: sector.id, group: family.group ?? 'none', start: family.start, end: family.start + family.width, top })
+    teeth.push({ sector: sector.id, group: family.group ?? family.lane ?? 'none', start: family.start, end: family.start + family.width, top })
   }
   return { positions, teeth }
 }
@@ -212,10 +240,21 @@ const packFamilies = (sector, outer, placed, subsOf) => {
  * along the ring as that takes, centred on the parent's angle — the model's rows of three. Returns
  * where each sits and how far out the last row reaches.
  */
-const placeDots = (subs, angle, radius) => {
+const placeDots = (subs, angle, radius, bounds = null, room = Infinity) => {
   const positions = {}
-  const rows = Math.min(DOTS.rows, subs.length)
-  const columns = Math.ceil(subs.length / Math.max(1, rows))
+  // Rows of three, as the model draws them, unless that is wider than the parent's share of the
+  // ring (`room`, an angle): then as many columns as fit, and the rows go further out.
+  const fit = Math.max(1, Math.floor((room * radius - DOTS.size * 2) / DOTS.column) + 1)
+  const columns = Math.min(Math.ceil(subs.length / Math.min(DOTS.rows, subs.length || 1)), fit)
+  const rows = Math.ceil(subs.length / Math.max(1, columns))
+  // Kept inside the parent's sector: a parent near its edge has its dots shifted in, rather than
+  // spilling them into the next branch.
+  if (bounds) {
+    const half = (((columns - 1) / 2) * DOTS.column + DOTS.size + DOTS.clearance) / radius
+    const low = bounds.start + half
+    const high = bounds.end - half
+    angle = low <= high ? Math.min(high, Math.max(low, angle)) : (bounds.start + bounds.end) / 2
+  }
   subs.forEach((node, index) => {
     const column = Math.floor(index / rows)
     const row = index % rows
@@ -240,7 +279,7 @@ const placeDots = (subs, angle, radius) => {
  *   teeth: {sector: string, group: string, start: number, end: number, top: number}[]
  * }}
  */
-export const layoutGovernment = (nodes) => {
+export const layoutGovernment = (nodes, geometry = GEOMETRY) => {
   const counts = {}
   // Sub-agencies do not widen their branch; they sit in the room their parent already has.
   for (const node of nodes) if (node.ring !== 'sub') counts[node.branch] = (counts[node.branch] ?? 0) + 1
@@ -261,9 +300,13 @@ export const layoutGovernment = (nodes) => {
 
     for (const ring of ['inner', 'cabinet', 'oversight']) {
       const onRing = members.filter((node) => node.ring === ring)
-      spreadAngles(onRing.length, sector.start, sector.end).forEach((angle, index) => {
+      // The end bodies stay clear of the seam by their own width (with the tab above a glyph), not
+      // by a fixed angle, which on an inner ring is narrower than a ministry.
+      const widest = Math.max(0, ...onRing.map(nodeSize))
+      const padding = Math.max(EDGE_PADDING, (widest * 1.45 + SEAM / 2 + 4) / geometry.ring[ring])
+      spreadAngles(onRing.length, sector.start, sector.end, padding).forEach((angle, index) => {
         const node = onRing[index]
-        positions[node.id] = { angle, radius: RINGS[ring] * UNIT, size: nodeSize(node) }
+        positions[node.id] = { angle, radius: geometry.ring[ring], size: nodeSize(node) }
       })
     }
   }
@@ -272,22 +315,31 @@ export const layoutGovernment = (nodes) => {
   // ministry — or the Premier — whatever order the sectors were laid out in.
   for (const sector of sectors) {
     const outer = nodes.filter((node) => node.branch === sector.id && node.ring === 'outer')
-    const packed = packFamilies(sector, outer, positions, subsOf)
+    const packed = packFamilies(sector, outer, positions, subsOf, geometry)
     Object.assign(positions, packed.positions)
     teeth.push(...packed.teeth)
   }
 
-  // Every other parent's dots — a ministry's divisions, an officer's offices — just beyond it.
+  // Every other parent's dots — a ministry's divisions, an officer's offices — just beyond it, each
+  // in its share of the ring: no wider than the space to the next parent on the same ring.
+  const ringParents = [...subsByParent.keys()].map((id) => ({ id, node: nodes.find((entry) => entry.id === id), at: positions[id] })).filter((entry) => entry.at && entry.node)
+  const shareOf = (parentId) => {
+    const me = ringParents.find((entry) => entry.id === parentId)
+    if (!me) return Infinity
+    const gaps = ringParents.filter((entry) => entry.id !== parentId && entry.node.ring === me.node.ring && entry.node.branch === me.node.branch)
+      .map((entry) => Math.abs(entry.at.angle - me.at.angle))
+    return gaps.length ? Math.min(...gaps) * 0.9 : Infinity
+  }
   for (const [parentId, subs] of subsByParent) {
     const parent = positions[parentId]
     const waiting = subs.filter((node) => !positions[node.id])
     if (!parent || !waiting.length) continue
     const node = nodes.find((entry) => entry.id === parentId)
-    const from = node?.ring === 'cabinet' ? RINGS.cabinet * UNIT + 22 + DOTS.clearance : parent.radius + parent.size + DOTS.clearance
-    Object.assign(positions, placeDots(waiting, parent.angle, from).positions)
+    const from = node?.ring === 'cabinet' ? geometry.ring.cabinet + 22 + DOTS.clearance : parent.radius + parent.size + DOTS.clearance
+    Object.assign(positions, placeDots(waiting, parent.angle, from, sectors.find((sector) => sector.id === node?.branch) ?? null, shareOf(parentId)).positions)
   }
 
-  return { sectors, positions, teeth }
+  return { sectors, positions, teeth, geometry }
 }
 
 /**
@@ -295,18 +347,41 @@ export const layoutGovernment = (nodes) => {
  * reaches it, each with a rounded shoulder. Sampled along the rim this is the cog's outline, and it
  * follows the teeth as they move, grow and merge.
  */
-export const rimAt = (angle, teeth) => {
-  let radius = RIM
-  const shoulder = SHOULDER / RIM
+export const rimAt = (angle, teeth, rim = RIM) => {
+  let radius = rim
+  const shoulder = SHOULDER / rim
   for (const tooth of teeth) {
-    if (tooth.top <= RIM) continue
+    if (tooth.top <= rim) continue
     let t = 0
     if (angle >= tooth.start && angle <= tooth.end) t = 1
     else if (angle > tooth.start - shoulder && angle < tooth.start) t = (angle - (tooth.start - shoulder)) / shoulder
     else if (angle > tooth.end && angle < tooth.end + shoulder) t = ((tooth.end + shoulder) - angle) / shoulder
-    if (t > 0) radius = Math.max(radius, RIM + (tooth.top - RIM) * (1 - Math.cos(Math.PI * t)) / 2)
+    if (t > 0) radius = Math.max(radius, rim + (tooth.top - rim) * (1 - Math.cos(Math.PI * t)) / 2)
   }
   return radius
+}
+
+/**
+ * The frame round a drawn cog: its rim and teeth as they stand, turned by `rotation`, with `margin`
+ * beyond for the names set along them. On a phone the diagram is fitted to this, year by year, so
+ * the disc runs to the screen's edges however its teeth have grown.
+ */
+export const frameAround = (teeth, rotation, geometry, margin = 30) => {
+  let left = 0
+  let right = 0
+  let top = 0
+  let bottom = 0
+  // Layout angles run once round from wherever the sectors start, so sample twice round to cover them.
+  for (let angle = -2 * Math.PI; angle < 2 * Math.PI; angle += 0.01) {
+    const radius = rimAt(angle, teeth, geometry.rim) + margin
+    const x = Math.cos(angle + rotation) * radius
+    const y = Math.sin(angle + rotation) * radius
+    left = Math.min(left, x)
+    right = Math.max(right, x)
+    top = Math.min(top, y)
+    bottom = Math.max(bottom, y)
+  }
+  return { x: CENTRE.x + left, y: CENTRE.y + top, width: right - left, height: bottom - top }
 }
 
 /**
@@ -316,24 +391,25 @@ export const rimAt = (angle, teeth) => {
  * @param {{start: number, end: number}} sector  Angles as drawn (rotation already applied).
  * @param {object[]} teeth  This sector's teeth, also as drawn.
  */
-export const territoryPath = (sector, teeth) => {
+export const territoryPath = (sector, teeth, geometry = GEOMETRY) => {
+  const inner = geometry.bandInner
   const half = SEAM / 2
   const span = sector.end - sector.start
   const steps = Math.max(24, Math.ceil(span / 0.006))
   const outer = []
   for (let index = 0; index <= steps; index += 1) {
     const raw = sector.start + (span * index) / steps
-    const radius = rimAt(raw, teeth)
+    const radius = rimAt(raw, teeth, geometry.rim)
     const angle = Math.min(Math.max(raw, sector.start + half / radius), sector.end - half / radius)
     const point = toPoint(angle, radius)
     outer.push(`${f(point.x)},${f(point.y)}`)
   }
-  const innerStart = sector.start + half / BAND_INNER
-  const innerEnd = sector.end - half / BAND_INNER
-  const a = toPoint(innerEnd, BAND_INNER)
-  const b = toPoint(innerStart, BAND_INNER)
+  const innerStart = sector.start + half / inner
+  const innerEnd = sector.end - half / inner
+  const a = toPoint(innerEnd, inner)
+  const b = toPoint(innerStart, inner)
   const large = innerEnd - innerStart > Math.PI ? 1 : 0
-  return `M${outer.join('L')}L${f(a.x)},${f(a.y)}A${BAND_INNER},${BAND_INNER} 0 ${large} 0 ${f(b.x)},${f(b.y)}Z`
+  return `M${outer.join('L')}L${f(a.x)},${f(a.y)}A${inner},${inner} 0 ${large} 0 ${f(b.x)},${f(b.y)}Z`
 }
 
 /** Cartesian coordinates of a polar position, about the diagram's centre. */
@@ -404,3 +480,31 @@ export const sealPath = (radius = RINGS.seal * UNIT, lobes = 16, amplitude = 4, 
 }
 
 const f = (value) => Math.round(value * 100) / 100
+
+/** How far a line keeps from the centre, so it bows round the people rather than crossing them. */
+export const SEAL_CLEARANCE = RINGS.seal * UNIT + 16
+
+/**
+ * The control point that bows a straight line from `a` to `b` round the seal at the centre, or null
+ * when the line does not pass through it (or starts or ends there, as the people's own lines do).
+ * The curve's midpoint lands `clearance` from the centre, on the side the line was passing.
+ */
+export const aroundCentre = (a, b, clearance = SEAL_CLEARANCE) => {
+  const dx = b.x - a.x
+  const dy = b.y - a.y
+  const length2 = dx * dx + dy * dy
+  if (length2 < 1) return null
+  if (Math.hypot(a.x - CENTRE.x, a.y - CENTRE.y) < clearance || Math.hypot(b.x - CENTRE.x, b.y - CENTRE.y) < clearance) return null
+  const t = ((CENTRE.x - a.x) * dx + (CENTRE.y - a.y) * dy) / length2
+  if (t <= 0 || t >= 1) return null
+  const near = { x: a.x + t * dx, y: a.y + t * dy }
+  const off = Math.hypot(near.x - CENTRE.x, near.y - CENTRE.y)
+  if (off >= clearance) return null
+  // Away from the centre on the side the line passes; through the centre exactly, to its left.
+  const length = Math.sqrt(length2)
+  const ux = off > 1e-6 ? (near.x - CENTRE.x) / off : -dy / length
+  const uy = off > 1e-6 ? (near.y - CENTRE.y) / off : dx / length
+  const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }
+  const apex = { x: CENTRE.x + ux * clearance, y: CENTRE.y + uy * clearance }
+  return { x: 2 * apex.x - mid.x, y: 2 * apex.y - mid.y }
+}

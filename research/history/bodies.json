@@ -113,7 +113,7 @@
       "name": "Game Commission",
       "kind": "agency",
       "established": "1934",
-      "ended": "1957",
+      "ended": "1957-04-01",
       "becameId": null,
       "predecessorIds": [
         "provincial-game-commissioner"
@@ -162,6 +162,14 @@
       ],
       "responsible": [
         {
+          "ministry": "Ministry of Consumer and Corporate Affairs",
+          "from": "1976-12-31",
+          "to": "1986",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/3495_1976",
+          "locator": "OIC 3495/1976, operative paragraph (approved 2 December 1976)",
+          "note": "Express assignment of the Liquor Distribution Act, from its commencement (OIC 3495/1976). Capped at 1986, when the Ministry of Consumer and Corporate Affairs itself ended; who answered for the branch from then until the Ministry of Agriculture and Food in 2025 is not in this research."
+        },
+        {
           "ministry": "Ministry of Agriculture and Food",
           "from": "2025",
           "to": null
@@ -172,7 +180,8 @@
       "otherSources": [
         "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-liquor-board",
         "https://www.bcldb.com/about/about-ldb"
-      ]
+      ],
+      "establishedMeaning": "formed when the Liquor Control Board's store functions passed to the Liquor Administration Branch (BC Archives). The Liquor Distribution Branch was established by statute on 31 December 1976, when section 2 of the Liquor Distribution Act came into force (OIC 3494/1976); when the administrative name changed is not known"
     },
     {
       "id": "coal-and-petroleum-control-board",
@@ -246,15 +255,16 @@
       "name": "British Columbia Power Commission",
       "kind": "crown-corporation",
       "established": "1945-04-17",
-      "ended": "1962-03-31",
+      "ended": "1965-08-20",
       "becameId": "bc-hydro",
       "predecessorIds": [],
       "responsible": [],
-      "description": "Public utility created by the Hart government to electrify areas not served by BC Electric; amalgamated with the nationalized BC Electric Company on 31 March 1962 to form BC Hydro.",
+      "description": "Public utility created by the Hart government to electrify areas not served by BC Electric. Purportedly amalgamated with BC Electric as BC Hydro on 30 March 1962; after that Act was struck down it was amalgamated into the reconstituted Authority on 20 August 1965.",
       "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-power-commission-2",
       "otherSources": [
         "https://en.wikipedia.org/wiki/BC_Hydro"
-      ]
+      ],
+      "endedMeaning": "amalgamated with the reconstituted Authority, at 5 p.m. Vancouver time (Power Measures Act, 1966, Schedule clauses 1-2); the statutory amalgamation of 30 March 1962 had been held ultra vires in 1963, and the Power Measures Act, 1964 validated its carrying on business under the Hydro name"
     },
     {
       "id": "bc-hospital-insurance-service",
@@ -370,22 +380,23 @@
       "shortName": "BC Electric",
       "kind": "crown-corporation",
       "established": "1961-08-01",
-      "ended": "1962-03-31",
+      "ended": "1965-08-20",
       "becameId": "bc-hydro",
       "predecessorIds": [],
       "responsible": [],
-      "description": "The private BC Electric utility, expropriated by the provincial government on 1 August 1961 and merged with the BC Power Commission in 1962 to form BC Hydro.",
+      "description": "The private BC Electric utility, whose shares were vested in the Crown with effect from 2 p.m. on 1 August 1961 (confirmed retroactively in 1964 after the 1963 judgment and settlement). It operated with the Power Commission as BC Hydro from 1962 and was amalgamated into the Authority on 20 August 1965.",
       "source": "https://en.wikipedia.org/wiki/British_Columbia_Electric_Railway",
       "otherSources": [
         "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-power-commission-2"
-      ]
+      ],
+      "endedMeaning": "amalgamated with the reconstituted Authority, at 5 p.m. Vancouver time (agreement ratified by the Power Measures Act, 1966); the statutory amalgamation of 30 March 1962 had been held ultra vires in 1963. It was formally dissolved by OIC 2387/1965 on 23 August 1965"
     },
     {
       "id": "bc-hydro",
       "name": "British Columbia Hydro and Power Authority",
       "shortName": "BC Hydro",
       "kind": "crown-corporation",
-      "established": "1962-03-31",
+      "established": "1962-03-30",
       "ended": null,
       "becameId": null,
       "predecessorIds": [
@@ -394,11 +405,21 @@
         "bc-transmission-corporation"
       ],
       "responsible": [],
-      "description": "Provincial electric utility formed by merging the nationalized BC Electric Company with the BC Power Commission; it shed its gas and transit operations from 1979 and re-absorbed BC Transmission Corporation in 2010.",
+      "description": "Provincial electric utility. The 1962 Act amalgamating the nationalized BC Electric Company with the BC Power Commission was struck down in 1963; the Authority was reconstituted by the 1964 Act and absorbed both on 20 August 1965. It shed its gas and transit operations from 1979 and re-absorbed BC Transmission Corporation in 2010.",
       "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-hydro-and-power-authority-2",
       "otherSources": [
         "https://en.wikipedia.org/wiki/BC_Hydro"
-      ]
+      ],
+      "establishedMeaning": "proclaimed under the 1962 British Columbia Hydro and Power Authority Act (OIC 839/1962), amalgamating the Power Commission and BC Electric. That Act was held ultra vires on 29 July 1963; the Authority was constituted anew under the 1964 Act (in force 23 March 1964), and the amalgamation took effect at 5 p.m. on 20 August 1965. BC Archives gives 31 March 1962",
+      "conflicts": [
+        {
+          "date": "1962-03-31",
+          "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-hydro-and-power-authority-2",
+          "why": "BC Archives authority record (retrospective); the proclamation order fixes 30 March 1962"
+        }
+      ],
+      "establishedSource": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0839_1962",
+      "establishedLocator": "OIC 839/1962, proclamation of the British Columbia Hydro and Power Authority Act, 1962, effective 30 March 1962"
     },
     {
       "id": "bc-housing",
@@ -608,13 +629,14 @@
       "id": "bc-steamship-company",
       "name": "British Columbia Steamship Company (1975) Ltd.",
       "kind": "crown-corporation",
-      "established": "1975",
+      "established": "1975-05-05",
       "ended": "1992",
       "becameId": null,
       "predecessorIds": [],
       "responsible": [],
       "description": "Crown corporation created in 1975 to restore Victoria-Seattle passenger and car service with the Princess Marguerite, bought from Canadian Pacific; dissolved in 1992.",
-      "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-british-columbia-steamship-company-1975-ltd"
+      "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-british-columbia-steamship-company-1975-ltd",
+      "establishedMeaning": "incorporated under the Canada Corporations Act, as its first-year audited statements record (Public Accounts 1975/76, p. F84); the certificate was not obtained"
     },
     {
       "id": "bc-buildings-corporation",
@@ -702,7 +724,31 @@
       "predecessorIds": [],
       "responsible": [],
       "description": "Crown corporation created in 1977 to run the BC Summer and Winter Games and manage Team BC at the Canada Games.",
-      "source": "https://en.wikipedia.org/wiki/BC_Games_Society"
+      "source": "https://en.wikipedia.org/wiki/BC_Games_Society",
+      "names": [
+        {
+          "name": "B.C. Summer and Winter Games Society",
+          "from": "1987-06-26",
+          "to": "1995-08-21",
+          "source": "https://orgbook.gov.bc.ca/api/v4/topic/2142997/credential-set",
+          "locator": "S0022603, credentials 3111202 and 3111219"
+        },
+        {
+          "name": "B.C. Games Society",
+          "from": "1995-08-21",
+          "to": "2003-08-07",
+          "source": "https://orgbook.gov.bc.ca/api/v4/topic/2142997/credential-set",
+          "locator": "S0022603, credentials 3111219 and 3111382"
+        },
+        {
+          "name": "BC Games Society",
+          "from": "2003-08-07",
+          "to": null,
+          "source": "https://orgbook.gov.bc.ca/api/v4/topic/2142997/credential-set",
+          "locator": "S0022603, credential 3111382"
+        }
+      ],
+      "establishedMeaning": "first held, according to a secondary source (Wikipedia) no primary source yet confirms; the society itself was registered on 26 June 1987 as the B.C. Summer and Winter Games Society (BC Registries S0022603), and what ran the Games before then is not known"
     },
     {
       "id": "open-learning-institute",
@@ -765,31 +811,58 @@
       "name": "Urban Transit Authority",
       "shortName": "UTA",
       "kind": "crown-corporation",
-      "established": "1979",
-      "ended": "1982",
+      "established": "1978-07-20",
+      "ended": "1982-08-12",
       "becameId": "bc-transit",
       "predecessorIds": [],
       "responsible": [],
-      "description": "Crown corporation created in 1979 to coordinate planning, marketing and funding of municipal transit; took over Victoria and Vancouver transit from BC Hydro in 1980 and was renamed BC Transit in 1982.",
+      "description": "Crown corporation established on 20 July 1978 under the Urban Transit Authority Act to plan and fund municipal transit, its directors appointed by Cabinet from elected municipal office-holders; took over Victoria and Vancouver transit from BC Hydro in 1980 and was renamed British Columbia Transit on 12 August 1982.",
       "source": "https://www.bctransit.com/about/history/",
       "otherSources": [
         "https://search-bcarchives.royalbcmuseum.bc.ca/b-c-transit"
-      ]
+      ],
+      "establishedMeaning": "established by section 2 of the Urban Transit Authority Act, in force by proclamation (OIC 1931/1978, approved 13 July 1978); the Act was assented on 29 June 1978",
+      "endedMeaning": "renamed British Columbia Transit (Urban Transit Authority Amendment Act, 1982, in force 12 August 1982): the corporation continued under the new name, so this ends the name, not the body"
     },
     {
       "id": "metro-transit-operating-company",
       "name": "Metro Transit Operating Company",
       "shortName": "MTOC",
       "kind": "crown-corporation",
-      "established": "1979-07-31",
-      "ended": "1983",
-      "becameId": "bc-transit",
+      "established": "1980-01-18",
+      "ended": null,
+      "becameId": null,
       "predecessorIds": [],
       "responsible": [],
-      "description": "Crown corporation established by the Metro Transit Operating Company Act to operate Vancouver-area transit; merged with the Urban Transit Authority into BC Transit.",
+      "description": "Crown corporation established on 18 January 1980 under the Metro Transit Operating Company Act to operate Vancouver-area transit, with a Cabinet-appointed board. On 1 June 1985 its property, obligations and employees passed to British Columbia Transit, and a new board was appointed the same day; when the company ended in law is untraced.",
       "source": "https://search-bcarchives.royalbcmuseum.bc.ca/metro-transit-operating-company",
       "otherSources": [
         "https://en.wikipedia.org/wiki/BC_Transit"
+      ],
+      "establishedMeaning": "established by the Metro Transit Operating Company Act, in force by proclamation (OIC 29/1980, approved 10 January 1980); the Act was assented on 31 July 1979",
+      "serviceSuccessorIds": [
+        "bc-transit"
+      ],
+      "endStatus": "untraced",
+      "operationalEnd": {
+        "date": "1985-06-01",
+        "meaning": "its property, rights, debts, obligations and employees passed to British Columbia Transit (BC Transit Amendment Act (No. 2), 1985)",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1093_1985",
+        "locator": "OIC 1093/1985, bringing the British Columbia Transit Amendment Act (No. 2), 1985 into force on 1 June 1985"
+      },
+      "attestations": [
+        {
+          "date": "1985-06-01",
+          "scope": "a new board appointed from that day",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1096_1985",
+          "locator": "OIC 1096/1985, operative paragraph (\"effective June 1, 1985\")"
+        },
+        {
+          "date": "1991",
+          "scope": "its constituting Act in the 1991 consolidation, administered by Human Resources",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/91consol15/91consol15/79257",
+          "locator": "Metro Transit Operating Company Act, 1991 consolidation, administration heading"
+        }
       ]
     },
     {
@@ -815,32 +888,33 @@
       "id": "bc-place-ltd",
       "name": "British Columbia Place Ltd.",
       "kind": "crown-corporation",
-      "established": "1980-05",
+      "established": "1980-03-25",
       "ended": "1987-03",
       "becameId": "bc-enterprise-corporation",
       "predecessorIds": [],
       "responsible": [],
       "description": "Crown corporation established May 1980 (developer of BC Place); renamed British Columbia Enterprise Corporation in March 1987.",
-      "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-place-ltd-2"
+      "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-place-ltd-2",
+      "establishedMeaning": "registered under the Company Act as British Columbia Place Ltd., certificate 207097 (BC Registries BC0207097), the certificate the British Columbia Place Act (SBC 1980 c. 2) names; BC Archives gives May 1980"
     },
     {
       "id": "bc-transit",
       "name": "BC Transit",
       "kind": "crown-corporation",
-      "established": "1982",
+      "established": "1982-08-12",
       "ended": null,
       "becameId": null,
       "predecessorIds": [
-        "urban-transit-authority",
-        "metro-transit-operating-company"
+        "urban-transit-authority"
       ],
       "responsible": [],
-      "description": "Provincial transit Crown corporation, renamed from the Urban Transit Authority in 1982; it handed Metro Vancouver transit to TransLink in 1999 and now coordinates transit elsewhere in the province.",
+      "description": "Provincial transit Crown corporation: the Urban Transit Authority (1978) renamed British Columbia Transit on 12 August 1982. It took over the Metro Transit Operating Company's property, obligations and employees on 1 June 1985, handed Metro Vancouver transit to TransLink in 1999 and now coordinates transit elsewhere in the province.",
       "source": "https://www.bctransit.com/about/history/",
       "otherSources": [
         "https://search-bcarchives.royalbcmuseum.bc.ca/b-c-transit",
         "https://en.wikipedia.org/wiki/BC_Transit"
-      ]
+      ],
+      "establishedMeaning": "renamed from the Urban Transit Authority, and made an agent of the Crown, by the Urban Transit Authority Amendment Act, 1982 (OIC 1534/1982): the same corporation, established on 20 July 1978"
     },
     {
       "id": "bc-utilities-commission",
@@ -934,7 +1008,8 @@
       ],
       "responsible": [],
       "description": "Crown corporation formed in March 1987 by renaming BC Place Ltd. and merging in the BC Development Corporation; it ceased operations on 30 September 1989, transferring its assets to the Province and B.C. Pavilion Corporation.",
-      "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-enterprise-corporation"
+      "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-enterprise-corporation",
+      "endedMeaning": "wound down: it ceased operations and passed its remaining assets to the Province and B.C. Pavilion Corporation (BC Archives). It was not dissolved then: the registry shows the company restored on 2 June 1993 and administratively dissolved on 27 March 2023"
     },
     {
       "id": "open-learning-agency",
@@ -1006,8 +1081,11 @@
       "becameId": null,
       "predecessorIds": [],
       "responsible": [],
-      "description": "Crown corporation established in 1993 under the Transportation Act to plan, acquire, build and hold transportation infrastructure.",
-      "source": "https://www2.gov.bc.ca/gov/content/transportation/transportation-reports-and-reference/ministry-reporting/bctfa"
+      "description": "Crown corporation established in 1993 under the Build BC Act (the Transportation Act replaced it as its basis on 31 December 2004) to plan, acquire, build and hold transportation infrastructure. It owns BC Railway Company (from 1 April 2010) and Transportation Investment Corporation (from 1 April 2018).",
+      "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/sup-e/bc-transportation-financing-authority-fs-2025-26.pdf",
+      "otherSources": [
+        "https://www2.gov.bc.ca/gov/content/transportation/transportation-reports-and-reference/ministry-reporting/bctfa"
+      ]
     },
     {
       "id": "columbia-power-corporation",
@@ -1141,21 +1219,6 @@
       ]
     },
     {
-      "id": "regional-health-boards-1997",
-      "name": "Regional health boards, community health councils and community health services societies",
-      "kind": "health-authority",
-      "established": "1997",
-      "ended": "2001-12",
-      "becameId": null,
-      "predecessorIds": [],
-      "responsible": [],
-      "description": "Under the 1997 amendments to the Health Authorities Act, 52 local health authorities (11 regional health boards, 34 community health councils, 7 community health services societies) ran health services until they were amalgamated into five regional authorities in December 2001.",
-      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1564394/",
-      "otherSources": [
-        "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
-      ]
-    },
-    {
       "id": "industry-training-and-apprenticeship-commission",
       "name": "Industry Training and Apprenticeship Commission",
       "shortName": "ITAC",
@@ -1261,90 +1324,97 @@
       "name": "Fraser Health Authority",
       "shortName": "Fraser Health",
       "kind": "health-authority",
-      "established": "2001-12",
+      "established": "2001-12-12",
       "ended": null,
       "becameId": null,
-      "predecessorIds": [
-        "regional-health-boards-1997"
-      ],
+      "predecessorIds": [],
       "responsible": [],
-      "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated the Fraser Valley, Simon Fraser and South Fraser health regions.",
-      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+      "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates three regional boards into it: the Fraser Valley, Simon Fraser and South Fraser health regions.",
+      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "otherSources": [
+        "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+      ]
     },
     {
       "id": "interior-health",
       "name": "Interior Health Authority",
       "shortName": "Interior Health",
       "kind": "health-authority",
-      "established": "2001-12",
+      "established": "2001-12-12",
       "ended": null,
       "becameId": null,
-      "predecessorIds": [
-        "regional-health-boards-1997"
-      ],
+      "predecessorIds": [],
       "responsible": [],
-      "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated about 20 former health regions and councils in the southern Interior.",
-      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+      "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates seventeen bodies into it: the Thompson, North Okanagan and Okanagan Similkameen health regions and fourteen councils and transitional authorities of the Kootenays and Cariboo. The East Kootenay, Kootenay Boundary and most of the Cariboo community health services societies’ services passed to it at the same time.",
+      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "otherSources": [
+        "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+      ]
     },
     {
       "id": "northern-health",
       "name": "Northern Health Authority",
       "shortName": "Northern Health",
       "kind": "health-authority",
-      "established": "2001-12",
+      "established": "2001-12-12",
       "ended": null,
       "becameId": null,
-      "predecessorIds": [
-        "regional-health-boards-1997"
-      ],
+      "predecessorIds": [],
       "responsible": [],
-      "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated the Northern Interior Regional Health Board and northern health councils.",
-      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+      "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates thirteen bodies into it: the Northern Interior Regional Health Board and twelve northwest, northeast and Quesnel councils. The North West and Peace Liard societies’ services, and the Cariboo society’s in Quesnel, passed to it at the same time.",
+      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "otherSources": [
+        "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+      ]
     },
     {
       "id": "vancouver-coastal-health",
       "name": "Vancouver Coastal Health Authority",
       "shortName": "Vancouver Coastal Health",
       "kind": "health-authority",
-      "established": "2001-12",
+      "established": "2001-12-12",
       "ended": null,
       "becameId": null,
-      "predecessorIds": [
-        "regional-health-boards-1997"
-      ],
+      "predecessorIds": [],
       "responsible": [],
-      "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated the Vancouver/Richmond Health Board, North Shore Health Region and coastal community health councils.",
-      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+      "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates five bodies into it: the Vancouver/Richmond Health Board, the North Shore Health Region and the Powell River, Sea to Sky and Sunshine Coast councils; the Coast Garibaldi society’s services passed to it. The Bella Coola and Central Coast areas joined it from Interior and Vancouver Island on 18 March 2002.",
+      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "otherSources": [
+        "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+      ]
     },
     {
       "id": "vancouver-island-health",
       "name": "Vancouver Island Health Authority",
       "shortName": "Island Health",
       "kind": "health-authority",
-      "established": "2001-12",
+      "established": "2001-12-12",
       "ended": null,
       "becameId": null,
-      "predecessorIds": [
-        "regional-health-boards-1997"
-      ],
+      "predecessorIds": [],
       "responsible": [],
-      "description": "One of five regional health authorities created by the December 2001 amalgamation under the Regional Health Boards Regulation (B.C. Reg. 293/2001). Amalgamated the Capital Health Region, Central Vancouver Island Health Region and island health councils.",
-      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/293_2001"
+      "description": "One of five geographic health authorities created on 12 December 2001 by the Regional Health Boards Regulation (B.C. Reg. 293/2001). Schedule A amalgamates six bodies into it: the Capital and Central Vancouver Island health regions and four councils and transitional authorities of the north island and Central Coast; the Upper Island/Central Coast society’s services passed to it. The Central Coast area moved to Vancouver Coastal on 18 March 2002.",
+      "source": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "otherSources": [
+        "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm"
+      ]
     },
     {
       "id": "provincial-health-services-authority",
       "name": "Provincial Health Services Authority",
       "shortName": "PHSA",
       "kind": "health-authority",
-      "established": "2001-12",
+      "established": "2001-12-12",
       "ended": null,
       "becameId": null,
-      "predecessorIds": [
-        "regional-health-boards-1997"
-      ],
+      "predecessorIds": [],
       "responsible": [],
-      "description": "Province-wide health authority created in December 2001 to run specialized provincial services such as BC Cancer, BCCDC and BC Emergency Health Services; its mandate was refocused after a 2025 review.",
-      "source": "https://en.wikipedia.org/wiki/Provincial_Health_Services_Authority"
+      "description": "Province-wide health authority, incorporated under the Society Act on 12 December 2001 to coordinate specialized provincial services: the BC Cancer Agency, BC Centre for Disease Control, BC Provincial Renal Agency, BC Transplant Society, Children’s and Women’s Health Centre, Riverview Hospital, Forensic Psychiatric Services and others. It is not a successor of the regional boards; its agencies each have their own history, and their branch societies were amalgamated with it into one society on 1 April 2018. Its mandate was refocused after a 2025 review.",
+      "source": "https://www.phsa.ca/about-site/Documents/PHSA%20Consolidated%20FS.pdf",
+      "otherSources": [
+        "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002HLTH0009-000402.htm",
+        "https://en.wikipedia.org/wiki/Provincial_Health_Services_Authority"
+      ]
     },
     {
       "id": "partnerships-bc",
@@ -1709,11 +1779,13 @@
       "becameId": null,
       "predecessorIds": [],
       "responsible": [],
-      "description": "Standalone shared-services organization, announced in December 2025 after the health-authority review and formally established on 1 April 2026 within the Health Employers Association of BC, to centralize corporate and administrative services for all health authorities.",
-      "source": "https://www.heu.org/shared-health-services-updates",
+      "description": "Stand-alone shared-services society, announced in December 2025 after the health-authority review and incorporated on 1 April 2026, to provide corporate and administrative services to the health authorities. It is a member of the Health Employers Association of BC, not a part of it, and its functions move to it in waves after incorporation.",
+      "source": "https://free.bcpublications.ca/civix/document/id/corpreg/corpreg/soc0409soc0526",
       "otherSources": [
+        "https://hsabc.org/BCSHS_townhall_questions",
+        "https://www.heu.org/shared-health-services-updates",
         "https://news.gov.bc.ca/releases/2025HLTH0103-001195",
-        "https://en.wikipedia.org/wiki/Provincial_Health_Services_Authority"
+        "https://www.bcbudget.gov.bc.ca/Annual_Reports/2025_2026/pdf/ministry/hlth.pdf"
       ]
     }
   ],

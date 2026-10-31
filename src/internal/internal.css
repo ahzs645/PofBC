@@ -81,9 +81,18 @@
   justify-content: center;
   height: 360px;
   padding: 20px;
-  background: #fff;
+  background: var(--tile, #fff);
   color: #57534e;
 }
+/* Dark mode (see InternalLogosView.jsx): a logo on plain white paper moves onto a dark tile. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .internal-logos__artwork[data-paper] { background: #2a2824; color: #b5aea4; }
+  :root:not([data-theme='light']) .internal-logos__artwork[data-paper][data-ink='mono'] .internal-logos__svg { filter: invert(1); }
+  :root:not([data-theme='light']) .internal-logos__artwork[data-paper][data-ink='colour'] .internal-logos__svg > svg { filter: drop-shadow(0 0 1px rgb(255 255 255 / 0.55)); }
+}
+:root[data-theme='dark'] .internal-logos__artwork[data-paper] { background: #2a2824; color: #b5aea4; }
+:root[data-theme='dark'] .internal-logos__artwork[data-paper][data-ink='mono'] .internal-logos__svg { filter: invert(1); }
+:root[data-theme='dark'] .internal-logos__artwork[data-paper][data-ink='colour'] .internal-logos__svg > svg { filter: drop-shadow(0 0 1px rgb(255 255 255 / 0.55)); }
 .internal-logos__svg { width: 100%; height: 100%; }
 .internal-logos__svg:empty { display: none; }
 .internal-logos__svg > svg { display: block; width: 100%; height: 100%; }
@@ -124,3 +133,11 @@ details.internal-logos__footnote p { max-width: 90ch; margin: 8px 0 0; }
   .internal-logos__artwork { height: 340px; }
   .internal-logos__design .internal-logos__artwork, .internal-logos__variant .internal-logos__artwork { height: 300px; }
 }
+
+/* An undated clipping is important context, but not a dated adoption record. */
+.internal-logos__article { margin-top: 18px; padding: 16px; border: 1px solid var(--outline); border-radius: var(--radius-sm); }
+.internal-logos__article h4 { margin: 0 0 8px; font-size: 14px; }
+.internal-logos__article blockquote { margin: 8px 0; padding-left: 12px; border-left: 3px solid var(--mid); font-size: 15px; font-style: italic; }
+.internal-logos__article p { margin: 10px 0 0; }
+.internal-logos__article .internal-logos__article-evidence { color: var(--ink); }
+.internal-logos__article .internal-logos__article-source { font-size: 12px; }

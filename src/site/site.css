@@ -827,12 +827,20 @@ input.share__url {
 .view-switcher__trigger:hover { background: var(--menu-hover); }
 .view-switcher__trigger svg { color: var(--menu-muted); transition: transform 150ms; }
 
+/* Wide, the menu hangs from the trigger and sets the views out in two columns, read down the first
+   and then the second; it is never taller than the room under the trigger (ViewSwitcher.jsx sets
+   --menu-room), and scrolls inside that. */
 .view-switcher__menu {
+  --menu-columns: 2;
   position: absolute;
   top: calc(100% + 8px);
   left: -4px;
   z-index: 50;
-  width: min(300px, calc(100vw - 48px));
+  box-sizing: border-box;
+  width: min(620px, calc(100vw - 32px));
+  max-height: var(--menu-room, 70vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 8px;
   border: 1px solid var(--menu-border);
   border-radius: 16px;
@@ -843,6 +851,17 @@ input.share__url {
   letter-spacing: 0;
   white-space: normal;
 }
+
+.view-switcher__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(var(--menu-rows, 5), auto);
+  grid-auto-flow: column;
+  gap: 2px 4px;
+}
+
+/* The page behind a phone's sheet is dimmed, and a tap on it closes the menu. */
+.view-switcher__backdrop { display: none; }
 
 .view-switcher__heading {
   padding: 8px 12px 6px;
@@ -868,9 +887,10 @@ input.share__url {
 }
 
 .view-switcher__item:hover, .view-switcher__item:focus-visible { background: var(--menu-hover); outline: none; }
+.view-switcher__item[aria-checked='true'] { background: var(--menu-hover); }
 .view-switcher__text { flex: 1; min-width: 0; display: grid; }
 .view-switcher__label { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; }
-.view-switcher__description { font-size: 12px; color: var(--menu-muted); }
+.view-switcher__description { font-size: 12px; line-height: 1.4; color: var(--menu-muted); }
 .view-switcher__check { flex: none; width: 14px; }
 
 .view-switcher__badge {
@@ -882,6 +902,31 @@ input.share__url {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+/* A phone: one column, as a sheet across the screen just under the masthead. Each view keeps its
+   one-line description, cut short rather than wrapped, so all ten fit on most screens; the rest
+   scroll within the sheet. */
+@media (max-width: 639px) {
+  .view-switcher__menu {
+    --menu-columns: 1;
+    position: fixed;
+    top: var(--menu-top, 72px);
+    left: 12px;
+    right: 12px;
+    width: auto;
+    padding: 6px;
+  }
+  .view-switcher__list { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; gap: 0; }
+  .view-switcher__backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 49;
+    background: rgb(0 0 0 / 0.28);
+  }
+  .view-switcher__item { padding: 9px 10px; }
+  .view-switcher__description { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 }
 
 /* ── The gallery view ──────────────────────────────────────────────────────────────────────── */
@@ -1121,6 +1166,36 @@ input.share__url {
 }
 
 .gallery__art--cover svg { width: 100%; max-height: 120px; height: auto; }
+.gallery__collected-image {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+  border-radius: var(--radius-sm);
+}
+.gallery__collected-image[data-dark="true"] { background: #243449; }
+.gallery__art--cover .gallery__collected-image { height: 120px; }
+.gallery__recovered { display: grid; gap: 16px; }
+.gallery__recovered h2, .gallery__recovered p { margin: 0; }
+.gallery__recovered-preview {
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  padding: 40px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.gallery__recovered-preview[data-dark] { background: #243449; }
+.gallery__recovered-preview img { max-width: 100%; width: auto; max-height: 420px; object-fit: contain; }
+.gallery__asset-format { font-size: 13px; color: var(--ink-muted); }
+.gallery__asset-downloads { flex-wrap: wrap; }
+.gallery__asset-source { margin: 0; display: grid; gap: 10px; font-size: 14px; }
+.gallery__asset-source > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; }
+.gallery__asset-source dt { font-weight: 600; }
+.gallery__asset-source dd { margin: 0; overflow-wrap: anywhere; }
 .gallery__collection-text { display: grid; gap: 2px; }
 .gallery__collection-title { font-size: 18px; font-weight: 600; }
 
@@ -1399,6 +1474,47 @@ input.share__url {
    surface card, and an empty dashed slot where the artwork would be — unmistakably not a mark. */
 .gallery__shelf-intro { padding-top: 0; font-size: 14px; }
 
+.gallery__collecting-group { display: grid; gap: 8px; margin-top: 8px; }
+.gallery__collecting-heading { margin: 0; font-size: 15px; font-weight: 600; cursor: default; }
+details.gallery__collecting-group > summary { cursor: pointer; }
+.gallery__collecting-count { margin-left: 6px; font-size: 13px; font-weight: 400; color: var(--ink-faint); }
+.gallery__collecting-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* A body still wanted is dashed, like the gallery's other empty slots; one collected is a card. */
+.gallery__collecting-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px dashed var(--mid);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+}
+.gallery__collecting-row[data-held] { border-style: solid; background: var(--surface); }
+.gallery__collecting-name { display: grid; gap: 1px; min-width: 0; }
+.gallery__collecting-years { font-size: 12px; color: var(--ink-faint); }
+.gallery__collecting-status { font-size: 12px; font-weight: 500; color: var(--ink-faint); white-space: nowrap; }
+button.gallery__collecting-status, .gallery__collecting-graph {
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--hover, var(--mid));
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.gallery__collecting-graph { background: transparent; color: var(--ink-2); }
+.gallery__collecting-graph:hover, button.gallery__collecting-status:hover { background: var(--mid); }
+
 .gallery__wanted {
   display: grid;
   align-content: start;
@@ -1426,3 +1542,426 @@ input.share__url {
 .gallery__wanted h3 { margin: 0; }
 .gallery__wanted .gallery__facts dd { font-size: 13px; }
 .gallery__wanted .gallery__caveat { margin: 0; }
+
+/* ── Salaries (src/salaries/SalariesView.jsx) ────────────────────────────────────────────────
+   The panel's card style from the government view: a title with its figure to the right, then a
+   grid of bordered cards, each led by a person's head and shoulders. */
+
+.salaries { --salaries-ink: #2f5f9e; display: grid; gap: 16px; }
+/* The period chooser also opens inside the government view, which has no salaries page around it. */
+.salaries-range { --salaries-ink: #2f5f9e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) :is(.salaries, .salaries-range) { --salaries-ink: #6d97e0; } }
+:root[data-theme='dark'] :is(.salaries, .salaries-range) { --salaries-ink: #6d97e0; }
+.salaries__intro { padding: 20px; border-radius: var(--radius); background: var(--surface); }
+.salaries__intro p { margin: 8px 0 0; max-width: 70ch; font-size: 15px; line-height: 1.5; color: var(--ink-muted); }
+.salaries__heading { margin: 0; font-size: 22px; font-weight: 600; color: var(--ink); }
+.salaries__search { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+@media (max-width: 560px) { .salaries__search { grid-template-columns: 1fr; } .salaries-range__trigger { width: 100%; } }
+.salaries__search input, .salaries__search select {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--mid);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+}
+/* Search fields take the salaries' own blue when focused, as a soft ring rather than the browser's
+   bright outline. */
+.salaries input[type='search']:focus, .salaries input[type='number']:focus, .salaries select:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--salaries-ink) 70%, var(--mid));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--salaries-ink) 20%, transparent);
+}
+.salaries input[type='search']:focus:not(:focus-visible) { box-shadow: none; }
+
+/* The search box with its name tip: an "i" inside the box's end that shows the tip on hover or focus. */
+.salaries__field { position: relative; display: grid; min-width: 0; }
+.salaries__field input { width: 100%; padding-right: 44px; }
+.salaries__tip { position: absolute; top: 50%; right: 8px; transform: translateY(-50%); }
+.salaries__tip-button {
+  display: grid; place-items: center; width: 24px; height: 24px; padding: 0;
+  border: 1px solid var(--mid); border-radius: 50%; background: var(--surface); color: var(--ink-faint);
+  font: italic 600 12px/1 Georgia, serif; cursor: help;
+}
+.salaries__tip-button:hover, .salaries__tip-button:focus-visible { border-color: var(--salaries-ink); color: var(--salaries-ink); outline: none; }
+.salaries__tip-text {
+  position: absolute; right: -8px; top: calc(100% + 10px); z-index: 30; width: min(320px, 80vw);
+  padding: 10px 12px; border-radius: 10px; background: var(--ink); color: var(--surface);
+  font-size: 13px; line-height: 1.45; box-shadow: var(--menu-shadow-token);
+  opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 120ms, transform 120ms, visibility 120ms;
+}
+.salaries__tip:hover .salaries__tip-text, .salaries__tip:focus-within .salaries__tip-text { opacity: 1; visibility: visible; transform: none; }
+
+/* The period picker: a button the height of the search box, opening the bar picker in a panel. */
+.salaries-range { position: relative; }
+.salaries-range__trigger {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; height: 100%; min-width: 11em;
+  padding: 10px 12px; border: 1px solid var(--mid); border-radius: 10px; background: var(--surface); color: var(--ink);
+  font: inherit; font-size: 15px; cursor: pointer; white-space: nowrap;
+}
+.salaries-range__trigger:hover { background: var(--hover); }
+.salaries-range__trigger:focus-visible { outline: none; border-color: var(--salaries-ink); box-shadow: 0 0 0 3px color-mix(in srgb, var(--salaries-ink) 20%, transparent); }
+.salaries-range__trigger svg { color: var(--ink-faint); flex: none; transition: transform 150ms; }
+.salaries-range__panel {
+  --sp-ink: var(--salaries-ink); --sp-mid: var(--mid); --sp-faint: var(--ink-faint); --sp-hover: var(--hover); --sp-text: var(--ink);
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 40; box-sizing: border-box; width: min(720px, calc(100vw - 32px));
+  display: grid; gap: 10px; padding: 14px; border: 1px solid var(--outline); border-radius: 16px;
+  background: var(--surface); box-shadow: var(--menu-shadow-token);
+}
+.salaries-range__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 12px; }
+.salaries-range__chosen { margin: 0; font-size: 16px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.salaries-range__hint { margin: 0; font-size: 13px; color: var(--ink-faint); }
+.salaries-range__quick { display: flex; flex-wrap: wrap; gap: 6px; }
+.salaries-range__quick button {
+  padding: 6px 12px; border: 1px solid var(--mid); border-radius: 999px; background: var(--surface);
+  color: var(--ink); font: inherit; font-size: 13px; cursor: pointer;
+}
+.salaries-range__quick button[aria-pressed='true'] { border-color: var(--ink); background: var(--ink); color: var(--surface); }
+.salaries-range__group { display: grid; gap: 6px; }
+.salaries-range__group-title { margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
+.salaries-range__group-title span { margin-left: 6px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+/* Each period a chip: its year, and under it a bar as long as its share of the records. Chips in
+   the range are tinted, its two ends filled. */
+.salaries-range__chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 4px; }
+.salaries-range__chip {
+  display: grid; gap: 5px; min-height: 44px; padding: 7px 8px 6px; border: 1px solid var(--mid); border-radius: 8px;
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 13px; text-align: left; cursor: pointer;
+}
+.salaries-range__chip:hover { border-color: var(--salaries-ink); }
+.salaries-range__chip:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--salaries-ink) 25%, transparent); }
+.salaries-range__chip[data-empty] { color: var(--ink-faint); }
+.salaries-range__chip[aria-pressed='true'] { border-color: color-mix(in srgb, var(--salaries-ink) 55%, var(--mid)); background: color-mix(in srgb, var(--salaries-ink) 14%, var(--surface)); }
+.salaries-range__chip[data-edge] { border-color: var(--salaries-ink); background: var(--salaries-ink); color: #fff; }
+.salaries-range__year { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.salaries-range__bar { display: block; height: 3px; border-radius: 2px; background: color-mix(in srgb, var(--mid) 60%, transparent); }
+.salaries-range__bar span { display: block; height: 100%; border-radius: inherit; background: var(--salaries-ink); opacity: 0.7; }
+.salaries-range__chip[data-edge] .salaries-range__bar { background: rgb(255 255 255 / 0.3); }
+.salaries-range__chip[data-edge] .salaries-range__bar span { background: #fff; opacity: 1; }
+.salaries-range__actions { display: flex; justify-content: flex-end; }
+.salaries-range__actions .salaries__more { margin: 0; }
+@media (max-width: 639px) {
+  /* A phone: a sheet at the foot of the screen, scrolling within, with Done kept in reach. */
+  .salaries-range__panel { position: fixed; left: 12px; right: 12px; top: auto; bottom: 12px; width: auto; max-height: min(78vh, 640px); overflow-y: auto; padding: 14px 12px 0; }
+  .salaries-range__chips { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+  .salaries-range__actions { position: sticky; bottom: 0; margin: 0 -12px; padding: 10px 12px 12px; background: var(--surface); border-top: 1px solid var(--hover); }
+  .salaries-range__actions .salaries__more { width: 100%; padding: 10px; }
+}
+
+/* Pages under a list of cards. */
+/* Centred under its list: the page buttons on one line, how many are shown on the line under them. */
+.salaries-pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px; margin-top: 12px; font-size: 14px; }
+.salaries-pager button {
+  min-width: 36px; height: 36px; padding: 0 10px; border: 0; border-radius: 999px;
+  background: var(--hover); color: var(--ink); font: inherit; font-variant-numeric: tabular-nums; cursor: pointer;
+}
+.salaries-pager button:disabled { opacity: 0.4; cursor: default; }
+.salaries-pager button[aria-current='page'] { background: var(--ink); color: var(--surface); font-weight: 600; }
+.salaries-pager__slot { display: inline-flex; align-items: center; gap: 4px; }
+.salaries-pager__gap { color: var(--ink-faint); padding: 0 2px; }
+.salaries-pager__range { flex-basis: 100%; margin-top: 4px; text-align: center; color: var(--ink-faint); font-size: 13px; font-variant-numeric: tabular-nums; }
+@media (max-width: 480px) {
+  .salaries-pager { gap: 3px; }
+  .salaries-pager button { min-width: 34px; height: 34px; padding: 0 8px; }
+  .salaries-pager__slot { gap: 3px; }
+}
+
+/* What is shown, and how: the tabs on the left, cards or a table on the right. */
+.salaries__browse-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.salaries__browse-bar > .field { margin: 0; width: auto; max-width: 100%; }
+.salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 320px; max-width: 520px; }
+.salaries__browse-bar .segmented { --track: var(--mid); --segment: var(--surface); }
+.salaries__browse-bar .segmented button { white-space: nowrap; }
+.salaries__intro .salaries__tiles { margin-top: 12px; }
+
+.salaries__hint, .salaries__note { margin: 0; font-size: 14px; color: var(--ink-faint); }
+.salaries__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 12px; margin-bottom: 8px; }
+.salaries__title { margin: 0; font-size: 15px; font-weight: 600; color: var(--ink); }
+.salaries__meta { margin: 0; font-size: 13px; color: var(--ink-faint); }
+.salaries__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 8px; }
+@media (max-width: 400px) { .salaries__grid { grid-template-columns: 1fr; } }
+.salaries__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  height: 100%;
+  padding: 8px 14px 8px 10px;
+  border: 1px solid var(--mid);
+  border-radius: 12px;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+.salaries__card:hover { background: var(--hover); }
+.salaries__card--still { cursor: default; }
+.salaries__card--still:hover { background: var(--surface); }
+.salaries__lead { flex: none; width: 1em; height: 1em; margin-top: 0.2em; }
+.salaries__icon { display: block; width: 1em; height: 1em; overflow: visible; }
+.salaries__text { display: grid; gap: 2px; flex: 1; min-width: 0; }
+.salaries__name { line-height: 1.25; color: var(--ink); overflow-wrap: anywhere; }
+.salaries__line { display: block; font-size: 12px; line-height: 1.35; color: var(--ink-faint); font-weight: 400; }
+.salaries__line[data-up] { color: #2e7d4f; }
+.salaries__aside { flex: none; display: grid; justify-items: end; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+.salaries__more, .salaries__back {
+  justify-self: start;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--hover);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.salaries__back { margin: 0 0 8px; }
+.salaries__person { display: grid; gap: 8px; padding: 20px; border-radius: var(--radius); background: var(--surface); }
+.salaries__person .salaries__card { background: var(--surface); }
+.salaries__link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.salaries__source { margin: 0; font-size: 12px; line-height: 1.5; color: var(--ink-faint); max-width: 80ch; }
+.salaries__source p { margin: 0.35em 0; }
+.salaries__name[data-missing] { color: var(--ink-faint); font-style: italic; }
+.salaries__search--one { grid-template-columns: 1fr; margin-bottom: 12px; }
+.salaries__sector { margin-top: 8px; }
+.salaries__tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 4px 0 0; }
+@media (max-width: 560px) { .salaries__tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.salaries__tiles div { padding: 10px 12px; border-radius: 10px; background: var(--hover); }
+.salaries__tiles dt { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
+.salaries__tiles dd { margin: 2px 0 0; font-size: 18px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.salaries__tiles--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 560px) {
+  .salaries__tiles--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .salaries__tiles--three div { padding: 8px 10px; }
+  .salaries__tiles--three dd { font-size: 15px; }
+}
+.salaries__tiles dd.salaries__line { margin: 0; font-size: 12px; font-weight: 400; color: var(--ink-faint); }
+.salaries__hint--small { font-size: 13px; }
+
+/* How pay moved: the tip beside a heading, the measures as tiles, and charts side by side when there
+   is room. */
+/* Its text opens under the heading it sits in, from the heading's start and no wider than it, so it
+   stays on screen wherever the "i" falls. */
+.salaries__tip--inline { position: static; top: auto; right: auto; transform: none; display: inline-block; vertical-align: -4px; margin-left: 6px; }
+.salaries__tip--inline .salaries__tip-button { width: 20px; height: 20px; font-size: 11px; }
+.salaries__tip--inline .salaries__tip-text { left: 0; right: auto; top: calc(100% + 6px); width: min(420px, 100%); font-weight: 400; letter-spacing: normal; text-transform: none; }
+.salaries__title, .salaries__order-note { position: relative; }
+.salaries__growth { margin-top: 16px; }
+.salaries__growth .salaries__title { margin-bottom: 8px; }
+.salaries__charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px 24px; margin-top: 12px; }
+.salaries__chart-title { margin: 0; font-size: 13px; font-weight: 600; color: var(--ink-faint); }
+.salaries__order-note { display: flex; align-items: center; gap: 0; margin: 0; flex: 1 1 260px; }
+
+/* A year's records in pay bands: a label, a bar as long as its share, and its count. */
+.salaries-bands { display: grid; gap: 4px; margin: 8px 0 0; padding: 0; list-style: none; }
+.salaries-bands li { display: grid; grid-template-columns: 96px minmax(0, 1fr) 56px; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.salaries-bands__bar { height: 14px; border-radius: 3px; background: var(--hover); overflow: hidden; }
+.salaries-bands__bar span { display: block; height: 100%; min-width: 2px; border-radius: 3px; background: var(--salaries-ink, #2f5f9e); }
+.salaries-bands__count { text-align: right; color: var(--ink); }
+.salaries__title--spaced { margin-top: 12px; }
+.salaries__year-title { margin: 4px 0 0; font-size: 15px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.salaries__sector { display: grid; gap: 8px; margin-top: 16px; }
+.salaries__sector-title { margin: 0; font-size: 14px; font-weight: 600; color: var(--ink); }
+.salaries__sector-title .salaries__meta { display: inline; margin-left: 6px; font-weight: 400; }
+.salaries__sector .salaries__more { margin-top: 0; }
+
+/* The sectors as chips under the search: one at a time, or all. On a phone they scroll sideways
+   rather than wrap into a block. */
+.salaries__chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.salaries__chips button {
+  padding: 6px 12px;
+  border: 1px solid var(--mid);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.salaries__chips button span { margin-left: 4px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.salaries__chips button[aria-pressed='true'] { border-color: var(--ink); background: var(--ink); color: var(--surface); }
+.salaries__chips button[aria-pressed='true'] span { color: inherit; opacity: 0.7; }
+@media (max-width: 640px) {
+  .salaries__chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 16px 2px; scrollbar-width: none; }
+}
+
+/* An employer's records: how they are set out (the site's Segmented control), the search within them,
+   and their order, stacked with the same space between. */
+.salaries__records { display: grid; gap: 10px; }
+.salaries__records .salaries__head, .salaries__records .salaries__search--one { margin: 0; }
+.salaries__records > .field { margin: 0; width: 100%; max-width: 520px; }
+.salaries__records > .field--compact { justify-self: start; width: auto; max-width: 100%; }
+.salaries__records .segmented { --track: var(--mid); --segment: var(--surface); }
+.salaries__records .segmented button { white-space: nowrap; }
+.salaries__grid--spaced { margin-top: 10px; }
+/* A range of pay is two figures: a size smaller than a tile's one, and free to wrap. */
+.salaries__tiles dd.salaries__range { font-size: 15px; line-height: 1.3; overflow-wrap: anywhere; }
+
+/* Everyone under a name, every year (EmployerPage.jsx): names down the side, years across. The table
+   scrolls sideways inside its own box, never the page, and the name column stays in view. */
+.salaries-table {
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--mid);
+  border-radius: 12px;
+  background: var(--surface);
+  overscroll-behavior-x: contain;
+}
+.salaries-table:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--salaries-ink) 20%, transparent); }
+/* The records table (DataTable.jsx): as tall as the window allows, scrolling inside itself; money
+   and counts to the right; under each header, its filter. */
+.salaries-table--scroll { width: auto; max-height: min(70vh, 720px); overflow: auto; }
+.salaries-table--scroll table { width: 100%; }
+.salaries-table.salaries-table--scroll th, .salaries-table.salaries-table--scroll td { text-align: left; }
+.salaries-table.salaries-table--scroll [data-kind='money'], .salaries-table.salaries-table--scroll [data-kind='number'] { text-align: right; }
+.salaries-table--scroll thead th { vertical-align: bottom; }
+.salaries-datatable { display: grid; gap: 6px; min-width: 0; }
+.salaries-datatable__count { margin: 0; }
+.salaries-datatable__sort { display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: inherit; cursor: pointer; white-space: nowrap; }
+.salaries-datatable__sort:hover { color: var(--ink); }
+.salaries-datatable__filter {
+  box-sizing: border-box; width: 100%; min-width: 6em; margin-top: 4px; padding: 4px 6px;
+  border: 1px solid var(--mid); border-radius: 6px; background: var(--surface); color: var(--ink);
+  font: inherit; font-size: 13px; font-weight: 400; text-align: inherit;
+}
+.salaries-datatable__empty { padding: 12px; }
+.salaries-table table { border-collapse: separate; border-spacing: 0; font-size: 13px; font-variant-numeric: tabular-nums; }
+.salaries-table th, .salaries-table td { padding: 7px 10px; border-bottom: 1px solid var(--hover); text-align: right; white-space: nowrap; vertical-align: top; }
+.salaries-table thead th { position: sticky; top: 0; z-index: 1; background: var(--surface); font-size: 12px; font-weight: 600; color: var(--ink-faint); }
+.salaries-table th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: 11em;
+  max-width: 16em;
+  background: var(--surface);
+  box-shadow: 1px 0 0 var(--hover);
+  text-align: left;
+  white-space: normal;
+  font-weight: 400;
+}
+.salaries-table thead th:first-child { z-index: 3; }
+.salaries-table tbody th .salaries-row__name { font-size: 14px; }
+.salaries-table [data-chosen] { background: var(--hover); color: var(--ink); }
+.salaries-table thead [data-chosen] .salaries__link { font-weight: 700; }
+.salaries-table td .salaries__line { display: inline; }
+.salaries-table sup { margin-left: 2px; font-size: 9px; color: var(--ink-faint); }
+.salaries-table tbody tr:last-child > * { border-bottom: 0; }
+@media (max-width: 560px) {
+  .salaries-table th:first-child { min-width: 8.5em; max-width: 10em; }
+  .salaries-table th, .salaries-table td { padding: 6px 8px; }
+}
+
+/* A year in a position's year-by-year list is a link that picks it; the one on screen is set bold. */
+.salaries-years__label .salaries__link[aria-pressed='true'] { text-decoration: none; }
+
+/* ── Shared salary pieces (src/salaries/parts.jsx) ───────────────────────────────────────────
+   Drawn from the site's colours; inside the government view they take its own (government.css). */
+
+.salaries-strip, .salaries-picker, .salaries-chart, .salaries-disclosure {
+  --sp-ink: var(--salaries-ink, #2f5f9e);
+  --sp-mid: var(--mid);
+  --sp-faint: var(--ink-faint);
+  --sp-hover: var(--hover);
+  --sp-surface: var(--surface);
+  --sp-text: var(--ink);
+}
+
+/* One mark a year, filled where there are records. */
+.salaries-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; margin-top: 4px; min-width: 0; }
+.salaries-strip__marks { display: inline-flex; gap: 2px; flex: none; }
+.salaries-strip__marks span { width: 5px; height: 12px; border-radius: 2px; background: var(--sp-hover); box-shadow: inset 0 0 0 1px var(--sp-mid); }
+.salaries-strip__marks span[data-seen] { background: var(--sp-ink); box-shadow: none; }
+.salaries-strip__text { font-size: 12px; color: var(--sp-faint); font-variant-numeric: tabular-nums; }
+
+/* The years as bars that pick one. A year without records is a dashed stub. */
+.salaries-picker-wrap { container-type: inline-size; min-width: 0; }
+.salaries-picker-select { display: none; gap: 4px; margin-bottom: 8px; font-size: 13px; color: var(--sp-faint, var(--ink-faint)); }
+.salaries-picker-select .salaries-range__trigger { width: 100%; }
+/* Inside a page (an employer's, the government panel) the chooser opens from its trigger's left. */
+@media (min-width: 640px) { .salaries-range--single .salaries-range__panel { left: 0; right: 0; width: auto; } }
+@container (max-width: 640px) { .salaries-picker-select { display: grid; } }
+.salaries-picker { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 2px; align-items: end; }
+.salaries-picker button {
+  display: grid;
+  grid-template-rows: 44px auto;
+  gap: 4px;
+  min-width: 0;
+  padding: 4px 0 2px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--sp-faint);
+  font: inherit;
+  cursor: pointer;
+}
+.salaries-picker button:hover { background: var(--sp-hover); }
+.salaries-picker__bar { display: flex; align-items: flex-end; justify-content: center; height: 100%; }
+.salaries-picker__bar span { display: block; width: min(16px, 70%); border-radius: 3px 3px 0 0; background: var(--sp-ink); opacity: 0.35; }
+.salaries-picker button[data-empty] .salaries-picker__bar span { height: 4px; border: 1px dashed var(--sp-mid); border-radius: 2px; background: none; opacity: 1; }
+.salaries-picker button[data-status='excluded'] .salaries-picker__bar span { border-color: #aa6b2e; }
+.salaries-picker button[data-status='source-found'] .salaries-picker__bar span { border-color: var(--sp-ink); }
+.salaries-picker button[aria-pressed='true'] { background: var(--sp-hover); color: var(--sp-text); font-weight: 600; }
+.salaries-picker button[aria-pressed='true'] .salaries-picker__bar span { opacity: 1; }
+/* A label can be wider than its bar (twenty years in a narrow panel): the button's one column stays
+   the button's width, so the bar is centred on it, and the label is centred under it on its own.
+   Which labels show, and which sit against an end instead, is worked out from the width (labelPlan
+   in parts.jsx). */
+.salaries-picker button { grid-template-columns: minmax(0, 1fr); }
+.salaries-picker__label, .salaries-chart__label { justify-self: start; width: max-content; margin-left: 50%; transform: translateX(-50%); font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+:is(.salaries-picker__label, .salaries-chart__label)[data-edge='start'] { margin-left: 0; transform: none; }
+:is(.salaries-picker__label, .salaries-chart__label)[data-edge='end'] { margin-left: 100%; transform: translateX(-100%); }
+:is(.salaries-picker__label, .salaries-chart__label)[data-hidden] { visibility: hidden; }
+
+/* A person's pay by year. */
+.salaries-chart { margin: 8px 0 0; }
+.salaries-chart__bars { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; height: 150px; }
+.salaries-chart__column { display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: minmax(0, 1fr); align-items: end; justify-items: center; min-width: 0; }
+.salaries-chart__value { grid-row: 1; font-size: 10px; color: var(--sp-faint); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.salaries-chart__bar { grid-row: 2; align-self: end; width: min(28px, 80%); border-radius: 3px 3px 0 0; background: var(--sp-ink); }
+.salaries-chart__bar[data-negative] { background: #a23c31; }
+.salaries-chart__column[data-empty] .salaries-chart__bar { height: 2px; background: var(--sp-mid); }
+.salaries-chart__label { grid-row: 3; margin-top: 4px; color: var(--sp-faint); }
+
+/* A disclosure's scope, period, threshold and source in a line; the rest folded. */
+.salaries-disclosure { font-size: 13px; line-height: 1.5; color: var(--sp-faint); }
+.salaries-disclosure__line { margin: 0; }
+.salaries-disclosure__line strong { color: var(--sp-text); font-weight: 600; }
+.salaries-disclosure a { color: inherit; }
+
+/* Records as rows: rank, who, and pay with its expenses and source under it. */
+.salaries-rows { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 0 24px; margin: 0; padding: 0; list-style: none; }
+@media (max-width: 400px) { .salaries-rows { grid-template-columns: 1fr; } }
+.salaries-rows--inner { padding: 4px 12px 10px 30px; }
+.salaries__more--inner { margin: 0 0 8px 30px; }
+.salaries-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; padding: 7px 0; border-bottom: 1px solid var(--hover); font-size: 14px; }
+.salaries-row__rank { flex: none; min-width: 2.2em; font-size: 12px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.salaries-row__who { flex: 1 1 9em; display: grid; gap: 1px; min-width: 0; }
+.salaries-row__name { justify-self: start; text-align: left; color: var(--ink); overflow-wrap: anywhere; }
+/* Who or what keeps at least 9em: where the pay beside it would leave less, the pay drops under it,
+   still at the row's end, and its notes (expenses, the source) wrap rather than squeeze either. */
+.salaries-row__pay { flex: 0 1 auto; margin-left: auto; display: grid; justify-items: end; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+.salaries-row__pay .salaries__line { font-weight: 400; text-align: right; }
+.salaries-row__pay .salaries__line a { color: inherit; }
+
+/* A person's years, newest first: a year and its records, or a run of years and why they are empty. */
+.salaries-years { display: grid; margin: 0; padding: 0; list-style: none; }
+.salaries-years > li { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--hover); }
+.salaries-years__label { font-size: 13px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.salaries-years__gap .salaries-years__label { font-weight: 400; color: var(--ink-faint); }
+.salaries-years__gap { padding: 6px 0; }
+.salaries-years__records { display: grid; gap: 8px; }
+.salaries-years--weak .salaries-record { opacity: 0.8; }
+.salaries-record { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; font-size: 14px; }
+.salaries-record__what { flex: 1 1 9em; display: grid; gap: 1px; min-width: 0; overflow-wrap: anywhere; }
+.salaries-record__what .salaries__link { text-align: left; }
+@media (max-width: 560px) {
+  .salaries-years > li { grid-template-columns: 5.5em minmax(0, 1fr); gap: 8px; }
+}

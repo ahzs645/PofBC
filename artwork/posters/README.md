@@ -12,6 +12,8 @@ palettes and validation records are here.
 | `reward-living-forest/` | REWARD — A Living Forest | `src/posters/forest-service/reward-living-forest.svg`, unchanged |
 | `enjoy-protect-forests/` | Enjoy & Protect our Forests | `src/posters/forest-service/enjoy-protect-forests.svg` (the outlined master), unchanged |
 | `forest-service-emblem/` | The Forest Service evergreen emblem | `src/internal/forest-service-emblem.svg`, unchanged; also drawn into the two posters above |
+| `go-bc-ferries/` | GO B.C. FERRIES — car decal | `src/posters/bc-ferries/go-bc-ferries.svg`, unchanged |
+| `queen-of-sidney/` | Queen of Sidney — car decal | `src/posters/bc-ferries/queen-of-sidney.svg`, **layer ids renamed** (below) |
 
 **The gamble badge is recoloured on the site.** The supplied badge, like the photograph it was
 rebuilt from, is deep blue (`#01375D`). The site sets every use of that blue — the field, the pips,
@@ -19,6 +21,13 @@ the dice outlines and the knockout stroke on “with” — in DON’T DROP IT!�
 the two fire-prevention badges read as one series. The cream (`#F1D8AC`) is the badge’s own. The
 master here is left blue; to regenerate the green one, change `BLUE` in
 `dont-gamble-with-fire/source/rebuild_badge.py` or replace the colour in the SVG.
+
+**The Queen of Sidney decal's layers are renamed on the site.** The master names its ten layers with
+a leading number (`02-flag-and-pole`), which a CSS selector cannot name, and the Posters view finds a
+part's layer by selector. The site copy drops the numbers: `sticker-and-field`, `flag-and-pole`,
+`sky-forest-and-birds`, `helm`, `dogwood-flowers`, `helm-above-bow`, `sea` and `ribbon` (`ferry` and
+`lettering` already had none). Nothing else changes. The two decals' packages also came with reference
+pictures, raster proofs, a PDF and an offline comparison page, which are left out like the others'.
 
 **Coastal Forest** comes from its own repository,
 [ahzs645/coastal-forest-poster](https://github.com/ahzs645/coastal-forest-poster), whose

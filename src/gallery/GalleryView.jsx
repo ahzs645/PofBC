@@ -21,20 +21,16 @@ import {
   findGalleryEntry, timelineOf
 } from './collections.js'
 import { ASSET_STATUS, WANTED, WANTED_AS_OF } from './wanted.js'
+import { COLLECTING } from './collectingData.js'
 import { HydroStudio } from '../hydro/HydroStudio.jsx'
 import { HydroMarkView } from '../hydro/HydroMarkView.jsx'
-import { renderCurrentHydroSvg, renderHydroMarkSvg } from '../hydro/hydroMarks.js'
-import { HYDRO_PRESETS, hydroDefaults } from '../hydro/hydroLayout.js'
-import { renderHydroSvg } from '../hydro/renderHydroSvg.js'
 import { hasGlow, renderOneOffSvg, rolesOf } from './renderOneOff.js'
-import { pageColoursFor } from './pageColours.js'
-import { ONE_OFF_MARKS } from '../assets/oneOffMarks.js'
-import { TRANSPARENT } from '../logo/logoColors.js'
 import { useSiteTheme } from '../site/useTheme.js'
 import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
-import { renderCurrentSvg } from '../current/currentMarks.js'
-import { renderSuppliedSvg } from './renderSupplied.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
+import { CollectedMarkView } from './CollectedMarkView.jsx'
+import { COLLECTION_RESEARCH, researchLabel } from './collectedCollections.js'
+import { onPage, tileArt } from './tileArt.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -175,6 +171,9 @@ const PROVENANCE_SENTENCES = {
   extracted_from_official_vector: 'Extracted from vector artwork in an official document of the body’s own.',
   extracted_from_published_artwork: 'Extracted from artwork as it was published, not redrawn.',
   archival_raster: 'An archival image, not vector artwork.',
+  published_vector: 'Vector artwork recovered from a published source, with that source recorded.',
+  published_raster: 'An image recovered from a published source, with that source recorded.',
+  third_party_reconstruction: 'An existing third-party redraw, retained with its attribution. It is not an original historical master.',
   reconstructed: 'Reconstructed: redrawn by this project from pictures or written rules, not taken from ' +
     'original artwork.',
   synthetic_name_variant: 'A generated interpretation — a name set in a style it never had — and not an ' +
@@ -192,6 +191,7 @@ const FIDELITY_SENTENCES = {
 const DATE_SENTENCES = {
   documented_adoption: (years) => `${years}, from a record of its adoption.`,
   first_observation: (years) => `First seen ${years}.`,
+  dated_specimen: (years) => `Seen in the cited specimen dated ${years}.`,
   estimated_era: (years) => `Estimated: ${years}.`,
   unknown: () => 'Unknown. That is not to say it was never in use.'
 }
@@ -370,56 +370,6 @@ const Detail = ({ entry, onClose }) => {
   )
 }
 
-/** What a card in an era shows: the entry drawn as it opens. */
-/**
- * What a card shows: the entry drawn for the page it sits on — no ground of its own, in the version
- * its identity sanctions for a light or a dark page (see pageColours.js). BC Hydro's 1961
- * signatures take their white form on dark, as the manual's reverse forms do. The exceptions keep
- * their ground because the ground is the point: the 1961 manual's backgrounds and vehicles, and
- * BC Hydro's current colourways, each of which is defined by what it sits on.
- */
-const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
-  if (entry.kind === 'artwork') {
-    const printed = ONE_OFF_MARKS[entry.mark].printed
-    return renderOneOffSvg({ id: entry.mark, colours: pageColoursFor(printed, theme), sun: 'glow', clearSpaceFactor: 0.02 }).svg
-  }
-  // ICBC's and BCLC's marks are never recoloured: on dark, one supplied reversed takes that version,
-  // and any other keeps a white ground of its own.
-  if (entry.kind === 'supplied') {
-    const dark = theme === 'dark'
-    const id = dark && entry.reverse ? entry.reverse : entry.mark
-    return renderSuppliedSvg({ id, background: dark && !entry.reverse ? '#ffffff' : TRANSPARENT, clearSpace: dark ? 0.12 : 0.02 }).svg
-  }
-  // Remade in the current identity: drawn by the generator's current era, reversed on dark.
-  if (entry.kind === 'current') {
-    return renderCurrentSvg({ text: entry.text, variant: theme === 'dark' ? 'reverse' : 'colour', clearSpaceFactor: 0.02 })
-  }
-  if (entry.kind === 'flag') {
-    const dark = theme === 'dark'
-    return renderFlagSvg({
-      ...entry.draw,
-      letterColor: dark ? '#ffffff' : '#10069f',
-      textColor: dark ? '#ffffff' : '#10069f',
-      flagPalette: dark ? 'ink' : 'official',
-      background: TRANSPARENT,
-      clearSpaceFactor: 0.02
-    }).svg
-  }
-  if (entry.kind === 'hydro') {
-    const settings = hydroDefaults(entry.preset)
-    const signature = HYDRO_PRESETS[entry.preset]?.group === 'signature'
-    return renderHydroSvg(signature && theme === 'dark' ? { ...settings, mode: 'white' } : settings, { metadata: false, width: 480 }).svg
-  }
-  if (entry.mark === '1990') return renderHydroMarkSvg({ id: 'bc-hydro-1990', clearSpace: 0.08, background: TRANSPARENT, width: 480 }).svg
-  // A collection's cover stands for the whole identity, so it takes the page's version of it.
-  if (cover) return renderCurrentHydroSvg({ variant: theme === 'dark' ? 'reverse' : 'colour', background: TRANSPARENT, clearSpace: 0.08, width: 480 }).svg
-  return renderCurrentHydroSvg({ variant: entry.variant, clearSpace: 1 / 3, width: 480 }).svg
-}
-
-/** Whether a card draws on the page's ground, or keeps a ground of its own. */
-const onPage = (entry) => entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
-  (entry.kind === 'hydro' && HYDRO_PRESETS[entry.preset]?.group === 'signature')
-
 /** A card in an era, with only the chips its era has not already said for every mark in it. */
 const Tile = ({ entry, onOpen, theme, said = [] }) => (
   <button type="button" className="gallery__pick gallery__pick--tile" onClick={onOpen} aria-label={`Open ${entry.label}`}>
@@ -429,7 +379,7 @@ const Tile = ({ entry, onOpen, theme, said = [] }) => (
       // Built by this project's own renderers; every value is escaped where written.
       dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }}
     />
-    <span className="gallery__label">{entry.label}</span>
+    <span className="gallery__label">{entry.label}{entry.kind === 'collected' && <span className="gallery__asset-format"> · {entry.asset.format.toUpperCase()}</span>}</span>
     <span className="gallery__note">{entry.note}</span>
     <Chips labels={chipsOf(entry.identity).filter((label) => !said.includes(label))} title={FIDELITY[entry.identity.fidelity]} />
   </button>
@@ -477,7 +427,9 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
         dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }}
       />
       <span className="gallery__label">
-        {entry.kind === 'current' ? 'Open in the generator' : 'Open to recolour, or to see it as published'}
+        {entry.kind === 'current' ? 'Open in the generator'
+          : entry.kind === 'collected' ? 'View artwork and download the source file'
+            : 'Open to recolour, or to see it as published'}
       </span>
     </button>
     <GraphLink node={entry.graphNode} onOpenGovernment={onOpenGovernment} />
@@ -500,7 +452,7 @@ const CollectionCard = ({ collection, onOpen, theme }) => {
         <span className="gallery__collection-title">{collection.label}</span>
         <span className="gallery__note">{collection.body}</span>
         <span className="gallery__years">
-          {collection.years} · {count} {count === 1 ? 'mark' : 'marks'}
+          {collection.years} · {count} {collection.fileCollection ? (count === 1 ? 'artwork file' : 'artwork files') : (count === 1 ? 'mark' : 'marks')}
           {collection.eras ? ` · ${collection.eras.length} eras` : ''}
         </span>
         <Chips labels={collectionChips(collection)} />
@@ -673,6 +625,77 @@ const GraphLink = ({ node, onOpenGovernment }) => node && onOpenGovernment && (
 )
 
 /**
+ * Every Crown corporation and health authority the government atlas holds, so the gallery can be
+ * filled body by body: each says whether its marks are collected here, and leads to it in the
+ * diagram, in a year it stood. Today's are listed open; former ones are folded away, since there
+ * are a hundred and forty of them, most the health system's boards and councils of the 1990s.
+ */
+const CollectingShelf = ({ onChoose, onOpenGovernment }) => {
+  const held = new Map(GALLERY_COLLECTIONS.filter((collection) => collection.graphNode).map((collection) => [collection.graphNode, collection]))
+  const groups = [
+    { id: 'crowns-today', label: 'Crown corporations today', bodies: COLLECTING.filter((body) => body.current && body.kind === 'crown-corporation') },
+    { id: 'health-today', label: 'Health authorities today', bodies: COLLECTING.filter((body) => body.current && body.kind === 'health-authority') },
+    { id: 'crowns-former', label: 'Former Crown corporations', folded: true, bodies: COLLECTING.filter((body) => !body.current && body.kind === 'crown-corporation') },
+    { id: 'health-former', label: 'Former health authorities, boards and councils', folded: true, bodies: COLLECTING.filter((body) => !body.current && body.kind === 'health-authority') }
+  ]
+  const years = (body) => `${body.from ?? '?'}–${body.current ? '' : body.to ?? '?'}`
+  // A former body opens in its last year; one whose end is untraced, in its first.
+  const yearIn = (body) => (body.current ? null : body.to ? body.to - 1 : body.from)
+  const list = (bodies) => (
+    <ul className="gallery__collecting-list">
+      {bodies.map((body) => {
+        const collection = held.get(body.id)
+        const research = COLLECTION_RESEARCH.get(body.id)
+        const marks = collection ? entriesOf(collection).length : 0
+        return (
+          <li key={body.id} className="gallery__collecting-row" data-held={collection ? true : undefined}>
+            <span className="gallery__collecting-name">
+              {body.name}
+              <span className="gallery__collecting-years">{body.shortName ? `${body.shortName} · ` : ''}{years(body)}{body.untraced ? ', end not traced' : ''}</span>
+            </span>
+            {collection
+              ? <button type="button" className="gallery__collecting-status" onClick={() => onChoose(collection.id)}>{marks} {collection.fileCollection ? (marks === 1 ? 'file' : 'files') : (marks === 1 ? 'mark' : 'marks')} <span aria-hidden="true">→</span></button>
+              : <span className="gallery__collecting-status" title={research?.notes}>{researchLabel(research)}</span>}
+            {onOpenGovernment && (
+              <button type="button" className="gallery__collecting-graph" onClick={() => onOpenGovernment(body.id, yearIn(body))} title={`${body.name} in the government graph`}>
+                Graph <span aria-hidden="true">→</span>
+              </button>
+            )}
+          </li>
+        )
+      })}
+    </ul>
+  )
+  return (
+    <section className="gallery__shelf" aria-labelledby="shelf-collecting">
+      <h2 id="shelf-collecting" className="gallery__shelf-title">Collecting: every Crown corporation and health authority</h2>
+      <p className="gallery__intro gallery__shelf-intro">
+        The government atlas’s {COLLECTING.filter((body) => body.current).length} standing today and{' '}
+        {COLLECTING.filter((body) => !body.current).length} before. Those with marks here lead to them; the rest are
+        wanted — artwork, or a dated sighting of one, fills a gap.
+      </p>
+      {groups.map((group) => {
+        const count = group.bodies.filter((body) => held.has(body.id)).length
+        const heading = <>{group.label} <span className="gallery__collecting-count">{count} of {group.bodies.length} collected</span></>
+        return group.folded
+          ? (
+            <details key={group.id} className="gallery__collecting-group">
+              <summary className="gallery__collecting-heading">{heading}</summary>
+              {list(group.bodies)}
+            </details>
+            )
+          : (
+            <div key={group.id} className="gallery__collecting-group">
+              <h3 className="gallery__collecting-heading">{heading}</h3>
+              {list(group.bodies)}
+            </div>
+            )
+      })}
+    </section>
+  )
+}
+
+/**
  * A body whose mark has not been obtained. Deliberately unlike a mark's card: an outline with
  * nothing inside it where the artwork would be, and no way to open it, because there is nothing to
  * open. What it does carry is how far the search has got.
@@ -823,7 +846,9 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ? <HydroMarkView mark={open.mark} variant={open.variant} />
             : open.kind === 'supplied'
               ? <SuppliedMarkView key={open.id} entry={open} />
-              : <Detail entry={open} />}
+              : open.kind === 'collected'
+                ? <CollectedMarkView key={open.id} entry={open} />
+                : <Detail entry={open} />}
         {markTimeline && (
           <section className="gallery__history" aria-labelledby="mark-history">
             <h2 id="mark-history" className="gallery__shelf-title">{markTimeline.label} through time</h2>
@@ -839,9 +864,6 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   if (!collection) {
     return (
       <div className="gallery">
-        <p className="gallery__intro">
-          Logos the generator doesn’t make: public bodies’ own identities, then the Province’s one-off marks.
-        </p>
         <section className="gallery__shelf" aria-labelledby="shelf-bodies">
           <h2 id="shelf-bodies" className="gallery__shelf-title">Crown corporations and public bodies</h2>
           <div className="gallery__collections">
@@ -858,6 +880,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
         </section>
+        <CollectingShelf onChoose={choose} onOpenGovernment={onOpenGovernment} />
         {/* Shown only while a body is still sought: an empty shelf would read as one still to fill. */}
         {WANTED.length > 0 && (
           <section className="gallery__shelf" aria-labelledby="shelf-wanted">

@@ -48,7 +48,10 @@ const stopsOf = (life) => {
     stops.set(at, [...(stops.get(at) ?? []), label])
   }
   if (life.from) note(life.from, 'began')
+  else if (life.firstSeen) note(life.firstSeen, 'first shown in a source')
   if (life.to) note(life.to, 'ended')
+  if (life.operationalEnd) note(life.operationalEnd, 'operations passed elsewhere')
+  if (life.lastSeen) note(life.lastSeen, life.toKind === 'occurred_date_unknown' ? 'last shown standing; it ended later, on a day not found' : 'last shown standing; later status untraced')
   for (const event of life.events) note(event.date.start, event.title)
   return [...stops.entries()].sort((a, b) => a[0] - b[0])
 }
@@ -69,8 +72,10 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
   const whatIn = (at) => (stepping ? stops.find(([candidate]) => candidate === at)?.[1].join('; ') : null)
   const stepTitle = (at, word) => at && `${word} ${at}${whatIn(at) ? ` — ${whatIn(at)}` : ''}`
   const height = following ? 90 : 78
-  const start = life?.from ? yearOf(life.from) : null
-  const end = life?.to ? yearOf(life.to) : PRESENT_YEAR + 1
+  // Drawn from its start, or from the first sighting; to its end, or only as far as a source shows it
+  // when its end is untraced. Only a life that continues runs to today.
+  const start = life?.from ? yearOf(life.from) : life?.firstSeen ? yearOf(life.firstSeen) : null
+  const end = life?.to ? yearOf(life.to) : life?.lastSeen ? yearOf(life.lastSeen) + 1 : life?.toKind === 'open' || !life ? PRESENT_YEAR + 1 : (start ?? PRESENT_YEAR) + 1
   const decades = []
   const track = useRef(null)
   const input = useRef(null)
@@ -222,7 +227,9 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
         {following && (
           <li>
             <span className="gov-timeline__swatch gov-timeline__swatch--life" />
-            {life.name ?? 'The chosen body'}: {life.from ? 'when it stood' : 'start unknown'}
+            {life.name ?? 'The chosen body'}: {life.from ? 'when it stood' : life.firstSeen ? 'from its first sighting; start unknown' : 'start unknown'}
+            {life.toKind === 'untraced' && ', as far as a source shows it; later status untraced'}
+            {life.toKind === 'occurred_date_unknown' && ', as far as a source shows it; it ended later, on a day not found'}
             {stepping
               ? <>, and {stops.length} {stops.length === 1 ? 'year' : 'years'} with a dated event — the arrows step through them</>
               : <>; no dated events yet</>}

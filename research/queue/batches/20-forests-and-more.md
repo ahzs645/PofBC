@@ -29,42 +29,35 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ### 1. Archaeology Branch
 
-- **id** `archaeology-branch` · division · **P1 — disappears before today, nothing on file**
+- **id** `archaeology-branch` · division · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Forests. Official site: https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/archaeology
 - **Collected from:** https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/archaeology
 - **What it does:** Protects archaeological sites under the Heritage Conservation Act and issues archaeology permits.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2025-03-31; parents on file: Ministry of Forests (seen 2025-03-31)
+- **Events on file:** 2025-03-31 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Archaeology Branch"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2025-03-31. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 2. Tree Improvement Branch
-
-- **id** `tree-improvement-branch` · division · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Forests. Official site: https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/tree-seed
-- **Collected from:** https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/tree-seed
-- **What it does:** Protects, manages and conserves B.C.'s forest genetic resources, including tree seed.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Tree Improvement Branch"
-- **Questions:** A, B and C, as above.
-
-### 3. BC Wildfire Service (BCWS)
+### 2. BC Wildfire Service (BCWS)
 
 - **id** `bc-wildfire-service` · agency · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Forests. Official site: https://www2.gov.bc.ca/gov/content/safety/wildfire-status/about-bcws
 - **Collected from:** https://www2.gov.bc.ca/gov/content/safety/wildfire-status/about-bcws
 - **What it does:** Manages wildfire prevention and response across B.C. through six regional fire centres.
-- **Held:** no start date
-- **Events on file:** 1874 function origin; 1905 operational start; 1912 name in use claim; 1912 unit placement; 1912 retrospective origin claim; 1912-02-27 legislation assented; 1969 legal name change; 1978 legal name change; 1979-04 legal name change; 1981-06 name first observed; 2003-11 legislation introduced; 2010 operating name change; 2013-04-10 name observed; 2015-05-26 operating name change; 2015-05-26 name last observed; 2015-07-02 name first observed
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2016-07; parents on file: Ministry of Forests, Lands and Natural Resource Operations (seen 2016-07)
+- **Events on file:** 1874 function origin; 1905 operational start; 1912 name in use claim; 1912 unit placement; 1912 retrospective origin claim; 1912-02-27 legislation assented; 1969 legal name change; 1978 legal name change; 1979-04 legal name change; 1981-06 name first observed; 2003-11 legislation introduced; 2010 operating name change; 2013-04-10 name observed; 2015-05-26 operating name change; 2015-05-26 name last observed; 2015-06-06 document terminology change; 2015-07-02 name first observed; 2016-07 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Wildfire Service", "BCWS"
 - **Questions:**
-  - A. First sighting: is it listed in the Estimates or service plan at each checkpoint year (table above)? Record every checkpoint you look at, with its outcome, the pages read, and the name and ministry as printed.
-  - B. Start: 16 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - A. It is already seen in 2016-07. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 18 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 4. Office of the Chief Forester
+### 3. Office of the Chief Forester
 
 - **id** `office-of-the-chief-forester` · office · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Forests. Official site: https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/timber-supply-review-and-allowable-annual-cut
@@ -79,13 +72,28 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 6 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
+### 4. Tree Improvement Branch
+
+- **id** `tree-improvement-branch` · division · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Forests. Official site: https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/tree-seed
+- **Collected from:** https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/tree-seed
+- **What it does:** Protects, manages and conserves B.C.'s forest genetic resources, including tree seed.
+- **Held:** no start date; first seen 2006; parents on file: Ministry of Forests and Range (seen 2006)
+- **Events on file:** 2006 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Tree Improvement Branch"
+- **Questions:**
+  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
 ### 5. BC Timber Sales (BCTS)
 
 - **id** `bc-timber-sales` · program · **P3 — dated; history over time**
 - **Today:** under Ministry of Forests. Official site: https://www2.gov.bc.ca/gov/content/industry/forestry/bc-timber-sales
 - **Collected from:** https://www2.gov.bc.ca/gov/content/industry/forestry/bc-timber-sales
 - **What it does:** Manages 20 per cent of B.C.'s public timber harvest and sells Crown timber at auction.
-- **Held:** began 2003-06-20 (as BC Timber Sales dates itself, in its 10th-anniversary release of 2013); first seen 2003-05-29; names on file: BC Timber Sales (seen 2005), BC Timber Sales (seen 2010); parents on file: Ministry of Forests (seen 2003)
+- **Held:** began 2003-06-20 (as BC Timber Sales dates itself, in its 10th-anniversary release of 2013); first seen 2003-05-29; names on file: BC Timber Sales (seen 2005), BC Timber Sales (seen 2010); parents on file: Ministry of Forests (seen 2003), Ministry of Forests and Range (seen 2006)
 - **Events on file:** 1988-07-11 legal instrument deposited; 2003-04-01 program organization replacement; 2003-04-01 succession claim; 2003-05-29 name first observed; 2003-06-20 unit established; 2003-06-20 succession; 2004-04-02 name observed
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Timber Sales", "BCTS"
@@ -107,38 +115,35 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 
 ### 7. BizPaL
 
-- **id** `bizpal-bc` · program · **P1 — disappears before today, nothing on file**
+- **id** `bizpal-bc` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Jobs and Economic Growth. Official site: https://www.bcbizpal.ca/
 - **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/jobs-economic-development-and-innovation
 - **What it does:** Online service listing the permits and licences a business needs.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2006
+- **Events on file:** 2006 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BizPaL"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2006. Look earlier: the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
 ### 8. EaseBiz BC
 
-- **id** `easebiz-bc` · program · **P1 — disappears before today, nothing on file**
+- **id** `easebiz-bc` · program · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Jobs and Economic Growth. Official site: https://www2.gov.bc.ca/gov/content/employment-business/business/ease-of-doing-business
 - **Collected from:** https://www2.gov.bc.ca/gov/content/employment-business/business/ease-of-doing-business
 - **What it does:** Ease-of-doing-business initiative that engages the business community to find and remove barriers.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2025-12-30
+- **Events on file:** 2025-06-05 initiative launch; 2025-12-30 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "EaseBiz BC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2025-12-30. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
 
-### 9. Trade and Invest British Columbia
-
-- **id** `trade-and-invest-british-columbia` · program · **P1 — disappears before today, nothing on file**
-- **Today:** under Ministry of Jobs and Economic Growth. Official site: https://www.britishcolumbia.ca/
-- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/jobs-economic-development-and-innovation
-- **What it does:** International trade and investment service, including the Province's network of international trade offices.
-- **Held:** no start date
-- **Review:** not yet researched
-- **Search for:** "Trade and Invest British Columbia"
-- **Questions:** A, B and C, as above.
-
-### 10. Small Business Roundtable
+### 9. Small Business Roundtable
 
 - **id** `small-business-roundtable` · board · **P2 — undated, but some history on file**
 - **Today:** under Ministry of Jobs and Economic Growth.
@@ -153,38 +158,65 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
   - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
   - C. Names and parents: extend what is on file; fill the years between observations.
 
+### 10. Trade and Invest British Columbia
+
+- **id** `trade-and-invest-british-columbia` · program · **P2 — undated, but some history on file**
+- **Today:** under Ministry of Jobs and Economic Growth. Official site: https://www.britishcolumbia.ca/
+- **Collected from:** https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/jobs-economic-development-and-innovation
+- **What it does:** International trade and investment service, including the Province's network of international trade offices.
+- **Held:** no start date; first seen 2025
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
+- **Search for:** "Trade and Invest British Columbia"
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period — the cabinet shuffles of 2001, 2005, 2017, 2020, 2022 and 2024 moved many branches.
+
 ### 11. Building BC
 
-- **id** `building-bc` · program · **P1 — disappears before today, nothing on file**
+- **id** `building-bc` · program · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Housing Management Commission.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bch.pdf
 - **What it does:** BC Housing program for increasing the supply of housing, named alongside BC Builds in its 2026/27 service plan.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2019
+- **Events on file:** 2018-02 retrospective claim; 2019 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Building BC"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2019. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 2 dated events are already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 12. Homeless Encampment Action Response Team and Temporary Housing (HEART / HEARTH)
 
-- **id** `heart-and-hearth` · program · **P1 — disappears before today, nothing on file**
+- **id** `heart-and-hearth` · program · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Housing Management Commission.
 - **Collected from:** https://www.bcbudget.gov.bc.ca/2026/sp/pdf/agency/bch.pdf
 - **What it does:** BC Housing initiatives (HEART and HEARTH) that respond to homeless encampments and provide temporary housing.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2025
+- **Events on file:** 2025 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Homeless Encampment Action Response Team and Temporary Housing", "HEART / HEARTH"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2025. Look earlier: the 2020 checkpoint, then the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 13. Licensing and Consumer Services
 
-- **id** `bc-housing-licensing-and-consumer-services` · division · **P1 — disappears before today, nothing on file**
+- **id** `bc-housing-licensing-and-consumer-services` · division · **P2 — undated, but some history on file**
 - **Today:** under British Columbia Housing Management Commission. Official site: https://www.bchousing.org/licensing-consumer-services
 - **Collected from:** https://www.bchousing.org/licensing-consumer-services
 - **What it does:** Administers the Homeowner Protection Act by licensing residential builders, requiring home warranty insurance on new homes, and handling enforcement and consumer information.
-- **Held:** no start date
-- **Review:** not yet researched
+- **Held:** no start date; first seen 2020; parents on file: BC Housing (seen 2020)
+- **Events on file:** 2020 name first observed
+- **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "Licensing and Consumer Services"
-- **Questions:** A, B and C, as above.
+- **Questions:**
+  - A. It is already seen in 2020. Look earlier: the 2015 checkpoint, then the 2010 checkpoint, then the 2005 checkpoint, then the 2002 checkpoint, then before 2002, the ministry annual reports and Estimates held by the Legislative Library. Record every source you look at, whatever the outcome; a non-match does not date a start.
+  - B. Start: 1 dated event is already on file (listed above). Which, if any, is the start of this body rather than of its function or a predecessor? If none, find the Act, order in council or announcement that created it.
+  - C. Names and parents: each earlier name, and the ministry or Crown it sat under, by period.
 
 ### 14. BC Builds
 
@@ -210,31 +242,6 @@ Return **one JSON object for the batch, with one record per body**, in the shape
     {
       "id": "archaeology-branch",
       "name": "Archaeology Branch",
-      "kind": "division",
-      "parent_today": "ministry-of-forests-2022",
-      "established": null,
-      "first_observed": null,
-      "ended": null,
-      "names": [],
-      "parents": [],
-      "relations": [],
-      "research_events": [],
-      "date_claims": [],
-      "legal_basis": null,
-      "evidence_status": null,
-      "note": "",
-      "review": {
-        "checked": null,
-        "by": null,
-        "scope": "Batch 20",
-        "sources_checked": [],
-        "unresolved_fields": [],
-        "full_history_complete": false
-      }
-    },
-    {
-      "id": "tree-improvement-branch",
-      "name": "Tree Improvement Branch",
       "kind": "division",
       "parent_today": "ministry-of-forests-2022",
       "established": null,
@@ -286,6 +293,31 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       "id": "office-of-the-chief-forester",
       "name": "Office of the Chief Forester",
       "kind": "office",
+      "parent_today": "ministry-of-forests-2022",
+      "established": null,
+      "first_observed": null,
+      "ended": null,
+      "names": [],
+      "parents": [],
+      "relations": [],
+      "research_events": [],
+      "date_claims": [],
+      "legal_basis": null,
+      "evidence_status": null,
+      "note": "",
+      "review": {
+        "checked": null,
+        "by": null,
+        "scope": "Batch 20",
+        "sources_checked": [],
+        "unresolved_fields": [],
+        "full_history_complete": false
+      }
+    },
+    {
+      "id": "tree-improvement-branch",
+      "name": "Tree Improvement Branch",
+      "kind": "division",
       "parent_today": "ministry-of-forests-2022",
       "established": null,
       "first_observed": null,
@@ -408,9 +440,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "trade-and-invest-british-columbia",
-      "name": "Trade and Invest British Columbia",
-      "kind": "program",
+      "id": "small-business-roundtable",
+      "name": "Small Business Roundtable",
+      "kind": "board",
       "parent_today": "ministry-of-jobs-and-economic-growth-2025",
       "established": null,
       "first_observed": null,
@@ -433,9 +465,9 @@ Return **one JSON object for the batch, with one record per body**, in the shape
       }
     },
     {
-      "id": "small-business-roundtable",
-      "name": "Small Business Roundtable",
-      "kind": "board",
+      "id": "trade-and-invest-british-columbia",
+      "name": "Trade and Invest British Columbia",
+      "kind": "program",
       "parent_today": "ministry-of-jobs-and-economic-growth-2025",
       "established": null,
       "first_observed": null,
