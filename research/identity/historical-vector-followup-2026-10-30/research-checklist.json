@@ -6,7 +6,7 @@
     "remainingFormerHealthVectorGaps": 109,
     "note": "Counts apply to the original 133 historical vector gaps, not all gallery bodies. Each SVG preserves original published path geometry. Additional raster references do not reduce the vector-gap count."
   },
-  "note": "The original 133 rows retain their prior search results. Pass 3 and pass 4 flags identify actual revisits; a carried-forward row is not a new search. No vector found is an outcome of these searches, not proof that a logo never existed.",
+  "note": "The original 133 rows retain their prior results. Pass 3, pass 4 and pass 5 flags identify actual revisits; carried-forward rows are not new searches. Accepted follow-up files are cumulative across PRs. No vector found describes the bounded searches, not proof that a logo never existed.",
   "rows": [
     {
       "id": "bc-assets-and-land-corporation",
@@ -79,9 +79,11 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": [
+      "acceptedFollowupFiles": [
         "identity-collected/bc-assets-and-land-corporation/bc-assets-and-land-corporation-1999.svg"
-      ]
+      ],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bc-buildings-corporation",
@@ -112,9 +114,11 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": [
+      "acceptedFollowupFiles": [
         "identity-collected/bc-buildings-corporation/bc-buildings-corporation-2005.svg"
-      ]
+      ],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bc-development-corporation",
@@ -208,7 +212,9 @@
           "remainingLead": "Use the recorded subject indexes to locate 20000-20 artwork files; item-level listing and actual artwork still needed."
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bc-electric-company-crown",
@@ -251,7 +257,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bc-enterprise-corporation",
@@ -342,7 +350,9 @@
           "remainingLead": "Use the recorded subject indexes to locate 20000-20 artwork files; item-level listing and actual artwork still needed."
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bc-ferry-authority",
@@ -436,7 +446,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bc-harbours-board",
@@ -546,7 +558,9 @@
           "remainingLead": "RG 66, V-85-86/395, volume 14 (499999), Harbours Board 1967–1970 subject file; BCEC indexes may also locate pre-1973 transferred records."
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bc-heritage-trust",
@@ -579,15 +593,17 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": [
+      "acceptedFollowupFiles": [
         "identity-collected/bc-heritage-trust/bc-heritage-trust-2002.svg"
-      ]
+      ],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bc-petroleum-corporation",
       "name": "British Columbia Petroleum Corporation",
       "group": "Former Crown",
-      "result": "No new vector verified",
+      "result": "Original raster recovered; vector still missing",
       "hasVerifiedVectorInFollowup": false,
       "originalInventoryAssetCount": 1,
       "notes": "No native art found beyond the existing 1982/83 raster flame-and-name annual-report specimen. Exact corporate-name/trademark and later-report searches did not locate a better graphic.",
@@ -633,7 +649,54 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [
+        "identity-collected/bc-petroleum-corporation/bc-petroleum-1992-symbol-raster.png"
+      ],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "crown",
+          "id": "bc-petroleum-corporation",
+          "name": "British Columbia Petroleum Corporation",
+          "scope": "Later annual-report binaries, archive file inventories, designer/native-format searches.",
+          "result": "No new vector verified; one different dated raster symbol reference supplied.",
+          "sources": [
+            {
+              "url": "https://archive.org/download/micro_IA40242808_0442/micro_IA40242808_0442.pdf",
+              "title": "British Columbia Petroleum Corporation Annual Report 1991–1992",
+              "downloadName": "micro_IA40242808_0442.pdf",
+              "downloaded": true,
+              "sha256": "99a6e8758f678bfc63fe72acbc09632565fe1039b0c7f0ca03fc398d97f32421",
+              "bytes": 1396849,
+              "pdf_pages": 11,
+              "native_drawing_count_all_pages": 0,
+              "image_placements_including_inline_all_pages": 22,
+              "inspection_scope": "All 11 pages inspected structurally; all pages viewed as a contact sheet; PDF pages 1 and 11 viewed at readable size; page 11 image planes and mask decoded.",
+              "outcome": "All pages are scans with zero drawing objects. Page 11 provides a different dated, black-on-white specimen of the known corporate symbol. A native-pixel crop is supplied as a raster reference; it is not vector."
+            },
+            {
+              "url": "https://archive.org/advancedsearch.php",
+              "title": "Internet Archive exact-corporation report search",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Exact-name search returned ten report records through 1991/92. Metadata inventories for the selected report expose scan/OCR derivatives, not original EPS, AI, PS, WMF, EMF or office artwork files. The tabled 1993/94 report remains a specific unlocated production-file target."
+            },
+            {
+              "url": "https://lims.leg.bc.ca/hdms/file/Debates/35th4th/19950404pm-Hansard-v18n14.htm",
+              "title": "Prior lead: April 4, 1995 Hansard",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Used as the target for later-report searches only; the actual 1993/94 annual report was not retrieved or newly counted."
+            }
+          ],
+          "asset_files": [
+            "pass5/crown/assets/bc-petroleum-1992-symbol-raster.png"
+          ],
+          "next_lead": "A production copy of the 1993/94 report, or original corporate identity files. The newly inspected 1991/92 document is a scan.",
+          "revisited": true,
+          "has_new_verified_vector": false
+        }
+      ]
     },
     {
       "id": "bc-place-ltd",
@@ -754,7 +817,9 @@
           "remainingLead": "Use the recorded subject indexes to locate 20000-20 artwork files; item-level listing and actual artwork still needed."
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bc-power-commission",
@@ -805,13 +870,42 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "crown",
+          "id": "bc-power-commission",
+          "name": "British Columbia Power Commission",
+          "scope": "Fresh 2022 heritage-conservation PDF route and exact-name vector/PDF searches.",
+          "result": "No new vector verified.",
+          "sources": [
+            {
+              "url": "https://tender.victoria.ca/webapps/ourcity/Prospero/FileDownload.aspx?fileId=BF902270-D3E8-429D-A038-B44E14E67A5B&folderId=77229C221129132130570731",
+              "title": "British Columbia Power Commission Building, 780 Blanshard Street, Conservation Plan, revised October 2022",
+              "downloadName": "bc-power-plan-complete.pdf",
+              "downloaded": true,
+              "sha256": "8a6eb217d3c71c05d25d98d7dfefd965cadd3a53c3858a8098dd34534a80f6b5",
+              "bytes": 12589202,
+              "pdf_pages": 79,
+              "native_drawing_count_all_pages": 2228,
+              "image_placements_including_inline_all_pages": 217,
+              "inspection_scope": "All 79 pages structurally inventoried and native text searched. Pages 1–34 visually inspected as a contact sheet; historical photographs/illustrations in pages 5, 7–11, 13–14, 16–20 were reviewed. No claim of page-by-page visual inspection of pages 35–79.",
+              "outcome": "The relevant early historical illustrations are building photographs, newspaper reproductions and plans; no separate BCPC logo artwork found in that inspected set. Native paths in the document include layout and other elements, not a verified recovered BCPC identity. The earlier incomplete local copy was superseded by this verified 79-page file."
+            }
+          ],
+          "asset_files": [],
+          "next_lead": "The 2022 plan references the sixth annual report for 1951. No claim is made that the plan exposes a vector of the historical BCPC symbol; the known Power Pioneers JPEG was not re-counted.",
+          "revisited": true,
+          "has_new_verified_vector": false
+        }
+      ]
     },
     {
       "id": "bc-resources-investment-corporation",
       "name": "British Columbia Resources Investment Corporation",
       "group": "Former Crown",
-      "result": "No new vector verified",
+      "result": "Original raster recovered; vector still missing",
       "hasVerifiedVectorInFollowup": false,
       "originalInventoryAssetCount": 2,
       "notes": "Downloaded and inspected the full 1980 annual report from McGill. It adds a dated BC RESOURCES identity specimen, but the entire cover is a raster scan. No native vector or verified redraw found.",
@@ -854,7 +948,81 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [
+        "identity-collected/bc-resources-investment-corporation/bcric-1979-brochure-wordmark-raster.png"
+      ],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "crown",
+          "id": "bc-resources-investment-corporation",
+          "name": "British Columbia Resources Investment Corporation",
+          "scope": "Original shareholder brochure; design-supplier attribution route; related timber branding history.",
+          "result": "No new vector verified; one distinct green BCRIC brochure wordmark raster supplied.",
+          "sources": [
+            {
+              "url": "https://sacda.ufv.ca/sites/default/files/2026-09/2021_03_01_03_003.pdf",
+              "title": "A share in BCRIC, August 1979",
+              "downloadName": "bcric-a-share-1979.pdf",
+              "downloaded": true,
+              "sha256": "452d8530aa8072e16d9a3b96708ee9ab001dda59ed875e6f05c4f0c51b26177b",
+              "bytes": 3729481,
+              "pdf_pages": 6,
+              "native_drawing_count_all_pages": 37,
+              "image_placements_including_inline_all_pages": 19,
+              "inspection_scope": "All six pages inventoried for images and paths. PDF pages 1, 2 and 6 visually inspected; page 2 supplies the printed August 1979 date and publisher context. Page 6 logo region checked against full-page RGB image xref 15.",
+              "outcome": "The green BCRIC acronym on page 6 is printed in the original brochure, but its PDF representation is raster. No path intersects the wordmark crop. The 37 drawing objects elsewhere in the six-page PDF are incidental scan-edge strokes rather than the wordmark. A direct source-pixel crop is supplied as a distinct 1979 raster reference."
+            },
+            {
+              "url": "https://sacda.ufv.ca/collections/2021_03_01_03_003",
+              "title": "SACDA catalogue for A share in BCRIC",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Catalogue identifies the corporation as publisher and dates it 1979-08-01; the document itself prints August 1979. Used for entity and document provenance."
+            },
+            {
+              "url": "https://www.creativehotlist.com/Individuals/details/176005",
+              "title": "Paul Woods self-published professional history, posted June 9, 2011",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Lists BC Resources as a corporate-identity client during the 1981–84 Landor Associates role. This is an attribution lead only: the abbreviated client name, exact corporation and specific mark remain uncorroborated. Do not label Woods as the verified BCRIC logo designer."
+            },
+            {
+              "url": "https://www.woodswoods.com/new-gallery-3/",
+              "title": "Woods + Woods, Brandmarks, Symbols and Logos portfolio",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "HTML exposes JPEG/PNG images, no AI/EPS/SVG/PDF attachments. Image names were inventoried and all ten ambiguous screenshot-named images were downloaded and visually checked. No BC Resources mark found."
+            },
+            {
+              "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/timber-tenures/tree-farm-licence/management-plans/tfl_01_mp9_appendix_12_tfl_history.pdf",
+              "title": "The History of Tree Farm Licence 1",
+              "downloadName": "tfl1-history.pdf",
+              "downloaded": true,
+              "sha256": "932181d79d851309f2d05c5942f9a438766a9daef73074e027faaee598a5d47f",
+              "bytes": 1859084,
+              "pdf_pages": 34,
+              "native_drawing_count_all_pages": 0,
+              "image_placements_including_inline_all_pages": 34,
+              "inspection_scope": "All 34 pages structurally inspected and viewed as a contact sheet. Cover brand montage inspected.",
+              "outcome": "Every page is a single scanned image with zero native paths. Cover contains related mill-company identities including BC Timber with a BC Resources Group line; these are not a standalone BCRIC corporate mark and are not native vector."
+            },
+            {
+              "url": "https://digital.library.mcgill.ca/hrcorpreports/search/detail.php?ID=404&company=British+Columbia+Resources+Investment+Corporation",
+              "title": "McGill prior report catalogue",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "This pass’s open redirected to the Archive corporate-report collection and failed. The already inspected 1980 annual-report scan was not downloaded or counted again."
+            }
+          ],
+          "asset_files": [
+            "pass5/crown/assets/bcric-1979-brochure-wordmark-raster.png"
+          ],
+          "next_lead": "Landor corporate identity project records may be productive only after the abbreviated BC Resources client attribution is corroborated. No contact was made and no designer artwork obtained.",
+          "revisited": true,
+          "has_new_verified_vector": false
+        }
+      ]
     },
     {
       "id": "bc-steamship-company",
@@ -925,7 +1093,64 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "crown",
+          "id": "bc-steamship-company",
+          "name": "British Columbia Steamship Company (1975) Ltd.",
+          "scope": "Original digital/office-file searches; public period brochure routes; Archive report discovery; period vessel-image context.",
+          "result": "No new vector verified; no additional accepted raster specimen.",
+          "sources": [
+            {
+              "url": "https://parkscanadahistory.com/publications/pacificrim/brochures/brochure-1987.pdf",
+              "title": "Pacific Rim National Park brochure, 1987",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "New direct download attempt returned HTTP 503; web open returned 502. Indexed company listing is visible, but no PDF or logo region was inspected. Do not claim this brochure has a company logo."
+            },
+            {
+              "url": "https://archive.org/advancedsearch.php",
+              "title": "Internet Archive exact-name query",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Only three records found: two earlier CP steamship brochures outside the 1975 Crown body and a 1988 Gaming Commission report (micro_IA40243216_1060). Metadata search only; the Gaming report was not downloaded or inspected."
+            },
+            {
+              "url": "https://www.rpsc.org/CP_scans/Canadian%20Philatelist%2C%20Vol.%2046.%20No.%204%2C%20July-August%2C%201995.%20Whole%20No.%20269.pdf",
+              "title": "Canadian Philatelist, July–August 1995, printed page 260",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Indexed image description identifies an August 26, 1981 corporate purser handstamp on mail. It is a raster postal-history reproduction, not a located digital logo; binary not downloaded."
+            },
+            {
+              "url": "https://www.flickr.com/photos/photolibrarian/9718793494/",
+              "title": "Public Princess Marguerite image listing",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Page metadata inspected; linked JPEG retrieval returned 403. No image claimed visually inspected or accepted. The 2013 upload date is not an artifact date."
+            },
+            {
+              "url": "https://www.flickr.com/photos/alcomike/50799127036",
+              "title": "Public mid-1980s vessel photograph listing",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Page describes a period ship photograph, not native logo artwork. Metadata only; no accepted image."
+            }
+          ],
+          "asset_files": [],
+          "exclusions": [
+            "Pre-1975 Canadian Pacific Coast Steamships identities.",
+            "Northland Navigation, which began in 1944 under a similar British Columbia Steamship name.",
+            "Columbia Steamship Company house flags.",
+            "Successor BC Stena branding."
+          ],
+          "next_lead": "The previously recorded SSHSA 1981–87 brochures remain a physical-artwork route. This pass did not re-count the inventory or the existing 1987 token image.",
+          "revisited": true,
+          "has_new_verified_vector": false
+        }
+      ]
     },
     {
       "id": "bc-systems-corporation",
@@ -997,7 +1222,77 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "crown",
+          "id": "bc-systems-corporation",
+          "name": "British Columbia Systems Corporation",
+          "scope": "Later report and plan binaries; original document-format searches; named technical-writing supplier portfolio; historical-domain verification.",
+          "result": "No new vector verified.",
+          "sources": [
+            {
+              "url": "https://archive.org/download/micro_IA40242807_1690/micro_IA40242807_1690.pdf",
+              "title": "British Columbia Systems Corporation Annual Report 1991/92",
+              "downloadName": "micro_IA40242807_1690.pdf",
+              "downloaded": true,
+              "sha256": "152b81976cba8a91e2060201d75661b67692871d5c5aaeac5816561656aa6c58",
+              "bytes": 6555951,
+              "pdf_pages": 31,
+              "native_drawing_count_all_pages": 0,
+              "image_placements_including_inline_all_pages": 62,
+              "inspection_scope": "All 31 pages inspected structurally and visually as a contact sheet; front and last pages viewed individually; OCR reviewed for production credits and historic website/domain.",
+              "outcome": "Zero drawing objects; full-page scan layers only. The inspected report supplies period corporate context but no original digital logo file or graphic-design credit."
+            },
+            {
+              "url": "https://archive.org/download/micro_IA40242807_0090/micro_IA40242807_0090.pdf",
+              "title": "British Columbia Systems Corporation Business Plan 1992/93, April 1992",
+              "downloadName": "micro_IA40242807_0090.pdf",
+              "downloaded": true,
+              "sha256": "15ef6756be2bc86e4a9dcf022230f4c94298c34d1b57c6618297a015f3cb4afe",
+              "bytes": 1099801,
+              "pdf_pages": 13,
+              "native_drawing_count_all_pages": 0,
+              "image_placements_including_inline_all_pages": 26,
+              "inspection_scope": "All 13 pages inspected structurally and visually as a contact sheet; front and last pages viewed individually.",
+              "outcome": "Zero drawing objects. The cover uses a large cropped, low-contrast treatment of the BC Systems corporate lettering. It is a scan and incomplete as standalone artwork; not accepted as an additional logo asset."
+            },
+            {
+              "url": "https://archive.org/details/micro_IA40242807_0091",
+              "title": "BC Systems 1997 strategic plan, published 1992",
+              "downloaded": false,
+              "inspection_scope": "Metadata and OCR inspection only.",
+              "outcome": "Read Archive metadata/file inventory and downloaded OCR only; the PDF was not downloaded. The strategic target year is 1997, but its publication date is 1992. No production/design credit or historical website found in the OCR."
+            },
+            {
+              "url": "https://techcommunicators.com/clients/",
+              "title": "Duncan Kent & Associates client/project list",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Supplier lists a BC Systems Corporation NetGuide project. Client-page HTML and portfolio were inspected, but no NetGuide file or corporate-logo attachment was exposed. This is a specific supplier/document lead, not a designer attribution or vector source."
+            },
+            {
+              "url": "https://techcommunicators.com/portfolio/",
+              "title": "Duncan Kent & Associates public portfolio",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Reviewed the portfolio listings; the historical NetGuide is not among the published samples. No contact made."
+            },
+            {
+              "url": "https://library.usask.ca/gic/v1n2/betts/betts.html",
+              "title": "1994 BC OnLine article",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Direct open returned 410 Gone. Indexed period text supplies service context only; does not establish a corporate web/FTP domain or graphic download."
+            }
+          ],
+          "asset_files": [],
+          "next_lead": "The named NetGuide manual or an original electronic 1990s report remains a better target than further microfilm copies. Historic corporate website domain remains unverified; contemporary Securities Commission and US power-supply-company marks were excluded.",
+          "revisited": true,
+          "has_new_verified_vector": false
+        }
+      ]
     },
     {
       "id": "bc-toll-highways-and-bridges-authority",
@@ -1065,7 +1360,9 @@
           "remainingLead": "Original Authority period publications or production artwork; this FOI packet does not supply a master."
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "land-and-water-bc",
@@ -1146,9 +1443,11 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": [
+      "acceptedFollowupFiles": [
         "identity-collected/land-and-water-bc/land-and-water-bc-2002.svg"
-      ]
+      ],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "metro-transit-operating-company",
@@ -1248,7 +1547,9 @@
           "remainingLead": "Inspect original 1981 and 1982 MTOC guides at the recorded UBC call numbers if digitized copies become available."
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "ocean-falls-corporation",
@@ -1313,7 +1614,51 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "crown",
+          "id": "ocean-falls-corporation",
+          "name": "Ocean Falls Corporation",
+          "scope": "Specific archival-processing project and fonds discovery; original-operation-report/design searches.",
+          "result": "No new vector verified; archival collection scope clarified.",
+          "sources": [
+            {
+              "url": "https://cdn.wildapricot.com/299250/resources/Documents/5.Documents_Newsletters/2006-2011_AABC%20Newsletters.pdf",
+              "title": "Claire E. Gilbert, Ocean Falls Project: A BC Archives Success Story, AABC Newsletter, Spring 2011, printed pages 6–7",
+              "downloaded": false,
+              "inspection_scope": "Read both article pages through search-provider indexed PDF text. No original logo artwork or local binary obtained.",
+              "outcome": "Search provider exposed the article text. It reports completion on September 12, 2010 and an inventory of 19,434 plans/drawings, more than 3,000 photographs and 177 textual-record containers. This gives a substantial collection route, but the article gives no usable logo-file identifier. A direct public-file download returned HTTP 403; no local PDF/hash or logo inspection."
+            },
+            {
+              "url": "https://friendsbcarchives.ca/past-events-2008-2015/",
+              "title": "Friends of BC Archives, February 20, 2011 Ocean Falls talk",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Corroborates the named archivist and project context; supplies no digital logo/file list."
+            },
+            {
+              "url": "https://search-bcarchives.royalbcmuseum.bc.ca/ocean-falls-corporation-fonds",
+              "title": "Guessed BC Archives catalogue slug; not a verified catalogue record",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Search-tool open was inaccessible. The guessed slug supplies no reliable fonds identifier and must not be cited as a verified record."
+            },
+            {
+              "url": "https://search.bcarchives.gov.bc.ca/ocean-falls-corporation-fonds",
+              "title": "Alternative guessed catalogue slug; not a verified catalogue record",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Search-tool open was inaccessible. No record identity or digital file confirmed."
+            }
+          ],
+          "asset_files": [],
+          "next_lead": "The processed Ocean Falls Corporation fonds is a specific collection route. A catalogue accession/series and original production artwork still need verification. Generic archival-description standards merely reuse this fonds as an example and were not accepted as file locators.",
+          "revisited": true,
+          "has_new_verified_vector": false
+        }
+      ]
     },
     {
       "id": "pacific-great-eastern-railway",
@@ -1439,7 +1784,64 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "crown",
+          "id": "pacific-great-eastern-railway",
+          "name": "Pacific Great Eastern Railway",
+          "scope": "Modern railway production artwork, fresh CTTA product pages, vector-format/decals searches.",
+          "result": "No new vector verified; inspected modern redraws are raster.",
+          "sources": [
+            {
+              "url": "https://files.constantcontact.com/b02e8bb6001/1f51bceb-1521-443b-bb87-5465a0532a45.pdf",
+              "title": "Rapido Canadian RDC brochure, linked from Rapido News 120 (2020)",
+              "downloadName": "rapido-canadian-rdc-2020.pdf",
+              "downloaded": true,
+              "sha256": "db0a636a28e3c11f92b0c1a62cb27591e904975607f235f874628f26e20e142a",
+              "bytes": 3342193,
+              "pdf_pages": 4,
+              "native_drawing_count_all_pages": 1052,
+              "image_placements_including_inline_all_pages": 43,
+              "inspection_scope": "All four pages structurally inventoried and rendered. The PGE delivery illustration on PDF page 4 was visually checked and its exact rectangle tested for intersecting images and drawing objects.",
+              "outcome": "The PDF contains 1,052 drawing objects overall, but the PGE vehicle region [312.626,280.6723,582.626,319.4044] is a single 750×108 raster image at xref 71 with zero overlapping native drawings. This modern model illustration is neither original corporate vector nor a recoverable vector redraw."
+            },
+            {
+              "url": "https://myemail.constantcontact.com/Rapido-News-120---New-Passenger-Cars--Locomotives--and-RDC-Offer-.html?aid=ZbqJ5o1XjV0&soid=1101318906379",
+              "title": "Rapido News 120, RDC brochure download link",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Supplies provenance for the new inspected brochure. This is modern supplier/model artwork, not primary PGE corporate artwork."
+            },
+            {
+              "url": "https://www.canadiantoytrains.org/portfolios/2024-pacific-great-eastern-stock-car/",
+              "title": "CTTA 2024 PGE stock car",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "HTML artwork links inspected. Original Atlas O artwork is published as PGE-Stock-car-art.jpg, downloaded SHA 7f4da07c44b4b76b844c83537323898b34be29eb8633a3d550d6fecd6fd139d0. No vector attachment found."
+            },
+            {
+              "url": "https://www.canadiantoytrains.org/portfolios/2024-pacific-great-eastern-40-steel-reefer/",
+              "title": "CTTA 2024 PGE steel reefer",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "HTML artwork links inspected. Artwork is published as 40-Steel-Reefer-PGE-page-001.jpg, downloaded SHA 3c91fe895e2a22d6ceea198ede3cc1a2f866244de3c86564aa3de3c4c669f98a. It is JPEG despite a file name suggesting a PDF-export page. No PDF/vector source was linked."
+            },
+            {
+              "url": "https://www.canadiantoytrains.org/portfolios/2025-pge-observation-car-2/",
+              "title": "CTTA PGE crane tender project",
+              "downloaded": false,
+              "inspection_scope": "Public page or search-indexed content; no original logo binary obtained.",
+              "outcome": "Public page/HTML exposes a model photograph JPEG. No native production artwork attachment found."
+            }
+          ],
+          "asset_files": [],
+          "next_lead": "No surviving modern vector redraw was obtained for comparison with historical primary artwork. Do not promote image-only supplier artwork because the surrounding brochure has vector layout elements.",
+          "revisited": true,
+          "has_new_verified_vector": false
+        }
+      ]
     },
     {
       "id": "urban-transit-authority",
@@ -1520,7 +1922,9 @@
           "remainingLead": "Actual manual associated with TRIS accession 00334369."
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "wlc-developments",
@@ -1594,7 +1998,9 @@
           "remainingLead": "An executed original showing a seal imprint or actual company letterhead; this copy remains blank."
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "abbotsford-matsqui-health-council",
@@ -1621,7 +2027,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "alberni-valley-health-council",
@@ -1640,7 +2048,32 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "alberni-valley-health-council",
+          "name": "Alberni Valley Health Council",
+          "query_log_ids": [
+            "c5_q1",
+            "c5_q2",
+            "c5_q4",
+            "c5_q11"
+          ],
+          "inspection_depth": "indexed source research only",
+          "notes": "New period-letterhead, newsletter, sponsor and report searches did not identify an original council artwork file. Results were current services, biographies and previously known statutory references. No underlying document or original logo was inspected for this body in this pass.",
+          "sources": [],
+          "remaining_leads": [
+            "Original 1994–1997 council-authored publication or correspondence; no new period corporate domain established."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "armstrong-enderby-and-spallumcheen-health-council",
@@ -1659,7 +2092,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "arrow-lakes-upper-slocan-valley-health-council",
@@ -1678,7 +2113,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "barriere-and-district-community-health-council",
@@ -1697,7 +2134,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bella-coola-and-district-transitional-health-authority",
@@ -1724,7 +2163,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "boundary-health-council",
@@ -1751,7 +2192,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "bulkley-valley-health-council",
@@ -1784,7 +2227,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "burnaby-health-board",
@@ -1811,7 +2256,23 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "lowerMainland",
+          "id": "burnaby-health-board",
+          "queriesFromBatches": [
+            5,
+            8
+          ],
+          "sourceIds": [
+            "burnaby-consultation-list"
+          ],
+          "result": "No new verified artwork.",
+          "review": "Fresh exact-body logo, correspondence, newsletter and plan searches returned the prior consultation list and hospital/charity context. No attributable original art recovered; successor hospital/foundation marks not substituted."
+        }
+      ]
     },
     {
       "id": "campbell-river-and-area-health-council",
@@ -1830,13 +2291,15 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "campbell-river-nootka-community-health-council",
       "name": "Campbell River/Nootka Community Health Council",
       "group": "Former health",
-      "result": "No new vector verified",
+      "result": "Original raster recovered; vector still missing",
       "hasVerifiedVectorInFollowup": false,
       "originalInventoryAssetCount": 1,
       "notes": "Searched period annual/report and trademark routes. Existing Words on the Water 2002 raster evidence remains the only verified logo source from the first pass; no new native vector recovered here.",
@@ -1863,7 +2326,120 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [
+        "identity-collected/campbell-river-nootka-community-health-council/campbell-river-nootka-community-health-council-2000-original.gif"
+      ],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "campbell-river-nootka-community-health-council",
+          "name": "Campbell River/Nootka Community Health Council",
+          "query_log_ids": [
+            "c5_q1",
+            "c5_q2",
+            "c5_q6",
+            "c5_q7",
+            "c5_q9",
+            "c5_q10"
+          ],
+          "inspection_depth": "original website and artwork inspection; whole PDF object inventories; selected full renders and program contact sheets",
+          "notes": "Recovered original full-colour council GIF at native 345×328. The old sponsor scan remains raster even in the complete pre-migration PDF. A clearer sponsor-card email/domain led to crncare.org; original council HTML establishes attribution. No vector upgrade. Already-failed CNA PDF routes were not repeated.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20000610001853id_/http://www.crncare.org:80/crncare/logo_col_345_328.gif",
+              "assessment": "Original unchanged full-colour GIF, visually verified and attributed by the exact-name homepage.",
+              "downloadName": "campbell-river-nootka-community-health-council-2000-original.gif",
+              "sha256": "b6ff426fb6fdcd25b345295ebbc2a4d82776eca319cdd86a903b5aa7fe62438f",
+              "bytes": 35224
+            },
+            {
+              "url": "https://web.archive.org/web/20000115210417id_/http://www.crncare.org:80/crncare/crn.html",
+              "assessment": "Original homepage names Campbell River/Nootka Community Health Council and embeds logo_col_345_328.gif.",
+              "downloadName": "crncare-home-2000.html",
+              "sha256": "593f6fcd1be3a350c7c70595cde42d7140ba22ed5bcb6426986e397443a95606",
+              "bytes": 1390
+            },
+            {
+              "url": "https://web.archive.org/web/20011203211029id_/http://www.crncare.org:80/crnchc/whoweare.htm",
+              "assessment": "Original corporate history states combined council established 1 April 1997; supports separation from earlier Campbell River and Area body.",
+              "downloadName": "crncare-whoweare-2001.html",
+              "sha256": "d389a47a1dcd43460ba5b310cc709b831ef9674c272a442178f12656e37f4345",
+              "bytes": 15827
+            },
+            {
+              "url": "https://wordsonthewater.ca/2002-2011/",
+              "assessment": "Official festival archive links current 2002, 2003 and 2004 PDFs.",
+              "access": "web-page-read",
+              "web_ref": "turn310view0"
+            },
+            {
+              "url": "https://wordsonthewater.ca/wp-content/uploads/2026/07/wow2002.pdf",
+              "assessment": "Current archived program is entirely raster: zero paths and zero text characters on all pages. 2002 p 5 is the already-known council sponsor mark. Contact-sheet review of 2003/2004 found personal Patterson sponsorship, not council artwork.",
+              "pdf_pages": 8,
+              "structure_log": "sources/wow-download-inspection.json",
+              "downloadName": "wow2002.pdf",
+              "sha256": "2bb76c2b5a3394ad59556ba75a2c219093e3f15d1f79766b1033a2445f848a09",
+              "bytes": 1053156
+            },
+            {
+              "url": "https://wordsonthewater.ca/wp-content/uploads/2026/07/wow2003.pdf",
+              "assessment": "Current archived program is entirely raster: zero paths and zero text characters on all pages. 2002 p 5 is the already-known council sponsor mark. Contact-sheet review of 2003/2004 found personal Patterson sponsorship, not council artwork.",
+              "pdf_pages": 8,
+              "structure_log": "sources/wow-download-inspection.json",
+              "downloadName": "wow2003.pdf",
+              "sha256": "0d5cb3009e7c6b98c6a0b4462f4b187dc7eb3f6d8c8455c9ede61867fd5048b4",
+              "bytes": 1048325
+            },
+            {
+              "url": "https://wordsonthewater.ca/wp-content/uploads/2026/07/wow2004.pdf",
+              "assessment": "Current archived program is entirely raster: zero paths and zero text characters on all pages. 2002 p 5 is the already-known council sponsor mark. Contact-sheet review of 2003/2004 found personal Patterson sponsorship, not council artwork.",
+              "pdf_pages": 12,
+              "structure_log": "sources/wow-download-inspection.json",
+              "downloadName": "wow2004.pdf",
+              "sha256": "a9348277edd2e04b07d96c7ae02a56e7801ae5d25ae01d1c33e90d8e1d354c04",
+              "bytes": 1552193
+            },
+            {
+              "url": "https://web.archive.org/web/20240125023008id_/https://www.wordsonthewater.ca/uploads/3/9/4/2/39427837/wow2002.pdf",
+              "assessment": "Complete pre-migration 2002 program (original Adobe PDF Library metadata, created 2005): all 8 pages are already single-image rasters. P 5 visually confirms same council sponsor card. This resolves the hypothesis that 2026 migration flattened a vector.",
+              "pdf_pages": 8,
+              "visually_inspected_pdf_pages": [
+                5
+              ],
+              "structure_log": "sources/wow2002-archive2024-inspection.json",
+              "downloadName": "wow2002-archive-20240125.pdf",
+              "sha256": "65cef8fb5fbad9135f81a04bdad0e1e1f5d9aa2bcc4d839c93a4e4211292dea0",
+              "bytes": 1076391
+            },
+            {
+              "url": "https://web.archive.org/web/20231211003728id_/https://www.wordsonthewater.ca/uploads/3/9/4/2/39427837/wow2002.pdf",
+              "assessment": "Earlier retrieved capture is incomplete: 1048576 stored bytes, declared PDF length 1076391, no EOF, PyMuPDF 0 pages. Not artwork-verification evidence.",
+              "access": "incomplete-archive-payload",
+              "downloadName": "wow2002-archive-20231211.pdf",
+              "sha256": "fdc7af595ce01e30bb802db6f9cf724e7776115c27a44343a28fef3e60ca61d4",
+              "bytes": 1048576
+            },
+            {
+              "url": "https://web.archive.org/cdx/search/cdx?url=crncare.org&matchType=domain&output=json&filter=statuscode%3A200&from=1996&to=2003&collapse=urlkey&fl=timestamp%2Coriginal%2Cmimetype%2Cdigest%2Clength&limit=1500",
+              "assessment": "105 successful original URLs returned in period domain index. No original native drawing or office document in this returned index. Expanded native-file/all-date requests later returned 503, so broader absence is not established.",
+              "downloadName": "crncare.org-cdx-1996-2003.json",
+              "sha256": "36b933c99a08b76384cbadb93837c6213902cefd5279fd58b1211f4932a1735d",
+              "bytes": 13864
+            }
+          ],
+          "remaining_leads": [
+            "Original print/design file or office-source document underlying the emblem; none located. Expanded archive-index requests are unresolved 503 failures, not proof of no files."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "Original raster artwork recovered; no new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": true,
+          "accepted_asset_ids": [
+            "historical-campbell-river-nootka-2000-color-web"
+          ]
+        }
+      ]
     },
     {
       "id": "capital-health-region",
@@ -1903,14 +2479,16 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": [
+      "acceptedFollowupFiles": [
         "identity-collected/capital-health-region/capital-health-region-2000-dark-grey.svg",
         "identity-collected/capital-health-region/capital-health-region-2000-dark-white.svg",
         "identity-collected/capital-health-region/capital-health-region-2000-original-colour.jpeg",
         "identity-collected/capital-health-region/capital-health-region-2000-original-greyscale.png",
         "identity-collected/capital-health-region/capital-health-region-1999-january-newspaper-raster.png",
         "identity-collected/capital-health-region/capital-health-region-1999-october-letterhead-raster.png"
-      ]
+      ],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "cariboo-community-health-services-society",
@@ -1943,7 +2521,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "cariboo-regional-health-board",
@@ -1962,7 +2542,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "castlegar-and-district-health-council",
@@ -1981,7 +2563,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "central-cariboo-chilcotin-health-council",
@@ -2041,7 +2625,9 @@
           "has_new_artwork": false
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "central-coast-transitional-health-authority",
@@ -2068,7 +2654,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "central-okanagan-community-health-council",
@@ -2102,7 +2690,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "chetwynd-health-council",
@@ -2129,7 +2719,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "chilliwack-kent-harrison-health-council",
@@ -2148,7 +2740,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "clearwater-and-district-community-health-council",
@@ -2167,13 +2761,15 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "coast-garibaldi-community-health-services-society",
       "name": "Coast Garibaldi Community Health Services Society",
       "group": "Former health",
-      "result": "No new vector verified",
+      "result": "Original raster recovered; vector still missing",
       "hasVerifiedVectorInFollowup": false,
       "originalInventoryAssetCount": 0,
       "notes": "Followed society annual/report, name-abbreviation, watershed and official-mark routes. Results mention the society as participant; no original attributable mark recovered. Modern Vancouver Coastal and later Coast Garibaldi service-area branding were excluded.",
@@ -2192,7 +2788,94 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [
+        "identity-collected/coast-garibaldi-community-health-services-society/coast-garibaldi-community-health-services-society-original-web-colour-2001.gif"
+      ],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "regions",
+          "body_id": "coast-garibaldi-community-health-services-society",
+          "name": "Coast Garibaldi Community Health Services Society",
+          "status": "new-original-raster-no-new-vector",
+          "scope": "Original cghealth.org discovered through surviving2001 community directory. Original home, organization, news, partner and table-of-contents HTML inspected. Archive catalogues and linked PDFs/native-format routes followed.",
+          "outcome": "One 200×64 original teal GIF verified and preserved. The only accessible original PDF located in the expanded catalogue has ordinary agency title text, a consultant raster logo/contact block and hospital photo. No agency vector verified.",
+          "new_assets": [
+            "pass5/regions/raster-references/coast-garibaldi-community-health-services-society-original-web-colour-2001.gif"
+          ],
+          "sources": [
+            {
+              "url": "https://www.folkstone.ca/broadband/SCbroadband.html",
+              "downloadName": "coast-directory-2001.html",
+              "sha256": "2769d9d45d211afbfb7ef16e140961720bff6ede20d1fee66d6318f705c357a7",
+              "bytes": 15870,
+              "assessment": "Page shows UpdatedOctober 18, 2001 and links www.cghealth.org as Coast Garibaldi health service.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20010813123007id_/http://cghealth.org:80/Images/CGHLogo2000.gif",
+              "downloadName": "cghealth-original-logo.gif",
+              "sha256": "689eacd4feac1e0cd752bf64ce7dd344a5c745c84bcc4e2a811150ddcb603a00",
+              "bytes": 22338,
+              "assessment": "Original GIF visually verified and byte-preserved.",
+              "verificationLevel": "original-raster-verified"
+            },
+            {
+              "url": "https://web.archive.org/web/20010803222639id_/http://www.cghealth.org:80/Top_level_pages/Organization.htm",
+              "downloadName": "cghealth-organization.html",
+              "sha256": "5ce64478bb9d65ccf17a3296868ea756ddb3ea54382bedde14ae3b7b042b0f67",
+              "bytes": 12797,
+              "assessment": "Direct image reference and explicit CHSS legal identity; not earlier-board attribution.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20010803222656id_/http://www.cghealth.org:80/Top_level_pages/News.htm",
+              "downloadName": "cghealth-news.html",
+              "sha256": "ce3196e0cb4a266140772f8bc5454dbe9e1d2b42b12b8ac0f053a7918a64f45e",
+              "bytes": 15022,
+              "assessment": "Links facilities plan, three Connections newsletters and a population report; all five selected exact PDFs returned 404.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/cdx/search/cdx?url=cghealth.org/*&output=json&filter=statuscode:200&collapse=urlkey&fl=timestamp,original,mimetype&to=2005&limit=1200",
+              "downloadName": "cghealth-complete-index-to2005.json",
+              "sha256": "d0903861a0b94c2bedc480c9a1b215123eeda2a2be199e1ad7c8e4676aedf72d",
+              "bytes": 42299,
+              "assessment": "426 collapsed status200 URL rows through 2005, below limit 1200; one PDF and no other listed native-document extension. Catalogue coverage only.",
+              "verificationLevel": "archive-index-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20020325203027id_/http://www.cghealth.org/Documents/Three_Year_Plan.htm",
+              "downloadName": "cgh-three-year-plan.html",
+              "sha256": "0c62616768d6d29eadd73d1705af1b53d3958a330fcb98fcbccdcc3c98961e8d",
+              "bytes": 273901,
+              "assessment": "Word 9-generated Health Services Plan 1999–2002 HTML inspected. VML wrappers point to raster bullet GIFs; no verified agency-logo native paths. References filelist.xml/editdata.mso are untested auxiliaries.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20031015171136id_/http://www.cghealth.org:80/Documents/SC_Dev_Plan/1-Intro-2-exec%20summary.pdf",
+              "downloadName": "cgh-sunshine-plan-intro.pdf",
+              "sha256": "81311aab0f6c399dfe88d1cc9a9948c31f7744d3d30548c16b027f81add3ef34",
+              "bytes": 119068,
+              "assessment": "14-page May 31, 2000 development-plan introduction/executive summary. All 14 pages inspected using get_image_info(xrefs=True) and get_drawings; visual cover and consultant p3 inspected. Four raster placements: three consultant objects p3, hospital photo p5. No agency logo identified.",
+              "verificationLevel": "pdf-structure-and-selected-visual-review"
+            }
+          ],
+          "failed_exact_documents": [
+            "https://web.archive.org/web/20011101000000id_/http://www.cghealth.org/Documents/CC_Facilities_Plan_2001.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.cghealth.org/Documents/Connections_Newsletters/Connections_3.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.cghealth.org/Documents/Connections_Newsletters/Connections_2.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.cghealth.org/Documents/Connections_Newsletters/Connections_1.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.cghealth.org/Documents/CHSS%20Population%20Report%20Coast%20Garibaldi%20%20V6%20FINAL.pdf"
+          ],
+          "identity_cautions": [
+            "The2001 website explicitly identifies CHSS. No adoption-date or earlier-Regional-Board use claim."
+          ],
+          "open_leads": [
+            "The exact 5 original report/newsletter URLs remain leads despite 404 responses. A different lawful mirror could still preserve original native artwork."
+          ]
+        }
+      ]
     },
     {
       "id": "coast-garibaldi-regional-health-board",
@@ -2219,7 +2902,39 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "regions",
+          "body_id": "coast-garibaldi-regional-health-board",
+          "name": "Coast Garibaldi Regional Health Board",
+          "status": "no-new-vector-or-raster-verified",
+          "scope": "Fresh1995 report route and exact historical-board report/plan/1996query; original2001 CHSS legal identity compared so later art is not assigned backward.",
+          "outcome": "Period newspaper indexing locates1995–96 board planning and dissolution reports. These are uninspected scan leads, not artwork evidence. The recovered2001 CHSS GIF is not attributed to this earlier board.",
+          "sources": [
+            {
+              "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/1/21347/19951219_Squamish_Times.pdf",
+              "assessment": "Indexed article on regional boundaries and1995 board plan. PDF not downloaded or visually inspected.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            },
+            {
+              "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/1/21412/19960227_The_Squamish_Chief.pdf",
+              "assessment": "Indexed1996 board implementation goals; PDF not downloaded, no art claim.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            },
+            {
+              "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/1/21629/19961203_The_Squamish_Chief.pdf",
+              "assessment": "Indexed report describes dissolution of earlier Regional Health Board; not downloaded or visually inspected.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            }
+          ],
+          "identity_cautions": [
+            "A 1995 report citation retroactively attributed to CHSS in a later bibliography is not reliable proof of society-era artwork.",
+            "The2001 CHSS logo cannot close this separate earlier-board row."
+          ]
+        }
+      ]
     },
     {
       "id": "columbia-valley-health-council",
@@ -2238,7 +2953,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "comox-valley-community-health-council",
@@ -2263,7 +2980,41 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "comox-valley-community-health-council",
+          "name": "Comox Valley Community Health Council",
+          "query_log_ids": [
+            "c5_q1",
+            "c5_q2",
+            "c5_q6",
+            "c5_q7",
+            "c5_q8"
+          ],
+          "inspection_depth": "indexed source research; historical directory HTML review",
+          "notes": "Exact-name, sponsor, abbreviation and historical-web-address queries produced no original artwork. CVCHC search hits included a modern Community Health Centre code; those are not the former council. HINET historical directory lists Comox Valley as ordinary text with no council web link or logo. Prior Glacier View Lodge release was not re-counted.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20020305054851id_/http://www.hinetbc.org/industry/community.html",
+              "assessment": "Historical council list has no Comox profile/logo/domain link.",
+              "downloadName": "hinet-community-2001.html",
+              "sha256": "78e7f5c732c5497e4566647f518d990fdc64d599b165e51a4750e146802cf28a",
+              "bytes": 7272
+            }
+          ],
+          "remaining_leads": [
+            "Original 1995–2001 council publication, sponsor panel or letterhead; no new downloadable source established."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "cowichan-communities-health-council",
@@ -2288,7 +3039,31 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "cowichan-communities-health-council",
+          "name": "Cowichan Communities Health Council",
+          "query_log_ids": [
+            "c5_q3",
+            "c5_q5",
+            "c5_q11"
+          ],
+          "inspection_depth": "indexed source research only",
+          "notes": "New health-plan, newsletter and period publication queries returned a previously known modern obituary/designation reference and unrelated current organizations. No original council artwork file retrieved. Current Our Cowichan and Chemainus foundation identities were not substituted.",
+          "sources": [],
+          "remaining_leads": [
+            "Original 1995–1997 council health plan or correspondence."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "cranbrook-health-council",
@@ -2337,7 +3112,9 @@
           "has_new_artwork": false
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "creston-and-district-health-council",
@@ -2356,7 +3133,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "delta-health-council",
@@ -2395,7 +3174,25 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "lowerMainland",
+          "id": "delta-health-council",
+          "queriesFromBatches": [
+            1,
+            2,
+            5,
+            8
+          ],
+          "sourceIds": [
+            "delta-financial-statements"
+          ],
+          "result": "More precise catalogue locator; vector still missing.",
+          "review": "The financial-statements lead now has VPL call number 362.10971133 D36 and a specific reference collection. The actual serial was not accessed."
+        }
+      ]
     },
     {
       "id": "district-69-community-health-council",
@@ -2414,7 +3211,31 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "district-69-community-health-council",
+          "name": "District 69 Community Health Council",
+          "query_log_ids": [
+            "c5_q5",
+            "c5_q8",
+            "c5_q11"
+          ],
+          "inspection_depth": "indexed source research only",
+          "notes": "Exact-name, local Parksville/Qualicum and health-plan searches did not locate original artwork. School District 69 and current health-service results do not establish the historical council identity. No actual publication inspected for this body.",
+          "sources": [],
+          "remaining_leads": [
+            "Original 1995–1997 council publication or municipal correspondence."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "east-kootenay-community-health-services-society",
@@ -2433,7 +3254,44 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "regions",
+          "body_id": "east-kootenay-community-health-services-society",
+          "name": "East Kootenay Community Health Services Society",
+          "status": "no-new-vector-or-raster-verified",
+          "scope": "Fresh old-domain, CHSS abbreviation,1999–2001 PDF, report/plan/newsletter/thesis, logo/annual-report/DOC queries; original-period Ministry/HINET directories and IA creator catalogue reviewed.",
+          "outcome": "Results identify governance/funding or mention the society; no original agency domain, logo-bearing digital report or native asset retrieved.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20020305060027id_/http://www.hinetbc.org/industry/service.html",
+              "downloadName": "hinet-societies-2001.html",
+              "sha256": "cea86c138fa71787b832bafbf82fcad76578f9dacf8d5e39a686f0d629a7fc4c",
+              "bytes": 6245,
+              "assessment": "The period society list includes East Kootenay as plain text, without a profile, original domain or agency-image link.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://archive.org/advancedsearch.php?q=creator%3A%28%22Coast+Garibaldi%22+OR+%22East+Kootenay%22+OR+%22Upper+Island%22+OR+%22Peace+Liard%22+OR+%22Thompson+Health%22%29&output=json&rows=100",
+              "downloadName": "historical-regions-catalogue.json",
+              "sha256": "fe05e6ec0effc438ed296974ef762327d0ce7c95b36d807a005f044f61530cf9",
+              "bytes": 2556,
+              "assessment": "The combined creator query returned two irrelevant East Kootenay Power Company records. It did not return a health-body record; this is a query-specific result.",
+              "verificationLevel": "catalogue-only"
+            },
+            {
+              "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2000resume31",
+              "assessment": "Ministerial-order summary identifies society appointments; no artwork verified.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            }
+          ],
+          "identity_cautions": [
+            "Modern InteriorHealth and unrelated addiction-service identities excluded."
+          ]
+        }
+      ]
     },
     {
       "id": "east-kootenay-regional-health-board",
@@ -2452,7 +3310,28 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "regions",
+          "body_id": "east-kootenay-regional-health-board",
+          "name": "East Kootenay Regional Health Board",
+          "status": "no-new-vector-or-raster-verified",
+          "scope": "Fresh exact-board PDF and original-domain/name-alternative queries, plus a combined report/logo/DOC query.",
+          "outcome": "Administrative/gazette text and later societymentions; no correct earlier-board art verified.",
+          "sources": [
+            {
+              "url": "https://publications.gc.ca/collections/collection_2013/gazette/SP2-1-134-6.pdf",
+              "assessment": "Indexed Canada Gazette charity-deregistration entry. Notdownloaded; no artwork claim.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            }
+          ],
+          "identity_cautions": [
+            "Earlierboard and1997–2001 society kept separate."
+          ]
+        }
+      ]
     },
     {
       "id": "east-thompson-north-shuswap-health-council",
@@ -2479,7 +3358,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "elk-valley-and-south-country-health-council",
@@ -2498,7 +3379,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "fort-nelson-liard-health-council",
@@ -2517,7 +3400,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "fort-st-john-and-district-health-council",
@@ -2544,7 +3429,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "fraser-valley-health-region",
@@ -2623,7 +3510,9 @@
           ]
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "golden-health-council",
@@ -2642,13 +3531,15 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "greater-trail-community-health-council",
       "name": "Greater Trail Community Health Council",
       "group": "Former health",
-      "result": "No new vector verified",
+      "result": "Original raster recovered; vector still missing",
       "hasVerifiedVectorInFollowup": false,
       "originalInventoryAssetCount": 0,
       "notes": "Downloaded Trail January 2001 remedial-options report,190 pages. Reviewed cover, author addresses, council references and final committee appendices. Greater Trail council appears in text; no attributable council artwork found. Native PDF contents alone were not treated as vector-logo proof.",
@@ -2699,7 +3590,53 @@
           "has_new_artwork": false
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [
+        "identity-collected/greater-trail-community-health-council/greater-trail-community-health-council-2001-original.gif"
+      ],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "greater-trail-community-health-council",
+          "name": "Greater Trail Community Health Council",
+          "query_log_ids": [],
+          "inspection_depth": "original council homepage and unchanged GIF visually verified; prefix index and chair-report HTML inspected",
+          "notes": "First verified complete council mark recovered from the original website: black people/oval emblem and council wordmark on the original grey GIF background. The site explicitly separates Trail Regional Hospital, long-term care and home-support sections. Inspected prefix index has 72 successful URLs (1996–2004), with HTML, GIFs/JPGs and Dreamweaver template text; no PDF/office/vector source in the returned list. The 2000–2001 chair report is HTML with no original drawing-file link.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20010404093451id_/http://www.trailnet.bc.ca/~trh/",
+              "assessment": "Exact council name and GTCHC_logo.gif reference.",
+              "downloadName": "greater-trail-home.html",
+              "sha256": "c4e54823b6c955a9dae664e1c46e5b50787f4d5db68ae95cce36df760d9f9e53",
+              "bytes": 4980
+            },
+            {
+              "url": "https://web.archive.org/web/20010606033527id_/http://www.trailnet.bc.ca:80/~trh/GTCHC_logo.gif",
+              "assessment": "Unchanged 205×105 original GIF, complete council mark.",
+              "downloadName": "greater-trail-logo.gif",
+              "sha256": "e0776fc664f4a827026a858227b55dc6a64f3d7f5f966662bbbe45299c5dc798",
+              "bytes": 2970
+            },
+            {
+              "url": "https://web.archive.org/web/20011016202119id_/http://trailnet.bc.ca:80/~trh/CHC/CHAIRreport.htm",
+              "assessment": "Original chair report HTML has no artwork/native-file link.",
+              "downloadName": "greater-trail-chair-report-2001.html",
+              "sha256": "3517af0010afa8f4036c89abd2423a8b0de9e28dfc6064d49221f28fe92dba97",
+              "bytes": 11769
+            }
+          ],
+          "remaining_leads": [
+            "Original letterhead/design source or other print publication; no native drawing recovered."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "Original raster artwork recovered; no new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": true,
+          "accepted_asset_ids": [
+            "historical-greater-trail-2001-web"
+          ]
+        }
+      ]
     },
     {
       "id": "greater-vernon-health-council",
@@ -2718,7 +3655,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "hope-and-district-health-council",
@@ -2737,7 +3676,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "houston-health-council",
@@ -2756,7 +3697,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "hudsons-hope-health-council",
@@ -2775,7 +3718,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "kamloops-community-health-council",
@@ -2794,7 +3739,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "kimberley-community-health-council",
@@ -2813,7 +3760,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "kitimat-and-area-health-council",
@@ -2879,7 +3828,9 @@
           "has_new_artwork": false
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "kootenay-boundary-community-health-services-society",
@@ -2924,7 +3875,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "lakes-district-health-council",
@@ -2943,7 +3896,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "lillooet-district-health-council",
@@ -2962,7 +3917,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "logan-lake-health-council",
@@ -2981,7 +3938,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "mackenzie-and-area-health-council",
@@ -3008,7 +3967,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "mission-and-district-community-health-council",
@@ -3027,7 +3988,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "mount-waddington-health-council",
@@ -3060,7 +4023,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "nanaimo-and-area-community-health-council",
@@ -3079,7 +4044,52 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "nanaimo-and-area-community-health-council",
+          "name": "Nanaimo and Area Community Health Council",
+          "query_log_ids": [
+            "c5_q3",
+            "c5_q4",
+            "c5_q5",
+            "c5_q6"
+          ],
+          "inspection_depth": "whole PDF text/object inventory and relevant-page visual inspection",
+          "notes": "A search hit initially associated with a Powell River festival resolves to Mainly Malaspina, May 1995. PDF p. 11 contains a short Nanaimo-and-area council formation paragraph beside an unrelated Powell River oyster-festival photo. Visual inspection confirms ordinary prose, no council artwork. College logos and hospital-society records are distinct identities.",
+          "sources": [
+            {
+              "url": "https://www.viurrspace.ca/server/api/core/bitstreams/7a716082-9257-4684-a54b-96ab48e48aaf/content",
+              "assessment": "Mainly Malaspina, May 1995, 12 pages. PDF p. 1 establishes issue/date; p 11 council mention is ordinary text.",
+              "pdf_pages": 12,
+              "visually_inspected_pdf_pages": [
+                1,
+                11
+              ],
+              "structure_log": "sources/powell-report-inspection.json",
+              "downloadName": "viu-powell-community-source.pdf",
+              "sha256": "e915e83a007d13713a9e3d8e56aef2b18ddb619b9ef3eb41b77032127b64c23a",
+              "bytes": 9035494
+            },
+            {
+              "url": "https://www.nanaimoarchives.ca/online-resources/finding-aids/nanaimo-regional-general-hospital-society-fonds",
+              "assessment": "Indexed fonds finding aid for hospital society, not recovered council letterhead or logo.",
+              "access": "search-index-only",
+              "web_ref": "turn317search7"
+            }
+          ],
+          "remaining_leads": [
+            "Council-specific 1995–1997 report or correspondence; hospital-society fonds catalogue is not itself council artwork."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "nelson-and-area-health-council",
@@ -3144,7 +4154,9 @@
           "has_new_artwork": false
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "new-westminster-health-council",
@@ -3163,7 +4175,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "nicola-valley-health-council",
@@ -3196,7 +4210,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "nisgaa-community-health-council",
@@ -3216,7 +4232,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "nootka-community-health-council",
@@ -3235,7 +4253,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "north-coast-community-health-council",
@@ -3275,7 +4295,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "north-peace-health-council",
@@ -3308,7 +4330,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "north-shore-health-region",
@@ -3397,10 +4421,12 @@
           "excluded_prior_evidence": "November 1999 CJNS advertisement and trail donor-panel raster already known; nshr.hnet.bc.ca email-domain archive query already attempted in pass 3 and not repeated."
         }
       ],
-      "acceptedFilesInThisPr": [
+      "integrationNote": "The 1999 source crop is already proposed in PR #9 and is excluded here. This PR includes only the distinct later trail-panel reproduction; no vector recovery or independent first-body claim.",
+      "acceptedFollowupFiles": [
         "identity-collected/north-shore-health-region/north-shore-health-region-trail-reversed-raster.png"
       ],
-      "integrationNote": "The 1999 source crop is already proposed in PR #9 and is excluded here. This PR includes only the distinct later trail-panel reproduction; no vector recovery or independent first-body claim."
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "north-west-community-health-services-society",
@@ -3440,7 +4466,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "north-west-regional-health-board",
@@ -3459,7 +4487,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "northern-interior-regional-health-board",
@@ -3597,9 +4627,11 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": [
+      "acceptedFollowupFiles": [
         "identity-collected/northern-interior-regional-health-board/northern-interior-regional-health-board-blue-2001.svg"
-      ]
+      ],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "okanagan-similkameen-health-region",
@@ -3663,7 +4695,9 @@
           "excluded_prior_evidence": "MQ 49217 pp 73/96 scan specimens and archivedoshr.org 1999 unavailable-site page already examined; later Interior Health and regional hospital district logos excluded as different identities."
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "oliver-osoyoos-health-council",
@@ -3690,7 +4724,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "omineca-health-council",
@@ -3709,7 +4745,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "oyster-district-community-health-council",
@@ -3729,7 +4767,32 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "oyster-district-community-health-council",
+          "name": "Oyster District Community Health Council",
+          "query_log_ids": [
+            "c5_q3",
+            "c5_q4",
+            "c5_q5",
+            "c5_q11"
+          ],
+          "inspection_depth": "indexed source research only",
+          "notes": "Exact checklist ID is oyster-district-community-health-council. Ladysmith/Oyster health-plan and publication queries did not produce original council artwork. Municipal legal land descriptions containing Oyster District are unrelated search noise; no Ladysmith municipal mark was accepted.",
+          "sources": [],
+          "remaining_leads": [
+            "Original 1995–1997 council records; no original council domain or document recovered."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "peace-arch-community-health-council",
@@ -3748,7 +4811,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "peace-liard-community-health-services-society",
@@ -3775,7 +4840,57 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "regions",
+          "body_id": "peace-liard-community-health-services-society",
+          "name": "Peace Liard Community Health Services Society",
+          "status": "no-new-vector-or-raster-verified",
+          "scope": "Fresh domain/annual/newsletter,1998–2000 PDF, thesis, telehealth, website 2001 and native-document queries. Period directories inspected.",
+          "outcome": "TeleMental Health pilot and draft 1998–2005 mental-health plan provide grounded document leads, but no original society art or native asset obtained. GlobalHealthJobs North Peace profile has a plr.hnet.bc.ca email only, which does not establish a public website.",
+          "sources": [
+            {
+              "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/2000/3810.asp",
+              "assessment": "June 23, 2000 TeleMental Health pilot identifies Peace Liard CHSS and partners. This is a Ministry release; no agency logo was verified.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            },
+            {
+              "url": "https://lims.leg.bc.ca/hdms/file/Debates/36th4th/20000515pm-Hansard-v19n16.htm",
+              "assessment": "Hansard identifies a draft mental-health plan for the Peace-Liard region, 1998–2005, and Gerrit van der Leer. The actual plan was not located.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            },
+            {
+              "url": "https://epe.lac-bac.gc.ca/100/200/301/hcan-scan/iacb-dgiac/telemental_health-e/pdf/mental_e.pdf?nodisclaimer=1",
+              "assessment": "A 2004 Telemental Health status-report lead; not downloaded, with no historical-mark claim.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20020305060027id_/http://www.hinetbc.org/industry/service.html",
+              "downloadName": "hinet-societies-2001.html",
+              "sha256": "cea86c138fa71787b832bafbf82fcad76578f9dacf8d5e39a686f0d629a7fc4c",
+              "bytes": 6245,
+              "assessment": "The period society list names Peace Liard in plain text, with no agency image or domain link.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20011030144658id_/http://www.globalhealthjobs.com/shopmain/bchealthorgs.html",
+              "downloadName": "bc-health-jobs-directory-2001.html",
+              "sha256": "01de135aad119172fd6c92d2f079b45af918d0499b662413c5e9f5a7baced35b",
+              "bytes": 56432,
+              "assessment": "North Peace contact email uses mail.plr.hnet.bc.ca but web field n/a; not used to invent a public host.",
+              "verificationLevel": "downloaded-inspected"
+            }
+          ],
+          "open_leads": [
+            "Draft Mental Health Plan 1998–2005 remains an exact historical title route."
+          ],
+          "identity_cautions": [
+            "Later Northern Health/PHSA/UBC service-program branding excluded."
+          ]
+        }
+      ]
     },
     {
       "id": "peace-river-south-east-health-council",
@@ -3802,7 +4917,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "peace-river-liard-regional-health-board",
@@ -3821,7 +4938,22 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "regions",
+          "body_id": "peace-river-liard-regional-health-board",
+          "name": "Peace River-Liard Regional Health Board",
+          "status": "no-new-vector-or-raster-verified",
+          "scope": "Exact earlier-board report/plan/minutes query plus period name alternatives.",
+          "outcome": "No attributable earlier-board original document or native asset was verified. Later Peace Liard society telehealth and mental-health plan leads were not transferred to this row.",
+          "sources": [],
+          "identity_cautions": [
+            "Earlier Regional Health Board and later CHSS remain distinct."
+          ]
+        }
+      ]
     },
     {
       "id": "penticton-and-area-health-council",
@@ -3840,7 +4972,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "powell-river-community-health-council",
@@ -3865,7 +4999,61 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "powell-river-community-health-council",
+          "name": "Powell River Community Health Council",
+          "query_log_ids": [
+            "c5_q1",
+            "c5_q3",
+            "c5_q6",
+            "c5_q7",
+            "c5_q8",
+            "c5_q9"
+          ],
+          "inspection_depth": "whole native-PDF text/object inventory and relevant-page visual inspection; bibliographic lead review",
+          "notes": "Downloaded Sharing Information to Strengthen Rural Communities: Lessons Learned from BC Projects, 213 pages. PDF pp. 161–162 name the council as a partner in an employment project; cover and these pages contain ordinary type/box rules, no council mark. The women’s-health report remains a bibliographic lead. The VIU oyster-festival search hit concerned Nanaimo council in a separate paragraph, not Powell River council sponsorship.",
+          "sources": [
+            {
+              "url": "https://www.fraserbasin.bc.ca/_Library/Community/report_rural_communities_lessons.pdf",
+              "assessment": "Native report, PDFmetadata April 2002. No council artwork in cover or relevant Powell River section inspected.",
+              "pdf_pages": 213,
+              "visually_inspected_pdf_pages": [
+                1,
+                161,
+                162
+              ],
+              "structure_log": "sources/powell-report-inspection.json",
+              "downloadName": "fraser-basin-rural-communities.pdf",
+              "sha256": "76a19d3902917b1a8073e512858df30618174ec16d764299ab85028e75e585fb",
+              "bytes": 398993
+            },
+            {
+              "url": "https://www.bcwomens.ca/healthinfo-site/Documents/Provincial%20Women%27s%20Health%20Strategy.pdf",
+              "assessment": "Indexed bibliography supplies fuller title Working Together For Women’s Health, Violence Against Women: Improving the Health Care Response (2000), Specialized Victim Support Services; original report not obtained.",
+              "access": "search-index-only",
+              "web_ref": "turn310search44"
+            },
+            {
+              "url": "https://cewh.ca/wp-content/uploads/2012/05/2004_Advancing-Health-Girls-Women.pdf",
+              "assessment": "Previously known citation to Wilson, Northrup and Sherritt (2000), Powell River council publication; not recovered source artwork.",
+              "access": "search-index-only",
+              "web_ref": "turn310search43"
+            }
+          ],
+          "remaining_leads": [
+            "Original Working Together For Women’s Health report, including its cover and sponsor panel, remains unlocated."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "prince-george-health-council",
@@ -3884,7 +5072,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "princeton-health-council",
@@ -3903,7 +5093,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "queen-charlotte-islands-haida-gwaii-community-health-council",
@@ -3922,7 +5114,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "quesnel-and-district-community-health-council",
@@ -3999,7 +5193,9 @@
           "has_new_artwork": false
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "revelstoke-community-health-council",
@@ -4018,7 +5214,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "richmond-health-board",
@@ -4037,7 +5235,24 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "lowerMainland",
+          "id": "richmond-health-board",
+          "queriesFromBatches": [
+            2,
+            5
+          ],
+          "sourceIds": [
+            "richmond-board-newsletter-six",
+            "richmond-environmental-review-2000"
+          ],
+          "result": "Specific original newsletter holding located; vector still missing.",
+          "review": "Richmond archive catalogue explicitly identifies Health Board newsletter No. 6 in RCSAC fonds Series 5 File 5. Catalogue only. The separately inspected 2000 environmental review concerns successor services and supplies no qualifying board artwork."
+        }
+      ]
     },
     {
       "id": "ridge-meadows-community-health-council",
@@ -4056,7 +5271,21 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "lowerMainland",
+          "id": "ridge-meadows-community-health-council",
+          "queriesFromBatches": [
+            6,
+            7
+          ],
+          "sourceIds": [],
+          "result": "No new attributable artwork source.",
+          "review": "Fresh exact-name and 1995/1996 report queries returned legal and later service context. No original council logo file located."
+        }
+      ]
     },
     {
       "id": "robson-valley-health-council",
@@ -4075,7 +5304,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "saint-bartholomews-health-council",
@@ -4094,7 +5325,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "sea-to-sky-community-health-council",
@@ -4177,7 +5410,65 @@
           "has_new_artwork": false
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "sea-to-sky-community-health-council",
+          "name": "Sea to Sky Community Health Council",
+          "query_log_ids": [],
+          "inspection_depth": "original website HTML and archive-index inspection; exact image recovery failed",
+          "notes": "Fresh domain stschc.org is linked by the original Coast Garibaldi partner page. Retrieved August 2001 council homepage and news page. Both reference images/logo%20-%20color.jpg (108×100 in HTML), but exact-file CDX returns empty and direct image retrieval returns 404. FrontPage VML includes only a local temporary PNG reference; it is not recovered native logo geometry. Initial 1996–2003 index returns 54 HTML URLs and no captured artwork. Expanded index requests return 503. Later 2002 other-councils page uses Vancouver Coastal header branding, which was rejected for Sea to Sky; its original partner links grounded Trail/Cariboo searches.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20010803223349id_/http://www.cghealth.org:80/Top_level_pages/Partners_and_links.htm",
+              "assessment": "Original Coast Garibaldi page links Sea to Sky and Sunshine Coast council domains.",
+              "downloadName": "cgh-partners-2001.html",
+              "sha256": "40d1bd643026f3597a20187edcc25d2e4333679d3f970ca6e5f286ae4b411f5a",
+              "bytes": 29382
+            },
+            {
+              "url": "https://web.archive.org/web/20010814215947id_/http://www.stschc.org:80/",
+              "assessment": "Exact-name council homepage and original image path.",
+              "downloadName": "stschc-home-2001.html",
+              "sha256": "f7f977431ad30e4492cf8db142ff8febd6c17bd27c7d07081f511b16e133520c",
+              "bytes": 8434
+            },
+            {
+              "url": "https://web.archive.org/web/20010819114452id_/http://www.stschc.org:80/news.htm",
+              "assessment": "2001 council news HTML uses same image path; body is empty, no document links.",
+              "downloadName": "stschc-news-2001.html",
+              "sha256": "6945e0f671c55685a83781eda875ab736453719784dd76353aca4556332c83b2",
+              "bytes": 3422
+            },
+            {
+              "url": "https://web.archive.org/web/20010814215947id_/http://www.stschc.org:80/images/logo%20-%20color.jpg",
+              "assessment": "Exact image request returns 404 HTML; not an image.",
+              "access": "http-404",
+              "downloadName": "stschc-logo-direct-response.bin",
+              "sha256": "d7ba4dc29d1f72077510512a12f208d0c8041dd5f9762ee8c0edf9a77740c907",
+              "bytes": 4622
+            },
+            {
+              "url": "https://web.archive.org/web/20020324190831id_/http://www.stschc.org:80/Other-CHCs.htm",
+              "assessment": "Later page provides original Greater Trail and South Cariboo links; Vancouver Coastal header is successor artwork.",
+              "downloadName": "stschc-other-councils.html",
+              "sha256": "ee75db7850c53e2a3e0e4c7a63c5e021c0784e2ef5f925a6fbf1fdc18d3a4459",
+              "bytes": 4672
+            }
+          ],
+          "remaining_leads": [
+            "Original header logo JPEG remains unrecovered; no evidence that it is vector.",
+            "Original newspaper ad route remains a prior unresolved lead; not rechecked in this pass."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "shuswap-community-health-council",
@@ -4196,7 +5487,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "simon-fraser-health-board",
@@ -4223,7 +5516,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "simon-fraser-health-region",
@@ -4418,11 +5713,13 @@
           "archive_index_limit": "Three distinct CDX catalogue scopes (broad domain, PDFs only and bounded About-path prefix) each returned 503. This is an access/retrieval failure, not evidence that no archived files exist. Direct archived links were followed instead."
         }
       ],
-      "acceptedFilesInThisPr": [
+      "integrationNote": "Two additional original raster specimens recovered in pass 4. The vector gap remains open; latest main already has a 2003 ad scan and PR #9 proposes a 1997 letterhead.",
+      "acceptedFollowupFiles": [
         "identity-collected/simon-fraser-health-region/simon-fraser-health-region-original-web-colour-2001.jpg",
         "identity-collected/simon-fraser-health-region/simon-fraser-health-region-continuum-2001-monochrome.png"
       ],
-      "integrationNote": "Two additional original raster specimens recovered in pass 4. The vector gap remains open; latest main already has a 2003 ad scan and PR #9 proposes a 1997 letterhead."
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "smithers-and-area-health-council",
@@ -4441,7 +5738,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "snow-country-health-council",
@@ -4460,13 +5759,15 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "south-cariboo-community-health-council",
       "name": "South Cariboo Community Health Council",
       "group": "Former health",
-      "result": "No new vector verified",
+      "result": "Original raster recovered; vector still missing",
       "hasVerifiedVectorInFollowup": false,
       "originalInventoryAssetCount": 0,
       "notes": "Follow-up found client credit for the health centre and text schedules. Architectural-client attribution is not a logo file.",
@@ -4499,7 +5800,96 @@
           "has_new_artwork": false
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [
+        "identity-collected/south-cariboo-community-health-council/south-cariboo-community-health-council-1999-health-plan.png",
+        "identity-collected/south-cariboo-community-health-council/south-cariboo-community-health-council-2000-web-emblem.gif"
+      ],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "south-cariboo-community-health-council",
+          "name": "South Cariboo Community Health Council",
+          "query_log_ids": [],
+          "inspection_depth": "two original council sites; native PDF whole-file object inspection and cover/agenda visual inspection; original bitmap extraction",
+          "notes": "First verified council artwork: original black website tree emblem and full green emblem/name from Health Plan approved 1 November 1999. The original archived PDF has 19 pages, zero drawing paths and one 315×141 JPEG on p 1. Preserved raw JPEG and applied only its PDF placement’s vertical flip for a faithful lossless PNG. The 100mile.com mirror is byte-identical to the bcinternet PDF, not a new version. Both pages of 18 December 2000 agenda contain ordinary text/rules, no mark. Explicitly linked nominations2001.pdf returns 404. No original DOC/WMF was obtained; Microsoft Word is PDF Creator metadata only. Assigned exclusively to the Community Health Council row, not the distinct 1994–1997 South Cariboo Health Council row.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20001214151700id_/http://www2.bcinternet.net/~100mile/health/health1.html",
+              "assessment": "Exact-name original council homepage references emblem and 1999 health plan.",
+              "downloadName": "south-cariboo-bcinternet-home.html",
+              "sha256": "5071dd95edbfcfbcd8c76ae962f3b1962531c18d7d5acdb6353f3af0c3eb5fa5",
+              "bytes": 1460
+            },
+            {
+              "url": "https://web.archive.org/web/20010606220634id_/http://www.100mile.com/health/",
+              "assessment": "Council page mirrored by local provider, linking same emblem, health plan, minutes and agendas.",
+              "downloadName": "south-cariboo-100mile-home.html",
+              "sha256": "73ff13c68729042d53c8f0baf04073d6d2418333f62abf82a522de70ca668956",
+              "bytes": 2652
+            },
+            {
+              "url": "https://web.archive.org/web/20000904081304id_/http://www2.bcinternet.net:80/~100mile/health/health1.gif",
+              "assessment": "Unchanged 239×258 black tree emblem.",
+              "downloadName": "south-cariboo-logo.gif",
+              "sha256": "beb642333f8cdad0e42da4a19fa2e2277c7756166668f5e254ba30c9d2f6d206",
+              "bytes": 1550
+            },
+            {
+              "url": "https://web.archive.org/web/20000915110312id_/http://www2.bcinternet.net:80/~100mile/health/healthplan99.pdf",
+              "assessment": "Original 19-page PDF, sole raster image on p 1; no native paths on any page.",
+              "pdf_pages": 19,
+              "visually_inspected_pdf_pages": [
+                1
+              ],
+              "structure_log": "sources/trail-cariboo-artwork-inspection.json",
+              "downloadName": "south-cariboo-healthplan1999.pdf",
+              "sha256": "52dfc8eb3cd2ba99773fb67efc8ab1606ab95e5da3863ca13b489218e655e19a",
+              "bytes": 78537
+            },
+            {
+              "url": "https://web.archive.org/web/20031015131303id_/http://www.100mile.com:80/health/healthplan99/healthplan99.pdf",
+              "assessment": "Byte-identical mirror of the already-inspected health plan. Not counted as a second unique PDF or new art.",
+              "duplicate_of": "sources/south-cariboo-healthplan1999.pdf",
+              "downloadName": "south-cariboo-healthplan1999-mirror.pdf",
+              "sha256": "52dfc8eb3cd2ba99773fb67efc8ab1606ab95e5da3863ca13b489218e655e19a",
+              "bytes": 78537
+            },
+            {
+              "url": "https://web.archive.org/web/20030510124446id_/http://www.100mile.com:80/health/agenda/agenda-00dec18.pdf",
+              "assessment": "Both pages visually inspected: ordinary council name, text and rules only.",
+              "pdf_pages": 2,
+              "visually_inspected_pdf_pages": [
+                1,
+                2
+              ],
+              "downloadName": "south-cariboo-agenda20001218.pdf",
+              "sha256": "7c0ef9884ce71b6f8c6bd579cc4fa1f829b0137889a9c5053670b043db436b2b",
+              "bytes": 13760
+            },
+            {
+              "url": "https://web.archive.org/web/20010101000000id_/http://www2.bcinternet.net/~100mile/health/nominations2001.pdf",
+              "assessment": "Explicitly linked nominations PDF route returned 404 HTML, not a PDF.",
+              "access": "http-404",
+              "downloadName": "south-cariboo-nominations2001-response.html",
+              "sha256": "74731804ce560b44163dd90fa2e54ea0604cb8c2ebcd9bbe56e9339cc0c524ae",
+              "bytes": 4663
+            }
+          ],
+          "remaining_leads": [
+            "Other indexed 1999–2001 minutes/member-list PDFs remain uninspected; do not claim full site publication coverage.",
+            "Original DOC/WMF/EPS or other design source remains unlocated."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "Original raster artwork recovered; no new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": true,
+          "accepted_asset_ids": [
+            "historical-south-cariboo-1999-health-plan",
+            "historical-south-cariboo-2000-web-emblem"
+          ]
+        }
+      ]
     },
     {
       "id": "south-cariboo-health-council-1996",
@@ -4518,7 +5908,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "south-fraser-health-region",
@@ -4682,10 +6074,12 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": [
+      "acceptedFollowupFiles": [
         "identity-collected/south-fraser-health-region/south-fraser-health-region-stacked-tagline-2001.svg",
         "identity-collected/south-fraser-health-region/south-fraser-health-region-horizontal-tagline-2001-raster.png"
-      ]
+      ],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "south-peace-health-council",
@@ -4724,7 +6118,9 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "south-similkameen-community-health-council",
@@ -4743,7 +6139,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "southern-gulf-islands-community-health-council",
@@ -4782,7 +6180,29 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "southern-gulf-islands-community-health-council",
+          "name": "Southern Gulf Islands Community Health Council",
+          "query_log_ids": [
+            "c5_q8"
+          ],
+          "inspection_depth": "indexed source research only",
+          "notes": "Searched for the original health plan beyond the previously inspected Salt Spring newspaper archive. No actual health-plan file or original artwork recovered. The already known June 1995 plan-availability story and earlier 1994–1996 Driftwood scans were not downloaded or counted again.",
+          "sources": [],
+          "remaining_leads": [
+            "The preliminary council health plan described in the already-known June 1995 newspaper article remains unrecovered."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "stikine-health-council",
@@ -4801,7 +6221,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "summerland-health-council",
@@ -4820,13 +6242,15 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "sunshine-coast-community-health-council",
       "name": "Sunshine Coast Community Health Council",
       "group": "Former health",
-      "result": "No new vector verified",
+      "result": "Original raster recovered; vector still missing",
       "hasVerifiedVectorInFollowup": false,
       "originalInventoryAssetCount": 0,
       "notes": "Recovered the formerly inaccessible MQ59442 thesis via LAC’s public alternate endpoint. Visually inspected appendices including minutes and UpBeat excerpts; they are retypeset text and supply no council masthead/logo. All source pages inspected are raster.",
@@ -4855,7 +6279,75 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [
+        "identity-collected/sunshine-coast-community-health-council/sunshine-coast-community-health-council-2001-website-banner.png"
+      ],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "sunshine-coast-community-health-council",
+          "name": "Sunshine Coast Community Health Council",
+          "query_log_ids": [],
+          "inspection_depth": "original website HTML, three source JPEG slices and assembled preview visually inspected",
+          "notes": "First verified artwork for this body: original sun/people/blue-ground symbol and council name across a three-slice website banner. Preserved all JPEGs unchanged and joined their decoded pixels losslessly at native dimensions for a readable PNG. No vector. The email domain scchc.bc.ca is grounded by the homepage but archive-index requests for it returned 503. Did not repeat the prior thesis or its retypeset appendices.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20010402060735id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/",
+              "assessment": "Exact-name original council homepage, with three banner image references in source order.",
+              "downloadName": "sunshine-home-2001.html",
+              "sha256": "4c0563a16e98d4aa8cd41f9a961563faa9193e9f96708e950ef7e483004f4d2a",
+              "bytes": 13751
+            },
+            {
+              "url": "https://web.archive.org/web/20010602235437id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_top_1.jpg",
+              "assessment": "Original unmodified JPEG slice, visually inspected; retained separately as provenance.",
+              "downloadName": "sunshine-coast-community-health-council-2001-banner-top.jpg",
+              "sha256": "5f11db74581b76c046654d99fc703aa0944dc7322e38dfeba00c288d40051828",
+              "bytes": 5979
+            },
+            {
+              "url": "https://web.archive.org/web/20010602234716id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_mid_2.jpg",
+              "assessment": "Original unmodified JPEG slice, visually inspected; retained separately as provenance.",
+              "downloadName": "sunshine-coast-community-health-council-2001-banner-middle.jpg",
+              "sha256": "d91e5b0b73063e19bf8ee732d8035709758f7f6ffefb01826d65e847aae1202f",
+              "bytes": 14542
+            },
+            {
+              "url": "https://web.archive.org/web/20010602233316id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_bottom_3.jpg",
+              "assessment": "Original unmodified JPEG slice, visually inspected; retained separately as provenance.",
+              "downloadName": "sunshine-coast-community-health-council-2001-banner-bottom.jpg",
+              "sha256": "9a67fbb23df2505bbce6218e2c68426f2f27ee9b454fbb05bcf94343d2be86e6",
+              "bytes": 7979
+            },
+            {
+              "url": "https://web.archive.org/web/20010616123937id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/newsletter.html",
+              "assessment": "UPBEAT newsletter content is HTML; no native office/PDF download in the inspected page.",
+              "downloadName": "sunshine-newsletter-2001.html",
+              "sha256": "bec7a08e8b67a0f89fcd4cfe7461928058d131a1e187cac2df4f4a0bc3260320",
+              "bytes": 19947
+            },
+            {
+              "url": "https://web.archive.org/web/20010218045309id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/health_action_plan.htm",
+              "assessment": "Health action plan is HTML and uses same raster header; no native drawing or office file linked here.",
+              "downloadName": "sunshine-health-action-plan-2001.html",
+              "sha256": "56ef2be214aa0048ca655d4b5a5155ea66cab7ec2c883707bcc588c62b2203f5",
+              "bytes": 15907
+            }
+          ],
+          "remaining_leads": [
+            "Original print-design file or newsletter/report source may retain vector geometry; no DOC/EPS/WMF located.",
+            "scchc.bc.ca archive index is unresolved 503, not an empty-result finding."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "Original raster artwork recovered; no new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": true,
+          "accepted_asset_ids": [
+            "historical-sunshine-coast-2001-web-banner"
+          ]
+        }
+      ]
     },
     {
       "id": "surrey-central-community-health-council",
@@ -4882,7 +6374,25 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "lowerMainland",
+          "id": "surrey-central-community-health-council",
+          "queriesFromBatches": [
+            1,
+            4,
+            6,
+            7
+          ],
+          "sourceIds": [
+            "surrey-women-needs-study"
+          ],
+          "result": "Original study still unavailable; no new verified artwork.",
+          "review": "Exact-title and author searches reconfirmed the 1996 women’s health-needs study bibliographically. Neither the original report nor a logo was retrieved."
+        }
+      ]
     },
     {
       "id": "surrey-north-community-health-council",
@@ -4901,7 +6411,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "terrace-and-area-health-council",
@@ -4949,7 +6461,9 @@
           "has_new_artwork": false
         }
       ],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "the-langleys-health-council",
@@ -4968,7 +6482,23 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "lowerMainland",
+          "id": "the-langleys-health-council",
+          "queriesFromBatches": [
+            2,
+            6,
+            7,
+            8
+          ],
+          "sourceIds": [],
+          "result": "No new attributable artwork source.",
+          "review": "Exact-body newsletter, annual-report and logo queries returned legal, hospital and later regional context. No original council asset recovered."
+        }
+      ]
     },
     {
       "id": "thompson-health-region",
@@ -5009,7 +6539,71 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "regions",
+          "body_id": "thompson-health-region",
+          "name": "Thompson Health Region",
+          "status": "no-new-vector-or-raster-verified",
+          "scope": "Fresh Canadian Nurse recruiting-ad routes; exact October 2000 volume catalogue; linked period HINET profile and government/job directories. Prior1998 Merritt letterhead scan not repeated.",
+          "outcome": "Indexed recruiting advertisements name the correct BC region and A Path to Better Health tagline, but their artwork could not be inspected. The original HINET profile contains text and the directory publisher banner only, with no Thompson agency image or original website link. No new asset.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20020112024606id_/http://www.hinetbc.org/industry/thompson.html",
+              "downloadName": "hinet-thompson-profile.html",
+              "sha256": "d55b79f3c05fc98364482c8b873ca356638f6d7bc57f2620c4e84dd46072f69d",
+              "bytes": 8335,
+              "assessment": "January 12, 2002 capture of period profile, text identifies Kamloops region; all image and anchor references inspected, no agency artwork or website.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://archive.org/advancedsearch.php?q=title%3A%28%22Canadian+nurse%22%29+AND+year%3A2000&output=json&rows=30",
+              "downloadName": "canadian-nurse-2000-catalogue.json",
+              "sha256": "2afb5e76ffc7603c1556d9bd3de6a7da31924d0d6fdb59bfd3bee5eb1d880087",
+              "bytes": 1838,
+              "assessment": "Catalogue returns volume 96 index rather than October issue. Metadata route led to restricted raw volume, not usable artwork.",
+              "verificationLevel": "catalogue-only"
+            },
+            {
+              "url": "https://archive.org/metadata/sim_raw_scan_IA1518813-01",
+              "downloadName": "cna-raw-volume2000-metadata.json",
+              "sha256": "96ee7a31212abd858c36758de1b68d5532f7bf631b15e2fb26c980842480c89d",
+              "bytes": 7138,
+              "assessment": "Metadata marks raw volume access-restricted-item and JP2 files private. No restricted file retrieval attempted.",
+              "verificationLevel": "metadata-only"
+            },
+            {
+              "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/15048ef2-1f79-ceaa-3a13-3654a36beb1c_file.pdf",
+              "assessment": "Correct-region recruiting-ad text indexed; canonical URL retrieval returned 403. No ad artwork inspected.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            },
+            {
+              "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/feffc54d-a302-ed72-cb02-f3b4389e3a5e_file.pdf",
+              "assessment": "Nursing Jobs at Four-season Recreation Centre ad text indexed; not downloaded; no art claim.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            },
+            {
+              "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/d6fbd830-ec32-7e05-e18b-ab0edc42edbf_file.pdf",
+              "assessment": "Canadian Nurse October 2000 Vol. 96, No. 9 indexed Thompson advertisement. Official archive page returned 403; artwork not inspected.",
+              "verificationLevel": "indexed-lead-artwork-not-inspected"
+            },
+            {
+              "url": "https://publications.gc.ca/collections/collection_2007/agr/A27-27-4-2003E.pdf",
+              "assessment": "RuralLink Spring 2003 p3 text concerns Thompson primary care; contact uses successor interiorhealth.ca. Web text only, no original mark or domain verified.",
+              "verificationLevel": "web-pdf-text-only"
+            }
+          ],
+          "unverified_leads": [
+            "Kamloops2000 municipal item https://kamloops.civicweb.net/document/7911/ was indexed but not downloaded; no artwork claim."
+          ],
+          "identity_cautions": [
+            "David Thompson Health Region in Alberta excluded.",
+            "Post2001 Interior Health art excluded."
+          ]
+        }
+      ]
     },
     {
       "id": "tri-cities-health-council",
@@ -5029,7 +6623,20 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "lowerMainland",
+          "id": "tri-cities-health-council",
+          "queriesFromBatches": [
+            6
+          ],
+          "sourceIds": [],
+          "result": "No new attributable artwork source.",
+          "review": "Fresh exact-name period report and logo query returned legal and later service context. No original council logo file located."
+        }
+      ]
     },
     {
       "id": "tumbler-ridge-health-council",
@@ -5048,7 +6655,9 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "upper-island-central-coast-community-health-services-society",
@@ -5076,7 +6685,92 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "regions",
+          "body_id": "upper-island-central-coast-community-health-services-society",
+          "name": "Upper Island/Central Coast Community Health Services Society",
+          "status": "fresh-original-host-found-no-artwork-retrieved",
+          "scope": "Original uicc.bc.ca grounded by CGH partner link and Ministry directory. Home, WhoWeAre, annual-report index, newsletter index and contacts read; full available archive URL catalogue inspected.",
+          "outcome": "Original logo and nine exact linked PDF targets identified, but all ten requests returned 404. Newsletter index states documents originated in Microsoft Publisher. No original art retrieved or vector verified.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20010803223349id_/http://www.cghealth.org:80/Top_level_pages/Partners_and_links.htm",
+              "downloadName": "cghealth-links.html",
+              "sha256": "40d1bd643026f3597a20187edcc25d2e4333679d3f970ca6e5f286ae4b411f5a",
+              "bytes": 29382,
+              "assessment": "Original CGH partner page explicitly links Upper Island/Central Coast CHSS to www.uicc.bc.ca.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20011031062503id_/http://www.uicc.bc.ca/",
+              "downloadName": "uicc-home.html",
+              "sha256": "ea10f0ec351eb86d2e57d5371ad55dec50a1d5d9c3a5515eb9e2aaa096ed1197",
+              "bytes": 6192,
+              "assessment": "Original society homepage links images/logocolorjpg.gif; that image request failed 404.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20010206061508id_/http://www.uicc.bc.ca:80/whoweare.htm",
+              "downloadName": "uicc-who-we-are.html",
+              "sha256": "730c98c163acfa24b9e9df034a97e99b3cce87f02412a5ad56d376e37aef0b4e",
+              "bytes": 3473,
+              "assessment": "Original page says society establishedApril 1, 1997; identifies the correct CHSS era.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20010203122600id_/http://www.uicc.bc.ca:80/annual_report.htm",
+              "downloadName": "uicc-annual-report.html",
+              "sha256": "522de88903681ffc04b616111f44136897561290b44329a227c9bc7c69dacc63",
+              "bytes": 3397,
+              "assessment": "Original annual-report page links annual%20report/Annual%20Report.pdf; request failed 404.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20010205062100id_/http://www.uicc.bc.ca:80/newsletter.htm",
+              "downloadName": "uicc-newsletter.html",
+              "sha256": "903f592334682052d69c4330a57925eb569f27717096b5da7e7f6854213340e2",
+              "bytes": 4645,
+              "assessment": "Original index links 3 Board Newsletter and 5 On The Move PDFs, stating Publisher originals converted to PDF; all 8 requests failed 404.",
+              "verificationLevel": "downloaded-inspected"
+            },
+            {
+              "url": "https://web.archive.org/cdx/search/cdx?url=uicc.bc.ca/*&output=json&filter=statuscode:200&collapse=urlkey&fl=timestamp,original,mimetype&to=2004&limit=700",
+              "downloadName": "uicc-index.json",
+              "sha256": "c448a43817838c021f2a5ee76458873f4dd9a3dc220220f10a6d3569855862f1",
+              "bytes": 1178,
+              "assessment": "15 collapsed status200 URL rows through 2004, below limit 700; only HTML recorded, no image or native-format document capture in this query.",
+              "verificationLevel": "archive-index-inspected"
+            },
+            {
+              "url": "https://web.archive.org/web/20010302235353id_/http://www.uicc.bc.ca:80/other_contacts.htm",
+              "downloadName": "uicc-other-contacts.html",
+              "sha256": "a257fbc8698dc9ced2484349da7ceef75772942d1534be1c7a723a3296aadb1a",
+              "bytes": 7862,
+              "assessment": "Council contacts mainly phones; no additional original council websites except municipal Alert Bay.",
+              "verificationLevel": "downloaded-inspected"
+            }
+          ],
+          "failed_exact_documents": [
+            "https://web.archive.org/web/20011031062503id_/http://www.uicc.bc.ca/images/logocolorjpg.gif",
+            "https://web.archive.org/web/20011101000000id_/http://www.uicc.bc.ca/annual%20report/Annual%20Report.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.uicc.bc.ca/Newsletters/board%20newsletter1.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.uicc.bc.ca/Newsletters/board%20newsletter2.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.uicc.bc.ca/Newsletters/boardnewslette%203.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.uicc.bc.ca/Newsletters/on%20the%20move1.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.uicc.bc.ca/Newsletters/on%20the%20move%202.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.uicc.bc.ca/Newsletters/on%20the%20move%203.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.uicc.bc.ca/Newsletters/on%20the%20move%204.pdf",
+            "https://web.archive.org/web/20011101000000id_/http://www.uicc.bc.ca/Newsletters/on%20the%20move%205.pdf"
+          ],
+          "identity_cautions": [
+            "Board Newsletter is this society’s board, not proof of identity or artwork for the earlier Regional Health Board.",
+            "No absence claim about all archives from a failed exact request."
+          ]
+        }
+      ]
     },
     {
       "id": "upper-island-central-coast-regional-health-board",
@@ -5095,7 +6789,31 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "regions",
+          "body_id": "upper-island-central-coast-regional-health-board",
+          "name": "Upper Island/Central Coast Regional Health Board",
+          "status": "no-new-vector-or-raster-verified",
+          "scope": "Exact earlier-board newsletter/annual-report/plan query and name/domain alternatives; original CHSS era compared.",
+          "outcome": "No attributable original board document or artwork found. New uicc.bc.ca evidence explicitly begins with the1997 society and cannot be assigned to this separate earlier board.",
+          "sources": [
+            {
+              "url": "https://web.archive.org/web/20010206061508id_/http://www.uicc.bc.ca:80/whoweare.htm",
+              "downloadName": "uicc-who-we-are.html",
+              "sha256": "730c98c163acfa24b9e9df034a97e99b3cce87f02412a5ad56d376e37aef0b4e",
+              "bytes": 3473,
+              "assessment": "Legal-identity boundary only: refers to 1997 CHSS, not original earlier-board artwork.",
+              "verificationLevel": "downloaded-inspected"
+            }
+          ],
+          "identity_cautions": [
+            "No reuse of later society logo or board-newsletter title as earlier-board evidence."
+          ]
+        }
+      ]
     },
     {
       "id": "upper-skeena-community-health-council",
@@ -5114,13 +6832,15 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     },
     {
       "id": "vancouver-richmond-health-board",
       "name": "Vancouver/Richmond Health Board",
       "group": "Former health",
-      "result": "No new vector verified",
+      "result": "Original raster recovered; vector still missing",
       "hasVerifiedVectorInFollowup": false,
       "originalInventoryAssetCount": 1,
       "notes": "Recovered a new Fall/Winter 2001 Visions wordmark-and-slogan specimen as the original 216×60 raster image. Existing baseline body, no new vector. Parent independently handles CIPO trademark-journal source. The additional official October3 2001 trademark-journal specimen was also verified as raster (705×154), not vector.",
@@ -5259,10 +6979,33 @@
       ],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": [
+      "acceptedFollowupFiles": [
         "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-2001-official-mark.png",
         "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-2001-visions-raster.png",
-        "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-2001-colour.png"
+        "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-2001-colour.png",
+        "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-colour-2000-original.png"
+      ],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "lowerMainland",
+          "id": "vancouver-richmond-health-board",
+          "queriesFromBatches": [
+            1,
+            2,
+            4
+          ],
+          "sourceIds": [
+            "vrhb-original-formats-index",
+            "vrhb-SRPDieselReviewFinal.doc",
+            "vrhb-turbidityqa.doc",
+            "richmond-environmental-review-2000",
+            "vrhb-denominational-agreement",
+            "vrhb-women-framework-alternate"
+          ],
+          "result": "Additional original 1200 by 320 colour raster recovered; vector still missing.",
+          "review": "Original 2000 Word report supplied the original colour pixels inside a compressed WMF. Pixel equality and original-file provenance verified. WMF contains raster painting only. Two archived DOCs and new PDF routes were inspected within the explicit limits recorded in sources."
+        }
       ]
     },
     {
@@ -5282,7 +7025,29 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": true,
+      "pass5Review": [
+        {
+          "researchGroup": "councils",
+          "body_id": "west-coast-community-health-council",
+          "name": "West Coast Community Health Council",
+          "query_log_ids": [
+            "c5_q4"
+          ],
+          "inspection_depth": "indexed source research only",
+          "notes": "Period West Coast health-council query did not yield an original council publication. No actual artwork file inspected; West Coast General Hospital and modern health-service marks were not substituted.",
+          "sources": [],
+          "remaining_leads": [
+            "Original 1994 designation submission / 1995–1997 council publication remains unresolved; previous biography lead not counted as a recovered document."
+          ],
+          "revisited_in_this_pass": true,
+          "outcome": "No new vector verified",
+          "has_new_verified_vector": false,
+          "has_new_artwork": false,
+          "accepted_asset_ids": []
+        }
+      ]
     },
     {
       "id": "west-kootenay-boundary-regional-health-board",
@@ -5301,17 +7066,33 @@
       "pass3Review": [],
       "pass4Revisited": false,
       "pass4Review": [],
-      "acceptedFilesInThisPr": []
+      "acceptedFollowupFiles": [],
+      "pass5Revisited": false,
+      "pass5Review": []
     }
   ],
   "latestPass": {
-    "bodiesRevisited": 21,
-    "crownBodiesRevisited": 8,
-    "healthBodiesRevisited": 13,
+    "pass": 5,
+    "bodiesRevisited": 38,
+    "crownBodiesRevisited": 7,
+    "healthBodiesRevisited": 31,
     "newVectorFiles": 0,
-    "additionalRasterFiles": 2,
-    "newlyRepresentedBodies": 0
+    "additionalRasterFiles": 9,
+    "bodiesWithAdditionalRasters": 8,
+    "newlyRepresentedBodies": 4,
+    "supportingOriginalImageFiles": 4
   },
-  "date": "2026-10-30",
-  "timezone": "America/Creston"
+  "date": "2026-10-31",
+  "timezone": "America/Creston",
+  "previousPassSummaries": [
+    {
+      "pass": 4,
+      "bodiesRevisited": 21,
+      "crownBodiesRevisited": 8,
+      "healthBodiesRevisited": 13,
+      "newVectorFiles": 0,
+      "additionalRasterFiles": 2,
+      "newlyRepresentedBodies": 0
+    }
+  ]
 }

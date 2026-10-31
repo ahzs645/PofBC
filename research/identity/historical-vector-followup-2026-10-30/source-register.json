@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "title": "Historical Crown and health logo follow-up",
-  "asOf": "2026-10-30",
-  "baseCommit": "64599abab1d2198e00bb289ab013b2a539a29b04",
+  "asOf": "2026-10-31",
+  "baseCommit": "8ea05fa636ec6033199aa8a3678b59ce94316572",
   "scope": {
     "originalFormerCrownVectorGaps": 21,
     "originalFormerHealthVectorGaps": 112,
@@ -15,10 +15,14 @@
     "bodiesUpgradedToVector": 7,
     "formerCrownVectorBodies": 4,
     "formerHealthVectorBodies": 3,
-    "rasterFiles": 11,
+    "rasterFiles": 20,
     "additionalPreviewFiles": 1,
     "pass4AdditionalRasterFiles": 2,
-    "pass4NewVectorFiles": 0
+    "pass4NewVectorFiles": 0,
+    "pass5AdditionalRasterFiles": 9,
+    "pass5NewVectorFiles": 0,
+    "pass5NewlyRepresentedBodies": 4,
+    "pass5SupportingOriginalImageFiles": 4
   },
   "bodyUpdates": {
     "bc-buildings-corporation": {
@@ -47,6 +51,38 @@
     },
     "simon-fraser-health-region": {
       "notes": "The earlier recruiting-advertisement scan is joined by an original colour website JPEG and the much larger original monochrome bitmap from the January 2001 Continuum newsletter. All are raster specimens; no vector has been verified. Source and capture dates identify appearances, not adoption."
+    },
+    "vancouver-richmond-health-board": {
+      "notes": "Dated print specimens are joined by the original 1200 × 320 colour logo and tagline recovered from the November 2000 diesel review. All collected versions are raster; source dates identify appearances, not adoption.",
+      "observedDate": "2026-10-31"
+    },
+    "coast-garibaldi-community-health-services-society": {
+      "notes": "Original teal Coast Garibaldi Health emblem and name recovered from the society’s archived 2001 website. The original organization page identifies the Community Health Services Society.",
+      "observedDate": "2026-10-31"
+    },
+    "campbell-river-nootka-community-health-council": {
+      "notes": "Original full-colour emblem recovered from the council’s archived 2000 website, alongside the later grayscale festival-program specimen. Both are raster source images.",
+      "observedDate": "2026-10-31"
+    },
+    "sunshine-coast-community-health-council": {
+      "notes": "The council’s original 2001 website banner preserves its sun, three-person emblem and full name. The photographic background and navigation strip are retained as source context.",
+      "observedDate": "2026-10-31"
+    },
+    "greater-trail-community-health-council": {
+      "notes": "Complete people-and-oval emblem and council name recovered from its archived 2001 website. Original grey background and small lettering are preserved.",
+      "observedDate": "2026-10-31"
+    },
+    "south-cariboo-community-health-council": {
+      "notes": "The 1999 health plan supplies the complete green trees and council name; the original 2000 website supplies the black standalone tree emblem. Both are raster specimens for the Community Health Council.",
+      "observedDate": "2026-10-31"
+    },
+    "bc-resources-investment-corporation": {
+      "notes": "Original 1979 share-certificate artwork is joined by the green BCRIC wordmark from the August 1979 shareholder brochure. Both are raster specimens.",
+      "observedDate": "2026-10-31"
+    },
+    "bc-petroleum-corporation": {
+      "notes": "The 1982/83 white-on-black mark is joined by a black symbol from the 1991/92 annual report. Original scan texture and the small adjacent phone-number fragment are retained.",
+      "observedDate": "2026-10-31"
     }
   },
   "assets": [
@@ -1451,6 +1487,435 @@
         "novelty": "Distinct original January 2001 newsletter image at substantially larger native bitmap dimensions than the existing scan crops. An additional specimen for an already represented body; no new vector or new-body claim.",
         "proofFile": "evidence/simon-fraser-continuum-raster-proof.json"
       }
+    },
+    {
+      "bodyId": "vancouver-richmond-health-board",
+      "id": "historical-vancouver-richmond-health-board-colour-2000-original",
+      "label": "Original colour logo and tagline from the November 2000 diesel review",
+      "file": "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-colour-2000-original.png",
+      "format": "png",
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "publisher": "Vancouver/Richmond Health Board; original Word report preserved by Internet Archive",
+      "sourcePage": "https://web.archive.org/web/20030626150903id_/http://www.vrhb.bc.ca:80/EnvironHealth/SRPDieselReviewFinal.doc",
+      "sourceUrl": "https://web.archive.org/web/20030626150903id_/http://www.vrhb.bc.ca:80/EnvironHealth/SRPDieselReviewFinal.doc",
+      "sourceLocator": "Scientific Review Panel of Diesel Exhaust Health Concerns, original Word report cover, November 22, 2000",
+      "sourceFile": null,
+      "sourceDate": "2000-11-22",
+      "observedDate": "2026-10-31",
+      "dateNote": "November 22, 2000 is the printed report date. June 26, 2003 is the archive capture date. These establish a specimen appearance, not adoption or complete usage dates.",
+      "evidenceType": "original-raster-extraction",
+      "notes": "Original 1200 by 320 colour emblem, name and Working Together for Better Health tagline. An additional raster specimen for the already represented board; vector remains missing.",
+      "fidelityNote": "Read the original OLE Data stream, decompressed its embedded WMF without alteration, decoded the original 1200x320 uncompressed 24-bit DIB with its native bottom-up orientation, and saved pixels losslessly as PNG. No resampling, trace, recolouring or cleanup. LibreOffice conversion was used for visual context and independently matched the original WMF bytes, not as the output image source.",
+      "sha256": "fdc6f01113a216c861beb4457010aabc110b740d1ef6f8eef1fa03a8b082330b",
+      "bytes": 50420,
+      "darkBackground": false,
+      "previewWidth": 1200,
+      "previewHeight": 320,
+      "verification": {
+        "sourceSha256": "4c73c0897ed7418234921312160d7c766d3b95558437f62ec49d62d495aad17c",
+        "archiveCaptureDate": "2003-06-26",
+        "nativePixelDimensions": [
+          1200,
+          320
+        ],
+        "originalWmfSha256": "44017c5e9971d6417811a41e311dcb7c9646b40d5b9688a370f9140fffd5f38c",
+        "nativeVectorDrawingRecords": 0,
+        "originalMetafileIsRasterWrapper": true,
+        "pixelEqualityVerified": true,
+        "decodedRgbSha256": "246732c5df02615ba2458d9d6a30397372a33e4ca6806e2539a46f853c9ceda4",
+        "visualValidation": "Original report cover rendered for context and the native PNG independently viewed. Complete emblem, name and tagline agree; source clipping retained.",
+        "novelty": "Additional dated original colour raster. Existing board artwork remains valid; this is not a new body, new vector or first-colour-design claim.",
+        "proofFile": "evidence/vrhb-original-word-raster-proof.json"
+      }
+    },
+    {
+      "bodyId": "coast-garibaldi-community-health-services-society",
+      "id": "historical-coast-garibaldi-community-health-services-society-original-web-colour-2001",
+      "label": "Teal Coast Garibaldi Health logo; original GIF archived August 13, 2001",
+      "file": "identity-collected/coast-garibaldi-community-health-services-society/coast-garibaldi-community-health-services-society-original-web-colour-2001.gif",
+      "format": "gif",
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "publisher": "Coast Garibaldi Community Health Services Society; original website preserved by Internet Archive",
+      "sourcePage": "https://web.archive.org/web/20010803222639id_/http://www.cghealth.org:80/Top_level_pages/Organization.htm",
+      "sourceUrl": "https://web.archive.org/web/20010813123007id_/http://cghealth.org:80/Images/CGHLogo2000.gif",
+      "sourceLocator": "Original society website image; archived August 13, 2001",
+      "sourceFile": null,
+      "sourceDate": "2001-08-13",
+      "observedDate": "2026-10-31",
+      "dateNote": "August 13, 2001 is the image archive capture, not a publication or adoption date. The filename CGHLogo2000.gif and copyright2000 do not establish the date of first use. Organization-page capture is August 3, 2001; its displayed last-modified date is June 26, 2001.",
+      "evidenceType": "original-website-image",
+      "notes": "Teal Coast Garibaldi Health emblem and wordmark from the society’s original website. First artwork collected for this society; the earlier Regional Health Board is a separate identity.",
+      "fidelityNote": "Original downloaded GIF copied byte-for-byte to the deliverable. Preview PNG was generated only for visual inspection, not submitted as a new artwork file. No crop, cleanup, resampling, recolouring, tracing or reconstruction.",
+      "sha256": "689eacd4feac1e0cd752bf64ce7dd344a5c745c84bcc4e2a811150ddcb603a00",
+      "bytes": 22338,
+      "darkBackground": false,
+      "previewWidth": 200,
+      "previewHeight": 64,
+      "verification": {
+        "sourceSha256": "689eacd4feac1e0cd752bf64ce7dd344a5c745c84bcc4e2a811150ddcb603a00",
+        "archiveCaptureDate": "2001-08-13",
+        "attributionPageCaptureDate": "2001-08-03",
+        "nativePixelDimensions": [
+          200,
+          64
+        ],
+        "frameCount": 1,
+        "extraction": {
+          "method": "Original downloaded GIF copied byte-for-byte to the deliverable. Preview PNG was generated only for visual inspection, not submitted as a new artwork file. No crop, cleanup, resampling, recolouring, tracing or reconstruction.",
+          "source_image_dimensions": [
+            200,
+            64
+          ],
+          "byte_identical_to_source": true
+        },
+        "visualValidation": "Original 200×64 artwork viewed at native size: teal circular mountain/landscape/water emblem, stacked italic serif Coast/Garibaldi/Health wordmark, white background. Attribution page links the exact image. All source pixels retained.",
+        "novelty": "Root confirmed the merged inventory has no artwork for Coast Garibaldi CHSS as of October 31, 2026. This adds one newly represented historical body. It does not close the vector gap or represent the earlier Regional Health Board.",
+        "proofFile": "evidence/coast-garibaldi-original-gif-proof.json"
+      }
+    },
+    {
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "observedDate": "2026-10-31",
+      "darkBackground": false,
+      "file": "identity-collected/campbell-river-nootka-community-health-council/campbell-river-nootka-community-health-council-2000-original.gif",
+      "sha256": "b6ff426fb6fdcd25b345295ebbc2a4d82776eca319cdd86a903b5aa7fe62438f",
+      "bytes": 35224,
+      "format": "gif",
+      "bodyId": "campbell-river-nootka-community-health-council",
+      "id": "historical-campbell-river-nootka-2000-color-web",
+      "label": "Original full-colour website emblem, 2000",
+      "publisher": "Campbell River/Nootka Community Health Council",
+      "sourcePage": "https://web.archive.org/web/20000115210417id_/http://www.crncare.org:80/crncare/crn.html",
+      "sourceUrl": "https://web.archive.org/web/20000610001853id_/http://www.crncare.org:80/crncare/logo_col_345_328.gif",
+      "sourceLocator": "Original council homepage embeds logo_col_345_328.gif at 345 by 328 pixels.",
+      "sourceDate": "2000-06-10",
+      "dateNote": "Image captured 10 June 2000; the 15 January 2000 homepage references the same image path. Capture dates are sightings, not adoption dates.",
+      "evidenceType": "original-archived-web-raster",
+      "fidelityNote": "GIF bytes preserved unchanged. No resizing, tracing, enhancement or colour changes.",
+      "notes": "Full-colour circular fish emblem and CR/N CHC initials, a clearer original-source specimen than the previously collected grayscale 2002 festival-program scan. The combined body was established 1 April 1997; this is not the earlier Campbell River and Area Health Council.",
+      "verification": {
+        "genuineVectorVerified": false,
+        "sourceHtml": {
+          "sha256": "593f6fcd1be3a350c7c70595cde42d7140ba22ed5bcb6426986e397443a95606",
+          "bytes": 1390,
+          "downloadName": "crncare-home-2000.html"
+        },
+        "bodyHistoryHtml": {
+          "sha256": "d389a47a1dcd43460ba5b310cc709b831ef9674c272a442178f12656e37f4345",
+          "bytes": 15827,
+          "downloadName": "crncare-whoweare-2001.html"
+        },
+        "visualInspection": "Original GIF viewed at native dimensions and matched to the known council emblem; exact council name and image reference in original HTML.",
+        "nativePixelDimensions": [
+          345,
+          328
+        ],
+        "frameCount": 1
+      },
+      "sourceFile": null,
+      "previewWidth": 345,
+      "previewHeight": 328
+    },
+    {
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "observedDate": "2026-10-31",
+      "darkBackground": false,
+      "file": "identity-collected/sunshine-coast-community-health-council/sunshine-coast-community-health-council-2001-website-banner.png",
+      "sha256": "720514ac836f4cc55fde23fb792a7f337509b1d59c70fac88964b10fad4f7ce4",
+      "bytes": 135842,
+      "format": "png",
+      "bodyId": "sunshine-coast-community-health-council",
+      "id": "historical-sunshine-coast-2001-web-banner",
+      "label": "Original website banner with symbol and wordmark, archived 2001",
+      "publisher": "Sunshine Coast Community Health Council",
+      "sourcePage": "https://web.archive.org/web/20010402060735id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/",
+      "sourceUrl": "https://web.archive.org/web/20010602234716id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_mid_2.jpg",
+      "sourceUrls": [
+        "https://web.archive.org/web/20010602235437id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_top_1.jpg",
+        "https://web.archive.org/web/20010602234716id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_mid_2.jpg",
+        "https://web.archive.org/web/20010602233316id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_bottom_3.jpg"
+      ],
+      "sourceLocator": "Three original homepage JPEG slices: banner_top_1.jpg, banner_mid_2.jpg, banner_bottom_3.jpg.",
+      "sourceDate": "2001-06-02",
+      "dateNote": "All three source images captured 2 June 2001. Council homepage captured 2 April 2001 references them in this order. These are source sightings, not adoption dates.",
+      "evidenceType": "lossless-assembly-of-original-web-image-slices",
+      "fidelityNote": "Original JPEG slices preserved byte-for-byte; preview PNG vertically joins their decoded pixels at native 625-pixel width in source HTML order. No resizing, enhancement, redrawing, background removal or text replacement.",
+      "notes": "Yellow sun, three-person black symbol, blue ground and full council name appear within the original photographic website banner. Original navigation strip retained as source context.",
+      "verification": {
+        "genuineVectorVerified": false,
+        "sourceHtml": {
+          "sha256": "4c0563a16e98d4aa8cd41f9a961563faa9193e9f96708e950ef7e483004f4d2a",
+          "bytes": 13751,
+          "downloadName": "sunshine-home-2001.html"
+        },
+        "sourceSlices": [
+          {
+            "url": "https://web.archive.org/web/20010602235437id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_top_1.jpg",
+            "file": "evidence/sunshine-coast-community-health-council-2001-banner-top.jpg",
+            "sha256": "5f11db74581b76c046654d99fc703aa0944dc7322e38dfeba00c288d40051828",
+            "bytes": 5979,
+            "nativePixels": [
+              625,
+              54
+            ],
+            "format": "jpeg",
+            "frames": 1
+          },
+          {
+            "url": "https://web.archive.org/web/20010602234716id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_mid_2.jpg",
+            "file": "evidence/sunshine-coast-community-health-council-2001-banner-middle.jpg",
+            "sha256": "d91e5b0b73063e19bf8ee732d8035709758f7f6ffefb01826d65e847aae1202f",
+            "bytes": 14542,
+            "nativePixels": [
+              625,
+              73
+            ],
+            "format": "jpeg",
+            "frames": 1
+          },
+          {
+            "url": "https://web.archive.org/web/20010602233316id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_bottom_3.jpg",
+            "file": "evidence/sunshine-coast-community-health-council-2001-banner-bottom.jpg",
+            "sha256": "9a67fbb23df2505bbce6218e2c68426f2f27ee9b454fbb05bcf94343d2be86e6",
+            "bytes": 7979,
+            "nativePixels": [
+              625,
+              23
+            ],
+            "format": "jpeg",
+            "frames": 1
+          }
+        ],
+        "assemblyProof": "evidence/sunshine-banner-assembly-proof.json",
+        "visualInspection": "All source slices and the assembled PNG were viewed. The symbol spans all three slices; the PNG retains every source pixel.",
+        "nativePixelDimensions": [
+          625,
+          150
+        ],
+        "frameCount": 1
+      },
+      "sourceFile": null,
+      "previewWidth": 625,
+      "previewHeight": 150
+    },
+    {
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "observedDate": "2026-10-31",
+      "darkBackground": false,
+      "file": "identity-collected/greater-trail-community-health-council/greater-trail-community-health-council-2001-original.gif",
+      "sha256": "e0776fc664f4a827026a858227b55dc6a64f3d7f5f966662bbbe45299c5dc798",
+      "bytes": 2970,
+      "format": "gif",
+      "bodyId": "greater-trail-community-health-council",
+      "id": "historical-greater-trail-2001-web",
+      "label": "Complete original website mark, 2001",
+      "publisher": "Greater Trail Community Health Council",
+      "sourcePage": "https://web.archive.org/web/20010404093451id_/http://www.trailnet.bc.ca/~trh/",
+      "sourceUrl": "https://web.archive.org/web/20010606033527id_/http://www.trailnet.bc.ca:80/~trh/GTCHC_logo.gif",
+      "sourceLocator": "Original council homepage embeds GTCHC_logo.gif.",
+      "sourceDate": "2001-06-06",
+      "dateNote": "Image captured 6 June 2001; homepage captured 4 April 2001 references the same image path. These sightings do not establish first use.",
+      "evidenceType": "original-archived-web-raster",
+      "fidelityNote": "Original 205 by 105 GIF preserved byte-for-byte, including its grey background and small lettering. No enhancement or tracing.",
+      "notes": "Complete people/oval emblem with Greater Trail and Community Health Council lettering. Distinct from the Trail Regional Hospital and hospital foundation.",
+      "verification": {
+        "genuineVectorVerified": false,
+        "sourceHtml": {
+          "sha256": "c4e54823b6c955a9dae664e1c46e5b50787f4d5db68ae95cce36df760d9f9e53",
+          "bytes": 4980,
+          "downloadName": "greater-trail-home.html"
+        },
+        "visualInspection": "GIF viewed, including full council wordmark; exact image reference checked in original council homepage.",
+        "nativePixelDimensions": [
+          205,
+          105
+        ],
+        "frameCount": 1
+      },
+      "sourceFile": null,
+      "previewWidth": 205,
+      "previewHeight": 105
+    },
+    {
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "observedDate": "2026-10-31",
+      "darkBackground": false,
+      "file": "identity-collected/south-cariboo-community-health-council/south-cariboo-community-health-council-1999-health-plan.png",
+      "sha256": "3b6e41d34996338da5dd08f0aff3a1b6aca69d89bcf29f757ba300b3da1f9645",
+      "bytes": 60881,
+      "format": "png",
+      "bodyId": "south-cariboo-community-health-council",
+      "id": "historical-south-cariboo-1999-health-plan",
+      "label": "Green emblem and full name, 1999 health plan",
+      "publisher": "South Cariboo Community Health Council",
+      "sourcePage": "https://web.archive.org/web/20000915110312id_/http://www2.bcinternet.net:80/~100mile/health/healthplan99.pdf",
+      "sourceUrl": "https://web.archive.org/web/20000915110312id_/http://www2.bcinternet.net:80/~100mile/health/healthplan99.pdf",
+      "sourceLocator": "Health Plan approved 1 November 1999, PDF page 1, image XObject 8.",
+      "sourceDate": "1999-11-01",
+      "dateNote": "Health Plan approved 1 November 1999; original PDF metadata says 1 May 2000 and archival capture is 15 September 2000. The document date is not an adoption date.",
+      "evidenceType": "native-pdf-raster-extraction",
+      "fidelityNote": "315 by 141 source JPEG extracted byte-for-byte and retained as provenance. Standalone PNG applies only the vertical flip specified by the original PDF negative-Y placement, then saves native decoded pixels losslessly. No scaling, enhancement or tracing.",
+      "notes": "Complete two-tone green trees and full council name from the health plan approved November 1, 1999. This belongs to the Community Health Council; the earlier Health Council is catalogued separately.",
+      "verification": {
+        "genuineVectorVerified": false,
+        "sourcePdf": {
+          "sha256": "52dfc8eb3cd2ba99773fb67efc8ab1606ab95e5da3863ca13b489218e655e19a",
+          "bytes": 78537,
+          "downloadName": "south-cariboo-healthplan1999.pdf"
+        },
+        "sourcePage": 1,
+        "imageXref": 8,
+        "nativeImagePixels": [
+          315,
+          141
+        ],
+        "rawEmbeddedJpeg": {
+          "file": "evidence/south-cariboo-healthplan1999-xref8-raw.jpeg",
+          "sha256": "8b445fac505a4570fe827af7584cd4a58b2b7727046dfcdd2724c400f5e2814b",
+          "bytes": 29921,
+          "nativePixels": [
+            315,
+            141
+          ],
+          "format": "jpeg",
+          "frames": 1
+        },
+        "imageProof": "evidence/south-cariboo-image-proof.json",
+        "visualInspection": "Original PDF cover and correctly oriented native-size PNG viewed. Whole 19-page PDF has zero drawing paths; p 1 contains the sole image instance.",
+        "nativePixelDimensions": [
+          315,
+          141
+        ],
+        "frameCount": 1
+      },
+      "sourceFile": null,
+      "previewWidth": 315,
+      "previewHeight": 141
+    },
+    {
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "observedDate": "2026-10-31",
+      "darkBackground": false,
+      "file": "identity-collected/south-cariboo-community-health-council/south-cariboo-community-health-council-2000-web-emblem.gif",
+      "sha256": "beb642333f8cdad0e42da4a19fa2e2277c7756166668f5e254ba30c9d2f6d206",
+      "bytes": 1550,
+      "format": "gif",
+      "bodyId": "south-cariboo-community-health-council",
+      "id": "historical-south-cariboo-2000-web-emblem",
+      "label": "Original black website emblem, 2000",
+      "publisher": "South Cariboo Community Health Council",
+      "sourcePage": "https://web.archive.org/web/20001214151700id_/http://www2.bcinternet.net/~100mile/health/health1.html",
+      "sourceUrl": "https://web.archive.org/web/20000904081304id_/http://www2.bcinternet.net:80/~100mile/health/health1.gif",
+      "sourceLocator": "Original council homepage embeds health1.gif beside the council name.",
+      "sourceDate": "2000-09-04",
+      "dateNote": "GIF captured 4 September 2000; the original council homepage was also recovered in a 14 December 2000 capture. Capture dates do not establish adoption.",
+      "evidenceType": "original-archived-web-raster",
+      "fidelityNote": "Original 239 by 258 GIF preserved byte-for-byte. No recolouring, enhancement, background removal or tracing.",
+      "notes": "Black standalone two-tree emblem used on the council website; the complete green mark in its 1999 health plan independently establishes the same council identity. Keep separate from the earlier South Cariboo Health Council row.",
+      "verification": {
+        "genuineVectorVerified": false,
+        "sourceHtml": {
+          "sha256": "5071dd95edbfcfbcd8c76ae962f3b1962531c18d7d5acdb6353f3af0c3eb5fa5",
+          "bytes": 1460,
+          "downloadName": "south-cariboo-bcinternet-home.html"
+        },
+        "visualInspection": "GIF viewed at native size and compared with the trees in the council health-plan mark.",
+        "nativePixelDimensions": [
+          239,
+          258
+        ],
+        "frameCount": 1
+      },
+      "sourceFile": null,
+      "previewWidth": 239,
+      "previewHeight": 258
+    },
+    {
+      "bodyId": "bc-resources-investment-corporation",
+      "id": "historical-bcric-1979-brochure-wordmark-raster",
+      "label": "Green BCRIC wordmark from August 1979 shareholder brochure",
+      "file": "identity-collected/bc-resources-investment-corporation/bcric-1979-brochure-wordmark-raster.png",
+      "format": "png",
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "publisher": "British Columbia Resources Investment Corporation; scan hosted by SACDA, University of the Fraser Valley",
+      "sourcePage": "https://sacda.ufv.ca/collections/2021_03_01_03_003",
+      "sourceUrl": "https://sacda.ufv.ca/sites/default/files/2026-09/2021_03_01_03_003.pdf",
+      "sourceLocator": "PDF page 6; date and publisher context on PDF page 2",
+      "sourceFile": null,
+      "sourceDate": "1979-08",
+      "observedDate": "2026-10-31",
+      "dateNote": "Dated sighting, not a complete usage period. The brochure prints August 1979; the catalogue uses 1979-08-01.",
+      "evidenceType": "original-raster-extraction",
+      "notes": "Green BCRIC wordmark from August 1979 shareholder brochure. Original fold and print texture retained; no inferred original brand colour beyond the scan pixels.",
+      "fidelityNote": "Decoded the original page-six image object at xref 15 and selected an integer pixel rectangle. PNG lossless encoding only; no rendering, resizing, resampling, retouching or colour adjustment.",
+      "sha256": "87096bb2a9f32a94a6101967b7876a23f9ec92a6cf59b733641a9b050f531b38",
+      "bytes": 136788,
+      "darkBackground": false,
+      "previewWidth": 567,
+      "previewHeight": 187,
+      "verification": {
+        "sourceSha256": "452d8530aa8072e16d9a3b96708ee9ab001dda59ed875e6f05c4f0c51b26177b",
+        "nativePixelDimensions": [
+          567,
+          187
+        ],
+        "pixelEqualityVerified": true,
+        "novelty": "Distinct from main/PR9 1979 share-certificate header/full certificate and the previously inspected 1980 BC RESOURCES annual-report cover.",
+        "proofFile": "evidence/raster-reference-crop-proof.json"
+      }
+    },
+    {
+      "bodyId": "bc-petroleum-corporation",
+      "id": "historical-bc-petroleum-1992-symbol-raster",
+      "label": "Black symbol from 1991–92 annual report",
+      "file": "identity-collected/bc-petroleum-corporation/bc-petroleum-1992-symbol-raster.png",
+      "format": "png",
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "publisher": "British Columbia Petroleum Corporation; microfiche scan hosted by Internet Archive",
+      "sourcePage": "https://archive.org/details/micro_IA40242808_0442",
+      "sourceUrl": "https://archive.org/download/micro_IA40242808_0442/micro_IA40242808_0442.pdf",
+      "sourceLocator": "PDF page 11, Corporate Information",
+      "sourceFile": null,
+      "sourceDate": "1992",
+      "observedDate": "2026-10-31",
+      "dateNote": "Dated by the 1991–1992 annual report; no identity introduction date inferred.",
+      "evidenceType": "original-raster-extraction",
+      "notes": "Black symbol from 1991–92 annual report. Original scan texture and a small portion of adjacent phone digits at upper left retained; not a full corporate lockup.",
+      "fidelityNote": "The decoded one-bit soft mask has only 0 and 255. Select each pixel directly from foreground xref 84 where the mask is 255, otherwise from background xref 82; all three planes have identical 3052 by 4042 dimensions and identical PDF placement. No arithmetic blending, geometric transform, resampling or retouching.",
+      "sha256": "e919903bac3624f56b2dbd84463a083ac01ab8f61992aa615bc4df6967bea232",
+      "bytes": 109366,
+      "darkBackground": false,
+      "previewWidth": 718,
+      "previewHeight": 845,
+      "verification": {
+        "sourceSha256": "99a6e8758f678bfc63fe72acbc09632565fe1039b0c7f0ca03fc398d97f32421",
+        "nativePixelDimensions": [
+          718,
+          845
+        ],
+        "pixelEqualityVerified": true,
+        "novelty": "Distinct 1991/92 specimen and original black-on-white polarity; main/PR9 carries the 1982/83 white-on-black symbol and name. Not a colour inversion of the prior crop.",
+        "proofFile": "evidence/raster-reference-crop-proof.json",
+        "compositeProofFile": "evidence/petroleum-layer-composite-proof.json"
+      }
     }
   ],
   "excludedDuplicateSpecimens": [
@@ -1467,5 +1932,8 @@
     }
   ],
   "researchTimezone": "America/Creston",
-  "initialBaseCommit": "766087b6f07eead08c32e1426696efa38ac42d81"
+  "initialBaseCommit": "766087b6f07eead08c32e1426696efa38ac42d81",
+  "priorIntegrationBaseCommits": [
+    "64599abab1d2198e00bb289ab013b2a539a29b04"
+  ]
 }
