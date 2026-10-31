@@ -48,10 +48,13 @@ const useWidth = () => {
 
 /**
  * The years as a row of bars, each as tall as its record count and each a button that picks it. A
- * year without records is a dashed stub: still a button, since choosing it explains the gap.
+ * year without records is a dashed stub: still a button, since choosing it explains the gap. Given
+ * `values` (a figure a year, such as median pay), the bars are as tall as those instead, `describe`
+ * writing each in full, so the one chart both shows the figure and picks the year.
  */
-export const YearPicker = ({ years, counts, coverage = [], value, onChange, label = 'Disclosure period' }) => {
-  const most = Math.max(1, ...counts)
+export const YearPicker = ({ years, counts, values, describe = formatMoney, valueName = 'median', coverage = [], value, onChange, label = 'Disclosure period', chooseLabel = label }) => {
+  const heights = values ?? counts
+  const most = Math.max(1, ...heights.map((height) => height ?? 0))
   const visible = new Set([...relevantYearIndexes(years, coverage, counts), value])
   const shown = years.map((_, at) => at).filter((at) => visible.has(at))
   const [ref, width] = useWidth()
@@ -60,7 +63,7 @@ export const YearPicker = ({ years, counts, coverage = [], value, onChange, labe
     <div className="salaries-picker-wrap">
       {/* Too narrow for a bar a period (a phone, the government panel): the period chooser instead. */}
       <div className="salaries-picker-select">
-        <span>{label}</span>
+        <span>{chooseLabel}</span>
         <PeriodRange
           single
           years={years}
@@ -75,6 +78,8 @@ export const YearPicker = ({ years, counts, coverage = [], value, onChange, labe
       {shown.map((at, place) => {
         const year = years[at]
         const count = counts[at] ?? 0
+        const height = values ? (count ? values[at] ?? 0 : 0) : count
+        const said = `${reportingYearLabel(year)}: ${yearAvailability(coverage[at], count)}${values && count && values[at] != null ? `, ${valueName} ${describe(values[at])}` : ''}`
         return (
           <button
             key={year}
@@ -82,11 +87,11 @@ export const YearPicker = ({ years, counts, coverage = [], value, onChange, labe
             aria-pressed={at === value}
             data-empty={!count || undefined}
             data-status={coverage[at]?.status}
-            aria-label={`${reportingYearLabel(year)}: ${yearAvailability(coverage[at], count)}`}
-            title={`${reportingYearLabel(year)}: ${yearAvailability(coverage[at], count)}`}
+            aria-label={said}
+            title={said}
             onClick={() => onChange(at)}
           >
-            <span className="salaries-picker__bar"><span style={{ height: count ? `${Math.max(8, (count / most) * 100)}%` : undefined }} /></span>
+            <span className="salaries-picker__bar"><span style={{ height: height ? `${Math.max(8, (height / most) * 100)}%` : undefined }} /></span>
             <span className="salaries-picker__label" data-hidden={!plan[place].shown || undefined} data-edge={plan[place].edge}>{shortYear(year)}</span>
           </button>
         )

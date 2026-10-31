@@ -352,13 +352,34 @@ try {
     // Most titles have neither measure: their entries stop at the average.
     while (entry.length > 6 && (entry.at(-1) === null || entry.at(-1) === 0)) entry.pop()
     titleList.push(entry)
+    // The median of every record under the title in each year, across every employer and, where it
+    // spans several sectors, within each. Employers' own medians cannot be combined into it. A year
+    // with one employer in it is left out: its median is that employer's, already in its cell.
+    const pooled = new Map()
+    for (const [cell, pay] of title.cells) {
+      const [employer, year] = cell.split('|').map(Number)
+      for (const group of ['all', employerList[employer].sector]) {
+        if (!pooled.has(group)) pooled.set(group, new Map())
+        const years = pooled.get(group)
+        if (!years.has(year)) years.set(year, { employers: 0, pay: [] })
+        const entry = years.get(year)
+        entry.employers += 1
+        for (const value of pay) entry.pay.push(value)
+      }
+    }
+    let medians
+    for (const [group, years] of pooled) {
+      if (group !== 'all' && pooled.size === 2) continue
+      const list = [...years].filter(([, entry]) => entry.employers > 1).sort((a, b) => a[0] - b[0]).map(([year, entry]) => [year, median(entry.pay)])
+      if (list.length) (medians ??= {})[group] = list
+    }
     const shard = titleShard(key)
     if (!titleShards.has(shard)) titleShards.set(shard, {})
-    titleShards.get(shard)[key] = { spellings: spellings.slice(0, 12), cells }
+    titleShards.get(shard)[key] = medians ? { spellings: spellings.slice(0, 12), cells, medians } : { spellings: spellings.slice(0, 12), cells }
   }
   titleList.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
   for (const [shard, entries] of titleShards) write(`positions/${shard}.json.gzip`, entries, true)
-  write('positions/index.json.gzip', { note: 'Titles: [most common spelling, rows, employers, first year index, last year index, average in the last period, average growth a year (each employer from its first to its last period with 5 or more records, 3 or more years apart, weighed by records; src/salaries/growth.js), records weighing it, employers in it, its first year index, its last year index, median yearly raise of a name kept under the title at one employer, raises in it, names in it]; growth and raise are null where none could be measured, and an entry ends where its remaining fields would all be empty. Slices by key: cells [employer index in employers/index.json, year index, rows, mean, median, lowest, highest]. Rows are disclosure records, not positions filled.', years: labels, titles: titleList, shards: [...titleShards.keys()].sort() }, true)
+  write('positions/index.json.gzip', { note: 'Titles: [most common spelling, rows, employers, first year index, last year index, average in the last period, average growth a year (each employer from its first to its last period with 5 or more records, 3 or more years apart, weighed by records; src/salaries/growth.js), records weighing it, employers in it, its first year index, its last year index, median yearly raise of a name kept under the title at one employer, raises in it, names in it]; growth and raise are null where none could be measured, and an entry ends where its remaining fields would all be empty. Slices by key: cells [employer index in employers/index.json, year index, rows, mean, median, lowest, highest]. Medians, where several employers share a year: { all, or a sector where the title spans several: [[year index, median of every record that year]] }; a year with one employer has that cell’s median. Rows are disclosure records, not positions filled.', years: labels, titles: titleList, shards: [...titleShards.keys()].sort() }, true)
   audit.output = { rows: rows.length, namedRows: Object.values(shardCounts).reduce((sum, count) => sum + count, 0), employers: employerList.length, atlasBodies: Object.keys(index.bodies).length, years: labels, availableEmployerYears: employerList.reduce((sum, entry) => sum + entry.coverage.filter((year) => year.status === 'available').length, 0) }
   write('coverage.json', { ...audit, employers: employerList.map(({ slug, names, sector, coverage }) => ({ slug, names, sector, coverage })) })
   index.coverage = Object.fromEntries(employerList.filter((entry) => entry.body).map((entry) => [entry.body, entry.coverage]))
