@@ -196,7 +196,7 @@ const LogoComments = ({ logo }) => (
         <p className="internal-logos__article-evidence">{logo.article.qualification}</p>
         <p className="internal-logos__article-source">{logo.article.citation}</p>
       </aside>
-    )
+    )}
     {logo.seenOn && (
       <>
         <h4>On the posters</h4>
@@ -298,7 +298,7 @@ export const InternalLogosView = () => {
                 {variants.studies.map((variant) => <VariantCard key={variant.id} variant={variant} />)}
               </div>
             </>
-          )
+          )}
           <p className="internal-logos__footnote">The colourways are display variations; they do not establish historical adoption or official approval.</p>
           {variants.related.length > 0 && (
             <>
