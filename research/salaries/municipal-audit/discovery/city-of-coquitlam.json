@@ -1,0 +1,200 @@
+{
+  "municipality": "Coquitlam",
+  "employerSlug": "city-of-coquitlam",
+  "website": "http://www.coquitlam.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.coquitlam.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.coquitlam.ca",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 283321,
+      "sha256": "dd2d042f7ad6fdd6e5013bed4011aeb23e530b878c0c65f41e6e45d3b4d3de25",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.coquitlam.ca/CivicAlerts.aspx?AID=1975",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.coquitlam.ca/m/newsflash/home/detail/1975",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 111454,
+      "sha256": "dff61579889a623c10dac3006afce853aef93da8f9addd21890bd120260a6168",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.coquitlam.ca/605",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.coquitlam.ca/605/Annual-Report",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 122028,
+      "sha256": "25cf72ee6c39b0d5efbb989db719ac7f17a3a34d2e963203927eff368d65e406",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.coquitlam.ca/CivicAlerts.aspx?AID=1849",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.coquitlam.ca/m/newsflash/home/detail/1849",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 112998,
+      "sha256": "33d9475a89922daa709c1bde965b6d20f0e780a535e75dfa55aa737350129f19",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://coquitlam.ca/607/Financial-Plan",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://coquitlam.ca/607/Financial-Plan",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 130072,
+      "sha256": "50073d80a059317fbbc595e3a8b6a90e4abbeb37a1a5e0d4b172506055d8261f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.coquitlam.ca/607",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.coquitlam.ca/607/Financial-Plan",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 130072,
+      "sha256": "50073d80a059317fbbc595e3a8b6a90e4abbeb37a1a5e0d4b172506055d8261f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.coquitlam.ca/27/Your-Government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.coquitlam.ca/27/Your-Government",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 251181,
+      "sha256": "f8ca35816e08b1cd328ed364eaaa0af173c9fd1d7cfdf8a8bcd973b4bf0d3944",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.coquitlam.ca/605/Annual-Report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.coquitlam.ca/605/Annual-Report",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 122028,
+      "sha256": "25cf72ee6c39b0d5efbb989db719ac7f17a3a34d2e963203927eff368d65e406",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.coquitlam.ca/1448/Finance-and-Legal",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.coquitlam.ca/1448/Finance-and-Legal",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 111370,
+      "sha256": "5ed4626bb269994845cbb416e2dc460b1bbe500f4bbee04add6ad93c58e9f9cd",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://coquitlam.ca/605/Annual-Report",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://coquitlam.ca/607/Financial-Plan",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.coquitlam.ca/605",
+      "label": "coquitlam.ca/AnnualReport",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.coquitlam.ca/m/newsflash/home/detail/1975",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.coquitlam.ca/605/Annual-Report",
+      "label": "Skip to Main Content",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.coquitlam.ca/605/Annual-Report",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.coquitlam.ca/Archive.aspx?AMID=37",
+      "label": "View past Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.coquitlam.ca/605/Annual-Report",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.coquitlam.ca/Archive.aspx?AMID=41",
+      "label": "View past Annual Report Highlights",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.coquitlam.ca/605/Annual-Report",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.coquitlam.ca/CivicAlerts.aspx?AID=1975",
+      "label": "Telling Coquitlam’s Financial Story: Annual Report and Financial Plan Released",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.coquitlam.ca",
+      "yearsInLabel": [
+        "1975"
+      ]
+    },
+    {
+      "url": "https://www.coquitlam.ca/DocumentCenter/View/17490/2025-Annual-Report",
+      "label": "2025 Annual Report ( PDF )",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.coquitlam.ca/605/Annual-Report",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.coquitlam.ca/DocumentCenter/View/19383/2025_Treasury_Report",
+      "label": "2025 Treasury Report ( PDF )",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.coquitlam.ca/605/Annual-Report",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.coquitlam.ca/DocumentCenter/View/19384/2025_Annual-Report-Highlights",
+      "label": "2025 Annual Report Highlights ( PDF )",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.coquitlam.ca/605/Annual-Report",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.coquitlam.ca/DocumentCenter/View/19407/2025_Statement_of_Financial_Information",
+      "label": "2025 Statement of Financial Information ( PDF )",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.coquitlam.ca/605/Annual-Report",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

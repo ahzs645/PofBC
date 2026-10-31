@@ -1,0 +1,263 @@
+{
+  "municipality": "Smithers",
+  "employerSlug": "town-of-smithers",
+  "website": "http://www.smithers.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.smithers.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smithers.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 61118,
+      "sha256": "2704198c673cb6c1f4e32a86cbf0c97dc3fafce8321105dc98765fcf208dd81a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 90828,
+      "sha256": "f3ca387b08e7e186a5f07c82c6ccd85794b403d28997593a3ef9ed4b08aa7065",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.smithers.ca/finance-taxes",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smithers.ca/finance-taxes",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 81435,
+      "sha256": "c45fa3a17a2aeea2cb51d8a927d74b0e873009e036ebf1e04c7cda376ae7f47c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.smithers.ca/finance-taxes/financial-plan",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smithers.ca/finance-taxes/financial-plan",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 96455,
+      "sha256": "75c4de0d07e9dbb75de81df58d354810fab6193e02f9df4c29aa577ad64623a8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://engage.smithers.ca/2026-budget",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://engage.smithers.ca/2026-budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 173962,
+      "sha256": "45d690364ebb386eabc609d9aa9ee0e7742574509bdb643a5e2332ec203733a5",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2023-04/Presentation%20-%20Financial%20Plan%202023-2027%20final.pptx",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smithers.ca/sites/default/files/2023-04/Presentation%20-%20Financial%20Plan%202023-2027%20final.pptx",
+      "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "bytes": 8000001,
+      "sha256": "00139695d502a51b75b526fb25ca5b31bd4fa474586e738ab98cdc975e1f3d71",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.smithers.ca/airport/airport-administration-0",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smithers.ca/airport/airport-administration-0",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 82334,
+      "sha256": "fd154216c038b393de04f1ab5359a5e728c6d2bc4f628b5facd30ae2095a389a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.smithers.ca/airport/airport-administration-0/advertising-yyd",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smithers.ca/airport/airport-administration-0/advertising-yyd",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 90712,
+      "sha256": "78c541bd7a31477b017004d852805beaa6c347f2cbdcfc34e8f9fa4aa6e7d124",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.smithers.ca/airport/airport-administration-0/development-opportunities",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smithers.ca/airport/airport-administration-0/development-opportunities",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 82106,
+      "sha256": "0e046fc3dd50427173754fd8a4c7711d2abf60c731680ea5357fd9a6ce7c85fe",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://smithers.civicweb.net/filepro/documents/426/",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "label": "Financial Reporting",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2022-03/2017_Audited_Consolidated_Financial_Statements.pdf",
+      "label": "2017 Consolidated Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2017",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2022-03/2018_Audited_Consolidated_Financial_Statements.pdf",
+      "label": "2018 Consolidated Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2022-03/2019_Financial_Statements_FINAL.pdf",
+      "label": "2019 Consolidated Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2022-03/2020_AUDITED_CONSOLIDATED_FINANCIAL_STATEMENTS.pdf",
+      "label": "2020 Consolidated Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2022-06/2021_Town_of_Smithers_FS_-_Mgmt_Final_-_CS_Final_05-10-22__Audit_Report.pdf",
+      "label": "2021 Consolidated Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2023-05/Smithers%202022%20Audited%20Financial%20Statements%2C%2005-09-23.pdf",
+      "label": "2022 Consolidated Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2023-09/Smithers%20Public%20Library%20-%202022%20Financial%20Information.pdf",
+      "label": "Smithers Public Library - 2022 Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2024-05/2023%20Smithers%20Audited%20Financial%20Statements%2C%2005-09-24.pdf",
+      "label": "2023 Consolidated Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2024-06/2023%20Smithers%20Approved%20SOFI%20Report%2C%2005-28-24.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2025-07/20250522091846.pdf",
+      "label": "2024 Consolidated Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2025-07/FIN%2025-012%20Attach.%201%202024%20SOFI%20Filing.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2026-05/Town%20of%20Smithers%202025%20Financial%20Statements.pdf",
+      "label": "2025 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.smithers.ca/sites/default/files/2026-06/TOS%20-%202025%20STATEMENT%20OF%20FINANCIAL%20INFORMATION.pdf",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

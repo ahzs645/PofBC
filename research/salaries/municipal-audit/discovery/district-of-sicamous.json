@@ -1,0 +1,130 @@
+{
+  "municipality": "Sicamous",
+  "employerSlug": "district-of-sicamous",
+  "website": "http://www.sicamous.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.sicamous.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sicamous.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120155,
+      "sha256": "941f713aee32017b84a5766c0ba853992efccd6477391c9caf917601908a2f42",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.sicamous.ca/your-municipality/departments/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sicamous.ca/your-municipality/departments/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 46646,
+      "sha256": "09f0c92e0f19d6599417b1d01cdf9110d0b4b75689f85906f1f962162fe06009",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.sicamous.ca/your-municipality/departments",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sicamous.ca/your-municipality/departments",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 50707,
+      "sha256": "d7cefa668130814d70255a10f68e88da6d327a4ba90828768e4cb6da5a3653e8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.sicamous.ca/your-municipality/departments/community-services",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sicamous.ca/your-municipality/departments/community-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 43616,
+      "sha256": "8d315a31688a40496a9b19e7d464236ba4e06fc5abdd9e8a7d63ebc7781e8ca8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.sicamous.ca/your-municipality/departments/corporate-services",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sicamous.ca/your-municipality/departments/corporate-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 46728,
+      "sha256": "8a0500764d52b199bcd37ff36ad168f5dd784f06a6fbfb8e9ba2cf09913df3b3",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.sicamous.ca/your-municipality/departments/development-services",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sicamous.ca/your-municipality/departments/development-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 56740,
+      "sha256": "57de8bdea03981510d70c4feb90eb1093ae766038b7415b9f3b9061aa37d1e0d",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.sicamous.ca/your-municipality/departments/operations-infrastructure",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sicamous.ca/your-municipality/departments/operations-infrastructure",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 60595,
+      "sha256": "11aa9c2fa4371a892485ae0080e2244d6a5c7b9149d22d530de17539320cf0bc",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "http://sicamous.ca/your-municipality/water-main-flushing",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sicamous.ca/your-municipality/water-main-flushing",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 44355,
+      "sha256": "9c45387b3e9e96619a6ee96bd843d0403a99e070c44baf9d559d7355b864e102",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.sicamous.ca/live-here/sicamous-cemetery",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://sicamous.civicweb.net/filepro/documents/30049",
+      "label": "Statements of Financial Information (SOFI)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.sicamous.ca/your-municipality/departments/finance",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://sicamous.civicweb.net/filepro/documents/51472",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.sicamous.ca/your-municipality/departments/finance",
+      "yearsInLabel": []
+    }
+  ]
+}

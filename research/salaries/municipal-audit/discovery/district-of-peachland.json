@@ -1,0 +1,205 @@
+{
+  "municipality": "Peachland",
+  "employerSlug": "district-of-peachland",
+  "website": "http://www.peachland.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.peachland.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.peachland.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 87473,
+      "sha256": "fd1ef1fe93343182307ff4d0f0c8efdb01ee64cc9a47118940c81770833e84d0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.peachland.ca/departments/finance/annual-report",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.peachland.ca/departments/finance/annual-report",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 77954,
+      "sha256": "dae173d7ca5d43176f7a1ad195023da3e83dd9c0d74ebfabf88f93899448f5ba",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/2021-annual-report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.peachland.ca/media/file/2021-annual-report",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "924bc58185b1a8b88b27e3ff89408eff94eb2fe6e579bd38e9a860690021be3b",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/2023-annual-report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.peachland.ca/media/file/2023-annual-report",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "6de336fcf652afca64dd76fa5bf30b217a9dd6c9551871e402a7beb340feed66",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/2024-annual-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.peachland.ca/media/file/2024-annual-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "6a76b19c28dfa916b15ea56277fff2373e3fdd720e77aea26b5b59ad3d32d912",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/draft-2025-annual-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.peachland.ca/media/file/draft-2025-annual-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "6b190f9effafebdadaa46394a7f9dc5018d4c8281cb163045049fdb613b58a74",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.peachland.ca/departments/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.peachland.ca/departments/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 79909,
+      "sha256": "4fbc7a4589c020122f5159441c97da92d2700e214c601bac0028a42bcb1b449b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.peachland.ca/departments/finance/capital-asset-management",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.peachland.ca/departments/finance/capital-asset-management",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 75513,
+      "sha256": "45d00b22f29ccf19c0a3df74d5b4b935a72b003fed506874f244742618b5c3c3",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.peachland.ca/departments/finance/financial-plan",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.peachland.ca/departments/finance/financial-plan",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 86006,
+      "sha256": "d5a1b54e56cc11b0b381f5c09bbb8757e9318aef040c92523676bbcdb9dbf61f",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.peachland.ca/departments/finance/annual-report",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/2021-annual-report",
+      "label": "2020 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca/departments/finance/annual-report",
+      "yearsInLabel": [
+        "2020",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/2023-annual-report",
+      "label": "2023 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca/departments/finance/annual-report",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/2024-annual-reportpdf",
+      "label": "2024 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca/departments/finance/annual-report",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/2024-statement-financial-informationpdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca/departments/finance/financial-plan",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/draft-2025-annual-reportpdf",
+      "label": "2025 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca/departments/finance/annual-report",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.peachland.ca/media/file/peachland-2025-statement-financial-informationpdf",
+      "label": "2025 Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca/departments/finance/financial-plan",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://pub-peachland.escribemeetings.com/filestream.ashx?DocumentId=1423",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca/departments/finance/annual-report",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://pub-peachland.escribemeetings.com/filestream.ashx?DocumentId=154",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca/departments/finance/annual-report",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://pub-peachland.escribemeetings.com/filestream.ashx?DocumentId=5383",
+      "label": "2026 Provisional Budget",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.peachland.ca/departments/finance/financial-plan",
+      "yearsInLabel": [
+        "2026"
+      ]
+    }
+  ]
+}

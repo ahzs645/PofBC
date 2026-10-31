@@ -1,0 +1,206 @@
+{
+  "municipality": "Lake Cowichan",
+  "employerSlug": "town-of-lake-cowichan",
+  "website": "http://www.town.lakecowichan.bc.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.town.lakecowichan.bc.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.town.lakecowichan.bc.ca",
+      "contentType": "text/html",
+      "bytes": 25398,
+      "sha256": "b3468fe1e6df8a0e24b7ad42c5e9176988803da1505dee7203e40e339c0553c2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/finance-warrants.php",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 31405,
+      "sha256": "49dbca28ef8ec7cf8ff02636cff901ddcf5b729ffdd24f74aa1aeecdd9e78f44",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2021 Annual Report.pdf",
+      "label": "Annual Report 2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2021 Financial Statements signed.pdf",
+      "label": "Financial Statements 2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2022 Annual Report.pdf",
+      "label": "Annual Report 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2022 Financial Statements.pdf",
+      "label": "Financial Statements 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2023 Annual Report.pdf",
+      "label": "Annual Report 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2023 Financial Statements.pdf",
+      "label": "Financial Statements 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2023 SOFI.pdf",
+      "label": "Statement of Financial Information 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2024 Annual Report.pdf",
+      "label": "Annual Report 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2024 Financial Statements.pdf",
+      "label": "Financial Statements 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2024 SOFI.pdf",
+      "label": "Statement of Financial Information 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2025 Annual Report.pdf",
+      "label": "Annual Report 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2025 Financial Statements.pdf",
+      "label": "Financial Statements 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2025 SOFI.pdf",
+      "label": "Statement of Financial Information 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2025 Tax Rates.pdf",
+      "label": "Tax Rates for 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2026 Tax Rates.pdf",
+      "label": "Tax Rates for 2026",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/2026 Utilities Newsletter.pdf",
+      "label": "2026 Utilities Newsletter",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/Lake Cowichan 2026 Tax Insert.pdf",
+      "label": "CVRD 2026 Tax Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.town.lakecowichan.bc.ca/dl/Taxes Newsletter 2026.pdf",
+      "label": "Taxes Newsletter 2026",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.town.lakecowichan.bc.ca/finance.php",
+      "yearsInLabel": [
+        "2026"
+      ]
+    }
+  ]
+}

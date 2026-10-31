@@ -71,6 +71,12 @@ export const applyCompiledReplacements = (baseline, official, sources, rules = [
       if (!sources[id] || !official.some((row) => row.slug === employerSlug && row.year === replacementYear && row.sourceId === id)) {
         throw new Error(`${employerSlug}|${compiledYear}: replacement source ${id} was not imported`)
       }
+      // A reviewed comparison must not survive a later source update under the
+      // same ID. New municipal rules pin the exact accepted data bytes as well
+      // as the compiled cohort selected for removal.
+      if (rule.sourceDataSha256 && (!/^[a-f0-9]{64}$/.test(rule.sourceDataSha256[id] ?? '') || sources[id].dataSha256 !== rule.sourceDataSha256[id])) {
+        throw new Error(`${employerSlug}|${compiledYear}: official replacement source fingerprint changed for ${id}`)
+      }
     }
     if (!sourceIds.some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id].scope))) {
       throw new Error(`${employerSlug}|${compiledYear}: partial disclosure cannot replace a compiled employee cohort across periods`)

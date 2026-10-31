@@ -1,0 +1,642 @@
+{
+  "municipality": "Penticton",
+  "employerSlug": "city-of-penticton",
+  "website": "http://www.penticton.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.penticton.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.penticton.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 101742,
+      "sha256": "1c4069b64b6e4c7cdf34655b2e44637c679bfff8965dd9c601ebb6b5f10926c5",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 139321,
+      "sha256": "9d152a3954bffaf86de133a91f9ed1f8d4a264d43842d9ef7170783bcb18ed41",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.penticton.ca/form/web-page-feedback?title=Statement of Financial Information&id=37650",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "URL can't contain control characters. '/form/web-page-feedback?title=Statement of Financial Information&id=37650' (found at least ' ')"
+    },
+    {
+      "url": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 150747,
+      "sha256": "8b14fa735b1cccfb3ad7cc10a92f4e6b524745ce8fca113a6a69b0b365b3a687",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.penticton.ca/city-hall/reports-plans/financial-statements",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.penticton.ca/city-hall/reports-plans/financial-statements",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 138705,
+      "sha256": "143d47ec5b8eab8d152a7878272c59a00cf04c883858489e5b82313d48b47c1b",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.penticton.ca/form/web-page-feedback?title=Annual Reports&id=491",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "URL can't contain control characters. '/form/web-page-feedback?title=Annual Reports&id=491' (found at least ' ')"
+    },
+    {
+      "url": "https://www.penticton.ca/form/web-page-feedback?title=Financial Statements&id=493",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "URL can't contain control characters. '/form/web-page-feedback?title=Financial Statements&id=493' (found at least ' ')"
+    },
+    {
+      "url": "https://www.penticton.ca/budget-talks",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.penticton.ca/budget-talks",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 300620,
+      "sha256": "ab6513e184397e005345e0f9eeea91e1ed32494423c2d3f52efabcbc0064f0a1",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.penticton.ca/city-hall/reports-plans/financial-corporate-business-plans",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.penticton.ca/city-hall/reports-plans/financial-corporate-business-plans",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 141754,
+      "sha256": "cd9170e788bfcdaac3fe4b1130897376740b4d8943a12ab7b8df4e71f03ccd01",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.penticton.ca/city-hall/reports-plans/financial-statements",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "label": "Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.penticton.ca/form/web-page-feedback?title=Annual Reports&id=491",
+      "label": "Report an Error",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.penticton.ca/form/web-page-feedback?title=Financial Statements&id=493",
+      "label": "Report an Error",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/financial-statements",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.penticton.ca/form/web-page-feedback?title=Statement of Financial Information&id=37650",
+      "label": "Report an Error",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/2026-06/FINAL%20DIGITAL_Penticton%202025%20Annual%20Report.pdf",
+      "label": "Download the 2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/annual-reports/FINAL%20DIGITAL_Penticton%202024%20Annual%20Report-compressed.pdf",
+      "label": "2024 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/annual-reports/SOFIs/2022%20Financial%20Statements.pdf",
+      "label": "2022 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/financial-statements",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/annual-reports/SOFIs/2022%20Statement%20of%20Financial%20Information%20(SOFI).pdf",
+      "label": "2022 Statement of Financial Information (SOFI)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/annual-reports/SOFIs/2023%20Financial%20Statements.pdf",
+      "label": "2023 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/financial-statements",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/annual-reports/SOFIs/2023%20Statement%20of%20Financial%20Information%20(SOFI).pdf",
+      "label": "2023 Statement of Financial Information (SOFI)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/annual-reports/SOFIs/2024%20Financial%20Statements.pdf",
+      "label": "2024 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/financial-statements",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2017/2017%20financial%20plan%20day%201.pdf",
+      "label": "2017 Financial plan day 1.pdf [PDF - 4.2 MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2017/2017%20financial%20plan%20day%202.pdf",
+      "label": "2017 financial plan day 2.pdf [PDF - 4.4 MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2017/2017%20financial%20plan%20day%203.pdf",
+      "label": "2017 financial plan day 3.pdf [PDF - 1.9 MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2017/2017-2021financial_plan.pdf",
+      "label": "2017-2021 Financial Plan [PDF - 1.1 MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2017",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2017/2017-21%20Financial%20Plan%20Overview.pdf",
+      "label": "2017-21 Financial Plan Overview.pdf [PDF - 2.7 MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2018/2018-04-189-Financial_Plan_Apr17_web.pdf",
+      "label": "2018-2022 Financial Plan - Adopted",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2019/2019-04-02-Financial Plan - 2019 Final.pdf",
+      "label": "2019-2023 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/financial-corporate-business-plans",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2019/2019-04-02-Financial%20Plan%20-%202019%20Final.pdf",
+      "label": "2019-2023 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2019/Penticton%20Business%20Plan%202019-Feb%2012.pdf",
+      "label": "2019 Corporate Business Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2020/2019-12-10-12%20Special%20Agenda%20Pages%20combined.pdf",
+      "label": "2020 Financial Plan Schedule",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2019",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2020/2020 Corporate Business Plan.pdf",
+      "label": "2020 Corporate Business Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/financial-corporate-business-plans",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2020/2020-2024 Financial Plan.pdf",
+      "label": "2020-2024 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/financial-corporate-business-plans",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2021/2020-11-04-PDF-Corporate%20Business%20Plan.pdf",
+      "label": "2021-2025 Corporate Business Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2020",
+        "2021",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2021/2021-01-28-PDF-Financial%20Plan.pdf",
+      "label": "2021-2025 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2021",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2022/2021-12-16-2022-2026%20Final%20Financial%20Plan.pdf",
+      "label": "2022-2026 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2021",
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2022/DIGITAL_Penticton%20Corporate%20Business%20Plan%20-%20Post%20Budget.pdf",
+      "label": "2022-2026 Corporate Business Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2023/2023-04-18-PDF-FINAL-DIGITAL-FINANCIAL%20PLAN%202023-2027.pdf",
+      "label": "2023-2027 Financial and Corporate Business Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2024/FINAL%20DIGITAL_Penticton%20Corp%20Business%20and%20Financial%20Plan%202024%20(1).pdf",
+      "label": "2024-2028 Financial and Corporate Business Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2025/FINAL_DIGITAL_2025-2029%20Penticton%20Final%20Corp%20Bus%20Plan%20and%20Fin%20Plan.pdf",
+      "label": "2025 – 2029 Financial and Corporate Business Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-plan/2026/2026-30%20FINAL%20Financial%20%26%20Corporate%20Business%20Plan%20-%20Revised.pdf",
+      "label": "2026–2030 Financial and Corporate Business Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/budget-talks",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-statements/2021%20SOFI%20Report.pdf",
+      "label": "2021 Statement of Financial Information (SOFI)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-statements/2022-06-22-PDF-Annual%20Report%20Financial%20Statements.pdf",
+      "label": "2021 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/financial-statements",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-statements/2025%20Audited%20Financial%20Statements_from%20Annual%20Report.pdf",
+      "label": "2025 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/financial-statements",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-statements/2025%20Statement%20of%20Financial%20Information%20(SOFI).pdf",
+      "label": "2025 Statement of Financial Information (SOFI)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-statements/Attachment%20A%20%E2%80%93%202024%20Statement%20of%20Financial%20Information%20(SOFI).pdf",
+      "label": "2024 Statement of Financial Information (SOFI)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2003%20Annual%20Report.pdf",
+      "label": "2003 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2003"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2004%20Annual%20Report.pdf",
+      "label": "2004 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2004"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2005%20Annual%20Report.pdf",
+      "label": "2005 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2005"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2006%20Annual%20Report.pdf",
+      "label": "2006 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2006"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2007%20Annual%20Report.pdf",
+      "label": "2007 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2007"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2008%20Annual%20Report.pdf",
+      "label": "2008 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2009%20Annual%20Report.pdf",
+      "label": "2009 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2010%20Annual%20Report.pdf",
+      "label": "2010 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2011%20Annual%20Report.pdf",
+      "label": "2011 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2012%20Annual%20Report.pdf",
+      "label": "2012 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2013%20Annual%20Report-web.pdf",
+      "label": "2013 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2014%20Annual%20Report-web.pdf",
+      "label": "2014 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2015%20City%20of%20Penticton%20Annual%20Report%20-%20Final.pdf",
+      "label": "2015 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2016_Annual_Report_full_2.pdf",
+      "label": "2016 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2017-Annual-Report-version%202%20for%20website.pdf",
+      "label": "2017 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2018%20Annual%20Report.pdf",
+      "label": "2018 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2019%20Annual%20Report.pdf",
+      "label": "2019 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2020%20Annual%20Report.pdf",
+      "label": "2020 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2021%20Annual%20Report.pdf",
+      "label": "2021 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2022%20Annual%20Report.pdf",
+      "label": "2022 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.penticton.ca/sites/default/files/uploads/financial-reports/2023-Annual%20Report.pdf",
+      "label": "2023 Annual Report.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "municipality": "Richmond",
+  "employerSlug": "city-of-richmond",
+  "website": "http://www.richmond.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.richmond.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.richmond.ca",
+      "contentType": "text/html",
+      "bytes": 76275,
+      "sha256": "d806c350cc56f6439973606baa266f509193cd85c6f44758f20165a770c0f900",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "contentType": "text/html",
+      "bytes": 100072,
+      "sha256": "1cec42c7df0f873937512175adcb5da8cbfdf2c754dad157d858614652de3de3",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance/reporting.htm",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.richmond.ca/city-hall/finance/reporting.htm",
+      "contentType": "text/html",
+      "bytes": 99119,
+      "sha256": "23ab823a8c809db89b6d14bb4d7495972b1c7e32b7f72891ad567bde19f0892b",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance/reporting.htm?PageMode=HTML",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.richmond.ca/city-hall/finance/reporting.htm?PageMode=HTML",
+      "contentType": "text/html",
+      "bytes": 99119,
+      "sha256": "23ab823a8c809db89b6d14bb4d7495972b1c7e32b7f72891ad567bde19f0892b",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "contentType": "text/html",
+      "bytes": 98461,
+      "sha256": "a60f85d874b3f6e5648bf377cf5454ecbd3c895b940b5fd415429c5481e60c53",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm?PageMode=HTML",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm?PageMode=HTML",
+      "contentType": "text/html",
+      "bytes": 98461,
+      "sha256": "a60f85d874b3f6e5648bf377cf5454ecbd3c895b940b5fd415429c5481e60c53",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/city-departments/finance-corporate-services.htm",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.richmond.ca/city-hall/city-departments/finance-corporate-services.htm",
+      "contentType": "text/html",
+      "bytes": 118388,
+      "sha256": "9a5a4140dc634cfd2504fe20dedf39a5580037eb7ea9111237418d120f3d693a",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance.htm",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.richmond.ca/city-hall/finance.htm",
+      "contentType": "text/html",
+      "bytes": 103348,
+      "sha256": "10eaa66d218360ad64424cf32dd4fb46c75f99e75fc3ecc9d02ac7984a541e85",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance/about.htm",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.richmond.ca/city-hall/finance/about.htm",
+      "contentType": "text/html",
+      "bytes": 99496,
+      "sha256": "b1ad449c8ff97bf22815d7ac575fea7b408f40bbc0b360380be117201d4c93dc",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "label": "Remuneration",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance/reporting.htm",
+      "label": "Budgets & Financial Reporting",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance/reporting.htm?PageMode=HTML",
+      "label": "Budgets & Financial Reporting",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting.htm",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm?PageMode=HTML",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting.htm",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2020annualreportcomp58630.pdf",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2020annualreporthighlights58631.pdf",
+      "label": "2020 Annual Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2021_Council_Remuneration_and_Expenses62972.pdf",
+      "label": "Council Remuneration and Expenses for 2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2021annualhighlights62804.pdf",
+      "label": "2021 Annual Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2021annualreport62803.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2022_Council_Remuneration_and_Expenses_CNCL_06262368993.pdf",
+      "label": "Council Remuneration and Expenses for 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2022annualhighlights68845.pdf",
+      "label": "2022 Annual Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2022annualreport68846.pdf",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2023__Council_Remuneration75291.pdf",
+      "label": "Supplementary Information - 2023 Council Remuneration and Expenses",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2023annualhighlights72860.pdf",
+      "label": "2023 Annual Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2023annualreport72861.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2024_Council_Remuneration_and_Expenses77766.pdf",
+      "label": "2024 Council Remuneration and Expenses",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/2024_Council_Remuneration_and_Expenses_from_Other_Agencies77765.pdf",
+      "label": "2024 Council Remuneration and Expenses from Other Agencies",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/Council_Remuneration_and_Expenses73085.pdf",
+      "label": "Council Remuneration and Expenses for 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/_19_-_2025_Council_Remuneration_and_Expenses79241.pdf",
+      "label": "2025 Council Remuneration and Expenses",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/_20_-_2025_Council_Remuneration_and_Expenses_from_Other_Agencies79242.pdf",
+      "label": "2025 Council Remuneration and Expenses from Other Agencies",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/_21A_-_2020_Council_Remuneration_and_Expenses_CNCL_06282158756.pdf",
+      "label": "Council Remuneration and Expenses for 2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/city-council/councilremuneration.htm",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/annualrptcomp202477005.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.richmond.ca/__shared/assets/annualrpthighlits202477006.pdf",
+      "label": "2024 Annual Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.richmond.ca/city-hall/finance/reporting/reports.htm",
+      "yearsInLabel": [
+        "2024"
+      ]
+    }
+  ]
+}

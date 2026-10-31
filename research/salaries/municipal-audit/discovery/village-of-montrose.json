@@ -1,0 +1,779 @@
+{
+  "municipality": "Montrose",
+  "employerSlug": "village-of-montrose",
+  "website": "http://www.montrose.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.montrose.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.montrose.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 247538,
+      "sha256": "4ef1c4599ae829587dd221bd4ee1f0f531329bbccc38671b6c67122f738503a1",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/annual-reports/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.montrose.ca/document-category/annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 359332,
+      "sha256": "c091dcdf89b6ab215b0db4201a67e9cc13283ce17fb16a7e688ed414143f23f8",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2014-annual-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.montrose.ca/document-category/2014-annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 238098,
+      "sha256": "9464cbff96dacf66e092bff7c9672ef6fe4fa354b5b360411f6addaa0ced1c48",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2015-annual-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.montrose.ca/document-category/2015-annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 240309,
+      "sha256": "f1d363d99a88e2f61e31531e7a65917350b5f533c13106d3961edbce047ef260",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2016-annual-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.montrose.ca/document-category/2016-annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 236935,
+      "sha256": "3bd2ae0e53d5569127a6ec20397d397c3740b5300f4def6884f2d3b80cbc6e35",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2017-annual-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.montrose.ca/document-category/2017-annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 238116,
+      "sha256": "a84ff93b57773c22ce8b57ffe17bcc4f70dd2396d58a0cc62d9475e480fceeb0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2018-annual-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.montrose.ca/document-category/2018-annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 237998,
+      "sha256": "3e45ef7fde69a9d5e394c85efc5edec641091ab96a38573e64d9c8159900b4a1",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2019-annual-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.montrose.ca/document-category/2019-annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 238106,
+      "sha256": "99c945da7b33a3a5636ee1507ba0160721adf8e3c7c27d8d4b7919bc3e26f2ec",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2020-annual-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.montrose.ca/document-category/2020-annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 238179,
+      "sha256": "f8e5c4e0eb8c58f0b18d039181b6d8c6566a378c8c723330b6ae91468b73616f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.montrose.ca/document-category/2014-annual-reports/",
+      "label": "2014",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2015-annual-reports/",
+      "label": "2015",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2016-annual-reports/",
+      "label": "2016",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2017-annual-reports/",
+      "label": "2017",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2018-annual-reports/",
+      "label": "2018",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2019-annual-reports/",
+      "label": "2019",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2020-annual-reports/",
+      "label": "2020",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2021-annual-reports/",
+      "label": "2021",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2022-annual-reports/",
+      "label": "2022",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2023-annual-reports/",
+      "label": "2023",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/2024-annual-reports/",
+      "label": "2024",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/annual-reports-annual-reports/",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/annual-reports/",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/financial-annual-reports/",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.montrose.ca/document-category/water-annual-reports/",
+      "label": "Water Monitoring",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2014-Annual-Report-Final.pdf&url_label=2014 Annual Report 2014",
+      "label": "2014 Annual Report 2014",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2014-annual-reports/",
+      "yearsInLabel": [
+        "2014",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2014-Annual-Report-on-Water-Monitoring.pdf&url_label=2014 Annual Report on Water Monitoring 2014",
+      "label": "2014 Annual Report on Water Monitoring 2014",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2014-annual-reports/",
+      "yearsInLabel": [
+        "2014",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2014-Audited-Financial-Statements.pdf&url_label=2014 Audited Financial Statements 2014",
+      "label": "2014 Audited Financial Statements 2014",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2014-annual-reports/",
+      "yearsInLabel": [
+        "2014",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2015-Annual-Report-of-Water-Monitoring.pdf&url_label=2015 Annual Report of Water Monitoring 2015",
+      "label": "2015 Annual Report of Water Monitoring 2015",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2015-annual-reports/",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2015-Annual-Report.pdf&url_label=2015 Annual Report 2015",
+      "label": "2015 Annual Report 2015",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2015-annual-reports/",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2015-Audited-Financial-Statements.pdf&url_label=2015 Audited Financial Statements 2015",
+      "label": "2015 Audited Financial Statements 2015",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2015-annual-reports/",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2016-Annual-Report.pdf&url_label=2016 Annual Report 2016",
+      "label": "2016 Annual Report 2016",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2016-annual-reports/",
+      "yearsInLabel": [
+        "2016",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2016-Financial-Statements.pdf&url_label=2016 Financial Statements 2016",
+      "label": "2016 Financial Statements 2016",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2016-annual-reports/",
+      "yearsInLabel": [
+        "2016",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2017-Annual-Report-of-Water-Monitoring.pdf&url_label=2017 Annual Report of Water Monitoring 2017",
+      "label": "2017 Annual Report of Water Monitoring 2017",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2017-annual-reports/",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2017-Annual-Report.pdf&url_label=2017 Annual Report 2017",
+      "label": "2017 Annual Report 2017",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2017-annual-reports/",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2018-Annual-Report.pdf&url_label=2018 Annual Report 2018",
+      "label": "2018 Annual Report 2018",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2018-annual-reports/",
+      "yearsInLabel": [
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2018-Village-of-Montrose-FINAL-Financial-Statements.pdf&url_label=2018 FINAL Financial Statement 2018",
+      "label": "2018 FINAL Financial Statement 2018",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2018-annual-reports/",
+      "yearsInLabel": [
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2019-Annual-Report.pdf&url_label=2019 Annual Report 2019",
+      "label": "2019 Annual Report 2019",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2019-annual-reports/",
+      "yearsInLabel": [
+        "2019",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/2019-Village-of-Montrose-FINAL-Financial-Statements.pdf&url_label=2019 FINAL Financial Statements 2019",
+      "label": "2019 FINAL Financial Statements 2019",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2019-annual-reports/",
+      "yearsInLabel": [
+        "2019",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/Annual-Report-of-Water-Monitoring-2020.pdf&url_label=Annual Report of Water Monitering 2020 2020",
+      "label": "Annual Report of Water Monitering 2020 2020",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2020-annual-reports/",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/Annual-Report.pdf&url_label=2020 Annual Report 2020",
+      "label": "2020 Annual Report 2020",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2020-annual-reports/",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/Village-of-Montrose-FS2017.pdf&url_label=2017 Financial Statement 2017",
+      "label": "2017 Financial Statement 2017",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2017-annual-reports/",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/pdf-document?pdf_url=https://www.montrose.ca/wp-content/uploads/2024/08/Village-of-Montrose-Financial-Statements-FINAL.pdf&url_label=Village of Montrose Financial Statements FINAL 2020",
+      "label": "Village of Montrose Financial Statements FINAL 2020",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/2020-annual-reports/",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2018-Annual-Report-of-Water-Monitoring.docx",
+      "label": "2018-Annual-Report-of-Water-Monitoring",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2014-Annual-Report-Final.pdf",
+      "label": "2014-Annual-Report-Final",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2014",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2014-Annual-Report-on-Water-Monitoring.pdf",
+      "label": "2014-Annual-Report-on-Water-Monitoring",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2014",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2014-Audited-Financial-Statements.pdf",
+      "label": "2014-Audited-Financial-Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2014",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2014-Auditors-Management-Report.pdf",
+      "label": "2014-Auditors-Management-Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2014",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2015-Annual-Report-of-Water-Monitoring.pdf",
+      "label": "2015-Annual-Report-of-Water-Monitoring",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2015-Annual-Report.pdf",
+      "label": "2015-Annual-Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2015-Audited-Financial-Statements.pdf",
+      "label": "2015-Audited-Financial-Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2016-Annual-Report.pdf",
+      "label": "2016-Annual-Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2016",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2016-Financial-Statements.pdf",
+      "label": "2016-Financial-Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2016",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2017-Annual-Report-of-Water-Monitoring.pdf",
+      "label": "2017-Annual-Report-of-Water-Monitoring",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2017-Annual-Report.pdf",
+      "label": "2017-Annual-Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2018-Annual-Report.pdf",
+      "label": "2018-Annual-Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2018-Village-of-Montrose-FINAL-Financial-Statements.pdf",
+      "label": "2018-Village-of-Montrose-FINAL-Financial-Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2019-Annual-Report.pdf",
+      "label": "2019-Annual-Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2019",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2019-Village-of-Montrose-FINAL-Financial-Statements.pdf",
+      "label": "2019-Village-of-Montrose-FINAL-Financial-Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2019",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2021-Annual-Report.pdf",
+      "label": "2021-Annual-Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2021",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/2022-Annual-Report.pdf",
+      "label": "2022-Annual-Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Annual-Report-of-Water-Monitoring-2020.pdf",
+      "label": "Annual-Report-of-Water-Monitoring-2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Annual-Report.pdf",
+      "label": "Annual-Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Asset-Management-2022-2026.pdf",
+      "label": "Asset-Management-2022-2026",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Audited-Financial-Statements-2022.pdf",
+      "label": "Audited-Financial-Statements-2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Imagine-Montrose-ICSP-2015-FINAL.pdf",
+      "label": "Imagine-Montrose-ICSP-2015-FINAL",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Montrose-2020-OCP-Community-Engagement-Program-Results.pdf",
+      "label": "Montrose-2020-OCP-Community-Engagement-Program-Results",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Montrose-Concept-Model-2016.pdf",
+      "label": "Montrose-Concept-Model-2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2016",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Montrose-Strategic-Plan-2015-2018-Mid-term-Update-April-2017.pdf",
+      "label": "Montrose-Strategic-Plan-2015-2018-Mid-term-Update-April-2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2015",
+        "2017",
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Montrose-Water-Conservation-Plan-2022.pdf",
+      "label": "Montrose-Water-Conservation-Plan-2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Strategic-Plan-2019-2022.pdf",
+      "label": "Strategic-Plan-2019-2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2019",
+        "2022",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Village-of-Montrose-2021-Financial-statement.pdf",
+      "label": "Village-of-Montrose-2021-Financial-statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2021",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Village-of-Montrose-Financial-Statements-FINAL.pdf",
+      "label": "Village-of-Montrose-Financial-Statements-FINAL",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2024/08/Water-Monitoring-report-2021.pdf",
+      "label": "Water-Monitoring-report-2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2021",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-Annual-Report.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-SOFI-Copy-for-website.pdf",
+      "label": "2023 SOFI – Copy for website",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2025/05/Village-of-Montrose-2024-Financial-Statements.pdf",
+      "label": "Village of Montrose 2024 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.montrose.ca/wp-content/uploads/2026/04/2024-Annual-Report.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.montrose.ca/document-category/annual-reports/",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    }
+  ]
+}

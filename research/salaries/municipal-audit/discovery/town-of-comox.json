@@ -1,0 +1,429 @@
+{
+  "municipality": "Comox",
+  "employerSlug": "town-of-comox",
+  "website": "http://www.comox.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.comox.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.comox.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 134548,
+      "sha256": "def8e2eb3e3700dba906c208ef384c97f20954bba3b48bf6a18696890e3606c9",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.comox.ca/SOFI",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.comox.ca/SOFI",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 166250,
+      "sha256": "005edb35b2c119064c5d75bd3677062e3a51c50864be57f0081d17a2991ab786",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.comox.ca/annualreport",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.comox.ca/annualreport",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 166566,
+      "sha256": "34899d1b1548d7f38b17639a3e6846ec17c2c1e5417129d14e3f4af09f132a8a",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.comox.ca/financialstatements",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.comox.ca/financialstatements",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 166057,
+      "sha256": "a8a55ff43e01ec8503fd70361f844384f27016aff38b4bac3e4e56fad1fe3239",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.comox.ca/budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.comox.ca/budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 182654,
+      "sha256": "38421951f4171af260fb1b29ef1078326ee782556978e04ecd2b737df0e59fe5",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.comox.ca/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.comox.ca/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 169399,
+      "sha256": "cb8d23bd06aad6c0ce837664f782f1abae909b31cb3426a7b6a349ea236e6808",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.comox.ca/finance/deposits-letters-credit-and-surety-bonds",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.comox.ca/finance/deposits-letters-credit-and-surety-bonds",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 175666,
+      "sha256": "130a2ff7ec291eacbac713092d5a06f72177f5f99f6ac5d305406408a761926f",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.comox.ca/financenewsletter",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.comox.ca/financenewsletter",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 165645,
+      "sha256": "29628b1110a21984834bca00e6d218bc641c628b9b5bbd1e81636d6a9ed826c0",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.comox.ca/media/2800",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.comox.ca/media/2800",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 163429,
+      "sha256": "5bc374c839c2f5d457e06d3ee9a3e3a3a4742e462293052f601fb9e1bdaf7203",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.comox.ca/SOFI",
+      "label": "Statement of Financial Information (SOFI)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.comox.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.comox.ca/annualreport",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.comox.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.comox.ca/financialstatements",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.comox.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2022-06/2020%20Annual%20Report.pdf",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/annualreport",
+      "yearsInLabel": [
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2022-07/2021_Financial_Statements.pdf",
+      "label": "2021 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/financialstatements",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2022-08/Annual%20Report%20-%20Town%20of%20Comox%202021.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/annualreport",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2023-07/2022SOFI_Report_FINAL_20230706.pdf",
+      "label": "2022 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/SOFI",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2023-11/2022%20Annual%20Report%20Town%20of%20Comox_0.pdf",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/annualreport",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2023-11/2022FinancialStatements_Final_20231115_Note16Fix.pdf",
+      "label": "2022 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/financialstatements",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2024-05/Comox%20Financial%20Newsletter%202024%20Letter%20size.pdf",
+      "label": "2024 Financial Newsletter",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/financenewsletter",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2024-07/2023%20Town%20of%20Comox%20Audited%20Financial%20Statements%20%282%29.pdf",
+      "label": "2023 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/financialstatements",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2024-08/20240807_SOFI%20Report_0.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/SOFI",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2024-10/2024-10-09%202025-2029%20Pre-budget%20Presentation.pdf",
+      "label": "2024-10-09 2025-2029 Pre-budget Presentation.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/media/2800",
+      "yearsInLabel": [
+        "2024",
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2024-10/2024-10Oct-09_Strategic%20Planning%20Committee%20Agenda_0.pdf",
+      "label": "Pre-budget Report on October 9, 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-01/Annual%20Report%202023%20Final%20Copy.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/annualreport",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-02/2025-2029%20Draft%20Proposed%20Comox%20Budget%20Package.pdf",
+      "label": "Draft 2025-2029 Proposed Budget Package",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-05/2024%20Statement%20Of%20Financial%20Information.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/SOFI",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-05/2025-05May-14_Special%20Council%20Meeting%20Agenda.pdf",
+      "label": "Agenda (Financial plan 20205- 2029 and Tax Rates Bylaw pg. 80 -86)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-05/4%202025-05May-07%20RCM-2025-010%202025-2029%20Financial%20Plan%20Bylaw.pdf",
+      "label": "2025 - 2029 Financial Plan Bylaw - Staff Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-05/Annual%20Report%202024%20with%20Financials.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/annualreport",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-09/2025-09Sep-10_Strategic%20Planning%20Committee%20Agenda.pdf",
+      "label": "September 10, 2025 - Strategic Planning Meeting",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-10/2025-10-22%20FIN-2025-021%202026%20Corporate%20Budget%20%281%29.pdf",
+      "label": "2026 Corporate Budget",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-10/2025-10-22%20FIN-2025-021%20Budget%20Presentation.pdf",
+      "label": "2026-2030 Budget Presentation",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2025",
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-10/2025-10Oct_22_Regular%20Council%20Meeting%20Agenda.pdf",
+      "label": "October 22, 2025 - Presentation of Operating and Capital Budget",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-10/2026%20Budget%20Pamphlet.pdf",
+      "label": "2026 Budget Overview and Highlights Pamphlet",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2025-10/2026-2030%20Comox%20Budget%20Package.pdf",
+      "label": "2026 - 2030 Comox Budget Package",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/budget",
+      "yearsInLabel": [
+        "2025",
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2026-05/2024%20Financial%20Statements.pdf",
+      "label": "2024 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/financialstatements",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2026-05/2025%20Annual%20Report-compressed.pdf",
+      "label": "2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/annualreport",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2026-05/2025%20Audited%20Financial%20Statements.pdf",
+      "label": "2025 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/financialstatements",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2026-05/2025%20Statement%20of%20Financial%20Information.pdf",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/SOFI",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2026-09/2026%20Finance%20Newsletter%20Combined.pdf",
+      "label": "2026 Financial Newsletter",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/financenewsletter",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.comox.ca/sites/default/files/2026-09/Comox%20Financial%20Newsletter%202025%20Letter%20size.pdf",
+      "label": "2025 Financial Newsletter",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.comox.ca/financenewsletter",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "municipality": "Vanderhoof",
+  "employerSlug": "district-of-vanderhoof",
+  "website": "http://www.vanderhoof.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.vanderhoof.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vanderhoof.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 40742,
+      "sha256": "d3980b78f06f3b8dd7dfecb5740d80411cfe676724471265abe5605c48fa7ff0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vanderhoof.ca/municipal-hall/finance/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vanderhoof.ca/municipal-hall/finance/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 55487,
+      "sha256": "1b37f97c743446e142f36726d7e6834c1fafa269aab14b5175ed099add9c46d7",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vanderhoof.ca/municipal-hall/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vanderhoof.ca/municipal-hall/finance/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 55487,
+      "sha256": "1b37f97c743446e142f36726d7e6834c1fafa269aab14b5175ed099add9c46d7",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vanderhoof.ca/municipal-hall/finance/2026-election/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://vanderhoof.ca/municipal-hall/2026-election",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vanderhoof.ca/municipal-hall/2026-election/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 78841,
+      "sha256": "4a1972fc5edb85f6273a99c224f0334eec7aef862369c24d1b0b55c4912b74f4",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://vanderhoof.ca/municipal-hall/bids-tenders",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vanderhoof.ca/municipal-hall/bids-tenders/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 52657,
+      "sha256": "16c86c1cfce4386002669133bbe90de7acd2cefc1efad5f0755eb7dc523681a5",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vanderhoof.ca/municipal-hall/building-inspection-zoning-bylaw",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vanderhoof.ca/municipal-hall/building-inspection-zoning-bylaw/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 52140,
+      "sha256": "f4caeeaba1d2a2110b444874a051d2ac50d1b26a982259aa3b9f60ddf4ebbdbd",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vanderhoof.ca/municipal-hall/building-inspection-zoning-bylaw/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vanderhoof.ca/municipal-hall/building-inspection-zoning-bylaw/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 52140,
+      "sha256": "f4caeeaba1d2a2110b444874a051d2ac50d1b26a982259aa3b9f60ddf4ebbdbd",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vanderhoof.ca/municipal-hall/bylaws-and-enforcement",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vanderhoof.ca/municipal-hall/bylaws-and-enforcement/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 51678,
+      "sha256": "883ade98eccb13f738b955eb81039148ccf3bb725546e70badd0daca0022db7f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://vanderhoof.ca/municipal-hall/finance/",
+      "label": "Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://vanderhoof.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://vanderhoof.civicweb.net/document/98009",
+      "label": "2025 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://vanderhoof.ca/municipal-hall/2026-election/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://vanderhoof.civicweb.net/filepro/documents/108/?preview=72312",
+      "label": "Council Remuneration Bylaw 1193, 2019",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://vanderhoof.ca/municipal-hall/2026-election/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://vanderhoof.civicweb.net/filepro/documents/82363",
+      "label": "2023 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://vanderhoof.ca/municipal-hall/finance/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    }
+  ]
+}

@@ -52,9 +52,12 @@ jobs:
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Rebuild and reconcile all published salary views
         run: |
+          npm run compare:municipal-periods
           npm run build:salaries
           npm run check:salaries
-          git diff --exit-code -- public/salaries src/government/salaryIndex.js research/salaries/coverage-inventory.md research/salaries/source-inventory.md
+          npm run audit:municipal-salaries
+          npm run follow-up:municipal-salaries
+          git diff --exit-code -- public/salaries src/government/salaryIndex.js research/salaries/coverage-inventory.md research/salaries/source-inventory.md research/salaries/municipal-audit/coverage.json research/salaries/municipal-audit/coverage.md research/salaries/municipal-audit/follow-up.json research/salaries/municipal-audit/follow-up.csv research/salaries/municipal-audit/follow-up.md research/salaries/municipal-corrections
           test -z "$(git ls-files --others --exclude-standard -- public/salaries research/salaries)"
       - name: Build the salary interface preview
         run: npm run preview:salaries -- --build

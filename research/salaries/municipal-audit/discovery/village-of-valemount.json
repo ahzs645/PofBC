@@ -1,0 +1,389 @@
+{
+  "municipality": "Valemount",
+  "employerSlug": "village-of-valemount",
+  "website": "http://www.valemount.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.valemount.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://valemount.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 306965,
+      "sha256": "4b3a482a91d7fb3d7f70243cce29150f6b3fd2e315e1f495e6e7a0ae5d63bdbe",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 202857,
+      "sha256": "5b88d570f584a942a256a5d6500513ac415ddc8db182b1b56099489ed65b7519",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 206742,
+      "sha256": "6f088676428867e2317b582646754329ea4d01a2a9d9a12588870caaa19ce866",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://valemount.ca/village-office/finance/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://valemount.ca/village-office/finance/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 215579,
+      "sha256": "37164a84ee623244d89be2271151d8d71f74a59dd26f8a5f69702d9bfadcd6f3",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://valemount.ca/village-office/finance/budget/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://valemount.ca/village-office/finance/budget/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 203433,
+      "sha256": "b58fa29d57d581ead573a5a9211843f1dd46ec089db3601c2f24c8a32671196f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://valemount.ca/village-office/finance/property-taxes/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://valemount.ca/village-office/finance/property-taxes/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 216707,
+      "sha256": "39a832a0546ef5d78e6ae5dc24662d340484802964eb298078c698a1d47c2e82",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://valemount.ca/village-office/finance/property-taxes/home-owner-grant/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://valemount.ca/village-office/finance/property-taxes/home-owner-grant/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 204116,
+      "sha256": "70a62e187b858f0049cc759b781ff634d118649ff81fb52440d8a31812ff63d6",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://valemount.ca/village-office/finance/property-taxes/municipal-tax-sale/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://valemount.ca/village-office/finance/property-taxes/municipal-tax-sale/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 205393,
+      "sha256": "09a3f6952005e2de7b5560e11f4cc1e08fa87cf611c63bec396a2c88ba84d68a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://valemount.ca/village-office/finance/property-taxes/permissive-tax-exemptions/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://valemount.ca/village-office/finance/property-taxes/permissive-tax-exemptions/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 203249,
+      "sha256": "f320a895375efa91c3e4b070651441b72f9c26886d190f41513dd4dfe6187c13",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://valemount.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "label": "Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://valemount.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://valemount.ca/uploads/2015-Audited-Financials.pdf",
+      "label": "2015 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2016-Audited-Financials.pdf",
+      "label": "2016 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2017-Audited-Financials.pdf",
+      "label": "2017 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2018-Annual-Report.pdf",
+      "label": "2018 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2018-Audited-Financials.pdf",
+      "label": "2018 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2019-Annual-Report.pdf",
+      "label": "2019 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2019-Audited-Financials.pdf",
+      "label": "2019 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2019-SOFI-FINAL-SIGNED.pdf",
+      "label": "2019 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2020-Annual-Report.pdf",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2020-Audited-Financials.pdf",
+      "label": "2020 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2020-Village-of-Valemount-SOFI.pdf",
+      "label": "2020 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2021-Annual-Report_Reduced.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2021-Audited-Financials.pdf",
+      "label": "2021 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/uploads/2021-FINAL-SOFI-REPORT.pdf",
+      "label": "2021 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2023/06/2022-Annual-Report-Vale.pdf",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2023/06/2022-Audited-Financials.pdf",
+      "label": "2022 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2023/06/2022-SOFI-Report-SIGNED.pdf",
+      "label": "2022 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2024/05/2023-Audited-Financials.pdf",
+      "label": "2023 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2024/06/Annual-Report-2023-4.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2024/07/2023-SOFI-REPORT-SIGNED.pdf",
+      "label": "2023 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2024/08/Valemount_LGCAP-Survey-Submission-Report_2024.pdf",
+      "label": "2024 Local Government Climate Action Survey",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2025/06/2024-Annual-Report.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2025/07/2024-Audited-Financials.pdf",
+      "label": "2024 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2025/07/2024-SOFI-Report.pdf",
+      "label": "2024 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2026/06/FINAL-2025-Valemount-Annual-Report.pdf",
+      "label": "2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2026/07/2025-Audited-Financials.pdf",
+      "label": "2025 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://valemount.ca/wp-content/uploads/2026/07/2025-SOFI-REPORT-SIGNED.pdf",
+      "label": "2025 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

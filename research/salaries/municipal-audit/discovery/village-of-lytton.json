@@ -1,0 +1,558 @@
+{
+  "municipality": "Lytton",
+  "employerSlug": "village-of-lytton",
+  "website": "http://www.lytton.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.lytton.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lytton.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 127817,
+      "sha256": "4270c877a2dc7e226d1d5cedb76bbc588db98e480f635d2f5e40d62f4a24e67b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lytton.ca/budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lytton.ca/budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 105730,
+      "sha256": "a07f14d9357ae27053b839d658b2737666800df22bf84d8bd7a34360b345cf33",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lytton.ca/local-government/budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lytton.ca/local-government/budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120046,
+      "sha256": "66edc1b3e25aba8924e0916e462b8312f1af556827e95e2e500ea2bc09b20ba4",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lytton.ca/local-government/reports-plans",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lytton.ca/local-government/reports-plans",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 130739,
+      "sha256": "7e8c4dc4ddcc31b55318251c6ebcf2d237323bd972473808066b451234cbc2e6",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.lytton.ca/contact-us/finance",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lytton.ca/contact-us/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 86028,
+      "sha256": "b961bb88eb2fa8b0629d520f8e99810f77c417951f41580322abdcfcc7aad5e5",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lytton.ca/local-government/council-meetings/2025-budget-information-and-input-session-february-26-2025",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lytton.ca/local-government/council-meetings/2025-budget-information-and-input-session-february-26-2025",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 100981,
+      "sha256": "3053d0ad7c16f6b08aa869082ab9244367a34a7397ad8ee5d15f02662775c4fc",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lytton.ca/media/2169",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lytton.ca/media/2169",
+      "contentType": "application/pdf",
+      "bytes": 581465,
+      "sha256": "3d2cf00a532b7ff15a5040bd517a4b577266fa6467a08c082bb4dcaaab892226",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.lytton.ca/news/council-approves-draft-budget",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lytton.ca/news/council-approves-draft-budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 87951,
+      "sha256": "75f49e1dfbeda0c78cf7857a726ea2f57858617fae98f48e1c59ddac1d25d9b2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lytton.ca/news/council-provides-first-three-readings-five-year-financial-plan-2026-2030-bylaw",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lytton.ca/news/council-provides-first-three-readings-five-year-financial-plan-2026-2030-bylaw",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 88938,
+      "sha256": "9a7cf7b00ab991987af2f4f5ee21d6c81b16525443cb3f1a93cd2212ac1d4cce",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://lyttonbc.civicweb.net/document/10326",
+      "label": "2021 Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://lyttonbc.civicweb.net/document/9715",
+      "label": "2021 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/local-government/reports-plans",
+      "label": "See Reports & Plans, including financial statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/budget",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.lytton.ca/media/2364",
+      "label": "2025 Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/media/2169",
+      "label": "Download a 2026 budget handout.",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/media/2169",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2015-Annual-Report.pdf",
+      "label": "2015 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2015-SOFI-Report.pdf",
+      "label": "2015 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2016-Annual-Municipal-Report-compressed-2-min.pdf",
+      "label": "2016 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2016",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2016-Year-End-Financial-Statements.pdf",
+      "label": "2016 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2016",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2017%20SOFI%20Report.pdf",
+      "label": "2017 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2017-Annual-Municipal-Report_reduce-1.compressed.pdf",
+      "label": "2017 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2017-financial-statements_0.pdf",
+      "label": "2017 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2018%20SOFI%20Report%20signed%20June%2026%2C%202018.pdf",
+      "label": "2018 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2018-Financial-Statements-Signed.pdf",
+      "label": "2018 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2019-Annual-Report-amended.pdf",
+      "label": "2019 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2019",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/2023-Village-of-Lytton-SOFI-Report.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/Annual-Report-2013.pdf",
+      "label": "2013 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2013",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/Annual-Report-2020-ADOPTED.pdf",
+      "label": "2020 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/DRAFT_2021-10-27_Village-of-Lytton_Short-Term-Recovery-Plan_Final.pdf",
+      "label": "2021 Short-Term Recovery Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2021",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/Lytton-Annual-Water-Report-for-2020.pdf",
+      "label": "2020 Annual Water Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/Lytton-Economic-Recovery-Plan-Report-April25-2023.pdf",
+      "label": "2023 Economic Recovery Plan report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/Lytton_SEWER-MASTER-PLAN_Final2022_03.pdf",
+      "label": "2022 Sewer Master Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2022",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/SOFI-2022-SignedMayor.pdf",
+      "label": "2022 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2022",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/VOL-2020-SOFI-REPORT-SIGNED-20211208.pdf",
+      "label": "2020 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/Village-Of-Lytton-2023AnnualReport-June-11-2024.pdf",
+      "label": "2023 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/Village-of-Lytton-2023-Financial-Statements-FINAL.pdf",
+      "label": "2023 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/Village-of-Lytton-Dec-2019-FS-795971.pdf",
+      "label": "2019 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2019",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-08/Village-of-Lytton-Dec-2020-FS-795971.pdf",
+      "label": "2020 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-09/2014_Lytton-Annual-Water-Report.pdf",
+      "label": "2014 Annual Water Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2014",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-09/Lytton-Annual-Water-Report-for-2011.pdf",
+      "label": "2011 Annual Water Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2011",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-09/Lytton-Annual-Water-Report-for-2019.pdf",
+      "label": "2019 Annual Water Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2019",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-09/Rebuilding-and-Corporate-Plan-August-2024.pdf",
+      "label": "August 2024 Rebuilding and Corporate Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2024-09/Village-of-Lytton-2023-Community-Water-System-Report.pdf",
+      "label": "2023 Annual Water Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2025-03/UpdatedStrategicPlan2024-2026.pdf",
+      "label": "Download the 2024–2026 Council Strategic Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2024",
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2025-04/2025%20Annual%20Plan.pdf",
+      "label": "2025 Annual Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2025-06/2024%20Audited%20Financial%20Statements.pdf",
+      "label": "2024 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2025-06/Village%20of%20Lytton%20Community%20Water%20System%202024.pdf",
+      "label": "2024 Annual Water Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2025-06/Village-Of-Lytton-2024-AnnualReport-Updated-June-20-2025.pdf",
+      "label": "2024 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2025-12/Attachment%20B%20-%202025%20Housing%20Needs%20Report.pdf",
+      "label": "a 2025 housing needs report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2026-03/VOL_Final_Signed_2024%20SOFI.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2026-04/2022%20-%20Village%20of%20Lytton.pdf",
+      "label": "2022 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2026-04/Village%20of%20Lytton%20Annual%20Plan%202026-PDF.pdf",
+      "label": "2026 Annual Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2026-08/Audited%20Financial%20Statements%202025.pdf",
+      "label": "2025 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2026-08/Village-Of-Lytton-2025%20Annual%20Report.pdf",
+      "label": "2025 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lytton.ca/sites/23/files/2026-10/Development%20Services%20Activity%20Report%20Third%20Quarter%202026.pdf",
+      "label": "Read the September 2026 (third quarter) Development Services activities update",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lytton.ca/local-government/reports-plans",
+      "yearsInLabel": [
+        "2026"
+      ]
+    }
+  ]
+}

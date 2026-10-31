@@ -1,0 +1,498 @@
+{
+  "municipality": "Colwood",
+  "employerSlug": "city-of-colwood",
+  "website": "http://www.colwood.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.colwood.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.colwood.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 103156,
+      "sha256": "09ffb95292652cdf76e67a079239fd90c6e3289a142947c07e16d19483d86ce6",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.colwood.ca/city-services/finance/property-tax/parcel-tax",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.colwood.ca/city-services/finance/property-tax/parcel-tax",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 78129,
+      "sha256": "355181529d1e1f51f285e94476c2151846cd6d5201bb0af883502f98e13755cc",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.colwood.ca/city-services/finance/property-tax/property-assessment",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.colwood.ca/city-services/finance/property-tax/property-assessment",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 78477,
+      "sha256": "ba5d705ba45d76d6fbd3c2375e1a088451c722c3faeac1301c04d22a7c414277",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.colwood.ca/city-services/finance/property-tax/sewer-user-fee",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.colwood.ca/city-services/finance/property-tax/sewer-user-fee",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 83726,
+      "sha256": "8d21446f23d695b3ce17aa4c129435e4e0065df0b4f5e976bd250200cf94cf5c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.colwood.ca/city-services/finance/property-tax/tax-sale-information",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.colwood.ca/city-services/finance/property-tax/tax-sale-information",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 86300,
+      "sha256": "404b28fc7b4173b7a41c100f15050b005c6c195dc0e2375f9546e1ddb0fb6e89",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.colwood.ca/city-services/finance/property-tax/ways-pay",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.colwood.ca/city-services/finance/property-tax/ways-pay",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 80354,
+      "sha256": "8fb588555b186d232e7abe31dceaff9370c84516b8e9351a075f487c8d2eccd5",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 94459,
+      "sha256": "4a153664d1379600ef1ffaf0bf935686384e9cf0d6d66d50ad12e5be3b6dfd22",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.colwood.ca/media/25642",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.colwood.ca/media/file/2022-sofi",
+      "contentType": "application/pdf",
+      "bytes": 1961046,
+      "sha256": "ba3316fe7a457c527bbf31e92919aa80f586eeb9bb3de06d089f7912d010081e",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.colwood.ca/media/25646",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.colwood.ca/media/file/2021-sofi-final-signatures",
+      "contentType": "application/pdf",
+      "bytes": 1550104,
+      "sha256": "74372810a1961e1dbf7c5d76503bb69e96cc01b61f173084a934081599f045d8",
+      "status": "pdf-downloaded-unreviewed"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.colwood.ca/media/25641",
+      "label": "2022 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25644",
+      "label": "2021 Financial Statements [PDF/3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25652",
+      "label": "2019 Financial Statements [PDF/398KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25654",
+      "label": "2018 Consolidated Financial Statements [PDF/629KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25655",
+      "label": "2018 Statement of Financial Information [PDF/186KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25657",
+      "label": "2017 Consolidated Financial Statements [PDF/881KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25658",
+      "label": "2017 Statement of Financial Information [PDF/400KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25662",
+      "label": "2016 Consolidated Financial Statements [PDF/809KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25663",
+      "label": "2016 Statement of Financial Information [PDF/186KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25665",
+      "label": "2015 Consolidated Financial Statements [PDF/8.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25666",
+      "label": "2015 Statement of Financial Information [PDF/687KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25667",
+      "label": "2014 Consolidated Financial Statements [PDF/1.2MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25668",
+      "label": "2014 Statement of Financial Information [PDF/2.4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25669",
+      "label": "2013 Consolidated Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25670",
+      "label": "2013 Statement of Financial Information [PDF/4.1MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25671",
+      "label": "2012 Consolidated Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25672",
+      "label": "2012 Statement of Financial Information [PDF/414KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25673",
+      "label": "2011 Statement of Financial Information [PDF/405KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/file/2024-12-31-city-colwood-fs-carupdatedpdf",
+      "label": "2024 Financial Statements [PDF/1.2MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/file/2024-statement-financial-informationpdf",
+      "label": "2024 Statement of Financial Information [PDF/5.6MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/file/2025-12-31-city-colwood-fs-carsignedpdf",
+      "label": "2025 Financial Statements [PDF/577KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/file/2025-statement-financial-information-signedpdf",
+      "label": "2025 Statement of Financial Information [PDF/1.2MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "http://colwood.civicweb.net/FileStorage/1A4D61845BA7469EB38139C5EA436954-2022_12_05_Quarter%203%20Update.pdf",
+      "label": "Q3 2022 Financial Update",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "http://colwood.civicweb.net/FileStorage/74C9C78ABC204BEDAC430403EF4AAB1A-2022_12_05_Quarter%203%20Update_Capital.pdf",
+      "label": "Q3 2022 Capital Plan Update",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://colwood.civicweb.net/FileStorage/41CFB727BDB04C59B5C1F104E712145C-2023%20Q3%20-%20Capital%20Financial%20Update%20FINAL.pdf",
+      "label": "Q3 2023 Capital Update",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://colwood.civicweb.net/FileStorage/7109732044E04A2FAD614E91757A936F-2023_Q3%20Financial%20Update%20FINAL.pdf",
+      "label": "Q3 2023 Financial Update",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://colwood.civicweb.net/FileStorage/BC5FFE7EF7E94C20BF8D40F8AEF782AA-REP%20-%202019%20SOFI.pdf",
+      "label": "2019 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25642",
+      "label": "2022 Statement of Financial Information [PDF/1.9MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/media/25642",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/media/25646",
+      "label": "2021 Statement of Financial Information [PDF/1.5MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/media/25646",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2024-06/2020%20City%20of%20Colwood%20Financial%20Statements%20signed.pdf",
+      "label": "2020 Financial Statements [PDF/3.3MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2024-06/2020_Annual_DCC_Report.pdf",
+      "label": "2020 Annual Development Cost Charges Report [PDF/743KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2024-06/2020_SOFI_FINAL_signed.pdf",
+      "label": "2020 Statement of Financial Information [PDF/9.2MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2024-06/2024-2028%20Financial%20Plan%20FINAL.pdf",
+      "label": "2024-2028 Financial Plan [PDF/26.4MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2024-10/2023%20SOFI.pdf",
+      "label": "2023 Statement of Financial Information [PDF/5.6MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2024-10/2023-12-31%20City%20of%20Colwood%20Financial%20Statements.pdf",
+      "label": "2023 Financial Statements [PDF/638KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2025-02/2024%20Q2%20Capital%20Financial%20Update.pdf",
+      "label": "Q2 2024 Capital Financial Update [PDF/554KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2025-02/2024%20Q2%20Financial%20Update.pdf",
+      "label": "Q2 2024 Financial Update [PDF/1.8MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2025-02/2024%20Q3%20Capital%20Financial%20Update.pdf",
+      "label": "Q3 2024 Capital Financial Update [PDF/892KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2025-02/2024%20Q3%20Financial%20Update.pdf",
+      "label": "Q3 2024 Financial Update [PDF/5.4MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2025-02/2024%20Service%20Review.pdf",
+      "label": "2024 Service Plan [PDF/26.5MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.colwood.ca/sites/default/files/2025-02/2025%20Service%20Review.pdf",
+      "label": "2025 Service Plan [PDF/20.3MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

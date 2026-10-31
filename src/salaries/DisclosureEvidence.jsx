@@ -1,20 +1,23 @@
-import { coverageStatus, disclosurePeriod, scopeLabel, sourceHref, thresholdLabel } from './coverage.js'
+import { coverageStatus, disclosurePeriod, scopeLabel, sourceHref, sourceWarnings, thresholdLabel } from './coverage.js'
 
 export const SourceLink = ({ sourceId, sources = {}, pdfPage, label }) => {
   const source = sources[sourceId]
   const href = sourceHref(source, pdfPage)
   const page = Number.isInteger(pdfPage) && pdfPage > 0 && href?.includes('#page=')
   return href
-    ? <a href={href} target="_blank" rel="noreferrer" title={source.title}>{label ?? (page ? `Source · p. ${pdfPage}` : 'Source')}</a>
+    ? <a href={href} target="_blank" rel="noreferrer" title={[source.title, source.publicWarning].filter(Boolean).join(' — ')}>{label ?? (page ? `Source · p. ${pdfPage}` : 'Source')}{source.publicWarning ? ' †' : ''}</a>
     : null
 }
 
 const month = (value) => new Intl.DateTimeFormat('en-CA', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`))
 
+export const SourceWarnings = ({ sourceIds, sources }) => sourceWarnings(sourceIds, sources).map((warning) => (
+  <p key={warning} className="salaries__hint salaries__hint--small"><strong>Source caveat: </strong>{warning}</p>
+))
+
 /**
  * A disclosure at a glance, on one line: what was disclosed, for when, above what threshold, and
- * where from. Its notes, caveats and the kind of source behind it are in the salary documentation
- * (research/salaries/README.md and each collection's README), not on the page.
+ * where from. Material qualifications accompany the records; extraction details remain in research.
  */
 export const DisclosureSummary = ({ coverage, sources = {}, className = '' }) => {
   const period = disclosurePeriod(coverage, sources)
@@ -34,6 +37,7 @@ export const DisclosureSummary = ({ coverage, sources = {}, className = '' }) =>
         ))}</>}
         {!ids.length && ' · no source document attached'}
       </p>
+      <SourceWarnings sourceIds={ids} sources={sources} />
     </div>
   )
 }

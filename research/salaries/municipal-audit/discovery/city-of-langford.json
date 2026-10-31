@@ -1,0 +1,512 @@
+{
+  "municipality": "Langford",
+  "employerSlug": "city-of-langford",
+  "website": "https://www.langford.ca/",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.langford.ca/",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://langford.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 435590,
+      "sha256": "725a083fcd7ee6bad6816ef34ff9cdfc54a25e5525b6cab68e6d4ff383258da8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 390294,
+      "sha256": "a43c6d71a3ead07a8c2a1eddd8034ccd37a75061241b70962fca11ed84118bda",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://langford.ca/budget-2026/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://langford.ca/budget-2026/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 383292,
+      "sha256": "1014d6aa19f81be3a100e6af6b2d38e16c74103d1b89f53fed8f5722df65095e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://langford.ca/budget-2026/langford.ca/meetings",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://langford.ca/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://langford.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 435590,
+      "sha256": "725a083fcd7ee6bad6816ef34ff9cdfc54a25e5525b6cab68e6d4ff383258da8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://langford.ca/builders/planning-and-zoning/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://langford.ca/home/planning-and-zoning/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 407788,
+      "sha256": "79df1732068a54485e8b8bd73d207ea791d4dae19c26133afdc518208185de08",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://langford.ca/city-hall/bylaws-directory/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://langford.ca/city-hall/bylaws-directory/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 407814,
+      "sha256": "232a2904cbf4132151da3eeef0b0f0ba4cbca9a41166c615ca359e8b8385eaa3",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://langford.ca/city-hall/careers/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://langford.ca/city-hall/careers/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 378624,
+      "sha256": "c1177e92f24c7e65a23913b37d6774e6c05660015ef5d71bb9ec51d2ac5b5ba2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://langford.ca/city-hall/committees/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://langford.ca/city-hall/committees/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 420167,
+      "sha256": "7881906b54044bbe5252e392d5f46ffe07c228407bdd7a54c2fd469a5c331642",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "label": "Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://langford.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/2012-SOFI.pdf",
+      "label": "Statement of Financial Information – 2012",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2012",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/2013-SOFI.pdf",
+      "label": "Statement of Financial Information – 2013",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2013",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/2014-SOFI.pdf",
+      "label": "Statement of Financial Information – 2014",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2014",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/2016-SOFI.pdf",
+      "label": "Statement of Financial Information – 2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2016",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/2018-SOFI.pdf",
+      "label": "Statement of Financial Information – 2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2018",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/2019-SOFI.pdf",
+      "label": "Statement of Financial Information – 2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2019",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Audited-2011-Financial-Statement.pdf",
+      "label": "Audited Financial Statement 2011",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2011",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Audited-Financial-Statement-2010.pdf",
+      "label": "Audited Financial Statement 2010",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2010",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Audited-Financial-Statement-2012.pdf",
+      "label": "Audited Financial Statement 2012",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2012",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Audited-Financial-Statement-2013.pdf",
+      "label": "Audited Financial Statement 2013",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2013",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Audited-Financial-Statement-2014.pdf",
+      "label": "Audited Financial Statement 2014",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2014",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Audited-Financial-Statement-2015.pdf",
+      "label": "Audited Financial Statement 2015",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2015",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Audited-Financial-Statement-2016.pdf",
+      "label": "Audited Financial Statement 2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2016",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Audited-Financial-Statement-2017.pdf",
+      "label": "Audited Financial Statement 2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2017",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Audited-Financial-Statements-2018.pdf",
+      "label": "Audited Financial Statement 2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2018",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Langford-DEC-09-FS.pdf",
+      "label": "Audited Financial Statement 2009",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2009",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Statement-of-Financial-Information-2010.pdf",
+      "label": "Statement of Financial Information – 2010",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2010",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Statement-of-Financial-Information-2011.pdf",
+      "label": "Statement of Financial Information – 2011",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2011",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Statement-of-Financial-Information-2015.pdf",
+      "label": "Statement of Financial Information – 2015",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2015",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2020/11/Statement-of-Financial-Information-2017.pdf",
+      "label": "Statement of Financial Information – 2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2017",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2021/05/2020-SOFI.pdf",
+      "label": "Statement of Financial Information – 2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2020",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2021/06/Audited-Financial-Statements-2019.pdf",
+      "label": "Audited Financial Statement 2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2019",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2021/08/Audited-Financial-Statement-2020.pdf",
+      "label": "Audited Financial Statement 2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2020",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2022/06/2021-City-of-Langford-Audited-Financial-Statements.pdf",
+      "label": "Audited Financial Statement 2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2022/06/2021-SOFI-Package.pdf",
+      "label": "Statement of Financial Information – 2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2022/11/Approved-2022-2026-Five-Year-Financial-Plan.pdf",
+      "label": "2022-2026 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2023/08/20230501-Amended-Proposed-2023-2027-Five-Year-Financial-Plan.pdf",
+      "label": "2023-2027 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2023/09/2022-City-of-Langford-Audited-Financials.pdf",
+      "label": "Audited Financial Statement 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2023/09/City-of-Langford-2022-Statement-of-Financial-Information-ONLY-Signed.pdf",
+      "label": "Statement of Financial Information – 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2024/05/City-of-Langford-2024-2028-Financial-Plan.pdf",
+      "label": "2024-2028 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2024/08/2023-Audited-Financial-Statements-Signed-Final.pdf",
+      "label": "Audited Financial Statement 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2024/08/2023-SOFI_signed.pdf",
+      "label": "Statement of Financial Information – 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2025/05/Five-year-Financial-Plan-2025-2029-Budget.pdf",
+      "label": "2025-2029 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2025/07/2024-Audited-Financial-Statement.pdf",
+      "label": "Audited Financial Statement 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2026/05/2026-2030-Financial-Plan-Adopted-May-12-2026.pdf",
+      "label": "2026-2030 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2026/05/Audited-Financial-Statements-2025.pdf",
+      "label": "Audited Financial Statements 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2026/06/2024-Statement-of-Financial-Information-Signed.pdf",
+      "label": "Statement of Financial Information – 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2026/06/2025-SOFI-Package-FINAL.pdf",
+      "label": "Statement of Financial Information – 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://langford.ca/wp-content/uploads/2026/10/2026-Pay-Transparency-Report.pdf",
+      "label": "Pay Transparency – 2026",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://langford.ca/city-hall/document-libraries/document-library/?doc_lib_category=financial-reports",
+      "yearsInLabel": [
+        "2026"
+      ]
+    }
+  ]
+}

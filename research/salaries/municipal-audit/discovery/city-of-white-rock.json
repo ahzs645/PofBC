@@ -1,0 +1,497 @@
+{
+  "municipality": "White Rock",
+  "employerSlug": "city-of-white-rock",
+  "website": "http://www.whiterockcity.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.whiterockcity.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.whiterockcity.ca",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 172377,
+      "sha256": "e9210547975ea52dcd7c70cb724ca2e8cca069098bdbc431564db796d4c75067",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 94700,
+      "sha256": "17831bae7897bf5d9d39749e80423aa8f63b320fbbafba224971a4740524d700",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=147",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.whiterockcity.ca/ArchiveCenter/ViewFile/Item/147",
+      "contentType": "application/pdf",
+      "bytes": 1916102,
+      "sha256": "d8b3be4ab132ff149ed3bc9959b6694b0d0d3e70c9089cf4892760d1fc44bf70",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.whiterockcity.ca/ArchiveCenter/ViewFile/Item/150",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.whiterockcity.ca/ArchiveCenter/ViewFile/Item/150",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "b5c29cd593521a58d1a98eec2db461b7964d7fa1bb97485dae0dc07ca9322a17",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.whiterockcity.ca/298/Resource-Library",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.whiterockcity.ca/298/Water-Quality-Reports-Data",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 163931,
+      "sha256": "ce318a4e3a49390723f6a4fe2aa87285238bbf95e8654f8982b60556cb78ea0a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=144",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.whiterockcity.ca/ArchiveCenter/ViewFile/Item/144",
+      "contentType": "application/pdf",
+      "bytes": 7822722,
+      "sha256": "e5cba2fe3b3d71dafc09ba3d9986bde999ba7c8a37cdc68b16497164e2aaa379",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=149",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.whiterockcity.ca/ArchiveCenter/ViewFile/Item/149",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "8dbd71f562e1ad56e2418a9abc3bcae86e695a38de6915df74468730cafe6520",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=154",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.whiterockcity.ca/ArchiveCenter/ViewFile/Item/154",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "818b9c37af9e1f0634d2a23edd8f3151ff20f625b3f9eefd75138a550e4bd5a3",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 100035,
+      "sha256": "892ef4a8aedff3406c3a30a00212da95d1fc494aa411efa4c5e831244fde7b81",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "label": "Annual Reports & City Plans",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.whiterockcity.ca/298/Resource-Library",
+      "label": "City of White Rock Water Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=124",
+      "label": "2017 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=132",
+      "label": "2018 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=138",
+      "label": "2019 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=139",
+      "label": "2020 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=149",
+      "label": "2022 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=152",
+      "label": "2023 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=154",
+      "label": "2024 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=156",
+      "label": "2025 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=88",
+      "label": "2010 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=89",
+      "label": "2011 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=90",
+      "label": "2012 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=91",
+      "label": "2013 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=92",
+      "label": "2014 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=93",
+      "label": "2015 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=94",
+      "label": "2016 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=95",
+      "label": "2005 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2005"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=96",
+      "label": "2006 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2006"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=97",
+      "label": "2007 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2007"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=98",
+      "label": "2008 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=99",
+      "label": "2009 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?AMID=44",
+      "label": "City Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.whiterockcity.ca/ArchiveCenter/ViewFile/Item/150",
+      "label": "2022 Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/ArchiveCenter/ViewFile/Item/152",
+      "label": "2023 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/ArchiveCenter/ViewFile/Item/156",
+      "label": "2025 Annual Report (PDF)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=144",
+      "label": "2021 Annual Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?ADID=144",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/Archive.aspx?ADID=147",
+      "label": "2021 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/Archive.aspx?ADID=147",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/10367",
+      "label": "2022 Council Remuneration and Expense",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/10368",
+      "label": "2023 Council Remuneration and Expense",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/10428",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/10687/2024-Budget-Report---City-of-White-Rock",
+      "label": "2024 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/10688/2023-Budget-Report---City-of-White-Rock",
+      "label": "2023 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/11460",
+      "label": "2024 Financial Statement Discussion and Analysis",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/11726",
+      "label": "2025 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/11823/2024-Council-Remuneration-and-Expenses",
+      "label": "2024 Council Remuneration and Expense",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/11831",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/12578/2025-SOFI-signed",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/12598/2025-Council-Remuneration-and-Expense",
+      "label": "2025 Council Remuneration and Expense",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/12599/Appendix-B---2025-Financial-Statement-Discussion-and-Analysis",
+      "label": "2025 Financial Statement Discussion and Analysis",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/12657",
+      "label": "LGCAP 2025 - Local Government Climate Action Program",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/12667/2026---2030-Financial-Plan-Document---web",
+      "label": "2026 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.whiterockcity.ca/DocumentCenter/View/7780",
+      "label": "2022 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.whiterockcity.ca/1117/Reports-Plans",
+      "yearsInLabel": [
+        "2022"
+      ]
+    }
+  ]
+}

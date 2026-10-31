@@ -1,0 +1,371 @@
+{
+  "municipality": "Williams Lake",
+  "employerSlug": "city-of-williams-lake",
+  "website": "http://www.williamslake.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.williamslake.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.williamslake.ca",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 318825,
+      "sha256": "3855f61c467c5d06ce1595158761842418705ce3a9e8bdc398951f919725045e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.williamslake.ca/CivicAlerts.aspx?AID=888",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.williamslake.ca/m/newsflash/home/detail/888",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 97471,
+      "sha256": "92e820cd09c112e5b4a809692a7967b5753b84edd83c02583536a7b07a914c7c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.williamslake.ca/CivicAlerts.aspx?AID=971",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.williamslake.ca/m/newsflash/home/detail/971",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 95180,
+      "sha256": "adb2a9d61b4ff1e10029abf4aa2e93f14d136190bf60183fe2f6e032ecd3d402",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.williamslake.ca/200/Departments",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.williamslake.ca/200/Departments",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 113515,
+      "sha256": "5d49df6da54c82c2cf496f7f1f4fe20a9317ec0ad40d7751ff0c674f8e34bcb4",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.williamslake.ca/377/Financial-Reports",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.williamslake.ca/377/Financial-Reports",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 94097,
+      "sha256": "250b76d3b8cd9f0b2ac674b7845db6e0eb52561e2c707168245963590e6be2de",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 101854,
+      "sha256": "4fb02c2afd69076c2b984c9614ccb4204228dc42b3a5de9a7835ad2c027a578a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.williamslake.ca/934/Financial-Services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.williamslake.ca/934/Financial-Services",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 96398,
+      "sha256": "072aa1416773b0f9cb77bc07f5433675bab84ce3374d00504c2c0718cf668b12",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.williamslake.ca/27/City-Hall",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.williamslake.ca/27/City-Hall",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 108040,
+      "sha256": "40075d4c7f48b78a8155bc0dce7d2259f0c4d473fc181f2d00fc6700a360d172",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.williamslake.ca/254/Financial-Services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.williamslake.ca/254/Financial-Services",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 106553,
+      "sha256": "ec11e2f9e516b13248375770a5ba2d5637b5bfc7edc1cba659de70a959e51e89",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "http://bc-williamslake.civicplus.com/377/Financial-Reports",
+      "label": "Related Topics: Financial Planning, Budgets and Reporting",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/254/Financial-Services",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.williamslake.ca/377/Financial-Reports",
+      "label": "Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/200/Departments",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=262",
+      "label": "2013 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=309",
+      "label": "2014 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=362",
+      "label": "2015 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=423",
+      "label": "2016 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=475",
+      "label": "2017 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=504",
+      "label": "2018 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=538",
+      "label": "2019 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=557",
+      "label": "2020 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=580",
+      "label": "2021 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=606",
+      "label": "2022 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=627",
+      "label": "2023 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=65",
+      "label": "2006 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2006"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=651",
+      "label": "2024 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=66",
+      "label": "2007 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2007"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=67",
+      "label": "2009 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=676",
+      "label": "2025 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=68",
+      "label": "2010 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=69",
+      "label": "2011 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=70",
+      "label": "2012 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?ADID=71",
+      "label": "2008 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?AMID=41",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/200/Departments",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?AMID=46",
+      "label": "View All Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/377/Financial-Reports",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.williamslake.ca/Archive.aspx?AMID=49",
+      "label": "View All SOFI Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/377/Financial-Reports",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.williamslake.ca/CivicAlerts.aspx?AID=888",
+      "label": "Notice of 2024 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/CivicAlerts.aspx?AID=971",
+      "label": "Draft 2025 Annual Report now available for viewing",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/DocumentCenter/View/6238/CoWL-AnnualReport-2024-DRAFT",
+      "label": "Additional Info...",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/m/newsflash/home/detail/888",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.williamslake.ca/DocumentCenter/View/6856/Draft-2025-AnnualReport-AuditedFinancialStatements",
+      "label": "downloaded from the City’s website",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.williamslake.ca/m/newsflash/home/detail/971",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

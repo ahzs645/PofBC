@@ -5,7 +5,7 @@
 import { displayName, nameMatch } from './people.js'
 import { titleKey } from './positions.js'
 import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, samePeriodKinds, sourceHref } from './coverage.js'
-import { SourceLink } from './DisclosureEvidence.jsx'
+import { SourceLink, SourceWarnings } from './DisclosureEvidence.jsx'
 import { formatMoney as money } from './money.js'
 import { PayChart, yearSpan } from './parts.jsx'
 import { count } from './common.jsx'
@@ -96,6 +96,7 @@ export const PersonPage = ({ chosen, all, scope, index, back, onEmployer, onRole
         {hasTruncatedNames ? ' At least one source publishes truncated names. The published text is preserved; an incomplete name may hide other records or combine different people.' : ''}
       </p>
 
+      <SourceWarnings sourceIds={chosen.rows.map((row) => row[6])} sources={index.sources} />
       <dl className="salaries__tiles salaries__tiles--three">
         <div><dt>Latest</dt><dd>{money(chosen.latest[2])}</dd><dd className="salaries__line">{index.years[chosen.latest[5]]}</dd></div>
         <div><dt>Highest</dt><dd>{money(Math.max(...points.map((point) => point.pay)))}</dd><dd className="salaries__line">{index.years[points.reduce((best, point) => (point.pay > best.pay ? point : best)).year]}</dd></div>

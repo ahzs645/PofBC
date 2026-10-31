@@ -1,0 +1,134 @@
+{
+  "municipality": "Vancouver",
+  "employerSlug": "city-of-vancouver",
+  "website": "http://vancouver.ca/",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://vancouver.ca/",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vancouver.ca/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 79346,
+      "sha256": "4999cb000c76624cda5ee2e4c293d06ace88ed0b5595c0d2258f258dc53824c3",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vancouver.ca/your-government.aspx",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vancouver.ca/your-government.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 60103,
+      "sha256": "e1e274bc33ea90b8ec9d840d04b6ecc016386576a34a93537bc7bf562ae95dda",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vancouver.ca/your-government/budgets.aspx",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vancouver.ca/your-government/budgets.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 42551,
+      "sha256": "a1711056c9392080bc4e7ba9346f0de55240cde9ca5932734e36b35b08d61e91",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vancouver.ca/your-government/park-board-salaries-expenses-and-financial-disclosure.aspx",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vancouver.ca/your-government/park-board-salaries-expenses-and-financial-disclosure.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 35748,
+      "sha256": "9c62078ee0d6780b7fcd9068322f5e14ffa40c513139ceb3b90c87b5b855298e",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://vancouver.ca/your-government/city-operations.aspx",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vancouver.ca/your-government/city-operations.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 44991,
+      "sha256": "046c432745e928c0c342502ee81842e9e3cbb043e1c533d07c1085d8b2468ff2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vancouver.ca/your-government/contact-the-city-of-vancouver.aspx",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vancouver.ca/your-government/contact-the-city-of-vancouver.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 50861,
+      "sha256": "18c1e23feca45e98265a7a485b0ca0b82508f1437fa6bd54036539895b74c82e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vancouver.ca/your-government/follow-the-city-on-social-media.aspx",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vancouver.ca/your-government/follow-the-city-on-social-media.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 66246,
+      "sha256": "fb2033b982f4941de9935849e7ff0117834b2d068dca8e5d4ec57aba27e292b6",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vancouver.ca/your-government/get-government-information.aspx",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vancouver.ca/your-government/get-government-information.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 45713,
+      "sha256": "8058e52eb71d78f60ad3b4033bf0a0600fc95ea674e89ac57e30f897f86b758b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://vancouver.ca/your-government/getting-to-city-hall.aspx",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://vancouver.ca/your-government/getting-to-city-hall.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 40726,
+      "sha256": "4f8f68e791f21cc67860611e311cd149ebf0fb826d7c69dfead602ca5a232ccb",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://vancouver.ca/your-government/financial-reports-and-information.aspx",
+      "label": "Financial reports and information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://vancouver.ca/your-government/budgets.aspx",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://bylaws.vancouver.ca/11484c.pdf",
+      "label": "Park Board Remuneration By-Law No.11484",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://vancouver.ca/your-government/park-board-salaries-expenses-and-financial-disclosure.aspx",
+      "yearsInLabel": []
+    }
+  ]
+}

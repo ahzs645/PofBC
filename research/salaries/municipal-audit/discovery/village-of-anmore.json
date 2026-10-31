@@ -1,0 +1,47 @@
+{
+  "municipality": "Anmore",
+  "employerSlug": "village-of-anmore",
+  "website": "http://www.anmore.com",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "no-source-link-found-in-bounded-search",
+  "pagesChecked": [
+    {
+      "url": "https://www.anmore.com",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://anmore.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 488117,
+      "sha256": "8cff59740823b0df95bc445de52e885874e0c508c36208d4599fe297c81a7b66",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://anmore.com/village-hall/departments/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://anmore.com/village-hall/departments/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 250625,
+      "sha256": "fde73aa567e7724109605141edb8a3116f547f3b6a79bca61c965c1d0d6519f8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://anmore.com/village-hall/reports-plans/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://anmore.com/village-hall/reports-plans/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 249642,
+      "sha256": "e6c9bb55ece47b5c5f67872462e181a4eae59a17e07ea19e7727b1481c448c98",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": []
+}

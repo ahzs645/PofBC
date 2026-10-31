@@ -1,0 +1,606 @@
+{
+  "municipality": "Duncan",
+  "employerSlug": "city-of-duncan",
+  "website": "http://www.duncan.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.duncan.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://duncan.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 90867,
+      "sha256": "4ca35ec6579594023d1dc13e059107928f878ede35ddb14483002ac8a9e1a854",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://duncan.ca/city-hall/finance/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://duncan.ca/city-hall/finance/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 87488,
+      "sha256": "77d8d501b7964adb75e046977fd0085c37f3d7d1ce170cb6f3b3d6c62b8e32b7",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://duncan.ca/city-hall/mayor-council/reports-and-publication/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 102093,
+      "sha256": "90f0ce392dceaf2f9614c69c3606e43cdc86d97d4e38a9587bd84179eeda7c46",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 102093,
+      "sha256": "90f0ce392dceaf2f9614c69c3606e43cdc86d97d4e38a9587bd84179eeda7c46",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://duncan.ca/city-hall/finance/animal_control/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://duncan.ca/city-hall/finance/animal_control/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 94722,
+      "sha256": "7d4cb80dd8ed02bfb091dea337a466a3a7b02699c1eb45aa83336746e607e72a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://duncan.ca/city-hall/finance/budget/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://duncan.ca/city-hall/finance/budget/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 90419,
+      "sha256": "ef38139a80a77dc2d71f5e732f884e901a016b9e21a362beedbc7f3da80d6c92",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://duncan.ca/city-hall/finance/property-taxes/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://duncan.ca/city-hall/finance/property-taxes/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 99247,
+      "sha256": "c27e24e6ea05b355c563ad48804ebc8ea051c6b3a5185c3df5cff88545333d48",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://bigconversations.duncan.ca/2024-budget",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://bigconversations.duncan.ca/login",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 177703,
+      "sha256": "d939c82dd57656b22324b2d55d5bf77b4b89b2fe2e7085369d70d80d714f050c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://duncan.ca/city-hall/finance/grant-in-aid-application/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://duncan.ca/city-hall/finance/grant-in-aid-application/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 88848,
+      "sha256": "e9d2841c832c636b4852bc11c4dfb15265c2e4274b22a412c6b772f18e0a129b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://bigconversations.duncan.ca/50883/widgets/215742/documents/169895",
+      "label": "2025 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/city-hall/mayor-council/reports-and-publication/",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/finance/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/finance/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://duncan.ca/download/2019-financial-statements/",
+      "label": "2019 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/2020-statement-of-financial-information/",
+      "label": "2020 Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/2021-12-31-consolidated-financial-statements/",
+      "label": "2021 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/2021-consolidated-financial-statements-audited/",
+      "label": "2020 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2020",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/2022-cod-financial-statements/?tmstv=1689372313",
+      "label": "2022 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/2022-sofi/?tmstv=1686601858",
+      "label": "2022 Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/2023-financial-statements/?tmstv=1715617071",
+      "label": "2023 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/annual-report-2019-final-low-res-pdf/",
+      "label": "2019 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/city-of-duncan-2018-v9-3-with-jub_final/",
+      "label": "2018 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/city-of-duncan-annual-report-2020/",
+      "label": "2020 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/sofi-2019-final-signed-with-fs/",
+      "label": "2019 Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/download/sofi-report-2018/",
+      "label": "2018 Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://duncan.civicweb.net/filepro/documents/119049?preview=119050",
+      "label": "2018 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2016/07/2009-Integrated-Flood-Management-Plan.pdf",
+      "label": "2009 Integrated Flood Management Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2009",
+        "2016"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2018/05/2017-CARIP-Public-Report.pdf",
+      "label": "CARIP Public Report for 2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2018/05/City-of-Duncan-2017-Annual-Report.pdf",
+      "label": "2017 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2018/05/City-of-Duncan-2017-FINAL.pdf",
+      "label": "2017 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2023/05/Form.pdf",
+      "label": "LGCAP Survey for 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2024/06/LGCAP-Survey-for-2023-1.pdf",
+      "label": "LGCAP Survey for 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/05/3257-Financial-Plan-2025-2029.pdf",
+      "label": "2025-2029 Financial Plan Bylaw No. 3257, 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/05/Asset-Management-Plan-Duncan-2024.pdf",
+      "label": "Long Term Financial Plan for Asset Management (2024)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/05/Attachment-C-Detailed-Five-year-financial-plan-operating.pdf",
+      "label": "2025-2029 Financial Plan – Operating",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/05/Attachment-D-Detailed-Five-year-financial-plan-capital.pdf",
+      "label": "2025-2029 Financial Plan – Capital",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/05/Tax-Rates-all-2025.pdf",
+      "label": "2025 Tax Rates",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/06/City-of-Duncan-FS-2024-FINAL.pdf",
+      "label": "2024 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/06/Dunc_2024_Annual_Jun_2025_lr-compress.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/06/SOFI-2024.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/07/LGCAP-Survey-2024.pdf",
+      "label": "LGCAP Survey for 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2025/11/2023-Duncan-Accessibility-Plan-Final.pdf",
+      "label": "2023 Accessibility Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2026/01/2024-Drinking-Water-System-Annual-Report-1.pdf",
+      "label": "2024 Drinking Water System Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2026/06/2025-Drinking-Water-System-Annual-Report.pdf",
+      "label": "2025 Drinking Water System Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2026/06/3262-Financial-Plan-2026-2030-Signed.pdf",
+      "label": "2026-2030 Financial Plan Bylaw",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2026/06/Attachment-C-Detailed-Five-Year-Financial-Plan-Operating.pdf",
+      "label": "2026-2030 Financial Plan – Operating",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2026/06/Attachment-D-Detailed-Five-Year-Financial-Plan-Capital.pdf",
+      "label": "2026-2030 Financial Plan – Capital",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2026/06/LGCAP-2025.pdf",
+      "label": "LGCAP Survey for 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/2026/09/2026-Tax-Rates-All-2.pdf",
+      "label": "2026 Tax Rates",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/dlm_uploads/2022/06/2020-12-07-CARIP-Report-for-2019-RFI.pdf",
+      "label": "CARIP Public Report for 2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2019",
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/dlm_uploads/2022/06/2021-06-07-RFI-CARIP-Report-for-2020.pdf",
+      "label": "CARIP Public Report for 2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2020",
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/dlm_uploads/2022/06/City-of-Duncan-2021-Annual-report-FINA-low-resL.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/dlm_uploads/2022/08/LGCAP-Survey-for-2021.pdf",
+      "label": "LGCAP Survey for 2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/dlm_uploads/2022/09/SOFI-2021-FINAL-signed.pdf",
+      "label": "2021 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/dlm_uploads/2023/03/KEY-TREATED-DRINKING-WATER-PARAMETERS-2022.pdf",
+      "label": "2022 Key Treated Drinking Water Parameters",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/dlm_uploads/2023/05/2023-Tax-Rates-All.pdf",
+      "label": "2023 All Tax Rates",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/dlm_uploads/2023/06/Dunc_2022_Annual_Jun2_23_lo-res.pdf",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://duncan.ca/wp-content/uploads/dlm_uploads/2025/11/2025-Duncan-Citizen-Survey-sm.pdf",
+      "label": "2025 Duncan Citizen Survey",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://duncan.civicweb.net/document/197998/Annual%20Report%202023.pdf?handle=3961FBB920654FAE946C8A18F563FF2B",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://duncan.civicweb.net/document/198241/Appendix%20A%20-%20Duncan%20Transportation%20Mobility%20Strate.pdf?handle=59F3A6AE342343719EA5D9CE327F53A8",
+      "label": "Transportation and Mobility Strategy 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://duncan.civicweb.net/document/198260/Appendix%20A%20-%20SOFI%20report%202023.pdf?handle=99877EA67A954782822EE63906282C2B",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    }
+  ]
+}

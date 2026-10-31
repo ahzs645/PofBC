@@ -1,0 +1,587 @@
+{
+  "municipality": "Kamloops",
+  "employerSlug": "city-of-kamloops",
+  "website": "http://www.kamloops.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.kamloops.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kamloops.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 237168,
+      "sha256": "31ba0e6cc1ff1c499128b2e1e233f792ca5a3299c229d351d51bcf5e8d934d9e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 904224,
+      "sha256": "6d5713d6d9772b4021c5c5c7c3d187cd28493fb654ae52de0f95e41cca55e437",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 911980,
+      "sha256": "2ef155164ba51dfbb4f7a1913de1409ede459c71eeadcc5778808730b81187d6",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/governance-finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kamloops.ca/city-hall/governance-finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 901734,
+      "sha256": "6996476da5848bd021b371a6a0f774f2daccce771cb4bf6c1fe6fd4761098777",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/governance-finance/alternative-approval-process",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kamloops.ca/city-hall/governance-finance/alternative-approval-process",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 924901,
+      "sha256": "5873bdc0385855c45cc8f31d28d9f198f7ab4437c08a09af065d4af0fc6fa342",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/governance-finance/city-budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kamloops.ca/city-hall/governance-finance/city-budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 910629,
+      "sha256": "6cf5f5d16a96475129affc5f5a6820d625eeeaefffd5b433d9912f06bfe92110",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/city-budget/financial-statements",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 911980,
+      "sha256": "2ef155164ba51dfbb4f7a1913de1409ede459c71eeadcc5778808730b81187d6",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/governance-finance/financial-plan",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-plan",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 904735,
+      "sha256": "882eaf537add52f69726bab600947377b340c93ab21aa52f421292c11b6c3dc2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/governance-finance/freedom-information-protection-privacy-act",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kamloops.ca/city-hall/governance-finance/freedom-information-protection-privacy-act",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 914012,
+      "sha256": "a2aa1ce0ea2784f81b175b39393e85ce536f50df99c17cf4bc8cbfdddd95f860",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://bsky.app/intent/compose?text=https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "label": "",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://bsky.app/intent/compose?text=https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "label": "",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://facebook.com/sharer.php?u=https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "label": "",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://facebook.com/sharer.php?u=https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "label": "",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/city-budget/financial-statements",
+      "label": "format_list_bulleted City's Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/city-budget",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-01/cityofkamloops_annualreport2019_11x8-5_may2020_final_web.pdf",
+      "label": "2019 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": [
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-01/cityofkamloops_annualreport2020_11x8-5_june2021_final-web-update.pdf",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": [
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-05/City%20of%20Kamloops%20Consolidated%202021%20Financial%20Statements.pdf",
+      "label": "2021 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-06/CityofKamloops_AnnualReport2021_11x8-5_May2022_WEB.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202016.pdf",
+      "label": "2016 Remuneration Report (SOFI* Report)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2016",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202017.pdf",
+      "label": "2017 Remuneration Report (SOFI* Report)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2017",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202018.pdf",
+      "label": "2018 Remuneration Report (SOFI* Report)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202019.pdf",
+      "label": "2019 Remuneration Report (SOFI* Report)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202020.pdf",
+      "label": "2020 Remuneration Report (SOFI* Report)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2022-07/2021%20SOFI%20Attachment%20A-SIGNED.pdf",
+      "label": "2021 Remuneration Report (SOFI* Report)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2023-05/City%20of%20Kamloops%20Consolidated%202022%20FS.pdf",
+      "label": "2022 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2023-06/CityofKamloops_AnnualReport2022_11x8-5_Apr2023_WEB.pdf",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2023-07/City%20of%20Kamloops_2022%20SOFI%20Attachment%20A.pdf",
+      "label": "2022 Remuneration Report (SOFI* Report)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2024%20SOFI.pdf",
+      "label": "2024 Remuneration Report (SOFI* Report)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2025%20Financial%20Statements%20-%20City%20of%20Kamloops.pdf",
+      "label": "2025 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2025-06/CityofKamloops_AnnualReport2023_11x8-5_June2024_FINAL-WEB.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/2025-06/CityofKamloops_AnnualReport2024_11x8-5_Jun2025_FINAL-WEB.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/CityofKamloops_AnnualReport2025_11x8-5_May2026_FINAL-WEB.pdf",
+      "label": "Download the 2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/FIN_SOFIReport_FactSheet_8-5x11_May2026_FINAL.pdf",
+      "label": "SOFI Report Fact Sheet",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/Report%20-%202025%20Statement%20of%20Financial%20Information.pdf",
+      "label": "2025 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/2002_financial_statements.pdf",
+      "label": "2002 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2002"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/2008_consolidated_financial_statements.pdf",
+      "label": "2008 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/2023%20SOFI%20Report.pdf",
+      "label": "2023 Remuneration Report (SOFI* Report)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/City%20of%20Kamloops%20Consolidated%20Financial%20Statement%202024%20(1).pdf",
+      "label": "2024 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/City%20of%20Kamloops%20Consolidated%20Financial%20Statements%202023.pdf",
+      "label": "2023 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/CityofKamloops_AnnualReport2025_Highlights_8-5x11_Jun2026_FINAL-WEB.pdf",
+      "label": "Download the 2025 Highlights Document",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city-hall/11-financialstatements.pdf",
+      "label": "2011 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city-hall/12-financialstatements.pdf",
+      "label": "2012 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city-hall/13-financialstatements.pdf",
+      "label": "2013 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city-hall/14-financialstatements.pdf",
+      "label": "2014 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city-hall/15-financialstatements.pdf",
+      "label": "2015 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city-hall/16-financialstatements.pdf",
+      "label": "2016 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_2004_financial_statements.pdf",
+      "label": "2004 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2004"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_2005_financial_statements.pdf",
+      "label": "2005 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2005"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_2006_financial_statements.pdf",
+      "label": "2006 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2006"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_2007_financial_statements.pdf",
+      "label": "2007 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2007"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_2009_financial_statements_-_final.pdf",
+      "label": "2009 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_2010_financialstatements_-_final.pdf_-_adobe_1.pdf",
+      "label": "2010 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_2017fsf_for_printing.pdf",
+      "label": "2017 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_2018_audited_signed_2.pdf",
+      "label": "2018 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_2020_fs.pdf",
+      "label": "2020 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_consolidated_2019_fs_-_signed.pdf",
+      "label": "2019 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/city_of_kamloops_financial_statments_2003.pdf",
+      "label": "2003 Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2003"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/pay_transparency_report_2025-10_2026-09%20v1.pdf",
+      "label": "2026 Pay Transparency Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.kamloops.ca/sites/default/files/docs/pay_transparency_report_final_0.pdf",
+      "label": "2025 Pay Transparency Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

@@ -1,21 +1,32 @@
 # Salary audit, source recovery and remaining gaps
 
-Updated **30 October 2026**. Original audit baseline: commit
+For the latest municipal work, start with [import assumptions and the acquisition
+list](municipal-audit/follow-up.md), including a spreadsheet of all remaining
+source tasks and uncovered jurisdictions. The app exports now contain **880,436
+records**; three further municipal employee cohorts retain their published
+amounts with visible source-subtotal warnings. No records requests have been sent.
+
+Updated **31 October 2026**. Original audit baseline: commit
 [`eabe55708952f945cf2b0733230db31d48146d88`](https://github.com/ahzs645/PofBC/commit/eabe55708952f945cf2b0733230db31d48146d88).
 
 The original salary setup contained three compiled editions, not a continuous annual history.
 This recovery replaces demonstrably incorrect employer/years with official schedules, adds earlier
 and intervening years, and makes the remaining uncertainty visible in the search, employer and
 government-atlas views. **A populated year is a set of disclosed payment records, not a verified
-workforce census.** The catalog contains 20 fiscal periods (2006/07–2025/26) and 18 calendar
-years (2008–2025). These are overlapping reporting-period labels, not 38 elapsed years. Coverage
-differs substantially by employer.
+workforce census.** The catalog contains 20 fiscal period labels and 24 calendar labels. Six early calendar
+labels (2002–2007) currently contain source leads only; imported calendar records begin in 2008.
+These overlapping labels are not elapsed years of complete coverage. Coverage differs
+substantially by employer.
 
 ## Where to inspect the results
 
+- [October 31 municipal expansion](municipal-audit/README.md): new accepted records, source caveats, validation and review priorities.
+- [All municipal jurisdictions](municipal-audit/coverage.md): province-wide coverage table, official archive links, missing schedules and next steps.
+- [Municipal machine-readable audit](municipal-audit/coverage.json): all 162 roster entries, accepted cohorts, held sources, and discovered links.
+
 - [October 30 processing review](processing-review-2026-10-30.md): accepted imports, reporting-period
   decisions, unresolved controls, originals, request drafts and implementation status.
-- [October 30 validation](validation-2026-10-30.json): current counts, baseline differences, tests,
+- [October 30 validation](validation-2026-10-30.json): previous-pass counts, baseline differences, tests,
   deterministic rebuild, archive integrity and browser-review limitation.
 - [Every employer and its coverage](coverage-inventory.md): a complete inventory of all employer
   histories, current counts for the three original edition labels, accepted official years and remaining review flags.
@@ -34,23 +45,47 @@ differs substantially by employer.
 <!-- SUMMARY:START -->
 | Measure | Original retained dataset | Current recovered dataset |
 |---|---:|---:|
-| Catalog period labels | 3 | 38 (20 fiscal + 18 calendar) |
-| Disclosure rows | 383,163 | 832,864 |
-| Named disclosure rows | 378,068 | 827,625 |
-| Official-source rows with attached provenance | 0 | 581,925 |
-| Retained compiled rows still requiring primary-source review | 383,163 | 250,939 |
-| Canonical employers | 131 | 133 |
-| Populated employer/period cells | 330 | 445 |
+| Catalog period labels | 3 | 44 (20 fiscal + 24 calendar; six lead-only years) |
+| Disclosure rows | 383,163 | 878,615 |
+| Named disclosure rows | 378,068 | 873,376 |
+| Official-source rows with attached provenance | 0 | 628,704 |
+| Retained compiled rows still requiring primary-source review | 383,163 | 249,911 |
+| Canonical employers | 131 | 159 |
+| Populated employer/period cells | 330 | 570 |
 | Duplicate-looking extra rows flagged | 456 | 311 |
 
-The recovery adds **449,701 net disclosure rows** relative to the immutable original snapshot,
-after replacements and the proved duplicate-block correction. Its **160 accepted normalized source
-files** cover **16 employers**; **117 employers** still have no accepted original-source schedule.
-Approximately **30.1% of published rows remain compiled and unverified**. The source and coverage
-inventories make the remaining work explicit.
+The recovery adds **495,452 net disclosure rows** relative to the immutable original snapshot,
+after replacements and proved duplicate corrections. Its **303 accepted normalized source
+files** cover **61 employers**; **98 employers** still have no accepted original-source schedule.
+Approximately **28.4% of published rows remain compiled and unverified**.
+The municipal audit also includes current jurisdictions that have no salary export at all.
 <!-- SUMMARY:END -->
 
-## Follow-up: source processing, 30 October 2026
+## Follow-up: municipal expansion, 31 October 2026
+
+This pass starts at `280e80817ec3f94827cd97b02e87c93d9b368d17`. It adds **46,779 official
+observations** in **143 employee/council cohorts**, covering **125 municipality-years** in
+**46 municipalities**. Five fully matched compiled employee cohorts are replaced under their
+proved calendar years, removing **1,028 duplicate compiled observations** while preserving all
+**38 separate council observations**. The net increase is **45,751 rows**.
+
+Accepted official municipal coverage grows from **2 to 47 municipalities**: 46 with employee
+records and one with council-only records. **114 current jurisdictions still lack accepted official
+records.** The audit covers 161 current jurisdictions, including shíshálh Nation Government District
+as a distinct governance case, and records Okanagan Falls separately as pending incorporation.
+Metro Vancouver remains a regional district outside this municipal denominator.
+
+The four accepted collections are [Lower Mainland](municipal-lower-mainland/README.md),
+[Island and coast](municipal-island/README.md), [North and Interior](municipal-north/README.md),
+and [smaller municipalities](municipal-small/README.md). The [comparison report](municipal-corrections/README.md)
+explains every replaced cohort. The [complete municipal review](municipal-audit/README.md)
+documents source disagreements, scanned reports, unsigned drafts, actual-year checks, provenance,
+independent reviews and reproduction. Original source values and known residuals remain explicit.
+
+## Historical follow-up: source processing, 30 October 2026
+
+**This section records the preceding pass. Its incremental counts and then-pending source and
+publication status are historical; current results appear above.**
 
 This pass builds on the reviewed Fraser/BCIT/Transit update at
 `261b5265595cd4422b079505d31f12aead792936`: 692,951 rows, 401,641 official-source rows,

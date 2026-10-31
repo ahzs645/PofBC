@@ -1,0 +1,254 @@
+{
+  "municipality": "Delta",
+  "employerSlug": "city-of-delta",
+  "website": "http://www.delta.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.delta.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.delta.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 93014,
+      "sha256": "aee730f2ff4723f27e9244ea431ca92afa415927348628354cd7b0516acd2dd4",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 133589,
+      "sha256": "665d4604d8e8ce94b8954f63a33b3af173f101e4e665c2525f633be3bd31891c",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.delta.ca/media/5179",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.delta.ca/media/5179",
+      "contentType": "application/pdf",
+      "bytes": 1407814,
+      "sha256": "819bd3f3f0e3a9708658b228d54c4e231f1d3fcfaa80d12c9acfb3db1a60233c",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.delta.ca/media/3692",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.delta.ca/media/3692",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "b34e280100472b9a55445c72634f7a3690e676d7bc560ff3701da46877091b0d",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.delta.ca/media/3693",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.delta.ca/media/3693",
+      "contentType": "application/pdf",
+      "bytes": 4870136,
+      "sha256": "6970b41f96e7682c489a0d2f8d6936c79a496fb111307ae44ccd42f462ce5cc1",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.delta.ca/media/3694",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.delta.ca/media/3694",
+      "contentType": "application/pdf",
+      "bytes": 4828192,
+      "sha256": "ba53572a8484d5762b3ae541b19601a69171dce2e3d82ad1c2746e8dca30fc8d",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.delta.ca/media/3695",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.delta.ca/media/3695",
+      "contentType": "application/pdf",
+      "bytes": 4656431,
+      "sha256": "159a71f6f1d4c5ce80350f1b66a643591f88fb677e76b9a61bd77d48eca21f91",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.delta.ca/media/3696",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.delta.ca/media/3696",
+      "contentType": "application/pdf",
+      "bytes": 7787220,
+      "sha256": "0597165608d5a29b9e546185f1775717a81b62ed49dc33ad64171ad02a22e098",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.delta.ca/media/3697",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.delta.ca/media/3697",
+      "contentType": "application/pdf",
+      "bytes": 4559408,
+      "sha256": "4b38814f20c85d202886e5f375808c32c7414eef4834559201ab1456a5c08fd7",
+      "status": "pdf-downloaded-unreviewed"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.delta.ca/media/3692",
+      "label": "View 2017 Annual Report (Year Ended December 31, 2016)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "yearsInLabel": [
+        "2016",
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/3698",
+      "label": "View 2022 Annual Report (Year Ended December 31, 2022)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/3699",
+      "label": "View 2023 Annual Report (Year Ended December 31, 2023)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/4044",
+      "label": "View 2024 Annual Report (Year Ended December 31, 2024)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/4571",
+      "label": "View the 2025 Quarterly Financial Report - Second Quarter",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/4579",
+      "label": "View the 2025 Quarterly Financial Report - Third Quarter",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/5107",
+      "label": "View 2025 Annual Report (Year Ended December 31, 2025)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/5153",
+      "label": "View the 2026 Quarterly Financial Report - First Quarter",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/5538",
+      "label": "View the 2026 Quarterly Financial Report - Second Quarter",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/city-hall/municipal-information/financial-information",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/3693",
+      "label": "View 2018 Annual Report (Year Ended December 31, 2017)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/media/3693",
+      "yearsInLabel": [
+        "2018",
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/3694",
+      "label": "View 2018 Annual Report (Year Ended December 31, 2018)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/media/3694",
+      "yearsInLabel": [
+        "2018",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/3695",
+      "label": "View 2019 Annual Report (Year Ended December 31, 2019)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/media/3695",
+      "yearsInLabel": [
+        "2019",
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/3696",
+      "label": "View 2020 Annual Report (Year Ended December 31, 2020)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/media/3696",
+      "yearsInLabel": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/3697",
+      "label": "View 2021 Annual Report (Year Ended December 31, 2021)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/media/3697",
+      "yearsInLabel": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.delta.ca/media/5179",
+      "label": "View the 2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.delta.ca/media/5179",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

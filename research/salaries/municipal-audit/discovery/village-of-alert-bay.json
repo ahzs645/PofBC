@@ -1,0 +1,50 @@
+{
+  "municipality": "Alert Bay",
+  "employerSlug": "village-of-alert-bay",
+  "website": "http://www.alertbay.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.alertbay.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.alertbay.ca",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 272976,
+      "sha256": "8bdb34324fd3453f71e46fc2d4e814369a5e62f061b06c1adac1c82eee39c705",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.alertbay.ca/documents",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.alertbay.ca/documents",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 95187,
+      "sha256": "8f83b11a31276e5adb35bd2d97303c25c3d3c840f59f508434c75086b404bb64",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://alertbay.civicweb.net/Documents/DocumentList.aspx?ID=124",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.alertbay.ca/documents",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://alertbay.civicweb.net/Documents/DocumentList.aspx?ID=354",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.alertbay.ca/documents",
+      "yearsInLabel": []
+    }
+  ]
+}

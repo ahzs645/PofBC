@@ -1,0 +1,741 @@
+{
+  "municipality": "Osoyoos",
+  "employerSlug": "town-of-osoyoos",
+  "website": "http://www.osoyoos.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.osoyoos.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.osoyoos.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 70890,
+      "sha256": "6d3ba094ba16d402a1cb5c46acc9d8d3eef1b062eb2f2713a8dea551407779bf",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.osoyoos.ca/annual-report",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.osoyoos.ca/annual-report",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 92516,
+      "sha256": "e806d4bd06f4b3b44632db42005dc1e6e01b8dda585acfcc4c3cdc8ac87873ac",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.osoyoos.ca/council/financial-statements",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.osoyoos.ca/council/financial-statements",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 93754,
+      "sha256": "f160e3a51db5be249dbd6b7b0163cbabddd06fa74e667c7a077c212089e3985f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.osoyoos.ca/media/1537",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.osoyoos.ca/media/1537",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 85994,
+      "sha256": "2d7fc0c6450cadb7a7e23888f7212c27bd94a62cb135941b11509b57ea13f1ec",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.osoyoos.ca/media/1538",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.osoyoos.ca/media/1538",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 86042,
+      "sha256": "5fb027a4b23cdcece4de660783931be3088692498afb1df502f94cc2896982c0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.osoyoos.ca/capital-operating-budgets",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.osoyoos.ca/capital-operating-budgets",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 94883,
+      "sha256": "be10ee0e7ff79050f60f6e48ce56089b2e7ad43c8a7931d190e3a5b32dade240",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.osoyoos.ca/services/financial-services/capital-operating-budgets",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.osoyoos.ca/capital-operating-budgets",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 94883,
+      "sha256": "be10ee0e7ff79050f60f6e48ce56089b2e7ad43c8a7931d190e3a5b32dade240",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.osoyoos.ca/council/reports-studies",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.osoyoos.ca/council/reports-studies",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 111405,
+      "sha256": "e8b317ae7a65d0d9a17a7957f0456aa8e2d788c750e58153a5944fbd609c1e45",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.osoyoos.ca/government-bylaws/council/meetings",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.osoyoos.ca/council/council/agendas-minutes-videos",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 89259,
+      "sha256": "947c36c1b6950c8008b5025289f5a917e817f1162bc27aed6e8611d0400a9c7c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=102368",
+      "label": "2020 Landfill Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=102388",
+      "label": "2020 Hauled Liquid Waste Disposal System Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=103373",
+      "label": "2020 Wastewater Treatment and Reclaimed Water Irrigation Systems Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=112993",
+      "label": "2021 Hauled Liquid Waste Disposal System Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=1377",
+      "label": "2005 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2005"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=15023",
+      "label": "2008 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=15024",
+      "label": "2006 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2006"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=15040",
+      "label": "2008 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=15041",
+      "label": "2009 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=15042",
+      "label": "2007 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2007"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=15043",
+      "label": "2006 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2006"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=17969",
+      "label": "2010 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=18260",
+      "label": "2010 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=1996",
+      "label": "2007 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "1996",
+        "2007"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=25648",
+      "label": "2011 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=26140",
+      "label": "2011 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=35661",
+      "label": "2012 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=35715",
+      "label": "2012 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=44748",
+      "label": "2012 01 01 Annual Report TRUE Wastewater Treatment and Reclaimed Water Irrigation Systems",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=49966",
+      "label": "2013 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=51622",
+      "label": "2014 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=51973",
+      "label": "2014 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=60533",
+      "label": "2015 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=60937",
+      "label": "2015 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=60938",
+      "label": "2015 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=70603",
+      "label": "2016 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=72874",
+      "label": "2014 Waste Water Treatment Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=72875",
+      "label": "2013 Waste Water Treatment Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=75557",
+      "label": "2016 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=75959",
+      "label": "2017 Landfill Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=75960",
+      "label": "2016 Waste Water Treatment Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=78380",
+      "label": "2017 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=89233",
+      "label": "2017 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=89234",
+      "label": "2018 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=90007",
+      "label": "2018 Audited Financial Statements Sun Bowl Arena",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=94185",
+      "label": "2019 Landfill Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=94187",
+      "label": "2019 Hauled Liquid Waste Disposal System Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=9439",
+      "label": "2009 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=97041",
+      "label": "2019 Wastewater Treatment Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=97042",
+      "label": "2017 Wastewater Treatment Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=98340",
+      "label": "2019 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/Documents/DocumentDisplay.aspx?Id=98341",
+      "label": "2018 Town of Osoyoos Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://osoyoos.civicweb.net/filepro/documents/55249/?preview=114958",
+      "label": "2021 Landfill Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/annual-report",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.osoyoos.ca/council/financial-statements",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.osoyoos.ca/media/1537",
+      "label": "2023 Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/media/1538",
+      "label": "2023 Audited Financial Statements Sun Bowl Arena",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2022-06/2021%20Wastewater%20Treatment%20and%20Reclaimed%20Water%20Irrigation%20Systems%20Annual%20Report.pdf",
+      "label": "2021 Wastewater Treatment and Reclaimed Water Irrigation Systems Annual",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-02/2020%20Annual%20Report%20-%20Final%20Approved.pdf",
+      "label": "2020 Town of Osoyoos Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-03/2022%20Hauled%20Liquid%20Waste%20Disposal%20System%20Annual%20Report.pdf",
+      "label": "2022 Hauled Liquid Waste Disposal System Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-04/2022%20Landfill%20Annual%20Report.pdf",
+      "label": "2022 Landfill Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-05/2022%20Sun%20Bowl%20FS%20final.pdf",
+      "label": "2022 Audited Financial Statements Sun Bowl Arena",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-05/2022%20Town%20of%20Osoyoos%20FS%20final.pdf",
+      "label": "2022 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-05/FINAL%20%202021%20Annual%20Report.pdf",
+      "label": "2021 Town of Osoyoos Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-05/Osoyoos%20Sun%20Bowl%20Arena%20AUDIT%20Dec%2019%20FS%20-%20787831.pdf",
+      "label": "2019 Audited Financial Statements Sun Bowl Arena",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-05/Osoyoos%20Sun%20Bowl%20Arena%20Dec%202020%20FS%20-%20787831.pdf",
+      "label": "2020 Audited Financial Statements Sun Bowl Arena",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-05/Osoyoos%20Sun%20Bowl%20Arena%20Dec%202021%20FS%20-%20787831.pdf",
+      "label": "2021 Audited Financial Statements Sun Bowl Arena",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-05/Town%20of%20Osoyoos%20AUDIT%20Dec%2019%20FS%20-%20787831.pdf",
+      "label": "2019 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-05/Town%20of%20Osoyoos%20Audited%20Financial%20Statement%202021.pdf",
+      "label": "2021 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2023-05/Town%20of%20Osoyoos%20Dec%202020%20FS%20-%20787831.pdf",
+      "label": "2020 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2024-05/2024%2005%2024%202023%20DRAFT%20Annual%20Report%20smaller.pdf",
+      "label": "2023 Town of Osoyoos Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2024-06/Town%20of%20Osoyoos%202023%20Landfill%20Annual%20Report_Optimized.pdf",
+      "label": "2023 Landfill Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/reports-studies",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2025-06/Final%20Draft%202024%20Annual%20Report%20reduced.pdf",
+      "label": "2024 Town of Osoyoos Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2025-09/Sun%20Bowl%20Arena%202024%20Financial%20Statement.pdf",
+      "label": "2024 Audited Financial Statements Sun Bowl Arena",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2025-09/Town%20of%20Osoyoos%202024%20Financial%20Statement.pdf",
+      "label": "2024 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/council/financial-statements",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/5/files/2026-06/2025%20DRAFT%20Annual%20Report%20Compressed.pdf",
+      "label": "2025 DRAFT Annual Report Compressed.pdf",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.osoyoos.ca/sites/osoyoos.ca/files/2024-04/2023%2005%2019%202022%20Annual%20Report.pdf",
+      "label": "2022 Town of Osoyoos Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.osoyoos.ca/annual-report",
+      "yearsInLabel": [
+        "2022",
+        "2023",
+        "2024"
+      ]
+    }
+  ]
+}
