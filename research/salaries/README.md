@@ -406,6 +406,22 @@ These notes used to be repeated on the pages themselves; they apply to every rec
 - **Highest paid across employers.** The People view before a search lists each period's 500
   highest-paid named records across every employer (`public/salaries/people/top.json.gzip`);
   `check:salaries` rebuilds that list from the person index and compares it.
+- **How pay moved.** Two measures are shown wherever a position, a title or an employer spans
+  years (`src/salaries/growth.js`). *Average growth* compares a series' average in its first and
+  last periods with 5 or more records, 3 or more years apart, as a compound rate a year; across
+  employers each employer's own series is measured and the rates are weighed by records, so a
+  title does not grow because a better-paying employer began disclosing it. It still moves when
+  who is on the list changes, since only records above the threshold appear. *Typical raise* is
+  the median yearly change for the same disclosed name under the same title at the same employer
+  (for an employer as a whole, under any title) between two disclosures up to 3 years apart; a
+  name with two records in one period is left out of that period. A shared name is not proof of
+  one person, and a part year shows as a jump, which is why the median is used. The position
+  index carries both for every title (`public/salaries/positions/index.json.gzip`); ranking by
+  either lists only titles with 10 or more records or raises behind it.
+- **An employer's trends.** *New to the list* and *off the list* compare each period's names with
+  the employer's previous period of the same kind (fiscal or calendar). Crossing the disclosure
+  threshold counts as either, so they are not hires and departures. An employer's charts follow
+  its main kind of period; the year-by-year table lists every period.
 
 ### Reproduce and check the published dataset
 

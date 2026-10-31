@@ -15,10 +15,13 @@ import { formatMoney as money, medianMoney as median } from './money.js'
 import { PayChart, YearPicker, shortYear } from './parts.jsx'
 import { count, LAYOUTS, loadJson, Paged, RecordRow, RoleIcon, seenYears, wordsOf } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
+import { GrowthTiles, rateColumn } from './Growth.jsx'
+import { peopleOverTime, Trends } from './Trends.jsx'
+import { seriesGrowth, stayerRaises, typicalRaise, yearNumber } from './growth.js'
 import { SourceLink } from './DisclosureEvidence.jsx'
 import { filterPositionGroups, matchesRecordQuery } from './viewState.js'
 
-const SHOWS = ['positions', 'people', 'everyone']
+const SHOWS = ['positions', 'people', 'everyone', 'trends']
 
 /** Rows grouped into titles: each with its commonest spelling, its spellings and what it paid. */
 const groupTitles = (rows) => {
@@ -201,9 +204,12 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
             options={[
               { value: 'positions', label: 'Positions', disabled: !withPositions, title: withPositions ? 'Each position this year, with its average pay' : 'This year’s records do not name positions' },
               { value: 'people', label: 'People', title: 'This year’s records, highest paid first' },
-              { value: 'everyone', label: 'All years', title: 'Everyone under a name, with their pay in every year' }
+              { value: 'everyone', label: 'All years', title: 'Everyone under a name, with their pay in every year' },
+              { value: 'trends', label: 'Trends', title: 'Records, pay and raises over the years, and positions by how fast their pay grew' }
             ]}
           />
+          {view === 'trends' && <Trends rows={rows} years={years} year={year} onRole={onRole} onYear={pick} />}
+          {view !== 'trends' && <>
           <div className="salaries__search salaries__search--one">
             <input type="search" value={filter} placeholder={view === 'positions' ? 'Find a position' : 'Find a name or a position'} aria-label="Find a name or a position" onChange={(event) => setFilter(event.target.value)} />
           </div>
@@ -298,6 +304,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
               </p>
             </>
           )}
+          </>}
 
         </section>
       )}
@@ -319,6 +326,23 @@ const RolePage = ({ entry, years, sources, rows, failed, roleKey, wantedYear, ba
   const year = wantedYear ?? counts.findLastIndex((value) => value > 0)
   const stats = byYear.map((list) => (list.length ? { mean: meanMoney(list.map((row) => row[2])), median: median(list.map((row) => row[2])), low: Math.min(...list.map((row) => row[2])), high: Math.max(...list.map((row) => row[2])) } : null))
   const points = stats.map((stat, at) => (stat ? { year: at, pay: stat.mean } : null)).filter(Boolean)
+  const growth = useMemo(() => seriesGrowth(stats.map((stat, at) => (stat ? { year: at, count: byYear[at].length, mean: stat.mean } : null)).filter(Boolean), years), [stats, byYear, years]) // eslint-disable-line react-hooks/exhaustive-deps
+  const raise = useMemo(() => typicalRaise(stayerRaises(matching.map((row) => ({ name: row[0], group: '', pay: row[2], year: row[4] })), years)), [matching, years])
+  const held = useMemo(() => peopleOverTime(matching, years), [matching, years])
+  const heldYears = years.map((_, at) => at).filter((at) => counts[at] > 0).sort((a, b) => yearNumber(years[a]) - yearNumber(years[b]))
+  const heldColumns = useMemo(() => [
+    { id: 'name', header: 'Name', accessorFn: (person) => displayName(person.name, sources?.[person.latest[5]]?.nameDisclosure), cell: ({ row, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(row.original.name)}>{getValue()}</button> },
+    { id: 'years', header: 'Periods', accessorFn: (person) => person.held.length, meta: { kind: 'number' } },
+    { id: 'from', header: 'First', accessorFn: (person) => years[person.from], sortingFn: (a, b) => yearNumber(years[a.original.from]) - yearNumber(years[b.original.from]) },
+    rateColumn('rate', 'Change', (person) => person.rate),
+    ...heldYears.map((at) => ({
+      id: `y${at}`, header: shortYear(years[at]), accessorFn: (person) => person.pay.get(at), meta: { kind: 'money' }, sortUndefined: 'last',
+      cell: ({ row, getValue }) => {
+        const extra = (row.original.records.get(at) ?? 0) - 1
+        return getValue() == null ? <span className="salaries__line" aria-label="No record">·</span> : <span title={extra > 0 ? `${extra + 1} records in ${years[at]}; the highest is shown` : undefined}>{money(getValue())}{extra > 0 && <sup>+{extra}</sup>}</span>
+      }
+    }))
+  ], [heldYears.join(','), years, sources, onPerson]) // eslint-disable-line react-hooks/exhaustive-deps
   const chosen = byYear[year] ?? []
   const ranked = [...chosen].sort((a, b) => b[2] - a[2])
   const oneSource = new Set(chosen.map((row) => row[5])).size <= 1
@@ -354,9 +378,27 @@ const RolePage = ({ entry, years, sources, rows, failed, roleKey, wantedYear, ba
               )
               : <p className="salaries__hint">No records under this position in {years[year]}; the bars above show the years with them.</p>}
             {points.length > 1 && <PayChart years={years} points={points} label="Average pay by year" />}
+            <GrowthTiles
+              id="salaries-role-growth" growth={growth} raise={raise} years={years}
+              extra={<div><dt>Names</dt><dd>{held.length.toLocaleString('en-CA')}</dd><dd className="salaries__line">{count(held.filter((person) => person.held.length > 1).length, 'in two or more periods', 'in two or more periods')}</dd></div>}
+            />
           </>
         )}
       </section>
+
+      {held.length > 0 && heldYears.length > 1 && (
+        <section aria-labelledby="salaries-role-held" className="salaries__records">
+          <div className="salaries__head">
+            <h3 id="salaries-role-held" className="salaries__title">Everyone in this position over the years</h3>
+            <p className="salaries__meta">{count(held.length, 'name', 'names')}</p>
+          </div>
+          <DataTable key={year} data={held} columns={heldColumns} sorting={[heldYears.includes(year) ? { id: `y${year}`, desc: true } : { id: 'years', desc: true }]} label="Pay in this position by name and period" />
+          <p className="salaries__hint salaries__hint--small">
+            Change is a name’s first year in the position to its last, a year. The highest record is shown where a name has more than one in a
+            year (marked +). Names are grouped as disclosed, so a row may not be one person.
+          </p>
+        </section>
+      )}
 
       {group && (
         <section aria-labelledby="salaries-role-years" className="salaries__person">
