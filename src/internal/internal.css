@@ -133,3 +133,11 @@ details.internal-logos__footnote p { max-width: 90ch; margin: 8px 0 0; }
   .internal-logos__artwork { height: 340px; }
   .internal-logos__design .internal-logos__artwork, .internal-logos__variant .internal-logos__artwork { height: 300px; }
 }
+
+/* An undated clipping is important context, but not a dated adoption record. */
+.internal-logos__article { margin-top: 18px; padding: 16px; border: 1px solid var(--outline); border-radius: var(--radius-sm); }
+.internal-logos__article h4 { margin: 0 0 8px; font-size: 14px; }
+.internal-logos__article blockquote { margin: 8px 0; padding-left: 12px; border-left: 3px solid var(--mid); font-size: 15px; font-style: italic; }
+.internal-logos__article p { margin: 10px 0 0; }
+.internal-logos__article .internal-logos__article-evidence { color: var(--ink); }
+.internal-logos__article .internal-logos__article-source { font-size: 12px; }
