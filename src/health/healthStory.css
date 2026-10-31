@@ -1,0 +1,184 @@
+/* Historical atlas presentation, recovered from its verified feature bundle. */
+.health-story{--health-sea:#e8eeef;--health-land:#d7ddd5;--health-line:#64776f;--health-highlight:#b65c2b;--health-label:#19382e;color:var(--ink);padding-bottom:48px}
+.health-story *{box-sizing:border-box}
+.health-story>.health-story-heading{justify-content:space-between;align-items:flex-end;gap:32px;padding:30px 8px 24px;display:flex}
+.health-story>.health-story-heading h1{letter-spacing:-.045em;margin:8px 0 16px;font-size:clamp(30px,3.5vw,48px);font-weight:600;line-height:1.1}
+.health-story>.health-story-heading p:not(.health-kicker){max-width:740px;color:var(--ink-muted);margin:0;font-size:16px;line-height:1.65}
+.health-heading-actions{flex-direction:column;flex:0 0 225px;align-items:flex-start;gap:14px;padding-bottom:4px;font-size:13px;display:flex}
+.health-kicker{color:var(--ink-muted);letter-spacing:.1em;text-transform:uppercase;margin:0 0 5px;font-size:10px;font-weight:700;line-height:1.4;display:block}
+.health-story button,.health-story select,.health-story input{font:inherit}
+.health-story button,.health-story select{cursor:pointer}
+.health-story a{color:inherit;text-underline-offset:3px}
+.health-story :is(button,input,select,a,summary,[tabindex]):focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.health-story button:disabled{cursor:default;opacity:.4}
+.health-button{background:var(--primary);color:var(--primary-ink);border:1px solid var(--primary);border-radius:6px;min-height:44px;padding:10px 14px;font-size:13px!important;font-weight:600!important}
+.health-button:hover{background:var(--primary-hover)}
+.health-button--quiet{color:var(--ink);background:var(--surface);border-color:var(--mid)}
+.health-button--quiet:hover{background:var(--hover)}
+.health-intro-note{color:var(--ink-muted);border-left:3px solid #a45c30;margin:0 8px 24px;padding:10px 14px;font-size:13px;line-height:1.6}
+.health-intro-note strong{color:var(--ink)}
+#health-story-frame{scroll-margin-top:16px}
+.health-story .health-story-frame{border-color:var(--mid)}
+.health-story .health-story-frame .health-story-reader{--editorial-bg:var(--surface);--editorial-fg:var(--ink);--editorial-muted:var(--ink-muted);--editorial-border:var(--mid);--editorial-card:var(--surface);--editorial-surface:var(--hover);--editorial-control:var(--surface);overscroll-behavior-y:contain}
+.health-story-frame .editorial-slide h2{letter-spacing:-.035em;margin:10px 0 20px;font-size:clamp(27px,2.6vw,37px);font-weight:600;line-height:1.12}
+.health-story-frame .editorial-slide h3{letter-spacing:-.02em;margin:6px 0 10px;font-size:20px;font-weight:600;line-height:1.25}
+.health-story-frame .editorial-slide p{margin:14px 0;font-size:14px;line-height:1.7}
+.health-story-frame .editorial-slide .health-lead{color:var(--ink);font-size:18px;line-height:1.5}
+.health-story-frame .editorial-slide .health-chapter-date{letter-spacing:.03em;color:var(--ink-muted);margin:0;font-size:11px;font-weight:600}
+.health-story-frame .editorial-slide .health-kicker{margin:0 0 6px;font-size:10px}
+.health-muted,.health-story-frame .health-muted{color:var(--ink-muted)}
+.health-small,.health-story-frame .editorial-slide .health-small{font-size:12px;line-height:1.65}
+.health-notice{background:var(--hover);border-left:2px solid #ad6b37;padding:12px 14px;line-height:1.65;font-size:12px!important}
+.health-story-facts{flex-wrap:wrap;gap:26px;margin:24px 0;display:flex}
+.health-story-facts span{color:var(--ink-muted);font-size:11px}
+.health-story-facts b{color:var(--ink);font-size:28px;font-weight:500;line-height:1.3;display:block}
+.health-field{flex-direction:column;gap:7px;min-width:0;margin:22px 0 16px;display:flex}
+.health-field>span{font-size:12px;font-weight:600;line-height:1.4}
+.health-field :is(select,input),.health-media-heading select{border:1px solid var(--mid);min-height:44px;color:var(--ink);background:var(--surface);border-radius:6px;width:100%;min-width:0;max-width:100%;padding:10px 12px;font-size:13px}
+.health-field select{text-overflow:ellipsis;padding-right:28px}
+.health-area-evidence{border-top:1px solid var(--mid);margin-top:20px;padding:20px 0 4px}
+.health-area-evidence .health-actions{margin-top:18px}
+.health-evidence-badge{background:var(--hover);border:1px solid var(--mid);color:var(--ink-2);border-radius:4px;padding:5px 9px;font-size:11px;font-weight:600;line-height:1.5;display:inline-block}
+.health-actions{flex-wrap:wrap;align-items:center;gap:10px 18px;font-size:12px;line-height:1.5;display:flex}
+.health-actions>:is(a,button){align-items:center;min-height:36px;display:inline-flex}
+.health-details{border-top:1px solid var(--mid);margin:18px 0;padding-top:14px;font-size:12px;line-height:1.7}
+.health-details summary{cursor:pointer;padding:5px 0;font-weight:600}
+.health-details ul{padding-left:18px}
+.health-details li{margin:10px 0}
+.health-source-list{list-style:none;padding:0!important}
+.health-source-list small{color:var(--ink-muted);display:block}
+.health-match-facts{margin:18px 0;font-size:12px}
+.health-match-facts div{border-bottom:1px solid var(--mid);padding:10px 0}
+.health-match-facts dt{color:var(--ink-muted)}
+.health-match-facts dd{font-variant-numeric:tabular-nums;margin:4px 0 0;line-height:1.6}
+.health-chip-list{flex-wrap:wrap;gap:6px;display:flex}
+.health-chip-list button{border:1px solid var(--mid);color:var(--ink);background:var(--surface);border-radius:5px;min-height:36px;padding:6px 10px;font-size:12px}
+.health-archive,.health-current-pane,.health-comparison-media{background:var(--hover);flex-direction:column;min-width:0;height:100%;min-height:0;margin:0;display:flex}
+.health-media-heading{border-bottom:1px solid var(--mid);background:var(--surface);flex:none;justify-content:space-between;align-items:center;gap:10px;padding:14px 18px;display:flex}
+.health-media-heading h3{letter-spacing:-.02em;margin:2px 0 0;font-size:15px;font-weight:600;line-height:1.3}
+.health-media-heading .health-kicker{font-size:9px}
+.health-media-heading select{flex:0 180px;width:auto;font-size:12px}
+.health-date{max-width:160px;color:var(--ink-muted);text-align:right;font-size:10px;line-height:1.45}
+.health-archive-selection{background:var(--hover);align-items:center;gap:10px;margin:0;padding:8px 18px;font-size:12px;line-height:1.3;display:flex}
+.health-archive-selection b{background:var(--surface);border:1px solid var(--mid);border-radius:50%;place-items:center;min-width:30px;height:30px;font-size:13px;display:grid}
+.health-archive-selection small{color:var(--ink-muted);margin-top:2px;font-size:10px;display:block}
+.health-archive-viewport{background:#d9dcd6;flex:1;min-height:60px;padding:10px;overflow:auto}
+.health-archive-viewport img{object-fit:contain;object-position:center top;background:#fff;max-width:none;display:block}
+.health-archive-caption{background:var(--surface);flex-wrap:wrap;flex:none;align-items:center;gap:7px 18px;margin:0;padding:10px 16px;font-size:11px;line-height:1.5;display:flex}
+.health-map-credit{width:100%;color:var(--ink-muted);flex:none;margin:0;padding:7px 14px;font-size:10px;line-height:1.5;display:block}
+.health-archive-caption .health-map-credit{padding:0}
+.health-map-zoom{flex-wrap:wrap;align-items:center;gap:4px;display:flex}
+.health-map-zoom button{border:1px solid var(--mid);min-width:34px;min-height:34px;color:var(--ink);background:var(--surface);border-radius:4px;padding:5px 9px;font-size:11px;line-height:1.35}
+.health-map-zoom button:hover:not(:disabled){background:var(--hover)}
+.health-comparison-panes{flex:1;min-height:0;display:flex}
+.health-comparison-panes>*{flex:1;min-width:0}
+.health-comparison-panes.is-split>*{width:50%}
+.health-comparison-panes.is-split>*+*{border-left:1px solid var(--mid)}
+.health-comparison-panes.is-split .health-media-heading{flex-wrap:wrap;padding:10px}
+.health-comparison-panes.is-split .health-media-heading select{flex-basis:100%;min-height:34px;padding:6px}
+.health-comparison-panes.is-split .health-date{text-align:left}
+.health-comparison-panes.is-split .health-archive-selection{padding:8px 10px}
+.health-comparison-panes.is-split .health-map-toolbar{padding:6px}
+.health-media-tabs{background:var(--surface);border-bottom:1px solid var(--mid);flex:none;gap:3px;padding:8px;display:flex}
+.health-media-tabs button{min-height:36px;color:var(--ink-muted);background:0 0;border:1px solid #0000;border-radius:5px;flex:1;padding:6px 8px;font-size:11px;line-height:1.3}
+.health-media-tabs button[aria-pressed=true]{color:var(--ink);background:var(--hover);border-color:var(--mid);font-weight:600}
+.health-boundary-map{flex-direction:column;flex:1;min-width:0;min-height:80px;display:flex;overflow:hidden}
+.health-map-toolbar{background:var(--hover);flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;font-size:10px;line-height:1.5;display:flex}
+.health-map-toolbar label{align-items:center;gap:5px;display:flex}
+.health-map-toolbar input{accent-color:var(--ink)}
+.health-map-canvas{background:var(--health-sea);flex:1;min-height:50px;position:relative;overflow:hidden}
+.health-map-canvas svg{touch-action:pan-y;width:100%;height:100%;display:block}
+.health-map-canvas svg.is-zoomed{cursor:grab;touch-action:none}
+.health-map-canvas svg.is-zoomed:active{cursor:grabbing}
+.health-map-context path{fill:var(--health-land);stroke:none}
+.health-map-region{fill:var(--health-land);stroke:var(--health-line);stroke-width:.6px;cursor:pointer}
+.health-map-region.is-selected{fill:var(--health-highlight);stroke:#743e20;stroke-width:1.2px}
+.health-map-region:hover,.health-map-region:focus-visible{stroke:#142f26;stroke-width:2px;fill:#98ad9d;outline:none}
+.health-map-region.is-selected:hover,.health-map-region.is-selected:focus-visible{fill:#d8783e}
+.health-map-overlays{fill:none;stroke:#344f45;stroke-width:1.3px;pointer-events:none}
+.health-map-labels{fill:var(--health-label);text-anchor:middle;paint-order:stroke;stroke:#f8faf6;stroke-width:2px;stroke-linejoin:round;pointer-events:none;font-weight:600}
+.health-map-readout{color:#243c31;pointer-events:none;background:#ffffffed;border-radius:4px;max-width:calc(100% - 20px);padding:5px 8px;font-size:10px;line-height:1.4;position:absolute;bottom:8px;left:10px}
+.health-map-north{color:#344b41;pointer-events:none;font-size:12px;position:absolute;top:10px;right:12px}
+.health-map-legend{color:var(--ink-muted);background:var(--surface);border-top:1px solid var(--mid);flex-wrap:wrap;flex:none;align-items:center;gap:8px 14px;padding:8px 12px;font-size:10px;line-height:1.5;display:flex}
+.health-map-legend>span{flex:100%}
+.health-map-legend label{align-items:center;gap:5px;display:inline-flex}
+.health-map-legend input[type=range]{accent-color:#a9572a;width:85px}
+.health-legend-swatch{background:#bd774f;border:1px solid #743e20;width:10px;height:10px;margin-right:5px;display:inline-block}
+.health-loading,.health-map-empty{color:var(--ink-muted);text-align:center;margin:auto;padding:28px;font-size:13px}
+.health-area-index,.health-source-section{padding:40px 8px 0}
+.health-section-heading{justify-content:space-between;align-items:center;gap:16px;display:flex}
+.health-section-heading h2{letter-spacing:-.025em;margin:5px 0;font-size:25px;font-weight:600;line-height:1.2}
+.health-section-heading>a{font-size:12px}
+.health-count{white-space:nowrap;color:var(--ink-muted);font-variant-numeric:tabular-nums;font-size:13px}
+.health-index-filters{grid-template-columns:1fr 250px;gap:18px;display:grid}
+.health-index-filters .health-field{margin:22px 0}
+.health-area-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;display:grid}
+.health-index-card{background:var(--surface);border-radius:8px;flex-direction:column;padding:20px;display:flex}
+.health-index-card h3{letter-spacing:-.02em;margin:6px 0 10px;font-size:18px;font-weight:600;line-height:1.3}
+.health-index-card>p:not(.health-kicker){color:var(--ink-muted);margin:0 0 15px;font-size:11px;line-height:1.5}
+.health-index-card .health-actions{gap:14px;margin-top:auto}
+.health-index-card .health-actions button{color:var(--ink);background:0 0;border:0;padding:0;font-size:12px;font-weight:600}
+.health-index-card .health-actions a{font-size:11px}
+.health-empty{color:var(--ink-muted);background:var(--surface);border-radius:8px;padding:20px}
+.health-empty button{color:var(--ink);background:0 0;border:none;padding:6px;text-decoration:underline}
+.health-source-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:26px 0;padding:0;list-style:none;display:grid}
+.health-source-grid li{font-size:13px;line-height:1.6}
+.health-source-grid li>a{font-weight:600}
+.health-source-grid p{color:var(--ink-muted);margin:8px 0 0;font-size:12px}
+.health-source-section>.health-details{max-width:880px}
+@media (width<=1000px){.health-story>.health-story-heading{align-items:flex-start}
+.health-heading-actions{flex-basis:200px}
+.health-area-grid,.health-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.health-story-frame .editorial-slide h2{font-size:29px}
+}
+@media (width<=700px){.health-story>.health-story-heading{flex-direction:column;gap:20px;padding:22px 0 16px}
+.health-heading-actions{flex-flow:wrap;flex-basis:auto;align-items:center;gap:12px 20px}
+.health-intro-note{margin:0 0 20px;font-size:12px}
+.health-story .health-story-frame .editorial-immersive-media{height:260px;min-height:260px;box-shadow:0 3px 6px #0002}
+.health-story .health-story-frame .editorial-slide{min-height:calc(var(--editorial-viewport,100dvh) - var(--editorial-top) - 260px)}
+.health-story-frame .editorial-slide p{font-size:14px}
+.health-media-heading{min-height:48px;padding:8px 12px}
+.health-media-heading h3{font-size:12px}
+.health-media-heading .health-kicker,.health-date{font-size:8px}
+.health-media-heading select{flex-basis:140px;min-height:36px;padding:6px;font-size:11px}
+.health-archive-selection{padding:5px 12px;font-size:11px}
+.health-archive-selection small{display:none}
+.health-archive-selection b{min-width:24px;height:24px;font-size:11px}
+.health-archive-viewport{padding:5px}
+.health-archive-caption{gap:5px 10px;padding:5px 10px}
+.health-archive-caption .health-map-credit{display:none}
+.health-current-pane>.health-map-credit{padding:4px 10px;font-size:8px}
+.health-map-toolbar{gap:4px;padding:4px 8px}
+.health-map-toolbar>label{display:none}
+.health-map-zoom button{min-width:30px;min-height:30px;padding:3px 7px;font-size:10px}
+.health-map-legend{gap:4px 8px;padding:4px 8px;font-size:9px}
+.health-map-legend>span{flex-basis:auto}
+.health-map-legend>label{display:none}
+.health-map-readout{padding:3px 5px;font-size:8px;bottom:4px;left:5px}
+.health-media-tabs{padding:4px}
+.health-media-tabs button{min-height:30px;padding:3px;font-size:10px}
+.health-comparison-panes.is-split .health-date,.health-comparison-panes.is-split .health-archive-selection,.health-comparison-panes.is-split .health-map-credit,.health-comparison-panes.is-split .health-map-toolbar,.health-comparison-panes.is-split .health-map-legend{display:none}
+.health-comparison-panes.is-split .health-media-heading{gap:4px;padding:6px}
+.health-comparison-panes.is-split .health-media-heading select{min-height:28px;font-size:10px}
+.health-comparison-panes.is-split .health-archive-caption{padding:4px}
+.health-comparison-panes.is-split .health-archive-caption>a{font-size:9px}
+.health-index-filters{grid-template-columns:1fr 140px;gap:10px}
+.health-area-index,.health-source-section{padding:32px 0 0}
+.health-section-heading{align-items:flex-start}
+.health-section-heading h2{font-size:22px}
+.health-section-heading>a{max-width:140px}
+.health-area-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.health-index-card{padding:15px 12px}
+.health-index-card h3{font-size:16px}
+.health-index-card .health-actions{gap:8px 14px}
+.health-index-card .health-actions>:is(a,button){min-height:40px}
+}
+@media (width<=420px){.health-index-filters,.health-source-grid{grid-template-columns:1fr;gap:0}
+.health-index-filters .health-field{margin:14px 0 0}
+.health-index-filters{margin-bottom:20px}
+.health-source-grid{gap:20px}
+}
+@media (prefers-reduced-motion:reduce){.health-story *{scroll-behavior:auto!important}
+}
+
+.health-story .editorial-expandable.is-expanded > :is(.health-archive, .health-current-pane, .health-comparison-media) { width: 100%; }

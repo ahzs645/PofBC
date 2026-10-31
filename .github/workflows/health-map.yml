@@ -1,0 +1,63 @@
+name: Check historical health map
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/health-map.yml'
+      - 'src/health/**'
+      - 'public/health-geography/**'
+      - 'src/site/App.jsx'
+      - 'src/site/ViewSwitcher.jsx'
+      - 'src/site/navigation.jsx'
+      - 'src/government/GovernmentPanel.jsx'
+      - 'research/**'
+      - 'scripts/**'
+      - 'vite.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.gitmodules'
+      - 'vendor/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: health-map-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    # The complete application build subsets the Helvetica installed by macOS.
+    runs-on: macos-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Check Helvetica is present
+        run: |
+          if [ ! -f /System/Library/Fonts/Helvetica.ttc ]; then
+            echo "::error::Helvetica.ttc is missing from this runner."
+            echo "The application build requires the Helvetica supplied by macOS."
+            exit 1
+          fi
+
+      - run: npm ci
+
+      # Build the font and artwork assets before tests so their checks can run.
+      - run: npm run build:assets
+
+      - run: npm test
+
+      - name: Build the complete site
+        run: npm run build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
