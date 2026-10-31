@@ -17,6 +17,7 @@ const SignsView = lazy(() => import('../signs/SignsView.jsx').then((module) => (
 const PatchesView = lazy(() => import('../patches/PatchesView.jsx').then((module) => ({ default: module.PatchesView })))
 const GuidesView = lazy(() => import('../guides/GuidesView.jsx').then((module) => ({ default: module.GuidesView })))
 const SalariesView = lazy(() => import('../salaries/SalariesView.jsx').then((module) => ({ default: module.SalariesView })))
+const HealthStoryView = lazy(() => import('../health/HealthStoryView.jsx').then((module) => ({ default: module.HealthStoryView })))
 import { generatorPatchFor } from '../government/eraMark.js'
 import {
   FLAG_PALETTE_ORDER, FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_SWATCHES
@@ -138,7 +139,7 @@ const initialView = () => {
 const writeView = (view) => {
   if (!globalThis.history?.replaceState) return
   const url = new URL(globalThis.location.href)
-  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'area', 'chapter']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   globalThis.history.replaceState(null, '', url)
 }
@@ -262,6 +263,12 @@ export const App = () => {
       {view === 'guides' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the visual guides…</p>}>
           <GuidesView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'health-map' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the historical health maps…</p>}>
+          <HealthStoryView key={visit} />
         </Suspense>
       )}
 

@@ -1,0 +1,115 @@
+{
+  "id": "statcan-bc-health-regions-2000-map",
+  "title": "British Columbia / Colombie-Britannique — Health Regions / Régions socio-sanitaires",
+  "publisher": "Statistics Canada",
+  "source_url": "https://www150.statcan.gc.ca/n1/pub/82-221-x/00401/images/pdf/4195184-eng.pdf",
+  "source_index_url": "https://www150.statcan.gc.ca/n1/pub/82-221-x/00401/4149085-eng.htm",
+  "source_index_publication": "Health Indicators, April 2001",
+  "display_caption": "Twenty statistical health regions — published April 2001",
+  "reference_year": 2000,
+  "reference_year_note": "The public map page does not print a boundary date. Its twenty-region framework corresponds to the 2000 statistical geography; the linked original source index is explicitly April 2001. The separately linked 2003 product guide describes the first 2000 digital boundary edition, not a date printed on this map.",
+  "reference_date_evidence": "https://www150.statcan.gc.ca/n1/pub/82-402-x/2004001/4152503-eng.htm",
+  "pdf_page": 1,
+  "width_pt": 612,
+  "height_pt": 792,
+  "scope": "Twenty analytical/statistical health regions used around 2000. These are not an assertion of the exact legal boundaries of the 1997–2001 health boards or societies.",
+  "notes": [
+    "Simon Fraser (08) and Burnaby (17) remain separately mapped, as do Vancouver (16) and Richmond (19).",
+    "Analytical areas were built from local health areas and generally, rather than perfectly, coincided with board service territories.",
+    "This SVG is an unaltered page rendering from the public PDF; it is not a georeferenced GIS boundary dataset.",
+    "Source legend contains historical place/region names.",
+    "An independently hosted public Statistics Canada map was used. Historical GIS geometry was not acquired."
+  ],
+  "license": {
+    "name": "Statistics Canada Open Licence",
+    "url": "https://www.statcan.gc.ca/en/terms-conditions/open-licence",
+    "faq_url": "https://www.statcan.gc.ca/en/terms-conditions/open-licence-faq",
+    "attribution": "Source: Statistics Canada, Health Indicators — British Columbia health regions reference map, April 2001 publication. Reproduced and distributed on an as is basis with the permission of Statistics Canada."
+  },
+  "sha256_pdf": "c6f46808c9c20cce227436862a79297f03aaf54e2e6fe81845750b32552db425",
+  "sha256_svg": "5cf471d6dab55af5c48747280b2578457203fc16c3e22e812bf9d0727d9fceb3",
+  "svg_bytes": 2418306,
+  "processing": "PyMuPDF page.get_svg_image(text_as_path=True); no coordinates or geometry modified; all printed text rendered as paths.",
+  "region_legend": [
+    {
+      "code": "01",
+      "name": "East Kootenay"
+    },
+    {
+      "code": "02",
+      "name": "West Kootenay-Boundary"
+    },
+    {
+      "code": "03",
+      "name": "North Okanagan"
+    },
+    {
+      "code": "04",
+      "name": "South Okanagan-Similkameen"
+    },
+    {
+      "code": "05",
+      "name": "Thompson"
+    },
+    {
+      "code": "06",
+      "name": "Fraser Valley"
+    },
+    {
+      "code": "07",
+      "name": "South Fraser Valley"
+    },
+    {
+      "code": "08",
+      "name": "Simon Fraser"
+    },
+    {
+      "code": "09",
+      "name": "Coast Garibaldi"
+    },
+    {
+      "code": "10",
+      "name": "Central Vancouver Island"
+    },
+    {
+      "code": "11",
+      "name": "Upper Island / Central Coast"
+    },
+    {
+      "code": "12",
+      "name": "Cariboo"
+    },
+    {
+      "code": "13",
+      "name": "North West"
+    },
+    {
+      "code": "14",
+      "name": "Peace Liard"
+    },
+    {
+      "code": "15",
+      "name": "Northern Interior"
+    },
+    {
+      "code": "16",
+      "name": "Vancouver"
+    },
+    {
+      "code": "17",
+      "name": "Burnaby"
+    },
+    {
+      "code": "18",
+      "name": "North Shore"
+    },
+    {
+      "code": "19",
+      "name": "Richmond"
+    },
+    {
+      "code": "20",
+      "name": "Capital"
+    }
+  ]
+}

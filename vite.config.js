@@ -10,15 +10,24 @@ const unusedCodec = fileURLToPath(new URL('./src/site/unusedCodec.js', import.me
 // (see README). It ships TypeScript source, which Vite compiles with its digitizing worker, so it is
 // aliased to its source rather than installed: installing it would also install its own toolchain.
 const patcher = (entry) => fileURLToPath(new URL(`./vendor/patcher/src/${entry}`, import.meta.url))
+// Reuse the pinned PGMaps story components directly, without the toolkit's optional map/editor
+// dependencies or a separate package build. These entry points need only React and local helpers.
+const storyToolkit = (entry) => fileURLToPath(new URL(`./vendor/geo-toolkit/src/${entry}`, import.meta.url))
 
 export default defineConfig(({ command }) => ({
   plugins: [react()],
+  // Scan the host entry rather than example applications within vendored repositories.
+  optimizeDeps: { entries: ['index.html'] },
   resolve: {
     alias: [
       { find: 'node:zlib', replacement: unusedCodec },
       { find: 'path', replacement: unusedCodec },
       { find: /^patcher$/, replacement: patcher('index.ts') },
-      { find: /^patcher\/library$/, replacement: patcher('library.ts') }
+      { find: /^patcher\/library$/, replacement: patcher('library.ts') },
+      { find: /^@pgmaps\/geo-toolkit\/stories\/components\/StorySidecar$/, replacement: storyToolkit('stories/components/StorySidecar.tsx') },
+      { find: /^@pgmaps\/geo-toolkit\/stories\/components\/StoryChapterNavigation$/, replacement: storyToolkit('stories/components/StoryChapterNavigation.tsx') },
+      { find: /^@pgmaps\/geo-toolkit\/workspace\/workspace-context$/, replacement: storyToolkit('workspace/workspace-context.tsx') },
+      { find: /^@pgmaps\/geo-toolkit\/stories\/styles\.css$/, replacement: storyToolkit('stories/styles.css') }
     ]
   },
   // GitHub Pages serves a project site from a repository subpath; local dev serves it from the
