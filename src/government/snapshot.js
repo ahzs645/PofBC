@@ -13,6 +13,7 @@ import { LIEUTENANT_GOVERNORS_OFFICIAL, PARLIAMENT_43, STAFFING } from './atlasD
 import { CURRENT_MINISTRIES, episodesIn, fold, forerunnerIn, MINISTRY_EPISODES, predecessorsOf, slugify, successorsOf } from './episodes.js'
 import { ELECTIONS, LIEUTENANT_GOVERNORS, PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { CROWN_CATEGORY_SOURCES, crownCategoryOf } from './crownCategories.js'
+import { monarchOn } from './monarchs.js'
 import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, OFFICE_HOLDERS, SUB_AGENCIES, LOCAL_BODIES } from './historyData.js'
 
 /** The BC Archives diagram every ministry episode comes from. */
@@ -262,6 +263,8 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
   const present = year >= PRESENT_YEAR
   const premier = premierOn(day)
   const lieutenantGovernor = lieutenantGovernorOn(day)
+  // The sovereign the Lieutenant Governor represents: a Queen or a King, by the year.
+  const monarch = monarchOn(day)
   const election = electionBefore(day)
   const dissolved = present && PENDING_ELECTION && PENDING_ELECTION.dissolved <= day && PENDING_ELECTION.date > day
 
@@ -324,7 +327,8 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
           { note: [lieutenantGovernor.locator, lieutenantGovernor.evidence === 'unreviewed' ? 'Review status not supplied.' : lieutenantGovernor.evidence !== 'documented' ? `Evidence status: ${lieutenantGovernor.evidence}` : null].filter(Boolean).join(' · ') }
         )].filter(Boolean)
       : [],
-    description: 'The King’s representative in British Columbia. Gives royal assent to laws, summons and dissolves the Legislature, and appoints the Premier — by convention, whoever can hold the Assembly’s confidence.',
+    monarch,
+    description: `The ${monarch.title}’s representative in British Columbia. Gives royal assent to laws, summons and dissolves the Legislature, and appoints the Premier — by convention, whoever can hold the Assembly’s confidence.`,
     officialUrl: 'https://ltgov.bc.ca'
   })
 
