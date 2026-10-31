@@ -10,6 +10,7 @@ import { currentMarkFor, identityFor, renderEraMark } from './eraMark.js'
 import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
 import { CROWN_CATEGORIES, CROWN_CATEGORY_SOURCES } from './crownCategories.js'
 import { Card, CardSection, KindIcon } from './PanelCards.jsx'
+import { LogoCard } from './LogoCard.jsx'
 import { Salaries } from './Salaries.jsx'
 import { StoryText } from './StoryText.jsx'
 import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, PEOPLE_ID, periodsOf, PRESENT_YEAR } from './snapshot.js'
@@ -799,6 +800,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
         {node.kind === 'premier' && <PremierList year={year} />}
       </section>
 
+      {isBody && <LogoCard node={node} theme={theme} />}
       <Salaries key={node.id} node={node} year={year} />
       <EventsCard events={node.events} day={day} />
       {isMinistry && <MinistryTimeline node={node} year={year} onJump={onJump} />}

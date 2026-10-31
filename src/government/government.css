@@ -611,10 +611,24 @@
   box-shadow: var(--gov-shadow);
 }
 
-/* On a phone the diagram is short and near the top of the page, so above its trigger the panel ran
-   off the top; it opens downward instead, over the timeline, where the page has room. */
+/* The Done button and backdrop belong to a phone's sheet only. */
+.gov-legend__done, .gov-legend__backdrop { display: none; }
+
+/* On a narrow screen the diagram is short and the panel ran off the screen whichever way it opened
+   from its trigger, so it is a sheet fixed to the foot of the screen instead: always in view,
+   scrolling inside itself, closed by Done or a tap on the dimmed page. */
 @media (max-width: 1023px) {
-  .gov-legend__panel { top: 42px; bottom: auto; width: min(300px, calc(100vw - 32px)); max-height: 70vh; max-height: 70svh; }
+  .gov-legend__panel {
+    position: fixed; left: 12px; right: 12px; top: auto; bottom: 12px; z-index: 60;
+    width: auto; max-width: 420px; margin: 0 auto; max-height: 72vh; max-height: 72svh;
+    padding: 12px 8px 0; box-shadow: var(--gov-menu-shadow, var(--gov-shadow));
+  }
+  .gov-legend__row { padding-block: 9px; }
+  .gov-legend__done {
+    display: block; position: sticky; bottom: 0; flex: none; margin: 10px -8px 0; padding: 12px; border-radius: 0;
+    border-top: 1px solid var(--gov-outline); background: var(--gov-surface); font-weight: 600;
+  }
+  .gov-legend__backdrop { display: block; position: fixed; inset: 0; z-index: 59; background: rgb(0 0 0 / 0.28); }
 }
 
 .gov-legend__heading {
@@ -1329,3 +1343,20 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-tip__text::before { content: ''; position: absolute; left: 0; right: 0; top: -8px; height: 8px; }
 .gov-tip:hover .gov-tip__text, .gov-tip:focus-within .gov-tip__text { opacity: 1; visibility: visible; transform: none; }
 .gov-tip__text a { color: inherit; }
+
+/* A body's logos: the gallery's tiles, two to a row, each a link to its page in Logos. */
+.gov-logos__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.gov-logos__tile {
+  display: block;
+  border: 1px solid var(--gov-outline);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--gov-surface);
+}
+.gov-logos__tile:hover { border-color: var(--gov-ink-4); }
+.gov-logos__tile:focus-visible { outline: 2px solid var(--gov-executive); outline-offset: 2px; }
+.gov-logos__art.gallery__art { min-height: 96px; padding: 10px; border-radius: 0; }
+.gov-logos__art svg { width: 100%; max-height: 76px; }
+/* A collected file keeps the ground it was drawn for, filling the tile. */
+.gov-logos__art.gallery__art[data-image] { padding: 0; }
+.gov-logos__art .gallery__collected-image { height: 96px; padding: 10px; border-radius: 0; }

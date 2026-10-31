@@ -5,6 +5,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { formatMoney } from './money.js'
+import { labelPlan } from './labelPlan.js'
 import { yearAvailability, shortYearLabel, reportingYearLabel, relevantYearIndexes, samePeriodKinds } from './coverage.js'
 
 /** "2012/13–2023/24", or one label when the range is a single year. */
@@ -31,6 +32,20 @@ export const YearStrip = ({ years, seen, coverage = [], children }) => {
   )
 }
 
+/** An element's width, kept current as it changes: [ref, width], width 0 until it is measured. */
+const useWidth = () => {
+  const ref = useRef(null)
+  const [width, setWidth] = useState(0)
+  useEffect(() => {
+    const node = ref.current
+    if (!node || typeof ResizeObserver === 'undefined') return undefined
+    const observer = new ResizeObserver(([entry]) => setWidth(entry.contentRect.width))
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
+  return [ref, width]
+}
+
 /**
  * The years as a row of bars, each as tall as its record count and each a button that picks it. A
  * year without records is a dashed stub: still a button, since choosing it explains the gap.
@@ -38,6 +53,9 @@ export const YearStrip = ({ years, seen, coverage = [], children }) => {
 export const YearPicker = ({ years, counts, coverage = [], value, onChange, label = 'Disclosure period' }) => {
   const most = Math.max(1, ...counts)
   const visible = new Set([...relevantYearIndexes(years, coverage, counts), value])
+  const shown = years.map((_, at) => at).filter((at) => visible.has(at))
+  const [ref, width] = useWidth()
+  const plan = labelPlan(shown.length, width, shown.indexOf(value), 2)
   return (
     <div className="salaries-picker-wrap">
       {/* Too narrow for a bar a period (a phone, the government panel): the period chooser instead. */}
@@ -53,9 +71,9 @@ export const YearPicker = ({ years, counts, coverage = [], value, onChange, labe
           describe={(at) => yearAvailability(coverage[at], counts[at] ?? 0)}
         />
       </div>
-    <div className="salaries-picker" role="group" aria-label={label}>
-      {years.map((year, at) => {
-        if (!visible.has(at)) return null
+    <div ref={ref} className="salaries-picker" role="group" aria-label={label}>
+      {shown.map((at, place) => {
+        const year = years[at]
         const count = counts[at] ?? 0
         return (
           <button
@@ -69,7 +87,7 @@ export const YearPicker = ({ years, counts, coverage = [], value, onChange, labe
             onClick={() => onChange(at)}
           >
             <span className="salaries-picker__bar"><span style={{ height: count ? `${Math.max(8, (count / most) * 100)}%` : undefined }} /></span>
-            <span className="salaries-picker__label">{shortYear(year)}</span>
+            <span className="salaries-picker__label" data-hidden={!plan[place].shown || undefined} data-edge={plan[place].edge}>{shortYear(year)}</span>
           </button>
         )
       })}
@@ -90,14 +108,18 @@ export const PayChart = ({ years, points, label = 'Disclosed pay by year', multi
   const last = Math.max(...indexes)
   const most = Math.max(1, ...points.map((point) => Math.abs(point.pay)))
   const span = samePeriodKinds(years, indexes).filter((at) => at >= first && at <= last).map((at) => ({ label: years[at], point: points.find((point) => point.year === at) }))
+  const [ref, width] = useWidth()
+  const plan = labelPlan(span.length, width, -1, 4)
+  // A value over its bar only where a column has room for "$208k" without meeting the next one's.
+  const values = !width || width / span.length >= 34
   return (
     <figure className="salaries-chart" aria-label={`${label}, ${years[first]} to ${years[last]}; the figures are in the list below`}>
-      <div className="salaries-chart__bars" aria-hidden="true">
-        {span.map(({ label, point }) => (
+      <div ref={ref} className="salaries-chart__bars" aria-hidden="true">
+        {span.map(({ label, point }, place) => (
           <div key={label} className="salaries-chart__column" data-empty={!point || undefined} title={point ? `${label}: ${formatMoney(point.pay)}` : `${label}: no record`}>
-            <span className="salaries-chart__value">{point ? compactMoney(point.pay) : ''}</span>
+            <span className="salaries-chart__value">{point && values ? compactMoney(point.pay) : ''}</span>
             <span className="salaries-chart__bar" data-negative={point?.pay < 0 || undefined} style={{ height: point ? `${Math.max(4, (Math.abs(point.pay) / most) * 100)}%` : undefined }} />
-            <span className="salaries-chart__label">{shortYear(label)}</span>
+            <span className="salaries-chart__label" data-hidden={!plan[place].shown || undefined} data-edge={plan[place].edge}>{shortYear(label)}</span>
           </div>
         ))}
       </div>
