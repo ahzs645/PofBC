@@ -7,8 +7,19 @@ import { gzipSync, gunzipSync } from 'node:zlib'
 import { spawnSync } from 'node:child_process'
 import { csvRows, money, sumMoney, median, duplicateStats, repeatedCandidates, sha256, validateReplacementScopes, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
+import { employerSector, employerSlug } from './lib/salary-employers.mjs'
 
 const row = (name, pay = 100000.01, year = '2017/18') => ({ slug: 'bc-hydro', year, name, position: null, pay, expenses: null })
+test('municipalities and Metro Vancouver are local government, not the provincial Government sector', () => {
+  for (const slug of ['city-of-vancouver', 'city-of-prince-george', 'district-of-saanich', 'village-of-anmore', 'bowen-island',
+    'langley-township', 'langley-city', 'metro-vancouver', employerSlug('District of Delta'), employerSlug('Township of Langley')]) {
+    assert.equal(employerSector(slug, 'Government'), 'Municipalities', slug)
+  }
+  assert.equal(employerSector('public-service', 'Government'), 'Government')
+  assert.equal(employerSector('vancouver-police', 'Municipal police'), 'Municipal police')
+  assert.equal(employerSector('vancouver-school-district', 'School districts'), 'School districts')
+  assert.equal(employerSector('north-vancouver-school-district', 'School districts'), 'School districts')
+})
 test('calendar and fiscal reporting periods retain distinct labels and output paths', () => {
   assert.equal(yearSlug('2020'), '2020')
   assert.equal(yearSlug('2020/21'), '2020-21')
