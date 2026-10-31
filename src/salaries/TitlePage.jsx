@@ -1,5 +1,6 @@
 // One position title across every employer that disclosed it: how many records each has in a year and
-// what they paid on average, the average across them all by year, and the titles near it.
+// what they paid, the median of every record by year in one chart that also picks the year, and the
+// titles near it.
 //
 // A title is grouped however its employers spelled it (positions.js). Titles that only share words
 // with it ("Teacher Elementary School" for "Teacher") are not merged into it: they are listed beside
@@ -9,25 +10,24 @@ import { useEffect, useMemo, useState } from 'react'
 import { Segmented } from '../site/Segmented.jsx'
 import { keyedTitles, relatedTitles, titleLabel, titleShard } from './positions.js'
 import { formatMoney as money } from './money.js'
-import { PayChart, YearPicker, yearSpan } from './parts.jsx'
+import { YearPicker, yearSpan } from './parts.jsx'
 import { count, LAYOUTS, loadJson, Paged, RoleIcon } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
 import { formatRate, pooledGrowth, seriesGrowth } from './growth.js'
 import { GrowthTiles, rateColumn } from './Growth.jsx'
 
 const ORDER = {
-  average: (a, b) => b.mean - a.mean || b.count - a.count,
-  records: (a, b) => b.count - a.count || b.mean - a.mean,
+  median: (a, b) => b.median - a.median || b.count - a.count,
+  records: (a, b) => b.count - a.count || b.median - a.median,
   name: (a, b) => a.name.localeCompare(b.name)
 }
 
-/** The figures of several employer/years taken together: records, their mean, and the range. */
+/** The figures of several employer/years taken together: records and the range. */
 const pool = (cells) => {
   const records = cells.reduce((sum, cell) => sum + cell.count, 0)
   if (!records) return null
   return {
     records,
-    mean: Math.round(cells.reduce((sum, cell) => sum + cell.mean * cell.count, 0) / records),
     low: Math.min(...cells.map((cell) => cell.low)),
     high: Math.max(...cells.map((cell) => cell.high))
   }
@@ -68,7 +68,7 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
   const [index, setIndex] = useState(null)
   const [failed, setFailed] = useState(false)
   const [loadVersion, setLoadVersion] = useState(0)
-  const [order, setOrder] = useState('average')
+  const [order, setOrder] = useState('median')
 
   useEffect(() => {
     let live = true
@@ -88,8 +88,17 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
   const year = wantedYear !== null && wantedYear !== undefined ? wantedYear : counts.findLastIndex((value) => value > 0)
   const chosen = inSector.filter((cell) => cell.year === year).sort(ORDER[order])
   const overall = pool(chosen)
-  const points = years.map((_, at) => ({ year: at, pooled: pool(inSector.filter((cell) => cell.year === at)) }))
-    .filter(({ pooled }) => pooled).map(({ year: at, pooled }) => ({ year: at, pay: pooled.mean }))
+  // The median of every record each year. Where several employers share a year it is the build's,
+  // since employers' medians do not combine: for the chosen sector where the title spans several,
+  // otherwise for all of them. Where one employer has the year, it is that employer's median.
+  const medians = useMemo(() => {
+    const byYear = years.map((_, at) => {
+      const there = inSector.filter((cell) => cell.year === at)
+      return there.length === 1 ? there[0].median : null
+    })
+    for (const [at, value] of detail?.medians?.[sector] ?? detail?.medians?.all ?? []) byYear[at] = value
+    return byYear
+  }, [detail, cells, sector, years]) // eslint-disable-line react-hooks/exhaustive-deps
   // The sector a search was narrowed to stays offered even where this title has none in it, so it can
   // be cleared here.
   const sectors = [...new Set([...cells.map((cell) => cell.entry.sector), ...(sector !== 'all' ? [sector] : [])])].sort()
@@ -155,19 +164,18 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
         )}
         {detail && inSector.length > 0 && (
           <>
-            <YearPicker years={years} counts={counts} value={year} onChange={onYear} label="Year of this title’s records" />
+            <YearPicker years={years} counts={counts} values={medians} value={year} onChange={onYear} label="Median pay by year" chooseLabel="Year of this title’s records" />
             <h3 className="salaries__year-title">{years[year]}</h3>
             {overall
               ? (
                 <dl className="salaries__tiles">
                   <div><dt>Employers</dt><dd>{chosen.length.toLocaleString('en-CA')}</dd></div>
                   <div><dt>Records</dt><dd>{overall.records.toLocaleString('en-CA')}</dd></div>
-                  <div><dt>Average</dt><dd>{money(overall.mean)}</dd></div>
+                  <div><dt>Median</dt><dd>{money(medians[year])}</dd></div>
                   <div><dt>Range</dt><dd className="salaries__range">{overall.records > 1 ? `${money(overall.low)}–${money(overall.high)}` : money(overall.low)}</dd></div>
                 </dl>
               )
               : <p className="salaries__hint">No employer disclosed this title in {years[year]}; the bars above show the years with records.</p>}
-            {points.length > 1 && <PayChart years={years} points={points} label="Average pay by year, all employers together" />}
             <GrowthTiles
               id="salaries-title-growth" growth={growth} raise={sector === 'all' ? raise : null} years={years}
               raiseNote={sector === 'all' ? undefined : 'measured across all sectors only'}
@@ -185,11 +193,11 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
           </div>
           <div className="salaries__browse-bar">
             {layout === 'cards'
-              ? <Segmented compact ariaLabel="Order employers" value={order} onChange={setOrder} options={[{ value: 'average', label: 'Highest average' }, { value: 'records', label: 'Most records' }, { value: 'name', label: 'A–Z' }]} />
+              ? <Segmented compact ariaLabel="Order employers" value={order} onChange={setOrder} options={[{ value: 'median', label: 'Highest median' }, { value: 'records', label: 'Most records' }, { value: 'name', label: 'A–Z' }]} />
               : <span />}
             <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />
           </div>
-          {layout === 'table' && <DataTable data={chosen} columns={employerColumns} sorting={[{ id: 'mean', desc: true }]} label={`Employers in ${years[year]}`} />}
+          {layout === 'table' && <DataTable data={chosen} columns={employerColumns} sorting={[{ id: 'median', desc: true }]} label={`Employers in ${years[year]}`} />}
           {layout === 'cards' && (
           <Paged list={chosen} size={24} reset={`${year}|${order}|${sector}`}>
             {(page) => (
@@ -200,10 +208,10 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
                 <span className="salaries__text">
                   <span className="salaries__name">{cell.name}</span>
                   <span className="salaries__line">{cell.entry.sector} · {count(cell.count, 'record', 'records')}</span>
-                  {cell.count > 1 && <span className="salaries__line">Median {money(cell.median)} · {money(cell.low)}–{money(cell.high)}</span>}
+                  {cell.count > 1 && <span className="salaries__line">{money(cell.low)}–{money(cell.high)} · average {money(cell.mean)}</span>}
                   {growthAt.get(cell.entry.slug) && <span className="salaries__line">Average {formatRate(growthAt.get(cell.entry.slug).rate)}</span>}
                 </span>
-                <span className="salaries__aside">{money(cell.mean)}<span className="salaries__line">{cell.count > 1 ? 'average' : 'paid'}</span></span>
+                <span className="salaries__aside">{money(cell.median)}<span className="salaries__line">{cell.count > 1 ? 'median' : 'paid'}</span></span>
               </button>
             ))}
           </div>

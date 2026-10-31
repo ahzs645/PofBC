@@ -8,10 +8,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { displayName } from './people.js'
 import { keyedTitles } from './positions.js'
-import { expenseLabel, reportingYearLabel } from './coverage.js'
+import { reportingYearLabel } from './coverage.js'
 import { formatMoney as money } from './money.js'
 import { rangeLabel, YearStrip } from './parts.jsx'
-import { count, loadJson, Paged, RecordRow, RoleIcon, seenYears } from './common.jsx'
+import { count, loadJson, Paged, PersonIcon, RoleIcon, seenYears } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
 import { TitleCard } from './TitlePage.jsx'
 import { GrowthTip, rateColumn } from './Growth.jsx'
@@ -85,6 +85,22 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
   ))
 }
 
+/**
+ * A highest-paid record as a card, like a name the search finds: the name, the position and employer,
+ * and the pay in its period. The card opens the person; their records, expenses and sources are there.
+ */
+const TopRecordCard = ({ row, rank, index, onPerson }) => (
+  <button type="button" className="salaries__card" onClick={() => onPerson(row[0])}>
+    <span className="salaries__lead"><PersonIcon /></span>
+    <span className="salaries__text">
+      <span className="salaries__name">{displayName(row[0], index.sources?.[row[6]]?.nameDisclosure)}</span>
+      {row[1] && <span className="salaries__line">{row[1]}</span>}
+      <span className="salaries__line">{index.employers[row[4]][0]}</span>
+    </span>
+    <span className="salaries__aside">{money(row[2])}<span className="salaries__line">No. {rank} · {index.years[row[5]]}</span></span>
+  </button>
+)
+
 /** The highest-paid named records across every employer, in the periods and sector chosen. */
 export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmployer }) => {
   const [top, setTop] = useState(null)
@@ -108,27 +124,15 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
   return (
     <>
       {note}
-      <Paged list={rows} size={50} reset={`${sector}|${range}`}>
-        {(page) => (
-          <ol className="salaries-rows">
-            {page.map((row) => (
-              <RecordRow
-                key={`${row[0]}|${row[4]}|${row[5]}|${row[2]}`}
-                rank={rows.indexOf(row) + 1}
-                name={row[0]}
-                position={[row[1], index.employers[row[4]][0], index.years[row[5]]].filter(Boolean).join(' · ')}
-                pay={row[2]}
-                expenses={row[3]}
-                expenseText={expenseLabel(row[6], index.sources)}
-                sourceId={row[6]}
-                sources={index.sources}
-                pdfPage={row[7]}
-                nameDisclosure={index.sources?.[row[6]]?.nameDisclosure}
-                onPerson={onPerson}
-              />
-            ))}
-          </ol>
-        )}
+      <Paged list={rows} size={24} reset={`${sector}|${range}`}>
+        {(page) => {
+          const first = rows.indexOf(page[0])
+          return (
+            <div className="salaries__grid">
+              {page.map((row, at) => <TopRecordCard key={`${row[0]}|${row[4]}|${row[5]}|${row[2]}`} row={row} rank={first + at + 1} index={index} onPerson={onPerson} />)}
+            </div>
+          )
+        }}
       </Paged>
     </>
   )

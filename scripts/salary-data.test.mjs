@@ -158,6 +158,30 @@ test('verified replacements restore quarantined years consistently in every view
   } finally { rmSync(f.dir, { recursive: true, force: true }) }
 })
 
+test('a title keeps the median of every record where employers share a year, overall and by sector', () => {
+  const f = fixture()
+  try {
+    // The employers' medians (150, 1000, 70) would give 150; the six records' own median is 125.
+    const baseline = { provenance: { description: 'Fixture compiled input' }, years: ['2017/18', '2020/21', '2023/24'], repeated: [],
+      employers: [
+        { slug: 'city-of-a', names: ['City of A'], sector: 'Government', counts: [3, 0, 0], rows: [['A, One', 'Mayor', 100, null, 0], ['A, Two', 'Mayor', 150, null, 0], ['A, Three', 'Mayor', 200, null, 0]] },
+        { slug: 'city-of-b', names: ['City of B'], sector: 'Government', counts: [1, 1, 0], rows: [['B, One', 'Mayor', 1000, null, 0], ['B, One', 'Mayor', 1100, null, 1]] },
+        { slug: 'bc-hydro', names: ['BC Hydro'], sector: 'Crown corporations', body: 'bc-hydro', counts: [2, 0, 0], rows: [['H, One', 'Mayor', 60, null, 0], ['H, Two', 'Mayor', 80, null, 0]] }
+      ] }
+    const bytes = gzipSync(JSON.stringify(baseline))
+    writeFileSync(join(f.research, 'baseline.json.gzip'), bytes)
+    writeFileSync(join(f.research, 'baseline-manifest.json'), JSON.stringify({ file: 'baseline.json.gzip', sha256: sha256(bytes), repositoryCommit: 'fixture' }))
+    rmSync(f.sourceDir, { recursive: true })
+    const result = f.run()
+    assert.equal(result.status, 0, result.stderr)
+    const mayor = JSON.parse(gunzipSync(readFileSync(join(f.out, 'positions/ma.json.gzip')))).mayor
+    // 2020/21 has one employer, and Crown corporations one in every year: their medians are the cells'.
+    assert.deepEqual(mayor.medians.all, [[0, 125]])
+    assert.deepEqual(mayor.medians.Municipalities, [[0, 175]])
+    assert.equal(mayor.medians['Crown corporations'], undefined)
+  } finally { rmSync(f.dir, { recursive: true, force: true }) }
+})
+
 test('a source-only future year appears as pending coverage without adding records', () => {
   const f = fixture()
   try {
