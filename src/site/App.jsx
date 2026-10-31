@@ -16,6 +16,8 @@ const SignsView = lazy(() => import('../signs/SignsView.jsx').then((module) => (
 // The patch library and digitizer come from the Patcher submodule (vendor/patcher).
 const PatchesView = lazy(() => import('../patches/PatchesView.jsx').then((module) => ({ default: module.PatchesView })))
 const GuidesView = lazy(() => import('../guides/GuidesView.jsx').then((module) => ({ default: module.GuidesView })))
+// The stationery brings brandkit's template engine and studio (vendor/brandkit).
+const StationeryView = lazy(() => import('../stationery/StationeryView.jsx').then((module) => ({ default: module.StationeryView })))
 const SalariesView = lazy(() => import('../salaries/SalariesView.jsx').then((module) => ({ default: module.SalariesView })))
 const HealthStoryView = lazy(() => import('../health/HealthStoryView.jsx').then((module) => ({ default: module.HealthStoryView })))
 import { generatorPatchFor } from '../government/eraMark.js'
@@ -263,6 +265,12 @@ export const App = () => {
       {view === 'guides' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the visual guides…</p>}>
           <GuidesView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'stationery' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the stationery…</p>}>
+          <StationeryView key={visit} />
         </Suspense>
       )}
 

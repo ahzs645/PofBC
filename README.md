@@ -564,15 +564,43 @@ books, each book to a grid of its pages, and each page full size with zoom, prev
 arrow keys too), its reconstruction notes, and its SVG to download. A page is linked by its address:
 `?view=guides&guide=sign&page=S05`.
 
-Only the rebuilt pages are here. The reference scans and PDFs are not: the pages are live text in
+The pages and the viewer live in [brandkit](https://github.com/ahzs645/brandkit), a git submodule
+at `vendor/brandkit`, so they can be reused for other identities and brand kits: the pages are its
+BC manual pack (`vendor/brandkit/manuals/bc/`), and the view is its manual library with this site's
+links added (`src/guides/guides.js`). brandkit's Vite plugin serves the pages at `visual-guides/`
+in development and copies them there in the build, the address they always had.
+
+Only the rebuilt pages are there. The reference scans and PDFs are not: the pages are live text in
 open-licence stand-ins (TeX Gyre faces for Helvetica and Times) and drawn geometry. Four pages of the
 1982 memo carried cropped pieces of the scan, two photographs and two handwritten signatures; each
-is replaced by a labelled placeholder. `scripts/import_visual_guides.py` copies the pages into
-`public/visual-guides/` and writes `src/guides/guidesData.js`; `scripts/render-guide-thumbnails.mjs`
-renders the grid images from those copies. `src/guides/guides.test.js` checks that every page is
-there and that none embeds an image.
-The pages embed subsets of TeX Gyre Heros, Termes and Cursor and of Noto Sans; their licences are
-in `public/visual-guides/font-licences/`, served beside the pages.
+is replaced by a labelled placeholder. brandkit's `scripts/import_visual_guides.py` copies the pages
+in from ManualKit and `scripts/render-guide-thumbnails.mjs` renders the grid images; its tests check
+that every page is there and that none embeds an image, and `src/guides/guides.test.js` here checks
+that the submodule is checked out and every family's links go somewhere. The pages embed subsets of
+TeX Gyre Heros, Termes and Cursor and of Noto Sans; their licences are served beside the pages, in
+`visual-guides/font-licences/`.
+
+---
+
+## Stationery
+
+**Stationery** in the title menu (`?view=stationery`) fills in the Visual Identity Program's
+**General Use** stationery of 1977: the calling card (3½ × 2 in), the letterhead (8½ × 11 in,
+Format A) and the No. 10 envelope. Each is rebuilt from the millimetre grid and point sizes on the
+Reproduction Manual's specification sheet ([R08](?view=guides&guide=reproduction&page=R08), with R03
+explaining the letterhead and card): the symbol, crest and ring, at 19, 16 and 12.5 mm; the type
+hung from its specified line; the rule where the band ends. Choose a ministry from the list (every
+ministry since 1976) or type one; fill in a name, title, component, address and telephone once,
+and every piece uses them. Each downloads as SVG (text live), PNG or PDF (text outlined), or all
+three zipped.
+
+The pieces are data (`src/stationery/bcStationery.js`), drawn by brandkit's template engine in the
+site's Helvetica (`src/stationery/helveticaFonts.js`, over the same metrics and outlines as the
+lockups); the editor is brandkit's template studio. Two choices are the site's, and labelled as
+such: Helvetica Medium is set in the bold the site carries, and the italic is the regular slanted.
+The symbol prints in Pantone 462 brown, shown as Pantone's screen conversion (#5C462B), or in black.
+
+---
 
 ---
 
@@ -661,6 +689,19 @@ directly; the toolkit's optional mapping dependencies and separate build toolcha
 digitizer behind **Patches** (above). It needs no build step: Vite compiles its source directly.
 
 
+[`vendor/brandkit`](https://github.com/ahzs645/brandkit) is the manual library behind **Visual
+Guides**, with the BC manuals' pages, and the template engine and studio behind **Stationery**. It
+is a project of its own, with its own site: brand kits (logos, business cards, letterhead, social
+graphics, a brand guide, web files) generated in the browser from one `brand.json`. Vite aliases
+its source (`brandkit`, `brandkit/studio`, `brandkit/manuals`) as it does Patcher's, with React
+deduplicated so its components share this app's; modules Node's test runner loads import it by
+relative path. To take a newer brandkit:
+
+```
+git -C vendor/brandkit fetch && git -C vendor/brandkit checkout origin/main
+git add vendor/brandkit && git commit -m "brandkit: …"
+```
+
 [`vendor/json-url`](https://github.com/ahzs645/json-url) compresses a lockup configuration into a
 share link. It gitignores its own `dist/`, and every entry in its package `exports` points there,
 so it has to be built before Vite can resolve the import. `npm run vendor:build` does that, and
@@ -729,6 +770,9 @@ scripts/
   svgAbsolute.mjs
   compare-artwork.mjs        re-renders each lockup over its original and diffs them
 vendor/json-url/             submodule — compresses a configuration into a share link
+vendor/brandkit/             submodule — the manual library and BC manual pages, and the template
+                             engine and studio the stationery is drawn with
+vendor/patcher/              submodule — the patch library and embroidery digitizer
 src/
   assets/                    generated artwork: the mark, the flag, the arms, the Parks frame
   logo/                      the framework-free core: layouts, measurement, colour, rendering
@@ -739,6 +783,8 @@ src/
   hydro/                     BC Hydro's signatures, the manual's rules, and its view
   export/                    SVG/PDF/PNG/WebP/JPEG, single files or a zipped bundle
   ministries/                the ministry list and its search
+  guides/                    the Visual Guides: brandkit's manual library, with this site's links
+  stationery/                the 1977 General Use stationery, as brandkit templates
   site/                      the React generator UI
 ```
 
