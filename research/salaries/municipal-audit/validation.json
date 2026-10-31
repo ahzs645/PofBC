@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-31",
+  "baselineCommit": "280e80817ec3f94827cd97b02e87c93d9b368d17",
+  "summary": {
+    "currentJurisdictions": 161,
+    "pendingJurisdictions": 1,
+    "auditedJurisdictions": 162,
+    "withAnySalaryRecordsBefore": 30,
+    "withAnySalaryRecordsAfter": 56,
+    "withOfficialRecordsBefore": 2,
+    "withOfficialRecordsAfter": 47,
+    "withOfficialEmployeeRecords": 46,
+    "withOfficialCouncilRecords": 19,
+    "withNoOfficialRecords": 114,
+    "withNoSalaryRecords": 105,
+    "newlyAcceptedSourceCohorts": 143,
+    "newlyAcceptedReportYears": 125,
+    "municipalitiesInAddedCollections": 46,
+    "newlyAcceptedRecords": 46779,
+    "newEmployeeRecords": 46648,
+    "newCouncilRecords": 131,
+    "municipalOfficialRecords": 98999,
+    "municipalCompiledUnverifiedRecords": 24054,
+    "municipalitiesWithExplicitSalarySourceLeads": 129,
+    "distinctSourceLeadUrls": 3799,
+    "allRecordsBefore": 832864,
+    "allRecordsAfter": 878615,
+    "allRecordsNetChange": 45751,
+    "allEmployersBefore": 133,
+    "allEmployersAfter": 159,
+    "replacedCompiledRecords": 1028
+  },
+  "publishedOutput": {
+    "rows": 878615,
+    "namedRows": 873376,
+    "employers": 159,
+    "atlasBodies": 45,
+    "years": [
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2006/07",
+      "2007",
+      "2007/08",
+      "2008",
+      "2008/09",
+      "2009",
+      "2009/10",
+      "2010",
+      "2010/11",
+      "2011",
+      "2011/12",
+      "2012",
+      "2012/13",
+      "2013",
+      "2013/14",
+      "2014",
+      "2014/15",
+      "2015",
+      "2015/16",
+      "2016",
+      "2016/17",
+      "2017",
+      "2017/18",
+      "2018",
+      "2018/19",
+      "2019",
+      "2019/20",
+      "2020",
+      "2020/21",
+      "2021",
+      "2021/22",
+      "2022",
+      "2022/23",
+      "2023",
+      "2023/24",
+      "2024",
+      "2024/25",
+      "2025",
+      "2025/26"
+    ],
+    "availableEmployerYears": 570
+  },
+  "officialRows": 628704,
+  "retainedCompiledRows": 249911,
+  "acceptedSourceFiles": 303,
+  "duplicateLookingExtras": 311,
+  "checks": {
+    "allPublishedViewsReconcile": "passed",
+    "sourceHashRowAndMoneyControls": "passed",
+    "pythonParserRegressionTests": {
+      "passed": 133,
+      "failed": 0,
+      "command": "python3 -m unittest discover -s scripts -p 'test_*.py'"
+    },
+    "nodeSalaryTests": {
+      "passed": 64,
+      "failed": 0,
+      "runtime": "Node 22.23.4",
+      "command": "node --test scripts/salary-data.test.mjs src/salaries/*.test.js src/government/salaries.test.js"
+    },
+    "salaryPreviewBuild": "passed",
+    "generatedOutputReproduction": {
+      "status": "passed",
+      "files": 1204,
+      "changedFiles": 0,
+      "firstRuntime": "Node 24.22.1",
+      "secondRuntime": "Node 22.23.4 (matches CI major version)",
+      "manifestSha256": "0134d2a693e8918e7028125f8739a35b353c2487a02a717ae0327048f7930dac"
+    },
+    "independentMunicipalSourceAudit": {
+      "cohorts": 173,
+      "newCohorts": 143,
+      "allHashesAndCountsVerified": true
+    },
+    "compiledReplacementReview": {
+      "rules": 5,
+      "removedEmployeeRows": 1028,
+      "retainedCouncilRows": 38,
+      "unrelatedBaselineRowsUnchanged": true,
+      "originalBaselineRows": 383163
+    },
+    "smallScheduleIndependentVisualReview": {
+      "cohorts": 17,
+      "records": 192,
+      "renderedPages": 12,
+      "defectsFoundAndFixed": [
+        "Mackenzie wrapped employee title",
+        "Valemount council-name capitalization"
+      ],
+      "unresolvedAcceptanceBlockingDefects": 0
+    }
+  },
+  "sourceManifestSha256": {
+    "municipal-north": "d85f364c15528fc53fdf1bc139d3d313c6f1e93410970d63d0112932b1dbaa35",
+    "municipal-island": "e8a5f30c4cd0031931432eca32a56d6873868e394b985ba37ff42b6db236f9b4",
+    "municipal-lower-mainland": "8e90ba7b174f6b4343bbac94a80dd8de4e997d7280d8e6e7bcad6dd216fe1b09",
+    "municipal-small": "2f56e6c800e34b9b19799fb23423163a1763eb72c272d48ba686b0926e875a1a",
+    "municipal-corrections": "ef6e7f04d1b3e155dcbb2fd6371f8df33f07968e589fb3bdcffae15ffbb90ac6"
+  },
+  "scopeLimitations": [
+    "Province-wide source discovery does not establish exhaustive historical coverage.",
+    "114 current jurisdictions still lack accepted official records;46 have accepted employee schedules and one has council-only records.",
+    "Scanned, draft, conflicting and unparsed schedules remain outside accepted data.",
+    "Official CSV-only early Victoria years explicitly lack original-PDF reconciliation.",
+    "No new browser usability review or unrelated logo/artwork review is claimed.",
+    "No municipal messages or records requests were sent."
+  ],
+  "integratedMainCommit": "af96ca84887923c93e3b1292d4d920cda19b10d6",
+  "upstreamIntegration": {
+    "status": "merged-cleanly",
+    "preservedCommits": [
+      "9435594",
+      "b63d4ae",
+      "af96ca8"
+    ],
+    "lockedDependenciesReinstalled": true,
+    "nodeSalaryTestsPassed": 64,
+    "nodeSalaryTestsFailed": 0,
+    "salaryPreviewBuild": "passed",
+    "salaryDataAndGeneratedEvidenceChanged": false
+  }
+}

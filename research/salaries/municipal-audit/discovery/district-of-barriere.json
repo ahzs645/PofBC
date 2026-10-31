@@ -1,0 +1,147 @@
+{
+  "municipality": "Barriere",
+  "employerSlug": "district-of-barriere",
+  "website": "http://www.barriere.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.barriere.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.barriere.ca",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 86007,
+      "sha256": "b9f90727e1589877a16034c9260a8bfb2b593097d6c009432af080d66e078f92",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.barriere.ca/p/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.barriere.ca/p/finance",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 99027,
+      "sha256": "d209848e5ee9435bab46ae840a8f7c71680d26666782c4c817f8f251ac11a78b",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.barriere.ca/p/administration",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.barriere.ca/p/administration",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 75608,
+      "sha256": "83b88de0d9234678aee5f6318a6310493b55bb8c1950d5f2b4a3dd7bc85289a2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.barriere.ca/p/government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.barriere.ca/p/government",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 90854,
+      "sha256": "00efd07bca4227f7266904836a8364b98b7dee94ab396829526128adac76cf0b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.barriere.ca/p/public-documents",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.barriere.ca/p/public-documents",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 85869,
+      "sha256": "eeb64daa9966483a76584fccabb06f8e616eaae7702a96347ecfa1032b17efdc",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://acrobat.adobe.com/id/urn:aaid:sc:va6c2:684f2108-9fba-4058-b6a9-d2d9b5f452e2",
+      "label": "Policy No. 37 - Beer Garden Regulation and Financial Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.barriere.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files%C2%A4tFolder=%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=COMPLETE%202020%20SOFI.pdf",
+      "label": "2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.barriere.ca/p/finance",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files%C2%A4tFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=5b%202023%20SOFI%20Report.pdf",
+      "label": "2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.barriere.ca/p/finance",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files%C2%A4tFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=Bylaw%20No_%2073%20Fees%20%26%20Charges%20-%20COMPILED%20March%202026.pdf",
+      "label": "Bylaw No. 73",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.barriere.ca/p/finance",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files%C2%A4tFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=FULL%202024%20Annual%20Report%20with%20Financials.pdf",
+      "label": "2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.barriere.ca/p/finance",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files%C2%A4tFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=Permissive%20Tax%20Exemption%20Application%20Fillable(2).pdf",
+      "label": "Permissive Tax Exemption Application Form",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.barriere.ca/p/finance",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files%C2%A4tFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=Signed%202024%20SOFI%20Complete.pdf",
+      "label": "2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.barriere.ca/p/finance",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=2025%20Calendar%20of%20Council%20Meetings.pdf",
+      "label": "2025 Council Meeting Schedule",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.barriere.ca/p/finance",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=Permissive%20Tax%20Exemption%20Application.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.barriere.ca/p/finance",
+      "yearsInLabel": []
+    }
+  ]
+}

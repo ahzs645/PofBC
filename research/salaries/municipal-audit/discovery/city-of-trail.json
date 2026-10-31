@@ -1,0 +1,225 @@
+{
+  "municipality": "Trail",
+  "employerSlug": "city-of-trail",
+  "website": "http://www.trail.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.trail.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://trail.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 448778,
+      "sha256": "70154b4b395f7aff78abebc3a9870e17a179695d2ca637b277db020be8fcba81",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 372527,
+      "sha256": "6d5fd3a1e9f3ff6bb2942b86004995c53fa9b7693e2d88826b6f224d3be046d0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/financial-statements/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://trail.ca/city-hall/budgets-finance/financial-statements/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 365597,
+      "sha256": "15ec854bfa61529465ce8891e3d1bc08cf837e0187b2a5c1b871e1271c7350ad",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/annual-reports/parks-recreation/recreation/programs-registration/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://trail.ca/parks-recreation/recreation/programs-registration/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 361564,
+      "sha256": "5fcfcf31a1bc98603cebff044f6c75b67bb2c9ecb8ee43f42dfec4b674f4ba7c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/financial-statements/parks-recreation/recreation/programs-registration/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://trail.ca/parks-recreation/recreation/programs-registration/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 361564,
+      "sha256": "5fcfcf31a1bc98603cebff044f6c75b67bb2c9ecb8ee43f42dfec4b674f4ba7c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://trail.ca/city-hall/budgets-finance/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 366248,
+      "sha256": "744f8b90678583c870975c6efa0318ca9b31bac91d2643a3c637975d498b0ce1",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/budgets/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://trail.ca/city-hall/budgets-finance/budgets/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 382570,
+      "sha256": "dbb172438450f4c11f02e7c7417b1a9b17eae9fe9dfda562821980d5de58b8e3",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://trail.ca/city-hall/departments/financial-services/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://trail.ca/city-hall/departments/financial-services/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 359037,
+      "sha256": "9f3431201f6311d944b99f7e2a077b04fdd0561580afa9fee5e15914555d021e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/budgets/parks-recreation/recreation/programs-registration/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://trail.ca/parks-recreation/recreation/programs-registration/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 361564,
+      "sha256": "5fcfcf31a1bc98603cebff044f6c75b67bb2c9ecb8ee43f42dfec4b674f4ba7c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://trail.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/annual-reports/parks-recreation/recreation/programs-registration/",
+      "label": ".. Register for a Program",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/financial-statements/",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://trail.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://trail.ca/city-hall/budgets-finance/financial-statements/parks-recreation/recreation/programs-registration/",
+      "label": ".. Register for a Program",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/financial-statements/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://trail.ca/wp-content/uploads/2026/06/2021Trail-Annual-Report.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://trail.ca/wp-content/uploads/2026/06/2022-STATEMENT-OF-FINANCIAL-INFORMATION.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/financial-statements/",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://trail.ca/wp-content/uploads/2026/06/2022AnnualReportFinal.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://trail.ca/wp-content/uploads/2026/06/2023-Annual-Report_FINAL.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+      "yearsInLabel": [
+        "2023",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://trail.ca/wp-content/uploads/2026/06/2023_Statement-of-Financial-Information.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/financial-statements/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://trail.ca/wp-content/uploads/2026/06/2024-Annual-Report_FINAL.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://trail.ca/wp-content/uploads/2026/06/2024-City-of-Trail-Statement-of-Financial-Information.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/financial-statements/",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://trail.ca/wp-content/uploads/2026/07/2025-Annual-Report-Final.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

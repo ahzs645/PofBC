@@ -1,0 +1,798 @@
+{
+  "municipality": "Esquimalt",
+  "employerSlug": "township-of-esquimalt",
+  "website": "http://www.esquimalt.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.esquimalt.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.esquimalt.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 118876,
+      "sha256": "47d04763491cec0a871703386a8ab80a56484f2b27e1a5053621c0498fdf6cbe",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 114442,
+      "sha256": "10ab7ec2e1fee9e32727f65ba028f78494e5ea0a60a2f901cb52f9b5b5d6b41b",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120952,
+      "sha256": "643de49f82f40d83ef0f1131e5960cd11459693db2639a59ecaafcfdbaffd8c2",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 114507,
+      "sha256": "cdfab5bc9f4cccfc563c7244cb19091ae8e0791bed94a34fbfab882d43e6544d",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.esquimalt.ca/media/7571",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.esquimalt.ca/media/file/2024-annual-report-finalpdf",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "b7332fd03c7317a13e3410fbe0ca7a060258f12973ee2a603a1e08999095c794",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 126507,
+      "sha256": "4dc5edbe89e967818796c8683da1b29a1624a094394ce0e85b4bd0100a877414",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.esquimalt.ca/government-bylaws/finance/insurance-claims",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.esquimalt.ca/government-bylaws/finance/insurance-claims",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120662,
+      "sha256": "8ddaeac94a4b8b10de5ea780c77968b6184689431ee19491d08f5fe68809f7fe",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.esquimalt.ca/media/file/2026-budget-bookpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.esquimalt.ca/media/file/2026-budget-bookpdf",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "86408100ebd70c1b5da440826eea0ef533a89e0db65bc58d9f59abbc35301bfc",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.esquimalt.ca/media/file/budget-book-2025",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.esquimalt.ca/media/file/budget-book-2025",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "410b2706c051b23ef29e160d1f31154f0f69195c91184fbf775daf39123fd182",
+      "status": "response-too-large"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "label": "Statement of Financial Information Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "label": "Financial Reports & Budgets",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "label": "Annual reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.esquimalt.ca/media/7571",
+      "label": "2024 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2802%20Financial%20Plan%2C%202013.pdf",
+      "label": "2013 Financial Plan Bylaw No. 2802",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2013",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2803%20Tax%20Rates%20Bylaw%2C%202013_0.pdf",
+      "label": "2013 Tax Rates Bylaw No. 2803",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2013",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2823%20Financial%20Plan%20%282014-2018%29%2C%202014.pdf",
+      "label": "2014 Financial Plan Bylaw No. 2823",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2014",
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2824%20Tax%20Rates%20Bylaw%2C%202014.pdf",
+      "label": "2014 Tax Rates Bylaw No. 2824",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2014",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2850%20Financial%20Plan%202015%20Bylaw%2C%202015.pdf",
+      "label": "2015 Financial Plan Bylaw No. 2850",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2851%20Tax%20Rates%2C%202015.pdf",
+      "label": "2015 Tax Rates Bylaw No. 2851",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2015",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2871%20Financial%20Plan%202016%20Bylaw.pdf",
+      "label": "2016 Financial Plan Bylaw No. 2871",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2016",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2872%20Tax%20Rates%202016%20Bylaw.pdf",
+      "label": "2016 Tax Rates Bylaw No. 2872",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2016",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2890%20Financial%20Plan%20Bylaw%2C%202017.pdf",
+      "label": "2017 Financial Plan Bylaw No. 2890",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2891%20Tax%20Rates%20Bylaw%2C%202017.pdf",
+      "label": "2017 Tax Rates Bylaw No. 2891",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2017",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2920%20Financial%20Plan%20Bylaw%2C%202018.pdf",
+      "label": "2018 Financial Plan Bylaw No. 2920",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2921%20Tax%20Rates%20Bylaw%2C%202018.pdf",
+      "label": "2018 Tax Rates Bylaw No. 2921",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2018",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2959%20-%20Financial%20Plan%20Bylaw_2019.pdf",
+      "label": "2019 Financial Plan Bylaw No. 2959",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2019",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2960%20-%20Tax%20Rates%20Bylaw_2019.pdf",
+      "label": "2019 Tax Rates Bylaw No. 2960",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2019",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2986%20-%20Financial%20Plan%20Bylaw%202020.pdf",
+      "label": "2020 Financial Plan Bylaw No. 2986",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/2987%20-%20Tax%20Rates%20Bylaw%202020.pdf",
+      "label": "2020 Tax Rates Bylaw No. 2987",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/3016%20-%20Financial%20Plan%20Bylaw%2C%202021.pdf",
+      "label": "2021 Financial Plan Bylaw No. 3016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2021",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/3017%20-%20Tax%20Rates%20Bylaw%2C%202021.pdf",
+      "label": "2021 Tax Rates Bylaw No. 3017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2021",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/3055%20-%20Tax%20Rates%20Bylaw%2C%202022%2C%20No.%203055.pdf",
+      "label": "2022 Tax Rates Bylaw No. 3055",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2022",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/3096%20-%20Financial%20Plan%20Bylaw%2C%202023%2C%20No.%203096%20with%20Schedules%20A%20and%20B.pdf",
+      "label": "2023 Financial Plan Bylaw No. 3096",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/3097%20-%20Tax%20Rates%20Bylaw%2C%202023%2C%20No.%203097%20with%20Schedule%20A.pdf",
+      "label": "2023 Tax Rates Bylaw No. 3097",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/Bylaw%203054%20-%202022-2026%20Financial%20Plan.pdf",
+      "label": "2022 Financial Plan Bylaw No. 3054",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2022",
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/Financial%20Plan%20Bylaw%203137%20-%20Signed.pdf",
+      "label": "2024 Financial Plan Bylaw No. 3137",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-05/Tax%20Rates%20Bylaw%203138%20-%20Signed.pdf",
+      "label": "2024 Tax Rates Bylaw No. 3138",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-07/2023%20Statement%20of%20Financial%20Information%20APPROVED_1.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2024-07/2023%20annual%20report-FINAL.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2025-02/2025%20Draft%20Budget.pdf",
+      "label": "2025 Draft Budget",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2025-02/2025%20Supplemental%20Requests%20-%20Mar%203.pdf",
+      "label": "2025 Supplemental Requests March 3",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2025-02/2025%20Supplemental%20Staff%20Additions%20-%20Mar%203.pdf",
+      "label": "2025 Supplemental Staff Additions March 3",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2025-06/2024%20Statement%20of%20Financial%20Information%20APPROVED.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-01/2026-budget-book.pdf",
+      "label": "2026 Budget Overview",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-01/capital%20projects_book_20260113pdf.pdf",
+      "label": "(read the 2026 Capital Projects Guide)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-02/2024%20-%202027%20Workforce%20Plan%20Corporate%20Services%20-%202026%20Update.pdf",
+      "label": "2024-2027-Workforce Plan Corporate Services",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "yearsInLabel": [
+        "2024",
+        "2026",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-02/2024%20-%202027%20Workforce%20Plan%20HR%20and%20Community%20Relations.pdf",
+      "label": "2024-2027-Workforce Plan Human Resources and Community Relations",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "yearsInLabel": [
+        "2024",
+        "2026",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-02/2025%20-%202027%20Workforce%20Plan%20Fire%20Department.pdf",
+      "label": "2024-2027-Workforce Plan Esquimalt Fire Rescue",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "yearsInLabel": [
+        "2024",
+        "2025",
+        "2026",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-02/2026%20-%202030%20Workforce%20Plan%20-%20EPW.pdf",
+      "label": "2024-2027-Workforce Plan Engineering/Public Works",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget",
+      "yearsInLabel": [
+        "2024",
+        "2026",
+        "2027",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-05/2025%20Financial%20Plan%20Bylaw%20No.%203159.pdf",
+      "label": "2025 Financial Plan Bylaw No. 3159",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-05/2025%20Tax%20Rates%20Bylaw%20No.%203160.pdf",
+      "label": "2025 Tax Rates Bylaw No. 3160",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-05/2025%20annual%20report%20FINAL.pdf",
+      "label": "Read the 2025 Township of Esquimalt Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-05/2026%20Financial%20Plan%20Bylaw%20No.%203180.pdf",
+      "label": "2026 Financial Plan Bylaw No. 3180",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-05/2026%20Tax%20Rates%20Bylaw%20No.%203181.pdf",
+      "label": "2026 Tax Rates Bylaw No. 3181",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/2026-06/2025%20Statement%20of%20Financial%20Information.pdf",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/2010_annual_report_for_web.pdf",
+      "label": "2010 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/2011_annual_report_for_review.pdf",
+      "label": "2011 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/2012_annual_report_web.pdf",
+      "label": "2012 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/2014_annual_report_web.pdf",
+      "label": "2014 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/2018/toe_2017_annual_report_web.pdf",
+      "label": "2017 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/Esquimalt_Annual_Report_2019-202007-FINAL.pdf",
+      "label": "2019 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/annual_report_2008.pdf",
+      "label": "2007 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2007"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/annual_report_2008_created_june_2009.pdf",
+      "label": "2008 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/annual_report_2009_web.pdf",
+      "label": "2009 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/annual_report_2013_township_of_esquimalt.pdf",
+      "label": "2013 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/esquimalt_annual_report_2015_web.pdf",
+      "label": "2015 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2016/final_statement_of_financial_information_signed.pdf",
+      "label": "2015 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2015",
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2017/2016_sofi.pdf",
+      "label": "2016 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2016",
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2017/toe_annual_report_2016_web.pdf",
+      "label": "2016 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2016",
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2018/sofi_final_signed.pdf",
+      "label": "2017 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2019/2018_Approved_SOFI_.pdf",
+      "label": "2018 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2018",
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2019/FINAL_2019_Statement_of_Financial_Information.pdf",
+      "label": "2019 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/finance-2021/2020_Approved_SOFI.pdf",
+      "label": "2020 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2020",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/finance-2021/2021_Statement_of_Financial_Information_FINAL.pdf",
+      "label": "2021 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/finance-2022/2022_Statement_of_Financial_Information_FINAL.pdf",
+      "label": "2022 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/sofi_2014.pdf",
+      "label": "2014 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/related/Esquimalt_Annual_Report_2019-web_0.pdf",
+      "label": "2018 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/related/Esquimalt_Annual_Report_2020-FINAL.pdf",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/related/Esquimalt_Annual_Report_2021-final.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.esquimalt.ca/sites/default/files/docs/related/Esquimalt_Annual_Report_2023-FINAL.pdf",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    }
+  ]
+}

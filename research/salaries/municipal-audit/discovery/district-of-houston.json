@@ -1,0 +1,134 @@
+{
+  "municipality": "Houston",
+  "employerSlug": "district-of-houston",
+  "website": "http://www.houston.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.houston.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://houston.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 204634,
+      "sha256": "cc59802cef26d6e0f8e9cff63d69d751f5af2844588791be21dfe8c0f7940e8d",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://houston.ca/community/finance/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://houston.ca/community/finance/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 139739,
+      "sha256": "6072663d86a4f3ef179511650c01efa9ee44f196aae9a6ac6a79e092b9a7b616",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://houston.ca/news-and-notices/2027-budget-survey/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://houston.ca/news-and-notices/2027-budget-survey/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 157998,
+      "sha256": "2a590fb1bf90a204f806c2dfdfdf86a87fbc1cd008036922ec8c474674d3c7b0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://houston.ca/community/finance/financial-planning/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://houston.ca/community/finance/financial-planning/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 128728,
+      "sha256": "e46678de26eb0de6b95d08d321a71774770d20916ee9020b5bdfb28df3d077dd",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://houston.ca/community/finance/property-taxes/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://houston.ca/community/finance/property-taxes/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 164931,
+      "sha256": "11f6ed50d97975ad593bf712fc76593fb1a8f842ba73b81890599bb1bfdd9aed",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://houston.ca/our-government/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://houston.ca/our-government/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 140806,
+      "sha256": "f71a225995cb2b1ac19f39e65635d3f25bccda5128600bee7e52e6e7c2434018",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://houston.ca/our-government/bylaws/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://houston.ca/our-government/bylaws/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 171528,
+      "sha256": "6e3ffff5abe77314df27c2906e2e5dd2b2161825873890809ec566c010da33e6",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://houston.ca/our-government/careers/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://houston.ca/our-government/careers/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 126872,
+      "sha256": "b5afad66419fc93227c58bc4d5c79228971a1ae63afd6d85b7ba09fbbe6b4f5d",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://houston.ca/our-government/council-and-committees/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://houston.ca/our-government/council-and-committees/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 137177,
+      "sha256": "d1bb29d71501efefbac3c9e9824f592c32cc9595201d0e3203f88cdf22c22b45",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://houston.civicweb.net/filepro/documents/143267/",
+      "label": "View SOFI Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://houston.ca/community/finance/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://houston.civicweb.net/filepro/documents/143268/",
+      "label": "View Audited Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://houston.ca/community/finance/",
+      "yearsInLabel": []
+    }
+  ]
+}

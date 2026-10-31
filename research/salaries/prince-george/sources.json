@@ -1380,17 +1380,19 @@
       ]
     }
   ],
-  "unparsedSources": [
+  "unparsedSources": [],
+  "resolvedSourceLeads": [
     {
       "id": "prince-george-sofi-2023",
-      "employerSlug": "city-of-prince-george",
       "year": "2023",
-      "periodType": "calendar",
-      "sourceUrl": "https://pub-princegeorge.escribemeetings.com/filestream.ashx?DocumentId=26123",
-      "indexUrl": "https://www.princegeorge.ca/finance",
-      "status": "held-for-review",
-      "reason": "Official 2023 attachment returned HTTP 403; original PDF not obtained or verified.",
-      "nextAction": "Obtain the original 2023 SOFI PDF from the City or an accessible official archive, then verify both named schedules."
+      "previousStatus": "held-for-review",
+      "resolvedOn": "2026-10-31",
+      "acceptedCollection": "municipal-north",
+      "acceptedSourceIds": [
+        "prince-george-sofi-2023-employees",
+        "prince-george-sofi-2023-elected-officials"
+      ],
+      "reason": "The original eScribe PDF was recovered; all 404 employee rows and nine council rows passed independent reader and component control checks."
     }
   ]
 }

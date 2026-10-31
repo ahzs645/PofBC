@@ -1,0 +1,135 @@
+{
+  "municipality": "Nelson",
+  "employerSlug": "city-of-nelson",
+  "website": "http://www.nelson.ca/",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.nelson.ca/",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nelson.ca/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 127949,
+      "sha256": "7673f2a96deea08bb9d6e73a1ef4dadfc1b49d5998887ef8357a6dffb81861e0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.nelson.ca/ArchiveCenter/ViewFile/Item/185",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nelson.ca/ArchiveCenter/ViewFile/Item/185",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "4610b33a7d929f6dde8961830010b526c7011153ae3ee8b59edb13a3dd06f50a",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.nelson.ca/27/Your-Government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nelson.ca/27/Your-Government",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 111730,
+      "sha256": "d7b517840585ff65ab81b881b020bd704968b281da9d5d4df634e384b51aa712",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.nelson.ca/203/Budget-Financial-Reports",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nelson.ca/203/Budget-Financial-Reports",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 109381,
+      "sha256": "7ed9e523a9dad8eb9655ffa007f83213d73fed6080196ea7b3b04c20d492ffea",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.nelson.ca/CivicAlerts.aspx?AID=1094",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nelson.ca/m/newsflash/home/detail/1094",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 99477,
+      "sha256": "938fe4f85dde66ae27d5558d4745a3caffda9a9644742447367e9824638bb14a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.nelson.ca/3154/2026-Local-Government-Election",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nelson.ca/3154/2026-Local-Government-Election",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 110530,
+      "sha256": "5dd08a53d57450ef20349cb5d404cdfe4251dd9b512802caa5ae47f743db2565",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.nelson.ca/586/City-Administration",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nelson.ca/586/City-Administration",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 91579,
+      "sha256": "260cfa8f454c1b77c5b554e5c76ac2de9091285342bfa8236c326130d44af518",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.nelson.ca/203/Budget-Financial-Reports",
+      "label": "Budget & Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.nelson.ca/27/Your-Government",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "label": "Statement of Financial Information (SOFI)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.nelson.ca/203/Budget-Financial-Reports",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.nelson.ca/Archive.aspx?AMID=38",
+      "label": "City of Nelson Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.nelson.ca/203/Budget-Financial-Reports",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.nelson.ca/ArchiveCenter/ViewFile/Item/185",
+      "label": "2025 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.nelson.ca/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://nelson.ca/DocumentCenter/View/11308/Five-Year-Financial-Plan-2026-2030-Bylaw-No-3660-2026",
+      "label": "Approved 2026 Budget",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.nelson.ca/203/Budget-Financial-Reports",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    }
+  ]
+}

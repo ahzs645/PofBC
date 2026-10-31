@@ -1,0 +1,336 @@
+{
+  "municipality": "North Vancouver",
+  "employerSlug": "city-of-north-vancouver",
+  "website": "http://www.cnv.org",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.cnv.org",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cnv.org",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 445753,
+      "sha256": "9a8499171d3b43b1cd2817ee6f8c74b0ff60e91513217e0632ca44d3cd004487",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 515640,
+      "sha256": "fd3917539ab5e6f3c6c45305b988053e3b0f671503d9260b792a9490b19bdf42",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.cnv.org/City-Hall/About/Departments/Finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cnv.org/City-Hall/About/Departments/Finance",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 448916,
+      "sha256": "620549bff4b498c42f175bdcc1c888d49319dab0d662d31d8523e65dd982a30e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.cnv.org/City-Hall/Council-Meetings/Public-Hearings-and-Public-Meetings/Finance-Committee-Minutes",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cnv.org/City-Hall/Council-Meetings/Public-Hearings-and-Public-Meetings/Finance-Committee-Minutes",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 443290,
+      "sha256": "114ea76bfe1f0211345be125dc94dba120c66347445964c1ee942a957a714913",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.cnv.org/City-Hall/Finances",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cnv.org/City-Hall/Finances",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 430828,
+      "sha256": "83fcf27c6d9f6699d974fc7926f1ef6a5f31f8b667db6f7b752387966c351294",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.cnv.org/City-Hall/Finances/Annual-Municipal-Report",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cnv.org/City-Hall/Finances/Annual-Municipal-Report",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 508496,
+      "sha256": "44b3788c43628451b57f0ac7792815d647492ba74a49ca4fd8c0380dee7e367b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.cnv.org/City-Hall/Finances/Financial-Plan",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cnv.org/City-Hall/Finances/Financial-Plan",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 572933,
+      "sha256": "32b88c4228b1a55cac29d78a315be7ed195cb2ee7fe694ffe3de961d293e727c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.cnv.org/Business-Development/Filming-In-the-City/Filming-Locations/Filming-in-City-Hall",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cnv.org/Business-Development/Filming-In-the-City/Filming-Locations/Filming-in-City-Hall",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 434787,
+      "sha256": "cc46973b36b641ee6715e4856cfb4e1399f8d2c980a193e9d0dcf19ff0aae2ea",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.cnv.org/Business-Development/Permits-Inspections/Building-Permit-Statistical-Reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cnv.org/Business-Development/Permits-Inspections/Building-Permit-Statistical-Reports",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 544888,
+      "sha256": "6c3287a59ed74751aa991c37e4de25052185e2914da14608de184fc155069547",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.cnv.org",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Building-Permit-Statistical-Reports/2019/2019-Annual-Report.pdf",
+      "label": "2019 Annual Statistical Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/Business-Development/Permits-Inspections/Building-Permit-Statistical-Reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Building-Permit-Statistical-Reports/2022/2022-Annual-Report.pdf",
+      "label": "2022 Annual Statistical Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/Business-Development/Permits-Inspections/Building-Permit-Statistical-Reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Building-Permit-Statistical-Reports/2023/2023-Annual-Report.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/Business-Development/Permits-Inspections/Building-Permit-Statistical-Reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2016/2016-Audited-Financial-Statements.pdf",
+      "label": "2016 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2016/2016-Statement-of-Financial-Information-SOFI.pdf",
+      "label": "2016 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2017/2017-Audited-Consolidated-Statements.pdf",
+      "label": "2017 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2017/2017-Statement-of-Financial-Information-SOFI.pdf",
+      "label": "2017 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2018/2018-Audited-Financial-Statements-2.pdf",
+      "label": "2018 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2018/2018-Statement-of-Financial-Information-SOFI.pdf",
+      "label": "2018 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2019/2019-Audited-Consolidated-Statements.pdf",
+      "label": "2019 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2019/2019-Statement-of-Financial-Information-SOFI.pdf",
+      "label": "2019 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2020/2020-Audited-Consolidated-Statements.pdf",
+      "label": "2020 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2020/2020-Statement-of-Financial-Information-SOFI.pdf",
+      "label": "2020 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2021/2021-Audited-Consolidated-Financial-Statements.PDF",
+      "label": "2021 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2021/2021-Statement-of-Financial-Information-SOFI.pdf",
+      "label": "2021 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Audited-Consolidated-Statements.pdf",
+      "label": "2022 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Statement-of-Financial-Information-SOFI.PDF",
+      "label": "2022 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2023/2023-Audited-Consolidated-Statements.pdf",
+      "label": "2023 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2023/2023-Statement-of-Financial-Information.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2024/2024-Audited-Consolidated-Statements.PDF",
+      "label": "2024 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2024/2024-Statement-of-Financial-Information.PDF",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2026/2025-CNV-Consolidated-Financial-Statements.pdf",
+      "label": "2025 Audited Consolidated Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2026/2025-Statement-of-Financial-Information.pdf",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

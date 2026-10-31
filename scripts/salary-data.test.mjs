@@ -7,10 +7,14 @@ import { gzipSync, gunzipSync } from 'node:zlib'
 import { spawnSync } from 'node:child_process'
 import { csvRows, money, sumMoney, median, duplicateStats, repeatedCandidates, sha256, validateReplacementScopes, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
-import { employerSector, employerSlug } from './lib/salary-employers.mjs'
+import { employerSector, employerSlug, canonicalSlug } from './lib/salary-employers.mjs'
 
 const row = (name, pay = 100000.01, year = '2017/18') => ({ slug: 'bc-hydro', year, name, position: null, pay, expenses: null })
 test('municipalities and Metro Vancouver are local government, not the provincial Government sector', () => {
+  assert.equal(canonicalSlug('district-of-mission'), 'city-of-mission')
+  assert.equal(canonicalSlug('district-of-delta'), 'city-of-delta')
+  assert.equal(canonicalSlug('township-of-langley'), 'langley-township')
+  assert.equal(canonicalSlug('bowen-island-municipality'), 'bowen-island')
   for (const slug of ['city-of-vancouver', 'city-of-prince-george', 'district-of-saanich', 'village-of-anmore', 'bowen-island',
     'langley-township', 'langley-city', 'metro-vancouver', employerSlug('District of Delta'), employerSlug('Township of Langley')]) {
     assert.equal(employerSector(slug, 'Government'), 'Municipalities', slug)
@@ -32,11 +36,13 @@ test('a pinned calendar correction preserves council and fails closed when sourc
   const employee = { ...row('Employee, A', 100000, '2020/21'), sourceId: 'compiled' }
   const mayor = { ...row('Mayor, B', 150000, '2020/21'), position: 'Mayor', sourceId: 'compiled' }
   const original = [employee, mayor]
+  const officialHash = sha256('reviewed official source fixture')
   const rule = { employerSlug: 'bc-hydro', compiledYear: '2020/21', replacementYear: '2020', sourceIds: ['official'],
+    sourceDataSha256: { official: officialHash },
     expectedRows: 1, expectedRetainedRows: 1, selectedRowsSha256: sha256(JSON.stringify([[employee.name, employee.position, employee.pay, employee.expenses]])),
     retainPositions: ['Mayor'], reason: 'Verified source calendar period and exact cohort comparison.',
     retainedSource: { id: 'compiled-council', scope: 'elected-officials' } }
-  const sources = () => ({ compiled: { scope: 'compiled-unverified', sourceKind: 'compiled' }, official: { scope: 'employee-remuneration' } })
+  const sources = () => ({ compiled: { scope: 'compiled-unverified', sourceKind: 'compiled' }, official: { scope: 'employee-remuneration', dataSha256: officialHash } })
   const official = [{ ...employee, year: '2020', sourceId: 'official' }]
   const registry = sources()
   const result = applyCompiledReplacements(original, official, registry, [rule])
@@ -49,7 +55,9 @@ test('a pinned calendar correction preserves council and fails closed when sourc
   assert.throws(() => applyCompiledReplacements(original, [], sources(), [rule]), /not imported/)
   assert.throws(() => applyCompiledReplacements([{ ...employee, pay: 100001 }, mayor], official, sources(), [rule]), /evidence no longer matches/)
   assert.throws(() => applyCompiledReplacements(original, official, sources(), [{ ...rule, retainPositions: [] }]), /evidence no longer matches/)
-  assert.throws(() => applyCompiledReplacements(original, official, { ...sources(), official: { scope: 'executive-only' } }, [rule]), /partial disclosure/)
+  assert.throws(() => applyCompiledReplacements(original, official, { ...sources(), official: { scope: 'executive-only', dataSha256: officialHash } }, [rule]), /partial disclosure/)
+  assert.throws(() => applyCompiledReplacements(original, official, { ...sources(), official: { scope: 'employee-remuneration', dataSha256: sha256('changed source') } }, [rule]), /source fingerprint changed/)
+  assert.throws(() => applyCompiledReplacements(original, official, sources(), [{ ...rule, sourceDataSha256: {} }]), /source fingerprint changed/)
 })
 test('a recovered cohort clears only an exactly reviewed ambiguous travel assignment', () => {
   const employee = { ...row('Example,Pat', 90000, '2017/18'), sourceId: 'employees', expenses: 16000 }
@@ -234,9 +242,15 @@ test('source catalog decisions are per employer and period, including a partiall
   assert.equal(catalog.length, 3)
   assert.equal(catalog.find((entry) => entry.employerSlug === 'sub-powertech-labs').status, 'imported')
   assert.equal(catalog.find((entry) => entry.employerSlug === 'bc-hydro').status, 'held-for-review')
+  assert.equal(catalog.find((entry) => entry.employerSlug === 'bc-hydro').reason, 'Totals differ')
   assert.equal(catalog.find((entry) => entry.employerSlug === 'bcit').status, 'source-found-awaiting-extraction')
   assert.equal(hasLocatedSource(sourceLeadsFor(catalog, 'bc-hydro', '2024/25')), true)
   assert.deepEqual(sourceLeadsFor(catalog, 'sub-powertech-labs', '2024/25'), [])
+  const preciseHold = sourceCatalog({}, [{ collection: 'municipal', manifest: { sources: [], unparsedSources: [
+    { id: 'draft', employerSlug: 'city-of-west-kelowna', year: '2025', sourceUrl: 'https://example.test/draft.pdf', status: 'held-for-review', reason: 'Approval page is unsigned.', nextAction: 'Obtain the adopted report.' }
+  ] } }])
+  assert.equal(sourceLeadsFor(preciseHold, 'city-of-west-kelowna', '2025')[0].reason, 'Approval page is unsigned.')
+  assert.equal(preciseHold[0].nextAction, 'Obtain the adopted report.')
 })
 
 test('partial executive imports cannot erase an employee disclosure without a reviewed scope decision', () => {

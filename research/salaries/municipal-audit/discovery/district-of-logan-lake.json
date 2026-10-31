@@ -1,0 +1,111 @@
+{
+  "municipality": "Logan Lake",
+  "employerSlug": "district-of-logan-lake",
+  "website": "http://www.loganlake.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.loganlake.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://loganlake.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 49378,
+      "sha256": "48c7de14ef94fa7a8faf8e71448707c02085de911d141649ea7f45acdb9db5a9",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://loganlake.ca/your-municipality/finance-department/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://loganlake.ca/your-municipality/finance-department/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 74231,
+      "sha256": "342f4a0a7765538ba12fa7032fe9924ffed7d3a6ac1ade01f83e6f525b7ca2d7",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://loganlake.ca/your-municipality/corporate-admin-department/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://loganlake.ca/your-municipality/corporate-admin-department/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 58606,
+      "sha256": "47dd320f14a7038259f02464d6ee6b3a3f055b02087327221aee4791fde7775a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://loganlake.ca/your-municipality/council-meetings/local-government-awareness-week/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://loganlake.ca/your-municipality/council-meetings/local-government-awareness-week/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 97475,
+      "sha256": "f78a81f1dddf7011bd416f3dd07fb7f34d048b75e2bc1571b5b8479a0fa00ef9",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://loganlake.ca/your-municipality/council-meetings/local-government-awareness-week/banner-contest-2025/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://loganlake.ca/your-municipality/council-meetings/local-government-awareness-week/banner-contest-2025/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 66758,
+      "sha256": "ea5ebfee25d44971de5b2255423647f554471e2dcef90c95531534a788c4973b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://loganlake.ca//wp-content/uploads/2026/05/2026-TAX-RATES-BYLAW.pdf",
+      "label": "Tax Rates Bylaw No. 959, 2026",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://loganlake.ca/your-municipality/finance-department/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://loganlake.ca//wp-content/uploads/2026/05/FINANCIAL-PLAN-BYLAW-2026-2030.pdf",
+      "label": "Five Year Financial Plan Bylaw No. 958, 2026 (2026 – 2030)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://loganlake.ca/your-municipality/finance-department/",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://loganlake.ca//wp-content/uploads/2026/05/FINANCIAL-STATEMENTS-2025.pdf",
+      "label": "2025 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://loganlake.ca/your-municipality/finance-department/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://loganlake.ca//wp-content/uploads/2026/05/SOFI-2025.pdf",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://loganlake.ca/your-municipality/finance-department/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

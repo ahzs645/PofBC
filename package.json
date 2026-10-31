@@ -2,7 +2,7 @@
   "name": "pofbc-logo",
   "private": true,
   "version": "0.1.0",
-  "description": "Province of British Columbia logo generator — four lockups, colour variants, and SVG/PDF/PNG/WebP/JPEG export.",
+  "description": "Province of British Columbia logo generator \u2014 four lockups, colour variants, and SVG/PDF/PNG/WebP/JPEG export.",
   "type": "module",
   "license": "UNLICENSED",
   "engines": {
@@ -66,7 +66,9 @@
     "build:government": "npm run build:government-history && npm run build:government-events && npm run build:government-atlas && npm run build:government-research && npm run build:research-brief && npm run build:research-queue",
     "check:government": "node scripts/check-government-drift.mjs",
     "build:research-queue": "node scripts/build-research-queue.mjs",
-    "research:merge": "node scripts/merge-research.mjs"
+    "research:merge": "node scripts/merge-research.mjs",
+    "audit:municipal-salaries": "node scripts/audit-municipal-salaries.mjs",
+    "compare:municipal-periods": "node scripts/compare-municipal-periods.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

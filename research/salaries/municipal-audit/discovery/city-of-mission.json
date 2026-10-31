@@ -1,0 +1,268 @@
+{
+  "municipality": "Mission",
+  "employerSlug": "city-of-mission",
+  "website": "http://www.mission.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.mission.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mission.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 98878,
+      "sha256": "69563b897ac70b5f68563c0b4d205042d89c27de9e45dca15014307e7e6052d5",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 92882,
+      "sha256": "5604c2cf61bd74425706b6e9e32d740afff2bb246408072ea61d3791e3a4305b",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.mission.ca/media/file/2023-sofi-report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mission.ca/media/file/2023-sofi-report",
+      "contentType": "application/pdf",
+      "bytes": 486250,
+      "sha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.mission.ca/media/file/2024-sofi-report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mission.ca/media/file/2024-sofi-report",
+      "contentType": "application/pdf",
+      "bytes": 522117,
+      "sha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 584620,
+      "sha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.mission.ca/media/file/2023-annual-report-0",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mission.ca/media/file/2023-annual-report-0",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "cfbbd4d2d0675acf781f85e33199ccabfda2af607eb002a80715b47dde75b9eb",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.mission.ca/media/file/annual-report-2024",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mission.ca/media/file/annual-report-2024",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "47de0f07a24f196b1f1c2cd9497503bc766634f1e3802b1a459c6eae5a4078a1",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2013",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mission.ca/media/file/mission-annual-report-2013",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "b495cddb9eebac0cf9ad0d18867f62745a13b527ce63b7bf11866ec784a91e04",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2014",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mission.ca/media/file/mission-annual-report-2014",
+      "contentType": "application/pdf",
+      "bytes": 7667741,
+      "sha256": "2daac53fc02615764b629ce609a7e8365cf083235f72e58ee13ffc27362c6830",
+      "status": "pdf-downloaded-unreviewed"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://online.flippingbook.com/view/405867676/",
+      "label": "2023 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "label": "Financial Reporting",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.mission.ca/media/file/2023-annual-report-0",
+      "label": "2023 Annual Report [PDF/30.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/annual-report-2024",
+      "label": "2024 Annual Report [PDF/34.9MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2013",
+      "label": "2013 Annual Report [PDF/12.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2015",
+      "label": "2015 Annual Report [PDF/9.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2016",
+      "label": "2016 Annual Report [PDF/24.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2017",
+      "label": "2017 Annual Report [PDF/29MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2018",
+      "label": "2018 Annual Report [PDF/27.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2019",
+      "label": "2019 Annual Report [PDF/31.4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2020",
+      "label": "2020 Annual Report [PDF/32.1MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2021",
+      "label": "2021 Annual Report [PDF/12.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2022",
+      "label": "2022 Annual Report [PDF/15.4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/2023-sofi-report",
+      "label": "2023 SOFI Report [PDF/475KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/media/file/2023-sofi-report",
+      "yearsInLabel": [
+        "2023",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/2024-sofi-report",
+      "label": "2024 SOFI Report [PDF/510KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/media/file/2024-sofi-report",
+      "yearsInLabel": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "label": "2025 SOFI Report [PDF/571KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "yearsInLabel": [
+        "2025",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.mission.ca/media/file/mission-annual-report-2014",
+      "label": "2014 Annual Report [PDF/7.3MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.mission.ca/media/file/mission-annual-report-2014",
+      "yearsInLabel": [
+        "2014",
+        "2014"
+      ]
+    }
+  ]
+}

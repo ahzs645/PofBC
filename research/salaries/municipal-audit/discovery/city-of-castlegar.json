@@ -1,0 +1,246 @@
+{
+  "municipality": "Castlegar",
+  "employerSlug": "city-of-castlegar",
+  "website": "http://www.castlegar.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.castlegar.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://castlegar.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 204762,
+      "sha256": "2c78f4872866e25fa92a32e295411c53ba00295d78875156b66422b8b867013c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 162509,
+      "sha256": "a314c490dc42d2a404f42858ee498ce827d4305b32c13fef0f4390b9fad6b599",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 159763,
+      "sha256": "b3b4200e56eef768de7599161f68ac50f37d99de421fd30f0315b5fb3f0e44ae",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://castlegar.ca/government/reports-plans-publications/annual-report/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 162509,
+      "sha256": "385e1c3071626c052b89329e8b774ceccb1f34294c30dcc2125509daf57e55af",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://castlegar.ca/contact/city-departments/financial-services/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://castlegar.ca/contact/city-departments/financial-services/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 163448,
+      "sha256": "8ab9874f1ca6f5564ce385e135710b5a513418807defdc4797bb7482432bb762",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://castlegar.ca/government/your-government/city-budgeting/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://castlegar.ca/government/your-government/city-budgeting/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 165119,
+      "sha256": "ff0c8a7e6e5b5429522e14f4868ebb760ac67e282b2a0cd45c2b2a52446bfc42",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://castlegar.ca/contact/city-departments/content-directory/?department=Financial Services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "URL can't contain control characters. '/contact/city-departments/content-directory/?department=Financial Services' (found at least ' ')"
+    },
+    {
+      "url": "https://castlegar.ca/profile/?profile=Kerry%20Wright",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://castlegar.ca/profile/?profile=Kerry%20Wright",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 154784,
+      "sha256": "71c10dcbbbf14ae4fc1f8b633e8d6050e8421a132d91bdaee0fdc9c1b344b37b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://castlegar.ca/profile/?profile=Paul%20Wallin",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://castlegar.ca/profile/?profile=Paul%20Wallin",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 154803,
+      "sha256": "f6090dab9d715934e26872a21d74128bc65bcf08c73793be120d302e5c2a7ba0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://castlegar.ca/government/reports-plans-publications/annual-report/",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "label": "Financial Reporting",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2023/01/Castlegar-AR-2021-digitalweb.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2023/04/2020-City-of-Castlegar-Annual-Report.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2023/05/2021-Statement-of-Financial-Information-amended-FINAL.pdf",
+      "label": "2021 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2023/07/2022-Annual-Report.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2023/11/2022-Statement-of-Financial-Information.pdf",
+      "label": "2022 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2024/07/2023-Statement-of-Financial-Information.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2024/07/Castlegar_AR_2023_v9_DraftPublic.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2025/09/2024-Statement-of-Financial-Information.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2025/10/Castlegar_AR_2024_v16-1.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2026/06/Castlegar-2025-SOFI-Report.pdf",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://castlegar.ca/wp-content/uploads/2026/08/Castlegar_AR_2025_v6_FINAL-Reduced-File-Size.pdf",
+      "label": "2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

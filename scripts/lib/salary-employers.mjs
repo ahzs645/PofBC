@@ -61,7 +61,13 @@ export const BODIES = {
   'Provincial government': 'public-service'
 }
 
-export const EMPLOYER_ALIASES = { 'langley-city': 'city-of-langley' }
+export const EMPLOYER_ALIASES = {
+  'langley-city': 'city-of-langley',
+  'township-of-langley': 'langley-township',
+  'bowen-island-municipality': 'bowen-island',
+  'district-of-delta': 'city-of-delta',
+  'district-of-mission': 'city-of-mission'
+}
 export const canonicalSlug = (slug) => EMPLOYER_ALIASES[slug] ?? slug
 const SAME_EMPLOYER = {
   emilycarr: 'emily-carr-university', 'emily-carr': 'emily-carr-university', 'oakanagan-college': 'okanagan-college',

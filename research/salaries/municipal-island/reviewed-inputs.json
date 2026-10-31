@@ -1,0 +1,1656 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-31",
+  "accepted": [
+    {
+      "id": "victoria-2012-employees",
+      "city": "victoria",
+      "year": "2012",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "Official City CSV; no original-PDF reconciliation is claimed for this early release. The original CSV schema, exact source bytes, named-row count and monetary totals are retained.",
+        "The amount uses the published RemunerationGreaterThan75000/RemunerationOver75000 field. No separately published benefits field exists in these early exports.",
+        "Disclosed names/initials are not unique person identifiers."
+      ],
+      "amountPrecision": "cents",
+      "localFile": "victoria-2012-employees.csv",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/8f5c5c95e32f4438af5eef963703f1a7/data",
+      "sha256": "d0108c579265998e490d391e02fb17acc1415c0881d24810d5d53be18e4aab0a",
+      "format": "csv",
+      "rowCount": 245,
+      "totals": [
+        23065900.23,
+        394452.55
+      ]
+    },
+    {
+      "id": "victoria-2013-employees",
+      "city": "victoria",
+      "year": "2013",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "Official City CSV; no original-PDF reconciliation is claimed for this early release. The original CSV schema, exact source bytes, named-row count and monetary totals are retained.",
+        "The amount uses the published RemunerationGreaterThan75000/RemunerationOver75000 field. No separately published benefits field exists in these early exports.",
+        "Disclosed names/initials are not unique person identifiers."
+      ],
+      "amountPrecision": "cents",
+      "localFile": "victoria-2013-employees.csv",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/578528a60e224d72a314424d1cd8b879/data",
+      "sha256": "dfb5b52374cf552109e42a3362ae3f44fd9bd2d4e705ad280cfaf6e5dcaa5010",
+      "format": "csv",
+      "rowCount": 254,
+      "totals": [
+        23661693.57,
+        422852.48
+      ]
+    },
+    {
+      "id": "victoria-2014-employees",
+      "city": "victoria",
+      "year": "2014",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "Official City CSV; no original-PDF reconciliation is claimed for this early release. The original CSV schema, exact source bytes, named-row count and monetary totals are retained.",
+        "The amount uses the published RemunerationGreaterThan75000/RemunerationOver75000 field. No separately published benefits field exists in these early exports.",
+        "Disclosed names/initials are not unique person identifiers."
+      ],
+      "amountPrecision": "cents",
+      "localFile": "victoria-2014-employees.csv",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/e6e354efca9d401a90e180b87d9ddd1b/data",
+      "sha256": "f404ad3f64b27cdb25f5196fb8fd197452106d4afb74218d6ef36a90128a2892",
+      "format": "csv",
+      "rowCount": 269,
+      "totals": [
+        26895440.29,
+        416084.32
+      ]
+    },
+    {
+      "id": "victoria-2016-employees",
+      "city": "victoria",
+      "year": "2016",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented."
+      ],
+      "amountPrecision": "cents",
+      "format": "pdf",
+      "localFile": "victoria-2016.pdf",
+      "url": "https://www.victoria.ca/media/file/2016-statement-financial-informationpdf",
+      "sha256": "c88dbaba1eea082499a5e2685ab795bdb8f24bd5458013f310e49bbc03f1ac09",
+      "companionCsv": {
+        "localFile": "victoria-2016-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/0d1c9e3ef3d54f4eb59f4e78c7ffb870/data",
+        "sha256": "a5d91361c94ceaf9f19e9a89b256ee8f532326ac06ef9fb3a9fca1eba93b1e71"
+      },
+      "pages": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "periodEvidence": "Year Ended December 31,? 2016",
+      "prefixAliases": {
+        "stratfordkcommunityrecreationneighbourhooddevelopmentcoordinator": "stratfordkcommunityrecreationandneighbourhooddevelopmentcoordinator"
+      },
+      "publishedTitles": {
+        "Stratford, K": "Community Recreation / Neighbourhood Development Coordinator"
+      },
+      "componentTotals": [
+        29527095.12,
+        1481943.44,
+        506196.55
+      ],
+      "printedComponentSubtotals": [
+        29527095.12,
+        1481943.44,
+        506196.55
+      ],
+      "printedTotals": [
+        29527095.12,
+        506196.55
+      ],
+      "rowCount": 316,
+      "totals": [
+        29527095.12,
+        506196.55
+      ]
+    },
+    {
+      "id": "victoria-2017-employees",
+      "city": "victoria",
+      "year": "2017",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented."
+      ],
+      "amountPrecision": "cents",
+      "format": "pdf",
+      "localFile": "victoria-2017.pdf",
+      "url": "https://www.victoria.ca/media/file/2017-statement-financial-informationpdf",
+      "sha256": "2710b953f5964dceb90384c62f236c13359cef92868a7952d123460339dc018b",
+      "companionCsv": {
+        "localFile": "victoria-2017-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/0109115c6b1242fa9b1a8b60d49ce5d2/data",
+        "sha256": "4df396beee159a718edb34529c6fd3687cc392202f2f53f4096bd1075d28a2f3"
+      },
+      "pages": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "periodEvidence": "Year Ended December 31,? 2017",
+      "prefixAliases": {},
+      "publishedTitles": {},
+      "componentTotals": [
+        31384980.06,
+        1577997.9,
+        502121.08
+      ],
+      "printedComponentSubtotals": [
+        31384980.06,
+        1577997.9,
+        502121.08
+      ],
+      "printedTotals": [
+        31384980.06,
+        502121.08
+      ],
+      "rowCount": 331,
+      "totals": [
+        31384980.06,
+        502121.08
+      ]
+    },
+    {
+      "id": "victoria-2018-employees",
+      "city": "victoria",
+      "year": "2018",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented."
+      ],
+      "amountPrecision": "cents",
+      "format": "pdf",
+      "localFile": "victoria-2018.pdf",
+      "url": "https://www.victoria.ca/media/file/2018-statement-financial-informationpdf",
+      "sha256": "09446ec36c2c13c0445800e4d5d7f015d1ebeae60959db4474f7ef35ea656675",
+      "companionCsv": {
+        "localFile": "victoria-2018-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/6b1291056ae340568d11c85e4100fdc2/data",
+        "sha256": "c1e8b10f95c58fd3cab0ffd3cc926981671a8692ea1a05f22882206ea451092e"
+      },
+      "pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "periodEvidence": "Year Ended December 31,? 2018",
+      "prefixAliases": {},
+      "publishedTitles": {},
+      "componentTotals": [
+        34681143.69,
+        1348502.36,
+        549451.72
+      ],
+      "printedComponentSubtotals": [
+        34681143.68,
+        1348502.36,
+        549451.72
+      ],
+      "printedTotals": [
+        34681143.68,
+        549451.72
+      ],
+      "rowCount": 364,
+      "totals": [
+        34681143.69,
+        549451.72
+      ]
+    },
+    {
+      "id": "victoria-2019-employees",
+      "city": "victoria",
+      "year": "2019",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented."
+      ],
+      "amountPrecision": "cents",
+      "format": "pdf",
+      "localFile": "victoria-2019.pdf",
+      "url": "https://www.victoria.ca/media/file/2019-statement-financial-information",
+      "sha256": "6714b4d0703d617e621eab668ffb698792f33ec069c4bc1df4b15deb5fdbe376",
+      "companionCsv": {
+        "localFile": "victoria-2019-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/4b2074fac36a40009e2734b710858962/data",
+        "sha256": "d04315cdceb6b881feced8bc960670dbf3e7838ddd502c08547c5c1954bc4e94"
+      },
+      "pages": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "periodEvidence": "Year Ended December 31,? 2019",
+      "prefixAliases": {},
+      "publishedTitles": {},
+      "componentTotals": [
+        37234579.88,
+        1347108.58,
+        478302.03
+      ],
+      "printedComponentSubtotals": [
+        37234579.88,
+        1347108.58,
+        478302.03
+      ],
+      "printedTotals": [
+        37234579.88,
+        478302.03
+      ],
+      "rowCount": 385,
+      "totals": [
+        37234579.88,
+        478302.03
+      ]
+    },
+    {
+      "id": "victoria-2020-employees",
+      "city": "victoria",
+      "year": "2020",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented."
+      ],
+      "amountPrecision": "cents",
+      "format": "pdf",
+      "localFile": "victoria-2020.pdf",
+      "url": "https://www.victoria.ca/media/file/2020-statement-financial-informationpdf",
+      "sha256": "3d589a485bdb12df9ee80e7a4359cb704faff09ee20eabe3fc42cd81e5e86008",
+      "companionCsv": {
+        "localFile": "victoria-2020-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/f572be5e505e455e96cd68dce74debe9/data",
+        "sha256": "9955b24e76832ca33f0758a11b29eab319a82f039c278e9be18efaea73d45ea1"
+      },
+      "pages": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "periodEvidence": "Year Ended December 31,? 2020",
+      "prefixAliases": {
+        "berkeleyrseniorbuildingandplumbinginspectorandqualitycontrolcoord": "berkeleyrseniorbuildingandplumbinginspectorandqualitycontrolcoordinator",
+        "villanuevasmanagerfacilityandeventoperationsvictoriaconferencecent": "villanuevasmanagerfacilityandeventoperationsvictoriaconferencecentre",
+        "lockhartjmanagerrevenue": "lockhartjactingmanagerfinancialplanning"
+      },
+      "publishedTitles": {
+        "Lockhart, J": "Manager - Revenue"
+      },
+      "componentTotals": [
+        45267530.56,
+        1404912.85,
+        319190.31
+      ],
+      "printedComponentSubtotals": [
+        45267530.56,
+        1404912.85,
+        319190.3
+      ],
+      "printedTotals": [
+        45267530.56,
+        319190.3
+      ],
+      "rowCount": 459,
+      "totals": [
+        45267530.56,
+        319190.31
+      ]
+    },
+    {
+      "id": "victoria-2021-employees",
+      "city": "victoria",
+      "year": "2021",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented."
+      ],
+      "amountPrecision": "cents",
+      "format": "pdf",
+      "localFile": "victoria-2021.pdf",
+      "url": "https://www.victoria.ca/media/file/2021-statement-financial-information",
+      "sha256": "ce0aa7cca64f5b3f00a2ce95d726915b4972007947796b12eaea5b5900284d64",
+      "companionCsv": {
+        "localFile": "victoria-2021-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/9eba7ccbb40442bcb1e8cebaf5168357/data",
+        "sha256": "687364a4ffed2528f32e0e81f853501521dc68bb2bb3747465887e208c8f5962"
+      },
+      "pages": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "periodEvidence": "Year Ended December 31,? 2021",
+      "prefixAliases": {},
+      "publishedTitles": {},
+      "componentTotals": [
+        45765178.67,
+        2159858.01,
+        275349.75
+      ],
+      "printedComponentSubtotals": [
+        45765178.67,
+        2159858.01,
+        275349.75
+      ],
+      "printedTotals": [
+        45765178.67,
+        275349.75
+      ],
+      "rowCount": 470,
+      "totals": [
+        45765178.67,
+        275349.75
+      ]
+    },
+    {
+      "id": "victoria-2022-employees",
+      "city": "victoria",
+      "year": "2022",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented."
+      ],
+      "amountPrecision": "cents",
+      "format": "pdf",
+      "localFile": "victoria-2022.pdf",
+      "url": "https://www.victoria.ca/media/file/2022-statement-financial-information",
+      "sha256": "ca74ef6c04e7c4839c95cba1185ab3e215d79e48a43c6f9da72bfb8e94379fbf",
+      "companionCsv": {
+        "localFile": "victoria-2022-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/e7981a683d87466b874bffff62310f35/data",
+        "sha256": "ce3243f4759ddfa722c37158019779b816abbb53ce58524d7cadec7d38fb8b34"
+      },
+      "pages": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "periodEvidence": "Year Ended December 31,? 2022",
+      "prefixAliases": {},
+      "publishedTitles": {},
+      "layoutRepairs": [
+        {
+          "page": 39,
+          "before": "SAN BUENAVENTURA,Technologist\n                    B          - Undgrd Design",
+          "after": "SAN BUENAVENTURA, B  Technologist - Undgrd Design"
+        },
+        {
+          "page": 43,
+          "before": "BOSWORTH-RUMM, F\n               Gire Fighter 1st Class",
+          "after": "BOSWORTH-RUMM, G  Fire Fighter 1st Class"
+        }
+      ],
+      "componentTotals": [
+        48940609.15,
+        2012410.48,
+        449361.17
+      ],
+      "printedComponentSubtotals": [
+        48940609.15,
+        2012410.48,
+        449361.17
+      ],
+      "printedTotals": [
+        48940609.15,
+        449361.17
+      ],
+      "rowCount": 490,
+      "totals": [
+        48940609.15,
+        449361.17
+      ]
+    },
+    {
+      "id": "victoria-2023-employees",
+      "city": "victoria",
+      "year": "2023",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented.",
+        "Three initials clipped in the PDF table (Janota-Bzowska, Van den Boomen and Bosworth-Rumm) are retained as published in the companion City CSV, matched by name fragment, position and monetary values. No unpublished initials are inferred."
+      ],
+      "amountPrecision": "cents",
+      "format": "pdf",
+      "localFile": "victoria-2023.pdf",
+      "url": "https://www.victoria.ca/media/file/2023-statement-financial-information",
+      "sha256": "ab367da0d70d42d1aa63eddb2656b3d9c1ed667352d927095f166747d98f43d0",
+      "companionCsv": {
+        "localFile": "victoria-2023-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/affdf0475cbc478f90ca58b5d2e56bcd/data",
+        "sha256": "279a5edf42b39ade7b681baf6cbfdcb6a1969e379082ded8d563d595dbf54c0b"
+      },
+      "pages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "periodEvidence": "Year Ended December 31,? 2023",
+      "prefixAliases": {
+        "janotabzowskaplanner": "janotabzowskakplanner",
+        "vandenboomensupervisorsolidwasterecyc": "vandenboomendsupervisorsolidwasterecyc",
+        "bosworthrummfirefighter1stclass": "bosworthrummgfirefighter1stclass"
+      },
+      "publishedTitles": {},
+      "componentTotals": [
+        60220822.36,
+        2936923.38,
+        760367.89
+      ],
+      "printedComponentSubtotals": [
+        60220822.36,
+        2936923.38,
+        760367.89
+      ],
+      "printedTotals": [
+        60220822.36,
+        760367.89
+      ],
+      "rowCount": 591,
+      "totals": [
+        60220822.36,
+        760367.89
+      ]
+    },
+    {
+      "id": "victoria-2024-employees",
+      "city": "victoria",
+      "year": "2024",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented."
+      ],
+      "amountPrecision": "whole-dollar",
+      "format": "pdf",
+      "localFile": "victoria-2024.pdf",
+      "url": "https://www.victoria.ca/media/file/2024-statement-financial-informationpdf",
+      "sha256": "4ff4f628dee5180d4a2de12109846e724c6f4dbe38f95668752bdf738aa0d177",
+      "companionCsv": {
+        "localFile": "victoria-2024-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/1d83f6f24fd14eb1bf82a5d105183b4e/data",
+        "sha256": "0c74ce33aa9ff7bda5afb17d2b82ea7b0dba57aec7bdcbd69db9cc15127dfb18"
+      },
+      "pages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "prefixAliases": {},
+      "publishedTitles": {},
+      "componentTotals": [
+        69949708,
+        4621306,
+        835848
+      ],
+      "printedComponentSubtotals": [
+        69949721,
+        4621310,
+        835840
+      ],
+      "printedTotals": [
+        69949721,
+        835840
+      ],
+      "rowCount": 663,
+      "totals": [
+        69949708,
+        835848
+      ]
+    },
+    {
+      "id": "victoria-2025-employees",
+      "city": "victoria",
+      "year": "2025",
+      "employerSlug": "city-of-victoria",
+      "employerName": "City of Victoria",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is preserved. Victoria reports taxable benefits and payouts in a separate column; those amounts are retained in the component ledger and are not silently added to remuneration.",
+        "The disclosed cohort threshold considers remuneration together with separately reported benefits and payouts; a remuneration amount below $75,000 is therefore not automatically an invalid row.",
+        "Police-department employees are excluded by the source. A published name or initials do not establish a unique identity.",
+        "Original PDF amounts take precedence where the accompanying City open-data CSV differs. Source residuals and all CSV/PDF monetary differences remain documented."
+      ],
+      "amountPrecision": "whole-dollar",
+      "format": "pdf",
+      "localFile": "victoria-2025.pdf",
+      "url": "https://www.victoria.ca/media/file/2025-statement-financial-information",
+      "sha256": "f485ee2cb78d55670a423778e3a04bd79d97300c90e2fdccb35dca237462bf97",
+      "companionCsv": {
+        "localFile": "victoria-2025-employees.csv",
+        "url": "https://www.arcgis.com/sharing/rest/content/items/9e31dd260f6e49eda499f78d27849897/data",
+        "sha256": "eca2fe06070fa2844088a50ff09824077c8f4a664ab019ccbf4c7d06d25144d6"
+      },
+      "pages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "periodEvidence": "Year Ended December 31,? 2025",
+      "prefixAliases": {},
+      "publishedTitles": {},
+      "componentTotals": [
+        74615117,
+        2846619,
+        856712
+      ],
+      "printedComponentSubtotals": [
+        74615126,
+        2846621,
+        856695
+      ],
+      "printedTotals": [
+        74615126,
+        856695
+      ],
+      "rowCount": 707,
+      "totals": [
+        74615117,
+        856712
+      ]
+    },
+    {
+      "id": "nanaimo-2019-employees",
+      "city": "nanaimo",
+      "year": "2019",
+      "employerSlug": "city-of-nanaimo",
+      "employerName": "City of Nanaimo",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "nanaimo-2019.pdf",
+      "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2019-statement-of-financial-information.pdf",
+      "indexUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+      "sha256": "09c052e3d84597b6a61c8a315162b386ca7fde61dbe600622fea6701d644fb9d",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2019",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved."
+      ],
+      "amountPrecision": "cents",
+      "printedTotals": [
+        31699332.7,
+        411404.04
+      ],
+      "rowCount": 312,
+      "totals": [
+        31699332.7,
+        411404.04
+      ]
+    },
+    {
+      "id": "nanaimo-2021-employees",
+      "city": "nanaimo",
+      "year": "2021",
+      "employerSlug": "city-of-nanaimo",
+      "employerName": "City of Nanaimo",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "nanaimo-2021.pdf",
+      "url": "https://www.nanaimo.ca/docs/default-document-library/2021-statement-of-financial-informationb74dd03a1b316d6b9fc9ff0f001037d2.pdf",
+      "indexUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+      "sha256": "507df8cab2b968bd8b45e72725664113f833287343b0b97e7069365bc862b5da",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2021",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved."
+      ],
+      "amountPrecision": "cents",
+      "printedTotals": [
+        38508994.4,
+        278970.21
+      ],
+      "rowCount": 369,
+      "totals": [
+        38508994.4,
+        278970.21
+      ]
+    },
+    {
+      "id": "nanaimo-2022-employees",
+      "city": "nanaimo",
+      "year": "2022",
+      "employerSlug": "city-of-nanaimo",
+      "employerName": "City of Nanaimo",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "nanaimo-2022.pdf",
+      "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2022-statement-of-financial-information.pdf",
+      "indexUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+      "sha256": "8d5b3de0f60fad2a816e05d7edc240df2adeea65e11b1d57c122d61f4f7b82ec",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2022",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved."
+      ],
+      "amountPrecision": "cents",
+      "printedTotals": [
+        40456195.63,
+        396795.75
+      ],
+      "rowCount": 384,
+      "totals": [
+        40456195.63,
+        396795.75
+      ]
+    },
+    {
+      "id": "nanaimo-2023-employees",
+      "city": "nanaimo",
+      "year": "2023",
+      "employerSlug": "city-of-nanaimo",
+      "employerName": "City of Nanaimo",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "nanaimo-2023.pdf",
+      "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2023-statement-of-financial-information.pdf",
+      "indexUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+      "sha256": "51e363c4e581f345af0f2011784f74905225f1da3ccab113aed98ab500b42939",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2023",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved."
+      ],
+      "amountPrecision": "cents",
+      "printedTotals": [
+        46402809.01,
+        513415.85
+      ],
+      "rowCount": 443,
+      "totals": [
+        46402809.01,
+        513415.85
+      ]
+    },
+    {
+      "id": "nanaimo-2024-employees",
+      "city": "nanaimo",
+      "year": "2024",
+      "employerSlug": "city-of-nanaimo",
+      "employerName": "City of Nanaimo",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "nanaimo-2024.pdf",
+      "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2024-statement-of-financial-information.pdf",
+      "indexUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+      "sha256": "0192271d6e2d72eb5f07b510d05f4f46dc62c0dfe551f82d17c82aa7a94610b7",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2024",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved."
+      ],
+      "amountPrecision": "cents",
+      "printedTotals": [
+        54788218.43,
+        533859.55
+      ],
+      "rowCount": 506,
+      "totals": [
+        54788218.43,
+        533859.55
+      ]
+    },
+    {
+      "id": "nanaimo-2025-employees",
+      "city": "nanaimo",
+      "year": "2025",
+      "employerSlug": "city-of-nanaimo",
+      "employerName": "City of Nanaimo",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "nanaimo-2025.pdf",
+      "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2025-official-statement-of-financial-information.pdf",
+      "indexUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+      "sha256": "6c72c39fb218202cf05a7a831f6a5adb41e5c9e7e0311e8ebd0553a0d24425f2",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2025",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved."
+      ],
+      "amountPrecision": "cents",
+      "printedTotals": [
+        62040288.15,
+        690760.83
+      ],
+      "rowCount": 565,
+      "totals": [
+        62040288.15,
+        690760.83
+      ]
+    },
+    {
+      "id": "saanich-2021-employees",
+      "city": "saanich",
+      "year": "2021",
+      "employerSlug": "district-of-saanich",
+      "employerName": "District of Saanich",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "saanich-2021.pdf",
+      "url": "https://www.saanich.ca/assets/Local~Government/Documents/Corporate~and~Annual~Reports/Saanich Final SOFI 2021 Approved.pdf",
+      "indexUrl": "https://www.saanich.ca/EN/main/local-government/departments/finance-department/financial-reports.html",
+      "sha256": "322bb2ff52f44e1a3af6139b844d3420c43ba6078339e1114aa948dae5d5be58",
+      "pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2021",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved.",
+        "The source explicitly excludes employees of the Saanich Police Board."
+      ],
+      "amountPrecision": "whole-dollar",
+      "printedTotals": [
+        41041746,
+        214126
+      ],
+      "rowCount": 401,
+      "totals": [
+        41041746,
+        214126
+      ]
+    },
+    {
+      "id": "saanich-2022-employees",
+      "city": "saanich",
+      "year": "2022",
+      "employerSlug": "district-of-saanich",
+      "employerName": "District of Saanich",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "saanich-2022.pdf",
+      "url": "https://www.saanich.ca/assets/Local~Government/Documents/Corporate~and~Annual~Reports/Saanich SOFI 2022.pdf",
+      "indexUrl": "https://www.saanich.ca/EN/main/local-government/departments/finance-department/financial-reports.html",
+      "sha256": "6939b43f50a9271b30d417a14723acf381abafe9a0e86ffda24c8e2dbb021201",
+      "pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2022",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved.",
+        "The source explicitly excludes employees of the Saanich Police Board."
+      ],
+      "amountPrecision": "whole-dollar",
+      "printedTotals": [
+        41733520,
+        316474
+      ],
+      "rowCount": 390,
+      "totals": [
+        41733520,
+        316474
+      ]
+    },
+    {
+      "id": "saanich-2023-employees",
+      "city": "saanich",
+      "year": "2023",
+      "employerSlug": "district-of-saanich",
+      "employerName": "District of Saanich",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "saanich-2023.pdf",
+      "url": "https://www.saanich.ca/assets/Local~Government/Documents/2023 Statement of Financial Information Report.pdf",
+      "indexUrl": "https://www.saanich.ca/EN/main/local-government/departments/finance-department/financial-reports.html",
+      "sha256": "6a0b1ec51b0b1439bf1aec5a8e4f3d7a8736a7061b9a630f1ba24d54498e51c7",
+      "pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2023",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved.",
+        "The source explicitly excludes employees of the Saanich Police Board."
+      ],
+      "amountPrecision": "whole-dollar",
+      "printedTotals": [
+        55562603,
+        408326
+      ],
+      "rowCount": 528,
+      "totals": [
+        55562603,
+        408326
+      ]
+    },
+    {
+      "id": "saanich-2024-employees",
+      "city": "saanich",
+      "year": "2024",
+      "employerSlug": "district-of-saanich",
+      "employerName": "District of Saanich",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "saanich-2024.pdf",
+      "url": "https://www.saanich.ca/assets/Local~Government/Documents/Final Dist Saanich SOFI 2024 May 28.pdf",
+      "indexUrl": "https://www.saanich.ca/EN/main/local-government/departments/finance-department/financial-reports.html",
+      "sha256": "1e521e508c3fc630071508d9e5cba9aa744a1f5121ca5455e02b052b15219f0f",
+      "pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2024",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved.",
+        "The source explicitly excludes employees of the Saanich Police Board."
+      ],
+      "amountPrecision": "whole-dollar",
+      "printedTotals": [
+        62261341,
+        481578
+      ],
+      "rowCount": 591,
+      "totals": [
+        62261341,
+        481578
+      ]
+    },
+    {
+      "id": "saanich-2025-employees",
+      "city": "saanich",
+      "year": "2025",
+      "employerSlug": "district-of-saanich",
+      "employerName": "District of Saanich",
+      "category": "employee-remuneration",
+      "format": "pdf",
+      "localFile": "saanich-2025.pdf",
+      "url": "https://www.saanich.ca/assets/Local~Government/Documents/Financial~Plan/Dist Saanich SOFI 2025.pdf",
+      "indexUrl": "https://www.saanich.ca/EN/main/local-government/departments/finance-department/financial-reports.html",
+      "sha256": "f77b4ca55aabbc3689c29ca003b0c8e901bf2b6be47988177fd82a9b1c6b8bbd",
+      "pages": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "periodEvidence": "(year ended|year ended on) December 31,? 2025",
+      "notes": [
+        "The source publishes calendar-year remuneration, not an annual salary rate or a full employee census. Under-threshold aggregates and employer payroll contributions are excluded. Blank/dash expenses remain missing; explicit source zeros and negative recoveries are preserved.",
+        "The source explicitly excludes employees of the Saanich Police Board."
+      ],
+      "amountPrecision": "whole-dollar",
+      "printedTotals": [
+        70094733,
+        458009
+      ],
+      "rowCount": 615,
+      "totals": [
+        70094733,
+        458009
+      ]
+    },
+    {
+      "id": "duncan-2024-employees",
+      "city": "duncan",
+      "year": "2024",
+      "employerSlug": "city-of-duncan",
+      "employerName": "City of Duncan",
+      "category": "employee-remuneration",
+      "indexUrl": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "format": "pdf",
+      "localFile": "duncan-2024.pdf",
+      "url": "https://duncan.ca/wp-content/uploads/2025/06/SOFI-2024.pdf",
+      "sha256": "9080c700498e0c6693fd1ee4878b9e3c982acdfa728ece824a5cb6636a353338",
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "pages": [
+        4
+      ],
+      "rowCount": 20,
+      "totals": [
+        2045416.99,
+        44047.24
+      ],
+      "printedTotals": [
+        2045416.99,
+        44047.24
+      ],
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "notes": [
+        "The published remuneration column is retained as reported; this is annual remuneration, not a standardized base-salary rate. Expense dashes or blank cells are preserved as missing rather than fabricated zero values.",
+        "Every extracted monetary row was checked against a second PDF reader using positioned cells and the associated published name. Schedule pages and printed control totals were visually reviewed.",
+        "Source notes on physical page 5 state that employee remuneration includes wages, taxable benefits, and potentially overtime, retirement allowances and banked-time payouts."
+      ],
+      "nameX": 175,
+      "pageSlices": [
+        {
+          "page": 4,
+          "after": "2 Employees - *See Notes on Page 4*",
+          "before": "  Subtotal"
+        }
+      ]
+    },
+    {
+      "id": "duncan-2024-council",
+      "city": "duncan",
+      "year": "2024",
+      "employerSlug": "city-of-duncan",
+      "employerName": "City of Duncan",
+      "category": "elected-officials",
+      "indexUrl": "https://duncan.ca/city-hall/mayor-council/reports-and-publications/",
+      "format": "pdf",
+      "localFile": "duncan-2024.pdf",
+      "url": "https://duncan.ca/wp-content/uploads/2025/06/SOFI-2024.pdf",
+      "sha256": "9080c700498e0c6693fd1ee4878b9e3c982acdfa728ece824a5cb6636a353338",
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "pages": [
+        4
+      ],
+      "rowCount": 7,
+      "totals": [
+        157063.92,
+        34691.14
+      ],
+      "printedTotals": [
+        157063.92,
+        34691.14
+      ],
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "notes": [
+        "The published remuneration column is retained as reported; this is annual remuneration, not a standardized base-salary rate. Expense dashes or blank cells are preserved as missing rather than fabricated zero values.",
+        "Every extracted monetary row was checked against a second PDF reader using positioned cells and the associated published name. Schedule pages and printed control totals were visually reviewed."
+      ],
+      "nameX": 175,
+      "pageSlices": [
+        {
+          "page": 4,
+          "after": "1 Elected Officials - *See Notes on Page 4*",
+          "before": "2 Employees - *See Notes on Page 4*"
+        }
+      ]
+    },
+    {
+      "id": "sechelt-2024-employees",
+      "city": "sechelt",
+      "year": "2024",
+      "employerSlug": "district-of-sechelt",
+      "employerName": "District of Sechelt",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.sechelt.ca/our-government/budget-and-finances/financial-plan-and-reports/",
+      "format": "pdf",
+      "localFile": "sechelt-2024.pdf",
+      "url": "https://www.sechelt.ca/media/ckxgv52f/2024-sofi-report.pdf",
+      "sha256": "0399a38f5f87dcb3416cbf459ee4c2128787fce1b8e8faba0b19b93511e15b7d",
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "pages": [
+        3
+      ],
+      "rowCount": 36,
+      "totals": [
+        4003699,
+        109397
+      ],
+      "printedTotals": [
+        4003698,
+        109396
+      ],
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-full-name",
+      "notes": [
+        "The published remuneration column is retained as reported; this is annual remuneration, not a standardized base-salary rate. Expense dashes or blank cells are preserved as missing rather than fabricated zero values.",
+        "Every extracted monetary row was checked against a second PDF reader using positioned cells and the associated published name. Schedule pages and printed control totals were visually reviewed.",
+        "The source states remuneration includes salary, wages and taxable benefits. Individually displayed whole-dollar rows sum $1 above each printed named subtotal; source values are retained without correction."
+      ],
+      "nameX": 170,
+      "moneyX": 350,
+      "pageSlices": [
+        {
+          "page": 3,
+          "after": "Other Employees with remuneration exceeding $75,000",
+          "before": "Subtotal: Other Employees"
+        }
+      ]
+    },
+    {
+      "id": "sechelt-2024-council",
+      "city": "sechelt",
+      "year": "2024",
+      "employerSlug": "district-of-sechelt",
+      "employerName": "District of Sechelt",
+      "category": "elected-officials",
+      "indexUrl": "https://www.sechelt.ca/our-government/budget-and-finances/financial-plan-and-reports/",
+      "format": "pdf",
+      "localFile": "sechelt-2024.pdf",
+      "url": "https://www.sechelt.ca/media/ckxgv52f/2024-sofi-report.pdf",
+      "sha256": "0399a38f5f87dcb3416cbf459ee4c2128787fce1b8e8faba0b19b93511e15b7d",
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "pages": [
+        3
+      ],
+      "rowCount": 7,
+      "totals": [
+        210080,
+        56747
+      ],
+      "printedTotals": [
+        210078,
+        56747
+      ],
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-full-name",
+      "notes": [
+        "The published remuneration column is retained as reported; this is annual remuneration, not a standardized base-salary rate. Expense dashes or blank cells are preserved as missing rather than fabricated zero values.",
+        "Every extracted monetary row was checked against a second PDF reader using positioned cells and the associated published name. Schedule pages and printed control totals were visually reviewed.",
+        "Displayed council remuneration sums $2 above the printed whole-dollar total; source amounts are retained."
+      ],
+      "nameX": 170,
+      "moneyX": 350,
+      "pageSlices": [
+        {
+          "page": 3,
+          "after": "Elected Officials",
+          "before": "Other Employees with remuneration exceeding $75,000"
+        }
+      ]
+    },
+    {
+      "id": "north-cowichan-2024-employees",
+      "city": "north-cowichan",
+      "year": "2024",
+      "employerSlug": "district-of-north-cowichan",
+      "employerName": "District of North Cowichan",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "format": "pdf",
+      "localFile": "north-cowichan-2024.pdf",
+      "url": "https://www.northcowichan.ca/media/1396",
+      "sha256": "aa30ac1a05875f7bbe7cf7f02929bc6b66ea59614c0443b59efc4130758d003e",
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "rowCount": 130,
+      "totals": [
+        13486447,
+        206074
+      ],
+      "printedTotals": [
+        13486444,
+        206073
+      ],
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "surname-and-initials",
+      "notes": [
+        "The published remuneration column is retained as reported; this is annual remuneration, not a standardized base-salary rate. Expense dashes or blank cells are preserved as missing rather than fabricated zero values.",
+        "Every extracted monetary row was checked against a second PDF reader using positioned cells and the associated published name. Schedule pages and printed control totals were visually reviewed.",
+        "Named controls appear on physical page 10. Individually displayed whole-dollar rows sum $3 above the printed remuneration subtotal and $1 above the expense subtotal; source values are retained without correction.",
+        "The separate elected-official table has a benefits column and is not included in this cohort."
+      ],
+      "pageSlices": [
+        {
+          "page": 6,
+          "after": "EMPLOYEE REMUNERATION AND EXPENSES"
+        }
+      ]
+    },
+    {
+      "id": "central-saanich-2024-employees",
+      "city": "central-saanich",
+      "year": "2024",
+      "employerSlug": "district-of-central-saanich",
+      "employerName": "District of Central Saanich",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.centralsaanich.ca/node/3543",
+      "format": "pdf",
+      "localFile": "central-saanich-2024.pdf",
+      "url": "https://www.centralsaanich.ca/sites/default/files/2025-08/2024%20Statement%20of%20Financial%20Information%20Jun%2023.pdf",
+      "sha256": "4acd5a4d72d1668ff768bbb97f6b9dc05c2d886e81ac5789ba9b2e4a55cc593a",
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "pages": [
+        37,
+        38
+      ],
+      "rowCount": 65,
+      "totals": [
+        7195111,
+        128271
+      ],
+      "printedTotals": [
+        7195111,
+        128271
+      ],
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-full-name",
+      "notes": [
+        "The published remuneration column is retained as reported; this is annual remuneration, not a standardized base-salary rate. Expense dashes or blank cells are preserved as missing rather than fabricated zero values.",
+        "Every extracted monetary row was checked against a second PDF reader using positioned cells and the associated published name. Schedule pages and printed control totals were visually reviewed.",
+        "The source labels the named cohort Total $75,000 or More. Wrapped position titles are joined from their published continuation lines."
+      ],
+      "nameX": 190,
+      "appendPositionLines": true,
+      "thresholdRule": "at-least"
+    },
+    {
+      "id": "central-saanich-2024-council",
+      "city": "central-saanich",
+      "year": "2024",
+      "employerSlug": "district-of-central-saanich",
+      "employerName": "District of Central Saanich",
+      "category": "elected-officials",
+      "indexUrl": "https://www.centralsaanich.ca/node/3543",
+      "format": "pdf",
+      "localFile": "central-saanich-2024.pdf",
+      "url": "https://www.centralsaanich.ca/sites/default/files/2025-08/2024%20Statement%20of%20Financial%20Information%20Jun%2023.pdf",
+      "sha256": "4acd5a4d72d1668ff768bbb97f6b9dc05c2d886e81ac5789ba9b2e4a55cc593a",
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "pages": [
+        36
+      ],
+      "rowCount": 7,
+      "totals": [
+        219305,
+        19939
+      ],
+      "printedTotals": [
+        219305,
+        19939
+      ],
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-full-name",
+      "notes": [
+        "The published remuneration column is retained as reported; this is annual remuneration, not a standardized base-salary rate. Expense dashes or blank cells are preserved as missing rather than fabricated zero values.",
+        "Every extracted monetary row was checked against a second PDF reader using positioned cells and the associated published name. Schedule pages and printed control totals were visually reviewed.",
+        "A trailing asterisk after Sarah Riddell is a source footnote marker, omitted from the name; the footnote states lower salary due to leave of absence. The source says these expenses exclude reimbursements for other committees or boards."
+      ],
+      "nameX": 220,
+      "removeNameFootnotes": true,
+      "pageSlices": [
+        {
+          "page": 36,
+          "after": "Schedule of Council Remuneration and Expenses"
+        }
+      ]
+    },
+    {
+      "id": "comox-2024-employees",
+      "city": "comox",
+      "year": "2024",
+      "employerSlug": "town-of-comox",
+      "employerName": "Town of Comox",
+      "category": "employee-remuneration",
+      "indexUrl": "https://www.comox.ca/SOFI",
+      "format": "pdf",
+      "localFile": "comox-2024.pdf",
+      "url": "https://www.comox.ca/sites/default/files/2025-05/2024%20Statement%20Of%20Financial%20Information.pdf",
+      "sha256": "3afc79cb03acdb91290eaf5a3bc177b8b02fb66e247b917b1e3cb6649bef94cd",
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "pages": [
+        37
+      ],
+      "rowCount": 40,
+      "totals": [
+        4262520.37,
+        43911.95
+      ],
+      "printedTotals": [
+        4262522,
+        43908
+      ],
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "notes": [
+        "The published remuneration column is retained as reported; this is annual remuneration, not a standardized base-salary rate. Expense dashes or blank cells are preserved as missing rather than fabricated zero values.",
+        "Every extracted monetary row was checked against a second PDF reader using positioned cells and the associated published name. Schedule pages and printed control totals were visually reviewed.",
+        "The original table mixes cents for the first named row with whole-dollar display for other rows. Extracted rows differ from the printed named controls by -$1.63 remuneration and +$3.95 expenses; original displayed amounts are retained."
+      ],
+      "combinedNamePosition": true,
+      "nameX": 300,
+      "moneyX": 300
+    },
+    {
+      "id": "comox-2024-council",
+      "city": "comox",
+      "year": "2024",
+      "employerSlug": "town-of-comox",
+      "employerName": "Town of Comox",
+      "category": "elected-officials",
+      "indexUrl": "https://www.comox.ca/SOFI",
+      "format": "pdf",
+      "localFile": "comox-2024.pdf",
+      "url": "https://www.comox.ca/sites/default/files/2025-05/2024%20Statement%20Of%20Financial%20Information.pdf",
+      "sha256": "3afc79cb03acdb91290eaf5a3bc177b8b02fb66e247b917b1e3cb6649bef94cd",
+      "periodEvidence": "Year Ended December 31,? 2024",
+      "pages": [
+        36
+      ],
+      "rowCount": 7,
+      "totals": [
+        226049,
+        30546.33
+      ],
+      "printedTotals": [
+        226049,
+        30545
+      ],
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "notes": [
+        "The published remuneration column is retained as reported; this is annual remuneration, not a standardized base-salary rate. Expense dashes or blank cells are preserved as missing rather than fabricated zero values.",
+        "Every extracted monetary row was checked against a second PDF reader using positioned cells and the associated published name. Schedule pages and printed control totals were visually reviewed.",
+        "The source mixes cents on the first council row with whole dollars on other rows. Individual expenses sum $1.33 above the printed total; no amounts are changed."
+      ],
+      "combinedNamePosition": true,
+      "nameX": 240,
+      "moneyX": 240
+    }
+  ],
+  "held": [
+    {
+      "id": "nanaimo-2020-employees-held",
+      "employerSlug": "city-of-nanaimo",
+      "employerName": "City of Nanaimo",
+      "year": "2020",
+      "sourceUrl": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2020-statement-of-financial-information.pdf",
+      "status": "held-for-review",
+      "category": "employee-remuneration",
+      "reason": "The scanned/OCR schedule did not reconcile under the reviewed text parser. Complete positioned OCR and row-by-row page review are needed before acceptance; no records imported."
+    },
+    {
+      "id": "campbell-river-2024-held",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "Campbell River",
+      "year": "2024",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2024-sofi-reportpdf",
+      "status": "held-for-review",
+      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+      "sha256": "00952ec1a32c8e5d7ff09d2fa7492a35677e121af0519f4dd45f814b2e89a66c"
+    },
+    {
+      "id": "gold-river-2024-held",
+      "employerSlug": "village-of-gold-river",
+      "employerName": "Gold River",
+      "year": "2024",
+      "sourceUrl": "https://goldriver.ca/wp-content/uploads/2025/08/2024-SOFI-Signed.pdf",
+      "status": "held-for-review",
+      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+      "sha256": "a250f7137ea3446f520d0443374bbf48f4b979422a658ae8c9aac4fff5915b49"
+    },
+    {
+      "id": "lantzville-2024-held",
+      "employerSlug": "district-of-lantzville",
+      "employerName": "Lantzville",
+      "year": "2024",
+      "sourceUrl": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7134.pdf",
+      "status": "held-for-review",
+      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+      "sha256": "a8459d11923535960bc8a780791b17a2f4bedca613200668b9c4153e5f73428a"
+    },
+    {
+      "id": "metchosin-2024-held",
+      "employerSlug": "district-of-metchosin",
+      "employerName": "Metchosin",
+      "year": "2024",
+      "sourceUrl": "https://www.metchosin.ca/sites/7/files/2025-06/2024%20SOFI.pdf",
+      "status": "held-for-review",
+      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+      "sha256": "fafbac8e845e7bd68ab98a198b49e873eae26a73e3e81135c21d5fa543a8d63b"
+    },
+    {
+      "id": "sayward-2024-held",
+      "employerSlug": "village-of-sayward",
+      "employerName": "Sayward",
+      "year": "2024",
+      "sourceUrl": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2024%20SOFI%20Package%20-%20signed.pdf",
+      "status": "held-for-review",
+      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+      "sha256": "03d0899a20d184af02094d0832a07d52294affe955737d9cdac9d6060a5475e2"
+    },
+    {
+      "id": "cumberland-2024-held",
+      "employerSlug": "village-of-cumberland",
+      "employerName": "Cumberland",
+      "year": "2024",
+      "sourceUrl": "https://cumberland.ca/wp-content/uploads/2025/07/2024-SOFI.pdf",
+      "status": "held-for-review",
+      "reason": "Downloaded source has wrapped name/title and monetary rows requiring a separate layout profile; no rows accepted in this collection.",
+      "sha256": "462eebcfb5df63698e2713c566b6a1a19a146e187719256290db8e1eee1dd530"
+    },
+    {
+      "id": "north-saanich-2024-held",
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "North Saanich",
+      "year": "2024",
+      "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2024-Statement-of-Financial-Information-SOFI.pdf",
+      "status": "held-for-review",
+      "reason": "Downloaded original has mixed scanned and text pages; complete salary-table extraction and control checks remain pending.",
+      "sha256": "1a213de87d6a80855302aaf72c881e376185090cb618acc4fa1399745152c527"
+    },
+    {
+      "id": "lake-cowichan-2024-held",
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Lake Cowichan",
+      "year": "2024",
+      "sourceUrl": "https://lakecowichan.ca/dl/2024%20SOFI.pdf",
+      "status": "held-for-review",
+      "reason": "Downloaded table includes remuneration, expenses and a separate total column; its distinct layout is not yet validated.",
+      "sha256": "e909d34599f0a3d2f8a1ebbdb706bb1139e9fecccbbd9cf04b12b96ffc4d7c46"
+    },
+    {
+      "id": "tahsis-2024-held",
+      "employerSlug": "village-of-tahsis",
+      "employerName": "Tahsis",
+      "year": "2024",
+      "sourceUrl": "https://villageoftahsis.com/wp-content/uploads/2025/06/sofi-report.pdf",
+      "status": "held-for-review",
+      "reason": "Exact official report URL returned HTTP 403 during download; source presence is not treated as validated salary data."
+    },
+    {
+      "id": "gibsons-2024-held",
+      "employerSlug": "town-of-gibsons",
+      "employerName": "Gibsons",
+      "year": "2024",
+      "sourceUrl": "https://gibsons.ca/wp-content/uploads/2026/07/2024-Statement-of-Financial-Information.pdf",
+      "status": "held-for-review",
+      "reason": "Exact official report URL returned HTTP 403 during download; source presence is not treated as validated salary data."
+    }
+  ],
+  "catalog": {
+    "url": "https://www.arcgis.com/sharing/rest/search?q=orgid%3AEHSKalEvBxdO9ljW%20remuneration&f=json&num=100",
+    "localFile": "victoria-arcgis-search.json",
+    "sha256": "69ed8cbe251015953c65be2384275fec9009abf367e67eb429661354df6323cf",
+    "description": "City of Victoria official ArcGIS catalog, confirming item ownership and disclosure years."
+  }
+}

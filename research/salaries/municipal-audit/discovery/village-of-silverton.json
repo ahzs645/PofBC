@@ -1,0 +1,47 @@
+{
+  "municipality": "Silverton",
+  "employerSlug": "village-of-silverton",
+  "website": "http://www.silverton.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "no-source-link-found-in-bounded-search",
+  "pagesChecked": [
+    {
+      "url": "https://www.silverton.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://silverton.ca/",
+      "contentType": "text/html",
+      "bytes": 38736,
+      "sha256": "0d9ea53535ac4ab72b04d563ec744aa99c3b6fd38daa4d18195d30f90d66e658",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://silverton.ca/government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://silverton.ca/government",
+      "contentType": "text/html",
+      "bytes": 16604,
+      "sha256": "1f19dd095cc75f735845a0f66ecc8c6c177d8d3163d0e5b7ed5a3a6db9df98d0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://silverton.ca/payment-options",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://silverton.ca/payment-options",
+      "contentType": "text/html",
+      "bytes": 17959,
+      "sha256": "fe85a2137b173d92288166bb7bc14647f0543f6d756da6e4fda38d542636bfee",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": []
+}

@@ -1,0 +1,77 @@
+{
+  "municipality": "Lillooet",
+  "employerSlug": "district-of-lillooet",
+  "website": "http://www.lillooet.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.lillooet.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lillooet.ca",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 394039,
+      "sha256": "14372db9d9e53d9f33b247680e10837aef3d66411d19f4821c5588ebf9ca1a7b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lillooet.ca/financial-planning",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lillooet.ca/financial-planning",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 686756,
+      "sha256": "5641b84e7f26108a34d1ac0bb7281bdadcdff49afdac9cdd387822760c158c7b",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.lillooet.ca/financial-planning-reporting",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://www.lillooet.ca/municipal-hall",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lillooet.ca/mayor-council-2",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 296676,
+      "sha256": "6cf7534189a8a24483a21a22d536686dc4dd46bc9cdfcac8aba81987f3c88dfd",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://lillooet.civicweb.net/filepro/documents/24683/",
+      "label": "View Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.lillooet.ca/financial-planning",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://lillooet.civicweb.net/filepro/documents/34564/",
+      "label": "View Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.lillooet.ca/financial-planning",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://lillooet.civicweb.net/filepro/documents/36584/",
+      "label": "View SOFI Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.lillooet.ca/financial-planning",
+      "yearsInLabel": []
+    }
+  ]
+}

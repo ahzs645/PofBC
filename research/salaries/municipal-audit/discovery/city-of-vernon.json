@@ -1,0 +1,304 @@
+{
+  "municipality": "Vernon",
+  "employerSlug": "city-of-vernon",
+  "website": "http://www.vernon.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.vernon.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vernon.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 112852,
+      "sha256": "6d69dd66717ea18202d19be6a4c10680cd88888a8c1485d6ddfef1f3d49b8683",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 205480,
+      "sha256": "cb776befa7956bf9a50bffcb80b9796429846a91799be643454d4dcc22dbfd47",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.vernon.ca/government-services/departments/financial-services",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vernon.ca/government-services/departments/financial-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 206557,
+      "sha256": "2d5b2fc42deae73611b29fc5c80a67fc43c7e8d5ea98dbead4ecd792906f7259",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.vernon.ca/government-services/contact-directory/finance",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vernon.ca/government-services/contact-directory/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 215851,
+      "sha256": "dc782507e34930be1e4673b90e36e245ce6e941272b7288eb9a805d19cd9cd98",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.vernon.ca/government-services/departments/financial-services/budget-process",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vernon.ca/government-services/departments/financial-services/budget-process",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 203446,
+      "sha256": "fef7a10390021ba93dac7d7505c6d295408bdf4662a3173ae552e3506a388631",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.vernon.ca/government-services/departments/financial-services/filing-claim",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vernon.ca/government-services/departments/financial-services/filing-claim",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 200876,
+      "sha256": "40c2340a8d97dc133f8c974311e61095a0435f6a5ed205d08c01b648b71581a6",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.vernon.ca/government-services/departments/financial-services/procurement-services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vernon.ca/government-services/departments/financial-services/procurement-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 202763,
+      "sha256": "4f371c02b343624913f645bfff82699714ecc5a71a11dff734c4fe2037bae82a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.vernon.ca/government-services",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vernon.ca/government-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 204497,
+      "sha256": "da3e76afddd7b94a79a00a9fb3c544c11dc0447cb2c7328418f560b0b152612f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.vernon.ca/government-services/bylaw-compliance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vernon.ca/government-services/bylaw-compliance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 218231,
+      "sha256": "e9a56dd42ec277a2fe64a02019adbc1b0f80c8167246bfd2f37b14de28c16620",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "label": "Financial Statements & Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/2022-05/2021%20Financial%20Statements_Final.pdf",
+      "label": "2021 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/2024-11/2023%20Financial%20Statements%20FINAL.pdf",
+      "label": "2023 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/2025-06/2024%20City%20of%20Vernon%20Annual%20Report%20%281%29.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/2025-06/2024%20Financial%20Statements_FINAL_Signed.pdf",
+      "label": "2024 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/2026-06/Annual%20Report%20Complete.pdf",
+      "label": "2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+      "label": "2025 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/annual_reports/2017_annual_report.pdf",
+      "label": "2017 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/annual_reports/2018_annual_report_final.pdf",
+      "label": "2018 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/annual_reports/2019_annual_report_final.pdf",
+      "label": "2019 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/annual_reports/2020_annual_report_final.pdf",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/annual_reports/2021%20Annual%20Report%20Final.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/annual_reports/2022_Annual_Report_Final.pdf",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/annual_reports/2023-Annual-Report-compressed.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/annual_reports/Financial%20Section%20Reduced.pdf",
+      "label": "2022 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/statements/2017_financial_statements_final.pdf",
+      "label": "2017 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/statements/2019_cov_financial_statements.pdf",
+      "label": "2019 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/statements/2025%20Financial%20Statements.pdf",
+      "label": "2025 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/statements/city_of_vernon_2020_-_financial_statements_final.pdf",
+      "label": "2020 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.vernon.ca/sites/default/files/docs/financial/statements/final_city_of_vernon_2018_-_financial_statements.pdf",
+      "label": "2018 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    }
+  ]
+}

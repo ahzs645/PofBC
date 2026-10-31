@@ -1,0 +1,526 @@
+{
+  "municipality": "Merritt",
+  "employerSlug": "city-of-merritt",
+  "website": "http://www.merritt.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.merritt.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.merritt.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 104578,
+      "sha256": "913ae3bb957b4ef2c998ba444dcd1f40ae3e37d1f04801eb832612c988244b63",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.merritt.ca/government/annual-reports-and-financial-statements/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.merritt.ca/government/annual-reports-and-financial-statements/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 66137,
+      "sha256": "db12edd207c9cb0c6ce21bab9c46d253e75fb98140f551cefcd95ce418a8dc35",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.merritt.ca/government/budget/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.merritt.ca/government/budget/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 79260,
+      "sha256": "c5f30149185199ccdee63c62d5ae8f578973a23d6e558f14250127e74e820d70",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.merritt.ca/government/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.merritt.ca/government/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 74565,
+      "sha256": "8299e86bab038b36be8733335363ffe3d0c9376d503915363b1e6794cd4a04bd",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.merritt.ca/government/agendas-minutes/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.merritt.ca/government/agendas-minutes/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 61616,
+      "sha256": "2f92f8b2de12d05a44f8729679fbc0898a2cdfaaf3270208e5f43745c4e3531a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.merritt.ca/government/bylaws-policies/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.merritt.ca/government/bylaws-policies/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 114865,
+      "sha256": "f34609075ecc859f68c7a267d5ab4e8baedc0a22b11f957f2262477a1ee093c8",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.merritt.ca/government/careers/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.merritt.ca/government/careers/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 93333,
+      "sha256": "b8fcbe18a4c41cdca659624268406d8db6c38c457a910fa9821208b0ff8cedc1",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.merritt.ca/government/committees/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.merritt.ca/government/committees/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 94631,
+      "sha256": "2be1ff9ffc46a0933078f67594fcb60889d56658a59576a6629e689f011e7544",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.merritt.ca/government/councilmeeting/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.merritt.ca/government/councilmeeting/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 75764,
+      "sha256": "adbbe61f167f11a793531eb36afe3339a078fdaf668c18b181c3c75dbebd0b4e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.merritt.ca/government/annual-reports-and-financial-statements/",
+      "label": "Annual Reports and Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/08/2336-Official-Community-Plan_2025-Amendments_consolidated_2026.01.13_150dpi_compressed.pdf",
+      "label": "Official Community Plan Bylaw. 2336, 2022 (PDF, 29 MB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/1875-Civic-Centre-Bylaw-2004-CONSOLIDATED.pdf",
+      "label": "Civic Centre Regulation and Rental Rate Bylaw 1875, 2004 (PDF, 309 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2004",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/1900-Sign-CONSOLIDATED-1.pdf",
+      "label": "Sign Regulation Bylaw 1900. 2005 (PDF, 283 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "1900",
+        "2005",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/1930-Traffic-CONSOLIDATED-FINAL.pdf",
+      "label": "Traffic Bylaw 1930, 2006 (PDF, 1 MB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "1930",
+        "2006",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/1933-controlled-substance.pdf",
+      "label": "Controlled Substance Bylaw 1933, 2006 (PDF, 126 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "1933",
+        "2006",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/annual-reports-and-financial-statements/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/2026-2030-Financial-Plan-Presentation-Draft-1.pdf",
+      "label": "2026 DRAFT FINANCIAL PLAN",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/budget/",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/2241-Animal-Control-CONSOLIDATED.pdf",
+      "label": "Animal Control Bylaw 2241, 2018 (PDF, 300 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2018",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/2246-Officer-Designation-and-Delegation-of-Authority-Bylaw-No.-2246-2019-CONSOLIDATED.pdf",
+      "label": "Officer Designation and Delegation of Authority Bylaw No. 2246, 2019 (PDF, 219 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2019",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/2266_council_remuneration_-_august_2019_.pdf",
+      "label": "Council Remuneration Bylaw 2266, 2019 (PDF, 63 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2019",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/2284_Zoning-Bylaw_2026.pdf",
+      "label": "Zoning Bylaw 2284, 2020 (PDF, 4 MB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2020",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/2381_Subdivision-Development-Servicing-Bylaw_Feb-11-2025.pdf",
+      "label": "Subdivision & Development Servicing Bylaw 2381, 2024 (PDF, 673 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2024",
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/BNE-Bylaw-2424-2026.pdf",
+      "label": "Bylaw Notice Enforcement Bylaw 2424, 2026 (PDF, 382 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Business-Licence-including-ICBLs.pdf",
+      "label": "Business Licence Bylaw 2268, 2019 (PDF, 388 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2019",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Bylaw-2244-Cemetery-Bylaw-CONSOLIDATED.pdf",
+      "label": "Cemetery Bylaw 2244, 2018 (PDF, 243 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2018",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Bylaw-2259-Water-Parcel-Tax-CONSOLIDATED.pdf",
+      "label": "Water Parcel Tax Bylaw 2259, 2019 (PDF, 83 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2019",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Bylaw-2418-2026.pdf",
+      "label": "2026-2030 Financial Plan, Bylaw 2418, 2026 (PDF, 278 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Bylaw-2421-2026.pdf",
+      "label": "2026 Annual Property Tax Rate Bylaw 2421, 2026 (PDF, 423 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Bylaw-No.-2380-City-of-Merritt-2025-2027-Permissive-Tax-Exemption-Bylaw.pdf",
+      "label": "2025-2027 Permissive Tax Exemption Bylaw 2380, 2024 (PDF, 1 MB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2024",
+        "2025",
+        "2026",
+        "2027"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Bylaw_2382_2024_City_of_Merritt_Building_Code_and_Regulation-CONSOLIDATED.pdf",
+      "label": "Building Bylaw 2382, 2024 (PDF, 602 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/COM-2025-Annual-Report.pdf",
+      "label": "2025 Annual Reports",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/annual-reports-and-financial-statements/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/City-of-Merritt-Fire-Rescue-Department-Establishment-and-Operations-Bylaw-No.-2389-2025-Consolidated.pdf",
+      "label": "Fire Rescue Department Establishment and Operations Bylaw No. 2389, 2025 (PDF, 862 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/City-of-Merritt-Sewer-Bylaw-2393-2025-Consolidated.pdf",
+      "label": "Sanitary Sewer Bylaw 2393, 2025 (PDF, 1 MB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/City-of-Merritt-Solid-Waste-Bylaw-2183-2015-Consolidated.pdf",
+      "label": "Solid Waste Collection, Disposal and Control Bylaw 2183, 2015 (PDF, 319 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2015",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Development-Approval-Procedure-Bylaw-2388-2025-Consolidated.pdf",
+      "label": "Development Approval Procedures Bylaw No. 2388, 2025 (PDF, 754 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Development-Cost-Charge-Bylaw-1964-2007-Consolidated-a.pdf",
+      "label": "Development Cost Charge Bylaw 1964, 2007 (PDF, 177 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "1964",
+        "2007",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Earthwork-Bylaw-2313-2021-Consolidated.pdf",
+      "label": "Earthworks Bylaw 2313, 2021 (PDF, 275 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2021",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Elections-and-Assent-Voting-Bylaw-2357-2023-Consolidated.pdf",
+      "label": "Election and Assent Voting Bylaw 2357, 2023 (PDF, 288 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2023",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Emergency-Measures-Bylaw-3274-2024-Consolidated.pdf",
+      "label": "Emergency Measures Bylaw 2374, 2024 (PDF, 244 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Fees-and-Charges-Amendments-as-at-December-2025-CONSOLIDATED.pdf",
+      "label": "Fees and Charges Bylaw 2386, 2024 (PDF, 1 MB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2024",
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Good-Neighbour-Bylaw-2387-2024-Consolidated.pdf",
+      "label": "Good Neighbour Bylaw 2387, 2024 (PDF, 321 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/MTI-Bylaw-2044-2009-Consolidated.pdf",
+      "label": "Municipal Ticket Information Bylaw 2044, 2009 (PDF, 431 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2009",
+        "2026",
+        "2044"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Mobile-Food-Concession-Bylaw-2081-2009-Consolidated.pdf",
+      "label": "Mobile Food Concession Business Regulation Bylaw 2081, 2009 (PDF, 123 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2009",
+        "2026",
+        "2081"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Park-Regulation-Bylaw-2385-2024-Consolidated.pdf",
+      "label": "Parks Regulation Bylaw 2385, 2024 (PDF, 226 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Procedure-Bylaw-2300-2021-Consolidated.pdf",
+      "label": "Procedure Bylaw 2300, 2021 (PDF, 468 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2021",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Record-Management-Bylaw-2404-2025-Consolidated.pdf",
+      "label": "Records Retention Bylaw No. 2404, 2025 (PDF, 139 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Sewer-Parcel-Tax-CONSOLIDATED.pdf",
+      "label": "Sewer Parcel Tax Bylaw 2260, 2019 (PDF, 97 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2019",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Waterworks-Bylaw-2412-2025.pdf",
+      "label": "Waterworks Bylaw 2412, 2025 (PDF, 353 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "http://www.merritt.ca/wp-content/uploads/2026/09/Wood-Burning-Appliances-and-Air-Quality-Bylaw-2012-CONSOLIDATION.pdf",
+      "label": "Wood Burning Applications and Air Quality Bylaw 2012, 2001 (PDF, 132 KB) Open PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.merritt.ca/government/bylaws-policies/",
+      "yearsInLabel": [
+        "2001",
+        "2012",
+        "2026"
+      ]
+    }
+  ]
+}

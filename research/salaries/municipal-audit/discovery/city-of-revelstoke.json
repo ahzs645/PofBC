@@ -1,0 +1,59 @@
+{
+  "municipality": "Revelstoke",
+  "employerSlug": "city-of-revelstoke",
+  "website": "http://www.revelstoke.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "no-source-link-found-in-bounded-search",
+  "pagesChecked": [
+    {
+      "url": "https://www.revelstoke.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.revelstoke.ca",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 156962,
+      "sha256": "dc1befb46f2ad384530206ea52c7bb09aab71c1611999863459c5964dc9838ea",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.revelstoke.ca/2145/City-Hall",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.revelstoke.ca/2145/City-Hall",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 126389,
+      "sha256": "fbec8fb9c1643f0c7e46b0adba5e016f2dc164bc40c336d3af06f154a516dc6b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.revelstoke.ca/1980/Local-Government-Explained",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.revelstoke.ca/1980/Local-Government-Explained",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 106511,
+      "sha256": "88feaa5de8bf2e520b275dee63c349f40118a7342d64c97ce796d894588902af",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.revelstoke.ca/2227/Communications-Documents",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.revelstoke.ca/2227/Communications-Documents",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 92432,
+      "sha256": "d6d7e343013c5e60ddab22d72c593a9491625ef229040e37c0058535e0a60d18",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": []
+}

@@ -1,0 +1,173 @@
+{
+  "municipality": "Cache Creek",
+  "employerSlug": "village-of-cache-creek",
+  "website": "http://www.cachecreek.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.cachecreek.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cachecreek.ca/",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 196583,
+      "sha256": "cf7e55d80b268aa9b1b53aeb9d0e87e350955f1da1808add0efd156d3dc6c308",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://cachecreek.ca/financial-reporting",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cachecreek.ca/financial-reporting",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 142298,
+      "sha256": "3c5647a8e7d1e8e6a10c28a474fd2f5fa7c052b05ae839005220babd9f18b131",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://cachecreek.ca/reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cachecreek.ca/reports",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 178952,
+      "sha256": "02cc2079f11ca748595cad7e3efc5c15aff6448db62f7304808575a10d094bde",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://cachecreek.ca/annual-reports",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cachecreek.ca/annual-reports",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 127550,
+      "sha256": "e2d2b8f8de744b834d98fe3a75c6b9580616122b46ee5b5182d9dc62d57fa8ad",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://cachecreek.ca/annual-reports",
+      "label": "Click here",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/reports",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://cachecreek.ca/financial-reporting",
+      "label": "Financial Reporting",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/2023%20Annual%20Report%20Final%20-%20Reduced.pdf",
+      "label": "Download PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/annual-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/2024%20Annual%20Report%20v0.4.pdf",
+      "label": "Download PDF",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/annual-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/2018%20SOFI.pdf?ver=1792599172574",
+      "label": "2018 SOFI (pdf) Download",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/financial-reporting",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/2019%20SOFI.pdf?ver=1792599172574",
+      "label": "2019 SOFI (pdf) Download",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/financial-reporting",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/2020%20SOFI.pdf?ver=1792599172574",
+      "label": "2020 SOFI (pdf) Download",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/financial-reporting",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/2021%20SOFI.pdf?ver=1792599172574",
+      "label": "2021 SOFI (pdf) Download",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/financial-reporting",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/2022%20SOFI%20REPORT_executed.pdf?ver=1792599172574",
+      "label": "2022 SOFI (pdf) Download",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/financial-reporting",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/2023%20SOFI%20REPORT_Executed..pdf?ver=1792599172574",
+      "label": "2023 SOFI (pdf) Download",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/financial-reporting",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/410fc72a-7450-4b44-ab46-8487501e5a48/2025%20SOFI%20REPORT_Executed.pdf?ver=1792599172574",
+      "label": "2025 SOFI (pdf) Download",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/financial-reporting",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/698f8ba3-658a-4230-9e65-2d12430e240f/2024%20SOFI%20Executed.pdf?ver=1792599172574",
+      "label": "2024 SOFI (pdf) Download",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/financial-reporting",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/b8e2ae6c-7b4c-46f6-a841-45cc7724d6bb/2025%20Annual%20Report%20(DRAFT).pdf?ver=1792599171975",
+      "label": "Download",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cachecreek.ca/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

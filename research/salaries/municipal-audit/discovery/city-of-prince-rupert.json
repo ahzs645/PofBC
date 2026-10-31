@@ -1,0 +1,863 @@
+{
+  "municipality": "Prince Rupert",
+  "employerSlug": "city-of-prince-rupert",
+  "website": "http://www.princerupert.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.princerupert.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princerupert.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 204141,
+      "sha256": "1b9d4098d3c1e08e07671eb8908fb72e6390441333ef39904fa6edb6901bb0d1",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.princerupert.ca/budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princerupert.ca/budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 186536,
+      "sha256": "01c41bc054b25cbab40a7e7400577c0912c49dc214528f751b7ca398998fd488",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.princerupert.ca/city-hall/city-financials",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 224572,
+      "sha256": "5c5334929c5608bd390ff5b8925c4751974cb204f79c2f72ebcf9850fad82de9",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.princerupert.ca/city-hall/city-financials/capital-project-loan-authorizations",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princerupert.ca/city-hall/city-financials/capital-project-loan-authorizations",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 198347,
+      "sha256": "85089f4279760f10d45f73e835453a0342ab87456793552283a476d656fe4219",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.princerupert.ca/city-hall/city-financials/pay-transparency-reporting",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princerupert.ca/city-hall/city-financials/pay-transparency-reporting",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 186012,
+      "sha256": "61c14990e4e0f8e48c35d03395ad82fe5781c8bd35424271814e4deb711533a3",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.princerupert.ca/city-hall/departments/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princerupert.ca/city-hall/departments/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 186379,
+      "sha256": "2ac6ccc9a6ed15b6146d423daada74574493647084c8910166fb92a7b227a290",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://engage.princerupert.ca/budget2026",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://engage.princerupert.ca/budget2026",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 209083,
+      "sha256": "242e174767d882a12cd9049b2f4f6585a67332efe2ebd84f7bdf0b471617bdca",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.princerupert.ca/city-hall",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princerupert.ca/city-hall",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 204178,
+      "sha256": "a02e3779c979fb6c9fdb1e020f0c5bc65bb76110216c4f48f8fb360c71cb5236",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.princerupert.ca/city-hall/bylaws-policies",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princerupert.ca/city-hall/bylaws-policies",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 212775,
+      "sha256": "f2d7def3706751a22fe25bc0ab7d7e71f6c538aee594d0f2c06441456a9f5fa9",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.princerupert.ca/city-hall/city-financials",
+      "label": "Financial Reports and Documentation",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/departments/finance",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2016%20Annual%20Report1.pdf",
+      "label": "2016 Annual Report and Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2016",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2016%20Audited%20Financial%20Statements%20%28May%202016%29.pdf",
+      "label": "2016 Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2016",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2016%20Five%20Year%20Financial%20Plan%20%28April%202016%29.pdf",
+      "label": "2016 Five Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2016",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2016%20Property%20Tax%20Bylaw%20%28April%202016%29.pdf",
+      "label": "2016 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2016",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2016%20Statement%20of%20Financial%20Information_0.pdf",
+      "label": "2016 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2016",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2017%20Annual%20Report%20-%20FINAL1.pdf",
+      "label": "2017 Annual Report and Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2018%20Annual%20Report%20-%20FINAL%20DRAFT1.pdf",
+      "label": "2018 Annual Report and Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2018%20City%20of%20Prince%20Rupert%20FS-%20FINAL.pdf",
+      "label": "2018 Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2018%20Proposed%205%20year%20Financial%20Plan%20Report%202018%20-2022.pdf",
+      "label": "2018-2022 Five-Year Financial Plan Document (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2018",
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2018%20SOFI.pdf",
+      "label": "2018 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2018-06-11%202017%20City%20of%20Prince%20Rupert%20Audited%20FS%20Final.pdf",
+      "label": "2017 Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2017",
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2018-06-11%202017%20SOFI%20Report.pdf",
+      "label": "2017 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2017",
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2019%205%20year%20financial%20plan%20Bylaw.pdf",
+      "label": "2019 Five-Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2019%20Annual%20Report%20-FINAL.pdf",
+      "label": "2019 Annual Report + Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2019%20SOFI%20Submission%20set.pdf",
+      "label": "2019 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2019%20tax%20bylaw.pdf",
+      "label": "2019 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2020%20Annual%20Report%20-%20final.pdf",
+      "label": "2020 Annual Report + Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2020%20Statement%20of%20Financial%20Information.pdf",
+      "label": "2020 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2021%20Annual%20Report%20-%20FINAL%20-%20reduced.pdf",
+      "label": "2021 Annual Report + Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2021%20City%20of%20Prince%20Rupert%20FS%20-%20FINAL%20Signed%20with%20Audit%20letter.pdf",
+      "label": "2021 Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2022%20Annual%20Report%20-%20FINAL%20to%20Public.pdf",
+      "label": "2022 Annual Report + Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2022%20City%20of%20Prince%20Rupert%20FS%20-%20Signed%20with%20Auditors%20Report.pdf",
+      "label": "2022 Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2022%20PR%20Legacy%20audited%20financial%20statements_final%20approved.pdf",
+      "label": "2022 Financial Statements - Prince Rupert Legacy Inc (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/2022%20Property%20Tax%20Bylaw%203495%2C%202022%20Signed.pdf",
+      "label": "2022 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/BL%203413%20-%202017%20Five%20Year%20Financial%20Plan%20Bylaw%20No.%203413%2C%202017.pdf",
+      "label": "2017 5-Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/BL%203414%20-%202017%20Property%20Tax%20Bylaw%20No.%203414%2C%202017.pdf",
+      "label": "2017 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/BL%203416%20-%202017%20Five%20Year%20Financial%20Plan%20Amendment%20Bylaw%20No%203416%2C%202017.pdf",
+      "label": "2017 Five-Year Financial Plan Amendment Bylaw 3416 (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/BL%203418%20-%202017%20Five%20Yr%20Financial%20Plan%20Amendment%20Bylaw%20No%203418%202017%2C%202nd%20Amendment.pdf",
+      "label": "2017 Five-Year Financial Plan Amendment Bylaw 3418 (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/BL%203421%20-%202017%20Five%20Year%20Financial%20Plan%20Amendment%20Bylaw%20No.%203421%2C%202017.pdf",
+      "label": "2017 Five-Year Financial Plan Amendment Bylaw 3421 (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/BL%203426%20-%202018%20Five%20Year%20Financial%20Plan%20Bylaw%203426%202018.pdf",
+      "label": "2018 Five-Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/BL%203427%20-%202018%20Property%20Tax%20Bylaw%20No%20%203427%202018.pdf",
+      "label": "2018 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Budget%20Reporting%20Document%20-%202019%20FINAL.pdf",
+      "label": "2019-2023 Financial Plan Document (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Budget%20Reporting%20Document%20-%202020%20-%20FINAL.pdf",
+      "label": "2020-2024 Financial Plan Document (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2020",
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Certified%202020%20Five%20Year%20Financial%20Plan.pdf",
+      "label": "2020 Five Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Certified%202020%20Tax%20Rate%20Bylaw.pdf",
+      "label": "2020 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Certified%20copy%20of%202021%20Five%20Year%20Financial%20Plan.pdf",
+      "label": "2021 Five Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Certified%20copy%20of%202021%20Property%20Tax%20Bylaw.pdf",
+      "label": "2021 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/FS%20for%202019%20Annual%20Report.pdf",
+      "label": "2019 Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Five%20Year%20Financial%20Plan%20Bylaw%203494%2C%202022%20Signed.pdf",
+      "label": "2022 Five Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/PRLI%20Audited%202019%20FS.PDF",
+      "label": "2019 Financials Statements – Prince Rupert Legacy Inc. (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Prince%20Rupert%20Legacy%202020%20Audited%20Financial%20Statements.pdf",
+      "label": "2020 Financials Statements – Prince Rupert Legacy Inc. (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Prince%20Rupert%20Legacy%20Inc%20-%202016%20Audited%20Financial%20Statements.pdf",
+      "label": "2016 Audited Financial Statements - Prince Rupert Legacy Inc (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2016",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Prince%20Rupert%20Legacy%20Inc%20-%202017%20Audited%20Financial%20Statements.pdf",
+      "label": "2017 Audited Financial Statements - Prince Rupert Legacy Inc (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Prince%20Rupert%20Legacy%20Inc.%202018.PDF",
+      "label": "2018 Financial Statements - Prince Rupert Legacy Inc (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Prince%20Rupert%20Legacy%20Inc.%202021.pdf",
+      "label": "2021 Financial Statements - Prince Rupert Legacy Inc. (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/Proposed%20Five%20Year%20Financial%20Plan%202021-2025.pdf",
+      "label": "2021-2025 Financial Plan (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2021",
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-06/SOFI%20June%2013%202022.pdf",
+      "label": "2021 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2021",
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-07/2022%20SOFI%20-%2015Jun2023.pdf",
+      "label": "2022 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-11/Budget%20Reporting%20Document%20-%202022%20-%20FINAL2.pdf",
+      "label": "2022 - 2026 Five Year Financial Plan (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2022",
+        "2023",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2023-11/Budget%20Reporting%20Document%20-%202024%20-%20to%20public_0.pdf",
+      "label": "2024 Budget Reporting Document (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-05/2023%20City%20of%20Prince%20Rupert%20FS%20-%20FINAL%20-%20UnSigned%20with%20audit%20report.pdf",
+      "label": "2023 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-05/2023%20Legacy%20Audited%20Financial%20statements.pdf",
+      "label": "2023 Audited Financial Statements - Prince Rupert Legacy Inc",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-06/2023%20Annual%20Report%20-%20June%206%202024_0.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-06/2023%20SOFI%20and%20Financial%20Statements.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-07/2024%20Five%20Year%20Financial%20Plan%20Bylaw%20No.%203526%2C%202023.pdf",
+      "label": "2024 - 2028 5 Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2023",
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-07/3517%2C%202023%20Five%20Year%20Financial%20Plan%20Bylaw.pdf",
+      "label": "2023 - 2027 Five Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2023",
+        "2024",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-07/3518%2C%202023%20Property%20Tax%20Bylaw.pdf",
+      "label": "2023 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-07/3530%2C%202024%20Property%20Tax%20Bylaw.pdf",
+      "label": "2024 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-10/Budget%20Reporting%20Document%20-%202025%20-FINAL.pdf",
+      "label": "2025 Budget Reporting Document (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2024-12/3552%2C%202024%202024%20Five%20Year%20Financial%20Plan%20Amendment%20Bylaw.pdf",
+      "label": "2024 - 2028 5 Year Financial Plan Amendment Bylaw 3552 (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2025-05/2024%20City%20of%20Prince%20Rupert%20FS%20-%20FINAL%20-%20Signature%20available%20with%20audit%20report.pdf",
+      "label": "2024 Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2025-05/2025%20Five%20Year%20Financial%20Plan%20Bylaw%203554%202025%20FINAL%20-%20Signature%20available.pdf",
+      "label": "2025 - 2029 5 Year Financial Plan Bylaw(PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2025-05/3661%20-%20BYLAW%202025%20Property%20Tax%20Bylaw%20No%20%203661%202025_0.pdf",
+      "label": "2025 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2025-05/Legacy%20Audited%202024%20Financial%20Statements%20final.pdf",
+      "label": "2024 Audited Financial Statements - Prince Rupert Legacy Inc (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2025-06/2024%20Annual%20Report%20-%20Draft_june6.pdf",
+      "label": "2024 Annual Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2025-06/2024%20SOFI.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2025-10/Budget%20Reporting%20Document%20-%202026_FINAL_oct27.pdf",
+      "label": "2026 Budget Reporting Document (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2026-05/3674%2C%202026%20Property%20Tax%20Bylaw%20%28signature%20available%29.pdf",
+      "label": "2026 Property Tax Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2026-06/2025%20Annual%20Report%20-%20FINAL.pdf",
+      "label": "2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2026-06/2025%20City%20of%20Prince%20Rupert%20Audited%20FS.pdf",
+      "label": "2025 Audited Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2026-06/2025%20Statement%20of%20Financial%20Information%20-%20FINAL%20-signatures%20avail.pdf",
+      "label": "2025 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2026-06/25%20PRLegacy%20Financial%20Statements%20FINAL_Redacted.pdf",
+      "label": "2025 Audited Financial Statements - Prince Rupert Legacy Inc (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.princerupert.ca/sites/7/files/2026-07/3671%202026%20Five%20Year%20Financial%20Plan%20Bylaw.pdf",
+      "label": "2026 - 2030 5 Year Financial Plan Bylaw(PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princerupert.ca/city-hall/city-financials",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    }
+  ]
+}

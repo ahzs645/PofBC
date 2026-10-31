@@ -1,0 +1,246 @@
+{
+  "municipality": "Pemberton",
+  "employerSlug": "village-of-pemberton",
+  "website": "http://www.pemberton.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.pemberton.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.pemberton.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 78709,
+      "sha256": "b83fc6414f347c025c212ec9c67d9a81b062cf6dfb8e008ffd27a1bc598ddf0f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 60800,
+      "sha256": "35b968ef38be9115bcef02f81a06503e01dc66874c78b88c719d06b77502f8b1",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322460",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.pemberton.ca/public/download/files/322460",
+      "contentType": "application/pdf",
+      "bytes": 329745,
+      "sha256": "90d1d16c968ba6be98d50b9110ff1ca10e82def7bd2fe3980294ebf17738dccb",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322464",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.pemberton.ca/public/download/files/322464",
+      "contentType": "application/pdf",
+      "bytes": 585298,
+      "sha256": "4322e3e0ff293ce8d54681900c4027187ec80980d108ea44bc9a8b2f9d98ac83",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322465",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.pemberton.ca/public/download/files/322465",
+      "contentType": "application/pdf",
+      "bytes": 1356390,
+      "sha256": "0b6805b3d92c707779fa58070aa7d59f127efb42b3f5f4e1da765e253d15ab6c",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322466",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.pemberton.ca/public/download/files/322466",
+      "contentType": "application/pdf",
+      "bytes": 954355,
+      "sha256": "795541738e93ce7acb9f14815ee546fb108d22ef8a2e39686f8674cc8546a8df",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322467",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.pemberton.ca/public/download/files/322467",
+      "contentType": "application/pdf",
+      "bytes": 1813781,
+      "sha256": "cbcfbb6b946409a8e79aecde118a4cb0420e3b38446703e52e240913a3599e4e",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/353616",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.pemberton.ca/public/download/files/353616",
+      "contentType": "application/pdf",
+      "bytes": 530540,
+      "sha256": "792cba2371330accc1af3389960912c4980ff1e61fcb6931b5cd2468f1938b16",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322457",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.pemberton.ca/public/download/files/322457",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "df9f1ce8c0dd7e5c788c006d8cb020f243dd3d6e15a3e80369ff377bd77986f7",
+      "status": "response-too-large"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "label": "Financial Statements & Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322457",
+      "label": "2023 Village of Pemberton Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322458",
+      "label": "2022 Village of Pemberton Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322459",
+      "label": "2024 Village of Pemberton Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322461",
+      "label": "2024 Audited Financial Statement Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322462",
+      "label": "2022 Audited Financial Statement Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322463",
+      "label": "2023 Audited Financial Statement Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/340169",
+      "label": "2025 Village of Pemberton Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/353615",
+      "label": "2025 Audited Financial Statement Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/government/budget-finance/financial-statements-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322460",
+      "label": "2023 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/public/download/files/322460",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322464",
+      "label": "2024 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/public/download/files/322464",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322465",
+      "label": "2021 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/public/download/files/322465",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322466",
+      "label": "2022 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/public/download/files/322466",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/322467",
+      "label": "2020 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/public/download/files/322467",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.pemberton.ca/public/download/files/353616",
+      "label": "2025 SOFI Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.pemberton.ca/public/download/files/353616",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

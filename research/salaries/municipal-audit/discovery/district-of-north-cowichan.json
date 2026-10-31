@@ -1,0 +1,550 @@
+{
+  "municipality": "North Cowichan",
+  "employerSlug": "district-of-north-cowichan",
+  "website": "http://www.northcowichan.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.northcowichan.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northcowichan.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 194263,
+      "sha256": "5d5c42f6bf7b4865d40b6ae77372dd503d405290333352d74dfe86090bd6b0ea",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 210536,
+      "sha256": "45701b92502ef13bf2de441f079a207bcab73f5319749f10e11d2687ae667518",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1123",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northcowichan.ca/media/1123",
+      "contentType": "application/pdf",
+      "bytes": 374282,
+      "sha256": "9b2be87050618a3d76b19d0870a05da49f0fa45b5a302f74558719eda6aa563f",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1396",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northcowichan.ca/media/1396",
+      "contentType": "application/pdf",
+      "bytes": 357875,
+      "sha256": "aa30ac1a05875f7bbe7cf7f02929bc6b66ea59614c0443b59efc4130758d003e",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1911",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northcowichan.ca/media/1911",
+      "contentType": "application/pdf",
+      "bytes": 600237,
+      "sha256": "cac51ad814596dbe61edcd1f46a155eb12a1b40b4259991db422e5043fc642b7",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1121",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northcowichan.ca/media/1121",
+      "contentType": "application/pdf",
+      "bytes": 519134,
+      "sha256": "06c66ba694c5332be8999df3f0225d858354d099ac089d53cceac35b78997283",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1122",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northcowichan.ca/media/1122",
+      "contentType": "application/pdf",
+      "bytes": 363193,
+      "sha256": "4d09b21d2ef41ac43841ae7b8969b1dc8cc03058ee0e69aad289623df0369412",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1395",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northcowichan.ca/media/1395",
+      "contentType": "application/pdf",
+      "bytes": 1868679,
+      "sha256": "66a7e137a0673d0af0bae13504b52bc63901b301baa47189c03b76b239fee3c8",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1397",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northcowichan.ca/media/1397",
+      "contentType": "application/pdf",
+      "bytes": 950713,
+      "sha256": "22dfff492b9b8e07e1637e704792466afd4348728447f75db3a6f09e68ea620a",
+      "status": "pdf-downloaded-unreviewed"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.northcowichan.ca/media/1867",
+      "label": "2025 Consolidated Financial Statements (North Cowichan)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1868",
+      "label": "2025 Audited Financial Statement (Duncan-North Cowichan Joint Utility Board)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "label": "Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1121",
+      "label": "2023 Consolidated Financial Statements (North Cowichan)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/media/1121",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1122",
+      "label": "2023 Audited Financial Statement (Duncan-North Cowichan Joint Utility Board)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/media/1122",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1123",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/media/1123",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1395",
+      "label": "2024 Consolidated Financial Statements (North Cowichan)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/media/1395",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1396",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/media/1396",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1397",
+      "label": "2024 Audited Financial Statement (Duncan-North Cowichan Joint Utility Board)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/media/1397",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/media/1911",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/media/1911",
+      "yearsInLabel": [
+        "2025",
+        "1911"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2013%20SOFI%20Report%20final.pdf",
+      "label": "2013 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2013",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2014%20SOFI%20Report%20final.pdf",
+      "label": "2014 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2014",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2015%20AMR%20Web%20Version.pdf",
+      "label": "2015 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2015",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2015%20SOFI%20Report%20final.pdf",
+      "label": "2015 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2015",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2016%20SOFI%20Report%20final.pdf",
+      "label": "2016 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2016",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2017%20AMR%2020180621%20-%20FINAL%20-%20web.pdf",
+      "label": "2017 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2017%20Five-Year%20Financial%20Plan%20Bylaw.pdf",
+      "label": "2017 Five Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2017%20SOFI%20Report%20Final.pdf",
+      "label": "2017 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2017",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2018%20AMR%20-%20FINAL%20-%20Web%20Friendly.pdf",
+      "label": "2018 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2018%20SOFI%20Report%20Final.pdf",
+      "label": "2018 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2019%20Annual%20Report%20FINAL%20spreads.pdf",
+      "label": "2019 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2019%20Consolidated%20Financial%20Statement.pdf",
+      "label": "2019 Consolidated Financial Statement (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2019%20SOFI%20Report%20final.pdf",
+      "label": "2019 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2020%20Annual%20Report%20spreads%20FINAL.pdf",
+      "label": "2020 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2020%20Consolidated%20Financial%20Statement.pdf",
+      "label": "2020 Consolidated Financial Statement (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2020%20SOFI%20Report%20final%20signed.pdf",
+      "label": "2020 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2021%20Annual%20Municipal%20Report%20FINAL%20-%20spread.pdf",
+      "label": "2021 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2021%20Consolidated%20Financial%20Statements.pdf",
+      "label": "2021 Consolidated Financial Statements (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2021%20Five-Year%20Financial%20Plan.pdf",
+      "label": "2021 Five-Year Financial Plan (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2021%20Statement%20of%20Financial%20Information.pdf",
+      "label": "2021 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2022%20DNC%20financial%20statements%20-%20Final.pdf",
+      "label": "2022 Consolidated Financial Statement",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/2022%20SOFI%20Report.pdf",
+      "label": "2022 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/3747%20Five-Year%20Financial%20Plan%20Bylaw%2C%202019.pdf",
+      "label": "2019 Five Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/AMR%202016%20MNC%20web.pdf",
+      "label": "2016 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2016",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/Annual%20Municipal%20Report%202012.pdf",
+      "label": "2012 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2012",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/Annual%20Municipal%20Report%202013%20Online%20View.pdf",
+      "label": "2013 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2013",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/Annual%20Municipal%20Report%202014%20Online%20View.pdf",
+      "label": "2014 Annual Municipal Report (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2014",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/Five%20Year%20Financial%20Plan%20Bylaw%202020.pdf",
+      "label": "2020 Five-Year Financial Plan (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/Five%20Year%20Financial%20Plan%20Bylaw%202022.pdf",
+      "label": "2022 Five-Year Financial Plan (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/Five-Year%20Financial%20Plan%20Bylaw%203785%202020.pdf",
+      "label": "2020 Five-Year Financial Plan Bylaw (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/Five-Year%20Financial%20Plan%20Bylaw%203785.pdf",
+      "label": "2023 Five-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/MNC%202022%20Annual%20Report%20Spreads.pdf",
+      "label": "2022 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2023-10/Statement%20Of%20Financial%20Information%202012.pdf",
+      "label": "2012 Statement of Financial Information (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2012",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2024-06/MNC_2023AnnualReport_Spreads_FINAL.pdf",
+      "label": "2023 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.northcowichan.ca/sites/default/files/2025-04/Five%20Year%20Financial%20Plan%20Bylaw.pdf",
+      "label": "2025 Five-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

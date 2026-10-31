@@ -1,0 +1,536 @@
+{
+  "municipality": "Terrace",
+  "employerSlug": "city-of-terrace",
+  "website": "http://terrace.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://terrace.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.terrace.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 97660,
+      "sha256": "2b7f8a7fda3a3e581920cc5ccdbb3907399f9bf87c0ddf82673532f31becf266",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.terrace.ca/city-hall/departments/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.terrace.ca/city-hall/departments/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 129498,
+      "sha256": "bf76acba699a74da1e2dfb54af1439f1b90b5b9dbd72864d3934a3691d694fc6",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.terrace.ca/city-services/finance-taxation",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 136883,
+      "sha256": "6ac5bef124e213dc059ce5cc3bdea69413fc248d416ffbed6cded6a067891088",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.terrace.ca/city-services/finance-taxation/budget-and-taxation",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.terrace.ca/city-services/finance-taxation/budget-and-taxation",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 121573,
+      "sha256": "c2b3618f3d9fb2c1f65b56c68fdd6ffac416d7e6e7f51c4d10538c24a5a7a90f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.terrace.ca/city-services/finance-taxation/property-assessments",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.terrace.ca/city-services/finance-taxation/property-assessments",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 127049,
+      "sha256": "3e2f6302705f646fe82d74a0b9f674f13a99427bcf26ef69dfee88ad21d01ca9",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.terrace.ca/city-services/finance-taxation/tax-certificates",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.terrace.ca/city-services/finance-taxation/tax-certificates",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 122503,
+      "sha256": "6c4fa7fe48028de3b729eeb18e3f9d350c0488ec1d6ce588e2c060b2a7221819",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.terrace.ca/city-hall-0/departments/finance",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.terrace.ca/city-hall/departments/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 129498,
+      "sha256": "ec4c4f64affc801358ba55e73dab69dca13f27354b26923a445da49c12785799",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.terrace.ca/media/1411",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.terrace.ca/media/1411",
+      "contentType": "application/pdf",
+      "bytes": 103226,
+      "sha256": "fc9057a802f40b7bf22657017ff77bc704c991c4174e56db7ec7dcc5b687fecf",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.terrace.ca/media/3344",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.terrace.ca/media/3344",
+      "contentType": "application/pdf",
+      "bytes": 129624,
+      "sha256": "71ae108e551326192db2a191bc886c5115d4cf442db8c4707e515c5c685450c5",
+      "status": "pdf-downloaded-unreviewed"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.terrace.ca/media/1411",
+      "label": "2022-2026 Financial Plan Bylaw No. 2241-2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/media/1411",
+      "yearsInLabel": [
+        "2022",
+        "2026",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/media/3344",
+      "label": "2023-2027 Financial Plan Bylaw No. 2278-2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/media/3344",
+      "yearsInLabel": [
+        "2023",
+        "2027",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2022%20SOFI%20CITY%20OF%20TERRACE%20p.pdf",
+      "label": "Statement of Financial Information - 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2024-02/2291-24%202024-2028%20Financial%20Plan%20Bylaw.pdf",
+      "label": "2024-2028 Financial Plan Bylaw No. 2291-2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2024-05/2301-24-Tax-Rates-Bylaw.pdf",
+      "label": "2024 Tax Rates Bylaw No. 2301-2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2024-2027%20Permissive%20Tax%20Exemption%20Application%20-%20fillable.pdf",
+      "label": "Application Form for Permissive Tax Exemption 2024-2027",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2024",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2024-2027%20Permissive%20Tax%20Exemption%20Renewal%20Application%20-%20fillable.pdf",
+      "label": "Renewal Form for Permissive Tax Exemption 2024-2027",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2024",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2025-02/2316-25%20Financial%20Plan%20Bylaw%20%282025-2029%29.pdf",
+      "label": "2025-2029 Financial Plan Bylaw No. 2316-2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2026-06/2025%20Annual%20Report%20-%20Final-compressed%20%281%29.pdf",
+      "label": "Annual Report - 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2026-06/2025%20SOFI%20CITY%20OF%20TERRACE%20-%20Website.pdf",
+      "label": "Statement of Financial Information - 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2026-2030%20Financial%20Plan%20Bylaw%20No.%202316-2025.pdf",
+      "label": "2026-2030 Financial Plan Bylaw No. 2327-2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2025",
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/2280-23%202023%20Tax%20Rate%20Bylaw%20(1).pdf",
+      "label": "2023 Tax Rates Bylaw No. 2280-2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/2017_annual_report_final_version_with_financial_statements.pdf",
+      "label": "Annual Report - 2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/2018_annual_report_final_version_w_financial_statement.pdf",
+      "label": "Annual Report - 2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/2021-annual-report-FINAL-WEB.pdf",
+      "label": "Annual Report - 2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/2176-19_2020-2023_tax_exemption_bylaw_october_2021_consolidation.pdf",
+      "label": "2020-2023 Tax Exemption Bylaw No. 2176-2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2019",
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/2177-19_tax_exemption_bylaw_2020-2029.pdf",
+      "label": "2020-2029 Tax Exemption Bylaw No. 2177-2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2019",
+        "2020",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/Financial%20Plan%20(2021-2025)%20Bylaw%20no.%202221-2021.pdf",
+      "label": "2021-2025 Financial Plan Bylaw No. 2221-2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2021",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/Statement%20of%20Financial%20Information%20-%202021%20(1).pdf",
+      "label": "Statement of Financial Information - 2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/Tax%20Rate%20(2021)%20Bylaw%20no.%202227-2021.pdf",
+      "label": "2021 Tax Rates Bylaw No. 2227-2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/bylaw_no._2107-2016_-_5_year_financial_plan.pdf",
+      "label": "2016-2020 Financial Plan Bylaw No. 2107-2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2016",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/bylaw_no._2131-2017_-_5_year_financial_plan.pdf",
+      "label": "2017-2021 Financial Plan Bylaw No. 2131-2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2017",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/bylaw_no._2145-2018_-_5_year_financial_plan.pdf",
+      "label": "2018-2022 Financial Plan Bylaw No. 2145-2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/bylaw_no._2162-2019_-_5_year_financial_plan.pdf",
+      "label": "2019-2023 Financial Plan Bylaw No. 2162-2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/bylaw_no._2163-2019_-_tax_rates_-_signed.pdf",
+      "label": "2019 Tax Rates Bylaw No. 2163 - 2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/bylaw_no._2195_-_2020_-_5_year_financial_plan.pdf",
+      "label": "2020-2024 Financial Plan Bylaw No. 2195-2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/bylaw_no._2196-2020_-_tax_rates.pdf",
+      "label": "2020 Tax Rates Bylaw No. 2196-2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/2019-cityofterrace-annual-report-web.pdf",
+      "label": "Annual Report - 2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/2020-annual-report-final-web.pdf",
+      "label": "Annual Report - 2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2015_annual_report.pdf",
+      "label": "Annual Report - 2015",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2017_sofi_city_of_terrace_p.pdf",
+      "label": "Statement of Financial Information - 2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2018_sofi_city_of_terrace_p.pdf",
+      "label": "Statement of Financial Information - 2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2019_sofi_city_of_terrace_p.pdf",
+      "label": "Statement of Financial Information - 2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2020-sofi.pdf",
+      "label": "Statement of Financial Information - 2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2022-annual-report-FINAL-WEB.pdf",
+      "label": "Annual Report - 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2023-SOFI-CITY-OF%20TERRACE.pdf",
+      "label": "Statement of Financial Information - 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2024-SOFI-CITY-OF-TERRACE.pdf",
+      "label": "Statement of Financial Information - 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/FINAL-2024-annual-report.pdf",
+      "label": "Annual Report - 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/signed-2023-annual-report-FINAL.pdf",
+      "label": "Annual Report - 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-services/2011_annual_report.pdf",
+      "label": "Annual Report - 2011",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-services/2012_annual_report.pdf",
+      "label": "Annual Report - 2012",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-services/2013_annual_report.pdf.pdf",
+      "label": "Annual Report - 2013",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-services/2014_-_annual_report_final_1.pdf",
+      "label": "Annual Report - 2014",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.terrace.ca/sites/default/files/docs/city-services/2016_annual_report_final.pdf",
+      "label": "Annual Report - 2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.terrace.ca/city-services/finance-taxation",
+      "yearsInLabel": [
+        "2016"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,846 @@
+{
+  "municipality": "Gibsons",
+  "employerSlug": "town-of-gibsons",
+  "website": "http://www.gibsons.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.gibsons.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://gibsons.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 293658,
+      "sha256": "1e3dadda4424f8e83c7791fe0f436a5f564590fdf62bfd6d4af3fb308db4b0c2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 223468,
+      "sha256": "282ffa6b6996c90c553d93863b912e78f0bb500d97103993910cbcf0f0759bf7",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 216455,
+      "sha256": "f3b25a620f93e1e5b36a3f7f7dcf8d4b2c608171e383970d0779aa4e2c3bd7cf",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://gibsons.ca/government/departments/finance/grants-of-assistance/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://gibsons.ca/government/departments/finance/home-owner-grant/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://gibsons.ca/government/departments/finance/property-taxes/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://gibsons.ca/government/departments/finance/utility-billing/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://gibsons.ca/town-hall/budget-finances/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://gibsons.ca/town-hall/budget-finances/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 220055,
+      "sha256": "2c0799776e0d960030399b0cad5242714ca6b468ab0f8613624d6470a35f16ba",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://gibsons.ca/town-hall/budget-finances/budget-2026/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://gibsons.ca/town-hall/budget-finances/budget-2026/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 235346,
+      "sha256": "897321710ff5b3aae60468aa028528f3a46d0c79cd4eed74421173a900dc6bb7",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "label": "Financial Reporting",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/1199-2014-Financial-Plan-Bylaw.pdf",
+      "label": "Financial Plan Bylaw No. 1199, 2014",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2014",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/1210-01-2015-Financial-Plan-Amendment-Bylaw.pdf",
+      "label": "Financial Plan Bylaw No. 1210, 2015",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2015",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/1225-2016-Financial-Plan-Bylaw.pdf",
+      "label": "Financial Plan Bylaw No. 1225, 2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2016",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/1241-2017-5-Year-Financial-Plan-for-adoption.pdf",
+      "label": "Financial Plan Bylaw No. 1241, 2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2008-Annual-Report.pdf",
+      "label": "2008 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2008",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2009-Annual-Report.pdf",
+      "label": "2009 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2009",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2010-Annual-Report.pdf",
+      "label": "2010 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2010",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2011-Annual-Report.pdf",
+      "label": "2011 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2011",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2012-annual-report.pdf",
+      "label": "2012 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2012",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2013-Town-of-Gibsons-FS.pdf",
+      "label": "2013 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2013",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2013-annual-report-WEBSITE.pdf",
+      "label": "2013 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2013",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2014-Town-of-Gibsons-Annual-Report.pdf",
+      "label": "2014 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2014",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2014-Town-of-Gibsons-Fin-Stmts-signed.pdf",
+      "label": "2014 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2014",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2015-Annual-Report.pdf",
+      "label": "2015 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2015",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2015-Town-of-Gibsons-Financial-Statements-signed.pdf",
+      "label": "2015 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2015",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2016-Gibsons-Financial-Statements-Signed-FINAL.pdf",
+      "label": "2016 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2016",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/2016-Town-of-Gibsons-Annual-Report-website-reduced.pdf",
+      "label": "2016 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2016",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/GEN-2017-5-yr-Fin-Plan-V6-FINAL.pdf",
+      "label": "2017 General 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/SAN-2017-5-yr-Fin-Plan-V5-FINAL.pdf",
+      "label": "2017 Sanitary 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/01/WTR-2017-5-yr-Fin-Plan-V5-FINAL.pdf",
+      "label": "2017 Water 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/05/1253-2018-5-Year-Financial-Plan-signed-Cert-true-copy.pdf",
+      "label": "Financial Plan Bylaw No. 1253, 2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/05/2017-Gibsons-Financial-Statements-FINAL-signed-06012018.pdf",
+      "label": "2017 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/05/2018-General-5-Year-Financial-Plan.pdf",
+      "label": "2018 General 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/05/2018-Sanitary-5-Year-Financial-Plan.pdf",
+      "label": "2018 Sanitary 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/05/2018-Water-5-Year-Financial-Plan.pdf",
+      "label": "2018 Water 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2018/07/2017-Town-of-Gibsons-Annual-Report.pdf",
+      "label": "2017 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2019/05/1266-2019-Financial-Plan-Bylaw.pdf",
+      "label": "Financial Plan Bylaw No. 1266, 2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2019/05/2018-Gibsons-Financial-Statements-Signed-FINAL.pdf",
+      "label": "2018 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2018",
+        "2019"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2019/05/2019-5-YR-GENERAL-FINAL.pdf",
+      "label": "2019 General 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2019/05/2019-5-YR-SANITARY-FINAL.pdf",
+      "label": "2019 Sanitary 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2019/05/2019-5-YR-WATER-FINAL.pdf",
+      "label": "2019 Water 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2019/07/2018-Annual-Report-June-30-2019.pdf",
+      "label": "2018 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2018",
+        "2019"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2020/05/2019-Gibsons-FS-Final.pdf",
+      "label": "2019 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2019",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2020/05/2020-GENERAL-5-Year-Budget-FINAL-rvsd.pdf",
+      "label": "2020 General 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2020/05/2020-SANITARY-5-Year-Budget-FINAL.pdf",
+      "label": "2020 Sanitary 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2020/05/2020-WATER-5-Year-Budget-FINAL.pdf",
+      "label": "2020 Water 5-Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2020/08/2019-Annual-Report-flattened.pdf",
+      "label": "2019 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2019",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2020/09/1276-2020-2024-Financial-Plan-Bylaw.pdf",
+      "label": "Financial Plan Bylaw No. 1276, 2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2021/04/2020-Gibsons-Financial-Statements-Final-Signed-as-at-04-29-2021.pdf",
+      "label": "2020 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2020",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2021/05/2021-5yr-General-Budget-FINAL.pdf",
+      "label": "2021 5-year General Budget",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2021/05/2021-5yr-Sanitary-Budget-FINAL.pdf",
+      "label": "2021 5-year Sanitary Budget",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2021/05/2021-5yr-Water-Budget-FINAL.pdf",
+      "label": "2021 5-year Water Budget",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2021/06/2021-06-1289-2021-5-Year-Financial-Plan-Signed.pdf",
+      "label": "Financial Plan Bylaw No. 1289, 2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2022/05/2021-Gibsons-Financial-Statements-Final-signed.pdf",
+      "label": "2021 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2022/05/2022-2026-GENERAL-CAPITAL-FINAL.pdf",
+      "label": "2022 5-Year General Capital Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2022/05/2022-2026-SANITARY-SEWER-FINAL.pdf",
+      "label": "2022 5-Year Sanitary Sewer Capital Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2022/05/2022-2026-WATER-CAPITAL-FINAL.pdf",
+      "label": "2022 5-Year Water Capital Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2022/07/2020-Annual-Report-as-at-July-12-2021-FINAL-optimized.pdf",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2020",
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2022/07/2021-Annual-Report-FINAL-as-at-July-14-2022-COMPRESSED.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2022/10/Town-of-Gibsons-2025-Annual-Report-for-adoption.pdf",
+      "label": "2025 Town of Gibsons Annual Report Final (pdf)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2023/06/1304-2023-2023-2027-Financial-Plan-Bylaw.pdf",
+      "label": "Financial Plan Bylaw No. 1304, 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2023/06/2022-Gibsons-FS-Final-Signed.pdf",
+      "label": "2022 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2023/06/2023-2027-General-Capital-Final.pdf",
+      "label": "2023 5-Year General Capital Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2023/06/2023-2027-Water-Capital-Final.pdf",
+      "label": "2023 5-Year Water Capital Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2023/06/Town-of-Gibsons-2022-Annual-Report_spread-3.pdf",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2024/05/1315-2024-Financial-Plan-Bylaw.pdf",
+      "label": "Financial Plan Bylaw No.1315, 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2024/05/2023-Gibsons-FS-Final-signed.pdf",
+      "label": "2023 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2024/07/Town-of-Gibsons-2023-Annual-Report_web-version-2024-07-10.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2025/04/2024-Town-of-Gibsons-Financial-Statements.pdf",
+      "label": "2024 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2025/07/ADOPTED-Town-of-Gibsons-2024-Annual-Report-Web-Audited.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2025/09/1331-2025-2025-2029-Financial-Plan-Bylaw-signed.pdf",
+      "label": "Financial Plan Bylaw No.1331, 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2025/09/Gen-Cap-2025-5-Yr-1.pdf",
+      "label": "2025 Gen Capital 5 Yr",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2025/09/Sewer-Cap-2025-5-Yr-1.pdf",
+      "label": "2025 Sewer Capital Plan 5 Yr",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2025/09/Water-Cap-2025-5-Yr-1.pdf",
+      "label": "2025 Water Capital Plan 5 Yr",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/04/2025-Town-of-Gibsons-Financial-Statements.pdf",
+      "label": "2025 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/07/2021-Statement-of-Financial-Information.pdf",
+      "label": "2021 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2021",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/07/2022-Statement-of-Financial-Information.pdf",
+      "label": "2022 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/07/2023-Statement-of-Financial-Information.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2023",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/07/2024-Statement-of-Financial-Information.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information.pdf",
+      "label": "2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/09/1347-2026-2026-2030-Financial-Plan-Bylaw-signed.pdf",
+      "label": "1347, 2026",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/09/2026-Drainage-Capital-Plan-5-Yr.pdf",
+      "label": "2026 Drainage Capital Plan 5 Yr",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/09/2026-General-Capital-Plan-5-Yr.pdf",
+      "label": "2026 General Capital Plan 5 Yr",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/09/2026-Sewer-Capital-Plan-5-Yr.pdf",
+      "label": "2026 Sewer Capital Plan 5 Yr",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://gibsons.ca/wp-content/uploads/2026/09/2026-Water-Capital-Plan-5-Yr.pdf",
+      "label": "2026 Water Capital Plan 5 Yr",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    }
+  ]
+}

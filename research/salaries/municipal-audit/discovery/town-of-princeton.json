@@ -1,0 +1,192 @@
+{
+  "municipality": "Princeton",
+  "employerSlug": "town-of-princeton",
+  "website": "http://www.princeton.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.princeton.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princeton.ca",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 91448,
+      "sha256": "018f1ac0831e6cc6df628582125fb756b9bbdc36cefd9e1d836fae4c19ea9db5",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.princeton.ca/p/http-princeton-ca-home-downloaddocument-docid-19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princeton.ca/p/http-princeton-ca-home-downloaddocument-docid-19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 87302,
+      "sha256": "4675c56cfe6ca64c4f3493a92766a4ec0033fd90a353f588deda62a1fd6bc357",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.princeton.ca/p/princeton-sofi-2022",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princeton.ca/p/princeton-sofi-2022",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 85028,
+      "sha256": "d42065bb4a1692bdd19201e03478b442c012a7ecfd2ee55eb60e46e703001257",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "http://princeton.ca/Home/DownloadDocument?docId=19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://princeton.ca/Home/DownloadDocument?docId=19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "contentType": "application/pdf",
+      "bytes": 147844,
+      "sha256": "37c2b374a148799d4fc32bb8059738d37a83dfa567eb8127bbcd982fb64b599a",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.princeton.ca/p/town-of-princeton-annual-report-2022",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princeton.ca/p/town-of-princeton-annual-report-2022",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 85294,
+      "sha256": "1ade208eea8f5bd8f0af85f493afa331f6dff70e3cb2b528d5b4250b82c8a494",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "http://princeton.ca/Home/DownloadDocument?docId=3c4d1f55-711e-47ab-937f-bcf9a42f3e65",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://princeton.ca/Home/DownloadDocument?docId=3c4d1f55-711e-47ab-937f-bcf9a42f3e65",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "e63bac236b9100002e469a863a525b26a6e20aea8665c01e8c7dfb8bf235f351",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.princeton.ca/p/2022-five-year-financial-plan-presentation",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princeton.ca/p/2022-five-year-financial-plan-presentation",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 85251,
+      "sha256": "d2615ac0b845ba965484aa7c86e59bccec243dcc8b27333f21aa12d1440eee47",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.princeton.ca/p/2025-2029-financial-plan-bylaw---public-consultation",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princeton.ca/p/2025-2029-financial-plan-bylaw---public-consultation",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 87282,
+      "sha256": "8cb16a27b23bade2424ab9541d55550cd68d738a4e9210707090df0616833127",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.princeton.ca/p/finance-and-administration",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.princeton.ca/p/finance-and-administration",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 87980,
+      "sha256": "a354a227e2b706cc718ac4a378b3212920dde93f6d88b2c6a79a4768f0c342d9",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "http://princeton.ca/Home/DownloadDocument?docId=3c4d1f55-711e-47ab-937f-bcf9a42f3e65",
+      "label": "Town of Princeton 2023 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.princeton.ca/p/town-of-princeton-annual-report-2022",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princeton.ca/p/http-princeton-ca-home-downloaddocument-docid-19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "label": "Princeton SOFI 2023",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.princeton.ca",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princeton.ca/p/princeton-sofi-2022",
+      "label": "Princeton SOFI 2022-2023",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.princeton.ca",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.princeton.ca/p/town-of-princeton-annual-report-2022",
+      "label": "Town of Princeton Annual Report 2022 - 2023",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.princeton.ca",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "http://princeton.ca/Home/DownloadDocument?docId=19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "label": "Please click here to see the PDF version of the SOFI 2023 document.",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "http://princeton.ca/Home/DownloadDocument?docId=19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "http://princeton.municipalwebsites.ca/UploadFiles/Docs/2024AnnualReport_SWQkn2.pdf",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princeton.ca",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://princeton.municipalwebsites.ca/UploadFiles/Docs/2022AnnualReportCombined_AO7WCj.pdf",
+      "label": "Town of Princeton 2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princeton.ca/p/town-of-princeton-annual-report-2022",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://princeton.municipalwebsites.ca/UploadFiles/Docs/SOFI2022_Ezpuz1.pdf",
+      "label": "Princeton SOFI 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.princeton.ca/p/princeton-sofi-2022",
+      "yearsInLabel": [
+        "2022"
+      ]
+    }
+  ]
+}

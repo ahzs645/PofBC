@@ -1,0 +1,359 @@
+{
+  "municipality": "Courtenay",
+  "employerSlug": "city-of-courtenay",
+  "website": "http://www.courtenay.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.courtenay.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.courtenay.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 130657,
+      "sha256": "5ae589acd94238fc9e5bb10d874df76c0121e1095dfd5728dcb689b304aa0f8d",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.courtenay.ca/city-hall/financial-services/annual-financial-plan/statement-financial-information",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.courtenay.ca/city-hall/financial-services/annual-financial-plan/statement-financial-information",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 125652,
+      "sha256": "7ecdb13567d7acf2cd8eb6950f8d600e412a437f63e0ef33dc9441d8c55baf27",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2020-statement-financial-informationpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.courtenay.ca/media/file/2020-statement-financial-informationpdf",
+      "contentType": "application/pdf",
+      "bytes": 3218998,
+      "sha256": "2aa339690271be2649d47599db3b686192fbbaf2a4f6515685235bcfaf6cacea",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2021-statement-financial-informationpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.courtenay.ca/media/file/2021-statement-financial-informationpdf",
+      "contentType": "application/pdf",
+      "bytes": 3407113,
+      "sha256": "afadc7ba27caa7b9fe38748dd9e73505eacc5d02a485daa15756494d7bde7dd8",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2022-statement-financial-informationpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.courtenay.ca/media/file/2022-statement-financial-informationpdf",
+      "contentType": "application/pdf",
+      "bytes": 4405167,
+      "sha256": "8c4436e78746e5b5a294abb176a30af50d78a1de4fe0d4ecbea49d76c4690483",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2023-statement-financial-informationpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.courtenay.ca/media/file/2023-statement-financial-informationpdf",
+      "contentType": "application/pdf",
+      "bytes": 2566451,
+      "sha256": "0f91a942d5649cbfe4157d7c8c6668af4cd1b48df0e1932962d09b841f76b8d7",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2024-statement-financial-informationpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.courtenay.ca/media/file/2024-statement-financial-informationpdf",
+      "contentType": "application/pdf",
+      "bytes": 4084621,
+      "sha256": "da8f87e293d47355063762960e1769b99a8c161792a94b04006c4504dd6df665",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+      "contentType": "application/pdf",
+      "bytes": 3273852,
+      "sha256": "f62a90a67f1067b6c771fd41b3109ee7ee998991eda3fde5fdb4c7b56c36d7dd",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 129829,
+      "sha256": "76d64a7435f2e3fa0d9ed9919104351a5fc01f7b3ff9113df0247282928a9235",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://courtenay-ca.cld.bz/2023-Courtenay-Annual-Report",
+      "label": "2023 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://courtenay-ca.cld.bz/2024-Annual-Report-Draft",
+      "label": "2024 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://courtenay-ca.cld.bz/City-of-Courtenay-Annual-Report-2021",
+      "label": "2021 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://courtenay-ca.cld.bz/City-of-Courtenay-Annual-Report-2022",
+      "label": "2022 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://courtenay-ca.cld.bz/Courtenay-Annual-Report-2025",
+      "label": "2025 Annual Report – FlippingBook",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/2025-annual-report",
+      "label": "2025 Annual Report – PDF",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "label": "Annual reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.courtenay.ca/city-hall/financial-services/annual-financial-plan/statement-financial-information",
+      "label": "Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2019-courtenay-annual-report",
+      "label": "2019 Annual Report [PDF/8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-ann-report-2008",
+      "label": "2008 Annual Report [PDF/4.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-ann-report-2010",
+      "label": "2010 Annual Report [PDF/3.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-ann-report-2011",
+      "label": "2011 Annual Report [PDF/1.4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-ann-report-2012",
+      "label": "2012 Annual Report [PDF/3.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-ann-report-2013",
+      "label": "2013 Annual Report [PDF/3.5MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-ann-report-2014",
+      "label": "2014 Annual Report [PDF/4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-ann-report-2015",
+      "label": "2015 Annual Report [PDF/3.9MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-ann-report-2018",
+      "label": "2018 Annual Report [PDF/5.9MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-ann-report-2020-draft",
+      "label": "2020 Annual Report [PDF/5.9MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-annual-report-2009",
+      "label": "2009 Annual Report [PDF/2.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-annual-report-2016-web",
+      "label": "2016 Annual Report [PDF/4.5MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/courtenay-annual-report-2017",
+      "label": "2017 Annual Report [PDF/5.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2020-statement-financial-informationpdf",
+      "label": "2020 Statement of Financial Information [PDF/3.1MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/media/file/2020-statement-financial-informationpdf",
+      "yearsInLabel": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2021-statement-financial-informationpdf",
+      "label": "2021 Statement of Financial Information [PDF/3.2MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/media/file/2021-statement-financial-informationpdf",
+      "yearsInLabel": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2022-statement-financial-informationpdf",
+      "label": "2022 Statement of Financial Information [PDF/4.2MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/media/file/2022-statement-financial-informationpdf",
+      "yearsInLabel": [
+        "2022",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2023-statement-financial-informationpdf",
+      "label": "2023 Statement of Financial Information [PDF/2.4MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/media/file/2023-statement-financial-informationpdf",
+      "yearsInLabel": [
+        "2023",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2024-statement-financial-informationpdf",
+      "label": "2024 Statement of Financial Information [PDF/3.9MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/media/file/2024-statement-financial-informationpdf",
+      "yearsInLabel": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+      "label": "2025 Statement of Financial Information [PDF/3.1MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+      "yearsInLabel": [
+        "2025",
+        "2025"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "municipality": "Burns Lake",
+  "employerSlug": "village-of-burns-lake",
+  "website": "http://www.burnslake.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.burnslake.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnslake.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 101594,
+      "sha256": "bbd693826659326df1677c429eeb690312d79a0ebc827956d0f0f908fbc1bea5",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.burnslake.ca/local-government/admin-finance/2024-annual-report",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnslake.ca/local-government/admin-finance/2024-annual-report",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 72242,
+      "sha256": "73d064e54fc3b5c7ca10589058c661b1d4ef7c2273dacadf8cf3079bfbb23a83",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2024-annual-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnslake.ca/media/file/2024-annual-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "1336ff698452012d28ad45b664ab4229f3d1633e336a5a83e3ae73a65516482c",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.burnslake.ca/local-government/admin-finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnslake.ca/local-government/admin-finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 87692,
+      "sha256": "8dc03aa77a33a87ac5a4ee34b09c875bb12f981dfedc4c9f2fe76569b835998c",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2019-statement-financial-information-report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnslake.ca/media/file/2019-statement-financial-information-report",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "9e7ad784e82df213d825133626870c1b0d6831a7e9f2bdeec0ca34e2cc2b2e4f",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2020-statement-financial-information-sofi",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnslake.ca/media/file/2020-statement-financial-information-sofi",
+      "contentType": "application/pdf",
+      "bytes": 1952624,
+      "sha256": "7fce39fc0e4fb800a327545c311af8e3725184733e4f4bcd2341fddbf3533095",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2021-village-burns-lake-sofi-report-final",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnslake.ca/media/file/2021-village-burns-lake-sofi-report-final",
+      "contentType": "application/pdf",
+      "bytes": 5691769,
+      "sha256": "1a9db50bcad6d42ba168bd4ae1b8a9f99c4bffceaa538f58e9dfc97f0139141a",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2022-village-burns-lake-sofi-report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnslake.ca/media/file/2022-village-burns-lake-sofi-report",
+      "contentType": "application/pdf",
+      "bytes": 3233721,
+      "sha256": "7dc53871d68e31b361c160250d121b25a28c1fdeaeda80df16353dff10c9dfd4",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2016-annual-report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnslake.ca/media/file/2016-annual-report",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "f086148b0e9f26d540f77494d0de48bc332820f6fe0e3ab6b7f421440d51ef67",
+      "status": "response-too-large"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.burnslake.ca/local-government/admin-finance/2024-annual-report",
+      "label": "2024 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2016-annual-report",
+      "label": "2016 Annual Report [PDF/15MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2016-audited-financial-statements-1",
+      "label": "2016 Audited Financial Statements [PDF/1.4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2017-annual-report-audited-financial-statements-final",
+      "label": "2017 Annual Report [PDF/19.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2017-audited-financial-statements-pdf",
+      "label": "2017 Audited Financial Statements [PDF/550KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2018-annual-report",
+      "label": "2018 Annual Report [PDF/2.5MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2018-audited-financial-statements",
+      "label": "2018 Audited Financial Statements [PDF/1.9MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2019-audited-financial-statements",
+      "label": "2019 Audited Financial Statements [PDF/16.2MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2019-statement-financial-information-report",
+      "label": "2019 Statement of Financial Information [PDF/19.2MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2020-annual-report-website-1",
+      "label": "2020 Annual Report [PDF/12.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2020village-burns-lake-financial-statement",
+      "label": "2020 Audited Financial Statements [PDF/1.4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2021village-burns-lakefs-stmts-signed-1",
+      "label": "2021 Audited Financial Statements [PDF/2.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2022village-burns-lakefs-stmts-signed",
+      "label": "2022 Audited Financial Statements [PDF/2.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2023-village-burns-lake-annual-report",
+      "label": "2023 Village of Burns Lake Annual Report [PDF/8.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2024-annual-reportpdf",
+      "label": "2024 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance/2024-annual-report",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/corporation-village-burns-lake-2023-audited-financial-statements-final",
+      "label": "The Corporation of the Village of Burns Lake 2023 Audited Financial Statements [PDF/1.2MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/local-government/admin-finance",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2020-statement-financial-information-sofi",
+      "label": "2020 Statement of Financial Information [PDF/1.9MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/media/file/2020-statement-financial-information-sofi",
+      "yearsInLabel": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2021-village-burns-lake-sofi-report-final",
+      "label": "2021 Statement of Financial Information [PDF/5.4MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/media/file/2021-village-burns-lake-sofi-report-final",
+      "yearsInLabel": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.burnslake.ca/media/file/2022-village-burns-lake-sofi-report",
+      "label": "2022 Statement of Financial Information [PDF/3.1MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnslake.ca/media/file/2022-village-burns-lake-sofi-report",
+      "yearsInLabel": [
+        "2022",
+        "2022"
+      ]
+    }
+  ]
+}
