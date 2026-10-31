@@ -177,7 +177,7 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "No independently attributable PRHC mark located. Its official BC Housing organization page and group-home page use BC Housing branding. Do not count the BC Housing parent/administrator logo as a separate PRHC logo. This is an unresolved artwork gap, not a claim that no PRHC logo ever existed.",
+    "notes": "No independently attributable PRHC mark located. Its official BC Housing organization page and group-home page use BC Housing branding. Do not count the BC Housing parent/administrator logo as a separate PRHC logo. This is an unresolved artwork gap, not a claim that no PRHC logo ever existed. Second pass: Second pass found no independently attributable PRHC logo or seal. Official corporate-report listings and the 2023 PRHC financial-information statement were checked; the latter identifies the land-holding company and its BC Housing agent but does not establish a separate graphic. BC Housing branding is not counted as PRHC artwork. This remains a research gap, not a claim that a mark never existed.",
     "assets": []
   },
   {
@@ -2725,10 +2725,50 @@ export const COLLECTED_BODIES = [
     "from": 1953,
     "to": 1964,
     "current": false,
-    "status": "source-found",
+    "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "A later toll authority, Coquihalla branding, or a government coat of arms must not be substituted without evidence.",
-    "assets": []
+    "notes": "Recovered the Authority’s original ferry-service emblem, documented in a 15 June 1960 opening-day newspaper advertisement. The mark reads British Columbia Toll Authority Ferry System. The same advertisement explicitly names British Columbia Toll Highways and Bridges Authority. Scope is the ferry service, not a claimed universal corporate seal. Date records this specimen, not adoption.",
+    "assets": [
+      {
+        "label": "British Columbia Toll Authority Ferry System emblem (1960)",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Toll Highways and Bridges Authority; The Daily Colonist; digitized by University of Victoria / Internet Archive",
+        "sourcePage": "https://archive.org/details/dailycolonist19600615/page/n6/mode/1up",
+        "sourceUrl": "https://archive.org/download/dailycolonist19600615/1960_06_15_jp2.zip/1960_06_15_jp2/1960_06_15_0006.jp2",
+        "sourceDate": "1960-06-15",
+        "sourceLocator": "The Daily Colonist, printed page 7; Internet Archive leaf 6; opening-day advertisement, lower-right emblem.",
+        "observedDate": "2026-10-22",
+        "evidenceType": "contemporary-newspaper-advertisement",
+        "notes": "Authentic ferry-service identity associated explicitly with the Authority in the surrounding advertisement. Do not describe this as a generic whole-corporation logo or seal.",
+        "fidelityNote": "Faithful rectangular crop from the original archival scan at native pixel dimensions. No redrawing, tracing, contrast adjustment, background removal, or resampling. Paper texture, ink wear and scan defects remain; this is a raster specimen, not an original vector master.",
+        "extraction": {
+          "method": "native scan pixel crop",
+          "sourceResolution": [
+            7903,
+            11961
+          ],
+          "cropBoundingBoxPixels": [
+            5870,
+            10090,
+            7090,
+            10825
+          ]
+        },
+        "sha256": "09a404851eb4292489a0ebea809fd66afe59af253b3ac5c45d88317e33b79cee",
+        "bytes": 477187,
+        "previewWidth": 1220,
+        "previewHeight": 735,
+        "artworkScope": "ferry-service emblem",
+        "file": "identity-collected/bc-toll-highways-and-bridges-authority/bc-toll-authority-ferry-system-1960.png",
+        "id": "source-bc-toll-highways-and-bridges-authority-bc-toll-authority-ferry-system-1960-png",
+        "darkBackground": false,
+        "dateNote": "A dated sighting is not a complete usage period.",
+        "researchPass": 2
+      }
+    ]
   },
   {
     "id": "bc-electric-company-crown",
@@ -2740,7 +2780,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "source-found",
     "observedDate": "2026-10-22",
-    "notes": "Candidate photo retained at sources/bce-1963-original.jpg; not counted as a collected corporate logo. BC Hydro and pre-1961 Electric Railway identities were not substituted.",
+    "notes": "Candidate photo retained at sources/bce-1963-original.jpg; not counted as a collected corporate logo. BC Hydro and pre-1961 Electric Railway identities were not substituted. Second pass: No clean graphic with adequately verified 1961–1965 Crown-company use was recovered. A BC Hydro retrospective displays the familiar BC Electric circular device but is a 2013 presentation, not a contemporary specimen. Dated 1961 newspaper and Buzzer originals were inspected: they show plain company names or publication/bond artwork, not an independently evidenced corporate logo. The pre-1961 Electric Railway mark and BC Hydro branding were not substituted.",
     "assets": []
   },
   {
@@ -2750,10 +2790,93 @@ export const COLLECTED_BODIES = [
     "from": 1964,
     "to": 1977,
     "current": false,
-    "status": "source-found",
+    "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "This record concerns the 1964–1977 authority in the brief. The BC Ferry Authority created in 2003 is not a substitute. Existing BC Ferries marks may require period review by the project.",
-    "assets": []
+    "notes": "Recovered a dated contemporary original signature from the historical Authority: a 21 May 1964 Driftwood advertisement explicitly prints British Columbia Ferry Authority with dogwood flag. This is direct evidence for the requested historical entity. Native scan quality is modest; no vector reconstruction was made.",
+    "assets": [
+      {
+        "label": "British Columbia Ferry Authority advertisement signature (1964)",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Ferry Authority; Driftwood; Salt Spring Island Archives",
+        "sourcePage": "https://saltspringarchives.com/driftwood/1964/may21-64.pdf",
+        "sourceUrl": "https://saltspringarchives.com/driftwood/1964/may21-64.pdf",
+        "sourceDate": "1964-05-21",
+        "sourceLocator": "Driftwood, 21 May 1964, printed page 3 / PDF page 3; B.C. Ferries Special Notice advertisement, lower left.",
+        "observedDate": "2026-10-22",
+        "evidenceType": "contemporary-newspaper-advertisement",
+        "notes": "Original agency name and dogwood-flag device together. Advertisement names the historical British Columbia Ferry Authority, head office 816 Wharf Street, Victoria. Keep distinct from both the modern 2003+ Ferry Authority and Ferry Corporation.",
+        "fidelityNote": "Faithful rectangular crop from the original archival scan at native pixel dimensions. No redrawing, tracing, contrast adjustment, background removal, or resampling. Paper texture, ink wear and scan defects remain; this is a raster specimen, not an original vector master.",
+        "extraction": {
+          "method": "native scan pixel crop",
+          "sourceResolution": [
+            1521,
+            2070
+          ],
+          "cropBoundingBoxPixels": [
+            99,
+            1838,
+            711,
+            1972
+          ],
+          "pdfPage": 3,
+          "pdfImageXref": 8,
+          "sourceImageExtraction": "Original JPEG image stream extracted losslessly from PDF image xref 8 before rectangular pixel crop."
+        },
+        "sha256": "bca52e761e1d89d1f6bf14329c566494d210d319acaf7b27661d5641737acf88",
+        "bytes": 105573,
+        "previewWidth": 612,
+        "previewHeight": 134,
+        "file": "identity-collected/bc-ferry-authority/bc-ferry-authority-1964-advertisement-signature.png",
+        "id": "source-bc-ferry-authority-bc-ferry-authority-1964-advertisement-signature-png",
+        "darkBackground": false,
+        "dateNote": "A dated sighting is not a complete usage period.",
+        "researchPass": 2
+      },
+      {
+        "label": "Dogwood-flag device from Ferry Authority advertisement (1964)",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Ferry Authority; Driftwood; Salt Spring Island Archives",
+        "sourcePage": "https://saltspringarchives.com/driftwood/1964/may21-64.pdf",
+        "sourceUrl": "https://saltspringarchives.com/driftwood/1964/may21-64.pdf",
+        "sourceDate": "1964-05-21",
+        "sourceLocator": "Driftwood, 21 May 1964, printed page 3 / PDF page 3; B.C. Ferries Special Notice advertisement, lower left.",
+        "observedDate": "2026-10-22",
+        "evidenceType": "contemporary-newspaper-advertisement",
+        "notes": "Secondary close crop of the original dogwood-flag device. Its very small 99×95 native resolution limits use; the companion signature and source page establish exact entity and date.",
+        "fidelityNote": "Faithful rectangular crop from the original archival scan at native pixel dimensions. No redrawing, tracing, contrast adjustment, background removal, or resampling. Paper texture, ink wear and scan defects remain; this is a raster specimen, not an original vector master.",
+        "extraction": {
+          "method": "native scan pixel crop",
+          "sourceResolution": [
+            1521,
+            2070
+          ],
+          "cropBoundingBoxPixels": [
+            98,
+            1876,
+            197,
+            1971
+          ],
+          "pdfPage": 3,
+          "pdfImageXref": 8,
+          "sourceImageExtraction": "Original JPEG image stream extracted losslessly from PDF image xref 8 before rectangular pixel crop."
+        },
+        "sha256": "217886f0575b894c4313bbe89cb28e6f0fd435bf58d5fd2f35ef8d6c972308c8",
+        "bytes": 13874,
+        "previewWidth": 99,
+        "previewHeight": 95,
+        "file": "identity-collected/bc-ferry-authority/bc-ferry-authority-1964-dogwood-flag.png",
+        "id": "source-bc-ferry-authority-bc-ferry-authority-1964-dogwood-flag-png",
+        "darkBackground": false,
+        "dateNote": "A dated sighting is not a complete usage period.",
+        "researchPass": 2
+      }
+    ]
   },
   {
     "id": "bc-development-corporation",
@@ -3247,8 +3370,124 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Third-party reconstruction of the historical UTA identity; primary specimen still wanted",
+    "notes": "Two dated original specimens recovered, upgrading this entry beyond the existing third-party reconstruction: italic UTA signature in a 16 September 1979 recruitment advertisement, plus double-arrow device in a 1 July 1980 Capital Region bus-service advertisement explicitly paired with Urban Transit Authority. Keep the 1980 shared signature attribution and distinguish observed dates from design/adoption dates. These originals provide historical evidence but do not certify all details of the modern reconstructed file.",
     "assets": [
+      {
+        "label": "Urban Transit Authority recruitment-advertisement signature (1979)",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Urban Transit Authority of British Columbia; The Daily Colonist; digitized by University of Victoria / Internet Archive",
+        "sourcePage": "https://archive.org/details/dailycolonist19790916/page/n9/mode/1up",
+        "sourceUrl": "https://archive.org/download/dailycolonist19790916/1979_09_16_jp2.zip/1979_09_16_jp2/1979_09_16_0009.jp2",
+        "sourceDate": "1979-09-16",
+        "sourceLocator": "The Daily Colonist, printed page 10; Internet Archive leaf 9; Careers in Public Transit recruitment advertisement.",
+        "observedDate": "2026-10-22",
+        "evidenceType": "contemporary-newspaper-advertisement",
+        "notes": "Original italic UTA lettering above Urban Transit Authority of British Columbia. Advertisement border strokes continue through the top of the signature and are retained as original context. Date is this documented use, not adoption.",
+        "fidelityNote": "Faithful rectangular crop from the original archival scan at native pixel dimensions. No redrawing, tracing, contrast adjustment, background removal, or resampling. Paper texture, ink wear and scan defects remain; this is a raster specimen, not an original vector master.",
+        "extraction": {
+          "method": "native scan pixel crop",
+          "sourceResolution": [
+            3960,
+            5777
+          ],
+          "cropBoundingBoxPixels": [
+            2290,
+            3188,
+            2745,
+            3300
+          ]
+        },
+        "sha256": "1afa06090bfcaff8cd9edff81bc448210f4876ada0886177dafc87ed87216c3a",
+        "bytes": 44658,
+        "previewWidth": 455,
+        "previewHeight": 112,
+        "file": "identity-collected/urban-transit-authority/urban-transit-authority-1979-newspaper.png",
+        "id": "source-urban-transit-authority-urban-transit-authority-1979-newspaper-png",
+        "darkBackground": false,
+        "dateNote": "A dated sighting is not a complete usage period.",
+        "researchPass": 2
+      },
+      {
+        "label": "Capital Region / Urban Transit Authority service signature (1980)",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Capital Region Transit System / Urban Transit Authority; The Daily Colonist; digitized by University of Victoria / Internet Archive",
+        "sourcePage": "https://archive.org/details/dailycolonist19800701/page/n11/mode/1up",
+        "sourceUrl": "https://archive.org/download/dailycolonist19800701/1980_07_01_jp2.zip/1980_07_01_jp2/1980_07_01_0011.jp2",
+        "sourceDate": "1980-07-01",
+        "sourceLocator": "The Daily Colonist, printed page 12; Internet Archive leaf 11; Dominion Day bus-service advertisement, bottom-left.",
+        "observedDate": "2026-10-22",
+        "evidenceType": "contemporary-newspaper-advertisement",
+        "notes": "Original shared regional-service signature: Capital Regional District at left, double-arrow emblem, Urban Transit Authority at right. MTOC is separately named above as information contact. This is evidence for UTA-associated double-arrow use, not a claim the whole signature is solely UTA or MTOC branding.",
+        "fidelityNote": "Faithful rectangular crop from the original archival scan at native pixel dimensions. No redrawing, tracing, contrast adjustment, background removal, or resampling. Paper texture, ink wear and scan defects remain; this is a raster specimen, not an original vector master.",
+        "extraction": {
+          "method": "native scan pixel crop",
+          "sourceResolution": [
+            3798,
+            5759
+          ],
+          "cropBoundingBoxPixels": [
+            415,
+            5070,
+            1445,
+            5315
+          ]
+        },
+        "sha256": "638d0ef0360a4a1736c59510f9ad201851953e95cd77609d5d568ca9b46a9dfc",
+        "bytes": 138717,
+        "previewWidth": 1030,
+        "previewHeight": 245,
+        "artworkScope": "shared Capital Region Transit System / Urban Transit Authority service signature",
+        "file": "identity-collected/urban-transit-authority/urban-transit-authority-1980-regional-signature.png",
+        "id": "source-urban-transit-authority-urban-transit-authority-1980-regional-signature-png",
+        "darkBackground": false,
+        "dateNote": "A dated sighting is not a complete usage period.",
+        "researchPass": 2
+      },
+      {
+        "label": "Double-arrow device from UTA regional-service advertisement (1980)",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Capital Region Transit System / Urban Transit Authority; The Daily Colonist; digitized by University of Victoria / Internet Archive",
+        "sourcePage": "https://archive.org/details/dailycolonist19800701/page/n11/mode/1up",
+        "sourceUrl": "https://archive.org/download/dailycolonist19800701/1980_07_01_jp2.zip/1980_07_01_jp2/1980_07_01_0011.jp2",
+        "sourceDate": "1980-07-01",
+        "sourceLocator": "The Daily Colonist, printed page 12; Internet Archive leaf 11; Dominion Day bus-service advertisement, bottom-left.",
+        "observedDate": "2026-10-22",
+        "evidenceType": "contemporary-newspaper-advertisement",
+        "notes": "Native close crop of the double-arrow symbol. Companion full signature establishes attribution to Capital Regional District / Urban Transit Authority. Limited 235×245 scan resolution and small surrounding halftone border remain. Does not independently validate every colour or drawing detail of the existing modern reconstruction.",
+        "fidelityNote": "Faithful rectangular crop from the original archival scan at native pixel dimensions. No redrawing, tracing, contrast adjustment, background removal, or resampling. Paper texture, ink wear and scan defects remain; this is a raster specimen, not an original vector master.",
+        "extraction": {
+          "method": "native scan pixel crop",
+          "sourceResolution": [
+            3798,
+            5759
+          ],
+          "cropBoundingBoxPixels": [
+            810,
+            5070,
+            1045,
+            5315
+          ]
+        },
+        "sha256": "88c8935bf633b66c3b9df1c02b8f2f6cd430db3e22e3b3b11548a0dcf71e4f67",
+        "bytes": 33711,
+        "previewWidth": 235,
+        "previewHeight": 245,
+        "artworkScope": "device from shared regional-service signature",
+        "file": "identity-collected/urban-transit-authority/urban-transit-authority-1980-arrow.png",
+        "id": "source-urban-transit-authority-urban-transit-authority-1980-arrow-png",
+        "darkBackground": false,
+        "dateNote": "A dated sighting is not a complete usage period.",
+        "researchPass": 2
+      },
       {
         "id": "source-urban-transit-authority-urban-transit-authority-png",
         "label": "Third-party reconstruction of the historical UTA identity; primary specimen still wanted",
@@ -3444,7 +3683,7 @@ export const COLLECTED_BODIES = [
     "untraced": true,
     "status": "source-found",
     "observedDate": "2026-10-22",
-    "notes": "Original annual-report PDFs retained as leads. No generic typeset report title was promoted to a logo.",
+    "notes": "Original annual-report PDFs retained as leads. No generic typeset report title was promoted to a logo. Second pass: Second-pass original publications and advertisements establish the exact issuer but did not reveal a distinct MTOC corporate mark. The Buzzer title is a publication mark, and the double-arrow in the July 1980 regional-service notice is paired with Capital Regional District and Urban Transit Authority while MTOC is named separately as an information contact. These were not reattributed to MTOC.",
     "assets": []
   },
   {
@@ -3456,7 +3695,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "Corporate seal not recovered from inspected 1988 contract",
+    "notes": "Corporate seal not recovered from inspected 1988 contract Second pass: Second-pass exact-name, archival and Whistler Museum searches produced corporate-history references but no attributable logo or seal image. Previously inspected contract seal area remains blank. Whistler Village Land Company, Whistler Resort Association and Tourism Whistler marks were not substituted. No claim is made that W.L.C. had no graphic.",
     "assets": []
   },
   {
@@ -4042,7 +4281,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "No verified corporate graphic located",
+    "notes": "No verified corporate graphic located Second pass: No verified BC Harbours Board logo or seal recovered. New search identified physical timetable and Port of Kitimat report holdings, but accessible catalogue descriptions did not expose artwork. The federal National Harbours Board and CP railway equipment identities are different entities and were not substituted.",
     "assets": []
   },
   {
@@ -4054,7 +4293,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4066,7 +4305,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4078,7 +4317,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4090,7 +4329,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4102,7 +4341,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4114,7 +4353,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4126,7 +4365,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4338,7 +4577,7 @@ export const COLLECTED_BODIES = [
     "untraced": true,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. Government and parliamentary results supplied names and structural history, not artwork. The later Cariboo Community Health Services Society was researched separately.",
     "assets": []
   },
   {
@@ -4350,7 +4589,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4463,7 +4702,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4475,7 +4714,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4488,7 +4727,7 @@ export const COLLECTED_BODIES = [
     "untraced": true,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4500,7 +4739,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4512,7 +4751,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4524,7 +4763,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4536,7 +4775,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4549,7 +4788,7 @@ export const COLLECTED_BODIES = [
     "untraced": true,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4561,7 +4800,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4573,7 +4812,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4626,7 +4865,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4677,7 +4916,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4689,7 +4928,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -4701,7 +4940,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4713,7 +4952,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4725,7 +4964,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4737,7 +4976,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4749,7 +4988,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -4761,7 +5000,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4773,7 +5012,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4785,7 +5024,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4797,7 +5036,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -4809,7 +5048,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -4821,7 +5060,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -4938,6 +5177,46 @@ export const COLLECTED_BODIES = [
     "notes": "A reversed original raster survives in a later Trans Canada Trail donor-panel file. Its later file dates document a reproduction, not the logo’s adoption. Earlier recruitment-ad evidence is recorded separately in the research.",
     "assets": [
       {
+        "label": "North Shore Health Region — November 1999 advertisement",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "North Shore Health Region; Canadian Journal of Neurological Sciences / Cambridge University Press",
+        "sourcePage": "https://doi.org/10.1017/S031716710005006X",
+        "sourceUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/A8E27023EA65F4CE1B3996116B8CF059/S031716710005006Xa.pdf/cjn_volume_26_issue_4_cover_and_back_matter.pdf",
+        "sourceLocator": "PDF page 30 / printed A-70",
+        "sourceDate": "1999-11",
+        "observedDate": "2026-10-22",
+        "evidenceType": "original-published-raster",
+        "fidelityNote": "Lossless PNG crop from original embedded grayscale JPEG scan. 143×176 pixels; source grain and JPEG softness retained. No redraw, tracing, thresholding or enlargement.",
+        "notes": "Mountain silhouette and boxed North Shore Health Region wordmark with Sharing a Vision of Health tagline in original recruitment advertisement for Lions Gate Hospital.",
+        "sha256": "dd4e0bc266ea78a34cb549e80d698a33b25cde07e5286259dee98347a26809c9",
+        "bytes": 11492,
+        "extraction": {
+          "source_pdf_page": 30,
+          "source_xref": 226,
+          "source_resolution": [
+            1215,
+            1665
+          ],
+          "crop_bbox_image_pixels": [
+            685,
+            895,
+            828,
+            1071
+          ],
+          "extraction_method": "Original JPEG decoded once then cropped without scaling to PNG."
+        },
+        "file": "identity-collected/north-shore-health-region/north-shore-health-region-1999.png",
+        "id": "source-north-shore-health-region-north-shore-health-region-1999-png",
+        "darkBackground": false,
+        "dateNote": "A dated sighting is not a complete usage period.",
+        "researchPass": 2,
+        "previewWidth": 143,
+        "previewHeight": 176
+      },
+      {
         "id": "historical-north-shore-health-region-trail-reversed-raster",
         "label": "North Shore Health Region — reversed raster preserved in a later donor-panel file",
         "file": "identity-collected/north-shore-health-region/north-shore-health-region-trail-reversed-raster.png",
@@ -4975,7 +5254,7 @@ export const COLLECTED_BODIES = [
     "untraced": true,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. Search also returned unrelated overseas regional health boards. Their marks were not treated as BC evidence.",
     "assets": []
   },
   {
@@ -5059,7 +5338,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. Peace Arch Hospital and its fundraising foundation are different identities; their logos were not substituted for the historical council.",
     "assets": []
   },
   {
@@ -5071,7 +5350,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5083,7 +5362,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed. Strongest remaining lead is the original 1996 newsletter identified in City of Richmond archive holdings.",
     "assets": []
   },
   {
@@ -5095,7 +5374,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5107,7 +5386,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5119,7 +5398,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5131,7 +5410,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed. Strongest remaining lead is the paid 2000 nominations ad in the now-migrated Squamish newspaper archive; access failure prevented verification.",
     "assets": []
   },
   {
@@ -5143,7 +5422,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -5155,7 +5434,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: An original April 10, 1997 letter on Simon Fraser Health Region letterhead is signed by Dennis Cocke as Simon Fraser Health Board Chair. Further legal QA established this is after the amalgamated body’s Region renaming: M88/1997 (February 26) briefly substituted Simon Fraser Health Board for Simon Fraser/Burnaby Health Board; M111/1997 (March 17) rescinded that change and substituted Simon Fraser Health Region. M432/1996 rescinds the old Simon Fraser and Burnaby Board designations on amalgamation and establishes the new regulatory framework effective December 16, 1996. Consequently this letter is assigned to Simon Fraser Health Region only; it does not establish use by the distinct predecessor Board. Original predecessor artwork remains unresolved.",
     "assets": []
   },
   {
@@ -5232,7 +5511,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. Modern building/project pages and government records name the body but do not establish a council logo. The two supplied timeline entries were kept distinct.",
     "assets": []
   },
   {
@@ -5377,7 +5656,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -5433,7 +5712,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5445,7 +5724,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5457,7 +5736,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5469,7 +5748,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -5481,7 +5760,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5494,7 +5773,7 @@ export const COLLECTED_BODIES = [
     "untraced": true,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5659,7 +5938,7 @@ export const COLLECTED_BODIES = [
     "untraced": true,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -5671,7 +5950,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5683,7 +5962,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5695,7 +5974,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. Quesnel municipal minutes contain references to council correspondence, but this did not yield an attached letterhead.",
     "assets": []
   },
   {
@@ -5707,7 +5986,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. Patients First lists Marilyn Hall, Central Coast Transitional Health Authority, submission 537 on PDF page 92. The underlying submitted document remains a lead, not a recovered logo.",
     "assets": []
   },
   {
@@ -5719,7 +5998,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -5731,7 +6010,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5743,7 +6022,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5755,7 +6034,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5767,7 +6046,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5779,7 +6058,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. Patients First lists Joe Novotny/Fort Nelson-Laird Community Health Council, submission 313, and Joe Novotny/Peace Liard Health, submission 448, on PDF page 99. Underlying submissions have not been visually inspected.",
     "assets": []
   },
   {
@@ -5791,7 +6070,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5803,7 +6082,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -5815,7 +6094,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5827,7 +6106,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5839,7 +6118,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5851,7 +6130,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5863,7 +6142,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. Nisga’a Valley Health Authority/Board references do not alone prove the logo of this particular historical council; no successor artwork was assigned.",
     "assets": []
   },
   {
@@ -5875,7 +6154,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5935,7 +6214,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -5947,7 +6226,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5959,7 +6238,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -5971,7 +6250,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5984,7 +6263,7 @@ export const COLLECTED_BODIES = [
     "untraced": true,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -5996,7 +6275,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -6008,7 +6287,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6020,7 +6299,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -6032,7 +6311,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6044,7 +6323,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6056,7 +6335,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -6068,7 +6347,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6080,7 +6359,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6092,7 +6371,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -6104,7 +6383,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6116,7 +6395,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -6128,7 +6407,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6140,7 +6419,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6152,7 +6431,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6164,7 +6443,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed.",
     "assets": []
   },
   {
@@ -6178,6 +6457,46 @@ export const COLLECTED_BODIES = [
     "observedDate": "2026-10-22",
     "notes": "The earlier recruiting-advertisement scan is joined by an original colour website JPEG and the much larger original monochrome bitmap from the January 2001 Continuum newsletter. All are raster specimens; no vector has been verified. Source and capture dates identify appearances, not adoption.",
     "assets": [
+      {
+        "label": "Simon Fraser Health Region — April 10, 1997 original letterhead",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Simon Fraser Health Region; University of the Fraser Valley South Asian Canadian Digital Archive",
+        "sourcePage": "https://sacda.ufv.ca/collections/2022_15_03_02_006",
+        "sourceUrl": "https://sacda.ufv.ca/sites/default/files/2026-09/2022_15_03_02_006.pdf",
+        "sourceLocator": "One-page original letter, letterhead. Signed by Dennis Cocke as Health Board Chair; after the March 17, 1997 legal renaming to Simon Fraser Health Region.",
+        "sourceDate": "1997-04-10",
+        "observedDate": "2026-10-22",
+        "evidenceType": "original-letterhead-raster",
+        "fidelityNote": "Native-resolution 870×475 PNG crop from the 3400×4677 one-bit JBIG2 image mask. Mask decoded to black ink on white to match the displayed PDF; source scan roughness retained. No redraw, tracing, resizing, or smoothing.",
+        "notes": "Logo reads SIMON FRASER HEALTH region. Letter is signed DENNIS COCKE, Chair, SIMON FRASER HEALTH BOARD, but the source postdates the legal naming of the amalgamated body as Simon Fraser Health Region (Ministerial Order M111/1997, March 17, 1997). It is attributed to the Region only and does not close the earlier separate Simon Fraser Health Board gap.",
+        "sha256": "d9bba20a62a94f6bdb2c3194b3877014046d7fb53efaf98f11583e2cb3f24f8e",
+        "bytes": 7846,
+        "extraction": {
+          "source_pdf_page": 1,
+          "source_xref": 14,
+          "source_resolution": [
+            3400,
+            4677
+          ],
+          "crop_bbox_image_pixels": [
+            510,
+            1155,
+            1380,
+            1630
+          ],
+          "extraction_method": "JBIG2 ImageMask decoded at its native pixel dimensions; mask composited as black on white following original PDF display; then cropped without scaling."
+        },
+        "file": "identity-collected/simon-fraser-health-region/simon-fraser-health-region-board-letterhead-1997.png",
+        "id": "source-simon-fraser-health-region-simon-fraser-health-region-board-letterhead-1997-png",
+        "darkBackground": false,
+        "dateNote": "A dated sighting is not a complete usage period.",
+        "researchPass": 2,
+        "previewWidth": 870,
+        "previewHeight": 475
+      },
       {
         "id": "source-simon-fraser-health-region-simon-fraser-health-region-2003-png",
         "label": "Archived recruiting-advertisement logo crop",
@@ -6276,7 +6595,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6362,7 +6681,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6413,7 +6732,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
     "assets": []
   },
   {
@@ -6507,7 +6826,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. Patients First submission 9 (18 October 2001, Fort St. John) names several North Peace Council representatives; underlying submission is a future letterhead lead. Fort St. John foundation artwork was rejected as a different organization.",
     "assets": []
   },
   {
@@ -6519,7 +6838,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6531,7 +6850,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded.",
     "assets": []
   },
   {
@@ -6543,7 +6862,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass archival and indexed-web research did not yield an original logo that could be visually verified and collected. This is not evidence that the organization had no logo. Name-only records and marks of successor or related organizations were excluded. South Peace Historical Society annual-review narratives record health-council activity, but the indexed text supplied no logo artwork.",
     "assets": []
   },
   {
@@ -6555,7 +6874,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "unresolved",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed.",
+    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed. The cited 1998/99 Society annual report is a stronger next target than the inspected thesis appendix.",
     "assets": []
   }
 ]
