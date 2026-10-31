@@ -99,9 +99,10 @@ export const YearPicker = ({ years, counts, coverage = [], value, onChange, labe
 /**
  * Pay by year as bars, from the first year with a record to the last; a year between with none is
  * left empty rather than drawn as zero. The table under it carries the same figures for reading.
- * `label` says what the pay is: a person's disclosed pay, or a position's average.
+ * `label` says what the pay is: a person's disclosed pay, or a position's average. `format` writes a
+ * value over its bar and `describe` one in full; both are money unless given (a count of records).
  */
-export const PayChart = ({ years, points, label = 'Disclosed pay by year', multiple = false }) => {
+export const PayChart = ({ years, points, label = 'Disclosed pay by year', multiple = false, format = compactMoney, describe = formatMoney }) => {
   const indexes = points.map((point) => point.year)
   if (!indexes.length) return null
   const first = Math.min(...indexes)
@@ -116,8 +117,8 @@ export const PayChart = ({ years, points, label = 'Disclosed pay by year', multi
     <figure className="salaries-chart" aria-label={`${label}, ${years[first]} to ${years[last]}; the figures are in the list below`}>
       <div ref={ref} className="salaries-chart__bars" aria-hidden="true">
         {span.map(({ label, point }, place) => (
-          <div key={label} className="salaries-chart__column" data-empty={!point || undefined} title={point ? `${label}: ${formatMoney(point.pay)}` : `${label}: no record`}>
-            <span className="salaries-chart__value">{point && values ? compactMoney(point.pay) : ''}</span>
+          <div key={label} className="salaries-chart__column" data-empty={!point || undefined} title={point ? `${label}: ${describe(point.pay)}` : `${label}: no record`}>
+            <span className="salaries-chart__value">{point && values ? format(point.pay) : ''}</span>
             <span className="salaries-chart__bar" data-negative={point?.pay < 0 || undefined} style={{ height: point ? `${Math.max(4, (Math.abs(point.pay) / most) * 100)}%` : undefined }} />
             <span className="salaries-chart__label" data-hidden={!plan[place].shown || undefined} data-edge={plan[place].edge}>{shortYear(label)}</span>
           </div>

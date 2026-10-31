@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url'
 import { gzipSync, gunzipSync } from 'node:zlib'
 import { surnameShard } from '../src/salaries/people.js'
 import { titleKey, titleShard } from '../src/salaries/positions.js'
+import { pooledGrowth, stayerRaises, typicalRaise } from '../src/salaries/growth.js'
 import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSlug, sectorOf } from './lib/salary-employers.mjs'
 import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
@@ -317,10 +318,11 @@ try {
   for (const row of rows) {
     const key = row.position ? titleKey(row.position) : ''
     if (!key) continue
-    if (!titles.has(key)) titles.set(key, { spellings: new Map(), cells: new Map(), employers: new Set(), rows: 0 })
+    if (!titles.has(key)) titles.set(key, { spellings: new Map(), cells: new Map(), employers: new Set(), rows: 0, records: [] })
     const title = titles.get(key)
     const cell = `${employerAt.get(row.slug)}|${yearAt.get(row.year)}`
     title.rows += 1
+    title.records.push({ name: row.name, group: row.slug, pay: row.pay, year: yearAt.get(row.year) })
     title.employers.add(row.slug)
     title.spellings.set(row.position, (title.spellings.get(row.position) ?? 0) + 1)
     if (!title.cells.has(cell)) title.cells.set(cell, [])
@@ -334,14 +336,29 @@ try {
       const [employer, year] = cell.split('|').map(Number)
       return [employer, year, pay.length, Math.round(sumMoney(pay) / pay.length * 100) / 100, median(pay), Math.min(...pay), Math.max(...pay)]
     }).sort((a, b) => a[1] - b[1] || a[0] - b[0])
-    titleList.push([spellings[0][0], title.rows, title.employers.size, cells[0][1], cells.at(-1)[1], periodMean(cells, cells.at(-1)[1])])
+    // How its pay moved (src/salaries/growth.js): each employer's average from end to end, and the
+    // median raise of a name kept under the title at one employer.
+    const byEmployer = new Map()
+    for (const [employer, year, count, mean] of cells) {
+      if (!byEmployer.has(employer)) byEmployer.set(employer, [])
+      byEmployer.get(employer).push({ year, count, mean })
+    }
+    const growth = pooledGrowth([...byEmployer], labels)
+    const raise = typicalRaise(stayerRaises(title.records, labels))
+    const rate = (value) => Math.round(value * 10000) / 10000
+    const entry = [spellings[0][0], title.rows, title.employers.size, cells[0][1], cells.at(-1)[1], periodMean(cells, cells.at(-1)[1]),
+      growth ? rate(growth.rate) : null, growth?.weight ?? 0, growth?.employers ?? 0, growth?.from ?? null, growth?.to ?? null,
+      raise ? rate(raise.rate) : null, raise?.pairs ?? 0, raise?.people ?? 0]
+    // Most titles have neither measure: their entries stop at the average.
+    while (entry.length > 6 && (entry.at(-1) === null || entry.at(-1) === 0)) entry.pop()
+    titleList.push(entry)
     const shard = titleShard(key)
     if (!titleShards.has(shard)) titleShards.set(shard, {})
     titleShards.get(shard)[key] = { spellings: spellings.slice(0, 12), cells }
   }
   titleList.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
   for (const [shard, entries] of titleShards) write(`positions/${shard}.json.gzip`, entries, true)
-  write('positions/index.json.gzip', { note: 'Titles: [most common spelling, rows, employers, first year index, last year index, average in the last period]. Slices by key: cells [employer index in employers/index.json, year index, rows, mean, median, lowest, highest]. Rows are disclosure records, not positions filled.', years: labels, titles: titleList, shards: [...titleShards.keys()].sort() }, true)
+  write('positions/index.json.gzip', { note: 'Titles: [most common spelling, rows, employers, first year index, last year index, average in the last period, average growth a year (each employer from its first to its last period with 5 or more records, 3 or more years apart, weighed by records; src/salaries/growth.js), records weighing it, employers in it, its first year index, its last year index, median yearly raise of a name kept under the title at one employer, raises in it, names in it]; growth and raise are null where none could be measured, and an entry ends where its remaining fields would all be empty. Slices by key: cells [employer index in employers/index.json, year index, rows, mean, median, lowest, highest]. Rows are disclosure records, not positions filled.', years: labels, titles: titleList, shards: [...titleShards.keys()].sort() }, true)
   audit.output = { rows: rows.length, namedRows: Object.values(shardCounts).reduce((sum, count) => sum + count, 0), employers: employerList.length, atlasBodies: Object.keys(index.bodies).length, years: labels, availableEmployerYears: employerList.reduce((sum, entry) => sum + entry.coverage.filter((year) => year.status === 'available').length, 0) }
   write('coverage.json', { ...audit, employers: employerList.map(({ slug, names, sector, coverage }) => ({ slug, names, sector, coverage })) })
   index.coverage = Object.fromEntries(employerList.filter((entry) => entry.body).map((entry) => [entry.body, entry.coverage]))

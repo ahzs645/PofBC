@@ -1737,6 +1737,27 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 }
 .salaries__tiles dd.salaries__line { margin: 0; font-size: 12px; font-weight: 400; color: var(--ink-faint); }
 .salaries__hint--small { font-size: 13px; }
+
+/* How pay moved: the tip beside a heading, the measures as tiles, and charts side by side when there
+   is room. */
+/* Its text opens under the heading it sits in, from the heading's start and no wider than it, so it
+   stays on screen wherever the "i" falls. */
+.salaries__tip--inline { position: static; top: auto; right: auto; transform: none; display: inline-block; vertical-align: -4px; margin-left: 6px; }
+.salaries__tip--inline .salaries__tip-button { width: 20px; height: 20px; font-size: 11px; }
+.salaries__tip--inline .salaries__tip-text { left: 0; right: auto; top: calc(100% + 6px); width: min(420px, 100%); font-weight: 400; letter-spacing: normal; text-transform: none; }
+.salaries__title, .salaries__order-note { position: relative; }
+.salaries__growth { margin-top: 16px; }
+.salaries__growth .salaries__title { margin-bottom: 8px; }
+.salaries__charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px 24px; margin-top: 12px; }
+.salaries__chart-title { margin: 0; font-size: 13px; font-weight: 600; color: var(--ink-faint); }
+.salaries__order-note { display: flex; align-items: center; gap: 0; margin: 0; flex: 1 1 260px; }
+
+/* A year's records in pay bands: a label, a bar as long as its share, and its count. */
+.salaries-bands { display: grid; gap: 4px; margin: 8px 0 0; padding: 0; list-style: none; }
+.salaries-bands li { display: grid; grid-template-columns: 96px minmax(0, 1fr) 56px; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.salaries-bands__bar { height: 14px; border-radius: 3px; background: var(--hover); overflow: hidden; }
+.salaries-bands__bar span { display: block; height: 100%; min-width: 2px; border-radius: 3px; background: var(--salaries-ink, #2f5f9e); }
+.salaries-bands__count { text-align: right; color: var(--ink); }
 .salaries__title--spaced { margin-top: 12px; }
 .salaries__year-title { margin: 4px 0 0; font-size: 15px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 .salaries__sector { display: grid; gap: 8px; margin-top: 16px; }
