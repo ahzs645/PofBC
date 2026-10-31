@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "bccss-employees-2016-17",
+      "year": "2016/17",
+      "periodType": "fiscal",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "status": "verified",
+      "employerSlug": "bc-clinical-and-support-services-society",
+      "employerName": "BC Clinical and Support Services Society",
+      "sector": "Health authorities",
+      "title": "BCCSS 2016/17 employee remuneration and expenses",
+      "category": "employee-remuneration",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/BCCSS%20Statement%20of%20Financial%20Information%202016-17.pdf",
+      "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sha256": "80f991ee3bc034534a23240fb1e57f613a0fe1a2c17a0eb7f87d0a8990ba2bd3",
+      "file": "2016-17.json.gzip",
+      "dataSha256": "9fbe175ffc175c0ffaa9c40cffbd61f2cbe5667936795e961e45d74f1a3d4b33",
+      "currency": "CAD",
+      "rowCount": 306,
+      "totalRemuneration": 28855034,
+      "totalExpenses": 958981,
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "nameDisclosure": "as-published",
+      "validation": {
+        "date": "2026-10-30",
+        "physicalPdfPages": [
+          48,
+          53
+        ],
+        "rowsPerPage": [
+          56,
+          56,
+          56,
+          56,
+          56,
+          26
+        ],
+        "independentReaders": [
+          "Poppler layout",
+          "PyMuPDF positioned words"
+        ],
+        "everyRowAndPageAgree": true,
+        "printedRemunerationReconcilesExactly": true,
+        "printedExpensesReconcileExactly": true,
+        "visuallyReviewedPhysicalPages": [
+          16,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        "expenseDashesRetainedAsMissing": 60,
+        "employeeTableExcludesBoardPage": 47,
+        "aggregateRowsExcluded": true
+      },
+      "notes": [
+        "BCCSS is a separate reporting employer. Its employee rows are not appended to PHSA or relabelled as PHSA employees.",
+        "The report describes BCCSS as a society and says operations commenced April 1, 2016 after services transferred from PHSA; see physical PDF page 16.",
+        "The schedule is cash-based remuneration, including disclosed employee payments; it is not an annual salary rate. Employer benefit costs and contracted labour explain why it differs from accrual financial statements.",
+        "Names and whole-dollar amounts are preserved. Sixty expense dashes remain missing, not disclosed zero; the disclosed numeric values reconcile exactly to the named subtotal.",
+        "The inclusive $75,000 threshold is taken from the named subtotal heading. Board, below-threshold and all-employee totals are excluded from individual records."
+      ]
+    }
+  ],
+  "employerDecision": {
+    "canonicalSlug": "bc-clinical-and-support-services-society",
+    "relatedEmployerSlug": "provincial-health-services-authority",
+    "relationship": "Separate society; transferred services began operations on April 1, 2016",
+    "evidenceUrl": "https://www.phsa.ca/about-site/Documents/BCCSS%20Statement%20of%20Financial%20Information%202016-17.pdf",
+    "physicalPdfPage": 16,
+    "aggregationRule": "Do not merge employers or deduplicate people across these employers without payment-specific evidence."
+  }
+}

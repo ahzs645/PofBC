@@ -1,0 +1,306 @@
+{
+  "scope": "Targeted additional pass on six unresolved timeline logos",
+  "searchedAt": "2026-10-30",
+  "summary": {
+    "timelineGapsSearched": 6,
+    "newVerifiedVectors": 0,
+    "newRasterReferencesExtracted": 2,
+    "exactHistoricalRasterReferences": 1,
+    "laterDifferentRasterVariants": 1
+  },
+  "method": "Read-only web search, public official repository-tree inspection and PDF image/path inspection using PyMuPDF. No raster tracing, successor substitution or recreated typography. Existing parent downloads reused.",
+  "results": [
+    {
+      "id": "bcstats-1996",
+      "status": "no_new_verified_vector",
+      "notes": "Archived web specimen is a provincial flag followed by italic white BC STATS in a blue band. No new native vector source located. Contemporary publications are an archival lead, not proof of an available vector.",
+      "existingRasterSpecimen": {
+        "url": "https://web.archive.org/web/19961228003016/http://www.bcstats.gov.bc.ca/pics/flagcol2.gif",
+        "localPath": "research-inputs-not-bundled/timeline/sources/bcstats-1996.gif",
+        "format": "GIF",
+        "width": 350,
+        "height": 86,
+        "alreadyDownloadedByParent": true
+      },
+      "checkedSources": [],
+      "searchQueries": [
+        "\"BC STATS\" \"1997\" filetype:pdf",
+        "\"BC Stats\" \"1998\" \"quick facts\"",
+        "\"BC Stats\" logo eps",
+        "\"BC Stats\" \"logo\" svg -site:dpdd.atlassian.net"
+      ],
+      "unverifiedLeads": [
+        {
+          "url": "http://www.bcstats.gov.bc.ca/data/qf.pdf",
+          "status": "historical_reference_only",
+          "notes": "Referenced as the 12-page Quick facts about British Columbia, 2004; not downloaded or proved to contain the 1996 logo."
+        }
+      ]
+    },
+    {
+      "id": "bcstats-2004",
+      "status": "no_new_verified_vector",
+      "notes": "Archived specimen is the small dark-blue serif BC Stats wordmark. The 2003/04 Merit Commissioner report is a period BC Stats lead, but this run received HTTP 503; the asset remains unverified.",
+      "existingRasterSpecimen": {
+        "url": "https://web.archive.org/web/20041205214534/http://www.bcstats.gov.bc.ca/images/bcstats_logo.gif",
+        "localPath": "research-inputs-not-bundled/timeline/sources/bcstats-2004.gif",
+        "format": "GIF",
+        "width": 108,
+        "height": 20,
+        "alreadyDownloadedByParent": true
+      },
+      "checkedSources": [
+        {
+          "url": "https://meritcomm.bc.ca/wp-content/uploads/2021/09/2003_04-Annual-Report-Merit-Commissioner.pdf",
+          "status": "retrieval_failed_http_503",
+          "notes": "Search-indexed 2003/04 Annual Report of the Merit Commissioner contains a BC Stats-prepared section; file bytes unavailable in this run. Do not call it vector. Source ref turn54search48."
+        }
+      ],
+      "searchQueries": [
+        "\"BC Stats\" \"2004\" filetype:pdf",
+        "\"BC Stats\" \"2004\" \"pdf\" -site:dpdd.atlassian.net",
+        "site:www2.gov.bc.ca/assets \"BC Stats\" \"2005\" filetype:pdf"
+      ]
+    },
+    {
+      "id": "bcstats-2012",
+      "status": "no_new_verified_vector",
+      "notes": "The dated 2013 reports show the shaded provincial sun, gold rule and BCStats wordmark matching the general period identity; inspected occurrences are embedded bitmaps. No native vector extracted.",
+      "existingRasterSpecimen": {
+        "url": "https://web.archive.org/web/20120319163902/http://www.bcstats.gov.bc.ca/Libraries/Website_Pictures/BCStats.sflb.ashx",
+        "localPath": "research-inputs-not-bundled/timeline/sources/bcstats-2012.bin",
+        "format": "PNG",
+        "width": 400,
+        "height": 100,
+        "alreadyDownloadedByParent": true
+      },
+      "checkedSources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/data/statistics/government/workforce_profile_report_2013_bcps.pdf",
+          "status": "verified_raster_logo",
+          "notes": "Cover logo is part of a 936x213 pixel image at bbox [14.3,600.9,463.2,702.8]; body footer BCStats images are 76x25 or 83x27. No vector logo at inspected pages 1,2,43.",
+          "page": 1,
+          "localPath": "research-inputs-not-bundled/timeline-extra/sources/bcstats-workforce-2013.pdf",
+          "bytes": 564812,
+          "sha256": "1e8ada2b9eee12ae67c2736bb994fa8100fce1919f83a1e1831608537a574a45"
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/data/statistics/government/wes/wes_2013_percentiles_lookup_table_final.pdf",
+          "status": "verified_raster_logo",
+          "notes": "The BC Stats logo is one 355x162 pixel image at bbox [542.3,-3.2,712.6,74.3]. The page has 3632 vector drawings, but they are the table/chart, not this logo.",
+          "page": 1,
+          "localPath": "research-inputs-not-bundled/timeline-extra/sources/bcstats-lookup-2013.pdf",
+          "bytes": 226003,
+          "sha256": "05288ad6167c79ae74505217dc91e37fb14a4b2eb93212f50da815750c206d37"
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/data/statistics/government/workforce_profile_report_2011_bcps.pdf",
+          "status": "verified_raster_logo",
+          "notes": "Cover logo is part of a 2236x487 pixel banner; body footer wordmark also raster. The existence of this 2011 print specimen does not date adoption of the 2012 website specimen.",
+          "page": 1,
+          "localPath": "research-inputs-not-bundled/timeline-extra/sources/bcstats-workforce-2011.pdf",
+          "bytes": 933144,
+          "sha256": "68b1c3761fb044ec56366892247702beba79c0d5d830ecd0cf54687d23215721"
+        },
+        {
+          "url": "https://catalogue.data.gov.bc.ca/dataset/466ddecd-2701-4e97-84fb-df60bd5aca95/resource/8a8f349e-0350-4168-91a4-22bca3b428e8/download/earnings_and_employment_trends_data_tables.pdf",
+          "status": "verified_raster_logo",
+          "notes": "Current report contains a 575x240 pixel BCStats logo image on the cover; not a historical vector replacement.",
+          "page": 1,
+          "localPath": "research-inputs-not-bundled/timeline-extra/sources/bcstats-earnings-2026.pdf",
+          "bytes": 261654,
+          "sha256": "0d58f2e97b004905fb630327c74b1ac269e90bc758100ce4bbaf19237b53e083"
+        },
+        {
+          "url": "https://meritcomm.bc.ca/wp-content/uploads/2021/10/BC_Stats_Random_Selection_for_2014_15_Merit_Performance_Audit_Amended_2016_04_26.pdf",
+          "status": "retrieval_failed_http_503",
+          "notes": "October2015/April2016 BCStats audit report found by web search but retrieval failed; candidate only."
+        },
+        {
+          "url": "https://github.com/bcgov/BCStats",
+          "status": "checked_no_logo_assets",
+          "notes": "Official index repository only contains README.md and COMPLIANCE.yaml. Recursively checked BC-demography and WES-demographic-profile; no image/vector assets. CANSIM-data-viewer tree request returned404. Source ref turn63view3."
+        }
+      ],
+      "searchQueries": [
+        "site:bcstats.gov.bc.ca \"2012\" filetype:pdf",
+        "\"BC Stats\" \"2014\" filetype:pdf -site:dpdd.atlassian.net",
+        "site:www2.gov.bc.ca/assets \"BC Stats\" \"2013\" filetype:pdf",
+        "\"BC Stats\" \"logo\" filetype:pdf"
+      ]
+    },
+    {
+      "id": "bcws-oval-crest",
+      "status": "no_new_verified_vector",
+      "notes": "Native vector of the exact Forests,Lands and Natural Resource Operations oval crest was not found. A high-resolution later Ministry of Forests crest is available as a raster reference only; it is a different wording variant and must not replace the historical specimen.",
+      "searchQueries": [
+        "\"BC Wildfire Service\" logo vector",
+        "\"BC Wildfire Service\" crest pdf",
+        "\"BC Wildfire\" \"logo\" \"github\""
+      ],
+      "checkedSources": [
+        {
+          "url": "https://www.rdno.ca/sites/default/files/2023-12/231219_BX_CWPP_Public.pdf",
+          "status": "verified_raster_later_variant",
+          "notes": "Page1 header crest is one 2293x2996 pixel image. Visually reviewed: it says Ministry of Forests, not Forests,Lands and Natural Resource Operations. Embedded image extracted without tracing. Source refs turn58search8.",
+          "page": 1,
+          "localPath": "research-inputs-not-bundled/timeline-extra/sources/bcws-bx-2023.pdf",
+          "bytes": 15401138,
+          "sha256": "5f31f1d4c2d3d42971a46cffb0b03398f19725a187d1d3bb797b6916f90501ff"
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/public-safety-and-emergency-services/wildfire-status/contact-information/media-room/handbook_-_media_information_sessions.pdf",
+          "status": "verified_raster_different_lockup",
+          "notes": "Media Handbook April1,2026 has the provincial sun/BCWildfireService lockup in a 1006x360 image; no sought oval crest at inspected pages.",
+          "page": 1,
+          "localPath": "research-inputs-not-bundled/timeline-extra/sources/bcws-media-2026.pdf",
+          "bytes": 1151496,
+          "sha256": "b26e48ebf61c1f0675702d4f127e23239b322d07d01a65804b3b470770d38b71"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/bcgov/nr-bcws-wfnews/release/2.7.0/client/wfnews-war/src/main/angular/src/assets/images/logo/bc-wildfire-service-logo-transparent.png",
+          "status": "verified_raster_different_lockup",
+          "notes": "Despite filename, this 620x180 PNG is the provincial sun and BCWildfireService endorsed wordmark, not an oval crest. Visually reviewed.",
+          "localPath": "research-inputs-not-bundled/timeline-extra/sources/bcws-official-crest.png",
+          "bytes": 14529,
+          "sha256": "41610e6ef14b35215c3afc12e3597f411e1523ce78e0ef479b300715f8780b98"
+        },
+        {
+          "url": "https://github.com/bcgov/nr-bcws-wfnews/tree/release/2.7.0",
+          "status": "checked_repository_assets",
+          "notes": "Recursive tree contains BCWS logo PNGs; SVG assets are icons or provincial logos, with no oval crest SVG/EPS found."
+        },
+        {
+          "url": "https://github.com/bcgov/nr-bcws-wfprev/tree/release/1.4.0",
+          "status": "checked_repository_assets",
+          "notes": "Logo asset bcwfservice-logo.png is raster."
+        },
+        {
+          "url": "https://github.com/bcgov/wps",
+          "status": "checked_repository_assets",
+          "notes": "Logo SVGs are provincial BCID marks, not the oval BCWS crest."
+        }
+      ],
+      "rasterReference": {
+        "source": "research-inputs-not-bundled/timeline-extra/sources/bcws-bx-2023.pdf",
+        "page": 1,
+        "xref": 3793,
+        "width": 2293,
+        "height": 2996,
+        "bbox": [
+          282.3500061035156,
+          7.200077056884766,
+          329.0299072265625,
+          68.28997802734375
+        ],
+        "path": "research-inputs-not-bundled/timeline-extra/bcws-oval-crest-raster-2023.png",
+        "sha256": "0909311fdfbe3392008ddcf8f53c6c317426da3f897c8a447ab39957b0069baf",
+        "format": "png",
+        "classification": "raster_reference_only"
+      }
+    },
+    {
+      "id": "bcts-oval-crest",
+      "status": "no_new_verified_vector",
+      "notes": "The exact oval ministry crest plus heavy green BCTS lockup was located in an additional July2017 sponsor publication, but it is a bitmap. Known 2017/2021 plans were not re-downloaded.",
+      "searchQueries": [
+        "\"BC Timber Sales\" \"logo\" \"vector\"",
+        "\"BC Timber Sales\" \"crest\" pdf",
+        "\"BC Timber Sales\" \"logo\" eps"
+      ],
+      "checkedSources": [
+        {
+          "url": "https://www.prliving.ca/media/pdfs/LoggerSports1707.pdf",
+          "status": "verified_raster_logo",
+          "notes": "Your Guide to Logger Sports2017, page2: exact oval Forests,Lands and Natural Resource Operations crest with BCTS and BC Timber Sales wordmark is an embedded 714x320 image (xref161), visually verified. Native vector logos elsewhere on page do not make this logo vector. Source refs turn62search8,turn63view2.",
+          "page": 2,
+          "localPath": "research-inputs-not-bundled/timeline-extra/sources/bcts-logger-2017.pdf",
+          "bytes": 46707323,
+          "sha256": "e02afefa536f6ed819400dc172fec858c52a3a0462f3a57cc35856440fc52af6"
+        },
+        {
+          "url": "https://www.trimble.com/en/products/forestry/land-resource-manager",
+          "status": "checked_raster_asset_link",
+          "notes": "Customer-logo image is linked as CustomerLogos-LRM-BCTS2.png. It is not an original vector download.",
+          "localPath": "research-inputs-not-bundled/timeline-extra/sources/bcts-trimble.html",
+          "bytes": 1320689,
+          "sha256": "feddcdaa280aea47c761869bc98899a67964c88c437723f747ec094723a91bed"
+        },
+        {
+          "url": "https://images.ctfassets.net/citn2sn5tdjr/6GqyXz2uojzN1TzVdjuO3h/ca3dc15d81fe1472673f6494e9794130/CustomerLogos-LRM-BCTS2.png",
+          "status": "raster_link_not_downloaded",
+          "notes": "Extracted from Trimble official customer page HTML."
+        }
+      ],
+      "rasterReference": {
+        "source": "research-inputs-not-bundled/timeline-extra/sources/bcts-logger-2017.pdf",
+        "page": 2,
+        "xref": 161,
+        "width": 714,
+        "height": 320,
+        "bbox": [
+          365.63079833984375,
+          349.20001220703125,
+          538.822998046875,
+          426.8211669921875
+        ],
+        "path": "research-inputs-not-bundled/timeline-extra/bcts-oval-lockup-raster-2017.png",
+        "sha256": "6779e4f63ce41c3651233d58a123e56b6e2351180600df117a906bb4b76eebb7",
+        "format": "png",
+        "classification": "raster_reference_only"
+      }
+    },
+    {
+      "id": "wcb-1968",
+      "status": "no_new_verified_vector",
+      "notes": "Official history explicitly describes hands protecting a worker in1968 and hands around the province in1983. The official HTML has no historical emblem image; its relevant visual lead is a centennial video. No native vector candidate found; no drawing or substitute made.",
+      "searchQueries": [
+        "\"Workers Compensation Board\" \"1968\" \"logo\"",
+        "\"Workmen’s Compensation Board\" \"1968\" \"logo\"",
+        "\"Workers Compensation Board\" \"1976\" annual report British Columbia",
+        "\"WorkSafeBC\" \"logos\"",
+        "\"WCB\" \"logo\" \"1968\"",
+        "\"Workmen\" \"Compensation\" \"British Columbia\" \"1968\" filetype:pdf"
+      ],
+      "checkedSources": [
+        {
+          "url": "https://www.worksafebc.com/en/about-us/who-we-are/our-story/1967-1991",
+          "status": "checked_official_history",
+          "localPath": "research-inputs-not-bundled/timeline/sources/worksafebc-history.html",
+          "notes": "Existing parent download inspected for all image/link tags. No historical emblem image. Source refs turn58search2,turn61search0."
+        },
+        {
+          "url": "https://www.worksafebc.com/resources/about-us/videos/centenial-video-1967-1991?lang=en",
+          "status": "uninspected_video_lead",
+          "notes": "Official history link; not a vector source. Could provide a historical visual specimen, but video was not downloaded."
+        },
+        {
+          "url": "https://www.vcn.bc.ca/clibrary/historyroom/Public%20Service.htm",
+          "status": "catalogue_lead_only",
+          "notes": "Catalogues period1974–1978 WCB pamphlets/annualreport; no native digital logo download found. Source ref turn61search1."
+        }
+      ]
+    }
+  ],
+  "sourceManifest": {
+    "bcstats-merit-2004.pdf": "https://meritcomm.bc.ca/wp-content/uploads/2021/09/2003_04-Annual-Report-Merit-Commissioner.pdf",
+    "bcstats-merit-2015.pdf": "https://meritcomm.bc.ca/wp-content/uploads/2021/10/BC_Stats_Random_Selection_for_2014_15_Merit_Performance_Audit_Amended_2016_04_26.pdf",
+    "bcws-media-2026.pdf": "https://www2.gov.bc.ca/assets/gov/public-safety-and-emergency-services/wildfire-status/contact-information/media-room/handbook_-_media_information_sessions.pdf",
+    "bcws-bx-2023.pdf": "https://www.rdno.ca/sites/default/files/2023-12/231219_BX_CWPP_Public.pdf",
+    "bcstats-repo.json": "https://api.github.com/repos/bcgov/BCStats",
+    "bcws-repos.json": "https://api.github.com/search/repositories?q=org:bcgov+wildfire&per_page=50",
+    "bcstats-earnings-2026.pdf": "https://catalogue.data.gov.bc.ca/dataset/466ddecd-2701-4e97-84fb-df60bd5aca95/resource/8a8f349e-0350-4168-91a4-22bca3b428e8/download/earnings_and_employment_trends_data_tables.pdf",
+    "bcts-logger-2017.pdf": "https://www.prliving.ca/media/pdfs/LoggerSports1707.pdf",
+    "bcstats-employee-surveys.html": "https://www2.gov.bc.ca/gov/content/data/statistics/surveys/bc-public-service-employee-surveys",
+    "bcstats-tools.html": "https://www2.gov.bc.ca/gov/content/data/statistics/surveys/understanding-the-engagement-model/tools-assessing-results",
+    "wps-logo-banner.svg": "https://raw.githubusercontent.com/bcgov/wps/main/web/apps/wps-web/public/images/logo-banner.svg",
+    "BC-demography-tree.json": "https://api.github.com/repos/bcgov/BC-demography/git/trees/HEAD?recursive=1",
+    "WES-demographic-profile-tree.json": "https://api.github.com/repos/bcgov/WES-demographic-profile/git/trees/HEAD?recursive=1",
+    "CANSIM-data-viewer-tree.json": "https://api.github.com/repos/bcgov/CANSIM-data-viewer/git/trees/HEAD?recursive=1",
+    "bcstats-workforce-2013.pdf": "https://www2.gov.bc.ca/assets/gov/data/statistics/government/workforce_profile_report_2013_bcps.pdf",
+    "bcstats-workforce-2011.pdf": "https://www2.gov.bc.ca/assets/gov/data/statistics/government/workforce_profile_report_2011_bcps.pdf",
+    "bcstats-lookup-2013.pdf": "https://www2.gov.bc.ca/assets/gov/data/statistics/government/wes/wes_2013_percentiles_lookup_table_final.pdf",
+    "bcts-trimble.html": "https://www.trimble.com/en/products/forestry/land-resource-manager",
+    "bcws-official-crest.png": "https://raw.githubusercontent.com/bcgov/nr-bcws-wfnews/release/2.7.0/client/wfnews-war/src/main/angular/src/assets/images/logo/bc-wildfire-service-logo-transparent.png"
+  }
+}

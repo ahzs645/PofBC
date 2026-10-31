@@ -1,88 +1,57 @@
-// The salary search: every public-sector employee whose pay was disclosed, by name, followed from one
-// year's disclosure to the next, and every employer's positions.
+// Search the remuneration records imported here, with explicit employer/year coverage and sources.
 //
-// The disclosures are each employer's list of everyone it paid over $75,000 (and every elected
-// official), in 2017/18, 2020/21 and 2023/24, as compiled in the pssdb files. A search loads one
-// slice of the index — the surnames that start with the same two letters (scripts/build-salaries.mjs)
-// — and groups its rows into the people they appear to be. Opening one lines their years up. An
-// employer's page loads that employer's rows and sets out the positions in it: how many held each,
-// what they were paid, and who.
+// Disclosures differ in reporting period, threshold and scope. A search finds employers by name,
+// position titles across employers, and people by name. A name typed without a comma can be read more
+// than one way ("john smith" or "smith john"), so it is read the likeliest way first, surname first,
+// and only where nobody is disclosed under that reading is the next one tried; the page says which
+// reading it shows and offers the others that also find someone. Within a reading, names that answer
+// in full come first, then names that only begin as typed, then initials that may be the person meant.
 //
-// A name in two years' disclosures is not proof of one person. Each year beside a person says what
-// joins it to the others: the same full name at the same employer, the same name elsewhere, or only
-// an initial that agrees. Two people with one name in one year are shown as that, not merged.
+// Each search loads one slice of the people index — the surnames that start with the same two letters
+// (scripts/build-salaries.mjs) — a slice for each reading. Opening a name sets its years out as a chart
+// and a table (PersonPage.jsx); an employer, its positions, people and every year (EmployerPage.jsx);
+// a title, the employers that disclosed it (TitlePage.jsx).
+//
+// A name in two years' disclosures is not proof of one person. Multiple rows may be different people,
+// multiple payments to one person, or source duplicates; none of these is inferred from a name alone.
 
-import { useEffect, useMemo, useState } from 'react'
-import { displayName, nameMatch, personKey, positionKey, readName, surnameShard } from './people.js'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } from './people.js'
+import { keyedTitles, titleMatcher } from './positions.js'
+import { formatMoney as money } from './money.js'
+import { PeriodRange, rangeLabel, YearStrip } from './parts.jsx'
+import { salaryYearRange, salaryYearValue } from './viewState.js'
+import { Segmented } from '../site/Segmented.jsx'
+import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Browse.jsx'
+import { count, LAYOUTS, loadJson, Paged, PersonIcon, readPlace, toTop, wordsOf, writePlace } from './common.jsx'
+import { EmployerPage } from './EmployerPage.jsx'
+import { PersonPage } from './PersonPage.jsx'
+import { TitleCard, TitlePage } from './TitlePage.jsx'
 
-const BASE = import.meta.env?.BASE_URL ?? '/'
-const loaded = new Map()
-
-const money = (value) => (value === null || value === undefined ? '—' : `$${Math.round(value).toLocaleString('en-CA')}`)
-const count = (value, one, many) => `${value.toLocaleString('en-CA')} ${value === 1 ? one : many}`
-
-const median = (values) => {
-  const sorted = [...values].sort((a, b) => a - b)
-  const middle = Math.floor(sorted.length / 2)
-  return sorted.length % 2 ? sorted[middle] : Math.round((sorted[middle - 1] + sorted[middle]) / 2)
+const describeNameGroup = (key, list) => {
+  const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && row[2] > best[2]) ? row : best))
+  const years = [...new Set(list.map((row) => row[5]))].sort((a, b) => a - b)
+  const shared = years.some((each) => list.filter((row) => row[5] === each).length > 1)
+  return { key, name: latest[0], latest, years, rows: list, shared }
 }
 
-/** A gzipped file, decompressed here; or plain JSON, if the server already undid the gzip. */
-const loadJson = (path) => {
-  if (!loaded.has(path)) {
-    loaded.set(path, fetch(`${BASE}${path}`).then(async (response) => {
-      if (!response.ok) throw new Error(`${response.status}`)
-      const bytes = new Uint8Array(await response.arrayBuffer())
-      if (bytes[0] === 0x1f && bytes[1] === 0x8b) {
-        const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))
-        return JSON.parse(await new Response(stream).text())
-      }
-      return JSON.parse(new TextDecoder().decode(bytes))
-    }))
-  }
-  return loaded.get(path)
-}
+const shardOf = (reading) => surnameShard(`${reading.surname},`)
+const shardOfKey = (key) => key.split('|')[0].slice(0, 2).padEnd(2, '_')
+/** A reading as it is written in the disclosures: "smith john" read surname first is "Smith, John". */
+const asDisclosed = (reading) => [reading.surname, reading.given].filter(Boolean).join(', ')
+  .replace(/(^|[\s,-])(\p{L})/gu, (_, before, letter) => `${before}${letter.toUpperCase()}`)
 
-// Where the search is lives in the address bar — the name typed, the person or employer open — so a
-// link opens there, and a person in a body's salary panel opens their years here.
-const PLACE = ['q', 'person', 'employer']
-
-const readPlace = () => {
-  const params = new URLSearchParams(globalThis.location?.search ?? '')
-  return Object.fromEntries(PLACE.map((key) => [key, params.get(key) ?? (key === 'q' ? '' : null)]))
-}
-
-const writePlace = (place) => {
-  if (!globalThis.history?.replaceState) return
-  const url = new URL(globalThis.location.href)
-  for (const key of PLACE) {
-    if (place[key]) url.searchParams.set(key, place[key])
-    else url.searchParams.delete(key)
-  }
-  globalThis.history.replaceState(null, '', url)
-}
-
-const Person = () => (
-  <svg className="salaries__icon" viewBox="0 0 21 22" aria-hidden="true">
-    <rect x="4.25" y="8" width="12.5" height="10" rx="2.6" fill="var(--surface)" />
-    <rect x="4.25" y="8" width="12.5" height="10" rx="2.6" fill="var(--salaries-ink)" fillOpacity="0.5" />
-    <rect x="4.25" y="8" width="12.5" height="10" rx="2.6" fill="none" stroke="var(--salaries-ink)" />
-    <circle cx="10.5" cy="8" r="3.75" fill="var(--surface)" />
-    <circle cx="10.5" cy="8" r="3.75" fill="var(--salaries-ink)" fillOpacity="0.5" />
-    <circle cx="10.5" cy="8" r="3.75" fill="none" stroke="var(--salaries-ink)" />
-  </svg>
-)
-
-/** A position: a briefcase, in the same layered style. */
-const Role = () => (
-  <svg className="salaries__icon" viewBox="0 0 21 22" aria-hidden="true">
-    {[{ fill: 'var(--surface)' }, { fill: 'var(--salaries-ink)', fillOpacity: 0.5 }, { fill: 'none', stroke: 'var(--salaries-ink)' }].map((layer, at) => (
-      <g key={at}>
-        <rect x="3.5" y="7.5" width="14" height="10" rx="2.4" {...layer} />
-        <path d="M8 7.5V5.6a1.3 1.3 0 0 1 1.3-1.3h2.4A1.3 1.3 0 0 1 13 5.6v1.9" fill="none" stroke={layer.stroke ?? 'none'} />
-      </g>
-    ))}
-  </svg>
+/** A name found by the search, as a card. */
+const PersonCard = ({ each, index, onOpen }) => (
+  <button type="button" className="salaries__card" onClick={() => onOpen(each.key)}>
+    <span className="salaries__lead"><PersonIcon /></span>
+    <span className="salaries__text">
+      <span className="salaries__name">{displayName(each.name, index.sources?.[each.latest[6]]?.nameDisclosure)}</span>
+      <span className="salaries__line">{[each.latest[1], index.employers[each.latest[4]][0]].filter(Boolean).join(' · ')}</span>
+      <YearStrip years={index.years} seen={each.years} />
+    </span>
+    <span className="salaries__aside">{money(each.latest[2])}<span className="salaries__line">{index.years[each.latest[5]]}</span></span>
+  </button>
 )
 
 /**
@@ -92,428 +61,375 @@ const Role = () => (
 export const SalariesView = ({ onOpenGovernment }) => {
   const [index, setIndex] = useState(null)
   const [employersIndex, setEmployersIndex] = useState(null)
+  const [titlesIndex, setTitlesIndex] = useState(null)
   const [failed, setFailed] = useState(false)
-  const initial = readPlace()
-  const [query, setQuery] = useState(initial.q)
-  const [person, setPerson] = useState(initial.person)
-  const [employer, setEmployer] = useState(initial.employer)
-  const [year, setYear] = useState('all')
-  const [sector, setSector] = useState('all')
-  const [rows, setRows] = useState({ shard: null, list: [] })
-  const [shown, setShown] = useState(30)
+  const [loadVersion, setLoadVersion] = useState(0)
+  const [place, setPlace] = useState(readPlace)
+  // The pages opened on the way here, newest last, each with the name its back button gives it.
+  const [trail, setTrail] = useState([])
+  const heading = useRef(null)
+  const [shards, setShards] = useState({})
+  const [reading, setReading] = useState(null)
+  const query = place.q
+  const sector = place.sector
+  const setSector = (value) => setPlace((current) => ({ ...current, sector: value }))
 
   useEffect(() => {
     loadJson('salaries/people/index.json').then(setIndex, () => setFailed(true))
     loadJson('salaries/employers/index.json').then(setEmployersIndex, () => setFailed(true))
-  }, [])
+  }, [loadVersion])
 
-  // What was typed, read as a name: a surname, and perhaps the start of a given name after a comma
-  // or a space ("smith, j", "smith john").
-  const wanted = useMemo(() => {
-    const text = query.trim()
-    if (!text) return null
-    const [surname, ...given] = text.includes(',') ? text.split(',') : text.split(/\s+/)
-    const name = readName(`${surname},${given.join(' ')}`)
-    return name.surname.length >= 2 ? { ...name, typedGiven: given.join(' ').trim().toLowerCase().replace(/[^a-z]/g, '') } : null
-  }, [query])
-  const shard = wanted ? surnameShard(`${wanted.surname},`) : null
+  // The year filter is kept as a label, so a shared link survives older years being added.
+  const range = salaryYearRange(place.year, index?.years ?? [])
+  const within = (at) => !range || (at >= range[0] && at <= range[1])
+  const setRange = (next) => setPlace((current) => ({ ...current, year: salaryYearValue(next, index.years) }))
+
+  // The ways what was typed can be read as a name, and the index slices they need.
+  const readings = useMemo(() => nameReadings(query), [query])
+  const needed = useMemo(() => [...new Set([...readings.map(shardOf), ...(place.person ? [shardOfKey(place.person)] : [])])], [readings, place.person])
 
   useEffect(() => {
-    if (!shard || !index) return undefined
-    if (!index.shards[shard]) { setRows({ shard, list: [] }); return undefined }
+    if (!index) return undefined
     let live = true
-    loadJson(`salaries/people/${shard}.json.gzip`).then((list) => live && setRows({ shard, list }), () => live && setFailed(true))
-    return () => { live = false }
-  }, [shard, index])
-
-  useEffect(() => { writePlace({ q: query.trim(), person, employer }) }, [query, person, employer])
-
-  const sectors = useMemo(() => (index ? [...new Set(index.employers.map(([, sectorName]) => sectorName))].filter(Boolean).sort() : []), [index])
-
-  // The rows that answer the search, then grouped into the people they appear to be.
-  const people = useMemo(() => {
-    if (!wanted || rows.shard !== shard || !index) return []
-    const matching = rows.list.filter((row) => {
-      const name = readName(row[0])
-      if (!name.surname.startsWith(wanted.surname)) return false
-      if (wanted.typedGiven && !name.given.startsWith(wanted.typedGiven)) return false
-      if (year !== 'all' && String(row[5]) !== year) return false
-      if (sector !== 'all' && index.employers[row[4]][1] !== sector) return false
-      return true
-    })
-    const groups = new Map()
-    for (const row of matching) {
-      const key = personKey(row[0])
-      if (!groups.has(key)) groups.set(key, [])
-      groups.get(key).push(row)
+    for (const shard of needed) {
+      if (shards[shard]) continue
+      if (!index.shards[shard]) { setShards((current) => ({ ...current, [shard]: [] })); continue }
+      // A slice that fails leaves the employer and position results standing, with its own retry.
+      loadJson(`salaries/people/${shard}.json.gzip`).then((list) => live && setShards((current) => ({ ...current, [shard]: list })), () => live && setShards((current) => ({ ...current, [shard]: 'failed' })))
     }
-    return [...groups.entries()].map(([key, list]) => {
-      const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && row[2] > best[2]) ? row : best))
-      const years = [...new Set(list.map((row) => row[5]))].sort()
-      // More than one row in a year: more than one person shares the name.
-      const shared = years.some((each) => list.filter((row) => row[5] === each).length > 1)
-      return { key, name: latest[0], latest, years, rows: list, shared }
-    }).sort((a, b) => b.years.length - a.years.length || b.latest[2] - a.latest[2])
-  }, [rows, shard, wanted, year, sector, index])
+    return () => { live = false }
+  }, [needed, index, loadVersion]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const chosen = person ? people.find((each) => each.key === person) ?? null : null
-  const openEmployer = (slug) => { setEmployer(slug); setPerson(null); globalThis.scrollTo?.({ top: 0 }) }
-  const openPerson = (name) => { setEmployer(null); setQuery(name); setPerson(personKey(name)); globalThis.scrollTo?.({ top: 0 }) }
+  // Position titles are searched once three letters are typed, and browsed under Positions; their
+  // index is loaded then.
+  const titleQuery = query.trim().replace(/[^A-Za-z0-9 ]/g, '').length >= 3 ? query.trim() : ''
+  useEffect(() => {
+    if (!titleQuery && !place.title && place.browse !== 'positions') return
+    loadJson('salaries/positions/index.json.gzip').then(setTitlesIndex, () => {})
+  }, [titleQuery, place.title, place.browse])
 
-  if (failed) return <p className="gallery__intro">The salary index could not be loaded.</p>
+  useEffect(() => { writePlace(place) }, [place])
+
+  // Each reading's names, in the order they answer it; then the reading shown — the first that finds
+  // anyone in full, or failing that by initials alone, unless another has been chosen.
+  const found = useMemo(() => {
+    if (!index) return []
+    return readings.map((each) => {
+      const list = shards[shardOf(each)]
+      if (!list) return { reading: each, loading: true, groups: [] }
+      if (list === 'failed') return { reading: each, loading: false, failed: true, groups: [], full: 0 }
+      const groups = new Map()
+      for (const row of list) {
+        const tier = nameQueryTier(row[0], each.typed, index.sources?.[row[6]]?.nameDisclosure)
+        if (tier === null) continue
+        if (!within(row[5])) continue
+        if (sector !== 'all' && index.employers[row[4]][1] !== sector) continue
+        const key = personKey(row[0])
+        if (!groups.has(key)) groups.set(key, { tier, rows: [] })
+        const group = groups.get(key)
+        group.tier = Math.min(group.tier, tier)
+        group.rows.push(row)
+      }
+      const described = [...groups].map(([key, group]) => ({ ...describeNameGroup(key, group.rows), tier: group.tier }))
+        .sort((a, b) => a.tier - b.tier || b.years.length - a.years.length || b.latest[2] - a.latest[2])
+      return { reading: each, loading: false, groups: described, full: described.filter((group) => group.tier < 2).length }
+    })
+  }, [readings, shards, place.year, sector, index]) // eslint-disable-line react-hooks/exhaustive-deps
+  const nameSearchFailed = found.some((each) => each.failed)
+  const retryNames = () => { setShards((current) => Object.fromEntries(Object.entries(current).filter(([, list]) => list !== 'failed'))); setLoadVersion((value) => value + 1) }
+  const settled = found.findIndex((each) => each.loading)
+  const automatic = (() => {
+    const done = settled < 0 ? found : found.slice(0, settled)
+    const full = done.findIndex((each) => each.full > 0)
+    if (full >= 0) return full
+    if (settled >= 0) return null
+    const any = found.findIndex((each) => each.groups.length > 0)
+    return any >= 0 ? any : 0
+  })()
+  const shownReading = reading !== null && found[reading] ? reading : automatic
+  const result = shownReading !== null ? found[shownReading] : null
+  const people = result?.groups ?? []
+  const fullPeople = people.filter((each) => each.tier < 2)
+  const initialsOnly = people.filter((each) => each.tier === 2)
+  const otherReadings = found.map((each, at) => ({ ...each, at })).filter((each) => each.at !== shownReading && each.groups.length > 0)
+
+  // Employers whose name, or a name they filed under, has every word typed.
+  const employerMatches = useMemo(() => {
+    const words = wordsOf(query)
+    if (!words.length || !employersIndex) return []
+    return employersIndex.employers.filter((entry) => {
+      if (sector !== 'all' && entry.sector !== sector) return false
+      if (range && !entry.counts.some((value, at) => value && within(at))) return false
+      const text = entry.names.join(' ').toLowerCase()
+      return words.every((word) => text.includes(word))
+    }).sort((a, b) => Math.max(...b.counts) - Math.max(...a.counts))
+  }, [query, employersIndex, sector, place.year]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Titles answering what was typed: the same title first, then every title beginning with it or
+  // holding its words, the most widely used first — so "nurse" finds Nurse, then the nursing titles
+  // most employers use, ahead of rare ones that merely start with the word.
+  const titleMatches = useMemo(() => {
+    if (!titleQuery || !titlesIndex) return []
+    const match = titleMatcher(titleQuery)
+    return keyedTitles(titlesIndex).map((title) => ({ title, tier: match(title.key) })).filter(({ tier }) => tier !== null)
+      .sort((a, b) => (a.tier > 0) - (b.tier > 0) || b.title.employers - a.title.employers || b.title.rows - a.title.rows)
+      .map(({ title }) => title)
+  }, [titleQuery, titlesIndex])
+
+  if (failed) return <p className="gallery__intro">The requested salary records could not be loaded. <button type="button" onClick={() => { setFailed(false); setLoadVersion((value) => value + 1) }}>Retry</button></p>
   if (!index || !employersIndex) return <p className="gallery__intro" role="status">Loading the salary index…</p>
 
-  const employerOf = (row) => index.employers[row[4]]
-  const yearLabel = (row) => index.years[row[5]]
-  const total = Object.values(index.shards).reduce((a, b) => a + b, 0)
+  const years = index.years
+  const yearAt = place.employerYear ? years.indexOf(place.employerYear) : -1
+  const pageYear = yearAt >= 0 ? yearAt : null
+  const rootLabel = query.trim() ? `All “${query.trim()}” results` : 'Salaries'
 
-  if (employer) {
-    const entry = employersIndex.employers.find((each) => each.slug === employer)
-    if (entry) return <EmployerPage entry={entry} years={employersIndex.years} onBack={() => setEmployer(null)} onPerson={openPerson} onOpenGovernment={onOpenGovernment} />
+  // Going somewhere remembers where from, under the name of the page being left.
+  const go = (next) => {
+    setTrail((current) => [...current, { place, label: place.person || place.employer || place.title ? heading.current : rootLabel }])
+    setPlace({ ...place, person: null, employer: null, role: null, title: null, show: null, ...next })
+    toTop()
   }
+  const goBack = () => {
+    const previous = trail.at(-1)
+    setTrail((current) => current.slice(0, -1))
+    setPlace(previous ? previous.place : { ...place, person: null, employer: null, role: null, title: null, show: null })
+    toTop()
+  }
+  const backLabel = trail.at(-1)?.label ?? rootLabel
+  const back = <button type="button" className="salaries__back" onClick={goBack}>← {backLabel}</button>
+  const remember = (label) => { heading.current = label }
+  const setYear = (at) => setPlace((current) => ({ ...current, employerYear: years[at] }))
+  const yearFromFilter = range ? years[range[1]] : place.employerYear
+
+  const openEmployer = (slug) => go({ employer: slug, employerYear: yearFromFilter })
+  const openPerson = (name) => go({ q: name, person: personKey(name) })
+  const openPersonKey = (key) => go({ person: key })
+  const openTitle = (key) => go({ title: key, employerYear: yearFromFilter })
+  const openRole = (slug, key, at) => go({ employer: slug, role: key, employerYear: at !== undefined && at !== null && at >= 0 ? years[at] : place.employerYear })
+  const search = (text) => {
+    setPlace((current) => ({ ...current, q: text, person: null }))
+    setReading(null)
+  }
+
+  if (place.employer) {
+    // An employer by its slug, an old slug, or the government body it is (the panel links by body).
+    const canonical = employersIndex.aliases?.[place.employer] ?? place.employer
+    const entry = employersIndex.employers.find((each) => each.slug === canonical) ?? employersIndex.employers.find((each) => each.body === canonical)
+    if (entry) {
+      return (
+        <EmployerPage
+          key={`${entry.slug}|${place.role ?? ''}`}
+          entry={entry}
+          years={employersIndex.years}
+          sources={employersIndex.sources ?? index.sources}
+          year={pageYear}
+          show={place.show}
+          role={place.role}
+          layout={place.layout === 'table' ? 'table' : 'cards'}
+          onLayout={(next) => setPlace((current) => ({ ...current, layout: next }))}
+          back={back}
+          onYear={setYear}
+          onShow={(show) => setPlace((current) => ({ ...current, show }))}
+          onRole={(key) => openRole(entry.slug, key, pageYear)}
+          onTitle={openTitle}
+          onPerson={openPerson}
+          onOpenGovernment={onOpenGovernment}
+          remember={remember}
+        />
+      )
+    }
+  }
+
+  if (place.title) {
+    return (
+      <TitlePage
+        key={place.title}
+        titleKey={place.title}
+        employers={employersIndex.employers}
+        years={years}
+        sector={sector}
+        year={pageYear}
+        layout={place.layout === 'table' ? 'table' : 'cards'}
+        back={back}
+        onYear={setYear}
+        onLayout={(next) => setPlace((current) => ({ ...current, layout: next }))}
+        onSector={setSector}
+        onEmployerRole={openRole}
+        onTitle={openTitle}
+        remember={remember}
+      />
+    )
+  }
+
+  // Filters narrow the search results, not the history of a name opened from one of those results.
+  const personRows = place.person ? shards[shardOfKey(place.person)] : null
+  const chosen = personRows ? (() => {
+    const list = personRows.filter((row) => personKey(row[0]) === place.person)
+    return list.length ? describeNameGroup(place.person, list) : null
+  })() : null
+  if (place.person && !personRows) return <p className="gallery__intro" role="status">Loading the name…</p>
+  if (chosen) {
+    return (
+      <div className="salaries">
+        <PersonPage chosen={chosen} all={personRows} index={index} back={back} onEmployer={openEmployer} onRole={openRole} onOpenGovernment={onOpenGovernment} remember={remember} />
+      </div>
+    )
+  }
+
+  // Every record, named or not: the people index holds only the named ones.
+  const total = employersIndex.employers.reduce((sum, entry) => sum + entry.counts.reduce((a, b) => a + b, 0), 0)
+  const sectors = [...new Set(employersIndex.employers.map((entry) => entry.sector))].filter(Boolean).sort()
+  const typed = query.trim()
+  const peopleSettled = result && !result.loading
+  const filtered = Boolean(range) || sector !== 'all'
+  const browse = ['employers', 'people', 'positions'].includes(place.browse) ? place.browse : 'employers'
+  const layout = place.layout === 'table' ? 'table' : 'cards'
+  const periodCounts = years.map((_, at) => employersIndex.employers.reduce((sum, entry) => sum + (entry.counts[at] ?? 0), 0))
+  // Records whose employer and period come from the employer's own published report, not the
+  // retained compilation.
+  const compiled = new Set(Object.entries(employersIndex.sources ?? {}).filter(([, source]) => source.scope === 'compiled-unverified' || source.sourceKind === 'compiled').map(([id]) => id))
+  const official = employersIndex.employers.reduce((sum, entry) => sum + entry.coverage.reduce((part, cell, at) => part + (cell?.status === 'available' && !(cell.sourceIds ?? []).some((id) => compiled.has(id)) ? entry.counts[at] : 0), 0), 0)
 
   return (
     <div className="salaries">
-      <section className="salaries__intro">
-        <h2 className="salaries__heading">Public-sector salaries</h2>
-        <p>
-          Everyone a British Columbia public employer disclosed paying over $75,000, and every elected official,
-          in {index.years.join(', ')}: {total.toLocaleString('en-CA')} named rows from {employersIndex.employers.length} employers
-          — the Province’s public service, Crown corporations, health authorities, cities, school districts, universities
-          and police. Search a surname to follow a person from year to year, or open an employer to see its positions.
-        </p>
+      <section className="salaries__intro" aria-labelledby="salaries-intro">
+        <h2 id="salaries-intro" className="salaries__heading">Public-sector salaries</h2>
+        <dl className="salaries__tiles">
+          <div><dt>Records</dt><dd>{total.toLocaleString('en-CA')}</dd><dd className="salaries__line">disclosed payments</dd></div>
+          <div><dt>Employers</dt><dd>{employersIndex.employers.length.toLocaleString('en-CA')}</dd><dd className="salaries__line">{sectors.length} sectors</dd></div>
+          <div><dt>Periods</dt><dd>{years.length}</dd><dd className="salaries__line">{years[0]} – {years.at(-1)}</dd></div>
+          <div><dt>From employer reports</dt><dd>{Math.round((official / total) * 100)}%</dd><dd className="salaries__line">{official.toLocaleString('en-CA')} records</dd></div>
+        </dl>
       </section>
 
       <div className="salaries__search">
-        <input
-          type="search"
-          value={query}
-          placeholder="Surname, then a given name if you like — “Smith, J”"
-          aria-label="Search a name"
-          onChange={(event) => { setQuery(event.target.value); setPerson(null); setShown(30) }}
-        />
-        <select value={year} onChange={(event) => setYear(event.target.value)} aria-label="Year">
-          <option value="all">Every year</option>
-          {index.years.map((label, at) => <option key={label} value={String(at)}>{label}</option>)}
-        </select>
-        <select value={sector} onChange={(event) => setSector(event.target.value)} aria-label="Sector">
-          <option value="all">Every sector</option>
-          {sectors.map((name) => <option key={name} value={name}>{name}</option>)}
-        </select>
+        <span className="salaries__field">
+          <input
+            type="search"
+            value={query}
+            placeholder="A name, an employer or a position, like “Smith, J”, “Transit” or “Nurse”"
+            aria-label="Search a name, an employer or a position"
+            aria-describedby="salaries-name-help"
+            onChange={(event) => search(event.target.value)}
+          />
+          <span className="salaries__tip">
+            <button type="button" className="salaries__tip-button" aria-label="How names are searched" aria-describedby="salaries-name-help">i</button>
+            <span role="tooltip" id="salaries-name-help" className="salaries__tip-text">
+              A name is read surname first, then the other way round. A comma fixes where given names begin, as in “Van der Meer, J”.
+            </span>
+          </span>
+        </span>
+        <PeriodRange years={years} counts={periodCounts} value={range} onChange={setRange} />
       </div>
 
-      {chosen && (
-        <section className="salaries__person" aria-labelledby="salaries-person">
-          <button type="button" className="salaries__back" onClick={() => setPerson(null)}>← All “{query.trim()}” results</button>
-          <h2 id="salaries-person" className="salaries__heading">{displayName(chosen.name)}</h2>
-          <p className="salaries__note">
-            Disclosed as “{chosen.name}” in {chosen.years.length} of {index.years.length} years.
-            {chosen.shared ? ' More than one person has this name in a year, so these rows are not all one person.' : ''}
-          </p>
-          <PersonTimeline chosen={chosen} all={rows.list} index={index} onEmployer={openEmployer} onOpenGovernment={onOpenGovernment} />
-        </section>
-      )}
-
-      {wanted && !chosen && (
-        <section aria-labelledby="salaries-results">
-          <div className="salaries__head">
-            <h2 id="salaries-results" className="salaries__title">People</h2>
-            <p className="salaries__meta">{rows.shard === shard ? count(people.length, 'name', 'names') : 'Loading…'}</p>
-          </div>
-          <div className="salaries__grid">
-            {people.slice(0, shown).map((each) => (
-              <button key={each.key} type="button" className="salaries__card" onClick={() => setPerson(each.key)}>
-                <span className="salaries__lead"><Person /></span>
-                <span className="salaries__text">
-                  <span className="salaries__name">{displayName(each.name)}</span>
-                  <span className="salaries__line">{[each.latest[1], employerOf(each.latest)[0]].filter(Boolean).join(' · ')}</span>
-                  <span className="salaries__years">
-                    {index.years.map((label, at) => (
-                      <span key={label} data-seen={each.years.includes(at) || undefined}>{label}</span>
-                    ))}
-                  </span>
-                </span>
-                <span className="salaries__aside">{money(each.latest[2])}<span className="salaries__line">{yearLabel(each.latest)}</span></span>
-              </button>
-            ))}
-          </div>
-          {people.length > shown && (
-            <button type="button" className="salaries__more" onClick={() => setShown((value) => value + 60)}>
-              Show {Math.min(60, people.length - shown)} more
-            </button>
-          )}
-        </section>
-      )}
-
-      {!wanted && <EmployerList employers={employersIndex.employers} years={employersIndex.years} sector={sector} onOpen={openEmployer} />}
-
-      <p className="salaries__source">
-        Disclosed by each employer under the Financial Information Act and the Public Sector Employers Act; compiled
-        in the pssdb public-sector salary files. Pay is the year’s remuneration, not a salary rate, and some employers
-        report a calendar year. A name in two years is not proof of one person.
-      </p>
-    </div>
-  )
-}
-
-/** Every employer, by sector, each a way to its positions. */
-const EmployerList = ({ employers, years, sector, onOpen }) => {
-  const latest = (entry) => entry.counts.reduce((best, value, at) => (value ? at : best), 0)
-  const bySector = new Map()
-  for (const entry of employers) {
-    if (sector !== 'all' && entry.sector !== sector) continue
-    if (!bySector.has(entry.sector)) bySector.set(entry.sector, [])
-    bySector.get(entry.sector).push(entry)
-  }
-  return (
-    <section aria-labelledby="salaries-employers">
-      <div className="salaries__head">
-        <h2 id="salaries-employers" className="salaries__title">Employers</h2>
-        <p className="salaries__meta">{count(employers.length, 'employer', 'employers')}</p>
-      </div>
-      {[...bySector].sort(([a], [b]) => a.localeCompare(b)).map(([name, list]) => (
-        <details key={name} className="salaries__sector" open={sector !== 'all' || undefined}>
-          <summary>{name} <span className="salaries__meta">{list.length}</span></summary>
-          <div className="salaries__grid">
-            {[...list].sort((a, b) => Math.max(...b.counts) - Math.max(...a.counts)).map((entry) => (
-              <button key={entry.slug} type="button" className="salaries__card" onClick={() => onOpen(entry.slug)}>
-                <span className="salaries__lead"><Role /></span>
-                <span className="salaries__text">
-                  <span className="salaries__name">{entry.names.at(-1)}</span>
-                  <span className="salaries__years">
-                    {years.map((label, at) => <span key={label} data-seen={entry.counts[at] > 0 || undefined}>{label}</span>)}
-                  </span>
-                </span>
-                <span className="salaries__aside">{entry.counts[latest(entry)].toLocaleString('en-CA')}<span className="salaries__line">{years[latest(entry)]}</span></span>
-              </button>
-            ))}
-          </div>
-        </details>
-      ))}
-    </section>
-  )
-}
-
-/**
- * An employer's positions in a year: each with how many held it and their pay, most held first, and
- * opened, who held it. Spellings of one position (capitals, stops, spacing) are counted as one.
- */
-const EmployerPage = ({ entry, years, onBack, onPerson, onOpenGovernment }) => {
-  const seen = years.map((_, at) => at).filter((at) => entry.counts[at] > 0)
-  const [chosenYear, setYear] = useState(null)
-  const [rows, setRows] = useState(null)
-  const [filter, setFilter] = useState('')
-  const [open, setOpen] = useState(null)
-  const [shown, setShown] = useState(40)
-
-  useEffect(() => {
-    let live = true
-    loadJson(`salaries/employers/${entry.slug}.json.gzip`).then((list) => live && setRows(list), () => live && setRows([]))
-    return () => { live = false }
-  }, [entry.slug])
-
-  // How much of each year's disclosure names positions: some employers give them one year and not the
-  // next. The page opens on the latest year that does, unless a year is chosen.
-  const named = useMemo(() => years.map((_, at) => {
-    const list = rows ? rows.filter((row) => row[4] === at) : []
-    return list.length ? list.filter((row) => row[1]).length / list.length : 0
-  }), [rows, years])
-  const year = chosenYear ?? ([...seen].reverse().find((at) => named[at] >= 0.5) ?? seen.at(-1) ?? 0)
-
-  const positions = useMemo(() => {
-    if (!rows) return []
-    const groups = new Map()
-    for (const row of rows) {
-      if (row[4] !== year) continue
-      const key = positionKey(row[1]) || '—'
-      if (!groups.has(key)) groups.set(key, { key, spellings: new Map(), rows: [] })
-      const group = groups.get(key)
-      group.rows.push(row)
-      if (row[1]) group.spellings.set(row[1], (group.spellings.get(row[1]) ?? 0) + 1)
-    }
-    return [...groups.values()].map((group) => {
-      const pay = group.rows.map((row) => row[2])
-      const label = [...group.spellings].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null
-      return { ...group, label, median: median(pay), low: Math.min(...pay), high: Math.max(...pay) }
-    }).sort((a, b) => (a.label === null) - (b.label === null) || b.rows.length - a.rows.length || b.median - a.median)
-  }, [rows, year])
-
-  const words = filter.trim().toLowerCase().split(/\s+/).filter(Boolean)
-  const matching = positions.filter((position) => words.every((word) => (position.label ?? 'position not given').toLowerCase().includes(word)))
-  const people = rows ? rows.filter((row) => row[4] === year) : []
-  const pay = people.map((row) => row[2])
-
-  return (
-    <div className="salaries">
-      <section className="salaries__person" aria-labelledby="salaries-employer">
-        <button type="button" className="salaries__back" onClick={onBack}>← Salaries</button>
-        <h2 id="salaries-employer" className="salaries__heading">{entry.names.at(-1)}</h2>
-        <p className="salaries__note">
-          {entry.sector}
-          {entry.names.length > 1 ? ` · also filed as ${entry.names.slice(0, -1).map((name) => `“${name}”`).join(', ')}` : ''}
-          {entry.body && onOpenGovernment && (
-            <> · <button type="button" className="salaries__link" onClick={() => onOpenGovernment(entry.body, Number(years[year].slice(0, 4)))}>in the government graph</button></>
-          )}
+      {filtered && (
+        <p className="salaries__hint">
+          {rangeLabel(years, range)} · {sector === 'all' ? 'All sectors' : sector}{' '}
+          <button type="button" className="salaries__link" onClick={() => setPlace((current) => ({ ...current, year: 'all', sector: 'all' }))}>Clear filters</button>
         </p>
-        {entry.repeated?.length > 0 && (
-          <p className="salaries__note">
-            Its {entry.repeated.join(', ')} rows in the files repeat the year before’s, name for name and dollar for dollar, so
-            they are left out.
-          </p>
-        )}
-        <div className="salaries__years-switch" role="group" aria-label="Disclosure year">
-          {years.map((label, at) => (
-            <button key={label} type="button" aria-pressed={at === year} disabled={!entry.counts[at]} title={entry.counts[at] && rows && named[at] < 0.5 ? 'Names and pay, without positions' : undefined} onClick={() => { setYear(at); setOpen(null); setShown(40) }}>
-              {label}{entry.counts[at] && rows && named[at] < 0.5 ? ' ·' : ''}
-            </button>
-          ))}
-        </div>
-        {rows && (
-          <dl className="salaries__tiles">
-            <div><dt>People</dt><dd>{people.length.toLocaleString('en-CA')}</dd></div>
-            <div><dt>Positions</dt><dd>{positions.filter((position) => position.label).length.toLocaleString('en-CA')}</dd></div>
-            <div><dt>Median</dt><dd>{pay.length ? money(median(pay)) : '—'}</dd></div>
-            <div><dt>Highest</dt><dd>{pay.length ? money(Math.max(...pay)) : '—'}</dd></div>
-          </dl>
-        )}
-      </section>
-
-      {!rows && <p className="salaries__hint" role="status">Loading its rows…</p>}
-      {rows && named[year] < 0.5 && (
-        <section aria-labelledby="salaries-people">
-          <p className="salaries__note">
-            Its {years[year]} disclosure gives names and pay, not positions
-            {years.some((_, at) => named[at] >= 0.5) ? ` — positions are given for ${years.filter((_, at) => named[at] >= 0.5).join(', ')}` : ''}.
-          </p>
-          <div className="salaries__head">
-            <h2 id="salaries-people" className="salaries__title">Highest paid</h2>
-            <p className="salaries__meta">{count(people.length, 'person', 'people')} · {years[year]}</p>
-          </div>
-          <ul className="salaries__holders salaries__holders--page">
-            {[...people].sort((a, b) => b[2] - a[2]).slice(0, shown).map((row, at) => (
-              <li key={at}>
-                {row[0]
-                  ? <button type="button" className="salaries__link" onClick={() => onPerson(row[0])}>{displayName(row[0])}</button>
-                  : <span className="salaries__line">Name not given</span>}
-                <span>{money(row[2])}</span>
-              </li>
-            ))}
-          </ul>
-          {people.length > shown && (
-            <button type="button" className="salaries__more" onClick={() => setShown((value) => value + 80)}>
-              Show {Math.min(80, people.length - shown)} more
-            </button>
-          )}
-        </section>
       )}
-      {rows && named[year] >= 0.5 && (
-        <section aria-labelledby="salaries-positions">
-          <div className="salaries__search salaries__search--one">
-            <input type="search" value={filter} placeholder="Find a position" aria-label="Find a position" onChange={(event) => { setFilter(event.target.value); setShown(40) }} />
-          </div>
-          <div className="salaries__head">
-            <h2 id="salaries-positions" className="salaries__title">Positions</h2>
-            <p className="salaries__meta">{count(matching.length, 'position', 'positions')} · {years[year]}</p>
-          </div>
-          <div className="salaries__grid">
-            {matching.slice(0, shown).map((position) => (
-              <div key={position.key} className="salaries__position" data-open={open === position.key || undefined}>
-                <button type="button" className="salaries__card" aria-expanded={open === position.key} onClick={() => setOpen((current) => (current === position.key ? null : position.key))}>
-                  <span className="salaries__lead"><Role /></span>
-                  <span className="salaries__text">
-                    <span className="salaries__name" data-missing={!position.label || undefined}>{position.label ?? 'Position not given'}</span>
-                    <span className="salaries__line">
-                      {count(position.rows.length, 'person', 'people')}
-                      {position.rows.length > 1 ? ` · ${money(position.low)}–${money(position.high)}` : ''}
-                    </span>
-                  </span>
-                  <span className="salaries__aside">{money(position.median)}<span className="salaries__line">{position.rows.length > 1 ? 'median' : 'paid'}</span></span>
-                </button>
-                {open === position.key && (
-                  <ul className="salaries__holders">
-                    {position.rows.map((row, at) => (
-                      <li key={at}>
-                        {row[0]
-                          ? <button type="button" className="salaries__link" onClick={() => onPerson(row[0])}>{displayName(row[0])}</button>
-                          : <span className="salaries__line">Name not given</span>}
-                        <span>{money(row[2])}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+
+      <div className="salaries__chips" role="group" aria-label="Sector">
+        <button type="button" aria-pressed={sector === 'all'} onClick={() => setSector('all')}>All sectors</button>
+        {sectors.map((name) => (
+          <button key={name} type="button" aria-pressed={sector === name} onClick={() => setSector(sector === name ? 'all' : name)}>
+            {name} <span>{employersIndex.employers.filter((entry) => entry.sector === name).length}</span>
+          </button>
+        ))}
+      </div>
+
+      {typed && (
+        <>
+          {employerMatches.length > 0 && (
+            <section aria-labelledby="salaries-employer-results">
+              <div className="salaries__head">
+                <h2 id="salaries-employer-results" className="salaries__title">Employers</h2>
+                <p className="salaries__meta">{count(employerMatches.length, 'employer', 'employers')}</p>
               </div>
-            ))}
-          </div>
-          {matching.length > shown && (
-            <button type="button" className="salaries__more" onClick={() => setShown((value) => value + 80)}>
-              Show {Math.min(80, matching.length - shown)} more
-            </button>
+              <Paged list={employerMatches} size={9} reset={`${query}|${place.year}|${sector}`}>
+                {(page) => <div className="salaries__grid">{page.map((entry) => <EmployerCard key={entry.slug} entry={entry} years={employersIndex.years} range={range} onOpen={openEmployer} />)}</div>}
+              </Paged>
+            </section>
           )}
+
+          {readings.length > 0 && !(peopleSettled && !nameSearchFailed && !people.length && (employerMatches.length > 0 || titleMatches.length > 0)) && (
+            <section aria-labelledby="salaries-results">
+              <div className="salaries__head">
+                <h2 id="salaries-results" className="salaries__title">People</h2>
+                <p className="salaries__meta" role="status">{nameSearchFailed && !people.length ? 'Search unavailable' : peopleSettled ? count(fullPeople.length, 'name', 'names') : 'Loading…'}</p>
+              </div>
+              {nameSearchFailed && (
+                <p className="salaries__hint" role="alert">Some name records could not be loaded. Employer and position results are still available. <button type="button" onClick={retryNames}>Retry name search</button></p>
+              )}
+              {peopleSettled && readings.length > 1 && (
+                <p className="salaries__hint salaries__hint--small">
+                  {shownReading !== 0 && reading === null
+                    ? <>Nobody is disclosed in full as “{asDisclosed(readings[0])}”, so this is read as “{asDisclosed(result.reading)}”.</>
+                    : <>Read as “{asDisclosed(result.reading)}”, surname first.</>}
+                  {otherReadings.map((each) => (
+                    <span key={each.at}>
+                      {' '}<button type="button" className="salaries__link" onClick={() => { setReading(each.at) }}>
+                        “{asDisclosed(each.reading)}” finds {each.full ? count(each.full, 'name', 'names') : `${count(each.groups.length, 'name', 'names')} by initials`}
+                      </button>.
+                    </span>
+                  ))}
+                </p>
+              )}
+              {peopleSettled && !nameSearchFailed && people.length === 0 && !(titleQuery && !titlesIndex) && (
+                <p className="salaries__hint">No disclosed name matches “{typed}”{filtered ? ' with these filters' : ''}. Try the surname alone.</p>
+              )}
+              {peopleSettled && fullPeople.length === 0 && initialsOnly.length > 0 && (
+                <p className="salaries__hint">No disclosed name matches “{typed}” in full.</p>
+              )}
+              <Paged list={fullPeople} size={24} reset={`${query}|${place.year}|${sector}|${shownReading}`}>
+                {(page) => <div className="salaries__grid">{page.map((each) => <PersonCard key={each.key} each={each} index={index} onOpen={openPersonKey} />)}</div>}
+              </Paged>
+              {initialsOnly.length > 0 && (
+                <>
+                  <h3 className="salaries__title salaries__title--spaced">Initials only</h3>
+                  <p className="salaries__hint salaries__hint--small">Disclosed with initials that agree with “{result.reading.given}”. Each may be the person you mean, or someone else.</p>
+                  <div className="salaries__grid salaries__grid--spaced">
+                    {initialsOnly.slice(0, 12).map((each) => <PersonCard key={each.key} each={each} index={index} onOpen={openPersonKey} />)}
+                  </div>
+                  {initialsOnly.length > 12 && <p className="salaries__hint salaries__hint--small">And {initialsOnly.length - 12} more; type an initial after the surname to narrow them.</p>}
+                </>
+              )}
+            </section>
+          )}
+
+          {titleMatches.length > 0 && (
+            <section aria-labelledby="salaries-title-results">
+              <div className="salaries__head">
+                <h2 id="salaries-title-results" className="salaries__title">Positions</h2>
+                <p className="salaries__meta">{count(titleMatches.length, 'title', 'titles')} across employers</p>
+              </div>
+              <Paged list={titleMatches} size={9} reset={query}>
+                {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={openTitle} />)}</div>}
+              </Paged>
+            </section>
+          )}
+
+          {!readings.length && !employerMatches.length && !titleMatches.length && <p className="salaries__hint">Type at least two letters of a surname, or part of an employer’s name or a position.</p>}
+        </>
+      )}
+
+      {!typed && (
+        <section aria-label="Browse" className="salaries__records">
+          <div className="salaries__browse-bar">
+            <Segmented
+              ariaLabel="Browse"
+              value={browse}
+              onChange={(next) => setPlace((current) => ({ ...current, browse: next }))}
+              options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }]}
+            />
+            <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
+          </div>
+          {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); toTop() }} />}
+          {browse === 'people' && <PeopleBrowse index={index} sector={sector} range={range} layout={layout} onPerson={openPerson} onEmployer={openEmployer} />}
+          {browse === 'positions' && <PositionBrowse titlesIndex={titlesIndex} years={years} range={range} layout={layout} onTitle={openTitle} />}
         </section>
       )}
     </div>
-  )
-}
-
-/**
- * A person's years: every row with their name, and, after it, rows elsewhere in the slice whose name
- * agrees only by initial — each said for what it is. The card leads with the position, since the name
- * is the page's; a row's own spelling of the name is shown only where it differs.
- */
-const PersonTimeline = ({ chosen, all, index, onEmployer, onOpenGovernment }) => {
-  const near = all.filter((row) => !chosen.rows.includes(row) && nameMatch(row[0], chosen.name) === 'initial')
-  const employerKey = (row) => index.employers[row[4]][3]
-  const entries = [
-    ...chosen.rows.map((row) => ({ row, link: 'name' })),
-    ...near.map((row) => ({ row, link: 'initial' }))
-  ].sort((a, b) => a.row[5] - b.row[5] || b.row[2] - a.row[2])
-  const byYear = index.years.map((label, at) => ({ label, entries: entries.filter(({ row }) => row[5] === at) }))
-  let previous = null
-  return (
-    <ol className="salaries__timeline">
-      {byYear.map(({ label, entries: list }) => {
-        const named = list.filter(({ link }) => link === 'name')
-        const change = named.length === 1 && previous ? (named[0].row[2] - previous) / previous : null
-        if (named.length === 1) previous = named[0].row[2]
-        return (
-          <li key={label} className="salaries__year">
-            <p className="salaries__year-label">{label}</p>
-            {list.length === 0 && <p className="salaries__line">Not in this year’s disclosures.</p>}
-            <div className="salaries__grid">
-              {list.map(({ row, link }, at) => {
-                const [employerName, sectorName, body, slug] = index.employers[row[4]]
-                const why = link === 'initial'
-                  ? 'Same surname and initial only'
-                  : chosen.rows.some((other) => other !== row && other[5] !== row[5] && employerKey(other) === employerKey(row)) ? 'Same name, same employer' : 'Same name'
-                return (
-                  <div key={at} className="salaries__card salaries__card--still" data-weak={link === 'initial' || undefined}>
-                    <span className="salaries__lead"><Role /></span>
-                    <span className="salaries__text">
-                      <span className="salaries__name" data-missing={!row[1] || undefined}>{row[1] ?? 'Position not given'}</span>
-                      <span className="salaries__line">
-                        <button type="button" className="salaries__link" onClick={() => onEmployer(slug)}>{employerName}</button>
-                        {sectorName ? ` · ${sectorName}` : ''}
-                        {body && onOpenGovernment && (
-                          <> · <button type="button" className="salaries__link" onClick={() => onOpenGovernment(body, Number(label.slice(0, 4)))}>graph</button></>
-                        )}
-                      </span>
-                      {row[0] !== chosen.name && <span className="salaries__line">As “{row[0]}”</span>}
-                      <span className="salaries__why">{why}</span>
-                    </span>
-                    <span className="salaries__aside">
-                      {money(row[2])}
-                      {link === 'name' && change !== null && named.length === 1 && (
-                        <span className="salaries__line" data-up={change >= 0 || undefined}>{change >= 0 ? '+' : '−'}{Math.abs(change * 100).toFixed(1)}%</span>
-                      )}
-                      {row[3] ? <span className="salaries__line">Expenses {money(row[3])}</span> : null}
-                    </span>
-                  </div>
-                )
-              })}
-            </div>
-          </li>
-        )
-      })}
-    </ol>
   )
 }

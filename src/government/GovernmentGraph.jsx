@@ -691,8 +691,10 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
               stroke={theme.people}
               strokeWidth={1.5}
             />
-            <text x={CENTRE.x} y={CENTRE.y - 3} className="gov-graph__seal-label" fill={selectedId === PEOPLE ? theme.sealInkSelected : theme.sealInk}>People of</text>
-            <text x={CENTRE.x} y={CENTRE.y + 11} className="gov-graph__seal-label" fill={selectedId === PEOPLE ? theme.sealInkSelected : theme.sealInk}>British Columbia</text>
+            {/* The label follows the fill: dark on the full sun, whether the people are chosen or
+                joined to what is, so it stays legible against the bright yellow. */}
+            <text x={CENTRE.x} y={CENTRE.y - 3}className="gov-graph__seal-label" fill={peopleLit ? theme.sealInkLit : theme.sealInk}>People of</text>
+            <text x={CENTRE.x} y={CENTRE.y + 11} className="gov-graph__seal-label" fill={peopleLit ? theme.sealInkLit : theme.sealInk}>British Columbia</text>
           </g>
 
           {/* Bodies. */}

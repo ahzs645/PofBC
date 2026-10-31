@@ -18,11 +18,13 @@ test('each year’s file is there, and its rows add up to the index', () => {
     for (const [slug, totals] of Object.entries(years)) {
       const data = JSON.parse(readFileSync(new URL(`../../public/salaries/${slug}/${id}.json`, import.meta.url)))
       assert.equal(data.rows.length, totals.count, `${id} ${slug}`)
-      assert.equal(data.rows.reduce((sum, row) => sum + row[2], 0), totals.total, `${id} ${slug}`)
+      assert.equal(data.rows.reduce((sum, row) => sum + Math.round(row[2] * 100), 0), Math.round(totals.total * 100), `${id} ${slug}: exact cents`)
       assert.equal(data.rows[0][2], totals.max)
     }
   }
-  assert.deepEqual(SALARY_YEARS.map(({ label }) => label), ['2017/18', '2020/21', '2023/24'])
+  const labels = SALARY_YEARS.map(({ label }) => label)
+  for (const label of ['2017/18', '2020/21', '2023/24']) assert.ok(labels.includes(label), label)
+  assert.equal(new Set(labels).size, labels.length)
 })
 
 test('a ministry shows the public service’s pay, which is not disclosed by ministry', () => {

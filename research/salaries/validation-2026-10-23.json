@@ -1,0 +1,46 @@
+{
+  "verifiedOn": "2026-10-23",
+  "baselineCommit": "cc3539464d22f0c195f3cc0d486573120841302d",
+  "rows": 692951,
+  "namedRows": 687712,
+  "officialRows": 401641,
+  "retainedCompiledRows": 291310,
+  "employers": 130,
+  "availableEmployerYears": 401,
+  "atlasFiles": 165,
+  "personShards": 461,
+  "acceptedSourceFiles": 92,
+  "duplicateLookingExtras": 311,
+  "checks": {
+    "exportReconciliation": "passed",
+    "deterministicOfflineRebuild": {
+      "status": "passed",
+      "generatedFileCount": 761
+    },
+    "javascriptTestFiles": {
+      "passed": 47,
+      "failed": 0,
+      "command": "npm test"
+    },
+    "pythonParserTests": {
+      "passed": 38,
+      "failed": 0,
+      "command": "python3 -S -m unittest discover -s scripts -p 'test_*.py'"
+    },
+    "salaryProductionPreviewBuild": {
+      "status": "passed",
+      "command": "npm run preview:salaries -- --build"
+    },
+    "diffWhitespace": "passed"
+  },
+  "browserReview": {
+    "existingPublicInterface": "inspected",
+    "revisedLocalInterface": "not verified",
+    "reason": "Cloud browser could not reach the workspace preview: localhost connection refused; workspace address blocked by client."
+  },
+  "fullSiteBuild": {
+    "status": "not run",
+    "reason": "Licensed macOS Helvetica source required by the unrelated artwork build is unavailable on this Linux environment."
+  },
+  "sourceValidation": "Source-specific reviewed counts, fingerprints, fiscal headers, page boundaries, row comparisons and reconciliation residuals are retained in each accepted manifest. Complete live PDF/OCR reruns are separate from the offline website rebuild."
+}

@@ -6,6 +6,10 @@ The collection contains **118 distinct artwork files for 71 organizations**. Fiv
 
 The second pass added **8 original raster files**, covering **3 previously unresolved bodies**, establishing an original Urban Transit Authority sighting, and adding an earlier Simon Fraser Health Region letterhead. See [second-pass.md](second-pass.md) for discoveries, distinctions and remaining leads.
 
+A vector search of 30 October 2026 added published vector artwork for 13 of these bodies and for
+five one-off programs; see [`../vector-search-2026-10-30/`](../vector-search-2026-10-30/README.md).
+The gallery reads both records.
+
 ## Coverage
 
 | Group | Listed | Artwork collected | Existing PofBC collection | Still wanted |

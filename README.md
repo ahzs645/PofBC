@@ -13,6 +13,29 @@ npm run dev
 
 Already cloned without `--recurse-submodules`? `git submodule update --init --recursive`.
 
+## Salary data and coverage
+
+The salary search (`?view=salaries`) combines verified official remuneration schedules with
+explicitly labelled, retained compiled disclosures. Reporting periods, source links, disclosure
+scope and remaining gaps are attached to the records. The original three compiled editions are
+not a complete annual history or a workforce census.
+
+The [salary audit and source recovery report](research/salaries/README.md) explains the corrected
+Hydro-group and public-service years, duplicated records, earlier history, remaining source work,
+and the limits of name matching. The [employer coverage inventory](research/salaries/coverage-inventory.md)
+lists every employer; [the source inventory](research/salaries/source-inventory.md) distinguishes
+accepted reports from located sources awaiting extraction or review. The current build has 692,951
+records, including 401,641 with official-source provenance. The
+[23 October follow-up](research/salaries/interface-review-2026-10-23.md) adds Fraser Health history,
+eight BCIT schedules, four BC Transit schedules and salary-interface corrections.
+
+Rebuild all salary views offline with `npm run build:salaries`, then reconcile their rows and
+refresh the inventory with `npm run check:salaries`. The accepted normalized schedules, source
+hashes and immutable compiled baseline are committed under `research/salaries/`; the original
+external CSV directory is no longer required for the default build. Run `npm run preview:salaries`
+for a salary-only development preview without the separate licensed artwork/font build. Use
+`npm run preview:salaries -- --build` to verify its production bundle.
+
 ---
 
 ## Four identities
@@ -592,12 +615,47 @@ supplied reconstruction packages are in [`artwork/posters/`](artwork/posters/REA
 
 ---
 
+## Historical health maps
+
+Open **Health Maps** in the view menu, or link to `?view=health-map`. Six chapters connect the
+twenty earlier regions, the 1997 regional boards, community councils and service societies, the
+December 2001 consolidation, and modern boundary comparisons. The scrolling sidecar and chapter
+navigation come from the same pinned `geo-toolkit` source used by
+[PGMaps](https://github.com/ahzs645/PGMaps).
+
+The original Auditor General maps retain their numbered labels. The searchable index contains
+**52 source labels and 51 confirmed institutional links**, with the Nisga’a source area kept
+separate because its institutional identity is unresolved. A fourth original map, published by
+Statistics Canada in **April 2001**, depicts twenty statistical regions; it does not certify the
+1997 legal board boundaries. Each linked health organization also offers a route back to its map.
+
+The comparison chapter includes the existing PGMaps **89 Local Health Areas, 16 Health Service
+Delivery Areas and five geographic Health Authorities**, loaded on demand from local GeoJSON
+snapshots. Select a historical area, switch layers, fit its proposed modern candidates, or put
+the original page beside them. Selection and chapter links can be copied from the address bar.
+No historical overlap percentage is claimed: the source maps are page artwork, while the modern
+polygons have geographic coordinates. Candidate codes, sources and limitations are retained in
+the downloadable comparison file.
+
+The evidence preserves consequential differences: the old South Cariboo council follows the
+100 Mile House lineage; North Shore is smaller than today's North Shore/Coast Garibaldi service
+region; Northern Interior's candidate excludes Quesnel; and North West explicitly excludes Nisga’a.
+See [`research/health-geography/README.md`](research/health-geography/README.md) for dated sources,
+asset provenance and the comparison method. Rebuild the catalogue with `npm run build:health-map`.
+The boundary research script is documented in
+[`boundary-comparison-README.md`](research/health-geography/boundary-comparison-README.md).
+
 ## Requirements
 
-**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and two git submodules. A copy of **Adobe
+**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and three git submodules. A copy of **Adobe
 Garamond Pro** is optional and widens the current era's alphabet.
 
 ### The submodules
+
+[`vendor/geo-toolkit`](https://github.com/ahzs645/geo-toolkit) supplies the historical health
+story's sidecar, chapter navigation and responsive workspace context. It is pinned to PGMaps's
+`e186e12005afb97c0b4470899bd2713c98336f36` revision. Vite imports the required source entry points
+directly; the toolkit's optional mapping dependencies and separate build toolchain are not installed.
 
 [`vendor/patcher`](https://github.com/ahzs645/patcher) is the patch library and embroidery
 digitizer behind **Patches** (above). It needs no build step: Vite compiles its source directly.

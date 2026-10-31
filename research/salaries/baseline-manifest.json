@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "sourceId": "pssdb-2026-10-22",
+  "repositoryCommit": "eabe55708952f945cf2b0733230db31d48146d88",
+  "file": "compiled-baseline.json.gzip",
+  "sha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+  "rows": 383163,
+  "years": [
+    "2017/18",
+    "2020/21",
+    "2023/24"
+  ],
+  "employers": 131,
+  "repeated": [
+    {
+      "employer": "bc-hydro",
+      "year": "2020/21",
+      "repeats": "2017/18",
+      "rows": 4672,
+      "same": 4575
+    },
+    {
+      "employer": "sub-powerex",
+      "year": "2020/21",
+      "repeats": "2017/18",
+      "rows": 127,
+      "same": 126
+    },
+    {
+      "employer": "sub-powertech-labs",
+      "year": "2020/21",
+      "repeats": "2017/18",
+      "rows": 106,
+      "same": 105
+    }
+  ],
+  "notes": [
+    "Lossless snapshot of retained employer exports from the supplied pssdb build. Original CSV files were not committed. Not an independently verified official disclosure. Per-row original agency spelling cannot be recovered; employer aliases are preserved.",
+    "The quarantined BC Hydro group 2020/21 input rows were already absent in this commit; exclusions and match counts are retained."
+  ]
+}
