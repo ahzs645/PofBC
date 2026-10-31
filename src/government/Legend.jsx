@@ -175,8 +175,11 @@ export const Legend = ({ hiddenKinds, hiddenRelations, onToggleKinds, onToggleRe
           {hiddenRows > 0 && (
             <button type="button" className="gov-legend__reset" onClick={onReset}>Show all</button>
           )}
+          {/* A phone's sheet closes from its own foot, since its trigger may be under it. */}
+          <button type="button" className="gov-button gov-legend__done" onClick={() => setOpen(false)}>Done</button>
         </div>
       )}
+      {open && <span className="gov-legend__backdrop" aria-hidden="true" onClick={() => setOpen(false)} />}
       <button type="button" className="gov-button gov-legend__trigger" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
         Legend{hiddenRows ? <span className="gov-muted"> · {hiddenRows} hidden</span> : null}
         <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" style={{ transform: open ? 'rotate(180deg)' : undefined }}>

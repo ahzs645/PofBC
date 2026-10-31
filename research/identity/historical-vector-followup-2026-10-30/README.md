@@ -1,6 +1,6 @@
 # Historical Crown and health logo follow-up
 
-This collection brings the verified historical follow-up into the gallery and records a fourth, targeted search pass. It is based on `main` at `766087b6f07eead08c32e1426696efa38ac42d81`, which already contains the earlier 35-SVG vector-search batch.
+This collection brings the verified historical follow-up into the gallery and records a fourth, targeted search pass. It is integrated with `main` at `64599abab1d2198e00bb289ab013b2a539a29b04`, including the gallery tile-sharing changes from PR #15. The initial comparison used `766087b6f07eead08c32e1426696efa38ac42d81`; both revisions already contain the earlier 35-SVG vector-search batch.
 
 **Added here: 8 original-path SVGs for 7 organizations, 11 additional raster specimens, and one source-page PNG used only as a display preview.** The fourth search pass contributed two of those raster specimens, both for Simon Fraser Health Region. It produced no further verified vector.
 
@@ -74,6 +74,6 @@ npm run build
 git diff --check
 ```
 
-The gallery-index build, four listed test files, asset/proof checks and whitespace check pass. The public dependency submodules were initialized and the `json-url` dependency built successfully. The full `npm run build` was attempted but stops at the existing Helvetica prerequisite: this Linux workspace has no licensed `/System/Library/Fonts/Helvetica.ttc`. No substitute font or build bypass was introduced. The repository’s existing Pages workflow uses macOS and checks for that font before building. Full production-build success is therefore not claimed by this local validation.
+The gallery-index build, four listed test files, asset/proof checks and whitespace check pass. After integrating PR #15, the new government-panel logo cards were also checked: all eight vectors appear for the seven upgraded bodies, Capital uses its source-page preview, and Simon Fraser and North Shore remain excluded from the vector-only cards. The public dependency submodules were initialized and the `json-url` dependency built successfully. The full `npm run build` was attempted but stops at the existing Helvetica prerequisite: this Linux workspace has no licensed `/System/Library/Fonts/Helvetica.ttc`. No substitute font or build bypass was introduced. The repository’s existing Pages workflow uses macOS and checks for that font before building. Full production-build success is therefore not claimed by this local validation.
 
 All document dates and archive captures are specimen sightings. They do not establish first use, adoption dates or complete usage periods. Research observation dates use October 30, 2026 in America/Creston; older supporting artifacts may retain their original UTC timestamps. Full publications are linked and checksummed rather than copied into this repository.
