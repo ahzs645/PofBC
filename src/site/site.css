@@ -1885,45 +1885,24 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-picker button[aria-pressed='true'] { background: var(--sp-hover); color: var(--sp-text); font-weight: 600; }
 .salaries-picker button[aria-pressed='true'] .salaries-picker__bar span { opacity: 1; }
 /* A label can be wider than its bar (twenty years in a narrow panel): the button's one column stays
-   the button's width, so the bar is centred on it, and the label is centred over it on its own. */
+   the button's width, so the bar is centred on it, and the label is centred under it on its own.
+   Which labels show, and which sit against an end instead, is worked out from the width (labelPlan
+   in parts.jsx). */
 .salaries-picker button { grid-template-columns: minmax(0, 1fr); }
-.salaries-picker__label { justify-self: start; width: max-content; margin-left: 50%; transform: translateX(-50%); font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
-/* Twenty years' labels need about 640px; narrower — a phone, or the government view's panel — every
-   other one is shown, and the chosen one always. */
-.salaries-picker { container-type: inline-size; }
-@container (max-width: 640px) {
-  .salaries-picker button:nth-child(even) .salaries-picker__label { visibility: hidden; }
-  .salaries-picker button[aria-pressed='true'] + button .salaries-picker__label,
-  .salaries-picker button:has(+ button[aria-pressed='true']) .salaries-picker__label { visibility: hidden; }
-  .salaries-picker button[aria-pressed='true'] .salaries-picker__label { visibility: visible; }
-}
-/* Narrower still, every fourth. */
-@container (max-width: 380px) {
-  .salaries-picker button .salaries-picker__label { visibility: hidden; }
-  .salaries-picker button:nth-child(4n + 1) .salaries-picker__label { visibility: visible; }
-  .salaries-picker button[aria-pressed='true'] + button .salaries-picker__label,
-  .salaries-picker button[aria-pressed='true'] + button + button .salaries-picker__label,
-  .salaries-picker button:has(+ button[aria-pressed='true']) .salaries-picker__label,
-  .salaries-picker button:has(+ button + button[aria-pressed='true']) .salaries-picker__label { visibility: hidden; }
-  .salaries-picker button[aria-pressed='true'] .salaries-picker__label { visibility: visible; }
-}
+.salaries-picker__label, .salaries-chart__label { justify-self: start; width: max-content; margin-left: 50%; transform: translateX(-50%); font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+:is(.salaries-picker__label, .salaries-chart__label)[data-edge='start'] { margin-left: 0; transform: none; }
+:is(.salaries-picker__label, .salaries-chart__label)[data-edge='end'] { margin-left: 100%; transform: translateX(-100%); }
+:is(.salaries-picker__label, .salaries-chart__label)[data-hidden] { visibility: hidden; }
 
 /* A person's pay by year. */
 .salaries-chart { margin: 8px 0 0; }
 .salaries-chart__bars { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; height: 150px; }
-.salaries-chart__column { display: grid; grid-template-rows: auto 1fr auto; align-items: end; justify-items: center; min-width: 0; }
+.salaries-chart__column { display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: minmax(0, 1fr); align-items: end; justify-items: center; min-width: 0; }
 .salaries-chart__value { grid-row: 1; font-size: 10px; color: var(--sp-faint); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .salaries-chart__bar { grid-row: 2; align-self: end; width: min(28px, 80%); border-radius: 3px 3px 0 0; background: var(--sp-ink); }
 .salaries-chart__bar[data-negative] { background: #a23c31; }
 .salaries-chart__column[data-empty] .salaries-chart__bar { height: 2px; background: var(--sp-mid); }
-.salaries-chart__label { grid-row: 3; margin-top: 4px; white-space: nowrap; font-size: 10px; color: var(--sp-faint); font-variant-numeric: tabular-nums; }
-/* Labels by the chart's own width: values over the bars only with room for them, and on a phone's
-   width every other year. */
-.salaries-chart { container-type: inline-size; }
-@container (max-width: 640px) {
-  .salaries-chart__value { visibility: hidden; }
-  .salaries-chart__column:nth-child(even) .salaries-chart__label { visibility: hidden; }
-}
+.salaries-chart__label { grid-row: 3; margin-top: 4px; color: var(--sp-faint); }
 
 /* A disclosure's scope, period, threshold and source in a line; the rest folded. */
 .salaries-disclosure { font-size: 13px; line-height: 1.5; color: var(--sp-faint); }
