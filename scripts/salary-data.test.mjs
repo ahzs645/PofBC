@@ -142,6 +142,8 @@ test('a corrupted official input cannot erase the previous published output', ()
 test('verified replacements restore quarantined years consistently in every view with row provenance', () => {
   const f = fixture()
   try {
+    f.manifest.sources[0].publicWarning = 'Published expenses have an unresolved source subtotal difference.'
+    writeFileSync(join(f.sourceDir, 'sources.json'), JSON.stringify(f.manifest))
     const result = f.run()
     assert.equal(result.status, 0, result.stderr)
     const employers = JSON.parse(readFileSync(join(f.out, 'employers/index.json')))
@@ -150,6 +152,8 @@ test('verified replacements restore quarantined years consistently in every view
     assert.equal(employers.employers[0].coverage[year].status, 'available')
     assert.equal(employers.employers[0].coverage[year].thresholdComparison, '>=')
     assert.equal(employers.sources['official-2021'].thresholdComparison, '>=')
+    assert.equal(employers.sources['official-2021'].publicWarning, f.manifest.sources[0].publicWarning)
+    assert.equal(JSON.parse(readFileSync(join(f.out, 'people/index.json'))).sources['official-2021'].publicWarning, f.manifest.sources[0].publicWarning)
     assert.deepEqual(employers.employers[0].repeated, [])
     const atlas = JSON.parse(readFileSync(join(f.out, '2020-21/bc-hydro.json')))
     assert.deepEqual(atlas.rows[0], ['New, Alice', null, 122528.25, 704.02, 'official-2021', 189])

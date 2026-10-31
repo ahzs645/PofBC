@@ -6478,19 +6478,299 @@
         "negativeExpenses": 0,
         "publishedThresholdExceptions": 0
       }
+    },
+    {
+      "id": "lower-mainland-surrey-2025-employees",
+      "inputKey": "surrey-2025",
+      "employerSlug": "city-of-surrey",
+      "employerName": "City of Surrey",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Surrey 2025 SOFI: employees (source differences disclosed)",
+      "sourceUrl": "https://www.surrey.ca/sites/default/files/media/documents/2025-SOFI-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "sha256": "ad57a85407520cbe9ebc2928e0a8ad7bffa1d9529209f17a4640b19227fea5db",
+      "file": "surrey-2025-employees.json.gzip",
+      "dataSha256": "b55916668fe8cd58578ea99c64fa800c97c1e3dc2c70c35995297b1b96441ca8",
+      "normalizedSha256": "a7cfea289561ae2b888cd32afedc2eab97ef15f1346f3c76415814cc60dac891",
+      "provenanceFile": "surrey-2025-components.json.gzip",
+      "provenanceSha256": "54dfeeaae9dca97ffd04bd1044b12fa9340e8be7f07d528e7d8ac9a962ad0216",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule, including any published threshold exceptions",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 1543,
+      "totalRemuneration": 181345413,
+      "totalExpenses": 1173162,
+      "pages": [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ],
+      "status": "accepted",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Calendar-year named employee disclosure; amounts are remuneration as published and may include overtime, retroactive pay, taxable benefits, leave payouts and other compensation. They are not annual base salary rates.",
+        "Expenses are kept separately from remuneration. Published dashes and blank expenses remain null; explicit zero and negative amounts are retained. Names, initials and available positions are preserved as disclosed; they do not establish unique person identities.",
+        "Only the employee schedule is imported. Elected officials, supplier payments, aggregate under-threshold payroll and employer pension/insurance contributions are outside this collection.",
+        "Normalized remuneration is the sum of the two published remuneration components: base_salary_remuneration, taxable_benefit_and_other. Source components remain in the retained audit. A dash in a component contributes no reported amount to this sum.",
+        "Surrey 2025: individual published amounts are preserved. Their expense sum is $473 above the printed subtotal; the two remuneration components differ by +$12 and −$1. These source differences are unresolved; totals here sum the disclosed rows.",
+        "Accepted as a faithful transcription with unresolved source controls, not as an exactly reconciled issuer schedule. No individual value is adjusted and no rounding explanation is assumed."
+      ],
+      "validation": {
+        "sourceFingerprintVerified": true,
+        "reportedYearEvidence": [
+          {
+            "physicalPage": 70,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2025"
+          }
+        ],
+        "rowsByPhysicalPage": {
+          "70": 36,
+          "71": 36,
+          "72": 36,
+          "73": 36,
+          "74": 36,
+          "75": 36,
+          "76": 36,
+          "77": 36,
+          "78": 36,
+          "79": 36,
+          "80": 36,
+          "81": 36,
+          "82": 36,
+          "83": 36,
+          "84": 36,
+          "85": 36,
+          "86": 36,
+          "87": 36,
+          "88": 36,
+          "89": 36,
+          "90": 36,
+          "91": 36,
+          "92": 36,
+          "93": 36,
+          "94": 36,
+          "95": 36,
+          "96": 36,
+          "97": 36,
+          "98": 36,
+          "99": 36,
+          "100": 36,
+          "101": 36,
+          "102": 36,
+          "103": 36,
+          "104": 36,
+          "105": 36,
+          "106": 36,
+          "107": 36,
+          "108": 36,
+          "109": 36,
+          "110": 36,
+          "111": 36,
+          "112": 31
+        },
+        "componentColumns": [
+          "base_salary_remuneration",
+          "taxable_benefit_and_other",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "168,337,452",
+          "13,007,950",
+          "1,172,689"
+        ],
+        "computedComponentTotals": [
+          "168337464",
+          "13007949",
+          "1173162"
+        ],
+        "controlResiduals": [
+          12.0,
+          -1.0,
+          473.0
+        ],
+        "allComponentSubtotalsExact": false,
+        "independentPdfReaders": "Poppler layout versus independently grouped PyMuPDF word coordinates; pypdf corroboration for clipped/wrapped text where required",
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "rowsIndependentlyChecked": 1543,
+        "unparsedInterRowText": 0,
+        "missingExpenses": 657,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 9,
+        "visuallyReviewedPhysicalPages": [
+          70,
+          112
+        ],
+        "acceptanceBasis": "Complete dual-reader row agreement with fixed, disclosed source-control exceptions; no assertion of exact source reconciliation.",
+        "approvalEvidence": {
+          "physicalPage": 3,
+          "signedApprovalVisuallyReviewed": true,
+          "note": "Rendered original approval page inspected during this follow-up; PDF hash is pinned."
+        }
+      },
+      "publicWarning": "Surrey 2025: individual published amounts are preserved. Their expense sum is $473 above the printed subtotal; the two remuneration components differ by +$12 and −$1. These source differences are unresolved; totals here sum the disclosed rows."
+    },
+    {
+      "id": "lower-mainland-north-vancouver-city-2022-employees",
+      "inputKey": "north-vancouver-city-2022",
+      "employerSlug": "city-of-north-vancouver",
+      "employerName": "City of North Vancouver",
+      "sector": "Municipalities",
+      "year": "2022",
+      "slug": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "City of North Vancouver 2022 SOFI: employees (source differences disclosed)",
+      "sourceUrl": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Statement-of-Financial-Information-SOFI.PDF",
+      "sourceIndexUrl": "https://www.cnv.org/City-Hall/Finances/financial-statements",
+      "sha256": "5c6b3c4bc779ce2722735e8447d05f5422842a75dd3026e6ae9de231330ec773",
+      "file": "north-vancouver-city-2022-employees.json.gzip",
+      "dataSha256": "dab7f3248968d789ddac5dce857ae3bbd56978edc93757847b3ec4ae176c20fa",
+      "normalizedSha256": "be01dd75798a2699ba5c825935a1d006b0b515c1ad2f51be71f27133ffbbb4a0",
+      "provenanceFile": "north-vancouver-city-2022-components.json.gzip",
+      "provenanceSha256": "eca709cf6b275a573abb57bd20b6727f32299b67fa4403773369bae548afb957",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule, including any published threshold exceptions",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 275,
+      "totalRemuneration": 30907848,
+      "totalExpenses": 235065,
+      "pages": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "status": "accepted",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Calendar-year named employee disclosure; amounts are remuneration as published and may include overtime, retroactive pay, taxable benefits, leave payouts and other compensation. They are not annual base salary rates.",
+        "Expenses are kept separately from remuneration. Published dashes and blank expenses remain null; explicit zero and negative amounts are retained. Names, initials and available positions are preserved as disclosed; they do not establish unique person identities.",
+        "Only the employee schedule is imported. Elected officials, supplier payments, aggregate under-threshold payroll and employer pension/insurance contributions are outside this collection.",
+        "North Vancouver City 2022: remuneration reconciles exactly, but individual expenses sum $143 below the printed subtotal and expense-inclusive totals sum $1 below it. Published cells are preserved; the source differences are unresolved.",
+        "Accepted as a faithful transcription with unresolved source controls, not as an exactly reconciled issuer schedule. No individual value is adjusted and no rounding explanation is assumed.",
+        "Normalized remuneration uses only the published remuneration column. The third column includes expenses and is not pay; it remains in the component evidence."
+      ],
+      "validation": {
+        "sourceFingerprintVerified": true,
+        "reportedYearEvidence": [
+          {
+            "physicalPage": 30,
+            "text": "For the year ended December 31, 2022"
+          }
+        ],
+        "rowsByPhysicalPage": {
+          "30": 62,
+          "31": 64,
+          "32": 64,
+          "33": 64,
+          "34": 21
+        },
+        "componentColumns": [
+          "remuneration",
+          "expenses",
+          "total_including_expenses"
+        ],
+        "printedControlTotals": [
+          "30,907,848",
+          "235,208",
+          "31,143,056"
+        ],
+        "computedComponentTotals": [
+          "30907848",
+          "235065",
+          "31143055"
+        ],
+        "controlResiduals": [
+          0.0,
+          -143.0,
+          -1.0
+        ],
+        "allComponentSubtotalsExact": false,
+        "independentPdfReaders": "Poppler layout versus independently grouped PyMuPDF word coordinates; pypdf corroboration for clipped/wrapped text where required",
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "rowsIndependentlyChecked": 275,
+        "unparsedInterRowText": 0,
+        "missingExpenses": 69,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0,
+        "visuallyReviewedPhysicalPages": [
+          30,
+          34
+        ],
+        "acceptanceBasis": "Complete dual-reader row agreement with fixed, disclosed source-control exceptions; no assertion of exact source reconciliation.",
+        "approvalEvidence": {
+          "physicalPage": 2,
+          "signedApprovalVisuallyReviewed": true,
+          "note": "Rendered original approval page inspected during this follow-up; PDF hash is pinned."
+        }
+      },
+      "publicWarning": "North Vancouver City 2022: remuneration reconciles exactly, but individual expenses sum $143 below the printed subtotal and expense-inclusive totals sum $1 below it. Published cells are preserved; the source differences are unresolved."
     }
   ],
   "unparsedSources": [
-    {
-      "employerSlug": "city-of-surrey",
-      "employerName": "City of Surrey",
-      "year": "2025",
-      "sourceUrl": "https://www.surrey.ca/sites/default/files/media/documents/2025-SOFI-Statement-of-Financial-Information.pdf",
-      "indexUrl": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
-      "status": "held-unparsed",
-      "sha256": "ad57a85407520cbe9ebc2928e0a8ad7bffa1d9529209f17a4640b19227fea5db",
-      "reason": "Held: all 1,543 candidate rows agree between PDF readers, but printed expenses subtotal is CAD 473 below the sum of printed expense cells; discrepancy remains unresolved."
-    },
     {
       "employerSlug": "city-of-coquitlam",
       "employerName": "City of Coquitlam",
@@ -6600,16 +6880,6 @@
       "status": "held-unparsed",
       "sha256": "d1cb787cb894ab7762d679b02a4a8d18c81bb5cfc815bb992ad4fd1f9ae88cc8",
       "reason": "Report retrieved, but the reviewed employee layout is absent (scan, font extraction issue or unsupported format); no rows imported."
-    },
-    {
-      "employerSlug": "city-of-north-vancouver",
-      "employerName": "City of North Vancouver",
-      "year": "2022",
-      "sourceUrl": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Statement-of-Financial-Information-SOFI.PDF",
-      "indexUrl": "https://www.cnv.org/City-Hall/Finances/financial-statements",
-      "status": "held-unparsed",
-      "sha256": "5c6b3c4bc779ce2722735e8447d05f5422842a75dd3026e6ae9de231330ec773",
-      "reason": "Held: employee extraction has unresolved layout, independent-reader or printed subtotal differences."
     },
     {
       "employerSlug": "district-of-west-vancouver",

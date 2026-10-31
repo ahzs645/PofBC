@@ -1,5 +1,14 @@
 # Province-wide municipal salary expansion — 31 October 2026
 
+**Follow-up:** [Import assumptions and acquisition list](follow-up.md) now
+documents three additional employee cohorts accepted as faithful transcriptions
+with unresolved source subtotals and visible app warnings. The current app
+contains **880,436 records**, including **630,525 official-source records**.
+Montrose now has three accepted employee observations as well as council.
+The figures and hold decisions below describe the original PR #23 baseline;
+use [current generated coverage](coverage.md) and [the complete follow-up CSV](follow-up.csv)
+for the subsequent state. Requests remain unsent.
+
 This review expands PofBC’s official municipal salary histories and provides a
 source inventory for every jurisdiction on the reviewed provincial roster. It
 starts from repository commit

@@ -40,7 +40,7 @@ class SmallMunicipalSchedules(unittest.TestCase):
                     for field, printed in section['controlsCents'].items():
                         self.assertEqual(parser.total(rows, field) - printed, section.get('reviewedResidualsCents', {}).get(field, 0), source_id + ' ' + field)
                 seen += len(actual)
-        self.assertEqual(seen, 192)
+        self.assertEqual(seen, 195)
 
     def test_mackenzie_total_never_becomes_remuneration(self):
         source = self.sources['municipal-small-district-of-mackenzie-2025-employee-remuneration']

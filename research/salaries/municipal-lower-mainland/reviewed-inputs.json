@@ -3754,6 +3754,202 @@
         },
         "interRowNotes": []
       }
+    },
+    {
+      "key": "surrey-2025",
+      "employerSlug": "city-of-surrey",
+      "sourceUrl": "https://www.surrey.ca/sites/default/files/media/documents/2025-SOFI-Statement-of-Financial-Information.pdf",
+      "sha256": "ad57a85407520cbe9ebc2928e0a8ad7bffa1d9529209f17a4640b19227fea5db",
+      "componentColumns": [
+        "base_salary_remuneration",
+        "taxable_benefit_and_other",
+        "expenses"
+      ],
+      "remunerationColumns": [
+        0,
+        1
+      ],
+      "expensesColumn": 2,
+      "normalizedSha256": "a7cfea289561ae2b888cd32afedc2eab97ef15f1346f3c76415814cc60dac891",
+      "expected": {
+        "rowCount": 1543,
+        "pages": [
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112
+        ],
+        "componentSums": [
+          "168337464",
+          "13007949",
+          "1173162"
+        ],
+        "printedControls": [
+          "168,337,452",
+          "13,007,950",
+          "1,172,689"
+        ],
+        "controlResiduals": [
+          12.0,
+          -1.0,
+          473.0
+        ],
+        "parserErrors": [],
+        "parserErrorCount": 0,
+        "rowsByPhysicalPage": {
+          "70": 36,
+          "71": 36,
+          "72": 36,
+          "73": 36,
+          "74": 36,
+          "75": 36,
+          "76": 36,
+          "77": 36,
+          "78": 36,
+          "79": 36,
+          "80": 36,
+          "81": 36,
+          "82": 36,
+          "83": 36,
+          "84": 36,
+          "85": 36,
+          "86": 36,
+          "87": 36,
+          "88": 36,
+          "89": 36,
+          "90": 36,
+          "91": 36,
+          "92": 36,
+          "93": 36,
+          "94": 36,
+          "95": 36,
+          "96": 36,
+          "97": 36,
+          "98": 36,
+          "99": 36,
+          "100": 36,
+          "101": 36,
+          "102": 36,
+          "103": 36,
+          "104": 36,
+          "105": 36,
+          "106": 36,
+          "107": 36,
+          "108": 36,
+          "109": 36,
+          "110": 36,
+          "111": 36,
+          "112": 31
+        },
+        "interRowNotes": []
+      },
+      "approvalEvidence": {
+        "physicalPage": 3,
+        "signedApprovalVisuallyReviewed": true
+      }
+    },
+    {
+      "key": "north-vancouver-city-2022",
+      "employerSlug": "city-of-north-vancouver",
+      "sourceUrl": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Statement-of-Financial-Information-SOFI.PDF",
+      "sha256": "5c6b3c4bc779ce2722735e8447d05f5422842a75dd3026e6ae9de231330ec773",
+      "componentColumns": [
+        "remuneration",
+        "expenses",
+        "total_including_expenses"
+      ],
+      "remunerationColumns": [
+        0
+      ],
+      "expensesColumn": 1,
+      "normalizedSha256": "be01dd75798a2699ba5c825935a1d006b0b515c1ad2f51be71f27133ffbbb4a0",
+      "expected": {
+        "rowCount": 275,
+        "pages": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "componentSums": [
+          "30907848",
+          "235065",
+          "31143055"
+        ],
+        "printedControls": [
+          "30,907,848",
+          "235,208",
+          "31,143,056"
+        ],
+        "controlResiduals": [
+          0.0,
+          -143.0,
+          -1.0
+        ],
+        "parserErrors": [
+          [
+            "subtotal-mismatch",
+            [
+              0.0,
+              -143.0,
+              -1.0
+            ]
+          ]
+        ],
+        "parserErrorCount": 1,
+        "rowsByPhysicalPage": {
+          "30": 62,
+          "31": 64,
+          "32": 64,
+          "33": 64,
+          "34": 21
+        },
+        "interRowNotes": []
+      },
+      "approvalEvidence": {
+        "physicalPage": 2,
+        "signedApprovalVisuallyReviewed": true
+      }
     }
   ]
 }

@@ -49,12 +49,14 @@
         "year": "2025",
         "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-SOFI-Statement-of-Financial-Information.pdf",
         "label": "2025 SOFI - Statement of Financial Information",
-        "status": "held-unparsed",
+        "status": "imported-with-source-caveat",
         "downloaded": true,
         "sha256": "ad57a85407520cbe9ebc2928e0a8ad7bffa1d9529209f17a4640b19227fea5db",
         "notes": [
-          "Held: all 1,543 candidate rows agree between PDF readers, but printed expenses subtotal is CAD 473 below the sum of printed expense cells; discrepancy remains unresolved."
-        ]
+          "Surrey 2025: individual published amounts are preserved. Their expense sum is $473 above the printed subtotal; the two remuneration components differ by +$12 and −$1. These source differences are unresolved; totals here sum the disclosed rows."
+        ],
+        "sourceId": "lower-mainland-surrey-2025-employees",
+        "rowCount": 1543
       }
     ],
     "status": "partially-imported",
@@ -66,7 +68,8 @@
       "2021",
       "2022",
       "2023",
-      "2024"
+      "2024",
+      "2025"
     ]
   },
   {
@@ -296,12 +299,14 @@
         "year": "2022",
         "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Statement-of-Financial-Information-SOFI.PDF",
         "label": "2022 Statement of Financial Information",
-        "status": "held-unparsed",
+        "status": "imported-with-source-caveat",
         "downloaded": true,
         "sha256": "5c6b3c4bc779ce2722735e8447d05f5422842a75dd3026e6ae9de231330ec773",
         "notes": [
-          "Held: employee extraction has unresolved layout, independent-reader or printed subtotal differences."
-        ]
+          "North Vancouver City 2022: remuneration reconciles exactly, but individual expenses sum $143 below the printed subtotal and expense-inclusive totals sum $1 below it. Published cells are preserved; the source differences are unresolved."
+        ],
+        "sourceId": "lower-mainland-north-vancouver-city-2022-employees",
+        "rowCount": 275
       },
       {
         "year": "2023",
@@ -340,6 +345,7 @@
     ],
     "checkedOn": "2026-10-31",
     "importedEmployeeYears": [
+      "2022",
       "2023",
       "2024",
       "2025"

@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "asOf": "2026-10-31",
+  "baseline": "PR #23 at 6b06980cda86bc836b365042b2dade0f05481cba",
+  "decisions": [
+    {
+      "topic": "Source disagreements",
+      "rule": "Accept faithful, complete transcriptions of adopted official schedules when independent readers agree on every row field, the reporting period and column meanings are established, and every residual is fixed in reviewed evidence. Preserve published cells, expose material source discrepancies in the app, and request clarification. Acceptance certifies the transcription, not the issuer's arithmetic.",
+      "assumption": "An unexplained aggregate discrepancy does not by itself establish which, if any, individual published cell is wrong. No amount is allocated to a person or adjusted to force agreement."
+    },
+    {
+      "topic": "Reporting period",
+      "rule": "Use the actual schedule heading and corroborating report evidence. A filename, upload date, compiler edition or adjacent year cannot establish a reporting year. Conflicting year evidence stays held.",
+      "assumption": "None: a reporting year must be established from the document."
+    },
+    {
+      "topic": "Final publication",
+      "rule": "An unsigned document labelled draft stays held until adoption or a final version is established. A link on an official site alone does not settle this.",
+      "assumption": "None: final status is not inferred from arithmetic agreement."
+    },
+    {
+      "topic": "Pay definition",
+      "rule": "Use the reviewed remuneration columns for each source. Keep expense-inclusive totals out of pay. Keep independently reported benefits and combined benefits/expenses in component evidence when they cannot be assigned to the standard fields.",
+      "assumption": "Published remuneration is a payment disclosure, not a standardized base salary. Kamloops/Quesnel remuneration and other municipalities' broader total remuneration require component-aware comparison."
+    },
+    {
+      "topic": "Missing values and identity",
+      "rule": "Keep missing, zero and negative amounts distinct. Preserve names, initials and job titles as disclosed. Do not infer full names, jobs or employment in missing years.",
+      "assumption": "Repeated names do not prove a single person's identity or continuous employment."
+    },
+    {
+      "topic": "Coverage and thresholds",
+      "rule": "Keep employee and council schedules separate, retain published threshold exceptions, and do not turn supplier payments or under-threshold aggregate payroll into individuals.",
+      "assumption": "A disclosed cohort is not a complete employee roster. No named rows imported does not mean no employees or no report."
+    },
+    {
+      "topic": "Compiled overlap",
+      "rule": "Delete compiled rows only under the existing complete, uniquely matched, hash-pinned cohort comparison. Preserve partial overlaps and unverified council dates.",
+      "assumption": "Similar values or matching employee dates do not establish a council reporting period."
+    },
+    {
+      "topic": "Extraction and OCR",
+      "rule": "Incomplete names, wrapped titles, unassigned table text and unresolved OCR differences remain processing tasks. Two readers of one embedded OCR layer do not replace rendered-page review.",
+      "assumption": "OCR is a candidate transcription, not evidence sufficient on its own for import."
+    },
+    {
+      "topic": "Acquisition route",
+      "rule": "Retrieve and process existing public sources first. Ask Finance or Corporate Services for public adopted schedules and existing electronic files where needed. Consider a formal access request only after checking the public body's applicable process; record refusals, fees and retention limits rather than inventing records or contacts.",
+      "assumption": "A bounded unsuccessful website search does not establish that FOI is necessary or that the record is absent. No requests have been sent."
+    },
+    {
+      "topic": "Jurisdiction scope",
+      "rule": "Retain the reviewed 161-current-jurisdiction denominator and separate shíshálh governance review. Okanagan Falls is pending until 2026-11-06 and has no missing pre-incorporation municipal years. Metro Vancouver remains outside this denominator.",
+      "assumption": "Ordinary municipal SOFI and provincial FOI requirements are not assumed for shíshálh Nation Government District."
+    }
+  ],
+  "qualifiedSources": [
+    {
+      "sourceId": "lower-mainland-surrey-2025-employees",
+      "employerSlug": "city-of-surrey",
+      "year": "2025",
+      "rows": 1543,
+      "componentResiduals": [12, -1, 473],
+      "action": "Import original individual amounts with a public warning; request explanation or amended component subtotals."
+    },
+    {
+      "sourceId": "lower-mainland-north-vancouver-city-2022-employees",
+      "employerSlug": "city-of-north-vancouver",
+      "year": "2022",
+      "rows": 275,
+      "componentResiduals": [0, -143, -1],
+      "action": "Import original remuneration and expenses with a public warning; do not use expense-inclusive total as pay. Request clarification."
+    },
+    {
+      "sourceId": "municipal-small-village-of-montrose-2023-employee-remuneration",
+      "employerSlug": "village-of-montrose",
+      "year": "2023",
+      "rows": 3,
+      "componentResiduals": [0, -36],
+      "action": "Import the three visually reviewed employee rows with a public warning; request the employee expense correction. Preserve the separately reconciled council cohort."
+    }
+  ]
+}

@@ -24,23 +24,23 @@
     "withAnySalaryRecordsAfter": 56,
     "withOfficialRecordsBefore": 2,
     "withOfficialRecordsAfter": 47,
-    "withOfficialEmployeeRecords": 46,
+    "withOfficialEmployeeRecords": 47,
     "withOfficialCouncilRecords": 19,
     "withNoOfficialRecords": 114,
     "withNoSalaryRecords": 105,
-    "newlyAcceptedSourceCohorts": 143,
-    "newlyAcceptedReportYears": 125,
+    "newlyAcceptedSourceCohorts": 146,
+    "newlyAcceptedReportYears": 127,
     "municipalitiesInAddedCollections": 46,
-    "newlyAcceptedRecords": 46779,
-    "newEmployeeRecords": 46648,
+    "newlyAcceptedRecords": 48600,
+    "newEmployeeRecords": 48469,
     "newCouncilRecords": 131,
-    "municipalOfficialRecords": 98999,
+    "municipalOfficialRecords": 100820,
     "municipalCompiledUnverifiedRecords": 24054,
     "municipalitiesWithExplicitSalarySourceLeads": 129,
     "distinctSourceLeadUrls": 3799,
     "allRecordsBefore": 832864,
-    "allRecordsAfter": 878615,
-    "allRecordsNetChange": 45751,
+    "allRecordsAfter": 880436,
+    "allRecordsNetChange": 47572,
     "allEmployersBefore": 133,
     "allEmployersAfter": 159,
     "replacedCompiledRecords": 1028
@@ -66,20 +66,20 @@
     },
     {
       "collection": "municipal-lower-mainland",
-      "sources": 63,
-      "reportYears": 63,
+      "sources": 65,
+      "reportYears": 65,
       "municipalities": 18,
-      "records": 26814,
-      "employeeRecords": 26814,
+      "records": 28632,
+      "employeeRecords": 28632,
       "councilRecords": 0
     },
     {
       "collection": "municipal-small",
-      "sources": 17,
+      "sources": 18,
       "reportYears": 9,
       "municipalities": 9,
-      "records": 192,
-      "employeeRecords": 134,
+      "records": 195,
+      "employeeRecords": 137,
       "councilRecords": 58
     }
   ],
@@ -33002,13 +33002,15 @@
       "website": "http://www.montrose.ca",
       "directoryUrl": "https://www.civicinfo.bc.ca/municipalities?id=76",
       "status": "current",
-      "salaryStatus": "official-council-only",
-      "nextAction": "Resolve the held employee schedule; council records do not establish employee coverage.",
+      "salaryStatus": "official-employee-records-imported",
+      "nextAction": "Review remaining report years and council schedules; accepted employee years are not a claim of complete employment or historical coverage.",
       "archiveUrl": "https://www.montrose.ca/document-category/annual-reports/",
-      "records": 5,
-      "officialRecords": 5,
+      "records": 8,
+      "officialRecords": 8,
       "compiledUnverifiedRecords": 0,
-      "officialEmployeeYears": [],
+      "officialEmployeeYears": [
+        "2023"
+      ],
       "officialCouncilYears": [
         "2023"
       ],
@@ -33060,26 +33062,73 @@
               }
             ],
             "fieldCorrections": {},
-            "evidenceFile": "evidence/village-of-montrose-2023-elected-officials.json.gzip"
+            "evidenceFile": "evidence/village-of-montrose-2023-elected-officials.json.gzip",
+            "approvalEvidence": {
+              "physicalPage": 36,
+              "signedApprovalVisuallyReviewed": true,
+              "note": "Rendered original signed approval inspected during this follow-up; PDF hash is pinned."
+            }
+          }
+        },
+        {
+          "collection": "municipal-small",
+          "id": "municipal-small-village-of-montrose-2023-employee-remuneration",
+          "employerSlug": "village-of-montrose",
+          "year": "2023",
+          "category": "employee-remuneration",
+          "rows": 3,
+          "namedRows": 3,
+          "sourceUrl": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-SOFI-Copy-for-website.pdf",
+          "sourceIndexUrl": "https://www.montrose.ca/document-category/annual-reports/",
+          "sourceSha256": "bcdebe3816ebb0c69a783b379619da10608d9b2ff446084ef939c04906c83989",
+          "dataSha256": "931654b1aad4a1fda5c31bb691c8d60623645aba3c0dee0893b3830bdc712ed2",
+          "notes": [
+            "The source is the 2023 report; the website upload path contains 2025. The literal nil expense cells are reported zeros.",
+            "Accepted as a faithful transcription with an unresolved expense control. The three named rows were visually checked against the rendered original. Council is a separate exactly reconciled cohort.",
+            "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+            "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+            "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+            "Montrose 2023 employees: remuneration reconciles exactly. Individual expenses sum to $6,503.65, $36 below the $6,539.65 implied by the printed aggregates. Published cells are preserved; the source difference is unresolved."
+          ],
+          "validation": {
+            "originalFingerprintVerified": true,
+            "independentReaders": [
+              "PyMuPDF positioned words",
+              "Poppler bbox-layout positioned words"
+            ],
+            "everyRowFieldAgreement": true,
+            "physicalPagesVisuallyReviewed": [
+              33
+            ],
+            "rowsIndependentlyChecked": 3,
+            "printedControls": [
+              {
+                "field": "pay",
+                "printedControl": 269287.16,
+                "rowSum": 269287.16,
+                "residual": 0,
+                "basis": "Printed total $393,137.06 less under-threshold aggregate $123,849.90"
+              },
+              {
+                "field": "expenses",
+                "printedControl": 6539.65,
+                "rowSum": 6503.65,
+                "residual": -36,
+                "basis": "Printed total $10,107.80 less under-threshold aggregate $3,568.15"
+              }
+            ],
+            "fieldCorrections": {},
+            "evidenceFile": "evidence/village-of-montrose-2023-employee-remuneration.json.gzip",
+            "acceptanceBasis": "Faithful transcription with fixed, publicly disclosed source-control exceptions; not exact source reconciliation.",
+            "approvalEvidence": {
+              "physicalPage": 36,
+              "signedApprovalVisuallyReviewed": true,
+              "note": "Rendered original signed approval inspected during this follow-up; PDF hash is pinned."
+            }
           }
         }
       ],
-      "heldOrUnparsedSources": [
-        {
-          "id": "municipal-small-montrose-2023-employees-held",
-          "employerSlug": "village-of-montrose",
-          "year": "2023",
-          "title": "village-of-montrose 2023 disclosure",
-          "url": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-SOFI-Copy-for-website.pdf",
-          "indexUrl": "https://www.montrose.ca/document-category/annual-reports/",
-          "status": "held-for-review",
-          "scope": "employee-remuneration",
-          "reason": "All three printed named rows were visually and independently extracted, but employee expenses sum to $6,503.65 against $6,539.65 implied by the printed employee total less the under-threshold aggregate. The unexplained $36 source residual is too large to attribute to cent rounding. Council controls reconcile exactly and that cohort is accepted separately.",
-          "nextAction": "Obtain a corrected employee expense subtotal or explanation from the municipality; do not alter individual amounts to force a match.",
-          "notes": [],
-          "collection": "municipal-small"
-        }
-      ],
+      "heldOrUnparsedSources": [],
       "sourceLeadCount": 68,
       "explicitSalaryLeadCount": 1,
       "pagesChecked": 9,
@@ -34042,7 +34091,7 @@
         },
         {
           "url": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-SOFI-Copy-for-website.pdf",
-          "label": "Village of Montrose 2023 elected-officials",
+          "label": "Village of Montrose 2023 employee-remuneration",
           "status": "imported",
           "kind": "report-linked-unreviewed",
           "yearsMentioned": [
@@ -34054,10 +34103,6 @@
             "https://www.montrose.ca/document-category/annual-reports/"
           ],
           "discoveryFile": "discovery/village-of-montrose.json",
-          "indexedYear": "2023",
-          "reason": "All three printed named rows were visually and independently extracted, but employee expenses sum to $6,503.65 against $6,539.65 implied by the printed employee total less the under-threshold aggregate. The unexplained $36 source residual is too large to attribute to cent rounding. Council controls reconcile exactly and that cohort is accepted separately.",
-          "nextAction": "Obtain a corrected employee expense subtotal or explanation from the municipality; do not alter individual amounts to force a match.",
-          "notes": [],
           "calendarYear": "2023"
         },
         {
@@ -39229,10 +39274,11 @@
       "salaryStatus": "official-employee-records-imported",
       "nextAction": "Review remaining report years and council schedules; accepted employee years are not a claim of complete employment or historical coverage.",
       "archiveUrl": "https://www.cnv.org/City-Hall/Finances/financial-statements",
-      "records": 1665,
-      "officialRecords": 1061,
+      "records": 1940,
+      "officialRecords": 1336,
       "compiledUnverifiedRecords": 604,
       "officialEmployeeYears": [
+        "2022",
         "2023",
         "2024",
         "2025"
@@ -39436,6 +39482,81 @@
             "negativeExpenses": 0,
             "publishedThresholdExceptions": 0
           }
+        },
+        {
+          "collection": "municipal-lower-mainland",
+          "id": "lower-mainland-north-vancouver-city-2022-employees",
+          "employerSlug": "city-of-north-vancouver",
+          "year": "2022",
+          "category": "employee-remuneration",
+          "rows": 275,
+          "namedRows": 275,
+          "sourceUrl": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Statement-of-Financial-Information-SOFI.PDF",
+          "sourceIndexUrl": "https://www.cnv.org/City-Hall/Finances/financial-statements",
+          "sourceSha256": "5c6b3c4bc779ce2722735e8447d05f5422842a75dd3026e6ae9de231330ec773",
+          "dataSha256": "dab7f3248968d789ddac5dce857ae3bbd56978edc93757847b3ec4ae176c20fa",
+          "notes": [
+            "Calendar-year named employee disclosure; amounts are remuneration as published and may include overtime, retroactive pay, taxable benefits, leave payouts and other compensation. They are not annual base salary rates.",
+            "Expenses are kept separately from remuneration. Published dashes and blank expenses remain null; explicit zero and negative amounts are retained. Names, initials and available positions are preserved as disclosed; they do not establish unique person identities.",
+            "Only the employee schedule is imported. Elected officials, supplier payments, aggregate under-threshold payroll and employer pension/insurance contributions are outside this collection.",
+            "North Vancouver City 2022: remuneration reconciles exactly, but individual expenses sum $143 below the printed subtotal and expense-inclusive totals sum $1 below it. Published cells are preserved; the source differences are unresolved.",
+            "Accepted as a faithful transcription with unresolved source controls, not as an exactly reconciled issuer schedule. No individual value is adjusted and no rounding explanation is assumed.",
+            "Normalized remuneration uses only the published remuneration column. The third column includes expenses and is not pay; it remains in the component evidence."
+          ],
+          "validation": {
+            "sourceFingerprintVerified": true,
+            "reportedYearEvidence": [
+              {
+                "physicalPage": 30,
+                "text": "For the year ended December 31, 2022"
+              }
+            ],
+            "rowsByPhysicalPage": {
+              "30": 62,
+              "31": 64,
+              "32": 64,
+              "33": 64,
+              "34": 21
+            },
+            "componentColumns": [
+              "remuneration",
+              "expenses",
+              "total_including_expenses"
+            ],
+            "printedControlTotals": [
+              "30,907,848",
+              "235,208",
+              "31,143,056"
+            ],
+            "computedComponentTotals": [
+              "30907848",
+              "235065",
+              "31143055"
+            ],
+            "controlResiduals": [
+              0,
+              -143,
+              -1
+            ],
+            "allComponentSubtotalsExact": false,
+            "independentPdfReaders": "Poppler layout versus independently grouped PyMuPDF word coordinates; pypdf corroboration for clipped/wrapped text where required",
+            "allRowFieldsAndMultiplicitiesAgree": true,
+            "rowsIndependentlyChecked": 275,
+            "unparsedInterRowText": 0,
+            "missingExpenses": 69,
+            "negativeExpenses": 0,
+            "publishedThresholdExceptions": 0,
+            "visuallyReviewedPhysicalPages": [
+              30,
+              34
+            ],
+            "acceptanceBasis": "Complete dual-reader row agreement with fixed, disclosed source-control exceptions; no assertion of exact source reconciliation.",
+            "approvalEvidence": {
+              "physicalPage": 2,
+              "signedApprovalVisuallyReviewed": true,
+              "note": "Rendered original approval page inspected during this follow-up; PDF hash is pinned."
+            }
+          }
         }
       ],
       "heldOrUnparsedSources": [
@@ -39520,20 +39641,6 @@
           "scope": null,
           "reason": "Report retrieved, but the reviewed employee layout is absent (scan, font extraction issue or unsupported format); no rows imported.",
           "nextAction": "Report retrieved, but the reviewed employee layout is absent (scan, font extraction issue or unsupported format); no rows imported.",
-          "notes": [],
-          "collection": "municipal-lower-mainland"
-        },
-        {
-          "id": "city-of-north-vancouver-2022",
-          "employerSlug": "city-of-north-vancouver",
-          "year": "2022",
-          "title": "City of North Vancouver 2022 disclosure",
-          "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Statement-of-Financial-Information-SOFI.PDF",
-          "indexUrl": "https://www.cnv.org/City-Hall/Finances/financial-statements",
-          "status": "held-unparsed",
-          "scope": null,
-          "reason": "Held: employee extraction has unresolved layout, independent-reader or printed subtotal differences.",
-          "nextAction": "Held: employee extraction has unresolved layout, independent-reader or printed subtotal differences.",
           "notes": [],
           "collection": "municipal-lower-mainland"
         }
@@ -39778,18 +39885,18 @@
         },
         {
           "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Statement-of-Financial-Information-SOFI.PDF",
-          "label": "2022 Statement of Financial Information",
-          "status": "linked-unreviewed",
+          "label": "City of North Vancouver 2022 employee-remuneration",
+          "status": "imported",
           "kind": "report-linked-unreviewed",
           "yearsMentioned": [
             "2022"
           ],
-          "periodVerified": false,
+          "periodVerified": true,
           "foundOn": [
-            "https://www.cnv.org/City-Hall/Finances/Financial-Statements",
             "https://www.cnv.org/City-Hall/Finances/financial-statements"
           ],
-          "discoveryFile": "discovery/city-of-north-vancouver.json"
+          "discoveryFile": "discovery/city-of-north-vancouver.json",
+          "calendarYear": "2022"
         },
         {
           "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2023/2023-Audited-Consolidated-Statements.pdf",
@@ -58407,14 +58514,15 @@
       "salaryStatus": "official-employee-records-imported",
       "nextAction": "Review remaining report years and council schedules; accepted employee years are not a claim of complete employment or historical coverage.",
       "archiveUrl": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
-      "records": 9292,
-      "officialRecords": 5545,
+      "records": 10835,
+      "officialRecords": 7088,
       "compiledUnverifiedRecords": 3747,
       "officialEmployeeYears": [
         "2021",
         "2022",
         "2023",
-        "2024"
+        "2024",
+        "2025"
       ],
       "officialCouncilYears": [],
       "compiledUnverifiedEditionLabels": [
@@ -58804,24 +58912,122 @@
             "negativeExpenses": 0,
             "publishedThresholdExceptions": 13
           }
-        }
-      ],
-      "heldOrUnparsedSources": [
+        },
         {
-          "id": "city-of-surrey-2025",
+          "collection": "municipal-lower-mainland",
+          "id": "lower-mainland-surrey-2025-employees",
           "employerSlug": "city-of-surrey",
           "year": "2025",
-          "title": "City of Surrey 2025 disclosure",
-          "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-SOFI-Statement-of-Financial-Information.pdf",
-          "indexUrl": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
-          "status": "held-unparsed",
-          "scope": null,
-          "reason": "Held: all 1,543 candidate rows agree between PDF readers, but printed expenses subtotal is CAD 473 below the sum of printed expense cells; discrepancy remains unresolved.",
-          "nextAction": "Held: all 1,543 candidate rows agree between PDF readers, but printed expenses subtotal is CAD 473 below the sum of printed expense cells; discrepancy remains unresolved.",
-          "notes": [],
-          "collection": "municipal-lower-mainland"
+          "category": "employee-remuneration",
+          "rows": 1543,
+          "namedRows": 1543,
+          "sourceUrl": "https://www.surrey.ca/sites/default/files/media/documents/2025-SOFI-Statement-of-Financial-Information.pdf",
+          "sourceIndexUrl": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+          "sourceSha256": "ad57a85407520cbe9ebc2928e0a8ad7bffa1d9529209f17a4640b19227fea5db",
+          "dataSha256": "b55916668fe8cd58578ea99c64fa800c97c1e3dc2c70c35995297b1b96441ca8",
+          "notes": [
+            "Calendar-year named employee disclosure; amounts are remuneration as published and may include overtime, retroactive pay, taxable benefits, leave payouts and other compensation. They are not annual base salary rates.",
+            "Expenses are kept separately from remuneration. Published dashes and blank expenses remain null; explicit zero and negative amounts are retained. Names, initials and available positions are preserved as disclosed; they do not establish unique person identities.",
+            "Only the employee schedule is imported. Elected officials, supplier payments, aggregate under-threshold payroll and employer pension/insurance contributions are outside this collection.",
+            "Normalized remuneration is the sum of the two published remuneration components: base_salary_remuneration, taxable_benefit_and_other. Source components remain in the retained audit. A dash in a component contributes no reported amount to this sum.",
+            "Surrey 2025: individual published amounts are preserved. Their expense sum is $473 above the printed subtotal; the two remuneration components differ by +$12 and −$1. These source differences are unresolved; totals here sum the disclosed rows.",
+            "Accepted as a faithful transcription with unresolved source controls, not as an exactly reconciled issuer schedule. No individual value is adjusted and no rounding explanation is assumed."
+          ],
+          "validation": {
+            "sourceFingerprintVerified": true,
+            "reportedYearEvidence": [
+              {
+                "physicalPage": 70,
+                "text": "FOR THE YEAR ENDED DECEMBER 31, 2025"
+              }
+            ],
+            "rowsByPhysicalPage": {
+              "70": 36,
+              "71": 36,
+              "72": 36,
+              "73": 36,
+              "74": 36,
+              "75": 36,
+              "76": 36,
+              "77": 36,
+              "78": 36,
+              "79": 36,
+              "80": 36,
+              "81": 36,
+              "82": 36,
+              "83": 36,
+              "84": 36,
+              "85": 36,
+              "86": 36,
+              "87": 36,
+              "88": 36,
+              "89": 36,
+              "90": 36,
+              "91": 36,
+              "92": 36,
+              "93": 36,
+              "94": 36,
+              "95": 36,
+              "96": 36,
+              "97": 36,
+              "98": 36,
+              "99": 36,
+              "100": 36,
+              "101": 36,
+              "102": 36,
+              "103": 36,
+              "104": 36,
+              "105": 36,
+              "106": 36,
+              "107": 36,
+              "108": 36,
+              "109": 36,
+              "110": 36,
+              "111": 36,
+              "112": 31
+            },
+            "componentColumns": [
+              "base_salary_remuneration",
+              "taxable_benefit_and_other",
+              "expenses"
+            ],
+            "printedControlTotals": [
+              "168,337,452",
+              "13,007,950",
+              "1,172,689"
+            ],
+            "computedComponentTotals": [
+              "168337464",
+              "13007949",
+              "1173162"
+            ],
+            "controlResiduals": [
+              12,
+              -1,
+              473
+            ],
+            "allComponentSubtotalsExact": false,
+            "independentPdfReaders": "Poppler layout versus independently grouped PyMuPDF word coordinates; pypdf corroboration for clipped/wrapped text where required",
+            "allRowFieldsAndMultiplicitiesAgree": true,
+            "rowsIndependentlyChecked": 1543,
+            "unparsedInterRowText": 0,
+            "missingExpenses": 657,
+            "negativeExpenses": 0,
+            "publishedThresholdExceptions": 9,
+            "visuallyReviewedPhysicalPages": [
+              70,
+              112
+            ],
+            "acceptanceBasis": "Complete dual-reader row agreement with fixed, disclosed source-control exceptions; no assertion of exact source reconciliation.",
+            "approvalEvidence": {
+              "physicalPage": 3,
+              "signedApprovalVisuallyReviewed": true,
+              "note": "Rendered original approval page inspected during this follow-up; PDF hash is pinned."
+            }
+          }
         }
       ],
+      "heldOrUnparsedSources": [],
       "sourceLeadCount": 39,
       "explicitSalaryLeadCount": 10,
       "pagesChecked": 9,
@@ -59266,17 +59472,18 @@
         },
         {
           "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-SOFI-Statement-of-Financial-Information.pdf",
-          "label": "2025 SOFI - Statement of Financial Information",
-          "status": "linked-unreviewed",
+          "label": "City of Surrey 2025 employee-remuneration",
+          "status": "imported",
           "kind": "report-linked-unreviewed",
           "yearsMentioned": [
             "2025"
           ],
-          "periodVerified": false,
+          "periodVerified": true,
           "foundOn": [
             "https://www.surrey.ca/city-government/city-departments/finance/financial-documents"
           ],
-          "discoveryFile": "discovery/city-of-surrey.json"
+          "discoveryFile": "discovery/city-of-surrey.json",
+          "calendarYear": "2025"
         },
         {
           "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-Statement-of-Financial-Information-Surrey-Public-Library.pdf",

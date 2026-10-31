@@ -1,5 +1,11 @@
 # Salary audit, source recovery and remaining gaps
 
+For the latest municipal work, start with [import assumptions and the acquisition
+list](municipal-audit/follow-up.md), including a spreadsheet of all remaining
+source tasks and uncovered jurisdictions. The app exports now contain **880,436
+records**; three further municipal employee cohorts retain their published
+amounts with visible source-subtotal warnings. No records requests have been sent.
+
 Updated **31 October 2026**. Original audit baseline: commit
 [`eabe55708952f945cf2b0733230db31d48146d88`](https://github.com/ahzs645/PofBC/commit/eabe55708952f945cf2b0733230db31d48146d88).
 

@@ -1,5 +1,12 @@
 # Reviewed small municipal schedules
 
+**Subsequent source decision:** Montrose's three 2023 employee rows are now
+accepted with a visible warning about the unresolved $36 expense discrepancy.
+Remuneration reconciles exactly and individual published cells are unchanged.
+This collection now has **195 observations in 18 cohorts**. Council remains a
+separate exactly reconciled cohort. See [the follow-up policy and requests](../municipal-audit/follow-up.md).
+Counts and hold decisions below describe the original PR #23 pass.
+
 Reviewed 31 October 2026. This collection adds **192 named observations in 17
 employee/council cohorts from nine original municipal PDFs**. Each accepted
 schedule has a pinned original SHA-256, a verified calendar year, physical PDF

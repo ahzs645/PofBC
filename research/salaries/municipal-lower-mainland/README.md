@@ -1,5 +1,14 @@
 # Lower Mainland municipal remuneration collection
 
+**Subsequent source decision:** Surrey 2025 (1,543 employees) and North Vancouver
+City 2022 (275 employees) are now accepted as faithful transcriptions with visible
+source warnings. This collection now has **28,632 records in 65 cohorts** and
+119 held/unparsed report links. Surrey component residuals are +$12, −$1 and
++$473; North Vancouver City residuals are $0, −$143 and −$1. Original individual
+amounts are preserved; no rounding explanation is asserted. The acceptance and
+request policy is in [the follow-up review](../municipal-audit/follow-up.md).
+The original pass counts and holds below are retained as historical context.
+
 Reviewed on 2026-10-31. This collection adds **26,814 employee records in 63 official report-years across 18 municipalities**. The source discovery register covers **30 municipalities and 184 dated report links**; **121 report links remain explicitly held or unparsed**. Vancouver’s existing open-data series remains in its separate collection.
 
 ## Accepted coverage

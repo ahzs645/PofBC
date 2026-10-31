@@ -174,7 +174,7 @@ def build(config, cache, fetch=False):
                 'Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.',
             ]
             if any(c['residual'] for c in controls):
-                notes.append('Displayed individual amounts have the recorded small residual against the source subtotal. Values are preserved; rounding is a possible explanation, not a proven reconciliation.')
+                notes.append(section.get('publicWarning') or 'Displayed individual amounts have the recorded small residual against the source subtotal. Values are preserved; rounding is a possible explanation, not a proven reconciliation.')
             source = {'id': source_id, 'employerSlug': slug, 'employerName': employers[slug]['employerName'], 'sector': 'Municipalities',
                       'year': year, 'periodType': 'calendar', 'periodStart': f'{year}-01-01', 'periodEnd': f'{year}-12-31',
                       'title': f"{employers[slug]['employerName']} {year} SOFI: {category}",
@@ -193,6 +193,12 @@ def build(config, cache, fetch=False):
                                      'fieldCorrections': section.get('fieldCorrections', {}), 'evidenceFile': audit_file}}
             if section.get('expensesIncludeBenefits'):
                 source['expensesNote'] = 'The report combines employee expenses and taxable benefits; the combined values are retained only in the component audit and cannot be identified as expenses.'
+            if section.get('publicWarning'):
+                source['publicWarning'] = section['publicWarning']
+                source['status'] = 'accepted'
+                source['validation']['acceptanceBasis'] = 'Faithful transcription with fixed, publicly disclosed source-control exceptions; not exact source reconciliation.'
+            if report.get('approvalEvidence'):
+                source['validation']['approvalEvidence'] = report['approvalEvidence']
             sources.append(source)
             print(f'{slug} {year} {category}: {len(rows)} rows; controls {controls}')
         reviews.append({'employerSlug': slug, 'year': year, 'sha256': sha(raw), 'sourceUrl': report['sourceUrl'], 'pdfPages': len(doc)})

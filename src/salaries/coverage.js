@@ -34,6 +34,10 @@ export const rowCoverage = (coverage, sourceId, sources = {}) => {
 
 export const expenseLabel = (sourceId, sources = {}) => sources[sourceId]?.travelSource ? 'Travel expenses' : 'Expenses'
 
+/** These qualifications affect interpretation of published values, so show them with the records. */
+export const sourceWarnings = (sourceIds = [], sources = {}) => [...new Set(sourceIds
+  .map((id) => sources[id]?.publicWarning).filter(Boolean))]
+
 /** Do not change an inclusive threshold into a strict one, or infer an unstated comparison. */
 export const thresholdLabel = (coverage) => {
   if (coverage?.threshold == null) return null

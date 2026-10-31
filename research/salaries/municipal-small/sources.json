@@ -637,8 +637,90 @@
           }
         ],
         "fieldCorrections": {},
-        "evidenceFile": "evidence/village-of-montrose-2023-elected-officials.json.gzip"
+        "evidenceFile": "evidence/village-of-montrose-2023-elected-officials.json.gzip",
+        "approvalEvidence": {
+          "physicalPage": 36,
+          "signedApprovalVisuallyReviewed": true,
+          "note": "Rendered original signed approval inspected during this follow-up; PDF hash is pinned."
+        }
       }
+    },
+    {
+      "id": "municipal-small-village-of-montrose-2023-employee-remuneration",
+      "employerSlug": "village-of-montrose",
+      "employerName": "Village of Montrose",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Village of Montrose 2023 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-SOFI-Copy-for-website.pdf",
+      "sourceIndexUrl": "https://www.montrose.ca/document-category/annual-reports/",
+      "sha256": "bcdebe3816ebb0c69a783b379619da10608d9b2ff446084ef939c04906c83989",
+      "file": "village-of-montrose-2023-employee-remuneration.json.gzip",
+      "dataSha256": "931654b1aad4a1fda5c31bb691c8d60623645aba3c0dee0893b3830bdc712ed2",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "accepted",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 3,
+      "totalRemuneration": 269287.16,
+      "totalExpenses": 6503.65,
+      "pages": [
+        33
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "The source is the 2023 report; the website upload path contains 2025. The literal nil expense cells are reported zeros.",
+        "Accepted as a faithful transcription with an unresolved expense control. The three named rows were visually checked against the rendered original. Council is a separate exactly reconciled cohort.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+        "Montrose 2023 employees: remuneration reconciles exactly. Individual expenses sum to $6,503.65, $36 below the $6,539.65 implied by the printed aggregates. Published cells are preserved; the source difference is unresolved."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          33
+        ],
+        "rowsIndependentlyChecked": 3,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 269287.16,
+            "rowSum": 269287.16,
+            "residual": 0,
+            "basis": "Printed total $393,137.06 less under-threshold aggregate $123,849.90"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 6539.65,
+            "rowSum": 6503.65,
+            "residual": -36,
+            "basis": "Printed total $10,107.80 less under-threshold aggregate $3,568.15"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/village-of-montrose-2023-employee-remuneration.json.gzip",
+        "acceptanceBasis": "Faithful transcription with fixed, publicly disclosed source-control exceptions; not exact source reconciliation.",
+        "approvalEvidence": {
+          "physicalPage": 36,
+          "signedApprovalVisuallyReviewed": true,
+          "note": "Rendered original signed approval inspected during this follow-up; PDF hash is pinned."
+        }
+      },
+      "publicWarning": "Montrose 2023 employees: remuneration reconciles exactly. Individual expenses sum to $6,503.65, $36 below the $6,539.65 implied by the printed aggregates. Published cells are preserved; the source difference is unresolved."
     },
     {
       "id": "municipal-small-village-of-nakusp-2024-elected-officials",
@@ -1230,18 +1312,6 @@
     }
   ],
   "unparsedSources": [
-    {
-      "id": "municipal-small-montrose-2023-employees-held",
-      "employerSlug": "village-of-montrose",
-      "year": "2023",
-      "category": "employee-remuneration",
-      "sourceUrl": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-SOFI-Copy-for-website.pdf",
-      "sourceIndexUrl": "https://www.montrose.ca/document-category/annual-reports/",
-      "sha256": "bcdebe3816ebb0c69a783b379619da10608d9b2ff446084ef939c04906c83989",
-      "status": "held-for-review",
-      "reason": "All three printed named rows were visually and independently extracted, but employee expenses sum to $6,503.65 against $6,539.65 implied by the printed employee total less the under-threshold aggregate. The unexplained $36 source residual is too large to attribute to cent rounding. Council controls reconcile exactly and that cohort is accepted separately.",
-      "nextAction": "Obtain a corrected employee expense subtotal or explanation from the municipality; do not alter individual amounts to force a match."
-    },
     {
       "id": "municipal-small-town-of-creston-2024-ocr",
       "employerSlug": "town-of-creston",

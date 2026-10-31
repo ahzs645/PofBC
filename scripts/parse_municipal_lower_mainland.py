@@ -93,6 +93,8 @@ def parse_reviewed(reviewed, cache):
     parsed = parse_document(text_path)
     if not parsed or "rows" not in parsed:
         raise ValueError(f"{reviewed['key']}: expected source layout not found")
+    if any(error[0] != "subtotal-mismatch" for error in parsed["errors"]):
+        raise ValueError(f"{reviewed['key']}: unresolved row extraction error")
     expected = reviewed["expected"]
     comparisons = {
         "rowCount": parsed["n"],
