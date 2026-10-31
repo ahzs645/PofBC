@@ -19,7 +19,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } from './people.js'
 import { keyedTitles, titleMatcher } from './positions.js'
 import { formatMoney as money } from './money.js'
-import { PeriodRange, rangeLabel, YearStrip } from './parts.jsx'
+import { PeriodRange, YearStrip } from './parts.jsx'
 import { salaryYearRange, salaryYearValue } from './viewState.js'
 import { Segmented } from '../site/Segmented.jsx'
 import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Browse.jsx'
@@ -187,13 +187,13 @@ export const SalariesView = ({ onOpenGovernment }) => {
   // Going somewhere remembers where from, under the name of the page being left.
   const go = (next) => {
     setTrail((current) => [...current, { place, label: place.person || place.employer || place.title ? heading.current : rootLabel }])
-    setPlace({ ...place, person: null, employer: null, role: null, title: null, show: null, ...next })
+    setPlace({ ...place, person: null, personAt: null, employer: null, role: null, title: null, show: null, ...next })
     toTop()
   }
   const goBack = () => {
     const previous = trail.at(-1)
     setTrail((current) => current.slice(0, -1))
-    setPlace(previous ? previous.place : { ...place, person: null, employer: null, role: null, title: null, show: null })
+    setPlace(previous ? previous.place : { ...place, person: null, personAt: null, employer: null, role: null, title: null, show: null })
     toTop()
   }
   const backLabel = trail.at(-1)?.label ?? rootLabel
@@ -204,11 +204,14 @@ export const SalariesView = ({ onOpenGovernment }) => {
 
   const openEmployer = (slug) => go({ employer: slug, employerYear: yearFromFilter })
   const openPerson = (name) => go({ q: name, person: personKey(name) })
+  // A name opened from an employer's page shows its records at that employer first; the rest of the
+  // name's records are one click away.
+  const openPersonAt = (name, slug) => go({ q: name, person: personKey(name), personAt: slug })
   const openPersonKey = (key) => go({ person: key })
   const openTitle = (key) => go({ title: key, employerYear: yearFromFilter })
   const openRole = (slug, key, at) => go({ employer: slug, role: key, employerYear: at !== undefined && at !== null && at >= 0 ? years[at] : place.employerYear })
   const search = (text) => {
-    setPlace((current) => ({ ...current, q: text, person: null }))
+    setPlace((current) => ({ ...current, q: text, person: null, personAt: null }))
     setReading(null)
   }
 
@@ -233,7 +236,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
           onShow={(show) => setPlace((current) => ({ ...current, show }))}
           onRole={(key) => openRole(entry.slug, key, pageYear)}
           onTitle={openTitle}
-          onPerson={openPerson}
+          onPerson={(name) => openPersonAt(name, entry.slug)}
           onOpenGovernment={onOpenGovernment}
           remember={remember}
         />
@@ -264,15 +267,23 @@ export const SalariesView = ({ onOpenGovernment }) => {
 
   // Filters narrow the search results, not the history of a name opened from one of those results.
   const personRows = place.person ? shards[shardOfKey(place.person)] : null
-  const chosen = personRows ? (() => {
-    const list = personRows.filter((row) => personKey(row[0]) === place.person)
-    return list.length ? describeNameGroup(place.person, list) : null
-  })() : null
+  // Opened from an employer's page, the name is limited to that employer's records, unless it has none
+  // there (a stale link), when every record under the name is shown.
+  const personList = personRows ? personRows.filter((row) => personKey(row[0]) === place.person) : []
+  const atEmployer = place.personAt ? personList.filter((row) => index.employers[row[4]][3] === place.personAt) : []
+  const scoped = atEmployer.length > 0 && atEmployer.length < personList.length
+  const chosen = personList.length ? describeNameGroup(place.person, scoped ? atEmployer : personList) : null
+  const scope = scoped ? {
+    employer: index.employers[atEmployer[0][4]][0],
+    others: new Set(personList.filter((row) => !atEmployer.includes(row)).map((row) => row[4])).size,
+    hidden: personList.length - atEmployer.length,
+    onShowAll: () => setPlace((current) => ({ ...current, personAt: null }))
+  } : null
   if (place.person && !personRows) return <p className="gallery__intro" role="status">Loading the name…</p>
   if (chosen) {
     return (
       <div className="salaries">
-        <PersonPage chosen={chosen} all={personRows} index={index} back={back} onEmployer={openEmployer} onRole={openRole} onOpenGovernment={onOpenGovernment} remember={remember} />
+        <PersonPage chosen={chosen} all={scoped ? personRows.filter((row) => index.employers[row[4]][3] === place.personAt) : personRows} scope={scope} index={index} back={back} onEmployer={openEmployer} onRole={openRole} onOpenGovernment={onOpenGovernment} remember={remember} />
       </div>
     )
   }
@@ -322,13 +333,6 @@ export const SalariesView = ({ onOpenGovernment }) => {
         </span>
         <PeriodRange years={years} counts={periodCounts} value={range} onChange={setRange} />
       </div>
-
-      {filtered && (
-        <p className="salaries__hint">
-          {rangeLabel(years, range)} · {sector === 'all' ? 'All sectors' : sector}{' '}
-          <button type="button" className="salaries__link" onClick={() => setPlace((current) => ({ ...current, year: 'all', sector: 'all' }))}>Clear filters</button>
-        </p>
-      )}
 
       <div className="salaries__chips" role="group" aria-label="Sector">
         <button type="button" aria-pressed={sector === 'all'} onClick={() => setSector('all')}>All sectors</button>

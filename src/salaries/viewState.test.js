@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { filterPositionGroups, hasExpenseAmount, matchesRecordQuery, readSalaryPlace, salaryPlaceUrl, salaryYearIndex } from './viewState.js'
 
 test('shared salary filters and employer year survive reload and catalog expansion', () => {
-  const place = { q: 'Smith, J', person: null, employer: 'northern-health', role: 'nurse', title: null, show: 'positions', browse: 'people', layout: 'table', year: '2020/21', sector: 'Health authorities', employerYear: '2023/24' }
+  const place = { q: 'Smith, J', person: 'smith|j', personAt: 'city-of-vancouver', employer: 'northern-health', role: 'nurse', title: null, show: 'positions', browse: 'people', layout: 'table', year: '2020/21', sector: 'Health authorities', employerYear: '2023/24' }
   const url = salaryPlaceUrl('https://example.org/PofBC/?view=salaries&year=1950', place)
   assert.deepEqual(readSalaryPlace(url.search), place)
   assert.equal(url.searchParams.get('year'), '1950')

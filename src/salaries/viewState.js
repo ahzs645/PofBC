@@ -1,10 +1,10 @@
 // Where the salaries are lives in the address bar — the search typed, its year and sector filters, the
-// person, employer, title or employer's position open, how an employer's records are set out, and the
+// person (and the employer it was opened from), employer, title or employer's position open, how an employer's records are set out, and the
 // year on that page — so a link opens there, and a body's salary panel links into it. URLs use year
 // labels, not positions in an index that can grow when older sources arrive. `employerYear` is the
 // year on an employer's or a title's page.
 const PARAMETERS = {
-  q: 'q', person: 'person', employer: 'employer', role: 'role', title: 'title', show: 'show', browse: 'browse', layout: 'layout',
+  q: 'q', person: 'person', personAt: 'person-at', employer: 'employer', role: 'role', title: 'title', show: 'show', browse: 'browse', layout: 'layout',
   year: 'salary-year', sector: 'salary-sector', employerYear: 'employer-year'
 }
 

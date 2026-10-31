@@ -8,10 +8,11 @@ import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, sameP
 import { SourceLink } from './DisclosureEvidence.jsx'
 import { formatMoney as money } from './money.js'
 import { PayChart, yearSpan } from './parts.jsx'
+import { count } from './common.jsx'
 import { hasExpenseAmount } from './viewState.js'
 
 /** A position in a record opens that position's page at its employer, in the record's year. */
-export const PersonPage = ({ chosen, all, index, back, onEmployer, onRole, onOpenGovernment, remember }) => {
+export const PersonPage = ({ chosen, all, scope, index, back, onEmployer, onRole, onOpenGovernment, remember }) => {
   const employerOf = (row) => index.employers[row[4]]
   const slugOf = (row) => employerOf(row)[3]
   const associated = [...new Set(chosen.rows.map(slugOf))]
@@ -83,6 +84,12 @@ export const PersonPage = ({ chosen, all, index, back, onEmployer, onRole, onOpe
         ))}
         {' '}· {yearLabels.length} {yearLabels.length === 1 ? 'disclosure period' : 'disclosure periods'}, {yearSpan(yearLabels)} · disclosed as “{chosen.name}”
       </p>
+      {scope && (
+        <p className="salaries__hint salaries__hint--small">
+          Showing records at {scope.employer} only. {count(scope.hidden, 'more record', 'more records')} under this name {scope.hidden === 1 ? 'is' : 'are'} at {count(scope.others, 'other employer', 'other employers')}.{' '}
+          <button type="button" className="salaries__link" onClick={scope.onShowAll}>Show every employer</button>
+        </p>
+      )}
       <p className="salaries__hint salaries__hint--small">
         Records are grouped by the disclosed name only, so they may not all concern one person.
         {chosen.shared ? ' Some years have more than one record under this name: different people, separate payments or source duplicates.' : ''}
