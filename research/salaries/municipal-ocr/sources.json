@@ -1,0 +1,2735 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "municipal-ocr-city-of-terrace-2017-employee-remuneration-p3",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2017-employee-remuneration-p3.json.gzip",
+      "dataSha256": "beb97256435b0885f06915b70d568965ac5e14155948c4a294e2a3f0cc62267a",
+      "sha256": "c60d68c86cfffaa374c9c02eb1e286846add2f7e30668549c28b5d1c245eef4b",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2017_sofi_city_of_terrace_p.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2017 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 29,
+      "totalRemuneration": 3032241.23,
+      "totalExpenses": 77921.68,
+      "pages": [
+        3
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other); expenses and expense-inclusive Total stay separate. Titles truncated in the published source remain truncated.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3032241.23,
+            "rowSum": 3032241.23,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 77921.68,
+            "rowSum": 77921.68,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 3110162.91,
+            "rowSum": 3110162.91,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "300-3",
+            "row": 9,
+            "field": "position",
+            "before": "Heavy Equip Operator Ii",
+            "after": "Heavy Equip Operator II"
+          },
+          {
+            "pass": "250-6",
+            "row": 26,
+            "field": "position",
+            "before": "Environmental Technician",
+            "after": "Environmental Technician II"
+          },
+          {
+            "pass": "300-3",
+            "row": 26,
+            "field": "position",
+            "before": "Environmental Technician 1",
+            "after": "Environmental Technician II"
+          },
+          {
+            "pass": "250-6",
+            "row": 14,
+            "field": "expenses",
+            "before": "0,00",
+            "after": "0.00"
+          },
+          {
+            "pass": "300-3",
+            "row": 14,
+            "field": "expenses",
+            "before": "0,00",
+            "after": "0.00"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2017-p003.json.gzip",
+        "evidenceSha256": "e2dbd6ee908de8539510adab53449caaba005ce9a07a764850c486a76ef98665"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2017-elected-officials-p1",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-terrace-2017-elected-officials-p1.json.gzip",
+      "dataSha256": "8325535feaf1624035304458450ecd7d50a58be1ef250128dcc73cd7b66ed33e",
+      "sha256": "c60d68c86cfffaa374c9c02eb1e286846add2f7e30668549c28b5d1c245eef4b",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2017_sofi_city_of_terrace_p.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2017 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 126487.28,
+      "totalExpenses": 71212.38,
+      "pages": [
+        1
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other); expenses and expense-inclusive Total stay separate. Titles truncated in the published source remain truncated.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          1
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 126487.28,
+            "rowSum": 126487.28,
+            "residual": 0
+          },
+          {
+            "field": "taxExempt",
+            "printedControl": 42162.41,
+            "rowSum": 42162.41,
+            "residual": 0
+          },
+          {
+            "field": "taxable",
+            "printedControl": 84324.87,
+            "rowSum": 84324.87,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 71212.38,
+            "rowSum": 71212.38,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 197699.66,
+            "rowSum": 197699.66,
+            "residual": 0
+          }
+        ],
+        "corrections": [],
+        "evidenceFile": "evidence/terrace-sofi-2017-p001.json.gzip",
+        "evidenceSha256": "1935009f12f018c9fd94fed690fa5c7e50bdbe2340d7801b3ca78fdb22e339de"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2018-employee-remuneration-p2",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2018-employee-remuneration-p2.json.gzip",
+      "dataSha256": "b4dbd6634718b90ace866501980a90f09259f24005b0ba30d666c2890c2bc866",
+      "sha256": "029f80e3f3b5885bc7e8f1e1d7695d3cdf592fb59c0d9d090bf365a7688964ea",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2018_sofi_city_of_terrace_p.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2018 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 31,
+      "totalRemuneration": 3287559.12,
+      "totalExpenses": 70468.4,
+      "pages": [
+        2
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other); expenses and expense-inclusive Total stay separate. Titles truncated in the published source remain truncated.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3287559.12,
+            "rowSum": 3287559.12,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 70468.4,
+            "rowSum": 70468.4,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 3358027.52,
+            "rowSum": 3358027.52,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "300-3",
+            "row": 20,
+            "field": "benefits",
+            "before": "— 1,380.00",
+            "after": "1,380.00"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2018-p002.json.gzip",
+        "evidenceSha256": "98b975387d4f83211ae8384fcb7942310bc6f17dab4c949edcdadd4d5c3f4db7"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2018-elected-officials-p1",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-terrace-2018-elected-officials-p1.json.gzip",
+      "dataSha256": "8adfd54f3bf76dde13c31793c8d37b7f9804a59bf37b8e203297749039f5b3b5",
+      "sha256": "029f80e3f3b5885bc7e8f1e1d7695d3cdf592fb59c0d9d090bf365a7688964ea",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2018_sofi_city_of_terrace_p.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2018 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 9,
+      "totalRemuneration": 129139.27,
+      "totalExpenses": 56022.3,
+      "pages": [
+        1
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other); expenses and expense-inclusive Total stay separate. Titles truncated in the published source remain truncated.",
+        "The tax-exempt split sums $0.02 above its printed subtotal and the taxable split $0.02 below. Remuneration, expenses and expense-inclusive totals reconcile exactly; no component is adjusted.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          1
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 129139.27,
+            "rowSum": 129139.27,
+            "residual": 0
+          },
+          {
+            "field": "taxExempt",
+            "printedControl": 43046.42,
+            "rowSum": 43046.44,
+            "residual": 0.02
+          },
+          {
+            "field": "taxable",
+            "printedControl": 86092.85,
+            "rowSum": 86092.83,
+            "residual": -0.02
+          },
+          {
+            "field": "expenses",
+            "printedControl": 56022.3,
+            "rowSum": 56022.3,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 185161.57,
+            "rowSum": 185161.57,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 1,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_",
+            "after": "Bujtas, Sean Michael Geza"
+          },
+          {
+            "pass": "250-6",
+            "row": 5,
+            "field": "expenses",
+            "before": "¢ 317.58",
+            "after": "317.58"
+          },
+          {
+            "pass": "300-3",
+            "row": 1,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_",
+            "after": "Bujtas, Sean Michael Geza"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2018-p001.json.gzip",
+        "evidenceSha256": "83eb60e20ff71c675a37a8c642e1fc9cd97f9438d033d890cdcdef30acd310e4"
+      }
+    },
+    {
+      "id": "municipal-ocr-village-of-clinton-2024-elected-officials-p7",
+      "employerSlug": "village-of-clinton",
+      "employerName": "Village of Clinton",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "village-of-clinton-2024-elected-officials-p7.json.gzip",
+      "dataSha256": "f57747a44f2f87c5f06d85c1ef3b4d8640506b76178f56183d702022df0f4654",
+      "sha256": "5e5a1a1e410bd9c9b53db47c96085111c7f8dfe72d136c0c97f6c3ea75c19a53",
+      "sourceUrl": "https://village.clinton.bc.ca/wp-content/uploads/2025/06/2024-SOFI-Report_001.pdf",
+      "sourceIndexUrl": "https://village.clinton.bc.ca/local-government/village-reports-plans/financial-reports/",
+      "title": "Village of Clinton 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 5,
+      "totalRemuneration": 40642,
+      "totalExpenses": 12907,
+      "pages": [
+        7
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          7
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 40640,
+            "rowSum": 40642,
+            "residual": 2
+          },
+          {
+            "field": "expenses",
+            "printedControl": 12907,
+            "rowSum": 12907,
+            "residual": 0
+          }
+        ],
+        "corrections": [],
+        "evidenceFile": "evidence/municipal-small-village-of-clinton-2024-ocr-p007.json.gzip",
+        "evidenceSha256": "ba4522057332e12633e0a3215faf861a762bb18f4c82a26b63203edf15b9a810"
+      },
+      "publicWarning": "Clinton 2024 council: individual remuneration sums $2 above the printed subtotal. Published amounts are preserved; the source difference is unresolved."
+    },
+    {
+      "id": "municipal-ocr-village-of-clinton-2024-employee-remuneration-p8",
+      "employerSlug": "village-of-clinton",
+      "employerName": "Village of Clinton",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "village-of-clinton-2024-employee-remuneration-p8.json.gzip",
+      "dataSha256": "59ac056763633f9b13018b99911071c2dde1622f68033c3c9efcf141e33a3ede",
+      "sha256": "5e5a1a1e410bd9c9b53db47c96085111c7f8dfe72d136c0c97f6c3ea75c19a53",
+      "sourceUrl": "https://village.clinton.bc.ca/wp-content/uploads/2025/06/2024-SOFI-Report_001.pdf",
+      "sourceIndexUrl": "https://village.clinton.bc.ca/local-government/village-reports-plans/financial-reports/",
+      "title": "Village of Clinton 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 3,
+      "totalRemuneration": 259392,
+      "totalExpenses": 13905,
+      "pages": [
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          8
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 259392,
+            "rowSum": 259392,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 13905,
+            "rowSum": 13905,
+            "residual": 0
+          }
+        ],
+        "corrections": [],
+        "evidenceFile": "evidence/municipal-small-village-of-clinton-2024-ocr-p008.json.gzip",
+        "evidenceSha256": "a81cd5012bbf80700d29ba2cdc21aa0a2c149a18583f5205c55bfc265f959aa8"
+      }
+    },
+    {
+      "id": "municipal-ocr-district-of-logan-lake-2025-elected-officials-p5",
+      "employerSlug": "district-of-logan-lake",
+      "employerName": "District of Logan Lake",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "district-of-logan-lake-2025-elected-officials-p5.json.gzip",
+      "dataSha256": "b25f91329732bbb098fdc781b653324cf119b87be60ef7dff9a4c315f91600b8",
+      "sha256": "f3c247274e30a55c54e1217b571ca0af6ec8d42a84959f402bf70f81f0f2d443",
+      "sourceUrl": "https://loganlake.ca//wp-content/uploads/2026/05/SOFI-2025.pdf",
+      "sourceIndexUrl": "https://loganlake.ca/your-municipality/finance-department/",
+      "title": "District of Logan Lake 2025 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 86752,
+      "totalExpenses": 39402.1,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Employee remuneration includes taxable benefits. Named employee controls are total other employees less the $75,000-or-less consolidated cohort.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "ocrPasses": [
+          "300-3",
+          "350-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 86752,
+            "rowSum": 86752,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 39402.1,
+            "rowSum": 39402.1,
+            "residual": 0
+          }
+        ],
+        "corrections": [],
+        "evidenceFile": "evidence/municipal-small-district-of-logan-lake-2025-ocr-p005.json.gzip",
+        "evidenceSha256": "b59588dbdf8d78ee3b9550461cbb6a595942f547e0f71f71f951128855522c21"
+      }
+    },
+    {
+      "id": "municipal-ocr-district-of-logan-lake-2025-employee-remuneration-p5",
+      "employerSlug": "district-of-logan-lake",
+      "employerName": "District of Logan Lake",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "district-of-logan-lake-2025-employee-remuneration-p5.json.gzip",
+      "dataSha256": "26bd343d8547efdc8656360e95e93eef3d10fc3a2d8505814916fb4700bb49e8",
+      "sha256": "f3c247274e30a55c54e1217b571ca0af6ec8d42a84959f402bf70f81f0f2d443",
+      "sourceUrl": "https://loganlake.ca//wp-content/uploads/2026/05/SOFI-2025.pdf",
+      "sourceIndexUrl": "https://loganlake.ca/your-municipality/finance-department/",
+      "title": "District of Logan Lake 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 16,
+      "totalRemuneration": 1745143.74,
+      "totalExpenses": 42232.01,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee remuneration includes taxable benefits. Named employee controls are total other employees less the $75,000-or-less consolidated cohort.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "ocrPasses": [
+          "300-3",
+          "350-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 1745143.74,
+            "rowSum": 1745143.74,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 42232.01,
+            "rowSum": 42232.01,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "350-3",
+            "row": 11,
+            "field": "expenses",
+            "before": "5991.05",
+            "after": "$991.05"
+          }
+        ],
+        "evidenceFile": "evidence/municipal-small-district-of-logan-lake-2025-ocr-p005.json.gzip",
+        "evidenceSha256": "b59588dbdf8d78ee3b9550461cbb6a595942f547e0f71f71f951128855522c21"
+      }
+    },
+    {
+      "id": "municipal-ocr-village-of-telkwa-2023-elected-officials-p36",
+      "employerSlug": "village-of-telkwa",
+      "employerName": "Village of Telkwa",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "village-of-telkwa-2023-elected-officials-p36.json.gzip",
+      "dataSha256": "c5dc0cf0c1cea56347e397ec0c89c8919845a727490c6d2a53c31847bd4ef9c3",
+      "sha256": "933208862dda20c2ebe281cc149973088f98e7084a6f780a86a5bb6a776e5d71",
+      "sourceUrl": "https://www.telkwa.ca/_files/ugd/a93d86_9cb18efc53314bc9bb222bbea5b1e183.pdf",
+      "sourceIndexUrl": "https://www.telkwa.ca/reports-and-budgets",
+      "title": "Village of Telkwa 2023 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 5,
+      "totalRemuneration": 55300,
+      "totalExpenses": 24217,
+      "pages": [
+        36
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Published remuneration includes salary, overtime, sick time, statutory and vacation pay. Expenses remain separate; operational statement totals include additional benefits and use a different accounting basis.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          36
+        ],
+        "ocrPasses": [
+          "300-3",
+          "350-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 55300,
+            "rowSum": 55300,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 24217,
+            "rowSum": 24217,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 79517,
+            "rowSum": 79517,
+            "residual": 0
+          }
+        ],
+        "corrections": [],
+        "evidenceFile": "evidence/municipal-small-village-of-telkwa-2023-ocr-p036.json.gzip",
+        "evidenceSha256": "23c16508e89690098773e6379416ed8abce80ad161832b5b31845db80728b3cb"
+      }
+    },
+    {
+      "id": "municipal-ocr-village-of-telkwa-2023-employee-remuneration-p37",
+      "employerSlug": "village-of-telkwa",
+      "employerName": "Village of Telkwa",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "village-of-telkwa-2023-employee-remuneration-p37.json.gzip",
+      "dataSha256": "6410d8f65ccfc6ad5354e5c0841efba86fb2831078523ee6479d30281b9768e4",
+      "sha256": "933208862dda20c2ebe281cc149973088f98e7084a6f780a86a5bb6a776e5d71",
+      "sourceUrl": "https://www.telkwa.ca/_files/ugd/a93d86_9cb18efc53314bc9bb222bbea5b1e183.pdf",
+      "sourceIndexUrl": "https://www.telkwa.ca/reports-and-budgets",
+      "title": "Village of Telkwa 2023 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 5,
+      "totalRemuneration": 489201,
+      "totalExpenses": 40100,
+      "pages": [
+        37
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Published remuneration includes salary, overtime, sick time, statutory and vacation pay. Expenses remain separate; operational statement totals include additional benefits and use a different accounting basis.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          37
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 489201,
+            "rowSum": 489201,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 40100,
+            "rowSum": 40100,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 529301,
+            "rowSum": 529301,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 1,
+            "field": "position",
+            "before": "Utility Il",
+            "after": "Utility II"
+          },
+          {
+            "pass": "300-3",
+            "row": 1,
+            "field": "position",
+            "before": "Utility Il",
+            "after": "Utility II"
+          }
+        ],
+        "evidenceFile": "evidence/municipal-small-village-of-telkwa-2023-ocr-p037.json.gzip",
+        "evidenceSha256": "8b10ae66ff6a4d732f83ae6eb87fffa99a1534f00fd00670944a82298024e215"
+      }
+    },
+    {
+      "id": "municipal-ocr-village-of-salmo-2024-elected-officials-p32",
+      "employerSlug": "village-of-salmo",
+      "employerName": "Village of Salmo",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "village-of-salmo-2024-elected-officials-p32.json.gzip",
+      "dataSha256": "0144288adea8cfa3f9a1ecc1b5e225a18b46a8715e3e8df10cf7ea4c0a669904",
+      "sha256": "cff1c46b5d93abccf5a234027b0192c4c8cc16d590a0fd48784245181fca9cb3",
+      "sourceUrl": "https://salmo.ca/wp-content/uploads/2025/06/2024-SOFI-Fully-Signed-Salmo.pdf",
+      "sourceIndexUrl": "https://salmo.ca/council/reports-links/",
+      "title": "Village of Salmo 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 5,
+      "totalRemuneration": 39747,
+      "totalExpenses": 5829,
+      "pages": [
+        32
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          32
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 39747,
+            "rowSum": 39747,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 5829,
+            "rowSum": 5829,
+            "residual": 0
+          }
+        ],
+        "corrections": [],
+        "evidenceFile": "evidence/municipal-small-village-of-salmo-2024-ocr-p032.json.gzip",
+        "evidenceSha256": "8d8c0a0a16628423374ce651f00f4ad2072ea24f751ad835298921ee5f9af6c7"
+      }
+    },
+    {
+      "id": "municipal-ocr-village-of-salmo-2024-employee-remuneration-p32",
+      "employerSlug": "village-of-salmo",
+      "employerName": "Village of Salmo",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "village-of-salmo-2024-employee-remuneration-p32.json.gzip",
+      "dataSha256": "8f65432002eac64cfdd78f4d8ee2d7c7b599282c2ca6a85b8fc8838f9db0825a",
+      "sha256": "cff1c46b5d93abccf5a234027b0192c4c8cc16d590a0fd48784245181fca9cb3",
+      "sourceUrl": "https://salmo.ca/wp-content/uploads/2025/06/2024-SOFI-Fully-Signed-Salmo.pdf",
+      "sourceIndexUrl": "https://salmo.ca/council/reports-links/",
+      "title": "Village of Salmo 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 2,
+      "totalRemuneration": 175969,
+      "totalExpenses": 1091,
+      "pages": [
+        32
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          32
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 175970,
+            "rowSum": 175969,
+            "residual": -1
+          },
+          {
+            "field": "expenses",
+            "printedControl": 1091,
+            "rowSum": 1091,
+            "residual": 0
+          }
+        ],
+        "corrections": [],
+        "evidenceFile": "evidence/municipal-small-village-of-salmo-2024-ocr-p032.json.gzip",
+        "evidenceSha256": "8d8c0a0a16628423374ce651f00f4ad2072ea24f751ad835298921ee5f9af6c7"
+      },
+      "publicWarning": "Salmo 2024 employees: published remuneration rows sum $1 below the printed subtotal. Individual amounts are preserved; the source difference is unresolved."
+    },
+    {
+      "id": "municipal-ocr-village-of-fruitvale-2023-employee-remuneration-p8",
+      "employerSlug": "village-of-fruitvale",
+      "employerName": "Village of Fruitvale",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "village-of-fruitvale-2023-employee-remuneration-p8.json.gzip",
+      "dataSha256": "cddc83d298fe0d47ec5c91fedc2891f8266766becf8a8502206c57a599a7ba9f",
+      "sha256": "4e67b34216aa738cea1cee70443d50b4dbf859dd7feec8771c1284fa5fd453b5",
+      "sourceUrl": "https://fruitvale.ca/wp-content/uploads/2025/04/2023-SOFI-Schedules-and-AFS.pdf",
+      "sourceIndexUrl": "https://fruitvale.ca/services/reports-publications/",
+      "title": "Village of Fruitvale 2023 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 734891.22,
+      "totalExpenses": 59370.47,
+      "pages": [
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration is the published Salary & Taxable Remuneration column, not the expense-inclusive Totals column.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          8
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 734891.22,
+            "rowSum": 734891.22,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 59370.47,
+            "rowSum": 59370.47,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 794261.69,
+            "rowSum": 794261.69,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 1,
+            "field": "pay",
+            "before": "Ss 114,317.41",
+            "after": "114,317.41"
+          },
+          {
+            "pass": "250-6",
+            "row": 3,
+            "field": "position",
+            "before": "Municipal Maint Worker",
+            "after": "Municipal Maint Worker I"
+          },
+          {
+            "pass": "250-6",
+            "row": 4,
+            "field": "name",
+            "before": "lhas, Kevin",
+            "after": "Ihas, Kevin"
+          },
+          {
+            "pass": "250-6",
+            "row": 5,
+            "field": "position",
+            "before": "Acting Mun Maint Worker ll",
+            "after": "Acting Mun Maint Worker II"
+          },
+          {
+            "pass": "300-3",
+            "row": 3,
+            "field": "position",
+            "before": "Municipal Maint Worker",
+            "after": "Municipal Maint Worker I"
+          },
+          {
+            "pass": "300-3",
+            "row": 4,
+            "field": "name",
+            "before": "lhas, Kevin",
+            "after": "Ihas, Kevin"
+          },
+          {
+            "pass": "300-3",
+            "row": 5,
+            "field": "position",
+            "before": "Acting Mun Maint Worker Il",
+            "after": "Acting Mun Maint Worker II"
+          }
+        ],
+        "evidenceFile": "evidence/municipal-small-village-of-fruitvale-2023-ocr-p008.json.gzip",
+        "evidenceSha256": "5e9c6571961c37910df8facfa6b493b885258e89ab5ca97f606050a25c01415a"
+      }
+    },
+    {
+      "id": "municipal-ocr-town-of-creston-2024-elected-officials-p37",
+      "employerSlug": "town-of-creston",
+      "employerName": "Town of Creston",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "town-of-creston-2024-elected-officials-p37.json.gzip",
+      "dataSha256": "ff0e340e3d2757c51476c267cd49b099218627aa81eb31cc2abc43749f177771",
+      "sha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+      "sourceUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+      "sourceIndexUrl": "https://www.creston.ca/statement-financial-information",
+      "title": "Town of Creston 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 164518,
+      "totalExpenses": 36087,
+      "pages": [
+        37
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Only the separately reviewed council schedule is accepted. The employee schedule remains held: the OCR candidate pay/expense sums and printed controls disagree and require further original-cell review or an electronic source file.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          37
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 164518,
+            "rowSum": 164518,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 36086,
+            "rowSum": 36087,
+            "residual": 1
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 0,
+            "field": "expenses",
+            "before": "§,291",
+            "after": "5,291"
+          },
+          {
+            "pass": "250-6",
+            "row": 2,
+            "field": "name",
+            "before": "DeBoon, Amoki",
+            "after": "DeBoon, Arnold"
+          },
+          {
+            "pass": "250-6",
+            "row": 2,
+            "field": "position",
+            "before": "Mayor/Counciior",
+            "after": "Mayor/Councillor"
+          },
+          {
+            "pass": "250-6",
+            "row": 2,
+            "field": "pay",
+            "before": "43,587",
+            "after": "43,557"
+          },
+          {
+            "pass": "250-6",
+            "row": 3,
+            "field": "name",
+            "before": "Dumas, Danise",
+            "after": "Dumas, Denise"
+          },
+          {
+            "pass": "250-6",
+            "row": 3,
+            "field": "position",
+            "before": "Councifor =”",
+            "after": "Councillor"
+          },
+          {
+            "pass": "250-6",
+            "row": 4,
+            "field": "position",
+            "before": "Councitor",
+            "after": "Councillor"
+          },
+          {
+            "pass": "250-6",
+            "row": 5,
+            "field": "name",
+            "before": "Hawton, Caratyn",
+            "after": "Hawton, Carolyn"
+          },
+          {
+            "pass": "250-6",
+            "row": 6,
+            "field": "name",
+            "before": "Hokand, Megan",
+            "after": "Holland, Megan"
+          },
+          {
+            "pass": "250-6",
+            "row": 6,
+            "field": "position",
+            "before": "Councitor",
+            "after": "Councillor"
+          },
+          {
+            "pass": "250-6",
+            "row": 6,
+            "field": "expenses",
+            "before": "§,354",
+            "after": "5,354"
+          },
+          {
+            "pass": "300-3",
+            "row": 1,
+            "field": "name",
+            "before": "Bakiwin, Kaith",
+            "after": "Baldwin, Keith"
+          },
+          {
+            "pass": "300-3",
+            "row": 1,
+            "field": "position",
+            "before": "Councilor",
+            "after": "Councillor"
+          },
+          {
+            "pass": "300-3",
+            "row": 2,
+            "field": "name",
+            "before": "DeBoon, Amold",
+            "after": "DeBoon, Arnold"
+          },
+          {
+            "pass": "300-3",
+            "row": 2,
+            "field": "position",
+            "before": "Mayor/Councitior",
+            "after": "Mayor/Councillor"
+          },
+          {
+            "pass": "300-3",
+            "row": 3,
+            "field": "position",
+            "before": "Councilor *",
+            "after": "Councillor"
+          },
+          {
+            "pass": "300-3",
+            "row": 3,
+            "field": "pay",
+            "before": "29,134",
+            "after": "23,134"
+          },
+          {
+            "pass": "300-3",
+            "row": 4,
+            "field": "position",
+            "before": "Gouncitor",
+            "after": "Councillor"
+          },
+          {
+            "pass": "300-3",
+            "row": 5,
+            "field": "name",
+            "before": "Hawton, Caratyn",
+            "after": "Hawton, Carolyn"
+          },
+          {
+            "pass": "300-3",
+            "row": 6,
+            "field": "name",
+            "before": "Holand, Magan",
+            "after": "Holland, Megan"
+          },
+          {
+            "pass": "300-3",
+            "row": 6,
+            "field": "position",
+            "before": "Councifor",
+            "after": "Councillor"
+          },
+          {
+            "pass": "300-3",
+            "row": 6,
+            "field": "expenses",
+            "before": "§,954",
+            "after": "5,354"
+          }
+        ],
+        "evidenceFile": "evidence/municipal-small-town-of-creston-2024-ocr-p037.json.gzip",
+        "evidenceSha256": "305b0a0b769b11568d7d025a9118123aba96cae924ed3ad10db210f36e4b5442"
+      },
+      "publicWarning": "Creston 2024 council: individual expenses sum $1 above the printed subtotal. Published values are preserved; the source difference is unresolved."
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2019-employee-remuneration-p2",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2019-employee-remuneration-p2.json.gzip",
+      "dataSha256": "6c9e4c6115d48fddd87c06145daef66ba90839f1af81ed0007f4c03be7012aa6",
+      "sha256": "64be5cde81e515d1e8c2d70782c3e54bf19b09a5e52e6a5e92bfa8ff57e3f43e",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2019_sofi_city_of_terrace_p.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2019 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 31,
+      "totalRemuneration": 3357945.48,
+      "totalExpenses": 85274.75,
+      "pages": [
+        2
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other). The expense-inclusive Total is not used as pay.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3357945.48,
+            "rowSum": 3357945.48,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 85274.75,
+            "rowSum": 85274.75,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 3443220.23,
+            "rowSum": 3443220.23,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 0,
+            "field": "benefits",
+            "before": "‘705.60",
+            "after": "705.60"
+          },
+          {
+            "pass": "300-3",
+            "row": 0,
+            "field": "benefits",
+            "before": "‘705.60",
+            "after": "705.60"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2019-p002.json.gzip",
+        "evidenceSha256": "7d25371cdeb789acb1954b6710c3ec9ad7ed1a5b4c3c4eaf3b1a36913b8c9098"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2019-elected-officials-p1",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-terrace-2019-elected-officials-p1.json.gzip",
+      "dataSha256": "af3ce67c2ec9bfa1e1a09f784851056f1e332e8ec2a73c5ce53f7b54e7b3e45f",
+      "sha256": "64be5cde81e515d1e8c2d70782c3e54bf19b09a5e52e6a5e92bfa8ff57e3f43e",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2019_sofi_city_of_terrace_p.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2019 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 145586.18,
+      "totalExpenses": 51376.34,
+      "pages": [
+        1
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other). The expense-inclusive Total is not used as pay.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          1
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 145586.18,
+            "rowSum": 145586.18,
+            "residual": 0
+          },
+          {
+            "field": "taxExempt",
+            "printedControl": 48528.73,
+            "rowSum": 48528.73,
+            "residual": 0
+          },
+          {
+            "field": "taxable",
+            "printedControl": 97057.45,
+            "rowSum": 97057.45,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 51376.34,
+            "rowSum": 51376.34,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 196962.52,
+            "rowSum": 196962.52,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 1,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_ —_—",
+            "after": "Bujtas, Sean Michael Geza"
+          },
+          {
+            "pass": "250-6",
+            "row": 2,
+            "field": "pay",
+            "before": "s 17,204.22",
+            "after": "17,204.22"
+          },
+          {
+            "pass": "300-3",
+            "row": 1,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_—",
+            "after": "Bujtas, Sean Michael Geza"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2019-p001.json.gzip",
+        "evidenceSha256": "28878a65c24cb256956452a1060625c7ef334613a17ab83fa0123671f3770116"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2020-employee-remuneration-p2",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2020-employee-remuneration-p2.json.gzip",
+      "dataSha256": "5181a848a51c8ba064fc6de325cbef95c0e3973722189a451771cf3ca8d99330",
+      "sha256": "a438fbb48d50fbee76f93abc89f3a7ca0a3e42e3c11d164bcd79aa54843813e2",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2020-sofi.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2020 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 41,
+      "totalRemuneration": 4206175.68,
+      "totalExpenses": 27110.16,
+      "pages": [
+        2
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other). The expense-inclusive Total is not used as pay.",
+        "One title is visibly clipped at its boundary and retained as WORKING FOREMAN ENVIRONMENTAL HEALT; no final letter is inferred.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 4206175.68,
+            "rowSum": 4206175.68,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 27110.16,
+            "rowSum": 27110.16,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 4233285.84,
+            "rowSum": 4233285.84,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 13,
+            "field": "position",
+            "before": "WORKING FOREMAN ENVIRONMENTAL HEALTt",
+            "after": "WORKING FOREMAN ENVIRONMENTAL HEALT"
+          },
+          {
+            "pass": "300-3",
+            "row": 13,
+            "field": "position",
+            "before": "WORKING FOREMAN ENVIRONMENTAL HEALTt",
+            "after": "WORKING FOREMAN ENVIRONMENTAL HEALT"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2020-p002.json.gzip",
+        "evidenceSha256": "74d05fb2086372fc55555365c564d828ff1e74585a13ff6e917726af35b4a380"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2020-elected-officials-p1",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-terrace-2020-elected-officials-p1.json.gzip",
+      "dataSha256": "376954d8aaa3f482296e3856f80226b8539fc64afb087dfe8e8402c3df1972d8",
+      "sha256": "a438fbb48d50fbee76f93abc89f3a7ca0a3e42e3c11d164bcd79aa54843813e2",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2020-sofi.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2020 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 149241.17,
+      "totalExpenses": 14134.34,
+      "pages": [
+        1
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other). The expense-inclusive Total is not used as pay.",
+        "One title is visibly clipped at its boundary and retained as WORKING FOREMAN ENVIRONMENTAL HEALT; no final letter is inferred.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          1
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 149241.17,
+            "rowSum": 149241.17,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 14134.34,
+            "rowSum": 14134.34,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 163375.51,
+            "rowSum": 163375.51,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 1,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_ —",
+            "after": "Bujtas, Sean Michael Geza"
+          },
+          {
+            "pass": "300-3",
+            "row": 1,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_ —",
+            "after": "Bujtas, Sean Michael Geza"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2020-p001.json.gzip",
+        "evidenceSha256": "aed5a2c2640b8bc6ca6d41dd419bae1754c41de0bd81896a203dac7b516e068f"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2021-employee-remuneration-p2",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2021-employee-remuneration-p2.json.gzip",
+      "dataSha256": "b016896bee017f24ca79217d06c0660985a2b56b98cfe89e874dae9aefe2433c",
+      "sha256": "22fe999a85d0717d8966d6caf506536b9666a2d3a83550f72d2b6195ef2f9db8",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/Statement%20of%20Financial%20Information%20-%202021%20(1).pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2021 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 46,
+      "totalRemuneration": 4844178.45,
+      "totalExpenses": 63687.6,
+      "pages": [
+        2
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other). The expense-inclusive Total is not used as pay.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 4844178.45,
+            "rowSum": 4844178.45,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 63687.6,
+            "rowSum": 63687.6,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 4907866.05,
+            "rowSum": 4907866.05,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 12,
+            "field": "expenses",
+            "before": "982.77.",
+            "after": "982.77"
+          },
+          {
+            "pass": "300-3",
+            "row": 12,
+            "field": "expenses",
+            "before": "982.77.",
+            "after": "982.77"
+          },
+          {
+            "pass": "300-3",
+            "row": 8,
+            "field": "benefits",
+            "before": "704,22",
+            "after": "704.22"
+          },
+          {
+            "pass": "300-3",
+            "row": 16,
+            "field": "benefits",
+            "before": "525,33",
+            "after": "525.33"
+          },
+          {
+            "pass": "300-3",
+            "row": 20,
+            "field": "expenses",
+            "before": "$97.33",
+            "after": "597.33"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2021-p002.json.gzip",
+        "evidenceSha256": "5aad917d34be1edd52318d47299ae7215ccd8b97d104011f9afb0d3dc8379b36"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2021-elected-officials-p1",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-terrace-2021-elected-officials-p1.json.gzip",
+      "dataSha256": "e4f1b4b386adbe3be2f243b6b4865cc31b9a3235ecd6564f2c989752b495886a",
+      "sha256": "22fe999a85d0717d8966d6caf506536b9666a2d3a83550f72d2b6195ef2f9db8",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/Statement%20of%20Financial%20Information%20-%202021%20(1).pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2021 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 8,
+      "totalRemuneration": 144827.13,
+      "totalExpenses": 9667.53,
+      "pages": [
+        1
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other). The expense-inclusive Total is not used as pay.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          1
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 144827.13,
+            "rowSum": 144827.13,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 9667.53,
+            "rowSum": 9667.53,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 154494.66,
+            "rowSum": 154494.66,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 1,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_ —",
+            "after": "Bujtas, Sean Michael Geza"
+          },
+          {
+            "pass": "300-3",
+            "row": 1,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_ _—",
+            "after": "Bujtas, Sean Michael Geza"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2021-p001.json.gzip",
+        "evidenceSha256": "8e19a9a72da0820d006fb902c15e171a418903e2f0c8da2e325caffa526410a9"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2022-employee-remuneration-p2",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2022-employee-remuneration-p2.json.gzip",
+      "dataSha256": "040fd36bba8ec46ae4f9d86580d14e4abf450fb6a1ba7908cd59eba682f4322f",
+      "sha256": "adfd7a71808a57de1035389712fec0c4ac31211ea5315be6c04504fd89ac67cd",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/2022%20SOFI%20CITY%20OF%20TERRACE%20p.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2022 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 51,
+      "totalRemuneration": 5337347.67,
+      "totalExpenses": 78237.53,
+      "pages": [
+        2
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other). The expense-inclusive Total is not used as pay.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 5337347.67,
+            "rowSum": 5337347.67,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 78237.53,
+            "rowSum": 78237.53,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 4833569.51,
+            "rowSum": 5415585.2,
+            "residual": 582015.69
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 7,
+            "field": "wages",
+            "before": "TU,2UTA2",
+            "after": "77,277.12"
+          },
+          {
+            "pass": "250-6",
+            "row": 11,
+            "field": "expenses",
+            "before": "31.33.",
+            "after": "31.33"
+          },
+          {
+            "pass": "250-6",
+            "row": 34,
+            "field": "benefits",
+            "before": "7",
+            "after": "-"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2022-p002.json.gzip",
+        "evidenceSha256": "bd38221fccd2f773d5fb77430b735473447efd1030e484b2059d0f40e3c7ec93"
+      },
+      "publicWarning": "Terrace 2022 employees: remuneration and expenses reconcile exactly. The printed expense-inclusive grand total is $582,015.69 below the sum of individual totals. Remuneration uses the separate Total Earnings column; published individual values are preserved."
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2022-elected-officials-p1",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-terrace-2022-elected-officials-p1.json.gzip",
+      "dataSha256": "2d4db14623856bd3ec88ab26f464708fa282b8afbf9c87af07822df0050c7d7a",
+      "sha256": "adfd7a71808a57de1035389712fec0c4ac31211ea5315be6c04504fd89ac67cd",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/2022%20SOFI%20CITY%20OF%20TERRACE%20p.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2022 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 10,
+      "totalRemuneration": 157459.66,
+      "totalExpenses": 39338.52,
+      "pages": [
+        1
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Remuneration uses published Total Earnings (wages plus Taxable Benefits & Other). The expense-inclusive Total is not used as pay.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          1
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 157459.66,
+            "rowSum": 157459.66,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 39338.52,
+            "rowSum": 39338.52,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 196798.18,
+            "rowSum": 196798.18,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 0,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_ =",
+            "after": "Bujtas, Sean Michael Geza"
+          },
+          {
+            "pass": "300-3",
+            "row": 0,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_ =",
+            "after": "Bujtas, Sean Michael Geza"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2022-p001.json.gzip",
+        "evidenceSha256": "ef9363b7fe12cfd968fa8d253fe75dda2207ac6a6a9b775467e0cbd97a2e6469"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2023-employee-remuneration-p3",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2023-employee-remuneration-p3.json.gzip",
+      "dataSha256": "e23e01a930bcdae418cc23c7815ce2da51913a14a25b37606d091a46f438cccf",
+      "sha256": "7df7927f22b0a8c81ade85c6e6105bc67e862649297b7ada5c02db839086f462",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2023-SOFI-CITY-OF%20TERRACE.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2023 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 63,
+      "totalRemuneration": 6735091.89,
+      "totalExpenses": 124510.9,
+      "pages": [
+        3
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses the published Total Earnings column. Wages, taxable benefits/other compensation and expense-inclusive totals remain in the evidence. Published ID codes, where present, are retained only in evidence, not used to join people.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 6735091.89,
+            "rowSum": 6735091.89,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 124510.9,
+            "rowSum": 124510.9,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 6859602.79,
+            "rowSum": 6859602.79,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 18,
+            "field": "benefits",
+            "before": "~ 1,132.87",
+            "after": "1,132.87"
+          },
+          {
+            "pass": "250-6",
+            "row": 26,
+            "field": "name",
+            "before": "Leblond, Dawsen °*",
+            "after": "Leblond, Dawsen"
+          },
+          {
+            "pass": "250-6",
+            "row": 56,
+            "field": "expenses",
+            "before": "644,92",
+            "after": "644.92"
+          },
+          {
+            "pass": "300-3",
+            "row": 8,
+            "field": "benefits",
+            "before": "§31.19",
+            "after": "531.19"
+          },
+          {
+            "pass": "300-3",
+            "row": 18,
+            "field": "benefits",
+            "before": "~ 1,132.87",
+            "after": "1,132.87"
+          },
+          {
+            "pass": "300-3",
+            "row": 20,
+            "field": "expenses",
+            "before": "2,768.78 +",
+            "after": "2,768.78"
+          },
+          {
+            "pass": "300-3",
+            "row": 45,
+            "field": "expenses",
+            "before": "202.47.",
+            "after": "202.47"
+          },
+          {
+            "pass": "300-3",
+            "row": 46,
+            "field": "pay",
+            "before": "7§,271.74",
+            "after": "75,271.74"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2023-p003.json.gzip",
+        "evidenceSha256": "368081a15f1a098d3f7f3d80ecadf052b3ebe641d7b561096dc828f31e399919"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2023-elected-officials-p2",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-terrace-2023-elected-officials-p2.json.gzip",
+      "dataSha256": "26b1c5c3c94e850f82e06b16108c65d7056a9c7701979e766ec3d9c2d74a7be2",
+      "sha256": "7df7927f22b0a8c81ade85c6e6105bc67e862649297b7ada5c02db839086f462",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2023-SOFI-CITY-OF%20TERRACE.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2023 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 174767.15,
+      "totalExpenses": 64041.76,
+      "pages": [
+        2
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Remuneration uses the published Total Earnings column. Wages, taxable benefits/other compensation and expense-inclusive totals remain in the evidence. Published ID codes, where present, are retained only in evidence, not used to join people.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 174767.15,
+            "rowSum": 174767.15,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 64041.76,
+            "rowSum": 64041.76,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 238808.91,
+            "rowSum": 238808.91,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 0,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_",
+            "after": "Bujtas, Sean Michael Geza"
+          },
+          {
+            "pass": "300-3",
+            "row": 0,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_",
+            "after": "Bujtas, Sean Michael Geza"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2023-p002.json.gzip",
+        "evidenceSha256": "5dbae1b9f8dcf74e0de96c15f6b9d746561c744c288f2c3ee8a5d9e9f34a70a8"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2024-employee-remuneration-p3",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2024-employee-remuneration-p3.json.gzip",
+      "dataSha256": "5c2d3da5d9d99af68348087dc082b27aeba79929f8674530d8ca7e29615c48ac",
+      "sha256": "3f5ddf11ab1f630b851af295842ae1a46523ac6cb23bb75421a452cb0a108a51",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2024-SOFI-CITY-OF-TERRACE.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 63,
+      "totalRemuneration": 6967605.82,
+      "totalExpenses": 181769.73,
+      "pages": [
+        3
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses the published Total Earnings column. Wages, taxable benefits/other compensation and expense-inclusive totals remain in the evidence. Published ID codes, where present, are retained only in evidence, not used to join people.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 13,
+            "field": "expenses",
+            "before": "1,515.07.",
+            "after": "1,515.07"
+          },
+          {
+            "pass": "250-6",
+            "row": 55,
+            "field": "benefits",
+            "before": "524,32",
+            "after": "524.32"
+          },
+          {
+            "pass": "300-3",
+            "row": 37,
+            "field": "pay",
+            "before": "115,212.57.",
+            "after": "115,212.57"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2024-p003.json.gzip",
+        "evidenceSha256": "7c0b38719ff48291f8ad11c52f6f59c715e466c1416a8be883e35bc1b462a41a",
+        "wholeScheduleControls": [
+          {
+            "field": "pay",
+            "printedControl": 7326303.15,
+            "rowSum": 7326303.15,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 184167.85,
+            "rowSum": 184167.85,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 7510471,
+            "rowSum": 7510471,
+            "residual": 0
+          }
+        ],
+        "wholeScheduleRows": 66
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2024-employee-remuneration-p4",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2024-employee-remuneration-p4.json.gzip",
+      "dataSha256": "44ec936f76ea12f59e8ddf1ec6c73e675489179d8454be8927953775e5179b25",
+      "sha256": "3f5ddf11ab1f630b851af295842ae1a46523ac6cb23bb75421a452cb0a108a51",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2024-SOFI-CITY-OF-TERRACE.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 3,
+      "totalRemuneration": 358697.33,
+      "totalExpenses": 2398.12,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses the published Total Earnings column. Wages, taxable benefits/other compensation and expense-inclusive totals remain in the evidence. Published ID codes, where present, are retained only in evidence, not used to join people.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 0,
+            "field": "position",
+            "before": "BYLAW COMPLIANCE OFFICER",
+            "after": "BYLAW COMPLIANCE OFFICER I"
+          },
+          {
+            "pass": "300-3",
+            "row": 0,
+            "field": "position",
+            "before": "BYLAW COMPLIANCE OFFICER",
+            "after": "BYLAW COMPLIANCE OFFICER I"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2024-p004.json.gzip",
+        "evidenceSha256": "9b3a0734b351bc2d8436538528aa5de04cdd4a872bbb8383473975891325cd8b",
+        "wholeScheduleControls": [
+          {
+            "field": "pay",
+            "printedControl": 7326303.15,
+            "rowSum": 7326303.15,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 184167.85,
+            "rowSum": 184167.85,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 7510471,
+            "rowSum": 7510471,
+            "residual": 0
+          }
+        ],
+        "wholeScheduleRows": 66
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2024-elected-officials-p2",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-terrace-2024-elected-officials-p2.json.gzip",
+      "dataSha256": "5535e30853a9ca2ede997f7cb4c3281d3501a4f4e114010379f83a39d153f433",
+      "sha256": "3f5ddf11ab1f630b851af295842ae1a46523ac6cb23bb75421a452cb0a108a51",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/city-hall/finance/2024-SOFI-CITY-OF-TERRACE.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 179275.68,
+      "totalExpenses": 47665.74,
+      "pages": [
+        2
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Remuneration uses the published Total Earnings column. Wages, taxable benefits/other compensation and expense-inclusive totals remain in the evidence. Published ID codes, where present, are retained only in evidence, not used to join people.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 179275.68,
+            "rowSum": 179275.68,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 47665.74,
+            "rowSum": 47665.74,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 226941.42,
+            "rowSum": 226941.42,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 0,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_ =",
+            "after": "Bujtas, Sean Michael Geza"
+          },
+          {
+            "pass": "300-3",
+            "row": 0,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_",
+            "after": "Bujtas, Sean Michael Geza"
+          },
+          {
+            "pass": "300-3",
+            "row": 5,
+            "field": "expenses",
+            "before": "Ss 779.53",
+            "after": "779.53"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2024-p002.json.gzip",
+        "evidenceSha256": "1d5e9049e524dbd8e49677a7e0570938e6cc4e1b83a97b2f55620e607a1bcbe1"
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2025-employee-remuneration-p3",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2025-employee-remuneration-p3.json.gzip",
+      "dataSha256": "94d0e6e20971e3072fa3d04e31672e878f2f7c8a24fae12ec730e4f06b01f820",
+      "sha256": "dace852d4fc354e077dde31a77448bbb833667d29f6208e75a377062dd879ac6",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/2026-06/2025%20SOFI%20CITY%20OF%20TERRACE%20-%20Website.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 70,
+      "totalRemuneration": 7508138.65,
+      "totalExpenses": 167328.55,
+      "pages": [
+        3
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses the published Total Earnings column. Wages, taxable benefits/other compensation and expense-inclusive totals remain in the evidence. Published ID codes, where present, are retained only in evidence, not used to join people.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 11,
+            "field": "name",
+            "before": "—Chalifoux, Melanie",
+            "after": "Chalifoux, Melanie"
+          },
+          {
+            "pass": "250-6",
+            "row": 19,
+            "field": "name",
+            "before": "‘Francisco, Leo",
+            "after": "Francisco, Leo"
+          },
+          {
+            "pass": "250-6",
+            "row": 23,
+            "field": "name",
+            "before": "—_Greenlaw, Lori",
+            "after": "Greenlaw, Lori"
+          },
+          {
+            "pass": "250-6",
+            "row": 32,
+            "field": "name",
+            "before": "__Kurisu, Clayton Lee Masumi",
+            "after": "Kurisu, Clayton Lee Masumi"
+          },
+          {
+            "pass": "250-6",
+            "row": 40,
+            "field": "name",
+            "before": "Maccormac, laian",
+            "after": "Maccormac, Iaian"
+          },
+          {
+            "pass": "250-6",
+            "row": 54,
+            "field": "name",
+            "before": "PA34__—Palahicky, Aiden",
+            "after": "Palahicky, Aiden"
+          },
+          {
+            "pass": "250-6",
+            "row": 62,
+            "field": "name",
+            "before": "__Reinbolt, Ben",
+            "after": "Reinbolt, Ben"
+          },
+          {
+            "pass": "250-6",
+            "row": 64,
+            "field": "name",
+            "before": "—Roseboom, Jacob",
+            "after": "Roseboom, Jacob"
+          },
+          {
+            "pass": "250-6",
+            "row": 66,
+            "field": "name",
+            "before": "—Seib, James",
+            "after": "Seib, James"
+          },
+          {
+            "pass": "300-3",
+            "row": 7,
+            "field": "position",
+            "before": "BUILDING/LICENCE OFFICIAL II]",
+            "after": "BUILDING/LICENCE OFFICIAL III"
+          },
+          {
+            "pass": "300-3",
+            "row": 10,
+            "field": "name",
+            "before": "~—‘Chant, Steven",
+            "after": "Chant, Steven"
+          },
+          {
+            "pass": "300-3",
+            "row": 11,
+            "field": "name",
+            "before": "CH15_—Chalifoux, Melanie",
+            "after": "Chalifoux, Melanie"
+          },
+          {
+            "pass": "300-3",
+            "row": 32,
+            "field": "name",
+            "before": "_Kurisu, Clayton Lee Masumi",
+            "after": "Kurisu, Clayton Lee Masumi"
+          },
+          {
+            "pass": "300-3",
+            "row": 40,
+            "field": "name",
+            "before": "Maccormag, laian",
+            "after": "Maccormac, Iaian"
+          },
+          {
+            "pass": "300-3",
+            "row": 64,
+            "field": "name",
+            "before": "~—Roseboom, Jacob",
+            "after": "Roseboom, Jacob"
+          },
+          {
+            "pass": "300-3",
+            "row": 65,
+            "field": "name",
+            "before": "~—_-Ruchotzke, Jason",
+            "after": "Ruchotzke, Jason"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2025-p003.json.gzip",
+        "evidenceSha256": "2c5558051eb193804ed6ba02f3a98f73ff372801a5d2cfd13bb558fb8b5e55ba",
+        "wholeScheduleControls": [
+          {
+            "field": "pay",
+            "printedControl": 8352068.23,
+            "rowSum": 8352068.23,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 167744.54,
+            "rowSum": 167744.54,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 8519812.77,
+            "rowSum": 8519812.77,
+            "residual": 0
+          }
+        ],
+        "wholeScheduleRows": 77
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2025-employee-remuneration-p4",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-terrace-2025-employee-remuneration-p4.json.gzip",
+      "dataSha256": "112e2c8ecb3487c32065622dbc214f14364cbaad2ffe688d4c55583b3fc2ef2a",
+      "sha256": "dace852d4fc354e077dde31a77448bbb833667d29f6208e75a377062dd879ac6",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/2026-06/2025%20SOFI%20CITY%20OF%20TERRACE%20-%20Website.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 843929.58,
+      "totalExpenses": 415.99,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration uses the published Total Earnings column. Wages, taxable benefits/other compensation and expense-inclusive totals remain in the evidence. Published ID codes, where present, are retained only in evidence, not used to join people.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 4,
+            "field": "name",
+            "before": "—_Willoner, Colin Mark",
+            "after": "Willoner, Colin Mark"
+          },
+          {
+            "pass": "250-6",
+            "row": 6,
+            "field": "position",
+            "before": "BYLAW COMPLIANCE OFFICER",
+            "after": "BYLAW COMPLIANCE OFFICER I"
+          },
+          {
+            "pass": "300-3",
+            "row": 4,
+            "field": "name",
+            "before": "—-Willoner, Colin Mark",
+            "after": "Willoner, Colin Mark"
+          },
+          {
+            "pass": "300-3",
+            "row": 6,
+            "field": "position",
+            "before": "BYLAW COMPLIANCE OFFICER",
+            "after": "BYLAW COMPLIANCE OFFICER I"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2025-p004.json.gzip",
+        "evidenceSha256": "88108ab635838d4ba080217a5ebaebd5e418e8a9236db0be2265c661adfe15aa",
+        "wholeScheduleControls": [
+          {
+            "field": "pay",
+            "printedControl": 8352068.23,
+            "rowSum": 8352068.23,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 167744.54,
+            "rowSum": 167744.54,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 8519812.77,
+            "rowSum": 8519812.77,
+            "residual": 0
+          }
+        ],
+        "wholeScheduleRows": 77
+      }
+    },
+    {
+      "id": "municipal-ocr-city-of-terrace-2025-elected-officials-p2",
+      "employerSlug": "city-of-terrace",
+      "employerName": "City of Terrace",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-terrace-2025-elected-officials-p2.json.gzip",
+      "dataSha256": "ebd79e8caac32e509b292300c4a3bfc03edd1aaf9639d418cae2dc0a771c9f2b",
+      "sha256": "dace852d4fc354e077dde31a77448bbb833667d29f6208e75a377062dd879ac6",
+      "sourceUrl": "https://www.terrace.ca/sites/default/files/2026-06/2025%20SOFI%20CITY%20OF%20TERRACE%20-%20Website.pdf",
+      "sourceIndexUrl": "https://www.terrace.ca/city-services/finance-taxation",
+      "title": "City of Terrace 2025 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 184785.98,
+      "totalExpenses": 57648.69,
+      "pages": [
+        2
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Remuneration uses the published Total Earnings column. Wages, taxable benefits/other compensation and expense-inclusive totals remain in the evidence. Published ID codes, where present, are retained only in evidence, not used to join people.",
+        "Two Tesseract passes use the same OCR engine and are not independent originals. Every accepted rendered row was visually checked; reviewed cell corrections and exact control residuals are retained."
+      ],
+      "validation": {
+        "method": "Two OCR passes plus complete visual table review",
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "ocrPasses": [
+          "250-6",
+          "300-3"
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 184785.98,
+            "rowSum": 184785.98,
+            "residual": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 57648.69,
+            "rowSum": 57648.69,
+            "residual": 0
+          },
+          {
+            "field": "total",
+            "printedControl": 242434.67,
+            "rowSum": 242434.67,
+            "residual": 0
+          }
+        ],
+        "corrections": [
+          {
+            "pass": "250-6",
+            "row": 0,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_ =",
+            "after": "Bujtas, Sean Michael Geza"
+          },
+          {
+            "pass": "300-3",
+            "row": 0,
+            "field": "name",
+            "before": "Bujtas, Sean Michael Geza_",
+            "after": "Bujtas, Sean Michael Geza"
+          }
+        ],
+        "evidenceFile": "evidence/terrace-sofi-2025-p002.json.gzip",
+        "evidenceSha256": "dc11f5f213d182515db99a232fa7228786590e35da7e34ed9c9913bdd92c0ae6"
+      }
+    }
+  ]
+}

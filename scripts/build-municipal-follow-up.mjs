@@ -1,6 +1,6 @@
 // Turn the complete reviewed municipal audit into an actionable acquisition and processing list.
 // No live requests, inferred reporting years, new source acceptance or invented contact details.
-import { readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -9,6 +9,9 @@ const folder = join(root, 'research/salaries/municipal-audit')
 const read = (file) => JSON.parse(readFileSync(join(folder, file), 'utf8'))
 const coverage = read('coverage.json')
 const policy = read('import-policy.json')
+const ocrFolder = join(root, 'research/salaries/municipal-ocr')
+const ocrRegister = existsSync(join(ocrFolder, 'ocr-register.json')) ? JSON.parse(readFileSync(join(ocrFolder, 'ocr-register.json'), 'utf8')) : null
+const ocrRequests = existsSync(join(ocrFolder, 'additional-requests.json')) ? JSON.parse(readFileSync(join(ocrFolder, 'additional-requests.json'), 'utf8')).requests : []
 const municipalityBySlug = new Map(coverage.municipalities.map((m) => [m.employerSlug, m]))
 const mtext = (text) => String(text ?? '—').replaceAll('|', '\\|').replaceAll('\n', ' ')
 const requestOverrides = new Map([
@@ -29,13 +32,15 @@ const sourceTasks = coverage.municipalities.flatMap((m) => m.heldOrUnparsedSourc
   const specific = requestOverrides.get(m.employerSlug)
   const needsRequest = specific && (specific.year == null || specific.year === s.year)
   const description = [s.reason, ...(s.notes ?? [])].join(' ')
+  const ocr = ocrRegister?.sources.find((r) => r.sourceUrl === s.url)
   const scanned = s.status === 'requires-ocr' || /scann|requires? OCR|no extractable text|image-based/i.test(description)
   const retrieval = /HTTP|403|404|retriev.*fail|download.*fail|inaccessible/i.test(description)
-  const route = needsRequest ? specific.route : scanned ? 'ocr-and-independent-review' : retrieval ? 'public-retrieval-or-routine-copy-request' : 'public-source-processing'
+  const route = needsRequest ? specific.route : ocr?.pageDiscoveryComplete ? 'verify-completed-ocr-or-layout' : scanned ? 'ocr-and-independent-review' : retrieval ? 'public-retrieval-or-routine-copy-request' : 'public-source-processing'
   return { id: s.id ?? `${m.employerSlug}-${s.year ?? 'period-unverified'}-${at}`, employerSlug: m.employerSlug,
     municipality: m.employerName, year: s.year, periodVerified: false, scope: s.scope ?? null, status: s.status,
     sourceUrl: s.url, archiveUrl: s.indexUrl ?? m.archiveUrl, blocker: s.reason ?? 'Located source has not completed extraction and validation.',
-    route, nextAction: needsRequest ? specific.ask : scanned ? 'OCR/transcribe the existing public original, then independently verify all row fields, reporting period, pages and controls. An existing spreadsheet is an optional shortcut.' : s.nextAction,
+    route, nextAction: needsRequest ? specific.ask : ocr?.pageDiscoveryComplete ? `${s.nextAction} OCR discovery is complete for all ${ocr.discoveryPages} pages, with ${ocr.candidatePages.length} two-pass candidate pages retained. Verify names, titles, actual periods and complete controls against the originals before importing; keyword discovery is not proof of exhaustive table coverage.` : scanned ? 'OCR/transcribe the existing public original, then independently verify all row fields, reporting period, pages and controls. An existing spreadsheet is an optional shortcut.' : s.nextAction,
+    ocrEvidence: ocr ? { file: `../municipal-ocr/${ocr.evidenceFile}`, sha256: ocr.evidenceSha256, pages: ocr.discoveryPages, candidatePages: ocr.candidatePages, status: ocr.status } : null,
     requestNeededNow: Boolean(needsRequest), requestStatus: 'not-sent',
     notes: s.notes ?? [] }
 }))
@@ -61,7 +66,10 @@ const requests = [
   ...qualifiedSources.map((s) => ({ ...s, year: s.year, blocker: s.action,
     firstRoute: 'Routine clarification/correction request to Finance; accepted published rows remain in the app with their warning.',
     formalAccessFallback: 'If necessary, request existing source tables/corrections through the verified official access process; an access request cannot require a new explanation to be created.',
-    contactVerified: false }))
+    contactVerified: false })),
+  ...ocrRequests.map((s) => ({ ...s, blocker: s.ask, requestStatus: 'not-sent', contactVerified: false,
+    firstRoute: 'Routine public-record or clarification request to Finance or Corporate Services.',
+    formalAccessFallback: 'Verify the official access process only if routine access does not resolve it; seek existing records, not newly created explanations.' }))
 ]
 const gaps = coverage.municipalities.filter((m) => m.status !== 'pending-incorporation' && !m.officialRecords).map((m) => ({
   employerSlug: m.employerSlug, municipality: m.employerName, archiveUrl: m.archiveUrl, website: m.website,
@@ -80,7 +88,8 @@ const result = { version: 1, asOf: coverage.asOf, baseline: policy.baseline,
   requestStatus: 'Draft list only. No messages, formal access requests or fee commitments have been made.',
   summary: { qualifiedCohorts: qualifiedSources.length, additionalRows: qualifiedSources.reduce((n, s) => n + s.rows, 0),
     currentJurisdictionsWithoutOfficialRecords: gaps.length, unresolvedSourceTasks: sourceTasks.length,
-    specificRequestCandidates: requests.length, sourceTasksByRoute: routeCounts },
+    specificRequestCandidates: requests.length, sourceTasksByRoute: routeCounts,
+    ocr: ocrRegister?.summary ?? null },
   qualifiedSources, requests, jurisdictionsWithoutOfficialRecords: gaps, sourceTasks,
   pending: coverage.municipalities.filter((m) => m.status === 'pending-incorporation').map((m) => ({ employerSlug: m.employerSlug, effectiveFrom: m.effectiveFrom, nextAction: m.nextAction })) }
 writeFileSync(join(folder, 'follow-up.json'), JSON.stringify(result, null, 2) + '\n')
@@ -93,7 +102,7 @@ const quote = (s) => `"${String(s ?? '').replaceAll('"', '""')}"`
 writeFileSync(join(folder, 'follow-up.csv'), [['type', 'municipality', 'year or target', 'route', 'official archive', 'source', 'blocker', 'next action or request', 'request status'], ...csvRows].map((r) => r.map(quote).join(',')).join('\n') + '\n')
 const lines = [
   '# Municipal import decisions and acquisition list', '', `As of ${coverage.asOf}. Generated by \`npm run follow-up:municipal-salaries\`.`, '',
-  `The PR #23 baseline has 878,615 records. This follow-up accepts **${result.summary.additionalRows.toLocaleString('en-CA')} further employee observations** in three cohorts, with visible source warnings. The rebuilt app has **${coverage.summary.allRecordsAfter.toLocaleString('en-CA')} records**. No individual value is changed to force agreement.`, '',
+  `The original PR #23 baseline has 878,615 records. The source-policy follow-up accepts **${result.summary.additionalRows.toLocaleString('en-CA')} further employee observations** in three cohorts, with visible source warnings.${ocrRegister ? ` The subsequent OCR review accepts **${ocrRegister.summary.acceptedRows} further employee/council observations**; [its full evidence and remaining work](../municipal-ocr/README.md) are separate from unaccepted OCR candidates.` : ''} The rebuilt app has **${coverage.summary.allRecordsAfter.toLocaleString('en-CA')} records**. No individual value is changed to force agreement.`, '',
   `**${gaps.length} current jurisdictions still have no accepted official records.** There are **${sourceTasks.length} unresolved source tasks**. These are separate counts: a jurisdiction can have multiple reports, and a covered jurisdiction can still have held years or council schedules. Neither count is a count of required FOI applications.`, '',
   '[Spreadsheet-ready complete list](follow-up.csv) · [Machine-readable evidence and actions](follow-up.json) · [Import assumptions and rules](import-policy.json)', '',
   '## What can enter the app', '',

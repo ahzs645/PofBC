@@ -1,5 +1,9 @@
 # Northern and Interior municipal salary expansion
 
+**OCR recovery:** Terrace's employee and council schedules for every year
+2017–2025 are now accepted in [the separate OCR collection](../municipal-ocr/README.md).
+The original counts and scan holds below describe the earlier audit pass.
+
 Reviewed 31 October 2026. This collection adds **8,806 named disclosure rows from 24 original PDFs**, separated into **30 employee or elected-official cohorts across 11 municipalities**. It also records official archives and unresolved sources for all 19 municipalities assigned to this research group.
 
 These are calendar-year remuneration disclosures, not base-salary estimates, a complete workforce census, or verified unique-person identities. Names, initials, positions, negative adjustments, and missing expense cells remain as the source publishes them. The same individual can appear in several years.

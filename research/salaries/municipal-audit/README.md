@@ -3,7 +3,9 @@
 **Follow-up:** [Import assumptions and acquisition list](follow-up.md) now
 documents three additional employee cohorts accepted as faithful transcriptions
 with unresolved source subtotals and visible app warnings. The current app
-contains **880,436 records**, including **630,525 official-source records**.
+contains **881,002 records**, including **631,091 official-source records**.
+The [OCR recovery](../municipal-ocr/README.md) adds 566 reviewed observations and
+retains the completed 98-report scan/layout processing receipts.
 Montrose now has three accepted employee observations as well as council.
 The figures and hold decisions below describe the original PR #23 baseline;
 use [current generated coverage](coverage.md) and [the complete follow-up CSV](follow-up.csv)

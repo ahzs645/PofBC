@@ -1546,7 +1546,12 @@
       "sourceUrl": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2020-statement-of-financial-information.pdf",
       "status": "held-for-review",
       "category": "employee-remuneration",
-      "reason": "The scanned/OCR schedule did not reconcile under the reviewed text parser. Complete positioned OCR and row-by-row page review are needed before acceptance; no records imported."
+      "reason": "Earlier audit: The scanned/OCR schedule did not reconcile under the reviewed text parser. Complete positioned OCR and row-by-row page review are needed before acceptance; no records imported. Follow-up: OCR discovery is complete on all 33 physical pages, with 21 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "notes": [
+        "Original audit blocker: The scanned/OCR schedule did not reconcile under the reviewed text parser. Complete positioned OCR and row-by-row page review are needed before acceptance; no records imported.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/nanaimo-2020-employees-held.json.gzip"
+      ],
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous."
     },
     {
       "id": "campbell-river-2024-held",
@@ -1555,8 +1560,13 @@
       "year": "2024",
       "sourceUrl": "https://www.campbellriver.ca/media/file/2024-sofi-reportpdf",
       "status": "held-for-review",
-      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
-      "sha256": "00952ec1a32c8e5d7ff09d2fa7492a35677e121af0519f4dd45f814b2e89a66c"
+      "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 17 physical pages, with 7 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "sha256": "00952ec1a32c8e5d7ff09d2fa7492a35677e121af0519f4dd45f814b2e89a66c",
+      "notes": [
+        "Original audit blocker: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/campbell-river-2024-held.json.gzip"
+      ],
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous."
     },
     {
       "id": "gold-river-2024-held",
@@ -1565,8 +1575,13 @@
       "year": "2024",
       "sourceUrl": "https://goldriver.ca/wp-content/uploads/2025/08/2024-SOFI-Signed.pdf",
       "status": "held-for-review",
-      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
-      "sha256": "a250f7137ea3446f520d0443374bbf48f4b979422a658ae8c9aac4fff5915b49"
+      "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 8 physical pages, with 2 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "sha256": "a250f7137ea3446f520d0443374bbf48f4b979422a658ae8c9aac4fff5915b49",
+      "notes": [
+        "Original audit blocker: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/gold-river-2024-held.json.gzip"
+      ],
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous."
     },
     {
       "id": "lantzville-2024-held",
@@ -1575,8 +1590,13 @@
       "year": "2024",
       "sourceUrl": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7134.pdf",
       "status": "held-for-review",
-      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
-      "sha256": "a8459d11923535960bc8a780791b17a2f4bedca613200668b9c4153e5f73428a"
+      "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 9 physical pages, with 3 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "sha256": "a8459d11923535960bc8a780791b17a2f4bedca613200668b9c4153e5f73428a",
+      "notes": [
+        "Original audit blocker: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/lantzville-2024-held.json.gzip"
+      ],
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous."
     },
     {
       "id": "metchosin-2024-held",
@@ -1585,8 +1605,13 @@
       "year": "2024",
       "sourceUrl": "https://www.metchosin.ca/sites/7/files/2025-06/2024%20SOFI.pdf",
       "status": "held-for-review",
-      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
-      "sha256": "fafbac8e845e7bd68ab98a198b49e873eae26a73e3e81135c21d5fa543a8d63b"
+      "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 43 physical pages, with 7 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "sha256": "fafbac8e845e7bd68ab98a198b49e873eae26a73e3e81135c21d5fa543a8d63b",
+      "notes": [
+        "Original audit blocker: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/metchosin-2024-held.json.gzip"
+      ],
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous."
     },
     {
       "id": "sayward-2024-held",
@@ -1595,8 +1620,13 @@
       "year": "2024",
       "sourceUrl": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2024%20SOFI%20Package%20-%20signed.pdf",
       "status": "held-for-review",
-      "reason": "Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
-      "sha256": "03d0899a20d184af02094d0832a07d52294affe955737d9cdac9d6060a5475e2"
+      "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 8 physical pages, with 2 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "sha256": "03d0899a20d184af02094d0832a07d52294affe955737d9cdac9d6060a5475e2",
+      "notes": [
+        "Original audit blocker: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/sayward-2024-held.json.gzip"
+      ],
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous."
     },
     {
       "id": "cumberland-2024-held",
@@ -1615,8 +1645,13 @@
       "year": "2024",
       "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2024-Statement-of-Financial-Information-SOFI.pdf",
       "status": "held-for-review",
-      "reason": "Downloaded original has mixed scanned and text pages; complete salary-table extraction and control checks remain pending.",
-      "sha256": "1a213de87d6a80855302aaf72c881e376185090cb618acc4fa1399745152c527"
+      "reason": "Earlier audit: Downloaded original has mixed scanned and text pages; complete salary-table extraction and control checks remain pending. Follow-up: OCR discovery is complete on all 45 physical pages, with 14 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "sha256": "1a213de87d6a80855302aaf72c881e376185090cb618acc4fa1399745152c527",
+      "notes": [
+        "Original audit blocker: Downloaded original has mixed scanned and text pages; complete salary-table extraction and control checks remain pending.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/north-saanich-2024-held.json.gzip"
+      ],
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous."
     },
     {
       "id": "lake-cowichan-2024-held",
