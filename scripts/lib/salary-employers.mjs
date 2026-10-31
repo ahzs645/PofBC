@@ -79,3 +79,10 @@ export const sectorOf = (sector) => [
   [/crown/i, 'Crown corporations'], [/health/i, 'Health authorities'], [/school/i, 'School districts'],
   [/universit|college/i, 'Universities and colleges'], [/police/i, 'Municipal police'], [/government/i, 'Government']
 ].find(([pattern]) => pattern.test(sector))?.[1] ?? sector
+
+// The compilation files every municipality under "Government", beside the provincial public service.
+// Cities, districts, towns, villages and townships, the island municipality of Bowen Island and the
+// Metro Vancouver regional district are local government, whatever sector their source gave.
+const MUNICIPAL = /^(?:city|district|town|township|village|corporation-of-the-(?:city|district|township|village))-of-|^(?:bowen-island|langley-township|metro-vancouver)$/
+export const isMunicipal = (slug) => MUNICIPAL.test(canonicalSlug(slug))
+export const employerSector = (slug, sector) => isMunicipal(slug) ? 'Municipalities' : sector

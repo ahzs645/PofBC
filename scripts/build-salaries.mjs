@@ -8,7 +8,7 @@ import { gzipSync, gunzipSync } from 'node:zlib'
 import { surnameShard } from '../src/salaries/people.js'
 import { titleKey, titleShard } from '../src/salaries/positions.js'
 import { pooledGrowth, stayerRaises, typicalRaise } from '../src/salaries/growth.js'
-import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSlug, sectorOf } from './lib/salary-employers.mjs'
+import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSector, employerSlug, sectorOf } from './lib/salary-employers.mjs'
 import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 
@@ -40,7 +40,7 @@ const sources = { [sourceId]: {
 const employerInfo = new Map()
 const remember = (slug, info) => {
   slug = canonicalSlug(slug)
-  if (!employerInfo.has(slug)) employerInfo.set(slug, { slug, names: [], body: info.body ?? null, sector: info.sector ?? 'Crown corporations' })
+  if (!employerInfo.has(slug)) employerInfo.set(slug, { slug, names: [], body: info.body ?? null, sector: employerSector(slug, info.sector ?? 'Crown corporations') })
   const existing = employerInfo.get(slug)
   existing.names = [...new Set([...existing.names, ...(info.names ?? [])])].sort()
   if (!existing.body && info.body) existing.body = info.body

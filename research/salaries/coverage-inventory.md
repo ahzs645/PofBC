@@ -30,30 +30,30 @@ The three count columns are the original compiled edition labels. Official repla
 | BC Clinical and Support Services Society | Health authorities | 346 | — | — | 2016/17–2017/18 | None | — |
 | BC Hydro and Power Authority | Crown corporations | 4,841 | 5,374 | 6,405 | 2012/13–2023/24 | None | 2010/11 source found; extraction pending; 2011/12 source found; extraction pending; 2024/25 held |
 | BCIT | Universities and colleges | 970 | 1,246 | 1,435 | 2014/15, 2016/17–2018/19, 2020/21–2024/25 | None | 2013/14 source found; extraction pending |
-| Bowen Island | Government | 17 | 16 | 22 | None | 2017/18, 2020/21, 2023/24 | — |
+| Bowen Island | Municipalities | 17 | 16 | 22 | None | 2017/18, 2020/21, 2023/24 | — |
 | Burnaby school district | School districts | 1,038 | 1,247 | 1,449 | None | 2017/18, 2020/21, 2023/24 | — |
 | Camosun College | Universities and colleges | 438 | 496 | 515 | None | 2017/18, 2020/21, 2023/24 | — |
 | Capilano University | Universities and colleges | 250 | 370 | 436 | None | 2017/18, 2020/21, 2023/24 | — |
 | Central Saanich Police | Municipal police | — | — | 29 | None | 2023/24 | — |
 | Chilliwack school district | School districts | 538 | 656 | 910 | None | 2017/18, 2020/21, 2023/24 | — |
-| City of Abbotsford | Government | 309 | 351 | — | None | 2017/18, 2020/21 | — |
-| City of Burnaby | Government | 822 | 901 | 1,417 | None | 2017/18, 2020/21, 2023/24 | — |
-| City of Chilliwack | Government | 160 | 166 | — | None | 2017/18, 2020/21 | — |
-| City of Coquitlam | Government | 446 | 546 | 670 | None | 2017/18, 2020/21, 2023/24 | — |
-| City of Kamloops | Government | 340 | — | — | None | 2017/18 | — |
-| City of Maple Ridge | Government | 398 | 223 | 267 | None | 2017/18, 2020/21, 2023/24 | 2017/18: 197 duplicate-looking extras |
-| City of Nelson | Government | 51 | — | — | None | 2017/18 | — |
-| City of New Westminster | Government | 277 | 303 | 331 | None | 2017/18, 2020/21, 2023/24 | — |
-| City of North Vancouver | Government | — | 267 | 337 | None | 2020/21, 2023/24 | — |
-| City of Pitt Meadows | Government | 48 | 52 | 76 | None | 2017/18, 2020/21, 2023/24 | — |
-| City of Port Coquitlam | Government | 177 | 184 | 226 | None | 2017/18, 2020/21, 2023/24 | — |
-| City of Port Moody | Government | 89 | 158 | 165 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of Abbotsford | Municipalities | 309 | 351 | — | None | 2017/18, 2020/21 | — |
+| City of Burnaby | Municipalities | 822 | 901 | 1,417 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of Chilliwack | Municipalities | 160 | 166 | — | None | 2017/18, 2020/21 | — |
+| City of Coquitlam | Municipalities | 446 | 546 | 670 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of Kamloops | Municipalities | 340 | — | — | None | 2017/18 | — |
+| City of Maple Ridge | Municipalities | 398 | 223 | 267 | None | 2017/18, 2020/21, 2023/24 | 2017/18: 197 duplicate-looking extras |
+| City of Nelson | Municipalities | 51 | — | — | None | 2017/18 | — |
+| City of New Westminster | Municipalities | 277 | 303 | 331 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of North Vancouver | Municipalities | — | 267 | 337 | None | 2020/21, 2023/24 | — |
+| City of Pitt Meadows | Municipalities | 48 | 52 | 76 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of Port Coquitlam | Municipalities | 177 | 184 | 226 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of Port Moody | Municipalities | 89 | 158 | 165 | None | 2017/18, 2020/21, 2023/24 | — |
 | City of Prince George | Municipalities | — | — | — | 2019–2022, 2024–2025 | None | 2023 held |
-| City of Richmond | Government | 846 | 882 | 1,080 | None | 2017/18, 2020/21, 2023/24 | — |
-| City of Surrey | Government | 1,080 | 1,283 | 1,384 | None | 2017/18, 2020/21, 2023/24 | — |
-| City of Vancouver | Government | — | 11 | 11 | 2008–2025 | 2020/21, 2023/24 | 2020/21 mayor/council only; 2023/24 mayor/council only |
-| City of Victoria | Government | 364 | 468 | 471 | None | 2017/18, 2020/21, 2023/24 | — |
-| City of White Rock | Government | 79 | 89 | 82 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of Richmond | Municipalities | 846 | 882 | 1,080 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of Surrey | Municipalities | 1,080 | 1,283 | 1,384 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of Vancouver | Municipalities | — | 11 | 11 | 2008–2025 | 2020/21, 2023/24 | 2020/21 mayor/council only; 2023/24 mayor/council only |
+| City of Victoria | Municipalities | 364 | 468 | 471 | None | 2017/18, 2020/21, 2023/24 | — |
+| City of White Rock | Municipalities | 79 | 89 | 82 | None | 2017/18, 2020/21, 2023/24 | — |
 | Coast Mountain College | Universities and colleges | — | 89 | 124 | None | 2020/21, 2023/24 | — |
 | College of New Caledonia | Universities and colleges | 212 | 258 | 312 | None | 2017/18, 2020/21, 2023/24 | — |
 | College of the Rockies | Universities and colleges | 122 | 129 | 154 | None | 2017/18, 2020/21, 2023/24 | — |
@@ -65,12 +65,12 @@ The three count columns are the original compiled edition labels. Official repla
 | Delta police | Municipal police | 209 | 218 | 234 | None | 2017/18, 2020/21, 2023/24 | — |
 | Delta school district | School districts | 78 | 813 | 1,013 | None | 2017/18, 2020/21, 2023/24 | — |
 | Destination B.C. | Crown corporations | — | 41 | 68 | None | 2020/21, 2023/24 | — |
-| District of Delta | Government | 386 | 462 | 575 | None | 2017/18, 2020/21, 2023/24 | — |
-| District of Mission | Government | 99 | 108 | — | None | 2017/18, 2020/21 | — |
-| District of North Vancouver | Government | 361 | 411 | 535 | None | 2017/18, 2020/21, 2023/24 | — |
-| District of Oak Bay | Government | — | 66 | 89 | None | 2020/21, 2023/24 | — |
-| District of Saanich | Government | 326 | 383 | 537 | None | 2017/18, 2020/21, 2023/24 | — |
-| District of West Vancouver | Government | 334 | 419 | 486 | None | 2017/18, 2020/21, 2023/24 | — |
+| District of Delta | Municipalities | 386 | 462 | 575 | None | 2017/18, 2020/21, 2023/24 | — |
+| District of Mission | Municipalities | 99 | 108 | — | None | 2017/18, 2020/21 | — |
+| District of North Vancouver | Municipalities | 361 | 411 | 535 | None | 2017/18, 2020/21, 2023/24 | — |
+| District of Oak Bay | Municipalities | — | 66 | 89 | None | 2020/21, 2023/24 | — |
+| District of Saanich | Municipalities | 326 | 383 | 537 | None | 2017/18, 2020/21, 2023/24 | — |
+| District of West Vancouver | Municipalities | 334 | 419 | 486 | None | 2017/18, 2020/21, 2023/24 | — |
 | Douglas College | Universities and colleges | 508 | 571 | 678 | None | 2017/18, 2020/21, 2023/24 | — |
 | EmilyCarr | Universities and colleges | 108 | 120 | 170 | None | 2017/18, 2020/21, 2023/24 | — |
 | First Peoples’ Heritage, Language and Culture Council | Crown corporations | — | 10 | 28 | None | 2020/21, 2023/24 | — |
@@ -88,12 +88,12 @@ The three count columns are the original compiled edition labels. Official repla
 | Knowledge Network | Crown corporations | — | 24 | 28 | None | 2020/21, 2023/24 | — |
 | Kwantlen Polytechnic University | Universities and colleges | 656 | 748 | 914 | None | 2017/18, 2020/21, 2023/24 | — |
 | Langara College | Universities and colleges | 476 | 630 | 891 | None | 2017/18, 2020/21, 2023/24 | — |
-| Langley City | Government | 70 | 70 | 79 | None | 2017/18, 2020/21, 2023/24 | — |
+| Langley City | Municipalities | 70 | 70 | 79 | None | 2017/18, 2020/21, 2023/24 | — |
 | Langley school district | School districts | 723 | 936 | 1,439 | None | 2017/18, 2020/21, 2023/24 | — |
 | Legal Services Society | Crown corporations | 49 | 63 | 68 | None | 2017/18, 2020/21, 2023/24 | — |
 | Liquor Distribution Branch | Crown corporations | — | 321 | 666 | None | 2020/21, 2023/24 | — |
 | Maple Ridge/Pitt Meadows school district | School districts | 635 | 755 | — | None | 2017/18, 2020/21 | — |
-| Metro Vancouver | Government | 1,313 | 1,205 | 1,639 | None | 2017/18, 2020/21, 2023/24 | — |
+| Metro Vancouver | Municipalities | 1,313 | 1,205 | 1,639 | None | 2017/18, 2020/21, 2023/24 | — |
 | Metro Vancouver Transit Police | Municipal police | 182 | — | — | None | 2017/18 | — |
 | Mission school district | School districts | 263 | 295 | 423 | None | 2017/18, 2020/21, 2023/24 | — |
 | Nelson Police | Municipal police | 27 | — | — | None | 2017/18 | — |
@@ -123,7 +123,7 @@ The three count columns are the original compiled edition labels. Official repla
 | Surrey school district | School districts | 2,628 | 3,352 | 4,534 | None | 2017/18, 2020/21, 2023/24 | — |
 | Technical Safety B.C. | Crown corporations | 67 | — | 359 | None | 2017/18, 2023/24 | — |
 | Thompson Rivers University | Universities and colleges | 281 | 671 | 795 | None | 2017/18, 2020/21, 2023/24 | — |
-| Township of Langley | Government | 364 | 400 | 487 | None | 2017/18, 2020/21, 2023/24 | — |
+| Township of Langley | Municipalities | 364 | 400 | 487 | None | 2017/18, 2020/21, 2023/24 | — |
 | Transit police | Municipal police | 156 | 209 | 233 | None | 2017/18, 2020/21, 2023/24 | — |
 | Translink | Crown corporations | 3,237 | 4,043 | 5,184 | None | 2017/18, 2020/21, 2023/24 | — |
 | Transportation Investment Corporation | Crown corporations | — | 47 | 160 | None | 2020/21, 2023/24 | — |
@@ -138,9 +138,9 @@ The three count columns are the original compiled edition labels. Official repla
 | Vancouver police (VPD) | Municipal police | 1,532 | 1,604 | 1,672 | None | 2017/18, 2020/21, 2023/24 | 2017/18: 2 duplicate-looking extras; 2020/21: 2 duplicate-looking extras; 2023/24: 1 duplicate-looking extras |
 | Vancouver school district | School districts | 2,312 | 2,629 | 3,187 | None | 2017/18, 2020/21, 2023/24 | — |
 | Victoria police | Municipal police | 294 | 270 | 232 | None | 2017/18, 2020/21, 2023/24 | — |
-| Village of Anmore | Government | 12 | 20 | 8 | None | 2017/18, 2020/21, 2023/24 | — |
-| Village of Belcarra | Government | 13 | — | 12 | None | 2017/18, 2023/24 | — |
-| Village of Lions Bay | Government | 14 | 14 | — | None | 2017/18, 2020/21 | — |
+| Village of Anmore | Municipalities | 12 | 20 | 8 | None | 2017/18, 2020/21, 2023/24 | — |
+| Village of Belcarra | Municipalities | 13 | — | 12 | None | 2017/18, 2023/24 | — |
+| Village of Lions Bay | Municipalities | 14 | 14 | — | None | 2017/18, 2020/21 | — |
 | West Vancouver school district | School districts | 282 | 319 | 389 | None | 2017/18, 2020/21, 2023/24 | — |
 | Worksafe B.C. | Crown corporations | 1,876 | 2,204 | 2,768 | None | 2017/18, 2020/21, 2023/24 | — |
 
