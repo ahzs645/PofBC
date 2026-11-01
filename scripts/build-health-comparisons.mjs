@@ -17,7 +17,9 @@ const labels = { boards: 'Regional boards', councils: 'Councils and related labe
 function drawable(feature) {
   const normalized = forSphericalDrawing({ type: 'Feature', ...feature })
   const path = projection.path(normalized)
-  const bounds = projection.path.bounds(normalized)
+  // V8/Node versions can differ by ~1e-12 in projected screen coordinates.
+  // Stabilize display extents without changing geographic data or scores.
+  const bounds = projection.path.bounds(normalized).map((point) => point.map((value) => Number(value.toFixed(6))))
   if (!path || /NaN|Infinity/.test(path) || !bounds.flat().every(Number.isFinite)) throw new Error(`Invalid drawable: ${feature.properties.code}`)
   return { code: String(feature.properties.code), name: feature.properties.name, path, bounds }
 }
