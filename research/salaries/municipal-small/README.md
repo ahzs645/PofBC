@@ -1,5 +1,10 @@
 # Reviewed small municipal schedules
 
+**OCR recovery:** [A separate reviewed collection](../municipal-ocr/README.md)
+now accepts Clinton, Fruitvale, Logan Lake, Salmo and Telkwa schedules, plus
+Creston's council. Creston's employees and New Hazelton's reporting period remain
+held. The older remaining-scan list below describes the original audit state.
+
 **Subsequent source decision:** Montrose's three 2023 employee rows are now
 accepted with a visible warning about the unresolved $36 expense discrepancy.
 Remuneration reconciles exactly and individual published cells are unchanged.

@@ -833,68 +833,16 @@
       "sourceUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
       "sourceIndexUrl": "https://www.creston.ca/statement-financial-information",
       "sha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
-      "status": "requires-ocr",
+      "status": "held-for-review",
       "category": "employee-remuneration",
       "pdfPages": 42,
-      "reason": "The retrieved original has no extractable text. Its named schedules require OCR, independent row review and monetary controls before import.",
-      "nextAction": "Transcribe and independently verify the named employee and council schedules; check their reporting years before accepting any rows.",
+      "reason": "Council is now accepted separately. Candidate employee transcription totals $2,685,206 remuneration and $61,034 expenses versus printed $2,685,008 / $61,044. These are not established issuer discrepancies: remaining ambiguous monetary/name glyphs still need resolution from the original or an electronic file.",
+      "nextAction": "Obtain an existing employee spreadsheet or higher-quality scan, resolve ambiguous glyphs, and independently recheck every named employee field and control. Do not infer a cell from the difference to a total.",
       "notes": [
         "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
-        "The cover/checklist says year ended December 31, 2024; upload-path years are not used."
-      ]
-    },
-    {
-      "id": "municipal-small-village-of-fruitvale-2023-ocr",
-      "employerSlug": "village-of-fruitvale",
-      "year": "2023",
-      "title": "village-of-fruitvale scanned SOFI requiring transcription",
-      "sourceUrl": "https://fruitvale.ca/wp-content/uploads/2025/04/2023-SOFI-Schedules-and-AFS.pdf",
-      "sourceIndexUrl": "https://fruitvale.ca/services/reports-publications/",
-      "sha256": "4e67b34216aa738cea1cee70443d50b4dbf859dd7feec8771c1284fa5fd453b5",
-      "status": "requires-ocr",
-      "category": "employee-remuneration",
-      "pdfPages": 44,
-      "reason": "The retrieved original has no extractable text. Its named schedules require OCR, independent row review and monetary controls before import.",
-      "nextAction": "Transcribe and independently verify the named employee and council schedules; check their reporting years before accepting any rows.",
-      "notes": [
-        "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
-        "The cover/checklist says year ended December 31, 2023; upload-path years are not used."
-      ]
-    },
-    {
-      "id": "municipal-small-village-of-clinton-2024-ocr",
-      "employerSlug": "village-of-clinton",
-      "year": "2024",
-      "title": "village-of-clinton scanned SOFI requiring transcription",
-      "sourceUrl": "https://village.clinton.bc.ca/wp-content/uploads/2025/06/2024-SOFI-Report_001.pdf",
-      "sourceIndexUrl": "https://village.clinton.bc.ca/local-government/village-reports-plans/financial-reports/",
-      "sha256": "5e5a1a1e410bd9c9b53db47c96085111c7f8dfe72d136c0c97f6c3ea75c19a53",
-      "status": "requires-ocr",
-      "category": "employee-remuneration",
-      "pdfPages": 10,
-      "reason": "The retrieved original has no extractable text. Its named schedules require OCR, independent row review and monetary controls before import.",
-      "nextAction": "Transcribe and independently verify the named employee and council schedules; check their reporting years before accepting any rows.",
-      "notes": [
-        "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
-        "The cover/checklist says year ended December 31, 2024; upload-path years are not used."
-      ]
-    },
-    {
-      "id": "municipal-small-district-of-logan-lake-2025-ocr",
-      "employerSlug": "district-of-logan-lake",
-      "year": "2025",
-      "title": "district-of-logan-lake scanned SOFI requiring transcription",
-      "sourceUrl": "https://loganlake.ca//wp-content/uploads/2026/05/SOFI-2025.pdf",
-      "sourceIndexUrl": "https://loganlake.ca/your-municipality/finance-department/",
-      "sha256": "f3c247274e30a55c54e1217b571ca0af6ec8d42a84959f402bf70f81f0f2d443",
-      "status": "requires-ocr",
-      "category": "employee-remuneration",
-      "pdfPages": 45,
-      "reason": "The retrieved original has no extractable text. Its named schedules require OCR, independent row review and monetary controls before import.",
-      "nextAction": "Transcribe and independently verify the named employee and council schedules; check their reporting years before accepting any rows.",
-      "notes": [
-        "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
-        "The cover/checklist says year ended December 31, 2025; upload-path years are not used."
+        "The cover/checklist says year ended December 31, 2024; upload-path years are not used.",
+        "Original audit blocker: Council is now accepted separately. Candidate employee transcription totals $2,685,206 remuneration and $61,034 expenses versus printed $2,685,008 / $61,044. These are not established issuer discrepancies: remaining ambiguous monetary/name glyphs still need resolution from the original or an electronic file.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/municipal-small-town-of-creston-2024-ocr.json.gzip"
       ]
     },
     {
@@ -908,47 +856,13 @@
       "status": "held-for-review",
       "category": "employee-remuneration",
       "pdfPages": 14,
-      "reason": "The retrieved original has no extractable text. Its named schedules require OCR, independent row review and monetary controls before import.",
+      "reason": "The attachment filename says 2023 but the first remuneration schedule says SOFI 2022. OCR discovery is now complete; the conflicting period evidence remains unresolved.",
       "nextAction": "Transcribe and independently verify the named employee and council schedules; check their reporting years before accepting any rows.",
       "notes": [
         "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
-        "The URL filename says SOFI 2023, but the first page is a remuneration schedule headed SOFI 2022. Resolve the mixed reporting-year evidence before assigning a period."
-      ]
-    },
-    {
-      "id": "municipal-small-village-of-salmo-2024-ocr",
-      "employerSlug": "village-of-salmo",
-      "year": "2024",
-      "title": "village-of-salmo scanned SOFI requiring transcription",
-      "sourceUrl": "https://salmo.ca/wp-content/uploads/2025/06/2024-SOFI-Fully-Signed-Salmo.pdf",
-      "sourceIndexUrl": "https://salmo.ca/council/reports-links/",
-      "sha256": "cff1c46b5d93abccf5a234027b0192c4c8cc16d590a0fd48784245181fca9cb3",
-      "status": "requires-ocr",
-      "category": "employee-remuneration",
-      "pdfPages": 34,
-      "reason": "The retrieved original has no extractable text. Its named schedules require OCR, independent row review and monetary controls before import.",
-      "nextAction": "Transcribe and independently verify the named employee and council schedules; check their reporting years before accepting any rows.",
-      "notes": [
-        "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
-        "The cover/checklist says year ended December 31, 2024; upload-path years are not used."
-      ]
-    },
-    {
-      "id": "municipal-small-village-of-telkwa-2023-ocr",
-      "employerSlug": "village-of-telkwa",
-      "year": "2023",
-      "title": "village-of-telkwa scanned SOFI requiring transcription",
-      "sourceUrl": "https://www.telkwa.ca/_files/ugd/a93d86_9cb18efc53314bc9bb222bbea5b1e183.pdf",
-      "sourceIndexUrl": "https://www.telkwa.ca/reports-and-budgets",
-      "sha256": "933208862dda20c2ebe281cc149973088f98e7084a6f780a86a5bb6a776e5d71",
-      "status": "requires-ocr",
-      "category": "employee-remuneration",
-      "pdfPages": 39,
-      "reason": "The retrieved original has no extractable text. Its named schedules require OCR, independent row review and monetary controls before import.",
-      "nextAction": "Transcribe and independently verify the named employee and council schedules; check their reporting years before accepting any rows.",
-      "notes": [
-        "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
-        "The cover/checklist says year ended December 31, 2023; upload-path years are not used."
+        "The URL filename says SOFI 2023, but the first page is a remuneration schedule headed SOFI 2022. Resolve the mixed reporting-year evidence before assigning a period.",
+        "Original audit blocker: The retrieved original has no extractable text. Its named schedules require OCR, independent row review and monetary controls before import.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/municipal-small-district-of-new-hazelton-year-review-ocr.json.gzip"
       ]
     }
   ]

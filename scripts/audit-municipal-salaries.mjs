@@ -20,7 +20,7 @@ const roster = read(join(out, 'roster.json'))
 const baseline = read(join(out, 'baseline.json'))
 const coverage = read(join(root, 'public/salaries/coverage.json'))
 const index = read(join(root, 'public/salaries/index.json'))
-const additions = ['municipal-north', 'municipal-island', 'municipal-lower-mainland', 'municipal-small']
+const additions = ['municipal-north', 'municipal-island', 'municipal-lower-mainland', 'municipal-small', 'municipal-ocr']
 const rosterSlugs = new Set(roster.municipalities.map(r => canonicalSlug(r.employerSlug)))
 if (rosterSlugs.size !== 162 || roster.municipalities.filter(r => r.status !== 'pending-incorporation').length !== 161) throw new Error('Reviewed municipal roster changed')
 const accepted = []
@@ -38,7 +38,7 @@ for (const collection of read(join(research, 'collections.json')).collections) {
     accepted.push({ collection, id: source.id, employerSlug: canonicalSlug(source.employerSlug), year: source.year,
       category: source.category ?? source.scope, rows: rows.length, namedRows: rows.filter(r => r[1]).length,
       sourceUrl: source.sourceUrl, sourceIndexUrl: source.sourceIndexUrl, sourceSha256: source.sha256,
-      dataSha256: source.dataSha256, notes: source.notes ?? [], validation: source.validation ?? {} })
+      dataSha256: source.dataSha256, notes: source.notes ?? [], publicWarning: source.publicWarning ?? null, validation: source.validation ?? {} })
   }
   if (additions.includes(collection)) collections.push({ collection, sources: municipal.length,
     reportYears: new Set(municipal.map(s => `${canonicalSlug(s.employerSlug)}|${s.year}`)).size,
