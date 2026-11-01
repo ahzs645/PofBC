@@ -1,0 +1,55 @@
+{
+  "auditDate": "2026-10-31",
+  "auditTimeZone": "America/Vancouver",
+  "status": "staged-for-independent-integration-review",
+  "manifests": [
+    {
+      "file": "research/salaries/municipal-history-north/sources.json",
+      "sha256": "51dacbabf69316b39e47486762fdb5a7bc35f69485846b176b40b0a43a8f088a",
+      "cohorts": 28,
+      "rows": 1121
+    },
+    {
+      "file": "research/salaries/municipal-history-north/supplemental/sources.json",
+      "sha256": "48273436338be0ab2a299a68193abf2fdfe61567839ded2fda8ed15f7d90cc92",
+      "cohorts": 2,
+      "rows": 3
+    },
+    {
+      "file": "research/salaries/municipal-history-north/council/sources.json",
+      "sha256": "3067b9cff2e6e0af4cce5c2808f0cffae0eb2ae097814e41eaaef42bd8570c2e",
+      "cohorts": 30,
+      "rows": 225
+    }
+  ],
+  "cohorts": 60,
+  "records": 1349,
+  "employeeRecords": 1124,
+  "councilRecords": 225,
+  "employers": [
+    "city-of-dawson-creek",
+    "city-of-williams-lake",
+    "district-of-chetwynd",
+    "northern-rockies-regional-municipality",
+    "village-of-hazelton",
+    "village-of-port-clements"
+  ],
+  "newOfficialJurisdictions": [
+    "village-of-hazelton",
+    "village-of-port-clements"
+  ],
+  "queueTasks": 49,
+  "queueByRoute": {
+    "clarification-request": 3,
+    "processing": 15,
+    "public-archive-research": 31
+  },
+  "tests": {
+    "script": "scripts/test_history_north.py",
+    "passed": 14
+  },
+  "reproducer": "scripts/parse_history_north.py",
+  "originalCache": "/tmp/pofbc-history-north",
+  "frozenEarlierBinaryChanges": 0,
+  "externalMessagesOrRequestsSent": false
+}

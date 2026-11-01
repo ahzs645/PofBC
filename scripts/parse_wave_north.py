@@ -136,6 +136,21 @@ def build(cache, fetch=False, check_data=False):
             pay, exp = [dollars(total - control) for total, control in zip(totals, report['controlsCents'])]
             warning = (f'Known named-row sums minus source controls: remuneration ${pay:+,.2f}; expenses ${exp:+,.2f}. '
                        'Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.')
+        named_controls = controls
+        broader_expense = None
+        if report.get('expenseControlScope') == 'all-employees-under-threshold-unknown':
+            # A blank under-threshold expense cell cannot be subtracted as zero.
+            # Keep the prior numeric comparison, while correcting its scope.
+            named_controls = [control for control in controls if control['field'] != 'expenses']
+            comparison = next(control for control in controls if control['field'] == 'expenses')
+            broader_expense = {**comparison, 'scope': 'Printed all-employee expense control versus known named employee cells',
+                               'underThresholdExpenses': None, 'namedOnlyControlAvailable': False,
+                               'residualInterpretation': 'Difference between different scopes; no zero under-threshold expense is inferred.'}
+            pay_residual = named_controls[0]['residual']
+            warning = (f'Named remuneration cells minus their derived pay control: ${pay_residual:+,.2f}. '
+                       f"Known named employee expenses total ${comparison['rowSum']:,.2f}; the printed all-employee expense control is ${comparison['printedControl']:,.2f} "
+                       f"(difference ${comparison['residual']:+,.2f}). The under-threshold expense cell is blank, so a named-only expense control is unavailable. "
+                       'The expense comparison has broader scope and does not establish an exact named expense reconciliation. Published individual values are unchanged; no zero or cause is inferred.')
         source = {'id': source_id, 'employerSlug': report['employerSlug'], 'employerName': report['employerName'], 'sector': 'Municipalities',
                   'year': report['year'], 'periodType': 'calendar', 'periodStart': report['year'] + '-01-01', 'periodEnd': report['year'] + '-12-31',
                   'category': report['category'], 'scope': report['category'], 'file': filename, 'sha256': report['sha256'], 'dataSha256': sha(data),
@@ -148,10 +163,14 @@ def build(cache, fetch=False, check_data=False):
                   'verifiedOn': '2026-10-31',
                   'notes': report['notes'], 'validation': {'method': 'Complete name/position-or-department/pay/expense/page agreement between two native-text readers',
                   'bothReadersAgree': True, 'renderedEdgeAndControlPagesReviewed': sorted(set([s[0] for s in report['sections']] + report['controlPages'])),
-                  'internalPeriodEvidencePages': report['periodEvidencePages'], 'printedControls': controls,
+                  'internalPeriodEvidencePages': report['periodEvidencePages'], 'printedControls': named_controls,
                   'controlPages': report['controlPages'], 'evidenceFile': evidence_file, 'evidenceSha256': sha((OUT / evidence_file).read_bytes())}}
         if warning:
             source['publicWarning'] = warning
+        if broader_expense:
+            source['validation']['namedExpenseControlAvailable'] = False
+            source['validation']['broaderControlComparisons'] = [broader_expense]
+            source['validation']['controlScopeAmendment'] = 'research/salaries/municipal-history-pass/corrections/north-expense-scope/corrections.json'
         if report['category'] == 'employee-remuneration':
             source['completeEmployeeSchedule'] = True
         if report['employerSlug'] == 'city-of-dawson-creek' and report['category'] == 'employee-remuneration':

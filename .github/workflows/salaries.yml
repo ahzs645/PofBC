@@ -59,9 +59,11 @@ jobs:
           npm run follow-up:municipal-salaries
           npm run review:sector-salaries
           npm run review:municipal-wave
+          npm run review:municipal-history
           git diff --exit-code -- public/salaries src/government/salaryIndex.js research/salaries/coverage-inventory.md research/salaries/source-inventory.md research/salaries/municipal-audit/coverage.json research/salaries/municipal-audit/coverage.md research/salaries/municipal-audit/follow-up.json research/salaries/municipal-audit/follow-up.csv research/salaries/municipal-audit/follow-up.md research/salaries/municipal-corrections
           git diff --exit-code -- research/salaries/sector-search-2026-10-31
           git diff --exit-code -- research/salaries/municipal-next-pass
+          git diff --exit-code -- research/salaries/municipal-history-pass research/salaries/release-amendments.json
           test -z "$(git ls-files --others --exclude-standard -- public/salaries research/salaries)"
       - name: Build the salary interface preview
         run: npm run preview:salaries -- --build

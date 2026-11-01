@@ -77,7 +77,9 @@ def extract(words, section):
         if abs(centers[at] - y) > section.get('maxRowDistance', 16):
             raise ValueError(f"Unassigned schedule text: {word[4]!r}")
         for field, (left, right) in columns.items():
-            if left <= x < right and word[4] not in ('$', 's', 'A', '_$_', 'A_', '_'):
+            if left <= x < right:
+                if field not in ('name', 'position', 'department') and word[4] in section.get('reviewedCurrencyTokens', ['$']):
+                    continue
                 groups[at][field].append(word)
     rows = []
     for group in groups:
@@ -92,7 +94,9 @@ def extract(words, section):
                 else:
                     lines.append((cy, [word]))
             text = ' '.join(w[4] for _, line in lines for w in sorted(line, key=lambda w: w[0])).strip()
-            if field in ('name', 'position'):
+            if field in ('name', 'position', 'department'):
+                if re.search(r'[$€£]', text):
+                    raise ValueError(f'Currency crossed into a text column: {field}={text}')
                 values[field] = text or None
             else:
                 values[field] = money(text)

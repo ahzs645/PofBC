@@ -1,0 +1,2868 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "history-north-williams-lake-2011-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2011",
+      "periodType": "calendar",
+      "periodStart": "2011-01-01",
+      "periodEnd": "2011-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2011-council.json.gzip",
+      "dataSha256": "11a33f631c1d72190063958d6f56d121c794d1736e0910151484970ea642f6d7",
+      "sha256": "3caaf17987c4d8fadebeeec44e83a6d2f6e5f614bb75b3a896b650ce9f4bf3e1",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=216",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2011 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 9,
+      "totalRemuneration": 127507.92,
+      "totalExpenses": 31594.56,
+      "pages": [
+        50
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 10,
+            "dpi": 100,
+            "renderedSha256": "e9791a7bf7b4ec8e29d1715df41a9aed99627bf18ab5c9c3957a16af08acba34",
+            "visualText": "FOR THE YEAR ENDED DECEMBER 31, 2011"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 127507.92,
+            "knownCellSum": 127507.92,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 31594.56,
+            "knownCellSum": 31594.56,
+            "residual": 0,
+            "missingCells": 1
+          }
+        ],
+        "printedControlCells": {
+          "page": 50,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 50,
+              "dpi": 100,
+              "renderedSha256": "5bc0f446e0a86f767c900e29c78ff30959165e88d8df4ba128f0f5f0dbb75ba8",
+              "imageFile": "williams-lake-2011-p50.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2011-council.json.gzip",
+        "evidenceSha256": "7fd77425cdf6fb67029e00122698d617c4fdb1de0dad35e35e291b90f1c63558",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2012-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2012",
+      "periodType": "calendar",
+      "periodStart": "2012-01-01",
+      "periodEnd": "2012-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2012-council.json.gzip",
+      "dataSha256": "4932f208cdf954a7adf88e5015ad6d5936c4f8b037a5fe7f5d9b174118c0934e",
+      "sha256": "2a677cbb00af53ee4ec766a27d23f94a7645fa2134ee33b231bbcc7858a25e55",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=217",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2012 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 135127.92,
+      "totalExpenses": 38609.65,
+      "pages": [
+        54
+      ],
+      "nameDisclosure": "not-published",
+      "sourceScopeDescription": "Complete published council Position/pay/expense table. No separate full-name column is published; the complete printed Position label (including any surname) is retained, and name remains null.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 10,
+            "text": "ENDED DECEMBER 31, 2012"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 135127.92,
+            "knownCellSum": 135127.92,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 38609.65,
+            "knownCellSum": 38609.65,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 54,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 54,
+              "dpi": 100,
+              "renderedSha256": "3b3d9d7767d704e8ad4824e8b335b4daf46686013a89b0860dcb42fe722a697f",
+              "imageFile": "williams-lake-2012-p54.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2012-council.json.gzip",
+        "evidenceSha256": "253c95d294bc09ec5472690be3767a142307ff7b4aca95ac2acc527d0dca380a",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "The original council schedule publishes a Position column with Mayor and councillor labels, sometimes including a surname, without a separate full-name column. Name remains missing and the complete printed Position label is retained; full identities are not inferred.",
+      "scopeDescription": "Complete published council Position/pay/expense table. No separate full-name column is published; the complete printed Position label (including any surname) is retained, and name remains null.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2013-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2013",
+      "periodType": "calendar",
+      "periodStart": "2013-01-01",
+      "periodEnd": "2013-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2013-council.json.gzip",
+      "dataSha256": "f9e1a2e535e2bad741c23bf86bdc6f3b5692b30f8062a70df7b519f3086de943",
+      "sha256": "7a44c7c7c11c05090db32a4290a3d1e79ae760e096b9991485bb7a5174486eed",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=265",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2013 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 135127.92,
+      "totalExpenses": 32246.61,
+      "pages": [
+        57
+      ],
+      "nameDisclosure": "not-published",
+      "sourceScopeDescription": "Complete published council Position/pay/expense table. No separate full-name column is published; the complete printed Position label (including any surname) is retained, and name remains null.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 10,
+            "text": "ENDED DECEMBER 31, 2013"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 135127.92,
+            "knownCellSum": 135127.92,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 32246.61,
+            "knownCellSum": 32246.61,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 57,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 57,
+              "dpi": 100,
+              "renderedSha256": "65914ada4964c95ee97b27f1c2bc94589b4b22fd3ef0a017ee8e5520d36ec578",
+              "imageFile": "williams-lake-2013-p57.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2013-council.json.gzip",
+        "evidenceSha256": "8d0cb2ebf9b089c17e8740cc7ad78622791c44fc790bbf87e718c95bf7ae9fe7",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "The original council schedule publishes a Position column with Mayor and councillor labels, sometimes including a surname, without a separate full-name column. Name remains missing and the complete printed Position label is retained; full identities are not inferred.",
+      "scopeDescription": "Complete published council Position/pay/expense table. No separate full-name column is published; the complete printed Position label (including any surname) is retained, and name remains null.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2014-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2014",
+      "periodType": "calendar",
+      "periodStart": "2014-01-01",
+      "periodEnd": "2014-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2014-council.json.gzip",
+      "dataSha256": "884c36d63aa67de40f7a2847f751c6475de4579464842b090e66a0b390a76c55",
+      "sha256": "612ccdfced254d36203b52a3edbf6c2ebddf4612eafd07fee82b5b0ff2d98087",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=314",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2014 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 135127.92,
+      "totalExpenses": 23510.78,
+      "pages": [
+        11
+      ],
+      "nameDisclosure": "not-published",
+      "sourceScopeDescription": "Complete published council Position/pay/expense table. No separate full-name column is published; the complete printed Position label (including any surname) is retained, and name remains null.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 15,
+            "text": "ENDED DECEMBER 31, 2014"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 135127.92,
+            "knownCellSum": 135127.92,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 23510.78,
+            "knownCellSum": 23510.78,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 11,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 11,
+              "dpi": 100,
+              "renderedSha256": "eb97e64b7f86c2ba1f9d6020220c52c9a39e0c0bdf4ddeade6ea283978c45aa1",
+              "imageFile": "williams-lake-2014-p11.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2014-council.json.gzip",
+        "evidenceSha256": "65105e3cac2387298b7a1443439962ce66b4eed357abdfe0c6caaa5069b8a0ff",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "The original council schedule publishes a Position column with Mayor and councillor labels, sometimes including a surname, without a separate full-name column. Name remains missing and the complete printed Position label is retained; full identities are not inferred.",
+      "scopeDescription": "Complete published council Position/pay/expense table. No separate full-name column is published; the complete printed Position label (including any surname) is retained, and name remains null.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2015-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2015",
+      "periodType": "calendar",
+      "periodStart": "2015-01-01",
+      "periodEnd": "2015-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2015-council.json.gzip",
+      "dataSha256": "49176bcb5d2e7ae5c3d4795ad9e0879946989f0733140b40d16863d358933581",
+      "sha256": "6933a9b61a0d8e3f913a7513910f6925e90f141eac6deef38f7519634f5aaee7",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=363",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2015 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 135128,
+      "totalExpenses": 32589,
+      "pages": [
+        29
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled.",
+        "One exact visual correction replaces the embedded-OCR BonneII with the rendered Bonnell. The original image and before/after strings are pinned; no global letter replacement is used."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2015"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 135128,
+            "knownCellSum": 135128,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 32590,
+            "knownCellSum": 32589,
+            "residual": -1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 29,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 29,
+              "dpi": 100,
+              "renderedSha256": "a88fcb26458a765a9f9c6a559a62fc36984bd8ce19166c6cf2bbb1609f0e4955",
+              "imageFile": "williams-lake-2015-p29.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true,
+          "nameCrop": {
+            "file": "williams-lake-2015-name-crop.png",
+            "dpi": 300,
+            "sha256": "a28a1dab7d9cf3937f91e8c8e3d4886b8c1874f9b1ef3f532b2d1934805b0866",
+            "visualText": "Bonnell, I."
+          }
+        },
+        "evidenceFile": "evidence/williams-lake-2015-council.json.gzip",
+        "evidenceSha256": "360f1504bbd5ceec256624d1138d079feb9d1faedfe2b6844763688955f303e9",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay +0 CAD; expenses -1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2016-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2016",
+      "periodType": "calendar",
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2016-council.json.gzip",
+      "dataSha256": "8353af0853d98027c5970875ca3d36525f9879b5590648de0057376f9aad522e",
+      "sha256": "44edb38b8d51be9a6e8f42a3aeae56802e82250b7c0fca6f70c9094b1c3cf33c",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=424",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2016 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 135128,
+      "totalExpenses": 20238,
+      "pages": [
+        57
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2016"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 135128,
+            "knownCellSum": 135128,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 20238,
+            "knownCellSum": 20238,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 57,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 57,
+              "dpi": 100,
+              "renderedSha256": "c7ae16d544ff47bb4e4f9a67635e3e8fe86c652cac88c210050f273ae4576f68",
+              "imageFile": "williams-lake-2016-p57.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2016-council.json.gzip",
+        "evidenceSha256": "a671cb311176fdcccdf67a1bf0a514749af2a574d52085882e3ac401f21bb812",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2017-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2017-council.json.gzip",
+      "dataSha256": "33be19d8518c197e8340aeecc93736e6dba2535639ddf3ba07ae315a6d8e0be7",
+      "sha256": "c9875e96df75f0e6f10b9c0e26df05584772c193f8093979a8c267cdb10906aa",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=473",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2017 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 135128,
+      "totalExpenses": 36226,
+      "pages": [
+        59
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2017"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 135128,
+            "knownCellSum": 135128,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 36226,
+            "knownCellSum": 36226,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 59,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 59,
+              "dpi": 100,
+              "renderedSha256": "7b47d5637933a46c7e058801718cd62ddab1754ddf7bcc97fb1a9c1404568dd8",
+              "imageFile": "williams-lake-2017-p59.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2017-council.json.gzip",
+        "evidenceSha256": "cba023d5bebafb259b6af9912dc05581f482da4e0f3fce34888b8c61c83de830",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2018-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2018-council.json.gzip",
+      "dataSha256": "38457d99d2008f7284906f7172b14f36e29833463ec5dd02f556a05e272f2cbf",
+      "sha256": "1ef62c79d3977fe0913cf4fe49b558e251818cbb06bfd094fe5db8c9ad39257b",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=502",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2018 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 9,
+      "totalRemuneration": 135128,
+      "totalExpenses": 36051,
+      "pages": [
+        57
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2018"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 135128,
+            "knownCellSum": 135128,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 36050,
+            "knownCellSum": 36051,
+            "residual": 1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 57,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 57,
+              "dpi": 100,
+              "renderedSha256": "a704bbc2e5f299df437b824ec58894c05b232d6d3030f9610e877274d0a192d1",
+              "imageFile": "williams-lake-2018-p57.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2018-council.json.gzip",
+        "evidenceSha256": "bb097214b372282441c849646e4673287502e49e9fe20386b5cc81dc61a88492",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay +0 CAD; expenses +1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2019-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2019-council.json.gzip",
+      "dataSha256": "2231c915fcedbdacba2fa00c5fa8b7a2daa2bc60b7c0e415b558bca2c9a5c4a1",
+      "sha256": "3e732f27273e29de5de4c4cc45b5d86e0235cbf1255e50f9709793370f92cdf9",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=537",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2019 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 135128,
+      "totalExpenses": 54491,
+      "pages": [
+        32
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2019"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 135128,
+            "knownCellSum": 135128,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 54491,
+            "knownCellSum": 54491,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 32,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 32,
+              "dpi": 100,
+              "renderedSha256": "e897492be9d757d6d8c676b81f39b88e0ca525c9ea56583b6eebc349a335a342",
+              "imageFile": "williams-lake-2019-p32.png"
+            },
+            {
+              "pdfPage": 33,
+              "dpi": 100,
+              "renderedSha256": "dccd13f3813b956c9a9343eafe6b1efc6d2dcb601c232db279db251e59d80537",
+              "imageFile": "williams-lake-2019-p33.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2019-council.json.gzip",
+        "evidenceSha256": "72ae27733a811cdecbc08eb96204a534025986d24f7b23cea34ae72990ccd2f9",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2020-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2020-council.json.gzip",
+      "dataSha256": "9c23fff688e15cf3be06056dc66ffcf014314d5c11fd6b301e0f584c36fa7694",
+      "sha256": "e0d235dc99806cbed2f3404b38f857e32c6ab03f4b8e082d433e95592f31efe9",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=552",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2020 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 156201,
+      "totalExpenses": 10867,
+      "pages": [
+        26
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2020"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 156204,
+            "knownCellSum": 156201,
+            "residual": -3,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 10865,
+            "knownCellSum": 10867,
+            "residual": 2,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 26,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 26,
+              "dpi": 100,
+              "renderedSha256": "cc549cee3dd6096d0b0d0d6f0b7381cb9a6d6c1eb3b9d532a9c4067a679183a3",
+              "imageFile": "williams-lake-2020-p26.png"
+            },
+            {
+              "pdfPage": 27,
+              "dpi": 100,
+              "renderedSha256": "c3e1863841f3c471f31fa6d6924b920401c02118836066fe112175e7312bb735",
+              "imageFile": "williams-lake-2020-p27.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2020-council.json.gzip",
+        "evidenceSha256": "04b3db19e3fb07af99d39fc7146d9d4913dd4fb48399c40178f8124fe6ec79a7",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay -3 CAD; expenses +2 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2021-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2021-council.json.gzip",
+      "dataSha256": "ef6f0e520053487573e0b66762d1ca83009da7e8c0c87184e52791a39b05a69e",
+      "sha256": "fc1fe9d6c91b1c9af860455fef54452dfabd29e1e150047003c34717e16850d6",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=577",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2021 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 157389,
+      "totalExpenses": 9151,
+      "pages": [
+        26
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2021"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 157391,
+            "knownCellSum": 157389,
+            "residual": -2,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 9151,
+            "knownCellSum": 9151,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 26,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 26,
+              "dpi": 100,
+              "renderedSha256": "bb56781a51ad503d5afcaefb4f460332f15f7667f8e492a45271a899f3636ead",
+              "imageFile": "williams-lake-2021-p26.png"
+            },
+            {
+              "pdfPage": 27,
+              "dpi": 100,
+              "renderedSha256": "38fe1bc1aff351fe91d2d6fbcb8f4225743ea575d9a3f8a81dfafcd2c36e2c01",
+              "imageFile": "williams-lake-2021-p27.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2021-council.json.gzip",
+        "evidenceSha256": "f6d907aea7bbee3ffee98fe316897da4b3e873c1246a04ad562ad0361b17a882",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay -2 CAD; expenses +0 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2022-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2022-council.json.gzip",
+      "dataSha256": "38cd351dd251140a83d69a0d0283166fc0d3a70f27dadb7c855ac5a23b477bce",
+      "sha256": "2eac911cad3bdb0ceabf7bb1ef28ab879beebeefddbe62161c97f3faeac34b6f",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=607",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2022 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 12,
+      "totalRemuneration": 168393,
+      "totalExpenses": 48465,
+      "pages": [
+        27
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2022"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 168391,
+            "knownCellSum": 168393,
+            "residual": 2,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 48465,
+            "knownCellSum": 48465,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 27,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 27,
+              "dpi": 100,
+              "renderedSha256": "550acc5f8927e888bf40002c5249fffcc69cd2b831960065378a3338e53cd0fb",
+              "imageFile": "williams-lake-2022-p27.png"
+            },
+            {
+              "pdfPage": 28,
+              "dpi": 100,
+              "renderedSha256": "b0d756d55dd2fb066d7815c05e1ca33ab3921bd2ff43f6fec2aeba8426889be7",
+              "imageFile": "williams-lake-2022-p28.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2022-council.json.gzip",
+        "evidenceSha256": "ff503c70145ee658958c63a9e8e5e6a2239b9c5586958c2aac02b5bc1f4b75e1",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay +2 CAD; expenses +0 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-williams-lake-2023-council",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "williams-lake-2023-council.json.gzip",
+      "dataSha256": "2d84067a9d809fe8f69993083ea19b7595ce6fd86de7afc9315b1bf9939f2c26",
+      "sha256": "11029c674b2a9eadb99155d0df53e86a255371ef5e00905fd1abf49476667f2f",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=630",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2023 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 203539,
+      "totalExpenses": 69009,
+      "pages": [
+        28
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 203541,
+            "knownCellSum": 203539,
+            "residual": -2,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 69008,
+            "knownCellSum": 69009,
+            "residual": 1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 28,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 28,
+              "dpi": 100,
+              "renderedSha256": "c9be3413361dc3271141dff0153f31354b483c5bda294e676f87008dcc09c44a",
+              "imageFile": "williams-lake-2023-p28.png"
+            },
+            {
+              "pdfPage": 29,
+              "dpi": 100,
+              "renderedSha256": "6e8709cbf66f16d20f29d5c08dc02de0e31eba3c3983db4b0fd69c3049034ae4",
+              "imageFile": "williams-lake-2023-p29.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/williams-lake-2023-council.json.gzip",
+        "evidenceSha256": "49552966c4a7a899f6ba8ad07d33174fee0ca9c67e93f1eefca3b72987d47dca",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay -2 CAD; expenses +1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-nrrm-2015-council",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2015",
+      "periodType": "calendar",
+      "periodStart": "2015-01-01",
+      "periodEnd": "2015-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "nrrm-2015-council.json.gzip",
+      "dataSha256": "601a60904f548c2e8e5960975e2b7533d9c12d75507440752ac3e91fa65974c4",
+      "sha256": "b65136ff68e97b392bfd3cd8dc5720a3dd9fa009a24330aa9e7b5f49275ffcc7",
+      "sourceUrl": "https://nr.civicweb.net/document/112816",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2015 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 179000,
+      "totalExpenses": 76490,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2015"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 179000,
+            "knownCellSum": 179000,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 76490,
+            "knownCellSum": 76490,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 4,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "0f646d6168622fa69d23c90f798cdfc466dd3fc1e73160f7f81da35e128ed173",
+              "imageFile": "nrrm-2015-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "db4deb094ae3db4386024553ffaeb319d703b2739870917679203f4dd214bcbe",
+              "imageFile": "nrrm-2015-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/nrrm-2015-council.json.gzip",
+        "evidenceSha256": "9f183dce6de2d675f3480088cf58d8ef66786be7c819ecba67a6096d1f354375",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-nrrm-2017-council",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "nrrm-2017-council.json.gzip",
+      "dataSha256": "56059a4f64709c8c2cbbccbc6cfdbecdbb86412b9e9085d70646e28da5da3380",
+      "sha256": "c830093e95ddb0d52abbad83b2c5db016e399ca9ddd65016289726bf90dad6ac",
+      "sourceUrl": "https://nr.civicweb.net/document/137274",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2017 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 179000,
+      "totalExpenses": 20772,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2017"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 179000,
+            "knownCellSum": 179000,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 20772,
+            "knownCellSum": 20772,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 4,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "3c25764c4f35c4c8a2dd4aad7b8b1a609bc7f448d23c66a6bfe39ff411943a07",
+              "imageFile": "nrrm-2017-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "8d38dd3c5e8ca8f5e0b2cec6ab16ed0b5ec6eec1c09ceca0f1c69a71b91c283d",
+              "imageFile": "nrrm-2017-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/nrrm-2017-council.json.gzip",
+        "evidenceSha256": "6b305b94df5f309fc8732bf67719e2c95848c313e764f6da664061d2df6de8f0",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-nrrm-2019-council",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "nrrm-2019-council.json.gzip",
+      "dataSha256": "4eba6a47986a4f12e0dd332bae5b0aaab4a3e385a7fb8d331ffb3dbdbcd907fb",
+      "sha256": "fe4d3b6b6ef45f60f6c9af52efd628926f7dfcbf50f2dc639ed18a453f2a02e5",
+      "sourceUrl": "https://nr.civicweb.net/document/166813",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2019 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 175330,
+      "totalExpenses": 63142,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2019"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 175330,
+            "knownCellSum": 175330,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 63141,
+            "knownCellSum": 63142,
+            "residual": 1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 4,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "0c994348b7be93cc030b16260ed1027e9cd22c16a7fb596c7e1f7af4f6bcd883",
+              "imageFile": "nrrm-2019-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "3047cc7f95a0ae5a06662576a2e5af5fda12f002346286ac05e28d5534faf9cc",
+              "imageFile": "nrrm-2019-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/nrrm-2019-council.json.gzip",
+        "evidenceSha256": "ef167c7e6a7f46220e293c81d8a18e5039fd1d03c5e9f9f96da5e7ec35d10eed",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay +0 CAD; expenses +1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-nrrm-2020-council",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "nrrm-2020-council.json.gzip",
+      "dataSha256": "8c24ba5b873f89bed3d153d986e93ed9b9fc76f7c101d5f2c57d807bfd163d2a",
+      "sha256": "f915eeace78ce6ef3c1d2443d30424d94a483b0132fcbbdd54873e27dae25d01",
+      "sourceUrl": "https://nr.civicweb.net/document/178261",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2020 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 175330,
+      "totalExpenses": 18698,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2020"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 175330,
+            "knownCellSum": 175330,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 18698,
+            "knownCellSum": 18698,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 4,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "f8aaac08997659253ad763b649edf42fadccc35bbfd6703bdada4c59b368fa22",
+              "imageFile": "nrrm-2020-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "7f5af261ea0f35ef4163606ba6cbb7b57e5ae1762d86c0e6ec1bce4e6024057d",
+              "imageFile": "nrrm-2020-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/nrrm-2020-council.json.gzip",
+        "evidenceSha256": "5eac3925332181ddc6792e9af8eb1212cee5bff0189c7d0983cc9f31d3624f03",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-nrrm-2021-council",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "nrrm-2021-council.json.gzip",
+      "dataSha256": "ac8d433db52d5ba99b65563fa22c5c7c75f6dcf883f3d4a03dcf36ba5edc10dc",
+      "sha256": "91751d274e4ecdc01893550a810c9a41592ff68d89770c23d1d08aa02e619a0a",
+      "sourceUrl": "https://nr.civicweb.net/document/191213",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2021 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 162567,
+      "totalExpenses": 7851,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2021"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 162567,
+            "knownCellSum": 162567,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 7851,
+            "knownCellSum": 7851,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 4,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "a69fb80f673d0882ecdb75af1a43a5137d471e58a558df3505b82d5bf17e90fe",
+              "imageFile": "nrrm-2021-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "ae716d584a142cdb6eb187519083347c82841e3a53bf5aad28dc31f7c2666331",
+              "imageFile": "nrrm-2021-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/nrrm-2021-council.json.gzip",
+        "evidenceSha256": "9ac7c36ecc1ac720d03f1daa3e6fdc16d1d06254acfb0a1b909e96747cb3d9ac",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-nrrm-2022-council",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "nrrm-2022-council.json.gzip",
+      "dataSha256": "82161696890b0dea56dcab267af366eda753075787e75ff74af1eb9d7bcc7924",
+      "sha256": "4339fd6868ee8daadfe3c012c1a9a96a04adb6284e91041a0312f9e9f2b35c5e",
+      "sourceUrl": "https://nr.civicweb.net/document/207831",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2022 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 9,
+      "totalRemuneration": 156230,
+      "totalExpenses": 40961,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2022"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 156228,
+            "knownCellSum": 156230,
+            "residual": 2,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 40961,
+            "knownCellSum": 40961,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 4,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "68c62d4c48904d45230902f5547958594043130d365c97cdbce4ba75d81643e5",
+              "imageFile": "nrrm-2022-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "4b05eadc96bbf64059b4f34c3fbd4700e2449886566c74693bebe73ac2a0973d",
+              "imageFile": "nrrm-2022-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/nrrm-2022-council.json.gzip",
+        "evidenceSha256": "cc705b7c626b764c620b106a9479dff002d71f2ad4da7485d56a3e86c0eb9cdb",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay +2 CAD; expenses +0 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-nrrm-2023-council",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "nrrm-2023-council.json.gzip",
+      "dataSha256": "939c850bdb91b45db1feb9ce6d545c45a049b3cc18300f0d3f989516ca7dc2cb",
+      "sha256": "b759fd2bc1ef42b550b6639d237a6a3312921b9e7869f7abef44cde18a114d95",
+      "sourceUrl": "https://nr.civicweb.net/document/215666",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2023 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 175330,
+      "totalExpenses": 49218,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 175330,
+            "knownCellSum": 175330,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 49217,
+            "knownCellSum": 49218,
+            "residual": 1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 4,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "3d27efb64b40d7133fb3d1fbfb2fc39f4568b3f475ecadfd5c0bd714fff42ef0",
+              "imageFile": "nrrm-2023-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "d9d6190188e387efce926b8310e691d96029c7e8207a84f5e042bd11a330f565",
+              "imageFile": "nrrm-2023-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/nrrm-2023-council.json.gzip",
+        "evidenceSha256": "e10c7c68f410e0a5b43fe099ce12f09eabf11ca14d5b0789d99ad953f9f0c0de",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay +0 CAD; expenses +1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-dawson-creek-2017-council",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "dawson-creek-2017-council.json.gzip",
+      "dataSha256": "309c3e8b5148100446200ff36066ac98bbd19d66570424905aa151e70b4dcebd",
+      "sha256": "45e6a3bd5b7a4d0d4ff159a713b7f0c461dc55e6d52f5a5d235bd34b6c27d99f",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135365",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2017 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 160997.2,
+      "totalExpenses": 61068.73,
+      "pages": [
+        5
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "Ended December 31, 2017"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 160997.2,
+            "knownCellSum": 160997.2,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 61068.73,
+            "knownCellSum": 61068.73,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 5,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "d2c835611c54d0f9cf326daaf799ef60159d5bbd72ff4a43f1ff240a8077a0ef",
+              "imageFile": "dawson-creek-2017-p5.png"
+            },
+            {
+              "pdfPage": 6,
+              "dpi": 100,
+              "renderedSha256": "28dc3c925600dc71e0dfee1348bd8610e5dcdee9b0214e45f9e90ec9c190528a",
+              "imageFile": "dawson-creek-2017-p6.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/dawson-creek-2017-council.json.gzip",
+        "evidenceSha256": "83d4acbe54ad02a6a7eafd77b8b0aba4754d05a4935817d3eae9377fc59ce7ff",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-dawson-creek-2019-council",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "dawson-creek-2019-council.json.gzip",
+      "dataSha256": "3c27417198782e7eacdb8a9129c1f6e1f5da2ab2bd36353995ae816724c28fac",
+      "sha256": "54ecac47ca549498c48654538b486658f632ef252f28c5f0037a76ce3b5e4b61",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135367",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2019 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 214021.57,
+      "totalExpenses": 49097.13,
+      "pages": [
+        38
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2019"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 214021.57,
+            "knownCellSum": 214021.57,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 49097.13,
+            "knownCellSum": 49097.13,
+            "residual": 0,
+            "missingCells": 1
+          }
+        ],
+        "printedControlCells": {
+          "page": 38,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 38,
+              "dpi": 100,
+              "renderedSha256": "365825e673cb36315db2fcf108b15d1848aeabb8337fc8323d6b13faced2d123",
+              "imageFile": "dawson-creek-2019-p38.png"
+            },
+            {
+              "pdfPage": 39,
+              "dpi": 100,
+              "renderedSha256": "b8cf7051301065e84defe5e3b230795dcf83261adb4ee8f2a2871a9effd89a9d",
+              "imageFile": "dawson-creek-2019-p39.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/dawson-creek-2019-council.json.gzip",
+        "evidenceSha256": "ea1d14eca0b52c67c6d14df79964ca376c5dfdfd198942ac6aa2a6307ec6c97c",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-dawson-creek-2020-council",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "dawson-creek-2020-council.json.gzip",
+      "dataSha256": "221d7ca0ddee4359df7cf5079c5c0150e2b213455cd81de864226e1634b9f3c7",
+      "sha256": "a39b3dfbb0814c73ad873dabdc2844de8837132c5ff9fee905ad2491c42c9720",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135368",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2020 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 8,
+      "totalRemuneration": 202958.9,
+      "totalExpenses": 14225.54,
+      "pages": [
+        39
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2020"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 202958.9,
+            "knownCellSum": 202958.9,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 14225.54,
+            "knownCellSum": 14225.54,
+            "residual": 0,
+            "missingCells": 3
+          }
+        ],
+        "printedControlCells": {
+          "page": 39,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 39,
+              "dpi": 100,
+              "renderedSha256": "bf09f562829f518b15f5b8c03a194e4e8e4fbf19d7c65f3cfb07cc1f3775058b",
+              "imageFile": "dawson-creek-2020-p39.png"
+            },
+            {
+              "pdfPage": 40,
+              "dpi": 100,
+              "renderedSha256": "656a3bf380ab4d6f9dda12b7395e9d03dd1800747e02083deed7cab92f681af3",
+              "imageFile": "dawson-creek-2020-p40.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/dawson-creek-2020-council.json.gzip",
+        "evidenceSha256": "fcf384716b8ccdbbcd2c06e1eece70ee10e77b1457623f80a8b1f762970df4fe",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-dawson-creek-2021-council",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "dawson-creek-2021-council.json.gzip",
+      "dataSha256": "1cc02387418782ac049120dfbb75f1f5e6a1c3c04cff4b850d448796a07c4e75",
+      "sha256": "1e1427d8283e9f0c6aed1ff33ea497418029b5de58648ee60f8bd3f97a04d05a",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135369",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2021 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 213995.6,
+      "totalExpenses": 6865.67,
+      "pages": [
+        37
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2021"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 213995.6,
+            "knownCellSum": 213995.6,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 6865.67,
+            "knownCellSum": 6865.67,
+            "residual": 0,
+            "missingCells": 5
+          }
+        ],
+        "printedControlCells": {
+          "page": 37,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 37,
+              "dpi": 100,
+              "renderedSha256": "0889f8d22f4845c7c5c0bd755c2e0d19fd78db32ec3173c866759f4ee78a1ae1",
+              "imageFile": "dawson-creek-2021-p37.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/dawson-creek-2021-council.json.gzip",
+        "evidenceSha256": "24c46ededc89f0a03da650966b202f60e9328369ed012408a9413fe73587ce3e",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-dawson-creek-2022-council",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "dawson-creek-2022-council.json.gzip",
+      "dataSha256": "dc06c2802674661f640ae48c459c0a1ffe390edf73b7079a43148b1d85f1c44e",
+      "sha256": "ad5af65948a7be0ee4bc103be085ec1d8b97248f2d1a8fbf5223c0829ae00417",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135370",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2022 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 10,
+      "totalRemuneration": 216790,
+      "totalExpenses": 35857.71,
+      "pages": [
+        35
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2022"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 216790,
+            "knownCellSum": 216790,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 35857.71,
+            "knownCellSum": 35857.71,
+            "residual": 0,
+            "missingCells": 1
+          }
+        ],
+        "printedControlCells": {
+          "page": 35,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 35,
+              "dpi": 100,
+              "renderedSha256": "375f51cc60d40518a6db4e1dfe5ad875ec22dfb235f5abd604551800c67df487",
+              "imageFile": "dawson-creek-2022-p35.png"
+            },
+            {
+              "pdfPage": 36,
+              "dpi": 100,
+              "renderedSha256": "e95951a4cd2be277a3e1254882cca4e31a598684911611478054487a942552d4",
+              "imageFile": "dawson-creek-2022-p36.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/dawson-creek-2022-council.json.gzip",
+        "evidenceSha256": "e3a917a41102bfa04a7c2ad7b7756cc997f54705d80b767534b1a6576ebf7723",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-dawson-creek-2023-council",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "dawson-creek-2023-council.json.gzip",
+      "dataSha256": "9068a16637bcbebb723aac382380aa28a9099a7a88ab14440ef55b6da3f1617d",
+      "sha256": "d293908dfee2c32639612b8da246e29c274377e6dd345cb4b92d44e3529f6ef8",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/144371",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2023 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 234198.18,
+      "totalExpenses": 53411.44,
+      "pages": [
+        38
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2023"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 234198.18,
+            "knownCellSum": 234198.18,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 53411.44,
+            "knownCellSum": 53411.44,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 38,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 38,
+              "dpi": 100,
+              "renderedSha256": "69196b36ff24e77599700d72385cbb0ed838695f8c8175d0773d29cb59e293aa",
+              "imageFile": "dawson-creek-2023-p38.png"
+            },
+            {
+              "pdfPage": 39,
+              "dpi": 100,
+              "renderedSha256": "d57bdea9b1e0f7a804b7798a0935d73eaa5ac43f5b25b243b5deacf4d18994ae",
+              "imageFile": "dawson-creek-2023-p39.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/dawson-creek-2023-council.json.gzip",
+        "evidenceSha256": "c0fbc0389eb8e1d21cfa50486009777202635c4b8db49a73470fe75eb98ba926",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-chetwynd-2018-council",
+      "employerSlug": "district-of-chetwynd",
+      "employerName": "District of Chetwynd",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "chetwynd-2018-council.json.gzip",
+      "dataSha256": "da9b57775a9cf2f940039ed536cdb1c71a6fd11bfcd13498b32ea3854cb035dc",
+      "sha256": "a54286a71a534a8da8844719cace04426720c3669ef939328eddce65a8b52d2f",
+      "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2019/06/SOFI-December-31-2018.pdf",
+      "sourceIndexUrl": "https://www.gochetwynd.com/municipal-office/documents-and-publications/",
+      "title": "District of Chetwynd 2018 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 10,
+      "totalRemuneration": 101586,
+      "totalExpenses": 48663,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "For the Year Ended December 31, 2018"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 101586,
+            "knownCellSum": 101586,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 48663,
+            "knownCellSum": 48663,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 3,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 3,
+              "dpi": 100,
+              "renderedSha256": "1e2cf9ec64addacad48ed0d12cfe8771ce9a82483ddb84df34f00e0295bc7018",
+              "imageFile": "chetwynd-2018-p3.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/chetwynd-2018-council.json.gzip",
+        "evidenceSha256": "1a7003f765c232b8ea27f300009dee2d83d50335322688a3958da692efb34883",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-chetwynd-2019-council",
+      "employerSlug": "district-of-chetwynd",
+      "employerName": "District of Chetwynd",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "chetwynd-2019-council.json.gzip",
+      "dataSha256": "2881468b798e30fa1d689fc51a9e9150562f51ea383812dfde7e012cb621c472",
+      "sha256": "515611997178cda7554e0a8f99756ff7a6ba0f4a55db7630f1fb25103768d636",
+      "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2020/06/SOFI-December-31-2019.pdf",
+      "sourceIndexUrl": "https://www.gochetwynd.com/municipal-office/documents-and-publications/",
+      "title": "District of Chetwynd 2019 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 119000,
+      "totalExpenses": 61021,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "For the Year Ended December 31, 2019"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 119000,
+            "knownCellSum": 119000,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 61021,
+            "knownCellSum": 61021,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 4,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "772a93149a009cf49c922ede5cef73c3b323a3c9d3f7b2943aa92c34829cad6f",
+              "imageFile": "chetwynd-2019-p4.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells.",
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/chetwynd-2019-council.json.gzip",
+        "evidenceSha256": "3a456559aad895ba964f4807aac2cef057ea3d6accfd6b9301cc8e05cc95f3f2",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-hazelton-2024-council",
+      "employerSlug": "village-of-hazelton",
+      "employerName": "Village of Hazelton",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "hazelton-2024-council.json.gzip",
+      "dataSha256": "3a7256de284ce005c3f819fb295b0f242647a6343430e50f95f3c34d871c89f9",
+      "sha256": "7606528880e8c76f6422df9895e4dd411fb3011790a72e68e412c515dac4fcfe",
+      "sourceUrl": "https://hazelton.ca/?mdocs-file=2659",
+      "sourceIndexUrl": "https://hazelton.ca/?mdocs-file=2659",
+      "title": "Village of Hazelton 2024 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 6,
+      "totalRemuneration": 23233.69,
+      "totalExpenses": 1439.6,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "year ended December 31, 2024"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 23233.69,
+            "knownCellSum": 23233.69,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 1439.5,
+            "knownCellSum": 1439.6,
+            "residual": 0.1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 3,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allRowsAndScope": true,
+          "pages": [
+            {
+              "pdfPage": 3,
+              "dpi": 110,
+              "renderedSha256": "cc96d8c24c0a33168ff19750798bceb7f55784bb13cf52f1bd1f44bcc30ee500"
+            }
+          ],
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/hazelton-2024-council.json.gzip",
+        "evidenceSha256": "93b2a14068a539c70636beab7f6dd097d098428f9f6a94c3a5303babc84b3911",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "publicWarning": "Known printed council cells minus source controls: pay +0 CAD; expenses +0.1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    },
+    {
+      "id": "history-north-port-clements-2025-council",
+      "employerSlug": "village-of-port-clements",
+      "employerName": "Village of Port Clements",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "port-clements-2025-council.json.gzip",
+      "dataSha256": "b556d2f66e8bc41f3c611443303bb710842c0e9d31e8d3c28c67b87813ed877b",
+      "sha256": "551076f5ce05f53ebaf8175a22581ae45f7b52914849efa9d8d8e5f61f6f6a82",
+      "sourceUrl": "https://portclements.ca/wp-content/uploads/2026/06/2025-SOFI-Report-Final.pdf",
+      "sourceIndexUrl": "https://portclements.ca/document/2025-sofi-report-final/",
+      "title": "Village of Port Clements 2025 SOFI council remuneration schedule",
+      "status": "accepted",
+      "rowCount": 5,
+      "totalRemuneration": 34000,
+      "totalExpenses": 4301.64,
+      "pages": [
+        35
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published elected municipal council table is retained separately from employees. Remuneration and expenses are the source’s actual separate columns; any expense-inclusive Total remains supporting evidence, not pay.",
+        "Published names and roles are retained without expansion from other years. Dashes and blanks remain missing; explicit zeros remain zero. No compiled council observations are deleted or relabelled."
+      ],
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 7,
+            "text": "For the year ended December 31, 2025"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 34000,
+            "knownCellSum": 34000,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 4301.64,
+            "knownCellSum": 4301.64,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "printedTotal",
+            "printedOrDerivedControl": 38301.64,
+            "knownCellSum": 38301.64,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 35,
+          "basis": "Direct published Total Elected Officials / council component controls"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allRowsAndScope": true,
+          "pages": [
+            {
+              "pdfPage": 35,
+              "dpi": 110,
+              "renderedSha256": "9c79a47358c0b3401e300a14eed17db395fd9802092144d8dbc95f41309bca82"
+            }
+          ],
+          "councilRowsReviewed": true
+        },
+        "evidenceFile": "evidence/port-clements-2025-council.json.gzip",
+        "evidenceSha256": "3d983c490953afce4399e3f1611ebfe312749c4597b89eddeaac53daeb5585a2",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": [],
+        "completeCouncilSchedule": true
+      },
+      "scopeDescription": "Complete published elected municipal council remuneration and expense schedule; separate from employee disclosures. No employee remuneration threshold applies to this council cohort.",
+      "completeCouncilSchedule": true
+    }
+  ]
+}

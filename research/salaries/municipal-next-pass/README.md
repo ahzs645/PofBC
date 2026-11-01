@@ -80,3 +80,5 @@ npm run review:sector-salaries
 npm run review:municipal-wave
 npm run preview:salaries -- --build
 ```
+
+This is the PR #27 release snapshot at merge `67d5cff`. Later historical imports have separate reviews. `npm run review:municipal-wave` verifies these original inputs and reconciled totals; any later published-text repairs require archived original bytes and an explicit reviewed amendment. Regenerate this original report on the PR #27 checkout.

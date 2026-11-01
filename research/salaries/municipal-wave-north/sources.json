@@ -137,7 +137,7 @@
         "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
         "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
         "Remuneration includes salary, wages, overtime, vacation payouts and taxable benefits, including incremental Emergency Operations Center pay. Expenses include travel, memberships, tuition, cell phone allowances, hiring expenses and boot/tool allowances.",
-        "The remuneration control is derived from printed Total Other Employees minus the printed below-threshold remuneration aggregate. The expense control is printed directly; missing individual cells remain missing."
+        "The remuneration control is printed total employee remuneration minus the numeric below-threshold remuneration aggregate. The expense control is printed for all employees and the below-threshold expense cell is blank, not zero. No named-only expense control is available; the retained known named-expense sum is compared with the broader all-employee control without claiming equivalent scope. Metadata scope was explicitly amended with an archived PR27 snapshot; individual records are unchanged."
       ],
       "validation": {
         "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
@@ -172,22 +172,30 @@
             "rowSum": 5149051,
             "residual": 0,
             "missingCells": 0
-          },
-          {
-            "field": "expenses",
-            "printedControl": 98438,
-            "rowSum": 98439,
-            "residual": 1,
-            "missingCells": 6
           }
         ],
         "controlPages": [
           29
         ],
         "evidenceFile": "evidence/city-of-williams-lake-2024.json.gzip",
-        "evidenceSha256": "12c267d22d066497a9b32a7ba0e06667f8590fad8804438d72196389e341dc26"
+        "evidenceSha256": "12c267d22d066497a9b32a7ba0e06667f8590fad8804438d72196389e341dc26",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "printedControl": 98438,
+            "rowSum": 98439,
+            "residual": 1,
+            "missingCells": 6,
+            "scope": "Printed all-employee expense control versus known named employee cells",
+            "underThresholdExpenses": null,
+            "namedOnlyControlAvailable": false,
+            "residualInterpretation": "Difference between different scopes; no zero under-threshold expense is inferred."
+          }
+        ],
+        "controlScopeAmendment": "research/salaries/municipal-history-pass/corrections/north-expense-scope/corrections.json"
       },
-      "publicWarning": "Known named-row sums minus source controls: remuneration $+0.00; expenses $+1.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.",
+      "publicWarning": "Named remuneration cells minus their derived pay control: $+0.00. Known named employee expenses total $98,439.00; the printed all-employee expense control is $98,438.00 (difference $+1.00). The under-threshold expense cell is blank, so a named-only expense control is unavailable. The expense comparison has broader scope and does not establish an exact named expense reconciliation. Published individual values are unchanged; no zero or cause is inferred.",
       "completeEmployeeSchedule": true
     },
     {
@@ -224,7 +232,7 @@
         "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
         "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
         "Remuneration includes salary, wages, overtime, vacation payouts and taxable benefits, including incremental Emergency Operations Center pay. Expenses include travel, memberships, tuition, cell phone allowances, hiring expenses and boot/tool allowances.",
-        "The remuneration control is derived from printed Total Other Employees minus the printed below-threshold remuneration aggregate. The expense control is printed directly; missing individual cells remain missing."
+        "The remuneration control is printed total employee remuneration minus the numeric below-threshold remuneration aggregate. The expense control is printed for all employees and the below-threshold expense cell is blank, not zero. No named-only expense control is available; the retained known named-expense sum is compared with the broader all-employee control without claiming equivalent scope. Metadata scope was explicitly amended with an archived PR27 snapshot; individual records are unchanged."
       ],
       "validation": {
         "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
@@ -259,22 +267,30 @@
             "rowSum": 6168419,
             "residual": 3,
             "missingCells": 0
-          },
-          {
-            "field": "expenses",
-            "printedControl": 158966,
-            "rowSum": 158966,
-            "residual": 0,
-            "missingCells": 4
           }
         ],
         "controlPages": [
           29
         ],
         "evidenceFile": "evidence/city-of-williams-lake-2025.json.gzip",
-        "evidenceSha256": "00adef960ff9f4e3a8a725f7c4d1dae34ead5671389132c3bf7589906ae362b9"
+        "evidenceSha256": "00adef960ff9f4e3a8a725f7c4d1dae34ead5671389132c3bf7589906ae362b9",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "printedControl": 158966,
+            "rowSum": 158966,
+            "residual": 0,
+            "missingCells": 4,
+            "scope": "Printed all-employee expense control versus known named employee cells",
+            "underThresholdExpenses": null,
+            "namedOnlyControlAvailable": false,
+            "residualInterpretation": "Difference between different scopes; no zero under-threshold expense is inferred."
+          }
+        ],
+        "controlScopeAmendment": "research/salaries/municipal-history-pass/corrections/north-expense-scope/corrections.json"
       },
-      "publicWarning": "Known named-row sums minus source controls: remuneration $+3.00; expenses $+0.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.",
+      "publicWarning": "Named remuneration cells minus their derived pay control: $+3.00. Known named employee expenses total $158,966.00; the printed all-employee expense control is $158,966.00 (difference $+0.00). The under-threshold expense cell is blank, so a named-only expense control is unavailable. The expense comparison has broader scope and does not establish an exact named expense reconciliation. Published individual values are unchanged; no zero or cause is inferred.",
       "completeEmployeeSchedule": true
     },
     {

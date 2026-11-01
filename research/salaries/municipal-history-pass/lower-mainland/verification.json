@@ -1,0 +1,82 @@
+{
+  "auditDate": "2026-10-31",
+  "acceptedRows": 2501,
+  "retainedSourceIndividualRows": 2515,
+  "heldRows": 14,
+  "originalReports": 8,
+  "cohorts": 12,
+  "pythonRegressionCases": 12,
+  "checks": {
+    "pinnedOriginalRebuild": "pass",
+    "retainedEvidenceOfflineReproduction": "pass",
+    "byteIdenticalSecondOriginalRebuildFiles": 26,
+    "independentFreshEmptyCacheOcr": {
+      "physicalPage": 64,
+      "employer": "City of Richmond",
+      "year": "2024",
+      "columnTsvCount": 4,
+      "rawTsvAndCoordinatesByteIdentical": true
+    },
+    "richmondFullImagePeerReview": {
+      "sourceRows": 1233,
+      "acceptedRows": 1231,
+      "physicalPages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "files": [
+        "research/salaries/municipal-history-pass/reviews/richmond-2024-pages-47-53.md",
+        "research/salaries/municipal-history-pass/reviews/richmond-2024-pages-54-61.md",
+        "research/salaries/municipal-history-pass/reviews/richmond-2024-pages-62-75.md"
+      ],
+      "newDataCorrections": 0
+    }
+  },
+  "sourceControlStatus": "Qualified source discrepancies are explicitly retained; these checks do not assert all printed financial controls reconcile.",
+  "queueTasks": 36,
+  "queueRoutes": {
+    "processing": 10,
+    "clarification-request": 11,
+    "public-archive-research": 14,
+    "ordinary-records-request": 1
+  },
+  "compiledDeletions": 0,
+  "aliasEdits": 0,
+  "manifestSha256": "4456473597d07efdad31ebcd5ec230606c3c27ce7c276736a377d7d5225d5245",
+  "scope": "Authored Lower Mainland collection only.",
+  "externalMunicipalMessagesOrRecordsRequestsSent": 0,
+  "extractionEnvironment": {
+    "python": "3.12.14",
+    "pymupdf": "1.26.6",
+    "pillow": "12.3.0",
+    "tesseract": "tesseract 5.5.0",
+    "poppler": "pdftotext version 25.03.0"
+  }
+}

@@ -1,0 +1,415 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "municipal-history-resolved-city-of-merritt-2025-elected-officials",
+      "employerSlug": "city-of-merritt",
+      "employerName": "City of Merritt",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Merritt 2025 SOFI: elected-officials",
+      "sourceKind": "official-pdf",
+      "sourceUrl": "https://www.merritt.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+      "sourceIndexUrl": "https://www.merritt.ca/government/annual-reports-and-financial-statements/",
+      "sha256": "887d8b9ec8fcb72288485f0b77ae8b3a4e09751bb69fa2b991bd392acdebf0ce",
+      "file": "city-of-merritt-2025-elected-officials.json.gzip",
+      "dataSha256": "47981ff5dcda6764a6136a9005b3f2d2abeb0cadb23a49888a3ca663c4152690",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "All seven published council rows; remuneration only; expense definition unresolved.",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "sourceNamedRowCount": 7,
+      "withheldRowCount": 0,
+      "totalRemuneration": 186501.5,
+      "totalExpenses": null,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "completeNamedCohort": true,
+      "completeExpensesDisclosure": false,
+      "expensesNote": "The original has separate Expenses and Grant Funded Expenses columns but does not define whether they overlap or combine into a complete expense amount. Both literal components remain in the evidence. Published app expenses are missing for every row; no component is treated as zero or added to remuneration.",
+      "publicWarning": "Remuneration is copied from the published named schedule. The printed Total Employees (B) numerically includes council as well as employee amounts; it is not used as an employee-only control. Both Expenses and Grant Funded Expenses are retained in the evidence, but their combined definition is not established, so app expenses remain missing. The official posted PDF is not marked draft; its approval signature and date lines are blank, so signed adoption is not claimed.",
+      "notes": [
+        "Schedule year is 2025 and approval heading states year ended December 31, 2025; the September 2026 upload does not change the payment year.",
+        "Names, job titles and source spelling remain as printed. Remuneration is a payment disclosure, not an annual base salary rate.",
+        "A single asterisk means Includes POC and Provincial Deployment Remuneration; two asterisks mean Includes Vacation Payout. Both markers are retained in row evidence and do not alter the published remuneration.",
+        "Both expense columns are read independently. Missing cells remain null. The exact arithmetic identity of printed B is observed without asserting the issuer's intended label or inferring nil below-threshold expenses.",
+        "The published subsection says Other Employees and the aggregate says Consolidated Employees Under 75K. No exact equality boundary is stated; thresholdComparison is null.",
+        "Wendy Charney's literal position annotation (incl ESS $5,497.77) is retained in the position field. The source separately publishes remuneration $27,592.34 and Expenses $5,497.77; the annotation is not a new pay component."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "completeRenderedRowTranscriptionAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2025"
+          },
+          {
+            "page": 4,
+            "text": "Schedule Remuneration and Expenses - 2025"
+          },
+          {
+            "page": 4,
+            "text": "Other Employees Remuneration and Expenses 2025"
+          }
+        ],
+        "rowsIndependentlyChecked": 7,
+        "acceptedRows": 7,
+        "sourceNamedRowCount": 7,
+        "withheldRows": [],
+        "completeNamedCohort": true,
+        "completeExpensesDisclosure": false,
+        "sourceControls": {
+          "council": [
+            186501.5,
+            29645.85,
+            576.49
+          ],
+          "namedEmployees": [
+            4779040.1,
+            null,
+            null
+          ],
+          "belowThreshold": [
+            2876685.82,
+            null,
+            null
+          ],
+          "printedB": [
+            7842227.42,
+            116206.03,
+            48141.93
+          ]
+        },
+        "publicationEvidence": {
+          "status": "official-web-publication-no-draft-mark",
+          "indexLinksOriginal": true,
+          "physicalPage": 2,
+          "approvalSignaturesPresent": false,
+          "approvalDatesPresent": false,
+          "statement": "Posted original has approval wording but blank signature/date lines; signed adoption is not established."
+        },
+        "evidenceFile": "evidence/city-of-merritt-2025-elected-officials.json.gzip",
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 186501.5,
+            "rowSum": 186501.5,
+            "residual": 0,
+            "basis": "Literal council subtotal"
+          }
+        ],
+        "observedCombinedBIdentity": {
+          "pay": "council named + employee named + under75k remuneration",
+          "expenses": "sum of published named council and employee Expenses cells; missing cells not certified zero",
+          "grantExpenses": "sum of published named council and employee Grant Funded Expenses cells; missing cells not certified zero",
+          "residuals": [
+            0,
+            0,
+            0
+          ],
+          "explanationOfIssuerLabel": "Not established; exact arithmetic only"
+        }
+      },
+      "provenanceFile": "evidence/city-of-merritt-2025-elected-officials.json.gzip",
+      "provenanceSha256": "e8f1c24e273f9961a0a69384d79d99b9c4de6335678589b10361fed8171e9f5d"
+    },
+    {
+      "id": "municipal-history-resolved-city-of-merritt-2025-employee-remuneration",
+      "employerSlug": "city-of-merritt",
+      "employerName": "City of Merritt",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Merritt 2025 SOFI: employee-remuneration",
+      "sourceKind": "official-pdf",
+      "sourceUrl": "https://www.merritt.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+      "sourceIndexUrl": "https://www.merritt.ca/government/annual-reports-and-financial-statements/",
+      "sha256": "887d8b9ec8fcb72288485f0b77ae8b3a4e09751bb69fa2b991bd392acdebf0ce",
+      "file": "city-of-merritt-2025-employee-remuneration.json.gzip",
+      "dataSha256": "d5659d2f54fb8d12c718d288435d91bc5014fcfae4fed64e73dec6d6dd710347",
+      "category": "employee-remuneration",
+      "scope": "named-employee-schedule",
+      "scopeDescription": "All 46 named employee remuneration rows; expense amounts withheld because a comparable total is not established.",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 46,
+      "sourceNamedRowCount": 46,
+      "withheldRowCount": 0,
+      "totalRemuneration": 4779040.1,
+      "totalExpenses": null,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "completeNamedCohort": true,
+      "completeExpensesDisclosure": false,
+      "expensesNote": "The original has separate Expenses and Grant Funded Expenses columns but does not define whether they overlap or combine into a complete expense amount. Both literal components remain in the evidence. Published app expenses are missing for every row; no component is treated as zero or added to remuneration.",
+      "publicWarning": "Remuneration is copied from the published named schedule. The printed Total Employees (B) numerically includes council as well as employee amounts; it is not used as an employee-only control. Both Expenses and Grant Funded Expenses are retained in the evidence, but their combined definition is not established, so app expenses remain missing. The official posted PDF is not marked draft; its approval signature and date lines are blank, so signed adoption is not claimed.",
+      "notes": [
+        "Schedule year is 2025 and approval heading states year ended December 31, 2025; the September 2026 upload does not change the payment year.",
+        "Names, job titles and source spelling remain as printed. Remuneration is a payment disclosure, not an annual base salary rate.",
+        "A single asterisk means Includes POC and Provincial Deployment Remuneration; two asterisks mean Includes Vacation Payout. Both markers are retained in row evidence and do not alter the published remuneration.",
+        "Both expense columns are read independently. Missing cells remain null. The exact arithmetic identity of printed B is observed without asserting the issuer's intended label or inferring nil below-threshold expenses.",
+        "The published subsection says Other Employees and the aggregate says Consolidated Employees Under 75K. No exact equality boundary is stated; thresholdComparison is null."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "completeRenderedRowTranscriptionAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2025"
+          },
+          {
+            "page": 4,
+            "text": "Schedule Remuneration and Expenses - 2025"
+          },
+          {
+            "page": 4,
+            "text": "Other Employees Remuneration and Expenses 2025"
+          }
+        ],
+        "rowsIndependentlyChecked": 46,
+        "acceptedRows": 46,
+        "sourceNamedRowCount": 46,
+        "withheldRows": [],
+        "completeNamedCohort": true,
+        "completeExpensesDisclosure": false,
+        "sourceControls": {
+          "council": [
+            186501.5,
+            29645.85,
+            576.49
+          ],
+          "namedEmployees": [
+            4779040.1,
+            null,
+            null
+          ],
+          "belowThreshold": [
+            2876685.82,
+            null,
+            null
+          ],
+          "printedB": [
+            7842227.42,
+            116206.03,
+            48141.93
+          ]
+        },
+        "publicationEvidence": {
+          "status": "official-web-publication-no-draft-mark",
+          "indexLinksOriginal": true,
+          "physicalPage": 2,
+          "approvalSignaturesPresent": false,
+          "approvalDatesPresent": false,
+          "statement": "Posted original has approval wording but blank signature/date lines; signed adoption is not established."
+        },
+        "evidenceFile": "evidence/city-of-merritt-2025-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 4779040.1,
+            "rowSum": 4779040.1,
+            "residual": 0,
+            "basis": "Literal named employee subtotal"
+          }
+        ],
+        "observedCombinedBIdentity": {
+          "pay": "council named + employee named + under75k remuneration",
+          "expenses": "sum of published named council and employee Expenses cells; missing cells not certified zero",
+          "grantExpenses": "sum of published named council and employee Grant Funded Expenses cells; missing cells not certified zero",
+          "residuals": [
+            0,
+            0,
+            0
+          ],
+          "explanationOfIssuerLabel": "Not established; exact arithmetic only"
+        }
+      },
+      "completeEmployeeSchedule": true,
+      "provenanceFile": "evidence/city-of-merritt-2025-employee-remuneration.json.gzip",
+      "provenanceSha256": "c029307fe89291a77900203519fbb72b0e8da86834e05fa3a4ad61c36b346988"
+    },
+    {
+      "id": "municipal-history-resolved-town-of-lake-cowichan-2024-employee-remuneration",
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Town of Lake Cowichan 2024 SOFI: employee-remuneration",
+      "sourceKind": "official-pdf",
+      "sourceUrl": "https://lakecowichan.ca/dl/2024%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "e909d34599f0a3d2f8a1ebbdb706bb1139e9fecccbbd9cf04b12b96ffc4d7c46",
+      "file": "town-of-lake-cowichan-2024-employee-remuneration.json.gzip",
+      "dataSha256": "e57d3b4b6eada00f1e14957eb80095f0cfba08b6b69075999aa8aceae3409660",
+      "category": "employee-remuneration",
+      "scope": "partial-named-employee-schedule",
+      "scopeDescription": "Seven internally consistent named staff rows; Jessica May is withheld;2024 council remains solely in its earlier accepted source.",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "sourceNamedRowCount": 8,
+      "withheldRowCount": 1,
+      "totalRemuneration": 729610.84,
+      "totalExpenses": 15015.4,
+      "pages": [
+        31
+      ],
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "completeNamedCohort": false,
+      "completeExpensesDisclosure": false,
+      "expensesNote": "Literal Expense column, defined as Travel, Conferences and Other. Expense-inclusive Totals remain evidence and are never remuneration.",
+      "publicWarning": "Partial employee schedule: seven of eight named employees are included. Jessica May is withheld because published Financial Compensation $92,354.93 plus Expenses $5,429.75 equals $97,784.68, while the row's expense-inclusive Total is $92,784.68, a $5,000.00 conflict. No amount is corrected or selected to force agreement. All other employees aggregate Total is $0.09 below its pay-plus-expense components. Original full-cohort remuneration and expense controls reconcile, but do not resolve the row conflict.",
+      "notes": [
+        "The original staff schedule is calendar 2024. Official signed approval is June 24, 2025; it does not change the salary year.",
+        "Financial Compensation is the remuneration column. Travel, Conferences and Other is the expense column. The separate Total includes expenses and is supporting evidence only.",
+        "Every original named employee row, including Jessica May's held row, is independently read and visually checked before publication selection. All seven accepted rows have exact pay-plus-expense agreement with their own source Total.",
+        "Eight named employees exist in the source; only seven are accepted. completeEmployeeSchedule and completeNamedCohort are false at both source and validation levels. Full-cohort source controls are not misrepresented as partial-cohort controls.",
+        "The source heading Staff does not state the exact disclosure-threshold equality boundary. thresholdComparison is null. Council 2024 is already accepted in municipal-wave-capital and is not duplicated."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "completeRenderedRowTranscriptionAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          31
+        ],
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Year Ended December 31, 2024"
+          },
+          {
+            "page": 31,
+            "text": "2024 Schedule of Staff Remuneration and Expenses"
+          },
+          {
+            "page": 31,
+            "text": "Financial Compensation"
+          }
+        ],
+        "rowsIndependentlyChecked": 8,
+        "acceptedRows": 7,
+        "sourceNamedRowCount": 8,
+        "withheldRows": [
+          {
+            "name": "Jessica May",
+            "position": "Fire Risk Officer",
+            "pay": 92354.93,
+            "expenses": 5429.75,
+            "total": 92784.68
+          }
+        ],
+        "completeNamedCohort": false,
+        "completeExpensesDisclosure": false,
+        "sourceControls": {
+          "allEmployees": [
+            2142501.52,
+            47788.55,
+            2190290.07
+          ],
+          "belowThreshold": [
+            1320535.75,
+            27343.4,
+            1347879.06
+          ]
+        },
+        "publicationEvidence": {
+          "status": "signed-approval",
+          "physicalPage": 27,
+          "approvalSignaturesPresent": true,
+          "approvalDate": "2025-06-24",
+          "signatories": [
+            "Tim McGonigle, Mayor",
+            "Ronnie Gill, Director of Finance"
+          ],
+          "statement": "Both signatures are visible on approval of all statements and schedules."
+        },
+        "evidenceFile": "evidence/town-of-lake-cowichan-2024-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": false,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 821965.77,
+            "completeOriginalNamedRowSum": 821965.77,
+            "completeOriginalResidual": 0,
+            "acceptedPartialRowSum": 729610.84,
+            "withheldRowSum": 92354.93,
+            "basis": "All employees less all other employees; full eight-row source checked before withholding Jessica May"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 20445.15,
+            "completeOriginalNamedRowSum": 20445.15,
+            "completeOriginalResidual": 0,
+            "acceptedPartialRowSum": 15015.4,
+            "withheldRowSum": 5429.75,
+            "basis": "All employees less all other employees; full eight-row source checked before withholding Jessica May"
+          }
+        ]
+      },
+      "completeEmployeeSchedule": false,
+      "provenanceFile": "evidence/town-of-lake-cowichan-2024-employee-remuneration.json.gzip",
+      "provenanceSha256": "6029fd40e527098a3b2391a35a31026c94aa9bcd27129996a23e483440a9ebc4"
+    }
+  ]
+}
