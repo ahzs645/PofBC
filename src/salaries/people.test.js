@@ -2,9 +2,87 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync, readdirSync } from 'node:fs'
 import { gunzipSync } from 'node:zlib'
-import { matchesNameQuery, nameMatch, nameQueryTier, nameReadings, personKey, readName, surnameShard } from './people.js'
+import { groupHighestPaidRecords, matchesNameQuery, nameMatch, nameQueryTier, nameReadings, personKey, readName, surnameShard } from './people.js'
 
 const DIR = new URL('../../public/salaries/people/', import.meta.url)
+
+const browseIndex = {
+  employers: [['City A', 'Municipalities', null, 'city-a'], ['City B', 'Municipalities', null, 'city-b'], ['School', 'School districts', null, 'school']],
+  sources: { official: { url: 'https://example.test/report.pdf', sourceKind: 'official-pdf' }, compiled: { scope: 'compiled-unverified', sourceKind: 'compiled' } }
+}
+
+test('people browse groups identical names per employer without merging initials or employers', () => {
+  const rows = [
+    ['Lee, Jane A.', null, 100, null, 0, 0, 'official'],
+    ['LEE, JANE A', null, 110, null, 0, 1, 'official'],
+    ['Lee, Jane A', null, 120, null, 1, 1, 'official'],
+    ['Lee, J A', null, 130, null, 0, 1, 'official'],
+    ['Lee, Jane B', null, 140, null, 0, 1, 'official']
+  ]
+  const groups = groupHighestPaidRecords(rows, browseIndex)
+  assert.equal(groups.length, 4)
+  const cityA = groups.find((group) => group.row[0] === 'LEE, JANE A')
+  assert.deepEqual(cityA.records, rows.slice(0, 2))
+  assert.deepEqual(cityA.years, [0, 1])
+  assert.equal(cityA.row[2], 110, 'display the highest payment, never the sum')
+})
+
+test('people browse filters periods and sectors before choosing a payment', () => {
+  const rows = [
+    ['Lee, Jane', null, 100, null, 0, 0, 'official'],
+    ['Lee, Jane', null, 200, null, 0, 1, 'official'],
+    ['Lee, Jane', null, 300, null, 2, 0, 'official']
+  ].map(Object.freeze)
+  Object.freeze(rows)
+  const groups = groupHighestPaidRecords(rows, { ...browseIndex, sector: 'Municipalities', range: [0, 0] })
+  assert.equal(groups.length, 1)
+  assert.equal(groups[0].row, rows[0])
+  assert.deepEqual(groups[0].records, [rows[0]])
+  assert.equal(groups[0].row[3], null)
+})
+
+test('equal payments prefer original sources without dropping the compiled observation', () => {
+  const original = ['Lee, Jane', null, 100, 10, 0, 0, 'official']
+  const compiled = ['Lee, Jane', null, 100, 11, 0, 1, 'compiled']
+  for (const rows of [[original, compiled], [compiled, original]]) {
+    const [group] = groupHighestPaidRecords(rows, browseIndex)
+    assert.equal(group.row, original)
+    assert.equal(group.records.length, 2)
+    assert.deepEqual(group.years, [0, 1])
+  }
+  const higherCompiled = [...compiled]; higherCompiled[2] = 101
+  assert.equal(groupHighestPaidRecords([original, higherCompiled], browseIndex)[0].row, higherCompiled, 'a higher compiled payment is not silently discarded')
+})
+
+test('same-period conflicting observations stay available without adding their amounts', () => {
+  const rows = [
+    ['Lee, Jane', 'Role A', 100, 10, 0, 0, 'official'],
+    ['Lee, Jane', 'Role B', 200, 20, 0, 0, 'official']
+  ]
+  const [group] = groupHighestPaidRecords(rows, browseIndex)
+  assert.deepEqual(group.records, rows)
+  assert.equal(group.row, rows[1])
+  assert.deepEqual(group.years, [0])
+})
+
+test('Surrey and Metro Vancouver browse overlaps each produce one group with all source rows retained', () => {
+  const index = JSON.parse(readFileSync(new URL('index.json', DIR)))
+  const top = JSON.parse(gunzipSync(readFileSync(new URL('top.json.gzip', DIR))))
+  const rows = top.rows.filter((row) => ['2023', '2023/24'].includes(index.years[row[5]]))
+  const groups = groupHighestPaidRecords(rows, { ...index, sector: 'Municipalities' })
+  for (const [slug, name, pay, source] of [
+    ['city-of-surrey', 'Lalonde, V', 750302.39, 'lower-mainland-surrey-2023-employees'],
+    ['metro-vancouver', 'Dobrovolny, Jerry', 674527, 'sector-government-police-metro-vancouver-2023-employees']
+  ]) {
+    const employer = index.employers.findIndex((entry) => entry[3] === slug)
+    const matching = groups.filter((group) => group.row[4] === employer && personKey(group.row[0]) === personKey(name))
+    assert.equal(matching.length, 1)
+    assert.equal(matching[0].row[2], pay)
+    assert.equal(matching[0].row[6], source)
+    assert.deepEqual(matching[0].records, rows.filter((row) => row[4] === employer && personKey(row[0]) === personKey(name)))
+    assert.ok(matching[0].records.some((row) => row[6] === 'pssdb-2026-10-22'))
+  }
+})
 
 test('a disclosed name is read as a surname and a first given name', () => {
   assert.deepEqual(readName('Wong, Christine, OnPui'), { surname: 'wong', given: 'christine', initial: 'c' })

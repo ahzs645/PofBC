@@ -2,11 +2,11 @@
 // people, and every position title, each as cards in pages or as one table to sort and filter.
 // All follow the period range; employers and people also follow the chosen sector.
 //
-// People are each period's highest-paid named records (people/top.json.gzip, written by the build):
+// The People view groups each period's highest-paid records by name and employer (people/top.json.gzip):
 // the full name index is hundreds of files, loaded a surname at a time by the search instead.
 
 import { useEffect, useMemo, useState } from 'react'
-import { displayName } from './people.js'
+import { displayName, groupHighestPaidRecords } from './people.js'
 import { keyedTitles } from './positions.js'
 import { reportingYearLabel } from './coverage.js'
 import { formatMoney as money } from './money.js'
@@ -86,41 +86,45 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
 }
 
 /**
- * A highest-paid record as a card, like a name the search finds: the name, the position and employer,
- * and the pay in its period. The card opens the person; their records, expenses and sources are there.
+ * A disclosed name and employer, represented by its highest ranked payment. Opening it retains
+ * every source record, including other periods and unverified compiled overlaps.
  */
-const TopRecordCard = ({ row, rank, index, onPerson }) => (
-  <button type="button" className="salaries__card" onClick={() => onPerson(row[0])}>
-    <span className="salaries__lead"><PersonIcon /></span>
-    <span className="salaries__text">
-      <span className="salaries__name">{displayName(row[0], index.sources?.[row[6]]?.nameDisclosure)}</span>
-      {row[1] && <span className="salaries__line">{row[1]}</span>}
-      <span className="salaries__line">{index.employers[row[4]][0]}</span>
-    </span>
-    <span className="salaries__aside">{money(row[2])}<span className="salaries__line">No. {rank} · {index.years[row[5]]}</span></span>
-  </button>
-)
+const TopRecordCard = ({ group, rank, index, onPerson }) => {
+  const { row, records, years } = group
+  return (
+    <button type="button" className="salaries__card" onClick={() => onPerson(row[0], index.employers[row[4]][3])}>
+      <span className="salaries__lead"><PersonIcon /></span>
+      <span className="salaries__text">
+        <span className="salaries__name">{displayName(row[0], index.sources?.[row[6]]?.nameDisclosure)}</span>
+        {row[1] && <span className="salaries__line">{row[1]}</span>}
+        <span className="salaries__line">{index.employers[row[4]][0]}</span>
+        {records.length > 1 && <span className="salaries__line">{count(records.length, 'ranked record', 'ranked records')} · {count(years.length, 'period', 'periods')}</span>}
+      </span>
+      <span className="salaries__aside">{money(row[2])}<span className="salaries__line">No. {rank} · {index.years[row[5]]}</span></span>
+    </button>
+  )
+}
 
-/** The highest-paid named records across every employer, in the periods and sector chosen. */
+/** Highest payments grouped by disclosed name and employer, in the chosen periods and sector. */
 export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmployer }) => {
   const [top, setTop] = useState(null)
   const [failed, setFailed] = useState(false)
   useEffect(() => { loadJson('salaries/people/top.json.gzip').then(setTop, () => setFailed(true)) }, [])
-  const inRange = within(range)
-  const rows = useMemo(() => (top ? top.rows.filter((row) => inRange(row[5]) && (sector === 'all' || index.employers[row[4]][1] === sector)).sort((a, b) => b[2] - a[2]) : []), [top, sector, range]) // eslint-disable-line react-hooks/exhaustive-deps
+  const rows = useMemo(() => top ? groupHighestPaidRecords(top.rows, { employers: index.employers, sources: index.sources, sector, range }) : [], [top, index, sector, range])
   const columns = useMemo(() => [
-    { id: 'name', header: 'Name', accessorFn: (row) => displayName(row[0], index.sources?.[row[6]]?.nameDisclosure), cell: ({ row, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(row.original[0])}>{getValue()}</button> },
-    { id: 'position', header: 'Position', accessorFn: (row) => row[1] ?? '' },
-    { id: 'employer', header: 'Employer', accessorFn: (row) => index.employers[row[4]][0], cell: ({ row, getValue }) => <button type="button" className="salaries__link" onClick={() => onEmployer(index.employers[row.original[4]][3])}>{getValue()}</button> },
-    { id: 'period', header: 'Period', accessorFn: (row) => index.years[row[5]] },
-    { id: 'pay', header: 'Pay', accessorFn: (row) => row[2], meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
-    { id: 'expenses', header: 'Expenses', accessorFn: (row) => row[3], meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) }
+    { id: 'name', header: 'Name', accessorFn: ({ row }) => displayName(row[0], index.sources?.[row[6]]?.nameDisclosure), cell: ({ row: { original }, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(original.row[0], index.employers[original.row[4]][3])}>{getValue()}</button> },
+    { id: 'position', header: 'Position', accessorFn: ({ row }) => row[1] ?? '' },
+    { id: 'employer', header: 'Employer', accessorFn: ({ row }) => index.employers[row[4]][0], cell: ({ row: { original }, getValue }) => <button type="button" className="salaries__link" onClick={() => onEmployer(index.employers[original.row[4]][3])}>{getValue()}</button> },
+    { id: 'period', header: 'Payment period', accessorFn: ({ row }) => index.years[row[5]] },
+    { id: 'pay', header: 'Highest payment', accessorFn: ({ row }) => row[2], meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    { id: 'expenses', header: 'Expenses', accessorFn: ({ row }) => row[3], meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    { id: 'records', header: 'Ranked records', accessorFn: ({ records }) => records.length, meta: { kind: 'number', filter: false } }
   ], [index, onPerson, onEmployer])
 
   if (failed) return <p className="salaries__hint" role="alert">The highest-paid records could not be loaded.</p>
   if (!top) return <p className="salaries__hint" role="status">Loading the highest-paid records…</p>
-  const note = <p className="salaries__hint salaries__hint--small">The {top.perPeriod.toLocaleString('en-CA')} highest-paid named records in each period, across every employer. Search a name to find anyone else.</p>
-  if (layout === 'table') return <>{note}<DataTable data={rows} columns={columns} sorting={[{ id: 'pay', desc: true }]} label="Highest-paid records" /></>
+  const note = <p className="salaries__hint salaries__hint--small">Names grouped by employer, showing the highest payment. From each period’s {top.perPeriod.toLocaleString('en-CA')} highest-paid records; matching names may be different people. Open a name for all records and sources.</p>
+  if (layout === 'table') return <>{note}<DataTable data={rows} columns={columns} sorting={[{ id: 'pay', desc: true }]} label="Highest payments by name and employer" /></>
   return (
     <>
       {note}
@@ -129,7 +133,7 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
           const first = rows.indexOf(page[0])
           return (
             <div className="salaries__grid">
-              {page.map((row, at) => <TopRecordCard key={`${row[0]}|${row[4]}|${row[5]}|${row[2]}`} row={row} rank={first + at + 1} index={index} onPerson={onPerson} />)}
+              {page.map((group, at) => <TopRecordCard key={group.key} group={group} rank={first + at + 1} index={index} onPerson={onPerson} />)}
             </div>
           )
         }}
