@@ -2234,6 +2234,58 @@
     {
       "id": "continuation-government-police-east-kootenay-2023-employees",
       "dataSha256": "30feefd96c2c964264a36ff59e6cb7cd271c76970089370c72afa02705aaceee"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2022-elected-officials",
+      "dataSha256": "cc5ed6c0b0ddb60a36f3f101ee631c0c806386100cb0c3c3aa6932392ae569e0"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2022-employee-remuneration",
+      "dataSha256": "6ab79dbd43307a337e64582350183c770ed7e6ec39fe3ab83326541639e3104d"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2023-elected-officials",
+      "dataSha256": "eb7cc7c3c3ff4484d68518780018813dd1a2364083e9dc4c122a615bfe523496"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2023-employee-remuneration",
+      "dataSha256": "bfdce37c03514522db6f5fc85d5d067d4222cde2a01d57e028cf1d66b6362055"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2024-elected-officials",
+      "dataSha256": "f1bd57ee9bd0f6a7816af06965415ac63bfcaf83450196fe1532f7fb3927bf96"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2024-employee-remuneration",
+      "dataSha256": "5523c92b9385e8698b50248386170aa9eee46d4d3f95783c32a467bd775e673a"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2025-employee-remuneration",
+      "dataSha256": "0c12cd8929b655ef4f918dff59c2d0b20d9b585380b564b01acff7e118b7844b"
+    },
+    {
+      "id": "recovery-municipal-midway-2023-elected-officials",
+      "dataSha256": "013ed833a1955c173e90816ed382c0c2f1a50d68d83db2c25b4d5406bdae4d06"
+    },
+    {
+      "id": "recovery-municipal-midway-2023-employee-remuneration",
+      "dataSha256": "217c20017f14efe1fdde645992feced72629502fdfce4e8ded86f7e28bc7f57b"
+    },
+    {
+      "id": "recovery-municipal-midway-2024-elected-officials",
+      "dataSha256": "6e7650ee38684c91a488a9f2e96c162233ed61aff4310afc82b10f136126e9e0"
+    },
+    {
+      "id": "recovery-municipal-midway-2024-employee-remuneration",
+      "dataSha256": "9a279a61dff0e759fee4eab455b9c5631643a18f15aa5505997aa9668c0fc514"
+    },
+    {
+      "id": "recovery-municipal-sooke-2025-elected-officials",
+      "dataSha256": "f3d97ddb1a1d8b5b1551058d87db941bc2c687568c9320fa2478701c7602ea0a"
+    },
+    {
+      "id": "recovery-municipal-sooke-2025-employee-remuneration",
+      "dataSha256": "3196e2b9a7acc4042bbedca2761ae3a6237cfeb8434e6d5511afb7aec2175a27"
     }
   ],
   "method": "For each municipality and compiled partition, compare multiset counts of disclosed name and remuneration rounded with JavaScript Math.round to whole CAD dollars. Name normalization is NFKC, lowercase, and removal of punctuation/whitespace; token order is preserved and no given names or initials are inferred. Each selected compiled observation must occur in exactly one tested accepted calendar-year cohort. Source cents, expenses, names and titles are untouched on import. All source hashes and exact selected baseline row hashes are pinned. Partial matches never remove rows.",

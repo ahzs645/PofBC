@@ -1,0 +1,158 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS all 35 frozen manual and normalized records with source trustee control caveat",
+  "independentRawTranscript": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd49-2025-original-transcription.tsv",
+    "sha256": "cccee377b78ddf7e78ae106fdd643d7e791fc1b708a6eca84ee79dabd59965d6",
+    "writtenBeforeCandidateOpened": true
+  },
+  "candidateManual": {
+    "path": "research/salaries/recovery-wave-2026-11-01/schools/sd49-2025-manual.tsv",
+    "sha256": "e7de04b7b851e72d19debd795a0ed4a00d311acfe41d2bdf5fa123191a3312e2"
+  },
+  "reviewerRawTranscriptCorrections": [
+    {
+      "rawRow": 17,
+      "pdfPage": 53,
+      "nameFieldInitialReading": "FAIRFU, BEVERLY",
+      "literalOriginal": "FAIRFUL, BEVERLY",
+      "candidateCorrect": true,
+      "verification": "The terminal L was faint at full-page resolution. Original PDF cell re-rendered at 5x after comparison; final L is visible. Frozen independent raw transcript retained unchanged.",
+      "image": "/tmp/recovery-schools/sd49-review-fairful.png",
+      "imageSha256": "3683fe327ccf0574f998470f800c1837c8aefee7deab094374144d74f2c53c5a"
+    }
+  ],
+  "candidateCorrections": [],
+  "rowsCompared": 35,
+  "rowFieldsCompared": [
+    "physicalPdfPage",
+    "scope",
+    "literalName",
+    "positionOrNull",
+    "remuneration",
+    "explicitExpenseIncludingZero"
+  ],
+  "normalizedComparisons": [
+    {
+      "sourceId": "recovery-schools-sd49-2025-trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd49-sofi-2025.pdf",
+      "sourceSha256": "f3e643ccba15d44118d411f83ee956ce166b9fe51dc97378024659c7b6bb34f3",
+      "file": "research/salaries/recovery-schools/sd49-2025-trustees.json.gzip",
+      "dataSha256": "0b92a0bacdacab6d876e1f79dc144275a2cae6b02e9a243675d680324d301142",
+      "rowsCompared": 5,
+      "allSixFieldsExact": true,
+      "explicitZeroExpenseRows": 2,
+      "nullPositionRows": 5,
+      "sourcePublicWarning": "The five published trustee rows total $63,095 remuneration and $14,225 expenses. The schedule prints $63,096 and $14,225, so the row remuneration sum is $1 lower than the printed trustee remuneration total. The published rows and control are retained literally; the reason is unresolved."
+    },
+    {
+      "sourceId": "recovery-schools-sd49-2025-employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd49-sofi-2025.pdf",
+      "sourceSha256": "f3e643ccba15d44118d411f83ee956ce166b9fe51dc97378024659c7b6bb34f3",
+      "file": "research/salaries/recovery-schools/sd49-2025-employees.json.gzip",
+      "dataSha256": "7db6985438dd0fe6c8b2317713434cfd9ebfa6e302175e4fef8b6ee751a5292c",
+      "rowsCompared": 30,
+      "allSixFieldsExact": true,
+      "explicitZeroExpenseRows": 23,
+      "nullPositionRows": 30,
+      "sourcePublicWarning": null
+    }
+  ],
+  "originalPdf": "/tmp/pofbc-schools/ministry-sd49-2025.pdf",
+  "originalSha256": "f3e643ccba15d44118d411f83ee956ce166b9fe51dc97378024659c7b6bb34f3",
+  "originalImageChecks": [
+    {
+      "pdfPage": 53,
+      "image": "/tmp/recovery-schools/sd49-p53.png",
+      "imageSha256": "2004bf8a077dd956b89df626e76b6f895cfe992f49cb6935033e004cf763315c",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "pdfPage": 3,
+      "image": "/tmp/recovery-schools/sd49-p3.png",
+      "imageSha256": "a1b5cd33d75588c6a7a024b344bf08700f4f5c66e7d0872c64a3d717132dfa0a",
+      "independent2xRenderedPixelMatch": true
+    }
+  ],
+  "coverage": {
+    "completeSalaryPhysicalPage": 53,
+    "trusteeRows": 5,
+    "employeeRows": 30,
+    "trusteeRange": [
+      "ANDERSON, CRYSTAL C",
+      "WEBBER, TERRY F. W."
+    ],
+    "employeeRange": [
+      "ABERGEL, JOEL",
+      "WILSON, KRISTA"
+    ],
+    "approvalDeclarationPhysicalPage": 3
+  },
+  "controls": {
+    "electedOfficials": {
+      "printed": [
+        63096,
+        14225
+      ],
+      "computed": [
+        63095,
+        14225
+      ],
+      "computedMinusPrinted": [
+        -1,
+        0
+      ]
+    },
+    "detailedEmployeesExceeding75000": {
+      "printed": [
+        3601790,
+        32532
+      ],
+      "computed": [
+        3601790,
+        32532
+      ]
+    },
+    "employeesEqualToOrLessThan75000": {
+      "printed": [
+        2825716,
+        50198
+      ],
+      "personRowsImported": 0
+    },
+    "consolidatedTotal": {
+      "printed": [
+        6427506,
+        82730
+      ],
+      "scope": "Employee disclosed + below-threshold aggregates only; printed consolidated control excludes trustees.",
+      "computedUsingEmployeeControls": [
+        6427506,
+        82730
+      ]
+    },
+    "employerCppEiPremium": {
+      "printed": 363512,
+      "personRowsImported": 0
+    }
+  },
+  "periodAndApproval": {
+    "salaryHeading": "THE BOARD OF EDUCATION OF SCHOOL DISTRICT NO. 49 (CENTRAL COAST) / YEAR ENDED JUNE 30, 2025 / SCHEDULE OF REMUNERATION AND EXPENSES",
+    "declarationYear": "2024/2025",
+    "declarationPeriodEnd": "June 30, 2025",
+    "visibleDates": "November 19, 2025 (three date fields)",
+    "signatureArea": "redacted black; actual signatures not visually verifiable",
+    "draftMarkVisibleOnReviewedPages": false
+  },
+  "scopeDecisions": [
+    "No positions are printed for either named table. All normalized positions must remain null, including elected-official rows.",
+    "All 35 expense amounts are explicitly printed numeric values including zeros. Source zero expenses remain zero.",
+    "Trustee remuneration control exceeds literal five-row sum by 1. Preserve literal values and publicWarning/clarification without inferred cause.",
+    "Printed consolidated employee control excludes trustee totals; do not compare it to combined trustee and employee observations.",
+    "Below-threshold aggregates and employer CPP/EI premiums are excluded from person rows."
+  ],
+  "limitations": [
+    "Physical pages 3 and 53 only; no report-wide visual-review claim."
+  ]
+}

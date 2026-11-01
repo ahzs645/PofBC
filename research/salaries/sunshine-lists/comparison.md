@@ -4,7 +4,7 @@
 
 The supplied snapshot contains **3 employers** and **0 annual observations**. **It is not a complete Sunshine Lists employer inventory.** 3 employer entries contain summary evidence only.
 
-All **1,010,644 published PofBC observations** across **239 employers** were reconciled against the actual employer files: **777,862 official-source observations** and **232,782 retained compiled observations**. 166 employers have some official records; 73 have compiled records only.
+All **1,022,585 published PofBC observations** across **245 employers** were reconciled against the actual employer files: **790,932 official-source observations** and **231,653 retained compiled observations**. 176 employers have some official records; 69 have compiled records only.
 
 ## Observed reference employers
 
@@ -20,13 +20,13 @@ Reference totals span the source’s own reported years and definitions. The tab
 
 | Sector | Employers | With official records | Compiled only | Official observations | Compiled observations |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Crown corporations | 43 | 12 | 31 | 105,013 | 36,315 |
+| Crown corporations | 43 | 14 | 29 | 107,704 | 35,310 |
 | Government | 1 | 1 | 0 | 242,158 | 0 |
-| Health authorities | 8 | 6 | 2 | 244,148 | 68,658 |
+| Health authorities | 8 | 6 | 2 | 244,191 | 68,658 |
 | Municipal police | 13 | 1 | 12 | 142 | 9,232 |
-| Municipalities | 116 | 113 | 3 | 118,593 | 28,211 |
-| School districts | 34 | 21 | 13 | 21,232 | 45,385 |
-| Universities and colleges | 24 | 12 | 12 | 46,576 | 44,981 |
+| Municipalities | 119 | 116 | 3 | 118,708 | 28,211 |
+| School districts | 37 | 24 | 13 | 21,466 | 45,385 |
+| Universities and colleges | 24 | 14 | 10 | 56,563 | 44,857 |
 
 ## Processing queue
 
@@ -52,5 +52,5 @@ Priority 1 covers missing official employer/period coverage, held partial employ
 - [Work queue](work-queue.csv) is suitable for filtering by employer, period, source status and priority.
 - [Usage and snapshot format](README.md) explains importing a saved snapshot and rerunning the audit.
 
-Repository input fingerprint: `c38edddbde95a7e6e9b9b13964cb985e899a4b0f7724749f7a75372e77d1a4fc`.
+Repository input fingerprint: `05416874223fefd1d9c5c38984ff073b2e512982322d3a1002a563e78c5e9011`.
 Reference snapshot fingerprint: `5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1`.

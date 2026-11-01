@@ -1,0 +1,326 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "recovery-health-interior-board-2017-18",
+      "year": "2017/18",
+      "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/board-remuneration-2018.pdf",
+      "sourceIndexUrl": "https://www.interiorhealth.ca/about-ih/accountability/financial-reporting",
+      "sha256": "2b08bfb30208745a19714c4e6819f53f3b34de46a4cf0f49d1ce651e3103434f",
+      "pdfBytes": 45150,
+      "notes": [
+        "Board members only. Remuneration retains the published annual remuneration field; expense reimbursements are unpublished and every normalized expense is null. Original officially published unsigned schedule; no adoption/signature claim. Physical PDF page numbers are retained.",
+        "Annual remuneration includes retainers, meeting fees and significant-travel per diem fees. Per diem fees are remuneration; the table does not publish expense reimbursements. Blank component cells remain unknown within evidence and are not presented as standalone zero payments. Annual published totals control remuneration."
+      ],
+      "employerSlug": "interior-health",
+      "employerName": "Interior Health",
+      "sector": "Health authorities",
+      "title": "Interior Health board remuneration 2017/18",
+      "file": "recovery-health-interior-board-2017-18.json.gzip",
+      "dataSha256": "04c45e0f9f3cf68f0512da056df2ee17664860161099deeccdf32942f3f1548e",
+      "rowCount": 13,
+      "totalRemuneration": 169627,
+      "totalExpenses": 0,
+      "totalDisclosedExpenses": 0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "periodType": "fiscal",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "currency": "CAD",
+      "nameDisclosure": "named",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "expenseDisclosure": "not-published",
+      "expenseComparatorAvailable": false,
+      "publicationStatus": "official-published-unsigned",
+      "publicWarning": "Expense reimbursements are not published in this board remuneration schedule. All expense fields are unknown, not zero. Published remuneration fields disagree: row sum minus printed total = 2 CAD; row component residuals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]. Published amounts remain literal; no cause is inferred.",
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF coordinate-word row reader",
+          "Poppler fixed-width text row reader"
+        ],
+        "independentlyComparedRows": 13,
+        "completeEmployeeSchedule": false,
+        "completeBoardSchedule": true,
+        "physicalPdfPages": [
+          1
+        ],
+        "sourceRowsPerPhysicalPage": [
+          13
+        ],
+        "expenseDisclosure": "not-published",
+        "missingExpenseRows": 13,
+        "explicitZeroExpenseRows": 0,
+        "explicitZeroRemunerationRows": 0,
+        "negativeRemunerationRows": 0,
+        "printedRemunerationTotal": 169625,
+        "remunerationControlResidual": 2,
+        "payComponentResiduals": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "originalBackedEvidenceSha256": "5bbf3ba5197b7d6ed36887e112f8e82ebc98275ffdb2bab496eb7c435e5d4acc",
+        "rowProvenanceFile": "evidence/recovery-health-interior-board-2017-18-rows.json.gzip",
+        "rowProvenanceSha256": "b67c772d35ab5188cb6e0acb3edb4c31ab8f13b462134d5b6a725d3034f1d6e4",
+        "renderReview": {
+          "physicalPages": [
+            1
+          ],
+          "allNamedRowsReviewed": true,
+          "coverage": "Complete primary summary/table: every name, title, amount, row/page boundary, header, period and relevant footnote reviewed against rendered original.",
+          "imagePath": "/tmp/recovery-health/interior-2018-summary.png"
+        }
+      }
+    },
+    {
+      "id": "recovery-health-interior-board-2016-17",
+      "year": "2016/17",
+      "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/board-remuneration-2017.pdf",
+      "sourceIndexUrl": "https://www.interiorhealth.ca/about-ih/accountability/financial-reporting",
+      "sha256": "7cd67d2535d507e3c6709d5c117d867d80e114fa3f1c8d71a40297e04abbdd3e",
+      "pdfBytes": 39128,
+      "notes": [
+        "Board members only. Remuneration retains the published annual remuneration field; expense reimbursements are unpublished and every normalized expense is null. Original officially published unsigned schedule; no adoption/signature claim. Physical PDF page numbers are retained.",
+        "Annual remuneration includes retainers, meeting fees and significant-travel per diem fees. Per diem fees are remuneration; the table does not publish expense reimbursements. Blank component cells remain unknown within evidence and are not presented as standalone zero payments. Annual published totals control remuneration."
+      ],
+      "employerSlug": "interior-health",
+      "employerName": "Interior Health",
+      "sector": "Health authorities",
+      "title": "Interior Health board remuneration 2016/17",
+      "file": "recovery-health-interior-board-2016-17.json.gzip",
+      "dataSha256": "cc74cd6c6fb6d20319d0fe3d1f71b64d05f7d633effe2e4c0acd3226a4183949",
+      "rowCount": 10,
+      "totalRemuneration": 176284,
+      "totalExpenses": 0,
+      "totalDisclosedExpenses": 0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "periodType": "fiscal",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "currency": "CAD",
+      "nameDisclosure": "named",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "expenseDisclosure": "not-published",
+      "expenseComparatorAvailable": false,
+      "publicationStatus": "official-published-unsigned",
+      "publicWarning": "Expense reimbursements are not published in this board remuneration schedule. All expense fields are unknown, not zero.",
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF coordinate-word row reader",
+          "Poppler fixed-width text row reader"
+        ],
+        "independentlyComparedRows": 10,
+        "completeEmployeeSchedule": false,
+        "completeBoardSchedule": true,
+        "physicalPdfPages": [
+          1
+        ],
+        "sourceRowsPerPhysicalPage": [
+          10
+        ],
+        "expenseDisclosure": "not-published",
+        "missingExpenseRows": 10,
+        "explicitZeroExpenseRows": 0,
+        "explicitZeroRemunerationRows": 0,
+        "negativeRemunerationRows": 0,
+        "printedRemunerationTotal": 176284,
+        "remunerationControlResidual": 0,
+        "payComponentResiduals": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "originalBackedEvidenceSha256": "3014d188b408156f202c63ba5cb4007bfbda0eded4028a2fdcaeff9de16b98f0",
+        "rowProvenanceFile": "evidence/recovery-health-interior-board-2016-17-rows.json.gzip",
+        "rowProvenanceSha256": "8027e87eec7c1e7057d60c305b6447ca446b46ef449018606a96ed10b624d966",
+        "renderReview": {
+          "physicalPages": [
+            1
+          ],
+          "allNamedRowsReviewed": true,
+          "coverage": "Complete primary summary/table: every name, title, amount, row/page boundary, header, period and relevant footnote reviewed against rendered original.",
+          "imagePath": "/tmp/recovery-health/interior-2017-summary.png"
+        }
+      }
+    },
+    {
+      "id": "recovery-health-interior-board-2015-16",
+      "year": "2015/16",
+      "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/board-remuneration-2016.pdf",
+      "sourceIndexUrl": "https://www.interiorhealth.ca/about-ih/accountability/financial-reporting",
+      "sha256": "7f3d37456c0c6a513a0a8a764ab9628458acce57a2d77f77fdcbeaf59169841e",
+      "pdfBytes": 61476,
+      "notes": [
+        "Board members only. Remuneration retains the published annual remuneration field; expense reimbursements are unpublished and every normalized expense is null. Original officially published unsigned schedule; no adoption/signature claim. Physical PDF page numbers are retained.",
+        "Source page 2 excludes $1,250 retainer and $500 meeting fees paid FY2015/16 for meetings attended and previously reported FY2014/15. This public original footnote is retained without adjusting either year. Remuneration includes retainer, chair and meeting fees; significant-travel per diem fees are disclosed as fees on page 3. The primary remuneration summary titles are used rather than inferring longer positions from the component schedule."
+      ],
+      "employerSlug": "interior-health",
+      "employerName": "Interior Health",
+      "sector": "Health authorities",
+      "title": "Interior Health board remuneration 2015/16",
+      "file": "recovery-health-interior-board-2015-16.json.gzip",
+      "dataSha256": "f982e1ffaabacf8b313d84fa82f463907b0a03d733d00ca576cc902c05411e42",
+      "rowCount": 9,
+      "totalRemuneration": 172969,
+      "totalExpenses": 0,
+      "totalDisclosedExpenses": 0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "periodType": "fiscal",
+      "periodStart": "2015-04-01",
+      "periodEnd": "2016-03-31",
+      "currency": "CAD",
+      "nameDisclosure": "named",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "expenseDisclosure": "not-published",
+      "expenseComparatorAvailable": false,
+      "publicationStatus": "official-published-unsigned",
+      "publicWarning": "Expense reimbursements are not published in this board remuneration schedule. All expense fields are unknown, not zero.",
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF coordinate-word row reader",
+          "Poppler fixed-width text row reader"
+        ],
+        "independentlyComparedRows": 9,
+        "completeEmployeeSchedule": false,
+        "completeBoardSchedule": true,
+        "physicalPdfPages": [
+          2
+        ],
+        "sourceRowsPerPhysicalPage": [
+          9
+        ],
+        "expenseDisclosure": "not-published",
+        "missingExpenseRows": 9,
+        "explicitZeroExpenseRows": 0,
+        "explicitZeroRemunerationRows": 0,
+        "negativeRemunerationRows": 0,
+        "printedRemunerationTotal": null,
+        "remunerationControlResidual": null,
+        "payComponentResiduals": [],
+        "originalBackedEvidenceSha256": "5a844c9cb108883f38d03883a86cd01d78704d05051300981a680f8752c947cf",
+        "rowProvenanceFile": "evidence/recovery-health-interior-board-2015-16-rows.json.gzip",
+        "rowProvenanceSha256": "242d52b2ecc63a8265f1de9583e2114c2c6d59fee690abf84ade9ee823c008ea",
+        "renderReview": {
+          "physicalPages": [
+            2
+          ],
+          "allNamedRowsReviewed": true,
+          "coverage": "Complete primary summary/table: every name, title, amount, row/page boundary, header, period and relevant footnote reviewed against rendered original.",
+          "imagePath": "/tmp/recovery-health/interior-2016-summary.png"
+        }
+      }
+    },
+    {
+      "id": "recovery-health-interior-board-2014-15",
+      "year": "2014/15",
+      "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/board-remuneration-2015.pdf",
+      "sourceIndexUrl": "https://www.interiorhealth.ca/about-ih/accountability/financial-reporting",
+      "sha256": "ec694fc6111142bf6b926f2de98ce324ea50bd5a9448f5de93a048f6b68fce35",
+      "pdfBytes": 73715,
+      "notes": [
+        "Board members only. Remuneration retains the published annual remuneration field; expense reimbursements are unpublished and every normalized expense is null. Original officially published unsigned schedule; no adoption/signature claim. Physical PDF page numbers are retained.",
+        "Source page 2 reports Debra Cannon remuneration as explicit $0. Footnote 3 excludes $1,250 retainer and $500 meeting fees earned FY2014/15 but paid FY2015/16. The source also excludes travel and other expense reimbursements; significant-travel per diem meeting fees are part of disclosed meeting fees. Spacing in David Goldsmith amount \"$ 21, 594\" is typography, retained in raw evidence and parsed as 21594. Names/titles come from the primary remuneration summary; attendance page spelling is not substituted."
+      ],
+      "employerSlug": "interior-health",
+      "employerName": "Interior Health",
+      "sector": "Health authorities",
+      "title": "Interior Health board remuneration 2014/15",
+      "file": "recovery-health-interior-board-2014-15.json.gzip",
+      "dataSha256": "0bb29556c9213082368efff0bcf4abe8eaeb44379dbc8df93b4ed2e7ebcca12e",
+      "rowCount": 11,
+      "totalRemuneration": 160689,
+      "totalExpenses": 0,
+      "totalDisclosedExpenses": 0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "periodType": "fiscal",
+      "periodStart": "2014-04-01",
+      "periodEnd": "2015-03-31",
+      "currency": "CAD",
+      "nameDisclosure": "named",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "expenseDisclosure": "not-published",
+      "expenseComparatorAvailable": false,
+      "publicationStatus": "official-published-unsigned",
+      "publicWarning": "Expense reimbursements are not published in this board remuneration schedule. All expense fields are unknown, not zero.",
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF coordinate-word row reader",
+          "Poppler fixed-width text row reader"
+        ],
+        "independentlyComparedRows": 11,
+        "completeEmployeeSchedule": false,
+        "completeBoardSchedule": true,
+        "physicalPdfPages": [
+          2
+        ],
+        "sourceRowsPerPhysicalPage": [
+          11
+        ],
+        "expenseDisclosure": "not-published",
+        "missingExpenseRows": 11,
+        "explicitZeroExpenseRows": 0,
+        "explicitZeroRemunerationRows": 1,
+        "negativeRemunerationRows": 0,
+        "printedRemunerationTotal": null,
+        "remunerationControlResidual": null,
+        "payComponentResiduals": [],
+        "originalBackedEvidenceSha256": "17cff387e9668ba6392dc24d9f65ba3a6e63dc4c6822d6604c2792a79b41a316",
+        "rowProvenanceFile": "evidence/recovery-health-interior-board-2014-15-rows.json.gzip",
+        "rowProvenanceSha256": "f3f648dc1de257273dc65c92d8e9b9fa43ba718778b1335ef0c4130d5e484f3e",
+        "renderReview": {
+          "physicalPages": [
+            2
+          ],
+          "allNamedRowsReviewed": true,
+          "coverage": "Complete primary summary/table: every name, title, amount, row/page boundary, header, period and relevant footnote reviewed against rendered original.",
+          "imagePath": "/tmp/recovery-health/interior-2015-summary.png"
+        }
+      }
+    }
+  ]
+}

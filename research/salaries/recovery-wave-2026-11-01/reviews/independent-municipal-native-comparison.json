@@ -1,0 +1,1005 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS all 80 native municipal remainder rows across six cohorts, with literal published Sooke control caveats",
+  "independentOriginalExtraction": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-municipal-native-pdfminer-original-extraction.json",
+    "sha256": "1521a424310955e7286b0151c84ccf65dddfaf7e209eaf37e28636b429a206a8",
+    "rows": 80,
+    "engine": "PDFMiner 20251230",
+    "writtenBeforeCandidateGzipOpened": true,
+    "implementationIndependence": "Author uses PyMuPDF and Poppler. This reviewer independently implemented PDFMiner LTTextLine extraction from the original PDFs; no author parser functions, parsed rows, or row-provenance cells were used to derive the third extraction. Embedded extractorCode in the raw receipt makes extraction replayable."
+  },
+  "candidateManifest": {
+    "path": "research/salaries/recovery-municipal/sources.json",
+    "sha256": "169c0a445d97de2bc5b5c98f173e71a824b7d6b2431750dc711936ffe4e38fba"
+  },
+  "rowsCompared": 80,
+  "fieldsCompared": [
+    "employerSlug",
+    "literalName",
+    "literalPositionWithWrappedLinesJoinedBySpace",
+    "remuneration",
+    "expensesOrNull",
+    "physicalPdfPage"
+  ],
+  "candidateCorrections": [],
+  "comparisons": [
+    {
+      "sourceId": "recovery-municipal-midway-2023-elected-officials",
+      "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/06/13-Agenda-JUN-9-2025.pdf",
+      "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "file": "research/salaries/recovery-municipal/midway-2023-elected-officials.json.gzip",
+      "dataSha256": "013ed833a1955c173e90816ed382c0c2f1a50d68d83db2c25b4d5406bdae4d06",
+      "evidenceFile": "research/salaries/recovery-municipal/evidence/midway-2023-2024.json.gzip",
+      "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc",
+      "rowsCompared": 5,
+      "allSixFieldsExact": true,
+      "rowsByPhysicalPage": {
+        "9": 5
+      },
+      "literalPaySum": 46270,
+      "literalKnownExpenseSum": 22608,
+      "nullExpenseRows": 0,
+      "explicitZeroExpenseRows": 0,
+      "printedNamedControls": {
+        "remuneration": 46270,
+        "expenses": 22608
+      },
+      "rowComparison": [
+        {
+          "sourceRow": 1,
+          "name": "McMynn, Douglas",
+          "physicalPage": 9,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 2,
+          "name": "Dunsdon, Richard",
+          "physicalPage": 9,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 3,
+          "name": "Metcalf, Darrin",
+          "physicalPage": 9,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 4,
+          "name": "Pownall, Aaron",
+          "physicalPage": 9,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 5,
+          "name": "Willsey, Judith",
+          "physicalPage": 9,
+          "allFieldsExact": true
+        }
+      ],
+      "sourcePublicWarning": null,
+      "corrections": []
+    },
+    {
+      "sourceId": "recovery-municipal-midway-2023-employee-remuneration",
+      "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/06/13-Agenda-JUN-9-2025.pdf",
+      "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "file": "research/salaries/recovery-municipal/midway-2023-employee-remuneration.json.gzip",
+      "dataSha256": "217c20017f14efe1fdde645992feced72629502fdfce4e8ded86f7e28bc7f57b",
+      "evidenceFile": "research/salaries/recovery-municipal/evidence/midway-2023-2024.json.gzip",
+      "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc",
+      "rowsCompared": 4,
+      "allSixFieldsExact": true,
+      "rowsByPhysicalPage": {
+        "9": 4
+      },
+      "literalPaySum": 357899,
+      "literalKnownExpenseSum": 19816,
+      "nullExpenseRows": 0,
+      "explicitZeroExpenseRows": 0,
+      "printedNamedControls": {
+        "remuneration": 357899,
+        "expenses": 19816
+      },
+      "rowComparison": [
+        {
+          "sourceRow": 1,
+          "name": "Boltz, John",
+          "physicalPage": 9,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 2,
+          "name": "Daloise, Michael",
+          "physicalPage": 9,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 3,
+          "name": "Peters, Tami",
+          "physicalPage": 9,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 4,
+          "name": "Teggarty, Lisa",
+          "physicalPage": 9,
+          "allFieldsExact": true
+        }
+      ],
+      "sourcePublicWarning": null,
+      "corrections": []
+    },
+    {
+      "sourceId": "recovery-municipal-midway-2024-elected-officials",
+      "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/06/13-Agenda-JUN-9-2025.pdf",
+      "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "file": "research/salaries/recovery-municipal/midway-2024-elected-officials.json.gzip",
+      "dataSha256": "6e7650ee38684c91a488a9f2e96c162233ed61aff4310afc82b10f136126e9e0",
+      "evidenceFile": "research/salaries/recovery-municipal/evidence/midway-2023-2024.json.gzip",
+      "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc",
+      "rowsCompared": 5,
+      "allSixFieldsExact": true,
+      "rowsByPhysicalPage": {
+        "11": 5
+      },
+      "literalPaySum": 48077,
+      "literalKnownExpenseSum": 23919,
+      "nullExpenseRows": 1,
+      "explicitZeroExpenseRows": 0,
+      "printedNamedControls": {
+        "remuneration": 48077,
+        "expenses": 23919
+      },
+      "rowComparison": [
+        {
+          "sourceRow": 1,
+          "name": "McMynn, Douglas",
+          "physicalPage": 11,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 2,
+          "name": "Dunsdon, Richard",
+          "physicalPage": 11,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 3,
+          "name": "Metcalf, Darrin",
+          "physicalPage": 11,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 4,
+          "name": "Pownall, Aaron",
+          "physicalPage": 11,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 5,
+          "name": "Willsey, Judith",
+          "physicalPage": 11,
+          "allFieldsExact": true
+        }
+      ],
+      "sourcePublicWarning": null,
+      "corrections": []
+    },
+    {
+      "sourceId": "recovery-municipal-midway-2024-employee-remuneration",
+      "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/06/13-Agenda-JUN-9-2025.pdf",
+      "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "file": "research/salaries/recovery-municipal/midway-2024-employee-remuneration.json.gzip",
+      "dataSha256": "9a279a61dff0e759fee4eab455b9c5631643a18f15aa5505997aa9668c0fc514",
+      "evidenceFile": "research/salaries/recovery-municipal/evidence/midway-2023-2024.json.gzip",
+      "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc",
+      "rowsCompared": 4,
+      "allSixFieldsExact": true,
+      "rowsByPhysicalPage": {
+        "11": 4
+      },
+      "literalPaySum": 362652,
+      "literalKnownExpenseSum": 2866,
+      "nullExpenseRows": 1,
+      "explicitZeroExpenseRows": 0,
+      "printedNamedControls": {
+        "remuneration": 362652,
+        "expenses": 2866
+      },
+      "rowComparison": [
+        {
+          "sourceRow": 1,
+          "name": "Boltz, John",
+          "physicalPage": 11,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 2,
+          "name": "Cameron, Phil",
+          "physicalPage": 11,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 3,
+          "name": "Daloise, Michael",
+          "physicalPage": 11,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 4,
+          "name": "Teggarty, Lisa",
+          "physicalPage": 11,
+          "allFieldsExact": true
+        }
+      ],
+      "sourcePublicWarning": null,
+      "corrections": []
+    },
+    {
+      "sourceId": "recovery-municipal-sooke-2025-elected-officials",
+      "sourceUrl": "https://www.sooke.ca/media/emqbjnxm/2025-statement-of-financial-information.pdf",
+      "sourceIndexUrl": "https://www.sooke.ca/media-manager/media-pages/plans-and-reports/2025-statement-of-financial-information-sofi/",
+      "originalSha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "file": "research/salaries/recovery-municipal/sooke-2025-elected-officials.json.gzip",
+      "dataSha256": "f3d97ddb1a1d8b5b1551058d87db941bc2c687568c9320fa2478701c7602ea0a",
+      "evidenceFile": "research/salaries/recovery-municipal/evidence/sooke-2025.json.gzip",
+      "evidenceSha256": "139c880e580b0e0898235d8e97e4cd5af99444f9ed8a41c569a86e1e5e99f3a1",
+      "rowsCompared": 7,
+      "allSixFieldsExact": true,
+      "rowsByPhysicalPage": {
+        "37": 7
+      },
+      "literalPaySum": 172062,
+      "literalKnownExpenseSum": 26266,
+      "nullExpenseRows": 0,
+      "explicitZeroExpenseRows": 0,
+      "printedNamedControls": {
+        "remuneration": 172062,
+        "expenses": 26266
+      },
+      "rowComparison": [
+        {
+          "sourceRow": 1,
+          "name": "Tait, Maja",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 2,
+          "name": "Bateman, Jeffrey",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 3,
+          "name": "Beddows, Allan",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 4,
+          "name": "Haldane, Herb",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 5,
+          "name": "McMath, Megan",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 6,
+          "name": "Pearson, Kevin",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 7,
+          "name": "St-Pierre, Marcel",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        }
+      ],
+      "sourcePublicWarning": "Sooke 2025 prints council remuneration of 172,062 and council expenses of 26,266 on page 37, but carries 172,064 in both council remuneration and council expenses columns on page 38. Page 38 prints total remuneration 8,634,739 and expenses 282,537. These published controls are retained literally; the differences remain unresolved and no cells have been adjusted.",
+      "corrections": []
+    },
+    {
+      "sourceId": "recovery-municipal-sooke-2025-employee-remuneration",
+      "sourceUrl": "https://www.sooke.ca/media/emqbjnxm/2025-statement-of-financial-information.pdf",
+      "sourceIndexUrl": "https://www.sooke.ca/media-manager/media-pages/plans-and-reports/2025-statement-of-financial-information-sofi/",
+      "originalSha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "file": "research/salaries/recovery-municipal/sooke-2025-employee-remuneration.json.gzip",
+      "dataSha256": "3196e2b9a7acc4042bbedca2761ae3a6237cfeb8434e6d5511afb7aec2175a27",
+      "evidenceFile": "research/salaries/recovery-municipal/evidence/sooke-2025.json.gzip",
+      "evidenceSha256": "139c880e580b0e0898235d8e97e4cd5af99444f9ed8a41c569a86e1e5e99f3a1",
+      "rowsCompared": 55,
+      "allSixFieldsExact": true,
+      "rowsByPhysicalPage": {
+        "37": 37,
+        "38": 18
+      },
+      "literalPaySum": 6874288,
+      "literalKnownExpenseSum": 110428,
+      "nullExpenseRows": 7,
+      "explicitZeroExpenseRows": 0,
+      "printedNamedControls": {
+        "remuneration": 6874287,
+        "expenses": 110474
+      },
+      "rowComparison": [
+        {
+          "sourceRow": 1,
+          "name": "Bagnall, Jessica",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 2,
+          "name": "Bate, Mitchell",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 3,
+          "name": "Bennett, Ryland",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 4,
+          "name": "Bledsoe, Mitch",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 5,
+          "name": "Blewett, Duane",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 6,
+          "name": "Bohemier, Paul",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 7,
+          "name": "Carter, Jeffrey",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 8,
+          "name": "Crawford, Madison",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 9,
+          "name": "Cruse, Cassandra",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 10,
+          "name": "Cullum, Scott",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 11,
+          "name": "Currie, Benjamin",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 12,
+          "name": "Dalep, Stacey",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 13,
+          "name": "Giles, Leah",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 14,
+          "name": "Gray, Raechel",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 15,
+          "name": "Handy, Christina",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 16,
+          "name": "Hardcastle, Bri",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 17,
+          "name": "Holder, Catherine",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 18,
+          "name": "Holmquist, Carsen",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 19,
+          "name": "Holmquist, Lowell",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 20,
+          "name": "Kaiser, Kevin",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 21,
+          "name": "Kennedy, Wayne",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 22,
+          "name": "Kerr, Grayson",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 23,
+          "name": "Knight, Deborah",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 24,
+          "name": "Knowles, Brandon",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 25,
+          "name": "Lambert, Derek",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 26,
+          "name": "Liu, Ye Qing",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 27,
+          "name": "Low, Jason",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 28,
+          "name": "MacDonald, Michael",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 29,
+          "name": "Marshall, Christopher",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 30,
+          "name": "Mattiussi, Lauren",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 31,
+          "name": "Mattson, Raphiel",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 32,
+          "name": "McCrea, Christopher",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 33,
+          "name": "McNeill, Andrew",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 34,
+          "name": "Mills, Medea",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 35,
+          "name": "Moog, Christina",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 36,
+          "name": "Norris-Jones, Cameron",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 37,
+          "name": "Owen, Nancy",
+          "physicalPage": 37,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 38,
+          "name": "Read, Shawn",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 39,
+          "name": "Reinsch, Ryan",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 40,
+          "name": "Riley, Jayden",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 41,
+          "name": "Robertson, Anastasia",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 42,
+          "name": "Roux, Steven",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 43,
+          "name": "Scott, Gail",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 44,
+          "name": "Senon, Sofia",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 45,
+          "name": "Shepheard, Brent",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 46,
+          "name": "Sinclair, Angela",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 47,
+          "name": "Stevens, Scott",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 48,
+          "name": "Sutherland, Kyle",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 49,
+          "name": "Taylor, Emma",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 50,
+          "name": "Temple, Benjamin",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 51,
+          "name": "Van Vianen, Nichole",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 52,
+          "name": "Wade, Ethan",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 53,
+          "name": "Waher, Kurt",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 54,
+          "name": "Wilson, Jonathan",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        },
+        {
+          "sourceRow": 55,
+          "name": "Zerr, Nicole",
+          "physicalPage": 38,
+          "allFieldsExact": true
+        }
+      ],
+      "sourcePublicWarning": "Sooke 2025 prints council remuneration of 172,062 and council expenses of 26,266 on page 37, but carries 172,064 in both council remuneration and council expenses columns on page 38. Page 38 prints total remuneration 8,634,739 and expenses 282,537. These published controls are retained literally; the differences remain unresolved and no cells have been adjusted. Known individual sums differ from printed named controls: remuneration 6,874,288.00 CAD versus 6,874,287.00 CAD (residual +1.00); expenses 110,428.00 CAD versus 110,474.00 CAD (residual -46.00). Original row values remain literal; cause unresolved.",
+      "corrections": []
+    }
+  ],
+  "completeVisualCoverage": {
+    "salaryPages": [
+      {
+        "original": "Sooke 2025",
+        "physicalPage": 37,
+        "printedPage": 34,
+        "namedCouncilRows": 7,
+        "namedEmployeeRows": 37
+      },
+      {
+        "original": "Sooke 2025",
+        "physicalPage": 38,
+        "printedPage": 35,
+        "namedEmployeeRows": 18
+      },
+      {
+        "original": "Midway revised 2023",
+        "physicalPage": 9,
+        "printedPage": "- 3 -",
+        "namedCouncilRows": 5,
+        "namedEmployeeRows": 4
+      },
+      {
+        "original": "Midway revised 2024",
+        "physicalPage": 11,
+        "printedPage": "- 3 -",
+        "namedCouncilRows": 5,
+        "namedEmployeeRows": 4
+      }
+    ],
+    "method": "All four full salary images were visually read for names, positions, pay, expense/null, row/page boundaries, period and controls alongside independent PDFMiner text. Full field-level native comparison then covered every normalized row; no sampling or totals-only acceptance."
+  },
+  "wrappedPositionChecks": [
+    {
+      "name": "Blewett, Duane",
+      "position": "Manager of Subdivision Land Development - Approving Officer",
+      "positionFragments": [
+        "Manager of Subdivision Land Development -",
+        "Approving Officer"
+      ],
+      "physicalPage": 37,
+      "allFieldsMatchCandidate": true
+    },
+    {
+      "name": "Crawford, Madison",
+      "position": "Fire Prevention Inspector & Life Safety Educator",
+      "positionFragments": [
+        "Fire Prevention Inspector & Life Safety",
+        "Educator"
+      ],
+      "physicalPage": 37,
+      "allFieldsMatchCandidate": true
+    },
+    {
+      "name": "Mills, Medea",
+      "position": "Bylaw Enforcement Officer II/Business License Inspector",
+      "positionFragments": [
+        "Bylaw Enforcement Officer II/Business License",
+        "Inspector"
+      ],
+      "physicalPage": 37,
+      "allFieldsMatchCandidate": true
+    },
+    {
+      "name": "Moog, Christina",
+      "position": "Manager of Communications and Community Relations",
+      "positionFragments": [
+        "Manager of Communications and Community",
+        "Relations"
+      ],
+      "physicalPage": 37,
+      "allFieldsMatchCandidate": true
+    }
+  ],
+  "millsOffBaselineExpense": {
+    "physicalPage": 37,
+    "printedPage": 34,
+    "name": "Mills, Medea",
+    "position": "Bylaw Enforcement Officer II/Business License Inspector",
+    "remuneration": 99970,
+    "expenses": 33,
+    "nameBaselineY": 67.48240000000008,
+    "expenseCellY": 72.4414,
+    "expenseCellBounds": [
+      526.0502,
+      72.4414,
+      550.87012,
+      82.4014
+    ],
+    "visuallyConfirmed": true,
+    "footer34Excluded": true,
+    "footerY": 9.23,
+    "explanation": "33 is visibly in the expense column within the Mills row, raised above name/pay baseline. Footer 34 is separately printed below the last employee row."
+  },
+  "sourceControls": {
+    "midway2023": {
+      "council": [
+        46270,
+        22608
+      ],
+      "namedEmployees": [
+        357899,
+        19816
+      ],
+      "belowThresholdAggregate": [
+        375277,
+        2622
+      ],
+      "totalRemunerationAndExpenses": [
+        779446,
+        45046
+      ],
+      "allNamedControlsMatchRows": true
+    },
+    "midway2024": {
+      "council": [
+        48077,
+        23919
+      ],
+      "namedEmployees": [
+        362652,
+        2866
+      ],
+      "belowThresholdAggregate": [
+        441679,
+        8249
+      ],
+      "totalRemunerationAndExpenses": [
+        852408,
+        35034
+      ],
+      "allNamedControlsMatchRows": true
+    },
+    "sooke2025": {
+      "councilPhysicalPage37": {
+        "printed": [
+          172062,
+          26266
+        ],
+        "computed": [
+          172062,
+          26266
+        ]
+      },
+      "employeesPhysicalPage38": {
+        "printed": [
+          6874287,
+          110474
+        ],
+        "computedFromAll55LiteralRows": [
+          6874288,
+          110428
+        ],
+        "computedMinusPrinted": [
+          1,
+          -46
+        ]
+      },
+      "belowThresholdAggregatePhysicalPage38": {
+        "printedRemuneration": 1588389,
+        "printedExpenses": null,
+        "printedExpenseCell": "blank"
+      },
+      "councilCarriedPhysicalPage38": {
+        "printedRemuneration": 172064,
+        "printedExpenses": 172064,
+        "differenceFromPage37CouncilControls": [
+          2,
+          145798
+        ]
+      },
+      "totalPhysicalPage38": {
+        "printedRemuneration": 8634739,
+        "printedExpenses": 282537
+      },
+      "resolution": "All printed rows, components, controls and publicWarnings remain literal. No balancing adjustment, imputation of blank aggregate expenses, or inference about the cause of discrepancies."
+    }
+  },
+  "midwayRevisedApproval": {
+    "minutesUrl": "https://midwaybc.ca/wp-content/uploads/2025/07/13-Regular-Meeting-June-9-2025.pdf",
+    "minutesIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+    "originalPdf": "/tmp/recovery-municipal-review/midway-june9-2025-minutes.pdf",
+    "sha256": "930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d",
+    "meetingDateVisualPhysicalPage1": "June 9, 2025",
+    "printedPage1": 6951,
+    "staffReportAgendaPhysicalPage8": {
+      "date": "June 9, 2025",
+      "subject": "2023 & 2024 Statement of Financial Information",
+      "item": "9(c)",
+      "purpose": "Approval of revised 2023 and 2024 SOFI schedules accompanying the 2024 financial information package",
+      "attachmentsIncludeBothSalarySchedules": true
+    },
+    "motionsPhysicalPage2": {
+      "printedPage": 6952,
+      "motions": [
+        {
+          "id": "025-2025",
+          "literalText": "THAT Council approves revised 2023 Statement of Financial Information (SOFI) Schedules.",
+          "result": "Carried"
+        },
+        {
+          "id": "026-2025",
+          "literalText": "THAT Council approves revised 2024 Statement of Financial Information (SOFI) Schedules",
+          "result": "Carried"
+        }
+      ]
+    },
+    "signaturePhysicalPage3": {
+      "printedPage": 6953,
+      "visibleSignedLabels": [
+        "Mayor McMynn",
+        "CAO Teggarty"
+      ],
+      "bothSignaturesVisible": true
+    },
+    "conclusion": "These revised salary schedules are approved by the two carried motions in the signed official minutes, not merely staff recommendations."
+  },
+  "sookePeriodAndApproval": {
+    "coverPhysicalPage1": "2025 STATEMENT OF FINANCIAL INFORMATION / For the year ended December 31, 2025",
+    "salaryPhysicalPage37": "Statement of Financial Information for the year ended December 31, 2025",
+    "approvalPhysicalPage2": {
+      "visibleSignatures": [
+        {
+          "name": "Rose Liu",
+          "title": "Director of Financial Services",
+          "visibleDate": "June 23, 2026"
+        },
+        {
+          "name": "Maja Tait",
+          "title": "Mayor",
+          "visibleDate": "June 26, 2026"
+        }
+      ]
+    },
+    "draftMarkVisibleOnReviewedPages": false
+  },
+  "scopeAndDefinitionChecks": [
+    "Each employee cohort is the complete published named schedule over $75,000; all under-threshold aggregates are excluded from person rows. Council scope is separately complete.",
+    "Midway employee table header misleadingly says Elected Official; surrounding section explicitly identifies employees over $75,000, and the individual role/title fields identify staff. Employee categorization follows that actual source section.",
+    "Midway literal Councilor spelling and Public Works Forman title retained. No name/title enrichment or inferred alias correction.",
+    "Midway 2024 Pownall and Boltz expense dashes remain null. Sooke blank/dash expenses remain null; no explicit zero expense appears in the 80 reviewed rows.",
+    "Sooke remuneration includes salary, wages and taxable benefits paid during the year on cash basis. Travel, memberships, tuition, relocation, vehicle leases, extraordinary hiring expenses, registration fees and similar items are separately expenses. Financial statements use accrual basis with employer costs."
+  ],
+  "renderedImageOriginalMappings": [
+    {
+      "originalPdf": "/tmp/continuation-municipal/village-of-midway-04bb08ea2b2fc4.pdf",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "physicalPage": 8,
+      "image": "/tmp/recovery-municipal-review/midway-p8.png",
+      "imageSha256": "6619f302d5ddf0c08e66ee26cf1f68ca213bd5de4b95b74f8b7e5fea0d9e9c5b",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/continuation-municipal/village-of-midway-04bb08ea2b2fc4.pdf",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "physicalPage": 9,
+      "image": "/tmp/recovery-municipal-review/midway-p9.png",
+      "imageSha256": "234cbccd15293b471d16cfb6074c747a3718e2d05d03caadc9af2f264fb56e6c",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/continuation-municipal/village-of-midway-04bb08ea2b2fc4.pdf",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "physicalPage": 11,
+      "image": "/tmp/recovery-municipal-review/midway-p11.png",
+      "imageSha256": "89668db343aed5bc528d8bc90aaa6d77ae1834b500c2b926264c7c683cd8c893",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/continuation-municipal/district-of-sooke-f7c218a6018043.pdf",
+      "originalSha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "physicalPage": 1,
+      "image": "/tmp/recovery-municipal-review/sooke-2025-p1.png",
+      "imageSha256": "dd6efdda7cb44ee734f1700410b6b59ab2a5261ea5b8e97c10d3d2b268ce3b30",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/continuation-municipal/district-of-sooke-f7c218a6018043.pdf",
+      "originalSha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "physicalPage": 2,
+      "image": "/tmp/recovery-municipal-review/sooke-2025-p2.png",
+      "imageSha256": "df973a04e02ffd22780b96d3228dbcdf809ef9adba1e3f9bd4f8ac08c2c5b7c8",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/continuation-municipal/district-of-sooke-f7c218a6018043.pdf",
+      "originalSha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "physicalPage": 37,
+      "image": "/tmp/recovery-municipal-review/sooke-2025-p37.png",
+      "imageSha256": "b2614730b03911bda0405658bd84ebf9ea46911a551b50ec5ead4bfd1258210a",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/continuation-municipal/district-of-sooke-f7c218a6018043.pdf",
+      "originalSha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "physicalPage": 38,
+      "image": "/tmp/recovery-municipal-review/sooke-2025-p38.png",
+      "imageSha256": "3d06868aa928fa073d977c4addf0e47b36dee36705f8b1b3dacf8aa56ac0890e",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/recovery-municipal-review/midway-june9-2025-minutes.pdf",
+      "originalSha256": "930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d",
+      "physicalPage": 1,
+      "image": "/tmp/recovery-municipal-review/midway-minutes-p1.png",
+      "imageSha256": "3c0628cf9c7aac5bba0100c7d273a0817c6b92768ef078804419da0e655b1c94",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/recovery-municipal-review/midway-june9-2025-minutes.pdf",
+      "originalSha256": "930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d",
+      "physicalPage": 2,
+      "image": "/tmp/recovery-municipal-review/midway-minutes-p2.png",
+      "imageSha256": "b971472f4b6696bdfc02b59ea9ce6a645bbbcf53bf3f044b38cb5ad7bee28400",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/recovery-municipal-review/midway-june9-2025-minutes.pdf",
+      "originalSha256": "930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d",
+      "physicalPage": 3,
+      "image": "/tmp/recovery-municipal-review/midway-minutes-p3.png",
+      "imageSha256": "67f8b3b79c8a1f623e654c2764c1482c8a0cb2927cc1b5d09b31acd448368822",
+      "independent2xRenderedPixelMatch": true
+    }
+  ],
+  "reproduction": {
+    "description": "Extract extractorCode from independent raw receipt into a temporary Python file, then run it with a NEW temporary JSON output path. Compare each resulting cohort row list to the raw receipt and pinned candidate gzip. This replay confirms extraction; it does not constitute new visual review.",
+    "command": "python /tmp/independent-municipal-native-extract.py /tmp/independent-municipal-native-replayed.json"
+  },
+  "ownershipAndLimitations": [
+    "Only NEW independent-municipal-native-* receipts were written in the repository for this bounded task. No previous frozen review receipt, author data/manifest, parser, branch or global file was modified.",
+    "No external re-download or source-precedence/compiled-overlap integration audit is claimed. Exact URLs come from the frozen manifest and official minutes acquisition receipt; local original hashes and physical page render mapping were independently verified."
+  ]
+}

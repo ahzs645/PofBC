@@ -1,0 +1,20 @@
+{
+  "employerSlug": "bc-assessment",
+  "compiledYear": "2020/21",
+  "replacementYear": "2020",
+  "sourceIds": [
+    "recovery-crowns-bc-assessment-2020-employees"
+  ],
+  "sourceDataSha256": {
+    "recovery-crowns-bc-assessment-2020-employees": "edc5c7adb367db7e96913cdc5d6dbb1dcaadaa985967cc4a55a4f71ff72cb7c3"
+  },
+  "sourceSha256": {
+    "recovery-crowns-bc-assessment-2020-employees": "bee373465b9105553304c6761afbcd36b23a4d332abfb05c0fad996fed5a9f07"
+  },
+  "expectedRows": 362,
+  "expectedRetainedRows": 0,
+  "selectedRowsSha256": "4a762a9dc5ebfe39bd0a9b3197a05facb352ad3b1b8ca1332784f4561da40550",
+  "retainPositions": [],
+  "reason": "All362 compiled employee observations match the complete officially dated calendar2020 employee schedule on names and exact remuneration, preserving multiplicity. Known expense values agree;42source dashes replace compiled zeros rather than treating missing source expenses as zero. The original date and complete employee scope support replacing this whole wrongly labelled copy; no council or board rows are selected.",
+  "evidence": "research/salaries/recovery-wave-2026-11-01/crowns/compiled-comparison.json"
+}

@@ -1,0 +1,3474 @@
+{
+  "frozen": true,
+  "date": "2026-11-01",
+  "reviewer": "recovery_health",
+  "status": "pass-no-row-correction; preserve literal warnings and source-specific definitions",
+  "originalOnlyTranscriptionFile": "research/salaries/recovery-wave-2026-11-01/reviews/independent-crowns-pdfminer-original-transcription.json.gzip",
+  "originalOnlyTranscriptionSha256": "6cb387283a225450fc6658489ee0b3218f854b58e5e2df166a52a26cd04c60c4",
+  "reviewedSpecsSha256": "592163282b4e4d2347a6e232929fb2e32cb72fb250599cf9e52dbd8f7b5be153",
+  "reviewedManifestSha256": "57cc5c3eedd09038fe510cf7619d68bcb7d3c58d200abdb67038277609c4cb4d",
+  "rowAndEvidencePayloadsFrozen": true,
+  "metadataStatusAtReview": "held-for-peer-review; root may publish a new metadata-only acceptance receipt after changing status/adding source-definition notes",
+  "cohorts": 8,
+  "independentlyComparedRows": 2691,
+  "allSixFieldsMatch": true,
+  "allComponentVectorsMatch": true,
+  "sources": [
+    {
+      "id": "recovery-crowns-bc-assessment-2020-employees",
+      "employerSlug": "bc-assessment",
+      "year": "2020",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202020.pdf",
+      "sourceSha256": "bee373465b9105553304c6761afbcd36b23a4d332abfb05c0fad996fed5a9f07",
+      "sourceCachePath": "/tmp/sector-crowns/9e272b6ff883b31b.pdf",
+      "normalizedFile": "research/salaries/recovery-crowns/bc-assessment-2020.json.gzip",
+      "dataSha256": "edc5c7adb367db7e96913cdc5d6dbb1dcaadaa985967cc4a55a4f71ff72cb7c3",
+      "evidenceFile": "research/salaries/recovery-crowns/evidence/bc-assessment-2020.json.gzip",
+      "evidenceSha256": "9c0c8e9d9cd7bdca0a5a8e5739037f438511acc7355b1cd1c8941eadc3d9681b",
+      "rowCount": 362,
+      "allSixNormalizedFieldsMatch": true,
+      "exactOrderAndPageBoundariesMatch": true,
+      "allMonetarySourceComponentsMatch": true,
+      "independentReader": "PDFMiner LTChar baseline/gap reader; no root parser import",
+      "namedRemunerationSum": 34830265,
+      "knownNamedExpensesSum": 532750,
+      "missingExpensesPreserved": 42,
+      "printedControlsIndependentlyTranscribed": {
+        "page": 44,
+        "namedComparator": [
+          34830265,
+          532750
+        ],
+        "allBeforeEmployer": [
+          54762937,
+          810272
+        ],
+        "underThreshold": [
+          19932672,
+          277522
+        ],
+        "employerCppEi": 2703919,
+        "allAfterEmployer": [
+          54762937,
+          3514191
+        ],
+        "derivation": "[54762937-19932672,810272-277522]",
+        "key": "bca2020",
+        "approvalPage": 4,
+        "approvalDate": "2021-06-28",
+        "signers": [
+          "Sylvia Bishop",
+          "Don Krusel"
+        ],
+        "definitionPage": 33
+      },
+      "derivedNamedResiduals": [
+        0,
+        0
+      ],
+      "period": {
+        "periodType": "calendar",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "coverNativeText": "British Columbia Assessment Authority \nStatements of Financial Information \nFiled in accordance with Financial Information Act \nFiscal Year Ended December 31, 2020\n",
+        "employeeHeadingVerifiedOnOriginal": true
+      },
+      "approval": {
+        "physicalPage": 4,
+        "visiblySigned": true,
+        "date": "2021-06-28",
+        "signers": [
+          "Sylvia Bishop",
+          "Don Krusel"
+        ],
+        "nativeText": "British Columbia Assessment Authority \nStatement of Financial Information Approval \nDecember 31, 2020 \nThe undersigned represents the Board of Directors of the British Columbia Assessment \nAuthority and approves all of the statements and schedules included in the Statement of \nFinancial Information, produced under the Financial Information Act.\n ____________________________________________________________   \nSylvia Bishop, Chair, Board of Directors \n _____________________________________________________________ \nDon Krusel, Chair, Audit & Risk Management Committee \nJune 28, 2021 \n"
+      },
+      "definitionEvidence": {
+        "physicalPage": 33,
+        "nativeTextRead": true,
+        "text": " \n \n \n \nBritish Columbia Assessment Authority \n \nSCHEDULE F \nSchedule of Remuneration and Expenses \n \nFor the Fiscal Year Ended December 31, 2020 \n \n \n \n \n“Remuneration” reported for employees and the Board of Directors reflect calendar year \n2020 T4 salaries paid. T4 salaries includes anything reported in Box 14 of the T4 including \nsalaries, wages, vacation payouts and other taxable benefits. \n \n“Expenses” for employees and for members of the Board of Directors reflect 2020 fiscal year \nexpenses as reported in the Financial Statements of BC Assessment for all travel, moving, \neducation and professional association expenses paid to or on behalf of BC Assessment staff. \nReported expenses may include payments which have also been included on the Schedule \nof Supplier Payments where such payments were made on behalf of employees and Board \nmembers to suppliers of services such as travel and educational agencies. \n \n“Employee Benefits” reported reflect 2020 fiscal year expenses as reported in the Financial \nStatements of BC Assessment. \n \n \n \n",
+        "sha256": "5a07fc1b0c44587f6a763113752f88c7235122fa00019a1c78aa23bb8c57ad55",
+        "definitionScope": "BCA remuneration/expense definition page; BCER complete named-control footer definition page"
+      },
+      "controlNativeText": "British Columbia Assessment Authority \nSchedule of the remuneration and expenses paid to or on \nbehalf of each employee \nFor the Fiscal Year Ended December 31, 2020 \nName\nRemuneration ($)\nExpenses ($)\nZiola, D\n100,910\n \n1,078\n \nZsombor, K\n75,314\n \n555\n \nConsolidated total, employees earning $75,000 or less\n19,932,672\n             \n277,522\n         \nTotal \n54,762,937\n             \n810,272\n         \nEmployer portion of CPP & EI\n2,703,919\n      \nTotal paid to or on behalf of employees\n54,762,937\n             \n3,514,191\n      \n",
+      "imagesVisuallyReviewed": [
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2020-approval-p4.png",
+          "physicalPage": 4,
+          "scope": "approval page fully visually reviewed",
+          "sha256": "fbcf2a7024c87c71424109ad7ee9086c83845db0c13fc998a465efd73166e4b6"
+        },
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2020-control-p44.png",
+          "physicalPage": 44,
+          "scope": "control page fully visually reviewed",
+          "sha256": "08b555970ad7db40aeb6b04be81c453b8ea8a90904cfe9f176220e5c21db684a"
+        }
+      ],
+      "transitionUnknownOrNegativeRows": [],
+      "candidateCorrections": []
+    },
+    {
+      "id": "recovery-crowns-bc-assessment-2021-22-employees",
+      "employerSlug": "bc-assessment",
+      "year": "2021/22",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202021-22.pdf",
+      "sourceSha256": "f278728d20082c5daa3709697552a7e8a023cfe368e925e0d11138e1ad9ec38a",
+      "sourceCachePath": "/tmp/sector-crowns/6cacd14b073201d1.pdf",
+      "normalizedFile": "research/salaries/recovery-crowns/bc-assessment-2021-22.json.gzip",
+      "dataSha256": "8242f6937ff288e43f076f1670aed0acd6692dcfa483833922a1a575594c13d2",
+      "evidenceFile": "research/salaries/recovery-crowns/evidence/bc-assessment-2021-22.json.gzip",
+      "evidenceSha256": "c02d2971a00f3ee0fb4cee01cb918771c3caed86d01a2e0fcc8836af77679b08",
+      "rowCount": 359,
+      "allSixNormalizedFieldsMatch": true,
+      "exactOrderAndPageBoundariesMatch": true,
+      "allMonetarySourceComponentsMatch": true,
+      "independentReader": "PDFMiner LTChar baseline/gap reader; no root parser import",
+      "namedRemunerationSum": 43024330,
+      "knownNamedExpensesSum": 714013,
+      "missingExpensesPreserved": 42,
+      "printedControlsIndependentlyTranscribed": {
+        "page": 45,
+        "namedComparator": [
+          43024330,
+          714013
+        ],
+        "allBeforeEmployer": [
+          67438511,
+          1027636
+        ],
+        "underThreshold": [
+          16276232,
+          206188
+        ],
+        "separate15MonthOver75k12MonthUnder75kGroup": [
+          8137949,
+          107435
+        ],
+        "employerCppEi": 3733152,
+        "allAfterEmployer": [
+          67438511,
+          4760788
+        ],
+        "derivation": "[67438511-16276232-8137949,1027636-206188-107435]",
+        "key": "bca2021-22",
+        "approvalPage": 4,
+        "approvalDate": "2022-09-29",
+        "signers": [
+          "Ruth Wittenberg",
+          "Don Krusel"
+        ],
+        "definitionPage": 34
+      },
+      "derivedNamedResiduals": [
+        0,
+        0
+      ],
+      "period": {
+        "periodType": "fiscal",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2022-03-31",
+        "coverNativeText": "British Columbia Assessment Authority \nStatements of Financial Information  \nFiled in accordance with Financial Information Act \n15 Months Ended March 31, 2022\n",
+        "employeeHeadingVerifiedOnOriginal": true
+      },
+      "approval": {
+        "physicalPage": 4,
+        "visiblySigned": true,
+        "date": "2022-09-29",
+        "signers": [
+          "Ruth Wittenberg",
+          "Don Krusel"
+        ],
+        "nativeText": "British Columbia Assessment Authority \nStatement of Financial Information Approval  \nMarch 31, 2022 \nThe undersigned represents the Board of Directors of the British Columbia Assessment \nAuthority and approves all of the statements and schedules included in the Statement of \nFinancial Information, produced under the Financial Information Act. \n __________________________________________________________\nRuth Wittenberg, Chair, Board of Directors \n _____________________________________________________________ \nDon Krusel, Chair, Audit & Risk Management Committee, Board of Directors \nSeptember 29, 2022 \n"
+      },
+      "definitionEvidence": {
+        "physicalPage": 34,
+        "nativeTextRead": true,
+        "text": "British Columbia Assessment Authority \nSCHEDULE F \nSchedule of Remuneration and Expenses \nFor the 15 month period ended March 31, 2022 \n“Remuneration” reported for employees and the Board of Directors reflect fiscal year \n2021/22 T4 salaries paid. T4 salaries includes anything reported in Box 14 of the T4 including \nsalaries, wages, vacation payouts and other taxable benefits. \n“Expenses” for employees and for members of the Board of Directors reflect 2021/22 fiscal \nyear expenses as reported in the Financial Statements of BC Assessment for all travel, \nmoving, education and professional association expenses paid to or on behalf of BC \nAssessment staff.  \n“Employee Benefits” reported reflect 2021/22 fiscal year expenses as reported in the \nFinancial Statements of BC Assessment. \nPlease note: BC Assessment Authority changed its fiscal year-end from December \n31st to March 31st effective immediately after the fiscal year ended December \n31, 2020; therefore, the fiscal period ended March 31, 2022 is a 15 month transitory \nfiscal period.  The total amounts reported above represent 15 months of remuneration and \nexpenses. \n",
+        "sha256": "b9785dbe8b7b1fa86f268abb5c4c05801442cc6e425b720ab7bd6f57dea33b68",
+        "definitionScope": "BCA remuneration/expense definition page; BCER complete named-control footer definition page"
+      },
+      "controlNativeText": "Please note: BC Assessment Authority changed its fiscal year-end from December 31st to March 31st \nand therefore, the fiscal period ended March 31, 2022 is a 15 month transitory fiscal period.  The total \namounts reported above represent 15 months of remuneration and expenses. \nBritish Columbia Assessment Authority \nSchedule of the remuneration and expenses paid to or on \nbehalf of each employee \nFor the 15 month period ended March 31, 2022 \nExpenses ($)\nName\n2021\nJan-Dec\n(12 MOS.)\n2022\nJan-Mar\n(3 MOS.)\n2021/22\nTotal\n(15 MOS.)\n2021/22\nTotal\n(15 MOS.)\n124,787\n22,481\n147,268\n1,576\n113,945\n25,992\n139,937\n273\n84,073\n-\n84,073\n-\n85,752\n23,508\n109,260\n3,627\n102,767\n24,834\n127,601\n1,684\n82,664\n19,129\n101,793\n1,207\n100,111\n22,295\n122,406\n1,513\n76,841\n17,714\n94,555\n-\n6,540,376\n1,597,573\n8,137,949\n107,435\n13,260,642\n3,015,590\n16,276,232\n206,188\n54,913,095\n12,525,416\n67,438,511\n1,027,636\n3,733,152\nZajac, Rebeka\nZak, Nolan\nZdunich, Richard\nZhang, Defeng\nZhao, Meng\nZheng, Shu Xian\nZiola, David\nZsombor, Kyle\nConsolidated total, employees earning > $75,000\nin 15 months, but less than $75,000 in 12 months\nConsolidated total, employees earning < $75,000\nTotal\nEmployer portion of CPP & EI\nTotal paid to or on behalf of employees\n67,438,511\n$       \n4,760,788\n$       \nRemuneration ($)\n",
+      "imagesVisuallyReviewed": [
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2021-22-approval-p4.png",
+          "physicalPage": 4,
+          "scope": "approval page fully visually reviewed",
+          "sha256": "40c90b905825c6862ecb261872d9acbdc1a22e32cfd498d406e3dfea0aa6fed4"
+        },
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2021-22-control-p45.png",
+          "physicalPage": 45,
+          "scope": "control page fully visually reviewed",
+          "sha256": "5563da59cc1b1dc12a17d7f4d922f4dd9ee26bef04b686bb14af142ee1fd11c5"
+        }
+      ],
+      "transitionUnknownOrNegativeRows": [
+        {
+          "row": [
+            "bc-assessment",
+            "Allwork, Clive",
+            null,
+            177712,
+            null,
+            36
+          ],
+          "physicalPage": 36,
+          "y0": 525.5371536000002,
+          "rawCells": [
+            "Allwork, Clive",
+            "152,349",
+            "25,363",
+            "177,712",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Allwork, Clive",
+              92.03178720000005,
+              145.26194928000007
+            ],
+            [
+              "       152,349",
+              306.470904,
+              353.84106096000016
+            ],
+            [
+              "25,363",
+              378.19002384,
+              405.47611824
+            ],
+            [
+              "177,712",
+              429.44011728,
+              461.65410528
+            ],
+            [
+              "-",
+              539.01847032,
+              541.98589992
+            ]
+          ],
+          "componentsAndExpenses": [
+            152349,
+            25363,
+            177712,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Audette, Cameron",
+            null,
+            180433,
+            null,
+            36
+          ],
+          "physicalPage": 36,
+          "y0": 500.6960016000002,
+          "rawCells": [
+            "Audette, Cameron",
+            "143,944",
+            "36,489",
+            "180,433",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Audette, Cameron",
+              92.03178720000005,
+              164.43350496000005
+            ],
+            [
+              "       143,944",
+              306.470904,
+              353.833932
+            ],
+            [
+              "36,489",
+              378.19002384,
+              405.47611824
+            ],
+            [
+              "180,433",
+              429.44011728,
+              461.65410528
+            ],
+            [
+              "-",
+              539.01847032,
+              541.98589992
+            ]
+          ],
+          "componentsAndExpenses": [
+            143944,
+            36489,
+            180433,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Autajay, Alan",
+            null,
+            121636,
+            null,
+            36
+          ],
+          "physicalPage": 36,
+          "y0": 488.27542560000023,
+          "rawCells": [
+            "Autajay, Alan",
+            "95,258",
+            "26,378",
+            "121,636",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Autajay, Alan",
+              92.03178720000005,
+              144.43855440000004
+            ],
+            [
+              "         95,258",
+              306.470904,
+              353.84106096000016
+            ],
+            [
+              "26,378",
+              378.19091496,
+              405.48413832000006
+            ],
+            [
+              "121,636",
+              429.4490284800001,
+              461.6701454400001
+            ],
+            [
+              "-",
+              539.0354016000001,
+              542.0028312000001
+            ]
+          ],
+          "componentsAndExpenses": [
+            95258,
+            26378,
+            121636,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Aybar, Edwin",
+            null,
+            130265,
+            null,
+            36
+          ],
+          "physicalPage": 36,
+          "y0": 475.85484960000025,
+          "rawCells": [
+            "Aybar, Edwin",
+            "105,053",
+            "25,212",
+            "130,265",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Aybar, Edwin",
+              92.03178720000005,
+              144.29597520000007
+            ],
+            [
+              "       105,053",
+              306.470904,
+              353.87135903999996
+            ],
+            [
+              "25,212",
+              378.19002384,
+              405.47611824
+            ],
+            [
+              "130,265",
+              429.44011728,
+              461.65410528
+            ],
+            [
+              "-",
+              539.01847032,
+              541.98589992
+            ]
+          ],
+          "componentsAndExpenses": [
+            105053,
+            25212,
+            130265,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Blackman, Laura",
+            null,
+            143195,
+            null,
+            36
+          ],
+          "physicalPage": 36,
+          "y0": 301.7893488000004,
+          "rawCells": [
+            "Blackman, Laura",
+            "116,705",
+            "26,490",
+            "143,195",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Blackman, Laura",
+              92.03178720000005,
+              158.95222584000004
+            ],
+            [
+              "       116,705",
+              306.470904,
+              353.83838760000015
+            ],
+            [
+              "26,490",
+              378.19002384,
+              405.47611824
+            ],
+            [
+              "143,195",
+              429.44011728,
+              461.65410528
+            ],
+            [
+              "-",
+              539.01847032,
+              541.98589992
+            ]
+          ],
+          "componentsAndExpenses": [
+            116705,
+            26490,
+            143195,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Bonner, Sarah",
+            null,
+            121422,
+            null,
+            36
+          ],
+          "physicalPage": 36,
+          "y0": 264.5276208000005,
+          "rawCells": [
+            "Bonner, Sarah",
+            "97,110",
+            "24,312",
+            "121,422",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Bonner, Sarah",
+              92.03178720000005,
+              149.49298704000006
+            ],
+            [
+              "         97,110",
+              306.470904,
+              353.83571424
+            ],
+            [
+              "24,312",
+              378.18289488,
+              405.47166264
+            ],
+            [
+              "121,422",
+              429.43566167999995,
+              461.65143192
+            ],
+            [
+              "-",
+              539.01579696,
+              541.9832265599999
+            ]
+          ],
+          "componentsAndExpenses": [
+            97110,
+            24312,
+            121422,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Carley, Sara",
+            null,
+            94482,
+            null,
+            36
+          ],
+          "physicalPage": 36,
+          "y0": 127.78299360000038,
+          "rawCells": [
+            "Carley, Sara",
+            "76,767",
+            "17,715",
+            "94,482",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Carley, Sara",
+              92.03178720000005,
+              141.46934256000006
+            ],
+            [
+              "         76,767",
+              306.470904,
+              353.8383876
+            ],
+            [
+              "17,715",
+              378.19002384000004,
+              405.4814649600001
+            ],
+            [
+              "94,482",
+              434.42593368000007,
+              461.65143192000016
+            ],
+            [
+              "-",
+              539.0157969600001,
+              541.98322656
+            ]
+          ],
+          "componentsAndExpenses": [
+            76767,
+            17715,
+            94482,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Chaplin, Eleonora",
+            null,
+            93985,
+            null,
+            37
+          ],
+          "physicalPage": 37,
+          "y0": 501.29600160000024,
+          "rawCells": [
+            "Chaplin, Eleonora",
+            "76,733",
+            "17,252",
+            "93,985",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Chaplin, Eleonora",
+              92.01770399999998,
+              162.59975472
+            ],
+            [
+              "76,733",
+              321.5639781599999,
+              348.76541616
+            ],
+            [
+              "17,252",
+              373.14913271999995,
+              400.4209691999997
+            ],
+            [
+              "93,985",
+              429.36543791999964,
+              456.56687591999935
+            ],
+            [
+              "-",
+              533.9312409599993,
+              536.8986705599992
+            ]
+          ],
+          "componentsAndExpenses": [
+            76733,
+            17252,
+            93985,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Chow, Dennis",
+            null,
+            105512,
+            null,
+            37
+          ],
+          "physicalPage": 37,
+          "y0": 463.97512800000027,
+          "rawCells": [
+            "Chow, Dennis",
+            "85,484",
+            "20,028",
+            "105,512",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Chow, Dennis",
+              92.01770399999998,
+              147.25377719999997
+            ],
+            [
+              "85,484",
+              321.59784071999997,
+              348.78858528
+            ],
+            [
+              "20,028",
+              373.17230184,
+              400.44413831999975
+            ],
+            [
+              "105,512",
+              424.40813735999967,
+              456.5846983199994
+            ],
+            [
+              "-",
+              533.9490633599994,
+              536.9164929599993
+            ]
+          ],
+          "componentsAndExpenses": [
+            85484,
+            20028,
+            105512,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Creegan, Joseph",
+            null,
+            94844,
+            null,
+            37
+          ],
+          "physicalPage": 37,
+          "y0": 352.1307984000004,
+          "rawCells": [
+            "Creegan, Joseph",
+            "77,130",
+            "17,714",
+            "94,844",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Creegan, Joseph",
+              92.01770399999998,
+              159.92283023999997
+            ],
+            [
+              "77,130",
+              321.58714727999995,
+              348.78323856
+            ],
+            [
+              "17,714",
+              373.16695512,
+              400.4387915999997
+            ],
+            [
+              "94,844",
+              429.38326031999964,
+              456.5846983199994
+            ],
+            [
+              "-",
+              533.9490633599994,
+              536.9164929599993
+            ]
+          ],
+          "componentsAndExpenses": [
+            77130,
+            17714,
+            94844,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Cunningham, Nicholas",
+            null,
+            126820,
+            null,
+            37
+          ],
+          "physicalPage": 37,
+          "y0": 327.28964640000044,
+          "rawCells": [
+            "Cunningham, Nicholas",
+            "103,083",
+            "23,737",
+            "126,820",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Cunningham, Nicholas",
+              92.01770399999998,
+              181.43981376
+            ],
+            [
+              "103,083",
+              316.60400424,
+              348.7315535999999
+            ],
+            [
+              "23,737",
+              373.1152701599999,
+              400.3853243999997
+            ],
+            [
+              "126,820",
+              424.3493234399997,
+              456.53746895999944
+            ],
+            [
+              "-",
+              533.9018339999994,
+              536.8692635999994
+            ]
+          ],
+          "componentsAndExpenses": [
+            103083,
+            23737,
+            126820,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "De Goede, Jacobus",
+            null,
+            99517,
+            1767,
+            37
+          ],
+          "physicalPage": 37,
+          "y0": 252.7070448000005,
+          "rawCells": [
+            "De Goede, Jacobus",
+            "99,517",
+            "-",
+            "99,517",
+            "1,767"
+          ],
+          "rawCellXExtents": [
+            [
+              "De Goede, Jacobus",
+              92.01770399999998,
+              170.72587799999997
+            ],
+            [
+              "99,517",
+              321.55061135999995,
+              348.7636339200001
+            ],
+            [
+              "-",
+              400.38799776000013,
+              403.35542736000014
+            ],
+            [
+              "99,517",
+              429.3681112800001,
+              456.59093616000007
+            ],
+            [
+              "1,767",
+              511.6951236000001,
+              533.9891637600001
+            ]
+          ],
+          "componentsAndExpenses": [
+            99517,
+            null,
+            99517,
+            1767
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Dergousoff, Shawn",
+            null,
+            95424,
+            null,
+            37
+          ],
+          "physicalPage": 37,
+          "y0": 215.38617120000046,
+          "rawCells": [
+            "Dergousoff, Shawn",
+            "77,355",
+            "18,069",
+            "95,424",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Dergousoff, Shawn",
+              92.01770399999998,
+              167.95538591999997
+            ],
+            [
+              "77,355",
+              321.57912719999996,
+              348.78056519999996
+            ],
+            [
+              "18,069",
+              373.16428175999994,
+              400.4361182399997
+            ],
+            [
+              "95,424",
+              429.3805869599996,
+              456.58202495999933
+            ],
+            [
+              "-",
+              533.9463899999993,
+              536.9138195999992
+            ]
+          ],
+          "componentsAndExpenses": [
+            77355,
+            18069,
+            95424,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Derickson, Jordan",
+            null,
+            99879,
+            -812,
+            37
+          ],
+          "physicalPage": 37,
+          "y0": 202.96559520000045,
+          "rawCells": [
+            "Derickson, Jordan",
+            "80,643",
+            "19,236",
+            "99,879",
+            "(812)"
+          ],
+          "rawCellXExtents": [
+            [
+              "Derickson, Jordan",
+              92.01770399999998,
+              163.87494743999997
+            ],
+            [
+              "80,643",
+              321.57912719999996,
+              348.78591192
+            ],
+            [
+              "19,236",
+              373.16962848,
+              400.43790048000005
+            ],
+            [
+              "99,879",
+              429.3823692,
+              456.58915392000006
+            ],
+            [
+              "(812)",
+              516.1329012000001,
+              536.91292848
+            ]
+          ],
+          "componentsAndExpenses": [
+            80643,
+            19236,
+            99879,
+            -812
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Dhami, Gurdeesh",
+            null,
+            99297,
+            -807,
+            37
+          ],
+          "physicalPage": 37,
+          "y0": 178.12444320000043,
+          "rawCells": [
+            "Dhami, Gurdeesh",
+            "80,218",
+            "19,079",
+            "99,297",
+            "(807)"
+          ],
+          "rawCellXExtents": [
+            [
+              "Dhami, Gurdeesh",
+              92.01770399999998,
+              161.87527416
+            ],
+            [
+              "80,218",
+              321.55952256,
+              348.76363391999996
+            ],
+            [
+              "19,079",
+              373.14735047999994,
+              400.41384023999984
+            ],
+            [
+              "99,297",
+              429.3583089599998,
+              456.5624203199997
+            ],
+            [
+              "(807)",
+              516.1061675999997,
+              536.8844126399995
+            ]
+          ],
+          "componentsAndExpenses": [
+            80218,
+            19079,
+            99297,
+            -807
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Fan, Lanfei",
+            null,
+            139998,
+            null,
+            38
+          ],
+          "physicalPage": 38,
+          "y0": 463.97512800000027,
+          "rawCells": [
+            "Fan, Lanfei",
+            "110,600",
+            "29,398",
+            "139,998",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Fan, Lanfei",
+              92.01770399999998,
+              136.71450095999998
+            ],
+            [
+              "110,600",
+              316.65479808,
+              348.77878295999994
+            ],
+            [
+              "29,398",
+              373.16249952,
+              400.43077152000006
+            ],
+            [
+              "139,998",
+              424.39477056,
+              456.58024272000006
+            ],
+            [
+              "-",
+              533.94460776,
+              536.91203736
+            ]
+          ],
+          "componentsAndExpenses": [
+            110600,
+            29398,
+            139998,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Frank, Nola Charmaine",
+            null,
+            96443,
+            -768,
+            38
+          ],
+          "physicalPage": 38,
+          "y0": 389.45167200000037,
+          "rawCells": [
+            "Frank, Nola Charmaine",
+            "77,821",
+            "18,622",
+            "96,443",
+            "(768)"
+          ],
+          "rawCellXExtents": [
+            [
+              "Frank, Nola Charmaine",
+              92.01770399999998,
+              184.15594752
+            ],
+            [
+              "77,821",
+              321.58001832,
+              348.77521848000004
+            ],
+            [
+              "18,622",
+              373.15893504,
+              400.41562247999974
+            ],
+            [
+              "96,443",
+              429.36009119999966,
+              456.57400487999934
+            ],
+            [
+              "(768)",
+              516.1177521599993,
+              536.903126159999
+            ]
+          ],
+          "componentsAndExpenses": [
+            77821,
+            18622,
+            96443,
+            -768
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Gontijo Leal, Gustavo",
+            null,
+            154629,
+            null,
+            38
+          ],
+          "physicalPage": 38,
+          "y0": 265.1276208000005,
+          "rawCells": [
+            "Gontijo Leal, Gustavo",
+            "124,782",
+            "29,847",
+            "154,629",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Gontijo Leal, Gustavo",
+              92.01770399999998,
+              177.69978312000006
+            ],
+            [
+              "124,782",
+              316.62360888,
+              348.75472271999996
+            ],
+            [
+              "29,847",
+              373.13843927999994,
+              400.41027576
+            ],
+            [
+              "154,629",
+              424.37427479999997,
+              456.56509368
+            ],
+            [
+              "-",
+              533.92945872,
+              536.8968883199999
+            ]
+          ],
+          "componentsAndExpenses": [
+            124782,
+            29847,
+            154629,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Grace, Aubrey",
+            null,
+            102435,
+            null,
+            38
+          ],
+          "physicalPage": 38,
+          "y0": 252.7070448000005,
+          "rawCells": [
+            "Grace, Aubrey",
+            "81,317",
+            "21,118",
+            "102,435",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Grace, Aubrey",
+              92.01770399999998,
+              149.57158032
+            ],
+            [
+              "81,317",
+              321.57556272,
+              348.7876941599999
+            ],
+            [
+              "21,118",
+              373.1714107199999,
+              400.4432472
+            ],
+            [
+              "102,435",
+              424.4072462399999,
+              456.59806511999994
+            ],
+            [
+              "-",
+              533.9624301599999,
+              536.9298597599999
+            ]
+          ],
+          "componentsAndExpenses": [
+            81317,
+            21118,
+            102435,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Grisales, Hernando",
+            null,
+            139468,
+            null,
+            38
+          ],
+          "physicalPage": 38,
+          "y0": 190.54501920000044,
+          "rawCells": [
+            "Grisales, Hernando",
+            "113,818",
+            "25,650",
+            "139,468",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Grisales, Hernando",
+              92.01770399999998,
+              168.76095839999996
+            ],
+            [
+              "113,818",
+              316.68598727999995,
+              348.80462543999994
+            ],
+            [
+              "25,650",
+              373.1892331199999,
+              400.45661399999995
+            ],
+            [
+              "139,468",
+              424.4215041599999,
+              456.60430296
+            ],
+            [
+              "-",
+              533.96955912,
+              536.9369887199999
+            ]
+          ],
+          "componentsAndExpenses": [
+            113818,
+            25650,
+            139468,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Harrington, James",
+            null,
+            93463,
+            null,
+            39
+          ],
+          "physicalPage": 39,
+          "y0": 562.1980272000002,
+          "rawCells": [
+            "Harrington, James",
+            "76,818",
+            "16,645",
+            "93,463",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Harrington, James",
+              92.01770399999998,
+              164.94518255999998
+            ],
+            [
+              "76,818",
+              321.58982063999997,
+              348.78591192
+            ],
+            [
+              "16,645",
+              373.16962848000003,
+              400.4414649599998
+            ],
+            [
+              "93,463",
+              429.38593367999965,
+              456.5873716799994
+            ],
+            [
+              "-",
+              533.9517367199993,
+              536.9191663199992
+            ]
+          ],
+          "componentsAndExpenses": [
+            76818,
+            16645,
+            93463,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Jerome, Wesley",
+            null,
+            110377,
+            null,
+            39
+          ],
+          "physicalPage": 39,
+          "y0": 313.60907040000046,
+          "rawCells": [
+            "Jerome, Wesley",
+            "97,059",
+            "13,318",
+            "110,377",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Jerome, Wesley",
+              92.01770399999998,
+              156.41270855999997
+            ],
+            [
+              "97,059",
+              321.63704999999993,
+              348.8224478399999
+            ],
+            [
+              "13,318",
+              373.2061643999999,
+              400.43879159999994
+            ],
+            [
+              "110,377",
+              424.4027906399999,
+              456.5811338399999
+            ],
+            [
+              "-",
+              533.9454988799998,
+              536.9129284799998
+            ]
+          ],
+          "componentsAndExpenses": [
+            97059,
+            13318,
+            110377,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Johnson, Ben",
+            null,
+            94516,
+            null,
+            39
+          ],
+          "physicalPage": 39,
+          "y0": 276.2881968000005,
+          "rawCells": [
+            "Johnson, Ben",
+            "76,802",
+            "17,714",
+            "94,516",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Johnson, Ben",
+              92.01770399999998,
+              146.45087808
+            ],
+            [
+              "76,802",
+              321.55506696,
+              348.7778918400001
+            ],
+            [
+              "17,714",
+              373.1616084000001,
+              400.4405738400001
+            ],
+            [
+              "94,516",
+              429.3850425600001,
+              456.60786744000006
+            ],
+            [
+              "-",
+              533.97223248,
+              536.93966208
+            ]
+          ],
+          "componentsAndExpenses": [
+            76802,
+            17714,
+            94516,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Lajeunesse, Carrie",
+            null,
+            94477,
+            null,
+            40
+          ],
+          "physicalPage": 40,
+          "y0": 487.58289552,
+          "rawCells": [
+            "Lajeunesse, Carrie",
+            "76,763",
+            "17,714",
+            "94,477",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Lajeunesse, Carrie",
+              92.03998200000001,
+              166.7915832
+            ],
+            [
+              "76,763",
+              321.55595808,
+              348.7805652
+            ],
+            [
+              "17,714",
+              373.16428176,
+              400.43611823999976
+            ],
+            [
+              "94,477",
+              429.3805869599997,
+              456.6051940799994
+            ],
+            [
+              "-",
+              533.9695591199993,
+              536.9369887199992
+            ]
+          ],
+          "componentsAndExpenses": [
+            76763,
+            17714,
+            94477,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Larson, Jarrett",
+            null,
+            100477,
+            null,
+            40
+          ],
+          "physicalPage": 40,
+          "y0": 450.26399344000004,
+          "rawCells": [
+            "Larson, Jarrett",
+            "79,547",
+            "20,930",
+            "100,477",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Larson, Jarrett",
+              92.03998200000001,
+              149.58227376
+            ],
+            [
+              "79,547",
+              321.58625616,
+              348.8064076800001
+            ],
+            [
+              "20,930",
+              373.1901242400001,
+              400.46196071999987
+            ],
+            [
+              "100,477",
+              424.42595975999984,
+              456.62212535999953
+            ],
+            [
+              "-",
+              533.9864903999994,
+              536.9539199999994
+            ]
+          ],
+          "componentsAndExpenses": [
+            79547,
+            20930,
+            100477,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Lim, Michelle",
+            null,
+            77672,
+            null,
+            40
+          ],
+          "physicalPage": 40,
+          "y0": 338.4275499200001,
+          "rawCells": [
+            "Lim, Michelle",
+            "77,672",
+            "-",
+            "77,672",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Lim, Michelle",
+              92.03998200000001,
+              143.76682464000004
+            ],
+            [
+              "77,672",
+              321.57110712,
+              348.79036752000013
+            ],
+            [
+              "-",
+              400.4147313600001,
+              403.3821609600001
+            ],
+            [
+              "77,672",
+              429.3948448800001,
+              456.6141052800001
+            ],
+            [
+              "-",
+              533.97847032,
+              536.94589992
+            ]
+          ],
+          "componentsAndExpenses": [
+            77672,
+            null,
+            77672,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Liu, Liang Hua",
+            null,
+            127854,
+            null,
+            40
+          ],
+          "physicalPage": 40,
+          "y0": 301.1086478400001,
+          "rawCells": [
+            "Liu, Liang Hua",
+            "100,621",
+            "27,233",
+            "127,854",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Liu, Liang Hua",
+              92.03998200000001,
+              149.47088376
+            ],
+            [
+              "100,621",
+              316.65479808,
+              348.78234743999997
+            ],
+            [
+              "27,233",
+              373.16606399999995,
+              400.4379004799998
+            ],
+            [
+              "127,854",
+              424.4018995199998,
+              456.59093615999956
+            ],
+            [
+              "-",
+              533.9553011999996,
+              536.9227307999995
+            ]
+          ],
+          "componentsAndExpenses": [
+            100621,
+            27233,
+            127854,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Lowry, Jennifer",
+            null,
+            115800,
+            null,
+            40
+          ],
+          "physicalPage": 40,
+          "y0": 251.43028688000015,
+          "rawCells": [
+            "Lowry, Jennifer",
+            "93,944",
+            "21,856",
+            "115,800",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Lowry, Jennifer",
+              92.03998200000001,
+              152.34118128000003
+            ],
+            [
+              "93,944",
+              321.57378048,
+              348.79304088000015
+            ],
+            [
+              "21,856",
+              373.17675744000013,
+              400.4485939200002
+            ],
+            [
+              "115,800",
+              424.41259296000015,
+              456.61054080000014
+            ],
+            [
+              "-",
+              533.9749058400001,
+              536.9423354400001
+            ]
+          ],
+          "componentsAndExpenses": [
+            93944,
+            21856,
+            115800,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Maclean, Laura",
+            null,
+            99450,
+            1717,
+            40
+          ],
+          "physicalPage": 40,
+          "y0": 176.8526140800002,
+          "rawCells": [
+            "Maclean, Laura",
+            "99,450",
+            "-",
+            "99,450",
+            "1,717"
+          ],
+          "rawCellXExtents": [
+            [
+              "Maclean, Laura",
+              92.03998200000001,
+              153.26883720000004
+            ],
+            [
+              "99,450",
+              321.592494,
+              348.80462544
+            ],
+            [
+              "-",
+              400.42898928,
+              403.39641888
+            ],
+            [
+              "99,450",
+              429.40910279999997,
+              456.62123424000004
+            ],
+            [
+              "1,717",
+              511.72542168,
+              534.0185707200001
+            ]
+          ],
+          "componentsAndExpenses": [
+            99450,
+            null,
+            99450,
+            1717
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Maclean-Talbot, Keith",
+            null,
+            93329,
+            672,
+            40
+          ],
+          "physicalPage": 40,
+          "y0": 164.4330238400002,
+          "rawCells": [
+            "Maclean-Talbot, Keith",
+            "93,329",
+            "-",
+            "93,329",
+            "672"
+          ],
+          "rawCellXExtents": [
+            [
+              "Maclean-Talbot, Keith",
+              92.03998200000001,
+              178.53030696000002
+            ],
+            [
+              "93,329",
+              321.59427624,
+              348.80462544
+            ],
+            [
+              "-",
+              400.42898928,
+              403.39641888
+            ],
+            [
+              "93,329",
+              429.40910279999997,
+              456.63994776
+            ],
+            [
+              "672",
+              519.18409608,
+              534.03639312
+            ]
+          ],
+          "componentsAndExpenses": [
+            93329,
+            null,
+            93329,
+            672
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Madden, John",
+            null,
+            134047,
+            2157,
+            40
+          ],
+          "physicalPage": 40,
+          "y0": 139.5337120000002,
+          "rawCells": [
+            "Madden, John",
+            "134,047",
+            "-",
+            "134,047",
+            "2,157"
+          ],
+          "rawCellXExtents": [
+            [
+              "Madden, John",
+              92.03998200000001,
+              148.35074592000004
+            ],
+            [
+              "134,047",
+              316.67440272,
+              348.80551655999994
+            ],
+            [
+              "-",
+              400.42988039999994,
+              403.39730999999995
+            ],
+            [
+              "134,047",
+              424.4295242399999,
+              456.62034312
+            ],
+            [
+              "2,157",
+              511.72453055999995,
+              534.0176796000001
+            ]
+          ],
+          "componentsAndExpenses": [
+            134047,
+            null,
+            134047,
+            2157
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "McClellan, Tracey",
+            null,
+            78820,
+            null,
+            41
+          ],
+          "physicalPage": 41,
+          "y0": 524.8416662400001,
+          "rawCells": [
+            "McClellan, Tracey",
+            "78,820",
+            "-",
+            "78,820",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "McClellan, Tracey",
+              92.03998200000001,
+              163.13620896000003
+            ],
+            [
+              "78,820",
+              321.58090944,
+              348.8019520800001
+            ],
+            [
+              "-",
+              400.4263159200001,
+              403.3937455200001
+            ],
+            [
+              "78,820",
+              429.40642944000007,
+              456.62747207999985
+            ],
+            [
+              "-",
+              533.9918371199998,
+              536.9592667199997
+            ]
+          ],
+          "componentsAndExpenses": [
+            78820,
+            null,
+            78820,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Mckay, Linnet",
+            null,
+            95933,
+            null,
+            41
+          ],
+          "physicalPage": 41,
+          "y0": 437.84440320000004,
+          "rawCells": [
+            "Mckay, Linnet",
+            "78,219",
+            "17,714",
+            "95,933",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Mckay, Linnet",
+              92.03998200000001,
+              146.83851528000002
+            ],
+            [
+              "78,219",
+              321.60229632000005,
+              348.81442775999994
+            ],
+            [
+              "17,714",
+              373.19814432,
+              400.46998080000003
+            ],
+            [
+              "95,933",
+              429.41444952,
+              456.62658096
+            ],
+            [
+              "-",
+              533.990946,
+              536.9583756
+            ]
+          ],
+          "componentsAndExpenses": [
+            78219,
+            17714,
+            95933,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Mrazek, Paul",
+            null,
+            118944,
+            null,
+            41
+          ],
+          "physicalPage": 41,
+          "y0": 313.5883694400001,
+          "rawCells": [
+            "Mrazek, Paul",
+            "96,689",
+            "22,255",
+            "118,944",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Mrazek, Paul",
+              92.03998200000001,
+              143.90405712
+            ],
+            [
+              "96,689",
+              321.62457431999997,
+              348.82868568000004
+            ],
+            [
+              "22,255",
+              373.21240224,
+              400.4842387199999
+            ],
+            [
+              "118,944",
+              424.44823775999987,
+              456.6337099199997
+            ],
+            [
+              "-",
+              533.9980749599997,
+              536.9655045599997
+            ]
+          ],
+          "componentsAndExpenses": [
+            96689,
+            22255,
+            118944,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Mullin, Jeffrey",
+            null,
+            137967,
+            null,
+            41
+          ],
+          "physicalPage": 41,
+          "y0": 301.1086478400001,
+          "rawCells": [
+            "Mullin, Jeffrey",
+            "107,838",
+            "30,129",
+            "137,967",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Mullin, Jeffrey",
+              92.03998200000001,
+              147.06129528
+            ],
+            [
+              "107,838",
+              316.66549151999993,
+              348.7930408799999
+            ],
+            [
+              "30,129",
+              373.1767574399999,
+              400.4485939199998
+            ],
+            [
+              "137,967",
+              424.41259295999976,
+              456.60162959999957
+            ],
+            [
+              "-",
+              533.9659946399995,
+              536.9334242399995
+            ]
+          ],
+          "componentsAndExpenses": [
+            107838,
+            30129,
+            137967,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Nolin, Christine",
+            null,
+            75219,
+            null,
+            41
+          ],
+          "physicalPage": 41,
+          "y0": 214.11138480000017,
+          "rawCells": [
+            "Nolin, Christine",
+            "75,219",
+            "-",
+            "75,219",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Nolin, Christine",
+              92.03998200000001,
+              152.34385464000002
+            ],
+            [
+              "75,219",
+              321.6281388,
+              348.8081899200001
+            ],
+            [
+              "-",
+              400.4325537600001,
+              403.3999833600001
+            ],
+            [
+              "75,219",
+              429.41266728000005,
+              456.6034118399998
+            ],
+            [
+              "-",
+              533.9677768799997,
+              536.9352064799997
+            ]
+          ],
+          "componentsAndExpenses": [
+            75219,
+            null,
+            75219,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "O'Kelly-Lynch, Luke",
+            null,
+            111770,
+            null,
+            41
+          ],
+          "physicalPage": 41,
+          "y0": 164.4330238400002,
+          "rawCells": [
+            "O'Kelly-Lynch, Luke",
+            "94,214",
+            "17,556",
+            "111,770",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "O'Kelly-Lynch, Luke",
+              92.03998200000001,
+              170.93350896000004
+            ],
+            [
+              "94,214",
+              321.61744536000003,
+              348.81264552
+            ],
+            [
+              "17,556",
+              373.19636208000003,
+              400.45304951999975
+            ],
+            [
+              "111,770",
+              424.4170485599997,
+              456.61143191999935
+            ],
+            [
+              "-",
+              533.9757969599993,
+              536.9432265599993
+            ]
+          ],
+          "componentsAndExpenses": [
+            94214,
+            17556,
+            111770,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Poirier, Neil",
+            null,
+            92060,
+            null,
+            42
+          ],
+          "physicalPage": 42,
+          "y0": 487.58289552,
+          "rawCells": [
+            "Poirier, Neil",
+            "77,511",
+            "14,549",
+            "92,060",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Poirier, Neil",
+              92.03998200000001,
+              137.97454464
+            ],
+            [
+              "77,511",
+              321.5746716,
+              348.78234743999997
+            ],
+            [
+              "14,549",
+              373.16606399999995,
+              400.4414649599999
+            ],
+            [
+              "92,060",
+              429.3859336799999,
+              456.60608519999977
+            ],
+            [
+              "-",
+              533.9704502399998,
+              536.9378798399997
+            ]
+          ],
+          "componentsAndExpenses": [
+            77511,
+            14549,
+            92060,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Raines, Heather",
+            null,
+            98007,
+            null,
+            42
+          ],
+          "physicalPage": 42,
+          "y0": 363.2667304000001,
+          "rawCells": [
+            "Raines, Heather",
+            "79,956",
+            "18,051",
+            "98,007",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Raines, Heather",
+              92.03998200000001,
+              156.34141896000003
+            ],
+            [
+              "79,956",
+              321.61388088,
+              348.81175440000004
+            ],
+            [
+              "18,051",
+              373.19547096,
+              400.46552519999995
+            ],
+            [
+              "98,007",
+              429.4099939199999,
+              456.62836319999985
+            ],
+            [
+              "-",
+              533.9927282399999,
+              536.9601578399999
+            ]
+          ],
+          "componentsAndExpenses": [
+            79956,
+            18051,
+            98007,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Sanchez, Fernando",
+            null,
+            104873,
+            null,
+            42
+          ],
+          "physicalPage": 42,
+          "y0": 214.11138480000017,
+          "rawCells": [
+            "Sanchez, Fernando",
+            "104,873",
+            "-",
+            "104,873",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Sanchez, Fernando",
+              92.03998200000001,
+              169.67168304
+            ],
+            [
+              "104,873",
+              316.69578959999996,
+              348.81264551999993
+            ],
+            [
+              "-",
+              400.43700936000005,
+              403.40443896000005
+            ],
+            [
+              "104,873",
+              424.4366532000001,
+              456.6203431200001
+            ],
+            [
+              "-",
+              533.9847081600001,
+              536.95213776
+            ]
+          ],
+          "componentsAndExpenses": [
+            104873,
+            null,
+            104873,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Schubert, John",
+            null,
+            101260,
+            null,
+            42
+          ],
+          "physicalPage": 42,
+          "y0": 89.85535104000022,
+          "rawCells": [
+            "Schubert, John",
+            "82,664",
+            "18,596",
+            "101,260",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Schubert, John",
+              92.03998200000001,
+              151.98473328
+            ],
+            [
+              "82,664",
+              321.56843375999995,
+              348.7761095999999
+            ],
+            [
+              "18,596",
+              373.1598261599999,
+              400.4352271199998
+            ],
+            [
+              "101,260",
+              424.3992261599998,
+              456.60608519999965
+            ],
+            [
+              "-",
+              533.9704502399995,
+              536.9378798399995
+            ]
+          ],
+          "componentsAndExpenses": [
+            82664,
+            18596,
+            101260,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Singh, Natasha",
+            null,
+            113970,
+            6995,
+            43
+          ],
+          "physicalPage": 43,
+          "y0": 375.6863206400001,
+          "rawCells": [
+            "Singh, Natasha",
+            "113,970",
+            "-",
+            "113,970",
+            "6,995"
+          ],
+          "rawCellXExtents": [
+            [
+              "Singh, Natasha",
+              92.03998200000001,
+              152.96318304000005
+            ],
+            [
+              "113,970",
+              316.66727376,
+              348.79838759999996
+            ],
+            [
+              "-",
+              400.4227514399999,
+              403.3901810399999
+            ],
+            [
+              "113,970",
+              424.4223952799999,
+              456.6132141599999
+            ],
+            [
+              "6,995",
+              511.7174015999999,
+              534.01055064
+            ]
+          ],
+          "componentsAndExpenses": [
+            113970,
+            null,
+            113970,
+            6995
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Sitter, Scott",
+            null,
+            98936,
+            1686,
+            43
+          ],
+          "physicalPage": 43,
+          "y0": 350.8471401600001,
+          "rawCells": [
+            "Sitter, Scott",
+            "98,936",
+            "-",
+            "98,936",
+            "1,686"
+          ],
+          "rawCellXExtents": [
+            [
+              "Sitter, Scott",
+              92.03998200000001,
+              138.18484896
+            ],
+            [
+              "98,936",
+              321.58892951999997,
+              348.79660535999994
+            ],
+            [
+              "-",
+              400.4209692,
+              403.3883988
+            ],
+            [
+              "98,936",
+              429.40108272,
+              456.62925432
+            ],
+            [
+              "1,686",
+              511.73344175999995,
+              534.03817536
+            ]
+          ],
+          "componentsAndExpenses": [
+            98936,
+            null,
+            98936,
+            1686
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Sivananthan, Prakash",
+            null,
+            131547,
+            null,
+            43
+          ],
+          "physicalPage": 43,
+          "y0": 338.4275499200001,
+          "rawCells": [
+            "Sivananthan, Prakash",
+            "106,425",
+            "25,122",
+            "131,547",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Sivananthan, Prakash",
+              92.03998200000001,
+              179.11933727999997
+            ],
+            [
+              "106,425",
+              316.66370928,
+              348.8055165600001
+            ],
+            [
+              "25,122",
+              373.1892331200001,
+              400.46106959999986
+            ],
+            [
+              "131,547",
+              424.4250686399998,
+              456.6212342399995
+            ],
+            [
+              "-",
+              533.9855992799994,
+              536.9530288799994
+            ]
+          ],
+          "componentsAndExpenses": [
+            106425,
+            25122,
+            131547,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Spackman, Timothy",
+            null,
+            126246,
+            null,
+            43
+          ],
+          "physicalPage": 43,
+          "y0": 251.43028688000015,
+          "rawCells": [
+            "Spackman, Timothy",
+            "102,509",
+            "23,737",
+            "126,246",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Spackman, Timothy",
+              92.03998200000001,
+              170.95935143999998
+            ],
+            [
+              "102,509",
+              316.68331391999993,
+              348.79660535999994
+            ],
+            [
+              "23,737",
+              373.18032192,
+              400.4521583999999
+            ],
+            [
+              "126,246",
+              424.4161574399999,
+              456.5980651199998
+            ],
+            [
+              "-",
+              533.9624301599997,
+              536.9298597599997
+            ]
+          ],
+          "componentsAndExpenses": [
+            102509,
+            23737,
+            126246,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Starcevic, Richard",
+            null,
+            107244,
+            null,
+            43
+          ],
+          "physicalPage": 43,
+          "y0": 226.59110640000017,
+          "rawCells": [
+            "Starcevic, Richard",
+            "82,689",
+            "24,555",
+            "107,244",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Starcevic, Richard",
+              92.03998200000001,
+              164.24208887999998
+            ],
+            [
+              "82,689",
+              321.6459612,
+              348.8322501600001
+            ],
+            [
+              "24,555",
+              373.2159667200001,
+              400.4592873600001
+            ],
+            [
+              "107,244",
+              424.42328640000005,
+              456.60875856
+            ],
+            [
+              "-",
+              533.9731236,
+              536.9405532
+            ]
+          ],
+          "componentsAndExpenses": [
+            82689,
+            24555,
+            107244,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Stenson, Devin",
+            null,
+            116477,
+            null,
+            43
+          ],
+          "physicalPage": 43,
+          "y0": 214.11138480000017,
+          "rawCells": [
+            "Stenson, Devin",
+            "94,404",
+            "22,073",
+            "116,477",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Stenson, Devin",
+              92.03998200000001,
+              152.34652800000003
+            ],
+            [
+              "94,404",
+              321.63081216,
+              348.82423008
+            ],
+            [
+              "22,073",
+              373.20794664000005,
+              400.46463407999977
+            ],
+            [
+              "116,477",
+              424.42863311999974,
+              456.62301647999936
+            ],
+            [
+              "-",
+              533.9873815199993,
+              536.9548111199992
+            ]
+          ],
+          "componentsAndExpenses": [
+            94404,
+            22073,
+            116477,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Tarr, Christina",
+            null,
+            122269,
+            null,
+            43
+          ],
+          "physicalPage": 43,
+          "y0": 139.5337120000002,
+          "rawCells": [
+            "Tarr, Christina",
+            "99,059",
+            "23,210",
+            "122,269",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Tarr, Christina",
+              92.03998200000001,
+              148.55124792000004
+            ],
+            [
+              "99,059",
+              321.55506696000003,
+              348.7778918400001
+            ],
+            [
+              "23,210",
+              373.1616084000001,
+              400.4334448800002
+            ],
+            [
+              "122,269",
+              424.39744392000017,
+              456.59539176000015
+            ],
+            [
+              "-",
+              533.9597568000002,
+              536.9271864000001
+            ]
+          ],
+          "componentsAndExpenses": [
+            99059,
+            23210,
+            122269,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Wallace, William",
+            null,
+            150371,
+            null,
+            44
+          ],
+          "physicalPage": 44,
+          "y0": 450.26399344000004,
+          "rawCells": [
+            "Wallace, William",
+            "123,481",
+            "26,890",
+            "150,371",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Wallace, William",
+              92.03998200000001,
+              157.9249392
+            ],
+            [
+              "123,481",
+              316.64143128,
+              348.78323856000014
+            ],
+            [
+              "26,890",
+              373.1669551200002,
+              400.43879159999994
+            ],
+            [
+              "150,371",
+              424.40279063999986,
+              456.5989562399996
+            ],
+            [
+              "-",
+              533.9633212799995,
+              536.9307508799994
+            ]
+          ],
+          "componentsAndExpenses": [
+            123481,
+            26890,
+            150371,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Zdunich, Richard",
+            null,
+            84073,
+            null,
+            45
+          ],
+          "physicalPage": 45,
+          "y0": 553.0852331999995,
+          "rawCells": [
+            "Zdunich, Richard",
+            "84,073",
+            "-",
+            "84,073",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Zdunich, Richard",
+              92.292,
+              158.41607750693802
+            ],
+            [
+              "84,073",
+              318.6692812,
+              345.4240852
+            ],
+            [
+              "-",
+              398.7588252,
+              401.6703774
+            ],
+            [
+              "84,073",
+              445.5622454,
+              472.3170494
+            ],
+            [
+              "-",
+              555.7728024,
+              558.6843546
+            ]
+          ],
+          "componentsAndExpenses": [
+            84073,
+            null,
+            84073,
+            null
+          ]
+        },
+        {
+          "row": [
+            "bc-assessment",
+            "Zsombor, Kyle",
+            null,
+            94555,
+            null,
+            45
+          ],
+          "physicalPage": 45,
+          "y0": 491.8339883999994,
+          "rawCells": [
+            "Zsombor, Kyle",
+            "76,841",
+            "17,714",
+            "94,555",
+            "-"
+          ],
+          "rawCellXExtents": [
+            [
+              "Zsombor, Kyle",
+              92.292,
+              148.629010337358
+            ],
+            [
+              "76,841",
+              318.7479718000001,
+              345.47654560000007
+            ],
+            [
+              "17,714",
+              372.05385858000005,
+              398.78243238000005
+            ],
+            [
+              "94,555",
+              445.5797322000001,
+              472.3083060000001
+            ],
+            [
+              "-",
+              555.7640590000001,
+              558.6756112
+            ]
+          ],
+          "componentsAndExpenses": [
+            76841,
+            17714,
+            94555,
+            null
+          ]
+        }
+      ],
+      "candidateCorrections": []
+    },
+    {
+      "id": "recovery-crowns-bc-assessment-2022-23-employees",
+      "employerSlug": "bc-assessment",
+      "year": "2022/23",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202022-23.pdf",
+      "sourceSha256": "741f755613efc41e3a7ca01dfcfcdaabfb13ffd9ab8d568bb7cb8c8a4a28d73a",
+      "sourceCachePath": "/tmp/sector-crowns/44bc04f7819a1732.pdf",
+      "normalizedFile": "research/salaries/recovery-crowns/bc-assessment-2022-23.json.gzip",
+      "dataSha256": "c6cbee17c59cd8978389fda542658fb32af0dc598042e9dffa88fb0c065088bb",
+      "evidenceFile": "research/salaries/recovery-crowns/evidence/bc-assessment-2022-23.json.gzip",
+      "evidenceSha256": "edf0e38413c35cf14cfdc890fff44aa1dd559aa0748332cbaf4646e772afa7d3",
+      "rowCount": 382,
+      "allSixNormalizedFieldsMatch": true,
+      "exactOrderAndPageBoundariesMatch": true,
+      "allMonetarySourceComponentsMatch": true,
+      "independentReader": "PDFMiner LTChar baseline/gap reader; no root parser import",
+      "namedRemunerationSum": 39153289,
+      "knownNamedExpensesSum": 1056265,
+      "missingExpensesPreserved": 42,
+      "printedControlsIndependentlyTranscribed": {
+        "page": 49,
+        "namedComparator": [
+          39153290,
+          1056258
+        ],
+        "allBeforeEmployer": [
+          59635831,
+          1502997
+        ],
+        "underThreshold": [
+          20482541,
+          446739
+        ],
+        "employerCppEi": 3309482,
+        "allAfterEmployer": [
+          59635831,
+          4812479
+        ],
+        "derivation": "direct printed named over-threshold subtotal",
+        "key": "bca2022-23",
+        "approvalPage": 4,
+        "approvalDate": "2023-07-18",
+        "signers": [
+          "Ruth Wittenberg",
+          "Richard Rainey"
+        ],
+        "definitionPage": 35
+      },
+      "derivedNamedResiduals": [
+        -1,
+        7
+      ],
+      "period": {
+        "periodType": "fiscal",
+        "periodStart": "2022-04-01",
+        "periodEnd": "2023-03-31",
+        "coverNativeText": "British Columbia Assessment Authority \nStatements of Financial Information \nFiled in accordance with the Financial Information Act \n12 Months Ended March 31, 2023\n",
+        "employeeHeadingVerifiedOnOriginal": true
+      },
+      "approval": {
+        "physicalPage": 4,
+        "visiblySigned": true,
+        "date": "2023-07-18",
+        "signers": [
+          "Ruth Wittenberg",
+          "Richard Rainey"
+        ],
+        "nativeText": "British Columbia Assessment Authority \nStatement of Financial Information Approval \nMarch 31, 2023 \nThe undersigned represents the Board of Directors of the British Columbia Assessment \nAuthority and approves all of the statements and schedules included in the Statement of \nFinancial Information, produced under the Financial Information Act. \n____________________________________________________________________________________________________    \nRuth Wittenberg, Chair, Board of Directors \n____________________________________________________________________________________________________ \nRichard Rainey, Chair, Audit & Risk Management Committee Chair, Board of Directors \nJuly 18, 2023 \n"
+      },
+      "definitionEvidence": {
+        "physicalPage": 35,
+        "nativeTextRead": true,
+        "text": " \n \n \nBritish Columbia Assessment Authority \n \nSCHEDULE F \nSchedule of Remuneration and Expenses \n \nFor the 12 month period ended March 31, 2023 \n \n \n \nAs defined in the FIR, Schedule 1, subsection 6(1): \n \n“Remuneration” reported for BCA employees and members of the Board of Directors \n• \nincludes any form of salary, wages, taxable benefits, payments paid by the \ncorporation to the employee or on behalf of the employee during the fiscal year \nbeing reported upon, whether or not such remuneration is reported under the \nIncome Tax Act (Canada), and \n \n“Expenses” reported for BCA employees and members of the Board of Directors  \n• \nincludes travel expenses, memberships, tuition, relocation, vehicle leases, \nregistration fees and similar amounts paid directly to an employee, or to a third \nparty on behalf of the employee, and which has not been included in \n‘remuneration’.   \n \n \n",
+        "sha256": "e24f4c29a5fa77efac11c4fa3f674336beaa9ccb0f651e44e5761c484df5b81a",
+        "definitionScope": "BCA remuneration/expense definition page; BCER complete named-control footer definition page"
+      },
+      "controlNativeText": " \n \n \n \nBritish Columbia Assessment Authority \n \nSchedule of the remuneration and expenses paid to or on behalf of \nemployees \n \nFor the 12 month period ended March 31, 2023 \n \nEmployee Name \nRemuneration \nExpenses \nWilliams, Kurtis \n $           102,926  \n $               1,201  \nWilson, Tia Toni \n88,531 \n                      951  \nWinn, Michael \n82,356 \n                      643  \nWong, Evelyn \n76,778 \n -  \nWong, Raymond \n88,724 \n                   1,798  \nWood, Susan \n202,587 \n                   9,016  \nWylie, Caris \n87,521 \n                      619  \nXiao, Aaron \n99,425 \n                   1,337  \nXing, Jing \n88,066 \n                      683  \nYahn, Christopher \n87,908 \n                   1,422  \nYeak, Choo-Ming \n87,509 \n                      326  \nYee, Charles \n85,370 \n -  \nYee, Terry \n97,444 \n                   2,135  \nYip, Vicky \n106,582 \n                   1,674  \nYli-Villamo, Liisa \n75,527 \n                   1,785  \nYoung, Bettina \n86,346 \n                   2,557  \nZaborniak, Todd \n89,385 \n                   5,692  \nZak, Nolan \n111,357 \n -  \nZhao, Meng \n108,250 \n                   1,723  \nZheng, Shu Xian \n88,116 \n                      651  \nZiola, David \n106,631 \n                   3,209  \nZsombor, Kyle \n82,540 \n -  \n  \n  \n  \nConsolidated total:  \nEmployees earning > $75,000 \n         39,153,290  \n           1,056,258  \n  \n  \n  \nEmployees earning < $75,000 \n         20,482,541  \n              446,739 \n  \n  \n  \nSubtotal \n $     59,635,831  \n $        1,502,997  \n  \n  \n  \nEmployer portion of CPP & EI \n  \n           3,309,482  \n  \n  \n  \nTotal paid to or on behalf of employees \n $     59,635,831  \n $        4,812,479  \n",
+      "imagesVisuallyReviewed": [
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2022-23-approval-p4.png",
+          "physicalPage": 4,
+          "scope": "approval page fully visually reviewed",
+          "sha256": "a2df619b4d1c26a7561bbe50812f012e6bbb73317e90b149c7d005f585b14b49"
+        },
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2022-23-control-p49.png",
+          "physicalPage": 49,
+          "scope": "control page fully visually reviewed",
+          "sha256": "71d947f88833f96a05aafc1a7fb137b304f5e641c484cd9e95cfe6112814be8f"
+        }
+      ],
+      "transitionUnknownOrNegativeRows": [],
+      "candidateCorrections": []
+    },
+    {
+      "id": "recovery-crowns-bc-assessment-2023-24-employees",
+      "employerSlug": "bc-assessment",
+      "year": "2023/24",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202023-24.pdf",
+      "sourceSha256": "062f9f329e16e5a95f034a2045f4bbfa7bc925ccf1c790f17150b99178626de5",
+      "sourceCachePath": "/tmp/sector-crowns/f4baccaaef0fe507.pdf",
+      "normalizedFile": "research/salaries/recovery-crowns/bc-assessment-2023-24.json.gzip",
+      "dataSha256": "e5abd5ad22c00610df04aa7bc556d19b48c90f08c275754faf87475c5b6e3bbd",
+      "evidenceFile": "research/salaries/recovery-crowns/evidence/bc-assessment-2023-24.json.gzip",
+      "evidenceSha256": "a3a31aea2023d686681da41f00e1d4531d8531bb6d6241cf0dfabb41f2c09899",
+      "rowCount": 394,
+      "allSixNormalizedFieldsMatch": true,
+      "exactOrderAndPageBoundariesMatch": true,
+      "allMonetarySourceComponentsMatch": true,
+      "independentReader": "PDFMiner LTChar baseline/gap reader; no root parser import",
+      "namedRemunerationSum": 41844959,
+      "knownNamedExpensesSum": 1231964,
+      "missingExpensesPreserved": 35,
+      "printedControlsIndependentlyTranscribed": {
+        "page": 48,
+        "namedComparator": [
+          41844962,
+          1231951
+        ],
+        "allBeforeEmployer": [
+          65000467,
+          1847895
+        ],
+        "underThreshold": [
+          23155505,
+          615945
+        ],
+        "employerCppEi": 3667205,
+        "allAfterEmployer": [
+          65000467,
+          5515101
+        ],
+        "otherPublishedControlResiduals": {
+          "allExpenseSubtotalMinusNamedAndUnder": -1,
+          "allExpenseGrandMinusSubtotalAndEmployer": 1
+        },
+        "derivation": "direct printed named over-threshold subtotal",
+        "key": "bca2023-24",
+        "approvalPage": 4,
+        "approvalDate": "2024-07-18",
+        "signers": [
+          "Ruth Wittenberg",
+          "John Crawford"
+        ],
+        "definitionPage": 35
+      },
+      "derivedNamedResiduals": [
+        -3,
+        13
+      ],
+      "period": {
+        "periodType": "fiscal",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "coverNativeText": "British Columbia Assessment Authority \nStatements of Financial Information \nFiled in accordance with the Financial Information Act \nFiscal Year Ended March 31, 2024 \n",
+        "employeeHeadingVerifiedOnOriginal": true
+      },
+      "approval": {
+        "physicalPage": 4,
+        "visiblySigned": true,
+        "date": "2024-07-18",
+        "signers": [
+          "Ruth Wittenberg",
+          "John Crawford"
+        ],
+        "nativeText": "British Columbia Assessment Authority \nStatement of Financial Information Approval \nMarch 31, 2024 \nThe undersigned represents the Board of Directors of the British Columbia Assessment \nAuthority and approves all of the statements and schedules included in the Statement of \nFinancial Information, produced under the Financial Information Act. \nRuth Wittenberg, Chair, Board of Directors \nJohn Crawford, Chair, Audit & Risk Management Committee, Board of Directors \nJuly 18, 2024 \n"
+      },
+      "definitionEvidence": {
+        "physicalPage": 35,
+        "nativeTextRead": true,
+        "text": "British Columbia Assessment Authority \n \nSCHEDULE F \nSchedule of Remuneration and Expenses \n \nFor the Fiscal Year Ended March 31, 2024 \n \n \nAs defined in the FIR, Schedule 1, subsection 6(1): \n \n“Remuneration” reported for BCA employees and members of the Board of Directors \n• \nincludes any form of salary, wages, bonuses, gratuities, taxable benefits, \npayment into trust or any form of income deferral paid by the corporation to the \nemployee or on behalf of the employee during the fiscal year being reported \nupon, whether or not such remuneration is reported under the Income Tax Act \n(Canada), and \n• \ndoes not include anything payable under a severance agreement. \n \n“Expenses” reported for BCA employees and members of the Board of Directors  \n• \nincludes travel expenses, memberships, tuition, relocation, vehicle leases, \nextraordinary hiring expenses, registration fees and similar amounts paid \ndirectly to an employee, or to a third party on behalf of the employee, and which \nhas not been included in ‘remuneration’.   \n• \nis not limited to expenses that are generally perceived as perquisites, or \nbestowing personal benefit, and may include expenditures required for \nemployees to perform their job functions, and \n• \nexcludes benefits of a general nature applicable to all employees pursuant to an \nagreement such as medical, dental, counselling, insurance and similar plans. \n• \nIt does not include the assignment of overhead costs to employees. \n",
+        "sha256": "1848bed8d193215fb565e41dede9b88341afc1b960252a55fe490ef7911daae9",
+        "definitionScope": "BCA remuneration/expense definition page; BCER complete named-control footer definition page"
+      },
+      "controlNativeText": "British Columbia Assessment Authority \nSchedule of the remuneration and expenses paid to or on behalf of \nemployees \nFor the Fiscal Year Ended March 31, 2024 \nEmployee Name \n Remuneration \n Expenses \nWilson, Tia-Toni \n   93,259 \n   1,575 \nWinn, Michael \n   86,293 \n      256 \nWong, Deborah \n   91,287 \n      754 \nWong, Raymond \n   93,064 \n      827 \nWood, Susan \n      224,448 \n      25,404 \nWylie, Caris \n   92,245 \n   1,365 \nXiao, Aaron \n      110,392 \n      740 \nXing, Joyce \n   95,793 \n      683 \nYahn, Chris \n   92,407 \n   2,001 \nYeak, Choo-Ming \n   95,070 \n   1,477 \nYee, Charles \n   90,660 \n   -  \nYee, Terry \n      106,853 \n   1,877 \nYip, Vicky \n      108,023 \n   -  \nYli-Villamo, Liisa \n   92,407 \n   2,161 \nYoung, Bettina \n   92,415 \n   -  \nZachariou, Zachary \n   78,879 \n   1,057 \nZak, Nolan \n      114,664 \n   -  \nZhao, Mandy \n      114,824 \n   3,852 \nZheng, Fiona \n   92,407 \n   1,478 \nZiola, David \n      110,842 \n   2,832 \nConsolidated total, employees earning > $75,000 \n 41,844,962 \n 1,231,951 \nConsolidated total, employees earning < $75,000 \n 23,155,505 \n    615,945 \nSubtotal \n $       65,000,467 \n $       1,847,895 \nEmployer portion of CPP & EI \n 3,667,205 \nTotal paid to or on behalf of employees \n $       65,000,467 \n $       5,515,101 \n",
+      "imagesVisuallyReviewed": [
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2023-24-approval-p4.png",
+          "physicalPage": 4,
+          "scope": "approval page fully visually reviewed",
+          "sha256": "51fbd5fde8ce9d325213ea2c44d90a29ff9ec1f28db4efdec5da3b1a62a255ed"
+        },
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2023-24-control-p48.png",
+          "physicalPage": 48,
+          "scope": "control page fully visually reviewed",
+          "sha256": "7167fadde595e3a4976f02c98b491d96218ec9a32bf96087e189c163ec04817d"
+        }
+      ],
+      "transitionUnknownOrNegativeRows": [],
+      "candidateCorrections": []
+    },
+    {
+      "id": "recovery-crowns-bc-assessment-2024-25-employees",
+      "employerSlug": "bc-assessment",
+      "year": "2024/25",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202024-25.pdf",
+      "sourceSha256": "04fd056af6a83f3d3966d44ad94bbe04f651506c2bd1016b90e2c414595c8a38",
+      "sourceCachePath": "/tmp/sector-crowns/480a1622555da297.pdf",
+      "normalizedFile": "research/salaries/recovery-crowns/bc-assessment-2024-25.json.gzip",
+      "dataSha256": "fb3853061c9f2c3739e30e17e7846324267c4b3d9ef8149592796d5ab5382237",
+      "evidenceFile": "research/salaries/recovery-crowns/evidence/bc-assessment-2024-25.json.gzip",
+      "evidenceSha256": "d3304e282d2625f6b8d77826be911a529b06dec2942363156dea30b096d279cd",
+      "rowCount": 411,
+      "allSixNormalizedFieldsMatch": true,
+      "exactOrderAndPageBoundariesMatch": true,
+      "allMonetarySourceComponentsMatch": true,
+      "independentReader": "PDFMiner LTChar baseline/gap reader; no root parser import",
+      "namedRemunerationSum": 44664847,
+      "knownNamedExpensesSum": 1405463,
+      "missingExpensesPreserved": 5,
+      "printedControlsIndependentlyTranscribed": {
+        "page": 49,
+        "namedComparator": [
+          44664840,
+          1405442
+        ],
+        "allBeforeEmployer": [
+          66888313,
+          1939545
+        ],
+        "underThreshold": [
+          22223472,
+          534103
+        ],
+        "employerCppEi": 3851870,
+        "allAfterEmployer": [
+          66888313,
+          5791415
+        ],
+        "otherPublishedControlResiduals": {
+          "allPaySubtotalMinusNamedAndUnder": 1
+        },
+        "derivation": "direct printed named over-threshold subtotal",
+        "key": "bca2024-25",
+        "approvalPage": 4,
+        "approvalDate": "2025-09-11",
+        "signers": [
+          "Ruth Wittenberg",
+          "John Crawford"
+        ],
+        "definitionPage": 35
+      },
+      "derivedNamedResiduals": [
+        7,
+        21
+      ],
+      "period": {
+        "periodType": "fiscal",
+        "periodStart": "2024-04-01",
+        "periodEnd": "2025-03-31",
+        "coverNativeText": "British Columbia Assessment Authority \nStatements of Financial Information \nFiled in accordance with the Financial Information Act \nFiscal Year Ended March 31, 2025 \n",
+        "employeeHeadingVerifiedOnOriginal": true
+      },
+      "approval": {
+        "physicalPage": 4,
+        "visiblySigned": true,
+        "date": "2025-09-11",
+        "signers": [
+          "Ruth Wittenberg",
+          "John Crawford"
+        ],
+        "nativeText": "British Columbia Assessment Authority \nStatement of Financial Information Approval \nMarch 31, 2025 \nThe undersigned represents the Board of Directors of the British Columbia Assessment \nAuthority and approves all of the statements and schedules included in the Statement of \nFinancial Information, produced under the Financial Information Act. \nRuth Wittenberg, Chair, Board of Directors \nJohn Crawford, Chair, Audit & Risk Management Committee, Board of Directors \nSeptember 11, 2025 \n"
+      },
+      "definitionEvidence": {
+        "physicalPage": 35,
+        "nativeTextRead": true,
+        "text": "British Columbia Assessment Authority \nSCHEDULE F \nSchedule of Remuneration and Expenses \nFor the Fiscal Year Ended March 31, 2025\nAs defined in the Financial Information Regulation (FIR), Schedule 1, subsection 6(1): \n“Remuneration” reported for BCA employees and members of the Board of Directors \n•\nincludes any form of salary, wages, bonuses, gratuities, taxable benefits,\npayment into trust or any form of income deferral paid by the corporation to the\nemployee or on behalf of the employee during the fiscal year being reported\nupon, whether or not such remuneration is reported under the Income Tax Act\n(Canada), and\n•\ndoes not include anything payable under a severance agreement.\n“Expenses” reported for BCA employees and members of the Board of Directors \n•\nincludes travel expenses, memberships, tuition, relocation, vehicle leases,\nextraordinary hiring expenses, registration fees and similar amounts paid\ndirectly to an employee, or to a third party on behalf of the employee, and which\nhas not been included in ‘remuneration’,\n•\nis not limited to expenses that are generally perceived as perquisites, or\nbestowing personal benefit, and may include expenditures required for\nemployees to perform their job functions, and\n•\nexcludes benefits of a general nature applicable to all employees pursuant to an\nagreement such as medical, dental, counselling, insurance and similar plans;\n•\nIt does not include the assignment of overhead costs to employees.\n",
+        "sha256": "46c9832ee70e8a62353dc52c49d1bf58ca7c8c95f2010959f917071920093e3a",
+        "definitionScope": "BCA remuneration/expense definition page; BCER complete named-control footer definition page"
+      },
+      "controlNativeText": "British Columbia Assessment Authority \nSchedule of the remuneration and expenses paid to or on behalf of \nemployees \nFor the Fiscal Year Ended March 31, 2025 \nEmployee Name \n Remuneration \n Expenses \nZheng, Shu Xian \n 94,584 \n 683 \nZiola, David \n 114,461 \n 5,039 \nZsombor, Kyle \n 88,702 \n -  \nConsolidated total, employees earning > $75,000 \n 44,664,840 \n 1,405,442 \nConsolidated total, employees earning < $75,000 \n22,223,472 \n 534,103 \nSubtotal \n 66,888,313 \n 1,939,545 \nEmployer portion of CPP & EI \n   3,851,870 \nTotal paid to or on behalf of employees \n $       66,888,313 \n $       5,791,415 \n",
+      "imagesVisuallyReviewed": [
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2024-25-approval-p4.png",
+          "physicalPage": 4,
+          "scope": "approval page fully visually reviewed",
+          "sha256": "0edc5843902c0661665f841bfdb0e6e071c550cf51efa3b5c36b2db9abbb7b25"
+        },
+        {
+          "path": "/tmp/recovery-health-crowns-review/bca2024-25-control-p49.png",
+          "physicalPage": 49,
+          "scope": "control page fully visually reviewed",
+          "sha256": "b24627d36c84cb63562cd4f26daa192bb1ba3397da27167a644e86ff53a77a00"
+        }
+      ],
+      "transitionUnknownOrNegativeRows": [],
+      "candidateCorrections": []
+    },
+    {
+      "id": "recovery-crowns-bc-energy-regulator-2023-24-employees",
+      "employerSlug": "bc-energy-regulator",
+      "year": "2023/24",
+      "sourceUrl": "https://www.bc-er.ca/files/reports/Financial-Information-Act/Fiscal-2023-24-Financial-Information-Act-Report.pdf",
+      "sourceSha256": "0c1bf2b553a1c7871c45ff71543afd2d5a29f94c22d0681028f5d2257ba4d21e",
+      "sourceCachePath": "/tmp/recovery-crowns/bcer-2023-24.pdf",
+      "normalizedFile": "research/salaries/recovery-crowns/bc-energy-regulator-2023-24.json.gzip",
+      "dataSha256": "037f7422f6e9d4cd994f3a8e9bf27240765e575e10cc511ac5f678444251a36e",
+      "evidenceFile": "research/salaries/recovery-crowns/evidence/bc-energy-regulator-2023-24.json.gzip",
+      "evidenceSha256": "0fe3e614ad7d41fc140ad79554466b0da0e01d5067ee613a77c3eb40ab133a33",
+      "rowCount": 249,
+      "allSixNormalizedFieldsMatch": true,
+      "exactOrderAndPageBoundariesMatch": true,
+      "allMonetarySourceComponentsMatch": true,
+      "independentReader": "PDFMiner LTChar baseline/gap reader; no root parser import",
+      "namedRemunerationSum": 28973613,
+      "knownNamedExpensesSum": 1405173,
+      "missingExpensesPreserved": 36,
+      "printedControlsIndependentlyTranscribed": {
+        "page": 34,
+        "namedComparator": [
+          28973613,
+          1405173
+        ],
+        "allBeforeEmployer": [
+          31988877,
+          null
+        ],
+        "underThreshold": [
+          3015264,
+          null
+        ],
+        "employerCpp": 1141712,
+        "employerEi": 364535,
+        "accrualsLeaveSecondments": 255532,
+        "broaderPrintedTotalRemuneration": 33750656,
+        "missingAggregateExpenseIsNotZero": true,
+        "derivation": "direct printed named over-threshold subtotal; under-threshold expense is blank and cannot create an all-employee expense comparator",
+        "key": "bcer2023-24",
+        "approvalPage": 3,
+        "approvalDate": "2024-09-05",
+        "signers": [
+          "Chris Hayman"
+        ],
+        "definitionPage": 34
+      },
+      "derivedNamedResiduals": [
+        0,
+        0
+      ],
+      "period": {
+        "periodType": "fiscal",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "coverNativeText": " \n \n \nFinancial Information Act Report \nFor the Year Ended March 31, 2024\n",
+        "employeeHeadingVerifiedOnOriginal": true
+      },
+      "approval": {
+        "physicalPage": 3,
+        "visiblySigned": true,
+        "date": "2024-09-05",
+        "signers": [
+          "Chris Hayman"
+        ],
+        "nativeText": "Financial Information Act Report \nStatement of Financial Information Approval \nFor the Year Ended March 31, 2024 \n \nThe undersigned represents the Board of Directors of the British Columbia Energy Regulator and \napproves all the statements and schedules included in the Statement of Financial Information, \nproduced under the Financial Information Act. \n \n \n  \nChris Hayman  \nBoard Chair \nSeptember 5, 2024 \n \n"
+      },
+      "definitionEvidence": {
+        "physicalPage": 34,
+        "nativeTextRead": true,
+        "text": "Financial Information Act Report \nSchedule B – Employee Renumeration and Expenses \nFor the Year Ended March 31, 2024 \n \n \n \n34 \n \n \n \nThe schedule of employee remuneration and expenses lists gross remuneration, which includes regular \nsalaries and wages, taxable benefits, payment for overtime, vacation, shift premiums, parking benefits, \nother allowances, and payout of earned entitlements.\nEmployee \nRenumeration\nExpenses\nWen, Rebecca\n87,885\n                \n-\n                                  \nWhite, Katelyn\n149,950\n              \n5,534\n                              \nWhitehouse, Michael\n128,412\n              \n10,864\n                           \nWhitford, Christine\n84,975\n                \n176\n                                 \nWigglesworth, Zandra\n75,853\n                \n4,356\n                              \nWilliams, Nova\n126,307\n              \n4,807\n                              \nWilson, Jason\n131,439\n              \n5,255\n                              \nWintemute, Kelly\n162,772\n              \n4,827\n                              \nWolski, Harvey\n117,659\n              \n24\n                                    \nWoods, Jonathan\n88,290\n                \n5,767\n                              \nWorkman, Robert\n115,965\n              \n-\n                                  \nWynne-Chesniak, April\n153,144\n              \n17,079\n                           \nYou, Patrick\n119,674\n              \n399\n                                 \nZhang, Linan\n142,242\n              \n2,010\n                              \nZoerb, Kristen\n133,425\n              \n4,978\n                              \nTotal over $75,000\n28,973,613\n$     \n1,405,173\n$                   \nTotal under $75,000\n3,015,264\n          \n31,988,877\n        \nC.P.P employer portion\n1,141,712\n          \nE.I. employer portion\n364,535\n              \nAccruals, leave liability, and secondments\n255,532\n              \nTotal Remuneration\n33,750,656\n$     \n",
+        "sha256": "e6e6bdd66a12a61e506ae30555e896402caafcc99afd768e980c85c2ff68b189",
+        "definitionScope": "BCA remuneration/expense definition page; BCER complete named-control footer definition page"
+      },
+      "controlNativeText": "Financial Information Act Report \nSchedule B – Employee Renumeration and Expenses \nFor the Year Ended March 31, 2024 \n \n \n \n34 \n \n \n \nThe schedule of employee remuneration and expenses lists gross remuneration, which includes regular \nsalaries and wages, taxable benefits, payment for overtime, vacation, shift premiums, parking benefits, \nother allowances, and payout of earned entitlements.\nEmployee \nRenumeration\nExpenses\nWen, Rebecca\n87,885\n                \n-\n                                  \nWhite, Katelyn\n149,950\n              \n5,534\n                              \nWhitehouse, Michael\n128,412\n              \n10,864\n                           \nWhitford, Christine\n84,975\n                \n176\n                                 \nWigglesworth, Zandra\n75,853\n                \n4,356\n                              \nWilliams, Nova\n126,307\n              \n4,807\n                              \nWilson, Jason\n131,439\n              \n5,255\n                              \nWintemute, Kelly\n162,772\n              \n4,827\n                              \nWolski, Harvey\n117,659\n              \n24\n                                    \nWoods, Jonathan\n88,290\n                \n5,767\n                              \nWorkman, Robert\n115,965\n              \n-\n                                  \nWynne-Chesniak, April\n153,144\n              \n17,079\n                           \nYou, Patrick\n119,674\n              \n399\n                                 \nZhang, Linan\n142,242\n              \n2,010\n                              \nZoerb, Kristen\n133,425\n              \n4,978\n                              \nTotal over $75,000\n28,973,613\n$     \n1,405,173\n$                   \nTotal under $75,000\n3,015,264\n          \n31,988,877\n        \nC.P.P employer portion\n1,141,712\n          \nE.I. employer portion\n364,535\n              \nAccruals, leave liability, and secondments\n255,532\n              \nTotal Remuneration\n33,750,656\n$     \n",
+      "imagesVisuallyReviewed": [
+        {
+          "path": "/tmp/recovery-health-crowns-review/bcer2023-24-approval-p3.png",
+          "physicalPage": 3,
+          "scope": "approval page fully visually reviewed",
+          "sha256": "7b380b0f8008b54caaf5a7fa035874a6994b6333977a0c745f010270d9072aa3"
+        },
+        {
+          "path": "/tmp/recovery-health-crowns-review/bcer2023-24-control-p34.png",
+          "physicalPage": 34,
+          "scope": "control page fully visually reviewed",
+          "sha256": "7e551efddac641e79c45e3d33095cdb54f8fcdedab862e1f5023648ee2cbcf33"
+        }
+      ],
+      "transitionUnknownOrNegativeRows": [],
+      "candidateCorrections": []
+    },
+    {
+      "id": "recovery-crowns-bc-energy-regulator-2024-25-employees",
+      "employerSlug": "bc-energy-regulator",
+      "year": "2024/25",
+      "sourceUrl": "https://www.bc-er.ca/files/reports/Financial-Information-Act/Fiscal-2024-25-Financial-Information-Act-Report.pdf",
+      "sourceSha256": "055e156e51c2c79af7373dc6bfd5566404f08a8df6215d0a8beeadde0ad174b4",
+      "sourceCachePath": "/tmp/sector-crowns/33aa32bcd7d2c4de.pdf",
+      "normalizedFile": "research/salaries/recovery-crowns/bc-energy-regulator-2024-25.json.gzip",
+      "dataSha256": "549d03095522640612f72aefd731f14a7cf286fb5458a4780f1b9eb450316006",
+      "evidenceFile": "research/salaries/recovery-crowns/evidence/bc-energy-regulator-2024-25.json.gzip",
+      "evidenceSha256": "f9dd76e831a277ee862b3391c3fbfe6a95bd72c33d61789bdfa3389658ba5a8c",
+      "rowCount": 257,
+      "allSixNormalizedFieldsMatch": true,
+      "exactOrderAndPageBoundariesMatch": true,
+      "allMonetarySourceComponentsMatch": true,
+      "independentReader": "PDFMiner LTChar baseline/gap reader; no root parser import",
+      "namedRemunerationSum": 30683576,
+      "knownNamedExpensesSum": 1167816,
+      "missingExpensesPreserved": 54,
+      "printedControlsIndependentlyTranscribed": {
+        "page": 34,
+        "namedComparator": [
+          30683573,
+          1167814
+        ],
+        "allBeforeEmployer": [
+          33520506,
+          1214116
+        ],
+        "underThreshold": [
+          2836933,
+          46302
+        ],
+        "employerCpp": 1168800,
+        "employerEi": 373552,
+        "accrualsLeaveSecondments": 877827,
+        "broaderPrintedTotalRemuneration": 35940686,
+        "otherPublishedControlResiduals": {
+          "broaderTotalMinusSubtotalCppEiAccruals": 1
+        },
+        "derivation": "direct printed named over-threshold subtotal",
+        "key": "bcer2024-25",
+        "approvalPage": 3,
+        "approvalDate": "2025-09-16",
+        "signers": [
+          "Natascha Kiernan"
+        ],
+        "definitionPage": 34
+      },
+      "derivedNamedResiduals": [
+        3,
+        2
+      ],
+      "period": {
+        "periodType": "fiscal",
+        "periodStart": "2024-04-01",
+        "periodEnd": "2025-03-31",
+        "coverNativeText": " \n \n \n \nFinancial Information Act Report \nFor the Year Ended March 31, 2025 \n \n \n",
+        "employeeHeadingVerifiedOnOriginal": true
+      },
+      "approval": {
+        "physicalPage": 3,
+        "visiblySigned": true,
+        "date": "2025-09-16",
+        "signers": [
+          "Natascha Kiernan"
+        ],
+        "nativeText": "Financial Information Act Report \nStatement of Financial Information Approval \nFor the Year Ended March 31, 2025 \n \n \nThe undersigned represents the Board of Directors of the British Columbia Energy Regulator and \napproves all the statements and schedules included in the Statement of Financial Information, \nproduced under the Financial Information Act. \n \n \n \n  \nNatascha Kiernan  \nBoard Chair \nSeptember 16, 2025 \n \n \n \n                       \n \n \n"
+      },
+      "definitionEvidence": {
+        "physicalPage": 34,
+        "nativeTextRead": true,
+        "text": "Financial Information Act Report \nSchedule B – Employee Renumeration and Expenses \nFor the Year Ended March 31, 2025 \n \n34 \n \n \n \n \nThe schedule of employee remuneration and expenses lists gross remuneration, which includes regular \nsalaries and wages, taxable benefits, payment for overtime, vacation, shift premiums, parking benefits, \nother allowances, and payout of earned entitlements.\nEmployee (Continued)\nRenumeration\nExpenses\nWaheed, Bushra\n151,372\n              \n4,551\n                              \nWarner, John \n118,850\n              \n-\n                                  \nWarner, Sarah\n98,981\n                \n4,002\n                              \nWarthe, Alex \n117,897\n              \n2,944\n                              \nWaterfield, Liz \n97,241\n                \n2,881\n                              \nWeatherill, Shannon\n134,382\n              \n7,268\n                              \nWeaver, Bradley \n80,459\n                \n945\n                                 \nWelch, Laurie \n159,095\n              \n19,166\n                           \nWen, Rebecca\n87,722\n                \n3,920\n                              \nWhite, Katelyn \n154,182\n              \n3,852\n                              \nWhitehouse, Mike \n128,006\n              \n10,940\n                           \nWhitford, Christine \n88,988\n                \n3,001\n                              \nWigglesworth, Zandra \n79,444\n                \n715\n                                 \nWilliams, Nova \n132,920\n              \n964\n                                 \nWilson, Jason\n126,552\n              \n3,860\n                              \nWolski, Harvey \n121,677\n              \n-\n                                  \nWoods, Jonathan \n89,732\n                \n2,799\n                              \nWorkman, Bob \n118,739\n              \n-\n                                  \nWynne-Chesniak, April\n161,408\n              \n12,812\n                           \nXia, Ruyi\n78,635\n                \n-\n                                  \nYou, Patrick\n115,485\n              \n1,263\n                              \nZhang, Linan\n149,571\n              \n2,380\n                              \nZoerb, Kristen \n140,390\n              \n1,489\n                              \nTotal over $75,000\n30,683,573\n$     \n1,167,814\n$                   \nTotal under $75,000\n2,836,933\n          \n46,302\n$                         \nSubtotal\n33,520,506\n        \n1,214,116\n                     \nC.P.P employer portion\n1,168,800\n          \nE.I. employer portion\n373,552\n              \nAccruals, leave liability, and secondments\n877,827\n              \nTotal Remuneration\n35,940,686\n$     \n",
+        "sha256": "4e18d87bef2eac95e1224335f31d4b482776282a5dc4c3d4c4c7a4b7cd775d9b",
+        "definitionScope": "BCA remuneration/expense definition page; BCER complete named-control footer definition page"
+      },
+      "controlNativeText": "Financial Information Act Report \nSchedule B – Employee Renumeration and Expenses \nFor the Year Ended March 31, 2025 \n \n34 \n \n \n \n \nThe schedule of employee remuneration and expenses lists gross remuneration, which includes regular \nsalaries and wages, taxable benefits, payment for overtime, vacation, shift premiums, parking benefits, \nother allowances, and payout of earned entitlements.\nEmployee (Continued)\nRenumeration\nExpenses\nWaheed, Bushra\n151,372\n              \n4,551\n                              \nWarner, John \n118,850\n              \n-\n                                  \nWarner, Sarah\n98,981\n                \n4,002\n                              \nWarthe, Alex \n117,897\n              \n2,944\n                              \nWaterfield, Liz \n97,241\n                \n2,881\n                              \nWeatherill, Shannon\n134,382\n              \n7,268\n                              \nWeaver, Bradley \n80,459\n                \n945\n                                 \nWelch, Laurie \n159,095\n              \n19,166\n                           \nWen, Rebecca\n87,722\n                \n3,920\n                              \nWhite, Katelyn \n154,182\n              \n3,852\n                              \nWhitehouse, Mike \n128,006\n              \n10,940\n                           \nWhitford, Christine \n88,988\n                \n3,001\n                              \nWigglesworth, Zandra \n79,444\n                \n715\n                                 \nWilliams, Nova \n132,920\n              \n964\n                                 \nWilson, Jason\n126,552\n              \n3,860\n                              \nWolski, Harvey \n121,677\n              \n-\n                                  \nWoods, Jonathan \n89,732\n                \n2,799\n                              \nWorkman, Bob \n118,739\n              \n-\n                                  \nWynne-Chesniak, April\n161,408\n              \n12,812\n                           \nXia, Ruyi\n78,635\n                \n-\n                                  \nYou, Patrick\n115,485\n              \n1,263\n                              \nZhang, Linan\n149,571\n              \n2,380\n                              \nZoerb, Kristen \n140,390\n              \n1,489\n                              \nTotal over $75,000\n30,683,573\n$     \n1,167,814\n$                   \nTotal under $75,000\n2,836,933\n          \n46,302\n$                         \nSubtotal\n33,520,506\n        \n1,214,116\n                     \nC.P.P employer portion\n1,168,800\n          \nE.I. employer portion\n373,552\n              \nAccruals, leave liability, and secondments\n877,827\n              \nTotal Remuneration\n35,940,686\n$     \n",
+      "imagesVisuallyReviewed": [
+        {
+          "path": "/tmp/recovery-health-crowns-review/bcer2024-25-approval-p3.png",
+          "physicalPage": 3,
+          "scope": "approval page fully visually reviewed",
+          "sha256": "8d163abab4932ce0d372c4ef9bce51a24cf51124ca634f9f9e2b88290be152e4"
+        },
+        {
+          "path": "/tmp/recovery-health-crowns-review/bcer2024-25-control-p34.png",
+          "physicalPage": 34,
+          "scope": "control page fully visually reviewed",
+          "sha256": "3a478ad988608a8048c724a9f8f3abe38c226e143a906cb95e4b4086a3296dfb"
+        }
+      ],
+      "transitionUnknownOrNegativeRows": [],
+      "candidateCorrections": []
+    },
+    {
+      "id": "recovery-crowns-bc-energy-regulator-2025-26-employees",
+      "employerSlug": "bc-energy-regulator",
+      "year": "2025/26",
+      "sourceUrl": "https://www.bc-er.ca/files/reports/Financial-Information-Act/Fiscal-2025-26-Financial-Information-Act-Report.pdf",
+      "sourceSha256": "669fa22788627d31283a55c076b4a75faff9d335e47619aaa0ad10ec0ca39ab2",
+      "sourceCachePath": "/tmp/sector-crowns/af73d8b27ac2a9fd.pdf",
+      "normalizedFile": "research/salaries/recovery-crowns/bc-energy-regulator-2025-26.json.gzip",
+      "dataSha256": "9f0353b11ffeca5bc31be4025f92406e0cdd7757520ee993edb5897e4b2331de",
+      "evidenceFile": "research/salaries/recovery-crowns/evidence/bc-energy-regulator-2025-26.json.gzip",
+      "evidenceSha256": "3def3ac8a9ef6b7b81cabcf2ab474e224e284e3cb164d72d83f8dee6bf2d7680",
+      "rowCount": 277,
+      "allSixNormalizedFieldsMatch": true,
+      "exactOrderAndPageBoundariesMatch": true,
+      "allMonetarySourceComponentsMatch": true,
+      "independentReader": "PDFMiner LTChar baseline/gap reader; no root parser import",
+      "namedRemunerationSum": 32865486,
+      "knownNamedExpensesSum": 900606,
+      "missingExpensesPreserved": 65,
+      "printedControlsIndependentlyTranscribed": {
+        "page": 35,
+        "namedComparator": [
+          32865486,
+          900606
+        ],
+        "allBeforeEmployer": [
+          35517995,
+          949450
+        ],
+        "underThreshold": [
+          2652509,
+          48844
+        ],
+        "employerCpp": 1399932,
+        "employerEi": 407134,
+        "accrualsLeaveSecondments": 1818480,
+        "broaderPrintedTotalRemuneration": 39143541,
+        "derivation": "direct printed named over-threshold subtotal",
+        "key": "bcer2025-26",
+        "approvalPage": 3,
+        "approvalDate": "2026-09-11",
+        "signers": [
+          "Natascha Kiernan"
+        ],
+        "definitionPage": 35
+      },
+      "derivedNamedResiduals": [
+        0,
+        0
+      ],
+      "period": {
+        "periodType": "fiscal",
+        "periodStart": "2025-04-01",
+        "periodEnd": "2026-03-31",
+        "coverNativeText": " \n \n \n \n \nFinancial Information Act Report \nFor the Year Ended March 31, 2026 \n \n",
+        "employeeHeadingVerifiedOnOriginal": true
+      },
+      "approval": {
+        "physicalPage": 3,
+        "visiblySigned": true,
+        "date": "2026-09-11",
+        "signers": [
+          "Natascha Kiernan"
+        ],
+        "nativeText": "Financial Information Act Report \nStatement of Financial Information Approval \nFor the Year Ended March 31, 2026 \n \n \nThe undersigned represents the Board of Directors of the British Columbia Energy Regulator and \napproves all the statements and schedules included in the Statement of Financial Information, \nproduced under the Financial Information Act. \n \n \n \n  \nNatascha Kiernan  \nBoard Chair \nSeptember 11, 2026 \n \n \n \n                       \n \n"
+      },
+      "definitionEvidence": {
+        "physicalPage": 35,
+        "nativeTextRead": true,
+        "text": " \nFinancial Information Act Report \nSchedule B – Employee Renumeration and Expenses \nFor the Year Ended March 31, 2026 \n \n35 \n \nThe schedule of employee remuneration and expenses lists gross remuneration, which includes regular \nsalaries and wages, taxable benefits, payment for overtime, vacation, shift premiums, parking benefits, \nother allowances, and payout of earned entitlements. \nEmployee (Continued)\nRenumeration\nExpenses\nVuppala, Hiran\n83,427\n                \n-\n                                  \nWaheed, Bushra\n153,843\n              \n1,117\n                              \nWalters, Kim\n149,810\n              \n14,005\n                           \nWarner, John\n102,515\n              \n453\n                                 \nWarner, Sarah\n98,714\n                \n190\n                                 \nWarthe, Alex\n121,280\n              \n8,089\n                              \nWeatherill, Shannon\n138,346\n              \n3,636\n                              \nWeaver, Bradley\n80,699\n                \n1,750\n                              \nWelch, Laurie\n164,266\n              \n14,487\n                           \nWen, Rebecca\n98,166\n                \n5,080\n                              \nWhite, Katelyn\n156,837\n              \n2,142\n                              \nWhitehouse, Mike\n134,374\n              \n8,269\n                              \nWhitford, Christine\n93,990\n                \n1,072\n                              \nWigglesworth, Zandra\n82,258\n                \n-\n                                  \nWilliams, Nova\n137,080\n              \n-\n                                  \nWilson, Jason\n127,299\n              \n4,933\n                              \nWolski, Harvey\n122,672\n              \n-\n                                  \nWoods, Jonathan\n90,544\n                \n-\n                                  \nWorkman, Bob\n118,624\n              \n686\n                                 \nWyatt, Glenda\n90,268\n                \n1,314\n                              \nWynne-Chesniak, April\n166,804\n              \n7,325\n                              \nXia, Ruyi\n80,082\n                \n320\n                                 \nYou, Patrick\n116,541\n              \n21\n                                    \nZhang, Linan\n153,874\n              \n734\n                                 \nZoerb, Kristen\n146,363\n              \n731\n                                 \nTotal over $75,000\n32,865,486\n        \n \nTotal under $75,000\n2,652,509\n          \n \nSubtotal\n35,517,995\n        \n949,450\n                         \nC.P.P employer portion\n1,399,932\n          \nE.I. employer portion\n407,134\n              \nAccruals, leave liability, and secondments\n1,818,480\n          \nTotal Remuneration\n39,143,541\n        \n$\n900,606\n \n \n \n \n48,844\n",
+        "sha256": "3acd52f031a018883ad080779d48adae7391f20ab34c65cbc8a0c09fb9c931f7",
+        "definitionScope": "BCA remuneration/expense definition page; BCER complete named-control footer definition page"
+      },
+      "controlNativeText": " \nFinancial Information Act Report \nSchedule B – Employee Renumeration and Expenses \nFor the Year Ended March 31, 2026 \n \n35 \n \nThe schedule of employee remuneration and expenses lists gross remuneration, which includes regular \nsalaries and wages, taxable benefits, payment for overtime, vacation, shift premiums, parking benefits, \nother allowances, and payout of earned entitlements. \nEmployee (Continued)\nRenumeration\nExpenses\nVuppala, Hiran\n83,427\n                \n-\n                                  \nWaheed, Bushra\n153,843\n              \n1,117\n                              \nWalters, Kim\n149,810\n              \n14,005\n                           \nWarner, John\n102,515\n              \n453\n                                 \nWarner, Sarah\n98,714\n                \n190\n                                 \nWarthe, Alex\n121,280\n              \n8,089\n                              \nWeatherill, Shannon\n138,346\n              \n3,636\n                              \nWeaver, Bradley\n80,699\n                \n1,750\n                              \nWelch, Laurie\n164,266\n              \n14,487\n                           \nWen, Rebecca\n98,166\n                \n5,080\n                              \nWhite, Katelyn\n156,837\n              \n2,142\n                              \nWhitehouse, Mike\n134,374\n              \n8,269\n                              \nWhitford, Christine\n93,990\n                \n1,072\n                              \nWigglesworth, Zandra\n82,258\n                \n-\n                                  \nWilliams, Nova\n137,080\n              \n-\n                                  \nWilson, Jason\n127,299\n              \n4,933\n                              \nWolski, Harvey\n122,672\n              \n-\n                                  \nWoods, Jonathan\n90,544\n                \n-\n                                  \nWorkman, Bob\n118,624\n              \n686\n                                 \nWyatt, Glenda\n90,268\n                \n1,314\n                              \nWynne-Chesniak, April\n166,804\n              \n7,325\n                              \nXia, Ruyi\n80,082\n                \n320\n                                 \nYou, Patrick\n116,541\n              \n21\n                                    \nZhang, Linan\n153,874\n              \n734\n                                 \nZoerb, Kristen\n146,363\n              \n731\n                                 \nTotal over $75,000\n32,865,486\n        \n \nTotal under $75,000\n2,652,509\n          \n \nSubtotal\n35,517,995\n        \n949,450\n                         \nC.P.P employer portion\n1,399,932\n          \nE.I. employer portion\n407,134\n              \nAccruals, leave liability, and secondments\n1,818,480\n          \nTotal Remuneration\n39,143,541\n        \n$\n900,606\n \n \n \n \n48,844\n",
+      "imagesVisuallyReviewed": [
+        {
+          "path": "/tmp/recovery-health-crowns-review/bcer2025-26-approval-p3.png",
+          "physicalPage": 3,
+          "scope": "approval page fully visually reviewed",
+          "sha256": "303370f53099695a80b571cc1b0542d0fcef55e8a17ace94f7e8d9f65e09c237"
+        },
+        {
+          "path": "/tmp/recovery-health-crowns-review/bcer2025-26-control-p35.png",
+          "physicalPage": 35,
+          "scope": "control page fully visually reviewed",
+          "sha256": "5f7bcbd5fa3fd10e7a1c70096a9268d3dbed057a169f295e61b96d15dab96f10"
+        }
+      ],
+      "transitionUnknownOrNegativeRows": [],
+      "candidateCorrections": []
+    }
+  ],
+  "additionalRenderedReview": [
+    {
+      "path": "/tmp/recovery-health-crowns-review/bca-transition-target-p37.png",
+      "physicalPage": 37,
+      "sha256": "f9abf8f46dbd9773f5f363256140d47071d2b30bdd75ef610e0acd32999ee6f4",
+      "coverage": "Complete source page: negative expenses Derickson -812 and Dhami -807; De Goede Jan-Mar dash unknown; fifteen-month heading/footer"
+    },
+    {
+      "path": "/tmp/recovery-health-crowns-review/bca-transition-target-p38.png",
+      "physicalPage": 38,
+      "sha256": "ed2d6c258d225255a041d431b5cc2a654f7e0c4cc0760b4ac47ab6f400713648",
+      "coverage": "Complete source page: Frank Nola Charmaine expense (768); full compound names; Gontijo Leal first component checked at high zoom separately"
+    },
+    {
+      "path": "/tmp/recovery-health-crowns-review/bca-transition-target-p40.png",
+      "physicalPage": 40,
+      "sha256": "287880cfb57c1fb164c89a47a88b9ce0b93cf10d54c62281e0f1cc596e62fc5c",
+      "coverage": "Complete source page: Lim, Maclean, Maclean-Talbot and Madden Jan-Mar dash components remain unknown; no zero inferred"
+    },
+    {
+      "path": "/tmp/recovery-health-crowns-review/bca2020-initials-p35.png",
+      "physicalPage": 35,
+      "sha256": "0f87cdeef446a3bc03e7b8aeb694ae18d5b8bb0f927b50ab46307dd7130839f9",
+      "coverage": "Complete first employee page: initials retained literally, no source job titles or cross-year expansion"
+    },
+    {
+      "path": "/tmp/recovery-health-crowns-review/bca2020-compound-p43.png",
+      "physicalPage": 43,
+      "sha256": "394ae9d54689b0607ac88e805162fe9dc34fce45ab49f12df501a86c81bb493a",
+      "coverage": "Complete later employee page: compound surname Wandawasi Dorakanti, R and single-row boundaries; initials retained"
+    },
+    {
+      "path": "/tmp/recovery-health-crowns-review/transition-p38-gontijo.png",
+      "physicalPage": 38,
+      "sha256": "9931fa7041608d0cf850864020b879d4b170d158bdd54b9730b84898f09faef8",
+      "coverage": "5x original region confirms 124,782 / 29,847 / 154,629 / dash for Gontijo Leal, Gustavo; no candidate correction."
+    }
+  ],
+  "manualCoverageStatement": "All eight approval pages and all eight final employee/control pages were completely visually reviewed. Five additional complete employee pages and one original 5x row region were visually reviewed for initials, compound names, negative expenses and unknown transition components. This reviewer does not claim manual image review of all employee pages. Full row verification across all original employee pages is by the independent PDFMiner reader compared with the frozen normalized/provenance payloads.",
+  "sourceDefinitionDistinctions": "BCA2020 and2021/22 define pay using T4 Box14 salaries paid;2022/23 uses FIR remuneration whether or not income-tax reported;2023/24 and2024/25 expressly include bonuses/gratuities/trust/income deferral and exclude severance. BCER lists gross remuneration including earned entitlement payouts. Root was notified to preserve these source-specific distinctions.",
+  "aggregateScopeConclusion": "Named employee comparators exclude under-threshold groups, CPP/EI and broader accrual/leave/secondment totals. Transition named controls subtract both separately published consolidated groups. BCER2023/24 blank under-threshold aggregate expense remains unknown; no all-employee expense total is fabricated.",
+  "otherPublishedArithmetic": "Additional literal all-scope residuals are retained in source controls above; none supplies an adjustment or asserted cause for individual residuals.",
+  "outreachSent": 0,
+  "rootDataOrSpecsEdited": false,
+  "reproducerCode": "from pathlib import Path\nimport json,gzip,hashlib,collections,datetime,fitz\nROOT=Path('/workspace/PofBC');REV=ROOT/'research/salaries/recovery-wave-2026-11-01/reviews';OUT=ROOT/'research/salaries/recovery-crowns';SPECS=ROOT/'research/salaries/recovery-wave-2026-11-01/crowns/source-specs.json'\nORIG=REV/'independent-crowns-pdfminer-original-transcription.json.gzip'\nsha=lambda data:hashlib.sha256(data).hexdigest()\nblind=json.loads(gzip.decompress(ORIG.read_bytes()));specs=json.loads(SPECS.read_text());manifest=OUT/'sources.json';sources=json.loads(manifest.read_text())['sources']\n# Values transcribed directly from the eight rendered source control pages.\ncontrols={\n('bc-assessment','2020'):dict(page=44,namedComparator=[34830265,532750],allBeforeEmployer=[54762937,810272],underThreshold=[19932672,277522],employerCppEi=2703919,allAfterEmployer=[54762937,3514191],derivation='[54762937-19932672,810272-277522]',key='bca2020',approvalPage=4,approvalDate='2021-06-28',signers=['Sylvia Bishop','Don Krusel'],definitionPage=33),\n('bc-assessment','2021/22'):dict(page=45,namedComparator=[43024330,714013],allBeforeEmployer=[67438511,1027636],underThreshold=[16276232,206188],separate15MonthOver75k12MonthUnder75kGroup=[8137949,107435],employerCppEi=3733152,allAfterEmployer=[67438511,4760788],derivation='[67438511-16276232-8137949,1027636-206188-107435]',key='bca2021-22',approvalPage=4,approvalDate='2022-09-29',signers=['Ruth Wittenberg','Don Krusel'],definitionPage=34),\n('bc-assessment','2022/23'):dict(page=49,namedComparator=[39153290,1056258],allBeforeEmployer=[59635831,1502997],underThreshold=[20482541,446739],employerCppEi=3309482,allAfterEmployer=[59635831,4812479],derivation='direct printed named over-threshold subtotal',key='bca2022-23',approvalPage=4,approvalDate='2023-07-18',signers=['Ruth Wittenberg','Richard Rainey'],definitionPage=35),\n('bc-assessment','2023/24'):dict(page=48,namedComparator=[41844962,1231951],allBeforeEmployer=[65000467,1847895],underThreshold=[23155505,615945],employerCppEi=3667205,allAfterEmployer=[65000467,5515101],otherPublishedControlResiduals={'allExpenseSubtotalMinusNamedAndUnder':-1,'allExpenseGrandMinusSubtotalAndEmployer':1},derivation='direct printed named over-threshold subtotal',key='bca2023-24',approvalPage=4,approvalDate='2024-07-18',signers=['Ruth Wittenberg','John Crawford'],definitionPage=35),\n('bc-assessment','2024/25'):dict(page=49,namedComparator=[44664840,1405442],allBeforeEmployer=[66888313,1939545],underThreshold=[22223472,534103],employerCppEi=3851870,allAfterEmployer=[66888313,5791415],otherPublishedControlResiduals={'allPaySubtotalMinusNamedAndUnder':1},derivation='direct printed named over-threshold subtotal',key='bca2024-25',approvalPage=4,approvalDate='2025-09-11',signers=['Ruth Wittenberg','John Crawford'],definitionPage=35),\n('bc-energy-regulator','2023/24'):dict(page=34,namedComparator=[28973613,1405173],allBeforeEmployer=[31988877,None],underThreshold=[3015264,None],employerCpp=1141712,employerEi=364535,accrualsLeaveSecondments=255532,broaderPrintedTotalRemuneration=33750656,missingAggregateExpenseIsNotZero=True,derivation='direct printed named over-threshold subtotal; under-threshold expense is blank and cannot create an all-employee expense comparator',key='bcer2023-24',approvalPage=3,approvalDate='2024-09-05',signers=['Chris Hayman'],definitionPage=34),\n('bc-energy-regulator','2024/25'):dict(page=34,namedComparator=[30683573,1167814],allBeforeEmployer=[33520506,1214116],underThreshold=[2836933,46302],employerCpp=1168800,employerEi=373552,accrualsLeaveSecondments=877827,broaderPrintedTotalRemuneration=35940686,otherPublishedControlResiduals={'broaderTotalMinusSubtotalCppEiAccruals':1},derivation='direct printed named over-threshold subtotal',key='bcer2024-25',approvalPage=3,approvalDate='2025-09-16',signers=['Natascha Kiernan'],definitionPage=34),\n('bc-energy-regulator','2025/26'):dict(page=35,namedComparator=[32865486,900606],allBeforeEmployer=[35517995,949450],underThreshold=[2652509,48844],employerCpp=1399932,employerEi=407134,accrualsLeaveSecondments=1818480,broaderPrintedTotalRemuneration=39143541,derivation='direct printed named over-threshold subtotal',key='bcer2025-26',approvalPage=3,approvalDate='2026-09-11',signers=['Natascha Kiernan'],definitionPage=35),\n}\nreviews=[];failures=[]\nfor b in blind['sources']:\n s=next(s for s in specs if s['sha256']==b['sourceSha256']);m=next(x for x in sources if x['id']==s['id']);control=controls[(b['employerSlug'],b['yearLabel'])]\n data=OUT/s['file'];evpath=OUT/s['evidenceFile'];rows=json.loads(gzip.decompress(data.read_bytes()));ev=json.loads(gzip.decompress(evpath.read_bytes()))\n components=[(p['pdfPage'],r['componentsAndExpenses']) for p in ev['pages'] for r in p['rowEvidence']]\n own=[(r['physicalPage'],r['componentsAndExpenses']) for r in b['rowProof']]\n assert rows==b['rows'],s['id']+' normalized rows differ'\n assert components==own,s['id']+' source monetary fields differ'\n assert s['controls']==control['namedComparator'],s['id']+' named comparator scope differs'\n assert s['pages']==b['employeePagesIndependentFromOriginalHeadings'],s['id']+' physical page coverage differs'\n assert sha(data.read_bytes())==m['dataSha256'] and sha(evpath.read_bytes())==m['evidenceSha256']\n residual=[b['totalRemuneration']-control['namedComparator'][0],b['totalKnownExpenses']-control['namedComparator'][1]]\n assert residual==m['validation']['residuals']\n if any(residual):assert m.get('publicWarning') and 'cause is unconfirmed' in m['publicWarning']\n if b['yearLabel']=='2021/22':\n  assert s['periodStart']=='2021-01-01' and s['periodEnd']=='2022-03-31'\n  assert 'fifteen months' in m['publicWarning'] and 'not annualized' in m['publicWarning']\n doc=fitz.open(b['sourcePath']);definition=doc[control['definitionPage']-1].get_text();cover=doc[0].get_text();approval=doc[control['approvalPage']-1].get_text();controlText=doc[control['page']-1].get_text()\n images=[]\n for label,pn in [('approval',control['approvalPage']),('control',control['page'])]:\n  p=Path(f\"/tmp/recovery-health-crowns-review/{control['key']}-{label}-p{pn}.png\")\n  images.append({'path':str(p),'physicalPage':pn,'scope':label+' page fully visually reviewed','sha256':sha(p.read_bytes())})\n special=[]\n if b['yearLabel']=='2021/22':\n  special=[r for r in b['rowProof'] if any(x is None or x<0 for x in r['componentsAndExpenses'])]\n reviews.append({'id':s['id'],'employerSlug':b['employerSlug'],'year':s['year'],'sourceUrl':s['sourceUrl'],'sourceSha256':b['sourceSha256'],'sourceCachePath':b['sourcePath'],'normalizedFile':str(data.relative_to(ROOT)),'dataSha256':sha(data.read_bytes()),'evidenceFile':str(evpath.relative_to(ROOT)),'evidenceSha256':sha(evpath.read_bytes()),'rowCount':len(rows),'allSixNormalizedFieldsMatch':True,'exactOrderAndPageBoundariesMatch':True,'allMonetarySourceComponentsMatch':True,'independentReader':'PDFMiner LTChar baseline/gap reader; no root parser import','namedRemunerationSum':b['totalRemuneration'],'knownNamedExpensesSum':b['totalKnownExpenses'],'missingExpensesPreserved':b['missingExpenses'],'printedControlsIndependentlyTranscribed':control,'derivedNamedResiduals':residual,'period':{'periodType':s['periodType'],'periodStart':s['periodStart'],'periodEnd':s['periodEnd'],'coverNativeText':cover,'employeeHeadingVerifiedOnOriginal':True},'approval':{'physicalPage':control['approvalPage'],'visiblySigned':True,'date':control['approvalDate'],'signers':control['signers'],'nativeText':approval},'definitionEvidence':{'physicalPage':control['definitionPage'],'nativeTextRead':True,'text':definition,'sha256':sha(definition.encode()),'definitionScope':'BCA remuneration/expense definition page; BCER complete named-control footer definition page'},'controlNativeText':controlText,'imagesVisuallyReviewed':images,'transitionUnknownOrNegativeRows':special,'candidateCorrections':[]})\nextraimages=[]\nfor stem,pn,note in [('bca-transition-target',37,'Complete source page: negative expenses Derickson -812 and Dhami -807; De Goede Jan-Mar dash unknown; fifteen-month heading/footer'),('bca-transition-target',38,'Complete source page: Frank Nola Charmaine expense (768); full compound names; Gontijo Leal first component checked at high zoom separately'),('bca-transition-target',40,'Complete source page: Lim, Maclean, Maclean-Talbot and Madden Jan-Mar dash components remain unknown; no zero inferred'),('bca2020-initials',35,'Complete first employee page: initials retained literally, no source job titles or cross-year expansion'),('bca2020-compound',43,'Complete later employee page: compound surname Wandawasi Dorakanti, R and single-row boundaries; initials retained')]:\n p=Path(f'/tmp/recovery-health-crowns-review/{stem}-p{pn}.png');extraimages.append({'path':str(p),'physicalPage':pn,'sha256':sha(p.read_bytes()),'coverage':note})\np=Path('/tmp/recovery-health-crowns-review/transition-p38-gontijo.png');extraimages.append({'path':str(p),'physicalPage':38,'sha256':sha(p.read_bytes()),'coverage':'5x original region confirms 124,782 / 29,847 / 154,629 / dash for Gontijo Leal, Gustavo; no candidate correction.'})\nreceipt={'frozen':True,'date':'2026-11-01','reviewer':'recovery_health','status':'pass-no-row-correction; preserve literal warnings and source-specific definitions','originalOnlyTranscriptionFile':str(ORIG.relative_to(ROOT)),'originalOnlyTranscriptionSha256':sha(ORIG.read_bytes()),'reviewedSpecsSha256':sha(SPECS.read_bytes()),'reviewedManifestSha256':sha(manifest.read_bytes()),'rowAndEvidencePayloadsFrozen':True,'metadataStatusAtReview':'held-for-peer-review; root may publish a new metadata-only acceptance receipt after changing status/adding source-definition notes','cohorts':len(reviews),'independentlyComparedRows':sum(r['rowCount'] for r in reviews),'allSixFieldsMatch':True,'allComponentVectorsMatch':True,'sources':reviews,'additionalRenderedReview':extraimages,'manualCoverageStatement':'All eight approval pages and all eight final employee/control pages were completely visually reviewed. Five additional complete employee pages and one original 5x row region were visually reviewed for initials, compound names, negative expenses and unknown transition components. This reviewer does not claim manual image review of all employee pages. Full row verification across all original employee pages is by the independent PDFMiner reader compared with the frozen normalized/provenance payloads.','sourceDefinitionDistinctions':'BCA2020 and2021/22 define pay using T4 Box14 salaries paid;2022/23 uses FIR remuneration whether or not income-tax reported;2023/24 and2024/25 expressly include bonuses/gratuities/trust/income deferral and exclude severance. BCER lists gross remuneration including earned entitlement payouts. Root was notified to preserve these source-specific distinctions.','aggregateScopeConclusion':'Named employee comparators exclude under-threshold groups, CPP/EI and broader accrual/leave/secondment totals. Transition named controls subtract both separately published consolidated groups. BCER2023/24 blank under-threshold aggregate expense remains unknown; no all-employee expense total is fabricated.','otherPublishedArithmetic':'Additional literal all-scope residuals are retained in source controls above; none supplies an adjustment or asserted cause for individual residuals.','outreachSent':0,'rootDataOrSpecsEdited':False,'reproducerCode':Path(__file__).read_text()}\np=REV/'independent-crowns-pdfminer-comparison-and-controls.json'\np.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\\n')\nprint(json.dumps({'path':str(p.relative_to(ROOT)),'sha256':sha(p.read_bytes()),'cohorts':len(reviews),'rows':receipt['independentlyComparedRows'],'normalizedAndComponentsMatch':True}))\n"
+}

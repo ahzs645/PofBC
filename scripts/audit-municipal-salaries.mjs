@@ -21,7 +21,7 @@ const baseline = read(join(out, 'baseline.json'))
 const coverage = read(join(root, 'public/salaries/coverage.json'))
 const index = read(join(root, 'public/salaries/index.json'))
 const additions = ['municipal-north', 'municipal-island', 'municipal-lower-mainland', 'municipal-small', 'municipal-ocr', 'sector-municipal',
-  ...read(join(research, 'collections.json')).collections.filter(name => name.startsWith('municipal-wave-') || name.startsWith('municipal-history-') || name.startsWith('continuation-municipal'))]
+  ...read(join(research, 'collections.json')).collections.filter(name => name.startsWith('municipal-wave-') || name.startsWith('municipal-history-') || name.startsWith('continuation-municipal') || name === 'recovery-municipal')]
 const rosterSlugs = new Set(roster.municipalities.map(r => canonicalSlug(r.employerSlug)))
 if (rosterSlugs.size !== 162 || roster.municipalities.filter(r => r.status !== 'pending-incorporation').length !== 161) throw new Error('Reviewed municipal roster changed')
 const accepted = []

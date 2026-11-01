@@ -1,0 +1,1063 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "recovery-crowns-bc-assessment-2020-employees",
+      "employerSlug": "bc-assessment",
+      "employerName": "British Columbia Assessment Authority",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202020.pdf",
+      "sourceIndexUrl": "https://info.bcassessment.ca/about/Pages/Annual-Reports.aspx",
+      "sha256": "bee373465b9105553304c6761afbcd36b23a4d332abfb05c0fad996fed5a9f07",
+      "file": "bc-assessment-2020.json.gzip",
+      "evidenceFile": "evidence/bc-assessment-2020.json.gzip",
+      "sourceKind": "official",
+      "sector": "Crown corporations",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "title": "bc-assessment official employee remuneration and expenses 2020",
+      "rowCount": 362,
+      "dataSha256": "edc5c7adb367db7e96913cdc5d6dbb1dcaadaa985967cc4a55a4f71ff72cb7c3",
+      "evidenceSha256": "9c0c8e9d9cd7bdca0a5a8e5739037f438511acc7355b1cd1c8941eadc3d9681b",
+      "totalRemuneration": 34830265.0,
+      "totalExpenses": 532750.0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Complete original named employee schedule only; board, non-person suppliers and aggregate payroll excluded.",
+        "Published gross remuneration follows original definitions; it is not annual base salary. Unknown dash expenses remain null, explicit zeros and negative amounts remain literal. Employer CPP/EI and broader accrued/aggregate amounts are excluded from individual remuneration and expenses.",
+        "Names and initials are retained from the source without cross-year identity assumptions; no job titles are published by these employee schedules.",
+        "The complete named employee table follows the source remuneration definition; this does not establish a complete employee roster. Separately stated severance, board payments, under-threshold payroll and employer CPP/EI are not individual salary observations.",
+        "This original defines remuneration as T4 Box 14 salaries paid, including salaries, wages, vacation payouts and taxable benefits. Later reports use FIR remuneration definitions; do not assume an unchanged compensation basis across these years."
+      ],
+      "validation": {
+        "rowCountsByPdfPage": [
+          [
+            35,
+            40
+          ],
+          [
+            36,
+            40
+          ],
+          [
+            37,
+            40
+          ],
+          [
+            38,
+            40
+          ],
+          [
+            39,
+            40
+          ],
+          [
+            40,
+            40
+          ],
+          [
+            41,
+            40
+          ],
+          [
+            42,
+            40
+          ],
+          [
+            43,
+            40
+          ],
+          [
+            44,
+            2
+          ]
+        ],
+        "namedRemunerationSum": 34830265.0,
+        "knownNamedExpensesSum": 532750.0,
+        "missingExpenseRows": 42,
+        "explicitZeroExpenseRows": 0,
+        "completeEmployeeSchedule": true,
+        "independentReaderAgreement": true,
+        "controls": [
+          34830265,
+          532750
+        ],
+        "controlDefinitions": "Derived named employee comparator: printed all-employee pay/expense54,762,937/810,272 minus separately printed under-threshold19,932,672/277,522. Employer CPP/EI excluded; all subtracted cells explicitly numeric.",
+        "residuals": [
+          0.0,
+          0.0
+        ],
+        "originalApprovalAndControls": {
+          "page": 44,
+          "namedComparator": [
+            34830265,
+            532750
+          ],
+          "allBeforeEmployer": [
+            54762937,
+            810272
+          ],
+          "underThreshold": [
+            19932672,
+            277522
+          ],
+          "employerCppEi": 2703919,
+          "allAfterEmployer": [
+            54762937,
+            3514191
+          ],
+          "derivation": "[54762937-19932672,810272-277522]",
+          "key": "bca2020",
+          "approvalPage": 4,
+          "approvalDate": "2021-06-28",
+          "signers": [
+            "Sylvia Bishop",
+            "Don Krusel"
+          ],
+          "definitionPage": 33
+        }
+      },
+      "nameDisclosure": "published-initials",
+      "positionDisclosure": "not-published",
+      "currency": "CAD"
+    },
+    {
+      "id": "recovery-crowns-bc-assessment-2021-22-employees",
+      "employerSlug": "bc-assessment",
+      "employerName": "British Columbia Assessment Authority",
+      "year": "2021/22",
+      "periodType": "fiscal",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2022-03-31",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202021-22.pdf",
+      "sourceIndexUrl": "https://info.bcassessment.ca/about/Pages/Annual-Reports.aspx",
+      "sha256": "f278728d20082c5daa3709697552a7e8a023cfe368e925e0d11138e1ad9ec38a",
+      "file": "bc-assessment-2021-22.json.gzip",
+      "evidenceFile": "evidence/bc-assessment-2021-22.json.gzip",
+      "sourceKind": "official",
+      "sector": "Crown corporations",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "title": "bc-assessment official employee remuneration and expenses 2021/22",
+      "rowCount": 359,
+      "dataSha256": "8242f6937ff288e43f076f1670aed0acd6692dcfa483833922a1a575594c13d2",
+      "evidenceSha256": "c02d2971a00f3ee0fb4cee01cb918771c3caed86d01a2e0fcc8836af77679b08",
+      "totalRemuneration": 43024330.0,
+      "totalExpenses": 714013.0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Complete original named employee schedule only; board, non-person suppliers and aggregate payroll excluded.",
+        "Published gross remuneration follows original definitions; it is not annual base salary. Unknown dash expenses remain null, explicit zeros and negative amounts remain literal. Employer CPP/EI and broader accrued/aggregate amounts are excluded from individual remuneration and expenses.",
+        "Names and initials are retained from the source without cross-year identity assumptions; no job titles are published by these employee schedules.",
+        "The actual transition covers fifteen months, January 1,2021–March31,2022. Published fifteen-month total remuneration is imported without annualization; calendar2021 and January–March2022 components stay in supporting evidence. Named employees are distinguished from the separately consolidated group over$75,000 in fifteen months but below$75,000 in twelve months. Missing component cells are not inferred as zeros.",
+        "The complete named employee table follows the source remuneration definition; this does not establish a complete employee roster. Separately stated severance, board payments, under-threshold payroll and employer CPP/EI are not individual salary observations.",
+        "This original defines remuneration as T4 Box 14 salaries paid, including salaries, wages, vacation payouts and taxable benefits. Later reports use FIR remuneration definitions; do not assume an unchanged compensation basis across these years."
+      ],
+      "validation": {
+        "rowCountsByPdfPage": [
+          [
+            36,
+            39
+          ],
+          [
+            37,
+            39
+          ],
+          [
+            38,
+            39
+          ],
+          [
+            39,
+            39
+          ],
+          [
+            40,
+            39
+          ],
+          [
+            41,
+            39
+          ],
+          [
+            42,
+            39
+          ],
+          [
+            43,
+            39
+          ],
+          [
+            44,
+            39
+          ],
+          [
+            45,
+            8
+          ]
+        ],
+        "namedRemunerationSum": 43024330.0,
+        "knownNamedExpensesSum": 714013.0,
+        "missingExpenseRows": 42,
+        "explicitZeroExpenseRows": 0,
+        "completeEmployeeSchedule": true,
+        "independentReaderAgreement": true,
+        "controls": [
+          43024330,
+          714013
+        ],
+        "controlDefinitions": "Derived named employee comparator: printed all-employee67,438,511/1,027,636 minus printed under-threshold16,276,232/206,188 and separate fifteen-month-over75k/twelve-month-under75k group8,137,949/107,435. All subtracted cells explicitly numeric; CPP/EI excluded.",
+        "residuals": [
+          0.0,
+          0.0
+        ],
+        "originalApprovalAndControls": {
+          "page": 45,
+          "namedComparator": [
+            43024330,
+            714013
+          ],
+          "allBeforeEmployer": [
+            67438511,
+            1027636
+          ],
+          "underThreshold": [
+            16276232,
+            206188
+          ],
+          "separate15MonthOver75k12MonthUnder75kGroup": [
+            8137949,
+            107435
+          ],
+          "employerCppEi": 3733152,
+          "allAfterEmployer": [
+            67438511,
+            4760788
+          ],
+          "derivation": "[67438511-16276232-8137949,1027636-206188-107435]",
+          "key": "bca2021-22",
+          "approvalPage": 4,
+          "approvalDate": "2022-09-29",
+          "signers": [
+            "Ruth Wittenberg",
+            "Don Krusel"
+          ],
+          "definitionPage": 34
+        }
+      },
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "currency": "CAD",
+      "publicWarning": "This schedule covers fifteen months, January 1, 2021–March 31, 2022. Published total remuneration and expenses are not annualized. The named schedule excludes a separately consolidated group above $75,000 in fifteen months but below $75,000 in twelve months; this threshold basis differs from an ordinary annual comparison."
+    },
+    {
+      "id": "recovery-crowns-bc-assessment-2022-23-employees",
+      "employerSlug": "bc-assessment",
+      "employerName": "British Columbia Assessment Authority",
+      "year": "2022/23",
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202022-23.pdf",
+      "sourceIndexUrl": "https://info.bcassessment.ca/about/Pages/Annual-Reports.aspx",
+      "sha256": "741f755613efc41e3a7ca01dfcfcdaabfb13ffd9ab8d568bb7cb8c8a4a28d73a",
+      "file": "bc-assessment-2022-23.json.gzip",
+      "evidenceFile": "evidence/bc-assessment-2022-23.json.gzip",
+      "sourceKind": "official",
+      "sector": "Crown corporations",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "title": "bc-assessment official employee remuneration and expenses 2022/23",
+      "rowCount": 382,
+      "dataSha256": "c6cbee17c59cd8978389fda542658fb32af0dc598042e9dffa88fb0c065088bb",
+      "evidenceSha256": "edf0e38413c35cf14cfdc890fff44aa1dd559aa0748332cbaf4646e772afa7d3",
+      "totalRemuneration": 39153289.0,
+      "totalExpenses": 1056265.0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Complete original named employee schedule only; board, non-person suppliers and aggregate payroll excluded.",
+        "Published gross remuneration follows original definitions; it is not annual base salary. Unknown dash expenses remain null, explicit zeros and negative amounts remain literal. Employer CPP/EI and broader accrued/aggregate amounts are excluded from individual remuneration and expenses.",
+        "Names and initials are retained from the source without cross-year identity assumptions; no job titles are published by these employee schedules.",
+        "The complete named employee table follows the source remuneration definition; this does not establish a complete employee roster. Separately stated severance, board payments, under-threshold payroll and employer CPP/EI are not individual salary observations.",
+        "This original uses FIR remuneration paid during the period whether or not reported under the Income Tax Act; it is not assumed identical to the earlier T4 Box 14 basis."
+      ],
+      "validation": {
+        "rowCountsByPdfPage": [
+          [
+            37,
+            30
+          ],
+          [
+            38,
+            30
+          ],
+          [
+            39,
+            30
+          ],
+          [
+            40,
+            30
+          ],
+          [
+            41,
+            30
+          ],
+          [
+            42,
+            30
+          ],
+          [
+            43,
+            30
+          ],
+          [
+            44,
+            30
+          ],
+          [
+            45,
+            30
+          ],
+          [
+            46,
+            30
+          ],
+          [
+            47,
+            30
+          ],
+          [
+            48,
+            30
+          ],
+          [
+            49,
+            22
+          ]
+        ],
+        "namedRemunerationSum": 39153289.0,
+        "knownNamedExpensesSum": 1056265.0,
+        "missingExpenseRows": 42,
+        "explicitZeroExpenseRows": 0,
+        "completeEmployeeSchedule": true,
+        "independentReaderAgreement": true,
+        "controls": [
+          39153290,
+          1056258
+        ],
+        "controlDefinitions": "Printed named-employee over-threshold subtotal only; employer CPP/EI, under-threshold aggregates, board and accrued expense totals are excluded.",
+        "residuals": [
+          -1.0,
+          7.0
+        ],
+        "originalApprovalAndControls": {
+          "page": 49,
+          "namedComparator": [
+            39153290,
+            1056258
+          ],
+          "allBeforeEmployer": [
+            59635831,
+            1502997
+          ],
+          "underThreshold": [
+            20482541,
+            446739
+          ],
+          "employerCppEi": 3309482,
+          "allAfterEmployer": [
+            59635831,
+            4812479
+          ],
+          "derivation": "direct printed named over-threshold subtotal",
+          "key": "bca2022-23",
+          "approvalPage": 4,
+          "approvalDate": "2023-07-18",
+          "signers": [
+            "Ruth Wittenberg",
+            "Richard Rainey"
+          ],
+          "definitionPage": 35
+        }
+      },
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "currency": "CAD",
+      "publicWarning": "Published named employee cells minus the reported named comparators: remuneration $-1.00; known expenses $+7.00. Both native readers agree on all individual fields. The cause is unconfirmed; no amount is adjusted to force agreement. Expense dashes remain unknown."
+    },
+    {
+      "id": "recovery-crowns-bc-assessment-2023-24-employees",
+      "employerSlug": "bc-assessment",
+      "employerName": "British Columbia Assessment Authority",
+      "year": "2023/24",
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202023-24.pdf",
+      "sourceIndexUrl": "https://info.bcassessment.ca/about/Pages/Annual-Reports.aspx",
+      "sha256": "062f9f329e16e5a95f034a2045f4bbfa7bc925ccf1c790f17150b99178626de5",
+      "file": "bc-assessment-2023-24.json.gzip",
+      "evidenceFile": "evidence/bc-assessment-2023-24.json.gzip",
+      "sourceKind": "official",
+      "sector": "Crown corporations",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "title": "bc-assessment official employee remuneration and expenses 2023/24",
+      "rowCount": 394,
+      "dataSha256": "e5abd5ad22c00610df04aa7bc556d19b48c90f08c275754faf87475c5b6e3bbd",
+      "evidenceSha256": "a3a31aea2023d686681da41f00e1d4531d8531bb6d6241cf0dfabb41f2c09899",
+      "totalRemuneration": 41844959.0,
+      "totalExpenses": 1231964.0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Complete original named employee schedule only; board, non-person suppliers and aggregate payroll excluded.",
+        "Published gross remuneration follows original definitions; it is not annual base salary. Unknown dash expenses remain null, explicit zeros and negative amounts remain literal. Employer CPP/EI and broader accrued/aggregate amounts are excluded from individual remuneration and expenses.",
+        "Names and initials are retained from the source without cross-year identity assumptions; no job titles are published by these employee schedules.",
+        "The complete named employee table follows the source remuneration definition; this does not establish a complete employee roster. Separately stated severance, board payments, under-threshold payroll and employer CPP/EI are not individual salary observations.",
+        "This original uses FIR remuneration including salary, wages, bonuses, gratuities, taxable benefits, trust or deferred-income payments paid during the fiscal year, whether or not income-tax reported; anything payable under a severance agreement is expressly excluded."
+      ],
+      "validation": {
+        "rowCountsByPdfPage": [
+          [
+            37,
+            34
+          ],
+          [
+            38,
+            34
+          ],
+          [
+            39,
+            34
+          ],
+          [
+            40,
+            34
+          ],
+          [
+            41,
+            34
+          ],
+          [
+            42,
+            34
+          ],
+          [
+            43,
+            34
+          ],
+          [
+            44,
+            34
+          ],
+          [
+            45,
+            34
+          ],
+          [
+            46,
+            34
+          ],
+          [
+            47,
+            34
+          ],
+          [
+            48,
+            20
+          ]
+        ],
+        "namedRemunerationSum": 41844959.0,
+        "knownNamedExpensesSum": 1231964.0,
+        "missingExpenseRows": 35,
+        "explicitZeroExpenseRows": 0,
+        "completeEmployeeSchedule": true,
+        "independentReaderAgreement": true,
+        "controls": [
+          41844962,
+          1231951
+        ],
+        "controlDefinitions": "Printed named-employee over-threshold subtotal only; employer CPP/EI, under-threshold aggregates, board and accrued expense totals are excluded.",
+        "residuals": [
+          -3.0,
+          13.0
+        ],
+        "originalApprovalAndControls": {
+          "page": 48,
+          "namedComparator": [
+            41844962,
+            1231951
+          ],
+          "allBeforeEmployer": [
+            65000467,
+            1847895
+          ],
+          "underThreshold": [
+            23155505,
+            615945
+          ],
+          "employerCppEi": 3667205,
+          "allAfterEmployer": [
+            65000467,
+            5515101
+          ],
+          "otherPublishedControlResiduals": {
+            "allExpenseSubtotalMinusNamedAndUnder": -1,
+            "allExpenseGrandMinusSubtotalAndEmployer": 1
+          },
+          "derivation": "direct printed named over-threshold subtotal",
+          "key": "bca2023-24",
+          "approvalPage": 4,
+          "approvalDate": "2024-07-18",
+          "signers": [
+            "Ruth Wittenberg",
+            "John Crawford"
+          ],
+          "definitionPage": 35
+        }
+      },
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "currency": "CAD",
+      "publicWarning": "Published named employee cells minus the reported named comparators: remuneration $-3.00; known expenses $+13.00. Both native readers agree on all individual fields. The cause is unconfirmed; no amount is adjusted to force agreement. Expense dashes remain unknown."
+    },
+    {
+      "id": "recovery-crowns-bc-assessment-2024-25-employees",
+      "employerSlug": "bc-assessment",
+      "employerName": "British Columbia Assessment Authority",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202024-25.pdf",
+      "sourceIndexUrl": "https://info.bcassessment.ca/about/Pages/Annual-Reports.aspx",
+      "sha256": "04fd056af6a83f3d3966d44ad94bbe04f651506c2bd1016b90e2c414595c8a38",
+      "file": "bc-assessment-2024-25.json.gzip",
+      "evidenceFile": "evidence/bc-assessment-2024-25.json.gzip",
+      "sourceKind": "official",
+      "sector": "Crown corporations",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "title": "bc-assessment official employee remuneration and expenses 2024/25",
+      "rowCount": 411,
+      "dataSha256": "fb3853061c9f2c3739e30e17e7846324267c4b3d9ef8149592796d5ab5382237",
+      "evidenceSha256": "d3304e282d2625f6b8d77826be911a529b06dec2942363156dea30b096d279cd",
+      "totalRemuneration": 44664847.0,
+      "totalExpenses": 1405463.0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Complete original named employee schedule only; board, non-person suppliers and aggregate payroll excluded.",
+        "Published gross remuneration follows original definitions; it is not annual base salary. Unknown dash expenses remain null, explicit zeros and negative amounts remain literal. Employer CPP/EI and broader accrued/aggregate amounts are excluded from individual remuneration and expenses.",
+        "Names and initials are retained from the source without cross-year identity assumptions; no job titles are published by these employee schedules.",
+        "The complete named employee table follows the source remuneration definition; this does not establish a complete employee roster. Separately stated severance, board payments, under-threshold payroll and employer CPP/EI are not individual salary observations.",
+        "This original uses FIR remuneration including salary, wages, bonuses, gratuities, taxable benefits, trust or deferred-income payments paid during the fiscal year, whether or not income-tax reported; anything payable under a severance agreement is expressly excluded."
+      ],
+      "validation": {
+        "rowCountsByPdfPage": [
+          [
+            37,
+            34
+          ],
+          [
+            38,
+            34
+          ],
+          [
+            39,
+            34
+          ],
+          [
+            40,
+            34
+          ],
+          [
+            41,
+            34
+          ],
+          [
+            42,
+            34
+          ],
+          [
+            43,
+            34
+          ],
+          [
+            44,
+            34
+          ],
+          [
+            45,
+            34
+          ],
+          [
+            46,
+            34
+          ],
+          [
+            47,
+            34
+          ],
+          [
+            48,
+            34
+          ],
+          [
+            49,
+            3
+          ]
+        ],
+        "namedRemunerationSum": 44664847.0,
+        "knownNamedExpensesSum": 1405463.0,
+        "missingExpenseRows": 5,
+        "explicitZeroExpenseRows": 0,
+        "completeEmployeeSchedule": true,
+        "independentReaderAgreement": true,
+        "controls": [
+          44664840,
+          1405442
+        ],
+        "controlDefinitions": "Printed named-employee over-threshold subtotal only; employer CPP/EI, under-threshold aggregates, board and accrued expense totals are excluded.",
+        "residuals": [
+          7.0,
+          21.0
+        ],
+        "originalApprovalAndControls": {
+          "page": 49,
+          "namedComparator": [
+            44664840,
+            1405442
+          ],
+          "allBeforeEmployer": [
+            66888313,
+            1939545
+          ],
+          "underThreshold": [
+            22223472,
+            534103
+          ],
+          "employerCppEi": 3851870,
+          "allAfterEmployer": [
+            66888313,
+            5791415
+          ],
+          "otherPublishedControlResiduals": {
+            "allPaySubtotalMinusNamedAndUnder": 1
+          },
+          "derivation": "direct printed named over-threshold subtotal",
+          "key": "bca2024-25",
+          "approvalPage": 4,
+          "approvalDate": "2025-09-11",
+          "signers": [
+            "Ruth Wittenberg",
+            "John Crawford"
+          ],
+          "definitionPage": 35
+        }
+      },
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "currency": "CAD",
+      "publicWarning": "Published named employee cells minus the reported named comparators: remuneration $+7.00; known expenses $+21.00. Both native readers agree on all individual fields. The cause is unconfirmed; no amount is adjusted to force agreement. Expense dashes remain unknown."
+    },
+    {
+      "id": "recovery-crowns-bc-energy-regulator-2025-26-employees",
+      "employerSlug": "bc-energy-regulator",
+      "employerName": "British Columbia Energy Regulator",
+      "year": "2025/26",
+      "periodType": "fiscal",
+      "periodStart": "2025-04-01",
+      "periodEnd": "2026-03-31",
+      "sourceUrl": "https://www.bc-er.ca/files/reports/Financial-Information-Act/Fiscal-2025-26-Financial-Information-Act-Report.pdf",
+      "sourceIndexUrl": "https://www.bc-er.ca/data-reports/reports/?topic=42",
+      "sha256": "669fa22788627d31283a55c076b4a75faff9d335e47619aaa0ad10ec0ca39ab2",
+      "file": "bc-energy-regulator-2025-26.json.gzip",
+      "evidenceFile": "evidence/bc-energy-regulator-2025-26.json.gzip",
+      "sourceKind": "official",
+      "sector": "Crown corporations",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "title": "bc-energy-regulator official employee remuneration and expenses 2025/26",
+      "rowCount": 277,
+      "dataSha256": "9f0353b11ffeca5bc31be4025f92406e0cdd7757520ee993edb5897e4b2331de",
+      "evidenceSha256": "3def3ac8a9ef6b7b81cabcf2ab474e224e284e3cb164d72d83f8dee6bf2d7680",
+      "totalRemuneration": 32865486.0,
+      "totalExpenses": 900606.0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Complete original named employee schedule only; board, non-person suppliers and aggregate payroll excluded.",
+        "Published gross remuneration follows original definitions; it is not annual base salary. Unknown dash expenses remain null, explicit zeros and negative amounts remain literal. Employer CPP/EI and broader accrued/aggregate amounts are excluded from individual remuneration and expenses.",
+        "Names and initials are retained from the source without cross-year identity assumptions; no job titles are published by these employee schedules.",
+        "The complete named employee table follows the source remuneration definition; this does not establish a complete employee roster. Separately stated severance, board payments, under-threshold payroll and employer CPP/EI are not individual salary observations."
+      ],
+      "validation": {
+        "rowCountsByPdfPage": [
+          [
+            28,
+            36
+          ],
+          [
+            29,
+            36
+          ],
+          [
+            30,
+            36
+          ],
+          [
+            31,
+            36
+          ],
+          [
+            32,
+            36
+          ],
+          [
+            33,
+            36
+          ],
+          [
+            34,
+            36
+          ],
+          [
+            35,
+            25
+          ]
+        ],
+        "namedRemunerationSum": 32865486.0,
+        "knownNamedExpensesSum": 900606.0,
+        "missingExpenseRows": 65,
+        "explicitZeroExpenseRows": 0,
+        "completeEmployeeSchedule": true,
+        "independentReaderAgreement": true,
+        "controls": [
+          32865486,
+          900606
+        ],
+        "controlDefinitions": "Printed named-employee over-threshold subtotal only; employer CPP/EI, under-threshold aggregates, board and accrued expense totals are excluded.",
+        "residuals": [
+          0.0,
+          0.0
+        ],
+        "originalApprovalAndControls": {
+          "page": 35,
+          "namedComparator": [
+            32865486,
+            900606
+          ],
+          "allBeforeEmployer": [
+            35517995,
+            949450
+          ],
+          "underThreshold": [
+            2652509,
+            48844
+          ],
+          "employerCpp": 1399932,
+          "employerEi": 407134,
+          "accrualsLeaveSecondments": 1818480,
+          "broaderPrintedTotalRemuneration": 39143541,
+          "derivation": "direct printed named over-threshold subtotal",
+          "key": "bcer2025-26",
+          "approvalPage": 3,
+          "approvalDate": "2026-09-11",
+          "signers": [
+            "Natascha Kiernan"
+          ],
+          "definitionPage": 35
+        }
+      },
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "currency": "CAD"
+    },
+    {
+      "id": "recovery-crowns-bc-energy-regulator-2024-25-employees",
+      "employerSlug": "bc-energy-regulator",
+      "employerName": "British Columbia Energy Regulator",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "sourceUrl": "https://www.bc-er.ca/files/reports/Financial-Information-Act/Fiscal-2024-25-Financial-Information-Act-Report.pdf",
+      "sourceIndexUrl": "https://www.bc-er.ca/data-reports/reports/?topic=42",
+      "sha256": "055e156e51c2c79af7373dc6bfd5566404f08a8df6215d0a8beeadde0ad174b4",
+      "file": "bc-energy-regulator-2024-25.json.gzip",
+      "evidenceFile": "evidence/bc-energy-regulator-2024-25.json.gzip",
+      "sourceKind": "official",
+      "sector": "Crown corporations",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "title": "bc-energy-regulator official employee remuneration and expenses 2024/25",
+      "rowCount": 257,
+      "dataSha256": "549d03095522640612f72aefd731f14a7cf286fb5458a4780f1b9eb450316006",
+      "evidenceSha256": "f9dd76e831a277ee862b3391c3fbfe6a95bd72c33d61789bdfa3389658ba5a8c",
+      "totalRemuneration": 30683576.0,
+      "totalExpenses": 1167816.0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Complete original named employee schedule only; board, non-person suppliers and aggregate payroll excluded.",
+        "Published gross remuneration follows original definitions; it is not annual base salary. Unknown dash expenses remain null, explicit zeros and negative amounts remain literal. Employer CPP/EI and broader accrued/aggregate amounts are excluded from individual remuneration and expenses.",
+        "Names and initials are retained from the source without cross-year identity assumptions; no job titles are published by these employee schedules.",
+        "The complete named employee table follows the source remuneration definition; this does not establish a complete employee roster. Separately stated severance, board payments, under-threshold payroll and employer CPP/EI are not individual salary observations."
+      ],
+      "validation": {
+        "rowCountsByPdfPage": [
+          [
+            28,
+            39
+          ],
+          [
+            29,
+            39
+          ],
+          [
+            30,
+            39
+          ],
+          [
+            31,
+            39
+          ],
+          [
+            32,
+            39
+          ],
+          [
+            33,
+            39
+          ],
+          [
+            34,
+            23
+          ]
+        ],
+        "namedRemunerationSum": 30683576.0,
+        "knownNamedExpensesSum": 1167816.0,
+        "missingExpenseRows": 54,
+        "explicitZeroExpenseRows": 0,
+        "completeEmployeeSchedule": true,
+        "independentReaderAgreement": true,
+        "controls": [
+          30683573,
+          1167814
+        ],
+        "controlDefinitions": "Printed named-employee over-threshold subtotal only; employer CPP/EI, under-threshold aggregates, board and accrued expense totals are excluded.",
+        "residuals": [
+          3.0,
+          2.0
+        ],
+        "originalApprovalAndControls": {
+          "page": 34,
+          "namedComparator": [
+            30683573,
+            1167814
+          ],
+          "allBeforeEmployer": [
+            33520506,
+            1214116
+          ],
+          "underThreshold": [
+            2836933,
+            46302
+          ],
+          "employerCpp": 1168800,
+          "employerEi": 373552,
+          "accrualsLeaveSecondments": 877827,
+          "broaderPrintedTotalRemuneration": 35940686,
+          "otherPublishedControlResiduals": {
+            "broaderTotalMinusSubtotalCppEiAccruals": 1
+          },
+          "derivation": "direct printed named over-threshold subtotal",
+          "key": "bcer2024-25",
+          "approvalPage": 3,
+          "approvalDate": "2025-09-16",
+          "signers": [
+            "Natascha Kiernan"
+          ],
+          "definitionPage": 34
+        }
+      },
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "currency": "CAD",
+      "publicWarning": "Published named employee cells minus the reported named comparators: remuneration $+3.00; known expenses $+2.00. Both native readers agree on all individual fields. The cause is unconfirmed; no amount is adjusted to force agreement. Expense dashes remain unknown."
+    },
+    {
+      "id": "recovery-crowns-bc-energy-regulator-2023-24-employees",
+      "employerSlug": "bc-energy-regulator",
+      "employerName": "British Columbia Energy Regulator",
+      "year": "2023/24",
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "sourceUrl": "https://www.bc-er.ca/files/reports/Financial-Information-Act/Fiscal-2023-24-Financial-Information-Act-Report.pdf",
+      "sourceIndexUrl": "https://www.bc-er.ca/data-reports/reports/?topic=42",
+      "sha256": "0c1bf2b553a1c7871c45ff71543afd2d5a29f94c22d0681028f5d2257ba4d21e",
+      "file": "bc-energy-regulator-2023-24.json.gzip",
+      "evidenceFile": "evidence/bc-energy-regulator-2023-24.json.gzip",
+      "sourceKind": "official",
+      "sector": "Crown corporations",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "title": "bc-energy-regulator official employee remuneration and expenses 2023/24",
+      "rowCount": 249,
+      "dataSha256": "037f7422f6e9d4cd994f3a8e9bf27240765e575e10cc511ac5f678444251a36e",
+      "evidenceSha256": "0fe3e614ad7d41fc140ad79554466b0da0e01d5067ee613a77c3eb40ab133a33",
+      "totalRemuneration": 28973613.0,
+      "totalExpenses": 1405173.0,
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Complete original named employee schedule only; board, non-person suppliers and aggregate payroll excluded.",
+        "Published gross remuneration follows original definitions; it is not annual base salary. Unknown dash expenses remain null, explicit zeros and negative amounts remain literal. Employer CPP/EI and broader accrued/aggregate amounts are excluded from individual remuneration and expenses.",
+        "Names and initials are retained from the source without cross-year identity assumptions; no job titles are published by these employee schedules.",
+        "The complete named employee table follows the source remuneration definition; this does not establish a complete employee roster. Separately stated severance, board payments, under-threshold payroll and employer CPP/EI are not individual salary observations."
+      ],
+      "validation": {
+        "rowCountsByPdfPage": [
+          [
+            28,
+            39
+          ],
+          [
+            29,
+            39
+          ],
+          [
+            30,
+            39
+          ],
+          [
+            31,
+            39
+          ],
+          [
+            32,
+            39
+          ],
+          [
+            33,
+            39
+          ],
+          [
+            34,
+            15
+          ]
+        ],
+        "namedRemunerationSum": 28973613.0,
+        "knownNamedExpensesSum": 1405173.0,
+        "missingExpenseRows": 36,
+        "explicitZeroExpenseRows": 0,
+        "completeEmployeeSchedule": true,
+        "independentReaderAgreement": true,
+        "controls": [
+          28973613,
+          1405173
+        ],
+        "controlDefinitions": "Printed named-employee over-threshold subtotal only; employer CPP/EI, under-threshold aggregates, board and accrued expense totals are excluded.",
+        "residuals": [
+          0.0,
+          0.0
+        ],
+        "originalApprovalAndControls": {
+          "page": 34,
+          "namedComparator": [
+            28973613,
+            1405173
+          ],
+          "allBeforeEmployer": [
+            31988877,
+            null
+          ],
+          "underThreshold": [
+            3015264,
+            null
+          ],
+          "employerCpp": 1141712,
+          "employerEi": 364535,
+          "accrualsLeaveSecondments": 255532,
+          "broaderPrintedTotalRemuneration": 33750656,
+          "missingAggregateExpenseIsNotZero": true,
+          "derivation": "direct printed named over-threshold subtotal; under-threshold expense is blank and cannot create an all-employee expense comparator",
+          "key": "bcer2023-24",
+          "approvalPage": 3,
+          "approvalDate": "2024-09-05",
+          "signers": [
+            "Chris Hayman"
+          ],
+          "definitionPage": 34
+        }
+      },
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "currency": "CAD"
+    }
+  ],
+  "compiledReplacements": [
+    {
+      "employerSlug": "bc-assessment",
+      "compiledYear": "2020/21",
+      "replacementYear": "2020",
+      "sourceIds": [
+        "recovery-crowns-bc-assessment-2020-employees"
+      ],
+      "sourceDataSha256": {
+        "recovery-crowns-bc-assessment-2020-employees": "edc5c7adb367db7e96913cdc5d6dbb1dcaadaa985967cc4a55a4f71ff72cb7c3"
+      },
+      "sourceSha256": {
+        "recovery-crowns-bc-assessment-2020-employees": "bee373465b9105553304c6761afbcd36b23a4d332abfb05c0fad996fed5a9f07"
+      },
+      "expectedRows": 362,
+      "expectedRetainedRows": 0,
+      "selectedRowsSha256": "4a762a9dc5ebfe39bd0a9b3197a05facb352ad3b1b8ca1332784f4561da40550",
+      "retainPositions": [],
+      "reason": "All362 compiled employee observations match the complete officially dated calendar2020 employee schedule on names and exact remuneration, preserving multiplicity. Known expense values agree;42source dashes replace compiled zeros rather than treating missing source expenses as zero. The original date and complete employee scope support replacing this whole wrongly labelled copy; no council or board rows are selected.",
+      "evidence": "research/salaries/recovery-wave-2026-11-01/crowns/compiled-comparison.json"
+    }
+  ]
+}

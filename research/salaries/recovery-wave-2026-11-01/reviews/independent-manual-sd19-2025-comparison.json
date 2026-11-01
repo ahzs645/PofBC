@@ -1,0 +1,895 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "method": "Manual original-image transcription before opening frozen candidate; original PDF render mapping independently verified pixel-for-pixel. Full field comparison covers each row.",
+  "originalPdf": "/tmp/pofbc-schools/ministry-sd19-2025.pdf",
+  "originalSha256": "e9986f7cbe9443f0593ae1b88f2014575a33aab5582510c8088a8fbb162870c0",
+  "originalPdfPageCount": 54,
+  "independentRawTranscript": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd19-2025-original-transcription.tsv",
+    "sha256": "1642193eb6909e1c5bd51534834ed015fcf44f0faf5f7b03e394b4574bb4710a",
+    "writtenBeforeCandidateOpened": true
+  },
+  "candidate": {
+    "path": "research/salaries/recovery-wave-2026-11-01/schools/sd19-2025-manual.tsv",
+    "sha256": "92c1b728b644423aec725947c56c23378002dbd2b85a25f9a0acf0d82e53e904"
+  },
+  "result": "PASS candidate field transcription with published expense-control warning required",
+  "candidateCorrections": [],
+  "reviewerRawTranscriptCorrections": [
+    {
+      "rawRow": 55,
+      "pdfPage": 51,
+      "employeePageRow": 13,
+      "name": "Monica Penner",
+      "field": "position",
+      "initialIndependentReading": "Speech language Pathologist",
+      "verifiedLiteralOriginal": "Speech language Patholoigist",
+      "candidateCorrect": true,
+      "verification": "Re-read original PDF page 51 title cell at 4x after comparison exposed the spelling difference. Original visibly prints the extra i. The frozen precomparison raw transcript is retained unchanged.",
+      "image": "/tmp/recovery-schools-sd19-review-p51-monica-title.png",
+      "imageSha256": "0f2d74ae8fc026934e57bfb3803e8c8b1795358b6fee515f70fac0f287105fde"
+    }
+  ],
+  "rowsCompared": 82,
+  "fieldsCompared": [
+    "pdfPage",
+    "scope",
+    "literalName",
+    "literalPosition",
+    "remuneration",
+    "expensesOrNull"
+  ],
+  "rows": [
+    {
+      "sequence": 1,
+      "pdfPage": 50,
+      "scope": "school-trustees",
+      "name": "Sasha-Emily Walch",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1695",
+      "expenseNormalized": 1695
+    },
+    {
+      "sequence": 2,
+      "pdfPage": 50,
+      "scope": "school-trustees",
+      "name": "Jodie Allen",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "5540",
+      "expenseNormalized": 5540
+    },
+    {
+      "sequence": 3,
+      "pdfPage": 50,
+      "scope": "school-trustees",
+      "name": "Alan Chell",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "6628",
+      "expenseNormalized": 6628
+    },
+    {
+      "sequence": 4,
+      "pdfPage": 50,
+      "scope": "school-trustees",
+      "name": "Wendy Rota",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "6245",
+      "expenseNormalized": 6245
+    },
+    {
+      "sequence": 5,
+      "pdfPage": 50,
+      "scope": "school-trustees",
+      "name": "Sarah Zimmer",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1557",
+      "expenseNormalized": 1557
+    },
+    {
+      "sequence": 6,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Ainslee Atamanok",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1270",
+      "expenseNormalized": 1270
+    },
+    {
+      "sequence": 7,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Jennifer Ausman",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "708",
+      "expenseNormalized": 708
+    },
+    {
+      "sequence": 8,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Adam Barraball",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 9,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Megan Bouvette",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "BLANK",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 10,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Theresa Browning",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 11,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Adam Cadegan",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 12,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Lida Carey",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "867",
+      "expenseNormalized": 867
+    },
+    {
+      "sequence": 13,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Jeffrey Colvin",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1020",
+      "expenseNormalized": 1020
+    },
+    {
+      "sequence": 14,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Teria Davies",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 15,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Tessa Davis",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "320",
+      "expenseNormalized": 320
+    },
+    {
+      "sequence": 16,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Olivia Dodds",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 17,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Meaghan Doebert",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "100",
+      "expenseNormalized": 100
+    },
+    {
+      "sequence": 18,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Gabriella Draboczi",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1391",
+      "expenseNormalized": 1391
+    },
+    {
+      "sequence": 19,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Monica Embury",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 20,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Erin England",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "439",
+      "expenseNormalized": 439
+    },
+    {
+      "sequence": 21,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "James Evans",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 22,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Jenna Evans",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 23,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Robert Evans",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "337",
+      "expenseNormalized": 337
+    },
+    {
+      "sequence": 24,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Kathleen Findlay",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "BLANK",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 25,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Kim Floyd",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 26,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Naomi Ford",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "3774",
+      "expenseNormalized": 3774
+    },
+    {
+      "sequence": 27,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Jillian Fransoo",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "5954",
+      "expenseNormalized": 5954
+    },
+    {
+      "sequence": 28,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Michelle Gadbois",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "86",
+      "expenseNormalized": 86
+    },
+    {
+      "sequence": 29,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Graham Gale",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 30,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Ian Gardiner",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "BLANK",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 31,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Julia Gauer",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "BLANK",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 32,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Stacey Grimm",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "4199",
+      "expenseNormalized": 4199
+    },
+    {
+      "sequence": 33,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Alison Hall",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "700",
+      "expenseNormalized": 700
+    },
+    {
+      "sequence": 34,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Adelle Harrison",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1058",
+      "expenseNormalized": 1058
+    },
+    {
+      "sequence": 35,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Connie Haworth",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1874",
+      "expenseNormalized": 1874
+    },
+    {
+      "sequence": 36,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Michael Haworth",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "4233",
+      "expenseNormalized": 4233
+    },
+    {
+      "sequence": 37,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Tracey Hill",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 38,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Kathleen Hoshizaki",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "674",
+      "expenseNormalized": 674
+    },
+    {
+      "sequence": 39,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Tara Johnson",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 40,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Allison Just",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1384",
+      "expenseNormalized": 1384
+    },
+    {
+      "sequence": 41,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Gregory Kenyon",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "480",
+      "expenseNormalized": 480
+    },
+    {
+      "sequence": 42,
+      "pdfPage": 50,
+      "scope": "employee-remuneration",
+      "name": "Justine Kerluck",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "BLANK",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 43,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Matthew Kieller",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "2281",
+      "expenseNormalized": 2281
+    },
+    {
+      "sequence": 44,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Roberta Kubik",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "32055",
+      "expenseNormalized": 32055
+    },
+    {
+      "sequence": 45,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Mary Catherine LaForest",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "50",
+      "expenseNormalized": 50
+    },
+    {
+      "sequence": 46,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Rosalee Lambert",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "452",
+      "expenseNormalized": 452
+    },
+    {
+      "sequence": 47,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Sarah Lenzi",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "2760",
+      "expenseNormalized": 2760
+    },
+    {
+      "sequence": 48,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Barry Leung",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "BLANK",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 49,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Graham Mackenzie",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 50,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Natalie MacLeod",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "256",
+      "expenseNormalized": 256
+    },
+    {
+      "sequence": 51,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Pam Mair",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "988",
+      "expenseNormalized": 988
+    },
+    {
+      "sequence": 52,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Joelle Malcolm",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "91",
+      "expenseNormalized": 91
+    },
+    {
+      "sequence": 53,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Andrew McDade",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "8605",
+      "expenseNormalized": 8605
+    },
+    {
+      "sequence": 54,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Ariel McDowell",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "3714",
+      "expenseNormalized": 3714
+    },
+    {
+      "sequence": 55,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Monica Penner",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1794",
+      "expenseNormalized": 1794
+    },
+    {
+      "sequence": 56,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Andrew Pfeiffer",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "4198",
+      "expenseNormalized": 4198
+    },
+    {
+      "sequence": 57,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Angela Pynn",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "75",
+      "expenseNormalized": 75
+    },
+    {
+      "sequence": 58,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Dana Reaume",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "464",
+      "expenseNormalized": 464
+    },
+    {
+      "sequence": 59,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Genessie Reeves",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1340",
+      "expenseNormalized": 1340
+    },
+    {
+      "sequence": 60,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Jillian Russell",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "470",
+      "expenseNormalized": 470
+    },
+    {
+      "sequence": 61,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Jarrett Spannier",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 62,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Jason Stevens",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 63,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Victoria Strange",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 64,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Christine Sylvain",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "250",
+      "expenseNormalized": 250
+    },
+    {
+      "sequence": 65,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Giovanna Tedesco",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 66,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Ashley Theberge",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 67,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Bruce Tisdale",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "38648",
+      "expenseNormalized": 38648
+    },
+    {
+      "sequence": 68,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Tammy Tomm",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "3556",
+      "expenseNormalized": 3556
+    },
+    {
+      "sequence": 69,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Tracy Tomkins",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "350",
+      "expenseNormalized": 350
+    },
+    {
+      "sequence": 70,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Giselle Trepanier",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "2223",
+      "expenseNormalized": 2223
+    },
+    {
+      "sequence": 71,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Jaclyn Uremovich",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "465",
+      "expenseNormalized": 465
+    },
+    {
+      "sequence": 72,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Janette Vickers",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "147",
+      "expenseNormalized": 147
+    },
+    {
+      "sequence": 73,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Sarah Vincent",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "290",
+      "expenseNormalized": 290
+    },
+    {
+      "sequence": 74,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Kendra Von Bremen",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "345",
+      "expenseNormalized": 345
+    },
+    {
+      "sequence": 75,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Colleen Wall",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "393",
+      "expenseNormalized": 393
+    },
+    {
+      "sequence": 76,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Jodi Wallach",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "9868",
+      "expenseNormalized": 9868
+    },
+    {
+      "sequence": 77,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Jeremy WEddell",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "BLANK",
+      "expenseNormalized": null
+    },
+    {
+      "sequence": 78,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Craig Weiler",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "2004",
+      "expenseNormalized": 2004
+    },
+    {
+      "sequence": 79,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Erin Williams",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "272",
+      "expenseNormalized": 272
+    },
+    {
+      "sequence": 80,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Eleanor Wilson",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "1450",
+      "expenseNormalized": 1450
+    },
+    {
+      "sequence": 81,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Jeffery Wilson",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "40",
+      "expenseNormalized": 40
+    },
+    {
+      "sequence": 82,
+      "pdfPage": 51,
+      "scope": "employee-remuneration",
+      "name": "Sylvia Wood",
+      "allFieldsExactAfterLiteralOriginalRecheck": true,
+      "originalExpenseToken": "-",
+      "expenseNormalized": null
+    }
+  ],
+  "renderedOriginalChecks": [
+    {
+      "physicalPdfPage": 50,
+      "image": "/tmp/recovery-schools-sd19-p50.png",
+      "sha256": "ac5df2dbbcad13caf039212306415c1476a994aca930f3249a7ca3a84baca519",
+      "independentRenderedPixelMatch": true,
+      "renderScale": 1.5
+    },
+    {
+      "physicalPdfPage": 51,
+      "image": "/tmp/recovery-schools/sd19-p51.png",
+      "sha256": "7371b4440322776f3331ad265f6835a68bf00fcdf152536c7a51b316d418b07e",
+      "independentRenderedPixelMatch": true,
+      "renderScale": 2
+    },
+    {
+      "physicalPdfPage": 2,
+      "image": "/tmp/recovery-schools/sd19-p2.png",
+      "sha256": "f7f8bdf8c68a53fb54f13041e3e1bc1cc88cb21b5ebe3d554c83e04497ea2e46",
+      "independentRenderedPixelMatch": true,
+      "renderScale": 2
+    },
+    {
+      "physicalPdfPage": 50,
+      "image": "/tmp/recovery-schools-sd19-review-p50-2_5x.png",
+      "sha256": "fc2cfc63d2b70753a50aa609bebe085d6dcd805545edc59c67d00601a8cbe65a",
+      "independentRenderedPixelMatch": true,
+      "renderScale": 2.5
+    }
+  ],
+  "coverage": [
+    {
+      "pdfPage": 50,
+      "trusteeRows": 5,
+      "employeeRows": 37,
+      "employeeRange": [
+        "Ainslee Atamanok",
+        "Justine Kerluck"
+      ]
+    },
+    {
+      "pdfPage": 51,
+      "employeeRows": 40,
+      "employeeRange": [
+        "Matthew Kieller",
+        "Sylvia Wood"
+      ]
+    }
+  ],
+  "periodAndApproval": {
+    "printedScheduleHeading": "SCHOOL DISTRICT NO. 19 (REVELSTOKE) / Year Ended June 30, 2025 / Schedule Showing The Remuneration And Expenses Paid In Respect Of Each Employee",
+    "scopeHeadings": [
+      "ELECTED OFFICIALS",
+      "DETAILED EMPLOYEES EXCEEDING $75,000",
+      "EMPLOYEES EQUAL TO OR LESS THAN $75,000",
+      "CONSOLIDATED TOTAL"
+    ],
+    "coverDeclarationPhysicalPage": 2,
+    "yearField": "2024-2025",
+    "declarationPeriod": "year ended June 30, 2025",
+    "visibleCertificationDates": [
+      "Dec 19/25",
+      "Dec 19/25",
+      "Dec 19/25"
+    ],
+    "signatureArea": "redacted black in official original; actual signatures not visually verifiable",
+    "draftMarkVisibleOnReviewedPages": false
+  },
+  "controls": {
+    "trustees": {
+      "printedRemuneration": 72982,
+      "computedRemuneration": 72982,
+      "printedExpenses": 21665,
+      "computedKnownExpenses": 21665,
+      "rows": 5
+    },
+    "detailedEmployeesExceeding75000": {
+      "printedRemuneration": 8210710,
+      "computedRemuneration": 8210710,
+      "printedExpenses": 148744,
+      "computedKnownExpenses": 150762,
+      "expensesComputedMinusPrinted": 2018,
+      "rows": 77
+    },
+    "employeesEqualToOrLessThan75000": {
+      "printedRemuneration": 4498285,
+      "printedExpenses": 41118,
+      "personRowsImported": 0
+    },
+    "consolidatedTotal": {
+      "printedRemuneration": 12781977,
+      "computedRemunerationFromControlsAndNamedTrustees": 12781977,
+      "printedExpenses": 211527,
+      "computedKnownExpensesUsingLiteralNamedRowsAndBelowThresholdAggregate": 213545,
+      "expensesComputedMinusPrinted": 2018
+    },
+    "employerPortionEmploymentInsuranceAndCanadaPensionNote": {
+      "printedValue": 776694,
+      "excludedFromPersonRemuneration": true,
+      "limitation": "Note text is clipped horizontally after Canada Pens in original scan; only visible text and value reported."
+    }
+  },
+  "scopeDecisions": [
+    "All 77 named over-threshold employee records and all 5 elected trustee records on the two complete original salary pages were independently read and compared. No titles inferred.",
+    "Blank or dash expenses normalize to null; no explicit zero expense is visible in these rows. Raw review retains which cells were blank versus dashed.",
+    "Below-threshold and consolidated totals are aggregates, excluded from person records. Employer EI/CPP note is excluded from person remuneration.",
+    "Printed detailed employee expense total 148,744 differs from exact known row sum 150,762 by 2,018. Consolidated expenses retain the same 2,018 difference. Preserve literal rows and a publicWarning plus clarification action; no cause is inferred."
+  ],
+  "limitations": [
+    "No review of report pages outside physical 2,50,51 is claimed.",
+    "Receipt compares frozen manual TSV, not yet-final normalized gzip or source manifest."
+  ]
+}

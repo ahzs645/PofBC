@@ -1,0 +1,383 @@
+{
+  "frozen": true,
+  "date": "2026-11-01",
+  "reviewer": "recovery_health",
+  "status": "pass-all1005-compiled-removals-supported",
+  "baselineCommit": "8a25875903ae787f048fdc3ec2705d45d06dab54",
+  "immutableCompiledSnapshotMatchesBaseline8aBytes": true,
+  "immutableSnapshotSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+  "baseline8aEmployerIndexSha256": "07e630284304ac5d6a0b486b5ff61e66d53b559d8f0dc32f37db8c59c5affb04",
+  "currentEmployerIndexSha256": "41d5016df7e9117baa9e9d29e524c6823ee3e7e8c825d51901304c505022042b",
+  "normalization": "Name comparison only: Unicode casefold then retain alphanumeric characters; no first-name expansion, cross-year identity linkage or other alias inference. Remuneration remains exact numeric. Expense null is treated as0 solely for overlap comparison; accepted source nulls remain literal. Position nulls independently checked. All comparisons use Counter multisets, never sets.",
+  "removedCompiledRows": 1005,
+  "sources": [
+    {
+      "employerSlug": "bc-assessment",
+      "compiledYear": "2020/21",
+      "officialYear": "2020",
+      "sourceId": "recovery-crowns-bc-assessment-2020-employees",
+      "compiledRows": 362,
+      "officialRows": 362,
+      "nameAndExactPayMultisetMatches": 362,
+      "namePayExpenseExactMultisetMatches": 320,
+      "comparisonOnlyNullVersusZeroMatches": 42,
+      "fullComparisonMultisetMatches": 362,
+      "compiledRemainder": 0,
+      "officialRemainder": 0,
+      "compiledPositionValues": [
+        null
+      ],
+      "officialPositionValues": [
+        null
+      ],
+      "compiledDuplicateOccurrences": 0,
+      "officialDuplicateOccurrences": 0,
+      "maximumComparisonKeyMultiplicity": 1,
+      "cardinalityAndMultiplicityPreserved": true,
+      "typographicNameDifferences": [],
+      "expenseNullsInAcceptedOfficial": 42,
+      "baseline8aExportSha256": "6943a64da85eb56dfd2dba32fe79b516abe00d461e8afacfcb6c665bf1a0e179",
+      "currentExportSha256": "19526e9d6ae355d9728958df60c89d9b3b7f4004c7d9cce713c697de15e65b91",
+      "baselineExportPartitionExactImmutableMultiset": true,
+      "baselineExportPartitionSourceKinds": [
+        "compiled"
+      ],
+      "currentOfficialPartitionExactOriginalSixFieldMultiset": true,
+      "currentCompiledRowsRemainingInRemovedPeriod": 0,
+      "sourceDataSha256": "edc5c7adb367db7e96913cdc5d6dbb1dcaadaa985967cc4a55a4f71ff72cb7c3",
+      "originalSourceSha256": "bee373465b9105553304c6761afbcd36b23a4d332abfb05c0fad996fed5a9f07",
+      "sourcePeriod": {
+        "type": "calendar",
+        "start": "2020-01-01",
+        "end": "2020-12-31"
+      },
+      "sourceScope": "complete named employee schedule; direct original headings/approvals and entire named table independently verified by prior PDFMiner receipt; no board row or broader compiled remainder remains",
+      "identityClaim": false,
+      "missingExpenseInferredZero": false
+    },
+    {
+      "employerSlug": "bc-assessment",
+      "compiledYear": "2023/24",
+      "officialYear": "2023/24",
+      "sourceId": "recovery-crowns-bc-assessment-2023-24-employees",
+      "compiledRows": 394,
+      "officialRows": 394,
+      "nameAndExactPayMultisetMatches": 394,
+      "namePayExpenseExactMultisetMatches": 359,
+      "comparisonOnlyNullVersusZeroMatches": 35,
+      "fullComparisonMultisetMatches": 394,
+      "compiledRemainder": 0,
+      "officialRemainder": 0,
+      "compiledPositionValues": [
+        null
+      ],
+      "officialPositionValues": [
+        null
+      ],
+      "compiledDuplicateOccurrences": 0,
+      "officialDuplicateOccurrences": 0,
+      "maximumComparisonKeyMultiplicity": 1,
+      "cardinalityAndMultiplicityPreserved": true,
+      "typographicNameDifferences": [
+        {
+          "normalizedComparisonKey": [
+            "stewartdrewryheather",
+            168878,
+            1138
+          ],
+          "compiledLabels": [
+            "StewartDrewry, Heather"
+          ],
+          "officialLabels": [
+            "Stewart-Drewry, Heather"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "kusanocrokekayo",
+            113032,
+            3761
+          ],
+          "compiledLabels": [
+            "KusanoCroke, Kayo"
+          ],
+          "officialLabels": [
+            "Kusano-Croke, Kayo"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "abdollahivayeghanhajar",
+            99586,
+            2196
+          ],
+          "compiledLabels": [
+            "AbdollahiVayeghan, Hajar"
+          ],
+          "officialLabels": [
+            "Abdollahi-Vayeghan, Hajar"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "mackinnonmaryann",
+            99121,
+            24680
+          ],
+          "compiledLabels": [
+            "MacKinnon, MaryAnn"
+          ],
+          "officialLabels": [
+            "MacKinnon, Mary-Ann"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "yeakchooming",
+            95070,
+            1477
+          ],
+          "compiledLabels": [
+            "Yeak, ChooMing"
+          ],
+          "officialLabels": [
+            "Yeak, Choo-Ming"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "wilsontiatoni",
+            93259,
+            1575
+          ],
+          "compiledLabels": [
+            "Wilson, TiaToni"
+          ],
+          "officialLabels": [
+            "Wilson, Tia-Toni"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "ylivillamoliisa",
+            92407,
+            2161
+          ],
+          "compiledLabels": [
+            "YliVillamo, Liisa"
+          ],
+          "officialLabels": [
+            "Yli-Villamo, Liisa"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "bannarmartinemma",
+            87159,
+            4579
+          ],
+          "compiledLabels": [
+            "BannarMartin, Emma"
+          ],
+          "officialLabels": [
+            "Bannar-Martin, Emma"
+          ]
+        }
+      ],
+      "expenseNullsInAcceptedOfficial": 35,
+      "baseline8aExportSha256": "6943a64da85eb56dfd2dba32fe79b516abe00d461e8afacfcb6c665bf1a0e179",
+      "currentExportSha256": "19526e9d6ae355d9728958df60c89d9b3b7f4004c7d9cce713c697de15e65b91",
+      "baselineExportPartitionExactImmutableMultiset": true,
+      "baselineExportPartitionSourceKinds": [
+        "compiled"
+      ],
+      "currentOfficialPartitionExactOriginalSixFieldMultiset": true,
+      "currentCompiledRowsRemainingInRemovedPeriod": 0,
+      "sourceDataSha256": "e5abd5ad22c00610df04aa7bc556d19b48c90f08c275754faf87475c5b6e3bbd",
+      "originalSourceSha256": "062f9f329e16e5a95f034a2045f4bbfa7bc925ccf1c790f17150b99178626de5",
+      "sourcePeriod": {
+        "type": "fiscal",
+        "start": "2023-04-01",
+        "end": "2024-03-31"
+      },
+      "sourceScope": "complete named employee schedule; direct original headings/approvals and entire named table independently verified by prior PDFMiner receipt; no board row or broader compiled remainder remains",
+      "identityClaim": false,
+      "missingExpenseInferredZero": false
+    },
+    {
+      "employerSlug": "bc-energy-regulator",
+      "compiledYear": "2023/24",
+      "officialYear": "2023/24",
+      "sourceId": "recovery-crowns-bc-energy-regulator-2023-24-employees",
+      "compiledRows": 249,
+      "officialRows": 249,
+      "nameAndExactPayMultisetMatches": 249,
+      "namePayExpenseExactMultisetMatches": 213,
+      "comparisonOnlyNullVersusZeroMatches": 36,
+      "fullComparisonMultisetMatches": 249,
+      "compiledRemainder": 0,
+      "officialRemainder": 0,
+      "compiledPositionValues": [
+        null
+      ],
+      "officialPositionValues": [
+        null
+      ],
+      "compiledDuplicateOccurrences": 0,
+      "officialDuplicateOccurrences": 0,
+      "maximumComparisonKeyMultiplicity": 1,
+      "cardinalityAndMultiplicityPreserved": true,
+      "typographicNameDifferences": [
+        {
+          "normalizedComparisonKey": [
+            "wynnechesniakapril",
+            153144,
+            17079
+          ],
+          "compiledLabels": [
+            "WynneChesniak, April"
+          ],
+          "officialLabels": [
+            "Wynne-Chesniak, April"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "louieamyjade",
+            106472,
+            4136
+          ],
+          "compiledLabels": [
+            "Louie, AmyJade"
+          ],
+          "officialLabels": [
+            "Louie, Amy-Jade"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "ericksonfearoncandace",
+            95051,
+            511
+          ],
+          "compiledLabels": [
+            "EricksonFearon, Candace"
+          ],
+          "officialLabels": [
+            "Erickson-Fearon, Candace"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "kimsungeun",
+            81024,
+            2475
+          ],
+          "compiledLabels": [
+            "Kim, SungEun"
+          ],
+          "officialLabels": [
+            "Kim, Sung-Eun"
+          ]
+        },
+        {
+          "normalizedComparisonKey": [
+            "gibsonlauralea",
+            77126,
+            1211
+          ],
+          "compiledLabels": [
+            "Gibson, LauraLea"
+          ],
+          "officialLabels": [
+            "Gibson, Laura-Lea"
+          ]
+        }
+      ],
+      "expenseNullsInAcceptedOfficial": 36,
+      "baseline8aExportSha256": "3c12a844c787b5b122e77519d69886b5eac79ecac2e0d8c9bdf0b4de2ac189e4",
+      "currentExportSha256": "40dcdc7875befa64b806cf874985f88e6dc6cfaff073db763cf9be154d15b6a6",
+      "baselineExportPartitionExactImmutableMultiset": true,
+      "baselineExportPartitionSourceKinds": [
+        "compiled"
+      ],
+      "currentOfficialPartitionExactOriginalSixFieldMultiset": true,
+      "currentCompiledRowsRemainingInRemovedPeriod": 0,
+      "sourceDataSha256": "037f7422f6e9d4cd994f3a8e9bf27240765e575e10cc511ac5f678444251a36e",
+      "originalSourceSha256": "0c1bf2b553a1c7871c45ff71543afd2d5a29f94c22d0681028f5d2257ba4d21e",
+      "sourcePeriod": {
+        "type": "fiscal",
+        "start": "2023-04-01",
+        "end": "2024-03-31"
+      },
+      "sourceScope": "complete named employee schedule; direct original headings/approvals and entire named table independently verified by prior PDFMiner receipt; no board row or broader compiled remainder remains",
+      "identityClaim": false,
+      "missingExpenseInferredZero": false
+    }
+  ],
+  "calendarReplacement": {
+    "selectedRowsSerialization": "UTF-8 JSON.stringify equivalent of first four immutable snapshot row fields, preserving original snapshot row order; compact separators, no added newline",
+    "selectedRowsSha256": "4a762a9dc5ebfe39bd0a9b3197a05facb352ad3b1b8ca1332784f4561da40550",
+    "declaredSelectedRowsSha256": "4a762a9dc5ebfe39bd0a9b3197a05facb352ad3b1b8ca1332784f4561da40550",
+    "exactHashMatch": true,
+    "expectedRows": 362,
+    "retainedRows": 0,
+    "sourceDataSha256": "edc5c7adb367db7e96913cdc5d6dbb1dcaadaa985967cc4a55a4f71ff72cb7c3",
+    "sourceSha256": "bee373465b9105553304c6761afbcd36b23a4d332abfb05c0fad996fed5a9f07",
+    "actualCalendarPeriodConfirmed": "Official original cover p1 and complete employee schedules pp35–44 print year ended December31,2020. Reviewed approval p4 is signed June28,2021; approval/publication date does not change the calendar2020 source period.",
+    "linkedIndependentOriginalReceipt": "independent-crowns-pdfminer-comparison-and-controls.json"
+  },
+  "olderBca2017_18RetainedUnchanged": {
+    "rows": 296,
+    "fullFirstFourFieldMultisetMatches": true
+  },
+  "fileFingerprints": [
+    {
+      "path": "research/salaries/compiled-baseline.json.gzip",
+      "sha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760"
+    },
+    {
+      "path": "public/salaries/employers/index.json",
+      "sha256": "41d5016df7e9117baa9e9d29e524c6823ee3e7e8c825d51901304c505022042b"
+    },
+    {
+      "path": "research/salaries/recovery-crowns/sources.json",
+      "sha256": "f60c0b8480470262d0f7b4391e255eb57023c2d75e8a6e4504d242cac160dfed"
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/crowns/compiled-comparison.json",
+      "sha256": "92dfcb34538fd7187edd127304be5e3aeb5c1fa1c26a0c4da264e0ccb9c5d8ba"
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/crowns/calendar-replacement.json",
+      "sha256": "e6c5cd3010912e294d574046761c7b7c93329878ac71ebb0a4c4c37894e93b1e"
+    },
+    {
+      "path": "research/salaries/recovery-crowns/bc-assessment-2020.json.gzip",
+      "sha256": "edc5c7adb367db7e96913cdc5d6dbb1dcaadaa985967cc4a55a4f71ff72cb7c3"
+    },
+    {
+      "path": "public/salaries/employers/bc-assessment.json.gzip",
+      "sha256": "19526e9d6ae355d9728958df60c89d9b3b7f4004c7d9cce713c697de15e65b91"
+    },
+    {
+      "path": "research/salaries/recovery-crowns/bc-assessment-2023-24.json.gzip",
+      "sha256": "e5abd5ad22c00610df04aa7bc556d19b48c90f08c275754faf87475c5b6e3bbd"
+    },
+    {
+      "path": "public/salaries/employers/bc-assessment.json.gzip",
+      "sha256": "19526e9d6ae355d9728958df60c89d9b3b7f4004c7d9cce713c697de15e65b91"
+    },
+    {
+      "path": "research/salaries/recovery-crowns/bc-energy-regulator-2023-24.json.gzip",
+      "sha256": "037f7422f6e9d4cd994f3a8e9bf27240765e575e10cc511ac5f678444251a36e"
+    },
+    {
+      "path": "public/salaries/employers/bc-energy-regulator.json.gzip",
+      "sha256": "40dcdc7875befa64b806cf874985f88e6dc6cfaff073db763cf9be154d15b6a6"
+    }
+  ],
+  "rootFilesEdited": false,
+  "outreachSent": 0,
+  "reproducerCode": "from pathlib import Path\nimport json,gzip,subprocess,hashlib,collections\nROOT=Path('/workspace/PofBC');REV=ROOT/'research/salaries/recovery-wave-2026-11-01/reviews';AUDIT=ROOT/'research/salaries/recovery-wave-2026-11-01/crowns';COLL=ROOT/'research/salaries/recovery-crowns'\nBASE='8a25875903ae787f048fdc3ec2705d45d06dab54';sha=lambda b:hashlib.sha256(b).hexdigest();encode=lambda value:json.dumps(value,ensure_ascii=False,separators=(',',':')).encode()\ndef historical(path):return subprocess.check_output(['git','show',BASE+':'+str(path.relative_to(ROOT))],cwd=ROOT)\ndef normalized_name(value):return ''.join(c for c in value.casefold() if c.isalnum())\ndef key(row,missing_zero=False):return (normalized_name(row[0]),row[2],0 if missing_zero and row[3] is None else row[3])\ndef counter(rows,missing_zero=False):return collections.Counter(key(r,missing_zero) for r in rows)\ndef intersection_count(a,b):return sum((a&b).values())\nsp=ROOT/'research/salaries/compiled-baseline.json.gzip';snapshotraw=sp.read_bytes();snapshot=json.loads(gzip.decompress(snapshotraw));assert snapshotraw==historical(sp),'immutable compiled snapshot changed since baseline'\nindexpath=ROOT/'public/salaries/employers/index.json';current_index_raw=indexpath.read_bytes();currentindex=json.loads(current_index_raw);baseline_index_raw=historical(indexpath);baselineindex=json.loads(baseline_index_raw)\nmanifestpath=COLL/'sources.json';manifest=json.loads(manifestpath.read_text());comparisonpath=AUDIT/'compiled-comparison.json';claimed=json.loads(comparisonpath.read_text());rulepath=AUDIT/'calendar-replacement.json';rule=json.loads(rulepath.read_text())\nselected=[('bc-assessment','2020/21','2020','recovery-crowns-bc-assessment-2020-employees'),('bc-assessment','2023/24','2023/24','recovery-crowns-bc-assessment-2023-24-employees'),('bc-energy-regulator','2023/24','2023/24','recovery-crowns-bc-energy-regulator-2023-24-employees')]\nreviews=[];files=[{'path':str(p.relative_to(ROOT)),'sha256':sha(p.read_bytes())} for p in [sp,indexpath,manifestpath,comparisonpath,rulepath]]\nfor slug,compiledyear,officialyear,sourceid in selected:\n e=next(e for e in snapshot['employers'] if e['slug']==slug);compiled=[r[:4] for r in e['rows'] if snapshot['years'][r[4]]==compiledyear]\n source=next(s for s in manifest['sources'] if s['id']==sourceid);datapath=COLL/source['file'];dataraw=datapath.read_bytes();official6=json.loads(gzip.decompress(dataraw));official=[r[1:5] for r in official6]\n assert source['employerSlug']==slug and source['year']==officialyear\n assert source['completeEmployeeSchedule'] is True and source['validation']['completeEmployeeSchedule'] is True\n assert len(compiled)==len(official)==source['rowCount']\n assert counter(compiled,True)==counter(official,True),'full multiset mismatch'\n exact=intersection_count(counter(compiled),counter(official));nullzero=intersection_count(counter(compiled,True),counter(official,True));namepay=intersection_count(collections.Counter((normalized_name(r[0]),r[2]) for r in compiled),collections.Counter((normalized_name(r[0]),r[2]) for r in official))\n assert len(compiled)-exact==sum(r[3] is None for r in official)\n assert all(r[1] is None for r in official+compiled),'unexpected position/board remainder'\n assert all(r[3] is not None for r in compiled),'compiled expense missing rather than reported0'\n observed=next(x for x in claimed if x['sourceId']==sourceid and x['compiledYear']==compiledyear)\n assert [observed['compiledRows'],observed['officialRows'],observed['namePayMatches'],observed['namePayExpenseExact'],observed['namePayExpenseNullZeroComparisonOnly']]==[len(compiled),len(official),namepay,exact,nullzero]\n # Independently read committed baseline8a exporter rows and current exporter rows.\n expath=ROOT/'public/salaries/employers'/(slug+'.json.gzip');oldraw=historical(expath);nowraw=expath.read_bytes();old=json.loads(gzip.decompress(oldraw));now=json.loads(gzip.decompress(nowraw));oldpart=[r for r in old if baselineindex['years'][r[4]]==compiledyear]\n assert collections.Counter(tuple(r[:4]) for r in oldpart)==collections.Counter(tuple(r) for r in compiled),'baseline export diverges from immutable partition'\n assert all(baselineindex['sources'][r[5]]['sourceKind']=='compiled' for r in oldpart)\n currentofficial=[r for r in now if r[5]==sourceid]\n assert len(currentofficial)==len(official)\n assert all(currentindex['years'][r[4]]==officialyear for r in currentofficial)\n assert collections.Counter(tuple(r[:4]+[r[6]]) for r in currentofficial)==collections.Counter(tuple(r[1:5]+[r[5]]) for r in official6),'current official export changed source observations'\n remaining=[r for r in now if currentindex['years'][r[4]]==compiledyear and currentindex['sources'][r[5]].get('sourceKind')=='compiled']\n assert not remaining,'compiled duplicate remains'\n assert sha(dataraw)==source['dataSha256']\n publicsource=currentindex['sources'][sourceid];assert publicsource['sha256']==source['sha256']\n # Name changes are typography only; retain every raw label in evidence.\n raw_compiled=collections.defaultdict(list);raw_official=collections.defaultdict(list)\n for r in compiled:raw_compiled[key(r,True)].append(r[0])\n for r in official:raw_official[key(r,True)].append(r[0])\n typography=[{'normalizedComparisonKey':list(k),'compiledLabels':sorted(raw_compiled[k]),'officialLabels':sorted(raw_official[k])} for k in raw_compiled if sorted(raw_compiled[k])!=sorted(raw_official[k])]\n reviews.append({'employerSlug':slug,'compiledYear':compiledyear,'officialYear':officialyear,'sourceId':sourceid,'compiledRows':len(compiled),'officialRows':len(official),'nameAndExactPayMultisetMatches':namepay,'namePayExpenseExactMultisetMatches':exact,'comparisonOnlyNullVersusZeroMatches':len(compiled)-exact,'fullComparisonMultisetMatches':nullzero,'compiledRemainder':0,'officialRemainder':0,'compiledPositionValues':[None],'officialPositionValues':[None],'compiledDuplicateOccurrences':sum(n-1 for n in counter(compiled,True).values()),'officialDuplicateOccurrences':sum(n-1 for n in counter(official,True).values()),'maximumComparisonKeyMultiplicity':max(counter(compiled,True).values()),'cardinalityAndMultiplicityPreserved':True,'typographicNameDifferences':typography,'expenseNullsInAcceptedOfficial':sum(r[3] is None for r in official),'baseline8aExportSha256':sha(oldraw),'currentExportSha256':sha(nowraw),'baselineExportPartitionExactImmutableMultiset':True,'baselineExportPartitionSourceKinds':['compiled'],'currentOfficialPartitionExactOriginalSixFieldMultiset':True,'currentCompiledRowsRemainingInRemovedPeriod':len(remaining),'sourceDataSha256':sha(dataraw),'originalSourceSha256':source['sha256'],'sourcePeriod':{'type':source['periodType'],'start':source['periodStart'],'end':source['periodEnd']},'sourceScope':'complete named employee schedule; direct original headings/approvals and entire named table independently verified by prior PDFMiner receipt; no board row or broader compiled remainder remains','identityClaim':False,'missingExpenseInferredZero':False})\n files.extend([{'path':str(datapath.relative_to(ROOT)),'sha256':sha(dataraw)},{'path':str(expath.relative_to(ROOT)),'sha256':sha(nowraw)}])\n if compiledyear=='2020/21':\n  selectedhash=sha(encode(compiled));assert selectedhash==rule['selectedRowsSha256']\n  assert rule['expectedRows']==len(compiled) and rule['expectedRetainedRows']==0 and rule['retainPositions']==[]\n  assert rule['sourceDataSha256'][sourceid]==sha(dataraw)\n  assert rule['sourceSha256'][sourceid]==source['sha256']\n  assert source['periodType']=='calendar' and source['periodStart']=='2020-01-01' and source['periodEnd']=='2020-12-31'\n  calendar={'selectedRowsSerialization':'UTF-8 JSON.stringify equivalent of first four immutable snapshot row fields, preserving original snapshot row order; compact separators, no added newline','selectedRowsSha256':selectedhash,'declaredSelectedRowsSha256':rule['selectedRowsSha256'],'exactHashMatch':True,'expectedRows':len(compiled),'retainedRows':0,'sourceDataSha256':sha(dataraw),'sourceSha256':source['sha256'],'actualCalendarPeriodConfirmed':'Official original cover p1 and complete employee schedules pp35–44 print year ended December31,2020. Reviewed approval p4 is signed June28,2021; approval/publication date does not change the calendar2020 source period.','linkedIndependentOriginalReceipt':'independent-crowns-pdfminer-comparison-and-controls.json'}\n# The older BCA2017/18 compiled cohort must remain unchanged.\nbca=next(e for e in snapshot['employers'] if e['slug']=='bc-assessment');kept=[r[:4] for r in bca['rows'] if snapshot['years'][r[4]]=='2017/18'];current=json.loads(gzip.decompress((ROOT/'public/salaries/employers/bc-assessment.json.gzip').read_bytes()));retained=[r[:4] for r in current if currentindex['years'][r[4]]=='2017/18']\nassert collections.Counter(map(tuple,kept))==collections.Counter(map(tuple,retained)) and len(kept)==296\nreceipt={'frozen':True,'date':'2026-11-01','reviewer':'recovery_health','status':'pass-all1005-compiled-removals-supported','baselineCommit':BASE,'immutableCompiledSnapshotMatchesBaseline8aBytes':True,'immutableSnapshotSha256':sha(snapshotraw),'baseline8aEmployerIndexSha256':sha(baseline_index_raw),'currentEmployerIndexSha256':sha(current_index_raw),'normalization':'Name comparison only: Unicode casefold then retain alphanumeric characters; no first-name expansion, cross-year identity linkage or other alias inference. Remuneration remains exact numeric. Expense null is treated as0 solely for overlap comparison; accepted source nulls remain literal. Position nulls independently checked. All comparisons use Counter multisets, never sets.','removedCompiledRows':sum(r['compiledRows'] for r in reviews),'sources':reviews,'calendarReplacement':calendar,'olderBca2017_18RetainedUnchanged':{'rows':296,'fullFirstFourFieldMultisetMatches':True},'fileFingerprints':files,'rootFilesEdited':False,'outreachSent':0,'reproducerCode':Path(__file__).read_text()}\np=REV/'independent-crowns-compiled-overlap-decision.json';raw=(json.dumps(receipt,ensure_ascii=False,indent=2)+'\\n').encode();p.write_bytes(raw)\nprint(json.dumps({'path':str(p.relative_to(ROOT)),'sha256':sha(raw),'removedCompiledRows':receipt['removedCompiledRows'],'partitions':[(r['sourceId'],r['compiledRows'],r['comparisonOnlyNullVersusZeroMatches'],len(r['typographicNameDifferences'])) for r in reviews],'calendarSelectedRowsHash':selectedhash,'retainedOlderBcaRows':len(kept)}))\n"
+}

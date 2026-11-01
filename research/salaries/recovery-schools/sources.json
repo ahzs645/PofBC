@@ -1,0 +1,582 @@
+{
+  "version": 1,
+  "reviewed": "2026-11-01",
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "recovery-schools-sd19-2025-trustees",
+      "inputKey": "sd19-2025",
+      "employerSlug": "school-district-19",
+      "employerName": "School District No. 19 (Revelstoke)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 19 (Revelstoke), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd19-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "e9986f7cbe9443f0593ae1b88f2014575a33aab5582510c8088a8fbb162870c0",
+      "file": "sd19-2025-trustees.json.gzip",
+      "dataSha256": "c1de2d3c16cbf6b7d09572d1e387b708f0f1fa9915a9b79525f02aa6fc4fd762",
+      "normalizedSha256": "04fa18785ff6572af4d3b8a38eda9ad7d5384e50821161a162bd76566c374380",
+      "provenanceFile": "sd19-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "7267c7a6673ecb9a2af9cc9973cf32db557cb840adac021f635cb0b76bb804e4",
+      "category": "school-trustees",
+      "scope": "elected-school-trustees",
+      "scopeDescription": "Complete published elected trustee remuneration schedule",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar-remuneration-and-published-expense-precision",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-as-disclosed",
+      "rowCount": 5,
+      "totalRemuneration": 72982.0,
+      "totalExpenses": 21665.0,
+      "pages": [
+        50
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "verifiedOn": "2026-11-01",
+      "notes": [
+        "The annual schedule prints year ended June 30, 2025. Fiscal period is July 1, 2024 through June 30, 2025; upload labels are not the reporting-period evidence.",
+        "Remuneration and expenses are separate reported payments, not annual base salary rates. Suppliers, below-threshold aggregate payroll, employer CPP/EI premiums and financial statement totals are excluded.",
+        "Blank or dash expense values remain null; explicit zeros remain zero. Published names, punctuation, unusual capitalization and source titles are preserved without inferred corrections.",
+        "Ministry-hosted original district SOFI convenience copy. Declaration identifies June 30, 2025; signatures are redacted and visible date fields read December 19, 2025.",
+        "Every scan row was read from the rendered original and fully transcribed; OCR comparison retains explicit image-verified corrections. OCR is not represented as independent native text. Complete independent peer image review compared every row and field; the hash-pinned receipt is linked in validation."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "complete rendered manual transcript",
+          "original OCR overlay with explicit image corrections"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 5,
+        "rowsByPhysicalPage": {
+          "50": 5
+        },
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "72982",
+          "21665"
+        ],
+        "computedComponentTotals": [
+          "72982",
+          "21665"
+        ],
+        "controlResiduals": [
+          "0",
+          "0"
+        ],
+        "summaryReconciles": true,
+        "allPublishedNamedControlsExact": true,
+        "allPrintedComponentControlsExact": true,
+        "knownExpenseValueCount": 5,
+        "unparsedInterRowText": 0,
+        "completeIndependentPeerImageReviewPending": false,
+        "sourceApprovalPhysicalPage": 2,
+        "independentRenderedReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd19-2025-comparison.json",
+          "sha256": "61a1295c0784a653725cb5c59bd328d04e6a002056737612a27bc59df029e36a",
+          "physicalPages": [
+            50,
+            51
+          ],
+          "rowsCheckedInThisCohort": 5,
+          "everyFieldCompared": true
+        },
+        "independentNormalizedPayloadReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-schools-normalized-payloads.json",
+          "sha256": "3b790d418fab916c22f1a3f90e36c8ee3bffcb913025dcc4b560cd6dc08b745b"
+        }
+      }
+    },
+    {
+      "id": "recovery-schools-sd19-2025-employees",
+      "inputKey": "sd19-2025",
+      "employerSlug": "school-district-19",
+      "employerName": "School District No. 19 (Revelstoke)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 19 (Revelstoke), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd19-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "e9986f7cbe9443f0593ae1b88f2014575a33aab5582510c8088a8fbb162870c0",
+      "file": "sd19-2025-employees.json.gzip",
+      "dataSha256": "d5b4a86e21f5c7d6b4def2a619788bd50b239abb557a9be3e60e1355ab8dc2d3",
+      "normalizedSha256": "2c11cf87a0449243089cfe64210ac540700eac73218a8744cf926da49da898a2",
+      "provenanceFile": "sd19-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "60cdf55dcaa74cab90e457bce056a5cb30cb3e86c34980c84f409da699fdbdc4",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-75000",
+      "scopeDescription": "Complete published named employee schedule exceeding $75,000 remuneration; under-threshold aggregates excluded",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar-remuneration-and-published-expense-precision",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-as-disclosed",
+      "rowCount": 77,
+      "totalRemuneration": 8210710.0,
+      "totalExpenses": 150762.0,
+      "pages": [
+        50,
+        51
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "verifiedOn": "2026-11-01",
+      "notes": [
+        "The annual schedule prints year ended June 30, 2025. Fiscal period is July 1, 2024 through June 30, 2025; upload labels are not the reporting-period evidence.",
+        "Remuneration and expenses are separate reported payments, not annual base salary rates. Suppliers, below-threshold aggregate payroll, employer CPP/EI premiums and financial statement totals are excluded.",
+        "Blank or dash expense values remain null; explicit zeros remain zero. Published names, punctuation, unusual capitalization and source titles are preserved without inferred corrections.",
+        "Ministry-hosted original district SOFI convenience copy. Declaration identifies June 30, 2025; signatures are redacted and visible date fields read December 19, 2025.",
+        "Every scan row was read from the rendered original and fully transcribed; OCR comparison retains explicit image-verified corrections. OCR is not represented as independent native text. Complete independent peer image review compared every row and field; the hash-pinned receipt is linked in validation."
+      ],
+      "publicWarning": "The 77 published employee rows total $8,210,710 remuneration and $150,762 expenses. The schedule prints $8,210,710 and $148,744, so the row expense sum is $2,018 higher than the printed employee expense total. The published rows and control are retained literally; the reason is unresolved.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "complete rendered manual transcript",
+          "original OCR overlay with explicit image corrections"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 77,
+        "rowsByPhysicalPage": {
+          "50": 37,
+          "51": 40
+        },
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "8210710",
+          "148744"
+        ],
+        "computedComponentTotals": [
+          "8210710",
+          "150762"
+        ],
+        "controlResiduals": [
+          "0",
+          "2018"
+        ],
+        "summaryReconciles": false,
+        "allPublishedNamedControlsExact": false,
+        "allPrintedComponentControlsExact": false,
+        "knownExpenseValueCount": 51,
+        "unparsedInterRowText": 0,
+        "completeIndependentPeerImageReviewPending": false,
+        "sourceApprovalPhysicalPage": 2,
+        "completeEmployeeSchedule": true,
+        "independentRenderedReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd19-2025-comparison.json",
+          "sha256": "61a1295c0784a653725cb5c59bd328d04e6a002056737612a27bc59df029e36a",
+          "physicalPages": [
+            50,
+            51
+          ],
+          "rowsCheckedInThisCohort": 77,
+          "everyFieldCompared": true
+        },
+        "independentNormalizedPayloadReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-schools-normalized-payloads.json",
+          "sha256": "3b790d418fab916c22f1a3f90e36c8ee3bffcb913025dcc4b560cd6dc08b745b"
+        }
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "recovery-schools-sd49-2025-trustees",
+      "inputKey": "sd49-2025",
+      "employerSlug": "school-district-49",
+      "employerName": "School District No. 49 (Central Coast)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 49 (Central Coast), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd49-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "f3e643ccba15d44118d411f83ee956ce166b9fe51dc97378024659c7b6bb34f3",
+      "file": "sd49-2025-trustees.json.gzip",
+      "dataSha256": "0b92a0bacdacab6d876e1f79dc144275a2cae6b02e9a243675d680324d301142",
+      "normalizedSha256": "d6c8e7c19a23ce5527253134cd3a6eb9cd41e59902bc083751ea03fa80f35df4",
+      "provenanceFile": "sd49-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "49ca4f41fa5c1107171babf11d349d10aac51656cf2eed9ade8c3c4dbe0cac98",
+      "category": "school-trustees",
+      "scope": "elected-school-trustees",
+      "scopeDescription": "Complete published elected trustee remuneration schedule",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar-remuneration-and-published-expense-precision",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "not-published",
+      "rowCount": 5,
+      "totalRemuneration": 63095.0,
+      "totalExpenses": 14225.0,
+      "pages": [
+        53
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "verifiedOn": "2026-11-01",
+      "notes": [
+        "The annual schedule prints year ended June 30, 2025. Fiscal period is July 1, 2024 through June 30, 2025; upload labels are not the reporting-period evidence.",
+        "Remuneration and expenses are separate reported payments, not annual base salary rates. Suppliers, below-threshold aggregate payroll, employer CPP/EI premiums and financial statement totals are excluded.",
+        "Blank or dash expense values remain null; explicit zeros remain zero. Published names, punctuation, unusual capitalization and source titles are preserved without inferred corrections.",
+        "Ministry-hosted original district SOFI convenience copy. Declaration identifies June 30, 2025; signatures are redacted and visible date fields read November 19, 2025.",
+        "Every scan row was read from the rendered original and fully transcribed; OCR comparison retains explicit image-verified corrections. OCR is not represented as independent native text. Complete independent peer image review compared every row and field; the hash-pinned receipt is linked in validation."
+      ],
+      "publicWarning": "The five published trustee rows total $63,095 remuneration and $14,225 expenses. The schedule prints $63,096 and $14,225, so the row remuneration sum is $1 lower than the printed trustee remuneration total. The published rows and control are retained literally; the reason is unresolved.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "complete rendered manual transcript",
+          "Tesseract 5 PSM6 with explicit image corrections"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 5,
+        "rowsByPhysicalPage": {
+          "53": 5
+        },
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "63096",
+          "14225"
+        ],
+        "computedComponentTotals": [
+          "63095",
+          "14225"
+        ],
+        "controlResiduals": [
+          "-1",
+          "0"
+        ],
+        "summaryReconciles": false,
+        "allPublishedNamedControlsExact": false,
+        "allPrintedComponentControlsExact": false,
+        "knownExpenseValueCount": 5,
+        "unparsedInterRowText": 0,
+        "completeIndependentPeerImageReviewPending": false,
+        "sourceApprovalPhysicalPage": 3,
+        "independentRenderedReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd49-2025-comparison.json",
+          "sha256": "529db236c50d5a17cefa93e2eff349342b80aaa6ff055375dbcfb43d62513e28",
+          "physicalPages": [
+            53
+          ],
+          "rowsCheckedInThisCohort": 5,
+          "everyFieldCompared": true
+        },
+        "independentNormalizedPayloadReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-schools-normalized-payloads.json",
+          "sha256": "3b790d418fab916c22f1a3f90e36c8ee3bffcb913025dcc4b560cd6dc08b745b"
+        }
+      }
+    },
+    {
+      "id": "recovery-schools-sd49-2025-employees",
+      "inputKey": "sd49-2025",
+      "employerSlug": "school-district-49",
+      "employerName": "School District No. 49 (Central Coast)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 49 (Central Coast), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd49-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "f3e643ccba15d44118d411f83ee956ce166b9fe51dc97378024659c7b6bb34f3",
+      "file": "sd49-2025-employees.json.gzip",
+      "dataSha256": "7db6985438dd0fe6c8b2317713434cfd9ebfa6e302175e4fef8b6ee751a5292c",
+      "normalizedSha256": "ae693eb83135208b257448587c862ea9e0fbcd13b14b4571375557a93c683c7c",
+      "provenanceFile": "sd49-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "90d5379e0056f6cc68c870a9a2157c9fa4185b94813839c0c537ca6460140c4a",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-75000",
+      "scopeDescription": "Complete published named employee schedule exceeding $75,000 remuneration; under-threshold aggregates excluded",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar-remuneration-and-published-expense-precision",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "not-published",
+      "rowCount": 30,
+      "totalRemuneration": 3601790.0,
+      "totalExpenses": 32532.0,
+      "pages": [
+        53
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "verifiedOn": "2026-11-01",
+      "notes": [
+        "The annual schedule prints year ended June 30, 2025. Fiscal period is July 1, 2024 through June 30, 2025; upload labels are not the reporting-period evidence.",
+        "Remuneration and expenses are separate reported payments, not annual base salary rates. Suppliers, below-threshold aggregate payroll, employer CPP/EI premiums and financial statement totals are excluded.",
+        "Blank or dash expense values remain null; explicit zeros remain zero. Published names, punctuation, unusual capitalization and source titles are preserved without inferred corrections.",
+        "Ministry-hosted original district SOFI convenience copy. Declaration identifies June 30, 2025; signatures are redacted and visible date fields read November 19, 2025.",
+        "Every scan row was read from the rendered original and fully transcribed; OCR comparison retains explicit image-verified corrections. OCR is not represented as independent native text. Complete independent peer image review compared every row and field; the hash-pinned receipt is linked in validation."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "complete rendered manual transcript",
+          "Tesseract 5 PSM6 with explicit image corrections"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 30,
+        "rowsByPhysicalPage": {
+          "53": 30
+        },
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "3601790",
+          "32532"
+        ],
+        "computedComponentTotals": [
+          "3601790",
+          "32532"
+        ],
+        "controlResiduals": [
+          "0",
+          "0"
+        ],
+        "summaryReconciles": true,
+        "allPublishedNamedControlsExact": true,
+        "allPrintedComponentControlsExact": true,
+        "knownExpenseValueCount": 30,
+        "unparsedInterRowText": 0,
+        "completeIndependentPeerImageReviewPending": false,
+        "sourceApprovalPhysicalPage": 3,
+        "completeEmployeeSchedule": true,
+        "independentRenderedReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd49-2025-comparison.json",
+          "sha256": "529db236c50d5a17cefa93e2eff349342b80aaa6ff055375dbcfb43d62513e28",
+          "physicalPages": [
+            53
+          ],
+          "rowsCheckedInThisCohort": 30,
+          "everyFieldCompared": true
+        },
+        "independentNormalizedPayloadReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-schools-normalized-payloads.json",
+          "sha256": "3b790d418fab916c22f1a3f90e36c8ee3bffcb913025dcc4b560cd6dc08b745b"
+        }
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "recovery-schools-sd64-2025-trustees",
+      "inputKey": "sd64-2025",
+      "employerSlug": "gulf-islands-school-district",
+      "employerName": "School District No. 64 (Gulf Islands)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 64 (Gulf Islands), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd64-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "38f70c4948dae2b68c560e2c4cbc0c95610b68c9448392f0c142798a954bad17",
+      "file": "sd64-2025-trustees.json.gzip",
+      "dataSha256": "c9c056d8dc8a709a6663d218e5d3d34f1c3f31e5a0faa911ef18204b8c7d283a",
+      "normalizedSha256": "cc4d47bb78f6199c6b6b6a4f5eb83925564b285943800e95c0ecc1297afd1dcc",
+      "provenanceFile": "sd64-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "aec29049082a198b989c9f864de3980ff2008481bca8f66fc1dfcdc63b3c3914",
+      "category": "school-trustees",
+      "scope": "elected-school-trustees",
+      "scopeDescription": "Complete published elected trustee remuneration schedule",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar-remuneration-and-published-expense-precision",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-as-disclosed",
+      "rowCount": 7,
+      "totalRemuneration": 126052.0,
+      "totalExpenses": 25345.0,
+      "pages": [
+        52
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "verifiedOn": "2026-11-01",
+      "notes": [
+        "The annual schedule prints year ended June 30, 2025. Fiscal period is July 1, 2024 through June 30, 2025; upload labels are not the reporting-period evidence.",
+        "Remuneration and expenses are separate reported payments, not annual base salary rates. Suppliers, below-threshold aggregate payroll, employer CPP/EI premiums and financial statement totals are excluded.",
+        "Blank or dash expense values remain null; explicit zeros remain zero. Published names, punctuation, unusual capitalization and source titles are preserved without inferred corrections.",
+        "Ministry-hosted original district SOFI convenience copy. Declaration identifies June 30, 2025; signature area is redacted and adjacent date fields are blank. No adoption date is inferred.",
+        "Every row and field agrees between independent Poppler lexical parsing and PyMuPDF geometric grouping. Rendered schedule pages were reviewed for period, scope, column boundaries and controls."
+      ],
+      "publicWarning": "The seven published trustee rows total $126,052 remuneration and $25,345 expenses. The schedule prints $126,054 and $25,345, so the row remuneration sum is $2 lower than the printed trustee remuneration total. The published rows and control are retained literally; the reason is unresolved.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler lexical role delimiters",
+          "PyMuPDF geometric columns"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "rowsByPhysicalPage": {
+          "52": 7
+        },
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "126054",
+          "25345"
+        ],
+        "computedComponentTotals": [
+          "126052",
+          "25345.00"
+        ],
+        "controlResiduals": [
+          "-2",
+          "0.00"
+        ],
+        "summaryReconciles": false,
+        "allPublishedNamedControlsExact": false,
+        "allPrintedComponentControlsExact": false,
+        "knownExpenseValueCount": 7,
+        "unparsedInterRowText": 0,
+        "completeIndependentPeerImageReviewPending": false,
+        "sourceApprovalPhysicalPage": 3,
+        "independentRenderedReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd64-2025-trustees-comparison.json",
+          "sha256": "99f5247cc23b6150c02d3c5ff2864e7f544715f2f08a7f07c3ceb3103b47c117",
+          "categories": [
+            "school-trustees"
+          ],
+          "physicalPages": [
+            52
+          ],
+          "rowsCheckedInThisCohort": 7,
+          "everyFieldCompared": true
+        },
+        "independentNormalizedPayloadReview": {
+          "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-schools-normalized-payloads.json",
+          "sha256": "3b790d418fab916c22f1a3f90e36c8ee3bffcb913025dcc4b560cd6dc08b745b"
+        }
+      }
+    },
+    {
+      "id": "recovery-schools-sd64-2025-employees",
+      "inputKey": "sd64-2025",
+      "employerSlug": "gulf-islands-school-district",
+      "employerName": "School District No. 64 (Gulf Islands)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 64 (Gulf Islands), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd64-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "38f70c4948dae2b68c560e2c4cbc0c95610b68c9448392f0c142798a954bad17",
+      "file": "sd64-2025-employees.json.gzip",
+      "dataSha256": "d67d946aedc1345ea79a0cb1e451471dd433d247510d90ba682c2ffcc1a75eb1",
+      "normalizedSha256": "db8623a8096adb0b1b9db09e5ef9ac50f85ab67fa2105bcfe7409e62d81f2cff",
+      "provenanceFile": "sd64-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "e4e97f04e3c3367984f95bd3a5b56379f82f4e9f13440d4672d3ea63f05b573f",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-75000",
+      "scopeDescription": "Complete published named employee schedule exceeding $75,000 remuneration; under-threshold aggregates excluded",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar-remuneration-and-published-expense-precision",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-as-disclosed",
+      "rowCount": 110,
+      "totalRemuneration": 12228711.0,
+      "totalExpenses": 223125.0,
+      "pages": [
+        52,
+        53,
+        54
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "verifiedOn": "2026-11-01",
+      "notes": [
+        "The annual schedule prints year ended June 30, 2025. Fiscal period is July 1, 2024 through June 30, 2025; upload labels are not the reporting-period evidence.",
+        "Remuneration and expenses are separate reported payments, not annual base salary rates. Suppliers, below-threshold aggregate payroll, employer CPP/EI premiums and financial statement totals are excluded.",
+        "Blank or dash expense values remain null; explicit zeros remain zero. Published names, punctuation, unusual capitalization and source titles are preserved without inferred corrections.",
+        "Ministry-hosted original district SOFI convenience copy. Declaration identifies June 30, 2025; signature area is redacted and adjacent date fields are blank. No adoption date is inferred.",
+        "Every row and field agrees between independent Poppler lexical parsing and PyMuPDF geometric grouping. Rendered schedule pages were reviewed for period, scope, column boundaries and controls."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler lexical role delimiters",
+          "PyMuPDF geometric columns"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 110,
+        "rowsByPhysicalPage": {
+          "52": 25,
+          "53": 42,
+          "54": 43
+        },
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "12228711",
+          "223125"
+        ],
+        "computedComponentTotals": [
+          "12228711",
+          "223125.00"
+        ],
+        "controlResiduals": [
+          "0",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "allPublishedNamedControlsExact": true,
+        "allPrintedComponentControlsExact": true,
+        "knownExpenseValueCount": 39,
+        "unparsedInterRowText": 0,
+        "completeIndependentPeerImageReviewPending": false,
+        "sourceApprovalPhysicalPage": 3,
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    }
+  ]
+}

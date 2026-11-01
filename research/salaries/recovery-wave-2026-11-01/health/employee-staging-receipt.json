@@ -1,0 +1,52 @@
+{
+  "status": "staged-partial-employee-page-not-for-import",
+  "sourceId": "phsa-2024-25-employee-page-1-staged",
+  "employerSlug": "provincial-health-services-authority",
+  "year": "2024/25",
+  "periodType": "fiscal",
+  "periodStart": "2024-04-01",
+  "periodEnd": "2025-03-31",
+  "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
+  "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+  "sourceSha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+  "sourceBytes": 54160556,
+  "sourceCachePath": "/tmp/sector-health/phsa-2025.pdf",
+  "pdfPages": 284,
+  "nativeTextCharacters": 0,
+  "scope": "employee-remuneration",
+  "completeEmployeeSchedule": false,
+  "acceptedRows": 0,
+  "stagedRows": 49,
+  "physicalPagesManuallyReviewed": [
+    1
+  ],
+  "physicalPagesNotReviewed": {
+    "first": 2,
+    "last": 284,
+    "count": 283
+  },
+  "sourceDefinition": "Alphabetical list of employees who received remuneration exceeding $75,000 for the year ended March 31, 2025 and their expenses paid during this period. Expenses may have been reimbursed directly to employees and/or paid to a third party supplier.",
+  "publicationStatus": "Official published scan, unsigned; no draft wording visible on reviewed page. Remaining source pages were not visually reviewed in this tranche.",
+  "reviewImage": {
+    "path": "/tmp/sector-health/phsa-2025-page-1.png",
+    "sha256": "7d7f4180aadcf42b0b0807859b9dc5d1b0c4d9495d83f4220b33bf82fb515613",
+    "dimensions": [
+      1224,
+      1584
+    ],
+    "render": "PyMuPDF matrix (2,2), physical page1"
+  },
+  "blocker": "283 original pages remain without complete independent row verification. No full-cohort acceptance or compiled replacement follows from this staged page.",
+  "nextAction": "Peer-review all 49 staged rows; use this guarded page fixture for a complete independent OCR/manual workflow, or obtain the existing electronic schedule using the prior unsent ordinary-copy request. Verify every remaining image page before proposing a full cohort.",
+  "stagedEvidenceSha256": "d635af59f570f71d86c35ef4b6753ba220854f53614fbfd764d9a0e28ce7518c",
+  "stagedTotalRemuneration": 6258067,
+  "stagedTotalDisclosedExpenses": 88815,
+  "missingExpenseRows": 18,
+  "ocrFullRowMismatchCount": 16,
+  "specialCorrection": {
+    "name": "Abia,Jo-Ann",
+    "rawOcrExpense": "™m",
+    "visibleExpense": 771,
+    "reason": "Both existing Tesseract configurations failed; the rendered source visibly shows 771."
+  }
+}
