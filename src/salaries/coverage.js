@@ -11,6 +11,7 @@ export const scopeLabel = (scope) => ({
   'employee-remuneration': 'Employee remuneration disclosure',
   'named-employees-over-threshold': 'Employee remuneration disclosure above the reporting threshold',
   'executive-only': 'Executive compensation only',
+  'board-remuneration': 'Board remuneration disclosure',
   'elected-officials': 'Mayor and council remuneration',
   'school-trustees': 'School trustee remuneration',
   'aggregate-only': 'Aggregate payroll only; no individual records',
@@ -133,6 +134,9 @@ export const missingYearMessage = (coverage, employers, year) => {
   if (entries.some((entry) => entry?.scope === 'executive-only')) {
     return 'No matching name was found in the imported records. Some associated employer records cover executives only; absence does not establish whether the person was employed or paid.'
   }
+  if (entries.some((entry) => ['board-remuneration', 'school-trustees', 'elected-officials'].includes(entry?.scope))) {
+    return 'No matching name was found in the imported records. Some associated disclosures cover only board members or elected officials; they do not establish employee coverage or whether the person was employed or paid.'
+  }
   if (entries.some((entry) => !entry || entry.status !== 'available')) {
     return 'No matching name was found in the imported records, and some associated employers have a coverage gap. Absence does not establish whether the person was employed or paid.'
   }
@@ -146,7 +150,7 @@ export const filterEmployers = (employers, sector = 'all', year = 'all') => empl
 /**
  * Why a disclosed name has no record in a year, as a short reason a run of such years can share:
  * the associated employers have no records imported then ('no-coverage'), disclosed only executives
- * ('executive-only'), are covered only in part ('partial'), or are covered and the name is not in it
+ * ('executive-only'), disclose another limited group, are covered only in part ('partial'), or are covered and the name is not in it
  * ('not-found'). The same cases missingYearMessage explains at length.
  */
 export const gapReason = (coverage, employers, year) => {
@@ -155,6 +159,7 @@ export const gapReason = (coverage, employers, year) => {
   if (!entries.length) return 'different-period'
   if (entries.length && entries.every((entry) => !entry || entry.status !== 'available')) return 'no-coverage'
   if (entries.some((entry) => entry?.scope === 'executive-only')) return 'executive-only'
+  if (entries.some((entry) => ['board-remuneration', 'school-trustees', 'elected-officials'].includes(entry?.scope))) return 'limited-disclosure'
   if (entries.some((entry) => !entry || entry.status !== 'available')) return 'partial'
   return 'not-found'
 }
@@ -163,6 +168,7 @@ export const GAP_LABELS = {
   'different-period': 'Different reporting-period type',
   'no-coverage': 'No records imported for this employer',
   'executive-only': 'Only executives disclosed',
+  'limited-disclosure': 'Limited group disclosed',
   partial: 'Not found; some employers not covered',
   'not-found': 'Not in that year’s disclosure'
 }

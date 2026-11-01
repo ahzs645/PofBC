@@ -1,0 +1,733 @@
+{
+  "reviewedBy": "/root/education_continuation",
+  "signedAtUtc": "2026-11-01T08:08:51.268022+00:00",
+  "recommendation": "accept-qualified all seven cohorts/8602 rows, retaining exact source-control and literal-negative warnings; unavailable-expense metadata correction is confirmed complete",
+  "scopeAndControlsReviewComplete": true,
+  "totalRowsIndependentlyCompared": 8602,
+  "nativeTablePagesCompared": 57,
+  "fullVolumeVisualCensusClaimed": false,
+  "readers": {
+    "authorReported": [
+      "PyMuPDF",
+      "PDFMiner"
+    ],
+    "independentPeerReader": "Poppler pdftotext -bbox",
+    "authorParserImported": false,
+    "noAdditionalPdfminerEngineIndependenceClaim": true
+  },
+  "reproductionCommand": "python scripts/continue_education_review_oic.py",
+  "offlineReplayCommand": "python scripts/continue_education_review_oic.py --offline",
+  "independentEvidenceFile": "government-oic-poppler-evidence.json.gzip",
+  "independentEvidenceSha256": "17062c34f3b38b12fef66dfc09650c907b7aa34f8255e7951afa484b7ea21c65",
+  "materialResiduals": [
+    {
+      "year": "1999/00",
+      "field": "travel",
+      "residualDollars": -13282
+    },
+    {
+      "year": "2001/02",
+      "field": "travel",
+      "residualDollars": 6901
+    },
+    {
+      "year": "2003/04",
+      "field": "salary",
+      "residualDollars": -106112
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "continuation-government-police-public-service-1999-00-appointees",
+      "year": "1999/00",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-crf-detailed-schedules-of-payments.pdf",
+      "originalFile": "/tmp/continuation-government-police/pa-1999-00.pdf",
+      "originalSha256": "8cf063150b697c1fa309964b06ffb76e888dcda15edfd3b0e5140082d7e0bedd",
+      "dataFile": "research/salaries/continuation-government-police/continuation-government-police-public-service-1999-00-appointees.json.gzip",
+      "dataSha256": "5ed469bef77daa3bb545273925e45ebe0dfba1001c16e5626d33cbf39ef66676",
+      "authorEvidenceFile": "research/salaries/continuation-government-police/evidence/continuation-government-police-public-service-1999-00-appointees.json.gzip",
+      "authorEvidenceSha256": "c3003393ebb9349a8abae438f4c2fe9c7bf99d596fc895d9a704d514e509f9c3",
+      "independentlyVerifiedRows": 1341,
+      "allFieldsOrderAndMultiplicityEqual": true,
+      "independentReader": "Poppler pdftotext -bbox; separately implemented salary-edge/name-fragment parser, no author parser imported",
+      "allNativeSalaryPagesCompared": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "independentWholeVolumeScopeHeadingInventory": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "rowCountsByPhysicalPage": {
+        "9": 159,
+        "10": 180,
+        "11": 180,
+        "12": 180,
+        "13": 180,
+        "14": 180,
+        "15": 180,
+        "16": 102
+      },
+      "renderedPhysicalPagesInspectedInFull": [
+        5,
+        16
+      ],
+      "renderedHeaderOrRowCropsOnly": [
+        9
+      ],
+      "negativeRowsRenderedAndConfirmed": [],
+      "allWrappedRowsRenderedAndConfirmed": [],
+      "summaryUnit": "thousands of dollars; unaudited",
+      "manuallyReadPrintedSalaryThousands": 74063,
+      "manuallyReadPrintedTravelThousands": 5047,
+      "independentSalarySum": 74063235,
+      "independentKnownTravelSum": 5033718,
+      "missingTravelCells": 574,
+      "salaryResidualDollars": 235,
+      "travelResidualDollars": -13282,
+      "residualCause": null,
+      "scope": "Complete named published OIC/other-appointee/non-Public-Service-Act salary table, no threshold. Distinct from ministers, deputy ministers and Other Employees.",
+      "completeCoreEmployeeSchedule": false,
+      "expenseAvailability": "same-row published travel; blank remains null",
+      "recommendation": "accept-qualified faithful displayed row disclosure; retain exact warnings",
+      "requiredMetadataCorrection": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2000-01-appointees",
+      "year": "2000/01",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-detailed-schedules-of-payments.pdf",
+      "originalFile": "/tmp/continuation-government-police/pa-2000-01.pdf",
+      "originalSha256": "ce4e9e971db8db090e71230e2b5ce5472467209f2b737fd05db04b6dbd429fe5",
+      "dataFile": "research/salaries/continuation-government-police/continuation-government-police-public-service-2000-01-appointees.json.gzip",
+      "dataSha256": "b98d8f08a5c7f1e3fa24a1285d14e139dc9cb2d070c558befd5079444975f902",
+      "authorEvidenceFile": "research/salaries/continuation-government-police/evidence/continuation-government-police-public-service-2000-01-appointees.json.gzip",
+      "authorEvidenceSha256": "80a1390eb0034a965df5f650d3cfb5e1866190509ccac8c52dbd5d228f0d9865",
+      "independentlyVerifiedRows": 1318,
+      "allFieldsOrderAndMultiplicityEqual": true,
+      "independentReader": "Poppler pdftotext -bbox; separately implemented salary-edge/name-fragment parser, no author parser imported",
+      "allNativeSalaryPagesCompared": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "independentWholeVolumeScopeHeadingInventory": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "rowCountsByPhysicalPage": {
+        "10": 159,
+        "11": 180,
+        "12": 180,
+        "13": 180,
+        "14": 180,
+        "15": 180,
+        "16": 180,
+        "17": 79
+      },
+      "renderedPhysicalPagesInspectedInFull": [
+        5
+      ],
+      "renderedHeaderOrRowCropsOnly": [
+        10,
+        11
+      ],
+      "negativeRowsRenderedAndConfirmed": [
+        [
+          "public-service",
+          "Carroll, P",
+          null,
+          -984,
+          null,
+          11
+        ],
+        [
+          "public-service",
+          "Davis, B D",
+          null,
+          -2410,
+          null,
+          11
+        ]
+      ],
+      "allWrappedRowsRenderedAndConfirmed": [],
+      "summaryUnit": "thousands of dollars; unaudited",
+      "manuallyReadPrintedSalaryThousands": 74551,
+      "manuallyReadPrintedTravelThousands": 4846,
+      "independentSalarySum": 74550784,
+      "independentKnownTravelSum": 4845746,
+      "missingTravelCells": 586,
+      "salaryResidualDollars": -216,
+      "travelResidualDollars": -254,
+      "residualCause": null,
+      "scope": "Complete named published OIC/other-appointee/non-Public-Service-Act salary table, no threshold. Distinct from ministers, deputy ministers and Other Employees.",
+      "completeCoreEmployeeSchedule": false,
+      "expenseAvailability": "same-row published travel; blank remains null",
+      "recommendation": "accept-qualified faithful displayed row disclosure; retain exact warnings",
+      "requiredMetadataCorrection": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2001-02-appointees",
+      "year": "2001/02",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-detailed-schedules-of-payments.pdf",
+      "originalFile": "/tmp/continuation-government-police/pa-2001-02.pdf",
+      "originalSha256": "3815ac29fe378fde536155ec7121013c98a81e06c311537ce255d30f3ee6f4f2",
+      "dataFile": "research/salaries/continuation-government-police/continuation-government-police-public-service-2001-02-appointees.json.gzip",
+      "dataSha256": "eea94d74d358bf9dd4d04121e56b5c631f34d2b75993567295aa9895543eb723",
+      "authorEvidenceFile": "research/salaries/continuation-government-police/evidence/continuation-government-police-public-service-2001-02-appointees.json.gzip",
+      "authorEvidenceSha256": "916a7e22b4e2208b09a9fd0ab9e9de091d25efb9d095b1f5ab222c448cbb2de1",
+      "independentlyVerifiedRows": 1351,
+      "allFieldsOrderAndMultiplicityEqual": true,
+      "independentReader": "Poppler pdftotext -bbox; separately implemented salary-edge/name-fragment parser, no author parser imported",
+      "allNativeSalaryPagesCompared": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "independentWholeVolumeScopeHeadingInventory": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "rowCountsByPhysicalPage": {
+        "12": 158,
+        "13": 179,
+        "14": 180,
+        "15": 180,
+        "16": 179,
+        "17": 180,
+        "18": 180,
+        "19": 115
+      },
+      "renderedPhysicalPagesInspectedInFull": [
+        6,
+        19
+      ],
+      "renderedHeaderOrRowCropsOnly": [
+        12,
+        13,
+        16,
+        18
+      ],
+      "negativeRowsRenderedAndConfirmed": [
+        [
+          "public-service",
+          "CULLEN, A F",
+          null,
+          -1334,
+          3833,
+          13
+        ],
+        [
+          "public-service",
+          "SONDHEIM, D",
+          null,
+          -5193,
+          null,
+          18
+        ]
+      ],
+      "allWrappedRowsRenderedAndConfirmed": [
+        {
+          "row": [
+            "public-service",
+            "BASARAB-OSTRANDER, S",
+            null,
+            67030,
+            null,
+            12
+          ],
+          "columnStart": 243,
+          "fragments": [
+            {
+              "y": 264.62868,
+              "text": "BASARAB-OSTRANDER,"
+            },
+            {
+              "y": 276.62868,
+              "text": "S"
+            }
+          ],
+          "salaryY": 276.62868
+        },
+        {
+          "row": [
+            "public-service",
+            "DELAUNAY-BELLEVILLE , K A",
+            null,
+            19029,
+            null,
+            13
+          ],
+          "columnStart": 243,
+          "fragments": [
+            {
+              "y": 696.26868,
+              "text": "DELAUNAY-BELLEVILLE"
+            },
+            {
+              "y": 708.26868,
+              "text": ", K A"
+            }
+          ],
+          "salaryY": 708.26868
+        },
+        {
+          "row": [
+            "public-service",
+            "LLEWELLYN-THOMAS, M",
+            null,
+            4695,
+            null,
+            16
+          ],
+          "columnStart": 63,
+          "fragments": [
+            {
+              "y": 216.38868,
+              "text": "LLEWELLYN-THOMAS,"
+            },
+            {
+              "y": 228.38868,
+              "text": "M"
+            }
+          ],
+          "salaryY": 228.38868
+        }
+      ],
+      "summaryUnit": "thousands of dollars; unaudited",
+      "manuallyReadPrintedSalaryThousands": 76692,
+      "manuallyReadPrintedTravelThousands": 3935,
+      "independentSalarySum": 76691830,
+      "independentKnownTravelSum": 3941901,
+      "missingTravelCells": 631,
+      "salaryResidualDollars": -170,
+      "travelResidualDollars": 6901,
+      "residualCause": null,
+      "scope": "Complete named published OIC/other-appointee/non-Public-Service-Act salary table, no threshold. Distinct from ministers, deputy ministers and Other Employees.",
+      "completeCoreEmployeeSchedule": false,
+      "expenseAvailability": "same-row published travel; blank remains null",
+      "recommendation": "accept-qualified faithful displayed row disclosure; retain exact warnings",
+      "requiredMetadataCorrection": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2002-03-appointees",
+      "year": "2002/03",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-detailed-schedules-of-payments.pdf",
+      "originalFile": "/tmp/continuation-government-police/pa-2002-03.pdf",
+      "originalSha256": "df3d0103ff42c7190ef73455fa69c3ebd9dae92a458f90fd5846579a9daa16a8",
+      "dataFile": "research/salaries/continuation-government-police/continuation-government-police-public-service-2002-03-appointees.json.gzip",
+      "dataSha256": "09bcc1e0abe8f23236793e63095b7292cab846cb2e60469dfa8b79f7e3585c78",
+      "authorEvidenceFile": "research/salaries/continuation-government-police/evidence/continuation-government-police-public-service-2002-03-appointees.json.gzip",
+      "authorEvidenceSha256": "d024478ebedd35aea157ed2a23036c045298d2b41cdb865bf90c2db78783ec97",
+      "independentlyVerifiedRows": 1339,
+      "allFieldsOrderAndMultiplicityEqual": true,
+      "independentReader": "Poppler pdftotext -bbox; separately implemented salary-edge/name-fragment parser, no author parser imported",
+      "allNativeSalaryPagesCompared": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "independentWholeVolumeScopeHeadingInventory": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "rowCountsByPhysicalPage": {
+        "10": 158,
+        "11": 179,
+        "12": 179,
+        "13": 179,
+        "14": 180,
+        "15": 180,
+        "16": 180,
+        "17": 104
+      },
+      "renderedPhysicalPagesInspectedInFull": [
+        6
+      ],
+      "renderedHeaderOrRowCropsOnly": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "negativeRowsRenderedAndConfirmed": [],
+      "allWrappedRowsRenderedAndConfirmed": [
+        {
+          "row": [
+            "public-service",
+            "BASARAB-OSTRANDER, S",
+            null,
+            60368,
+            null,
+            10
+          ],
+          "columnStart": 243,
+          "fragments": [
+            {
+              "y": 342.74868,
+              "text": "BASARAB-OSTRANDER,"
+            },
+            {
+              "y": 354.74868,
+              "text": "S"
+            }
+          ],
+          "salaryY": 354.74868
+        },
+        {
+          "row": [
+            "public-service",
+            "DELAUNAY-BELLEVILLE K A",
+            null,
+            19096,
+            null,
+            11
+          ],
+          "columnStart": 423,
+          "fragments": [
+            {
+              "y": 138.26868,
+              "text": "DELAUNAY-BELLEVILLE"
+            },
+            {
+              "y": 150.26868,
+              "text": "K A"
+            }
+          ],
+          "salaryY": 150.26868
+        },
+        {
+          "row": [
+            "public-service",
+            "HODKINSON, C MARILYN",
+            null,
+            4499,
+            128,
+            12
+          ],
+          "columnStart": 423,
+          "fragments": [
+            {
+              "y": 685.10868,
+              "text": "HODKINSON, C"
+            },
+            {
+              "y": 697.10868,
+              "text": "MARILYN"
+            }
+          ],
+          "salaryY": 697.10868
+        },
+        {
+          "row": [
+            "public-service",
+            "LLEWELLYN-THOMAS, M",
+            null,
+            32316,
+            null,
+            13
+          ],
+          "columnStart": 423,
+          "fragments": [
+            {
+              "y": 673.94868,
+              "text": "LLEWELLYN-THOMAS,"
+            },
+            {
+              "y": 685.94868,
+              "text": "M"
+            }
+          ],
+          "salaryY": 685.94868
+        }
+      ],
+      "summaryUnit": "thousands of dollars; unaudited",
+      "manuallyReadPrintedSalaryThousands": 81951,
+      "manuallyReadPrintedTravelThousands": 4200,
+      "independentSalarySum": 81951415,
+      "independentKnownTravelSum": 4200290,
+      "missingTravelCells": 649,
+      "salaryResidualDollars": 415,
+      "travelResidualDollars": 290,
+      "residualCause": null,
+      "scope": "Complete named published OIC/other-appointee/non-Public-Service-Act salary table, no threshold. Distinct from ministers, deputy ministers and Other Employees.",
+      "completeCoreEmployeeSchedule": false,
+      "expenseAvailability": "same-row published travel; blank remains null",
+      "recommendation": "accept-qualified faithful displayed row disclosure; retain exact warnings",
+      "requiredMetadataCorrection": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2003-04-appointees",
+      "year": "2003/04",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-detailed-schedules-of-payments.pdf",
+      "originalFile": "/tmp/continuation-government-police/pa-2003-04.pdf",
+      "originalSha256": "0038ca624a5522e5b995ff10f3feff886c2d3d7bc07d2996b22c153896d13a59",
+      "dataFile": "research/salaries/continuation-government-police/continuation-government-police-public-service-2003-04-appointees.json.gzip",
+      "dataSha256": "3f4205010c2fbe2c4a5f4a5993b33dbec62576539fb93a6b69c9f3fe98443f8b",
+      "authorEvidenceFile": "research/salaries/continuation-government-police/evidence/continuation-government-police-public-service-2003-04-appointees.json.gzip",
+      "authorEvidenceSha256": "9a2080d4a945e174517e546595a8546c6695a7612eed9087a88a13d5118e4947",
+      "independentlyVerifiedRows": 1075,
+      "allFieldsOrderAndMultiplicityEqual": true,
+      "independentReader": "Poppler pdftotext -bbox; separately implemented salary-edge/name-fragment parser, no author parser imported",
+      "allNativeSalaryPagesCompared": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "independentWholeVolumeScopeHeadingInventory": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "rowCountsByPhysicalPage": {
+        "11": 150,
+        "12": 165,
+        "13": 165,
+        "14": 165,
+        "15": 165,
+        "16": 165,
+        "17": 100
+      },
+      "renderedPhysicalPagesInspectedInFull": [
+        6,
+        17
+      ],
+      "renderedHeaderOrRowCropsOnly": [
+        11
+      ],
+      "negativeRowsRenderedAndConfirmed": [],
+      "allWrappedRowsRenderedAndConfirmed": [],
+      "summaryUnit": "thousands of dollars; unaudited",
+      "manuallyReadPrintedSalaryThousands": 75505,
+      "manuallyReadPrintedTravelThousands": null,
+      "independentSalarySum": 75398888,
+      "independentKnownTravelSum": null,
+      "missingTravelCells": 1075,
+      "salaryResidualDollars": -106112,
+      "travelResidualDollars": null,
+      "residualCause": null,
+      "scope": "Complete named published OIC/other-appointee/non-Public-Service-Act salary table, no threshold. Distinct from ministers, deputy ministers and Other Employees.",
+      "completeCoreEmployeeSchedule": false,
+      "expenseAvailability": "salary-only table; all row expenses null, later cross-scope travel lists deliberately not joined",
+      "recommendation": "accept-qualified faithful displayed row disclosure; retain exact warnings",
+      "requiredMetadataCorrection": null,
+      "completedMetadataCorrection": {
+        "field": "totalExpenses",
+        "before": 0,
+        "after": null,
+        "normalizedRowsAndEvidenceUnchanged": true
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2004-05-appointees",
+      "year": "2004/05",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-detailed-schedules-of-payments.pdf",
+      "originalFile": "/tmp/continuation-government-police/pa-2004-05.pdf",
+      "originalSha256": "5ee4fcd4567abc869520acf7f3d2022da9f256a5da6fd398fa1ca88d4d26c7f0",
+      "dataFile": "research/salaries/continuation-government-police/continuation-government-police-public-service-2004-05-appointees.json.gzip",
+      "dataSha256": "d6404688235ac98a906bcc10b1a7b81a6b5d75cd22d2349b6e8a2e525bf242e1",
+      "authorEvidenceFile": "research/salaries/continuation-government-police/evidence/continuation-government-police-public-service-2004-05-appointees.json.gzip",
+      "authorEvidenceSha256": "7bf3540c520ee49b6733a8ffd1e02afcae65561eaf78ba55f5b8628e7aa6fa0b",
+      "independentlyVerifiedRows": 1083,
+      "allFieldsOrderAndMultiplicityEqual": true,
+      "independentReader": "Poppler pdftotext -bbox; separately implemented salary-edge/name-fragment parser, no author parser imported",
+      "allNativeSalaryPagesCompared": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "independentWholeVolumeScopeHeadingInventory": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "rowCountsByPhysicalPage": {
+        "13": 126,
+        "14": 132,
+        "15": 132,
+        "16": 132,
+        "17": 132,
+        "18": 132,
+        "19": 132,
+        "20": 132,
+        "21": 33
+      },
+      "renderedPhysicalPagesInspectedInFull": [
+        7
+      ],
+      "renderedHeaderOrRowCropsOnly": [
+        13
+      ],
+      "negativeRowsRenderedAndConfirmed": [],
+      "allWrappedRowsRenderedAndConfirmed": [],
+      "summaryUnit": "thousands of dollars; unaudited",
+      "manuallyReadPrintedSalaryThousands": 78637,
+      "manuallyReadPrintedTravelThousands": null,
+      "independentSalarySum": 78637177,
+      "independentKnownTravelSum": null,
+      "missingTravelCells": 1083,
+      "salaryResidualDollars": 177,
+      "travelResidualDollars": null,
+      "residualCause": null,
+      "scope": "Complete named published OIC/other-appointee/non-Public-Service-Act salary table, no threshold. Distinct from ministers, deputy ministers and Other Employees.",
+      "completeCoreEmployeeSchedule": false,
+      "expenseAvailability": "salary-only table; all row expenses null, later cross-scope travel lists deliberately not joined",
+      "recommendation": "accept-qualified faithful displayed row disclosure; retain exact warnings",
+      "requiredMetadataCorrection": null,
+      "completedMetadataCorrection": {
+        "field": "totalExpenses",
+        "before": 0,
+        "after": null,
+        "normalizedRowsAndEvidenceUnchanged": true
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2005-06-appointees",
+      "year": "2005/06",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-detailed-schedules-of-payments.pdf",
+      "originalFile": "/tmp/continuation-government-police/pa-2005-06.pdf",
+      "originalSha256": "2028c0f92d245043fd4b98438b50cbc817993c02e189c9cdd08dec074b5366ca",
+      "dataFile": "research/salaries/continuation-government-police/continuation-government-police-public-service-2005-06-appointees.json.gzip",
+      "dataSha256": "5ea7b7b48012c386b18fd6ccf1bcdfa99123a0f8bca9202f678c46b293e1061d",
+      "authorEvidenceFile": "research/salaries/continuation-government-police/evidence/continuation-government-police-public-service-2005-06-appointees.json.gzip",
+      "authorEvidenceSha256": "63f2562f98dc923996a1c7d4a918fea6bd20d4b92863727bff13d47949a069d0",
+      "independentlyVerifiedRows": 1095,
+      "allFieldsOrderAndMultiplicityEqual": true,
+      "independentReader": "Poppler pdftotext -bbox; separately implemented salary-edge/name-fragment parser, no author parser imported",
+      "allNativeSalaryPagesCompared": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "independentWholeVolumeScopeHeadingInventory": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "rowCountsByPhysicalPage": {
+        "15": 126,
+        "16": 132,
+        "17": 132,
+        "18": 132,
+        "19": 132,
+        "20": 132,
+        "21": 132,
+        "22": 132,
+        "23": 45
+      },
+      "renderedPhysicalPagesInspectedInFull": [
+        7
+      ],
+      "renderedHeaderOrRowCropsOnly": [
+        15
+      ],
+      "negativeRowsRenderedAndConfirmed": [],
+      "allWrappedRowsRenderedAndConfirmed": [],
+      "summaryUnit": "thousands of dollars; unaudited",
+      "manuallyReadPrintedSalaryThousands": 80374,
+      "manuallyReadPrintedTravelThousands": null,
+      "independentSalarySum": 80373799,
+      "independentKnownTravelSum": null,
+      "missingTravelCells": 1095,
+      "salaryResidualDollars": -201,
+      "travelResidualDollars": null,
+      "residualCause": null,
+      "scope": "Complete named published OIC/other-appointee/non-Public-Service-Act salary table, no threshold. Distinct from ministers, deputy ministers and Other Employees.",
+      "completeCoreEmployeeSchedule": false,
+      "expenseAvailability": "salary-only table; all row expenses null, later cross-scope travel lists deliberately not joined",
+      "recommendation": "accept-qualified faithful displayed row disclosure; retain exact warnings",
+      "requiredMetadataCorrection": null,
+      "completedMetadataCorrection": {
+        "field": "totalExpenses",
+        "before": 0,
+        "after": null,
+        "normalizedRowsAndEvidenceUnchanged": true
+      }
+    }
+  ],
+  "definitionFindings": [
+    "All seven original fiscal periods and OIC/non-Public-Service-Act scope labels match the normalized sources. No titles or individual threshold is published in this scope.",
+    "1999/00–2002/03 salary and own-row travel are separate original columns; blank travel stays null. Salary-only2003/04–2005/06 expenses are unavailable, not zero.",
+    "2002/03–2005/06 original summary footnotes explicitly state salary can comprise base salary, retroactive pay and benefit/prior-year/current-year vacation payments; do not treat as base annual salary. Earlier summary footnotes identify overall compensation classifications, not an additional individual-pay column.",
+    "Starting2001/02 the source describes reporting changes, cash-basis invoices and separately listed accruals. These general notes do not identify a cause for the internal OIC salary/travel differences.",
+    "2004/05 summary page caption says Members Compensation while its actual OIC salary row and thousands unit are clear; the control was read from that explicit row, not inferred from the page caption.",
+    "No unseen continuation, omitted monetary cell, hidden title column or alternate summary scope was found in the complete independent table/heading checks. No balancing adjustment or inferred residual cause is warranted."
+  ],
+  "allRequiredMetadataCorrectionsComplete": true
+}

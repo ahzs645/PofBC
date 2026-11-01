@@ -1,0 +1,5 @@
+# Parent review of small school control residuals
+
+Accept the eight named fiscal2024/25 employee/trustee cohorts from SD48,SD63,SD67 andSD72 with their exact source-control warnings. Parent inspected complete original first/trustee and final/control physical pages48:7/13,63:58/68,67:53/63,72:61/62, and independently re-summed every normalized monetary cell against the rendered printed controls. The receipt JSON pins each original/data hash, row count, known sums, literal controls and differences.
+
+All source rows, roles, physical pages and multiplicity have the author's independent Poppler/PyMuPDF agreement and rendered layout review. The parent review does not claim a second manual transcription of every employee row. Dashes remain unknown, actual zeros and negative recoveries remain numeric, employer premiums stay aggregates and expense-inclusive consolidated totals are not pay. Printed SD67 trustee name cells literally repeat role words; these source anomalies and the separate Position column remain disclosed without silently editing names. No value is changed to balance an issuer control and no cause is inferred.

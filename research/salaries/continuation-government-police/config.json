@@ -1,0 +1,2128 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "continuation-government-police-public-service-1999-00-employees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "1999/00",
+      "periodType": "fiscal",
+      "periodStart": "1999-04-01",
+      "periodEnd": "2000-03-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees gross salary payments of $75,000 or more",
+      "completeEmployeeSchedule": true,
+      "title": "Public Accounts 1999/00 — Other Employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "8cf063150b697c1fa309964b06ffb76e888dcda15edfd3b0e5140082d7e0bedd",
+      "pages": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "notes": [
+        "The source Other Employees schedule discloses gross salary payments of $75,000 or more for the fiscal year ended March 31, 2000. It does not publish job titles; position remains null.",
+        "Fiscal payment disclosure; annual salary rates, MLA/minister compensation, deputy-minister compensation and OIC/appointee rows are distinct scopes and excluded from this cohort.",
+        "All printed duplicate names and rows are preserved. No person matching or cross-schedule expense join is made.",
+        "These recovered fiscal labels had no retained compiled counterpart at import; no compiled public-service records are replaced.",
+        "Travel is disclosed in the same employee row. Empty travel cells remain unknown (null), with no zero inferred."
+      ],
+      "publicWarning": "Travel blank cells are not disclosed and remain missing.",
+      "parser": "pa-employees",
+      "cacheFile": "pa-1999-00.pdf",
+      "columnStarts": [
+        63,
+        243,
+        423
+      ],
+      "travelInRow": true,
+      "fiscalEnd": 2000,
+      "expectedCount": 963,
+      "contextPages": [
+        1,
+        5,
+        17
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 5,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 80048,
+          "publishedDollars": 80048000,
+          "rowSum": 80048214,
+          "residualDollars": 214,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 5,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 5778,
+          "publishedDollars": 5778000,
+          "rowSum": 5777815,
+          "residualDollars": -185,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-early-controls.json",
+        "../continuation-2026-11-01/reviews/government-control-acceptance.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2000-01-employees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2000/01",
+      "periodType": "fiscal",
+      "periodStart": "2000-04-01",
+      "periodEnd": "2001-03-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees gross salary payments of $75,000 or more",
+      "completeEmployeeSchedule": true,
+      "title": "Public Accounts 2000/01 — Other Employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "ce4e9e971db8db090e71230e2b5ce5472467209f2b737fd05db04b6dbd429fe5",
+      "pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "notes": [
+        "The source Other Employees schedule discloses gross salary payments of $75,000 or more for the fiscal year ended March 31, 2001. It does not publish job titles; position remains null.",
+        "Fiscal payment disclosure; annual salary rates, MLA/minister compensation, deputy-minister compensation and OIC/appointee rows are distinct scopes and excluded from this cohort.",
+        "All printed duplicate names and rows are preserved. No person matching or cross-schedule expense join is made.",
+        "These recovered fiscal labels had no retained compiled counterpart at import; no compiled public-service records are replaced.",
+        "Travel is disclosed in the same employee row. Empty travel cells remain unknown (null), with no zero inferred."
+      ],
+      "publicWarning": "Travel blank cells are not disclosed and remain missing. Source-control disagreement: remuneration named-cell sum $95837081 versus printed summary $88864000, residual $6973081. Values are unchanged; cause unresolved.",
+      "parser": "pa-employees",
+      "cacheFile": "pa-2000-01.pdf",
+      "columnStarts": [
+        63,
+        243,
+        423
+      ],
+      "travelInRow": true,
+      "fiscalEnd": 2001,
+      "expectedCount": 1137,
+      "contextPages": [
+        1,
+        5,
+        18
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 5,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 88864,
+          "publishedDollars": 88864000,
+          "rowSum": 95837081,
+          "residualDollars": 6973081,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 5,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 6767,
+          "publishedDollars": 6767000,
+          "rowSum": 6767042,
+          "residualDollars": 42,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-early-controls.json",
+        "../continuation-2026-11-01/reviews/government-control-acceptance.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2001-02-employees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2001/02",
+      "periodType": "fiscal",
+      "periodStart": "2001-04-01",
+      "periodEnd": "2002-03-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees gross salary payments of $75,000 or more",
+      "completeEmployeeSchedule": true,
+      "title": "Public Accounts 2001/02 — Other Employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "3815ac29fe378fde536155ec7121013c98a81e06c311537ce255d30f3ee6f4f2",
+      "pages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "notes": [
+        "The source Other Employees schedule discloses gross salary payments of $75,000 or more for the fiscal year ended March 31, 2002. It does not publish job titles; position remains null.",
+        "Fiscal payment disclosure; annual salary rates, MLA/minister compensation, deputy-minister compensation and OIC/appointee rows are distinct scopes and excluded from this cohort.",
+        "All printed duplicate names and rows are preserved. No person matching or cross-schedule expense join is made.",
+        "These recovered fiscal labels had no retained compiled counterpart at import; no compiled public-service records are replaced.",
+        "Travel is disclosed in the same employee row. Empty travel cells remain unknown (null), with no zero inferred."
+      ],
+      "publicWarning": "Travel blank cells are not disclosed and remain missing. Source-control disagreement: expenses named-cell sum $7817360 versus printed summary $7815000, residual $2360. Values are unchanged; cause unresolved.",
+      "parser": "pa-employees",
+      "cacheFile": "pa-2001-02.pdf",
+      "columnStarts": [
+        63,
+        243,
+        423
+      ],
+      "travelInRow": true,
+      "fiscalEnd": 2002,
+      "expectedCount": 1706,
+      "contextPages": [
+        1,
+        6,
+        20
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 145459,
+          "publishedDollars": 145459000,
+          "rowSum": 145459401,
+          "residualDollars": 401,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 7815,
+          "publishedDollars": 7815000,
+          "rowSum": 7817360,
+          "residualDollars": 2360,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-early-controls.json",
+        "../continuation-2026-11-01/reviews/government-control-acceptance.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2002-03-employees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2002/03",
+      "periodType": "fiscal",
+      "periodStart": "2002-04-01",
+      "periodEnd": "2003-03-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees gross salary payments of $75,000 or more",
+      "completeEmployeeSchedule": true,
+      "title": "Public Accounts 2002/03 — Other Employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "df3d0103ff42c7190ef73455fa69c3ebd9dae92a458f90fd5846579a9daa16a8",
+      "pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "notes": [
+        "The source Other Employees schedule discloses gross salary payments of $75,000 or more for the fiscal year ended March 31, 2003. It does not publish job titles; position remains null.",
+        "Fiscal payment disclosure; annual salary rates, MLA/minister compensation, deputy-minister compensation and OIC/appointee rows are distinct scopes and excluded from this cohort.",
+        "All printed duplicate names and rows are preserved. No person matching or cross-schedule expense join is made.",
+        "These recovered fiscal labels had no retained compiled counterpart at import; no compiled public-service records are replaced.",
+        "Travel is disclosed in the same employee row. Empty travel cells remain unknown (null), with no zero inferred.",
+        "Summary note 2 says salary may include base salaries, retroactive pay, and benefits/vacation payments from current or prior years (2002/03); later notes refer to prior-year benefits and current-year vacation payouts. This is the source salary-payment definition, not base salary."
+      ],
+      "publicWarning": "Travel blank cells are not disclosed and remain missing. Source-control disagreement: remuneration named-cell sum $171231079 versus printed summary $171648000, residual $-416921; expenses named-cell sum $10049544 versus printed summary $10068000, residual $-18456. Values are unchanged; cause unresolved.",
+      "parser": "pa-employees",
+      "cacheFile": "pa-2002-03.pdf",
+      "columnStarts": [
+        63,
+        243,
+        423
+      ],
+      "travelInRow": true,
+      "fiscalEnd": 2003,
+      "expectedCount": 1957,
+      "contextPages": [
+        1,
+        6,
+        18
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 171648,
+          "publishedDollars": 171648000,
+          "rowSum": 171231079,
+          "residualDollars": -416921,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 10068,
+          "publishedDollars": 10068000,
+          "rowSum": 10049544,
+          "residualDollars": -18456,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-early-controls.json",
+        "../continuation-2026-11-01/reviews/government-control-acceptance.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2003-04-employees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2003/04",
+      "periodType": "fiscal",
+      "periodStart": "2003-04-01",
+      "periodEnd": "2004-03-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees gross salary payments of $75,000 or more",
+      "completeEmployeeSchedule": true,
+      "title": "Public Accounts 2003/04 — Other Employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "0038ca624a5522e5b995ff10f3feff886c2d3d7bc07d2996b22c153896d13a59",
+      "pages": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "notes": [
+        "The source Other Employees schedule discloses gross salary payments of $75,000 or more for the fiscal year ended March 31, 2004. It does not publish job titles; position remains null.",
+        "Fiscal payment disclosure; annual salary rates, MLA/minister compensation, deputy-minister compensation and OIC/appointee rows are distinct scopes and excluded from this cohort.",
+        "All printed duplicate names and rows are preserved. No person matching or cross-schedule expense join is made.",
+        "These recovered fiscal labels had no retained compiled counterpart at import; no compiled public-service records are replaced.",
+        "The Other Employees schedule publishes salary only. Expenses remain null. The separate thresholded travel schedule is not joined by name.",
+        "Summary note 2 says salary may include base salaries, retroactive pay, and benefits/vacation payments from current or prior years (2002/03); later notes refer to prior-year benefits and current-year vacation payouts. This is the source salary-payment definition, not base salary."
+      ],
+      "publicWarning": "Salary-only employee schedule; separate travel disclosures are not joined. Expenses are unavailable in this cohort.",
+      "parser": "pa-employees",
+      "cacheFile": "pa-2003-04.pdf",
+      "columnStarts": [
+        69,
+        237,
+        404
+      ],
+      "travelInRow": false,
+      "fiscalEnd": 2004,
+      "expectedCount": 2551,
+      "contextPages": [
+        1,
+        6,
+        19
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 224503,
+          "publishedDollars": 224503000,
+          "rowSum": 224503285,
+          "residualDollars": 285,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-early-controls.json",
+        "../continuation-2026-11-01/reviews/government-control-acceptance.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2004-05-employees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2004/05",
+      "periodType": "fiscal",
+      "periodStart": "2004-04-01",
+      "periodEnd": "2005-03-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees gross salary payments of $75,000 or more",
+      "completeEmployeeSchedule": true,
+      "title": "Public Accounts 2004/05 — Other Employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "5ee4fcd4567abc869520acf7f3d2022da9f256a5da6fd398fa1ca88d4d26c7f0",
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "notes": [
+        "The source Other Employees schedule discloses gross salary payments of $75,000 or more for the fiscal year ended March 31, 2005. It does not publish job titles; position remains null.",
+        "Fiscal payment disclosure; annual salary rates, MLA/minister compensation, deputy-minister compensation and OIC/appointee rows are distinct scopes and excluded from this cohort.",
+        "All printed duplicate names and rows are preserved. No person matching or cross-schedule expense join is made.",
+        "These recovered fiscal labels had no retained compiled counterpart at import; no compiled public-service records are replaced.",
+        "The Other Employees schedule publishes salary only. Expenses remain null. The separate thresholded travel schedule is not joined by name.",
+        "Summary note 2 says salary may include base salaries, retroactive pay, and benefits/vacation payments from current or prior years (2002/03); later notes refer to prior-year benefits and current-year vacation payouts. This is the source salary-payment definition, not base salary."
+      ],
+      "publicWarning": "Salary-only employee schedule; separate travel disclosures are not joined. Expenses are unavailable in this cohort.",
+      "parser": "pa-employees",
+      "cacheFile": "pa-2004-05.pdf",
+      "columnStarts": [
+        70,
+        322
+      ],
+      "travelInRow": false,
+      "fiscalEnd": 2005,
+      "expectedCount": 2525,
+      "contextPages": [
+        1,
+        7,
+        23
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 222222,
+          "publishedDollars": 222222000,
+          "rowSum": 222221766,
+          "residualDollars": -234,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-early-controls.json",
+        "../continuation-2026-11-01/reviews/government-control-acceptance.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2005-06-employees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2005/06",
+      "periodType": "fiscal",
+      "periodStart": "2005-04-01",
+      "periodEnd": "2006-03-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees gross salary payments of $75,000 or more",
+      "completeEmployeeSchedule": true,
+      "title": "Public Accounts 2005/06 — Other Employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "2028c0f92d245043fd4b98438b50cbc817993c02e189c9cdd08dec074b5366ca",
+      "pages": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "notes": [
+        "The source Other Employees schedule discloses gross salary payments of $75,000 or more for the fiscal year ended March 31, 2006. It does not publish job titles; position remains null.",
+        "Fiscal payment disclosure; annual salary rates, MLA/minister compensation, deputy-minister compensation and OIC/appointee rows are distinct scopes and excluded from this cohort.",
+        "All printed duplicate names and rows are preserved. No person matching or cross-schedule expense join is made.",
+        "These recovered fiscal labels had no retained compiled counterpart at import; no compiled public-service records are replaced.",
+        "The Other Employees schedule publishes salary only. Expenses remain null. The separate thresholded travel schedule is not joined by name.",
+        "Summary note 2 says salary may include base salaries, retroactive pay, and benefits/vacation payments from current or prior years (2002/03); later notes refer to prior-year benefits and current-year vacation payouts. This is the source salary-payment definition, not base salary."
+      ],
+      "publicWarning": "Salary-only employee schedule; separate travel disclosures are not joined. Expenses are unavailable in this cohort.",
+      "parser": "pa-employees",
+      "cacheFile": "pa-2005-06.pdf",
+      "columnStarts": [
+        70,
+        322
+      ],
+      "travelInRow": false,
+      "fiscalEnd": 2006,
+      "expectedCount": 2611,
+      "contextPages": [
+        1,
+        7,
+        25
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 231695,
+          "publishedDollars": 231695000,
+          "rowSum": 231695047,
+          "residualDollars": 47,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-early-controls.json",
+        "../continuation-2026-11-01/reviews/government-control-acceptance.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2024-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2024 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2025/04/foi-2024-vpd-executive-remuneration.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "03d232767990321cd8b7d7454a94b91493c1c71ba1900f81caa2286a18f5384a",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2024.pdf",
+      "expectedCount": 13,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2023-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2023 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2024/04/vancouver-police-executive-remuneration-and-expenses-2023.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "d1b8acecaee9f742f9eefc31251fca3948d3a022a68709c2836c0572657ccffb",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2023.pdf",
+      "expectedCount": 13,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2022-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2022 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2023/03/vancouver-police-executive-remuneration-and-expenses-2022.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "330106a327c0e428622eddbe2e6d3a276280bfda5ba5d543aa7147b48ccb2064",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2022.pdf",
+      "expectedCount": 16,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2021-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2021 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2022/03/2021Dec31-VPB-Executive-Remuneration-Expenses.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "f0cd7b847799818adbaf37af139ef7c313172d6c8660f26ed1c4ae28a220cb93",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort. Expense dashes remain missing.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2021.pdf",
+      "expectedCount": 19,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2020-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2020 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/vpd-executive-remuneration-and-expenses-2020.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "8cfbc85643283534ab17ffe7bf677314a50d50b8b7c8a4d08be95998f36c7a3f",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort. Expense dashes remain missing.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2020.pdf",
+      "expectedCount": 15,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2019-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2019 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2019-executive-remuneration-and-expenses.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "b4ee1a274e9a3b46ce58142f616ca1c79d3476755a49c3c151c9d001fdfd566d",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort. Expense dashes remain missing.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2019.pdf",
+      "expectedCount": 13,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2018-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2018 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2018-executive-remuneration-and-expenses.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "7cb812d542ff85b6a2e2c3c6dcbdb4683724359361dc278da3226395ac7c8da3",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2018.pdf",
+      "expectedCount": 12,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2017-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2017 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2017-executive-remuneration-and-expenses.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "e2da5ef18a15408e796c48afd867df9ffd22524cb1c8d2838009a6bd6bee052b",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero.",
+        "An asterisk before three names means retired; the footnote marker is omitted from the name field and preserved in extraction evidence."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2017.pdf",
+      "expectedCount": 15,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2016-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2016",
+      "periodType": "calendar",
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2016 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2016-executive-remuneration.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "1f0adb7528b6c892166a47f1eba597632a937a601eca0f4556ecea6bc2bc3a10",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2016.pdf",
+      "expectedCount": 11,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-vancouver-police-2015-executives",
+      "employerSlug": "vancouver-police",
+      "employerName": "Vancouver Police",
+      "sector": "Municipal police",
+      "year": "2015",
+      "periodType": "calendar",
+      "periodStart": "2015-01-01",
+      "periodEnd": "2015-12-31",
+      "category": "executive-only",
+      "scope": "Published police executive remuneration and expenses only",
+      "completeEmployeeSchedule": false,
+      "title": "Vancouver Police 2015 Executive Remuneration and Expenses",
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2015-vpd-executive-remuneration-1.pdf",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "sha256": "1e26751d79756a0917527c65a3efbcba7bf30a64eea6570fee7b5352a8412f0d",
+      "pages": [
+        1
+      ],
+      "notes": [
+        "Executive-only original; not a complete employee or sworn/civilian workforce remuneration schedule.",
+        "The original publishes Remuneration (Amount in 2015) separately from Expenses. Components are not further defined in this one-page release; published remuneration is preserved without treating it as base salary.",
+        "Name initials and punctuation follow the published row. Names are not expanded.",
+        "Published expense dashes have no zero legend and remain null. Explicit zero expense cells in 2022 remain zero."
+      ],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort. Expense dashes remain missing.",
+      "parser": "vpd-executives",
+      "cacheFile": "vancouver-police-2015.pdf",
+      "expectedCount": 15,
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "id": "continuation-government-police-alberni-clayoquot-2025-employees",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "employerName": "Alberni-Clayoquot Regional District",
+      "sector": "Municipalities",
+      "governanceType": "regional-district",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees with remuneration over $75,000",
+      "completeEmployeeSchedule": true,
+      "title": "Alberni-Clayoquot Regional District 2025 SOFI — Other Employees",
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/2026/acrd_sofi_2025.pdf",
+      "sourceIndexUrl": "https://www.acrd.bc.ca/sofi",
+      "sha256": "97816b7e34fbcfb84f4b73e799f690a9b92ca817102d6b301e07a8a4f241d645",
+      "pages": [
+        35,
+        36
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration and Expenses are separate published columns. Remuneration components are not further defined on this schedule; the source payment field is preserved.",
+        "Every named employee row above the published threshold is included. The consolidated under-threshold aggregate and all elected/alternate directors are excluded.",
+        "Published names, initials, punctuation, wrapped titles, and explicit zero expenses are preserved. Regional district, outside the161-current-municipality denominator.",
+        "No compiled fiscal-looking calendar-year mapping or compiled replacement is inferred."
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort. Source-control residuals (named rows + published under-threshold aggregate − published total): remuneration $+2; expenses $-318. Individual cells are unchanged; causes are unresolved.",
+      "parser": "acrd-employees",
+      "cacheFile": "regional-acrd-0.pdf",
+      "expectedCount": 36,
+      "payColumnLeft": 400,
+      "contextPages": [
+        1,
+        36
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            36
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 4823083,
+          "publishedUnderThreshold": 984006,
+          "namedRowSum": 3839079,
+          "fullScheduleKnownSum": 4823085,
+          "residualDollars": 2
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            36
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 176442,
+          "publishedUnderThreshold": 28756,
+          "namedRowSum": 147368,
+          "fullScheduleKnownSum": 176124,
+          "residualDollars": -318
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          35,
+          36
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      },
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.json",
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-alberni-clayoquot-2024-employees",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "employerName": "Alberni-Clayoquot Regional District",
+      "sector": "Municipalities",
+      "governanceType": "regional-district",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees with remuneration over $75,000",
+      "completeEmployeeSchedule": true,
+      "title": "Alberni-Clayoquot Regional District 2024 SOFI — Other Employees",
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/2025/acrd_sofi_2024.pdf",
+      "sourceIndexUrl": "https://www.acrd.bc.ca/sofi",
+      "sha256": "abfe338bcfe8853cc111475ea2e5072422bc365525b5491859a7aefb119bf727",
+      "pages": [
+        32
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration and Expenses are separate published columns. Remuneration components are not further defined on this schedule; the source payment field is preserved.",
+        "Every named employee row above the published threshold is included. The consolidated under-threshold aggregate and all elected/alternate directors are excluded.",
+        "Published names, initials, punctuation, wrapped titles, and explicit zero expenses are preserved. Regional district, outside the161-current-municipality denominator.",
+        "No compiled fiscal-looking calendar-year mapping or compiled replacement is inferred."
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort.",
+      "parser": "acrd-employees",
+      "cacheFile": "regional-acrd-1.pdf",
+      "expectedCount": 31,
+      "payColumnLeft": 400,
+      "contextPages": [
+        1,
+        32,
+        33
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            32,
+            33
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 4664451,
+          "publishedUnderThreshold": 1265748,
+          "namedRowSum": 3398703,
+          "fullScheduleKnownSum": 4664451,
+          "residualDollars": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            32,
+            33
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 154162,
+          "publishedUnderThreshold": 39646,
+          "namedRowSum": 114516,
+          "fullScheduleKnownSum": 154162,
+          "residualDollars": 0
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          32,
+          33
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      },
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.json",
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-alberni-clayoquot-2023-employees",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "employerName": "Alberni-Clayoquot Regional District",
+      "sector": "Municipalities",
+      "governanceType": "regional-district",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees with remuneration over $75,000",
+      "completeEmployeeSchedule": true,
+      "title": "Alberni-Clayoquot Regional District 2023 SOFI — Other Employees",
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/2024/acrd_sofi_2023.pdf",
+      "sourceIndexUrl": "https://www.acrd.bc.ca/sofi",
+      "sha256": "761edd8bf9605535eab4927930a9ca54c41676802e34372bfedbd9ba497a4b3b",
+      "pages": [
+        34
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration and Expenses are separate published columns. Remuneration components are not further defined on this schedule; the source payment field is preserved.",
+        "Every named employee row above the published threshold is included. The consolidated under-threshold aggregate and all elected/alternate directors are excluded.",
+        "Published names, initials, punctuation, wrapped titles, and explicit zero expenses are preserved. Regional district, outside the161-current-municipality denominator.",
+        "No compiled fiscal-looking calendar-year mapping or compiled replacement is inferred."
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort.",
+      "parser": "acrd-employees",
+      "cacheFile": "regional-acrd-2.pdf",
+      "expectedCount": 26,
+      "payColumnLeft": 400,
+      "contextPages": [
+        1,
+        34
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            34
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 4032396,
+          "publishedUnderThreshold": 1303986,
+          "namedRowSum": 2728410,
+          "fullScheduleKnownSum": 4032396,
+          "residualDollars": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            34
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 127077,
+          "publishedUnderThreshold": 42607,
+          "namedRowSum": 84470,
+          "fullScheduleKnownSum": 127077,
+          "residualDollars": 0
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          34
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      },
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.json",
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-alberni-clayoquot-2020-employees",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "employerName": "Alberni-Clayoquot Regional District",
+      "sector": "Municipalities",
+      "governanceType": "regional-district",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees with remuneration over $75,000",
+      "completeEmployeeSchedule": true,
+      "title": "Alberni-Clayoquot Regional District 2020 SOFI — Other Employees",
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/sofi2020.pdf",
+      "sourceIndexUrl": "https://www.acrd.bc.ca/sofi",
+      "sha256": "e9ac93b3075337814f6fb592116054bac712994362b2673ad762323999046cd7",
+      "pages": [
+        28
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration and Expenses are separate published columns. Remuneration components are not further defined on this schedule; the source payment field is preserved.",
+        "Every named employee row above the published threshold is included. The consolidated under-threshold aggregate and all elected/alternate directors are excluded.",
+        "Published names, initials, punctuation, wrapped titles, and explicit zero expenses are preserved. Regional district, outside the161-current-municipality denominator.",
+        "No compiled fiscal-looking calendar-year mapping or compiled replacement is inferred."
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort. Source-control residuals (named rows + published under-threshold aggregate − published total): remuneration $-1; expenses $+57. Individual cells are unchanged; causes are unresolved.",
+      "parser": "acrd-employees",
+      "cacheFile": "regional-acrd-5.pdf",
+      "expectedCount": 14,
+      "payColumnLeft": 375,
+      "contextPages": [
+        1,
+        28
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            28
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 2612019,
+          "publishedUnderThreshold": 1156710,
+          "namedRowSum": 1455308,
+          "fullScheduleKnownSum": 2612018,
+          "residualDollars": -1
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            28
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 50596,
+          "publishedUnderThreshold": 19653,
+          "namedRowSum": 31000,
+          "fullScheduleKnownSum": 50653,
+          "residualDollars": 57
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          28
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      },
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.json",
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-alberni-clayoquot-2019-employees",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "employerName": "Alberni-Clayoquot Regional District",
+      "sector": "Municipalities",
+      "governanceType": "regional-district",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "employee-remuneration",
+      "scope": "Other Employees with remuneration over $75,000",
+      "completeEmployeeSchedule": true,
+      "title": "Alberni-Clayoquot Regional District 2019 SOFI — Other Employees",
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/sofi2019.pdf",
+      "sourceIndexUrl": "https://www.acrd.bc.ca/sofi",
+      "sha256": "9265475d5c0fdb30366adb3d4694685170456d736d441bbb199e353d1d91912e",
+      "pages": [
+        27
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Remuneration and Expenses are separate published columns. Remuneration components are not further defined on this schedule; the source payment field is preserved.",
+        "Every named employee row above the published threshold is included. The consolidated under-threshold aggregate and all elected/alternate directors are excluded.",
+        "Published names, initials, punctuation, wrapped titles, and explicit zero expenses are preserved. Regional district, outside the161-current-municipality denominator.",
+        "No compiled fiscal-looking calendar-year mapping or compiled replacement is inferred."
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort. Source-control residuals (named rows + published under-threshold aggregate − published total): expenses $+1. Individual cells are unchanged; causes are unresolved.",
+      "parser": "acrd-employees",
+      "cacheFile": "regional-acrd-6.pdf",
+      "expectedCount": 15,
+      "payColumnLeft": 375,
+      "contextPages": [
+        1,
+        27
+      ],
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            27
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 2502878,
+          "publishedUnderThreshold": 984621,
+          "namedRowSum": 1518257,
+          "fullScheduleKnownSum": 2502878,
+          "residualDollars": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            27
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 84730,
+          "publishedUnderThreshold": 20687,
+          "namedRowSum": 64044,
+          "fullScheduleKnownSum": 84731,
+          "residualDollars": 1
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          27
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      },
+      "acceptanceStatus": "verified",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.json",
+        "../continuation-2026-11-01/reviews/regional-acrd-controls.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-1999-00-appointees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "1999/00",
+      "periodType": "fiscal",
+      "periodStart": "1999-04-01",
+      "periodEnd": "2000-03-31",
+      "category": "appointee-remuneration",
+      "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+      "completeEmployeeSchedule": false,
+      "title": "Public Accounts 1999/00 — OIC and Other Appointees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "8cf063150b697c1fa309964b06ffb76e888dcda15edfd3b0e5140082d7e0bedd",
+      "pages": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "notes": [
+        "The published salary payment field is transcribed for all named Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act rows. This is a distinct appointee/non-Public-Service-Act scope; it is not a complete core employee workforce cohort.",
+        "Initials, surname punctuation, repeated names, and multiple original observations are preserved. No titles are published; position remains null.",
+        "Travel in1999/00–2002/03 is disclosed in the same original row. Blank travel remains null. Later salary-only schedules have expenses null; separate travel lists are not joined by name.",
+        "The selected pay column is labelled Salary and travel is published separately; individual salary components are not itemized on this schedule. No base-salary assumption is made.",
+        "No compiled same-label period overlaps these historical cohorts; no compiled rows are proposed for deletion."
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Source-control disagreement: expenses named-cell sum $5033718 versus printed summary $5047000, residual $-13282. Values are unchanged; cause unresolved.",
+      "parser": "pa-appointees",
+      "cacheFile": "pa-1999-00.pdf",
+      "columnStarts": [
+        63,
+        243,
+        423
+      ],
+      "travelInRow": true,
+      "fiscalEnd": 2000,
+      "contextPages": [
+        1,
+        5,
+        17
+      ],
+      "acceptanceStatus": "verified",
+      "layoutPitch": 2,
+      "expectedCount": 1341,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 5,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 74063,
+          "publishedDollars": 74063000,
+          "rowSum": 74063235,
+          "residualDollars": 235,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 5,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 5047,
+          "publishedDollars": 5047000,
+          "rowSum": 5033718,
+          "residualDollars": -13282,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      },
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-oic-poppler-results.json",
+        "../continuation-2026-11-01/reviews/government-oic-poppler-evidence.json.gzip"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2000-01-appointees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2000/01",
+      "periodType": "fiscal",
+      "periodStart": "2000-04-01",
+      "periodEnd": "2001-03-31",
+      "category": "appointee-remuneration",
+      "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+      "completeEmployeeSchedule": false,
+      "title": "Public Accounts 2000/01 — OIC and Other Appointees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "ce4e9e971db8db090e71230e2b5ce5472467209f2b737fd05db04b6dbd429fe5",
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "notes": [
+        "The published salary payment field is transcribed for all named Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act rows. This is a distinct appointee/non-Public-Service-Act scope; it is not a complete core employee workforce cohort.",
+        "Initials, surname punctuation, repeated names, and multiple original observations are preserved. No titles are published; position remains null.",
+        "Travel in1999/00–2002/03 is disclosed in the same original row. Blank travel remains null. Later salary-only schedules have expenses null; separate travel lists are not joined by name.",
+        "The selected pay column is labelled Salary and travel is published separately; individual salary components are not itemized on this schedule. No base-salary assumption is made.",
+        "No compiled same-label period overlaps these historical cohorts; no compiled rows are proposed for deletion."
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Literal negative salary cells retained: Carroll, P $-984; Davis, B D $-2410. The original provides no explanation; none is inferred.",
+      "parser": "pa-appointees",
+      "cacheFile": "pa-2000-01.pdf",
+      "columnStarts": [
+        63,
+        243,
+        423
+      ],
+      "travelInRow": true,
+      "fiscalEnd": 2001,
+      "contextPages": [
+        1,
+        5,
+        18
+      ],
+      "acceptanceStatus": "verified",
+      "layoutPitch": 2,
+      "expectedCount": 1318,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 5,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 74551,
+          "publishedDollars": 74551000,
+          "rowSum": 74550784,
+          "residualDollars": -216,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 5,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 4846,
+          "publishedDollars": 4846000,
+          "rowSum": 4845746,
+          "residualDollars": -254,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          11
+        ],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      },
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-oic-poppler-results.json",
+        "../continuation-2026-11-01/reviews/government-oic-poppler-evidence.json.gzip"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2001-02-appointees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2001/02",
+      "periodType": "fiscal",
+      "periodStart": "2001-04-01",
+      "periodEnd": "2002-03-31",
+      "category": "appointee-remuneration",
+      "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+      "completeEmployeeSchedule": false,
+      "title": "Public Accounts 2001/02 — OIC and Other Appointees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "3815ac29fe378fde536155ec7121013c98a81e06c311537ce255d30f3ee6f4f2",
+      "pages": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "notes": [
+        "The published salary payment field is transcribed for all named Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act rows. This is a distinct appointee/non-Public-Service-Act scope; it is not a complete core employee workforce cohort.",
+        "Initials, surname punctuation, repeated names, and multiple original observations are preserved. No titles are published; position remains null.",
+        "Travel in1999/00–2002/03 is disclosed in the same original row. Blank travel remains null. Later salary-only schedules have expenses null; separate travel lists are not joined by name.",
+        "The selected pay column is labelled Salary and travel is published separately; individual salary components are not itemized on this schedule. No base-salary assumption is made.",
+        "No compiled same-label period overlaps these historical cohorts; no compiled rows are proposed for deletion.",
+        "Physical13 prints the name DELAUNAY-BELLEVILLE on one line, with comma and K A on the next line. The wrapped name is joined as DELAUNAY-BELLEVILLE , K A; all characters are preserved."
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Source-control disagreement: expenses named-cell sum $3941901 versus printed summary $3935000, residual $6901. Values are unchanged; cause unresolved. Literal negative salary cells retained: CULLEN, A F $-1334; SONDHEIM, D $-5193. The original provides no explanation; none is inferred.",
+      "parser": "pa-appointees",
+      "cacheFile": "pa-2001-02.pdf",
+      "columnStarts": [
+        63,
+        243,
+        423
+      ],
+      "travelInRow": true,
+      "fiscalEnd": 2002,
+      "contextPages": [
+        1,
+        6,
+        20
+      ],
+      "acceptanceStatus": "verified",
+      "layoutPitch": 2,
+      "expectedCount": 1351,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 76692,
+          "publishedDollars": 76692000,
+          "rowSum": 76691830,
+          "residualDollars": -170,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 3935,
+          "publishedDollars": 3935000,
+          "rowSum": 3941901,
+          "residualDollars": 6901,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          13,
+          18
+        ],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      },
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-oic-poppler-results.json",
+        "../continuation-2026-11-01/reviews/government-oic-poppler-evidence.json.gzip"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2002-03-appointees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2002/03",
+      "periodType": "fiscal",
+      "periodStart": "2002-04-01",
+      "periodEnd": "2003-03-31",
+      "category": "appointee-remuneration",
+      "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+      "completeEmployeeSchedule": false,
+      "title": "Public Accounts 2002/03 — OIC and Other Appointees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "df3d0103ff42c7190ef73455fa69c3ebd9dae92a458f90fd5846579a9daa16a8",
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "notes": [
+        "The published salary payment field is transcribed for all named Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act rows. This is a distinct appointee/non-Public-Service-Act scope; it is not a complete core employee workforce cohort.",
+        "Initials, surname punctuation, repeated names, and multiple original observations are preserved. No titles are published; position remains null.",
+        "Travel in1999/00–2002/03 is disclosed in the same original row. Blank travel remains null. Later salary-only schedules have expenses null; separate travel lists are not joined by name.",
+        "The salary-payment definition may include retroactive pay, benefit/vacation payments and amounts relating to prior years as described in the original source notes; this is not base salary.",
+        "No compiled same-label period overlaps these historical cohorts; no compiled rows are proposed for deletion."
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Physical11 publishes DELAUNAY-BELLEVILLE K A across two lines without a comma; the original punctuation is retained.",
+      "parser": "pa-appointees",
+      "cacheFile": "pa-2002-03.pdf",
+      "columnStarts": [
+        63,
+        243,
+        423
+      ],
+      "travelInRow": true,
+      "fiscalEnd": 2003,
+      "contextPages": [
+        1,
+        6,
+        18
+      ],
+      "acceptanceStatus": "verified",
+      "layoutPitch": 2,
+      "expectedCount": 1339,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 81951,
+          "publishedDollars": 81951000,
+          "rowSum": 81951415,
+          "residualDollars": 415,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 4200,
+          "publishedDollars": 4200000,
+          "rowSum": 4200290,
+          "residualDollars": 290,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          11
+        ],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      },
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-oic-poppler-results.json",
+        "../continuation-2026-11-01/reviews/government-oic-poppler-evidence.json.gzip"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2003-04-appointees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2003/04",
+      "periodType": "fiscal",
+      "periodStart": "2003-04-01",
+      "periodEnd": "2004-03-31",
+      "category": "appointee-remuneration",
+      "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+      "completeEmployeeSchedule": false,
+      "title": "Public Accounts 2003/04 — OIC and Other Appointees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "0038ca624a5522e5b995ff10f3feff886c2d3d7bc07d2996b22c153896d13a59",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "notes": [
+        "The published salary payment field is transcribed for all named Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act rows. This is a distinct appointee/non-Public-Service-Act scope; it is not a complete core employee workforce cohort.",
+        "Initials, surname punctuation, repeated names, and multiple original observations are preserved. No titles are published; position remains null.",
+        "Travel in1999/00–2002/03 is disclosed in the same original row. Blank travel remains null. Later salary-only schedules have expenses null; separate travel lists are not joined by name.",
+        "The salary-payment definition may include retroactive pay, benefit/vacation payments and amounts relating to prior years as described in the original source notes; this is not base salary.",
+        "No compiled same-label period overlaps these historical cohorts; no compiled rows are proposed for deletion."
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Source-control disagreement: remuneration named-cell sum $75398888 versus printed summary $75505000, residual $-106112. Values are unchanged; cause unresolved.",
+      "parser": "pa-appointees",
+      "cacheFile": "pa-2003-04.pdf",
+      "columnStarts": [
+        56,
+        228,
+        409
+      ],
+      "travelInRow": false,
+      "fiscalEnd": 2004,
+      "contextPages": [
+        1,
+        6,
+        19
+      ],
+      "acceptanceStatus": "verified",
+      "layoutPitch": 2,
+      "expectedCount": 1075,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 75505,
+          "publishedDollars": 75505000,
+          "rowSum": 75398888,
+          "residualDollars": -106112,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          11
+        ],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      },
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-oic-poppler-results.json",
+        "../continuation-2026-11-01/reviews/government-oic-poppler-evidence.json.gzip"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2004-05-appointees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2004/05",
+      "periodType": "fiscal",
+      "periodStart": "2004-04-01",
+      "periodEnd": "2005-03-31",
+      "category": "appointee-remuneration",
+      "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+      "completeEmployeeSchedule": false,
+      "title": "Public Accounts 2004/05 — OIC and Other Appointees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "5ee4fcd4567abc869520acf7f3d2022da9f256a5da6fd398fa1ca88d4d26c7f0",
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "notes": [
+        "The published salary payment field is transcribed for all named Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act rows. This is a distinct appointee/non-Public-Service-Act scope; it is not a complete core employee workforce cohort.",
+        "Initials, surname punctuation, repeated names, and multiple original observations are preserved. No titles are published; position remains null.",
+        "Travel in1999/00–2002/03 is disclosed in the same original row. Blank travel remains null. Later salary-only schedules have expenses null; separate travel lists are not joined by name.",
+        "The salary-payment definition may include retroactive pay, benefit/vacation payments and amounts relating to prior years as described in the original source notes; this is not base salary.",
+        "No compiled same-label period overlaps these historical cohorts; no compiled rows are proposed for deletion."
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing.",
+      "parser": "pa-appointees",
+      "cacheFile": "pa-2004-05.pdf",
+      "columnStarts": [
+        70,
+        322
+      ],
+      "travelInRow": false,
+      "fiscalEnd": 2005,
+      "contextPages": [
+        1,
+        7,
+        23
+      ],
+      "acceptanceStatus": "verified",
+      "layoutPitch": 2,
+      "expectedCount": 1083,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 78637,
+          "publishedDollars": 78637000,
+          "rowSum": 78637177,
+          "residualDollars": 177,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      },
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-oic-poppler-results.json",
+        "../continuation-2026-11-01/reviews/government-oic-poppler-evidence.json.gzip"
+      ]
+    },
+    {
+      "id": "continuation-government-police-public-service-2005-06-appointees",
+      "employerSlug": "public-service",
+      "employerName": "Government of British Columbia",
+      "sector": "Government",
+      "year": "2005/06",
+      "periodType": "fiscal",
+      "periodStart": "2005-04-01",
+      "periodEnd": "2006-03-31",
+      "category": "appointee-remuneration",
+      "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+      "completeEmployeeSchedule": false,
+      "title": "Public Accounts 2005/06 — OIC and Other Appointees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-detailed-schedules-of-payments.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "sha256": "2028c0f92d245043fd4b98438b50cbc817993c02e189c9cdd08dec074b5366ca",
+      "pages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "notes": [
+        "The published salary payment field is transcribed for all named Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act rows. This is a distinct appointee/non-Public-Service-Act scope; it is not a complete core employee workforce cohort.",
+        "Initials, surname punctuation, repeated names, and multiple original observations are preserved. No titles are published; position remains null.",
+        "Travel in1999/00–2002/03 is disclosed in the same original row. Blank travel remains null. Later salary-only schedules have expenses null; separate travel lists are not joined by name.",
+        "The salary-payment definition may include retroactive pay, benefit/vacation payments and amounts relating to prior years as described in the original source notes; this is not base salary.",
+        "No compiled same-label period overlaps these historical cohorts; no compiled rows are proposed for deletion."
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing.",
+      "parser": "pa-appointees",
+      "cacheFile": "pa-2005-06.pdf",
+      "columnStarts": [
+        70,
+        322
+      ],
+      "travelInRow": false,
+      "fiscalEnd": 2006,
+      "contextPages": [
+        1,
+        7,
+        25
+      ],
+      "acceptanceStatus": "verified",
+      "layoutPitch": 2,
+      "expectedCount": 1095,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 80374,
+          "publishedDollars": 80374000,
+          "rowSum": 80373799,
+          "residualDollars": -201,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      },
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/government-oic-poppler-results.json",
+        "../continuation-2026-11-01/reviews/government-oic-poppler-evidence.json.gzip"
+      ]
+    },
+    {
+      "id": "continuation-government-police-east-kootenay-2025-employees",
+      "employerSlug": "regional-district-of-east-kootenay",
+      "employerName": "Regional District of East Kootenay",
+      "sector": "Municipalities",
+      "governanceType": "regional-district",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "employee-remuneration",
+      "scope": "Named Employee Gross Earnings over $75,000, separate from directors and employer-paid benefit aggregates",
+      "completeEmployeeSchedule": true,
+      "title": "Regional District of East Kootenay 2025 Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.rdek.bc.ca/web/FinancialPlan/SOFI_2025_-_signed.pdf",
+      "sourceIndexUrl": "https://www.rdek.bc.ca/departments/finance/",
+      "sha256": "e09254560935598c3dba90e31cfb6245dab37fed49f7c2e597ed7ef0a34e5260",
+      "pages": [
+        6,
+        7
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The schedule labels its named-employee subtotal Employee Gross Earnings (over$75,000). Remuneration is the published employee gross earnings field; employer share of employee benefits appears only as separate aggregate rows and is not added to individual remuneration.",
+        "The original Name column discloses surnames only. Preserve those literal names; given names/initials are not reconstructed.",
+        "Explicit expense dashes have no zero legend and remain null. All named remuneration fields are present.",
+        "In2025 an asterisk marks payout of unused vacation; the footnote marker is omitted from the normalized surname and retained in extraction evidence.",
+        "Directors and under-threshold employee/benefits aggregates are outside this individual employee cohort. Regional district, excluded from161-municipality denominator."
+      ],
+      "publicWarning": "Surname-only employee disclosure; original provides no given names. Expense dashes remain unknown. Employer-paid benefit aggregates are excluded from individual earnings. Named known-cell sums differ from published over-threshold employee controls: remuneration $+2; expenses $+125. Values and literal surname spellings are unchanged; causes are unresolved. Expense sums compare known cells only and do not turn dashes into zero.",
+      "parser": "eko-employees",
+      "cacheFile": "regional-east-kootenay-0.pdf",
+      "contextPages": [
+        1
+      ],
+      "acceptanceStatus": "verified",
+      "expectedCount": 56,
+      "nameDisclosure": "surname-only",
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 5958322,
+          "rowSum": 5958324,
+          "residualDollars": 2,
+          "sourceUnit": "dollars",
+          "missingCells": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 7,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 24942,
+          "rowSum": 25067,
+          "residualDollars": 125,
+          "sourceUnit": "dollars",
+          "missingCells": 18
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          6,
+          7
+        ],
+        "coverage": "Complete employee, control, footnote and separate aggregate benefits scope reviewed visually for every named row.",
+        "reviewDate": "2026-11-01"
+      },
+      "sourceNameDisclosure": "surname-only",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/regional-east-kootenay-controls.json",
+        "../continuation-2026-11-01/reviews/regional-east-kootenay-controls.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-east-kootenay-2024-employees",
+      "employerSlug": "regional-district-of-east-kootenay",
+      "employerName": "Regional District of East Kootenay",
+      "sector": "Municipalities",
+      "governanceType": "regional-district",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "Named Employee Gross Earnings over $75,000, separate from directors and employer-paid benefit aggregates",
+      "completeEmployeeSchedule": true,
+      "title": "Regional District of East Kootenay 2024 Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.rdek.bc.ca/web/FinancialPlan/2024/2024_SOFI_Report.pdf",
+      "sourceIndexUrl": "https://www.rdek.bc.ca/departments/finance/",
+      "sha256": "9b4d20d845619994b8661eccc37e6c2c29c9efe06fd8505393a580c20e48322a",
+      "pages": [
+        7,
+        8
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The schedule labels its named-employee subtotal Employee Gross Earnings (over$75,000). Remuneration is the published employee gross earnings field; employer share of employee benefits appears only as separate aggregate rows and is not added to individual remuneration.",
+        "The original Name column discloses surnames only. Preserve those literal names; given names/initials are not reconstructed.",
+        "Explicit expense dashes have no zero legend and remain null. All named remuneration fields are present.",
+        "In2025 an asterisk marks payout of unused vacation; the footnote marker is omitted from the normalized surname and retained in extraction evidence.",
+        "Directors and under-threshold employee/benefits aggregates are outside this individual employee cohort. Regional district, excluded from161-municipality denominator."
+      ],
+      "publicWarning": "Surname-only employee disclosure; original provides no given names. Expense dashes remain unknown. Employer-paid benefit aggregates are excluded from individual earnings. Named known-cell sums differ from published over-threshold employee controls: remuneration $+2; expenses $+376. Values and literal surname spellings are unchanged; causes are unresolved. Expense sums compare known cells only and do not turn dashes into zero.",
+      "parser": "eko-employees",
+      "cacheFile": "regional-east-kootenay-1.pdf",
+      "contextPages": [
+        1
+      ],
+      "acceptanceStatus": "verified",
+      "expectedCount": 52,
+      "nameDisclosure": "surname-only",
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 8,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 5606800,
+          "rowSum": 5606802,
+          "residualDollars": 2,
+          "sourceUnit": "dollars",
+          "missingCells": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 8,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 20998,
+          "rowSum": 21374,
+          "residualDollars": 376,
+          "sourceUnit": "dollars",
+          "missingCells": 19
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          7,
+          8
+        ],
+        "coverage": "Complete employee, control, footnote and separate aggregate benefits scope reviewed visually for every named row.",
+        "reviewDate": "2026-11-01"
+      },
+      "sourceNameDisclosure": "surname-only",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/regional-east-kootenay-controls.json",
+        "../continuation-2026-11-01/reviews/regional-east-kootenay-controls.md"
+      ]
+    },
+    {
+      "id": "continuation-government-police-east-kootenay-2023-employees",
+      "employerSlug": "regional-district-of-east-kootenay",
+      "employerName": "Regional District of East Kootenay",
+      "sector": "Municipalities",
+      "governanceType": "regional-district",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "employee-remuneration",
+      "scope": "Named Employee Gross Earnings over $75,000, separate from directors and employer-paid benefit aggregates",
+      "completeEmployeeSchedule": true,
+      "title": "Regional District of East Kootenay 2023 Employee Remuneration and Expenses",
+      "sourceUrl": "https://www.rdek.bc.ca/web/FinancialPlan/2023_Statement_of_Financial_Information.pdf",
+      "sourceIndexUrl": "https://www.rdek.bc.ca/departments/finance/",
+      "sha256": "a425b90193d1ea9a79b48c94922953ea251a40b88d9a42d6cbd208246c521ab2",
+      "pages": [
+        6,
+        7
+      ],
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The schedule labels its named-employee subtotal Employee Gross Earnings (over$75,000). Remuneration is the published employee gross earnings field; employer share of employee benefits appears only as separate aggregate rows and is not added to individual remuneration.",
+        "The original Name column discloses surnames only. Preserve those literal names; given names/initials are not reconstructed.",
+        "Explicit expense dashes have no zero legend and remain null. All named remuneration fields are present.",
+        "In2025 an asterisk marks payout of unused vacation; the footnote marker is omitted from the normalized surname and retained in extraction evidence.",
+        "Directors and under-threshold employee/benefits aggregates are outside this individual employee cohort. Regional district, excluded from161-municipality denominator."
+      ],
+      "publicWarning": "Surname-only employee disclosure; original provides no given names. Expense dashes remain unknown. Employer-paid benefit aggregates are excluded from individual earnings. Named known-cell sums differ from published over-threshold employee controls: remuneration $-2; expenses $+4000. Values and literal surname spellings are unchanged; causes are unresolved. Expense sums compare known cells only and do not turn dashes into zero.",
+      "parser": "eko-employees",
+      "cacheFile": "regional-east-kootenay-2.pdf",
+      "contextPages": [
+        1
+      ],
+      "acceptanceStatus": "verified",
+      "expectedCount": 47,
+      "nameDisclosure": "surname-only",
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 4940053,
+          "rowSum": 4940051,
+          "residualDollars": -2,
+          "sourceUnit": "dollars",
+          "missingCells": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 7,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 31988,
+          "rowSum": 35988,
+          "residualDollars": 4000,
+          "sourceUnit": "dollars",
+          "missingCells": 18
+        }
+      ],
+      "renderedReview": {
+        "physicalPages": [
+          6,
+          7
+        ],
+        "coverage": "Complete employee, control, footnote and separate aggregate benefits scope reviewed visually for every named row.",
+        "reviewDate": "2026-11-01"
+      },
+      "sourceNameDisclosure": "surname-only",
+      "independentReviews": [
+        "../continuation-2026-11-01/reviews/regional-east-kootenay-controls.json",
+        "../continuation-2026-11-01/reviews/regional-east-kootenay-controls.md"
+      ]
+    }
+  ]
+}

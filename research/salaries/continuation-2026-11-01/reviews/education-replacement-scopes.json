@@ -1,0 +1,78 @@
+{
+  "reviewedBy": "government-police-continuation independent worker",
+  "reviewDate": "2026-11-01",
+  "scope": "Requested education replacement scope review; not full independently repeated UFV all-page extraction",
+  "records": [
+    {
+      "sourceId": "ufv-sofi-2023-24-employees",
+      "originalCache": "/tmp/pofbc-sector-education/2f71392144ff992c.body",
+      "originalSha256": "2ddeb95a0f80b259fda0535728780c45526a96b00b2e63653a3c6e5f0ab78c77",
+      "reviewedPhysicalPages": [
+        18
+      ],
+      "normalizedPayloadSha256": "3ffc5274e3486b1338bffcf0a95c73276a2ccf93f927a984971a3ac618fc6988",
+      "finalEmployeeCount": 673,
+      "finalPageEmployeeCount": 23,
+      "allFinalPageEmployeeFieldsMatchIndependentPoppler": true,
+      "employeeBoardBoundary": "All named employee rows above Total Over $75,000 retained; Board Members block below subtotal contains expenses only and is excluded.",
+      "renderedReviewComplete": true
+    },
+    {
+      "sourceId": "ufv-sofi-2020-21-employees",
+      "originalCache": "/tmp/pofbc-sector-education/590f134494dbba0d.body",
+      "originalSha256": "34ee3235143c4709db9859734cb3cca9ff32face0ed14a31a6ff5eddafd7e977",
+      "reviewedPhysicalPages": [
+        13
+      ],
+      "normalizedPayloadSha256": "c251ab3f8e0001d81054bb30f5c56a23eaba600aa3fef15abab30d36e4d286d0",
+      "finalEmployeeCount": 511,
+      "finalPageEmployeeCount": 16,
+      "allFinalPageEmployeeFieldsMatchIndependentPoppler": true,
+      "employeeBoardBoundary": "All named employee rows above Total Over $75,000 retained; Board Members block below subtotal contains expenses only and is excluded.",
+      "renderedReviewComplete": true
+    },
+    {
+      "sourceId": "camosun-sofi-2025-26-employees",
+      "originalCache": "/tmp/pofbc-sector-education/f50365036a66dc4d.body",
+      "originalSha256": "6e9b1d017dfe5ece1afbb06aacfb3d1dae9d96348b025e8c9abf4861f0cd3655",
+      "reviewedPhysicalPages": [
+        7,
+        9
+      ],
+      "renderedReviewComplete": true,
+      "explicitEmployeeScheduleExclusions": [
+        "employees who are members of Board of Governors",
+        "amounts paid under a severance agreement"
+      ],
+      "boardEmployeeRemunerationRows": [
+        [
+          "Ahmadi, Bijan",
+          113053,
+          2566
+        ],
+        [
+          "Bannikoff, Sandra",
+          113053,
+          209
+        ],
+        [
+          "Cumberland, Joanne",
+          68102,
+          710
+        ],
+        [
+          "Trotter, Lane",
+          297982,
+          3966
+        ],
+        [
+          "Van Akker, Albert",
+          119670,
+          3394
+        ]
+      ],
+      "recommendation": "Retain same-label compiled partitions with explicit guarded retention metadata and a public warning until full employee/board/severance scope is independently reconciled. Do not treat board Total as remuneration; expenses and retainers are separate. Student-society pay is a separate stated scope."
+    }
+  ],
+  "conclusion": "Corrected UFV final employee counts673/511 include the formerly omitted final-page employee rows; earlier650/495 were extraction incompleteness, not board exclusion. Camosun has explicit actual employee/severance omissions and requires partial flags and compiled retention until equivalence established."
+}

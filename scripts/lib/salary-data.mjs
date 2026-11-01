@@ -180,7 +180,25 @@ export const validateRow = (row, context) => {
 }
 
 /** A small executive/deputy cohort must never silently replace an employee partition. */
+/** Qualified sources can coexist with a compiled partition whose broader scope is unresolved. */
+export const compiledPartitionsToRetain = (official, sources) => {
+  const retained = new Set()
+  for (const row of official) {
+    const source = sources[row.sourceId]
+    if (source?.retainCompiledPartition !== true) continue
+    const validation = source.validation ?? {}
+    const partial = source.completeEmployeeSchedule === false || validation.completeEmployeeSchedule === false
+    if (!source.publicWarning?.trim() || validation.compiledPartitionRetained !== true || !validation.compiledPartitionRetentionReason?.trim() ||
+      (partial && !(source.completeEmployeeSchedule === false && validation.completeEmployeeSchedule === false))) {
+      throw new Error(`${row.sourceId}: retaining a compiled partition requires an explicit scope qualification and consistent completeness guards`)
+    }
+    retained.add(`${row.slug}|${row.year}`)
+  }
+  return retained
+}
+
 export const validateReplacementScopes = (baseline, official, sources, decisions = []) => {
+  const retained = compiledPartitionsToRetain(official, sources)
   const previous = new Set(baseline.map((row) => `${row.slug}|${row.year}`))
   const partitions = new Map()
   for (const row of official) {
@@ -190,6 +208,7 @@ export const validateReplacementScopes = (baseline, official, sources, decisions
     partitions.get(key).add(row.sourceId)
   }
   for (const [key, ids] of partitions) {
+    if (retained.has(key)) continue
     if ([...ids].some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id]?.scope) && sources[id]?.completeEmployeeSchedule !== false && sources[id]?.validation?.completeEmployeeSchedule !== false)) continue
     const [employer, year] = key.split('|')
     const decision = decisions.find((entry) => entry.kind === 'replace-partition-scope' && entry.employer === employer && entry.year === year)
