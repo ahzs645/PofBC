@@ -1,0 +1,13 @@
+# Continuation research: government, police and regional districts
+
+The inventory covers all 27 regional districts, all 13 compiled police employers and five government/legislature/judiciary work areas (45 entries). Every roster index was fetched again; deeper official archive pages recovered direct histories for Cariboo 2021–2025, Fraser-Fort George 2020–2025, Kitimat-Stikine 2016–2025, Peace River 2022–2025 and Strathcona 2016–2025. Latest originals for those districts, FVRD 2023 and Sunshine Coast 2024 were downloaded with pinned hashes/native-text diagnostics. These discovery periods are index labels until the individual original is verified.
+
+`inventory.json` records accepted employee and executive periods separately, indexed-but-unaccepted periods, held cohorts, exact direct archive documents, retrieval receipts and unresolved historical limits. It does not assert all historical records exist or were found. Thompson-Nicola main-site 403 and Transit Police’s old TransLink index 404 remain retrieval/navigation limitations, not evidence that an FOI is required.
+
+`work-queue.json` contains 64 tasks using the required eleven-key schema. Located native/scanned PDFs are processing tasks. Missing final SOFI/older histories stay public-archive research; police ordinary inquiry is only a future draft after open archives have been exhausted. Source-control clarification tasks are draft-only. No outreach, FOI, fees or messages to public bodies were sent.
+
+`compiled-replacement-review.json` establishes no new same-label compiled partition replacement. No compiled observation is deleted. New regional identities remain outside the 161-municipality denominator. Calendar police executive observations do not establish equivalence with compiled workforce fiscal labels.
+
+The normalized handoff currently has 32 verified cohorts/22,471 rows and 0 held cohorts/0 rows. Exact source/data/evidence hashes and all cached originals are listed in `handoff.json`. Payloads/evidence are frozen; metadata can only be promoted through a documented parent peer-review decision. Commands and money/scope definitions are in `../../continuation-government-police/README.md`.
+
+Remaining large processing work includes native RD histories, independently verified OCR for scanned SOFIs, old VPD staff FOI releases, actual deputy-minister histories, and the separate MLA/minister component model. Public Accounts before 1999/00, final RDCO/SLRD staff schedules and additional police workforce histories still need deeper public archives. Existing accessible 1999/00 and 2001/02 government originals supersede earlier retrieval/request leads for those years.

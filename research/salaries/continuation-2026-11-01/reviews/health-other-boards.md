@@ -1,0 +1,9 @@
+# Parent review of Interior, PHSA and BCCSS board originals
+
+Parent inspected all11complete rendered one-page original schedules: Interior2018/19–2025/26, PHSA2024/25–2025/26 andBCCSS2017/18. Their129accepted observations and held unknown-pay rows preserve source names, literal roles, dates, monetary definitions and scope. Two independently implemented native readers agree on every source cell; exact source/data hashes are pinned in the receipt. Northern's other61rows have a separate full independent review.
+
+Remuneration uses actual retainers/meeting/per-diem fees, never the meeting rates or expense-inclusive totals. Blank optional components remain supporting evidence; all-blank/dash pay rows are held rather than made zero. Expenses retain numeric zeroes and unknown cells separately. BCCSS's23explicit pay values include genuine zeros, while ordinary expenses remain null because the original excludes reimbursements.
+
+Interior2024/25 and2025/26 state that most columns are cash based but meeting fees include current-year meetings paid nextmonth; public notes disclose this mixed basis. PHSA places significant-travel fees inside its ExpenseReimbursement column and carries some prior-service payments into the actual payment year; these source meanings remain explicit and are not silently reclassified. IHA2021/22's literal Committee glyph correction agrees with the rendered original.
+
+Exact small row/component/grand residuals remain public qualifications with no forced balance or inferred rounding cause. Partial PHSA and Interior unknown-pay observations remain held with their disclosed expenses in evidence. Parent also checked that all17health source notes now use arrays containing the identical prior text; this schema correction changes no normalized/evidence hash. Approve source-faithful board observations, not employee workforce coverage or issuer arithmetic.

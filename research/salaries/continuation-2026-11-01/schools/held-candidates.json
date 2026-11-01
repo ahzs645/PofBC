@@ -1,0 +1,106 @@
+[
+  {
+    "id": "continuation-schools-sd08-2026-employees",
+    "inputKey": "sd08-2026",
+    "employerSlug": "school-district-08",
+    "employerName": "School District No. 8 (Kootenay Lake)",
+    "sector": "School districts",
+    "year": "2025/26",
+    "slug": "2025-26",
+    "periodType": "fiscal",
+    "periodStart": "2025-07-01",
+    "periodEnd": "2026-06-30",
+    "title": "School District No. 8 (Kootenay Lake), year ended June 30, 2026: employees",
+    "sourceUrl": "https://sd8.bc.ca/sites/default/files/documents/2026-09/2025-2026%20SOFI%20Report_Final_Redacted_0.pdf",
+    "sourceIndexUrl": "https://sd8.bc.ca/finance",
+    "sha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+    "file": "sd08-2026-employees.json.gzip",
+    "dataSha256": "d88fecc9e02f2f9c3942796ec2d01e9a4e5025cbe9fbf58b417deda317d4e2c3",
+    "normalizedSha256": "94df405ae58b55d98ed64a31e4195381b030de090a82a290ed3bb2e6ade4d0d2",
+    "provenanceFile": "sd08-2026-employees-evidence.json.gzip",
+    "provenanceSha256": "f41fa75c658bc3642aee2c5459f3a73c3ae842b0a2ae0ef8467c146450af47e1",
+    "category": "employee-remuneration",
+    "scope": "named-employees-over-threshold",
+    "scopeDescription": "Published named employees whose remuneration exceeds $75,000",
+    "currency": "CAD",
+    "amountUnit": "dollars",
+    "amountPrecision": "dollars",
+    "nameDisclosure": "published-name-as-disclosed",
+    "positionDisclosure": "not-published",
+    "rowCount": 340,
+    "totalRemuneration": 37683809.0,
+    "totalExpenses": 414506.0,
+    "pages": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "status": "held-period-heading-conflict",
+    "sourceKind": "official-pdf",
+    "verifiedOn": "2026-11-01",
+    "notes": [
+      "Annual fiscal period is July 1–June 30; the original SOFI report identifies the fiscal year ended June 30. Upload dates are not used as reporting periods.",
+      "Published remuneration and expense columns remain separate. These payments are not annual base salary rates. Suppliers, under-threshold aggregate payroll, employer premiums and financial statement totals are excluded.",
+      "Published names, initials, punctuation and visibly abbreviated titles are preserved. No missing title is inferred. Blank and dash expenses are null; explicit zeros remain zero.",
+      "Every complete row, field, order and multiplicity agrees between Poppler layout text and independently grouped PyMuPDF geometric columns. Rendered originals were reviewed for table scope, headings, controls and layout."
+    ],
+    "publicWarning": "The cover and salary pages51,53–59 identify fiscal year endedJune30,2026, but salary page52 identifiesJune30,2025. The employee reporting period is unresolved; no typo or cause is inferred.",
+    "validation": {
+      "originalFingerprintVerified": true,
+      "independentReaders": [
+        "Poppler layout text",
+        "PyMuPDF independent word geometry"
+      ],
+      "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+      "rowsIndependentlyChecked": 340,
+      "rowsByPhysicalPage": {
+        "51": 27,
+        "52": 41,
+        "53": 41,
+        "54": 41,
+        "55": 41,
+        "56": 41,
+        "57": 41,
+        "58": 41,
+        "59": 26
+      },
+      "componentColumns": [
+        "remuneration",
+        "expenses"
+      ],
+      "printedControlTotals": [
+        "37683809",
+        "414506"
+      ],
+      "computedComponentTotals": [
+        "37683809",
+        "414506"
+      ],
+      "controlResiduals": [
+        "0",
+        "0"
+      ],
+      "underThresholdExpenseComparator": "not imported; not inferred as zero",
+      "knownExpenseValueCount": 142,
+      "unparsedInterRowText": 0,
+      "summaryReconciles": true,
+      "allPublishedNamedControlsExact": true,
+      "allPrintedComponentControlsExact": true,
+      "completeEmployeeSchedule": true,
+      "periodHeadingConflict": {
+        "pdfPage": 52,
+        "literalHeading": "For the Fiscal Year Ended June 30, 2025",
+        "otherSalaryPagesEndingYear": 2026
+      }
+    },
+    "completeEmployeeSchedule": true,
+    "threshold": 75000,
+    "thresholdRule": "over"
+  }
+]

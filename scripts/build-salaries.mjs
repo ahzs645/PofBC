@@ -9,7 +9,7 @@ import { surnameShard } from '../src/salaries/people.js'
 import { titleKey, titleShard } from '../src/salaries/positions.js'
 import { pooledGrowth, stayerRaises, typicalRaise } from '../src/salaries/growth.js'
 import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSector, employerSlug, sectorOf } from './lib/salary-employers.mjs'
-import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes } from './lib/salary-data.mjs'
+import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes, compiledPartitionsToRetain } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -182,6 +182,7 @@ for (const directory of requiredCollections ?? readdirSync(research).sort()) {
       sha256: source.sha256 ?? source.pdfSha256, dataSha256: sha256(bytes), notes: source.notes ?? [],
       validation: source.validation ?? null, nameDisclosure: source.nameDisclosure ?? null, positionDisclosure: source.positionDisclosure ?? null,
       ...(source.completeEmployeeSchedule !== undefined ? { completeEmployeeSchedule: source.completeEmployeeSchedule } : {}),
+      ...(source.retainCompiledPartition === true ? { retainCompiledPartition: true } : {}),
       travelSource: source.travelSource ?? null, expensesNote: source.expensesNote ?? null, publicWarning: source.publicWarning ?? null, currency: source.currency ?? 'CAD'
     }
     official.push(...accepted)
@@ -207,10 +208,11 @@ for (const correction of travelRecovery.corrections) {
   source.validation = { ...source.validation, invalidatedTravelJoins: travelRecovery.corrections.filter((entry) => entry.employeeSourceId === correction.employeeSourceId) }
 }
 validateReplacementScopes(baseline, official, sources, reviewed)
+const retainedCompiledPartitions = compiledPartitionsToRetain(official, sources)
 const compiledRecovery = applyCompiledReplacements(baseline, official, sources, manifests.flatMap(({ manifest }) => manifest.compiledReplacements ?? []))
 const backlogPath = join(research, 'source-backlog.json')
 const catalog = sourceCatalog(existsSync(backlogPath) ? readJson(backlogPath) : {}, manifests)
-const legacyRetained = compiledRecovery.rows.filter((row) => !importedPartitions.has(`${row.slug}|${row.year}`) && !excluded.has(`${row.slug}|${row.year}`))
+const legacyRetained = compiledRecovery.rows.filter((row) => (!importedPartitions.has(`${row.slug}|${row.year}`) || retainedCompiledPartitions.has(`${row.slug}|${row.year}`)) && !excluded.has(`${row.slug}|${row.year}`))
 const rows = [...legacyRetained, ...official]
 if (!rows.length) throw new Error('No salary rows; refusing to replace the published data')
 const labels = [...new Set([...LEGACY.map(({ label }) => label), ...rows.map((row) => row.year), ...catalog.map((entry) => entry.year).filter(Boolean)])].sort()
@@ -272,7 +274,7 @@ try {
       const thresholdComparisons = new Set(details.map((detail) => detail.thresholdComparison ?? null))
       const notes = [...new Set([
         ...(isLegacy ? compiledNotes : []), ...details.flatMap((detail) => detail.notes ?? []),
-        ...(scope === 'executive-only' ? ['Only five executive positions are present; this is not a full employee disclosure.'] : []),
+        ...(scope === 'executive-only' ? ['Executive positions only; this is not a full employee disclosure.'] : []),
         ...(duplicates.duplicateRows ? [`${duplicates.duplicateRows} identical-looking extra rows require source review; totals include these rows.`] : []),
         ...(subset.some((row) => row.name && !row.name.includes(',')) ? ['Some source names lack a verified surname/given-name separator; matches across years may be incomplete.'] : []),
         ...(scope === 'mixed-disclosure' ? ['Includes separate disclosure categories. Select a category to compare records with the same coverage rules.'] : [])
@@ -297,7 +299,7 @@ try {
     }
   }
   const coverage = Object.fromEntries(employerList.map((entry) => [entry.slug, entry.coverage]))
-  write('employers/index.json', { schemaVersion: 2, note: 'Rows: [disclosed name, position, remuneration, expenses, year index, source id, physical PDF page or null]. Counts are disclosure rows, not a workforce census.', years: labels, sources, aliases: EMPLOYER_ALIASES, employers: employerList })
+  write('employers/index.json', { schemaVersion: 2, note: 'Rows: [disclosed name, position, remuneration, expenses, year index, source id, physical PDF page or null]. Counts are disclosure rows, not a workforce census.', years: labels, recordCounts: { official: official.length, compiled: legacyRetained.length }, sources, aliases: EMPLOYER_ALIASES, employers: employerList })
   const employerAt = new Map(employerList.map((employer, at) => [employer.slug, at]))
   const shards = new Map()
   for (const row of rows) {

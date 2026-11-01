@@ -40,9 +40,18 @@ test('missing or excluded employer data cannot imply no employment', () => {
   assert.match(missingYearMessage({ hydro: [{ status: 'available', scope: 'executive-only' }] }, ['hydro'], 0), /executives only/)
 })
 
+test('board and elected-only schedules cannot imply ordinary employee coverage', () => {
+  for (const scope of ['board-remuneration', 'school-trustees', 'elected-officials']) {
+    const coverage = { employer: [{ status: 'available', scope }] }
+    assert.equal(gapReason(coverage, ['employer'], 0), 'limited-disclosure')
+    assert.match(missingYearMessage(coverage, ['employer'], 0), /do not establish employee coverage/)
+  }
+})
+
 test('scope and exact period come from evidence, never the collection label', () => {
   assert.equal(scopeLabel('executive-only'), 'Executive compensation only')
   assert.equal(scopeLabel('school-trustees'), 'School trustee remuneration')
+  assert.equal(scopeLabel('board-remuneration'), 'Board remuneration disclosure')
   assert.match(scopeLabel('mixed-disclosure'), /Combined/)
   assert.equal(scopeLabel('deputy-minister-remuneration'), 'Deputy minister remuneration')
   assert.equal(scopeLabel('appointee-remuneration'), 'Order in Council appointee remuneration')

@@ -1,0 +1,48 @@
+{
+  "auditDate": "2026-11-01",
+  "method": "Live web discovery searches in parallel batches, followed by official index/original retrievals. Query list summarizes actual discovery work; it is not a claim that every historical report was indexed.",
+  "queries": [
+    "site.abbypd.ca remuneration SOFI salaries 2024 police",
+    "site.vicpd.ca remuneration salaries financial information police employees",
+    "site.nwpolice.org remuneration salaries disclosure",
+    "site.rdco.com statement of financial information 2024",
+    "site.vicpd.ca Remuneration 2023",
+    "site.saanichpolice.ca remuneration employee",
+    "site.deltapolice.ca remuneration employees",
+    "site.nwpolice.org remuneration",
+    "site.cspolice.ca remuneration employees salaries",
+    "site.portmoodypolice.com remuneration salaries",
+    "site.gov.bc.ca 1998-99 detailed-schedules",
+    "site.gov.bc.ca 1997-98 schedules of payments",
+    "site.rdffg.ca Statement of Financial Information 2025",
+    "site.fvrd.ca Statement of Financial Information 2024",
+    "site.rdks.bc.ca SOFI 2024",
+    "site.slrd.bc.ca SOFI 2024",
+    "site.scrd.ca statement of financial information 2025 pdf",
+    "site.surreypolice.ca remuneration salary disclosure",
+    "site.oakbaypolice.org remuneration disclosure salary",
+    "site.nelsonpolice.ca remuneration financial information"
+  ],
+  "newOfficialLeads": [
+    {
+      "employer": "Victoria Police",
+      "sourceUrl": "https://vicpd.ca/wp-content/uploads/2025/08/2024-Remuneration-Expenses.pdf",
+      "result": "Web native text, 7 pages; no published name field. Direct retrieval 503; processing queue."
+    },
+    {
+      "employer": "Fraser Valley Regional District",
+      "sourceUrl": "https://www.fvrd.ca/assets/Government/Documents/Finance/2023%20FVRD%20Public%20Bodies%20Report.pdf",
+      "result": "Official original downloaded and hashed; not imported."
+    },
+    {
+      "employer": "Kitimat-Stikine Regional District",
+      "sourceIndexUrl": "https://www.rdks.bc.ca/cms/One.aspx?pageId=15697996&portalId=12415190",
+      "result": "Direct official SOFI archive 2016\u20132025; current scan downloaded and queued."
+    },
+    {
+      "employer": "Sunshine Coast Regional District",
+      "sourceUrl": "https://www.scrd.ca/wp-content/uploads/2025/06/2025-SCRD-Annual-Report-for-2024-1.pdf",
+      "result": "Official annual report downloaded and hashed; SOFI scope extraction still pending."
+    }
+  ]
+}

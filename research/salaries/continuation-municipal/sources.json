@@ -1,0 +1,2998 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2016-elected-officials",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2016",
+      "periodType": "calendar",
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2016-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "97a5f68ebda85f21d89681bbc5abb981aa4526ee29d63f5595300b02f952ac7f",
+      "file": "city-of-campbell-river-2016-elected-officials.json.gzip",
+      "dataSha256": "6734463b5b9b556c3b9e99903bc2af8be1d3b15081038a6722843113434c4372",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Campbell River 2016 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 200305,
+      "totalExpenses": 62432,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 200308,
+            "rowSum": 200305,
+            "residual": -3,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 62432,
+            "rowSum": 62432,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2016-elected-officials.json.gzip",
+        "evidenceSha256": "9f80d177b5cba12f1e23648a64a30f6317e82ceba2ae73eca73e941e412a78f4",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2016"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      },
+      "publicWarning": "City of Campbell River 2016 elected-officials: known individual remuneration sum 200,305.00 CAD versus printed named control 200,308.00 CAD (residual -3.00); known individual expenses 62,432.00 CAD versus printed named control 62,432.00 CAD (residual +0.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2016-employee-remuneration",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2016",
+      "periodType": "calendar",
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2016-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "97a5f68ebda85f21d89681bbc5abb981aa4526ee29d63f5595300b02f952ac7f",
+      "file": "city-of-campbell-river-2016-employee-remuneration.json.gzip",
+      "dataSha256": "1b92f66bbf933a1a3cd21b69e2fee011508d74e26dbeaf2b19b18e9c9179fe60",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Campbell River 2016 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 83,
+      "totalRemuneration": 8325078,
+      "totalExpenses": 306607,
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5,
+          6,
+          7
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 8325079,
+            "rowSum": 8325078,
+            "residual": -1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 306607,
+            "rowSum": 306607,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2016-employee-remuneration.json.gzip",
+        "evidenceSha256": "adbd677e07e917cb46e5517920ad74cf5b48ff6b552b37c7b1cc28014f5cf5b4",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2016"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      },
+      "publicWarning": "City of Campbell River 2016 employee-remuneration: known individual remuneration sum 8,325,078.00 CAD versus printed named control 8,325,079.00 CAD (residual -1.00); known individual expenses 306,607.00 CAD versus printed named control 306,607.00 CAD (residual +0.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2017-elected-officials",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2017-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "593c188b8f9bd8dc8e58a26c2d19ff7fa60027cb5fdc12689a38aab448ef7f3d",
+      "file": "city-of-campbell-river-2017-elected-officials.json.gzip",
+      "dataSha256": "0ba8b9b3abf076b137830eada679dd4a0051cfa2603a80e1d4e49eea23d3576e",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Campbell River 2017 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 203094,
+      "totalExpenses": 45122,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 203092,
+            "rowSum": 203094,
+            "residual": 2,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 45122,
+            "rowSum": 45122,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2017-elected-officials.json.gzip",
+        "evidenceSha256": "20ed1a2a84b5e98d7573e0b8b95b866d250c3991826195c41a1c33a7f2d17e66",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2017"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      },
+      "publicWarning": "City of Campbell River 2017 elected-officials: known individual remuneration sum 203,094.00 CAD versus printed named control 203,092.00 CAD (residual +2.00); known individual expenses 45,122.00 CAD versus printed named control 45,122.00 CAD (residual +0.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2017-employee-remuneration",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2017-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "593c188b8f9bd8dc8e58a26c2d19ff7fa60027cb5fdc12689a38aab448ef7f3d",
+      "file": "city-of-campbell-river-2017-employee-remuneration.json.gzip",
+      "dataSha256": "2a3070527a758dbeabf509b633ffe79204dd6a2b1b58d21e27517b9e2d35c8ed",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Campbell River 2017 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 87,
+      "totalRemuneration": 8883260,
+      "totalExpenses": 320920,
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6,
+          7,
+          8
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 8883259,
+            "rowSum": 8883260,
+            "residual": 1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 320917,
+            "rowSum": 320920,
+            "residual": 3,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2017-employee-remuneration.json.gzip",
+        "evidenceSha256": "23844286994fd3ba1f173a5a4ffa0f59fe9193e161d62c7084ae15fd4b068b67",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2017"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      },
+      "publicWarning": "City of Campbell River 2017 employee-remuneration: known individual remuneration sum 8,883,260.00 CAD versus printed named control 8,883,259.00 CAD (residual +1.00); known individual expenses 320,920.00 CAD versus printed named control 320,917.00 CAD (residual +3.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2018-elected-officials",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2018-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "e9f9fca5a32a5e7955690a97a92c05373171f8e27ea702b6fd2e5cb833909283",
+      "file": "city-of-campbell-river-2018-elected-officials.json.gzip",
+      "dataSha256": "f062e7f4637849139c2cd9f5611da043e69b85b2053f0134c4966ea344fe45bb",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Campbell River 2018 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 9,
+      "totalRemuneration": 205181,
+      "totalExpenses": 39024,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 205182,
+            "rowSum": 205181,
+            "residual": -1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 39024,
+            "rowSum": 39024,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2018-elected-officials.json.gzip",
+        "evidenceSha256": "b705b34a657fe47fc1d049eaf21805e93abe7a81831e40df7c8d2f069e21fc50",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2018"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      },
+      "publicWarning": "City of Campbell River 2018 elected-officials: known individual remuneration sum 205,181.00 CAD versus printed named control 205,182.00 CAD (residual -1.00); known individual expenses 39,024.00 CAD versus printed named control 39,024.00 CAD (residual +0.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2018-employee-remuneration",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2018-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "e9f9fca5a32a5e7955690a97a92c05373171f8e27ea702b6fd2e5cb833909283",
+      "file": "city-of-campbell-river-2018-employee-remuneration.json.gzip",
+      "dataSha256": "f191c2de5e3ce62bc6e359634d22e61edcb9d280616750666176c576a8b5faab",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Campbell River 2018 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 95,
+      "totalRemuneration": 10006192,
+      "totalExpenses": 361944,
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6,
+          7,
+          8
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 10006193,
+            "rowSum": 10006192,
+            "residual": -1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 361941,
+            "rowSum": 361944,
+            "residual": 3,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2018-employee-remuneration.json.gzip",
+        "evidenceSha256": "88e54ecbd53924e12381c855f76f63796f3da12bcdb2d5f91890bed53e7363df",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2018"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      },
+      "publicWarning": "City of Campbell River 2018 employee-remuneration: known individual remuneration sum 10,006,192.00 CAD versus printed named control 10,006,193.00 CAD (residual -1.00); known individual expenses 361,944.00 CAD versus printed named control 361,941.00 CAD (residual +3.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2019-elected-officials",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2019-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "803f7eee508b419fb0cc00748d910a2461b4cff696b242eaab07aafaee326ab2",
+      "file": "city-of-campbell-river-2019-elected-officials.json.gzip",
+      "dataSha256": "4093c124e1a4b2eb493edbb937af0332d63a08bacd245a9fb042628bd77e1a0e",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Campbell River 2019 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 241936,
+      "totalExpenses": 38967,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 241936,
+            "rowSum": 241936,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 38967,
+            "rowSum": 38967,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2019-elected-officials.json.gzip",
+        "evidenceSha256": "02f0842949af2d3f3a558bccc9fced30e96b546e1b500c510a7e867ffc63c45b",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2019"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2019-employee-remuneration",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2019-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "803f7eee508b419fb0cc00748d910a2461b4cff696b242eaab07aafaee326ab2",
+      "file": "city-of-campbell-river-2019-employee-remuneration.json.gzip",
+      "dataSha256": "bdee554e70dc44bb388076907f5fe10a67a66f9152c24245628f6cd7e4949164",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Campbell River 2019 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 97,
+      "totalRemuneration": 10186348,
+      "totalExpenses": 410820,
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6,
+          7,
+          8
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 10186344,
+            "rowSum": 10186348,
+            "residual": 4,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 410817,
+            "rowSum": 410820,
+            "residual": 3,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2019-employee-remuneration.json.gzip",
+        "evidenceSha256": "e1bcc257b0896343ab80364f8e483283fdb16a3f69156f3123d9f1698f5565d3",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2019"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      },
+      "publicWarning": "City of Campbell River 2019 employee-remuneration: known individual remuneration sum 10,186,348.00 CAD versus printed named control 10,186,344.00 CAD (residual +4.00); known individual expenses 410,820.00 CAD versus printed named control 410,817.00 CAD (residual +3.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2020-elected-officials",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2020-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "447523033f667c778ed9f88d81886a4e440dd812f03824d8a283ec9dccc1d50e",
+      "file": "city-of-campbell-river-2020-elected-officials.json.gzip",
+      "dataSha256": "ecbecdd628dd466acdfa7c653a9c63db94355ee17b0783fbea5f34aeeb87cf1d",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Campbell River 2020 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 254858,
+      "totalExpenses": 11375,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 254858,
+            "rowSum": 254858,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 11375,
+            "rowSum": 11375,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2020-elected-officials.json.gzip",
+        "evidenceSha256": "45fc480d155b57634d08e9db8e6985c39b5ce121578ebadcb645d33f59666e8d",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2020"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2020-employee-remuneration",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2020-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "447523033f667c778ed9f88d81886a4e440dd812f03824d8a283ec9dccc1d50e",
+      "file": "city-of-campbell-river-2020-employee-remuneration.json.gzip",
+      "dataSha256": "1f969e9d772fb591ebaac2c7b43769e32c2a9f1fa6375b0d8393139636a479c9",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Campbell River 2020 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 121,
+      "totalRemuneration": 12398718,
+      "totalExpenses": 163355,
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6,
+          7,
+          8
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 12398716,
+            "rowSum": 12398718,
+            "residual": 2,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 163354,
+            "rowSum": 163355,
+            "residual": 1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2020-employee-remuneration.json.gzip",
+        "evidenceSha256": "f6ea5f44682a6f7087e8fc483db5f44ebbd0599105617d793a183b465e0e1523",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2020"
+          }
+        ],
+        "completeEmployeeSchedule": true,
+        "supportingControlEvidence": {
+          "file": "supporting/city-of-campbell-river-2020-employee-controls.json.gzip",
+          "sha256": "a584a459c962a9cc38e3cacaa840179709e1977fbeda65a1309f2d73d48087db",
+          "physicalPage": 9,
+          "fields": {
+            "pay": 1239871600,
+            "expenses": 16335400
+          },
+          "columns": {
+            "pay": [
+              393,
+              475
+            ],
+            "expenses": [
+              475,
+              555
+            ]
+          }
+        }
+      },
+      "publicWarning": "City of Campbell River 2020 employee-remuneration: known individual remuneration sum 12,398,718.00 CAD versus printed named control 12,398,716.00 CAD (residual +2.00); known individual expenses 163,355.00 CAD versus printed named control 163,354.00 CAD (residual +1.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2021-elected-officials",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2021-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "cfeaf09c22c5849143700ade5b089a5933be87781ad1bc91015a2db9401d0abc",
+      "file": "city-of-campbell-river-2021-elected-officials.json.gzip",
+      "dataSha256": "c71698ff3a21811edb4a5b8e5b2f92dfbcf720870a762448b8e4d0cc695799f0",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Campbell River 2021 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 248056,
+      "totalExpenses": 11924,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 248055,
+            "rowSum": 248056,
+            "residual": 1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 11924,
+            "rowSum": 11924,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2021-elected-officials.json.gzip",
+        "evidenceSha256": "da1b60cde5755ee917a94e985f398ffe4bcafb490dfad7688838b4778add216b",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2021"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      },
+      "publicWarning": "City of Campbell River 2021 elected-officials: known individual remuneration sum 248,056.00 CAD versus printed named control 248,055.00 CAD (residual +1.00); known individual expenses 11,924.00 CAD versus printed named control 11,924.00 CAD (residual +0.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2021-employee-remuneration",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2021-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "cfeaf09c22c5849143700ade5b089a5933be87781ad1bc91015a2db9401d0abc",
+      "file": "city-of-campbell-river-2021-employee-remuneration.json.gzip",
+      "dataSha256": "1315aef22f996627c616fa13ada9230672543caaef37f115f466727ce0bfe32b",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Campbell River 2021 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 108,
+      "totalRemuneration": 11158201,
+      "totalExpenses": 146101,
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6,
+          7,
+          8
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 11158201,
+            "rowSum": 11158201,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 146101,
+            "rowSum": 146101,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2021-employee-remuneration.json.gzip",
+        "evidenceSha256": "092763da129a4aa404e7d5cc59a6514ba9d070d5ea8b58400638d23ad5400678",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2021"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2022-elected-officials",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2022-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "e013974f3bb3a47d5797f5211eb856ca5dffd0fcbe7989b5a2fb5628f5fedd44",
+      "file": "city-of-campbell-river-2022-elected-officials.json.gzip",
+      "dataSha256": "8c02e0c90ca9bf02dd27edea98b749cb84a24bac2dc7f2391e3803b6a62c0077",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Campbell River 2022 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 11,
+      "totalRemuneration": 262669,
+      "totalExpenses": 35784,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 262670,
+            "rowSum": 262669,
+            "residual": -1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 35784,
+            "rowSum": 35784,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2022-elected-officials.json.gzip",
+        "evidenceSha256": "9adf2ef0617b011a9538cc0b8670fdd14d371ce5f285adf195c528ae5f6c45fc",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2022"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      },
+      "publicWarning": "City of Campbell River 2022 elected-officials: known individual remuneration sum 262,669.00 CAD versus printed named control 262,670.00 CAD (residual -1.00); known individual expenses 35,784.00 CAD versus printed named control 35,784.00 CAD (residual +0.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-campbell-river-2022-employee-remuneration",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2022-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "sha256": "e013974f3bb3a47d5797f5211eb856ca5dffd0fcbe7989b5a2fb5628f5fedd44",
+      "file": "city-of-campbell-river-2022-employee-remuneration.json.gzip",
+      "dataSha256": "d8dce13f7bd0925ef4beb17d49ed49daed0fd77339aa72f1b7a53beeb4c7e0e4",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Campbell River 2022 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 119,
+      "totalRemuneration": 12370869,
+      "totalExpenses": 295399,
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Names, punctuation, initials and titles retain the published schedule; no compiled name enrichment is applied. Native tables were read independently with PyMuPDF and Poppler, then every named row and printed control was checked in the rendered original.",
+        "Original schedule is published in whole CAD; exact individual values are retained. Source-control residuals are disclosed without assigning a cause or adjusting any cell.",
+        "Remuneration is the separate published Remuneration column. Employer payroll-cost components in the financial-statement reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6,
+          7,
+          8
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 12370863,
+            "rowSum": 12370869,
+            "residual": 6,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 295396,
+            "rowSum": 295399,
+            "residual": 3,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-campbell-river-2022-employee-remuneration.json.gzip",
+        "evidenceSha256": "211fd6a457737b0e266ebb38a2625e2a1d86d73340f6b28e1126ff92fe5b8fa4",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2022"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      },
+      "publicWarning": "City of Campbell River 2022 employee-remuneration: known individual remuneration sum 12,370,869.00 CAD versus printed named control 12,370,863.00 CAD (residual +6.00); known individual expenses 295,399.00 CAD versus printed named control 295,396.00 CAD (residual +3.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-salmon-arm-2022-elected-officials",
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1170",
+      "sourceIndexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "sha256": "27cfe920cd5ea467c0cb96679d9bb50b4e7f5ce728e98541972fe7eae05d727d",
+      "file": "city-of-salmon-arm-2022-elected-officials.json.gzip",
+      "dataSha256": "3606364ddc22b2c6425890dd1dd580f739fc374648345aa1dc5e887b679711da",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Salmon Arm 2022 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 8,
+      "totalRemuneration": 252873,
+      "totalExpenses": 51899,
+      "pages": [
+        33
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "The employee schedule describes gross remuneration, bonuses and gratuities.",
+        "The source marks these named schedules Unaudited. Every named table cell and printed control was checked in the complete rendered original. Native source spellings and truncated published titles are retained.",
+        "Remuneration is the source Remuneration column. Council Life & Health Benefit is separately disclosed and is not added to its chosen Remuneration measure; the expense-inclusive Total is not remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          33
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 252873,
+            "rowSum": 252873,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 51899,
+            "rowSum": 51899,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-salmon-arm-2022-elected-officials.json.gzip",
+        "evidenceSha256": "ffeb4f6266c5e9eec88670065811a159c3b1078ccc3c3436289a9cf0ef296398",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 33,
+            "text": "For the Year Ended December 31, 2022"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-salmon-arm-2022-employee-remuneration",
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1170",
+      "sourceIndexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "sha256": "27cfe920cd5ea467c0cb96679d9bb50b4e7f5ce728e98541972fe7eae05d727d",
+      "file": "city-of-salmon-arm-2022-employee-remuneration.json.gzip",
+      "dataSha256": "7aded7f07c73edd2cb792722129879052744d3fe8197fe1a57941ded37ebf027",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Salmon Arm 2022 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 32,
+      "totalRemuneration": 3101224,
+      "totalExpenses": 41210,
+      "pages": [
+        34
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "The employee schedule describes gross remuneration, bonuses and gratuities.",
+        "The source marks these named schedules Unaudited. Every named table cell and printed control was checked in the complete rendered original. Native source spellings and truncated published titles are retained.",
+        "Remuneration is the source Remuneration column. Council Life & Health Benefit is separately disclosed and is not added to its chosen Remuneration measure; the expense-inclusive Total is not remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          34
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 3101224,
+            "rowSum": 3101224,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 41210,
+            "rowSum": 41210,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-salmon-arm-2022-employee-remuneration.json.gzip",
+        "evidenceSha256": "fc5d6eb3b3837e47deac57eb017f2a98dae1412432d7cd49473d1ef65a2ffefb",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 33,
+            "text": "For the Year Ended December 31, 2022"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-salmon-arm-2024-elected-officials",
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1275",
+      "sourceIndexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "sha256": "b923f41c3434b2ee56b14f0f0240792f1ea735514375d106ade8eabbbc98a466",
+      "file": "city-of-salmon-arm-2024-elected-officials.json.gzip",
+      "dataSha256": "0543ab47f2a072d7ed3f617d3500661731bf4adb2a21e0d266fe544567568868",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Salmon Arm 2024 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 257023,
+      "totalExpenses": 55759,
+      "pages": [
+        42
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "The employee schedule describes gross remuneration, including vacation and overtime banks.",
+        "The source marks these named schedules Unaudited. Every named table cell and printed control was checked in the complete rendered original. Native source spellings and truncated published titles are retained.",
+        "Remuneration is the source Remuneration column. Council Life & Health Benefit is separately disclosed and is not added to its chosen Remuneration measure; the expense-inclusive Total is not remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          42
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 257025,
+            "rowSum": 257023,
+            "residual": -2,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 55758,
+            "rowSum": 55759,
+            "residual": 1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-salmon-arm-2024-elected-officials.json.gzip",
+        "evidenceSha256": "1b6cf5801f7fc5741eb485e8747b4186dc6a4115bd29b357baea7f1dcaca6e74",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 42,
+            "text": "For the Year Ended December 31, 2024"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      },
+      "publicWarning": "City of Salmon Arm 2024 elected-officials: known individual remuneration sum 257,023.00 CAD versus printed named control 257,025.00 CAD (residual -2.00); known individual expenses 55,759.00 CAD versus printed named control 55,758.00 CAD (residual +1.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-city-of-salmon-arm-2024-employee-remuneration",
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1275",
+      "sourceIndexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "sha256": "b923f41c3434b2ee56b14f0f0240792f1ea735514375d106ade8eabbbc98a466",
+      "file": "city-of-salmon-arm-2024-employee-remuneration.json.gzip",
+      "dataSha256": "c1f0c0b8b4029b90485ece74eca12f0862adc9562a84f5eb8cb3a148876c7b6d",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Salmon Arm 2024 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 44,
+      "totalRemuneration": 4362391,
+      "totalExpenses": 61091,
+      "pages": [
+        43
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "The employee schedule describes gross remuneration, including vacation and overtime banks.",
+        "The source marks these named schedules Unaudited. Every named table cell and printed control was checked in the complete rendered original. Native source spellings and truncated published titles are retained.",
+        "Remuneration is the source Remuneration column. Council Life & Health Benefit is separately disclosed and is not added to its chosen Remuneration measure; the expense-inclusive Total is not remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          43
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 4362390,
+            "rowSum": 4362391,
+            "residual": 1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 61090,
+            "rowSum": 61091,
+            "residual": 1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-salmon-arm-2024-employee-remuneration.json.gzip",
+        "evidenceSha256": "43777888ea3d38e7c10560c5c0af5a497b0484f46b527c40e92cf70e0ebbc29c",
+        "corrections": [
+          {
+            "row": 9,
+            "field": "position",
+            "before": [
+              "Chief Operator of Waste Water Treatment Plan",
+              "Chief Operator of Waste Water Treatment Plant"
+            ],
+            "after": "Chief Operator of Waste Water Treatment Plan",
+            "reason": "Original clips final t of Plant; visible truncated title retained and corroborating crop reviewed."
+          },
+          {
+            "row": 39,
+            "field": "name",
+            "before": "Van De Cappelle, ChelseaChief",
+            "after": "Van De Cappelle, Chelsea"
+          },
+          {
+            "row": 39,
+            "field": "position",
+            "before": "Financial Officer",
+            "after": "Chief Financial Officer"
+          }
+        ],
+        "periodEvidence": [
+          {
+            "page": 42,
+            "text": "For the Year Ended December 31, 2024"
+          }
+        ],
+        "completeEmployeeSchedule": true,
+        "ignoredClippedWords": [
+          {
+            "text": "Engineer",
+            "x": 324.0,
+            "y": 639.33,
+            "tolerance": 1,
+            "reason": "Poppler exposes a glyph run clipped by the original position cell. The complete rendered source visibly ends this title at Coordinator/City; PyMuPDF correctly omits Engineer."
+          }
+        ]
+      },
+      "publicWarning": "City of Salmon Arm 2024 employee-remuneration: known individual remuneration sum 4,362,391.00 CAD versus printed named control 4,362,390.00 CAD (residual +1.00); known individual expenses 61,091.00 CAD versus printed named control 61,090.00 CAD (residual +1.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-district-of-port-edward-2024-elected-officials",
+      "employerSlug": "district-of-port-edward",
+      "employerName": "District of Port Edward",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://www.portedward.ca/uploads/_reports/_financial/2024_Statement_of_Financial_Information",
+      "sourceIndexUrl": "https://www.portedward.ca/municipal-hall/reports",
+      "sha256": "3684c762671846859493fb4dd41e0cac9754f64714225401aae9f2c0ceec3a50",
+      "file": "district-of-port-edward-2024-elected-officials.json.gzip",
+      "dataSha256": "a76d97d8c08246c00646c8b568f3d4d94fb84d44236a0020519a41757943e534",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "District of Port Edward 2024 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 5,
+      "totalRemuneration": 70347,
+      "totalExpenses": 9357,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Only the separately verified elected-official schedule is imported. The original employee table has separate Other Remuneration cells with blanks/dashes and an expense-inclusive field labelled Total Remuneration; it remains held for component/scope clarification.",
+        "Offices come from the printed Mayor and Councillors group labels and remain as published.",
+        "Remuneration is the published Remuneration & Taxable Benefits column. Expenses are separate; the expense-inclusive Total is not remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 70347,
+            "rowSum": 70347,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 9357,
+            "rowSum": 9357,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/district-of-port-edward-2024-elected-officials.json.gzip",
+        "evidenceSha256": "4c627b27fd8fdc07f42953ed3d3d47ef0a2955107f241f98eafffba065497ef3",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2024"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      }
+    },
+    {
+      "id": "continuation-municipal-district-of-port-edward-2025-elected-officials",
+      "employerSlug": "district-of-port-edward",
+      "employerName": "District of Port Edward",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://www.portedward.ca/uploads/_reports/_financial/2025_Statement_of_Financial_Information.pdf",
+      "sourceIndexUrl": "https://www.portedward.ca/municipal-hall/reports",
+      "sha256": "0312a2efde846cdae064392d694edddcf909ec633a18830cee3a202c435cce2f",
+      "file": "district-of-port-edward-2025-elected-officials.json.gzip",
+      "dataSha256": "6d85d2878d869045acddeb721af0fb5cb23987e716b1be364f651a8f214dcad1",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "District of Port Edward 2025 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 5,
+      "totalRemuneration": 71895,
+      "totalExpenses": 41436,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Only the separately verified elected-official schedule is imported. The original employee table has separate Other Remuneration cells with blanks/dashes and an expense-inclusive field labelled Total Remuneration; it remains held for component/scope clarification.",
+        "Offices come from the printed Mayor and Councillors group labels and remain as published.",
+        "Remuneration is the published Remuneration & Taxable Benefits column. Expenses are separate; the expense-inclusive Total is not remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 71895,
+            "rowSum": 71895,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 41437,
+            "rowSum": 41436,
+            "residual": -1,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/district-of-port-edward-2025-elected-officials.json.gzip",
+        "evidenceSha256": "a57e54dd3456e60108ae4df734ba6ee2e3ee32e3ee0166b85957cd6ecef786ad",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 5,
+            "text": "For the Year Ended December 31, 2025"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      },
+      "publicWarning": "District of Port Edward 2025 elected-officials: known individual remuneration sum 71,895.00 CAD versus printed named control 71,895.00 CAD (residual +0.00); known individual expenses 41,436.00 CAD versus printed named control 41,437.00 CAD (residual -1.00). Original values are preserved; the source differences remain unresolved."
+    },
+    {
+      "id": "continuation-municipal-district-of-metchosin-2025-elected-officials",
+      "employerSlug": "district-of-metchosin",
+      "employerName": "District of Metchosin",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://www.metchosin.ca/sites/7/files/2026-06/2025%20%20SOFI_Final_signed%2026%206%201_0.pdf",
+      "sourceIndexUrl": "https://www.metchosin.ca/municipal-hall/taxes-budgets",
+      "sha256": "cde2e7e380edbde9629ede36db0b8cbe29d64c4d9e5681a014638fb7ca49ce84",
+      "file": "district-of-metchosin-2025-elected-officials.json.gzip",
+      "dataSha256": "63fc052742020afa22ff26cec842d2bffe0f926416f3fd0eb7317e7fe06de401",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "District of Metchosin 2025 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-scanned-pdf",
+      "rowCount": 5,
+      "totalRemuneration": 107634.48,
+      "totalExpenses": 9708.9,
+      "pages": [
+        39
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "The salary schedule is scanned/image content. Tesseract provides one OCR transcription only. Every accepted row/field/control was independently transcribed from and checked against the complete rendered original; no independent OCR-engine agreement is claimed.",
+        "The source separately prints Taxable Benefits while its note defines Remuneration as including taxable benefits. The normalized measure faithfully retains the chosen Remuneration field without asserting that the separate column is an additional payment. Employee Dunlop S has an unpublished expense cell, retained null; the named expense control compares known cells only. Under-threshold expenses and taxable benefits are printed n/a and are not zero.",
+        "Remuneration is the source Remuneration column. Its note defines remuneration as including salary, wages and taxable benefits. The separately displayed Taxable Benefits column is retained in evidence and controls, and is not added a second time. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "Tesseract 5 OCR",
+          "Independent complete manual image transcription"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          39
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 107634.48,
+            "rowSum": 107634.48,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 9708.9,
+            "rowSum": 9708.9,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          }
+        ],
+        "evidenceFile": "evidence/district-of-metchosin-2025-elected-officials.json.gzip",
+        "evidenceSha256": "1619d3d4e6f146d4be30e5305aab34b4d328aff10b1c72ca8670432b33abc269",
+        "corrections": [
+          {
+            "row": 0,
+            "field": "name",
+            "before": "Little, MT.",
+            "after": "Little, M.T.",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 1,
+            "field": "name",
+            "before": "Epp, $",
+            "after": "Epp, S",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 2,
+            "field": "expenses",
+            "before": "41,473.69",
+            "after": "1473.69",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 4,
+            "field": "name",
+            "before": "Donaldson, $",
+            "after": "Donaldson, S",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          }
+        ],
+        "periodEvidence": [
+          {
+            "page": 39,
+            "text": "Year ended December 31, 2025"
+          }
+        ],
+        "completeEmployeeSchedule": null,
+        "ocrEngineIndependenceClaimed": false,
+        "completeRenderedTranscriptionReview": true
+      },
+      "publicWarning": "Metchosin 2025 separately displays Taxable Benefits while defining Remuneration as including taxable benefits. This dataset uses the published Remuneration column without adding the separate benefits column. Raw components and controls remain available in source evidence."
+    },
+    {
+      "id": "continuation-municipal-district-of-metchosin-2025-employee-remuneration",
+      "employerSlug": "district-of-metchosin",
+      "employerName": "District of Metchosin",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://www.metchosin.ca/sites/7/files/2026-06/2025%20%20SOFI_Final_signed%2026%206%201_0.pdf",
+      "sourceIndexUrl": "https://www.metchosin.ca/municipal-hall/taxes-budgets",
+      "sha256": "cde2e7e380edbde9629ede36db0b8cbe29d64c4d9e5681a014638fb7ca49ce84",
+      "file": "district-of-metchosin-2025-employee-remuneration.json.gzip",
+      "dataSha256": "edbe539c8c391b2b15a45059d96c86f5ddbc7374aee6a4f727400222c3048495",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "District of Metchosin 2025 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-scanned-pdf",
+      "rowCount": 11,
+      "totalRemuneration": 1157216.34,
+      "totalExpenses": 20073.3,
+      "pages": [
+        39
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "The salary schedule is scanned/image content. Tesseract provides one OCR transcription only. Every accepted row/field/control was independently transcribed from and checked against the complete rendered original; no independent OCR-engine agreement is claimed.",
+        "The source separately prints Taxable Benefits while its note defines Remuneration as including taxable benefits. The normalized measure faithfully retains the chosen Remuneration field without asserting that the separate column is an additional payment. Employee Dunlop S has an unpublished expense cell, retained null; the named expense control compares known cells only. Under-threshold expenses and taxable benefits are printed n/a and are not zero.",
+        "Remuneration is the source Remuneration column. Its note defines remuneration as including salary, wages and taxable benefits. The separately displayed Taxable Benefits column is retained in evidence and controls, and is not added a second time. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "Tesseract 5 OCR",
+          "Independent complete manual image transcription"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          39
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 1157216.34,
+            "rowSum": 1157216.34,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          },
+          {
+            "field": "taxableBenefits",
+            "printedOrDerivedControl": 20907.91,
+            "rowSum": 20907.91,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 20073.3,
+            "rowSum": 20073.3,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          }
+        ],
+        "evidenceFile": "evidence/district-of-metchosin-2025-employee-remuneration.json.gzip",
+        "evidenceSha256": "bf7bfc847dd823670b738d6966c2f5ddd2d5ad09d2c38db3ee75f34003c818fb",
+        "corrections": [
+          {
+            "row": 0,
+            "field": "position",
+            "before": "cAO",
+            "after": "CAO",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 2,
+            "field": "pay",
+            "before": "126,964.55",
+            "after": "126984.58",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 2,
+            "field": "taxableBenefits",
+            "before": "531.64",
+            "after": "531.84",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 3,
+            "field": "taxableBenefits",
+            "before": "526.54",
+            "after": "526.51",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 4,
+            "field": "taxableBenefits",
+            "before": "531.62",
+            "after": "531.82",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 5,
+            "field": "taxableBenefits",
+            "before": "531.62",
+            "after": "531.82",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 6,
+            "field": "taxableBenefits",
+            "before": "531.62",
+            "after": "531.82",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 7,
+            "field": "taxableBenefits",
+            "before": "531.62",
+            "after": "531.82",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          },
+          {
+            "row": 9,
+            "field": "taxableBenefits",
+            "before": "356.46",
+            "after": "356.48",
+            "basis": "Complete rendered original independently transcribed and visually reviewed; OCR misreading only."
+          }
+        ],
+        "periodEvidence": [
+          {
+            "page": 39,
+            "text": "Year ended December 31, 2025"
+          }
+        ],
+        "completeEmployeeSchedule": true,
+        "ocrEngineIndependenceClaimed": false,
+        "completeRenderedTranscriptionReview": true
+      },
+      "publicWarning": "Metchosin 2025 separately displays Taxable Benefits while defining Remuneration as including taxable benefits. This dataset uses the published Remuneration column without adding the separate benefits column. Raw components and controls remain available in source evidence."
+    },
+    {
+      "id": "continuation-municipal-village-of-fraser-lake-2023-employee-remuneration",
+      "employerSlug": "village-of-fraser-lake",
+      "employerName": "Village of Fraser Lake",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://www.fraserlake.ca/sites/26/files/2024-08/SOFI_2023.pdf",
+      "sourceIndexUrl": "https://www.fraserlake.ca",
+      "sha256": "96b17d3209368f08cb025032effca4af0fcdbdbbcd7566bb4b326339935ab13b",
+      "file": "village-of-fraser-lake-2023-employee-remuneration.json.gzip",
+      "dataSha256": "9913a48e957b2c4b737d99333bf0044c19029539d5ac0263cbc2cd75f94b575b",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Fraser Lake 2023 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-scanned-pdf",
+      "rowCount": 8,
+      "totalRemuneration": 744869,
+      "totalExpenses": 17661,
+      "pages": [
+        12
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "The salary schedule is scanned/image content. Tesseract provides one OCR transcription only. Every accepted row/field/control was independently transcribed from and checked against the complete rendered original; no independent OCR-engine agreement is claimed.",
+        "Employee Campbell Cameron has an explicit printed expense zero; it remains zero. Complete original employee and council named subtotals agree exactly.",
+        "Remuneration is the separate source Remuneration column; expenses remain separate. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "Tesseract 5 OCR",
+          "Independent complete manual image transcription"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          12
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 744869,
+            "rowSum": 744869,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 17661,
+            "rowSum": 17661,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          }
+        ],
+        "evidenceFile": "evidence/village-of-fraser-lake-2023-employee-remuneration.json.gzip",
+        "evidenceSha256": "8ed6ae49f081c281f2dc2fe7d2600c69876ca9c33d5bcc8e60f3a10997e56925",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 12,
+            "text": "For the Year Ended December 31, 2023"
+          },
+          {
+            "page": 13,
+            "text": "For the Year Ended December 31, 2023"
+          }
+        ],
+        "completeEmployeeSchedule": true,
+        "ocrEngineIndependenceClaimed": false,
+        "completeRenderedTranscriptionReview": true
+      }
+    },
+    {
+      "id": "continuation-municipal-village-of-fraser-lake-2023-elected-officials",
+      "employerSlug": "village-of-fraser-lake",
+      "employerName": "Village of Fraser Lake",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://www.fraserlake.ca/sites/26/files/2024-08/SOFI_2023.pdf",
+      "sourceIndexUrl": "https://www.fraserlake.ca",
+      "sha256": "96b17d3209368f08cb025032effca4af0fcdbdbbcd7566bb4b326339935ab13b",
+      "file": "village-of-fraser-lake-2023-elected-officials.json.gzip",
+      "dataSha256": "5cc7a314f7b2d90ecf6159a5417a44a9dfc53495b8b634899f8f27141d944336",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of Fraser Lake 2023 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-scanned-pdf",
+      "rowCount": 5,
+      "totalRemuneration": 72268,
+      "totalExpenses": 39403,
+      "pages": [
+        13
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "The salary schedule is scanned/image content. Tesseract provides one OCR transcription only. Every accepted row/field/control was independently transcribed from and checked against the complete rendered original; no independent OCR-engine agreement is claimed.",
+        "Employee Campbell Cameron has an explicit printed expense zero; it remains zero. Complete original employee and council named subtotals agree exactly.",
+        "Remuneration is the separate source Remuneration column; expenses remain separate. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "Tesseract 5 OCR",
+          "Independent complete manual image transcription"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          13
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 72268,
+            "rowSum": 72268,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 39403,
+            "rowSum": 39403,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          }
+        ],
+        "evidenceFile": "evidence/village-of-fraser-lake-2023-elected-officials.json.gzip",
+        "evidenceSha256": "0d8ac3280c3252a448bbafc01e61219c55a538d71f54ae0dc1124dfa127c08c0",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 12,
+            "text": "For the Year Ended December 31, 2023"
+          },
+          {
+            "page": 13,
+            "text": "For the Year Ended December 31, 2023"
+          }
+        ],
+        "completeEmployeeSchedule": null,
+        "ocrEngineIndependenceClaimed": false,
+        "completeRenderedTranscriptionReview": true
+      }
+    },
+    {
+      "id": "continuation-municipal-district-of-wells-2020-elected-officials",
+      "employerSlug": "district-of-wells",
+      "employerName": "District of Wells",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "sourceUrl": "https://www.wells.ca/download_file/view/586/375",
+      "sourceIndexUrl": "https://www.wells.ca/district-wells/reports/statement-financial-information",
+      "sha256": "b52eea68b62eb7243dd60c0532e13c26cde88de8ce5ada53b83f209e5c88c925",
+      "file": "district-of-wells-2020-elected-officials.json.gzip",
+      "dataSha256": "bdb7743162a36fc4e7c335710a88676f0287d5c28d03b047829b0e7b91162b6a",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "District of Wells 2020 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-scanned-pdf",
+      "rowCount": 5,
+      "totalRemuneration": 26779.32,
+      "totalExpenses": 3354.48,
+      "pages": [
+        3
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "The salary schedule is scanned/image content. Tesseract provides one OCR transcription only. Every accepted row/field/control was independently transcribed from and checked against the complete rendered original; no independent OCR-engine agreement is claimed.",
+        "Only the council schedule with its own explicit 2020 heading is imported. On this same page the employee subsection says Staff2018 beneath the overall2020 schedule title. That employee row is held for reporting-period clarification; council dates do not resolve the employee conflict. Four council expenses are explicit printed0.00 and remain zero.",
+        "Remuneration is the separate source Remuneration column; expenses remain separate. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "Tesseract 5 OCR",
+          "Independent complete manual image transcription"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 26779.32,
+            "rowSum": 26779.32,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 3354.48,
+            "rowSum": 3354.48,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; missing expenses are not assigned zero."
+          }
+        ],
+        "evidenceFile": "evidence/district-of-wells-2020-elected-officials.json.gzip",
+        "evidenceSha256": "40572cee6fa82aff34287fb3578fe9944e6d359c6095de207b7887d6444fcb96",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "Mayor and Council 2020 Remuneration and Expenses"
+          }
+        ],
+        "completeEmployeeSchedule": null,
+        "ocrEngineIndependenceClaimed": false,
+        "completeRenderedTranscriptionReview": true
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-grand-forks-2024-elected-officials",
+      "employerSlug": "city-of-grand-forks",
+      "employerName": "City of Grand Forks",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://www.grandforks.ca/wp-content/uploads/CGF-2024-Statement-of-Financial-Information-website.pdf",
+      "sourceIndexUrl": "https://www.grandforks.ca/financial-administration-department/",
+      "sha256": "6855147f7ebc32965d36b0c3290585f1fa02c5736c233cf7d454668ae8631314",
+      "file": "city-of-grand-forks-2024-elected-officials.json.gzip",
+      "dataSha256": "3cba68fe699d9f3b0098b390a73c2d3b6a37382cca46c823806290dbc88a624f",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Grand Forks 2024 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 154293,
+      "totalExpenses": 30037,
+      "pages": [
+        38
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Full published named schedules are retained with names/initials and positions exactly as disclosed; no external identity enrichment or additional threshold filtering is applied.",
+        "The report defines the employee schedule as calendar cash payments in its remuneration reconciliation on physical page40. Council Remuneration excludes the separate general Benefits field, matching the source reconciliation measure.",
+        "Remuneration is the source Remuneration column. Expenses and separately published general Benefits remain distinct; the expense-inclusive Total is not pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          38
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 154293,
+            "rowSum": 154293,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 30037,
+            "rowSum": 30037,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-grand-forks-2024-elected-officials.json.gzip",
+        "evidenceSha256": "0d6543e327af8b4b75ae7f922c3ed57481f2a934d0838b96bab5879733154c93",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 38,
+            "text": "Fiscal Year Ended December 31, 2024"
+          },
+          {
+            "page": 39,
+            "text": "Fiscal Year Ended December 31, 2024"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-grand-forks-2024-employee-remuneration",
+      "employerSlug": "city-of-grand-forks",
+      "employerName": "City of Grand Forks",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://www.grandforks.ca/wp-content/uploads/CGF-2024-Statement-of-Financial-Information-website.pdf",
+      "sourceIndexUrl": "https://www.grandforks.ca/financial-administration-department/",
+      "sha256": "6855147f7ebc32965d36b0c3290585f1fa02c5736c233cf7d454668ae8631314",
+      "file": "city-of-grand-forks-2024-employee-remuneration.json.gzip",
+      "dataSha256": "4a59bec9172ed2e6860396b0828799b3652b35413068e8e382161d688da94428",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Grand Forks 2024 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 34,
+      "totalRemuneration": 3350745,
+      "totalExpenses": 78552,
+      "pages": [
+        39
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Full published named schedules are retained with names/initials and positions exactly as disclosed; no external identity enrichment or additional threshold filtering is applied.",
+        "The report defines the employee schedule as calendar cash payments in its remuneration reconciliation on physical page40. Council Remuneration excludes the separate general Benefits field, matching the source reconciliation measure.",
+        "Remuneration is the source Remuneration column. Expenses and separately published general Benefits remain distinct; the expense-inclusive Total is not pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          39
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 3350745,
+            "rowSum": 3350745,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 78552,
+            "rowSum": 78552,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-grand-forks-2024-employee-remuneration.json.gzip",
+        "evidenceSha256": "03fbe3d4544f92eb1a6968e030714139ec41a66800bb8d4304ae338f58902516",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 38,
+            "text": "Fiscal Year Ended December 31, 2024"
+          },
+          {
+            "page": 39,
+            "text": "Fiscal Year Ended December 31, 2024"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      },
+      "publicWarning": "The complete published employee cohort includes Klein, Tanis with Remuneration 74,917 CAD, Expenses 573 CAD and expense-inclusive Total 75,490 CAD, despite the printed remuneration-over-75,000 label. The original named row is retained; no additional threshold filter is imposed."
+    },
+    {
+      "id": "continuation-municipal-district-of-lake-country-2025-elected-officials",
+      "employerSlug": "district-of-lake-country",
+      "employerName": "District of Lake Country",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://www.lakecountry.bc.ca/media/file/2025-statements-financial-information-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.lakecountry.bc.ca/government/document-library/2025-statements-financial-information-sofi-report",
+      "sha256": "4f2dc49a27f4f951ebcec6f7f76f97c2481ec71d6ed22ca54b03467df0f77e38",
+      "file": "district-of-lake-country-2025-elected-officials.json.gzip",
+      "dataSha256": "9cf37287448568102ae726bc3e71c8961092825558bf8a4b3eed8fccdb4866f5",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "District of Lake Country 2025 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 217852.52,
+      "totalExpenses": 56088.59,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Full published named schedules are retained with names/initials and positions exactly as disclosed; no external identity enrichment or additional threshold filtering is applied.",
+        "The report labels named schedules Unaudited. Employee controls use the named Employees75,000andgreater subtotal only, not the broader expense column grand total that includes employerEI/CPP.",
+        "Remuneration is the published Taxable Remuneration column, including the described accumulated vacation or sick payouts on termination. Other Expenses remain separate; employer EI/CPP costs in the bottom reconciliation are not added to individual pay or named expenses. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 217852.52,
+            "rowSum": 217852.52,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 56088.59,
+            "rowSum": 56088.59,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/district-of-lake-country-2025-elected-officials.json.gzip",
+        "evidenceSha256": "eddd3d7c6c4f55996c76c8beef9c13a2065bfb56ccb02548938f08d2d9c1b76e",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 4,
+            "text": "for the year ended December 31, 2025"
+          },
+          {
+            "page": 5,
+            "text": "for the year ended December 31, 2025"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      }
+    },
+    {
+      "id": "continuation-municipal-district-of-lake-country-2025-employee-remuneration",
+      "employerSlug": "district-of-lake-country",
+      "employerName": "District of Lake Country",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://www.lakecountry.bc.ca/media/file/2025-statements-financial-information-sofi-reportpdf",
+      "sourceIndexUrl": "https://www.lakecountry.bc.ca/government/document-library/2025-statements-financial-information-sofi-report",
+      "sha256": "4f2dc49a27f4f951ebcec6f7f76f97c2481ec71d6ed22ca54b03467df0f77e38",
+      "file": "district-of-lake-country-2025-employee-remuneration.json.gzip",
+      "dataSha256": "049f96d47135e6aecf7d5b505ca1d5c425c0efbd6da6cd8faf20c35160109726",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "District of Lake Country 2025 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 81,
+      "totalRemuneration": 9054656.29,
+      "totalExpenses": 277706.21,
+      "pages": [
+        5,
+        6
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Full published named schedules are retained with names/initials and positions exactly as disclosed; no external identity enrichment or additional threshold filtering is applied.",
+        "The report labels named schedules Unaudited. Employee controls use the named Employees75,000andgreater subtotal only, not the broader expense column grand total that includes employerEI/CPP.",
+        "Remuneration is the published Taxable Remuneration column, including the described accumulated vacation or sick payouts on termination. Other Expenses remain separate; employer EI/CPP costs in the bottom reconciliation are not added to individual pay or named expenses. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5,
+          6
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 9054656.29,
+            "rowSum": 9054656.29,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 277706.21,
+            "rowSum": 277706.21,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/district-of-lake-country-2025-employee-remuneration.json.gzip",
+        "evidenceSha256": "7450f4fb3b516c5d017f8d5500214b5630cbf2ac7fefa7b7c703fe9a529cdd77",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 4,
+            "text": "for the year ended December 31, 2025"
+          },
+          {
+            "page": 5,
+            "text": "for the year ended December 31, 2025"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      }
+    },
+    {
+      "id": "continuation-municipal-district-of-elkford-2022-elected-officials",
+      "employerSlug": "district-of-elkford",
+      "employerName": "District of Elkford",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.elkford.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+      "sourceIndexUrl": "https://www.elkford.ca/finance_services",
+      "sha256": "3e697dd7066aa03f819b9605d31de91c9ca9866b04149164216ae1d410f12aca",
+      "file": "district-of-elkford-2022-elected-officials.json.gzip",
+      "dataSha256": "13d201a04a27a41e4e97f9c7b0ac9d2f40c0034f3abd580d010f5f947ba3b38b",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "District of Elkford 2022 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-pdf-ocr-overlay",
+      "rowCount": 11,
+      "totalRemuneration": 130142,
+      "totalExpenses": 50120,
+      "pages": [
+        6
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "The salary page is a scanned original with an issuer-provided OCR text overlay, not a native table. Two PDF readers corroborate the overlay; no independent OCR-engine agreement is claimed. Every name, initial, punctuation, title, pay/expense cell, explicit zero and original control was checked on the complete rendered physical page 6.",
+        "Council and employee scopes remain separate. Employee controls are derived by subtracting the printed under-threshold aggregate from all-employee totals; no aggregate is expanded into individuals.",
+        "Remuneration is the separate published Remuneration column. Expenses and employer-paid benefits in the reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF OCR-overlay words",
+          "Poppler OCR-overlay words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 130144,
+            "rowSum": 130142,
+            "residual": -2,
+            "basis": "Printed full named council subtotal."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 50119,
+            "rowSum": 50120,
+            "residual": 1,
+            "basis": "Printed full named council subtotal."
+          }
+        ],
+        "evidenceFile": "evidence/district-of-elkford-2022-elected-officials.json.gzip",
+        "evidenceSha256": "6220b9a5c5e7220dc6bfefe58281c7383f2ed628f8768465d27d1000959c2539",
+        "corrections": [
+          {
+            "row": 2,
+            "field": "position",
+            "before": "Councillor/Mayor",
+            "after": "Councillor / Mayor",
+            "basis": "Original rendered position visibly separates the slash; issuer OCR overlay compressed the spaces."
+          }
+        ],
+        "periodEvidence": [
+          {
+            "page": 6,
+            "text": "For the Year Ending December 31,2022"
+          }
+        ],
+        "completeEmployeeSchedule": null,
+        "ocrEngineIndependenceClaimed": false,
+        "completeRenderedTranscriptionReview": true
+      },
+      "publicWarning": "Elkford 2022 council: known individual remuneration sums 130,142 CAD versus printed 130,144 CAD (−2 CAD); expenses sum 50,120 CAD versus printed 50,119 CAD (+1 CAD). Individual source values are preserved; the cause is unknown."
+    },
+    {
+      "id": "continuation-municipal-district-of-elkford-2022-employee-remuneration",
+      "employerSlug": "district-of-elkford",
+      "employerName": "District of Elkford",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.elkford.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+      "sourceIndexUrl": "https://www.elkford.ca/finance_services",
+      "sha256": "3e697dd7066aa03f819b9605d31de91c9ca9866b04149164216ae1d410f12aca",
+      "file": "district-of-elkford-2022-employee-remuneration.json.gzip",
+      "dataSha256": "9d99208b912855c7c94dddefa26c0e18a9fd0dcb9329011fc77163c0bffcac5a",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "District of Elkford 2022 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-pdf-ocr-overlay",
+      "rowCount": 18,
+      "totalRemuneration": 1791873,
+      "totalExpenses": 53945,
+      "pages": [
+        6
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "The salary page is a scanned original with an issuer-provided OCR text overlay, not a native table. Two PDF readers corroborate the overlay; no independent OCR-engine agreement is claimed. Every name, initial, punctuation, title, pay/expense cell, explicit zero and original control was checked on the complete rendered physical page 6.",
+        "Council and employee scopes remain separate. Employee controls are derived by subtracting the printed under-threshold aggregate from all-employee totals; no aggregate is expanded into individuals.",
+        "Remuneration is the separate published Remuneration column. Expenses and employer-paid benefits in the reconciliation are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF OCR-overlay words",
+          "Poppler OCR-overlay words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 1791872,
+            "rowSum": 1791873,
+            "residual": 1,
+            "basis": "Derived full named employee control: printed all-employee total minus separate under-threshold aggregate. Remuneration 3,204,567−1,412,695=1,791,872 CAD; expenses 60,005−6,060=53,945 CAD."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 53945,
+            "rowSum": 53945,
+            "residual": 0,
+            "basis": "Derived full named employee control: printed all-employee total minus separate under-threshold aggregate. Remuneration 3,204,567−1,412,695=1,791,872 CAD; expenses 60,005−6,060=53,945 CAD."
+          }
+        ],
+        "evidenceFile": "evidence/district-of-elkford-2022-employee-remuneration.json.gzip",
+        "evidenceSha256": "a254c654a802a29fbb13dc88225c71a54c2f4d92da3cf7cec40dfd77647a5c41",
+        "corrections": [
+          {
+            "row": 1,
+            "field": "name",
+            "before": "Dawson,C",
+            "after": "Dawson, C",
+            "basis": "Confirmed literal comma-space in high-resolution original image; issuer OCR overlay omitted the space. Kliment,E remains compressed as visibly printed."
+          },
+          {
+            "row": 2,
+            "field": "name",
+            "before": "Gagnon,M",
+            "after": "Gagnon, M",
+            "basis": "Confirmed literal comma-space in high-resolution original image; issuer OCR overlay omitted the space. Kliment,E remains compressed as visibly printed."
+          },
+          {
+            "row": 8,
+            "field": "name",
+            "before": "Madsen,T",
+            "after": "Madsen, T",
+            "basis": "Confirmed literal comma-space in high-resolution original image; issuer OCR overlay omitted the space. Kliment,E remains compressed as visibly printed."
+          },
+          {
+            "row": 13,
+            "field": "name",
+            "before": "Rookes,M",
+            "after": "Rookes, M",
+            "basis": "Confirmed literal comma-space in high-resolution original image; issuer OCR overlay omitted the space. Kliment,E remains compressed as visibly printed."
+          }
+        ],
+        "periodEvidence": [
+          {
+            "page": 6,
+            "text": "For the Year Ending December 31,2022"
+          }
+        ],
+        "completeEmployeeSchedule": true,
+        "ocrEngineIndependenceClaimed": false,
+        "completeRenderedTranscriptionReview": true
+      },
+      "publicWarning": "Elkford 2022 employees: known individual remuneration sums 1,791,873 CAD versus derived full named control 1,791,872 CAD (+1 CAD). Known expenses agree with the derived named control 53,945 CAD. Individual source values are preserved; the remuneration difference remains unexplained."
+    },
+    {
+      "id": "continuation-municipal-city-of-revelstoke-2021-elected-officials",
+      "employerSlug": "city-of-revelstoke",
+      "employerName": "City of Revelstoke",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16952/2021-SOFI-PDF",
+      "sourceIndexUrl": "https://revelstoke.ca/86/Financial-Documents",
+      "sha256": "895f800fac68609d2a4bea229be7a2c0941b06c3b075b0f189348885a1ac8c65",
+      "file": "city-of-revelstoke-2021-elected-officials.json.gzip",
+      "dataSha256": "a4b53df9feafd36ec57babb69f8f7693dcb92a8dc5ac128e35e0f38581915b8d",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Revelstoke 2021 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 118013,
+      "totalExpenses": 3228,
+      "pages": [
+        39
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "These older official originals were previously located but had no accepted cohorts. The complete published named schedules now receive independent PDF-reader comparison and full rendered original review. Names, initials, titles and source spelling are retained; no across-year identity enrichment is applied.",
+        "Council office is printed as a Mayor/Councillor prefix inside the Name cell; that original prefix is separated into the normalized position field, with the remaining printed name retained.",
+        "Remuneration is the separate source Remuneration column. Employer benefit expense and payroll-reconciliation components are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          39
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 118013,
+            "rowSum": 118013,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 3228,
+            "rowSum": 3228,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-revelstoke-2021-elected-officials.json.gzip",
+        "evidenceSha256": "3beef75ebf42c091fc998b9078b5bb6933d45b1d6fb099ebde9aaff58a9d4c7a",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "Fiscal Year End: December 31, 2021"
+          },
+          {
+            "page": 39,
+            "text": "Elected Officials 2021"
+          },
+          {
+            "page": 40,
+            "text": "Employee's Remuneration over $75,000 & Employment Expenses 2021"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-revelstoke-2021-employee-remuneration",
+      "employerSlug": "city-of-revelstoke",
+      "employerName": "City of Revelstoke",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16952/2021-SOFI-PDF",
+      "sourceIndexUrl": "https://revelstoke.ca/86/Financial-Documents",
+      "sha256": "895f800fac68609d2a4bea229be7a2c0941b06c3b075b0f189348885a1ac8c65",
+      "file": "city-of-revelstoke-2021-employee-remuneration.json.gzip",
+      "dataSha256": "2d8ed210910f878b3234883a78dd949b7983c73c223215667c8e3c2fe0f22e6a",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Revelstoke 2021 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 31,
+      "totalRemuneration": 3102639.72,
+      "totalExpenses": 25797.88,
+      "pages": [
+        40
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "These older official originals were previously located but had no accepted cohorts. The complete published named schedules now receive independent PDF-reader comparison and full rendered original review. Names, initials, titles and source spelling are retained; no across-year identity enrichment is applied.",
+        "Council office is printed as a Mayor/Councillor prefix inside the Name cell; that original prefix is separated into the normalized position field, with the remaining printed name retained.",
+        "Remuneration is the separate source Remuneration column. Employer benefit expense and payroll-reconciliation components are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          40
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 3102639.72,
+            "rowSum": 3102639.72,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 25797.88,
+            "rowSum": 25797.88,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-revelstoke-2021-employee-remuneration.json.gzip",
+        "evidenceSha256": "99a1e0a6967077f94e25f746eeac8d120a560a549590cdadb2f16d92f59a7b56",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "Fiscal Year End: December 31, 2021"
+          },
+          {
+            "page": 39,
+            "text": "Elected Officials 2021"
+          },
+          {
+            "page": 40,
+            "text": "Employee's Remuneration over $75,000 & Employment Expenses 2021"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-revelstoke-2023-elected-officials",
+      "employerSlug": "city-of-revelstoke",
+      "employerName": "City of Revelstoke",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16953/2023-SOFI-PDF",
+      "sourceIndexUrl": "https://revelstoke.ca/86/Financial-Documents",
+      "sha256": "0cb1508e353a98b073cbe42a9ad01045391c156a34833eed05dc05a098607834",
+      "file": "city-of-revelstoke-2023-elected-officials.json.gzip",
+      "dataSha256": "4ff63d085d39dd99fa38bcf008994ed8a8399be7d2b6c0e1a943ba9738ec6498",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Revelstoke 2023 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 192165,
+      "totalExpenses": 38932.58,
+      "pages": [
+        48
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "These older official originals were previously located but had no accepted cohorts. The complete published named schedules now receive independent PDF-reader comparison and full rendered original review. Names, initials, titles and source spelling are retained; no across-year identity enrichment is applied.",
+        "Council office is printed as a Mayor/Councillor prefix inside the Name cell; that original prefix is separated into the normalized position field, with the remaining printed name retained.",
+        "Remuneration is the separate source Remuneration column. Employer benefit expense and payroll-reconciliation components are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          48
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 192165,
+            "rowSum": 192165,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 38932.58,
+            "rowSum": 38932.58,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-revelstoke-2023-elected-officials.json.gzip",
+        "evidenceSha256": "44bebc09ceb0e823693e5f5d832e0af23cb23550ba32d475fe120b9f3f28bfcf",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "Fiscal Year End: December 31, 2023"
+          },
+          {
+            "page": 48,
+            "text": "Elected Officials 2023"
+          },
+          {
+            "page": 49,
+            "text": "Employee's Remuneration over $75,000 & Employment Expenses 2023"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-revelstoke-2023-employee-remuneration",
+      "employerSlug": "city-of-revelstoke",
+      "employerName": "City of Revelstoke",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16953/2023-SOFI-PDF",
+      "sourceIndexUrl": "https://revelstoke.ca/86/Financial-Documents",
+      "sha256": "0cb1508e353a98b073cbe42a9ad01045391c156a34833eed05dc05a098607834",
+      "file": "city-of-revelstoke-2023-employee-remuneration.json.gzip",
+      "dataSha256": "d0affcfeae2d410f4ecbba39eeaff60d308676cce9f4f44e2552e8280eef2531",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Revelstoke 2023 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 47,
+      "totalRemuneration": 4857775.67,
+      "totalExpenses": 76929.24,
+      "pages": [
+        49
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "These older official originals were previously located but had no accepted cohorts. The complete published named schedules now receive independent PDF-reader comparison and full rendered original review. Names, initials, titles and source spelling are retained; no across-year identity enrichment is applied.",
+        "Council office is printed as a Mayor/Councillor prefix inside the Name cell; that original prefix is separated into the normalized position field, with the remaining printed name retained.",
+        "Remuneration is the separate source Remuneration column. Employer benefit expense and payroll-reconciliation components are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          49
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 4857775.67,
+            "rowSum": 4857775.67,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 76929.24,
+            "rowSum": 76929.24,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-revelstoke-2023-employee-remuneration.json.gzip",
+        "evidenceSha256": "517baa9719cfa19775d27af5b69519cbe569f36319a95cf79ac1a65e721cf41b",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "Fiscal Year End: December 31, 2023"
+          },
+          {
+            "page": 48,
+            "text": "Elected Officials 2023"
+          },
+          {
+            "page": 49,
+            "text": "Employee's Remuneration over $75,000 & Employment Expenses 2023"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-revelstoke-2024-elected-officials",
+      "employerSlug": "city-of-revelstoke",
+      "employerName": "City of Revelstoke",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16950/2024-SOFI-PDF",
+      "sourceIndexUrl": "https://revelstoke.ca/86/Financial-Documents",
+      "sha256": "1fe9ba1403552dab4815ba9a8e111686c9ca60fccbc07529b3152be826a7386d",
+      "file": "city-of-revelstoke-2024-elected-officials.json.gzip",
+      "dataSha256": "c4e4c33fad66bc68dc855c76fb75809cfd71cb3330d9532a9a1d2ae5119913fe",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Revelstoke 2024 SOFI: elected-officials",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 7,
+      "totalRemuneration": 201552.98,
+      "totalExpenses": 31717.9,
+      "pages": [
+        46
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "These older official originals were previously located but had no accepted cohorts. The complete published named schedules now receive independent PDF-reader comparison and full rendered original review. Names, initials, titles and source spelling are retained; no across-year identity enrichment is applied.",
+        "Remuneration is the separate source Remuneration column. Employer benefit expense and payroll-reconciliation components are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          46
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 201552.98,
+            "rowSum": 201552.98,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 31717.9,
+            "rowSum": 31717.9,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-revelstoke-2024-elected-officials.json.gzip",
+        "evidenceSha256": "a0d0f837d976548ba945b7311685c8185604f440b393437121d49f9df8cf8d16",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "Fiscal Year End: December 31, 2024"
+          },
+          {
+            "page": 46,
+            "text": "Elected Officials 2024"
+          },
+          {
+            "page": 47,
+            "text": "Employee's Remuneration over $75,000 & Employment Expenses 2024"
+          }
+        ],
+        "completeEmployeeSchedule": null
+      }
+    },
+    {
+      "id": "continuation-municipal-city-of-revelstoke-2024-employee-remuneration",
+      "employerSlug": "city-of-revelstoke",
+      "employerName": "City of Revelstoke",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16950/2024-SOFI-PDF",
+      "sourceIndexUrl": "https://revelstoke.ca/86/Financial-Documents",
+      "sha256": "1fe9ba1403552dab4815ba9a8e111686c9ca60fccbc07529b3152be826a7386d",
+      "file": "city-of-revelstoke-2024-employee-remuneration.json.gzip",
+      "dataSha256": "bf9d6852ced07507ff172c73cd05360296146517855dec0ba961297fa707a8fb",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Revelstoke 2024 SOFI: employee-remuneration",
+      "status": "verified",
+      "sourceKind": "official-native-pdf",
+      "rowCount": 59,
+      "totalRemuneration": 6235613.89,
+      "totalExpenses": 102993.25,
+      "pages": [
+        47
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "These older official originals were previously located but had no accepted cohorts. The complete published named schedules now receive independent PDF-reader comparison and full rendered original review. Names, initials, titles and source spelling are retained; no across-year identity enrichment is applied.",
+        "Remuneration is the separate source Remuneration column. Employer benefit expense and payroll-reconciliation components are not added to individual pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          47
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 6235613.89,
+            "rowSum": 6235613.89,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 102993.25,
+            "rowSum": 102993.25,
+            "residual": 0,
+            "basis": "Printed subtotal for the complete named cohort; blank/dash expenses remain unknown and are not imputed to zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-revelstoke-2024-employee-remuneration.json.gzip",
+        "evidenceSha256": "a11d55029bd05a5db04c30c184855ec975ac5b39fcacb3819532fd24a99a97ce",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "Fiscal Year End: December 31, 2024"
+          },
+          {
+            "page": 46,
+            "text": "Elected Officials 2024"
+          },
+          {
+            "page": 47,
+            "text": "Employee's Remuneration over $75,000 & Employment Expenses 2024"
+          }
+        ],
+        "completeEmployeeSchedule": true
+      }
+    }
+  ]
+}
