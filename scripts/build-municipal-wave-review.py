@@ -4,8 +4,10 @@ import csv
 import gzip
 import hashlib
 import json
+import sys
 from collections import Counter
 from pathlib import Path
+from salary_release_audit import verify_frozen_release
 
 ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT / 'research/salaries'
@@ -28,6 +30,9 @@ def text(value):
 
 
 def main():
+    if '--frozen' in sys.argv:
+        print(json.dumps(verify_frozen_release(OUT, RESEARCH)))
+        return
     baseline = read(OUT / 'baseline.json')
     coverage = read(RESEARCH / 'municipal-audit/coverage.json')
     audit = read(ROOT / 'public/salaries/coverage.json')

@@ -1,0 +1,819 @@
+{
+  "version": 1,
+  "reviewMethod": "Complete rendered source page read, full literal cell transcription pinned; both native-text readers must agree with every field.",
+  "reports": [
+    {
+      "employerSlug": "city-of-merritt",
+      "employerName": "City of Merritt",
+      "year": "2025",
+      "sourceUrl": "https://www.merritt.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+      "sourceIndexUrl": "https://www.merritt.ca/government/annual-reports-and-financial-statements/",
+      "sha256": "887d8b9ec8fcb72288485f0b77ae8b3a4e09751bb69fa2b991bd392acdebf0ce",
+      "cacheFile": "merritt-2025.pdf",
+      "requiredHeadings": [
+        {
+          "page": 2,
+          "text": "FOR THE YEAR ENDED DECEMBER 31, 2025"
+        },
+        {
+          "page": 4,
+          "text": "Schedule Remuneration and Expenses - 2025"
+        },
+        {
+          "page": 4,
+          "text": "Other Employees Remuneration and Expenses 2025"
+        }
+      ],
+      "expenseMapping": "withhold-ambiguous-total",
+      "expensesNote": "The original has separate Expenses and Grant Funded Expenses columns but does not define whether they overlap or combine into a complete expense amount. Both literal components remain in the evidence. Published app expenses are missing for every row; no component is treated as zero or added to remuneration.",
+      "publicationEvidence": {
+        "status": "official-web-publication-no-draft-mark",
+        "indexLinksOriginal": true,
+        "physicalPage": 2,
+        "approvalSignaturesPresent": false,
+        "approvalDatesPresent": false,
+        "statement": "Posted original has approval wording but blank signature/date lines; signed adoption is not established."
+      },
+      "publicWarning": "Remuneration is copied from the published named schedule. The printed Total Employees (B) numerically includes council as well as employee amounts; it is not used as an employee-only control. Both Expenses and Grant Funded Expenses are retained in the evidence, but their combined definition is not established, so app expenses remain missing. The official posted PDF is not marked draft; its approval signature and date lines are blank, so signed adoption is not claimed.",
+      "notes": [
+        "Schedule year is 2025 and approval heading states year ended December 31, 2025; the September 2026 upload does not change the payment year.",
+        "Names, job titles and source spelling remain as printed. Remuneration is a payment disclosure, not an annual base salary rate.",
+        "A single asterisk means Includes POC and Provincial Deployment Remuneration; two asterisks mean Includes Vacation Payout. Both markers are retained in row evidence and do not alter the published remuneration.",
+        "Both expense columns are read independently. Missing cells remain null. The exact arithmetic identity of printed B is observed without asserting the issuer's intended label or inferring nil below-threshold expenses.",
+        "The published subsection says Other Employees and the aggregate says Consolidated Employees Under 75K. No exact equality boundary is stated; thresholdComparison is null."
+      ],
+      "controls": [
+        {
+          "id": "council",
+          "page": 4,
+          "y": 172.26,
+          "columns": [
+            [
+              235,
+              282
+            ],
+            [
+              300,
+              345
+            ],
+            [
+              345,
+              395
+            ]
+          ],
+          "values": [
+            186501.5,
+            29645.85,
+            576.49
+          ]
+        },
+        {
+          "id": "namedEmployees",
+          "page": 4,
+          "y": 631.38,
+          "columns": [
+            [
+              235,
+              282
+            ],
+            [
+              300,
+              345
+            ],
+            [
+              345,
+              395
+            ]
+          ],
+          "values": [
+            4779040.1,
+            null,
+            null
+          ]
+        },
+        {
+          "id": "belowThreshold",
+          "page": 4,
+          "y": 653.94,
+          "columns": [
+            [
+              235,
+              282
+            ],
+            [
+              300,
+              345
+            ],
+            [
+              345,
+              395
+            ]
+          ],
+          "values": [
+            2876685.82,
+            null,
+            null
+          ]
+        },
+        {
+          "id": "printedB",
+          "page": 4,
+          "y": 671.34,
+          "columns": [
+            [
+              235,
+              282
+            ],
+            [
+              300,
+              345
+            ],
+            [
+              345,
+              395
+            ]
+          ],
+          "values": [
+            7842227.42,
+            116206.03,
+            48141.93
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "elected-officials",
+          "scopeDescription": "All seven published council rows; remuneration only; expense definition unresolved.",
+          "layout": {
+            "page": 4,
+            "columns": [
+              24,
+              88,
+              235,
+              282,
+              300,
+              345,
+              395
+            ],
+            "roles": [
+              "name",
+              "position",
+              "pay",
+              "marker",
+              "expenses",
+              "grantExpenses"
+            ],
+            "yRange": [
+              109,
+              164
+            ],
+            "rows": 7
+          },
+          "notes": [
+            "Wendy Charney's literal position annotation (incl ESS $5,497.77) is retained in the position field. The source separately publishes remuneration $27,592.34 and Expenses $5,497.77; the annotation is not a new pay component."
+          ],
+          "reviewedRows": [
+            {
+              "name": "Goetz, Mike",
+              "position": "Mayor",
+              "pay": 47336.97,
+              "marker": null,
+              "expenses": 4251.13,
+              "grantExpenses": 576.49
+            },
+            {
+              "name": "Charney, Wendy",
+              "position": "Councillor (incl ESS $5,497.77)",
+              "pay": 27592.34,
+              "marker": null,
+              "expenses": 5497.77,
+              "grantExpenses": null
+            },
+            {
+              "name": "Egan, Dana",
+              "position": "Councillor",
+              "pay": 22507.84,
+              "marker": null,
+              "expenses": 5307.58,
+              "grantExpenses": null
+            },
+            {
+              "name": "Etchart, Adam",
+              "position": "Councillor",
+              "pay": 22798.96,
+              "marker": null,
+              "expenses": 3731.1,
+              "grantExpenses": null
+            },
+            {
+              "name": "Baxter, Yvette",
+              "position": "Councillor",
+              "pay": 20856.05,
+              "marker": null,
+              "expenses": 4130.2,
+              "grantExpenses": null
+            },
+            {
+              "name": "Olguin, Manuel",
+              "position": "Councillor",
+              "pay": 22901.47,
+              "marker": null,
+              "expenses": 4970.37,
+              "grantExpenses": null
+            },
+            {
+              "name": "Petroczi, Paul",
+              "position": "Councillor",
+              "pay": 22507.87,
+              "marker": null,
+              "expenses": 1757.7,
+              "grantExpenses": null
+            }
+          ]
+        },
+        {
+          "category": "employee-remuneration",
+          "scopeDescription": "All 46 named employee remuneration rows; expense amounts withheld because a comparable total is not established.",
+          "layout": {
+            "page": 4,
+            "columns": [
+              24,
+              88,
+              235,
+              282,
+              300,
+              345,
+              395
+            ],
+            "roles": [
+              "name",
+              "position",
+              "pay",
+              "marker",
+              "expenses",
+              "grantExpenses"
+            ],
+            "yRange": [
+              217,
+              624
+            ],
+            "rows": 46
+          },
+          "reviewedRows": [
+            {
+              "name": "Bates, Wesley",
+              "position": "Bylaw Officer III",
+              "pay": 85948.59,
+              "marker": null,
+              "expenses": 1130.27,
+              "grantExpenses": null
+            },
+            {
+              "name": "Blonde Travis",
+              "position": "Engineering Technologist",
+              "pay": 78988.24,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Bortolussi, Louie",
+              "position": "Arena Attendant III",
+              "pay": 92897.61,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Brick Linda",
+              "position": "Director of Corporate Serv",
+              "pay": 131821.54,
+              "marker": null,
+              "expenses": 6502.01,
+              "grantExpenses": null
+            },
+            {
+              "name": "Colwell Brandon",
+              "position": "Arena Attendant II",
+              "pay": 88665,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Croasdale Robert",
+              "position": "Fire Technician",
+              "pay": 106338.32,
+              "marker": "*",
+              "expenses": 1242.5,
+              "grantExpenses": null
+            },
+            {
+              "name": "Douglas Keith",
+              "position": "Mechanic",
+              "pay": 89217.11,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Ellingsen Gerry",
+              "position": "Mechanic",
+              "pay": 79843.11,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Ferris Holly",
+              "position": "Director of Housing",
+              "pay": 119414.96,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": 4694.28
+            },
+            {
+              "name": "Finch Parker",
+              "position": "Equipment Operator I",
+              "pay": 76954.05,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Fournier Craig",
+              "position": "WWTPO II",
+              "pay": 85569.68,
+              "marker": null,
+              "expenses": 5579.76,
+              "grantExpenses": null
+            },
+            {
+              "name": "Gill Ryan",
+              "position": "Manager of Operations",
+              "pay": 85639.77,
+              "marker": null,
+              "expenses": 4026.04,
+              "grantExpenses": 2672.94
+            },
+            {
+              "name": "Green, Rick",
+              "position": "Director of PW & Engineering",
+              "pay": 157529.34,
+              "marker": null,
+              "expenses": 4381.54,
+              "grantExpenses": null
+            },
+            {
+              "name": "Hamm Tyrone",
+              "position": "Utility Maintenance Operator I",
+              "pay": 75856.76,
+              "marker": null,
+              "expenses": 2775.58,
+              "grantExpenses": null
+            },
+            {
+              "name": "Harrington, Tom",
+              "position": "Utilities Foreperson",
+              "pay": 101011.76,
+              "marker": null,
+              "expenses": 3943.14,
+              "grantExpenses": null
+            },
+            {
+              "name": "Hart Adam",
+              "position": "Emergency Management Coordinator",
+              "pay": 89397.7,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": 1259.07
+            },
+            {
+              "name": "Houde Michael",
+              "position": "Equipment Operator III",
+              "pay": 80247.5,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Huang Shiming",
+              "position": "Planner - Term",
+              "pay": 78931.02,
+              "marker": null,
+              "expenses": 3360.53,
+              "grantExpenses": 45.42
+            },
+            {
+              "name": "Jacoe Remo",
+              "position": "Working Foreperson",
+              "pay": 84013.54,
+              "marker": null,
+              "expenses": 179,
+              "grantExpenses": null
+            },
+            {
+              "name": "Jani, Purnesh",
+              "position": "Manager of Planning & Development",
+              "pay": 108313.19,
+              "marker": null,
+              "expenses": 5861.78,
+              "grantExpenses": null
+            },
+            {
+              "name": "Johnston Carl",
+              "position": "Building Offical I",
+              "pay": 93791,
+              "marker": null,
+              "expenses": 2033.23,
+              "grantExpenses": null
+            },
+            {
+              "name": "Joe Charlene",
+              "position": "Indigenous Engagement Lead",
+              "pay": 94395.79,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": 2754.9
+            },
+            {
+              "name": "Krisha Shah",
+              "position": "Planner",
+              "pay": 90571.19,
+              "marker": null,
+              "expenses": 4153.48,
+              "grantExpenses": null
+            },
+            {
+              "name": "Oppenheim Alix",
+              "position": "Community Services Manager",
+              "pay": 82060.42,
+              "marker": null,
+              "expenses": 3828.03,
+              "grantExpenses": null
+            },
+            {
+              "name": "Long Jeremy",
+              "position": "WW treatment plant III in training",
+              "pay": 95479.38,
+              "marker": null,
+              "expenses": 1651.9,
+              "grantExpenses": null
+            },
+            {
+              "name": "Manaloto Nathaniel",
+              "position": "Development Eng Tech",
+              "pay": 77552.43,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Mckeown, Sky",
+              "position": "ROC Deputy Director",
+              "pay": 131717.02,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": 2795.4
+            },
+            {
+              "name": "Milne, Stuart",
+              "position": "Fire Prev Officer",
+              "pay": 113387.53,
+              "marker": "*",
+              "expenses": 3010.59,
+              "grantExpenses": 836.64
+            },
+            {
+              "name": "Mouland Mike",
+              "position": "Director of Infrastructure",
+              "pay": 121847.02,
+              "marker": null,
+              "expenses": 362.93,
+              "grantExpenses": null
+            },
+            {
+              "name": "Mullin Kimberley",
+              "position": "Communications Manager",
+              "pay": 109358.9,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Natkinniemi, Kevin",
+              "position": "Director of Finance and HR & CFO",
+              "pay": 189378.04,
+              "marker": "**",
+              "expenses": 11854.65,
+              "grantExpenses": 9365.85
+            },
+            {
+              "name": "Peck Ryan",
+              "position": "Superintendent Public Works",
+              "pay": 85458.13,
+              "marker": null,
+              "expenses": 1031,
+              "grantExpenses": 1962.93
+            },
+            {
+              "name": "Rempel, Steven",
+              "position": "Fire Technician",
+              "pay": 112642.58,
+              "marker": "*",
+              "expenses": 766.22,
+              "grantExpenses": 3326.64
+            },
+            {
+              "name": "Robinson, Linda",
+              "position": "Manager of Fin & HR",
+              "pay": 123555.77,
+              "marker": "**",
+              "expenses": 2480.11,
+              "grantExpenses": null
+            },
+            {
+              "name": "Stancer Dani",
+              "position": "Grants & Sustainability Coordinator",
+              "pay": 78927.9,
+              "marker": null,
+              "expenses": 289.29,
+              "grantExpenses": 7302.99
+            },
+            {
+              "name": "Sulz Jessica",
+              "position": "Working Foreperson",
+              "pay": 92906.73,
+              "marker": "*",
+              "expenses": 910.01,
+              "grantExpenses": 409.94
+            },
+            {
+              "name": "Strang Sean",
+              "position": "Director of Flood Recovery",
+              "pay": 192901.37,
+              "marker": "**",
+              "expenses": null,
+              "grantExpenses": 4840.65
+            },
+            {
+              "name": "Taylor Kodi",
+              "position": "Fire Technician",
+              "pay": 104865.37,
+              "marker": "*",
+              "expenses": 878.91,
+              "grantExpenses": null
+            },
+            {
+              "name": "Tilt, Gareth",
+              "position": "Fire Prevention Officer",
+              "pay": 117525.64,
+              "marker": "*",
+              "expenses": 3282.54,
+              "grantExpenses": 418.13
+            },
+            {
+              "name": "Tomkinson, David",
+              "position": "Fire Chief",
+              "pay": 162752.55,
+              "marker": "*",
+              "expenses": 1996.95,
+              "grantExpenses": 942.6
+            },
+            {
+              "name": "Trufanenko Dallas",
+              "position": "WWTPO I",
+              "pay": 79224.36,
+              "marker": null,
+              "expenses": 2915.52,
+              "grantExpenses": null
+            },
+            {
+              "name": "Vilac, Kevin",
+              "position": "Chief Plant Operator",
+              "pay": 114408.9,
+              "marker": null,
+              "expenses": 1695.84,
+              "grantExpenses": null
+            },
+            {
+              "name": "Walder Katrina",
+              "position": "Court Liasion/Foreperson",
+              "pay": 79306.89,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "White Cynthia",
+              "position": "CAO",
+              "pay": 129026.73,
+              "marker": null,
+              "expenses": 2714.32,
+              "grantExpenses": 1316.51
+            },
+            {
+              "name": "Worrin Shawn",
+              "position": "Facility Team lead",
+              "pay": 80171.26,
+              "marker": null,
+              "expenses": null,
+              "grantExpenses": null
+            },
+            {
+              "name": "Zakall, Dave",
+              "position": "Director of Community Services",
+              "pay": 129228.41,
+              "marker": null,
+              "expenses": 1722.51,
+              "grantExpenses": 2620.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "year": "2024",
+      "sourceUrl": "https://lakecowichan.ca/dl/2024%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "e909d34599f0a3d2f8a1ebbdb706bb1139e9fecccbbd9cf04b12b96ffc4d7c46",
+      "cacheFile": "lake-2024.pdf",
+      "requiredHeadings": [
+        {
+          "page": 1,
+          "text": "Year Ended December 31, 2024"
+        },
+        {
+          "page": 31,
+          "text": "2024 Schedule of Staff Remuneration and Expenses"
+        },
+        {
+          "page": 31,
+          "text": "Financial Compensation"
+        }
+      ],
+      "expensesNote": "Literal Expense column, defined as Travel, Conferences and Other. Expense-inclusive Totals remain evidence and are never remuneration.",
+      "publicationEvidence": {
+        "status": "signed-approval",
+        "physicalPage": 27,
+        "approvalSignaturesPresent": true,
+        "approvalDate": "2025-06-24",
+        "signatories": [
+          "Tim McGonigle, Mayor",
+          "Ronnie Gill, Director of Finance"
+        ],
+        "statement": "Both signatures are visible on approval of all statements and schedules."
+      },
+      "publicWarning": "Partial employee schedule: seven of eight named employees are included. Jessica May is withheld because published Financial Compensation $92,354.93 plus Expenses $5,429.75 equals $97,784.68, while the row's expense-inclusive Total is $92,784.68, a $5,000.00 conflict. No amount is corrected or selected to force agreement. All other employees aggregate Total is $0.09 below its pay-plus-expense components. Original full-cohort remuneration and expense controls reconcile, but do not resolve the row conflict.",
+      "notes": [
+        "The original staff schedule is calendar 2024. Official signed approval is June 24, 2025; it does not change the salary year.",
+        "Financial Compensation is the remuneration column. Travel, Conferences and Other is the expense column. The separate Total includes expenses and is supporting evidence only.",
+        "Every original named employee row, including Jessica May's held row, is independently read and visually checked before publication selection. All seven accepted rows have exact pay-plus-expense agreement with their own source Total.",
+        "Eight named employees exist in the source; only seven are accepted. completeEmployeeSchedule and completeNamedCohort are false at both source and validation levels. Full-cohort source controls are not misrepresented as partial-cohort controls.",
+        "The source heading Staff does not state the exact disclosure-threshold equality boundary. thresholdComparison is null. Council 2024 is already accepted in municipal-wave-capital and is not duplicated."
+      ],
+      "controls": [
+        {
+          "id": "allEmployees",
+          "page": 31,
+          "y": 595.18,
+          "columns": [
+            [
+              310,
+              400
+            ],
+            [
+              400,
+              465
+            ],
+            [
+              465,
+              555
+            ]
+          ],
+          "values": [
+            2142501.52,
+            47788.55,
+            2190290.07
+          ]
+        },
+        {
+          "id": "belowThreshold",
+          "page": 31,
+          "y": 577.99,
+          "columns": [
+            [
+              310,
+              400
+            ],
+            [
+              400,
+              465
+            ],
+            [
+              465,
+              555
+            ]
+          ],
+          "values": [
+            1320535.75,
+            27343.4,
+            1347879.06
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "employee-remuneration",
+          "scopeDescription": "Seven internally consistent named staff rows; Jessica May is withheld;2024 council remains solely in its earlier accepted source.",
+          "withholdNames": [
+            "Jessica May"
+          ],
+          "layout": {
+            "page": 31,
+            "columns": [
+              95,
+              200,
+              310,
+              400,
+              475,
+              555
+            ],
+            "roles": [
+              "name",
+              "position",
+              "pay",
+              "expenses",
+              "total"
+            ],
+            "yRange": [
+              453,
+              568
+            ],
+            "rows": 8
+          },
+          "reviewedRows": [
+            {
+              "name": "Joseph Fernandez",
+              "position": "Chief Admin. Officer",
+              "pay": 150915.04,
+              "expenses": 3351.8,
+              "total": 154266.84
+            },
+            {
+              "name": "Ronnie Gill",
+              "position": "Director of Finance",
+              "pay": 114243.55,
+              "expenses": 3778.33,
+              "total": 118021.88
+            },
+            {
+              "name": "Jessica May",
+              "position": "Fire Risk Officer",
+              "pay": 92354.93,
+              "expenses": 5429.75,
+              "total": 92784.68
+            },
+            {
+              "name": "Jas Sandhu",
+              "position": "Superintendent",
+              "pay": 110749.01,
+              "expenses": 6952.27,
+              "total": 117701.28
+            },
+            {
+              "name": "Dalton Smith",
+              "position": "CLEC Manager",
+              "pay": 96233.88,
+              "expenses": 130,
+              "total": 96363.88
+            },
+            {
+              "name": "Kelly Bergstrom",
+              "position": "Public Works Cat. 3",
+              "pay": 76861.65,
+              "expenses": 225,
+              "total": 77086.65
+            },
+            {
+              "name": "Dave Campbell",
+              "position": "Public Works Cat. 3",
+              "pay": 99056.96,
+              "expenses": 225,
+              "total": 99281.96
+            },
+            {
+              "name": "Kuldeep Johel",
+              "position": "Foreman",
+              "pay": 81550.75,
+              "expenses": 353,
+              "total": 81903.75
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

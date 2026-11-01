@@ -1,0 +1,530 @@
+{
+  "version": 1,
+  "auditDate": "2026-11-01",
+  "baseline": "67d5cff",
+  "baselineRecords": 919955,
+  "summary": {
+    "acceptedRecords": 797,
+    "employeeRecords": 670,
+    "electedRecords": 127,
+    "acceptedCohorts": 34,
+    "reportYears": 18,
+    "municipalitiesWithAcceptedRecords": 6,
+    "retrievedOriginalReceipts": 58,
+    "nativeCohorts": 32,
+    "reviewedScanCohorts": 2,
+    "heldCouncilRows": 7,
+    "regressionTests": 21,
+    "remainingTasks": 16,
+    "taskRoutes": {
+      "processing": 10,
+      "public-archive-research": 4,
+      "clarification-request": 2
+    },
+    "sourceManifestSha256": "fcfe885e8b0c89961ca53d5fc9aa0bc7417d26f4e3851244ebe4199a162304e3",
+    "reviewedLayoutsSha256": "5471cce77ab529e7907afdfa9268c690672aed47be7e80bda1c04228b24c49f5"
+  },
+  "requestsSent": 0,
+  "compiledReplacementsAuthored": 0,
+  "scope": "Six priority historical archives plus Oak Bay2024 original; remaining prior12-municipality work is carried forward without claiming a fresh search of every prior lead.",
+  "municipalities": [
+    {
+      "employerSlug": "city-of-colwood",
+      "indexYearsRetrieved": [
+        "2024",
+        "2023",
+        "2022",
+        "2021",
+        "2020",
+        "2019",
+        "2018",
+        "2017",
+        "2016",
+        "2015",
+        "2014",
+        "2013",
+        "2012",
+        "2011"
+      ],
+      "sourceIndexUrls": [
+        "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports"
+      ],
+      "accepted": [
+        {
+          "year": "2012",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.colwood.ca/media/25672",
+          "pages": [
+            8
+          ],
+          "publicWarning": "This seven-person council schedule publishes no group subtotal and no individual offices. Every original row was independently transcribed from the rendered page; unprinted subtotals and offices remain missing."
+        },
+        {
+          "year": "2012",
+          "category": "employee-remuneration",
+          "rows": 20,
+          "sourceUrl": "https://www.colwood.ca/media/25672",
+          "pages": [
+            9,
+            10
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $-47.55; expense difference has no numeric printed named control. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2016",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.colwood.ca/media/25663",
+          "pages": [
+            9
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $-0.02. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2016",
+          "category": "employee-remuneration",
+          "rows": 32,
+          "sourceUrl": "https://www.colwood.ca/media/25663",
+          "pages": [
+            10
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $0.01. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2018",
+          "category": "elected-officials",
+          "rows": 11,
+          "sourceUrl": "https://www.colwood.ca/media/25655",
+          "pages": [
+            9
+          ],
+          "publicWarning": null
+        },
+        {
+          "year": "2018",
+          "category": "employee-remuneration",
+          "rows": 32,
+          "sourceUrl": "https://www.colwood.ca/media/25655",
+          "pages": [
+            10
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $0.01. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2021",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.colwood.ca/media/25646",
+          "pages": [
+            9
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $2.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2021",
+          "category": "employee-remuneration",
+          "rows": 48,
+          "sourceUrl": "https://www.colwood.ca/media/25646",
+          "pages": [
+            10
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $1.00; expense difference $5.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Published numeric remuneration TOTAL differs from published gross plus taxable benefits in 13 rows. Each exact difference is retained in supporting evidence; all original fields remain unchanged and the cause is unresolved. Remuneration uses the published TOTAL."
+        },
+        {
+          "year": "2017",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.colwood.ca/media/25658",
+          "pages": [
+            9
+          ],
+          "publicWarning": null
+        }
+      ],
+      "remainingTaskIds": [
+        "capital-history-city-of-colwood-historical-processing",
+        "capital-history-city-of-colwood-council2025"
+      ]
+    },
+    {
+      "employerSlug": "city-of-langford",
+      "indexYearsRetrieved": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "sourceIndexUrls": [
+        "https://langford.ca/city-hall/document-libraries/document-library/"
+      ],
+      "accepted": [
+        {
+          "year": "2021",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://langford.ca/wp-content/uploads/2022/06/2021-SOFI-Package.pdf",
+          "pages": [
+            6
+          ],
+          "publicWarning": "Every published council expense cell and the printed council expense total is a dash. These amounts remain missing; a sum of zero disclosed numeric expenses does not establish nil expenses."
+        },
+        {
+          "year": "2021",
+          "category": "employee-remuneration",
+          "rows": 60,
+          "sourceUrl": "https://langford.ca/wp-content/uploads/2022/06/2021-SOFI-Package.pdf",
+          "pages": [
+            7,
+            8
+          ],
+          "publicWarning": null
+        },
+        {
+          "year": "2010",
+          "category": "employee-remuneration",
+          "rows": 24,
+          "sourceUrl": "https://langford.ca/wp-content/uploads/2020/11/Statement-of-Financial-Information-2010.pdf",
+          "pages": [
+            6
+          ],
+          "publicWarning": "The salary schedule prints Tement, Steve, while the same original approval on physical page3 prints Steve Ternent. The schedule spelling is retained; no identity substitution or alias is inferred."
+        },
+        {
+          "year": "2010",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://langford.ca/wp-content/uploads/2020/11/Statement-of-Financial-Information-2010.pdf",
+          "pages": [
+            7
+          ],
+          "publicWarning": null
+        }
+      ],
+      "remainingTaskIds": [
+        "capital-history-city-of-langford-historical-processing"
+      ]
+    },
+    {
+      "employerSlug": "district-of-north-saanich",
+      "indexYearsRetrieved": [
+        "2024",
+        "2023",
+        "2022",
+        "2021",
+        "2020",
+        "2019"
+      ],
+      "sourceIndexUrls": [
+        "https://www.northsaanich.ca/local-government/plans-reports"
+      ],
+      "accepted": [
+        {
+          "year": "2020",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2020-SOFI.pdf",
+          "pages": [
+            36
+          ],
+          "publicWarning": null
+        },
+        {
+          "year": "2020",
+          "category": "employee-remuneration",
+          "rows": 25,
+          "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2020-SOFI.pdf",
+          "pages": [
+            37
+          ],
+          "publicWarning": null
+        },
+        {
+          "year": "2021",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2021-Statement-of-Financial-Information.pdf",
+          "pages": [
+            36
+          ],
+          "publicWarning": null
+        },
+        {
+          "year": "2021",
+          "category": "employee-remuneration",
+          "rows": 28,
+          "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2021-Statement-of-Financial-Information.pdf",
+          "pages": [
+            37
+          ],
+          "publicWarning": null
+        },
+        {
+          "year": "2023",
+          "category": "elected-officials",
+          "rows": 8,
+          "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2023-Statement-of-Financial-Information-SOFI.pdf",
+          "pages": [
+            42
+          ],
+          "publicWarning": null
+        },
+        {
+          "year": "2023",
+          "category": "employee-remuneration",
+          "rows": 32,
+          "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2023-Statement-of-Financial-Information-SOFI.pdf",
+          "pages": [
+            40
+          ],
+          "publicWarning": null
+        }
+      ],
+      "remainingTaskIds": [
+        "capital-history-district-of-north-saanich-historical-processing"
+      ]
+    },
+    {
+      "employerSlug": "district-of-oak-bay",
+      "indexYearsRetrieved": [
+        "2024"
+      ],
+      "sourceIndexUrls": [
+        "https://oakbay.civicweb.net/document/175333/"
+      ],
+      "accepted": [
+        {
+          "year": "2024",
+          "category": "employee-remuneration",
+          "rows": 98,
+          "sourceUrl": "https://www.oakbay.ca/wp-content/uploads/2025/11/DOB_2024Sofi.pdf",
+          "pages": [
+            51,
+            52,
+            53
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $5.00; expense difference $-4.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. The printed all-employee remuneration total $26,456,705 is $1 below the printed named $10,979,361 plus other-employee $15,477,345 controls. Source values are preserved; the cause is unresolved. The separate2024 council cohort is held for material source conflicts."
+        }
+      ],
+      "remainingTaskIds": [
+        "capital-history-district-of-oak-bay-source-processing",
+        "capital-history-district-of-oak-bay-other-history",
+        "capital-history-oak-bay-2021-ocr"
+      ]
+    },
+    {
+      "employerSlug": "town-of-ladysmith",
+      "indexYearsRetrieved": [
+        "2024",
+        "2023",
+        "2022",
+        "2021"
+      ],
+      "sourceIndexUrls": [
+        "https://www.ladysmith.ca/city-hall/reports-publications"
+      ],
+      "accepted": [
+        {
+          "year": "2021",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2021-sofi-final.pdf?sfvrsn=82d5f4db_6",
+          "pages": [
+            5
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2021",
+          "category": "employee-remuneration",
+          "rows": 32,
+          "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2021-sofi-final.pdf?sfvrsn=82d5f4db_6",
+          "pages": [
+            5
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2022",
+          "category": "elected-officials",
+          "rows": 8,
+          "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2022-sofi-final.pdf?sfvrsn=eb4df7db_6",
+          "pages": [
+            5
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2022",
+          "category": "employee-remuneration",
+          "rows": 37,
+          "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2022-sofi-final.pdf?sfvrsn=eb4df7db_6",
+          "pages": [
+            5
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $5.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2023",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2023-sofi.pdf?sfvrsn=5219f6db_4",
+          "pages": [
+            5
+          ],
+          "publicWarning": null
+        },
+        {
+          "year": "2023",
+          "category": "employee-remuneration",
+          "rows": 37,
+          "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2023-sofi.pdf?sfvrsn=5219f6db_4",
+          "pages": [
+            5
+          ],
+          "publicWarning": null
+        }
+      ],
+      "remainingTaskIds": [
+        "capital-history-town-of-ladysmith-historical-processing"
+      ]
+    },
+    {
+      "employerSlug": "town-of-sidney",
+      "indexYearsRetrieved": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "sourceIndexUrls": [
+        "https://www.sidney.ca/government/financial-accountability/financial-reporting/"
+      ],
+      "accepted": [
+        {
+          "year": "2021",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2021-Statement-of-Financial-Information.pdf",
+          "pages": [
+            35
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2021",
+          "category": "employee-remuneration",
+          "rows": 34,
+          "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2021-Statement-of-Financial-Information.pdf",
+          "pages": [
+            35
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $-1.00; expense difference $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Separately, the printed all-employee remuneration total $7,758,302 is $1 below the sum of the printed named and other-employee controls (3,596,336 + 4,161,967). Source values are unchanged; the cause is unresolved."
+        },
+        {
+          "year": "2022",
+          "category": "elected-officials",
+          "rows": 9,
+          "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2022-Statement-of-Financial-Information.pdf",
+          "pages": [
+            35
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $-3.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. The printed council remuneration total $142,923 exceeds printed gross $138,164 plus benefits $4,758 by $1. The published numeric remuneration TOTAL is used directly; all components remain unchanged and the cause is unresolved."
+        },
+        {
+          "year": "2022",
+          "category": "employee-remuneration",
+          "rows": 35,
+          "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2022-Statement-of-Financial-Information.pdf",
+          "pages": [
+            35,
+            36
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $1.00; expense difference $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Separately, the printed all-employee remuneration total $7,941,300 is $1 below the sum of the printed named and other-employee controls (3,762,417 + 4,178,884). Source values are unchanged; the cause is unresolved."
+        },
+        {
+          "year": "2023",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2023-Statement-of-Financial-Information.pdf",
+          "pages": [
+            40
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2023",
+          "category": "employee-remuneration",
+          "rows": 49,
+          "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2023-Statement-of-Financial-Information.pdf",
+          "pages": [
+            40,
+            41
+          ],
+          "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $2.00; expense difference $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+        },
+        {
+          "year": "2024",
+          "category": "elected-officials",
+          "rows": 7,
+          "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2024-Statement-of-Financial-Information.pdf",
+          "pages": [
+            41
+          ],
+          "publicWarning": null
+        },
+        {
+          "year": "2024",
+          "category": "employee-remuneration",
+          "rows": 47,
+          "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2024-Statement-of-Financial-Information.pdf",
+          "pages": [
+            41,
+            42
+          ],
+          "publicWarning": null
+        }
+      ],
+      "remainingTaskIds": [
+        "capital-history-town-of-sidney-historical-processing"
+      ]
+    },
+    {
+      "employerSlug": "township-of-esquimalt",
+      "indexYearsRetrieved": [
+        "2024",
+        "2023",
+        "2022",
+        "2021",
+        "2020",
+        "2019",
+        "2018",
+        "2017",
+        "2016",
+        "2015",
+        "2014"
+      ],
+      "sourceIndexUrls": [
+        "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information"
+      ],
+      "accepted": [],
+      "remainingTaskIds": [
+        "capital-history-township-of-esquimalt-historical-processing"
+      ]
+    }
+  ]
+}

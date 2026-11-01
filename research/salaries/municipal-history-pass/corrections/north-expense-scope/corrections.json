@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "kind": "explicit-metadata-amendment-of-frozen-pr27-north-collection",
+  "reason": "Correct issuer all-employee expense control scope when the under-threshold expense component is blank; no amount or normalized observation is changed.",
+  "originalArchiveManifest": "pr27-original/archive-manifest.json",
+  "originalSourcesFileSha256": "304697fcec31f9d3527eeba6d2e0af7543084afab19124ce67b9d944811bc1b6",
+  "amendedSourcesFileSha256": "d77c43f93dc20115d764fa4367cdbc46a4b1d199c9f192fb2efc566a533ea199",
+  "all24FrozenDataAndEvidenceBinariesUnchanged": true,
+  "changedSources": [
+    {
+      "sourceId": "municipal-wave-north-city-of-williams-lake-2024",
+      "year": "2024",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=653",
+      "originalSha256": "c2ead68c58d72fbfef69977782bad4a56cf3d429122215a4eb5c56a1a87d0df7",
+      "normalizedDataSha256Unchanged": "d3592c1fccd98aa9395017317cfe8de3ac6bda8027a1e58887326f5b33ada09b",
+      "oldSourceMetadataSha256": "3fb649de3eebef430e2eea1c1ab6752836e3cab8b4fcd6d4b28c4e6ec5de7d73",
+      "newSourceMetadataSha256": "b51b76e94ccf6335ccd68b8a0e5fd0a2724f20d1eaa20efedf7ec7f9c6077db5",
+      "oldWarning": "Known named-row sums minus source controls: remuneration $+0.00; expenses $+1.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.",
+      "newWarning": "Named remuneration cells minus their derived pay control: $+0.00. Known named employee expenses total $98,439.00; the printed all-employee expense control is $98,438.00 (difference $+1.00). The under-threshold expense cell is blank, so a named-only expense control is unavailable. The expense comparison has broader scope and does not establish an exact named expense reconciliation. Published individual values are unchanged; no zero or cause is inferred.",
+      "oldExpenseControl": {
+        "field": "expenses",
+        "printedControl": 98438,
+        "rowSum": 98439,
+        "residual": 1,
+        "missingCells": 6
+      },
+      "newBroaderExpenseComparison": {
+        "field": "expenses",
+        "printedControl": 98438,
+        "rowSum": 98439,
+        "residual": 1,
+        "missingCells": 6,
+        "scope": "Printed all-employee expense control versus known named employee cells",
+        "underThresholdExpenses": null,
+        "namedOnlyControlAvailable": false,
+        "residualInterpretation": "Difference between different scopes; no zero under-threshold expense is inferred."
+      },
+      "metadataChanges": [
+        "Expense comparison removed from named printedControls and retained as broaderControlComparisons",
+        "Named-only expense control marked unavailable; under-threshold expense cell retained as unknown",
+        "Public warning and notes distinguish all-employee issuer control from known named cohort cells"
+      ]
+    },
+    {
+      "sourceId": "municipal-wave-north-city-of-williams-lake-2025",
+      "year": "2025",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=674",
+      "originalSha256": "497658688d38194fe5af192820bca4c98619080a4af45c9325bf7dbe56a5961a",
+      "normalizedDataSha256Unchanged": "f982bc34bd501110e4aefbf3086c5e34948476057b334b86bfac232fb358dc76",
+      "oldSourceMetadataSha256": "e854040875cf81c052f924b3f835d4d9f220ad8f2ee548670bfdb154a497e641",
+      "newSourceMetadataSha256": "738404dfea9d7324d9ba7b1aac2f2c8917d39cd38a26134506fe9aa651ed3e42",
+      "oldWarning": "Known named-row sums minus source controls: remuneration $+3.00; expenses $+0.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.",
+      "newWarning": "Named remuneration cells minus their derived pay control: $+3.00. Known named employee expenses total $158,966.00; the printed all-employee expense control is $158,966.00 (difference $+0.00). The under-threshold expense cell is blank, so a named-only expense control is unavailable. The expense comparison has broader scope and does not establish an exact named expense reconciliation. Published individual values are unchanged; no zero or cause is inferred.",
+      "oldExpenseControl": {
+        "field": "expenses",
+        "printedControl": 158966,
+        "rowSum": 158966,
+        "residual": 0,
+        "missingCells": 4
+      },
+      "newBroaderExpenseComparison": {
+        "field": "expenses",
+        "printedControl": 158966,
+        "rowSum": 158966,
+        "residual": 0,
+        "missingCells": 4,
+        "scope": "Printed all-employee expense control versus known named employee cells",
+        "underThresholdExpenses": null,
+        "namedOnlyControlAvailable": false,
+        "residualInterpretation": "Difference between different scopes; no zero under-threshold expense is inferred."
+      },
+      "metadataChanges": [
+        "Expense comparison removed from named printedControls and retained as broaderControlComparisons",
+        "Named-only expense control marked unavailable; under-threshold expense cell retained as unknown",
+        "Public warning and notes distinguish all-employee issuer control from known named cohort cells"
+      ]
+    }
+  ],
+  "sourcePageReviewProof": [
+    {
+      "year": "2024",
+      "physicalPage": 29,
+      "originalSha256": "c2ead68c58d72fbfef69977782bad4a56cf3d429122215a4eb5c56a1a87d0df7",
+      "renderedFile": "williams-lake-2024-p29.png",
+      "renderDpi": 120,
+      "renderedSha256": "e4c9febfa95344501d069f274353f484f63b13dd157134b35d19f6ebce78cc1a",
+      "reviewedFinding": "The row Consolidated total of other employees with remuneration of $75,000 or less publishes a remuneration aggregate and a blank expense cell. Total: Other Employees is an all-employee expense control, not a separately printed named subtotal. A blank component cannot be subtracted as zero."
+    },
+    {
+      "year": "2025",
+      "physicalPage": 29,
+      "originalSha256": "497658688d38194fe5af192820bca4c98619080a4af45c9325bf7dbe56a5961a",
+      "renderedFile": "williams-lake-2025-p29.png",
+      "renderDpi": 120,
+      "renderedSha256": "5d48fa82b356a20182e1ca763c73c317838663398db16c5bf19e57fa6b18d529",
+      "reviewedFinding": "The row Consolidated total of other employees with remuneration of $75,000 or less publishes a remuneration aggregate and a blank expense cell. Total: Other Employees is an all-employee expense control, not a separately printed named subtotal. A blank component cannot be subtracted as zero."
+    }
+  ]
+}

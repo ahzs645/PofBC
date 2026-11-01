@@ -1,0 +1,1055 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "municipal-wave-north-city-of-dawson-creek-2024",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-dawson-creek-2024.json.gzip",
+      "sha256": "ff2996355d7752bdf5f1e8ac3c8c8cdfbbcfed05b0319832f454606c7c893ee2",
+      "dataSha256": "db3295165ba90e47294f14e0b6debaf57d1cee707138c749f0806329d983ef89",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/153465",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 89,
+      "totalRemuneration": 9686304.94,
+      "totalExpenses": 212843.44,
+      "pages": [
+        36,
+        37
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
+        "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
+        "Printed threshold wording refers to remuneration and expenses exceeding $75,000. All accepted named employees also have remuneration above $75,000; threshold text is not silently generalized to other years."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          36,
+          37
+        ],
+        "internalPeriodEvidencePages": [
+          3,
+          4,
+          5,
+          10,
+          14,
+          15,
+          16,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          33,
+          34,
+          36,
+          38,
+          40,
+          43
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 9686304.94,
+            "rowSum": 9686304.94,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 212843.44,
+            "rowSum": 212843.44,
+            "residual": 0,
+            "missingCells": 13
+          }
+        ],
+        "controlPages": [
+          37
+        ],
+        "evidenceFile": "evidence/city-of-dawson-creek-2024.json.gzip",
+        "evidenceSha256": "3f5025f4bebc303ab58aecfb602e4c290c062210b6293e2c959ce59404d99a3d"
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "municipal-wave-north-city-of-williams-lake-2024",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-williams-lake-2024.json.gzip",
+      "sha256": "c2ead68c58d72fbfef69977782bad4a56cf3d429122215a4eb5c56a1a87d0df7",
+      "dataSha256": "d3592c1fccd98aa9395017317cfe8de3ac6bda8027a1e58887326f5b33ada09b",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=653",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 51,
+      "totalRemuneration": 5149051,
+      "totalExpenses": 98439,
+      "pages": [
+        28,
+        29
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
+        "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
+        "Remuneration includes salary, wages, overtime, vacation payouts and taxable benefits, including incremental Emergency Operations Center pay. Expenses include travel, memberships, tuition, cell phone allowances, hiring expenses and boot/tool allowances.",
+        "The remuneration control is derived from printed Total Other Employees minus the printed below-threshold remuneration aggregate. The expense control is printed directly; missing individual cells remain missing."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          28,
+          29
+        ],
+        "internalPeriodEvidencePages": [
+          1,
+          2,
+          6,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          25
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 5149051,
+            "rowSum": 5149051,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 98438,
+            "rowSum": 98439,
+            "residual": 1,
+            "missingCells": 6
+          }
+        ],
+        "controlPages": [
+          29
+        ],
+        "evidenceFile": "evidence/city-of-williams-lake-2024.json.gzip",
+        "evidenceSha256": "12c267d22d066497a9b32a7ba0e06667f8590fad8804438d72196389e341dc26"
+      },
+      "publicWarning": "Known named-row sums minus source controls: remuneration $+0.00; expenses $+1.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.",
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "municipal-wave-north-city-of-williams-lake-2025",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "city-of-williams-lake-2025.json.gzip",
+      "sha256": "497658688d38194fe5af192820bca4c98619080a4af45c9325bf7dbe56a5961a",
+      "dataSha256": "f982bc34bd501110e4aefbf3086c5e34948476057b334b86bfac232fb358dc76",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=674",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 61,
+      "totalRemuneration": 6168419,
+      "totalExpenses": 158966,
+      "pages": [
+        28,
+        29
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
+        "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
+        "Remuneration includes salary, wages, overtime, vacation payouts and taxable benefits, including incremental Emergency Operations Center pay. Expenses include travel, memberships, tuition, cell phone allowances, hiring expenses and boot/tool allowances.",
+        "The remuneration control is derived from printed Total Other Employees minus the printed below-threshold remuneration aggregate. The expense control is printed directly; missing individual cells remain missing."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          28,
+          29
+        ],
+        "internalPeriodEvidencePages": [
+          1,
+          2,
+          6,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          25
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 6168416,
+            "rowSum": 6168419,
+            "residual": 3,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 158966,
+            "rowSum": 158966,
+            "residual": 0,
+            "missingCells": 4
+          }
+        ],
+        "controlPages": [
+          29
+        ],
+        "evidenceFile": "evidence/city-of-williams-lake-2025.json.gzip",
+        "evidenceSha256": "00adef960ff9f4e3a8a725f7c4d1dae34ead5671389132c3bf7589906ae362b9"
+      },
+      "publicWarning": "Known named-row sums minus source controls: remuneration $+3.00; expenses $+0.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.",
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "municipal-wave-north-district-of-chetwynd-2024",
+      "employerSlug": "district-of-chetwynd",
+      "employerName": "District of Chetwynd",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "district-of-chetwynd-2024.json.gzip",
+      "sha256": "d5c80e8dfca0a7b2d4fad7de0155fa426b14edbd4395ee50f4e4400b2c2c2cbe",
+      "dataSha256": "c93e4b7ccb38cd992fa8b210dd1d09f08213c23641976713ea774baad318dcdb",
+      "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2025/10/SOFI-December-31-2024.pdf",
+      "sourceIndexUrl": "https://www.gochetwynd.com/municipal-office/documents-and-publications/",
+      "title": "District of Chetwynd 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 23,
+      "totalRemuneration": 2476229,
+      "totalExpenses": 72109,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
+        "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
+        "This is the employee subsection of a page titled Schedule of Council Remuneration and Expenses; the separate elected officials are not employee rows. Wrapped job titles remain attached to the named employee immediately above their continuation.",
+        "The named subsection says Other Employees and the aggregate says Employees less than $75,000. All published named remuneration exceeds $75,000, but the printed equality boundary is unspecified; thresholdComparison remains null rather than imposing a statutory convention as source text."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          4
+        ],
+        "internalPeriodEvidencePages": [
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 2476229,
+            "rowSum": 2476229,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 72109,
+            "rowSum": 72109,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "controlPages": [
+          4
+        ],
+        "evidenceFile": "evidence/district-of-chetwynd-2024.json.gzip",
+        "evidenceSha256": "b70d745379f06ba94aa1f97789908813d11269fc8d3d679b44f13c98312df9b3"
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "municipal-wave-north-district-of-chetwynd-2025",
+      "employerSlug": "district-of-chetwynd",
+      "employerName": "District of Chetwynd",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "district-of-chetwynd-2025.json.gzip",
+      "sha256": "89832388e53190e8647585321d87fd2b249bdfbbe0c84c345ba3406843167f4c",
+      "dataSha256": "cf636cd17c7109108151907dd6e7be14460978a40cd92ed2f73c864f4c55f77a",
+      "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2026/05/SOFI-December-31-2025_Redacted.pdf",
+      "sourceIndexUrl": "https://www.gochetwynd.com/municipal-office/documents-and-publications/",
+      "title": "District of Chetwynd 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 23,
+      "totalRemuneration": 2515492,
+      "totalExpenses": 80563,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
+        "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
+        "This is the employee subsection of a page titled Schedule of Council Remuneration and Expenses; the separate elected officials are not employee rows. Wrapped job titles remain attached to the named employee immediately above their continuation.",
+        "The named subsection says Other Employees and the aggregate says Employees less than $75,000. All published named remuneration exceeds $75,000, but the printed equality boundary is unspecified; thresholdComparison remains null rather than imposing a statutory convention as source text."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          4
+        ],
+        "internalPeriodEvidencePages": [
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 2515492,
+            "rowSum": 2515492,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 80563,
+            "rowSum": 80563,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "controlPages": [
+          4
+        ],
+        "evidenceFile": "evidence/district-of-chetwynd-2025.json.gzip",
+        "evidenceSha256": "c86f1eae593e2d3675f331b4e68a00ea3d2cb9f6280b4f87c131d14ae541efeb"
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "municipal-wave-north-taylor2022",
+      "employerSlug": "district-of-taylor",
+      "employerName": "District of Taylor",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "taylor2022.json.gzip",
+      "sha256": "e1f5be34ae9714f9ed876b8b1c2c60e2e173c5e6e36344effd52138cdd28565b",
+      "dataSha256": "874d0e3598890cbafcc42323ebf654610005e218c288a4dc2fa8efff0570cc75",
+      "sourceUrl": "https://districtoftaylor.com/wp-content/uploads/2023/06/2022-SOFI-and-FS_SIGNED.pdf",
+      "sourceIndexUrl": "https://districtoftaylor.com/2022-statement-of-financial-information-and-consolidated-financial-statements/",
+      "title": "District of Taylor 2022 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 12,
+      "totalRemuneration": 1187088,
+      "totalExpenses": 48138,
+      "pages": [
+        10
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
+        "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
+        "Remuneration uses the published Remuneration and Benefits column; Travel, Conference and Expenses stay separate. Names and positions are split only at the printed name/title delimiter."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          10
+        ],
+        "internalPeriodEvidencePages": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 1187087,
+            "rowSum": 1187088,
+            "residual": 1,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 48139,
+            "rowSum": 48138,
+            "residual": -1,
+            "missingCells": 1
+          }
+        ],
+        "controlPages": [
+          10
+        ],
+        "evidenceFile": "evidence/taylor2022.json.gzip",
+        "evidenceSha256": "36c09d61e442f32e74dd26649ec54e93d2ac81cda25b479f3214b342666745ab"
+      },
+      "publicWarning": "Known named-row sums minus source controls: remuneration $+1.00; expenses $-1.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.",
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "municipal-wave-north-northern-rockies2024",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "northern-rockies2024.json.gzip",
+      "sha256": "89af75c18a6c0dd0f66ed229554033c3b5d93e5b386c2791c606e2d20f651fb8",
+      "dataSha256": "c58c5666e030dc1ab52a579037549cc06e1213711e5b1eacff6c65dbd9940859",
+      "sourceUrl": "https://nr.civicweb.net/document/229156",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000",
+      "title": "Northern Rockies Regional Municipality 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 55,
+      "totalRemuneration": 7053967,
+      "totalExpenses": 68443,
+      "pages": [
+        5,
+        6
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
+        "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
+        "Employee remuneration can include retroactive pay, vacation payouts, Emergency Operations Center payments and taxable benefits. The source explicitly warns these are not salary rates or take-home pay.",
+        "The second source column is Department, not job title. Normalized position stays missing; published department values remain in supporting evidence.",
+        "Source named employee controls cover Management, IAFF, CUPE and Non-Unionized groups. The printed overall expense total exceeds printed named-plus-under-threshold employee expenses by $46,159, exactly the printed council expense total. Only the explicit named employee subtotal is used as a control; no inferred adjustment is made. The source name ESTATE OF RYAN KERR is preserved when published."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          5,
+          6,
+          7
+        ],
+        "internalPeriodEvidencePages": [
+          1,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 7053964,
+            "rowSum": 7053967,
+            "residual": 3,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 68442,
+            "rowSum": 68443,
+            "residual": 1,
+            "missingCells": 0
+          }
+        ],
+        "controlPages": [
+          7
+        ],
+        "evidenceFile": "evidence/northern-rockies2024.json.gzip",
+        "evidenceSha256": "75be7b7d9da9bcf0013a5db4ddf7950fef29d35679a907132577650a9281321f"
+      },
+      "publicWarning": "Known named-row sums minus source controls: remuneration $+3.00; expenses $+1.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.",
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "municipal-wave-north-northern-rockies2025",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "northern-rockies2025.json.gzip",
+      "sha256": "30a55b00f96415cf8154ca4f8e60983b20b8304afd6d42946b75b76a2ad13bd3",
+      "dataSha256": "216c366c119864999130358d4c96af2cd44f7c6d30fe92ba5fc4932fac899ec3",
+      "sourceUrl": "https://nr.civicweb.net/document/240844",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000",
+      "title": "Northern Rockies Regional Municipality 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 59,
+      "totalRemuneration": 7198094,
+      "totalExpenses": 108716,
+      "pages": [
+        5,
+        6
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
+        "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
+        "Employee remuneration can include retroactive pay, vacation payouts, Emergency Operations Center payments and taxable benefits. The source explicitly warns these are not salary rates or take-home pay.",
+        "The second source column is Department, not job title. Normalized position stays missing; published department values remain in supporting evidence.",
+        "Source named employee controls cover Management, IAFF, CUPE and Non-Unionized groups. The printed overall expense total exceeds printed named-plus-under-threshold employee expenses by $31,292, exactly the printed council expense total. Only the explicit named employee subtotal is used as a control; no inferred adjustment is made. The source name ESTATE OF RYAN KERR is preserved when published."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          5,
+          6,
+          7
+        ],
+        "internalPeriodEvidencePages": [
+          1,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 7198095,
+            "rowSum": 7198094,
+            "residual": -1,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 108715,
+            "rowSum": 108716,
+            "residual": 1,
+            "missingCells": 35
+          }
+        ],
+        "controlPages": [
+          7
+        ],
+        "evidenceFile": "evidence/northern-rockies2025.json.gzip",
+        "evidenceSha256": "008626d722c3e0e0835b1e71fe5fa08ff803c46459c8b5d87d545263fe4ab14d"
+      },
+      "publicWarning": "Known named-row sums minus source controls: remuneration $-1.00; expenses $+1.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing.",
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "municipal-wave-north-city-of-dawson-creek-2024-council",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "city-of-dawson-creek-2024-council.json.gzip",
+      "sha256": "ff2996355d7752bdf5f1e8ac3c8c8cdfbbcfed05b0319832f454606c7c893ee2",
+      "dataSha256": "057ea5267a7162d720d3dbeb2020477d011f8c84b148b6af3e81426bb14314c5",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/153465",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 242596.9,
+      "totalExpenses": 72895.5,
+      "pages": [
+        36
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published mayor/councillor actual remuneration and expenses; council observations are separate from employee coverage. Dashes remain missing and explicit zero remains zero."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          36
+        ],
+        "internalPeriodEvidencePages": [
+          3,
+          4,
+          5,
+          10,
+          14,
+          15,
+          16,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          30,
+          31,
+          32,
+          33,
+          34,
+          36,
+          38,
+          40,
+          43
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 242596.9,
+            "rowSum": 242596.9,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 72895.5,
+            "rowSum": 72895.5,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "controlPages": [
+          36
+        ],
+        "evidenceFile": "evidence/city-of-dawson-creek-2024-council.json.gzip",
+        "evidenceSha256": "e7ccb91cdbc6321be6a303f6d6ca263a7e62089653a164eebb6265f4f38adbee"
+      }
+    },
+    {
+      "id": "municipal-wave-north-district-of-chetwynd-2024-council",
+      "employerSlug": "district-of-chetwynd",
+      "employerName": "District of Chetwynd",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "district-of-chetwynd-2024-council.json.gzip",
+      "sha256": "d5c80e8dfca0a7b2d4fad7de0155fa426b14edbd4395ee50f4e4400b2c2c2cbe",
+      "dataSha256": "761f82d80bead535246b98a5c1c9d7f993381f056b801cb5b47105dce2b1a951",
+      "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2025/10/SOFI-December-31-2024.pdf",
+      "sourceIndexUrl": "https://www.gochetwynd.com/municipal-office/documents-and-publications/",
+      "title": "District of Chetwynd 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 126374,
+      "totalExpenses": 65280,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published mayor/councillor actual remuneration and expenses; council observations are separate from employee coverage. Dashes remain missing and explicit zero remains zero."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          4
+        ],
+        "internalPeriodEvidencePages": [
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 126374,
+            "rowSum": 126374,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 65280,
+            "rowSum": 65280,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "controlPages": [
+          4
+        ],
+        "evidenceFile": "evidence/district-of-chetwynd-2024-council.json.gzip",
+        "evidenceSha256": "57372ea460840e67f665f62f409f22c6c0a3615ebf6d42fdc5255b7f3571cc0d"
+      }
+    },
+    {
+      "id": "municipal-wave-north-northern-rockies2024-council",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "northern-rockies2024-council.json.gzip",
+      "sha256": "89af75c18a6c0dd0f66ed229554033c3b5d93e5b386c2791c606e2d20f651fb8",
+      "dataSha256": "983802fda339d7d408ef36171263719bfbf9ca6b314bdd11aec120442d43a8f3",
+      "sourceUrl": "https://nr.civicweb.net/document/229156",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000",
+      "title": "Northern Rockies Regional Municipality 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 175330,
+      "totalExpenses": 46159,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published mayor/councillor actual remuneration and expenses; council observations are separate from employee coverage. Dashes remain missing and explicit zero remains zero."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          4
+        ],
+        "internalPeriodEvidencePages": [
+          1,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 175330,
+            "rowSum": 175330,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 46159,
+            "rowSum": 46159,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "controlPages": [
+          4
+        ],
+        "evidenceFile": "evidence/northern-rockies2024-council.json.gzip",
+        "evidenceSha256": "7bed36b9cf0876a8d28d9cdc68bf997204c5ec1ae817afd6c89fcc82cd5c86d9"
+      }
+    },
+    {
+      "id": "municipal-wave-north-northern-rockies2025-council",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "file": "northern-rockies2025-council.json.gzip",
+      "sha256": "30a55b00f96415cf8154ca4f8e60983b20b8304afd6d42946b75b76a2ad13bd3",
+      "dataSha256": "df0d476ab7167295baca8a73dffee5a7bb405e2174374406a7ebde4f11571627",
+      "sourceUrl": "https://nr.civicweb.net/document/240844",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000",
+      "title": "Northern Rockies Regional Municipality 2025 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 175330,
+      "totalExpenses": 31293,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Published mayor/councillor actual remuneration and expenses; council observations are separate from employee coverage. Dashes remain missing and explicit zero remains zero."
+      ],
+      "validation": {
+        "method": "Complete name/position-or-department/pay/expense/page agreement between two native-text readers",
+        "bothReadersAgree": true,
+        "renderedEdgeAndControlPagesReviewed": [
+          4
+        ],
+        "internalPeriodEvidencePages": [
+          1,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "printedControl": 175330,
+            "rowSum": 175330,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedControl": 31292,
+            "rowSum": 31293,
+            "residual": 1,
+            "missingCells": 3
+          }
+        ],
+        "controlPages": [
+          4
+        ],
+        "evidenceFile": "evidence/northern-rockies2025-council.json.gzip",
+        "evidenceSha256": "af429f70dce48d42623f2034d1c105ce2aaa4bb4d8460eebd7f63c49299fd3e1"
+      },
+      "publicWarning": "Known named-row sums minus source controls: remuneration $+0.00; expenses $+1.00. Published cells are unchanged and residual causes remain unresolved. Missing expense dashes stay missing."
+    }
+  ]
+}

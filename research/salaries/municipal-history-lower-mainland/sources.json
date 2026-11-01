@@ -1,0 +1,2432 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2019-employee-remuneration",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "sourceUrl": "https://www.portmoody.ca/eDocs/get?docnumber=570602",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "ac869ee0ca29ea645446098811801236dfa43135d2afac871f1abf9ee676797f",
+      "file": "city-of-port-moody-2019-employee-remuneration.json.gzip",
+      "dataSha256": "60c31c27999d26802160a57a703d0845aadab60b056698af89f82ceefe312e6d",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Port Moody 2019 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 144,
+      "totalRemuneration": 15343440,
+      "totalExpenses": 204797,
+      "pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Remuneration and taxable benefits/payouts are separate source components. Their sum is normalized remuneration; ordinary expenses remain separate. Every source-named employee is retained in evidence, including below-base-pay-threshold observations.",
+        "The 2019 taxable-benefit definition explicitly includes MSP. The separate council Tax Free Allowance column is not interpreted or imported with employees; historical council classification remains a separate review task.",
+        "Published Remuneration plus numeric Taxable Benefits and Payouts/Taxable Benefits form pay. Printed expenses, employer CPP/EI and aggregate payroll are not added. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Remuneration",
+            "printedOrDerivedControl": 15016645,
+            "knownCellSum": 15016643,
+            "residual": -2,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Tax Benefits & Payouts",
+            "printedOrDerivedControl": 427636,
+            "knownCellSum": 427632,
+            "residual": -4,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 205836,
+            "knownCellSum": 205845,
+            "residual": 9,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2019-employee-remuneration.json.gzip",
+        "evidenceSha256": "db2f6fc02994855624ab843c8ac875a1e11a1173f9b8d53008aa29dc3e440c43",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 8,
+            "text": "For the Year Ended December 31, 2019"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 145,
+        "acceptedRows": 144,
+        "heldMissingBenefitRows": 1,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 8,
+            "rows": 22
+          },
+          {
+            "page": 9,
+            "rows": 54
+          },
+          {
+            "page": 10,
+            "rows": 58
+          },
+          {
+            "page": 11,
+            "rows": 11
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 8,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 8,
+            "text": "Taxable benefits and payouts include MSP, group life insurance and other allowances"
+          }
+        ],
+        "heldRows": [
+          {
+            "name": "Allan, Doug",
+            "position": "Senior Planner - AUX",
+            "pdfPage": 8,
+            "knownRemunerationColumn": 100835,
+            "benefits": null,
+            "expenses": 1048
+          }
+        ],
+        "completeEmployeeSchedule": false
+      },
+      "publicWarning": "Port Moody 2019 employee known-cell sums minus printed named controls: Remuneration −$2, Tax Benefits & Payouts −$4, Expenses +$9. Published values are retained; the cause is unknown. Partial employee cohort: 1 named rows with an unpublished/dash taxable-benefit component remain held; their known remuneration cells and raw dashes remain in evidence, and are not substituted for composite remuneration. Accepted-subset totals differ in scope from full named-cohort controls. Held names/pages: Allan, Doug (p8)",
+      "completeEmployeeSchedule": false
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2020-employee-remuneration",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "sourceUrl": "https://www.portmoody.ca/eDocs/get?docnumber=562010",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "4961985206232fcbfd33fb85282248103fc056d2bc348381b3c658b6aaeb38cb",
+      "file": "city-of-port-moody-2020-employee-remuneration.json.gzip",
+      "dataSha256": "efdeac1ef10fb72f83a40c70f670927b41d9151a1755ef240c2202a4efe4b91b",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Port Moody 2020 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 150,
+      "totalRemuneration": 16297726,
+      "totalExpenses": 91171,
+      "pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Remuneration and taxable benefits/payouts are separate source components. Their sum is normalized remuneration; ordinary expenses remain separate. Every source-named employee is retained in evidence, including below-base-pay-threshold observations.",
+        "Published Remuneration plus numeric Taxable Benefits and Payouts/Taxable Benefits form pay. Printed expenses, employer CPP/EI and aggregate payroll are not added. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8,
+          11
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Remuneration",
+            "printedOrDerivedControl": 16081614,
+            "knownCellSum": 16081614,
+            "residual": 0,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Tax Benefits & Payouts",
+            "printedOrDerivedControl": 298021,
+            "knownCellSum": 298013,
+            "residual": -8,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 91174,
+            "knownCellSum": 91171,
+            "residual": -3,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2020-employee-remuneration.json.gzip",
+        "evidenceSha256": "92a886b2ed48610b90a8812db93767c827c45c8b21021ce6a2cfd578bf6cbe0a",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 8,
+            "text": "For the Year Ended December 31, 2020"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 151,
+        "acceptedRows": 150,
+        "heldMissingBenefitRows": 1,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 8,
+            "rows": 28
+          },
+          {
+            "page": 9,
+            "rows": 51
+          },
+          {
+            "page": 10,
+            "rows": 53
+          },
+          {
+            "page": 11,
+            "rows": 19
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 8,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 8,
+            "text": "Staff (Greater than $75,000)"
+          }
+        ],
+        "heldRows": [
+          {
+            "name": "Allan, Doug",
+            "position": "Senior Planner - AUX",
+            "pdfPage": 8,
+            "knownRemunerationColumn": 81901,
+            "benefits": null,
+            "expenses": null
+          }
+        ],
+        "completeEmployeeSchedule": false
+      },
+      "publicWarning": "Port Moody 2020 employee known-cell sums minus printed named controls: Remuneration +$0, Tax Benefits & Payouts −$8, Expenses −$3. Published values are retained; the cause is unknown. Partial employee cohort: 1 named rows with an unpublished/dash taxable-benefit component remain held; their known remuneration cells and raw dashes remain in evidence, and are not substituted for composite remuneration. Accepted-subset totals differ in scope from full named-cohort controls. Held names/pages: Allan, Doug (p8)",
+      "completeEmployeeSchedule": false
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2020-elected-officials",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "sourceUrl": "https://www.portmoody.ca/eDocs/get?docnumber=562010",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "4961985206232fcbfd33fb85282248103fc056d2bc348381b3c658b6aaeb38cb",
+      "file": "city-of-port-moody-2020-elected-officials.json.gzip",
+      "dataSha256": "63d05b64133ef0f80c12862f1f2389108430a6428f4b8abfadaf9f6cde74c423",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Port Moody 2020 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 382090,
+      "totalExpenses": 14175,
+      "pages": [
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Council is a separate complete seven-row schedule. Printed Councillor spelling is preserved.",
+        "Published council Base Salary plus numeric Taxable Benefits form remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Base Salary",
+            "printedOrDerivedControl": 379445,
+            "knownCellSum": 379445,
+            "residual": 0,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Taxable Benefits",
+            "printedOrDerivedControl": 2645,
+            "knownCellSum": 2645,
+            "residual": 0,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 14175,
+            "knownCellSum": 14175,
+            "residual": 0,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2020-elected-officials.json.gzip",
+        "evidenceSha256": "a63859193debc4a6490345210b14142686463600e72354c972f05639d15f48a4",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 8,
+            "text": "For the Year Ended December 31, 2020"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 7,
+        "acceptedRows": 7,
+        "heldMissingBenefitRows": 0,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 8,
+            "rows": 7
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 8,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 8,
+            "text": "Staff (Greater than $75,000)"
+          }
+        ],
+        "heldRows": []
+      }
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2021-employee-remuneration",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://www.portmoody.ca/eDocs/get?docnumber=584992",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "3b8bc27b7131b7550cf73ca3cebfb2ba60f0e7ed48aaeae6ade124fbe57388da",
+      "file": "city-of-port-moody-2021-employee-remuneration.json.gzip",
+      "dataSha256": "e26ed483b5c69a5e889d92c16ead144eeabd81b546d545f0fa9844764eb373bf",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Port Moody 2021 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 163,
+      "totalRemuneration": 17938738,
+      "totalExpenses": 153149,
+      "pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Remuneration and taxable benefits/payouts are separate source components. Their sum is normalized remuneration; ordinary expenses remain separate. Every source-named employee is retained in evidence, including below-base-pay-threshold observations.",
+        "Published Remuneration plus numeric Taxable Benefits and Payouts/Taxable Benefits form pay. Printed expenses, employer CPP/EI and aggregate payroll are not added. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8,
+          11
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Remuneration",
+            "printedOrDerivedControl": 17606076,
+            "knownCellSum": 17606073,
+            "residual": -3,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Tax Benefits & Payouts",
+            "printedOrDerivedControl": 332662,
+            "knownCellSum": 332665,
+            "residual": 3,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 153145,
+            "knownCellSum": 153149,
+            "residual": 4,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2021-employee-remuneration.json.gzip",
+        "evidenceSha256": "021fa1926efa3885a81f488d8aeca2893668254bdc31032c75b5802bf57b14ae",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 8,
+            "text": "For the Year Ended December 31, 2021"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 163,
+        "acceptedRows": 163,
+        "heldMissingBenefitRows": 0,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 8,
+            "rows": 28
+          },
+          {
+            "page": 9,
+            "rows": 50
+          },
+          {
+            "page": 10,
+            "rows": 48
+          },
+          {
+            "page": 11,
+            "rows": 37
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 8,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 8,
+            "text": "Staff (Greater than $75,000)"
+          }
+        ],
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "publicWarning": "Port Moody 2021 employee known-cell sums minus printed named controls: Remuneration −$3, Tax Benefits & Payouts +$3, Expenses +$4. Published values are retained; the cause is unknown.",
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2021-elected-officials",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://www.portmoody.ca/eDocs/get?docnumber=584992",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "3b8bc27b7131b7550cf73ca3cebfb2ba60f0e7ed48aaeae6ade124fbe57388da",
+      "file": "city-of-port-moody-2021-elected-officials.json.gzip",
+      "dataSha256": "432e58013bc15583a908ff8bbd0763cd435605bd81c5d83c717eeedbc229f34c",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Port Moody 2021 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 370767,
+      "totalExpenses": 14325,
+      "pages": [
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Distinct disclosed office/role rows are preserved, including two Meghan Lahti observations in 2022; printed Councilor/Councillor spelling is unchanged.",
+        "Published council Base Salary plus numeric Taxable Benefits form remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Base Salary",
+            "printedOrDerivedControl": 368038,
+            "knownCellSum": 368038,
+            "residual": 0,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Taxable Benefits",
+            "printedOrDerivedControl": 2729,
+            "knownCellSum": 2729,
+            "residual": 0,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 14326,
+            "knownCellSum": 14325,
+            "residual": -1,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2021-elected-officials.json.gzip",
+        "evidenceSha256": "902f3f9b094d4ac7b5da35c9184163511598ccd18f2dc12c5a04b99db803433f",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 8,
+            "text": "For the Year Ended December 31, 2021"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 7,
+        "acceptedRows": 7,
+        "heldMissingBenefitRows": 0,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 8,
+            "rows": 7
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 8,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 8,
+            "text": "Staff (Greater than $75,000)"
+          }
+        ],
+        "heldRows": []
+      },
+      "publicWarning": "Port Moody 2021 council known-cell sums minus printed council controls: Expenses −$1. Published values are retained; the cause is unknown."
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2022-employee-remuneration",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.portmoody.ca/eDocs/get?docnumber=616362",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "329dfd3600c4c3ba90cb996995a1137220f384ea0ff89ead5f39cff2b7d90a7a",
+      "file": "city-of-port-moody-2022-employee-remuneration.json.gzip",
+      "dataSha256": "5ad741eb9f74ffc298fe433e7b1e5706e0e7379ee354d894286987f577cdd399",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Port Moody 2022 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 163,
+      "totalRemuneration": 17755868,
+      "totalExpenses": 183312,
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Remuneration and taxable benefits/payouts are separate source components. Their sum is normalized remuneration; ordinary expenses remain separate. Every source-named employee is retained in evidence, including below-base-pay-threshold observations.",
+        "Published Remuneration plus numeric Taxable Benefits and Payouts/Taxable Benefits form pay. Printed expenses, employer CPP/EI and aggregate payroll are not added. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8,
+          9,
+          12
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Remuneration",
+            "printedOrDerivedControl": 17469223,
+            "knownCellSum": 17469223,
+            "residual": 0,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Tax Benefits & Payouts",
+            "printedOrDerivedControl": 383986,
+            "knownCellSum": 383988,
+            "residual": 2,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 183881,
+            "knownCellSum": 183878,
+            "residual": -3,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2022-employee-remuneration.json.gzip",
+        "evidenceSha256": "1e9f04865aaed0f1bc252e0d7f979bc4ee60e6fc033bfaf2aa0c74271c9205cc",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 8,
+            "text": "For the Year Ended December 31, 2022"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 164,
+        "acceptedRows": 163,
+        "heldMissingBenefitRows": 1,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 8,
+            "rows": 18
+          },
+          {
+            "page": 9,
+            "rows": 43
+          },
+          {
+            "page": 10,
+            "rows": 41
+          },
+          {
+            "page": 11,
+            "rows": 43
+          },
+          {
+            "page": 12,
+            "rows": 19
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 8,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 8,
+            "text": "Staff (Greater than $75,000)"
+          }
+        ],
+        "heldRows": [
+          {
+            "name": "Guerin, Catherine",
+            "position": "Safety & Wellness Specialist",
+            "pdfPage": 9,
+            "knownRemunerationColumn": 97343,
+            "benefits": null,
+            "expenses": 566
+          }
+        ],
+        "completeEmployeeSchedule": false
+      },
+      "publicWarning": "Port Moody 2022 employee known-cell sums minus printed named controls: Remuneration +$0, Tax Benefits & Payouts +$2, Expenses −$3. Published values are retained; the cause is unknown. Partial employee cohort: 1 named rows with an unpublished/dash taxable-benefit component remain held; their known remuneration cells and raw dashes remain in evidence, and are not substituted for composite remuneration. Accepted-subset totals differ in scope from full named-cohort controls. Held names/pages: Guerin, Catherine (p9)",
+      "completeEmployeeSchedule": false
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2022-elected-officials",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.portmoody.ca/eDocs/get?docnumber=616362",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "329dfd3600c4c3ba90cb996995a1137220f384ea0ff89ead5f39cff2b7d90a7a",
+      "file": "city-of-port-moody-2022-elected-officials.json.gzip",
+      "dataSha256": "19453960f363626189e6e8c96f7e9d589144391bfc7fd64e4ecbe06b70cbf5b8",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Port Moody 2022 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 12,
+      "totalRemuneration": 381731,
+      "totalExpenses": 32654,
+      "pages": [
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Distinct disclosed office/role rows are preserved, including two Meghan Lahti observations in 2022; printed Councilor/Councillor spelling is unchanged.",
+        "Published council Base Salary plus numeric Taxable Benefits form remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Base Salary",
+            "printedOrDerivedControl": 378705,
+            "knownCellSum": 378705,
+            "residual": 0,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Taxable Benefits",
+            "printedOrDerivedControl": 3026,
+            "knownCellSum": 3026,
+            "residual": 0,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 32654,
+            "knownCellSum": 32654,
+            "residual": 0,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2022-elected-officials.json.gzip",
+        "evidenceSha256": "fac89823ea37bc79b40894c6b12bbae86f9545a96be9787d75791dc8b435ef02",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 8,
+            "text": "For the Year Ended December 31, 2022"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 12,
+        "acceptedRows": 12,
+        "heldMissingBenefitRows": 0,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 8,
+            "rows": 12
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 8,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 8,
+            "text": "Staff (Greater than $75,000)"
+          }
+        ],
+        "heldRows": []
+      }
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2023-employee-remuneration",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/yuxhrlr4/2023_statement_of_financial_information_-sofi-3.pdf",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "31d3c09905e8318507a8eeb7ad8ef61f0c19b4aa5c7969885e0d044670e41ea1",
+      "file": "city-of-port-moody-2023-employee-remuneration.json.gzip",
+      "dataSha256": "24e9c740ab66bd5d337583cb5572d2bebb12b6c33608fd66314df34d7514f631",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Port Moody 2023 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 163,
+      "totalRemuneration": 18083797,
+      "totalExpenses": 232058,
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Remuneration and taxable benefits/payouts are separate source components. Their sum is normalized remuneration; ordinary expenses remain separate. Every source-named employee is retained in evidence, including below-base-pay-threshold observations.",
+        "Published Remuneration plus numeric Taxable Benefits and Payouts/Taxable Benefits form pay. Printed expenses, employer CPP/EI and aggregate payroll are not added. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8,
+          9,
+          12
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Remuneration",
+            "printedOrDerivedControl": 17735498,
+            "knownCellSum": 17735499,
+            "residual": 1,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Tax Benefits & Payouts",
+            "printedOrDerivedControl": 435703,
+            "knownCellSum": 435708,
+            "residual": 5,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 233028,
+            "knownCellSum": 233037,
+            "residual": 9,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2023-employee-remuneration.json.gzip",
+        "evidenceSha256": "7b59ba6f2d97d907dea99dd492b8d9667ce582b7dcb13bf0e9f3da4ef089910d",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 8,
+            "text": "For the Year Ended December 31, 2023"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 164,
+        "acceptedRows": 163,
+        "heldMissingBenefitRows": 1,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 8,
+            "rows": 22
+          },
+          {
+            "page": 9,
+            "rows": 42
+          },
+          {
+            "page": 10,
+            "rows": 41
+          },
+          {
+            "page": 11,
+            "rows": 43
+          },
+          {
+            "page": 12,
+            "rows": 16
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 8,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 8,
+            "text": "Staff (Greater than $75,000)"
+          }
+        ],
+        "heldRows": [
+          {
+            "name": "Cote-Rolvink, Stephen",
+            "position": "Manager of Building Services",
+            "pdfPage": 9,
+            "knownRemunerationColumn": 87410,
+            "benefits": null,
+            "expenses": 979
+          }
+        ],
+        "completeEmployeeSchedule": false
+      },
+      "publicWarning": "Port Moody 2023 employee known-cell sums minus printed named controls: Remuneration +$1, Tax Benefits & Payouts +$5, Expenses +$9. Published values are retained; the cause is unknown. Partial employee cohort: 1 named rows with an unpublished/dash taxable-benefit component remain held; their known remuneration cells and raw dashes remain in evidence, and are not substituted for composite remuneration. Accepted-subset totals differ in scope from full named-cohort controls. Held names/pages: Cote-Rolvink, Stephen (p9)",
+      "completeEmployeeSchedule": false
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2023-elected-officials",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/yuxhrlr4/2023_statement_of_financial_information_-sofi-3.pdf",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "31d3c09905e8318507a8eeb7ad8ef61f0c19b4aa5c7969885e0d044670e41ea1",
+      "file": "city-of-port-moody-2023-elected-officials.json.gzip",
+      "dataSha256": "cab8d06f2162d1ec72fe2cff42c8313996dd7bb8d7e4da7f96d3c18b82433a43",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Port Moody 2023 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 474739,
+      "totalExpenses": 71433,
+      "pages": [
+        8
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Distinct disclosed office/role rows are preserved, including two Meghan Lahti observations in 2022; printed Councilor/Councillor spelling is unchanged.",
+        "Published council Base Salary plus numeric Taxable Benefits form remuneration. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Base Salary",
+            "printedOrDerivedControl": 471154,
+            "knownCellSum": 471152,
+            "residual": -2,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Taxable Benefits",
+            "printedOrDerivedControl": 3590,
+            "knownCellSum": 3587,
+            "residual": -3,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 71434,
+            "knownCellSum": 71433,
+            "residual": -1,
+            "basis": "Printed council Base Salary, Taxable Benefits and Expenses totals."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2023-elected-officials.json.gzip",
+        "evidenceSha256": "9ba2d37bf9865c729bedc0fc61b50321bf24691816c40724e5d33a711c9dc995",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 8,
+            "text": "For the Year Ended December 31, 2023"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 7,
+        "acceptedRows": 7,
+        "heldMissingBenefitRows": 0,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 8,
+            "rows": 7
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 8,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 8,
+            "text": "Staff (Greater than $75,000)"
+          }
+        ],
+        "heldRows": []
+      },
+      "publicWarning": "Port Moody 2023 council known-cell sums minus printed council controls: Base Salary −$2, Taxable Benefits −$3, Expenses −$1. Published values are retained; the cause is unknown."
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2024-employee-remuneration",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/0n3nhqjd/2024-statement-of-financial-information.pdf",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "8ca6ab1a4662257e8efd8f27d96ce169bc15e534ce3b5363789ba90f1064a6d0",
+      "file": "city-of-port-moody-2024-employee-remuneration.json.gzip",
+      "dataSha256": "4934eb3737741a6f591dd39ff2ac82ca7b332b88042746fd805d0ad4478a8c02",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Port Moody 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 238,
+      "totalRemuneration": 28373139,
+      "totalExpenses": 285864,
+      "pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Remuneration and taxable benefits/payouts are separate source components. Their sum is normalized remuneration; ordinary expenses remain separate. Every source-named employee is retained in evidence, including below-base-pay-threshold observations.",
+        "Published Remuneration plus numeric Taxable Benefits and Payouts/Taxable Benefits form pay. Printed expenses, employer CPP/EI and aggregate payroll are not added. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          42,
+          43,
+          44,
+          46,
+          48
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Remuneration",
+            "printedOrDerivedControl": 28305351,
+            "knownCellSum": 28305354,
+            "residual": 3,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Taxable Benefits",
+            "printedOrDerivedControl": 397816,
+            "knownCellSum": 397815,
+            "residual": -1,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 285869,
+            "knownCellSum": 285864,
+            "residual": -5,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2024-employee-remuneration.json.gzip",
+        "evidenceSha256": "5fe91c9f306f13492827dd326ed941ee07f36f1e89752275f965f6ee9aae92de",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "Year Ended December 31, 2024"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 242,
+        "acceptedRows": 238,
+        "heldMissingBenefitRows": 4,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 42,
+            "rows": 33
+          },
+          {
+            "page": 43,
+            "rows": 39
+          },
+          {
+            "page": 44,
+            "rows": 38
+          },
+          {
+            "page": 45,
+            "rows": 38
+          },
+          {
+            "page": 46,
+            "rows": 38
+          },
+          {
+            "page": 47,
+            "rows": 39
+          },
+          {
+            "page": 48,
+            "rows": 17
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 42,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 42,
+            "text": "Staff (Greater than $75,000)"
+          },
+          {
+            "page": 42,
+            "text": "as well as payment of retroactive rate increases. Taxable benefits include group life insurance and other allowances"
+          }
+        ],
+        "heldRows": [
+          {
+            "name": "Cameron, Matthew",
+            "position": "Labourer",
+            "pdfPage": 43,
+            "knownRemunerationColumn": 78458,
+            "benefits": null,
+            "expenses": null
+          },
+          {
+            "name": "Dhak, Jaspal",
+            "position": "Facilities Maintenance Worker",
+            "pdfPage": 43,
+            "knownRemunerationColumn": 87896,
+            "benefits": null,
+            "expenses": null
+          },
+          {
+            "name": "Lentija, Bonnie Jay",
+            "position": "Building Service Worker",
+            "pdfPage": 45,
+            "knownRemunerationColumn": 76517,
+            "benefits": null,
+            "expenses": null
+          },
+          {
+            "name": "Puleo, Michael",
+            "position": "Equipment Operator",
+            "pdfPage": 46,
+            "knownRemunerationColumn": 87159,
+            "benefits": null,
+            "expenses": null
+          }
+        ],
+        "completeEmployeeSchedule": false
+      },
+      "publicWarning": "Port Moody 2024 employee known-cell sums minus printed named controls: Remuneration +$3, Taxable Benefits −$1, Expenses −$5. Published values are retained; the cause is unknown. Partial employee cohort: 4 named rows with an unpublished/dash taxable-benefit component remain held; their known remuneration cells and raw dashes remain in evidence, and are not substituted for composite remuneration. Accepted-subset totals differ in scope from full named-cohort controls. Held names/pages: Cameron, Matthew (p43); Dhak, Jaspal (p43); Lentija, Bonnie Jay (p45); Puleo, Michael (p46)",
+      "completeEmployeeSchedule": false
+    },
+    {
+      "id": "history-lower-mainland-city-of-richmond-2024-employee-remuneration",
+      "employerSlug": "city-of-richmond",
+      "employerName": "City of Richmond",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://citycouncil.richmond.ca/__shared/assets/2024_Statement_of_Financial_Information77285.pdf",
+      "sourceIndexUrl": "https://citycouncil.richmond.ca/agendas/archives/council/2025/062325_agenda.htm",
+      "sha256": "f63925088a6b381fe2ff96d9759c62a8c5316f59e2bf464ec532ba5d4409fde2",
+      "file": "city-of-richmond-2024-employee-remuneration.json.gzip",
+      "dataSha256": "0d0fb9ee1f5ea6434d23af567a8cc7f72ad2da6cf0728df55abede131089b9a8",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Richmond 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 1231,
+      "totalRemuneration": 148393545,
+      "totalExpenses": 577933,
+      "pages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The original is a scanned employee schedule with a pre-existing OCR layer. Independent Tesseract column OCR is compared against both positioned PDF readers; all 38 name and 10 monetary OCR disagreements were resolved against the rendered original and frozen as reader-specific exact-cell corrections. Whitespace around existing commas is normalized; literal initials and names are preserved. No job titles are published in this schedule, so positions remain missing.",
+        "The source explicitly combines Base Salary and Benefits and Other for remuneration. Benefits and Other includes group life, accidental-death/dismemberment and vehicle benefits, plus lump-sum leave balances, union gratuities and union overtime. The two rows with blank Base Salary have no numeric individual remuneration total and remain held.",
+        "Published numeric Base Salary plus numeric Benefits and Other form remuneration; no missing individual component is inferred as zero. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Base Salary",
+            "printedOrDerivedControl": 124813440,
+            "knownCellSum": 124813470,
+            "residual": 30,
+            "basis": "Printed full 1,233-row named Base Salary / Benefits and Other / Expenses subtotals on physical page 75. Known cells are summed separately; a printed subtotal does not establish blank components as zero. Accepted-subset totals have different scope."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Benefits and Other",
+            "printedOrDerivedControl": 23773440,
+            "knownCellSum": 23773412,
+            "residual": -28,
+            "basis": "Printed full 1,233-row named Base Salary / Benefits and Other / Expenses subtotals on physical page 75. Known cells are summed separately; a printed subtotal does not establish blank components as zero. Accepted-subset totals have different scope."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 577893,
+            "knownCellSum": 577933,
+            "residual": 40,
+            "basis": "Printed full 1,233-row named Base Salary / Benefits and Other / Expenses subtotals on physical page 75. Known cells are summed separately; a printed subtotal does not establish blank components as zero. Accepted-subset totals have different scope."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-richmond-2024-employee-remuneration.json.gzip",
+        "evidenceSha256": "2f6daa6f9837bac4eabfa0073cdfa1676affc82ff3f8699f46a1fe6babad032d",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 47,
+            "text": "Employee Earnings in Excess of $75,000 and Related Expenses for 2024"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 1233,
+        "acceptedRows": 1231,
+        "heldMissingBenefitRows": 0,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 47,
+            "rows": 44
+          },
+          {
+            "page": 48,
+            "rows": 44
+          },
+          {
+            "page": 49,
+            "rows": 44
+          },
+          {
+            "page": 50,
+            "rows": 44
+          },
+          {
+            "page": 51,
+            "rows": 44
+          },
+          {
+            "page": 52,
+            "rows": 44
+          },
+          {
+            "page": 53,
+            "rows": 44
+          },
+          {
+            "page": 54,
+            "rows": 44
+          },
+          {
+            "page": 55,
+            "rows": 44
+          },
+          {
+            "page": 56,
+            "rows": 44
+          },
+          {
+            "page": 57,
+            "rows": 44
+          },
+          {
+            "page": 58,
+            "rows": 44
+          },
+          {
+            "page": 59,
+            "rows": 44
+          },
+          {
+            "page": 60,
+            "rows": 44
+          },
+          {
+            "page": 61,
+            "rows": 44
+          },
+          {
+            "page": 62,
+            "rows": 44
+          },
+          {
+            "page": 63,
+            "rows": 44
+          },
+          {
+            "page": 64,
+            "rows": 44
+          },
+          {
+            "page": 65,
+            "rows": 44
+          },
+          {
+            "page": 66,
+            "rows": 44
+          },
+          {
+            "page": 67,
+            "rows": 44
+          },
+          {
+            "page": 68,
+            "rows": 44
+          },
+          {
+            "page": 69,
+            "rows": 44
+          },
+          {
+            "page": 70,
+            "rows": 44
+          },
+          {
+            "page": 71,
+            "rows": 44
+          },
+          {
+            "page": 72,
+            "rows": 44
+          },
+          {
+            "page": 73,
+            "rows": 44
+          },
+          {
+            "page": 74,
+            "rows": 40
+          },
+          {
+            "page": 75,
+            "rows": 5
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 75,
+            "text": "*Combines salary, taxable benefits and other lump sum payouts"
+          }
+        ],
+        "heldRows": [
+          {
+            "name": "Duncan, Scott",
+            "position": null,
+            "pdfPage": 54,
+            "knownBaseSalary": null,
+            "knownBenefitsAndOther": 98718,
+            "expenses": null,
+            "missingPayComponents": [
+              "salary"
+            ]
+          },
+          {
+            "name": "Young, Jim",
+            "position": null,
+            "pdfPage": 74,
+            "knownBaseSalary": null,
+            "knownBenefitsAndOther": 94619,
+            "expenses": null,
+            "missingPayComponents": [
+              "salary"
+            ]
+          }
+        ],
+        "printedAggregateControls": {
+          "physicalPage": 75,
+          "amountUnit": "dollars",
+          "printedNamedSalary": 124813440,
+          "printedNamedBenefitsAndOther": 23773440,
+          "printedNamedExpenses": 577893,
+          "printedCombinedNamedRemuneration": 148586879,
+          "knownNamedComponentsMinusPrintedCombinedNamedRemuneration": 3,
+          "printedUnderThresholdRemuneration": 37711940,
+          "printedGrandRemuneration": 186298819,
+          "printedUnderThresholdExpenses": 48872,
+          "printedGrandExpenses": 626765,
+          "allKnownNamedSalary": 124813470,
+          "allKnownNamedBenefitsAndOther": 23773412,
+          "allKnownNamedExpenses": 577933,
+          "printedNamedComponentsMinusPrintedCombinedNamedRemuneration": 1
+        },
+        "independentCrossReview": {
+          "files": [
+            "research/salaries/municipal-history-pass/reviews/richmond-2024-pages-47-53.md",
+            "research/salaries/municipal-history-pass/reviews/richmond-2024-pages-54-61.md",
+            "research/salaries/municipal-history-pass/reviews/richmond-2024-pages-62-75.md"
+          ],
+          "fieldTranscriptionFiles": [
+            "research/salaries/municipal-history-pass/reviews/richmond-2024-pages-47-53.json",
+            "research/salaries/municipal-history-pass/reviews/richmond-2024-pages-54-61.json",
+            "research/salaries/municipal-history-pass/reviews/richmond-2024-pages-62-75.json"
+          ],
+          "fullRenderedEmployeePages": [
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75
+          ],
+          "all1233NamesAndThreeMonetaryFieldsAgree": true,
+          "all1231AcceptedSixFieldRowsAgree": true,
+          "sourceRowsReviewedByPartition": [
+            308,
+            352,
+            573
+          ],
+          "acceptedRowsReviewedByPartition": [
+            308,
+            351,
+            572
+          ],
+          "heldMissingBaseSalaryRows": 2,
+          "qualification": "Unchanged original cells; unresolved known-cell residuals +$30 Base Salary, −$28 Benefits and Other, +$40 Expenses, +$3 vs combined printed named remuneration. Cause unknown."
+        },
+        "independentOcr": {
+          "reader": "Tesseract 5 column OCR from original 300-dpi ink",
+          "pdfTextLayer": "Pre-existing OCR; PyMuPDF/Poppler alone are not independent OCR readings.",
+          "allAcceptedAndHeldRowFieldsAgreeAfterRenderedCorrections": true,
+          "pageCorrections": [
+            {
+              "physicalPage": 47,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": [
+                  {
+                    "row": 17,
+                    "field": "salary",
+                    "before": ", 59,086",
+                    "after": "59,086",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 48,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 27,
+                    "field": "name",
+                    "before": "Basraon, A vtar",
+                    "after": "Basraon, Avtar",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 26,
+                    "field": "name",
+                    "before": "Basford; Adam",
+                    "after": "Basford, Adam",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 27,
+                    "field": "benefits",
+                    "before": "47,167",
+                    "after": "47,767",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 49,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": [
+                  {
+                    "row": 2,
+                    "field": "name",
+                    "before": "Berenguer. Vieira, Gabriel",
+                    "after": "Berenguer Vieira, Gabriel",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 16,
+                    "field": "name",
+                    "before": "Black, David :",
+                    "after": "Black, David",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 40,
+                    "field": "name",
+                    "before": "Bruce, Jan",
+                    "after": "Bruce, Ian",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 50,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 51,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 20,
+                    "field": "name",
+                    "before": "Chien, Johtty",
+                    "after": "Chien, Johny",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 26,
+                    "field": "name",
+                    "before": "Chiu, I. Lin",
+                    "after": "Chiu, I Lin",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 52,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 8,
+                    "field": "name",
+                    "before": "Combs, Arie",
+                    "after": "Combs, Aric",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 16,
+                    "field": "name",
+                    "before": "Comils, Kevin",
+                    "after": "Cornils, Kevin",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 53,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 54,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 55,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 37,
+                    "field": "name",
+                    "before": "Gill, Mamaj",
+                    "after": "Gill, Manraj",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 6,
+                    "field": "salary",
+                    "before": ", 75,932",
+                    "after": "75,932",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 26,
+                    "field": "name",
+                    "before": "Georgescu, Jan",
+                    "after": "Georgescu, Ian",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 56,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 19,
+                    "field": "name",
+                    "before": "Guglani, Arnita",
+                    "after": "Guglani, Amita",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 57,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 2,
+                    "field": "name",
+                    "before": "Hau,HeiMan",
+                    "after": "Hau, Hei Man",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 8,
+                    "field": "name",
+                    "before": "Beathe, Gerina",
+                    "after": "Heathe, Gerina",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 58,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 16,
+                    "field": "name",
+                    "before": "lrcandia, Michael",
+                    "after": "Ircandia, Michael",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 28,
+                    "field": "name",
+                    "before": "Jauk, Lies!",
+                    "after": "Jauk, Liesl",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 59,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 31,
+                    "field": "name",
+                    "before": "Komerup, John",
+                    "after": "Kornerup, John",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 39,
+                    "field": "name",
+                    "before": "Krungtanmueng, B unruen",
+                    "after": "Krungtanmueng, Bunruen",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 20,
+                    "field": "name",
+                    "before": "Khatkar; Parmveer",
+                    "after": "Khatkar, Parmveer",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 60,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 61,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 33,
+                    "field": "name",
+                    "before": "Lo,KinMing",
+                    "after": "Lo, Kin Ming",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 13,
+                    "field": "expenses",
+                    "before": "",
+                    "after": "11",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 62,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 63,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 23,
+                    "field": "name",
+                    "before": "McLaughlin, Kris",
+                    "after": "McLoughlin, Kris",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 64,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 17,
+                    "field": "benefits",
+                    "before": "I 0,928",
+                    "after": "10,928",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 28,
+                    "field": "name",
+                    "before": "Maxin, Greg",
+                    "after": "Moxin, Greg",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 35,
+                    "field": "salary",
+                    "before": "I 16,825",
+                    "after": "116,825",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 4,
+                    "field": "name",
+                    "before": "Mitchell; Dwayne",
+                    "after": "Mitchell, Dwayne",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 35,
+                    "field": "name",
+                    "before": "Mumblo, Jan",
+                    "after": "Mumblo, Ian",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 65,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 19,
+                    "field": "name",
+                    "before": "Nguyen, Due Nhu Quynh",
+                    "after": "Nguyen, Duc Nhu Quynh",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 66,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": [
+                  {
+                    "row": 12,
+                    "field": "name",
+                    "before": "Pattullo; Chris",
+                    "after": "Pattullo, Chris",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 22,
+                    "field": "name",
+                    "before": "Peters, Cassidy.",
+                    "after": "Peters, Cassidy",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 67,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": [
+                  {
+                    "row": 32,
+                    "field": "expenses",
+                    "before": "7196",
+                    "after": "796",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 68,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 36,
+                    "field": "name",
+                    "before": "Sangara, J aren",
+                    "after": "Sangara, Jaren",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 8,
+                    "field": "name",
+                    "before": "Rosenberg, Suzanne ;",
+                    "after": "Rosenberg, Suzanne",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 69,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 21,
+                    "field": "name",
+                    "before": "Shaima, Reecha",
+                    "after": "Sharma, Reecha",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 23,
+                    "field": "expenses",
+                    "before": "16",
+                    "after": "76",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 31,
+                    "field": "expenses",
+                    "before": "4",
+                    "after": "41",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 70,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 35,
+                    "field": "name",
+                    "before": "Stewa1i, Aaron",
+                    "after": "Stewart, Aaron",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 71,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 4,
+                    "field": "name",
+                    "before": "Sun,ShiLin",
+                    "after": "Sun, Shi Lin",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 72,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 0,
+                    "field": "name",
+                    "before": "To, Tik.Hang",
+                    "after": "To, Tik Hang",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 35,
+                    "field": "name",
+                    "before": "Vaughn, J erret",
+                    "after": "Vaughn, Jerret",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  },
+                  {
+                    "row": 40,
+                    "field": "name",
+                    "before": "V erbian, Liana",
+                    "after": "Verbian, Liana",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 0,
+                    "field": "name",
+                    "before": "To, Tik Hang ;",
+                    "after": "To, Tik Hang",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 73,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 30,
+                    "field": "name",
+                    "before": "W eststrate, Jason",
+                    "after": "Weststrate, Jason",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": []
+              }
+            },
+            {
+              "physicalPage": 74,
+              "readers": {
+                "embedded-ocr": [
+                  {
+                    "row": 10,
+                    "field": "name",
+                    "before": "Wong,Isabe!Anne",
+                    "after": "Wong, Isabel Anne",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ],
+                "independent-ocr": [
+                  {
+                    "row": 16,
+                    "field": "name",
+                    "before": "Wringe, Jain",
+                    "after": "Wringe, Iain",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            },
+            {
+              "physicalPage": 75,
+              "readers": {
+                "embedded-ocr": [],
+                "independent-ocr": [
+                  {
+                    "row": 2,
+                    "field": "salary",
+                    "before": "79,492",
+                    "after": "75,492",
+                    "reason": "Exact rendered original cell; existing and independent OCR differ. No inferred text or control-balancing adjustment."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "completeEmployeeSchedule": false,
+        "heldMissingPayComponentRows": 2,
+        "adoptionEvidence": {
+          "file": "evidence/richmond-2024-adoption.html.gzip",
+          "sha256": "62842e51a8838c9be808c603c2cd493bee483a560b38b1e1dc9797b9f1517d47",
+          "sourceUrl": "https://citycouncil.richmond.ca/agendas/council/062325_minutes.htm",
+          "resolution": "R25/12-12",
+          "meetingDate": "2025-06-23",
+          "text": "That the 2024 Statement of Financial Information be approved.",
+          "status": "Carried in official minutes"
+        }
+      },
+      "publicWarning": "Richmond 2024 full-source known-cell sums minus printed named component controls: Base Salary +$30, Benefits and Other −$28, Expenses +$40. The full 1,233-row known pay-component sum is $148,586,882, $3 above printed combined named remuneration $148,586,879. Separately, the two printed pay-component subtotals add to $148,586,880, $1 above that printed combined named total. Cause unknown; published individual values are unchanged. Full-source component controls differ in scope from the 1,231 accepted composite-pay rows. Partial employee cohort: 2 named rows have a blank/dash pay component and no numeric row remuneration total. Their known component cells and raw missing cells remain in evidence; no zero component or composite remuneration is inferred. Held names/pages: Duncan, Scott (p54); Young, Jim (p74)",
+      "completeEmployeeSchedule": false
+    },
+    {
+      "id": "history-lower-mainland-city-of-port-moody-2025-employee-remuneration",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/yrkh3rw0/edms-674189-v2-2025_statement_of_financial_information_-sofi.pdf",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "2be6c71b4a1a12bf447fb363f8d3633acec16a55d4072631fb0cc973f8fdc44b",
+      "file": "city-of-port-moody-2025-employee-remuneration.json.gzip",
+      "dataSha256": "31b37b59a8931c05a4a607c3fcd09449936cfe0c940adffb0e154f8e697e8d6f",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Port Moody 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 216,
+      "totalRemuneration": 25930099,
+      "totalExpenses": 322434,
+      "pages": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Original calendar-year employee schedules. Names, initials and positions remain as printed, including source-specific abbreviations. Council cohorts are separate; existing 2024/2025 council files are not duplicated.",
+        "Remuneration and taxable benefits/payouts are separate source components. Their sum is normalized remuneration; ordinary expenses remain separate. Every source-named employee is retained in evidence, including below-base-pay-threshold observations.",
+        "Published Remuneration plus numeric Taxable Benefits and Payouts/Taxable Benefits form pay. Printed expenses, employer CPP/EI and aggregate payroll are not added. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "sourceColumnLabel": "Remuneration",
+            "printedOrDerivedControl": 28810242,
+            "knownCellSum": 25810252,
+            "residual": -2999990,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "benefits",
+            "sourceColumnLabel": "Taxable Benefits",
+            "printedOrDerivedControl": 437511,
+            "knownCellSum": 437523,
+            "residual": 12,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          },
+          {
+            "field": "expenses",
+            "sourceColumnLabel": "Expenses",
+            "printedOrDerivedControl": 322435,
+            "knownCellSum": 322434,
+            "residual": -1,
+            "basis": "Printed named Staff (Greater than $75,000) component subtotals. All known component cells are compared; accepted-subset scope remains separate if a pay component is held."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2025-employee-remuneration.json.gzip",
+        "evidenceSha256": "24f72527e6aeff9193e5cd9e21acb9b8c1a9bad57e85be2910c0593c733fabf0",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "Year Ended December 31, 2025"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 220,
+        "acceptedRows": 216,
+        "heldMissingBenefitRows": 4,
+        "sourceRowCountsByPhysicalPage": [
+          {
+            "page": 41,
+            "rows": 31
+          },
+          {
+            "page": 42,
+            "rows": 38
+          },
+          {
+            "page": 43,
+            "rows": 37
+          },
+          {
+            "page": 44,
+            "rows": 37
+          },
+          {
+            "page": 45,
+            "rows": 37
+          },
+          {
+            "page": 46,
+            "rows": 37
+          },
+          {
+            "page": 47,
+            "rows": 3
+          }
+        ],
+        "columnAndControlEvidence": [
+          {
+            "page": 41,
+            "text": "Remuneration includes base salary, acting pay and overtime"
+          },
+          {
+            "page": 41,
+            "text": "Staff (Greater than $75,000)"
+          },
+          {
+            "page": 41,
+            "text": "as well as payment of retroactive rate increases. Taxable benefits include group life insurance and other allowances"
+          }
+        ],
+        "heldRows": [
+          {
+            "name": "Cameron, Matthew",
+            "position": "Labourer",
+            "pdfPage": 42,
+            "knownRemunerationColumn": 78882,
+            "benefits": null,
+            "expenses": null
+          },
+          {
+            "name": "Dhak, Jaspal",
+            "position": "Senior Facilities Maintenance Worker",
+            "pdfPage": 42,
+            "knownRemunerationColumn": 82724,
+            "benefits": null,
+            "expenses": null
+          },
+          {
+            "name": "Mohebi, Mohammad",
+            "position": "Senior Facilities Maintenance Worker",
+            "pdfPage": 44,
+            "knownRemunerationColumn": 78143,
+            "benefits": null,
+            "expenses": null
+          },
+          {
+            "name": "Virgo, Everton",
+            "position": "Building Services Worker 1",
+            "pdfPage": 46,
+            "knownRemunerationColumn": 77927,
+            "benefits": null,
+            "expenses": null
+          }
+        ],
+        "printedAggregateControls": {
+          "physicalPage": 47,
+          "amountUnit": "dollars",
+          "sourceColumns": [
+            "Remuneration",
+            "Taxable Benefits",
+            "Expenses"
+          ],
+          "printedNamed": [
+            28810242,
+            437511,
+            322435
+          ],
+          "printedUnderThreshold": [
+            10508868,
+            88956,
+            41584
+          ],
+          "printedGrand": [
+            36319110,
+            526467,
+            364019
+          ],
+          "printedNamedPlusUnderMinusGrand": [
+            3000000,
+            0,
+            0
+          ],
+          "allKnownNamedCells": [
+            25810252,
+            437523,
+            322434
+          ],
+          "knownNamedPlusPrintedUnderMinusGrand": [
+            10,
+            12,
+            -1
+          ],
+          "cause": "Unresolved; no replacement control or per-person adjustment is inferred."
+        },
+        "independentCrossReview": {
+          "file": "research/salaries/municipal-history-pass/reviews/port-moody-2025.md",
+          "readers": [
+            "PyMuPDF positioned words",
+            "Poppler bbox-layout words",
+            "uncropped pypdf layout inventory"
+          ],
+          "fullRenderedEmployeePages": [
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "allNamesAndThreeMonetaryCellsAgree": true,
+          "publicationApprovalPhysicalPage": 3,
+          "cashBasisNotePhysicalPage": 6
+        },
+        "completeEmployeeSchedule": false
+      },
+      "publicWarning": "MATERIAL SOURCE CONTROL DISCREPANCY: All 220 published Remuneration cells sum to $25,810,252, which is $2,999,990 below the printed named subtotal $28,810,242 (row sum minus control: −$2,999,990). The printed named subtotal plus under-threshold $10,508,868 exceeds printed grand remuneration $36,319,110 by $3,000,000; the full row sum is $10 above grand less under-threshold. Known Taxable Benefits are $12 above their named control and known Expenses are $1 below. Full-page review and three independent readers account for all 220 named source rows; no omitted component or cohort explains the conflicting source controls. The cause is unknown. Individual published values are unchanged. These full-source component controls differ in scope from the 216 accepted composite-pay rows. Partial employee cohort: 4 named rows with an unpublished/dash taxable-benefit component remain held; their known remuneration cells and raw dashes remain in evidence, and are not substituted for composite remuneration. Accepted-subset totals differ in scope from full named-cohort controls. Held names/pages: Cameron, Matthew (p42); Dhak, Jaspal (p42); Mohebi, Mohammad (p44); Virgo, Everton (p46)",
+      "completeEmployeeSchedule": false
+    }
+  ]
+}

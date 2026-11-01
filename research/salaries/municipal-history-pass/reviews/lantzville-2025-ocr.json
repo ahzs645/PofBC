@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-01",
+  "reviewer": "education_histories independent second full-image reviewer",
+  "status": "pass-final-fields-controls-and-documentation",
+  "sourceUrl": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7293.pdf",
+  "sourceIndexUrl": "https://www.lantzville.ca/cms.asp?wpID=485",
+  "sourceSha256": "9b49ae1c58e98255e3c464946dc2bc129f2b58d90fecc3a01536c703f8809f33",
+  "originalFingerprintVerified": true,
+  "method": "Independent full rendered-image transcription of all16 rows, then exact comparison with author manual rows. Original year/approval/controls visually verified; fresh OCR is supporting evidence only.",
+  "rowSchema": [
+    "cohort",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "rows": [
+    [
+      "council",
+      "Jones, Joan",
+      "Councillor",
+      16073,
+      -256,
+      4
+    ],
+    [
+      "council",
+      "Lerner, Jonathan",
+      "Councillor",
+      16073,
+      8864,
+      4
+    ],
+    [
+      "council",
+      "Mundell, Rachelle",
+      "Councillor",
+      16073,
+      3968,
+      4
+    ],
+    [
+      "council",
+      "Savage, Ian",
+      "Councillor",
+      16073,
+      4337,
+      4
+    ],
+    [
+      "council",
+      "Swain, Mark",
+      "Mayor",
+      28998,
+      8501,
+      4
+    ],
+    [
+      "employees",
+      "Copp, Camelia",
+      "Deputy Director of Financial Services",
+      97459,
+      5652,
+      4
+    ],
+    [
+      "employees",
+      "Gosling, Jason",
+      "Park Technician III",
+      82714,
+      1655,
+      4
+    ],
+    [
+      "employees",
+      "Long, Aria",
+      "Deputy Director of Corporate Administration",
+      102588,
+      11284,
+      4
+    ],
+    [
+      "employees",
+      "Morphy, Glenn",
+      "Director of Public Works",
+      122990,
+      1370,
+      4
+    ],
+    [
+      "employees",
+      "Robinson, George",
+      "Director of Planning and Community Services",
+      123106,
+      3089,
+      4
+    ],
+    [
+      "employees",
+      "Rukus, Neil",
+      "Fire Chief",
+      104053,
+      7106,
+      4
+    ],
+    [
+      "employees",
+      "Seppola, Julia",
+      "Director of Financial Services",
+      80308,
+      17255,
+      4
+    ],
+    [
+      "employees",
+      "Smith, Matthew",
+      "Maintenance Technician II",
+      75009,
+      1659,
+      4
+    ],
+    [
+      "employees",
+      "Thurlin, Eric",
+      "Maintenance Technician III",
+      87131,
+      1675,
+      4
+    ],
+    [
+      "employees",
+      "Wells, Delcy",
+      "Director of Corporate Administration",
+      123107,
+      10545,
+      4
+    ],
+    [
+      "employees",
+      "Woods, Matthew",
+      "Public Works Working Foreman",
+      81181,
+      2308,
+      4
+    ]
+  ],
+  "all16RowsAgreeWithAuthorTranscription": true,
+  "fullImagePagesReviewed": [
+    4,
+    8
+  ],
+  "reportingPeriod": {
+    "start": "2025-01-01",
+    "end": "2025-12-31",
+    "physicalHeadingPage": 4,
+    "heading": "For the Year Ended December 31, 2025"
+  },
+  "publicationEvidence": {
+    "physicalPage": 8,
+    "visibleSignatures": [
+      "Mark Swain, Mayor on behalf of Council",
+      "Julia Seppola, Director of Financial Services"
+    ],
+    "approvalDate": "2026-06-24",
+    "statement": "Approves all statements and schedules; visible signatures and dates."
+  },
+  "controls": [
+    {
+      "cohort": "council",
+      "field": "remuneration",
+      "rowSum": 93290,
+      "printedNamed": 93290,
+      "residual": 0
+    },
+    {
+      "cohort": "council",
+      "field": "expenses",
+      "rowSum": 25414,
+      "printedNamed": 25414,
+      "residual": 0
+    },
+    {
+      "cohort": "employees",
+      "field": "remuneration",
+      "rowSum": 1079646,
+      "printedAllEmployees": 1733634,
+      "printedUnderThreshold": 653988,
+      "derivedNamed": 1079646,
+      "residual": 0
+    },
+    {
+      "cohort": "employees",
+      "field": "expenses",
+      "rowSum": 63598,
+      "printedAllEmployees": 125219,
+      "printedUnderThreshold": 61621,
+      "derivedNamed": 63598,
+      "residual": 0
+    }
+  ],
+  "additionalSourceConflict": {
+    "physicalPage": 4,
+    "field": "council-remuneration",
+    "namedRowsAndNamedSubtotal": 93290,
+    "reconciliationCell": 93289,
+    "namedMinusReconciliation": 1,
+    "cause": "Unresolved; no individual cell adjusted."
+  },
+  "adjudications": [
+    {
+      "name": "Jones, Joan",
+      "field": "expenses",
+      "printed": "(256)",
+      "normalized": -256,
+      "decision": "Parentheses visibly denote a negative amount; no inferred refund/recovery explanation."
+    },
+    {
+      "name": "Savage, Ian",
+      "field": "name",
+      "image": "Savage, Ian",
+      "embeddedOcr": "Savage, lan",
+      "freshTesseract": "Savage, lan",
+      "decision": "Full image establishes uppercase I; embedded and fresh OCR confuse I/l. Both embedded PyMuPDF and Poppler text include the name, so a total-omission claim is unsupported."
+    },
+    {
+      "name": "Long, Aria",
+      "field": "name",
+      "image": "Long, Aria",
+      "decision": "Aria confirmed directly; not Arla."
+    },
+    {
+      "name": "Gosling, Jason",
+      "field": "position",
+      "image": "Park Technician III",
+      "decision": "Three uppercase Roman-I strokes visible."
+    },
+    {
+      "name": "Smith, Matthew",
+      "field": "position",
+      "image": "Maintenance Technician II",
+      "decision": "Two uppercase Roman-I strokes visible."
+    },
+    {
+      "name": "Thurlin, Eric",
+      "field": "position",
+      "image": "Maintenance Technician III",
+      "freshTesseract": "Maintenance Technician Ill",
+      "decision": "Three uppercase Roman-I strokes visible; no lowercase ell suffix."
+    }
+  ],
+  "missingZeroNegativeSemantics": {
+    "explicitNegativeExpenseRows": [
+      "Jones, Joan"
+    ],
+    "missingCells": 0,
+    "explicitZeroCells": 0,
+    "expenseInclusiveTotalUsedAsPay": false,
+    "aggregatesImportedAsIndividuals": false
+  },
+  "scopeNote": "Employee subsection says EMPLOYEES; below aggregate says Employees less than$75,000. Exact equality boundary is not explicit, so do not infer a verbatim greater-than rule. Council is distinct.",
+  "supportingFingerprints": {
+    "renderedPageSha256": "b1c80fad4f6bfbc931442f7c85fca49c2df84c9a08751361c315a8c54ba3b6d8",
+    "freshOcrTextSha256": "3718c7d321fd59822bb34a0eea7b94aec47725ae9b496546cd3841deeb5610e1"
+  },
+  "externalMessagesSent": false,
+  "colleagueFilesChanged": false,
+  "embeddedOcrMisreadDescriptionCorrectedByAuthor": true,
+  "all16FinalNormalizedRowsMatchIndependentTranscription": true
+}

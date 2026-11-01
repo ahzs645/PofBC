@@ -1,0 +1,3749 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "municipal-history-capital-town-of-ladysmith-2021-elected-officials",
+      "employerSlug": "town-of-ladysmith",
+      "employerName": "Town of Ladysmith",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "Town of Ladysmith 2021 SOFI: elected-officials",
+      "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2021-sofi-final.pdf?sfvrsn=82d5f4db_6",
+      "sourceIndexUrl": "https://www.ladysmith.ca/city-hall/reports-publications",
+      "sha256": "ca36ca71f537b21b8d6bca19897061b7c1f2177df647ea0723fe01ab92c197f4",
+      "file": "town-of-ladysmith-2021-elected-officials.json.gzip",
+      "dataSha256": "550ceca7abdf236a81d97adb70918db46fafab27ab475b8735a6001825b6243c",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 135454,
+      "totalExpenses": 2979,
+      "pages": [
+        5
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 1,
+        "knownNumericExpenseRows": 6,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            135454,
+            2980
+          ],
+          "employees": [
+            3144864,
+            23545
+          ],
+          "other-employees": [
+            2981082,
+            37466
+          ],
+          "all-employees-plus-council": [
+            6261400,
+            63991
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 135454,
+            "rowSum": 135454,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 2980,
+            "rowSum": 2979,
+            "residual": -1,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-ladysmith-2021-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-ladysmith-2021-employee-remuneration",
+      "employerSlug": "town-of-ladysmith",
+      "employerName": "Town of Ladysmith",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "Town of Ladysmith 2021 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2021-sofi-final.pdf?sfvrsn=82d5f4db_6",
+      "sourceIndexUrl": "https://www.ladysmith.ca/city-hall/reports-publications",
+      "sha256": "ca36ca71f537b21b8d6bca19897061b7c1f2177df647ea0723fe01ab92c197f4",
+      "file": "town-of-ladysmith-2021-employee-remuneration.json.gzip",
+      "dataSha256": "b7b3400d7fb5cc911ee77d769a2131cb3e97b290ecb586ef390081925214d147",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 32,
+      "totalRemuneration": 3144864,
+      "totalExpenses": 23546,
+      "pages": [
+        5
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Published PAYROLL is remuneration; benefits bought by the employer appear separately in the aggregate financial-statement reconciliation and are not added to individual pay. Printed employee control explicitly says greater than $75,000.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 3,
+        "knownNumericExpenseRows": 29,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 32,
+        "sourceControls": {
+          "council": [
+            135454,
+            2980
+          ],
+          "employees": [
+            3144864,
+            23545
+          ],
+          "other-employees": [
+            2981082,
+            37466
+          ],
+          "all-employees-plus-council": [
+            6261400,
+            63991
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3144864,
+            "rowSum": 3144864,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 23545,
+            "rowSum": 23546,
+            "residual": 1,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-ladysmith-2021-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-ladysmith-2022-elected-officials",
+      "employerSlug": "town-of-ladysmith",
+      "employerName": "Town of Ladysmith",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "Town of Ladysmith 2022 SOFI: elected-officials",
+      "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2022-sofi-final.pdf?sfvrsn=eb4df7db_6",
+      "sourceIndexUrl": "https://www.ladysmith.ca/city-hall/reports-publications",
+      "sha256": "c82fb26c9dc671af9691438f3bb12bdd75339c63b254d6ce8bfaabe6b930227e",
+      "file": "town-of-ladysmith-2022-elected-officials.json.gzip",
+      "dataSha256": "470a1d0c5fed7d45c62684a72ac478d4953cddd96539a2a94d4d45381c2eebcb",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 8,
+      "totalRemuneration": 147996,
+      "totalExpenses": 24573,
+      "pages": [
+        5
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 1,
+        "knownNumericExpenseRows": 7,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 8,
+        "sourceControls": {
+          "council": [
+            147996,
+            24572
+          ],
+          "employees": [
+            3606340,
+            38305
+          ],
+          "other-employees": [
+            2884955,
+            53448
+          ],
+          "all-employees-plus-council": [
+            6639291,
+            116325
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 147996,
+            "rowSum": 147996,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 24572,
+            "rowSum": 24573,
+            "residual": 1,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-ladysmith-2022-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-ladysmith-2022-employee-remuneration",
+      "employerSlug": "town-of-ladysmith",
+      "employerName": "Town of Ladysmith",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "Town of Ladysmith 2022 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2022-sofi-final.pdf?sfvrsn=eb4df7db_6",
+      "sourceIndexUrl": "https://www.ladysmith.ca/city-hall/reports-publications",
+      "sha256": "c82fb26c9dc671af9691438f3bb12bdd75339c63b254d6ce8bfaabe6b930227e",
+      "file": "town-of-ladysmith-2022-employee-remuneration.json.gzip",
+      "dataSha256": "c613b4250580f14b0cdbb6175fd025022385baf150411458f97bfa078c37f1fc",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 37,
+      "totalRemuneration": 3606340,
+      "totalExpenses": 38310,
+      "pages": [
+        5
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $5.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Published PAYROLL is remuneration; benefits bought by the employer appear separately in the aggregate financial-statement reconciliation and are not added to individual pay. Printed employee control explicitly says greater than $75,000.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $5.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 1,
+        "knownNumericExpenseRows": 36,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 37,
+        "sourceControls": {
+          "council": [
+            147996,
+            24572
+          ],
+          "employees": [
+            3606340,
+            38305
+          ],
+          "other-employees": [
+            2884955,
+            53448
+          ],
+          "all-employees-plus-council": [
+            6639291,
+            116325
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3606340,
+            "rowSum": 3606340,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 38305,
+            "rowSum": 38310,
+            "residual": 5,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-ladysmith-2022-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-ladysmith-2023-elected-officials",
+      "employerSlug": "town-of-ladysmith",
+      "employerName": "Town of Ladysmith",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Town of Ladysmith 2023 SOFI: elected-officials",
+      "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2023-sofi.pdf?sfvrsn=5219f6db_4",
+      "sourceIndexUrl": "https://www.ladysmith.ca/city-hall/reports-publications",
+      "sha256": "898f98d3a4b7c81c810d267b74b9e5b04395d00bb6b06563894f02b8aa51b395",
+      "file": "town-of-ladysmith-2023-elected-officials.json.gzip",
+      "dataSha256": "97a08d1c4ebb2fdadab4d638b3786800a74338c949f4bb8afc786a5ed37bcdb5",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 145560,
+      "totalExpenses": 47944,
+      "pages": [
+        5
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 1,
+        "knownNumericExpenseRows": 6,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            145560,
+            47944
+          ],
+          "employees": [
+            3710254,
+            45541
+          ],
+          "other-employees": [
+            2993221,
+            12552
+          ],
+          "all-employees-plus-council": [
+            6849035,
+            106037
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 145560,
+            "rowSum": 145560,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 47944,
+            "rowSum": 47944,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-ladysmith-2023-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-ladysmith-2023-employee-remuneration",
+      "employerSlug": "town-of-ladysmith",
+      "employerName": "Town of Ladysmith",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Town of Ladysmith 2023 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2023-sofi.pdf?sfvrsn=5219f6db_4",
+      "sourceIndexUrl": "https://www.ladysmith.ca/city-hall/reports-publications",
+      "sha256": "898f98d3a4b7c81c810d267b74b9e5b04395d00bb6b06563894f02b8aa51b395",
+      "file": "town-of-ladysmith-2023-employee-remuneration.json.gzip",
+      "dataSha256": "0b542b1fa5e216518fcbf627c1142b71454f14614492c05fcdedf0775bb395d6",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 37,
+      "totalRemuneration": 3710254,
+      "totalExpenses": 45541,
+      "pages": [
+        5
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Published PAYROLL is remuneration; benefits bought by the employer appear separately in the aggregate financial-statement reconciliation and are not added to individual pay. Printed employee control explicitly says greater than $75,000."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 9,
+        "knownNumericExpenseRows": 28,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 37,
+        "sourceControls": {
+          "council": [
+            145560,
+            47944
+          ],
+          "employees": [
+            3710254,
+            45541
+          ],
+          "other-employees": [
+            2993221,
+            12552
+          ],
+          "all-employees-plus-council": [
+            6849035,
+            106037
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3710254,
+            "rowSum": 3710254,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 45541,
+            "rowSum": 45541,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-ladysmith-2023-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-langford-2021-elected-officials",
+      "employerSlug": "city-of-langford",
+      "employerName": "City of Langford",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "City of Langford 2021 SOFI: elected-officials",
+      "sourceUrl": "https://langford.ca/wp-content/uploads/2022/06/2021-SOFI-Package.pdf",
+      "sourceIndexUrl": "https://langford.ca/city-hall/document-libraries/document-library/",
+      "sha256": "5c7a9b2cf93e7eb31606081e33923bb2a12d22c4a0c71e9370c17bbc83ec3805",
+      "file": "city-of-langford-2021-elected-officials.json.gzip",
+      "dataSha256": "665e67062397d79ecddfabb36b3cf367c1830c970b3e2a9631bcf912ae980a10",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 258761.35,
+      "totalExpenses": 0,
+      "pages": [
+        6
+      ],
+      "publicWarning": "Every published council expense cell and the printed council expense total is a dash. These amounts remain missing; a sum of zero disclosed numeric expenses does not establish nil expenses.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Every published council expense cell and the printed council expense total is a dash. These amounts remain missing; a sum of zero disclosed numeric expenses does not establish nil expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 7,
+        "knownNumericExpenseRows": 0,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          6
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            258761.35,
+            null
+          ],
+          "employees": [
+            6314022.62,
+            52916.24
+          ],
+          "other-employees": [
+            4847906.63
+          ],
+          "all-employees": [
+            11161929.25
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 258761.35,
+            "rowSum": 258761.35,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": null,
+            "rowSum": 0,
+            "residual": null,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-langford-2021-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-langford-2021-employee-remuneration",
+      "employerSlug": "city-of-langford",
+      "employerName": "City of Langford",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "City of Langford 2021 SOFI: employee-remuneration",
+      "sourceUrl": "https://langford.ca/wp-content/uploads/2022/06/2021-SOFI-Package.pdf",
+      "sourceIndexUrl": "https://langford.ca/city-hall/document-libraries/document-library/",
+      "sha256": "5c7a9b2cf93e7eb31606081e33923bb2a12d22c4a0c71e9370c17bbc83ec3805",
+      "file": "city-of-langford-2021-employee-remuneration.json.gzip",
+      "dataSha256": "c660e9e7bd74beb64bc02ce59e85b2b5c82040da7ac2d2af0e984e980e0b4536",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 60,
+      "totalRemuneration": 6314022.62,
+      "totalExpenses": 52916.24,
+      "pages": [
+        7,
+        8
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Source remuneration includes all forms of salary, wages and taxable benefits paid to an employee during the year. Cash payment timing can differ from total salary earned. Employee expenses remain separate. The named control explicitly says Total over $75,000."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 17,
+        "knownNumericExpenseRows": 43,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          7,
+          8
+        ],
+        "rowsIndependentlyChecked": 60,
+        "sourceControls": {
+          "council": [
+            258761.35,
+            null
+          ],
+          "employees": [
+            6314022.62,
+            52916.24
+          ],
+          "other-employees": [
+            4847906.63
+          ],
+          "all-employees": [
+            11161929.25
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 6314022.62,
+            "rowSum": 6314022.62,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 52916.24,
+            "rowSum": 52916.24,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-langford-2021-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-district-of-north-saanich-2020-elected-officials",
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "District of North Saanich",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "title": "District of North Saanich 2020 SOFI: elected-officials",
+      "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2020-SOFI.pdf",
+      "sourceIndexUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "sha256": "5b755ba83f56aae9919227f514b246f93e9df5aa0173bfeeeb29d535c1c590e6",
+      "file": "district-of-north-saanich-2020-elected-officials.json.gzip",
+      "dataSha256": "177dd9c3e2cf9fa2532485c9546851f9385621916558542c7022cd2817b98b51",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 128782,
+      "totalExpenses": 2549,
+      "pages": [
+        36
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 0,
+        "knownNumericExpenseRows": 7,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          36
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            128782,
+            2549
+          ],
+          "employees": [
+            2550273,
+            26628
+          ],
+          "other-employees": [
+            2534826,
+            76357
+          ],
+          "all-employees": [
+            5085099,
+            102985
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 128782,
+            "rowSum": 128782,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 2549,
+            "rowSum": 2549,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-north-saanich-2020-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-district-of-north-saanich-2020-employee-remuneration",
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "District of North Saanich",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "title": "District of North Saanich 2020 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2020-SOFI.pdf",
+      "sourceIndexUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "sha256": "5b755ba83f56aae9919227f514b246f93e9df5aa0173bfeeeb29d535c1c590e6",
+      "file": "district-of-north-saanich-2020-employee-remuneration.json.gzip",
+      "dataSha256": "41628a9c0a3216cbb5ad6200e825937fb36fd8c0e8ce5745434e5b73b9afd3f3",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 25,
+      "totalRemuneration": 2550273,
+      "totalExpenses": 26628,
+      "pages": [
+        37
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Printed rule: Employees that exceed $75,000. Source gross pay includes retroactive rate increases, holiday, overtime, other earned pay and fringe benefits; it excludes severance and the described general employer benefits. Distinct same-name rows are preserved as published."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 1,
+        "knownNumericExpenseRows": 24,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          37
+        ],
+        "rowsIndependentlyChecked": 25,
+        "sourceControls": {
+          "council": [
+            128782,
+            2549
+          ],
+          "employees": [
+            2550273,
+            26628
+          ],
+          "other-employees": [
+            2534826,
+            76357
+          ],
+          "all-employees": [
+            5085099,
+            102985
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 2550273,
+            "rowSum": 2550273,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 26628,
+            "rowSum": 26628,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-north-saanich-2020-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-district-of-north-saanich-2021-elected-officials",
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "District of North Saanich",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "District of North Saanich 2021 SOFI: elected-officials",
+      "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2021-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "sha256": "13a2b3c332ba1bab3cbed752b44b03a11a13d6a91f69ad8d56ce0c8ba476d68c",
+      "file": "district-of-north-saanich-2021-elected-officials.json.gzip",
+      "dataSha256": "d062f778b05e845c094dd052974ed572c6047f17581206719fc2cdefa1930bf0",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 130200,
+      "totalExpenses": 3075,
+      "pages": [
+        36
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 2,
+        "knownNumericExpenseRows": 5,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          36
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            130200,
+            3075
+          ],
+          "employees": [
+            2857119,
+            41174
+          ],
+          "other-employees": [
+            2776782,
+            64331
+          ],
+          "all-employees": [
+            5633901,
+            105505
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 130200,
+            "rowSum": 130200,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 3075,
+            "rowSum": 3075,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-north-saanich-2021-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-district-of-north-saanich-2021-employee-remuneration",
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "District of North Saanich",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "District of North Saanich 2021 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2021-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "sha256": "13a2b3c332ba1bab3cbed752b44b03a11a13d6a91f69ad8d56ce0c8ba476d68c",
+      "file": "district-of-north-saanich-2021-employee-remuneration.json.gzip",
+      "dataSha256": "5dbb9e2e456003d0b2206cf2a03dbc1ba870bc1bb9438ca41104679cd8bc7904",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 28,
+      "totalRemuneration": 2857119,
+      "totalExpenses": 41174,
+      "pages": [
+        37
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Printed rule: Employees that exceed $75,000. Source gross pay includes retroactive rate increases, holiday, overtime, other earned pay and fringe benefits; it excludes severance and the described general employer benefits. Distinct same-name rows are preserved as published."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 3,
+        "knownNumericExpenseRows": 25,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          37
+        ],
+        "rowsIndependentlyChecked": 28,
+        "sourceControls": {
+          "council": [
+            130200,
+            3075
+          ],
+          "employees": [
+            2857119,
+            41174
+          ],
+          "other-employees": [
+            2776782,
+            64331
+          ],
+          "all-employees": [
+            5633901,
+            105505
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 2857119,
+            "rowSum": 2857119,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 41174,
+            "rowSum": 41174,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-north-saanich-2021-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-district-of-north-saanich-2023-elected-officials",
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "District of North Saanich",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "District of North Saanich 2023 SOFI: elected-officials",
+      "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2023-Statement-of-Financial-Information-SOFI.pdf",
+      "sourceIndexUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "sha256": "6c4aea304c7f0db7dcfa97fe54475d6427d3e1572c0c60591b35464374a98416",
+      "file": "district-of-north-saanich-2023-elected-officials.json.gzip",
+      "dataSha256": "0b1fa28fe6a06be6839747e9614ef137901a475b7af815b3fb9dcacb942755a8",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 8,
+      "totalRemuneration": 136786,
+      "totalExpenses": 49951,
+      "pages": [
+        42
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 1,
+        "knownNumericExpenseRows": 7,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          42
+        ],
+        "rowsIndependentlyChecked": 8,
+        "sourceControls": {
+          "council": [
+            136786,
+            49951
+          ],
+          "employees": [
+            3428910,
+            76839
+          ],
+          "other-employees": [
+            2958646,
+            83239
+          ],
+          "all-employees": [
+            6387556,
+            160078
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 136786,
+            "rowSum": 136786,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 49951,
+            "rowSum": 49951,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-north-saanich-2023-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-district-of-north-saanich-2023-employee-remuneration",
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "District of North Saanich",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "District of North Saanich 2023 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2023-Statement-of-Financial-Information-SOFI.pdf",
+      "sourceIndexUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "sha256": "6c4aea304c7f0db7dcfa97fe54475d6427d3e1572c0c60591b35464374a98416",
+      "file": "district-of-north-saanich-2023-employee-remuneration.json.gzip",
+      "dataSha256": "d94468da8d218eb44146b626518ec4127488005884e4ae12ad1c65012bc0fa3f",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 32,
+      "totalRemuneration": 3428910,
+      "totalExpenses": 76839,
+      "pages": [
+        40
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Printed rule: Employees that exceed $75,000. Source gross pay includes retroactive rate increases, holiday, overtime, other earned pay and fringe benefits; it excludes severance and the described general employer benefits. Distinct same-name rows are preserved as published."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 5,
+        "knownNumericExpenseRows": 27,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          40
+        ],
+        "rowsIndependentlyChecked": 32,
+        "sourceControls": {
+          "council": [
+            136786,
+            49951
+          ],
+          "employees": [
+            3428910,
+            76839
+          ],
+          "other-employees": [
+            2958646,
+            83239
+          ],
+          "all-employees": [
+            6387556,
+            160078
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3428910,
+            "rowSum": 3428910,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 76839,
+            "rowSum": 76839,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-north-saanich-2023-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-sidney-2021-elected-officials",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "Town of Sidney 2021 SOFI: elected-officials",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2021-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "8b3670028f07c84c1f2897a72bac44e9983ef3fc135350f454749794fe6649ca",
+      "file": "town-of-sidney-2021-elected-officials.json.gzip",
+      "dataSha256": "158d1ec8faf711ee6aadd8800ac110c63be5de792b1cf3a0a885470670b35467",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 138039,
+      "totalExpenses": 1102,
+      "pages": [
+        35
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Published numeric remuneration TOTAL is used directly; gross and benefit components remain supporting evidence. Blank/dash benefits are not converted to zero or used to construct pay.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 5,
+        "knownNumericExpenseRows": 2,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          35
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            138039,
+            1101
+          ],
+          "employees": [
+            3596336,
+            25746
+          ],
+          "other-employees-remuneration": [
+            4161967
+          ],
+          "all-employees": [
+            7758302,
+            25746
+          ],
+          "council-components": [
+            135074,
+            2965
+          ]
+        },
+        "controlEquations": [
+          {
+            "id": "all-remuneration-vs-named-plus-other",
+            "result": [
+              "all-employees",
+              0
+            ],
+            "terms": [
+              [
+                "employees",
+                0
+              ],
+              [
+                "other-employees-remuneration",
+                0
+              ]
+            ],
+            "residual": -1,
+            "actualResidual": -1
+          }
+        ],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 138039,
+            "rowSum": 138039,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 1101,
+            "rowSum": 1102,
+            "residual": 1,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2021-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-sidney-2021-employee-remuneration",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "Town of Sidney 2021 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2021-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "8b3670028f07c84c1f2897a72bac44e9983ef3fc135350f454749794fe6649ca",
+      "file": "town-of-sidney-2021-employee-remuneration.json.gzip",
+      "dataSha256": "fa93911df3d298c17aadbaa76f41bbdd546949def853f6daa189ab50a4ab9f12",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 34,
+      "totalRemuneration": 3596335,
+      "totalExpenses": 25746,
+      "pages": [
+        35
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $-1.00; expense difference $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Separately, the printed all-employee remuneration total $7,758,302 is $1 below the sum of the printed named and other-employee controls (3,596,336 + 4,161,967). Source values are unchanged; the cause is unresolved.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Employee REMUNERATION is used directly. Named employees are separated from the printed consolidated total of other employees with remuneration of $75,000 or less. The aggregate-only other employees are not converted to individual records.",
+        "Named employee heading has no printed threshold comparison; thresholdComparison remains null. The original separately labels the consolidated other-employees amount $75,000 or less; all accepted named employee amounts exceed $75,000.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $-1.00; expense difference $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Separately, the printed all-employee remuneration total $7,758,302 is $1 below the sum of the printed named and other-employee controls (3,596,336 + 4,161,967). Source values are unchanged; the cause is unresolved."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 8,
+        "knownNumericExpenseRows": 26,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          35
+        ],
+        "rowsIndependentlyChecked": 34,
+        "sourceControls": {
+          "council": [
+            138039,
+            1101
+          ],
+          "employees": [
+            3596336,
+            25746
+          ],
+          "other-employees-remuneration": [
+            4161967
+          ],
+          "all-employees": [
+            7758302,
+            25746
+          ],
+          "council-components": [
+            135074,
+            2965
+          ]
+        },
+        "controlEquations": [
+          {
+            "id": "all-remuneration-vs-named-plus-other",
+            "result": [
+              "all-employees",
+              0
+            ],
+            "terms": [
+              [
+                "employees",
+                0
+              ],
+              [
+                "other-employees-remuneration",
+                0
+              ]
+            ],
+            "residual": -1,
+            "actualResidual": -1
+          }
+        ],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3596336,
+            "rowSum": 3596335,
+            "residual": -1,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 25746,
+            "rowSum": 25746,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2021-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-sidney-2022-elected-officials",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "Town of Sidney 2022 SOFI: elected-officials",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2022-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "9a301ec5764ccb3a73579611a76233e06805d4109671d5903764dbf7715cb8c3",
+      "file": "town-of-sidney-2022-elected-officials.json.gzip",
+      "dataSha256": "17694294284be8e5a0f3158e0c46fb7f56155bbba26ea9732bbdaebda10b4b69",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 9,
+      "totalRemuneration": 142923,
+      "totalExpenses": 1732,
+      "pages": [
+        35
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $-3.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. The printed council remuneration total $142,923 exceeds printed gross $138,164 plus benefits $4,758 by $1. The published numeric remuneration TOTAL is used directly; all components remain unchanged and the cause is unresolved.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Published numeric remuneration TOTAL is used directly; gross and benefit components remain supporting evidence. Blank/dash benefits are not converted to zero or used to construct pay.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $-3.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. The printed council remuneration total $142,923 exceeds printed gross $138,164 plus benefits $4,758 by $1. The published numeric remuneration TOTAL is used directly; all components remain unchanged and the cause is unresolved."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 0,
+        "knownNumericExpenseRows": 9,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          35
+        ],
+        "rowsIndependentlyChecked": 9,
+        "sourceControls": {
+          "council": [
+            142923,
+            1735
+          ],
+          "employees": [
+            3762417,
+            40950
+          ],
+          "other-employees-remuneration": [
+            4178884
+          ],
+          "all-employees": [
+            7941300,
+            40950
+          ],
+          "council-components": [
+            138164,
+            4758
+          ]
+        },
+        "controlEquations": [
+          {
+            "id": "all-remuneration-vs-named-plus-other",
+            "result": [
+              "all-employees",
+              0
+            ],
+            "terms": [
+              [
+                "employees",
+                0
+              ],
+              [
+                "other-employees-remuneration",
+                0
+              ]
+            ],
+            "residual": -1,
+            "actualResidual": -1
+          },
+          {
+            "id": "council-total-vs-gross-plus-benefits",
+            "result": [
+              "council",
+              0
+            ],
+            "terms": [
+              [
+                "council-components",
+                0
+              ],
+              [
+                "council-components",
+                1
+              ]
+            ],
+            "residual": 1,
+            "actualResidual": 1
+          }
+        ],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 142923,
+            "rowSum": 142923,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 1735,
+            "rowSum": 1732,
+            "residual": -3,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2022-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-sidney-2022-employee-remuneration",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "Town of Sidney 2022 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2022-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "9a301ec5764ccb3a73579611a76233e06805d4109671d5903764dbf7715cb8c3",
+      "file": "town-of-sidney-2022-employee-remuneration.json.gzip",
+      "dataSha256": "62f97a9e79c376a29775c8773cc9dd80bd4673067f32d8c8c776a75c75d3e04f",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 35,
+      "totalRemuneration": 3762418,
+      "totalExpenses": 40950,
+      "pages": [
+        35,
+        36
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $1.00; expense difference $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Separately, the printed all-employee remuneration total $7,941,300 is $1 below the sum of the printed named and other-employee controls (3,762,417 + 4,178,884). Source values are unchanged; the cause is unresolved.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Employee REMUNERATION is used directly. Named employees are separated from the printed consolidated total of other employees with remuneration of $75,000 or less. The aggregate-only other employees are not converted to individual records.",
+        "Named employee heading has no printed threshold comparison; thresholdComparison remains null. The original separately labels the consolidated other-employees amount $75,000 or less; all accepted named employee amounts exceed $75,000.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $1.00; expense difference $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Separately, the printed all-employee remuneration total $7,941,300 is $1 below the sum of the printed named and other-employee controls (3,762,417 + 4,178,884). Source values are unchanged; the cause is unresolved."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 9,
+        "knownNumericExpenseRows": 26,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          35,
+          36
+        ],
+        "rowsIndependentlyChecked": 35,
+        "sourceControls": {
+          "council": [
+            142923,
+            1735
+          ],
+          "employees": [
+            3762417,
+            40950
+          ],
+          "other-employees-remuneration": [
+            4178884
+          ],
+          "all-employees": [
+            7941300,
+            40950
+          ],
+          "council-components": [
+            138164,
+            4758
+          ]
+        },
+        "controlEquations": [
+          {
+            "id": "all-remuneration-vs-named-plus-other",
+            "result": [
+              "all-employees",
+              0
+            ],
+            "terms": [
+              [
+                "employees",
+                0
+              ],
+              [
+                "other-employees-remuneration",
+                0
+              ]
+            ],
+            "residual": -1,
+            "actualResidual": -1
+          },
+          {
+            "id": "council-total-vs-gross-plus-benefits",
+            "result": [
+              "council",
+              0
+            ],
+            "terms": [
+              [
+                "council-components",
+                0
+              ],
+              [
+                "council-components",
+                1
+              ]
+            ],
+            "residual": 1,
+            "actualResidual": 1
+          }
+        ],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3762417,
+            "rowSum": 3762418,
+            "residual": 1,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 40950,
+            "rowSum": 40950,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2022-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-sidney-2023-elected-officials",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Town of Sidney 2023 SOFI: elected-officials",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2023-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "d403c0be8af8562f8a7ca028bd27716dbee8d3b8171834fb706026d4f6dd6b63",
+      "file": "town-of-sidney-2023-elected-officials.json.gzip",
+      "dataSha256": "8c60a6e2619341b4fd86666b78a3afbb36133e27d7b9c2e1aaa5ce7cbfb7dfc9",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 154652,
+      "totalExpenses": 18701,
+      "pages": [
+        40
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Published numeric remuneration TOTAL is used directly; gross and benefit components remain supporting evidence. Blank/dash benefits are not converted to zero or used to construct pay.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 3,
+        "knownNumericExpenseRows": 4,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          40
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            154652,
+            18700
+          ],
+          "employees": [
+            5048352,
+            56105
+          ],
+          "other-employees-remuneration": [
+            3343201
+          ],
+          "all-employees": [
+            8391553,
+            56105
+          ],
+          "council-components": [
+            147782,
+            6870
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 154652,
+            "rowSum": 154652,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 18700,
+            "rowSum": 18701,
+            "residual": 1,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2023-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-sidney-2023-employee-remuneration",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Town of Sidney 2023 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2023-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "d403c0be8af8562f8a7ca028bd27716dbee8d3b8171834fb706026d4f6dd6b63",
+      "file": "town-of-sidney-2023-employee-remuneration.json.gzip",
+      "dataSha256": "0a17655e85f3f4fef911ba0916181b26807ff8d6fd1b31849c0389612f9e43a3",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 49,
+      "totalRemuneration": 5048354,
+      "totalExpenses": 56104,
+      "pages": [
+        40,
+        41
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $2.00; expense difference $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Employee REMUNERATION is used directly. Named employees are separated from the printed consolidated total of other employees with remuneration of $75,000 or less. The aggregate-only other employees are not converted to individual records.",
+        "Named employee heading has no printed threshold comparison; thresholdComparison remains null. The original separately labels the consolidated other-employees amount $75,000 or less; all accepted named employee amounts exceed $75,000.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $2.00; expense difference $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 15,
+        "knownNumericExpenseRows": 34,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          40,
+          41
+        ],
+        "rowsIndependentlyChecked": 49,
+        "sourceControls": {
+          "council": [
+            154652,
+            18700
+          ],
+          "employees": [
+            5048352,
+            56105
+          ],
+          "other-employees-remuneration": [
+            3343201
+          ],
+          "all-employees": [
+            8391553,
+            56105
+          ],
+          "council-components": [
+            147782,
+            6870
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 5048352,
+            "rowSum": 5048354,
+            "residual": 2,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 56105,
+            "rowSum": 56104,
+            "residual": -1,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2023-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-sidney-2024-elected-officials",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Town of Sidney 2024 SOFI: elected-officials",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2024-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "6cae2db0e674738eb73eb1104aa6368b2fc3fc09115341e012edca7063fedc45",
+      "file": "town-of-sidney-2024-elected-officials.json.gzip",
+      "dataSha256": "d3afc49072f77f9df20774cba197523ccde8a432e04bdebf12d29daaa82bc093",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 161321,
+      "totalExpenses": 12257,
+      "pages": [
+        41
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Published numeric remuneration TOTAL is used directly; gross and benefit components remain supporting evidence. Blank/dash benefits are not converted to zero or used to construct pay."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 2,
+        "knownNumericExpenseRows": 5,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          41
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            161321,
+            12257
+          ],
+          "employees": [
+            5049369,
+            51417
+          ],
+          "other-employees-remuneration": [
+            3722464
+          ],
+          "all-employees": [
+            8771833,
+            51417
+          ],
+          "council-components": [
+            153260,
+            8060
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [
+          {
+            "name": "Novek, Richard",
+            "pdfPage": 41,
+            "totalMinusComponents": 1
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 161321,
+            "rowSum": 161321,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 12257,
+            "rowSum": 12257,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2024-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-town-of-sidney-2024-employee-remuneration",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Town of Sidney 2024 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2024-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "6cae2db0e674738eb73eb1104aa6368b2fc3fc09115341e012edca7063fedc45",
+      "file": "town-of-sidney-2024-employee-remuneration.json.gzip",
+      "dataSha256": "e1f1fa46320af96ff2e5de0646bdfc94d966dbed4ac6fe8b0f874fca38e40136",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 47,
+      "totalRemuneration": 5049369,
+      "totalExpenses": 51417,
+      "pages": [
+        41,
+        42
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original published remuneration and expenses are separate; blank/dash expense cells remain missing. Every accepted row is read independently using PyMuPDF and Poppler and checked against rendered originals.",
+        "These are payment disclosures above the source disclosure threshold, not annual salary rates or a complete employee roster.",
+        "Employee REMUNERATION is used directly. Named employees are separated from the printed consolidated total of other employees with remuneration of $75,000 or less. The aggregate-only other employees are not converted to individual records.",
+        "Named employee heading has no printed threshold comparison; thresholdComparison remains null. The original separately labels the consolidated other-employees amount $75,000 or less; all accepted named employee amounts exceed $75,000."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 13,
+        "knownNumericExpenseRows": 34,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          41,
+          42
+        ],
+        "rowsIndependentlyChecked": 47,
+        "sourceControls": {
+          "council": [
+            161321,
+            12257
+          ],
+          "employees": [
+            5049369,
+            51417
+          ],
+          "other-employees-remuneration": [
+            3722464
+          ],
+          "all-employees": [
+            8771833,
+            51417
+          ],
+          "council-components": [
+            153260,
+            8060
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 5049369,
+            "rowSum": 5049369,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 51417,
+            "rowSum": 51417,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2024-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-colwood-2012-elected-officials",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2012",
+      "periodType": "calendar",
+      "periodStart": "2012-01-01",
+      "periodEnd": "2012-12-31",
+      "title": "City of Colwood 2012 SOFI: elected-officials",
+      "sourceUrl": "https://www.colwood.ca/media/25672",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "166880b37d8f33319c6790dfbb6cf405ad68a965bb2850f1e6f32c79bc76313c",
+      "file": "city-of-colwood-2012-elected-officials.json.gzip",
+      "dataSha256": "c3ead8f40f7629a56319b378c8d2dd9e3c5b2f9346d0ef7160ad8b8bf5d71884",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 95013.24,
+      "totalExpenses": 2734.52,
+      "pages": [
+        8
+      ],
+      "publicWarning": "This seven-person council schedule publishes no group subtotal and no individual offices. Every original row was independently transcribed from the rendered page; unprinted subtotals and offices remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "Source remuneration includes salary, wages, bonuses, gratuities, taxable benefits, payments into trust or income deferral, and excludes severance. Expenses are separately defined and exclude amounts included in remuneration. Names and capitalization remain as published; no surname separator or office is invented.",
+        "This seven-person council schedule publishes no group subtotal and no individual offices. Every original row was independently transcribed from the rendered page; unprinted subtotals and offices remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 0,
+        "knownNumericExpenseRows": 7,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          8
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "employees": [
+            2022914,
+            null
+          ],
+          "other-employees": [
+            2733441
+          ],
+          "all-employees": [
+            4756355
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": null,
+            "rowSum": 95013.24,
+            "residual": null,
+            "basis": {
+              "none": true
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": null,
+            "rowSum": 2734.52,
+            "residual": null,
+            "basis": {
+              "none": true
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2012-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-colwood-2012-employee-remuneration",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2012",
+      "periodType": "calendar",
+      "periodStart": "2012-01-01",
+      "periodEnd": "2012-12-31",
+      "title": "City of Colwood 2012 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.colwood.ca/media/25672",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "166880b37d8f33319c6790dfbb6cf405ad68a965bb2850f1e6f32c79bc76313c",
+      "file": "city-of-colwood-2012-employee-remuneration.json.gzip",
+      "dataSha256": "6530109c81526eedd84391beafcafd650f1082073fc95722fc5b1a95bc3849ee",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 20,
+      "totalRemuneration": 2022866.45,
+      "totalExpenses": 22517.33,
+      "pages": [
+        9,
+        10
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $-47.55; expense difference has no numeric printed named control. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "Source remuneration includes salary, wages, bonuses, gratuities, taxable benefits, payments into trust or income deferral, and excludes severance. Expenses are separately defined and exclude amounts included in remuneration. Names and capitalization remain as published; no surname separator or office is invented.",
+        "Printed control says TOTAL $75,000 OR MORE. No named employee expense subtotal is printed; expense controls remain missing. Individual pay/expenses include cents, while printed remuneration aggregates are whole-dollar amounts; no cause of the resulting residual is inferred.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $-47.55; expense difference has no numeric printed named control. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 3,
+        "knownNumericExpenseRows": 17,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          9,
+          10
+        ],
+        "rowsIndependentlyChecked": 20,
+        "sourceControls": {
+          "employees": [
+            2022914,
+            null
+          ],
+          "other-employees": [
+            2733441
+          ],
+          "all-employees": [
+            4756355
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 2022914,
+            "rowSum": 2022866.45,
+            "residual": -47.55,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": null,
+            "rowSum": 22517.33,
+            "residual": null,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2012-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-colwood-2016-elected-officials",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2016",
+      "periodType": "calendar",
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "title": "City of Colwood 2016 SOFI: elected-officials",
+      "sourceUrl": "https://www.colwood.ca/media/25663",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "e67008025e1c6b19b21fdbdd47e581b8fe6f26b587ed70b3ee34ac6ac4b97398",
+      "file": "city-of-colwood-2016-elected-officials.json.gzip",
+      "dataSha256": "9b35c72c6a0261784ab6af84a71c0a39c6335fdaae051d34bfe7e2f710eeaf05",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 106381.58,
+      "totalExpenses": 5798.71,
+      "pages": [
+        9
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $-0.02. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "Source remuneration includes salary, wages, bonuses, gratuities, taxable benefits, payments into trust or income deferral, and excludes severance. Expenses are separately defined and exclude amounts included in remuneration. Names and capitalization remain as published; no surname separator or office is invented.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $-0.02. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 1,
+        "knownNumericExpenseRows": 6,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          9
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            106381.58,
+            5798.73
+          ],
+          "employees": [
+            3286696.42,
+            53093.01
+          ],
+          "other-employees": [
+            3195573.62,
+            49382.6
+          ],
+          "all-employees": [
+            6482270.04,
+            102475.6
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 106381.58,
+            "rowSum": 106381.58,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 5798.73,
+            "rowSum": 5798.71,
+            "residual": -0.02,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2016-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-colwood-2016-employee-remuneration",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2016",
+      "periodType": "calendar",
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "title": "City of Colwood 2016 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.colwood.ca/media/25663",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "e67008025e1c6b19b21fdbdd47e581b8fe6f26b587ed70b3ee34ac6ac4b97398",
+      "file": "city-of-colwood-2016-employee-remuneration.json.gzip",
+      "dataSha256": "5a38cc61e674a6faa0c7f4c8e4641c5cacd031625985e07293f3cb44848b9978",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 32,
+      "totalRemuneration": 3286696.42,
+      "totalExpenses": 53093.02,
+      "pages": [
+        10
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $0.01. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Source remuneration includes salary, wages, bonuses, gratuities, taxable benefits, payments into trust or income deferral, and excludes severance. Expenses are separately defined and exclude amounts included in remuneration. Names and capitalization remain as published; no surname separator or office is invented.",
+        "Published numeric remuneration TOTAL is used directly; gross earnings and taxable benefits remain supporting evidence. Blank/dash benefits are missing, not zero. Printed control: TOTAL $75,000 OR MORE.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $0.01. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 4,
+        "knownNumericExpenseRows": 28,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          10
+        ],
+        "rowsIndependentlyChecked": 32,
+        "sourceControls": {
+          "council": [
+            106381.58,
+            5798.73
+          ],
+          "employees": [
+            3286696.42,
+            53093.01
+          ],
+          "other-employees": [
+            3195573.62,
+            49382.6
+          ],
+          "all-employees": [
+            6482270.04,
+            102475.6
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3286696.42,
+            "rowSum": 3286696.42,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 53093.01,
+            "rowSum": 53093.02,
+            "residual": 0.01,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2016-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-colwood-2018-elected-officials",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "title": "City of Colwood 2018 SOFI: elected-officials",
+      "sourceUrl": "https://www.colwood.ca/media/25655",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "26bb2019b35979f4d3fd45285954f72e912f73dfe6be990ec1ebba30a251a4a6",
+      "file": "city-of-colwood-2018-elected-officials.json.gzip",
+      "dataSha256": "ca420fac17bde337493af049feeeabb1193fdd8aa093995f262ab63ccadb7df3",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 11,
+      "totalRemuneration": 117381.69,
+      "totalExpenses": 16370.21,
+      "pages": [
+        9
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Source remuneration includes salary, wages, bonuses, gratuities, taxable benefits, payments into trust or income deferral, and excludes severance. Expenses are separately defined and exclude amounts included in remuneration. Names and capitalization remain as published; no surname separator or office is invented."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 5,
+        "knownNumericExpenseRows": 6,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          9
+        ],
+        "rowsIndependentlyChecked": 11,
+        "sourceControls": {
+          "council": [
+            117381.69,
+            16370.21
+          ],
+          "employees": [
+            3378244.03,
+            86446.52
+          ],
+          "other-employees": [
+            3263073.15,
+            58233.32
+          ],
+          "all-employees": [
+            6641317.18,
+            144679.84
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 117381.69,
+            "rowSum": 117381.69,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 16370.21,
+            "rowSum": 16370.21,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2018-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-colwood-2018-employee-remuneration",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "title": "City of Colwood 2018 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.colwood.ca/media/25655",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "26bb2019b35979f4d3fd45285954f72e912f73dfe6be990ec1ebba30a251a4a6",
+      "file": "city-of-colwood-2018-employee-remuneration.json.gzip",
+      "dataSha256": "17483688b460741c1ab09d044c059ffa4476912af5b9e8f404f3d510cdfb859b",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 32,
+      "totalRemuneration": 3378244.03,
+      "totalExpenses": 86446.53,
+      "pages": [
+        10
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $0.01. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Source remuneration includes salary, wages, bonuses, gratuities, taxable benefits, payments into trust or income deferral, and excludes severance. Expenses are separately defined and exclude amounts included in remuneration. Names and capitalization remain as published; no surname separator or office is invented.",
+        "Published numeric remuneration TOTAL is used directly, with gross earnings and taxable benefits retained. Printed control: TOTAL $75,000 OR MORE.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $0.00; expense difference $0.01. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 5,
+        "knownNumericExpenseRows": 27,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          10
+        ],
+        "rowsIndependentlyChecked": 32,
+        "sourceControls": {
+          "council": [
+            117381.69,
+            16370.21
+          ],
+          "employees": [
+            3378244.03,
+            86446.52
+          ],
+          "other-employees": [
+            3263073.15,
+            58233.32
+          ],
+          "all-employees": [
+            6641317.18,
+            144679.84
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3378244.03,
+            "rowSum": 3378244.03,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 86446.52,
+            "rowSum": 86446.53,
+            "residual": 0.01,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2018-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-colwood-2021-elected-officials",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "City of Colwood 2021 SOFI: elected-officials",
+      "sourceUrl": "https://www.colwood.ca/media/25646",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "74372810a1961e1dbf7c5d76503bb69e96cc01b61f173084a934081599f045d8",
+      "file": "city-of-colwood-2021-elected-officials.json.gzip",
+      "dataSha256": "662d9703449d6b90df21d783ff8b2f6c36ee57d686c86da0805ca8dbf7434291",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 130112,
+      "totalExpenses": 4785,
+      "pages": [
+        9
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $2.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Source remuneration includes salary, wages, bonuses, gratuities, taxable benefits, payments into trust or income deferral, and excludes severance. Expenses are separately defined and exclude amounts included in remuneration. Names and capitalization remain as published; no surname separator or office is invented.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $2.00; expense difference $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 0,
+        "knownNumericExpenseRows": 7,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          9
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            130110,
+            4784
+          ],
+          "employees": [
+            4933998,
+            60033
+          ],
+          "other-employees": [
+            3085549,
+            113239
+          ],
+          "all-employees": [
+            8019547,
+            173272
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 130110,
+            "rowSum": 130112,
+            "residual": 2,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 4784,
+            "rowSum": 4785,
+            "residual": 1,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2021-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-colwood-2021-employee-remuneration",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "City of Colwood 2021 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.colwood.ca/media/25646",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "74372810a1961e1dbf7c5d76503bb69e96cc01b61f173084a934081599f045d8",
+      "file": "city-of-colwood-2021-employee-remuneration.json.gzip",
+      "dataSha256": "994ee7adb11528ea7d1b2d8c03b16d716c648ac3d6fb4f7426e6b6e3a092c4c9",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 48,
+      "totalRemuneration": 4933999,
+      "totalExpenses": 60038,
+      "pages": [
+        10
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $1.00; expense difference $5.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Published numeric remuneration TOTAL differs from published gross plus taxable benefits in 13 rows. Each exact difference is retained in supporting evidence; all original fields remain unchanged and the cause is unresolved. Remuneration uses the published TOTAL.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Source remuneration includes salary, wages, bonuses, gratuities, taxable benefits, payments into trust or income deferral, and excludes severance. Expenses are separately defined and exclude amounts included in remuneration. Names and capitalization remain as published; no surname separator or office is invented.",
+        "Published numeric remuneration TOTAL is used directly, not reconstructed from whole-dollar gross and benefit components. Printed control: TOTAL $75,000 OR MORE. Names have no printed commas and are preserved that way.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $1.00; expense difference $5.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Published numeric remuneration TOTAL differs from published gross plus taxable benefits in 13 rows. Each exact difference is retained in supporting evidence; all original fields remain unchanged and the cause is unresolved. Remuneration uses the published TOTAL."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 8,
+        "knownNumericExpenseRows": 40,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          10
+        ],
+        "rowsIndependentlyChecked": 48,
+        "sourceControls": {
+          "council": [
+            130110,
+            4784
+          ],
+          "employees": [
+            4933998,
+            60033
+          ],
+          "other-employees": [
+            3085549,
+            113239
+          ],
+          "all-employees": [
+            8019547,
+            173272
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [
+          {
+            "name": "ANGELIUS BOB",
+            "pdfPage": 10,
+            "totalMinusComponents": -1
+          },
+          {
+            "name": "BOVEN MARLIE",
+            "pdfPage": 10,
+            "totalMinusComponents": 1
+          },
+          {
+            "name": "BRYSON DANIEL",
+            "pdfPage": 10,
+            "totalMinusComponents": -1
+          },
+          {
+            "name": "CHOW GREG",
+            "pdfPage": 10,
+            "totalMinusComponents": -1
+          },
+          {
+            "name": "CLARK SHIREEN",
+            "pdfPage": 10,
+            "totalMinusComponents": 1
+          },
+          {
+            "name": "EARL ROBERT",
+            "pdfPage": 10,
+            "totalMinusComponents": -1
+          },
+          {
+            "name": "FISHER ROB",
+            "pdfPage": 10,
+            "totalMinusComponents": -1
+          },
+          {
+            "name": "HEPTING JENN",
+            "pdfPage": 10,
+            "totalMinusComponents": -1
+          },
+          {
+            "name": "IRVING AMANDA",
+            "pdfPage": 10,
+            "totalMinusComponents": -1
+          },
+          {
+            "name": "MOLNAR BRENT",
+            "pdfPage": 10,
+            "totalMinusComponents": -1
+          },
+          {
+            "name": "PERKINS CANDACE",
+            "pdfPage": 10,
+            "totalMinusComponents": 1
+          },
+          {
+            "name": "TWIDALE CRAIG",
+            "pdfPage": 10,
+            "totalMinusComponents": 1
+          },
+          {
+            "name": "WHITTAKER ADAM",
+            "pdfPage": 10,
+            "totalMinusComponents": 1
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 4933998,
+            "rowSum": 4933999,
+            "residual": 1,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 60033,
+            "rowSum": 60038,
+            "residual": 5,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2021-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-colwood-2017-elected-officials",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "title": "City of Colwood 2017 SOFI: elected-officials",
+      "sourceUrl": "https://www.colwood.ca/media/25658",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "4067dca2f8083f36e747c6ce5f9167fade31e3d274f716343fdf3c6915485a62",
+      "file": "city-of-colwood-2017-elected-officials.json.gzip",
+      "dataSha256": "6c0fdeeeb7718450efd157c5d3f1f9047bc293cff89f8b602ecf1a69e33eabf5",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 108092.13,
+      "totalExpenses": 20521.75,
+      "pages": [
+        9
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "Source remuneration includes salary, wages, bonuses, gratuities, taxable benefits, payments into trust or income deferral, and excludes severance. Expenses are separately defined and exclude amounts included in remuneration. Names and capitalization remain as published; no surname separator or office is invented."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 0,
+        "knownNumericExpenseRows": 7,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          9
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            108092.13,
+            20521.75
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 108092.13,
+            "rowSum": 108092.13,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 20521.75,
+            "rowSum": 20521.75,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2017-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-langford-2010-employee-remuneration",
+      "employerSlug": "city-of-langford",
+      "employerName": "City of Langford",
+      "sector": "Municipalities",
+      "year": "2010",
+      "periodType": "calendar",
+      "periodStart": "2010-01-01",
+      "periodEnd": "2010-12-31",
+      "title": "City of Langford 2010 SOFI: employee-remuneration",
+      "sourceUrl": "https://langford.ca/wp-content/uploads/2020/11/Statement-of-Financial-Information-2010.pdf",
+      "sourceIndexUrl": "https://langford.ca/city-hall/document-libraries/document-library/",
+      "sha256": "02f847011c5a6e643136ccb38cc279216dbbbea66a054dc95ad664e0551a6f9d",
+      "file": "city-of-langford-2010-employee-remuneration.json.gzip",
+      "dataSha256": "d164c97c11634c3647993f39848219d3e2b96c6a73e94adc9096d43851764798",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 24,
+      "totalRemuneration": 2447411.63,
+      "totalExpenses": 45866.48,
+      "pages": [
+        6
+      ],
+      "publicWarning": "The salary schedule prints Tement, Steve, while the same original approval on physical page3 prints Steve Ternent. The schedule spelling is retained; no identity substitution or alias is inferred.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "These salary pages are scans with a pre-existing searchable text layer, not native text. Every field was manually transcribed and checked against the rendered original at enlarged resolution, with new Tesseract OCR and city-provided searchable text retained as corroboration. Raw OCR discrepancies were adjudicated individually; uncorrected OCR is not the published data.",
+        "Remuneration is the source payment-disclosure amount, with expenses separate. The expense-inclusive Total and council Budget columns are retained as evidence, not used as pay. Employee notes say cash basis and possible extraordinary payments such as unused-vacation payouts or retroactive pay.",
+        "Source name Barber, Jennfier is retained with its printed spelling. No job title or office is inferred.",
+        "The salary schedule is transcribed as Tement, Steve. The same original approval on physical3 prints Steve Ternent. This same-document name difference is retained without an identity substitution or alias inference.",
+        "The salary schedule prints Tement, Steve, while the same original approval on physical page3 prints Steve Ternent. The schedule spelling is retained; no identity substitution or alias is inferred."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": false,
+        "ocrReview": {
+          "method": "Full rendered-original transcription with independent new Tesseract5 psm6 OCR and original searchable-layer corroboration",
+          "renderDpi": 300,
+          "tesseractVersion": "5.5.0",
+          "pages": [
+            {
+              "pdfPage": 6,
+              "tesseractTextFile": "evidence/ocr/langford2010-p6-tesseract.txt.gzip",
+              "tesseractTextSha256": "3cfae27083ef678e23a22c34cd2f1c8816bf334467747a52fae6ca30741c0bfa",
+              "originalTextFile": "evidence/ocr/langford2010-p6-original-text.txt.gzip",
+              "originalTextSha256": "871940dc2b856fb5f07995a301ed0408db7f907ed9e38043d3805794795a3605"
+            },
+            {
+              "pdfPage": 7,
+              "tesseractTextFile": "evidence/ocr/langford2010-p7-tesseract.txt.gzip",
+              "tesseractTextSha256": "f436723dd6678b61ab1f9a5233e06ca7a5352fae3a5aecf961b5d1231d51be5a",
+              "originalTextFile": "evidence/ocr/langford2010-p7-original-text.txt.gzip",
+              "originalTextSha256": "b1eabf42fb61e934a5b7a1c2de221abe9282d56b1219a3afa442f7d719c5a278"
+            }
+          ]
+        },
+        "rawOcrReadersMayDisagree": true,
+        "allOcrDisagreementsAdjudicated": true,
+        "expenseMissingRows": 2,
+        "knownNumericExpenseRows": 22,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "Full rendered-original field transcription",
+          "New Tesseract5 psm6 OCR with explicit individual adjudications",
+          "Original searchable-layer corroboration"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          6
+        ],
+        "rowsIndependentlyChecked": 24,
+        "sourceControls": {
+          "employee-remuneration": [
+            2447411.63,
+            45866.48,
+            2493278.11
+          ],
+          "elected-officials": [
+            140588.4,
+            35259,
+            175847.4,
+            193000
+          ],
+          "other-employees": [
+            4054015.1
+          ],
+          "all-employees": [
+            6501426.73
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 2447411.63,
+            "rowSum": 2447411.63,
+            "residual": 0,
+            "basis": {
+              "total": "employee-remuneration"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 45866.48,
+            "rowSum": 45866.48,
+            "residual": 0,
+            "basis": {
+              "total": "employee-remuneration"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-langford-2010-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-city-of-langford-2010-elected-officials",
+      "employerSlug": "city-of-langford",
+      "employerName": "City of Langford",
+      "sector": "Municipalities",
+      "year": "2010",
+      "periodType": "calendar",
+      "periodStart": "2010-01-01",
+      "periodEnd": "2010-12-31",
+      "title": "City of Langford 2010 SOFI: elected-officials",
+      "sourceUrl": "https://langford.ca/wp-content/uploads/2020/11/Statement-of-Financial-Information-2010.pdf",
+      "sourceIndexUrl": "https://langford.ca/city-hall/document-libraries/document-library/",
+      "sha256": "02f847011c5a6e643136ccb38cc279216dbbbea66a054dc95ad664e0551a6f9d",
+      "file": "city-of-langford-2010-elected-officials.json.gzip",
+      "dataSha256": "f76b9acccdb53ead992dd144dac03cea182c1cbe1c9c908a572e0f7253df2af7",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 140588.4,
+      "totalExpenses": 35259,
+      "pages": [
+        7
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "These salary pages are scans with a pre-existing searchable text layer, not native text. Every field was manually transcribed and checked against the rendered original at enlarged resolution, with new Tesseract OCR and city-provided searchable text retained as corroboration. Raw OCR discrepancies were adjudicated individually; uncorrected OCR is not the published data.",
+        "Remuneration is the source payment-disclosure amount, with expenses separate. The expense-inclusive Total and council Budget columns are retained as evidence, not used as pay. Employee notes say cash basis and possible extraordinary payments such as unused-vacation payouts or retroactive pay.",
+        "The Indemnity column is remuneration; Total includes expenses and Budget is not actual pay. No individual offices are printed."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": false,
+        "ocrReview": {
+          "method": "Full rendered-original transcription with independent new Tesseract5 psm6 OCR and original searchable-layer corroboration",
+          "renderDpi": 300,
+          "tesseractVersion": "5.5.0",
+          "pages": [
+            {
+              "pdfPage": 6,
+              "tesseractTextFile": "evidence/ocr/langford2010-p6-tesseract.txt.gzip",
+              "tesseractTextSha256": "3cfae27083ef678e23a22c34cd2f1c8816bf334467747a52fae6ca30741c0bfa",
+              "originalTextFile": "evidence/ocr/langford2010-p6-original-text.txt.gzip",
+              "originalTextSha256": "871940dc2b856fb5f07995a301ed0408db7f907ed9e38043d3805794795a3605"
+            },
+            {
+              "pdfPage": 7,
+              "tesseractTextFile": "evidence/ocr/langford2010-p7-tesseract.txt.gzip",
+              "tesseractTextSha256": "f436723dd6678b61ab1f9a5233e06ca7a5352fae3a5aecf961b5d1231d51be5a",
+              "originalTextFile": "evidence/ocr/langford2010-p7-original-text.txt.gzip",
+              "originalTextSha256": "b1eabf42fb61e934a5b7a1c2de221abe9282d56b1219a3afa442f7d719c5a278"
+            }
+          ]
+        },
+        "rawOcrReadersMayDisagree": true,
+        "allOcrDisagreementsAdjudicated": true,
+        "expenseMissingRows": 0,
+        "knownNumericExpenseRows": 7,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "Full rendered-original field transcription",
+          "New Tesseract5 psm6 OCR with explicit individual adjudications",
+          "Original searchable-layer corroboration"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          7
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "employee-remuneration": [
+            2447411.63,
+            45866.48,
+            2493278.11
+          ],
+          "elected-officials": [
+            140588.4,
+            35259,
+            175847.4,
+            193000
+          ],
+          "other-employees": [
+            4054015.1
+          ],
+          "all-employees": [
+            6501426.73
+          ]
+        },
+        "controlEquations": [],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 140588.4,
+            "rowSum": 140588.4,
+            "residual": 0,
+            "basis": {
+              "total": "elected-officials"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 35259,
+            "rowSum": 35259,
+            "residual": 0,
+            "basis": {
+              "total": "elected-officials"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-langford-2010-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-history-capital-district-of-oak-bay-2024-employee-remuneration",
+      "employerSlug": "district-of-oak-bay",
+      "employerName": "District of Oak Bay",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "District of Oak Bay 2024 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.oakbay.ca/wp-content/uploads/2025/11/DOB_2024Sofi.pdf",
+      "sourceIndexUrl": "https://oakbay.civicweb.net/document/175333/",
+      "sha256": "8e2cde9477ce6a78fb42dddb2530ca3dfd8258a39dc2ff551711346a4286e485",
+      "file": "district-of-oak-bay-2024-employee-remuneration.json.gzip",
+      "dataSha256": "790ae96887bdd9776bdffbc5ede1570e50efee0f219a210eb67342cfb89975ec",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "completeForNamedPopulation": true,
+      "partialImport": false,
+      "verifiedOn": "2026-11-01",
+      "rowCount": 98,
+      "totalRemuneration": 10979366,
+      "totalExpenses": 69831,
+      "pages": [
+        51,
+        52,
+        53
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls: remuneration difference $5.00; expense difference $-4.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. The printed all-employee remuneration total $26,456,705 is $1 below the printed named $10,979,361 plus other-employee $15,477,345 controls. Source values are preserved; the cause is unresolved. The separate2024 council cohort is held for material source conflicts.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Physical49 explicitly defines remuneration as salary, wages and taxable benefits paid during the year, with expenses separate and cash timing distinguished from salary earned. It explicitly excludes employees of Oak Bay Police Department.",
+        "The employee source prints separate Last Name,First Name,Department and Position columns. The app name concatenates the original surname and given-name fields with one space; no surname comma or new identity is invented. Both source name fields and the separate department remain in supporting evidence.",
+        "A single hidden underlying text token3.5 at physical52 x361.47,y251.98 is excluded using exact text+geometry, with a count guard. It is not visible in the rendered table and is not part of Laktin Marilyn’s published job title; no global token filter is used.",
+        "Physical49 says report remuneration for each employee that exceeds$75,000; physical53 separately labels98>$75,000 employees. Police are excluded.",
+        "Published row amounts minus printed named-cohort controls: remuneration difference $5.00; expense difference $-4.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. The printed all-employee remuneration total $26,456,705 is $1 below the printed named $10,979,361 plus other-employee $15,477,345 controls. Source values are preserved; the cause is unresolved. The separate2024 council cohort is held for material source conflicts."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "completeForNamedPopulation": true,
+        "partialImport": false,
+        "nativeTablePagesVerified": true,
+        "ocrReview": null,
+        "rawOcrReadersMayDisagree": false,
+        "allOcrDisagreementsAdjudicated": null,
+        "expenseMissingRows": 30,
+        "knownNumericExpenseRows": 68,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          51,
+          52,
+          53
+        ],
+        "rowsIndependentlyChecked": 98,
+        "sourceControls": {
+          "council": [
+            222360,
+            25472,
+            244307
+          ],
+          "employees": [
+            10979361,
+            69835
+          ],
+          "other-employees": [
+            15477345
+          ],
+          "all-employees": [
+            26456705
+          ]
+        },
+        "controlEquations": [
+          {
+            "id": "employee-aggregate-components",
+            "result": [
+              "all-employees",
+              0
+            ],
+            "terms": [
+              [
+                "employees",
+                0
+              ],
+              [
+                "other-employees",
+                0
+              ]
+            ],
+            "residual": -1,
+            "actualResidual": -1
+          }
+        ],
+        "componentResiduals": [],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 10979361,
+            "rowSum": 10979366,
+            "residual": 5,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 69835,
+            "rowSum": 69831,
+            "residual": -4,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-oak-bay-2024-employee-remuneration.json.gzip"
+      }
+    }
+  ]
+}

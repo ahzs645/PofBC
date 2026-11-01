@@ -97,6 +97,15 @@ class InteriorSourceChecks(unittest.TestCase):
         self.assertEqual([c['residual'] for c in coldstream['validation']['printedControls']],[0,-300,-300])
         self.assertIn('$300 below',coldstream['publicWarning']);self.assertTrue(coldstream['completeEmployeeSchedule'])
 
+    def test_disclosed_standalone_initial_a_is_preserved_in_text_columns(self):
+        expected=[('district-of-sparwood','2025','employee-remuneration',{'LEBLANC, A','LUCAS, A','PINCHAK, A','STRASSER, A'}),('district-of-sparwood','2024','employee-remuneration',{'STRASSER, A'}),('district-of-sparwood','2025','elected-officials',{'CARDOZO, A'}),('district-of-sparwood','2024','elected-officials',{'CARDOZO, A'}),('town-of-princeton','2023','elected-officials',{'WILLIS, TYLER A'})]
+        for slug,year,category,names in expected:
+            source=self.get_source(slug,year,category);rows=json.loads(gzip.decompress((parser.OUT/source['file']).read_bytes()))
+            self.assertTrue(names <= {r[1] for r in rows})
+        for source in self.sources.values():
+            rows=json.loads(gzip.decompress((parser.OUT/source['file']).read_bytes()))
+            self.assertFalse(any('$' in str(row[1:3]) for row in rows))
+
     def test_changed_original_cannot_reuse_reviewed_layout(self):
         with tempfile.TemporaryDirectory() as cache,tempfile.TemporaryDirectory() as out:
             report=self.config['reports'][0];(Path(cache)/report['cacheFile']).write_bytes(b'%PDF changed')
