@@ -168,11 +168,11 @@ export const PositionBrowse = ({ titlesIndex, years, range, layout, onTitle }) =
 
   if (!titlesIndex) return <p className="salaries__hint" role="status">Loading the positions…</p>
   const note = (
-    <div className="salaries__browse-bar">
+    <div className="salaries__browse-bar salaries__browse-bar--position-order">
       <Segmented compact ariaLabel="Order positions" value={order} onChange={setOrder} options={TITLE_ORDERS} />
       <p className="salaries__hint salaries__hint--small salaries__order-note">
         {order === 'used'
-          ? 'Each title gathers its spellings across employers; the average is for the last period it was disclosed.'
+          ? 'Grouped titles · latest period averages'
           : order === 'growth'
             ? 'Titles whose average could be followed over 10 or more records, fastest first.'
             : 'Titles with 10 or more raises of a name kept under them, largest first.'}
