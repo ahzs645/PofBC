@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "preparedOn": "2026-10-31",
+  "sourceSha256": "6f55df69890dd1ce89a516fc25325aa142eee26618911179a8a52e703bf31d04",
+  "geolibrePythonVersion": "3.6.0",
+  "geolibreCode": {
+    "repository": "https://github.com/opengeos/GeoLibre",
+    "commit": "44b9c42a16e055c400a04f49f45959100627cd03",
+    "path": "apps/geolibre-desktop/src/lib/georeference.ts",
+    "sha256": "e4a396ffc7f1206319c58ac4a2285376a9ee62859882c232a3b7972fc06483d9",
+    "conversion": "TypeScript annotations stripped using node:module.stripTypeScriptTypes; runtime code unmodified."
+  },
+  "images": [
+    {
+      "mapId": "boards",
+      "file": "boards-source.png",
+      "sha256": "9ba3c33140ae74ce74d42d07a117920e1cbedf202b6690165ae160e5218ecea2",
+      "width": 1680,
+      "height": 1460,
+      "pdfPage": 1,
+      "pixelsPerPdfPoint": 4,
+      "pageOrigin": [
+        100.0,
+        115.0
+      ],
+      "insetsIncluded": false,
+      "controls": [
+        {
+          "name": "Northwest provincial corner on 60th parallel",
+          "pixel": [
+            101.140016,
+            18.716064
+          ],
+          "longitudeLatitude": [
+            -139.052201,
+            60.000041
+          ]
+        },
+        {
+          "name": "Northeast provincial corner at 120W / 60N",
+          "pixel": [
+            1149.43994,
+            123.11206
+          ],
+          "longitudeLatitude": [
+            -120,
+            60
+          ]
+        },
+        {
+          "name": "Southeast provincial corner near 49N",
+          "pixel": [
+            1633.472044,
+            1304.287964
+          ],
+          "longitudeLatitude": [
+            -114.068332,
+            48.99885
+          ]
+        }
+      ],
+      "cog": "boards-registered.tif",
+      "cogSha256": "bdf0ad39d4fdf6d7dc3661e7b6d367d0c3863cd456c98085be96f14a97a6b0bc",
+      "registeredPreview": "boards-registered.png",
+      "warp": {
+        "sourceCrs": "EPSG:3005",
+        "displayCrs": "EPSG:3857",
+        "resolutionMetres": 2000,
+        "bounds": [
+          -141.21923493763913,
+          46.791932341385056,
+          -109.09548037752502,
+          61.485562583639265
+        ],
+        "independentAccuracyEstablished": false
+      }
+    },
+    {
+      "mapId": "councils",
+      "file": "councils-source.png",
+      "sha256": "c12907cc5e8162719bed6cde2d90d381e6b960f8edd3d02238c4b36d37acbd2a",
+      "width": 1680,
+      "height": 1460,
+      "pdfPage": 2,
+      "pixelsPerPdfPoint": 4,
+      "pageOrigin": [
+        100.0,
+        115.0
+      ],
+      "insetsIncluded": false,
+      "controls": [
+        {
+          "name": "Northwest provincial corner on 60th parallel",
+          "pixel": [
+            24.907988,
+            19.196044
+          ],
+          "longitudeLatitude": [
+            -139.052201,
+            60.000041
+          ]
+        },
+        {
+          "name": "Northeast provincial corner at 120W / 60N",
+          "pixel": [
+            1073.475952,
+            123.691896
+          ],
+          "longitudeLatitude": [
+            -120,
+            60
+          ]
+        },
+        {
+          "name": "Southeast provincial corner near 49N",
+          "pixel": [
+            1555.11206,
+            1305.099976
+          ],
+          "longitudeLatitude": [
+            -114.068332,
+            48.99885
+          ]
+        }
+      ],
+      "cog": "councils-registered.tif",
+      "cogSha256": "cbe00b7e6bd6877d8681465d5bef880a576bc2f1b9ac929df9d43141752c7821",
+      "registeredPreview": "councils-registered.png",
+      "warp": {
+        "sourceCrs": "EPSG:3005",
+        "displayCrs": "EPSG:3857",
+        "resolutionMetres": 2000,
+        "bounds": [
+          -139.861434766466,
+          46.71262668512092,
+          -107.70174759498713,
+          61.52462626131381
+        ],
+        "independentAccuracyEstablished": false
+      }
+    },
+    {
+      "mapId": "societies",
+      "file": "societies-source.png",
+      "sha256": "1ca786782f9d7297f3df17e7c7d287efa363773893783ae18c4bec8c07f761a0",
+      "width": 1680,
+      "height": 1460,
+      "pdfPage": 3,
+      "pixelsPerPdfPoint": 4,
+      "pageOrigin": [
+        100.0,
+        115.0
+      ],
+      "insetsIncluded": false,
+      "controls": [
+        {
+          "name": "Northwest provincial corner on 60th parallel",
+          "pixel": [
+            52.679992,
+            20.07202
+          ],
+          "longitudeLatitude": [
+            -139.052201,
+            60.000041
+          ]
+        },
+        {
+          "name": "Northeast provincial corner at 120W / 60N",
+          "pixel": [
+            1100.011964,
+            124.471924
+          ],
+          "longitudeLatitude": [
+            -120,
+            60
+          ]
+        },
+        {
+          "name": "Southeast provincial corner near 49N",
+          "pixel": [
+            1582.732056,
+            1305.644044
+          ],
+          "longitudeLatitude": [
+            -114.068332,
+            48.99885
+          ]
+        }
+      ],
+      "cog": "societies-registered.tif",
+      "cogSha256": "2112cdab4c1af27ee2632593b344a41e3aa59407e8e4d5009232bf9623befa53",
+      "registeredPreview": "societies-registered.png",
+      "warp": {
+        "sourceCrs": "EPSG:3005",
+        "displayCrs": "EPSG:3857",
+        "resolutionMetres": 2000,
+        "bounds": [
+          -140.3631599395248,
+          46.743975238568744,
+          -108.18550646236353,
+          61.52073298888659
+        ],
+        "independentAccuracyEstablished": false
+      }
+    }
+  ],
+  "baselineChanged": false,
+  "note": "Original main-map crops and correctly scaled GeoLibre control files. Reopening these files does not independently verify the controls or improve their accuracy."
+}

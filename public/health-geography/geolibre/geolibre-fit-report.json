@@ -1,0 +1,146 @@
+[
+  {
+    "mapId": "boards",
+    "image": "boards-source.png",
+    "csv": "boards-gcps.csv",
+    "gcps": [
+      {
+        "px": 101.140016,
+        "py": 18.716064,
+        "lng": -139.052201,
+        "lat": 60.000041
+      },
+      {
+        "px": 1149.43994,
+        "py": 123.11206,
+        "lng": -120,
+        "lat": 60
+      },
+      {
+        "px": 1633.472044,
+        "py": 1304.287964,
+        "lng": -114.068332,
+        "lat": 48.99885
+      }
+    ],
+    "nativeGeographicAffine": {
+      "a": 0.01842623514772035,
+      "b": -0.0025290232870769647,
+      "c": -140.8684973559619,
+      "d": 0.0009669376448619704,
+      "e": -0.009709966842228412,
+      "f": 60.083977271984736
+    },
+    "nativeGeographicFitResiduals": {
+      "perPoint": [
+        8.398750756480562e-9,
+        2.7956187254382773e-8,
+        6.483966476857471e-8
+      ],
+      "rms": 4.10539058124508e-8
+    },
+    "independentAccuracyEstablished": false,
+    "canExportWithCurrentControlCount": {
+      "affine": true,
+      "polynomial": false,
+      "tps": false
+    },
+    "note": "Three controls have no redundant fit check. Polynomial needs six and TPS at least four independently identified controls; do not pad controls with interpolated points."
+  },
+  {
+    "mapId": "councils",
+    "image": "councils-source.png",
+    "csv": "councils-gcps.csv",
+    "gcps": [
+      {
+        "px": 24.907988,
+        "py": 19.196044,
+        "lng": -139.052201,
+        "lat": 60.000041
+      },
+      {
+        "px": 1073.475952,
+        "py": 123.691896,
+        "lng": -120,
+        "lat": 60
+      },
+      {
+        "px": 1555.11206,
+        "py": 1305.099976,
+        "lng": -114.068332,
+        "lat": 48.99885
+      }
+    ],
+    "nativeGeographicAffine": {
+      "a": 0.0184176430448994,
+      "b": -0.002487653474215673,
+      "c": -139.46319432640263,
+      "d": 0.0009672419258336118,
+      "e": -0.009706221610277982,
+      "f": 60.16227000682281
+    },
+    "nativeGeographicFitResiduals": {
+      "perPoint": [
+        1.406711619069938e-8,
+        1.62112619820319e-8,
+        3.3567917731766814e-8
+      ],
+      "rms": 2.30035785174059e-8
+    },
+    "independentAccuracyEstablished": false,
+    "canExportWithCurrentControlCount": {
+      "affine": true,
+      "polynomial": false,
+      "tps": false
+    },
+    "note": "Three controls have no redundant fit check. Polynomial needs six and TPS at least four independently identified controls; do not pad controls with interpolated points."
+  },
+  {
+    "mapId": "societies",
+    "image": "societies-source.png",
+    "csv": "societies-gcps.csv",
+    "gcps": [
+      {
+        "px": 52.679992,
+        "py": 20.07202,
+        "lng": -139.052201,
+        "lat": 60.000041
+      },
+      {
+        "px": 1100.011964,
+        "py": 124.471924,
+        "lng": -120,
+        "lat": 60
+      },
+      {
+        "px": 1582.732056,
+        "py": 1305.644044,
+        "lng": -114.068332,
+        "lat": 48.99885
+      }
+    ],
+    "nativeGeographicAffine": {
+      "a": 0.018441871840861435,
+      "b": -0.0025149544434499294,
+      "c": -139.97323844515392,
+      "d": 0.0009677986404852679,
+      "e": -0.009709275773265316,
+      "f": 60.143942152868306
+    },
+    "nativeGeographicFitResiduals": {
+      "perPoint": [
+        2.738085604068767e-8,
+        1.679751330444194e-8,
+        4.557368153866801e-8
+      ],
+      "rms": 3.219124197522102e-8
+    },
+    "independentAccuracyEstablished": false,
+    "canExportWithCurrentControlCount": {
+      "affine": true,
+      "polynomial": false,
+      "tps": false
+    },
+    "note": "Three controls have no redundant fit check. Polynomial needs six and TPS at least four independently identified controls; do not pad controls with interpolated points."
+  }
+]

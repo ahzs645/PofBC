@@ -2,6 +2,8 @@
 
 This directory records the evidence behind PofBC's health-history story and its links between published map labels, institutional records, and modern comparison areas. The original maps remain source artwork; the selectable PGMaps polygons are modern geographic candidates. See [boundary-comparison-README.md](boundary-comparison-README.md) for the detailed geometry method, source manifest, audit, and reconstruction limits.
 
+The follow-up [drawing registration experiment](rectification-README.md) overlays all three administrative main maps on modern BC geography. The [extended boundary review](boundary-estimates.md) supplies working geometry and an independent source-drawing approximation for **all 52 administrative labels**, plus **20 separately labelled statistical illustrations**. It locates 44 written territories and a related Nisga’a definition, and screens the drawings against 357 current features across six boundary types. These estimates remain separate from authenticated historical GIS and legal-boundary verification. The app also exposes an [evidence review and records list](records-to-obtain.md), compiled from [evidence-plan.json](evidence-plan.json), covering all 52 labels. Request drafts have not been sent.
+
 ## Original map sources and dates
 
 The principal source is the BC Auditor General's *A Review of Governance and Accountability in the Regionalization of Health Services*, **1997/98 Report 3, published March 1998**. The maps credit the Ministry of Health and Ministry Responsible for Seniors. The current website's `2024/08` upload path is not the report's publication date.
@@ -39,7 +41,7 @@ Order-made dates, deposit dates, publication dates, and effective dates answer d
 
 An identity match connects a historical name or alias to a continuing institution. It does **not** confirm its boundary, establish unchanged geography through 2001, or validate a modern polygon. Keep original legend numbers and labels alongside repository IDs. Councils and societies administered different services and their territories overlap; do not dissolve all three map categories into mutually exclusive authorities.
 
-The PDFs and SVGs preserve the published maps, including insets and historical names. Their vector paths use page coordinates, not a geographic projection. No independently reusable historical administrative GIS dataset was acquired, no historical polygon intersections were measured, and no historical overlap percentages are claimed. Legal reconstruction would require tracing the dated descriptions against appropriate geographic evidence and checking intervening amendments.
+The PDFs and SVGs preserve the published maps, including insets and historical names. Their original vector paths use page coordinates, not a geographic projection. No independently reusable historical administrative GIS dataset was acquired. The follow-up registration measures approximate publication-drawing overlap separately, without establishing historical legal-boundary identity. Legal reconstruction still requires tracing dated descriptions against appropriate geographic evidence and checking intervening amendments.
 
 ## Geographic traps to preserve in the interface
 
@@ -91,6 +93,29 @@ node scripts/build-health-map-catalogue.mjs
 
 This writes `src/health/healthAreas.generated.js` and `public/health-geography/catalogue.json`, validates referenced institutional IDs, and reports the 52 source areas and 51 confirmed identity matches. Edit the research inputs rather than those generated files. Rebuilding modern geometry is a separate operation documented in [boundary-comparison-README.md](boundary-comparison-README.md), using `scripts/build_health_boundary_comparison.py`; its current-data audit compares PGMaps with current provincial data only.
 
+## Rebuild all working estimates
+
+To rebuild the extended estimates and portable GeoLibre project offline, install `requirements-estimates.txt` in a virtual environment and run, in order:
+
+```sh
+python scripts/rectify_health_maps.py
+node scripts/build-health-map-catalogue.mjs
+python scripts/build_health_estimates.py
+python scripts/build_health_geolibre.py
+python -m unittest discover -s scripts -p test_health_estimates.py
+node --test src/health/*.test.js
+```
+
+Inputs are `estimate-decisions.json` (all 52 choices and twenty statistical LHA aggregates), `council-tracing.json` (explicit source seeds/path components), `boundary-definition-evidence.json` (official source locators and checksums), the source PDF and checked-in modern display layers. Extra comparison layers are pinned normalized snapshots: PGMaps regional districts/municipalities, and the provincial Tantalis school-district WFS. These are current layers, not historical replacements. Source-space tracing uses no modern internal boundary edges; delivered coordinates receive topology-preserving precision normalization to avoid sub-metre rounding artifacts. See [GeoLibre workflow](geolibre-workflow.md) for continued control-point review and protected proposal imports.
+
 ## Relationship to PGMaps and the story toolkit
 
 `src/health/StoryFrame.jsx` uses the pinned `vendor/geo-toolkit` story sidecar, chapter navigation, and workspace context, also used by [PGMaps](https://github.com/ahzs645/PGMaps). PofBC owns the historical evidence, identity crosswalk, selected candidate codes, and attribution. The toolkit supplies the presentation components; it does not authenticate a historical geographic match. See the [toolkit README](../../vendor/geo-toolkit/README.md) and keep the historical source artwork visually distinguishable from modern comparison geometry.
+
+## Vancouver/Richmond alignment review
+
+The previous 29% comparison is withdrawn. The published inset labels both Vancouver and Richmond with 9. Main-map drawing 76 is Richmond and now joins Vancouver drawing 193; it has been removed from South Fraser. North Shore also includes the shaded Bowen Island component. All drawing comparisons now retain their full source footprints, without modern-land clipping that can conceal positional errors. The four source-drawn best estimates still use an outer land-display clip.
+
+The comparison viewer and app now apply a provisional 5 km northward local display adjustment for Vancouver/Richmond following user review. Other northward translations remain sensitivity scenarios. The local adjustment moves the source in BC Albers and retains the original trace, current reference polygons and original global registration. Separate layer controls expose each geometry. Source evidence and the withdrawn geometry are retained in `vancouver-richmond-alignment-review.json`. Independent coastal controls and a separate inset registration remain outstanding.
+
+The download `vancouver-richmond-reference-and-traces.geojson` contains the seven unchanged modern reference LHAs, original trace and adjusted trace, with explicit layer roles and EPSG:3005 translation metadata. `adjusted-source-traces.geojson` publishes the active local trace separately. The focused GeoLibre workspace embeds four layers (coastal context, reference boundaries, original trace, adjusted trace); reference and adjusted trace start visible.

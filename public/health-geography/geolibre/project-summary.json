@@ -1,0 +1,146 @@
+{
+  "name": "PofBC historical health maps — GeoLibre alignment review",
+  "version": "0.1.0",
+  "mapView": {
+    "center": [
+      -126.0,
+      54.0
+    ],
+    "zoom": 4.0,
+    "bearing": 0,
+    "pitch": 0
+  },
+  "basemapStyleUrl": "",
+  "layerCount": 16,
+  "layers": [
+    {
+      "id": "7b2b0d55-5976-5d5c-8b54-d7a5a0fe6d83",
+      "name": "Modern HA comparison",
+      "type": "geojson",
+      "visible": true,
+      "opacity": 1,
+      "featureCount": 5
+    },
+    {
+      "id": "d90b05eb-d88d-5766-b635-5396cc307e68",
+      "name": "Modern HSDA comparison",
+      "type": "geojson",
+      "visible": true,
+      "opacity": 1,
+      "featureCount": 16
+    },
+    {
+      "id": "50cd3276-ad72-5cf9-a1d2-18f21b6aaa7d",
+      "name": "Modern LHA comparison",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 89
+    },
+    {
+      "id": "78682038-dea6-5bb4-9372-88da2eada27c",
+      "name": "Original boards drawing — preliminary alignment",
+      "type": "image",
+      "visible": false,
+      "opacity": 0.55,
+      "source": "[embedded registered PNG]"
+    },
+    {
+      "id": "14ed640f-f812-5192-8e7c-8aeca1ab680a",
+      "name": "Original councils drawing — preliminary alignment",
+      "type": "image",
+      "visible": false,
+      "opacity": 0.55,
+      "source": "[embedded registered PNG]"
+    },
+    {
+      "id": "e499d4ea-4416-5bc2-933c-5b0075f3bcc3",
+      "name": "Original societies drawing — preliminary alignment",
+      "type": "image",
+      "visible": true,
+      "opacity": 0.55,
+      "source": "[embedded registered PNG]"
+    },
+    {
+      "id": "3606d7bc-94f2-5457-9063-a3e0939712a2",
+      "name": "Registered society boundary vectors",
+      "type": "geojson",
+      "visible": true,
+      "opacity": 1,
+      "featureCount": 1
+    },
+    {
+      "id": "5486fb4e-defd-5c87-bb06-8a6cb6295d75",
+      "name": "Working estimates — boards (unverified)",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 11
+    },
+    {
+      "id": "4661c3aa-1e95-540b-bacb-e1ebd23cf082",
+      "name": "Working estimates — councils (unverified)",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 34
+    },
+    {
+      "id": "2acf2452-08b8-54c7-827d-54a4141f34ed",
+      "name": "Working estimates — societies (unverified)",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 7
+    },
+    {
+      "id": "c2a29d65-9b1e-52d9-b35d-f19a4e501bb9",
+      "name": "Source drawing estimates — all 52 (overlapping frameworks)",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 52
+    },
+    {
+      "id": "736e1b5f-d45f-5e88-98db-ddae2b3f45f6",
+      "name": "20 statistical illustrations — modern LHA aggregates",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 20
+    },
+    {
+      "id": "fe2fb894-3abb-5355-84eb-40ac4ec76e38",
+      "name": "Current municipalities — comparison only",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 160
+    },
+    {
+      "id": "9306ef9f-87c7-502a-920c-b75af3c0bb73",
+      "name": "Current regional districts — comparison only",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 28
+    },
+    {
+      "id": "50c3f342-b32a-50f8-aaa5-947a1d4a7e07",
+      "name": "Current school districts — comparison only",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 59
+    },
+    {
+      "id": "88c3a180-524c-55bc-86c5-91bae2e265f6",
+      "name": "Vancouver/Richmond adjusted trace — provisional 5 km north",
+      "type": "geojson",
+      "visible": false,
+      "opacity": 1,
+      "featureCount": 1
+    }
+  ],
+  "mapControls": []
+}

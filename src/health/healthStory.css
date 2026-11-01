@@ -38,6 +38,10 @@
 .health-field select{text-overflow:ellipsis;padding-right:28px}
 .health-area-evidence{border-top:1px solid var(--mid);margin-top:20px;padding:20px 0 4px}
 .health-area-evidence .health-actions{margin-top:18px}
+.health-estimate-evidence{border-top:1px solid var(--mid);margin:20px 0;padding:16px 0;font-size:13px;line-height:1.7;overflow-wrap:anywhere}
+.health-estimate-evidence h3{margin:0 0 12px;font-size:18px}
+.health-estimate-evidence ul{padding-left:18px}
+.health-estimate-evidence li{margin:8px 0}
 .health-evidence-badge{background:var(--hover);border:1px solid var(--mid);color:var(--ink-2);border-radius:4px;padding:5px 9px;font-size:11px;font-weight:600;line-height:1.5;display:inline-block}
 .health-actions{flex-wrap:wrap;align-items:center;gap:10px 18px;font-size:12px;line-height:1.5;display:flex}
 .health-actions>:is(a,button){align-items:center;min-height:36px;display:inline-flex}
@@ -93,6 +97,19 @@
 .health-map-context path{fill:var(--health-land);stroke:none}
 .health-map-region{fill:var(--health-land);stroke:var(--health-line);stroke-width:.6px;cursor:pointer}
 .health-map-region.is-selected{fill:var(--health-highlight);stroke:#743e20;stroke-width:1.2px}
+.health-alignment-reference path{fill:#2393a5;stroke:#96b1b3;stroke-width:.6px}
+.health-alignment-reference path.is-candidate{stroke:#087c91;stroke-width:1.4px;stroke-dasharray:5 3}
+.health-alignment-original{fill:none;stroke:#ad256d;stroke-width:1.8px;stroke-dasharray:4 3}
+.health-alignment-adjusted{fill:#c17522;stroke:#a44c08;stroke-width:2px}
+.health-alignment-labels text{fill:#183b35;stroke:#f5f4ee;stroke-width:.08px;paint-order:stroke;text-anchor:middle;pointer-events:none}
+.health-alignment-swatch{display:inline-block;width:20px;border-top:3px solid;flex:none}
+.health-alignment-swatch.is-reference{border-color:#087c91;border-top-style:dashed}
+.health-alignment-swatch.is-original{border-color:#ad256d;border-top-style:dashed}
+.health-alignment-swatch.is-adjusted{border-color:#a44c08}
+.health-alignment-controls{font-size:11px;gap:8px 16px}
+.health-source-inset{margin:18px 0;background:var(--hover);border:1px solid var(--mid);padding:8px}
+.health-source-inset img{display:block;width:100%;height:auto}
+.health-source-inset figcaption{font-size:11px;line-height:1.5;padding:8px 4px;color:var(--ink-muted)}
 .health-map-region:hover,.health-map-region:focus-visible{stroke:#142f26;stroke-width:2px;fill:#98ad9d;outline:none}
 .health-map-region.is-selected:hover,.health-map-region.is-selected:focus-visible{fill:#d8783e}
 .health-map-overlays{fill:none;stroke:#344f45;stroke-width:1.3px;pointer-events:none}
@@ -182,3 +199,45 @@
 }
 
 .health-story .editorial-expandable.is-expanded > :is(.health-archive, .health-current-pane, .health-comparison-media) { width: 100%; }
+.health-story .editorial-expandable.is-expanded { padding-top: 56px; }
+.health-story .editorial-expandable.is-expanded .editorial-expand { min-height: 44px; top: 6px; }
+
+/* Evidence review uses the same research inputs as the downloadable request list. */
+.health-research-section{padding:40px 8px 0;scroll-margin-top:20px}
+.health-research-section h3{font-size:20px;line-height:1.35;margin:28px 0 14px}
+.health-research-section h4{font-size:15px;line-height:1.4;margin:0 0 10px}
+.health-research-counts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:24px 0}
+.health-research-counts>div{display:flex;flex-direction:column-reverse;justify-content:flex-end;background:var(--surface);border-radius:8px;padding:18px}
+.health-research-counts dt{color:var(--ink-muted);font-size:12px;line-height:1.5}
+.health-research-counts dd{margin:0 0 5px;font-size:30px;font-variant-numeric:tabular-nums}
+.health-research-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.health-research-card{min-width:0;background:var(--surface);border-radius:8px;padding:20px;font-size:13px;line-height:1.65}
+.health-research-card .health-details{margin-bottom:0}
+.health-research-sources{overflow-wrap:anywhere;font-size:12px;line-height:1.6}
+.health-research-assumption{padding:16px 0;border-bottom:1px solid var(--mid)}
+.health-research-assumption:last-child{border:0}
+.health-selected-research{border-left:3px solid #a45c30;padding:1px 18px;background:var(--surface)}
+.health-selected-research h3{font-size:16px;margin:18px 0 0}
+.health-selected-research .health-details{border:0;margin-top:8px}
+.health-research-task{scroll-margin-top:20px}
+.health-research-task summary{min-height:48px;font-size:14px}
+.health-research-task .health-kicker{display:inline;font-size:10px;margin-right:8px}
+.health-request-draft{margin:16px 0;padding:16px;border-left:3px solid var(--mid);background:var(--surface);user-select:text}
+.health-map-source-lines{fill:none;stroke:#aa267d;stroke-width:1;stroke-dasharray:4 2;pointer-events:none}
+.health-map-source-lines .health-map-source-selected{stroke:#82125d;stroke-width:2;stroke-dasharray:none}
+.health-map-legend .health-source-toggle{display:inline-flex;flex-basis:100%}
+.health-story-frame .editorial-expandable.is-expanded .health-alignment-controls{font-size:11px;gap:6px 12px}
+.health-story-frame .editorial-expandable.is-expanded .health-alignment-controls>label{display:inline-flex;min-height:28px}
+.health-source-swatch{display:inline-block;width:16px;border-top:2px dashed #aa267d}
+.health-rectification-evidence{margin-top:22px;border-top:1px solid var(--mid);padding-top:16px}
+.health-geolibre-review{padding:18px 0;border-top:1px solid var(--mid);margin-top:24px}
+.health-geolibre-review h3{font-size:18px;margin:0 0 12px}
+.health-geolibre-review .health-actions{gap:10px 18px}
+.health-geolibre-review .health-button{text-decoration:none}
+@media (width<=700px){
+  .health-research-section{padding:32px 0 0}
+  .health-research-counts{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .health-research-grid{grid-template-columns:1fr}
+  .health-research-card{padding:16px}
+  .health-research-task .health-kicker{display:block;margin:5px 0}
+}

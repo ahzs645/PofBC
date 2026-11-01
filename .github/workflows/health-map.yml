@@ -27,6 +27,42 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check-research-and-registration:
+    # The derived map comparison and feature preview do not need artwork fonts.
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            research/health-geography/requirements-rectification.txt
+            research/health-geography/requirements-geolibre.txt
+            research/health-geography/requirements-estimates.txt
+      - run: npm ci
+      - run: python -m pip install -r research/health-geography/requirements-estimates.txt
+      - run: python -m unittest discover -s scripts -p test_rectify_health_maps.py
+      - run: python -m unittest discover -s scripts -p test_health_geolibre.py
+      - run: python scripts/rectify_health_maps.py
+      - run: npm run build:health-map
+      - run: python scripts/build_health_estimates.py
+      - run: node scripts/build-health-comparisons.mjs --no-png
+      - run: python -m unittest discover -s scripts -p test_health_estimates.py
+      - name: Check derived research and map files are current
+        run: git diff --exit-code -- public/health-geography src/health/healthAreas.generated.js src/health/healthResearch.generated.js research/health-geography/rectification-results.json research/health-geography/records-to-obtain.md research/health-geography/estimate-results.json research/health-geography/boundary-estimates.md
+      - run: node --test src/health/*.test.js
+      - name: Verify the GeoLibre SDK can rebuild the portable review
+        run: python scripts/build_health_geolibre.py
+      - run: npm run preview:health-map -- --build --base /PofBC/
+
   build-and-test:
     # The complete application build subsets the Helvetica installed by macOS.
     runs-on: macos-latest

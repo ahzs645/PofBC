@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "sourcePdf": "maps/BC-health-area-maps-1997-98.pdf",
+  "sourceSha256": "6f55df69890dd1ce89a516fc25325aa142eee26618911179a8a52e703bf31d04",
+  "referenceFile": "display-ha.geojson",
+  "referenceSha256": "ebc9d930be4d7c5ef9d21924867989584e0ee73df4d517766c96c79abe4ce556",
+  "projectedCrs": "EPSG:3005",
+  "method": "Three-point affine registration of each main map; no administrative candidate edges used as controls. Enlarged southern insets and legends excluded.",
+  "controlLimitation": "Three non-collinear controls determine six affine coefficients exactly, leaving no redundant control for an independent registration RMSE. Zero fit residual is not an accuracy estimate. Target corners come from the simplified modern PGMaps authority layer, not a cadastral survey.",
+  "sensitivityMetres": 15000,
+  "pages": [
+    {
+      "mapId": "boards",
+      "pdfPage": 1,
+      "mainMapBounds": [
+        100,
+        115,
+        520,
+        480
+      ],
+      "controls": [
+        {
+          "name": "Northwest provincial corner on 60th parallel",
+          "pagePoint": [
+            125.285004,
+            119.679016
+          ],
+          "longitudeLatitude": [
+            -139.052201,
+            60.000041
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Northeast provincial corner at 120W / 60N",
+          "pagePoint": [
+            387.359985,
+            145.778015
+          ],
+          "longitudeLatitude": [
+            -120,
+            60
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Southeast provincial corner near 49N",
+          "pagePoint": [
+            508.368011,
+            441.071991
+          ],
+          "longitudeLatitude": [
+            -114.068332,
+            48.99885
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        }
+      ],
+      "areaDrawings": [
+        {
+          "areaId": "north-okanagan-health-region",
+          "legendNumber": 1,
+          "drawingIndices": [
+            42
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "okanagan-similkameen-health-region",
+          "legendNumber": 2,
+          "drawingIndices": [
+            59
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "thompson-health-region",
+          "legendNumber": 3,
+          "drawingIndices": [
+            45
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "fraser-valley-health-region",
+          "legendNumber": 4,
+          "drawingIndices": [
+            93
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "south-fraser-health-region",
+          "legendNumber": 5,
+          "drawingIndices": [
+            198
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Removed drawing 76, which is Richmond (legend 9), not South Fraser (legend 5). Main-map South Fraser is drawing 198."
+        },
+        {
+          "areaId": "simon-fraser-health-region",
+          "legendNumber": 6,
+          "drawingIndices": [
+            197
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "central-vancouver-island-health-region",
+          "legendNumber": 7,
+          "drawingIndices": [
+            55
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "northern-interior-regional-health-board",
+          "legendNumber": 8,
+          "drawingIndices": [
+            7
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "vancouver-richmond-health-board",
+          "legendNumber": 9,
+          "drawingIndices": [
+            76,
+            193
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Corrected against both legend-9 components in the published inset: main-map 193 is Vancouver and 76 is Richmond. Local registration and offshore components remain unverified."
+        },
+        {
+          "areaId": "north-shore-health-region",
+          "legendNumber": 10,
+          "drawingIndices": [
+            79,
+            195
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Included main-map Bowen Island drawing 79 with mainland 195; the corresponding island is shaded with legend-10 geography in the inset."
+        },
+        {
+          "areaId": "capital-health-region",
+          "legendNumber": 11,
+          "drawingIndices": [
+            52
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        }
+      ]
+    },
+    {
+      "mapId": "councils",
+      "pdfPage": 2,
+      "mainMapBounds": [
+        100,
+        115,
+        520,
+        480
+      ],
+      "controls": [
+        {
+          "name": "Northwest provincial corner on 60th parallel",
+          "pagePoint": [
+            106.226997,
+            119.799011
+          ],
+          "longitudeLatitude": [
+            -139.052201,
+            60.000041
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Northeast provincial corner at 120W / 60N",
+          "pagePoint": [
+            368.368988,
+            145.922974
+          ],
+          "longitudeLatitude": [
+            -120,
+            60
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Southeast provincial corner near 49N",
+          "pagePoint": [
+            488.778015,
+            441.274994
+          ],
+          "longitudeLatitude": [
+            -114.068332,
+            48.99885
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        }
+      ],
+      "areaDrawings": []
+    },
+    {
+      "mapId": "societies",
+      "pdfPage": 3,
+      "mainMapBounds": [
+        100,
+        115,
+        520,
+        480
+      ],
+      "controls": [
+        {
+          "name": "Northwest provincial corner on 60th parallel",
+          "pagePoint": [
+            113.169998,
+            120.018005
+          ],
+          "longitudeLatitude": [
+            -139.052201,
+            60.000041
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Northeast provincial corner at 120W / 60N",
+          "pagePoint": [
+            375.002991,
+            146.117981
+          ],
+          "longitudeLatitude": [
+            -120,
+            60
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Southeast provincial corner near 49N",
+          "pagePoint": [
+            495.683014,
+            441.411011
+          ],
+          "longitudeLatitude": [
+            -114.068332,
+            48.99885
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        }
+      ],
+      "areaDrawings": [
+        {
+          "areaId": "east-kootenay-community-health-services-society",
+          "legendNumber": 1,
+          "drawingIndices": [
+            272
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "kootenay-boundary-community-health-services-society",
+          "legendNumber": 2,
+          "drawingIndices": [
+            211
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "coast-garibaldi-community-health-services-society",
+          "legendNumber": 3,
+          "drawingIndices": [
+            214,
+            227,
+            229,
+            230,
+            231,
+            232,
+            233,
+            235,
+            237,
+            238,
+            240,
+            241,
+            247
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "upper-island-central-coast-community-health-services-society",
+          "legendNumber": 4,
+          "drawingIndices": [
+            19,
+            25,
+            217,
+            251,
+            252,
+            253,
+            255,
+            257,
+            258,
+            260,
+            261,
+            262,
+            264,
+            266,
+            268,
+            269,
+            270,
+            271
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "cariboo-community-health-services-society",
+          "legendNumber": 5,
+          "drawingIndices": [
+            7
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "north-west-community-health-services-society",
+          "legendNumber": 6,
+          "drawingIndices": [
+            12,
+            218,
+            221,
+            224,
+            225,
+            226,
+            249,
+            250
+          ],
+          "subtractDrawingIndices": [
+            376
+          ],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "peace-liard-community-health-services-society",
+          "legendNumber": 7,
+          "drawingIndices": [
+            32
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        }
+      ]
+    }
+  ],
+  "deferred": "This initial 18-area registration experiment omits council polygon scores; the extended estimates review adds all 34 council approximations separately. All southern insets and the twenty-region statistical map still require separate registrations."
+}

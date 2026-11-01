@@ -49,7 +49,21 @@ jobs:
       - name: Test salary data and interface behavior
         run: node --test scripts/salary-data.test.mjs src/salaries/*.test.js src/government/salaries.test.js
       - name: Test source parsers with local regression fixtures
-        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+        # GIS fixtures run in health-map.yml with their own pinned dependencies.
+        # Retain every other parser fixture in this lightweight salary job.
+        run: |
+          python3 - <<'PY'
+          import sys
+          import unittest
+          from pathlib import Path
+          sys.path.insert(0, 'scripts')
+          tests = sorted(path.stem for path in Path('scripts').glob('test_*.py')
+                         if not path.stem.startswith('test_health_')
+                         and path.stem != 'test_rectify_health_maps')
+          if not tests:
+              raise SystemExit('No salary parser fixtures found')
+          unittest.main(module=None, argv=['salary-parsers', *tests], verbosity=2)
+          PY
       - name: Rebuild and reconcile all published salary views
         run: |
           npm run compare:municipal-periods

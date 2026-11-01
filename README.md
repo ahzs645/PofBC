@@ -657,13 +657,44 @@ separate because its institutional identity is unresolved. A fourth original map
 Statistics Canada in **April 2001**, depicts twenty statistical regions; it does not certify the
 1997 legal board boundaries. Each linked health organization also offers a route back to its map.
 
-The comparison chapter includes the existing PGMaps **89 Local Health Areas, 16 Health Service
-Delivery Areas and five geographic Health Authorities**, loaded on demand from local GeoJSON
-snapshots. Select a historical area, switch layers, fit its proposed modern candidates, or put
-the original page beside them. Selection and chapter links can be copied from the address bar.
-No historical overlap percentage is claimed: the source maps are page artwork, while the modern
-polygons have geographic coordinates. Candidate codes, sources and limitations are retained in
-the downloadable comparison file.
+The comparison chapter offers **52 working administrative estimates**, with separate source-drawn
+approximations for every label. Twenty statistical illustrations remain a separate modern-LHA
+aggregation. Current references include **89 Local Health Areas, 16 Health Service Delivery Areas,
+five geographic Health Authorities, 28 regional districts, 160 municipalities and 59 geographic
+school districts**, loaded on demand from local snapshots. Select an area, inspect its defining
+watershed/survey/municipal references, switch layers, fit the estimate, or put the original page
+beside it. Selection and chapter links can be copied from the address bar.
+
+The three administrative main-map drawings are registered as vectors. Source-drawing screening
+now covers all 52 labels, independently of their modern comparison edges. Original B.C. Reg.
+293/2001 supplies 44 later written territories; M191/1997 supplies a related Nisga’a council
+definition without settling the map-label identity. All geometry remains provisional; legal
+reconstruction, historical amendments, marine detail and inset registration remain open.
+See the complete [area-by-area estimate review](research/health-geography/boundary-estimates.md).
+GeoJSON, CSV, controls, screening scores, sources and remaining records are downloadable in the app.
+
+Use **Explore all 52 comparisons side by side** to open an offline viewer with historical drawing,
+current reference and overlay panels, six boundary types and direct links to definitions. The
+six-example overview is `public/health-geography/comparison-examples.png`; regenerate the viewer,
+SVG and PNG after rebuilding estimates with `npm run build:health-comparisons`.
+
+An evidence review below the story covers all 52 labels, with explicit assumptions, eight tasks
+using existing sources and seven records/provenance targets. It includes archive/direct-request
+routes, possible FOI routes, proposed custodians, date scopes and unsent request drafts. See
+[`records-to-obtain.md`](research/health-geography/records-to-obtain.md) and the
+[`registration method`](research/health-geography/rectification-README.md).
+
+Use `npm run preview:health-map` to review the real feature at port 4174 without building the
+unrelated licensed artwork fonts; `npm run preview:health-map -- --build` creates a standalone
+production preview. The preview covers the health feature; organization-history links require
+the complete application. The full app still needs its normal licensed font assets.
+
+**GeoLibre:** the Health Maps evidence panels now open a portable GeoLibre review and download
+the sixteen-layer project, original image/control-point CSV pairs and registered Cloud-Optimized
+GeoTIFFs. It includes all working estimates and the additional comparison layers, initially hidden.
+Build estimates with `npm run build:health-estimates`, then `npm run build:health-geolibre`, after installing the Python requirements in
+[`geolibre-workflow.md`](research/health-geography/geolibre-workflow.md). Edited GeoLibre controls
+can be imported and evaluated as separate proposals; the baseline is preserved until reviewed.
 
 The evidence preserves consequential differences: the old South Cariboo council follows the
 100 Mile House lineage; North Shore is smaller than today's North Shore/Coast Garibaldi service
@@ -1259,3 +1290,5 @@ on the machine and commits neither — only advance widths and kerning, which ar
 Distributing a built site distributes the embedded subsets, which is your call to make under
 whatever licence covers your copies. `GARAMOND_SOURCE` has no default path so that this cannot
 happen by accident.
+
+The Vancouver/Richmond comparison now applies the reviewed provisional 5 km northward local adjustment. Current reference geography, the original trace and the adjusted trace have separate layer controls; the original published inset remains visible in the evidence panel. Download all nine reference/trace features as GeoJSON, or open the focused four-layer GeoLibre project. The original global registration is retained.

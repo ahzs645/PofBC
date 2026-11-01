@@ -1,0 +1,893 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "choices": [
+    {
+      "areaId": "north-okanagan-health-region",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "The North Okanagan candidate combines Armstrong/Spallumcheen, Vernon, Enderby, Revelstoke and Salmon Arm. It spans today's Okanagan and Thompson Cariboo Shuswap HSDAs; either modern HSDA alone is the wrong extent.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m444-1996"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "okanagan-similkameen-health-region",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "The candidate uses Southern Okanagan, Penticton, Keremeos, Princeton, Central Okanagan and Summerland. Today's Okanagan HSDA also includes northern areas that belonged to the separate North Okanagan board.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m432-1996"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "thompson-health-region",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "The candidate uses Kamloops, North Thompson, Lillooet, South Cariboo LHA 148 and Merritt. The current Thompson Cariboo Shuswap HSDA includes additional Cariboo and Shuswap areas. Historical South Cariboo council around 100 Mile House is a different area.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996",
+        "m225-1997"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "fraser-valley-health-region",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "Fraser East is a strong comparison candidate: Statistics Canada explicitly equates January 2000 Fraser Valley with June 2002 Fraser Valley. This dated statistical correspondence still requires checking against the 1997 legal board boundary and modern changes.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "south-fraser-health-region",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "Fraser South is a strong comparison candidate supported by the January 2000-to-June 2002 statistical correspondence. Modern Surrey subdivisions do not establish unchanged historical board edges.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "simon-fraser-health-region",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "The candidate combines Burnaby, New Westminster, Maple Ridge/Pitt Meadows and Tri-Cities. The 1997 board combined former Simon Fraser and Burnaby areas; Statistics Canada also documents this merged correspondence to the 2002 Simon Fraser HSDA.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m432-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "central-vancouver-island-health-region",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "Today's Central Vancouver Island HSDA is a useful geographic candidate, supported by its constituent place names. Its matching name is not proof that its legal edge equals the 1997 board; later Vancouver Island health boundaries changed.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "northern-interior-regional-health-board",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "Use Burns Lake, Nechako and Prince George as the candidate. Do not automatically use all of current Northern Interior HSDA 52: it also includes Quesnel, which was in the separate Cariboo area and had its own council.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m444-1996",
+        "reg293-2001"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "vancouver-richmond-health-board",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "The candidate combines today's Vancouver and Richmond HSDAs. The historical institution amalgamated the predecessor Vancouver and Richmond regional health boards. Vancouver and Richmond remained separate labels in the 20-region statistical presentation. The 1996 legal schedule also incorporates specified electoral areas, so municipal names alone do not certify an exact match.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "north-shore-health-region",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "North Vancouver and West Vancouver/Bowen Island form the modern candidate. Today's North Shore/Coast Garibaldi HSDA is broader. The dated statistical correspondence combines North Shore with Coast Garibaldi; it does not independently validate LHA 331 and LHA 332 as the historical board boundary.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m432-1996",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "capital-health-region",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "South Vancouver Island's Greater Victoria, Western Communities, Saanich Peninsula and Southern Gulf Islands provide the candidate. The legal 1996 schedule remains the authority for the historical edge.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m441-1996"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "elk-valley-and-south-country-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Fernie is a place-based candidate for Elk Valley and South Country; the current LHA label does not reproduce the historic legal description.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "cranbrook-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Cranbrook is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "kimberley-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Kimberley is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "columbia-valley-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Windermere is the modern LHA covering the Columbia Valley candidate; the differing name is preserved.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "creston-and-district-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Creston is the direct place-name candidate; district-level extent is not certified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "nelson-and-area-health-council",
+      "method": "modern-combination",
+      "confidence": "low",
+      "reason": "Nelson plus Kootenay Lake is a candidate for Nelson and Area; the inclusion of all Kootenay Lake needs checking against the legal schedule.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "castlegar-and-district-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Castlegar is the direct place-name candidate; district-level extent is not certified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "arrow-lakes-upper-slocan-valley-health-council",
+      "method": "modern-single",
+      "confidence": "low",
+      "reason": "Arrow Lakes is a starting candidate. Upper Slocan Valley is specifically named in the council and may not follow the modern Arrow Lakes LHA edge.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "greater-trail-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Trail is the place-name candidate for Greater Trail; greater-area extent remains unverified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "boundary-health-council",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "Grand Forks plus Kettle Valley is the Boundary-area candidate; this is an inferred grouping of modern LHAs.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "golden-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Golden is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "south-cariboo-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "This council was renamed from 100 Mile House & District. Use modern 100 Mile House LHA 144 as the candidate, not the differently located modern South Cariboo LHA 148.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "m87-1997",
+        "m225-1997"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "central-cariboo-chilcotin-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Cariboo/Chilcotin is the geographic candidate for Central Cariboo Chilcotin; identical legal boundaries are not established.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "quesnel-and-district-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Quesnel is the direct place-name candidate. Its current placement in Northern Interior HSDA does not place the former council inside the old Northern Interior board.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "bella-coola-and-district-transitional-health-authority",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Bella Coola Valley is the place-name candidate. The source map and later transitional-authority identity are preserved as separate evidence.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "sunshine-coast-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Sunshine Coast is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "powell-river-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Powell River is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "sea-to-sky-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Howe Sound is the modern geographic candidate for the Sea To Sky council; the changed name is not a boundary-equivalence assertion.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "comox-valley-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Comox Valley is the direct place-name candidate; the 1997 schedule remains necessary for edge validation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "campbell-river-nootka-community-health-council",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "Greater Campbell River plus Vancouver Island West is a candidate for Campbell River/Nootka; this is an inferred modern aggregation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "mount-waddington-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Vancouver Island North is the geographic candidate for Mount Waddington; the district name alone does not establish the historical edge.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "central-coast-transitional-health-authority",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Central Coast is the direct place-name candidate, including the mainland geography missing from a Vancouver-Island-only selection.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "south-peace-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Peace River South is the modern place-name candidate for South Peace.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "north-peace-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Peace River North is the modern place-name candidate for North Peace.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "fort-nelson-liard-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Fort Nelson is the modern geographic candidate for Fort Nelson-Liard.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "bulkley-valley-health-council",
+      "method": "modern-single",
+      "confidence": "low",
+      "reason": "Smithers is a starting candidate for Bulkley Valley. Coverage toward Houston and the old council's watershed limits must be checked; this is not a confirmed complete aggregation.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "upper-skeena-community-health-council",
+      "method": "source-drawn",
+      "confidence": "low",
+      "reason": "Use the independently traced source drawing as the working extent. Modern Upper Skeena remains a comparison candidate, but the 1997 definition follows multiple watershed divides and dated survey references; its edge identity is unverified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "terrace-and-area-health-council",
+      "method": "modern-single",
+      "confidence": "low",
+      "reason": "Terrace is a starting candidate; 'and Area' must be checked against the historic legal description, particularly neighbouring Nisga'a and Kitimat areas.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "kitimat-and-area-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Kitimat is the place-name candidate; district-level extent is not certified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "north-coast-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Prince Rupert is the modern geographic candidate for North Coast; do not equate a present regional-district name with this council.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "queen-charlotte-islands-haida-gwaii-community-health-council",
+      "method": "modern-single",
+      "confidence": "medium",
+      "reason": "Haida Gwaii is the direct geographic candidate for Queen Charlotte Islands/Haida Gwaii; historical shore limits remain unverified.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "nisgaa-source-area",
+      "method": "modern-single",
+      "confidence": "low",
+      "reason": "This is related Nisga'a geography only. The map's 'Nisga'a Health Authority' identity is not confirmed equivalent to the repository's community-health-council record.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "snow-country-health-council",
+      "method": "source-drawn",
+      "confidence": "low",
+      "reason": "Use the source-drawn approximation, capped at the 57th parallel documented in M87/1997. The written description follows Nass/Kispiox watershed limits and the Alaska boundary. Modern Snow Country plus Telegraph Creek has a poor drawing fit and is retained only as a comparison.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "stikine-health-council",
+      "method": "source-drawn",
+      "confidence": "low",
+      "reason": "Use the source-drawn approximation. M52/1997 defines a perimeter with a 56th-parallel reference, river watershed divides and the provincial boundary. Modern Stikine is a comparison candidate, not a legally reconstructed perimeter.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "east-kootenay-community-health-services-society",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "Today's East Kootenay HSDA is a strong candidate. Statistics Canada documents unchanged January 2000-to-June 2002 East Kootenay statistical geography. Society jurisdiction is related evidence, not a legal identity of all polygon edges.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "kootenay-boundary-community-health-services-society",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "The source map calls this society Central Kootenay. Today's Kootenay Boundary HSDA is a strong candidate; Statistics Canada connects the older West Kootenay-Boundary statistical region with the 2002 Kootenay/Boundary HSDA.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "coast-garibaldi-community-health-services-society",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "Sunshine Coast, Powell River and Howe Sound form the candidate. Do not use the whole present North Shore/Coast Garibaldi HSDA: North Shore was a separate board, and Bella Coola/Central Coast were associated with other former regions.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "upper-island-central-coast-community-health-services-society",
+      "method": "source-drawn",
+      "confidence": "low",
+      "reason": "Use the society map drawing to retain its historical island/mainland arrangement. The modern North Vancouver Island plus Central Coast LHA combination is a useful comparison, but the 2002 coastal changes and unresolved original service-area schedule prevent treating current edges as the historical society extent.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "cariboo-community-health-services-society",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "The candidate combines 100 Mile House, Cariboo/Chilcotin, Quesnel and Bella Coola Valley. These now span Interior, Northern and Vancouver Coastal health authorities. A contemporary Cariboo-labelled area is not an adequate substitute.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "central-coast-lrmp",
+        "reg293-2001"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "north-west-community-health-services-society",
+      "method": "modern-combination",
+      "confidence": "low",
+      "reason": "The source society map explicitly excludes Nisga'a Health Authority. The modern candidate therefore uses Northwest LHAs except Nisga'a LHA 518; the whole Northwest HSDA 51 would incorrectly fill that exclusion. Using the modern Nisga'a edge to represent the historical exclusion remains unverified, and the old Northwest statistical region is not identical to this society's jurisdiction.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    },
+    {
+      "areaId": "peace-liard-community-health-services-society",
+      "method": "modern-combination",
+      "confidence": "medium",
+      "reason": "Peace River South, Peace River North and Fort Nelson form the candidate. Statistics Canada documents the January 2000 Peace Liard to June 2002 Northeast statistical correspondence.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "lha-crosswalk",
+        "oag-1998",
+        "pho-1998",
+        "statcan-2002"
+      ],
+      "boundaryIdentityVerified": false
+    }
+  ],
+  "statisticalLhaCodes": {
+    "5901": [
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116"
+    ],
+    "5902": [
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127"
+    ],
+    "5903": [
+      "135",
+      "136",
+      "139",
+      "141",
+      "142"
+    ],
+    "5904": [
+      "131",
+      "132",
+      "133",
+      "134",
+      "137",
+      "138"
+    ],
+    "5905": [
+      "143",
+      "145",
+      "147",
+      "148",
+      "149"
+    ],
+    "5906": [
+      "211",
+      "212",
+      "213",
+      "214",
+      "215"
+    ],
+    "5907": [
+      "231",
+      "232",
+      "233",
+      "234"
+    ],
+    "5908": [
+      "222",
+      "223",
+      "224"
+    ],
+    "5909": [
+      "333",
+      "334",
+      "335"
+    ],
+    "5910": [
+      "421",
+      "422",
+      "423",
+      "424",
+      "425",
+      "426"
+    ],
+    "5911": [
+      "431",
+      "432",
+      "433",
+      "434",
+      "337"
+    ],
+    "5912": [
+      "144",
+      "146",
+      "521",
+      "336"
+    ],
+    "5913": [
+      "510",
+      "511",
+      "512",
+      "513",
+      "514",
+      "515",
+      "516",
+      "517",
+      "518",
+      "519"
+    ],
+    "5914": [
+      "531",
+      "532",
+      "533"
+    ],
+    "5915": [
+      "522",
+      "523",
+      "524"
+    ],
+    "5916": [
+      "321",
+      "322",
+      "323",
+      "324",
+      "325",
+      "326"
+    ],
+    "5917": [
+      "221"
+    ],
+    "5918": [
+      "331",
+      "332"
+    ],
+    "5919": [
+      "311"
+    ],
+    "5920": [
+      "411",
+      "412",
+      "413",
+      "414"
+    ]
+  },
+  "statisticalCaveat": "A complete illustrative aggregation of the 89 modern LHAs into the 20 named historical statistical regions. It is not recovered January 2000 GIS and does not establish the 1995 legal board boundaries. Northwest statistical geography includes Nisga’a; the separate society map expressly excludes it."
+}
