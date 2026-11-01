@@ -181,6 +181,7 @@ for (const directory of requiredCollections ?? readdirSync(research).sort()) {
       provenance: 'Official published schedule; independently downloaded and validated by the source importer.',
       sha256: source.sha256 ?? source.pdfSha256, dataSha256: sha256(bytes), notes: source.notes ?? [],
       validation: source.validation ?? null, nameDisclosure: source.nameDisclosure ?? null, positionDisclosure: source.positionDisclosure ?? null,
+      ...(source.completeEmployeeSchedule !== undefined ? { completeEmployeeSchedule: source.completeEmployeeSchedule } : {}),
       travelSource: source.travelSource ?? null, expensesNote: source.expensesNote ?? null, publicWarning: source.publicWarning ?? null, currency: source.currency ?? 'CAD'
     }
     official.push(...accepted)

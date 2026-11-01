@@ -1,0 +1,2549 @@
+{
+  "version": 1,
+  "auditDate": "2026-10-31",
+  "auditTimezone": "America/Vancouver",
+  "scope": "Government, legislature/judiciary, all13 compiled municipal police employers and all27 regional districts",
+  "reviewLimits": "Discovery and16 regional sample originals, not a claim that every historical report was found. Index dates/file upload paths are not accepted salary periods. OCR and native extraction are processing tasks, distinct from missing-source procurement.",
+  "acceptedCollection": "research/salaries/sector-government-police/sources.json",
+  "acceptedRows": 6495,
+  "acceptedSourceCount": 4,
+  "acceptedMunicipalDenominatorChange": 0,
+  "acceptedOverlaps": "Same Metro Vancouver employer; all old compiled rows retained pending exact complete-group equivalence. No board/committee records deleted.",
+  "regionalDistricts": [
+    {
+      "id": "regional-acrd",
+      "name": "Alberni-Clayoquot Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.acrd.bc.ca/sofi",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "ACRD Statement of Financial Information 2025",
+          "url": "https://www.acrd.bc.ca/dms/documents/finance/2026/acrd_sofi_2025.pdf"
+        },
+        {
+          "label": "ACRD Statement of Financial Information 2024",
+          "url": "https://www.acrd.bc.ca/dms/documents/finance/2025/acrd_sofi_2024.pdf"
+        },
+        {
+          "label": "ACRD Statement of Financial Information 2023",
+          "url": "https://www.acrd.bc.ca/dms/documents/finance/2024/acrd_sofi_2023.pdf"
+        },
+        {
+          "label": "ACRD Statement of Financial Information 2022",
+          "url": "https://www.acrd.bc.ca/dms/documents/finance/2026/sofi-2022.pdf"
+        },
+        {
+          "label": "ACRD Statement of Financial Information 2021",
+          "url": "https://www.acrd.bc.ca/dms/documents/finance/acrd_sofi_2021.pdf"
+        },
+        {
+          "label": "ACRD Statement of Financial Information 2020",
+          "url": "https://www.acrd.bc.ca/dms/documents/finance/sofi2020.pdf"
+        },
+        {
+          "label": "ACRD Statement of Financial Information 2019",
+          "url": "https://www.acrd.bc.ca/dms/documents/finance/sofi2019.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "ACRD Statement of Financial Information 2025",
+        "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/2026/acrd_sofi_2025.pdf",
+        "finalUrl": "https://www.acrd.bc.ca/dms/documents/finance/2026/acrd_sofi_2025.pdf",
+        "httpStatus": 200,
+        "sha256": "97816b7e34fbcfb84f4b73e799f690a9b92ca817102d6b301e07a8a4f241d645",
+        "bytes": 1092234,
+        "physicalPages": 44,
+        "nativeTextCharacters": 71708,
+        "firstPageExcerpt": "Alberni-Clayoquot Regional District | 3008 Fifth Avenue, Port Alberni, BC V9Y 2E3 | 250.720.2700 | www.acrd.bc.ca Serving Port Alberni, Tofino, Ucluelet, Treaty First Nations: Huu-ay-aht, Yuułuʔiłʔatḥ, Uchucklesaht Tribe Government, and Toquaht Nation, and Six Electoral Areas: \"A\" (Bamfield), \"B\" (Beaufort), \"C\" (Long Beach), \"D\" (Sproat Lake), \"E\" (Beaver Creek) and \"F\" (Cherry Creek). REGIONAL DISTRICT OF ALBERNI-CLAYOQUOT STATEMENT OF FINANCIAL INFORMATION PERIOD ENDED DECEMBER 31, 2025 Table",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 1,
+            "textCharacters": 984,
+            "excerpt": "Alberni-Clayoquot Regional District | 3008 Fifth Avenue, Port Alberni, BC V9Y 2E3 | 250.720.2700 | www.acrd.bc.ca Serving Port Alberni, Tofino, Ucluelet, Treaty First Nations: Huu-ay-aht, Yuułuʔiłʔatḥ, Uchucklesaht Tribe Government, and Toquaht Nation, and Six Electoral Areas: \"A\" (Bamfield), \"B\" (Beaufort), \"C\" (Long Beach), \"D\" (Sproat Lake), \"E\" (Beaver Creek) and \"F\" (Cherry Creek). REGIONAL DISTRICT OF ALBERNI-CLAYOQUOT STATEMENT OF FINANCIAL INFORMATION PERIOD ENDED DECEMBER 31, 2025 Table of Contents Audited Financial Statements which includes: Page Statement of Financial Position 7 Statement of Operations 8 Schedule of Debenture Debt 30 Schedule of Guarantee and Indemnity Agreements "
+          },
+          {
+            "physicalPage": 27,
+            "textCharacters": 1842,
+            "excerpt": "Regional District of Alberni-Clayoquot Notes to Financial Statements Year Ended December 31, 2025 19. Segmented Reporting (continued) Administrative services Planning & development services Recreational & cultural services Solid waste services Transportation services Water & sewer services Protective services Grant-in-aid Other services 2025 Revenue Tax Requisition $ 2,444,649 $ 1,084,397 $ 1,184,225 $ 403,522 $ 2,218,564 $ 511,506 $ 2,628,781 $ 329,337 $ 44,728 $ 10,849,709 Grants in lieu of taxes 28,785 23,427 23,820 7,023 29,085 2,351 47,944 - 124 162,559 Services provided to other governments 1,121 7,078 - 45,037 5,478 - 86,640 - - 145,354 Sales of service - 108,540 10 4,870,354 807,606 "
+          },
+          {
+            "physicalPage": 28,
+            "textCharacters": 1831,
+            "excerpt": "Regional District of Alberni-Clayoquot Notes to Financial Statements Year Ended December 31, 2025 19. Segmented Reporting (continued) Administrative services Planning & development services Recreational & cultural services Solid waste services Transportation services Water & sewer services Protective services Grant-in-aid Other services 2024 Revenue Tax Requisition $ 2,305,657 $ 1,068,044 $ 1,108,308 $ 398,176 $ 1,998,203 $ 461,312 $ 2,320,191 $ 303,015 $ 45,317 $ 10,008,223 Grants in lieu of taxes 41,015 24,627 23,766 8,006 31,281 2,322 49,288 - 171 180,476 Services provided to other governments - 7,000 - 44,755 - - 77,942 1,000 - 130,697 Sales of service - 93,382 7 4,517,056 774,500 1,273,"
+          },
+          {
+            "physicalPage": 34,
+            "textCharacters": 1184,
+            "excerpt": "Page 34 of 44 REGIONAL DISTRICT OF ALBERNI-CLAYOQUOT Schedule of Remuneration and Expenses 1. Elected Officials Name Position Remuneration Expenses Beckett, Robert Director $14,777 $1,877 Boyko, Fred Director $15,331 $2,588 Cote, Penny Director $22,620 $8,103 Cootes, Moriah Director $0 $2,746 Haggard, Deborah Vice-Chairperson $12,395 $753 Jack, John Chairperson $18,302 $4,008 Johnsen, Kirsten Director $12,464 $7,742 Lacoursiere, Rene Alternate Director $1,257 $0 Law, Daniel Alternate Director $198 $0 Mastrangelo, Levana Director $9,885 $303 McEwen, Marilyn Director $10,822 $490 McLeman, Jack W Alternate Director $990 $0 Minions, Sharie Director $10,429 $0 Patola, Todd Alternate Director $768"
+          },
+          {
+            "physicalPage": 35,
+            "textCharacters": 2359,
+            "excerpt": "Page 35 of 44 REGIONAL DISTRICT OF ALBERNI-CLAYOQUOT Schedule of Remuneration and Expenses (Continued) 2. Other Employees (excluding those listed in Part 1 above) Name Position Remuneration Expenses Brunn, Jennifer General Manager of Community Services $160,374 $12,484 Cann, Mike Sproat Lake Fire Department Chief $95,308 $4,455 Creighton, Kerri Planning Assistant $76,511 $6,989 Dick, Cynthia General Manager of Administrative Services $148,065 $5,556 Dyer, Alex General Manager of Planning $137,997 $2,800 Eschuk, Brooke Planner 1 $84,275 $2,699 Fong, Teri Chief Financial Officer $164,707 $5,100 Fortune, Mark Airport Manager $124,784 $3,319 Frank, Jodie Solid Waste Project Coordinator $100,899 "
+          },
+          {
+            "physicalPage": 36,
+            "textCharacters": 939,
+            "excerpt": "Page 36 of 44 REGIONAL DISTRICT OF ALBERNI-CLAYOQUOT Schedule of Remuneration and Expenses (Continued) Other Employees (excluding those listed in Part 1 above) (continued) Wilson, Amy GIS Analyst $92,797 $887 Zenner, Heather Manager of Administrative Services $122,681 $4,543 Consolidated total of other employees with remuneration of $75,000.00 or less $984,006 $28,756 Total Other Employees $4,823,083 $176,442 3. Reconciliation Total Remuneration – Elected Officials $193,904 Total Remuneration – Other Employees $4,823,083 Subtotal $5,016,987 Reconciling Items $0.00 Total per Statement of Revenue & Expenditures *See note below Variance $0.00 *The Financial Statements do not provide this inform"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.acrd.bc.ca/sofi",
+        "finalUrl": "https://www.acrd.bc.ca/sofi",
+        "httpStatus": 200,
+        "bytes": 31636,
+        "sha256": "63c92dc052021573074dcadb459fccd51ff97ffe38e1d3660be9146eba65a659"
+      }
+    },
+    {
+      "id": "regional-rdbn",
+      "name": "Bulkley-Nechako Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.rdbn.bc.ca/departments/finance/reports",
+      "status": "ocr-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2025 Statement of Financial Information (SOFI)",
+          "url": "https://www.rdbn.bc.ca/download_file/view/10307/4452"
+        },
+        {
+          "label": "2024 Statement of Financial Information (SOFI)",
+          "url": "https://www.rdbn.bc.ca/download_file/view/9275/4452"
+        },
+        {
+          "label": "2023 Statement of Financial Information (SOFI)",
+          "url": "https://www.rdbn.bc.ca/download_file/view/8233/4452"
+        },
+        {
+          "label": "2022 Statement of Financial Information (SOFI)",
+          "url": "https://www.rdbn.bc.ca/download_file/view/7056/4452"
+        },
+        {
+          "label": "2021 Statement of Financial Information (SOFI)",
+          "url": "https://www.rdbn.bc.ca/download_file/view/6285/4452"
+        },
+        {
+          "label": "2020 Statement of Financial Information (SOFI)",
+          "url": "https://www.rdbn.bc.ca/download_file/view/5227/4452"
+        },
+        {
+          "label": "2019 Statement of Financial Information (SOFI)",
+          "url": "https://www.rdbn.bc.ca/download_file/view/3932/4452"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2025 Statement of Financial Information (SOFI)",
+        "sourceUrl": "https://www.rdbn.bc.ca/download_file/view/10307/4452",
+        "finalUrl": "https://www.rdbn.bc.ca/application/files/4817/8216/4855/SOFI_Signed.pdf",
+        "httpStatus": 200,
+        "sha256": "77df200ae938a4823f7111549fd3a4570878a4337c836b3d3a89eaf0eaa212fb",
+        "bytes": 1852422,
+        "physicalPages": 48,
+        "nativeTextCharacters": 0,
+        "firstPageExcerpt": "",
+        "remunerationPageCandidates": [],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Render original, OCR with independent readers, verify every named row, published period and component/control totals",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.rdbn.bc.ca/departments/finance/reports",
+        "finalUrl": "https://www.rdbn.bc.ca/departments/finance/reports",
+        "httpStatus": 200,
+        "bytes": 15750,
+        "sha256": "73aa4327bdada3fa16f2e5c1b81745a1c2d286d3b3b3c297c6517c1b8f265bc4"
+      }
+    },
+    {
+      "id": "regional-capital",
+      "name": "Capital Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.crd.ca/government-administration/financial-plans-reports/employee-compensation",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2025 Statement of Financial Information [PDF/7.8MB]",
+          "url": "https://www.crd.ca/media/file/2025-crd-statement-financial-informationpdf"
+        },
+        {
+          "label": "2024 Statement of Financial Information [PDF/6.5MB]",
+          "url": "https://www.crd.ca/media/file/2024-crd-statement-financial-information"
+        },
+        {
+          "label": "2023 Statement of Financial Information [PDF/7.2MB]",
+          "url": "https://www.crd.ca/media/file/2023-crd-statement-financial-information"
+        },
+        {
+          "label": "2022 Statement of Financial Information [PDF/6.4MB]",
+          "url": "https://www.crd.ca/media/file/2022-crd-statement-financial-information"
+        },
+        {
+          "label": "2021 Statement of Financial Information [PDF/3.9MB]",
+          "url": "https://www.crd.ca/media/file/crd2021sofi-web"
+        },
+        {
+          "label": "2020 Statement of Financial Information [PDF/1.1MB]",
+          "url": "https://www.crd.ca/media/file/sofi-2020"
+        },
+        {
+          "label": "2019 Statement of Financial Information [PDF/1.3MB]",
+          "url": "https://www.crd.ca/media/file/2019-sofi"
+        },
+        {
+          "label": "2018 Statement of Financial Information [PDF/1.2MB]",
+          "url": "https://www.crd.ca/media/file/2018-sofi"
+        },
+        {
+          "label": "2017 Statement of Financial Information [PDF/1.7MB]",
+          "url": "https://www.crd.ca/media/file/2017-sofi"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2025 Statement of Financial Information [PDF/7.8MB]",
+        "sourceUrl": "https://www.crd.ca/media/file/2025-crd-statement-financial-informationpdf",
+        "finalUrl": "https://www.crd.ca/media/file/2025-crd-statement-financial-informationpdf",
+        "httpStatus": 200,
+        "sha256": "3f460f00a05e10b951b540c3fd18634e9b25b07b198759b3881be932aa725510",
+        "bytes": 8126856,
+        "physicalPages": 81,
+        "nativeTextCharacters": 72434,
+        "firstPageExcerpt": "British Columbia, Canada Fiscal year ended December 31, 2025 Capital Regional District 2025 Statement of Financial Information",
+        "remunerationPageCandidates": [],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.crd.ca/government-administration/financial-plans-reports/employee-compensation",
+        "finalUrl": "https://www.crd.ca/government-administration/financial-plans-reports/employee-compensation",
+        "httpStatus": 200,
+        "bytes": 122936,
+        "sha256": "268731d9c7540c92fac3443d832a202de7bb073fb539b6b6d4debb504c36ba1c"
+      }
+    },
+    {
+      "id": "regional-cariboo",
+      "name": "Cariboo Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.cariboord.ca/regional-government/budget-and-finances/",
+      "status": "official-archive-discovery-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Follow official financial-report and board-agenda archives to locate actual named employee schedule; do not infer absence from this navigation pass",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.cariboord.ca/regional-government/budget-and-finances/",
+        "finalUrl": "https://www.cariboord.ca/regional-government/budget-and-finances/",
+        "httpStatus": 200,
+        "bytes": 68234,
+        "sha256": "24aa94969c80932b096e0bc86ed37457ca281e6a81037f30537244ff377fbdb4"
+      }
+    },
+    {
+      "id": "regional-central-coast",
+      "name": "Central Coast Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.ccrd.ca/governance/finance/",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "SOFI Report 2025",
+          "url": "https://www.ccrd.ca/wp-content/uploads/2026/10/2026-May-Statement-of-Financial-Information-2025.pdf"
+        },
+        {
+          "label": "SOFI Report 2024",
+          "url": "https://www.ccrd.ca/wp-content/uploads/2025/10/2024%20Sofi%20Signed.pdf"
+        },
+        {
+          "label": "Supplemental to SOFI 2023",
+          "url": "https://www.ccrd.ca/wp-content/uploads/2025/10/Supplemental%20to%20SOFI%202023.pdf"
+        },
+        {
+          "label": "SOFI Report 2023",
+          "url": "https://www.ccrd.ca/wp-content/uploads/2025/10/SOFI%20Report%202023.pdf"
+        },
+        {
+          "label": "SOFI Report 2022",
+          "url": "https://www.ccrd.ca/wp-content/uploads/2025/10/SOFI%20Report%202022.pdf"
+        },
+        {
+          "label": "SOFI Report 2021",
+          "url": "https://www.ccrd.ca/wp-content/uploads/2025/10/SOFI%20Report%202021.pdf"
+        },
+        {
+          "label": "SOFI Report 2020",
+          "url": "https://www.ccrd.ca/wp-content/uploads/2026/01/SOFI-2020.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "SOFI Report 2025",
+        "sourceUrl": "https://www.ccrd.ca/wp-content/uploads/2026/10/2026-May-Statement-of-Financial-Information-2025.pdf",
+        "finalUrl": "https://www.ccrd.ca/wp-content/uploads/2026/10/2026-May-Statement-of-Financial-Information-2025.pdf",
+        "httpStatus": 200,
+        "sha256": "e0d60c52f876cc92dd529f3e02df9622a0461ecfe1fd5423d530d52a11912b06",
+        "bytes": 167006,
+        "physicalPages": 6,
+        "nativeTextCharacters": 10575,
+        "firstPageExcerpt": "CENTRAL COAST REGIONAL DISTRICT 2025 FINANCIAL REPORTING – Filing under the Financial Information ACT (FIA) SCHEDULE SHOWING THE REMUNERATION AND EXPENSES PAID TO OR ON BEHALF OF EACH EMPLOYEE FIR Schedule 1, Sections 6(2), (3), (4), (5) and (6) 1. Elected Officials, Employees appointed by Cabinet and Members of the Board of Directors Name Position Remuneration1 Expenses3 Emery, Steve Director, Area A $11,596 $9,127 Hall, Travis Director, Area B $12,335 $17,856 Kennedy, Jayme Director, Area C, C",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 1,
+            "textCharacters": 2338,
+            "excerpt": "CENTRAL COAST REGIONAL DISTRICT 2025 FINANCIAL REPORTING – Filing under the Financial Information ACT (FIA) SCHEDULE SHOWING THE REMUNERATION AND EXPENSES PAID TO OR ON BEHALF OF EACH EMPLOYEE FIR Schedule 1, Sections 6(2), (3), (4), (5) and (6) 1. Elected Officials, Employees appointed by Cabinet and Members of the Board of Directors Name Position Remuneration1 Expenses3 Emery, Steve Director, Area A $11,596 $9,127 Hall, Travis Director, Area B $12,335 $17,856 Kennedy, Jayme Director, Area C, Chair $16,332 $10,959 Northeast, Lawrence Director, Area D $8,891 $0 Harestad, Leslie Director, Area E $9,239 $5,370 Levesque, Ryan Alternate Director, Area C $485 $0 Newkirk, Garret Alternate Director"
+          },
+          {
+            "physicalPage": 2,
+            "textCharacters": 1432,
+            "excerpt": "3. Reconciliation Total remuneration and expense – elected officials, employees appointed by Cabinet and members of the Board of Directors $103,645 Total remuneration and expense – other employees $1,013,109 Sub Total $1,116,754 Reconciling Items The variance between the financial statements and the total earnings paid on the Schedule of Remuneration and Expenses is due to several factors including: - the financial statements include non-taxable employee benefits expenses including Employer contributions for Municipal Pension Plan premiums, Employment Insurance premiums, Canada Pension Plan contributions, Long Term Disability, Medical, Dental, WorkSafe premiums and Employee Health Tax. -Expe"
+          },
+          {
+            "physicalPage": 5,
+            "textCharacters": 1913,
+            "excerpt": "- Asset Retirement Obligation Accretion - Amortization - Municipal Pension Plan – Company portion included in (A) and (D) - EI, CPP – Company portion included in (A) and in (D) - Worksafe BC premiums included in (B) and in (D) - Taxable and Non-taxable benefit included in (A), (B) and in (D) - Conventions, Professional development expenses, travels and accommodation expenses and registration fees for the employee and directors included in (B) and (D) - GST rebate - Other the Schedule of Remuneration and Expenses is based on actual payments made in the year whereas the financial statement figure is based on accruals. $113,532 $621,488 ($60,492) ($65,673) ($22,372) ($60,231) ($129,895) ($525,8"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.ccrd.ca/governance/finance/",
+        "finalUrl": "https://www.ccrd.ca/governance/finance/",
+        "httpStatus": 200,
+        "bytes": 144947,
+        "sha256": "a0981b54a888c53e45865b87aa0280d32e174f28a7f964e69330affd60d26045"
+      }
+    },
+    {
+      "id": "regional-central-kootenay",
+      "name": "Central Kootenay Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.rdck.ca/finance/plans-statements-and-sofi-reports/",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2025 Statement of Financial Information",
+          "url": "https://www.rdck.ca/wp-content/uploads/2026/07/2025_SOFI_Report_Signed.pdf"
+        },
+        {
+          "label": "2024 Statement of Financial Information",
+          "url": "https://www.rdck.ca/wp-content/uploads/2025/06/2024_RDCK_SOFI.pdf"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://www.rdck.ca/wp-content/uploads/2024/11/2023_RDCK_SOFI.pdf"
+        },
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://www.rdck.ca/wp-content/uploads/2024/11/2022_RDCK_SOFI.pdf"
+        },
+        {
+          "label": "2021 Statement of Financial Information",
+          "url": "https://www.rdck.ca/wp-content/uploads/2024/11/2021_SOFI_RDCK_Signed.pdf"
+        },
+        {
+          "label": "2020 Statement of Financial Information",
+          "url": "https://www.rdck.ca/wp-content/uploads/2024/11/2020_RDCK_SOFI_Report-Signed.pdf"
+        },
+        {
+          "label": "2019 Statement of Financial Information",
+          "url": "https://www.rdck.ca/wp-content/uploads/2024/11/SOFI-2019-for-web.pdf"
+        },
+        {
+          "label": "2018 Statement of Financial Information",
+          "url": "https://www.rdck.ca/wp-content/uploads/2024/11/SOFI_2018.pdf"
+        },
+        {
+          "label": "2017 Statement of Financial Information",
+          "url": "https://www.rdck.ca/wp-content/uploads/2024/11/SOFI_2017.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2025 Statement of Financial Information",
+        "sourceUrl": "https://www.rdck.ca/wp-content/uploads/2026/07/2025_SOFI_Report_Signed.pdf",
+        "finalUrl": "https://www.rdck.ca/wp-content/uploads/2026/07/2025_SOFI_Report_Signed.pdf",
+        "httpStatus": 200,
+        "sha256": "279f30914e55fbb0c2a6f0b130d860cdc8c9f85821cf77b57d9557e9a54c86a9",
+        "bytes": 6281276,
+        "physicalPages": 61,
+        "nativeTextCharacters": 101649,
+        "firstPageExcerpt": "June 19, 2026 Ministry of Municipal Affairs PO Box 9838 Stn Prov Govt Victoria, B.C. V8W 9T1 Dear Sir or Madam: RE: FILING UNDER THE FINANCIAL INFORMATION ACT STATEMENT OF FINANCIAL INFORMATION On June 18th, 2026, the Board passed the following motion: \"The Schedule and Statement of Financial Information for the Fiscal Year Ended December 31, 2025, having been received, be approved for release in accordance with the Financial Information Act, with a copy to be filed with the Ministry of Communit",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 44,
+            "textCharacters": 2279,
+            "excerpt": "REGIONAL DISTRICT OF CENTRAL KOOTENAY SCHEDULE OF REMUNERATION AND EXPENSES 6 (2) (a) 2025 SCHEDULE OF ELECTED OFFICIAL'S REMUNERATION AND EXPENSES Name Bogle, Brian Douglas Buller, Ezra Casley, Leonard Cunningham, Hans Davidoff, Andrew DeBoon, Arnold Frank Dumas, Denise Fyke, John G Gordon, Tany Graham, Cheryl Elaine Hanegraaf, Henny (Henrica) Hewat, Suzan Jackman, Garry Lang,Robert Lockwood, Diana LD Lunn, Jessica Main, Leah McFaddin, Maria June McLaren-Caux, Aiden(Kenneth) Newell, Thomas Page, Keith Popoff, Walter A Smienk.Johannes Tierney, Roger Bruce Vandenberghe, Kelly Watson, Aimee Weatherhead,Teresa A Woodward, Jesse Zeleznik, Thomas M Grand Total Posiiton Alternate Director Alternat"
+          },
+          {
+            "physicalPage": 45,
+            "textCharacters": 5946,
+            "excerpt": "Archibald, Russe! Armstrong, Wendy Barnhart, David Bench, Heidj Benson, MartyG Bjarnason, Evan Bourgeois, Jesse Bradley.Jeanmne Braithwaite, Mark Briscoe. tan Brohman. Mike Brown, tarry Chernenko. Rob Chezenko, Sadle Chirico,Joseph Chmara, Erick Clarke, Ryan Colleyjay Contini, Nia Crowe. Mark M Dalenault.Shane Davison.Trisha Denny,Shawn Diviakovski, Alexandra Dool, Tom Drabik, Fernando Duming, Stuart Elliott, Dan Even son, AJ Fehst, Tristan Felt, Joseph Friesen, Matthew Fuhr, Sarah Gaba, Rlshab Gainham, Christopher Gaynor, Car^ Gillender,Anne Gordon, Graham R Hamilton, Aiayne Hannon,Nora Hay, Thomas Hergott, Patrick Hogan, Carolyn Horn,Stuart Humc, Grant Ihlcn, Gord Johnson, Stephanie Johnst"
+          },
+          {
+            "physicalPage": 47,
+            "textCharacters": 454,
+            "excerpt": "REGIONAL DISTRICT OF CENTRAL KOOTENAY SCHEDULE OF REMUNERATION AND EXPENSES 6 (2) (d) 2025 PAYROLL RECONCILIATION TO FINANCIAL STATEMENT Total Remuneration Elected Officials 994,932 Total Remuneration Other 23,169,465 24,164,397 Wages/Benefits per Financial Statements 30,668,971 Reconciling Items: Non Wage Items: Travel, Training, Incentives, Accruals, -620,365 Heatlh & Safety, Incentives, Training, Tavel Benefits Employer Cost -5,884,209 24,164,397"
+          },
+          {
+            "physicalPage": 48,
+            "textCharacters": 651,
+            "excerpt": "REGIONAL DISTRICT OF CENTRAL KOOTENAY SCHEDULE OF REMUNERATION EXPENSES 6(6) 2025 SCHEDULE OF EMPLOYER COSTS EMPLOYEE INC TAX CPP PENSION LIFE INSURANCE & HEALTH BENEFITS TOTAL RP01 RP02 Combined 783,142 2,571,799 322,566 757,140 101,735 201,150 130,988 1,300,912 1,338,432 4,831,002 250,880 250,880 EMPLOYEE TOTALS 3,354,941 1,079,706 302,886 1,431,900 250,880 6,420,313 EMPLOYER CPP PENSION WCB LIFE INSURANCE & Employer Hlth HEALTH Tax BENEFITS TOTAL RP0001 RP0002 Combined 322,566 757,140 142,428 235,919 1,567,851 744,842 477,135 1,636,327 464,994 993,059 4,426,156 EMPLOYER TOTALS 1,079,706 378,346 1,567,851 744,842 477,135 1,636,327 5,884,209"
+          },
+          {
+            "physicalPage": 49,
+            "textCharacters": 299,
+            "excerpt": "REGIONAL DISTRICT OF CENTRAL KOOTENAY SCHEDULE OF REMUNERATION AND EXPENSES 6 (7) (a) & (b) 2025 STATEMENT OF SEVERANCE AGREEMENTS There were no severance agreements under which payment commenced between the Regional District of Central Kootenay and it's non union employees during fiscal year 2025"
+          },
+          {
+            "physicalPage": 53,
+            "textCharacters": 1149,
+            "excerpt": "REGIONAL DISTRICT OF CENTRAL KOOTENAY SCHEDULE OF SUPPLIERS OF PROVISION OF GOODS AND SERVICES 7 (1) (c) 2025 RECONCILIATION TO FINANCIAL STATEMENT RECONCILIATION TO CONSOLIDATED FINANCIAL STATEMENTS Total aggregate payment exceeding $25,000 paid to suppliers (a) $ 36,085,473 Total online lease payments Consolidated total of payments of $25,000 or less paid to suppliers (b) 3,835,341 Consolidated total of all grants and contributions exceeding $25,000 ( c) 7,759,089 Consolidated total of all grants and contributions of $25,000 or less 2,140,660 $ 49,820,563 Reconciling Items: Payroll & Severance Agreements $23,169,465 Directors Remuneration & Expenses 994,932 Change in work in progress, paya"
+          },
+          {
+            "physicalPage": 55,
+            "textCharacters": 2061,
+            "excerpt": "sprint'EQcm\" Financial Information Act Financial Information Regulation (FIR), Schedule 1 Statement of Financial Information (SOFI) Index to FIR Schedule 1 and the Checklist Page 1: Corporation Information Ministry Information General; Section One 1(1 )(a) Statement of assets and liabilities 1(1 )(b) Operational statement 1(1 )(c) Schedule of debts 1(1 )(d) Schedule of guarantee and indemnity agreements 1 (1 )(e) Schedule of employee remuneration and expenses 1 (1 )(f) Schedule of suppliers of goods and services 1 (2) [Explanatory information for reference] 1 (3) Statements prepared on a consolidated basis or for each fund 1 (4) & (5) Notes to the statements and schedules in section 1 (1) Pa"
+          },
+          {
+            "physicalPage": 56,
+            "textCharacters": 1457,
+            "excerpt": "Page 3 & 4: Schedule of Remuneration and Expenses: Section Six (continued) 6(4) & (5) [Explanatory information for reference] 6(6) Report employer portion of El and CPP as a supplier payment 6(7)(a) & (b) Statement of severance agreements 6(8) Explain an omission of statement of severance agreements 6(9) [Statement of severance agreements to minister - not required unless requested] Page 4: Schedule of Suppliers of Goods or Services: Section Seven 7(1)(a) List suppliers receiving payments exceeding $25,000 7(1)(b) Consolidated total of all payments of $25,000 or less 7(1 )(c) Reconcile difference in total above with operational statement 7(2)(a) [Explanatory information for reference] 7(2)(b"
+          },
+          {
+            "physicalPage": 57,
+            "textCharacters": 1154,
+            "excerpt": "Financial Information Regulation, Schedule 1 Checklist - Statement of Financial Information (SOFI) For the Corporation: Corporate Name: Regional District of Central Kootenay Contact Name: Heather Smith Phone Number: E-mail: Fiscal Year End: December 31 , 2025 250-352-8181 Date Submitted: June 19,2026 hsmith@rdck.bc.ca For the Ministry: Ministry Name: Date Received: Date Reviewed: Approved (SFO): Reviewer: Deficiencies: Yes Deficiencies Addressed: Yes Further Action Taken: a D No No a Distribution: Legislative Library | d Ministry Retention D :RR^?%<: Scheyulel^ iSectipri K ; Jtew ^es^ w N/f ;<Xoinmnnent& General 1(1) (a) Statement of assets and liabilities n 1 (1) (b) Operational statement n"
+          },
+          {
+            "physicalPage": 59,
+            "textCharacters": 1372,
+            "excerpt": "ipiRwas ^Scheaul^l? :ISectitMff%PH: f^ea; » ^a£ &S0Qm]menfs@ Schedule of Guarantee and Indemnity Agreements 5(1) List financial agreements that required government approval prior to being given (see Guarantees and Indemnities Regulation in FIA Guidance Package) B D D 5(2) State the entities involved, and the specific amount involved if known a a n 5(3) 5(4) The schedule may be omitted if addressed under section 2 or 4 and it provides no additional information The omission must be explained in a note to the schedule a a Schedule of Remuneration and Expenses (See Guidance Package for suggested format) 6 (2) (a) List separately, by name and position, the total remuneration and the total expense"
+          },
+          {
+            "physicalPage": 60,
+            "textCharacters": 1258,
+            "excerpt": "gScheduI^ jsSeiet[dngg^ ^^y3^^^^^ VsMil m gilllSojminri^^ Schedule of Remuneration and Expenses (See Guidance Package for suggested format) 6(6) Report the employer portion of El and CPP as a supplier payment to the Receiver General for Canada rather than as employee remuneration B 0 6 (7) (a) 6 (7) (b) Include a statement of severance agreements providing: • the number of severance agreements under which payment commenced in the fiscal year being reported on for non-union employees, and • the range of equivalent months' compensation for them (see Guidance Package for suggested format) D a 6(8) Provide the reason for omitting a statement of severance agreements in a note to the schedule of r"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.rdck.ca/finance/plans-statements-and-sofi-reports/",
+        "finalUrl": "https://www.rdck.ca/finance/plans-statements-and-sofi-reports/",
+        "httpStatus": 200,
+        "bytes": 274702,
+        "sha256": "be98ed4671a176675dce134fa9a8b8544f23b117553cb5370c09ebab19583488"
+      }
+    },
+    {
+      "id": "regional-central-okanagan",
+      "name": "Central Okanagan Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.rdco.com/your-government/budgets-and-financial-statements/",
+      "status": "official-archive-discovery-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Follow official financial-report and board-agenda archives to locate actual named employee schedule; do not infer absence from this navigation pass",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.rdco.com/your-government/budgets-and-financial-statements/",
+        "finalUrl": "https://www.rdco.com/your-government/budgets-and-financial-statements/",
+        "httpStatus": 200,
+        "bytes": 96385,
+        "sha256": "92e3dc7c18d724ed822847a0f0f152a0641ee84af72c721c0a9879765a8a04ae"
+      }
+    },
+    {
+      "id": "regional-columbia-shuswap",
+      "name": "Columbia Shuswap Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.csrd.bc.ca/189/Financial-Services",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2025 Statement of Financial Information (SOFI) (PDF)",
+          "url": "https://www.csrd.bc.ca/ArchiveCenter/ViewFile/Item/942"
+        },
+        {
+          "label": "2024 Statement of Financial Information (SOFI) (PDF)",
+          "url": "https://bc-csrd.civicplus.com/Archive.aspx?ADID=830"
+        },
+        {
+          "label": "2023 Statement of Financial Information (SOFI) (PDF)",
+          "url": "https://bc-csrd.civicplus.com/Archive.aspx?ADID=714"
+        },
+        {
+          "label": "2022 Statement of Financial Information (SOFI) (PDF)",
+          "url": "https://bc-csrd.civicplus.com/Archive.aspx?ADID=640"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2025 Statement of Financial Information (SOFI) (PDF)",
+        "sourceUrl": "https://www.csrd.bc.ca/ArchiveCenter/ViewFile/Item/942",
+        "finalUrl": "https://www.csrd.bc.ca/ArchiveCenter/ViewFile/Item/942",
+        "httpStatus": 200,
+        "sha256": "a8c42707dc73c6079d3850e9bcd6f05a23c7ea5e186e21f015f0a928a8200941",
+        "bytes": 3377337,
+        "physicalPages": 12,
+        "nativeTextCharacters": 18609,
+        "firstPageExcerpt": "2025 Statement of Financial Information",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 2,
+            "textCharacters": 1290,
+            "excerpt": "Columbia Shuswap Regional District Statement of Financial Information NOTICE TO READER: The Statement of Financial Information (SOFI) report is a regulatory requirement for all Regional Districts and Municipalities in British Columbia, produced under the Financial Information Act. Elected Official Remuneration represents the Elected Official's gross pay. Employee Remuneration is the total of employee gross salary plus any other income. Salary represents base salaries and taxable benefits and may also include retroactive pay. Other income may include payout of vacation, banked overtime, shift premiums, on-call time, employee portion of rebates, cell phone allowances, and pay for election work"
+          },
+          {
+            "physicalPage": 6,
+            "textCharacters": 2872,
+            "excerpt": "SCHEDULE OF REMUNERATION AND EXPENSES - 2025 NAME POSITION REMUNERATION EXPENSES PAID TO AND ON BEHALF OF: 1: ELECTED OFFICIALS ANDERSON, Colleen Director, District of Sicamous 21,716 $ 1,243 $ BROOKS-HILL, David Director, Area B 37,340 $ 9,391 $ CATHCART, Karen Director, Area A 34,437 $ 7,148 $ FLYNN, Kevin Director, City of Salmon Arm 23,979 $ 663 $ GIBBONS, Martin Director, Area C 37,613 $ 12,981 $ LAVERY, Tim Director, City of Salmon Arm 21,237 $ - $ LINDGREN, Sylvia Alternate Director, City of Salmon Arm 996 $ 58 $ MARTIN, Rhona Director, Area E 33,454 $ 3,826 $ MCCORMICK, Margaret Alternate Director, Area C 727 $ 63 $ MELNYCHUK, Natalya Director, Area G 68,651 $ 20,266 $ OSZUST, Ron Di"
+          },
+          {
+            "physicalPage": 7,
+            "textCharacters": 2234,
+            "excerpt": "SCHEDULE OF REMUNERATION AND EXPENSES - 2025 NAME REMUNERATION EXPENSES PAID TO AND ON BEHALF OF: Columbia Shuswap Regional District KASSA, Hamish 89,469 $ 4,264 $ LEFLOCH, Christine 95,794 $ 7,217 $ MACLEAN, John 223,654 $ 14,072 $ MAJOR, DAVID 83,385 $ 635 $ MARTENS, Janice 75,216 $ 235 $ NICHOLL, Christopher 80,334 $ 89 $ PAIEMENT, Corey 145,087 $ 1,914 $ PAYNE, Brad 122,626 $ 443 $ PEREPOLKIN, Tim 118,153 $ 598 $ PIERCE, Jodi 169,517 $ 4,886 $ PONICH, Kerri 117,468 $ 4,004 $ RANDELL, Sophie 84,793 $ 4,039 $ ROBERGE, Veda 83,338 $ 1,279 $ ROBICHAUD, Crystal 91,379 $ 6,692 $ SEMCHUK, Cathy 102,809 $ 3,386 $ SHAM, Jennifer 146,100 $ 11,670 $ SMIT, Christiaan 113,999 $ 3,057 $ SUTHERLAND, De"
+          },
+          {
+            "physicalPage": 8,
+            "textCharacters": 798,
+            "excerpt": "3: RECONCILIATION OF REMUNERATION AND EXPENSES FOR THE YEAR 2025 409,809 $ 6,677,049 7,086,858 1,379,343 334,451 8,800,651 $ Total Remuneration - Elected Officials Total Remuneration - Other Employees SUBTOTAL: RECONCILING ITEMS Emergency Volunteer and Paid On Call FireFighter earnings Non-taxable benefits*, employer portion of statutory deductions and accruals TOTAL PER CONSOLIDATED STATEMENT OF FINANCIAL ACTIVITIES - EXPENDITURES (Note 16)** **Agrees to the audited Financial Statements, Note 16: Expenditures by Object - Salaries, Wages and Benefits Columbia Shuswap Regional District *Non-taxable benefits include employee benefits (such as medical and dental) and employer contributions to t"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.csrd.bc.ca/189/Financial-Services",
+        "finalUrl": "https://www.csrd.bc.ca/189/Financial-Services",
+        "httpStatus": 200,
+        "bytes": 119708,
+        "sha256": "05ac51a9ec8f537677b60f83b4fe0c156efbaad4e3e51b52a1e26b289aef6f89"
+      }
+    },
+    {
+      "id": "regional-comox-valley",
+      "name": "Comox Valley Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.comoxvalleyrd.ca/about/finance/financial-statements",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "View",
+          "url": "https://www.comoxvalleyrd.ca/sites/default/files/2025-06/CVRD%20SOFI%20Statements%20Signed%202024.pdf"
+        },
+        {
+          "label": "View",
+          "url": "https://www.comoxvalleyrd.ca/sites/default/files/2024-06/CVRD%20SoFI%202023%20Final%20May%2023_0.pdf"
+        },
+        {
+          "label": "View",
+          "url": "https://www.comoxvalleyrd.ca/sites/default/files/2023-06/CVRD%20SOFI%202022%20FINAL.pdf"
+        },
+        {
+          "label": "View",
+          "url": "https://www.comoxvalleyrd.ca/sites/default/files/2022-08/2021-12-31_statement_of_financial_information_final.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "View",
+        "sourceUrl": "https://www.comoxvalleyrd.ca/sites/default/files/2025-06/CVRD%20SOFI%20Statements%20Signed%202024.pdf",
+        "finalUrl": "https://www.comoxvalleyrd.ca/sites/default/files/2025-06/CVRD%20SOFI%20Statements%20Signed%202024.pdf",
+        "httpStatus": 200,
+        "sha256": "eea041269d3730c0f1b2156f5210be487a793ba177bf362eb94215057d0e4b0f",
+        "bytes": 3980758,
+        "physicalPages": 56,
+        "nativeTextCharacters": 118608,
+        "firstPageExcerpt": "Statement of Financial Information Year ended December 31, 2024",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 2,
+            "textCharacters": 1092,
+            "excerpt": "Page 6 7 8 9 10 11 Schedules A 35 B 36 C 37 D 38 Statements of Financial Information (unaudited) 1 Schedule of Remuneration and Expenses for Elected Officials 39 2 Schedule of Remuneration and Expenses for Employees 40 3 Reconciliation of Remuneration and Expenses to Financial Statements 42 4 Schedule of Severance Agreements 43 5 Schedule of Payments to Suppliers of Goods and Services 44 6 Reconciliation of Payments to Suppliers of Goods and Services to Financial Statements 50 7 Schedule of Grant Payments 51 8 Schedule of Guarantee and Indemnity Agreements 55 Table of Contents December 31, 2024 Statement of Management’s Responsibility for Financial Reporting Independent Auditor’s Report Stat"
+          },
+          {
+            "physicalPage": 40,
+            "textCharacters": 3122,
+            "excerpt": "Director Committee Arbour, Daniel Baynes Sound-Denman/Hornby Islands (Area A) 39,000 $ 10,680 $ 77 $ 6,786 $ Baker, Mark 1 Village of Sayward - 1,335 - 315 Blacklock, Steve Town of Comox - 225 - - Brown, Vickey Village of Cumberland 16,000 6,305 - - Chapman, Doug 1 City of Campbell River - 1,280 - - Cole-Hamilton, William City of Courtenay 53,000 19,015 - 8,353 Dahl, Kermit 1 City of Campbell River - 960 - - Davis, Martin 1 Village of Tahsis - 1,290 - 1,263 Deck, Ronald 1 Village of Zeballos - 1,880 - 1,026 Fowler, Sarah 1 Village of Tahsis - 160 - - Grant, Ken Town of Comox 16,000 9,180 77 - Grieve, Edwin Puntledge-Black Creek (Area C) 39,000 17,335 - 12,141 Hardy, Richard Lazo North (Area "
+          },
+          {
+            "physicalPage": 41,
+            "textCharacters": 7305,
+            "excerpt": "Employee Position Base Salary Other (Note 1) Total Remuneration Expenses Allemekinders, Gregg Control System Technician 74,802 $ $ 1,065 $ 75,867 - Batchelor, Paige Human Resources Advisor 98,506 2,025 100,531 11,308 Bean, George Supervisor - Comox Valley Waste Management Centre 96,167 1,522 97,688 1,945 Bell, Matthew Sr. Communications and Engagement Advisor 74,802 1,846 76,648 4,695 Bennett, Dustin Transit and Facilities Coordinator 74,802 1,306 76,108 298 Berkey, Zoe Senior Engineering Analyst 89,571 613 90,184 1,519 Bhatia, Ravinder Manager of Business Applications and Client Services 105,318 1,656 106,974 3,346 Bird, Kerry Waterworks Operator III - Transmission and Distribution 89,190 2"
+          },
+          {
+            "physicalPage": 42,
+            "textCharacters": 7355,
+            "excerpt": "Employee Position Base Salary Other (Note 1) Total Remuneration Expenses Matfin, Tammy Aquatic Program Coordinator 73,959 1,420 75,379 - May, Daniel Senior Parks Technician 78,600 794 79,394 2,227 McCauley, Stone Senior Control Systems Techncian 99,445 19,879 119,324 1,627 McGill, Dan Waterworks Operator III - Transmission and Distribution 89,190 5,115 94,305 428 McIntyre, Cari Emergency Planning Coordinator 82,809 5,363 88,172 4,383 Montieth, Darry Manager of Liquid Waste Planning 117,991 1,649 119,640 - Moonen, Cameron Maintenance Operator - Wastewater Facilities 89,190 5,881 95,072 - Morgan, Tricia Assistant Sr. Manager Recreation Services 131,800 1,028 132,828 7,125 Morka, Jarrett Senior"
+          },
+          {
+            "physicalPage": 43,
+            "textCharacters": 934,
+            "excerpt": "Remuneration per Schedule of Remuneration and Expenses for Directors (Schedule 1) 408,189 Remuneration per Schedule of Remuneration and Expenses for Employees (Schedule 2) 19,670,113 Total Remuneration per Schedules 1 & 2 20,078,302 Total Personnel Costs per Schedule A 24,338,600 Items included in Statement of Operations but not in Schedules 1 & 2: Employer paid corporate benefits (4,980,095) 2024 Salaries and benefit accruals (723,429) Items included in Schedules 1 & 2 but not in the Statement of Operations: 2023 Salaries and benefit accruals 798,067 Salaries and benefits capitalized and included in tangible capital assets 454,699 Salaries and benefits recovered 190,460 20,078,302 Year ende"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.comoxvalleyrd.ca/financial-statements",
+        "finalUrl": "https://www.comoxvalleyrd.ca/about/finance/financial-statements",
+        "httpStatus": 200,
+        "bytes": 159971,
+        "sha256": "93c7282b826e8096f682d6de5d560e0919f66faa479b8c5ba8073ea71345b818"
+      }
+    },
+    {
+      "id": "regional-cowichan",
+      "name": "Cowichan Valley Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://cvrd.ca/government-administration/finance/financial-statements/statements-of-financial-information/",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2025 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2026/06/2025-Final-SOFI-Report.pdf"
+        },
+        {
+          "label": "2024 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2026/05/2024-SOFI-Report-FINAL.pdf"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2025/09/Clean-signed-2023-SOFI-report_202406271216203550.pdf"
+        },
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2025/09/2022-Statement-of-Financial-Information-SOFI_202306301312043562.pdf"
+        },
+        {
+          "label": "2021 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2025/09/2021-Statement-of-Financial-Information-FINAL_202206231716315720.pdf"
+        },
+        {
+          "label": "2020 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2025/09/2020-Statement-of-Financial-Information_202106111713017093.pdf"
+        },
+        {
+          "label": "2019 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2025/09/2019-SOFI_202006031242006048.pdf"
+        },
+        {
+          "label": "2018 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2025/09/2018-SOFI_201904241838563864.pdf"
+        },
+        {
+          "label": "2017 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2025/09/2017-SOFI-Report-Final_201806141204239695.pdf"
+        },
+        {
+          "label": "2016 Statement of Financial Information",
+          "url": "https://cvrd.ca/wp-content/uploads/2025/09/2016-SOFI-Report_201706201324373626.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2025 Statement of Financial Information",
+        "sourceUrl": "https://cvrd.ca/wp-content/uploads/2026/06/2025-Final-SOFI-Report.pdf",
+        "finalUrl": "https://cvrd.ca/wp-content/uploads/2026/06/2025-Final-SOFI-Report.pdf",
+        "httpStatus": 200,
+        "sha256": "9068cf19b9c13332df4047738798c42cf2e7735f88facca586b21b2657787134",
+        "bytes": 4623699,
+        "physicalPages": 59,
+        "nativeTextCharacters": 113975,
+        "firstPageExcerpt": "2025 STATEMENT OF FINANCIAL INFORMATION",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 2,
+            "textCharacters": 1709,
+            "excerpt": "Table of Contents Page CONSOLIDATED FINANCIAL STATEMENT SECTION MANAGEMENT’S RESPONSIBILITY ............................................................................................................ 5 INDEPENDENT AUDITOR’S REPORT ....................................................................................................... 6-8 CONSOLIDATED STATEMENT OF FINANCIAL POSITION ............................................................................ 9 CONSOLIDATED STATEMENT OF OPERATIONS ....................................................................................... 10 CONSOLIDATED STATEMENT OF CHANGES IN NET FINANCIAL ASSETS ................................................. "
+          },
+          {
+            "physicalPage": 49,
+            "textCharacters": 2969,
+            "excerpt": "Director Position Remuneration Expenses Note 1 Segall, K. Chair - Director - Area A 86,996.57 13,926.19 Acton, S. Director - Area B 51,628.11 10,351.46 Wilson, M. Director - Area C 51,494.91 8,337.46 Abbott, H. Director - Area D 51,561.58 8,173.02 Nicholson, A. Director - Area E 51,561.58 7,203.84 Morrison, I. Director - Area F 57,170.46 17,017.55 McClinton, J. Director - Area G 51,494.91 12,983.89 Maartman, B. Director - Area H 51,561.58 10,193.84 Deck, K. Director - Area I 51,494.91 4,433.77 Staples, M. Director - Duncan 22,819.25 231.10 Beeston, D. Director - Ladysmith 16,841.04 - McKay, T. * Director - Ladysmith 6,116.53 186.67 McGonigle, T. Vice Chair - Director - Lake Cowichan 22,752.7"
+          },
+          {
+            "physicalPage": 50,
+            "textCharacters": 7034,
+            "excerpt": "Employee Position Remuneration Expenses Note 1 Note 2 Aikenhead, A. Human Resources Consultant 126,918.21 1,500.00 Aitken, E. Parks Volunteer Coordinator 77,749.58 - Allen, D. Payroll Coordinator 133,847.92 1,323.00 Andersen, E. Operations Attendant 85,809.01 - Arden, A. Planner I 88,751.11 1,583.81 Armitage, D. Assistant Technical Director 85,785.54 - Atchison, C. Building Maintenance/ Ice Maker II 91,848.83 - Barker, M. Operations Attendant 82,106.13 - Basi-Primeau, S. GIS Technician I 80,349.79 1,505.22 Bates, C. GIS Developer 92,084.67 - Behnen, R. Truck Driver 83,440.12 - Bell, C. Manager Financial Operations 109,069.68 3,864.99 Berscheid, L. Environmental Technologist II 85,413.34 3,01"
+          },
+          {
+            "physicalPage": 51,
+            "textCharacters": 4814,
+            "excerpt": "COWICHAN VALLEY REGIONAL DISTRICT EMPLOYEE REMUNERATION AND EXPENSES YEAR ENDED DECEMBER 31, 2025 EARNINGS GREATER THAN $75,000 Layseca, J. Programs & Marketing Coordinator 103,927.07 2,241.34 Leaf, E. Recycling Facility Leader 85,307.40 - Leblanc, P. Manager Arts & Culture Division 136,006.47 2,344.56 Leerholm, T. Recycling Facility Leader 82,668.18 - Lendrum, R. Operations Attendant Lead Hand (North/Central Cowichan) 101,390.90 106.99 Lewis, P. Administrative Assistant 77,861.64 - Liddle, A. Manager - Facility Operations (South Cowichan) 121,494.17 172.80 Liddle, K. Manager South Cowichan Recreation 144,883.36 3,618.21 Litchfield, N. Utility Operator II 128,379.18 3,974.99 Liu, Y. Manager "
+          },
+          {
+            "physicalPage": 52,
+            "textCharacters": 3173,
+            "excerpt": "COWICHAN VALLEY REGIONAL DISTRICT EMPLOYEE REMUNERATION AND EXPENSES YEAR ENDED DECEMBER 31, 2025 EARNINGS GREATER THAN $75,000 Vandendungen, M. Parks & Trails Planner 96,962.94 861.14 Vander Klok, J. Capital Projects Coordinator - Parks 80,708.49 1,701.50 Vezerian, K. Manager Human Resources Client Advisory Services 132,176.01 3,889.92 Virtanen, L. Payroll Assistant 84,011.87 - Wainwright, R. Senior Manager Emergency Management 161,238.95 159.31 Wakeham, J. Senior Manager Facilities & Transit 92,429.90 1,411.58 Waldron, L. Communications Specialist 91,009.08 2,910.67 Walker, M. Parks & Trails Planner 97,043.60 1,474.88 Warwick, D. Soil Deposit Bylaw Officer 94,953.97 4,028.10 Watt, L. Recyc"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://cvrd.ca/government-administration/finance/financial-statements/statements-of-financial-information/",
+        "finalUrl": "https://cvrd.ca/government-administration/finance/financial-statements/statements-of-financial-information/",
+        "httpStatus": 200,
+        "bytes": 531651,
+        "sha256": "1e007ea6ed5be3ffd533621d5d6bf89e38c66b6d1c0e468670656c99a1afd2b2"
+      }
+    },
+    {
+      "id": "regional-east-kootenay",
+      "name": "East Kootenay Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.rdek.bc.ca/departments/finance/",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "Statement of Financial Information",
+          "url": "https://www.rdek.bc.ca/web/FinancialPlan/SOFI_2025_-_signed.pdf"
+        },
+        {
+          "label": "Statement of Financial Information",
+          "url": "https://www.rdek.bc.ca/web/FinancialPlan/2024/2024_SOFI_Report.pdf"
+        },
+        {
+          "label": "Statement of Financial Information",
+          "url": "https://www.rdek.bc.ca/web/FinancialPlan/2023_Statement_of_Financial_Information.pdf"
+        },
+        {
+          "label": "Statement of Financial Information",
+          "url": "https://www.rdek.bc.ca/web/FinancialPlan/SOFI2022.pdf"
+        },
+        {
+          "label": "Statement of Financial Information",
+          "url": "https://www.rdek.bc.ca/web/FinancialPlan/RDEK_2021_SOFI_Report.pdf"
+        },
+        {
+          "label": "Statement of Financial Information",
+          "url": "https://www.rdek.bc.ca/web/FinancialPlan/SofiDocument2020.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "Statement of Financial Information",
+        "sourceUrl": "https://www.rdek.bc.ca/web/FinancialPlan/SOFI_2025_-_signed.pdf",
+        "finalUrl": "https://www.rdek.bc.ca/web/FinancialPlan/SOFI_2025_-_signed.pdf",
+        "httpStatus": 200,
+        "sha256": "e09254560935598c3dba90e31cfb6245dab37fed49f7c2e597ed7ef0a34e5260",
+        "bytes": 3152895,
+        "physicalPages": 15,
+        "nativeTextCharacters": 41213,
+        "firstPageExcerpt": "REGIONAL DISTRICT OF EAST KOOTENAY Statement of Financial Information For the year ended December 31, 2025 (Unaudited)",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 5,
+            "textCharacters": 3531,
+            "excerpt": "As at December 31, 2025 Regional District of East Kootenay Director Remuneration and Expenses Name Position Remuneration Expenses ASHMORE Alternate Director Electoral Area 735 $ 580 $ BALDWIN Director Hospital District 925 278 $ BLISSETT Director Municipal 21,881 - $ CARAVETTA Alternate Director Electoral Area 1,750 808 $ CATHCART Director Hospital District 375 - $ CLOVECHOK Director Electoral Area 46,557 4,400 $ CSOKONAY Alternate Director Electoral Area 985 479 $ DAMSTROM Alternate Director Electoral Area 190 109 $ DOEHLE Director Electoral Area 44,531 2,184 $ DOHERTY Director Municipal 23,171 525 $ DOWNEY Alternate Director Electoral Area 745 - $ FAIRBAIRN Director Municipal 21,426 530 $ "
+          },
+          {
+            "physicalPage": 6,
+            "textCharacters": 4055,
+            "excerpt": "As at December 31, 2025 Regional District of East Kootenay Employee Remuneration and Expenses Name Position Remuneration Expenses ALTMANN Utilities Manager 118,962 $ 126 $ BARRON IT Manager 130,800 215 $ BARROS Building Supervisor 114,836 113 $ BATES GM of Development & Protective Services 155,794 - $ BERGEY Building Inspector 3 76,041 19 $ BOSE Operator 2 85,990 - $ BRADSHAW Deputy Corporate Officer 102,581 244 $ BUCCI Operator 3 115,984 - $ CARBREY Protective Services Manager 148,019 535 $ CARDER Arena Operator 2 122,351 190 $ COCHRANE Operator 2 102,095 - $ DAVIES General Manager of Operations 127,772 331 $ DE PAOLI* Environmental Services Foreman 91,095 - $ DOBBIN Assistant Fire Chief (C"
+          },
+          {
+            "physicalPage": 7,
+            "textCharacters": 2218,
+            "excerpt": "As at December 31, 2025 Regional District of East Kootenay Employee Remuneration and Expenses RONNQUIST* Chief Financial Officer 170,060 - $ SANDHU* Emergency Program Coordinator 108,025 428 $ SIEMENS Communications Coordinator 92,291 175 $ SINCLAIR Fire Chief (CV) 134,303 275 $ SMALLWOOD Emergency Program Coordinator 103,950 626 $ SMITH Engineering Services Manager 119,635 - $ SOPKOW Project Specialist 85,246 - $ TAMES Deputy Fire Chief (CV) 117,496 475 $ THOM Executive Assistant 86,415 158 $ THOMPSON GIS Coordinator 90,911 35 $ TOMLIN Chief Administrative Officer 233,103 1,116 $ VAN DE WIEL Planning Technician 2 88,120 - $ VOGT Senior IT Administrator 89,123 22 $ WEITZEL Deputy Chief Finan"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.rdek.bc.ca/departments/finance/",
+        "finalUrl": "https://www.rdek.bc.ca/departments/finance/",
+        "httpStatus": 200,
+        "bytes": 219460,
+        "sha256": "1f95861ce6df242c8d3ba68e4e58100a5bebfd4ec7774b73571ef1b2dea31b62"
+      }
+    },
+    {
+      "id": "regional-fraser-valley",
+      "name": "Fraser Valley Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.fvrd.ca/EN/main/government/financial-reporting.html",
+      "status": "official-archive-discovery-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Follow official financial-report and board-agenda archives to locate actual named employee schedule; do not infer absence from this navigation pass",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.fvrd.ca/EN/main/government/financial-reporting.html",
+        "finalUrl": "https://www.fvrd.ca/EN/main/government/financial-reporting.html",
+        "httpStatus": 200,
+        "bytes": 115757,
+        "sha256": "e1924e52cdcdade70d0398605b4b90487d0dcaf40c65de0d390427acd5aa5e41"
+      }
+    },
+    {
+      "id": "regional-fraser-fort-george",
+      "name": "Fraser-Fort George Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.rdffg.ca/FinancialServices",
+      "status": "official-archive-discovery-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Follow official financial-report and board-agenda archives to locate actual named employee schedule; do not infer absence from this navigation pass",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.rdffg.ca/FinancialServices",
+        "finalUrl": "https://www.rdffg.ca/FinancialServices",
+        "httpStatus": 200,
+        "bytes": 49392,
+        "sha256": "254f1a057792458f479ef84414367bd5d12690ed0af75c701f76bde9111be900"
+      }
+    },
+    {
+      "id": "regional-kitimat-stikine",
+      "name": "Kitimat-Stikine Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.rdks.bc.ca/services/financial_services",
+      "status": "official-archive-discovery-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Follow official financial-report and board-agenda archives to locate actual named employee schedule; do not infer absence from this navigation pass",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.rdks.bc.ca/services/financial_services",
+        "finalUrl": "https://www.rdks.bc.ca/services/financial_services",
+        "httpStatus": 200,
+        "bytes": 158297,
+        "sha256": "cb3758e184580c8e6d3ec097ad31544087fae9b1bd4f376094e6782d2f35920c"
+      }
+    },
+    {
+      "id": "regional-kootenay-boundary",
+      "name": "Kootenay Boundary Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://rdkb.com/Regional-Government/Organization/Finance",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2025 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2025.pdf"
+        },
+        {
+          "label": "2024 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2024.pdf"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2023.pdf"
+        },
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2022.pdf?ver=2023-08-21-151823-577"
+        },
+        {
+          "label": "2021 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2021.pdf"
+        },
+        {
+          "label": "2020 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2020.pdf?ver=2020-10-22-104232-003"
+        },
+        {
+          "label": "2019 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2019.pdf?ver=2020-10-22-104232-003"
+        },
+        {
+          "label": "2018 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2018.pdf?ver=2020-10-22-104254-033"
+        },
+        {
+          "label": "2017 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2017.pdf?ver=2020-10-22-104314-503"
+        },
+        {
+          "label": "2016 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2016.pdf?ver=2020-10-22-104340-800"
+        },
+        {
+          "label": "2015 Statement of Financial Information",
+          "url": "https://rdkb.com/Portals/0/Finance/SOFI2015.pdf?ver=2020-10-22-104405-223"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2025 Statement of Financial Information",
+        "sourceUrl": "https://rdkb.com/Portals/0/Finance/SOFI2025.pdf",
+        "finalUrl": "https://rdkb.com/Portals/0/Finance/SOFI2025.pdf",
+        "httpStatus": 200,
+        "sha256": "4e296d749888bc493914e8d2910c15f0d12bed4f1b43faa17ad15e9063ed0c1e",
+        "bytes": 239466,
+        "physicalPages": 17,
+        "nativeTextCharacters": 21581,
+        "firstPageExcerpt": "Regional District of Kootenay Boundary STATEMENT OF FINANCIAL INFORMATION DECEMBER 31, 2025 DRAFT",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 2,
+            "textCharacters": 372,
+            "excerpt": "CONTENTS • Approval • Schedule of Debt • Schedule of Guarantees and Indemnities • Schedule of Payments to Suppliers of Goods & Services • Schedule of Elected Official Remuneration & Expenses • Schedule of Employee Compensation & Expenses • Schedule of Severance Agreements Paid • Financial Statements for the year ending December 31, 2025 DRAFT"
+          },
+          {
+            "physicalPage": 3,
+            "textCharacters": 972,
+            "excerpt": "APPROVAL FOR THE YEAR ENDING DECEMBER 31, 2025 The following schedules of Debt, Guarantees and Indemnities, Remuneration and payments to suppliers for goods and services have been prepared by the staff of the Regional District of Kootenay Boundary from the accounting records of the District in compliance with the requirements of the Financial Information Act its associated regulations and directives. These schedules have been reviewed and approved by the Board of Directors of the Regional District of Kootenay Boundary. The undersigned, as authorized by the Financial Information Regulation, Schedule 1, subsection 9(2), approves all the statements and schedules included in this Statement of Fi"
+          },
+          {
+            "physicalPage": 11,
+            "textCharacters": 596,
+            "excerpt": "SCHEDULE OF ELECTED OFFICIAL REMUNERATION & EXPENSES FOR THE YEAR ENDING DECEMBER 31, 2025 The schedule of Director Remuneration and expenses is presented on a cash basis. This schedule does not reconcile to the financial statements of the Regional District of Kootenay Boundary which are based on accrual accounting. This schedule lists all amounts paid to individuals holding elected office on the Board of Directors of the Regional District of Kootenay Boundary during 2025. _______________________________ Farhad Hossain, MBA, MSC, CGMA, FCPA (Aust.) Chief Financial Officer DRAFT"
+          },
+          {
+            "physicalPage": 12,
+            "textCharacters": 1574,
+            "excerpt": "Regional District of Kootenay Boundary Schedule of Remuneration and Expenses: Elected Officials For the year ended December 31, 2025 Elected Official Position Remuneration Expenses Total Remuneration & Expenses BAKER, EVERETT City of Grand Forks Director 21,899 1,408 23,307 BOLT, JOHN City of Greenwood Director 3,486 516 4,002 DUNSDON, RICHARD Village of Midway Director 23,160 2,957 26,117 GIBBS, SHAREN Electoral Area ‘E’/West Boundary Director 48,930 22,651 71,581 GRIEVE, ALI Electoral Area 'A' Director 51,352 11,207 62,559 GUESFORD, CATHERINE Village of Fruitvale Director (Alternate) 432 - 432 LINTON, CHRISTINE Electoral Area 'D'/Rural Grand Forks Director (Alternate) 322 - 322 MARINO, FRA"
+          },
+          {
+            "physicalPage": 13,
+            "textCharacters": 1061,
+            "excerpt": "SCHEDULE OF EMPLOYEE REMUNERATION & EXPENSES FOR THE YEAR ENDING DECEMBER 31, 2025 The schedule of remuneration is presented on a cash basis. This schedule does not reconcile to the financial statements of the Regional District of Kootenay Boundary which are based on accrual accounting. This schedule lists amounts over $75,000 paid to individuals providing employment services for the Regional District of Kootenay Boundary during 2025. In accordance with the Financial Information Regulation (Schedule 1, Section 6), the Statement of Financial Information (SOFI) is prepared on a cash basis. Consequently, the figures in the schedule below reflect actual payments made during the calendar year (Ja"
+          },
+          {
+            "physicalPage": 14,
+            "textCharacters": 2733,
+            "excerpt": "Regional District of Kootenay Boundary Schedule of Remuneration and Expenses: Employees For the year ended December 31, 2025 Employee Title Remuneration Expenses Total Remuneration & Expenses ALDERSON, CLAYTON FIREFIGHTER 20TH YEAR 199,251 - 199,251 AMANTEA, GREGORY LANDFILL SUPERVISOR 89,414 215 89,629 ANDERSON, KRISTIN WATERSHED PLANNER 110,787 6,099 116,886 ANDISON, R. MARK CHIEF ADMINISTRATIVE OFFICER 236,594 11,399 247,993 ARNOTT, DOUGLAS BUILDING & PLUMBING OFFICIAL LEVEL 3 102,225 1,405 103,630 BARBER, ASHLEE CASHIER 76,776 - 76,776 BAULNE, CHELAN FIRE & EMERGENCY SERVICES ADMIN SUPPORT 79,275 423 79,698 BELLIVEAU, CONRAD CPCC OPERATOR 1 91,704 1,313 93,016 BELTON, BRIAN A ENV. COMMS "
+          },
+          {
+            "physicalPage": 15,
+            "textCharacters": 2716,
+            "excerpt": "Regional District of Kootenay Boundary Schedule of Remuneration and Expenses: Employees For the year ended December 31, 2025 Employee Title Remuneration Expenses Total Remuneration & Expenses GREEN, DALE ALAN MANAGER OF INFORMATION SERVICES 134,835 3,009 137,844 HAMILTON, ADRIAN BUILDING & PLUMBING OFFICIAL - LEVEL 2 99,746 3,577 103,323 HARDY, JEFFREY BUILDING MAINTENANCE 3/ELECTRICIAN FSR 98,305 292 98,596 HOODLE, ISABELLA LIFEGUARD INSTRUCTOR 3 75,335 2,092 77,427 HORNE, KEVIN RFA 3 - CHIEF ENGINEER 85,072 - 85,072 HOSSAIN, FARHAD GENERAL MANAGER OF FINANCE, CFO 180,761 9,180 189,941 HOUGHTON, RYAN HUMAN RESOURCES MANAGER 109,634 795 110,429 HURLEY, VIVIENNE COMMUNICATIONS OFFICER 101,005"
+          },
+          {
+            "physicalPage": 16,
+            "textCharacters": 1238,
+            "excerpt": "Regional District of Kootenay Boundary Schedule of Remuneration and Expenses: Employees For the year ended December 31, 2025 Employee Title Remuneration Expenses Total Remuneration & Expenses SCOTT, ADAM FF 2ND CLASS 136,340 - 136,340 SILVA, ROBERT BUILDING & PLUMBING OFFICIAL LEVEL 3 105,848 1,247 107,096 SMYTH, RYAN FIREFIGHTER - CAPTAIN 187,279 - 187,279 STEPHENS, MARK MANAGER OF EMERGENCY PROGRAMS 123,474 6,010 129,485 THORPE, ALISON GIS TECHNICIAN 79,499 1,030 80,529 TYSON, GRANT CAPTAIN 156,569 85 156,654 WALSH, ROCCO FF 2ND CLASS 122,923 425 123,348 WALKER, SARAH KEL PROGRAM SERVICES COORDINATOR 75,395 - 75,395 WHEATON, WADE EQUIPMENT OPERATOR 84,413 280 84,693 WIEBE, GABRIEL ENGINEER"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://rdkb.com/Regional-Government/Organization/Finance",
+        "finalUrl": "https://rdkb.com/Regional-Government/Organization/Finance",
+        "httpStatus": 200,
+        "bytes": 64789,
+        "sha256": "23347ccb95f7de02871b1dbd665ae9539b3baa60117eb35122d51e24d5fcf8d1"
+      }
+    },
+    {
+      "id": "regional-metro",
+      "name": "Metro Vancouver",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://metrovancouver.org/about-us/budgets-and-financial-plans",
+      "status": "accepted-employee-schedules-ready-for-build-integration",
+      "archiveLabelYears": [
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "Metro Vancouver 2022 SOFI: Schedule 2, employees",
+          "url": "https://metrovancouver.org/about-us/Documents/statement-financial-information-2022.pdf"
+        },
+        {
+          "label": "Metro Vancouver 2023 SOFI: Schedule 2, employees",
+          "url": "https://metrovancouver.org/about-us/Documents/statement-financial-information-2023.pdf"
+        },
+        {
+          "label": "Metro Vancouver 2024 SOFI: Schedule 2, employees",
+          "url": "https://metrovancouver.org/about-us/Documents/statement-financial-information-2024.pdf"
+        },
+        {
+          "label": "Metro Vancouver 2025 SOFI: Schedule 2, employees",
+          "url": "https://metrovancouver.org/about-us/Documents/statement-of-financial-information-2025.pdf"
+        }
+      ],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "existingCompiledOverlap": "Metro Vancouver existing compiled groups retained under unverified labels; no replacement inferred",
+      "nextAction": "Integrate and independently reproduce the four accepted employee cohorts; process governing-board/committee scope separately and extend earlier archive history",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://metrovancouver.org/about-us/budgets-and-financial-plans",
+        "finalUrl": "https://metrovancouver.org/about-us/budgets-and-financial-plans",
+        "httpStatus": 200,
+        "bytes": 198960,
+        "sha256": "52bc23b3d892980eace045ffd36d5a80f8448a26aa68533ceb66d72e1a4e28e7"
+      }
+    },
+    {
+      "id": "regional-mount-waddington",
+      "name": "Mount Waddington Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.rdmw.bc.ca/government/documents-resources/budget-finances/",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2024 RDMW Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/wp-content/uploads/2026/10/2024-RDMW-Statement-of-Financial-Information.pdf"
+        },
+        {
+          "label": "2023 RDMW Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/RDMW%20SOFI%20Report%20-%202023%20(1)%20Signed(1).pdf"
+        },
+        {
+          "label": "2022 RDMW Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2022%20SOFI%20Final%20.pdf"
+        },
+        {
+          "label": "2021 RDMW Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2021%20FINAL%20SOFI%20Statement%20of%20Financial%20Information%20SIGNED.pdf"
+        },
+        {
+          "label": "2021 MWRHD Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2021%20MWRHD%20Financial%20Statements.pdf"
+        },
+        {
+          "label": "2020 RDMW Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2020%2012%2031%20RDMW%20Financial%20Statements.pdf"
+        },
+        {
+          "label": "2020 MWRHD Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2020%2012%2031%20MWRHD%20Financial%20Statements.pdf"
+        },
+        {
+          "label": "2019 RDMW Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2019%20RDMW%20Financial%20Statement.pdf"
+        },
+        {
+          "label": "2019 MWRHD Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2019%20MWRHD%20Financial%20Statement.pdf"
+        },
+        {
+          "label": "2018 RDMW Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2018%20Statement%20of%20Financial%20Information(1).pdf"
+        },
+        {
+          "label": "2018 MWRHD Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2018%20MWRHD%20Financial%20Statement.pdf"
+        },
+        {
+          "label": "2017 RDMW Statement of Financial Information",
+          "url": "https://www.rdmw.bc.ca/media/2017%20RDMW%20SOFI.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2024 RDMW Statement of Financial Information",
+        "sourceUrl": "https://www.rdmw.bc.ca/wp-content/uploads/2026/10/2024-RDMW-Statement-of-Financial-Information.pdf",
+        "finalUrl": "https://www.rdmw.bc.ca/wp-content/uploads/2026/10/2024-RDMW-Statement-of-Financial-Information.pdf",
+        "httpStatus": 200,
+        "sha256": "688d0f36232260b2e31c4e81f9913d5b77fbe239d6f0a7ec830bb2994dae49ef",
+        "bytes": 496135,
+        "physicalPages": 12,
+        "nativeTextCharacters": 11064,
+        "firstPageExcerpt": "2024 STATEMENT OF FINANCIAL INFORMATION REGIONAL DISTRICT OF MOUNT WADDINGTON",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 3,
+            "textCharacters": 634,
+            "excerpt": "Regional District of Mount Waddington December 31, 2024 Schedule Page 1(1)(a) Statement of Assets and Liabilities 1 1(1)(b) Operational Statement – Part (a) Statement of Operations 2 1(1)(b) Operational Statement – Part (b) Statement of Changes in Financial Position 3 1(1)(c) Schedule of Debts 4 1(1)(d) Schedule of Guarantee and Indemnity 5 1(1)(e) Schedule of Employee Remuneration and Expense 6 - 7 1(1)(f) Schedule of Suppliers of Goods and Services 8 - 9"
+          },
+          {
+            "physicalPage": 9,
+            "textCharacters": 1678,
+            "excerpt": "REGIONAL DISTRICT OF MOUNT WADDINGTON Schedule of Employee Remuneration and Expenses Schedule 1(1)(e) Year Ended December 31, 2024 Section 6(2)(a) Schedule of Remuneration and Expenses for Elected Officials Elected Official Position Remuneration Expenses Hory, Andrew Chair, Electoral Director, Area B 30,455 $ 8,546 $ Pottage, Michelle Electoral Director, Area A 15,973 4,451 Wykes, Kathryn Electoral Director, Area C 14,482 3,325 Summers, David Electoral Director, Area D 15,547 3,404 Dugas, Dennis Municipal Director, Port Hardy 12,523 - Corbett-Labatt, Pat Municipal Director, Port Hardy 12,949 - Cameron, Kevin Municipal Director, Port Alice 12,736 220 Furney, James Municipal Director, Port McN"
+          },
+          {
+            "physicalPage": 10,
+            "textCharacters": 1167,
+            "excerpt": "REGIONAL DISTRICT OF MOUNT WADDINGTON Schedule of Employee Remuneration and Expenses (Continued)Schedule 1(1)(e) Year Ended December 31, 2024 Section 6(2)(b) Employees that Exceed $75,000 Employee Position Remuneration Expenses Kim, David Administrator 182,150 $ 3,492 $ Nicholson, Lisa Senior Finance Clerk 98,767 1,564 Tait, Dean Parks Supervisor 79,293 - Vanlerberg, David Chief Refrigeration Operator - Arena 94,323 200 454,533 $ 5,256 $ Section 6(2)(c) Remuneration Under $75,000 Total Remuneration Under $75,000 1,170,556 $ - $ Total Remuneration 1,766,716 $ 25,553 $ Section 6(2)(d) Variance from Statement of Operations Section 6(6) Employer Portion of Benefits CPP Cost 73,819 $ EI Cost 24,4"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.rdmw.bc.ca/government/documents-resources/budget-finances/",
+        "finalUrl": "https://www.rdmw.bc.ca/government/documents-resources/budget-finances/",
+        "httpStatus": 200,
+        "bytes": 3094274,
+        "sha256": "dbd6ae6ea3978a84f33a8209379f6b44f909f0a4db4a7e7a4362aed31f0ba030"
+      }
+    },
+    {
+      "id": "regional-nanaimo",
+      "name": "Nanaimo Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://rdn.bc.ca/financial-reports",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2025 Statement of Financial Information",
+          "url": "https://rdn.bc.ca/sites/default/files/2025%20Statement%20of%20Financial%20Information.pdf"
+        },
+        {
+          "label": "2024 Statement of Financial Information",
+          "url": "https://rdn.bc.ca/sites/default/files/inline-files/2024%20Statement%20of%20Financial%20Information_0.pdf"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://rdn.bc.ca/sites/default/files/inline-files/2023%20Statement%20of%20Financial%20Information%281%29.pdf"
+        },
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://rdn.bc.ca/sites/default/files/inline-files/2022%20Statement%20of%20Financial%20Information.pdf"
+        },
+        {
+          "label": "2021 Statement of Financial Information",
+          "url": "https://rdn.bc.ca/sites/default/files/inline-files/2021%20Statement%20of%20Financial%20Information.pdf"
+        },
+        {
+          "label": "2020 Statement of Financial Information",
+          "url": "https://rdn.bc.ca/sites/default/files/inline-files/2020%20Statement%20of%20Financial%20Information.pdf"
+        },
+        {
+          "label": "2019 Statement of Financial Information",
+          "url": "https://rdn.bc.ca/sites/default/files/inline-files/2019%20Statement%20of%20Financial%20Information_0.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2025 Statement of Financial Information",
+        "sourceUrl": "https://rdn.bc.ca/sites/default/files/2025%20Statement%20of%20Financial%20Information.pdf",
+        "finalUrl": "https://rdn.bc.ca/sites/default/files/2025%20Statement%20of%20Financial%20Information.pdf",
+        "httpStatus": 200,
+        "sha256": "8d69b470d80a6f7710a41328c2adc46aecd0ed51f6a93abf0d2556d4c62a3c3b",
+        "bytes": 4695296,
+        "physicalPages": 58,
+        "nativeTextCharacters": 184039,
+        "firstPageExcerpt": "2025 SããÃÄã Ê¥ F®ÄÄ®½ IÄ¥ÊÙÃã®ÊÄ FOR THE YEAR ENDED DECEMBER 31, 2025",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 2,
+            "textCharacters": 984,
+            "excerpt": "Page 1 2-3 4 5 6 7 8 9-26 27 28 29-31 32 33 34-42 43 44-53 CONSOLIDATED FINANCIAL STATEMENT SECTION MANAGEMENT REPORT FOR THE YEAR ENDED DECEMBER 31, 2025 INDEPENDENT AUDITOR'S REPORT CONSOLIDATED STATEMENT OF FINANCIAL POSITION CONSOLIDATED STATEMENT OF OPERATIONS CONSOLIDATED STATEMENT OF REMEASUREMENT GAINS AND LOSSES CONSOLIDATED STATEMENT OF CHANGE IN NET FINANCIAL ASSETS CONSOLIDATED STATEMENT OF CASH FLOWS NOTES TO CONSOLIDATED FINANCIAL STATEMENTS SCHEDULES AND REPORTS SCHEDULE OF GENERAL REVENUE FUND REVENUE AND EXPENSES LONG-TERM DEBT SUMMARY BY FUNCTION SCHEDULE OF LONG-TERM DEBT SCHEDULE OF GUARANTEE AND INDEMNITY AGREEMENTS SCHEDULE OF DIRECTORS REMUNERATION AND EXPENSES SCHEDUL"
+          },
+          {
+            "physicalPage": 36,
+            "textCharacters": 1885,
+            "excerpt": "FIR, Schedule 1, Section 6(2) Name Position Remuneration1 Expenses2 Mclean, S. Chair - Area H Director 67,127.07 $ 12,582.41 $ Stanley, J. Area A Director 57,463.58 6,441.44 Craig, V. Area B Director 109,330.46 10,143.18 Melanson, L. Area C Director 55,063.58 11,470.19 Rogers, R. Area E Director 57,584.78 8,865.88 Salter, L. Area F Director 57,224.78 7,948.72 Wallace, L. Area G Driector 54,523.58 7,882.30 Swain, M. Lantzville Director 26,557.51 74.06 Armstrong, S. Nanaimo Director 25,537.51 - Brown, T. Nanaimo Director 25,807.51 282.25 Geselbracht, B. Nanaimo Director 31,147.51 - Hemmens, E. Nanaimo Director 29,947.51 441.60 Krog, L. Nanaimo Director 27,097.51 - Manly, P. Nanaimo Director 28"
+          },
+          {
+            "physicalPage": 37,
+            "textCharacters": 4708,
+            "excerpt": "FIR, Schedule 1, Section 6 Employee Name Position Base Remuneration1 Emergency Remuneration2 Other Remuneration3 Total Remuneration Expenses4 Exempt Staff Ames, S. Fire Safety & Rescue Technician 72,948.33 4,513.47 1,868.55 79,330.35 8,301.96 Bajwa, S. Superintendent, Solid Waste Planning 133,767.65 - 993.33 134,760.98 9,921.55 Beauchamp, E. Manager, Emergency Services 149,941.51 12,059.21 2,616.66 164,617.38 2,714.86 Bender, R. Manager, Employee Health, Safety & Wellness 142,432.18 - 1,608.46 144,040.64 3,276.40 Benoit, I. Project Engineer 126,139.85 - 950.49 127,090.34 1,381.90 Birch, J. Chief Technology Officer 203,641.59 10,482.09 1,348.29 215,471.97 1,396.50 Boekenkruger, A. Manager, Bu"
+          },
+          {
+            "physicalPage": 38,
+            "textCharacters": 10093,
+            "excerpt": "FIR, Schedule 1, Section 6 Employee Name Position Base Remuneration1 Emergency Remuneration2 Other Remuneration3 Total Remuneration Expenses4 REGIONAL DISTRICT OF NANAIMO SCHEDULE OF EMPLOYEE REMUNERATION AND EXPENSES FOR THE YEAR ENDED DECEMBER 31, 2025 Mann, S. Chief Human Resources Officer 188,595.40 - 1,419.93 190,015.33 4,286.22 Marcellus, J. Superintendent Of Arena Services 125,191.36 - - 125,191.36 172.12 Marshall, D. Senior Manager, Transit Operations 175,001.14 8,586.14 1,344.09 184,931.37 4,912.44 Mathie, C. Project Engineer 134,431.60 - 1,022.28 135,453.88 2,702.11 Mcmullen, A. Superintendent, Parks Planning & Development 138,991.28 - 1,039.74 140,031.02 4,603.90 Mcmullen, M. Mana"
+          },
+          {
+            "physicalPage": 39,
+            "textCharacters": 11735,
+            "excerpt": "FIR, Schedule 1, Section 6 Employee Name Position Base Remuneration1 Emergency Remuneration2 Other Remuneration3 Total Remuneration Expenses4 REGIONAL DISTRICT OF NANAIMO SCHEDULE OF EMPLOYEE REMUNERATION AND EXPENSES FOR THE YEAR ENDED DECEMBER 31, 2025 CUPE Staff Alexander, C. Parks Technician 88,810.53 - 1,452.45 90,262.98 1,254.76 Allan, C. Serviceperson Driver 93,940.72 - 402.45 94,343.17 - Alyward, D. Serviceperson Driver 77,917.27 - 402.45 78,319.72 - Anderson, T. Arena Maintenance Worker 93,947.78 - 402.45 94,350.23 80.55 Badland, L. Serviceperson Driver 117,478.00 288.48 168.25 117,934.73 - Baildham, R. Building Official 2 96,035.54 - 402.45 96,437.99 862.65 Bains, K. Serviceperson "
+          },
+          {
+            "physicalPage": 40,
+            "textCharacters": 12002,
+            "excerpt": "FIR, Schedule 1, Section 6 Employee Name Position Base Remuneration1 Emergency Remuneration2 Other Remuneration3 Total Remuneration Expenses4 REGIONAL DISTRICT OF NANAIMO SCHEDULE OF EMPLOYEE REMUNERATION AND EXPENSES FOR THE YEAR ENDED DECEMBER 31, 2025 Catbagan, P. Chief Facilities Operator 87,822.74 259.20 1,067.45 89,149.39 3,039.10 Chavez, J. Serviceperson Driver 94,604.85 - 402.45 95,007.30 - Chays, C. Operator 3 102,178.44 - 402.45 102,580.89 2,026.06 Childs, M. Information Technologist 96,952.27 - 402.45 97,354.72 3,480.26 Choi, B. Serviceperson Driver 157,620.07 - - 157,620.07 - Christoffel, S. Accounting Services Coordinator 80,352.28 - 402.45 80,754.73 32.23 Churko, D. Engineering"
+          },
+          {
+            "physicalPage": 41,
+            "textCharacters": 11910,
+            "excerpt": "FIR, Schedule 1, Section 6 Employee Name Position Base Remuneration1 Emergency Remuneration2 Other Remuneration3 Total Remuneration Expenses4 REGIONAL DISTRICT OF NANAIMO SCHEDULE OF EMPLOYEE REMUNERATION AND EXPENSES FOR THE YEAR ENDED DECEMBER 31, 2025 Hamelin, B. Information Systems Technician 77,620.23 2,943.29 402.45 80,965.97 1,995.00 Hamilton, J. Serviceperson Driver 80,355.14 - 402.45 80,757.59 - Hann, E. Building Inspection Supervisor 99,400.45 197.40 402.45 100,000.30 4,278.76 Harris, K. Planner, Long-Range Planning 88,659.40 3,676.60 402.45 92,738.45 3,914.13 Harrison, W. Serviceperson Driver 92,446.12 - 693.25 93,139.37 - Harvey, A. Administrative Associate 75,477.33 4,867.64 837"
+          },
+          {
+            "physicalPage": 42,
+            "textCharacters": 11927,
+            "excerpt": "FIR, Schedule 1, Section 6 Employee Name Position Base Remuneration1 Emergency Remuneration2 Other Remuneration3 Total Remuneration Expenses4 REGIONAL DISTRICT OF NANAIMO SCHEDULE OF EMPLOYEE REMUNERATION AND EXPENSES FOR THE YEAR ENDED DECEMBER 31, 2025 Le, T. Payroll Coordinator 89,858.77 - 402.45 90,261.22 459.00 Legood, D. Serviceperson Driver 114,677.46 - 402.45 115,079.91 - Leier, G. Information Systems Technologist 88,488.14 - 402.45 88,890.59 2,205.75 Leigh, C. Serviceperson Driver 103,066.47 - 402.45 103,468.92 - Leland, R. Handydart Driver 112,336.51 - 402.45 112,738.96 - Lepoidevin, M. Serviceperson Driver 105,181.29 - 927.45 106,108.74 703.77 Lewis, C. Information Systems Technic"
+          },
+          {
+            "physicalPage": 43,
+            "textCharacters": 11988,
+            "excerpt": "FIR, Schedule 1, Section 6 Employee Name Position Base Remuneration1 Emergency Remuneration2 Other Remuneration3 Total Remuneration Expenses4 REGIONAL DISTRICT OF NANAIMO SCHEDULE OF EMPLOYEE REMUNERATION AND EXPENSES FOR THE YEAR ENDED DECEMBER 31, 2025 Padamadan, V. Operator 1, Wastewater 77,739.97 - 269.20 78,009.17 1,647.81 Parenteau, B. Handydart Driver 77,707.29 - 402.45 78,109.74 - Parker, W. Wastewater Operator 77,746.28 - 402.45 78,148.73 2,880.49 Parkin, A. Serviceperson Driver 77,321.03 - 402.45 77,723.48 - Patrickson, S. Legislative Services & Foipp Coordinator 88,730.91 - 402.45 89,133.36 2,669.34 Polman, A. Aquatic Team Leader 76,962.33 - 402.45 77,364.78 1,389.96 Poroliseanu, "
+          },
+          {
+            "physicalPage": 44,
+            "textCharacters": 8305,
+            "excerpt": "FIR, Schedule 1, Section 6 Employee Name Position Base Remuneration1 Emergency Remuneration2 Other Remuneration3 Total Remuneration Expenses4 REGIONAL DISTRICT OF NANAIMO SCHEDULE OF EMPLOYEE REMUNERATION AND EXPENSES FOR THE YEAR ENDED DECEMBER 31, 2025 Suhan, Z. Senior Operator 111,075.52 - 402.45 111,477.97 5,613.22 Syme, S. Special Projects Coordinator, Solid Waste 77,171.42 - 402.45 77,573.87 1,718.07 Tandoc, J. Arena Maintenance Worker 92,725.47 - 402.45 93,127.92 159.55 Thomas, N. Serviceperson Driver 85,810.16 - 402.45 86,212.61 - Thorne, J. Recreation Coordinator 83,211.12 - 402.45 83,613.57 1,739.81 Thornton, H. Serviceperson Driver 91,848.89 - 402.45 92,251.34 - Tomlinson, M. Wast"
+          },
+          {
+            "physicalPage": 45,
+            "textCharacters": 2313,
+            "excerpt": "FIR, Schedule 1, Section 6 REGIONAL DISTRICT OF NANAIMO SCHEDULE OF EMPLOYEE REMUNERATION AND EXPENSES FOR THE YEAR ENDED DECEMBER 31, 2025 1Base remuneration includes any form of salary, wages, gratuities, taxable benefits, payment into trust or any form of income deferral paid by the corporation to the employee or on behalf of the employee during the fiscal year being reported upon, whether or not such remuneration is reported under the Income Tax Act (Canada), but does not include anything payable under a severance agreement. 2 Emergency remuneration relate to incremental overtime wages paid for employees performing work directly related to response activites of an activated Emergency Ope"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://rdn.bc.ca/financial-reports",
+        "finalUrl": "https://rdn.bc.ca/financial-reports",
+        "httpStatus": 200,
+        "bytes": 425681,
+        "sha256": "d30e3b9053fc0753309809f8ca27bc79a5e6bcd5958d1b98cbb1ea2e4170b3b3"
+      }
+    },
+    {
+      "id": "regional-north-coast",
+      "name": "North Coast Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.ncrdbc.com/governance/corporate-finance/statement-financial-information-sofi",
+      "status": "ocr-and-full-verification-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2026.06.19_ncrd_2025_sofi.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2026.06.22_2024_sofi_updated.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2024.06.24_2023_sofi_final.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2023.06.26_2022_sofi_approved_june_23_2023.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2022.06.22_2021_sofi.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2020_ncrd_sofi_approved_july_16_2021_0.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2019_sofi_package_june_22.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2018_sofi_submission.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2017_sofi_report.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2016_sofi_submission.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/sofi_2015_online.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2014_sofi_report.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/sofi_report_2013.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/sofi_2012.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/sofi_report_2011.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/statement_of_financial_information_sofi_-_2010.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2009_sofi_report.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2008_sofi_report.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2007_sofi_report.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2006_sofi_report.pdf"
+        },
+        {
+          "label": "PDF",
+          "url": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2005_sofi_report.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "PDF",
+        "sourceUrl": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2026.06.19_ncrd_2025_sofi.pdf",
+        "finalUrl": "https://www.ncrdbc.com/sites/default/files/uploads/documents/2026.06.19_ncrd_2025_sofi.pdf",
+        "httpStatus": 200,
+        "sha256": "d5b036a2e82ccec695718bbff0e75097847f6d2dcb45f63da74600e153d844df",
+        "bytes": 4780531,
+        "physicalPages": 41,
+        "nativeTextCharacters": 0,
+        "firstPageExcerpt": "",
+        "remunerationPageCandidates": [],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Render original, OCR with independent readers, verify every named row, published period and component/control totals",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.ncrdbc.com/governance/corporate-finance/statement-financial-information-sofi",
+        "finalUrl": "https://www.ncrdbc.com/governance/corporate-finance/statement-financial-information-sofi",
+        "httpStatus": 200,
+        "bytes": 45266,
+        "sha256": "e2ac58759b3675a06237470a80ce07be20c2c531394ef31c42f40328fcc09fa6"
+      }
+    },
+    {
+      "id": "regional-north-okanagan",
+      "name": "North Okanagan Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.rdno.ca/rdno-services/financial-services/financial-reporting",
+      "status": "native-text-extraction-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2025 Statement of Financial Information",
+          "url": "https://www.rdno.ca/sites/default/files/2026-06/260617_RPT_SOFI_2025_signed.pdf"
+        },
+        {
+          "label": "2024 Statement of Financial Information",
+          "url": "https://www.rdno.ca/sites/default/files/2025-06/250618_RPT_SOFI_2024_signed.pdf"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://www.rdno.ca/sites/default/files/2024-06/240619_RPT_SOFI_signed.pdf"
+        },
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://www.rdno.ca/sites/default/files/2023-05/230509_RPT_SOFI_full_signed.pdf"
+        },
+        {
+          "label": "2021 Statement of Financial Information",
+          "url": "https://www.rdno.ca/sites/default/files/2022-05/2021_SOFI.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2025 Statement of Financial Information",
+        "sourceUrl": "https://www.rdno.ca/sites/default/files/2026-06/260617_RPT_SOFI_2025_signed.pdf",
+        "finalUrl": "https://www.rdno.ca/sites/default/files/2026-06/260617_RPT_SOFI_2025_signed.pdf",
+        "httpStatus": 200,
+        "sha256": "4cafa9fed14841bb8d190ae0b6b28c534cf1212566f2189a0f716b51d53063af",
+        "bytes": 3888487,
+        "physicalPages": 13,
+        "nativeTextCharacters": 43047,
+        "firstPageExcerpt": "o REGIONAL DISTRICT NORTH OKANAGAN STAFF REPORT TO: Board of Directors File No: 1830.2025 FROM: Finance Department Date: June 17, 2026 SUBJECT: 2025 Statement of Financial Information RECOMMENDATION: That the 2025 Statement of Financial Information be approved. SUMMARY: The Financial Information Act (FIA) is provincial legislation that requires corporations, including local governments, to annually prepare the following statements and schedules of financial information: 1. a statement of assets ",
+        "remunerationPageCandidates": [
+          {
+            "physicalPage": 1,
+            "textCharacters": 3608,
+            "excerpt": "o REGIONAL DISTRICT NORTH OKANAGAN STAFF REPORT TO: Board of Directors File No: 1830.2025 FROM: Finance Department Date: June 17, 2026 SUBJECT: 2025 Statement of Financial Information RECOMMENDATION: That the 2025 Statement of Financial Information be approved. SUMMARY: The Financial Information Act (FIA) is provincial legislation that requires corporations, including local governments, to annually prepare the following statements and schedules of financial information: 1. a statement of assets and liabilities; 2. an operational statement; 3. a schedule of debts; 4. a schedule of guarantee and indemnity agreements; 5. a schedule showing the total remuneration paid to and the total expenses p"
+          },
+          {
+            "physicalPage": 2,
+            "textCharacters": 5307,
+            "excerpt": "Report to: Board of Directors From: Finance Department Re: 2025 Statement of Financial Information File No.: 1830.2025 Date: June 17, 2026 Page 2 of 3 DISCUSSION: The remuneration amounts disclosed in the Statement of Financial Information (SOFI) report for employees (Schedule 4) include salaries and wages, overtime pay, statutory holiday pay, payouts of vacation and sick time, as well as taxable benefits. The following table is a year-over-year comparison of the changes in overall employee remuneration. This table does not include elected officials. Employees >75,000 Employees <75,000 Volunteer Firefighters Number of Employees 2025 2024 Increase/ (Decrease) 62 64 96 48 14 87 (23) 85 11 222 "
+          },
+          {
+            "physicalPage": 3,
+            "textCharacters": 1915,
+            "excerpt": "Report to: Board of Directors From: Finance Department Re: 2025 Statement of Financial Information File No.: 1830.2025 Date: June 17, 2026 Page 3 of 3 LEGAL/STATUTORY PROCEDURAL REQUIREMENTS: The Financial Information Act requires various financial information to be prepared annually in addition to the annual financial statements. The Statement of Financial Information must be approved by both the Board of Directors and the Financial Officer. The Financial Information Regulation sets out the detailed requirements, as well as reporting thresholds for the schedules that accompany the financial statements. For instance, the regulation sets out the $25,000 reporting threshold for suppliers and t"
+          },
+          {
+            "physicalPage": 6,
+            "textCharacters": 4407,
+            "excerpt": "SCHEDULE 3 REGIONAL DISTRICT OF NORTH OKANAGAN 2025 Schedule of Board of Directors and Alternate Directors Remuneration and Expenses (pursuant to Section 377 of the Local Government Act and BC Regulation 371/93 of the Financial Information Act) Board Members Position Area Remuneration Expenses ACTON, Kevin Director Village of Lumby $ 17,532 $ COCHRANE, Patrick Alt. Director District of Coldstream 240 COUCH, Todd Alt. Director Electoral Area \"F\" 1,920 CUMMING, Victor Director City of Vernon 24,348 DURNING, Teresa Alt. Director City of Vernon 7,296 FAIRBAIRN, Patrick Director Electoral Area \"D\" 39,780 11,073 FEHR, Kelly Alt. Director City of Vernon 15,487 - FLEMING, Robert Director Electoral A"
+          },
+          {
+            "physicalPage": 7,
+            "textCharacters": 5819,
+            "excerpt": "SCHEDULE 4 REGIONAL DISTRICT OF NORTH OKANAGAN 2025 Schedule of Employee Remuneration & Expenses (pursuant to BC Regulation 371/93 - Financial Information Regulation, Schedule 1, Section 6) Employee Position Remuneration Expenses AFFLECK, Andy Manager, Parks & Recreation $ 119,718 $ 4,696 BANMEN, Stephen General Manager, Finance 191,753 2,652 BECKETT, Jemma Water Supply & Treatment Operator II 99,736 871 BERNDT, Kimberley Engineering Technician, Utilities 77,620 127 BETZ, Nathan FireSmart Coordinator 81,877 2,953 BEVAN, Ashley Deputy Corporate Officer 101,199 5,599 BRETT, Tricia Manager, Water Quality 121,855 1,645 CANNON, Christopher Water Quality Technician 77,404 440 CIMON, Caroline Water"
+          },
+          {
+            "physicalPage": 8,
+            "textCharacters": 4613,
+            "excerpt": "Employee Position Remuneration Expenses NELSON, Tannis Manager, Culture & Community Services 121,855 401 PARKER, Keiko Manager, Small Utilities 111,349 682 PEDE, Gary Systems Analyst (SCADA) 105,163 1,851 PHILLIPS, Michael Engineering Technologist 87,845 535 RADU, David Water Supply & Treatment Operator II 98,420 2,139 RAFTUS, Stacey Communications Officer 81,130 595 RIEMER, Lance Building Inspector II 93,428 1,966 ROUTLEY, Gregory Planning Manager 122,458 1,175 SARIC, Jozo Water Supply & Treatment Operator II 92,023 2,206 SCHEPERS, Aaron Electrical Instrumentation Technician 106,783 62 SCHRAUWEN, Lisa Executive Assistant, Utilities 80,009 2,313 SCHULZ, Nicolas Assistant Manager, Environment"
+          }
+        ],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Open employee remuneration schedules, confirm internal calendar period, disclosure threshold, benefits/expense definitions and jurisdiction; independently reproduce named rows before importing",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.rdno.ca/rdno-services/financial-services/financial-reporting",
+        "finalUrl": "https://www.rdno.ca/rdno-services/financial-services/financial-reporting",
+        "httpStatus": 200,
+        "bytes": 193034,
+        "sha256": "286c8d0418cd7097f84d1d86b0b5847ebcced00042fae00c87e0e8217b66b1ad"
+      }
+    },
+    {
+      "id": "regional-okanagan-similkameen",
+      "name": "Okanagan-Similkameen Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.rdos.bc.ca/finance/budget-and-financial-statements/",
+      "status": "ocr-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2025 SOFI Report",
+          "url": "https://www.rdos.bc.ca/assets/Uploads/2025-Statement-of-Financial-Information-FINAL.pdf"
+        },
+        {
+          "label": "2024 SOFI Report",
+          "url": "https://www.rdos.bc.ca/assets/FINANCE/Financial-Statements/2024-SOFI-Report-FINAL-SIGNED.pdf"
+        },
+        {
+          "label": "2023 SOFI Report",
+          "url": "https://www.rdos.bc.ca/assets/COMMS-2024/20240619-2023-Statement-of-Financial-Information.pdf"
+        },
+        {
+          "label": "2022 SOFI Report",
+          "url": "https://www.rdos.bc.ca/assets/FINANCE/Financial-Statements/RDOS-2022-SOFI-Report.pdf"
+        },
+        {
+          "label": "2021 SOFI Report",
+          "url": "https://www.rdos.bc.ca/assets/FINANCE/Financial-Statements/RDOS-2021-SOFI-Final.pdf"
+        },
+        {
+          "label": "2020 SOFI Report",
+          "url": "https://www.rdos.bc.ca/assets/FINANCE/Financial-Statements/2020-Statement-of-Financial-Information.pdf"
+        },
+        {
+          "label": "2019 SOFI Report",
+          "url": "https://www.rdos.bc.ca/assets/FINANCE/Budget/2019/RDOS-SOFI-2019-signed.pdf"
+        },
+        {
+          "label": "2018 SOFI Report",
+          "url": "https://www.rdos.bc.ca/assets/FINANCE/Budget/2018/2018SOFIReport.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "2025 SOFI Report",
+        "sourceUrl": "https://www.rdos.bc.ca/assets/Uploads/2025-Statement-of-Financial-Information-FINAL.pdf",
+        "finalUrl": "https://www.rdos.bc.ca/assets/Uploads/2025-Statement-of-Financial-Information-FINAL.pdf",
+        "httpStatus": 200,
+        "sha256": "ed2a81f6641b623d0037eb5a4c236b18a5b5dff368fe47d355385ab6a2dcc7d9",
+        "bytes": 7550951,
+        "physicalPages": 14,
+        "nativeTextCharacters": 0,
+        "firstPageExcerpt": "",
+        "remunerationPageCandidates": [],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Render original, OCR with independent readers, verify every named row, published period and component/control totals",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.rdos.bc.ca/finance/budget-and-financial-statements/",
+        "finalUrl": "https://www.rdos.bc.ca/finance/budget-and-financial-statements/",
+        "httpStatus": 200,
+        "bytes": 30254,
+        "sha256": "e867230ad7f8263d46cc9f89e24253a8b072f301bdbe74bb3738702b8b873e92"
+      }
+    },
+    {
+      "id": "regional-peace-river",
+      "name": "Peace River Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.prrd.bc.ca/our-government/budgets-and-finances/",
+      "status": "official-archive-discovery-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Follow official financial-report and board-agenda archives to locate actual named employee schedule; do not infer absence from this navigation pass",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.prrd.bc.ca/our-government/budgets-and-finances/",
+        "finalUrl": "https://www.prrd.bc.ca/our-government/budgets-and-finances/",
+        "httpStatus": 200,
+        "bytes": 80056,
+        "sha256": "0b77fa2e433aea550c582ef43047b79ae845c21bd5bff4235907d0e9685a1526"
+      }
+    },
+    {
+      "id": "regional-qathet",
+      "name": "qathet Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://qathet.ca/about/finance/financial-statements/",
+      "status": "ocr-and-full-verification-needed",
+      "archiveLabelYears": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "qathet Regional District 2025",
+          "url": "https://qathet.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information-signed.pdf"
+        },
+        {
+          "label": "qathet Regional District 2024",
+          "url": "https://qathet.ca/wp-content/uploads/2026/07/2024-Statement-of-Financial-Information-signed.pdf"
+        },
+        {
+          "label": "qathet Regional District 2023",
+          "url": "https://qathet.ca/wp-content/uploads/2026/07/2023-Statement-of-Financial-Information-signed.pdf"
+        }
+      ],
+      "sampleOriginal": {
+        "indexLabel": "qathet Regional District 2025",
+        "sourceUrl": "https://qathet.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information-signed.pdf",
+        "finalUrl": "https://qathet.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information-signed.pdf",
+        "httpStatus": 200,
+        "sha256": "2f34d7677ce3d924452ce0e1cf6841a0f15555f4e8d45d84a81ae4873c2ad7ad",
+        "bytes": 2133815,
+        "physicalPages": 45,
+        "nativeTextCharacters": 0,
+        "firstPageExcerpt": "",
+        "remunerationPageCandidates": [],
+        "status": "downloaded-not-accepted"
+      },
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Render original, OCR with independent readers, verify every named row, published period and component/control totals",
+      "procurementRoute": "No request needed for located originals; pursue missing historical PDFs or original spreadsheets through routine finance/archive inquiry only after index/agenda search",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://qathet.ca/about/finance/financial-statements/",
+        "finalUrl": "https://qathet.ca/about/finance/financial-statements/",
+        "httpStatus": 200,
+        "bytes": 191081,
+        "sha256": "6688cd833d0fbc49e90decdc93924fb3f4cdc8c1992deff505ca91229424cbd2"
+      }
+    },
+    {
+      "id": "regional-squamish-lillooet",
+      "name": "Squamish-Lillooet Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.slrd.bc.ca/services/financial-services/financial-plans-statements",
+      "status": "official-archive-discovery-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Follow official financial-report and board-agenda archives to locate actual named employee schedule; do not infer absence from this navigation pass",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.slrd.bc.ca/services/financial-services/financial-plans-statements",
+        "finalUrl": "https://www.slrd.bc.ca/services/financial-services/financial-plans-statements",
+        "httpStatus": 200,
+        "bytes": 185500,
+        "sha256": "3f3f779bbf57f42b3d3e0ff732b8cb0905c5b778ca50a9ca26234a00699a6f72"
+      }
+    },
+    {
+      "id": "regional-strathcona",
+      "name": "Strathcona Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.srd.ca/government/financial-resources/annual-reports",
+      "status": "official-archive-discovery-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Follow official financial-report and board-agenda archives to locate actual named employee schedule; do not infer absence from this navigation pass",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.srd.ca/government/financial-resources/annual-reports",
+        "finalUrl": "https://www.srd.ca/government/financial-resources/annual-reports",
+        "httpStatus": 200,
+        "bytes": 76364,
+        "sha256": "4fa56e38d84423d0f5fefd7a411ebc5a0d5eaa7ad7d70d7f6b5ed9a88a8ebafa"
+      }
+    },
+    {
+      "id": "regional-sunshine-coast",
+      "name": "Sunshine Coast Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.scrd.ca/finance/",
+      "status": "official-archive-discovery-needed",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Follow official financial-report and board-agenda archives to locate actual named employee schedule; do not infer absence from this navigation pass",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.scrd.ca/finance/",
+        "finalUrl": "https://www.scrd.ca/finance/",
+        "httpStatus": 200,
+        "bytes": 135134,
+        "sha256": "2821f4c138d90b13f41061b98d2329ca6bbfec4ade56a738e345d0c0b6b11733"
+      }
+    },
+    {
+      "id": "regional-thompson-nicola",
+      "name": "Thompson-Nicola Regional District",
+      "governanceType": "regional-district",
+      "includedInMunicipal161Denominator": false,
+      "sourceIndexUrl": "https://www.tnrd.ca/financial-reports/",
+      "status": "official-cdn-originals-located-main-site-retrieval-blocked",
+      "archiveLabelYears": [],
+      "archiveYearsVerifiedAgainstOriginal": [],
+      "indexedDocuments": [
+        {
+          "label": "2020 Statement of Financial Information",
+          "url": "https://wpcdn.tnrd.ca/wp-content/uploads/2021/07/17134304/2020-TNRD-SOFI-Report.pdf"
+        },
+        {
+          "label": "2019 Statement of Financial Information",
+          "url": "https://wpcdn.tnrd.ca/wp-content/uploads/2020/09/17134929/TNRD-2019-SOFI-Report.pdf"
+        },
+        {
+          "label": "2024 final SOFI availability notice",
+          "url": "https://wpcdn.tnrd.ca/wp-content/uploads/2025/06/12100101/2024-SOFI-Ad-for-distribution-Final.pdf"
+        }
+      ],
+      "sampleOriginal": null,
+      "existingAcceptedOfficialYears": [],
+      "existingCompiledOverlap": "No employer-level app identity or source equivalence inferred in this discovery pass",
+      "nextAction": "Retry financial-reports index through browser or direct official CDN; verify final adopted2024/25 schedules, then extract historical2019/20 originals. HTTP403 is not evidence the reports are unavailable.",
+      "procurementRoute": "Archive navigation/retrieval first; routine finance/archive inquiry if original cannot be located; formal FOI is a fallback, not yet shown necessary",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.tnrd.ca",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    }
+  ],
+  "policeEmployers": [
+    {
+      "id": "abbotsford-police",
+      "sourceIndexUrl": "https://www.abbypd.ca/",
+      "status": "routine-records-inquiry-candidate-after-board-archive-review",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.abbypd.ca/blog/proactive-disclosure",
+        "finalUrl": "https://www.abbypd.ca/",
+        "httpStatus": 200,
+        "bytes": 14910,
+        "sha256": "8601067ee6ac56ed27649bff97c3e5e4df0a919604c3bafabdff3161e2e2ee8b"
+      }
+    },
+    {
+      "id": "central-saanich-police",
+      "sourceIndexUrl": "https://www.cspolice.ca/who-we-are/police-board",
+      "status": "routine-records-inquiry-candidate-after-board-archive-review",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.cspolice.ca/who-we-are/police-board",
+        "finalUrl": "https://www.cspolice.ca/who-we-are/police-board",
+        "httpStatus": 200,
+        "bytes": 58366,
+        "sha256": "7e69595a7ade417a297c2d93f59fe43339e3748fee47e45249e5a7270bd03655"
+      },
+      "scopeEvidence": {
+        "sourceUrl": "https://pub-centralsaanich.escribemeetings.com/filestream.ashx?DocumentId=22018",
+        "finding": "2024 municipal SOFI employee schedules exclude Police Board; police board governance page is not a workforce salary schedule."
+      }
+    },
+    {
+      "id": "delta-police",
+      "sourceIndexUrl": "https://www.deltapolice.ca/about/ourteam/policeboard",
+      "status": "routine-records-inquiry-candidate-after-board-archive-review",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.deltapolice.ca/about/ourteam/policeboard",
+        "finalUrl": "https://www.deltapolice.ca/about/ourteam/policeboard",
+        "httpStatus": 200,
+        "bytes": 37512,
+        "sha256": "d7cf88c98af009674b5b35153d363074cbb3c8b936a343b7858031555521876d"
+      }
+    },
+    {
+      "id": "metro-vancouver-transit-police",
+      "sourceIndexUrl": "https://www.translink.ca/about-us/accountability",
+      "status": "official-translink-subsidiary-schedule-processing-needed",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": true,
+      "indexedDocuments": [
+        {
+          "label": "2025 Financial Information Act filing, TransLink Security Management Ltd employees physical pages214–220",
+          "url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+        },
+        {
+          "label": "FOI release archive lists2016-362 Remuneration2014",
+          "url": "https://transitpolice.ca/news/published-foi-requests/"
+        }
+      ],
+      "nextAction": "Use crown-agent source inventory and original2024/25 TransLink PDF hashes. Extract security/police subsidiary cohort, distinguish governing board and other subsidiaries, then resolve both compiler employer identities using complete records and scope evidence.",
+      "procurementRoute": "Process located official originals first; no new records request needed for2024/25.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://transitpolice.ca/news/published-foi-requests/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "identityWarning": "metro-vancouver-transit-police182 compiled2017/18 rows overlaps transit-police156 compiled2017/18 rows. transit-police also209 rows2020/21 and233 rows2023/24. Shared branding does not establish same complete observation group; preserve all compiled rows pending source equivalence."
+    },
+    {
+      "id": "nelson-police",
+      "sourceIndexUrl": "https://www.nelson.ca/650/Board-Meeting-Information",
+      "status": "routine-records-inquiry-candidate-after-board-archive-review",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.nelson.ca/650/Board-Meeting-Information",
+        "finalUrl": "https://www.nelson.ca/650/Board-Meeting-Information",
+        "httpStatus": 200,
+        "bytes": 92379,
+        "sha256": "02537d661e234936864b07cefc3c2843fad960b8accba016eecc0f1eda08cf76"
+      },
+      "scopeEvidence": {
+        "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=167",
+        "finding": "2020 reconciliation explicitly states remuneration schedule excludes Nelson Police Department."
+      }
+    },
+    {
+      "id": "new-west-police",
+      "sourceIndexUrl": "https://www.nwpolice.org/services/freedom-of-information/",
+      "status": "routine-records-inquiry-candidate-after-board-archive-review",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.nwpolice.org/services/freedom-of-information/",
+        "finalUrl": "https://www.nwpolice.org/services/freedom-of-information/",
+        "httpStatus": 200,
+        "bytes": 70952,
+        "sha256": "0c30e94bcda0ea4629998059c8d0cd429665cc578a193079b96767402b0bc286"
+      },
+      "scopeEvidence": {
+        "sourceUrl": "https://www.newwestcity.ca/city_hall/finance-taxes-and-budgets/financial-reporting/articles/8133.php",
+        "repositoryEvidence": "research/salaries/municipal-lower-mainland/README.md",
+        "finding": "Accepted City SOFI scope excludes sworn police; check civilian payroll overlap separately."
+      }
+    },
+    {
+      "id": "oak-bay-police",
+      "sourceIndexUrl": "https://oakbaypolice.org/help/freedom-of-information/",
+      "status": "routine-records-inquiry-candidate-after-board-archive-review",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://oakbaypolice.org/help/freedom-of-information/",
+        "finalUrl": "https://oakbaypolice.org/help/freedom-of-information/",
+        "httpStatus": 200,
+        "bytes": 101033,
+        "sha256": "3504b3ee992ff5039b637ff6e12f0645f9ab5e261d86ec0348241b1858607a47"
+      },
+      "scopeEvidence": {
+        "sourceUrl": "https://www.oakbay.ca/wp-content/uploads/2025/06/DOB_2024AnnualReport.pdf",
+        "finding": "2024 annual-report remuneration schedule printed page106 excludes Oak Bay Police Department employees."
+      }
+    },
+    {
+      "id": "port-moody-police",
+      "sourceIndexUrl": "https://www.portmoodypolice.com/services-and-programs/freedom-of-information/",
+      "status": "routine-records-inquiry-candidate-after-board-archive-review",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.portmoodypolice.com/services-and-programs/freedom-of-information/",
+        "finalUrl": "https://www.portmoodypolice.com/services-and-programs/freedom-of-information/",
+        "httpStatus": 200,
+        "bytes": 52972,
+        "sha256": "dcb4e7b3b08a3690112580be91c6ed04369d9509a24aa00746a5da6d987ce1be"
+      }
+    },
+    {
+      "id": "saanich-police",
+      "sourceIndexUrl": "https://saanichpolice.ca/our-organization/saanich-police-board/code-of-conduct/",
+      "status": "board-only-original-located-workforce-original-still-needed",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [
+        {
+          "label": "Saanich Police Board Schedule of Remuneration 2024",
+          "url": "https://saanichpolice.ca/wp-content/uploads/2025/07/Saanich-Police-Board-Schedule-of-Remuneration.pdf"
+        },
+        {
+          "label": "SPB Board Remuneration Policy",
+          "url": "https://saanichpolice.ca/wp-content/uploads/2026/07/SPB-Board-Remuneration-Honorarium-Policy-1.7.1-April-14-2026.pdf"
+        }
+      ],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://saanichpolice.ca/our-organization/saanich-police-board/code-of-conduct/",
+        "finalUrl": "https://saanichpolice.ca/our-organization/saanich-police-board/code-of-conduct/",
+        "httpStatus": 200,
+        "bytes": 226487,
+        "sha256": "65cf83bcbb26386f226c10ce942ebe1431b77b348ea7cf5e0c478c7841d57ca9"
+      },
+      "scopeEvidence": {
+        "sourceUrl": "https://saanich.ca.granicus.com/MetaViewer.php?clip_id=751&meta_id=57265&view_id=1",
+        "finding": "Municipal employee schedule excludes police; Police Board Schedule of Remuneration2024 is a governing-board report, not workforce coverage."
+      }
+    },
+    {
+      "id": "surrey-police",
+      "sourceIndexUrl": "https://surreypolice.ca/information-and-privacy",
+      "status": "routine-records-inquiry-candidate-after-board-archive-review",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://surreypolice.ca/information-and-privacy",
+        "finalUrl": "https://surreypolice.ca/information-and-privacy",
+        "httpStatus": 200,
+        "bytes": 43493,
+        "sha256": "c6f7973cdbc854e7a58f4848c2805f9b66afc5a23d18ac2f4142d17b864db3e6"
+      },
+      "scopeEvidence": {
+        "sourceUrl": "https://www.surrey.ca/sites/default/files/media/documents/2021SurreyStatementFinancialInformation.pdf",
+        "finding": "2021 City SOFI explicitly excludes Surrey Police Service. Exclude United Kingdom Surrey Police results entirely."
+      }
+    },
+    {
+      "id": "transit-police",
+      "sourceIndexUrl": "https://www.translink.ca/about-us/accountability",
+      "status": "official-translink-subsidiary-schedule-processing-needed",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": true,
+      "indexedDocuments": [
+        {
+          "label": "2025 Financial Information Act filing, TransLink Security Management Ltd employees physical pages214–220",
+          "url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+        },
+        {
+          "label": "FOI release archive lists2016-362 Remuneration2014",
+          "url": "https://transitpolice.ca/news/published-foi-requests/"
+        }
+      ],
+      "nextAction": "Use crown-agent source inventory and original2024/25 TransLink PDF hashes. Extract security/police subsidiary cohort, distinguish governing board and other subsidiaries, then resolve both compiler employer identities using complete records and scope evidence.",
+      "procurementRoute": "Process located official originals first; no new records request needed for2024/25.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://transitpolice.ca/news/published-foi-requests/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "identityWarning": "metro-vancouver-transit-police182 compiled2017/18 rows overlaps transit-police156 compiled2017/18 rows. transit-police also209 rows2020/21 and233 rows2023/24. Shared branding does not establish same complete observation group; preserve all compiled rows pending source equivalence."
+    },
+    {
+      "id": "vancouver-police",
+      "sourceIndexUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+      "status": "staff-originals-and-executive-series-located-ocr-and-scope-review-needed",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": true,
+      "indexedDocuments": [
+        {
+          "label": "2025 VPD Executive Remuneration",
+          "url": "https://vpd.ca/wp-content/uploads/2026/05/foi-2025-vpd-executive-remuneration.pdf"
+        },
+        {
+          "label": "VPD Executive Remuneration and Expenses for 2024",
+          "url": "https://vpd.ca/wp-content/uploads/2025/04/foi-2024-vpd-executive-remuneration.pdf"
+        },
+        {
+          "label": "Vancouver Police Executive Remuneration and Expenses for 2023",
+          "url": "https://vpd.ca/wp-content/uploads/2024/04/vancouver-police-executive-remuneration-and-expenses-2023.pdf"
+        },
+        {
+          "label": "Vancouver Police Executive Remuneration and Expenses for 2022",
+          "url": "https://vpd.ca/wp-content/uploads/2023/03/vancouver-police-executive-remuneration-and-expenses-2022.pdf"
+        },
+        {
+          "label": "Vancouver Police Executive Remuneration and Expenses for 2021",
+          "url": "https://vpd.ca/wp-content/uploads/2022/03/2021Dec31-VPB-Executive-Remuneration-Expenses.pdf"
+        },
+        {
+          "label": "Executive Remuneration and Expenses for 2020",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/vpd-executive-remuneration-and-expenses-2020.pdf"
+        },
+        {
+          "label": "2019 Executive Remuneration and Expenses",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/2019-executive-remuneration-and-expenses.pdf"
+        },
+        {
+          "label": "2018 VPD Executive Remuneration and Expenses",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/2018-executive-remuneration-and-expenses.pdf"
+        },
+        {
+          "label": "2017 VPD Executive Remuneration and Expenses",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/2017-executive-remuneration-and-expenses.pdf"
+        },
+        {
+          "label": "2016 VPD Executive Remuneration",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/2016-executive-remuneration.pdf"
+        },
+        {
+          "label": "2015 VPD Executive Remuneration",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/2015-vpd-executive-remuneration-1.pdf"
+        },
+        {
+          "label": "2014 VPD Executive Remuneration",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/2014-vpd-executive-remuneration-1.pdf"
+        },
+        {
+          "label": "VPD Staff 2013 Remuneration",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/2014-vpd-staff-remuneration-1.pdf"
+        },
+        {
+          "label": "VPD Staff 2012 Remuneration",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/2012-employee-remuneration-1.pdf"
+        },
+        {
+          "label": "VPD Staff 2009 Remuneration and Expenses",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/foi-2009-remuneration-and-expenses-names-1.pdf"
+        },
+        {
+          "label": "VPD Staff with Salaries $75,000 and Above",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/foi-vpd-salaries-all-75000-and-above-1.pdf"
+        },
+        {
+          "label": "2009 VPD Salaries",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/foi-vpd-executive-salaries-1.pdf"
+        },
+        {
+          "label": "2008 VPD Salaries and Expenses",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/foi-2008-remuneration-1.pdf"
+        },
+        {
+          "label": "VPD Executive Salaries",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/foi-executive-salaries-1.pdf"
+        },
+        {
+          "label": "2007 VPD Salaries over $75,000",
+          "url": "https://vpd.ca/wp-content/uploads/2021/06/foi-salaries-75k-plus-1.pdf"
+        }
+      ],
+      "nextAction": "OCR staff2009/2012 originals and inspect all original rendering/redactions. Native staff2013 PDF has many unnamed constable rows; retain only disclosed named individuals if period/scope and controls can be verified. Verify period from original/report reply, not its2021 upload path or2014 filename. Process executive2014–25 as executive-only, never claim whole workforce coverage.",
+      "procurementRoute": "Located published originals need processing. After archive review, seek re-release/native versions of missing workforce years through published FOI route; do not seek to reconstruct withheld identities.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+        "finalUrl": "https://vpd.ca/about-the-vpd/published-freedom-of-information-requests/",
+        "httpStatus": 200,
+        "bytes": 397291,
+        "sha256": "25b016134e68fca3e66f624eda4bed999c5520b43ccc2e867072b51c9e73619c"
+      },
+      "archiveStaffLabels": [
+        "2007",
+        "2008",
+        "2009",
+        "2012",
+        "2013"
+      ],
+      "archiveExecutiveLabels": [
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "downloadedOriginals": [
+        {
+          "archiveLabelYear": "2013",
+          "periodVerifiedFromOriginal": false,
+          "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2014-vpd-staff-remuneration-1.pdf",
+          "sha256": "8c31258279665236ee5f0095be41e3a7fd08a3d8c902995dfd3701145d073a2b",
+          "bytes": 556363,
+          "physicalPages": 43,
+          "nativeTextCharacters": 95578,
+          "unresolved": "Source period and scope require original/report correspondence review; archive label alone does not establish every row date."
+        },
+        {
+          "archiveLabelYear": "2012",
+          "periodVerifiedFromOriginal": false,
+          "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2012-employee-remuneration-1.pdf",
+          "sha256": "cb878cc10c0fac68267bbf3fab724e60c53cefb0ce3b54cedcd48426b0326f00",
+          "bytes": 1309646,
+          "physicalPages": 29,
+          "nativeTextCharacters": 0,
+          "unresolved": "Source period and scope require original/report correspondence review; archive label alone does not establish every row date."
+        },
+        {
+          "archiveLabelYear": "2009",
+          "periodVerifiedFromOriginal": false,
+          "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/foi-2009-remuneration-and-expenses-names-1.pdf",
+          "sha256": "41031612c9bb869a7a31da9050940bb312079594abc1e21cfa9fbd4fef102e9c",
+          "bytes": 118234,
+          "physicalPages": 2,
+          "nativeTextCharacters": 0,
+          "unresolved": "Source period and scope require original/report correspondence review; archive label alone does not establish every row date."
+        }
+      ]
+    },
+    {
+      "id": "victoria-police",
+      "sourceIndexUrl": "https://www.vicpd.ca",
+      "status": "routine-records-inquiry-candidate-after-board-archive-review",
+      "existingAcceptedOfficialYears": [],
+      "verifiedOriginalPeriods": [],
+      "namedWorkforceScheduleLocated": false,
+      "indexedDocuments": [],
+      "nextAction": "Search police board open-meeting/FOI release archives for annual actual remuneration and expenses; if absent, request existing previously disclosed/publicly releasable schedules or native spreadsheet from the police records custodian. Ask for actual reporting dates, component definitions and any publication redactions. Keep governing-board payments and salary rates separate.",
+      "procurementRoute": "Routine access / re-release inquiry first; targeted FOI only for originals still unavailable. No request sent, fee accepted or response assumed.",
+      "overlapCheck": "Confirm sworn/civilian employee scope separately from the parent municipal SOFI before importing. Never infer withheld identities.",
+      "sourceIndexRetrieval": {
+        "requestedUrl": "https://www.vicpd.ca",
+        "finalUrl": "https://www.vicpd.ca",
+        "httpStatus": 200,
+        "bytes": 85500,
+        "sha256": "475912af8dea784d083b31538158601abaa4d69c0829b0a86d636d213b8542a0"
+      },
+      "scopeEvidence": {
+        "sourceUrl": "https://www.victoria.ca/media/file/2021-statement-financial-information",
+        "finding": "2021 City SOFI states Province instructed organizations covered by FIA not to publish municipal police board employee remuneration and expenses; do not assume city records fill this gap. Preserve names withheld in police-origin originals."
+      }
+    }
+  ],
+  "governmentLegislatureJudiciary": [
+    {
+      "id": "premier-and-ministers-salary-and-travel-expenses",
+      "name": "Premier and Ministers Salary and Travel Expenses",
+      "sourceIndexUrl": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5",
+      "catalogueMetadataSha256": "a8fc742c71b33601a6cd9b4b60d04107e69ad0b3c8cfb8846ea046a2cdb3801b",
+      "status": "official-machine-readable-history-processing-needed",
+      "indexedDocuments": [
+        {
+          "label": "FYE 2026 Premier and Ministers Salary and Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/0f7fffad-eb8f-4023-a043-87639938e4e2/download/fye26-prem_min.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2025 Premier and Ministers Salary and Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/97acc245-773f-498d-8e75-aa4a34022041/download/fye25-premier_ministers.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2024 - Premier and Ministers Salary and Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/ce0ac960-1253-44c9-8ffc-b3324ba6b860/download/fye24-premier_ministers.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2023 - Premier and Ministers Salary and Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/5612d16e-a702-4628-89f4-352e6659937a/download/fye23-premier_ministers.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2022 - Premier and Ministers Salary and Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/d2eb9d41-6401-450c-a65d-b11884ccc1e8/download/fye22-premier_ministers.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2021 - Premier and Ministers Salary and Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/372a5012-7c6a-4a4a-b271-656bb209ac7b/download/fye21-premier-and-ministers-salary.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2020 - Premier and Ministers Salary and Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/4f2500df-a61c-48b8-8381-fbc4a94a952a/download/fye20-premier-and-ministers-salary.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2019 - Premier and Ministers Salary and Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/19c06096-bef0-4cd5-9ca6-0dd1defe9035/download/fye19-premier-and-ministers.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2018 - Premier and Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/d07e2945-4660-4a70-b1b7-56d3e65c1441/download/fy18-premier-and-ministers.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2017 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/f122eb71-f0e1-423f-a9d1-6489d43de714/download/fy17-premier-and-ministers.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2016 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/a580beee-4fec-44bf-a5f4-490a1768f21f/download/fye-16-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2015 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/7c4884ee-93b1-41f1-ae5a-99612c40f573/download/fye-15-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2014 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/8a8b4acd-beb2-4617-aaf1-bfdbbf9e185e/download/fye-14-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2013 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/3d834dbd-865e-420e-9e50-2ff0143d6e11/download/fye-13-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2012 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/952b7775-3ecf-44c1-9a02-b872cd2f72b9/download/fye-12-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2011 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/45c785ff-a28a-435c-bad2-6456b334edcf/download/fye-11-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2010 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/94ed0230-4ae3-4d55-8ba0-a22f92c5247e/download/fye-10-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2009 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/c5a2403b-d536-4160-b35a-3864c55be048/download/fye-09-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2008 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/3fca8f29-4eee-468f-bf1a-4bb59f8f2fad/download/fye-08-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2007 - Premier And Ministers Salary And Travel Expenses",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/dbc3fc05-ba53-43af-8170-496f22941fc5/resource/328f7e5f-df27-4f4d-9e6e-4e8de87f2a7e/download/fye-07-premier-and-ministers-salary-and-travel-expenses.csv",
+          "format": "csv"
+        }
+      ],
+      "existingAcceptedOfficialYears": [],
+      "nextAction": "Download every original, verify internal fiscal year and component schema. Aggregate explicit pay components for the same person only within a proven reporting scope; distinguish MLA pay, office/committee allowances, ministerial supplementary salary, living allowance and travel. Preserve actual payment categories and avoid duplicate person-year salary claims. Add an appropriate legislator/minister scope label before app integration.",
+      "procurementRoute": "Processing of located official CSVs; MLA FYE2008 absent from indexed CSV resources, use original CRF PDF or routine archive inquiry for that year."
+    },
+    {
+      "id": "members-of-the-legislative-assembly-compensation",
+      "name": "Members of the Legislative Assembly Compensation",
+      "sourceIndexUrl": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299",
+      "catalogueMetadataSha256": "2853146b5916506bae4f76371c9120e04dcae3e3dcb02b434b94fe57b3130878",
+      "status": "official-machine-readable-history-processing-needed",
+      "indexedDocuments": [
+        {
+          "label": "FYE 2026 Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/acbeae30-917a-42b0-be53-27fd1814f089/download/fye26-member-comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2025 Members Compensation ",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/1d5f25d6-c1e7-4c78-aadf-d359230cf7a7/download/fye25-member-comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2024 - Members Compensation ",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/c2538fa7-5805-4c14-a21b-3191e683ca9c/download/fye24-member-comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2023 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/66f2f5c6-d92f-469b-9592-9c226ee09906/download/fye23-member-comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2022 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/7742862b-021c-4cfc-ab65-1d96cd9f987a/download/fye22-member_comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2021 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/73275f20-d211-4c98-b7e3-5cc2146f96cf/download/fye21-members-comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2020 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/dc606cb1-ac7a-409d-af68-d926523ab5f7/download/fye20-members-comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2019 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/3d5e9101-f263-4ae0-b736-382986f2c364/download/fye19-members-comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2018 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/46a70eb6-626b-468f-a8dd-b248220f8a8a/download/fye18-member-comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2017 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/86e6013d-7f93-4d8d-afea-c639550a590b/download/fye17-member-comp.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2016 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/48cde472-1d83-4c96-86fc-c981b1e0acda/download/fye-2016-members-compensation.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2015 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/29f6059c-c0b5-4b8d-a03a-48483ac48cd2/download/fye-2015-members-compensation.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2014 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/88ee4cb7-3fd8-4d84-8826-a23376231262/download/fye-2014-members-compensation.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2013 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/be3f47f4-80ce-4b3f-8353-bf2858844def/download/fye-2013-members-compensation.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2012 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/50644968-a70f-46d3-aa9b-f1c806129071/download/fye-2012-members-compensation.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2011 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/f5c8d997-0010-49ac-ab47-436fd31e7468/download/fye-2011-members-compensation.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2010 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/2b9ca8a8-0b76-4683-afef-8fa21bba9479/download/fye-2010-members-compensation.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2009 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/94cc4376-e881-4280-9a60-2b933ed1fad4/download/fye-2009-members-compensation.csv",
+          "format": "csv"
+        },
+        {
+          "label": "FYE 2007 - Members Compensation",
+          "url": "https://catalogue.data.gov.bc.ca/dataset/e1eb6eca-f654-4644-b470-d38976852299/resource/6ad08621-2d06-4472-b308-6a740428ba8f/download/fye-2007-members-compensation.csv",
+          "format": "csv"
+        }
+      ],
+      "existingAcceptedOfficialYears": [],
+      "nextAction": "Download every original, verify internal fiscal year and component schema. Aggregate explicit pay components for the same person only within a proven reporting scope; distinguish MLA pay, office/committee allowances, ministerial supplementary salary, living allowance and travel. Preserve actual payment categories and avoid duplicate person-year salary claims. Add an appropriate legislator/minister scope label before app integration.",
+      "procurementRoute": "Processing of located official CSVs; MLA FYE2008 absent from indexed CSV resources, use original CRF PDF or routine archive inquiry for that year."
+    },
+    {
+      "id": "public-accounts-before-2006-07",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/archive",
+      "status": "official-archive-original-selection-and-retrieval-needed",
+      "existingAcceptedOfficialYears": "2006/07–2025/26 employees already accepted; do not duplicate",
+      "indexedPeriodRange": "1999/2000–2005/06 in existing source backlog",
+      "indexedDocuments": [
+        {
+          "label": "2005/06 CRF Detailed Schedules of Payments",
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-detailed-schedules-of-payments.pdf"
+        }
+      ],
+      "retrievalAttempt": "Direct2005/06 PDF returned HTTP503 in this pass; index retrieved200. No hash or accepted rows asserted.",
+      "nextAction": "Retry the original PDF/browser route and select actual Other Employees/OIC/MLA/minister schedules with internal reporting dates. Reproduce names and monetary columns before acceptance; do not turn suppliers or travel-only lists into salary records.",
+      "procurementRoute": "Archive retrieval first. Native1998/99,1999/2000 and accessible2001/02 originals already identified in research/salaries/requests/source-requests-2026-10-30.md as request candidates."
+    },
+    {
+      "id": "historical-public-accounts-legislative-library",
+      "sourceIndexUrl": "https://www.llbc.leg.bc.ca/public/pubdocs/bcdocs2015_2/164239/index.htm",
+      "status": "historical-scan-archive-processing-needed",
+      "existingBacklogEvidence": "research/salaries/source-backlog.json;126 indexed resources; nineteenth century through1984/85. This pass did not redownload95–224MB scans.",
+      "indexedDocuments": [
+        {
+          "label": "1984/85 volume2",
+          "url": "https://www.llbc.leg.bc.ca/public/PubDocs/bcdocs2015_2/164239/Public_accounts/164239_PA_1984_1985_v2.pdf"
+        },
+        {
+          "label": "1978/79 volume2",
+          "url": "https://www.llbc.leg.bc.ca/public/PubDocs/bcdocs2015_2/164239/Public_accounts/164239_PA_1978_79_v2.pdf"
+        }
+      ],
+      "nextAction": "Retrieve page-level salary/indemnity schedules with page-range requests, then OCR and independently review every row and period. Record historical thresholds; small named schedules are a practical first batch.",
+      "procurementRoute": "Process accessible scans first. Ask Legislative Library for accessible/native missing volumes only after archive search."
+    },
+    {
+      "id": "judiciary",
+      "sourceIndexUrl": "https://www.provincialcourt.bc.ca/",
+      "status": "separate-scope-discovery-needed",
+      "nextAction": "Locate actual named judicial payment schedules and check existing provincial employee/OIC rows for overlap. Judicial compensation commission salary-rate recommendations do not prove person-level actual annual payments. Separate provincially appointed judges from federally paid superior-court judges.",
+      "procurementRoute": "Search Public Accounts and court financial/annual archives first; request existing actual payment disclosures from the correct provincial/federal custodian only if unavailable. No named actual-pay original accepted in this pass."
+    }
+  ],
+  "procurementPolicy": "No requests, messages, FOI applications, fee commitments or third-party contacts sent. Use public archives/native original requests first; formal FOI only for specific remaining original schedules. Do not infer publication redactions, disclosure completeness or withheld names.",
+  "evidenceFiles": [
+    "retrieval-evidence.json",
+    "pdf-sample-retrievals.json",
+    "catalogue-sample-retrievals.json"
+  ],
+  "originalNamedRows": 6504,
+  "heldRowsMissingPayComponent": 9,
+  "partialCoverageWarning": "2022/2024/2025 Metro employee cohorts exclude9 named rows with missing benefits/other; complete source evidence retained. Source dashes are missing, not zero."
+}

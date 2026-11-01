@@ -78,7 +78,7 @@ export const applyCompiledReplacements = (baseline, official, sources, rules = [
         throw new Error(`${employerSlug}|${compiledYear}: official replacement source fingerprint changed for ${id}`)
       }
     }
-    if (!sourceIds.some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id].scope))) {
+    if (!sourceIds.some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id].scope) && sources[id].completeEmployeeSchedule !== false && sources[id].validation?.completeEmployeeSchedule !== false)) {
       throw new Error(`${employerSlug}|${compiledYear}: partial disclosure cannot replace a compiled employee cohort across periods`)
     }
     const partition = baseline.filter((row) => row.slug === employerSlug && row.year === compiledYear)
@@ -190,7 +190,7 @@ export const validateReplacementScopes = (baseline, official, sources, decisions
     partitions.get(key).add(row.sourceId)
   }
   for (const [key, ids] of partitions) {
-    if ([...ids].some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id]?.scope))) continue
+    if ([...ids].some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id]?.scope) && sources[id]?.completeEmployeeSchedule !== false && sources[id]?.validation?.completeEmployeeSchedule !== false)) continue
     const [employer, year] = key.split('|')
     const decision = decisions.find((entry) => entry.kind === 'replace-partition-scope' && entry.employer === employer && entry.year === year)
     if (decision?.reason?.trim() && Array.isArray(decision.sourceIds) && [...ids].every((id) => decision.sourceIds.includes(id))) continue

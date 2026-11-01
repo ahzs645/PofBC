@@ -1,0 +1,1143 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-10-31",
+  "auditTimezone": "America/Vancouver",
+  "baselineMain": "96d798e",
+  "baselineDatasetRows": 881002,
+  "scope": "Health authorities, Providence and distinct BCCSS/BCEHS reporting scopes; public original-source discovery and historical expansion.",
+  "sourcePolicy": "A located/indexed PDF is not an accepted row source. Accepted import candidates require locked raw source hashes, true internal periods, complete employee rows, named/aggregate scope separation, exact evidence and visible warnings for unresolved issuer discrepancies. OCR configurations sharing an engine are not independent verification.",
+  "summary": {
+    "employersReviewed": 8,
+    "newVerifiedEmployeeSources": 2,
+    "newVerifiedEmployeeRows": 11494,
+    "phsaOfficialScannedPeriods": 10,
+    "phsaOcrPilotPages": [
+      1,
+      284
+    ],
+    "phsaRowsAcceptedFromOcr": 0,
+    "externalRequestsSent": 0
+  },
+  "entities": [
+    {
+      "employerSlug": "fraser-health",
+      "sector": "Health authorities",
+      "baselineCoverage": {
+        "totalRows": 99712,
+        "officialPeriods": [
+          {
+            "year": "2015/16",
+            "rows": 6219,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2016/17",
+            "rows": 6606,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2017/18",
+            "rows": 6938,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2018/19",
+            "rows": 7527,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2019/20",
+            "rows": 8080,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2020/21",
+            "rows": 10072,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2021/22",
+            "rows": 10782,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2022/23",
+            "rows": 11289,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2023/24",
+            "rows": 14921,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2024/25",
+            "rows": 17278,
+            "scope": "employee-remuneration"
+          }
+        ],
+        "compiledPeriods": []
+      },
+      "employerName": "Fraser Health",
+      "sourceIndexUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting",
+      "indexedEmployeePeriods": "2015/16–2024/25",
+      "checkedPeriods": [
+        "2012/13",
+        "2013/14",
+        "2014/15",
+        "2015/16–2024/25 index links",
+        "2025/26 index section"
+      ],
+      "acceptedCoverageBefore": "2015/16–2024/25",
+      "newVerifiedSources": [
+        {
+          "sourceId": "fraser-health-sofi-2013-14",
+          "year": "2013/14",
+          "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2014/2014EmployeeRemuneration.pdf",
+          "sha256": "dc651f21a4d8f7e143865c3e6e723a32189c271b90d251511f40e93c94e87f28",
+          "rows": 5569,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "fraser-health-sofi-2014-15",
+          "year": "2014/15",
+          "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2015/2015EmployeeRemuneration.pdf",
+          "sha256": "dd902ea484f17717eff18ce0faa9876831d2a513cf34f1e3ac9642e87e4971c0",
+          "rows": 5925,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        }
+      ],
+      "newRecords": 11494,
+      "existingOverlap": "No compiled or official rows in either recovered fiscal year; preserved compiled labels are only 2017/18, 2020/21, 2023/24.",
+      "scope": "Cash-basis named employee payments >=75000; excludes employer benefit costs, contracted labour and physician fees. Positions unpublished.",
+      "processingRoute": "Verified import ready for integration after independent root review; visible publicWarning records unresolved source residuals.",
+      "nextActions": [
+        "Register the two source inputs after independent review, rebuild app exports, and retain per-source publicWarning.",
+        "For FY2012/13 and earlier, look through former reporting/archive pages and request existing archived schedules if not recovered. The guessed 2013 filename was HTML page-not-found; no absence claim.",
+        "Recheck FY2025/26 employee disclosure; current 2026 section links board/executive/financial statements only."
+      ]
+    },
+    {
+      "employerSlug": "interior-health",
+      "sector": "Health authorities",
+      "baselineCoverage": {
+        "totalRows": 65364,
+        "officialPeriods": [
+          {
+            "year": "2014/15",
+            "rows": 3408,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2015/16",
+            "rows": 3538,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2016/17",
+            "rows": 4233,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2017/18",
+            "rows": 4084,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2018/19",
+            "rows": 4447,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2019/20",
+            "rows": 5125,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2020/21",
+            "rows": 6320,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2021/22",
+            "rows": 6611,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2022/23",
+            "rows": 7222,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2023/24",
+            "rows": 9540,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2024/25",
+            "rows": 10836,
+            "scope": "employee-remuneration"
+          }
+        ],
+        "compiledPeriods": []
+      },
+      "employerName": "Interior Health",
+      "sourceIndexUrl": "https://www.interiorhealth.ca/about-ih/accountability/financial-reporting",
+      "indexedEmployeePeriods": "2014/15–2024/25",
+      "checkedPeriods": [
+        "2013/14 guessed direct filename returned 404",
+        "2014/15–2024/25 index links",
+        "2025/26 index section"
+      ],
+      "sources": [
+        {
+          "sourceId": "interior-health-sofi-2014-15",
+          "year": "2014/15",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2015.pdf",
+          "sha256": "1a855bf7c2709ebc8f27f86638b1ca99f75f0e978c77d262166c34d18a446532",
+          "rows": 3408,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2015-16",
+          "year": "2015/16",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2016.pdf",
+          "sha256": "a2862553ce057d07d633300c354e3b69413ee909835f9fd6c8ad8c36b65e12ad",
+          "rows": 3538,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2016-17",
+          "year": "2016/17",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2017.pdf",
+          "sha256": "b2800e35e50f13b7d89de746fe1e6a4bf20dfddbc66b373df5135b5474616706",
+          "rows": 4233,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2017-18",
+          "year": "2017/18",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2018.pdf",
+          "sha256": "2c99b878151b8617a349caa732f6b9ee1f1b20a8950fde4603aa686ac2896c59",
+          "rows": 4084,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2018-19",
+          "year": "2018/19",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2019.pdf",
+          "sha256": "d7df21b3b35ed7bfd8df940f62b6c6b8bc5c49c65bb581baca56b58a28fce2b5",
+          "rows": 4447,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2019-20",
+          "year": "2019/20",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-employee-remuneration-and-expenses-2020.pdf",
+          "sha256": "2dd2005c9d69553ec9db35a0ca9f54176d3f06e0f2d3640f41b5ae239feef840",
+          "rows": 5125,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2020-21",
+          "year": "2020/21",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2021.pdf",
+          "sha256": "950ad48c1f618ae12e5bca865733b9b0fd6e246c5aa6c137a8fafc606255ceeb",
+          "rows": 6320,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2021-22",
+          "year": "2021/22",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2022.pdf",
+          "sha256": "dca0f5e1d47e2c6456fd3d49c87dd62b9d17b8f09f1bb3363cbdcad2c3a3389f",
+          "rows": 6611,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2022-23",
+          "year": "2022/23",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2023.pdf",
+          "sha256": "bb31af4b09978ae13738f036221da93e604c719fdea67f30e614c348b4f3feb8",
+          "rows": 7222,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2023-24",
+          "year": "2023/24",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2024.pdf",
+          "sha256": "5f05258e6b0d5a523f4cb4be126ed629e552d274ffcc88d5ce96c094fe6f9990",
+          "rows": 9540,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "interior-health-sofi-2024-25",
+          "year": "2024/25",
+          "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/schedule-of-remuneration-and-expenses-2025.pdf",
+          "sha256": "6d32e3fbbf601db59db549ca983852efbcc77507dc945606f2202f807c6d1661",
+          "rows": 10836,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        }
+      ],
+      "scope": "Named employee remuneration above the source threshold; fiscal periods and threshold rules remain as accepted manifest.",
+      "newRecords": 0,
+      "existingOverlap": "All eleven currently indexed employee schedules are already accepted.",
+      "processingRoute": "Earlier-history source discovery, then ordinary native-text import if originals recovered.",
+      "nextActions": [
+        "Search former Interior Health website/archive pages for FY2013/14 and earlier; the guessed schedule-of-remuneration-and-expenses-2014.pdf returns 404.",
+        "Ask the records/financial reporting office for existing archived employee schedules if public archive retrieval fails.",
+        "Recheck FY2025/26 employee schedule; 2026 index currently links board report only among remuneration schedules."
+      ]
+    },
+    {
+      "employerSlug": "northern-health",
+      "sector": "Health authorities",
+      "baselineCoverage": {
+        "totalRows": 17842,
+        "officialPeriods": [
+          {
+            "year": "2020/21",
+            "rows": 2500,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2021/22",
+            "rows": 2755,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2022/23",
+            "rows": 2842,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2023/24",
+            "rows": 3645,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2024/25",
+            "rows": 4379,
+            "scope": "employee-remuneration"
+          }
+        ],
+        "compiledPeriods": [
+          {
+            "year": "2017/18",
+            "rows": 1721,
+            "scope": "compiled-unverified"
+          }
+        ]
+      },
+      "employerName": "Northern Health",
+      "sourceIndexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "indexedEmployeePeriods": "2020/21–2024/25",
+      "checkedPeriods": [
+        "2018/19 direct filename 404",
+        "2019/20 direct filename 404",
+        "2020/21–2024/25 index links",
+        "2025/26 board link"
+      ],
+      "sources": [
+        {
+          "sourceId": "northern-health-sofi-2020-21",
+          "year": "2020/21",
+          "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2020-21.pdf",
+          "sha256": "9d551d4fe50c52ed1a832ae324baac8a26e5e37b3cb0eedaabb133f4c6106338",
+          "rows": 2500,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "northern-health-sofi-2021-22",
+          "year": "2021/22",
+          "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2021-22.pdf",
+          "sha256": "cc479e28a8a90e7f51b665a4c08dab7e759c1c08da2f999e655dc7ad6071edbd",
+          "rows": 2755,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "northern-health-sofi-2022-23",
+          "year": "2022/23",
+          "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2022-23.pdf",
+          "sha256": "8fded11f668f7c1fe6cb05bd6a67903a5db62000fd1dd21614ffb1ccb68fb894",
+          "rows": 2842,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "northern-health-sofi-2023-24",
+          "year": "2023/24",
+          "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2023-24.pdf",
+          "sha256": "65a05177684e0d8cdb7727dc5b82d528993bf21c2879cea872bdd17e41a9dfd8",
+          "rows": 3645,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "northern-health-sofi-2024-25",
+          "year": "2024/25",
+          "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2024-25.pdf",
+          "sha256": "6d608e1715f8fb5866c80ce16283c22650e90451cfb54e5ba15ddb4a8739b81f",
+          "rows": 4379,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        }
+      ],
+      "scope": "Named employee remuneration >75000, including source-disclosed estate payments; employee schedule distinct from board.",
+      "newRecords": 0,
+      "existingOverlap": "All five currently indexed employee schedules accepted; compiled 2017/18 remains unverified.",
+      "processingRoute": "Historical public archives first; existing archived employee schedules can be requested if unrecovered.",
+      "nextActions": [
+        "Recover FY2017/18 official original to verify the 1,721-row compiled group and locate FY2018/19–2019/20 plus earlier schedules.",
+        "Do not infer historical absence from 404s on two filename guesses or from the current five-year index.",
+        "Recheck FY2025/26 full employee disclosure; board link is not an employee substitute."
+      ]
+    },
+    {
+      "employerSlug": "island-health",
+      "sector": "Health authorities",
+      "baselineCoverage": {
+        "totalRows": 61015,
+        "officialPeriods": [
+          {
+            "year": "2015/16",
+            "rows": 3824,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2016/17",
+            "rows": 4229,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2017/18",
+            "rows": 4413,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2018/19",
+            "rows": 5022,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2019/20",
+            "rows": 5835,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2020/21",
+            "rows": 7324,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2021/22",
+            "rows": 7685,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2024/25",
+            "rows": 12283,
+            "scope": "employee-remuneration"
+          }
+        ],
+        "compiledPeriods": [
+          {
+            "year": "2023/24",
+            "rows": 10400,
+            "scope": "compiled-unverified"
+          }
+        ]
+      },
+      "employerName": "Island Health / Vancouver Island Health Authority",
+      "sourceIndexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "indexedEmployeePeriods": "2015/16–2024/25",
+      "checkedPeriods": [
+        "2015/16–2024/25 index links",
+        "2022/23 and 2023/24 existing reviewed holds",
+        "2025/26 board link"
+      ],
+      "sources": [
+        {
+          "sourceId": "island-health-sofi-2015-16",
+          "year": "2015/16",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2018-04/schedule-remuneration-expenses-employees-2015-2016.pdf",
+          "sha256": "6620711670a70f3ba4173488edfd04365d572cef7b6b96fbb668bc0c078ed9a6",
+          "rows": 3824,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "island-health-sofi-2016-17",
+          "year": "2016/17",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2018-04/employee-remuneration-expenses-2016-2017.pdf",
+          "sha256": "959097be964a86dd67d07816d1111863ecd513a5d83659cacf2555cee7240684",
+          "rows": 4229,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "island-health-sofi-2017-18",
+          "year": "2017/18",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2018-10/employee-remuneration-expenses.pdf",
+          "sha256": "a9d4d9d38a1b2c089fa35eece92a9da310134bcb1de22e434dc8b4b2f5bf3685",
+          "rows": 4413,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "island-health-sofi-2018-19",
+          "year": "2018/19",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2019-10/Employee-remuneration-expenses.pdf",
+          "sha256": "6d0d0e14b5afaee84f13b9ad3481c60f94a3e6a8e7679d0505f05fff742189b5",
+          "rows": 5022,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "island-health-sofi-2019-20",
+          "year": "2019/20",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/employee-remuneration-2019-2020.pdf",
+          "sha256": "91b959a72d7d552a4cba537186576e1f24b76d0b5b2f0a598a68389c34013733",
+          "rows": 5835,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "island-health-sofi-2020-21",
+          "year": "2020/21",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/employee-remuneration-2020-2021.pdf",
+          "sha256": "eca0df807f09d251d1033138baa9b57484be01be6aca37f456c15bd32aebf8b1",
+          "rows": 7324,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "island-health-sofi-2021-22",
+          "year": "2021/22",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/employee-remuneration-2021-2022.pdf",
+          "sha256": "450c24dbfec3cfce88e1e27a58b97948987c0454c1dadb08ba4a5d9280ba0c56",
+          "rows": 7685,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "island-health-sofi-2022-23",
+          "year": "2022/23",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/financial-statement-info-22-23.pdf",
+          "sha256": "20e6828ee3cc04d5ef01c7f6821b80ae3acc78906d0257ae97f766f81e8af7d3",
+          "rows": 8252,
+          "accepted": false,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "island-health-sofi-2023-24",
+          "year": "2023/24",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/financial-statement-info-23-24.pdf",
+          "sha256": "0730efb76919ef124a4e556f2289206f1db82ffb2f96ca46bae0e364ca5b80ea",
+          "rows": 10884,
+          "accepted": false,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "island-health-sofi-2024-25",
+          "year": "2024/25",
+          "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/statement-of-financial-information-2024-2025.pdf",
+          "sha256": "f35b2248f27dcf8e0771c0c5398d76a7982d26dad135dbcb774c6c17b8a21c28",
+          "rows": 12283,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        }
+      ],
+      "scope": "Named employee remuneration >75000; no titles supplied. Whole source cohorts kept separate from compiled edition labels.",
+      "newRecords": 0,
+      "existingOverlap": "Eight official years accepted. 10,400 compiled observations labelled 2023/24 remain; replacing this whole cohort needs a complete accepted official employee source.",
+      "processingRoute": "Source correction/clarification for held years; older source discovery for FY2014/15 and earlier.",
+      "nextActions": [
+        "Obtain an existing corrected spreadsheet or explanation/amended source for FY2022/23 and FY2023/24 using the existing unsent request draft.",
+        "Do not treat these holds as an OCR problem: both full extracts already agree between readers; row/count/expense control disagreements remain.",
+        "Search previous archives or request existing FY2014/15 and earlier employee schedules.",
+        "Recheck FY2025/26 full employee disclosure; the new board report is a separate cohort."
+      ],
+      "heldPeriods": [
+        {
+          "year": "2022/23",
+          "candidateRows": 8252,
+          "declaredNamedCount": 8264,
+          "missingCount": 12,
+          "remunerationSum": 828394349,
+          "remunerationResidual": 54,
+          "expensesSum": 7029656,
+          "expensesResidual": 93,
+          "status": "held-source-count-and-money-disagreement"
+        },
+        {
+          "year": "2023/24",
+          "candidateRows": 10884,
+          "remunerationSum": 1197885209,
+          "remunerationResidual": 41,
+          "expensesSum": 14592431,
+          "printedExpenses": 14638203,
+          "expensesResidual": -45772,
+          "status": "held-source-expense-disagreement"
+        }
+      ],
+      "procurementRoute": {
+        "indexUrl": "https://www.islandhealth.ca/about-us/accountability/information-stewardship-access-privacy/accessing-information-records",
+        "email": "FOI@islandhealth.ca",
+        "verifiedFrom": "research/salaries/requests/source-requests-2026-10-30.md",
+        "route": "Existing electronic schedule/amended publication or explanation first; formal records access if needed.",
+        "requestSent": false
+      }
+    },
+    {
+      "employerSlug": "provincial-health-services-authority",
+      "sector": "Health authorities",
+      "baselineCoverage": {
+        "totalRows": 24923,
+        "officialPeriods": [],
+        "compiledPeriods": [
+          {
+            "year": "2017/18",
+            "rows": 5072,
+            "scope": "compiled-unverified"
+          },
+          {
+            "year": "2020/21",
+            "rows": 7943,
+            "scope": "compiled-unverified"
+          },
+          {
+            "year": "2023/24",
+            "rows": 11908,
+            "scope": "compiled-unverified"
+          }
+        ]
+      },
+      "employerName": "Provincial Health Services Authority",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "indexedEmployeePeriods": "2015/16–2024/25",
+      "checkedPeriods": [
+        "2015/16–2024/25 current index; earlier download receipt inventory",
+        "2024/25 all284pages inspected for native-text availability; first/last pages rendered",
+        "2025/26 board links"
+      ],
+      "sources": [
+        {
+          "id": "phsa-2015-16",
+          "year": "2015/16",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/2016%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000%20FINAL.pdf",
+          "sha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+          "bytes": 20587571,
+          "pdfPages": 128,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "prior-original-hash-2026-10-30-current-index-link-reconfirmed",
+          "accepted": false
+        },
+        {
+          "id": "phsa-2016-17",
+          "year": "2016/17",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+          "sha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+          "bytes": 15021240,
+          "pdfPages": 144,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "prior-original-hash-2026-10-30-current-index-link-reconfirmed",
+          "accepted": false
+        },
+        {
+          "id": "phsa-2017-18",
+          "year": "2017/18",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%2018%20PHSA%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+          "sha256": "1971861d325c81e48083e56e45edbb62c6446fa2c387ce786a2b4e0aa5cdc006",
+          "bytes": 17176902,
+          "pdfPages": 139,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "prior-original-hash-2026-10-30-current-index-link-reconfirmed",
+          "accepted": false
+        },
+        {
+          "id": "phsa-2018-19",
+          "year": "2018/19",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2019.pdf",
+          "sha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+          "bytes": 16827281,
+          "pdfPages": 111,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "prior-original-hash-2026-10-30-current-index-link-reconfirmed",
+          "accepted": false
+        },
+        {
+          "id": "phsa-2019-20",
+          "year": "2019/20",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2020.PDF",
+          "sha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+          "bytes": 20806913,
+          "pdfPages": 121,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "prior-original-hash-2026-10-30-current-index-link-reconfirmed",
+          "accepted": false
+        },
+        {
+          "id": "phsa-2020-21",
+          "year": "2020/21",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20remuneration%20greater%20than%20$75%2c000%20%28PHSA%29.pdf",
+          "sha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "bytes": 14669502,
+          "pdfPages": 148,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "prior-original-hash-2026-10-30-current-index-link-reconfirmed",
+          "accepted": false
+        },
+        {
+          "id": "phsa-2021-22",
+          "year": "2021/22",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2022%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+          "sha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+          "bytes": 32237942,
+          "pdfPages": 188,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "prior-original-hash-2026-10-30-current-index-link-reconfirmed",
+          "accepted": false
+        },
+        {
+          "id": "phsa-2022-23",
+          "year": "2022/23",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2023-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
+          "sha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+          "bytes": 39118825,
+          "pdfPages": 217,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "prior-original-hash-2026-10-30-current-index-link-reconfirmed",
+          "accepted": false
+        },
+        {
+          "id": "phsa-2023-24",
+          "year": "2023/24",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
+          "sha256": "89cf82dd1701081e4073408fc38006a08b5033e151d5a0cb2a4ff0c096594ab7",
+          "bytes": 46904106,
+          "pdfPages": 284,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "prior-original-hash-2026-10-30-current-index-link-reconfirmed",
+          "accepted": false
+        },
+        {
+          "id": "phsa-2024-25",
+          "year": "2024/25",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
+          "sha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+          "bytes": 54160556,
+          "pdfPages": 284,
+          "nativeTextChars": 0,
+          "employeeTablePresence": "confirmed-in-original-archive",
+          "textAvailability": "scan-no-native-text",
+          "retrievalStatus": "redownloaded-2026-10-31-same-hash",
+          "accepted": false
+        }
+      ],
+      "newRecords": 0,
+      "existingOverlap": "Only compiled 2017/18, 2020/21 and 2023/24; exact calendar/fiscal scope matching and cohort boundaries must be established before replacement.",
+      "scope": "PHSA-named employee schedule. Hosting BCCSS/BCEHS/Forensic Psychiatric Services documents does not imply identical employer scope; do not combine or double-count.",
+      "processingRoute": "Request existing Excel/CSV or accessible electronic original first; otherwise guarded OCR plus full row/page and issuer-control review.",
+      "ocrPilot": "ocr-pilot.json",
+      "nextActions": [
+        "Use the already drafted unsent request for ten existing electronic salary/expense tables FY2015/16–2024/25, including scope and summary controls.",
+        "If no electronic copy is obtainable, OCR all pages with guarded image-grounded corrections; the page1 pilot demonstrates shared errors in both Tesseract modes.",
+        "Investigate FY2014/15 and earlier archive locations.",
+        "Recheck FY2025/26 employee schedule; current new 2025/26 links cover PHSA/FPSC/BCEHS boards, not employees."
+      ],
+      "procurementRoute": {
+        "indexUrl": "https://www.phsa.ca/about/accountability/freedom-of-information-requests",
+        "email": "foi@phsa.ca",
+        "verifiedFrom": "research/salaries/requests/source-requests-2026-10-30.md",
+        "requestSent": false
+      }
+    },
+    {
+      "employerSlug": "bc-clinical-and-support-services-society",
+      "sector": "Health authorities",
+      "baselineCoverage": {
+        "totalRows": 652,
+        "officialPeriods": [
+          {
+            "year": "2016/17",
+            "rows": 306,
+            "scope": "employee-remuneration"
+          },
+          {
+            "year": "2017/18",
+            "rows": 346,
+            "scope": "employee-remuneration"
+          }
+        ],
+        "compiledPeriods": []
+      },
+      "employerName": "BC Clinical and Support Services Society",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "indexedEmployeePeriods": "2016/17 and 2017/18",
+      "checkedPeriods": [
+        "2016/17 and 2017/18 current index links",
+        "2018/19 BCCSS board link only"
+      ],
+      "sources": [
+        {
+          "sourceId": "bccss-employees-2016-17",
+          "year": "2016/17",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/BCCSS%20Statement%20of%20Financial%20Information%202016-17.pdf",
+          "sha256": "80f991ee3bc034534a23240fb1e57f613a0fe1a2c17a0eb7f87d0a8990ba2bd3",
+          "rows": 306,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "native-text",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        },
+        {
+          "sourceId": "bccss-employee-remuneration-2017-18",
+          "year": "2017/18",
+          "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%2018%20BCCSS%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+          "sha256": "8c74494d2b3fb201f48fa8243af20dd92070fb5cab5750728f86d77976522140",
+          "rows": 346,
+          "accepted": true,
+          "employeeTablePresence": "confirmed-from-existing-reviewed-manifest",
+          "textAvailability": "scanned-verified-ocr",
+          "retrievalStatus": "existing-reviewed-manifest-not-redownloaded-this-pass"
+        }
+      ],
+      "newRecords": 0,
+      "existingOverlap": "Both known employee cohorts accepted: 306 native-text 2016/17 and346 fully reviewed OCR 2017/18.",
+      "scope": "Separate employer; 2016/17 source states operations began April1,2016 following transfer of PHSA services. Pre-operation years are not treated as missing BCCSS salary cohorts.",
+      "processingRoute": "Determine continued entity/employer reporting scope before seeking later standalone schedules.",
+      "nextActions": [
+        "Establish the staff/reporting-entity transfer and successor scope after FY2017/18 before classifying later BCCSS years as gaps.",
+        "The FY2018/19 BCCSS board report is not proof of a separate employee schedule.",
+        "Retain per-source >=75000 (2016/17) versus >75000 (2017/18) threshold rules."
+      ]
+    },
+    {
+      "employerSlug": "providence-health-care",
+      "sector": "Health authorities",
+      "baselineCoverage": {
+        "totalRows": 7408,
+        "officialPeriods": [],
+        "compiledPeriods": [
+          {
+            "year": "2017/18",
+            "rows": 1722,
+            "scope": "compiled-unverified"
+          },
+          {
+            "year": "2020/21",
+            "rows": 2397,
+            "scope": "compiled-unverified"
+          },
+          {
+            "year": "2023/24",
+            "rows": 3289,
+            "scope": "compiled-unverified"
+          }
+        ]
+      },
+      "employerName": "Providence Health Care Society",
+      "verifiedSourceIndexUrl": null,
+      "attemptedIndexUrl": "https://www.providencehealthcare.org/about-us/accountability/financial-accountability",
+      "indexStatus": "guessed-path-http403-no-current-index-verified",
+      "indexedEmployeePeriods": [
+        "2017/18",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "checkedPeriods": [
+        "2017/18–2024/25 official public search-indexed document leads; 2018/19 employee table not yet confirmed",
+        "earlier periods and2025/26 remain archive-search gaps"
+      ],
+      "sources": [
+        {
+          "year": "2017/18",
+          "sourceUrl": "https://www.providencehealthcare.org/en/media/3706",
+          "sha256": null,
+          "employeeTablePresence": "web-indexed-employee-table-confirmed",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "original-http403",
+          "accepted": false
+        },
+        {
+          "year": "2018/19",
+          "sourceUrl": "https://www.providencehealthcare.org/en/media/3676",
+          "sha256": null,
+          "employeeTablePresence": "SOFI-supplier-table-indexed-employee-table-not-confirmed",
+          "textAvailability": "native-text-visible-supplier-section-only",
+          "retrievalStatus": "web-indexed-official-original-not-raw-downloaded",
+          "accepted": false
+        },
+        {
+          "year": "2019/20",
+          "sourceUrl": "https://www.providencehealthcare.org/en/media/3661",
+          "sha256": null,
+          "employeeTablePresence": "web-indexed-employee-table-confirmed",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "original-http403",
+          "accepted": false
+        },
+        {
+          "year": "2020/21",
+          "sourceUrl": "https://www.providencehealthcare.org/en/media/3656",
+          "sha256": null,
+          "employeeTablePresence": "web-indexed-employee-table-confirmed",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "web-indexed-official-original-not-raw-downloaded",
+          "accepted": false
+        },
+        {
+          "year": "2021/22",
+          "sourceUrl": "https://www.providencehealthcare.org/en/media/3276",
+          "sha256": null,
+          "employeeTablePresence": "web-indexed-employee-table-confirmed",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "original-http403",
+          "accepted": false
+        },
+        {
+          "year": "2022/23",
+          "sourceUrl": "https://www.providencehealthcare.org/en/media/3261",
+          "sha256": null,
+          "employeeTablePresence": "web-indexed-employee-table-confirmed",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "web-indexed-official-original-not-raw-downloaded",
+          "accepted": false
+        },
+        {
+          "year": "2023/24",
+          "sourceUrl": "https://www.providencehealthcare.org/sites/default/files/2024-10/Schedule%20of%20Remuneration%2C%20Expenses%2C%20%26%20Supplies%20Payments%2020232024.pdf",
+          "sha256": null,
+          "employeeTablePresence": "web-indexed-employee-table-confirmed",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "original-http403",
+          "accepted": false
+        },
+        {
+          "year": "2024/25",
+          "sourceUrl": "https://www.providencehealthcare.org/sites/default/files/2025-11/Schedule%20of%20Remuneration%2C%20Expenses%2C%20%26%20Supplies%20Payments%2020242025.pdf",
+          "sha256": null,
+          "employeeTablePresence": "web-indexed-employee-table-confirmed",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "original-http403",
+          "accepted": false
+        }
+      ],
+      "newRecords": 0,
+      "existingOverlap": "7,408 unverified compiled rows across labels2017/18,2020/21,2023/24; historical originals offer substantial replacement/expansion candidates after full extraction.",
+      "scope": "Employee table uses separate last/first-name columns and cash-basis remuneration excluding employer benefits, contracted labour and physician fees. Exclude supplier/board sections.",
+      "processingRoute": "Retrieve the official raw PDF through a working ordinary public download/browser route, hash it and validate complete employee pages; do not import search snippets.",
+      "nextActions": [
+        "Prioritize the seven confirmed native-text employee years; original endpoints returned403 in this runtime, so source existence is established but bulk retrieval is unresolved.",
+        "Confirm employee-table presence in FY2018/19 media3676; current hit was supplier payments only.",
+        "Verify the current financial reporting index and seek FY2016/17 and earlier through the official archive or a request for existing schedules if public retrieval fails.",
+        "Avoid substituting audited financial-statement aggregate wages or supplier tables for named employee disclosures."
+      ]
+    },
+    {
+      "employerSlug": "vancouver-coastal-health",
+      "sector": "Health authorities",
+      "baselineCoverage": {
+        "totalRows": 24206,
+        "officialPeriods": [],
+        "compiledPeriods": [
+          {
+            "year": "2017/18",
+            "rows": 5204,
+            "scope": "compiled-unverified"
+          },
+          {
+            "year": "2020/21",
+            "rows": 7742,
+            "scope": "compiled-unverified"
+          },
+          {
+            "year": "2023/24",
+            "rows": 11260,
+            "scope": "compiled-unverified"
+          }
+        ]
+      },
+      "employerName": "Vancouver Coastal Health",
+      "verifiedSourceIndexUrl": null,
+      "attemptedIndexUrls": [
+        "https://www.vch.ca/en/about-us/accountability/financial-accountability",
+        "https://www.vch.ca/en/about-us/accountability-and-reports"
+      ],
+      "indexStatus": "attempted-paths-http403-no-current-index-verified",
+      "indexedEmployeePeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21"
+      ],
+      "checkedPeriods": [
+        "2018/19–2021/22 and2023/24 official document leads",
+        "2024/25 board-only source; full employee schedule not located",
+        "older and2022/23 remain archive-search gaps"
+      ],
+      "sources": [
+        {
+          "year": "2018/19",
+          "sourceUrl": "https://www.vch.ca/sites/default/files/import/documents/Schedule-of-Remuneration-and-Expenses-2019.pdf",
+          "sha256": null,
+          "employeeTablePresence": "confirmed-in-web-index",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "raw-endpoint403",
+          "evidence": "web-indexed employee earnings table and cash-remuneration definitions",
+          "accepted": false
+        },
+        {
+          "year": "2019/20",
+          "sourceUrl": "https://www.vch.ca/Documents/Schedule-of-remuneration-and-expenses-2020.pdf",
+          "sha256": null,
+          "employeeTablePresence": "confirmed-in-web-index",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "raw-endpoint403",
+          "evidence": "web-indexed employee rows; printed employee section128pages",
+          "accepted": false
+        },
+        {
+          "year": "2020/21",
+          "sourceUrl": "https://www.vch.ca/en/media/12116",
+          "sha256": null,
+          "employeeTablePresence": "confirmed-in-web-index",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "webtool-opened-pdf-raw-endpoint403",
+          "evidence": "webtool opened155pagePDF; employee section153pages plus cover/board",
+          "accepted": false
+        },
+        {
+          "year": "2021/22",
+          "sourceUrl": "https://www.vch.ca/en/media/15051",
+          "sha256": null,
+          "employeeTablePresence": "unverified",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "raw-endpoint403",
+          "evidence": "web-indexed board heading confirms period; employee presence not yet confirmed",
+          "accepted": false
+        },
+        {
+          "year": "2023/24",
+          "sourceUrl": "https://prod-careers.vch.ca/en/media/29876",
+          "sha256": null,
+          "employeeTablePresence": "unverified",
+          "textAvailability": "native-text-visible-in-web-index",
+          "retrievalStatus": "indexed-copy-raw-endpoint404",
+          "evidence": "web-indexed PartF title says Board and Employees; period not internally verified in this pass",
+          "accepted": false
+        }
+      ],
+      "newRecords": 0,
+      "existingOverlap": "24,206 compiled rows across unverified labels2017/18,2020/21,2023/24. Official2020/21 raw original is highest-priority exact-period comparison candidate.",
+      "scope": "PartF combines separate board and employee sections. FY2018/19 definition: cash paid during April1,2018–March31,2019; remuneration includes base salary, retroactive pay, taxable benefits, vacation payouts and retirement allowances. Expenses separate.",
+      "processingRoute": "Retrieve official raw PDF via working ordinary public route, then coordinate-aware extraction; web text sometimes orders dash before pay, so plain trailing-number parsing would be wrong.",
+      "nextActions": [
+        "Recover downloadable original behind media12116 for full FY2020/21 extraction and compiled comparison; source is155physicalpages,153employee-sectionpages.",
+        "Locate the current primary financial index and official FY2022/23–2024/25 employee originals.",
+        "Confirm FY2021/22 media15051 contains the employee section; current indexed excerpt is board-only.",
+        "Confirm actual period inside media29876; production-careers indexed copy currently returns404 and its search result date cannot establish fiscal year.",
+        "Use ordinary records/financial office acquisition only if public-original/archive retrieval fails; no FOI need is inferred from this runtime403 alone."
+      ]
+    }
+  ],
+  "limitations": [
+    "Public search/index discovery is not an exhaustive historical archive audit. Missing links and403/404 responses do not prove absence.",
+    "Raw original hashes are null where only web-indexed content could be seen; these leads are unaccepted.",
+    "Previously reviewed PHSA hashes retain their original2026-10-30 receipt date; only FY2024/25 was re-downloaded this pass.",
+    "The tentative2023/24 label for VCH media29876 is not internally verified; do not import under that label without opening the original."
+  ]
+}

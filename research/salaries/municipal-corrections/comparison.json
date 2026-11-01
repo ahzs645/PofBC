@@ -706,6 +706,78 @@
     {
       "id": "municipal-ocr-city-of-terrace-2025-elected-officials-p2",
       "dataSha256": "ebd79e8caac32e509b292300c4a3bfc03edd1aaf9639d418cae2dc0a771c9f2b"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2013-elected-officials",
+      "dataSha256": "301aeac57c0aaced0b7dd59d17e0d9a59c95c506b62c6d24099681e4d1d99c2e"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration",
+      "dataSha256": "20426a3b82db3ff0039d16e06b1a3565c23e062684b7f8e029dfef642d415a71"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2019-elected-officials",
+      "dataSha256": "be2e68538d72cfc89a4babafd2fa3df787e2578b438d14cff400bd2f7c3434dc"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration",
+      "dataSha256": "666524b8e45946e58bb2fd50dc552d672f6b08676a201f88557c17c7fae70b68"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2020-elected-officials",
+      "dataSha256": "23b0fbd70afbf876fbe77241f6339951bd92b6d378e72f5bca7398086275e0ca"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration",
+      "dataSha256": "bf4a446f228ae516e5eeca2445dcbc86530751bbddcb4b96ad18593ce4bb9d9e"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2021-elected-officials",
+      "dataSha256": "41b2a6541e6e4d0f08d8508a9d479676c62758163b32b87013447b377e0c0ce0"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration",
+      "dataSha256": "18ca83d6bbf447b3a8f84c15d9192d6959b4bb78bb7a08a9b3e0f819229cfbdf"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2022-elected-officials",
+      "dataSha256": "401503bba569d6458f0f59f12ad88e145f9ddbd53512d706d75e4fb1597e3538"
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration",
+      "dataSha256": "5cec60f3a7b57b25726f597e4a20dd33d5eeb3ed0ff7f01c899b3b0a63ad2594"
+    },
+    {
+      "id": "sector-municipal-city-of-revelstoke-2025-elected-officials",
+      "dataSha256": "6af8e79ccff7dea026b4c8ecf1a55405af035d24c22038b3e98038c5fdfb301d"
+    },
+    {
+      "id": "sector-municipal-city-of-revelstoke-2025-employee-remuneration",
+      "dataSha256": "eed02f03e956b96aae468f02581c2132c2db03af42cec75a39c6d31d2c5d2ac8"
+    },
+    {
+      "id": "sector-municipal-city-of-parksville-2025-elected-officials",
+      "dataSha256": "20f9602f98ee552e640f75ec97a10f3a9780e6b813813b2fecca85c717252cef"
+    },
+    {
+      "id": "sector-municipal-city-of-parksville-2025-employee-remuneration",
+      "dataSha256": "0f2db77a829c009ada4508aecde7b45f647cb1b5a3bda44f245d0a0ecb00489d"
+    },
+    {
+      "id": "sector-government-police-metro-vancouver-2022-employees",
+      "dataSha256": "a938998e8404f87dae06f974beb2136b0b9b1cddd1aed79378fb8065c6e9a86b"
+    },
+    {
+      "id": "sector-government-police-metro-vancouver-2023-employees",
+      "dataSha256": "0e509c53108a3e609065d9a68a0805e9289b3529f33dbf65538df84d803154d7"
+    },
+    {
+      "id": "sector-government-police-metro-vancouver-2024-employees",
+      "dataSha256": "026bab83ecc268379b58f44baf33fc00d51c4f09d0af9d4ef4ba489b0105242d"
+    },
+    {
+      "id": "sector-government-police-metro-vancouver-2025-employees",
+      "dataSha256": "2cfaa177802bb3ad2dd3a1a6582b8868784096483dba50eb28ac886270a41da2"
     }
   ],
   "method": "For each municipality and compiled partition, compare multiset counts of disclosed name and remuneration rounded with JavaScript Math.round to whole CAD dollars. Name normalization is NFKC, lowercase, and removal of punctuation/whitespace; token order is preserved and no given names or initials are inferred. Each selected compiled observation must occur in exactly one tested accepted calendar-year cohort. Source cents, expenses, names and titles are untouched on import. All source hashes and exact selected baseline row hashes are pinned. Partial matches never remove rows.",
@@ -3159,6 +3231,405 @@
           "unmatchedOfficialRows": 370,
           "sourceIds": [
             "lower-mainland-north-vancouver-city-2025-employees"
+          ]
+        }
+      ]
+    },
+    {
+      "employerSlug": "city-of-pitt-meadows",
+      "compiledYear": "2017/18",
+      "status": "unresolved-retained",
+      "compiledRows": 48,
+      "comparisons": [
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2013",
+          "compiledRows": 48,
+          "officialRows": 28,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 48,
+          "unmatchedOfficialRows": 28,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2013-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2013",
+          "compiledRows": 37,
+          "officialRows": 21,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 37,
+          "unmatchedOfficialRows": 21,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2019",
+          "compiledRows": 48,
+          "officialRows": 46,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 48,
+          "unmatchedOfficialRows": 46,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2019-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2019",
+          "compiledRows": 37,
+          "officialRows": 39,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 37,
+          "unmatchedOfficialRows": 39,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2020",
+          "compiledRows": 48,
+          "officialRows": 52,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 48,
+          "unmatchedOfficialRows": 52,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2020-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2020",
+          "compiledRows": 37,
+          "officialRows": 45,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 37,
+          "unmatchedOfficialRows": 45,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2021",
+          "compiledRows": 48,
+          "officialRows": 63,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 48,
+          "unmatchedOfficialRows": 63,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2021-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2021",
+          "compiledRows": 37,
+          "officialRows": 56,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 37,
+          "unmatchedOfficialRows": 56,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2022",
+          "compiledRows": 48,
+          "officialRows": 71,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 48,
+          "unmatchedOfficialRows": 71,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2022-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2022",
+          "compiledRows": 37,
+          "officialRows": 62,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 37,
+          "unmatchedOfficialRows": 62,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration"
+          ]
+        }
+      ]
+    },
+    {
+      "employerSlug": "city-of-pitt-meadows",
+      "compiledYear": "2020/21",
+      "status": "unresolved-retained",
+      "compiledRows": 52,
+      "comparisons": [
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2020",
+          "compiledRows": 52,
+          "officialRows": 52,
+          "matchingNamePayRows": 51,
+          "unmatchedCompiledRows": 1,
+          "unmatchedOfficialRows": 1,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2020-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2020",
+          "compiledRows": 45,
+          "officialRows": 45,
+          "matchingNamePayRows": 44,
+          "unmatchedCompiledRows": 1,
+          "unmatchedOfficialRows": 1,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2013",
+          "compiledRows": 52,
+          "officialRows": 28,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 52,
+          "unmatchedOfficialRows": 28,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2013-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2013",
+          "compiledRows": 45,
+          "officialRows": 21,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 45,
+          "unmatchedOfficialRows": 21,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2019",
+          "compiledRows": 52,
+          "officialRows": 46,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 52,
+          "unmatchedOfficialRows": 46,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2019-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2019",
+          "compiledRows": 45,
+          "officialRows": 39,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 45,
+          "unmatchedOfficialRows": 39,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2021",
+          "compiledRows": 52,
+          "officialRows": 63,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 52,
+          "unmatchedOfficialRows": 63,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2021-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2021",
+          "compiledRows": 45,
+          "officialRows": 56,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 45,
+          "unmatchedOfficialRows": 56,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2022",
+          "compiledRows": 52,
+          "officialRows": 71,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 52,
+          "unmatchedOfficialRows": 71,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2022-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2022",
+          "compiledRows": 45,
+          "officialRows": 62,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 45,
+          "unmatchedOfficialRows": 62,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration"
+          ]
+        }
+      ]
+    },
+    {
+      "employerSlug": "city-of-pitt-meadows",
+      "compiledYear": "2023/24",
+      "status": "unresolved-retained",
+      "compiledRows": 76,
+      "comparisons": [
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2013",
+          "compiledRows": 76,
+          "officialRows": 28,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 76,
+          "unmatchedOfficialRows": 28,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2013-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2013",
+          "compiledRows": 70,
+          "officialRows": 21,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 70,
+          "unmatchedOfficialRows": 21,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2019",
+          "compiledRows": 76,
+          "officialRows": 46,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 76,
+          "unmatchedOfficialRows": 46,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2019-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2019",
+          "compiledRows": 70,
+          "officialRows": 39,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 70,
+          "unmatchedOfficialRows": 39,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2020",
+          "compiledRows": 76,
+          "officialRows": 52,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 76,
+          "unmatchedOfficialRows": 52,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2020-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2020",
+          "compiledRows": 70,
+          "officialRows": 45,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 70,
+          "unmatchedOfficialRows": 45,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2021",
+          "compiledRows": 76,
+          "officialRows": 63,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 76,
+          "unmatchedOfficialRows": 63,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2021-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2021",
+          "compiledRows": 70,
+          "officialRows": 56,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 70,
+          "unmatchedOfficialRows": 56,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2022",
+          "compiledRows": 76,
+          "officialRows": 71,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 76,
+          "unmatchedOfficialRows": 71,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2022-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2022",
+          "compiledRows": 70,
+          "officialRows": 62,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 70,
+          "unmatchedOfficialRows": 62,
+          "sourceIds": [
+            "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration"
           ]
         }
       ]
@@ -6361,6 +6832,318 @@
       ]
     },
     {
+      "employerSlug": "metro-vancouver",
+      "compiledYear": "2017/18",
+      "status": "unresolved-retained",
+      "compiledRows": 1313,
+      "comparisons": [
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2022",
+          "compiledRows": 1313,
+          "officialRows": 1391,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1313,
+          "unmatchedOfficialRows": 1391,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2022-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2022",
+          "compiledRows": 1313,
+          "officialRows": 1391,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1313,
+          "unmatchedOfficialRows": 1391,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2022-employees"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2023",
+          "compiledRows": 1313,
+          "officialRows": 1634,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1313,
+          "unmatchedOfficialRows": 1634,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2023-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2023",
+          "compiledRows": 1313,
+          "officialRows": 1634,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1313,
+          "unmatchedOfficialRows": 1634,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2023-employees"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2024",
+          "compiledRows": 1313,
+          "officialRows": 1694,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1313,
+          "unmatchedOfficialRows": 1694,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2024-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2024",
+          "compiledRows": 1313,
+          "officialRows": 1694,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1313,
+          "unmatchedOfficialRows": 1694,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2024-employees"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2025",
+          "compiledRows": 1313,
+          "officialRows": 1776,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1313,
+          "unmatchedOfficialRows": 1776,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2025-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2025",
+          "compiledRows": 1313,
+          "officialRows": 1776,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1313,
+          "unmatchedOfficialRows": 1776,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2025-employees"
+          ]
+        }
+      ]
+    },
+    {
+      "employerSlug": "metro-vancouver",
+      "compiledYear": "2020/21",
+      "status": "unresolved-retained",
+      "compiledRows": 1205,
+      "comparisons": [
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2022",
+          "compiledRows": 1205,
+          "officialRows": 1391,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1205,
+          "unmatchedOfficialRows": 1391,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2022-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2022",
+          "compiledRows": 1205,
+          "officialRows": 1391,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1205,
+          "unmatchedOfficialRows": 1391,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2022-employees"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2023",
+          "compiledRows": 1205,
+          "officialRows": 1634,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1205,
+          "unmatchedOfficialRows": 1634,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2023-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2023",
+          "compiledRows": 1205,
+          "officialRows": 1634,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1205,
+          "unmatchedOfficialRows": 1634,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2023-employees"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2024",
+          "compiledRows": 1205,
+          "officialRows": 1694,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1205,
+          "unmatchedOfficialRows": 1694,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2024-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2024",
+          "compiledRows": 1205,
+          "officialRows": 1694,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1205,
+          "unmatchedOfficialRows": 1694,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2024-employees"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2025",
+          "compiledRows": 1205,
+          "officialRows": 1776,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1205,
+          "unmatchedOfficialRows": 1776,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2025-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2025",
+          "compiledRows": 1205,
+          "officialRows": 1776,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1205,
+          "unmatchedOfficialRows": 1776,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2025-employees"
+          ]
+        }
+      ]
+    },
+    {
+      "employerSlug": "metro-vancouver",
+      "compiledYear": "2023/24",
+      "status": "unresolved-retained",
+      "compiledRows": 1639,
+      "comparisons": [
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2023",
+          "compiledRows": 1639,
+          "officialRows": 1634,
+          "matchingNamePayRows": 1634,
+          "unmatchedCompiledRows": 5,
+          "unmatchedOfficialRows": 0,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2023-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2023",
+          "compiledRows": 1639,
+          "officialRows": 1634,
+          "matchingNamePayRows": 1634,
+          "unmatchedCompiledRows": 5,
+          "unmatchedOfficialRows": 0,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2023-employees"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2022",
+          "compiledRows": 1639,
+          "officialRows": 1391,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1639,
+          "unmatchedOfficialRows": 1391,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2022-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2022",
+          "compiledRows": 1639,
+          "officialRows": 1391,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1639,
+          "unmatchedOfficialRows": 1391,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2022-employees"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2024",
+          "compiledRows": 1639,
+          "officialRows": 1694,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1639,
+          "unmatchedOfficialRows": 1694,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2024-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2024",
+          "compiledRows": 1639,
+          "officialRows": 1694,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1639,
+          "unmatchedOfficialRows": 1694,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2024-employees"
+          ]
+        },
+        {
+          "mode": "all-published-cohorts",
+          "calendarYear": "2025",
+          "compiledRows": 1639,
+          "officialRows": 1776,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1639,
+          "unmatchedOfficialRows": 1776,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2025-employees"
+          ]
+        },
+        {
+          "mode": "employee-cohort",
+          "calendarYear": "2025",
+          "compiledRows": 1639,
+          "officialRows": 1776,
+          "matchingNamePayRows": 0,
+          "unmatchedCompiledRows": 1639,
+          "unmatchedOfficialRows": 1776,
+          "sourceIds": [
+            "sector-government-police-metro-vancouver-2025-employees"
+          ]
+        }
+      ]
+    },
+    {
       "employerSlug": "village-of-anmore",
       "compiledYear": "2017/18",
       "status": "unresolved-retained",
@@ -6510,9 +7293,9 @@
     }
   ],
   "summary": {
-    "comparedPartitions": 51,
+    "comparedPartitions": 57,
     "replacements": 5,
     "replacedRows": 1028,
-    "unresolvedPartitions": 46
+    "unresolvedPartitions": 52
   }
 }

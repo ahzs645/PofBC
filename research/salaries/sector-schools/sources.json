@@ -1,0 +1,3113 @@
+{
+  "version": 1,
+  "reviewed": "2026-10-31",
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "coverageNotes": [
+    "SD42 original fiscal employee and trustee schedules. Compiled data are untouched; no alias or duplicate replacement decision is encoded here."
+  ],
+  "sources": [
+    {
+      "id": "schools-sd42-2005-employees",
+      "inputKey": "sd42-2005",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2004/05",
+      "slug": "2004-05",
+      "periodType": "fiscal",
+      "periodStart": "2004-07-01",
+      "periodEnd": "2005-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2005: employees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/0405-Sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "e0dd61e5ab2852af88598d4f6dcda1e8fcdd56027a3f05fbdf25d35cd3641547",
+      "file": "sd42-2005-employees.json.gzip",
+      "dataSha256": "a2e30b8a20b567a3bc27b116ecfc751fff7882eae16def6ef8fb6b882e77d103",
+      "normalizedSha256": "94e547ef6c5cad37684a68fd2c39ed2ef16fce791130d0c5ec1175f71897c1c4",
+      "provenanceFile": "sd42-2005-employees-evidence.json.gzip",
+      "provenanceSha256": "7293c092fbbd5fda2fe597fa8d13a70685a292a1c092a291a4950d8b1e0b8e8a",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 67,
+      "totalRemuneration": 6234523.63,
+      "totalExpenses": 130572.75,
+      "pages": [
+        7,
+        8
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "7": 42,
+          "8": 25
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 67,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "6,234,523.63",
+          "130,572.75"
+        ],
+        "computedComponentTotals": [
+          "6234523.63",
+          "130572.75"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 2,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2005-trustees",
+      "inputKey": "sd42-2005",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2004/05",
+      "slug": "2004-05",
+      "periodType": "fiscal",
+      "periodStart": "2004-07-01",
+      "periodEnd": "2005-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2005: trustees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/0405-Sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "e0dd61e5ab2852af88598d4f6dcda1e8fcdd56027a3f05fbdf25d35cd3641547",
+      "file": "sd42-2005-trustees.json.gzip",
+      "dataSha256": "0cbe7064138fd22efbe82c7a4981321801b5aabf898cbab469f189df7e9d641c",
+      "normalizedSha256": "9b76300d6e71de8b1e1f22043f1727ec874a15d37da3961f20c1459e381af809",
+      "provenanceFile": "sd42-2005-trustees-evidence.json.gzip",
+      "provenanceSha256": "a06d083c9955545722663fe79f51e99fe4c9e09e96b8e79ffac46b9975152dc4",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 102432.72,
+      "totalExpenses": 10747.54,
+      "pages": [
+        6
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "6": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "102,432.72",
+          "10,747.54"
+        ],
+        "computedComponentTotals": [
+          "102432.72",
+          "10747.54"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 0,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2006-employees",
+      "inputKey": "sd42-2006",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2005/06",
+      "slug": "2005-06",
+      "periodType": "fiscal",
+      "periodStart": "2005-07-01",
+      "periodEnd": "2006-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2006: employees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/0506-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "9f10fbb433002554a40c8e955292859da12c94a5c1edd18be0183e0cae154f1e",
+      "file": "sd42-2006-employees.json.gzip",
+      "dataSha256": "0df6fdb8372941780488c79f01d3fe83921347c7e01fdca151d691b8b544163f",
+      "normalizedSha256": "a0cee90ba8030a9e09a3402a7744c0fb8e49c2ad3c17b0390532bb791991aaea",
+      "provenanceFile": "sd42-2006-employees-evidence.json.gzip",
+      "provenanceSha256": "5fc808a9b5f38b96dd279502d7110951af70c778c6553037c848b7fa6c9f2244",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 77,
+      "totalRemuneration": 7290825.54,
+      "totalExpenses": 136967.36,
+      "pages": [
+        7,
+        8
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "Some disclosed name cells contain trailing numeric tokens (for example 23 or 11). Those published tokens are retained verbatim; no unproved identity correction has been made."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "7": 45,
+          "8": 32
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 77,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "7,290,825.54",
+          "136,967.36"
+        ],
+        "computedComponentTotals": [
+          "7290825.54",
+          "136967.36"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 13,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2006-trustees",
+      "inputKey": "sd42-2006",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2005/06",
+      "slug": "2005-06",
+      "periodType": "fiscal",
+      "periodStart": "2005-07-01",
+      "periodEnd": "2006-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2006: trustees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/0506-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "9f10fbb433002554a40c8e955292859da12c94a5c1edd18be0183e0cae154f1e",
+      "file": "sd42-2006-trustees.json.gzip",
+      "dataSha256": "6a84ee8918f1861804c47515bed8765097d60011203a51bbffb9c5e94f349b15",
+      "normalizedSha256": "26a0c527f8a69656dad17567eb489371ba24f3cddeaba382760e373d08c794b0",
+      "provenanceFile": "sd42-2006-trustees-evidence.json.gzip",
+      "provenanceSha256": "3ed93be12b94b237bb5c12c1d3b6df833f862d052d8cdbfefd8384a6ef08f1e3",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 10,
+      "totalRemuneration": 102600.96,
+      "totalExpenses": 11712.2,
+      "pages": [
+        6
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "Some disclosed name cells contain trailing numeric tokens (for example 23 or 11). Those published tokens are retained verbatim; no unproved identity correction has been made."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "6": 10
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 10,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "102,600.96",
+          "11,712.20"
+        ],
+        "computedComponentTotals": [
+          "102600.96",
+          "11712.20"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 0,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2010-employees",
+      "inputKey": "sd42-2010",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2009/10",
+      "slug": "2009-10",
+      "periodType": "fiscal",
+      "periodStart": "2009-07-01",
+      "periodEnd": "2010-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2010: employees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/0910-SOFI.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "68ce1d3e46b489e9a473efac0ae17b90c741391c6c4bdd83643786f7c0205760",
+      "file": "sd42-2010-employees.json.gzip",
+      "dataSha256": "f54cba8734d9b5a4345deed11f5375938f0fb6c0519afc6c9db46a618e047f46",
+      "normalizedSha256": "8a574648a0e81f0618893a4cbd1c2d4e9a89a486bf972b4735c85619ca60d472",
+      "provenanceFile": "sd42-2010-employees-evidence.json.gzip",
+      "provenanceSha256": "6887c03ba072e9b213f1b6561467d65e60d3995b30a15ed1334646db1ca4b718",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 463,
+      "totalRemuneration": 39275883.17,
+      "totalExpenses": 310350.65,
+      "pages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "Some disclosed name cells contain trailing numeric tokens (for example 23 or 11). Those published tokens are retained verbatim; no unproved identity correction has been made."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "15": 45,
+          "16": 45,
+          "17": 45,
+          "18": 45,
+          "19": 45,
+          "20": 45,
+          "21": 45,
+          "22": 45,
+          "23": 45,
+          "24": 45,
+          "25": 13
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 463,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "39,275,883.17",
+          "310,350.65"
+        ],
+        "computedComponentTotals": [
+          "39275883.17",
+          "310350.65"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 249,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2010-trustees",
+      "inputKey": "sd42-2010",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2009/10",
+      "slug": "2009-10",
+      "periodType": "fiscal",
+      "periodStart": "2009-07-01",
+      "periodEnd": "2010-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2010: trustees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/0910-SOFI.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "68ce1d3e46b489e9a473efac0ae17b90c741391c6c4bdd83643786f7c0205760",
+      "file": "sd42-2010-trustees.json.gzip",
+      "dataSha256": "94836e5784b97fc0700860799ea56330cff1cca4bcc84e42611adcef0258a6c6",
+      "normalizedSha256": "193236b4573a84445e65f854fb380f31dd430f59fbac28c8ef17ccbe6db9169c",
+      "provenanceFile": "sd42-2010-trustees-evidence.json.gzip",
+      "provenanceSha256": "7555eaa919f82b64c3e5a06639004a720652497fcb412f69e0c864fd1210753f",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 133822.05,
+      "totalExpenses": 15197.41,
+      "pages": [
+        14
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "Some disclosed name cells contain trailing numeric tokens (for example 23 or 11). Those published tokens are retained verbatim; no unproved identity correction has been made."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "14": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "133,822.05",
+          "15,197.41"
+        ],
+        "computedComponentTotals": [
+          "133822.05",
+          "15197.41"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 1,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2014-employees",
+      "inputKey": "sd42-2014",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2013/14",
+      "slug": "2013-14",
+      "periodType": "fiscal",
+      "periodStart": "2013-07-01",
+      "periodEnd": "2014-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2014: employees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/1314-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "6326806e29278f5951617c533ed06e98dc6ca0f891e9f842a61c14e067bca022",
+      "file": "sd42-2014-employees.json.gzip",
+      "dataSha256": "4168d3aafb60582de9c0bb99727db014cb15132046f428ec67181579b65661f8",
+      "normalizedSha256": "32a8a96164bc47eec478b7ea304d946f73f5036e655870aa72a96cbddf49aa42",
+      "provenanceFile": "sd42-2014-employees-evidence.json.gzip",
+      "provenanceSha256": "0b89d4ce30ad5ac4aa506d2cf810eef2f7ec1122f2d6d45c6974de15e2ca42b3",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 421,
+      "totalRemuneration": 35228761.45,
+      "totalExpenses": 372235.96,
+      "pages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "This employee schedule does not publish job titles; positions remain null."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "47": 46,
+          "48": 46,
+          "49": 46,
+          "50": 46,
+          "51": 46,
+          "52": 46,
+          "53": 46,
+          "54": 46,
+          "55": 46,
+          "56": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 421,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "35,228,761.45",
+          "372,235.96"
+        ],
+        "computedComponentTotals": [
+          "35228761.45",
+          "372235.96"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 240,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2014-trustees",
+      "inputKey": "sd42-2014",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2013/14",
+      "slug": "2013-14",
+      "periodType": "fiscal",
+      "periodStart": "2013-07-01",
+      "periodEnd": "2014-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2014: trustees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/1314-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "6326806e29278f5951617c533ed06e98dc6ca0f891e9f842a61c14e067bca022",
+      "file": "sd42-2014-trustees.json.gzip",
+      "dataSha256": "6bc184010fceb45e389d0feda13de0cad06e652bd09fa6ffb8f950cc3af35f24",
+      "normalizedSha256": "618fb24cb58b6e7151534d743b2f35099dceb489e77c2e6b3ef597d7f25f7552",
+      "provenanceFile": "sd42-2014-trustees-evidence.json.gzip",
+      "provenanceSha256": "7435bf068d065629bd0f7287164f94d7a087ab822f2fd9f81aa4675b50807bbf",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 139368.58,
+      "totalExpenses": 13265.48,
+      "pages": [
+        46
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "46": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "139,368.58",
+          "13,265.48"
+        ],
+        "computedComponentTotals": [
+          "139368.58",
+          "13265.48"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 0,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2015-employees",
+      "inputKey": "sd42-2015",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2014/15",
+      "slug": "2014-15",
+      "periodType": "fiscal",
+      "periodStart": "2014-07-01",
+      "periodEnd": "2015-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2015: employees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/1415-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "bfd1d9777f66cac5adfdf9f349d4e3413cf5cdcac4ad649d92b1a6ccb6069fca",
+      "file": "sd42-2015-employees.json.gzip",
+      "dataSha256": "6812b72bffbc7087cc5f3edb13755c9dc78842137a7cd2e3a1232706f0534c34",
+      "normalizedSha256": "a70348f07daa6a0da95766d6ab40e92eb46b633bd8540eff6b1ac3844be32e49",
+      "provenanceFile": "sd42-2015-employees-evidence.json.gzip",
+      "provenanceSha256": "babe95025eae8281bb49f53a0b7d29c2d45624ae3f2e7d01d440a3c6228ba348",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 473,
+      "totalRemuneration": 40036988.01,
+      "totalExpenses": 388269.96,
+      "pages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "This employee schedule does not publish job titles; positions remain null."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "47": 46,
+          "48": 46,
+          "49": 46,
+          "50": 46,
+          "51": 46,
+          "52": 46,
+          "53": 46,
+          "54": 46,
+          "55": 46,
+          "56": 46,
+          "57": 13
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 473,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "40,036,988.01",
+          "388,269.96"
+        ],
+        "computedComponentTotals": [
+          "40036988.01",
+          "388269.96"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 258,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2015-trustees",
+      "inputKey": "sd42-2015",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2014/15",
+      "slug": "2014-15",
+      "periodType": "fiscal",
+      "periodStart": "2014-07-01",
+      "periodEnd": "2015-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2015: trustees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/1415-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "bfd1d9777f66cac5adfdf9f349d4e3413cf5cdcac4ad649d92b1a6ccb6069fca",
+      "file": "sd42-2015-trustees.json.gzip",
+      "dataSha256": "00300694aab01c443a63637fb43fcee167e087cc436a5c2989a4fd3596809f06",
+      "normalizedSha256": "0a4a3c1980ccbb647b0b211ec5f21f16c418cd99866be42520a98b221269a020",
+      "provenanceFile": "sd42-2015-trustees-evidence.json.gzip",
+      "provenanceSha256": "3cf3347e3db7da6b9416ef4e6ecdbcf177ff244dc0ca32f2e48c254fc1a8daab",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 9,
+      "totalRemuneration": 140833.35,
+      "totalExpenses": 15563.73,
+      "pages": [
+        46
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "46": 9
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 9,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "140,833.35",
+          "15,563.73"
+        ],
+        "computedComponentTotals": [
+          "140833.35",
+          "15563.73"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 1,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2016-employees",
+      "inputKey": "sd42-2016",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2015/16",
+      "slug": "2015-16",
+      "periodType": "fiscal",
+      "periodStart": "2015-07-01",
+      "periodEnd": "2016-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2016: employees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-30-2016.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "d7cb5e07293ffe34e6f622fcafb3e9b02133db5c5239b52a221f7affa5109246",
+      "file": "sd42-2016-employees.json.gzip",
+      "dataSha256": "b10216f476c9a5608032e70f7f0d811d0901b8d6a950769ec935bb16f37ef307",
+      "normalizedSha256": "fb5c8178b912b44cee5837ab66e63668f764494df75a1cc6dd36c9f5fa51267d",
+      "provenanceFile": "sd42-2016-employees-evidence.json.gzip",
+      "provenanceSha256": "c9fcd29d27470e77cb25afc7b69f7a96f7cd93e39ee93f0c607c78e00c611ec2",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 595,
+      "totalRemuneration": 52255376.78,
+      "totalExpenses": 458632.02,
+      "pages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "This employee schedule does not publish job titles; positions remain null."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "47": 45,
+          "48": 45,
+          "49": 45,
+          "50": 45,
+          "51": 45,
+          "52": 45,
+          "53": 45,
+          "54": 45,
+          "55": 45,
+          "56": 45,
+          "57": 45,
+          "58": 45,
+          "59": 45,
+          "60": 10
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 595,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "52,255,376.78",
+          "458,632.02"
+        ],
+        "computedComponentTotals": [
+          "52255376.78",
+          "458632.02"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 350,
+        "negativeExpenses": 1,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2016-trustees",
+      "inputKey": "sd42-2016",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2015/16",
+      "slug": "2015-16",
+      "periodType": "fiscal",
+      "periodStart": "2015-07-01",
+      "periodEnd": "2016-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2016: trustees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-30-2016.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "d7cb5e07293ffe34e6f622fcafb3e9b02133db5c5239b52a221f7affa5109246",
+      "file": "sd42-2016-trustees.json.gzip",
+      "dataSha256": "7be80ba26a1f751e489c246d8f034d6e3145ddcc5114bb35c9e5e9055912df6b",
+      "normalizedSha256": "bae723ae0a42c9bd5643e1bc33f930418e2f8c337c26bfa5938381137b2195db",
+      "provenanceFile": "sd42-2016-trustees-evidence.json.gzip",
+      "provenanceSha256": "01d2bea238a5567ae5f0fe37f5e5bcac8ec1357907d77c0b687a8b38d64a2376",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 143148.09,
+      "totalExpenses": 12056.56,
+      "pages": [
+        46
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "46": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "143,148.09",
+          "12,056.56"
+        ],
+        "computedComponentTotals": [
+          "143148.09",
+          "12056.56"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 0,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2017-employees",
+      "inputKey": "sd42-2017",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2016/17",
+      "slug": "2016-17",
+      "periodType": "fiscal",
+      "periodStart": "2016-07-01",
+      "periodEnd": "2017-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2017: employees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-30-2017.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "fc5e451d35960340cd0cd760793b671a31f100bc54dfce6267333b31ae4324df",
+      "file": "sd42-2017-employees.json.gzip",
+      "dataSha256": "c4ca96406c16dbba834ec3cdc1aafece62f41af323b328712bea66ddc8527121",
+      "normalizedSha256": "fc8d2c7cd0dcdbdc48646749862d0b32cb5e59edd25061aaae45086b9c2111d7",
+      "provenanceFile": "sd42-2017-employees-evidence.json.gzip",
+      "provenanceSha256": "fd655dd2f5d5754c1eeebb31b0a66f102205f6ccc3ec8b99c5079b62b571c71c",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 604,
+      "totalRemuneration": 54011183.44,
+      "totalExpenses": 539839.52,
+      "pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "This employee schedule does not publish job titles; positions remain null."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "48": 45,
+          "49": 45,
+          "50": 45,
+          "51": 45,
+          "52": 45,
+          "53": 45,
+          "54": 45,
+          "55": 45,
+          "56": 45,
+          "57": 45,
+          "58": 45,
+          "59": 45,
+          "60": 45,
+          "61": 19
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 604,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "54,011,183.44",
+          "539,839.52"
+        ],
+        "computedComponentTotals": [
+          "54011183.44",
+          "539839.52"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 329,
+        "negativeExpenses": 1,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2017-trustees",
+      "inputKey": "sd42-2017",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2016/17",
+      "slug": "2016-17",
+      "periodType": "fiscal",
+      "periodStart": "2016-07-01",
+      "periodEnd": "2017-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2017: trustees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-30-2017.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "fc5e451d35960340cd0cd760793b671a31f100bc54dfce6267333b31ae4324df",
+      "file": "sd42-2017-trustees.json.gzip",
+      "dataSha256": "7ad78c9b874210109fbeb259fea2ca18578efb61a5b734fb0020fa450100b5a2",
+      "normalizedSha256": "93bcd0cd9dcc2a6426ddb8fc8a6fff277be3c92fa2afab061024f52f769f5a92",
+      "provenanceFile": "sd42-2017-trustees-evidence.json.gzip",
+      "provenanceSha256": "382f1a7ad1a2dca9529d43634c36443abec5f4303908850ed5992de58cfc76a5",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 141607.36,
+      "totalExpenses": 15344.3,
+      "pages": [
+        47
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "47": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "141,607.36",
+          "15,344.30"
+        ],
+        "computedComponentTotals": [
+          "141607.36",
+          "15344.30"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 1,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2018-employees",
+      "inputKey": "sd42-2018",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2017/18",
+      "slug": "2017-18",
+      "periodType": "fiscal",
+      "periodStart": "2017-07-01",
+      "periodEnd": "2018-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2018: employees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-2018.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "26fc2d6d6c4d30b40114f8abd4c0c18a4403af6fa6de1292ba5b02a351cb52ad",
+      "file": "sd42-2018-employees.json.gzip",
+      "dataSha256": "ab9ecff1ba3d575b581e265dbb2890b0e225659201d40437dbc779eccf2928c8",
+      "normalizedSha256": "aaf6b21d1e15a152d9e5f3305719667e42a4e51afc1bd2513b3c0c4f74d7d18a",
+      "provenanceFile": "sd42-2018-employees-evidence.json.gzip",
+      "provenanceSha256": "b24c4f2ae7e1e6db1bcdd184606985fcc4655b23be1fc3264314dc8dda8bb808",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 629,
+      "totalRemuneration": 56368075.57,
+      "totalExpenses": 534037.13,
+      "pages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "47": 51,
+          "48": 51,
+          "49": 51,
+          "50": 51,
+          "51": 51,
+          "52": 51,
+          "53": 51,
+          "54": 51,
+          "55": 51,
+          "56": 51,
+          "57": 51,
+          "58": 51,
+          "59": 17
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 629,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "56,368,075.57",
+          "534,037.13"
+        ],
+        "computedComponentTotals": [
+          "56368075.57",
+          "534037.13"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 321,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2018-trustees",
+      "inputKey": "sd42-2018",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2017/18",
+      "slug": "2017-18",
+      "periodType": "fiscal",
+      "periodStart": "2017-07-01",
+      "periodEnd": "2018-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2018: trustees",
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-2018.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "26fc2d6d6c4d30b40114f8abd4c0c18a4403af6fa6de1292ba5b02a351cb52ad",
+      "file": "sd42-2018-trustees.json.gzip",
+      "dataSha256": "9c033c4d0d9649374cf6357de71feceadc4347cbd688b2d3f4bb0c13805b5306",
+      "normalizedSha256": "b23200d9fd6f02a22caeee9c7b75178ad2c722671774a592db02e4f9a6199980",
+      "provenanceFile": "sd42-2018-trustees-evidence.json.gzip",
+      "provenanceSha256": "bf4b3d8331ebe26f050ec88c305e22d9d237fdf52c116d1929007800fdda9b63",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 6,
+      "totalRemuneration": 126792.9,
+      "totalExpenses": 14591.34,
+      "pages": [
+        46
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "46": 6
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 6,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "126,792.90",
+          "14,591.34"
+        ],
+        "computedComponentTotals": [
+          "126792.90",
+          "14591.34"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 1,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2019-employees",
+      "inputKey": "sd42-2019",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2018/19",
+      "slug": "2018-19",
+      "periodType": "fiscal",
+      "periodStart": "2018-07-01",
+      "periodEnd": "2019-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2019: employees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/2019-SOFI-REPORT-website.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "649f48bad8c72344c708db28fb11f3a0c21eb322cfbb055a9ace849101851a82",
+      "file": "sd42-2019-employees.json.gzip",
+      "dataSha256": "519e17d461c0e9e1c09e9c00a03371874f58a6954cee8523e18c57ef5fb6bd12",
+      "normalizedSha256": "f34350ad392110405fd630104965080ba2840aadef8c0f4a7073aac52c169502",
+      "provenanceFile": "sd42-2019-employees-evidence.json.gzip",
+      "provenanceSha256": "e4dda10ac5b0171de129ce5e6999dd88271778cb1885b5606875213eee327af2",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 656,
+      "totalRemuneration": 60011186.87,
+      "totalExpenses": 656386.29,
+      "pages": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "49": 50,
+          "50": 50,
+          "51": 50,
+          "52": 50,
+          "53": 50,
+          "54": 50,
+          "55": 50,
+          "56": 50,
+          "57": 50,
+          "58": 50,
+          "59": 50,
+          "60": 50,
+          "61": 50,
+          "62": 6
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 656,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "60,011,186.87",
+          "656,386.29"
+        ],
+        "computedComponentTotals": [
+          "60011186.87",
+          "656386.29"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 285,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2019-trustees",
+      "inputKey": "sd42-2019",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2018/19",
+      "slug": "2018-19",
+      "periodType": "fiscal",
+      "periodStart": "2018-07-01",
+      "periodEnd": "2019-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2019: trustees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/2019-SOFI-REPORT-website.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "649f48bad8c72344c708db28fb11f3a0c21eb322cfbb055a9ace849101851a82",
+      "file": "sd42-2019-trustees.json.gzip",
+      "dataSha256": "ba81b368ae4c8e1f3b118818a3da3b4f4ef242f2929c5973023dadc581e7cdf4",
+      "normalizedSha256": "d916720e69ba34f568ee0806210df439b94c5962308bfe9236a68c4429bf97fe",
+      "provenanceFile": "sd42-2019-trustees-evidence.json.gzip",
+      "provenanceSha256": "4032aaa2f7ead0f573cac81c01cd428c18a76138a8fb0afa7cad31fbc18f22ea",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 11,
+      "totalRemuneration": 162205.42,
+      "totalExpenses": 24748.09,
+      "pages": [
+        48
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "48": 11
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 11,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "162,205.42",
+          "24,748.09"
+        ],
+        "computedComponentTotals": [
+          "162205.42",
+          "24748.09"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 4,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2020-employees",
+      "inputKey": "sd42-2020",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2019/20",
+      "slug": "2019-20",
+      "periodType": "fiscal",
+      "periodStart": "2019-07-01",
+      "periodEnd": "2020-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2020: employees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-Report-June-30-2020_website-copy.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "b3ad0fe0864e52240eebd38b972758b00316723875ed41f427a54765c9b4f7d3",
+      "file": "sd42-2020-employees.json.gzip",
+      "dataSha256": "b62be9259c3e1b5c28ff47a4fffdd6e68d4ed433128d898aa5f062bec6169578",
+      "normalizedSha256": "9837d98ef7f463686bffc58b4040cd79ea99e878d4abf1562cec0967bc538b1b",
+      "provenanceFile": "sd42-2020-employees-evidence.json.gzip",
+      "provenanceSha256": "70229ec0ebe3653c73282dbbbc655ba57328a89fd407485695f564c5d926204d",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 693,
+      "totalRemuneration": 65148119.93,
+      "totalExpenses": 565220.75,
+      "pages": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "50": 57,
+          "51": 57,
+          "52": 57,
+          "53": 57,
+          "54": 57,
+          "55": 57,
+          "56": 57,
+          "57": 57,
+          "58": 57,
+          "59": 57,
+          "60": 57,
+          "61": 57,
+          "62": 9
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 693,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "65,148,119.93",
+          "565,220.75"
+        ],
+        "computedComponentTotals": [
+          "65148119.93",
+          "565220.75"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 358,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2020-trustees",
+      "inputKey": "sd42-2020",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2019/20",
+      "slug": "2019-20",
+      "periodType": "fiscal",
+      "periodStart": "2019-07-01",
+      "periodEnd": "2020-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2020: trustees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-Report-June-30-2020_website-copy.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "b3ad0fe0864e52240eebd38b972758b00316723875ed41f427a54765c9b4f7d3",
+      "file": "sd42-2020-trustees.json.gzip",
+      "dataSha256": "095a4f39666d058c3588ee8823a47610ca57d8fefe122adc3c32a9b5ec9d8610",
+      "normalizedSha256": "e81e1979322179b8ff822cba99bb4c0004b84ae630ce51b57c910f4b50733bea",
+      "provenanceFile": "sd42-2020-trustees-evidence.json.gzip",
+      "provenanceSha256": "ef36ba1d93e9c80d7b656b9f1b0085318551345b9fdeb987d67a785e97f10b3b",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 177050.64,
+      "totalExpenses": 11318.27,
+      "pages": [
+        49
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "49": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "177,050.64",
+          "11,318.27"
+        ],
+        "computedComponentTotals": [
+          "177050.64",
+          "11318.27"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 0,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2021-employees",
+      "inputKey": "sd42-2021",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2020/21",
+      "slug": "2020-21",
+      "periodType": "fiscal",
+      "periodStart": "2020-07-01",
+      "periodEnd": "2021-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2021: employees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-REPORT_-June-30-2021.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "ef1942cbedcd4a4823de0acdc01f46f71b1314c8cdd68dcf3e9749eef50b1fec",
+      "file": "sd42-2021-employees.json.gzip",
+      "dataSha256": "b2e9ba7cc93c13a8f20b4a5879ca01a1935ec7da7723e7caf6582810c41c4f0e",
+      "normalizedSha256": "3bb2e54ae3e3757f9aac7e4c1427df1dad763f7805fde3ee1b7380b5bd94244e",
+      "provenanceFile": "sd42-2021-employees-evidence.json.gzip",
+      "provenanceSha256": "a32528a3ab73e4a6a0b847cd07c05f8ee3702c5b74a0b02d646a8d35e4544b97",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 756,
+      "totalRemuneration": 72611558.13,
+      "totalExpenses": 185182.63,
+      "pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "52": 57,
+          "53": 57,
+          "54": 57,
+          "55": 57,
+          "56": 57,
+          "57": 57,
+          "58": 57,
+          "59": 57,
+          "60": 57,
+          "61": 57,
+          "62": 57,
+          "63": 57,
+          "64": 57,
+          "65": 15
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 756,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "72,611,558.13",
+          "185,182.63"
+        ],
+        "computedComponentTotals": [
+          "72611558.13",
+          "185182.63"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 488,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2021-trustees",
+      "inputKey": "sd42-2021",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2020/21",
+      "slug": "2020-21",
+      "periodType": "fiscal",
+      "periodStart": "2020-07-01",
+      "periodEnd": "2021-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2021: trustees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-REPORT_-June-30-2021.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "ef1942cbedcd4a4823de0acdc01f46f71b1314c8cdd68dcf3e9749eef50b1fec",
+      "file": "sd42-2021-trustees.json.gzip",
+      "dataSha256": "c3344ad3fb2966f805fcff5d016d1e4a37f2f7ee2c6a0735ebb351d1fad40277",
+      "normalizedSha256": "a0be2c76d73892496dede6d4e27de5192c225ab1165002083de41592b2d87a22",
+      "provenanceFile": "sd42-2021-trustees-evidence.json.gzip",
+      "provenanceSha256": "d6e88690f3e5f366f94582ed7b0a17aec42a95ce8f3131c930fcfd8b6e0a5a1d",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 181218.65,
+      "totalExpenses": 5701.57,
+      "pages": [
+        51
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "51": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "181,218.65",
+          "5,701.57"
+        ],
+        "computedComponentTotals": [
+          "181218.65",
+          "5701.57"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 0,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2022-employees",
+      "inputKey": "sd42-2022",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2021/22",
+      "slug": "2021-22",
+      "periodType": "fiscal",
+      "periodStart": "2021-07-01",
+      "periodEnd": "2022-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2022: employees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-REPORT-Final-Jun-30-2022.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "a570cd9eca79d4a5619c6a0fc9942154dcd7e4ceac9ef1f66611f3e181e8d5bd",
+      "file": "sd42-2022-employees.json.gzip",
+      "dataSha256": "690f756db2f8483230cf9dd8995fdcafa5045e6ae43664326d2c8b94c5c10a64",
+      "normalizedSha256": "53280e2557ab0a0107c42a04f30a5da4918c722d5460574a0d08d9fa7dc2b4cc",
+      "provenanceFile": "sd42-2022-employees-evidence.json.gzip",
+      "provenanceSha256": "be8268ed1d65ad95e384afa9a60cf2e5b29b2b484d4ad1bb1e970439fa6db262",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 824,
+      "totalRemuneration": 79616875.75,
+      "totalExpenses": 277692.11,
+      "pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "52": 51,
+          "53": 51,
+          "54": 51,
+          "55": 51,
+          "56": 51,
+          "57": 51,
+          "58": 51,
+          "59": 51,
+          "60": 51,
+          "61": 51,
+          "62": 51,
+          "63": 51,
+          "64": 51,
+          "65": 51,
+          "66": 51,
+          "67": 51,
+          "68": 8
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 824,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "79,616,875.75",
+          "277,692.11"
+        ],
+        "computedComponentTotals": [
+          "79616875.75",
+          "277692.11"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 538,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2022-trustees",
+      "inputKey": "sd42-2022",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2021/22",
+      "slug": "2021-22",
+      "periodType": "fiscal",
+      "periodStart": "2021-07-01",
+      "periodEnd": "2022-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2022: trustees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-REPORT-Final-Jun-30-2022.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "a570cd9eca79d4a5619c6a0fc9942154dcd7e4ceac9ef1f66611f3e181e8d5bd",
+      "file": "sd42-2022-trustees.json.gzip",
+      "dataSha256": "074c49073abf4db3887560bb3b7f7ce9820e2b95c062a8677cd4a2b06231b3d7",
+      "normalizedSha256": "33dbe77532d4ac4b9fde79bac74758fddca02da11894cd66350376bfbfbaa78d",
+      "provenanceFile": "sd42-2022-trustees-evidence.json.gzip",
+      "provenanceSha256": "777467a3ab91b2092f0fe48619cf38296f1962ce6de6feb1ccbd7e11971b675a",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 181942.29,
+      "totalExpenses": 21966.09,
+      "pages": [
+        51
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "51": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "181,942.29",
+          "21,966.09"
+        ],
+        "computedComponentTotals": [
+          "181942.29",
+          "21966.09"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 0,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2023-employees",
+      "inputKey": "sd42-2023",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2022/23",
+      "slug": "2022-23",
+      "periodType": "fiscal",
+      "periodStart": "2022-07-01",
+      "periodEnd": "2023-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2023: employees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-Report-ELECTRONICALLY-signed-fiscal-year-ended-June-30-2023-for-website.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "c9cdab359367fb576d3920699810710595e56173a1bed323bbadb1cd0897e47c",
+      "file": "sd42-2023-employees.json.gzip",
+      "dataSha256": "d0e0dcc03b796fe44b649b93b8513bbf752114059bc25bdd7b0731f78b5a9d8a",
+      "normalizedSha256": "14db4d29ec03eb11b4f449526e1281696e13e20a1fdc06470094a6c8d57c8797",
+      "provenanceFile": "sd42-2023-employees-evidence.json.gzip",
+      "provenanceSha256": "71bdaa459e416f1b7da1dde29df745bd2f28a1c3a5900af635c5f9cd1671377d",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 900,
+      "totalRemuneration": 88692641.4,
+      "totalExpenses": 675010.89,
+      "pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "52": 49,
+          "53": 49,
+          "54": 49,
+          "55": 49,
+          "56": 49,
+          "57": 49,
+          "58": 49,
+          "59": 49,
+          "60": 49,
+          "61": 49,
+          "62": 49,
+          "63": 49,
+          "64": 49,
+          "65": 49,
+          "66": 49,
+          "67": 49,
+          "68": 49,
+          "69": 49,
+          "70": 18
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 900,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "88,692,641.40",
+          "675,010.89"
+        ],
+        "computedComponentTotals": [
+          "88692641.40",
+          "675010.89"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 453,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2023-trustees",
+      "inputKey": "sd42-2023",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2022/23",
+      "slug": "2022-23",
+      "periodType": "fiscal",
+      "periodStart": "2022-07-01",
+      "periodEnd": "2023-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2023: trustees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-Report-ELECTRONICALLY-signed-fiscal-year-ended-June-30-2023-for-website.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "c9cdab359367fb576d3920699810710595e56173a1bed323bbadb1cd0897e47c",
+      "file": "sd42-2023-trustees.json.gzip",
+      "dataSha256": "5fc094cbe9044bc45f577bfd7838e86d1a474362cdddae623103b8ecf664e86b",
+      "normalizedSha256": "d41bad8d19e96232c3a432a71146d8537d3fd0adf57e18c6597c7c43b8a63518",
+      "provenanceFile": "sd42-2023-trustees-evidence.json.gzip",
+      "provenanceSha256": "d9637cf3ca2c613f753066cb0119955aab00261600e992a60dc116ac49d84f77",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 9,
+      "totalRemuneration": 199623.97,
+      "totalExpenses": 26451.59,
+      "pages": [
+        51
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "51": 9
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 9,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "199,623.97",
+          "26,451.59"
+        ],
+        "computedComponentTotals": [
+          "199623.97",
+          "26451.59"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 2,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2024-employees",
+      "inputKey": "sd42-2024",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2023/24",
+      "slug": "2023-24",
+      "periodType": "fiscal",
+      "periodStart": "2023-07-01",
+      "periodEnd": "2024-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2024: employees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/2023-24-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "a7c575f155fab04072f9880f7ea48454496064e3358a607d9ecddc764049d197",
+      "file": "sd42-2024-employees.json.gzip",
+      "dataSha256": "16bad51f881f442a6a4c55a12c1268f759c5f245e03decaf32458df19cb4ace0",
+      "normalizedSha256": "32b9d94456bc745fbca45dcffa2297393f4aa35b69f172f8724cbb989936dace",
+      "provenanceFile": "sd42-2024-employees-evidence.json.gzip",
+      "provenanceSha256": "ef31b5166374862140c7aa6fbcf5f0b4916b14a624d002524b6a603d4a376601",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 1030,
+      "totalRemuneration": 106331701.12,
+      "totalExpenses": 646800.86,
+      "pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "52": 54,
+          "53": 54,
+          "54": 54,
+          "55": 54,
+          "56": 54,
+          "57": 54,
+          "58": 54,
+          "59": 54,
+          "60": 54,
+          "61": 54,
+          "62": 54,
+          "63": 54,
+          "64": 54,
+          "65": 54,
+          "66": 54,
+          "67": 54,
+          "68": 54,
+          "69": 54,
+          "70": 54,
+          "71": 4
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 1030,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "106,331,701.12",
+          "646,800.86"
+        ],
+        "computedComponentTotals": [
+          "106331701.12",
+          "646800.86"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 642,
+        "negativeExpenses": 1,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2024-trustees",
+      "inputKey": "sd42-2024",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2023/24",
+      "slug": "2023-24",
+      "periodType": "fiscal",
+      "periodStart": "2023-07-01",
+      "periodEnd": "2024-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2024: trustees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/2023-24-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "a7c575f155fab04072f9880f7ea48454496064e3358a607d9ecddc764049d197",
+      "file": "sd42-2024-trustees.json.gzip",
+      "dataSha256": "c8b30717973e24e173da97250d7a0d69a6e77dbdf840399b7f30671b6a319217",
+      "normalizedSha256": "5a0e7e9116910c8759078694665375acbebff02509954bb9c4ff9130d8e838f0",
+      "provenanceFile": "sd42-2024-trustees-evidence.json.gzip",
+      "provenanceSha256": "cb49fb8bcd1c0e78b92ca23c7092613b6fddb61ed4e0b6cec1578f3449966413",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 220194.64,
+      "totalExpenses": 26458.87,
+      "pages": [
+        51
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "51": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "220,194.64",
+          "26,458.87"
+        ],
+        "computedComponentTotals": [
+          "220194.64",
+          "26458.87"
+        ],
+        "controlResiduals": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "missingExpenses": 0,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2025-employees",
+      "inputKey": "sd42-2025",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/2024-25-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "22ac9365d3459ba91ca570097205163d9553d1f46ace6645a6951fed4e0c1f72",
+      "file": "sd42-2025-employees.json.gzip",
+      "dataSha256": "08dcbca058e32b4efe3dfbfdb6ff902707c2b04fd12c2378ad8f07c1122bc081",
+      "normalizedSha256": "90638022866f10c8ee32c08cff9317b8e46b3a78d43a39e276f54710628ce7b0",
+      "provenanceFile": "sd42-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "858823ac9c9ffde184c0fcba4040c7be3b7787d21bb863b8a87f495ec7eb14b9",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 1105,
+      "totalRemuneration": 117264120,
+      "totalExpenses": 756803,
+      "pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "The source prints whole dollars. Row-minus-printed-control residuals in remuneration and expenses are [17, -5] CAD. Individual values are retained without adjustment; no cause for these differences is asserted.",
+        "Long names and titles sometimes touch or overlap in the rendered table. Reviewed name/title boundaries are explicit in the importer; the published clipped name 'PENACERRADA, CARLO GATCHALI' in 2025 is retained without expanding its ending."
+      ],
+      "publicWarning": "Sum of published row amounts minus the printed named-cohort subtotal: remuneration +17 CAD; expenses -5 CAD. Values are retained as printed; the cause is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "52": 50,
+          "53": 65,
+          "54": 65,
+          "55": 65,
+          "56": 65,
+          "57": 65,
+          "58": 65,
+          "59": 65,
+          "60": 65,
+          "61": 65,
+          "62": 65,
+          "63": 65,
+          "64": 65,
+          "65": 65,
+          "66": 65,
+          "67": 65,
+          "68": 65,
+          "69": 15
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 1105,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "117,264,103",
+          "756,808"
+        ],
+        "computedComponentTotals": [
+          "117264120",
+          "756803"
+        ],
+        "controlResiduals": [
+          17,
+          -5
+        ],
+        "allComponentSubtotalsExact": false,
+        "missingExpenses": 529,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2025-trustees",
+      "inputKey": "sd42-2025",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/2024-25-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "22ac9365d3459ba91ca570097205163d9553d1f46ace6645a6951fed4e0c1f72",
+      "file": "sd42-2025-trustees.json.gzip",
+      "dataSha256": "e0ecfeb47b591757de620c57e44ab9e3e850b2000b30378350ce07378d32b27d",
+      "normalizedSha256": "4e1170ea0a6d203b25a7615afbe43ddcfe07226bee8cc4c50ed3b247e312ddad",
+      "provenanceFile": "sd42-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "78c106e711ef20027a1df72c0f33531ff1c5a9c7921ad86c608b2489387b854c",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 220450,
+      "totalExpenses": 28139,
+      "pages": [
+        52
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "The source prints whole dollars. Row-minus-printed-control residuals in remuneration and expenses are [0, 1] CAD. Individual values are retained without adjustment; no cause for these differences is asserted."
+      ],
+      "publicWarning": "Sum of published row amounts minus the printed named-cohort subtotal: remuneration +0 CAD; expenses +1 CAD. Values are retained as printed; the cause is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "52": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "220,450",
+          "28,138"
+        ],
+        "computedComponentTotals": [
+          "220450",
+          "28139"
+        ],
+        "controlResiduals": [
+          0,
+          1
+        ],
+        "allComponentSubtotalsExact": false,
+        "missingExpenses": 0,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    },
+    {
+      "id": "schools-sd42-2026-employees",
+      "inputKey": "sd42-2026",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2025/26",
+      "slug": "2025-26",
+      "periodType": "fiscal",
+      "periodStart": "2025-07-01",
+      "periodEnd": "2026-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2026: employees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/2025-26-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "85c8b09db94ea3d7b4b0084e0ed3ca96db63fff3edc68fc7ed8671355cc674eb",
+      "file": "sd42-2026-employees.json.gzip",
+      "dataSha256": "aa2e233cba6108cbd9fa9b0cf436c58fa2a82f82d5962fae443970f34faec960",
+      "normalizedSha256": "3358139718acaa11d885768b9f96f3a06618e544a7479338cf36f7a11f972a01",
+      "provenanceFile": "sd42-2026-employees-evidence.json.gzip",
+      "provenanceSha256": "f71056d9c3f6d15dead2db621dafd3a9484d9f1985533a925604f618addccb46",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published employees with remuneration over $75,000",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 1153,
+      "totalRemuneration": 124978890,
+      "totalExpenses": 690755,
+      "pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "The source prints whole dollars. Row-minus-printed-control residuals in remuneration and expenses are [-8, -9] CAD. Individual values are retained without adjustment; no cause for these differences is asserted.",
+        "Long names and titles sometimes touch or overlap in the rendered table. Reviewed name/title boundaries are explicit in the importer; the published clipped name 'PENACERRADA, CARLO GATCHALI' in 2025 is retained without expanding its ending."
+      ],
+      "publicWarning": "Sum of published row amounts minus the printed named-cohort subtotal: remuneration -8 CAD; expenses -9 CAD. Values are retained as printed; the cause is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "52": 47,
+          "53": 62,
+          "54": 62,
+          "55": 62,
+          "56": 62,
+          "57": 62,
+          "58": 62,
+          "59": 62,
+          "60": 62,
+          "61": 62,
+          "62": 62,
+          "63": 62,
+          "64": 62,
+          "65": 62,
+          "66": 62,
+          "67": 62,
+          "68": 62,
+          "69": 62,
+          "70": 52
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 1153,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "124,978,898",
+          "690,764"
+        ],
+        "computedComponentTotals": [
+          "124978890",
+          "690755"
+        ],
+        "controlResiduals": [
+          -8,
+          -9
+        ],
+        "allComponentSubtotalsExact": false,
+        "missingExpenses": 637,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": 0
+      }
+    },
+    {
+      "id": "schools-sd42-2026-trustees",
+      "inputKey": "sd42-2026",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "employerName": "School District No. 42 (Maple Ridge - Pitt Meadows)",
+      "sector": "School districts",
+      "year": "2025/26",
+      "slug": "2025-26",
+      "periodType": "fiscal",
+      "periodStart": "2025-07-01",
+      "periodEnd": "2026-06-30",
+      "title": "School District No. 42 (Maple Ridge - Pitt Meadows), year ended June 30, 2026: trustees",
+      "sourceUrl": "https://www.sd42.ca/assets/media/2025-26-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "sha256": "85c8b09db94ea3d7b4b0084e0ed3ca96db63fff3edc68fc7ed8671355cc674eb",
+      "file": "sd42-2026-trustees.json.gzip",
+      "dataSha256": "f23269ce2a99109cc9a169115cfeb6209e509c2cf9e69d4f957372752c78c1cb",
+      "normalizedSha256": "5c88e014ce1e694bf4085e5a98792fbe6b0045be95f91495dd30ae2147f80281",
+      "provenanceFile": "sd42-2026-trustees-evidence.json.gzip",
+      "provenanceSha256": "e4089455958f3f3bb961e47ef9ae2ff045be1ba1b42b74f616f7d7b4cbb858b9",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Published elected trustees; no employee threshold is applied",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "rowCount": 7,
+      "totalRemuneration": 219109,
+      "totalExpenses": 23674,
+      "pages": [
+        52
+      ],
+      "status": "verified",
+      "sourceKind": "official-pdf",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "Fiscal reporting period is July 1 to June 30, confirmed from the original salary-schedule headings. Upload dates and calendar labels are not used as the reporting period.",
+        "These are published payments, including disclosed taxable benefits and other compensation; they are not annual base salary rates or a complete employee roster. Expenses remain separate from remuneration.",
+        "Published names, initials, titles and negative amounts are retained. Dashes and blank expenses remain null; explicit zero remains zero. Footnote asterisks are retained in row evidence and excluded from display names.",
+        "Named employee and elected trustee schedules are separate cohorts. Under-threshold aggregate payroll, employer premiums, suppliers and financial-statement totals are not individual records.",
+        "Every complete source row, amount and physical PDF page agrees between Poppler layout text and independently grouped PyMuPDF word coordinates. Original table layouts and the explicit joined-name/title exceptions were visually reviewed.",
+        "The source prints whole dollars. Row-minus-printed-control residuals in remuneration and expenses are [-1, -1] CAD. Individual values are retained without adjustment; no cause for these differences is asserted."
+      ],
+      "publicWarning": "Sum of published row amounts minus the printed named-cohort subtotal: remuneration -1 CAD; expenses -1 CAD. Values are retained as printed; the cause is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "reportingPeriodVerifiedOnEverySalaryPage": true,
+        "rowsByPhysicalPage": {
+          "52": 7
+        },
+        "independentReaders": [
+          "Poppler layout text",
+          "PyMuPDF independently grouped PDF word coordinates"
+        ],
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "rowsIndependentlyChecked": 7,
+        "unparsedInterRowText": 0,
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "219,110",
+          "23,675"
+        ],
+        "computedComponentTotals": [
+          "219109",
+          "23674"
+        ],
+        "controlResiduals": [
+          -1,
+          -1
+        ],
+        "allComponentSubtotalsExact": false,
+        "missingExpenses": 1,
+        "negativeExpenses": 0,
+        "publishedThresholdExceptions": null
+      }
+    }
+  ],
+  "unparsedSources": [
+    {
+      "endingYear": 2007,
+      "sourceUrl": "http://www.sd42.ca/assets/media/0607-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "retrievedUrl": "https://www.sd42.ca/assets/media/0607-sofi.pdf",
+      "sha256": "1993359aa558b674e1a0542d188aa8da4eda26b893e2e4d874f81ac55e402d2f",
+      "bytes": 439393,
+      "cacheFile": "sd42-2007.pdf",
+      "status": "ocr-needed",
+      "nextAction": "OCR all original salary pages; independently verify every name, amount, reporting period and complete cohort controls before acceptance"
+    },
+    {
+      "endingYear": 2008,
+      "sourceUrl": "http://www.sd42.ca/assets/media/0708-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "retrievedUrl": "https://www.sd42.ca/assets/media/0708-sofi.pdf",
+      "sha256": "6ab35662d7c4d859ce423b4b41d28cf32f0ad90d3ff54ecc523414c9b93c1c85",
+      "bytes": 1032411,
+      "cacheFile": "sd42-2008.pdf",
+      "status": "ocr-needed",
+      "nextAction": "OCR all original salary pages; independently verify every name, amount, reporting period and complete cohort controls before acceptance"
+    },
+    {
+      "endingYear": 2009,
+      "sourceUrl": "http://www.sd42.ca/assets/media/0809-SOFI.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "retrievedUrl": "https://www.sd42.ca/assets/media/0809-SOFI.pdf",
+      "sha256": "20cc25048b1f3ff5755e9ebcff240afe60f785bef8382e38748d479a0655b417",
+      "bytes": 1404469,
+      "cacheFile": "sd42-2009.pdf",
+      "status": "ocr-needed",
+      "nextAction": "OCR all original salary pages; independently verify every name, amount, reporting period and complete cohort controls before acceptance"
+    },
+    {
+      "endingYear": 2011,
+      "sourceUrl": "http://www.sd42.ca/assets/media/1011-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "retrievedUrl": "https://www.sd42.ca/assets/media/1011-sofi.pdf",
+      "sha256": "f762f3b8544b26bca6550c8e6ebb7400e17f2a4de4f2a038b70e9ab81c163eec",
+      "bytes": 744104,
+      "cacheFile": "sd42-2011.pdf",
+      "status": "ocr-needed",
+      "nextAction": "OCR all original salary pages; independently verify every name, amount, reporting period and complete cohort controls before acceptance"
+    },
+    {
+      "endingYear": 2012,
+      "sourceUrl": "http://www.sd42.ca/assets/media/1112-SOFI.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "retrievedUrl": "https://www.sd42.ca/assets/media/1112-SOFI.pdf",
+      "sha256": "4ed2d2ac7a9a02ea13d31446129a2a9161a547b4a9b22193d464eec279e1523c",
+      "bytes": 4640290,
+      "cacheFile": "sd42-2012.pdf",
+      "status": "ocr-needed",
+      "nextAction": "OCR all original salary pages; independently verify every name, amount, reporting period and complete cohort controls before acceptance"
+    },
+    {
+      "endingYear": 2013,
+      "sourceUrl": "http://www.sd42.ca/assets/media/1213-sofi.pdf",
+      "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+      "retrievedUrl": "https://www.sd42.ca/assets/media/1213-sofi.pdf",
+      "sha256": "0e2f96d8250d13c9eda554222017af3dee5b8c7c9c614c301071a6306600b831",
+      "bytes": 5326124,
+      "cacheFile": "sd42-2013.pdf",
+      "status": "ocr-needed",
+      "nextAction": "OCR all original salary pages; independently verify every name, amount, reporting period and complete cohort controls before acceptance"
+    }
+  ]
+}

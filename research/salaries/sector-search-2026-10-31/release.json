@@ -1,0 +1,1840 @@
+{
+  "version": 1,
+  "asOf": "2026-10-31",
+  "timezone": "America/Vancouver",
+  "baselineCommit": "96d798ed3d352d368452e01d7303aea50d598dd7",
+  "baseline": {
+    "records": 881002,
+    "officialRecords": 631091,
+    "compiledRecords": 249911,
+    "employerEntries": 166,
+    "employersWithOfficialRecords": 68,
+    "acceptedSourceFiles": 336
+  },
+  "proposed": {
+    "records": 917420,
+    "officialRecords": 673627,
+    "compiledRecords": 243793,
+    "employerEntries": 167,
+    "employersWithOfficialRecords": 75,
+    "acceptedSourceFiles": 397
+  },
+  "officialRowsAdded": 42536,
+  "compiledRowsReplaced": 6118,
+  "netRowsAdded": 36418,
+  "sectors": {
+    "Municipal police": {
+      "employerEntries": 13,
+      "records": 9232,
+      "officialRecords": 0,
+      "compiledRecords": 9232,
+      "employersWithOfficialRecords": 0
+    },
+    "School districts": {
+      "employerEntries": 14,
+      "records": 55953,
+      "officialRecords": 10568,
+      "compiledRecords": 45385,
+      "employersWithOfficialRecords": 1
+    },
+    "Crown corporations": {
+      "employerEntries": 41,
+      "records": 109942,
+      "officialRecords": 65950,
+      "compiledRecords": 43992,
+      "employersWithOfficialRecords": 6
+    },
+    "Health authorities": {
+      "employerEntries": 8,
+      "records": 312616,
+      "officialRecords": 243958,
+      "compiledRecords": 68658,
+      "employersWithOfficialRecords": 5
+    },
+    "Universities and colleges": {
+      "employerEntries": 24,
+      "records": 73068,
+      "officialRecords": 24753,
+      "compiledRecords": 48315,
+      "employersWithOfficialRecords": 4
+    },
+    "Municipalities": {
+      "employerEntries": 66,
+      "records": 136503,
+      "officialRecords": 108292,
+      "compiledRecords": 28211,
+      "employersWithOfficialRecords": 58
+    },
+    "Government": {
+      "employerEntries": 1,
+      "records": 220106,
+      "officialRecords": 220106,
+      "compiledRecords": 0,
+      "employersWithOfficialRecords": 1
+    }
+  },
+  "imports": [
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2013-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2013",
+      "scope": "elected-officials",
+      "rows": 7,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2013_statement_of_financial.pdf",
+      "sourceSha256": "7d38a11f0f44694a100b28522e9222bc8f583df81110e294e6bdd46f76b8f364",
+      "dataSha256": "301aeac57c0aaced0b7dd59d17e0d9a59c95c506b62c6d24099681e4d1d99c2e",
+      "publicWarning": "Pitt Meadows 2013 council: remuneration sums +3 CAD and expenses +1 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2013",
+      "scope": "employee-remuneration",
+      "rows": 21,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2013_statement_of_financial.pdf",
+      "sourceSha256": "7d38a11f0f44694a100b28522e9222bc8f583df81110e294e6bdd46f76b8f364",
+      "dataSha256": "20426a3b82db3ff0039d16e06b1a3565c23e062684b7f8e029dfef642d415a71",
+      "publicWarning": "Pitt Meadows 2013 employees: remuneration sums +2 CAD and expenses -1 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2019-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2019",
+      "scope": "elected-officials",
+      "rows": 7,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2019_sofi_report.pdf",
+      "sourceSha256": "823b4e0904620cc3229317a32c38dbf7d4cfe1c780e8331cf8569907723a3f03",
+      "dataSha256": "be2e68538d72cfc89a4babafd2fa3df787e2578b438d14cff400bd2f7c3434dc",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2019",
+      "scope": "employee-remuneration",
+      "rows": 39,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2019_sofi_report.pdf",
+      "sourceSha256": "823b4e0904620cc3229317a32c38dbf7d4cfe1c780e8331cf8569907723a3f03",
+      "dataSha256": "666524b8e45946e58bb2fd50dc552d672f6b08676a201f88557c17c7fae70b68",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2020-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2020",
+      "scope": "elected-officials",
+      "rows": 7,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2020_sofi.pdf",
+      "sourceSha256": "66baeadc3d221497268fb088496d954138264b1826b6f284d21b91dbefcef388",
+      "dataSha256": "23b0fbd70afbf876fbe77241f6339951bd92b6d378e72f5bca7398086275e0ca",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2020",
+      "scope": "employee-remuneration",
+      "rows": 45,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2020_sofi.pdf",
+      "sourceSha256": "66baeadc3d221497268fb088496d954138264b1826b6f284d21b91dbefcef388",
+      "dataSha256": "bf4a446f228ae516e5eeca2445dcbc86530751bbddcb4b96ad18593ce4bb9d9e",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2021-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2021",
+      "scope": "elected-officials",
+      "rows": 7,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/2022-06/2021%20SOFI.pdf",
+      "sourceSha256": "9ca9ab5a6c3158d066cd33293ab9e2bf2b52518d49940957116b9bc5c669ac4e",
+      "dataSha256": "41b2a6541e6e4d0f08d8508a9d479676c62758163b32b87013447b377e0c0ce0",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2021",
+      "scope": "employee-remuneration",
+      "rows": 56,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/2022-06/2021%20SOFI.pdf",
+      "sourceSha256": "9ca9ab5a6c3158d066cd33293ab9e2bf2b52518d49940957116b9bc5c669ac4e",
+      "dataSha256": "18ca83d6bbf447b3a8f84c15d9192d6959b4bb78bb7a08a9b3e0f819229cfbdf",
+      "publicWarning": "Pitt Meadows 2021 employees: remuneration sums -2 CAD and expenses +1 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2022-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2022",
+      "scope": "elected-officials",
+      "rows": 9,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+      "sourceSha256": "b1bc5be91d9cfe5befefe33029b3d637dfa0562733320c2a6b5bffc7c4466e71",
+      "dataSha256": "401503bba569d6458f0f59f12ad88e145f9ddbd53512d706d75e4fb1597e3538",
+      "publicWarning": "Pitt Meadows 2022 council: remuneration sums -1 CAD and expenses +1 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "year": "2022",
+      "scope": "employee-remuneration",
+      "rows": 62,
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+      "sourceSha256": "b1bc5be91d9cfe5befefe33029b3d637dfa0562733320c2a6b5bffc7c4466e71",
+      "dataSha256": "5cec60f3a7b57b25726f597e4a20dd33d5eeb3ed0ff7f01c899b3b0a63ad2594",
+      "publicWarning": "Pitt Meadows 2022 employees: remuneration sums -4 CAD and expenses +0 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-revelstoke-2025-elected-officials",
+      "employerSlug": "city-of-revelstoke",
+      "year": "2025",
+      "scope": "elected-officials",
+      "rows": 7,
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16909/2025-SOFI-PDF",
+      "sourceSha256": "00483f68e05588692d75b85390f0d9801331aab0da195437d4e9a7f10a03e71c",
+      "dataSha256": "6af8e79ccff7dea026b4c8ecf1a55405af035d24c22038b3e98038c5fdfb301d",
+      "publicWarning": "Revelstoke 2025 elected-officials: individual remuneration sums -2 CAD and expenses -1 CAD relative to the printed named subtotals. Published amounts are preserved; these source differences remain unresolved."
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-revelstoke-2025-employee-remuneration",
+      "employerSlug": "city-of-revelstoke",
+      "year": "2025",
+      "scope": "employee-remuneration",
+      "rows": 65,
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16909/2025-SOFI-PDF",
+      "sourceSha256": "00483f68e05588692d75b85390f0d9801331aab0da195437d4e9a7f10a03e71c",
+      "dataSha256": "eed02f03e956b96aae468f02581c2132c2db03af42cec75a39c6d31d2c5d2ac8",
+      "publicWarning": "Revelstoke 2025 employee-remuneration: individual remuneration sums -1 CAD and expenses +1 CAD relative to the printed named subtotals. Published amounts are preserved; these source differences remain unresolved."
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-parksville-2025-elected-officials",
+      "employerSlug": "city-of-parksville",
+      "year": "2025",
+      "scope": "elected-officials",
+      "rows": 7,
+      "sourceUrl": "https://parksville.civicweb.net/FileStorage/6F0BB1A06E80498CB57F01D450F88675-3f)%202025%20SOFI%20report%20to%20Council_Redacted.pdf",
+      "sourceSha256": "e5084fdc345e6ca5da2a1275bed1e836880fe3031296e7b09f303e5da883646f",
+      "dataSha256": "20f9602f98ee552e640f75ec97a10f3a9780e6b813813b2fecca85c717252cef",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-municipal",
+      "sourceId": "sector-municipal-city-of-parksville-2025-employee-remuneration",
+      "employerSlug": "city-of-parksville",
+      "year": "2025",
+      "scope": "employee-remuneration",
+      "rows": 72,
+      "sourceUrl": "https://parksville.civicweb.net/FileStorage/6F0BB1A06E80498CB57F01D450F88675-3f)%202025%20SOFI%20report%20to%20Council_Redacted.pdf",
+      "sourceSha256": "e5084fdc345e6ca5da2a1275bed1e836880fe3031296e7b09f303e5da883646f",
+      "dataSha256": "0f2db77a829c009ada4508aecde7b45f647cb1b5a3bda44f245d0a0ecb00489d",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-health",
+      "sourceId": "fraser-health-sofi-2013-14",
+      "employerSlug": "fraser-health",
+      "year": "2013/14",
+      "scope": "employee-remuneration",
+      "rows": 5569,
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2014/2014EmployeeRemuneration.pdf",
+      "sourceSha256": "dc651f21a4d8f7e143865c3e6e723a32189c271b90d251511f40e93c94e87f28",
+      "dataSha256": "107e532a35ce96323d66ae94940a6826b1d5d911d5305aa088871bc32bbce06c",
+      "publicWarning": "Displayed employee rows exceed the printed named remuneration subtotal by $40 and the expense subtotal by $34. The cause is unresolved; all published cells are retained unchanged."
+    },
+    {
+      "collection": "sector-health",
+      "sourceId": "fraser-health-sofi-2014-15",
+      "employerSlug": "fraser-health",
+      "year": "2014/15",
+      "scope": "employee-remuneration",
+      "rows": 5925,
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/About-Us/Accountability/Financial-reporting/2015/2015EmployeeRemuneration.pdf",
+      "sourceSha256": "dd902ea484f17717eff18ce0faa9876831d2a513cf34f1e3ac9642e87e4971c0",
+      "dataSha256": "cb6e9935c92cee2c0f372a7a421bbd180f7f61119d98e0e028e2e575cd2cfe85",
+      "publicWarning": "Displayed employee rows exceed the printed named remuneration subtotal by $104 and the expense subtotal by $23. The cause is unresolved; all published cells are retained unchanged."
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2005-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2004/05",
+      "scope": "employee-remuneration",
+      "rows": 67,
+      "sourceUrl": "http://www.sd42.ca/assets/media/0405-Sofi.pdf",
+      "sourceSha256": "e0dd61e5ab2852af88598d4f6dcda1e8fcdd56027a3f05fbdf25d35cd3641547",
+      "dataSha256": "a2e30b8a20b567a3bc27b116ecfc751fff7882eae16def6ef8fb6b882e77d103",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2005-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2004/05",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "http://www.sd42.ca/assets/media/0405-Sofi.pdf",
+      "sourceSha256": "e0dd61e5ab2852af88598d4f6dcda1e8fcdd56027a3f05fbdf25d35cd3641547",
+      "dataSha256": "0cbe7064138fd22efbe82c7a4981321801b5aabf898cbab469f189df7e9d641c",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2006-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2005/06",
+      "scope": "employee-remuneration",
+      "rows": 77,
+      "sourceUrl": "http://www.sd42.ca/assets/media/0506-sofi.pdf",
+      "sourceSha256": "9f10fbb433002554a40c8e955292859da12c94a5c1edd18be0183e0cae154f1e",
+      "dataSha256": "0df6fdb8372941780488c79f01d3fe83921347c7e01fdca151d691b8b544163f",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2006-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2005/06",
+      "scope": "school-trustees",
+      "rows": 10,
+      "sourceUrl": "http://www.sd42.ca/assets/media/0506-sofi.pdf",
+      "sourceSha256": "9f10fbb433002554a40c8e955292859da12c94a5c1edd18be0183e0cae154f1e",
+      "dataSha256": "6a84ee8918f1861804c47515bed8765097d60011203a51bbffb9c5e94f349b15",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2010-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2009/10",
+      "scope": "employee-remuneration",
+      "rows": 463,
+      "sourceUrl": "http://www.sd42.ca/assets/media/0910-SOFI.pdf",
+      "sourceSha256": "68ce1d3e46b489e9a473efac0ae17b90c741391c6c4bdd83643786f7c0205760",
+      "dataSha256": "f54cba8734d9b5a4345deed11f5375938f0fb6c0519afc6c9db46a618e047f46",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2010-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2009/10",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "http://www.sd42.ca/assets/media/0910-SOFI.pdf",
+      "sourceSha256": "68ce1d3e46b489e9a473efac0ae17b90c741391c6c4bdd83643786f7c0205760",
+      "dataSha256": "94836e5784b97fc0700860799ea56330cff1cca4bcc84e42611adcef0258a6c6",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2014-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2013/14",
+      "scope": "employee-remuneration",
+      "rows": 421,
+      "sourceUrl": "http://www.sd42.ca/assets/media/1314-sofi.pdf",
+      "sourceSha256": "6326806e29278f5951617c533ed06e98dc6ca0f891e9f842a61c14e067bca022",
+      "dataSha256": "4168d3aafb60582de9c0bb99727db014cb15132046f428ec67181579b65661f8",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2014-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2013/14",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "http://www.sd42.ca/assets/media/1314-sofi.pdf",
+      "sourceSha256": "6326806e29278f5951617c533ed06e98dc6ca0f891e9f842a61c14e067bca022",
+      "dataSha256": "6bc184010fceb45e389d0feda13de0cad06e652bd09fa6ffb8f950cc3af35f24",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2015-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2014/15",
+      "scope": "employee-remuneration",
+      "rows": 473,
+      "sourceUrl": "http://www.sd42.ca/assets/media/1415-sofi.pdf",
+      "sourceSha256": "bfd1d9777f66cac5adfdf9f349d4e3413cf5cdcac4ad649d92b1a6ccb6069fca",
+      "dataSha256": "6812b72bffbc7087cc5f3edb13755c9dc78842137a7cd2e3a1232706f0534c34",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2015-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2014/15",
+      "scope": "school-trustees",
+      "rows": 9,
+      "sourceUrl": "http://www.sd42.ca/assets/media/1415-sofi.pdf",
+      "sourceSha256": "bfd1d9777f66cac5adfdf9f349d4e3413cf5cdcac4ad649d92b1a6ccb6069fca",
+      "dataSha256": "00300694aab01c443a63637fb43fcee167e087cc436a5c2989a4fd3596809f06",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2016-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2015/16",
+      "scope": "employee-remuneration",
+      "rows": 595,
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-30-2016.pdf",
+      "sourceSha256": "d7cb5e07293ffe34e6f622fcafb3e9b02133db5c5239b52a221f7affa5109246",
+      "dataSha256": "b10216f476c9a5608032e70f7f0d811d0901b8d6a950769ec935bb16f37ef307",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2016-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2015/16",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-30-2016.pdf",
+      "sourceSha256": "d7cb5e07293ffe34e6f622fcafb3e9b02133db5c5239b52a221f7affa5109246",
+      "dataSha256": "7be80ba26a1f751e489c246d8f034d6e3145ddcc5114bb35c9e5e9055912df6b",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2017-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2016/17",
+      "scope": "employee-remuneration",
+      "rows": 604,
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-30-2017.pdf",
+      "sourceSha256": "fc5e451d35960340cd0cd760793b671a31f100bc54dfce6267333b31ae4324df",
+      "dataSha256": "c4ca96406c16dbba834ec3cdc1aafece62f41af323b328712bea66ddc8527121",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2017-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2016/17",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-30-2017.pdf",
+      "sourceSha256": "fc5e451d35960340cd0cd760793b671a31f100bc54dfce6267333b31ae4324df",
+      "dataSha256": "7ad78c9b874210109fbeb259fea2ca18578efb61a5b734fb0020fa450100b5a2",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2018-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2017/18",
+      "scope": "employee-remuneration",
+      "rows": 629,
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-2018.pdf",
+      "sourceSha256": "26fc2d6d6c4d30b40114f8abd4c0c18a4403af6fa6de1292ba5b02a351cb52ad",
+      "dataSha256": "ab9ecff1ba3d575b581e265dbb2890b0e225659201d40437dbc779eccf2928c8",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2018-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2017/18",
+      "scope": "school-trustees",
+      "rows": 6,
+      "sourceUrl": "http://www.sd42.ca/assets/media/SOFI-Report-June-2018.pdf",
+      "sourceSha256": "26fc2d6d6c4d30b40114f8abd4c0c18a4403af6fa6de1292ba5b02a351cb52ad",
+      "dataSha256": "9c033c4d0d9649374cf6357de71feceadc4347cbd688b2d3f4bb0c13805b5306",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2019-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2018/19",
+      "scope": "employee-remuneration",
+      "rows": 656,
+      "sourceUrl": "https://www.sd42.ca/assets/media/2019-SOFI-REPORT-website.pdf",
+      "sourceSha256": "649f48bad8c72344c708db28fb11f3a0c21eb322cfbb055a9ace849101851a82",
+      "dataSha256": "519e17d461c0e9e1c09e9c00a03371874f58a6954cee8523e18c57ef5fb6bd12",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2019-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2018/19",
+      "scope": "school-trustees",
+      "rows": 11,
+      "sourceUrl": "https://www.sd42.ca/assets/media/2019-SOFI-REPORT-website.pdf",
+      "sourceSha256": "649f48bad8c72344c708db28fb11f3a0c21eb322cfbb055a9ace849101851a82",
+      "dataSha256": "ba81b368ae4c8e1f3b118818a3da3b4f4ef242f2929c5973023dadc581e7cdf4",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2020-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2019/20",
+      "scope": "employee-remuneration",
+      "rows": 693,
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-Report-June-30-2020_website-copy.pdf",
+      "sourceSha256": "b3ad0fe0864e52240eebd38b972758b00316723875ed41f427a54765c9b4f7d3",
+      "dataSha256": "b62be9259c3e1b5c28ff47a4fffdd6e68d4ed433128d898aa5f062bec6169578",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2020-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2019/20",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-Report-June-30-2020_website-copy.pdf",
+      "sourceSha256": "b3ad0fe0864e52240eebd38b972758b00316723875ed41f427a54765c9b4f7d3",
+      "dataSha256": "095a4f39666d058c3588ee8823a47610ca57d8fefe122adc3c32a9b5ec9d8610",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2021-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2020/21",
+      "scope": "employee-remuneration",
+      "rows": 756,
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-REPORT_-June-30-2021.pdf",
+      "sourceSha256": "ef1942cbedcd4a4823de0acdc01f46f71b1314c8cdd68dcf3e9749eef50b1fec",
+      "dataSha256": "b2e9ba7cc93c13a8f20b4a5879ca01a1935ec7da7723e7caf6582810c41c4f0e",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2021-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2020/21",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-REPORT_-June-30-2021.pdf",
+      "sourceSha256": "ef1942cbedcd4a4823de0acdc01f46f71b1314c8cdd68dcf3e9749eef50b1fec",
+      "dataSha256": "c3344ad3fb2966f805fcff5d016d1e4a37f2f7ee2c6a0735ebb351d1fad40277",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2022-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2021/22",
+      "scope": "employee-remuneration",
+      "rows": 824,
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-REPORT-Final-Jun-30-2022.pdf",
+      "sourceSha256": "a570cd9eca79d4a5619c6a0fc9942154dcd7e4ceac9ef1f66611f3e181e8d5bd",
+      "dataSha256": "690f756db2f8483230cf9dd8995fdcafa5045e6ae43664326d2c8b94c5c10a64",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2022-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2021/22",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-REPORT-Final-Jun-30-2022.pdf",
+      "sourceSha256": "a570cd9eca79d4a5619c6a0fc9942154dcd7e4ceac9ef1f66611f3e181e8d5bd",
+      "dataSha256": "074c49073abf4db3887560bb3b7f7ce9820e2b95c062a8677cd4a2b06231b3d7",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2023-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2022/23",
+      "scope": "employee-remuneration",
+      "rows": 900,
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-Report-ELECTRONICALLY-signed-fiscal-year-ended-June-30-2023-for-website.pdf",
+      "sourceSha256": "c9cdab359367fb576d3920699810710595e56173a1bed323bbadb1cd0897e47c",
+      "dataSha256": "d0e0dcc03b796fe44b649b93b8513bbf752114059bc25bdd7b0731f78b5a9d8a",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2023-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2022/23",
+      "scope": "school-trustees",
+      "rows": 9,
+      "sourceUrl": "https://www.sd42.ca/assets/media/SOFI-Report-ELECTRONICALLY-signed-fiscal-year-ended-June-30-2023-for-website.pdf",
+      "sourceSha256": "c9cdab359367fb576d3920699810710595e56173a1bed323bbadb1cd0897e47c",
+      "dataSha256": "5fc094cbe9044bc45f577bfd7838e86d1a474362cdddae623103b8ecf664e86b",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2024-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2023/24",
+      "scope": "employee-remuneration",
+      "rows": 1030,
+      "sourceUrl": "https://www.sd42.ca/assets/media/2023-24-SOFI-Report.pdf",
+      "sourceSha256": "a7c575f155fab04072f9880f7ea48454496064e3358a607d9ecddc764049d197",
+      "dataSha256": "16bad51f881f442a6a4c55a12c1268f759c5f245e03decaf32458df19cb4ace0",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2024-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2023/24",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "https://www.sd42.ca/assets/media/2023-24-SOFI-Report.pdf",
+      "sourceSha256": "a7c575f155fab04072f9880f7ea48454496064e3358a607d9ecddc764049d197",
+      "dataSha256": "c8b30717973e24e173da97250d7a0d69a6e77dbdf840399b7f30671b6a319217",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2025-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2024/25",
+      "scope": "employee-remuneration",
+      "rows": 1105,
+      "sourceUrl": "https://www.sd42.ca/assets/media/2024-25-SOFI-Report.pdf",
+      "sourceSha256": "22ac9365d3459ba91ca570097205163d9553d1f46ace6645a6951fed4e0c1f72",
+      "dataSha256": "08dcbca058e32b4efe3dfbfdb6ff902707c2b04fd12c2378ad8f07c1122bc081",
+      "publicWarning": "Sum of published row amounts minus the printed named-cohort subtotal: remuneration +17 CAD; expenses -5 CAD. Values are retained as printed; the cause is unconfirmed."
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2025-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2024/25",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "https://www.sd42.ca/assets/media/2024-25-SOFI-Report.pdf",
+      "sourceSha256": "22ac9365d3459ba91ca570097205163d9553d1f46ace6645a6951fed4e0c1f72",
+      "dataSha256": "e0ecfeb47b591757de620c57e44ab9e3e850b2000b30378350ce07378d32b27d",
+      "publicWarning": "Sum of published row amounts minus the printed named-cohort subtotal: remuneration +0 CAD; expenses +1 CAD. Values are retained as printed; the cause is unconfirmed."
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2026-employees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2025/26",
+      "scope": "employee-remuneration",
+      "rows": 1153,
+      "sourceUrl": "https://www.sd42.ca/assets/media/2025-26-SOFI-Report.pdf",
+      "sourceSha256": "85c8b09db94ea3d7b4b0084e0ed3ca96db63fff3edc68fc7ed8671355cc674eb",
+      "dataSha256": "aa2e233cba6108cbd9fa9b0cf436c58fa2a82f82d5962fae443970f34faec960",
+      "publicWarning": "Sum of published row amounts minus the printed named-cohort subtotal: remuneration -8 CAD; expenses -9 CAD. Values are retained as printed; the cause is unconfirmed."
+    },
+    {
+      "collection": "sector-schools",
+      "sourceId": "schools-sd42-2026-trustees",
+      "employerSlug": "maple-ridge-pitt-meadows-school-district",
+      "year": "2025/26",
+      "scope": "school-trustees",
+      "rows": 7,
+      "sourceUrl": "https://www.sd42.ca/assets/media/2025-26-SOFI-Report.pdf",
+      "sourceSha256": "85c8b09db94ea3d7b4b0084e0ed3ca96db63fff3edc68fc7ed8671355cc674eb",
+      "dataSha256": "f23269ce2a99109cc9a169115cfeb6209e509c2cf9e69d4f957372752c78c1cb",
+      "publicWarning": "Sum of published row amounts minus the printed named-cohort subtotal: remuneration -1 CAD; expenses -1 CAD. Values are retained as printed; the cause is unconfirmed."
+    },
+    {
+      "collection": "sector-education",
+      "sourceId": "sfu-sofi-2017-18-employees",
+      "employerSlug": "simon-fraser-university",
+      "year": "2017/18",
+      "scope": "employee-remuneration",
+      "rows": 1617,
+      "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2018%20SFU%20SOFI%20Report.pdf",
+      "sourceSha256": "a7839bdf254de1141e4a4f6e11ee9a530093b0eacb85dd94646fb2db8f237437",
+      "dataSha256": "a9f657bf7d654e417f6c93d1efb968d7c30e4d127b110dd8f9d700dfffcb7ffc",
+      "publicWarning": "The retained compilation gives different names for three matching payment cells: official 'Schmidt, Michele' ($119,776 pay, $4,725 expenses) versus compiled 'Schmidt, Gina'; official 'Schmidt, G' ($81,003, $6,570) versus compiled 'Schmidt, Margaret'; official 'Schmidt, Margaret' ($132,061, $811) versus compiled 'Schmidt, Michele'. The official report is reproduced as published; the names and compiled job titles have not been reconciled."
+    },
+    {
+      "collection": "sector-education",
+      "sourceId": "sfu-sofi-2018-19-employees",
+      "employerSlug": "simon-fraser-university",
+      "year": "2018/19",
+      "scope": "employee-remuneration",
+      "rows": 1723,
+      "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2019%20SFU%20SOFI%20Report.pdf",
+      "sourceSha256": "ca60f55e020d207241bb04cae31bb66b4f9030bbdeedcf222e9b126ac5b3f99a",
+      "dataSha256": "a181d737193fec158097ec09d71a4e494873bae2ba2619ffac3c8d2b1448a449",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-education",
+      "sourceId": "sfu-sofi-2020-21-employees",
+      "employerSlug": "simon-fraser-university",
+      "year": "2020/21",
+      "scope": "employee-remuneration",
+      "rows": 1980,
+      "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2021%20SFU%20SOFI%20Report.pdf",
+      "sourceSha256": "448494f7185048c7301f52ad6e4f4739e888cf017df15283e289e947354e542c",
+      "dataSha256": "e3f684132fec286f0fbead92bd6b997e9efc3bcf030c5fb15ddd9cc32dfab6ca",
+      "publicWarning": "Published employee rows and named subtotals disagree: remuneration $+10; expenses $+25 (row sums minus printed subtotals). Cause unresolved; published row values retained."
+    },
+    {
+      "collection": "sector-education",
+      "sourceId": "sfu-sofi-2021-22-employees",
+      "employerSlug": "simon-fraser-university",
+      "year": "2021/22",
+      "scope": "employee-remuneration",
+      "rows": 2366,
+      "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2022%20SFU%20SOFI%20Report.pdf",
+      "sourceSha256": "5c8540fc551d2471541a0e318d047114a8a1f7f1400640824767c493195118ad",
+      "dataSha256": "1257e0ad8f6224443a41b49d0cb70dbd209541be41d717db4c259207026f30b2",
+      "publicWarning": "Published employee rows and named subtotals disagree: remuneration $+11; expenses $+18 (row sums minus printed subtotals). Cause unresolved; published row values retained."
+    },
+    {
+      "collection": "sector-education",
+      "sourceId": "sfu-sofi-2024-25-employees",
+      "employerSlug": "simon-fraser-university",
+      "year": "2024/25",
+      "scope": "employee-remuneration",
+      "rows": 2874,
+      "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2025-SOFI-report.pdf",
+      "sourceSha256": "a8d64b51ca33986c9dea586213fbac2213029156eaabd13cf1b250871ed5080c",
+      "dataSha256": "2cc6307f73baef2d7d5895419afd67316c4fe7a91612c908055f2a2491a35dc3",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-education",
+      "sourceId": "sfu-sofi-2025-26-employees",
+      "employerSlug": "simon-fraser-university",
+      "year": "2025/26",
+      "scope": "employee-remuneration",
+      "rows": 2967,
+      "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2026-SOFI-report.pdf",
+      "sourceSha256": "d25179f9977b0abab61ad6a8ba5b9c97572a7839f86acb940f51f382ab512c09",
+      "dataSha256": "266d3ccbab17a91204aec3f2b252b7d2b07cbe8d20e79cb2657418a005ded7e3",
+      "publicWarning": "Published employee rows and named subtotals disagree: remuneration $+30; expenses $-9 (row sums minus printed subtotals). Cause unresolved; published row values retained."
+    },
+    {
+      "collection": "sector-crowns",
+      "sourceId": "sector-crowns-inbc-2022-23",
+      "employerSlug": "inbc",
+      "year": "2022/23",
+      "scope": "employee-remuneration",
+      "rows": 9,
+      "sourceUrl": "https://inbcinvestment.com/wp-content/uploads/2023/12/InBC-Statement-of-Financial-Information-March-31-2023-Signed.pdf",
+      "sourceSha256": "5c2c91aedda3251af04c9cf83c40a41188c22032c0309419fc70451bab08fa18",
+      "dataSha256": "fdbbc16cbba4f4a4c6e1495f31838fc28704adbe96dec0b401db5328f435506b",
+      "publicWarning": null
+    },
+    {
+      "collection": "sector-crowns",
+      "sourceId": "sector-crowns-inbc-2023-24",
+      "employerSlug": "inbc",
+      "year": "2023/24",
+      "scope": "employee-remuneration",
+      "rows": 15,
+      "sourceUrl": "https://inbcinvestment.com/wp-content/uploads/2025/03/InBC-Statement-of-Financial-Information-March-31-2024-Signed.pdf",
+      "sourceSha256": "0d299af9e848a44091e84e79cf4fe0215c79e471745eb5213e3edb66af7654d2",
+      "dataSha256": "2aed916a546fe3c40864326ae977b29c94c1d75ef1d023bf0d3db5fce9ef916e",
+      "publicWarning": "Published employee cells sum to $2,334,321 remuneration and $105,309 disclosed expenses; the printed named subtotals are $2,334,320 and $105,309. Residuals (rows minus printed): remuneration +$1, expenses +$0. Source values are preserved; the cause is unresolved."
+    },
+    {
+      "collection": "sector-crowns",
+      "sourceId": "sector-crowns-inbc-2024-25",
+      "employerSlug": "inbc",
+      "year": "2024/25",
+      "scope": "employee-remuneration",
+      "rows": 17,
+      "sourceUrl": "https://inbcinvestment.com/wp-content/uploads/2025/10/FIA-Return-March-31-2025_Final_Chair-signed.pdf",
+      "sourceSha256": "c6e95c9635d1b42c593e4094d795ff3b74039e5159f238498d87ae415f1277e5",
+      "dataSha256": "3583baa1098bb41c88ae5a75e3c85dd700cec9859227ab73b2e390934eb35f20",
+      "publicWarning": "Published employee cells sum to $2,874,812 remuneration and $152,073 disclosed expenses; the printed named subtotals are $2,874,812 and $152,072. Residuals (rows minus printed): remuneration +$0, expenses +$1. Source values are preserved; the cause is unresolved."
+    },
+    {
+      "collection": "sector-government-police",
+      "sourceId": "sector-government-police-metro-vancouver-2022-employees",
+      "employerSlug": "metro-vancouver",
+      "year": "2022",
+      "scope": "employee-remuneration",
+      "rows": 1391,
+      "sourceUrl": "https://metrovancouver.org/about-us/Documents/statement-financial-information-2022.pdf",
+      "sourceSha256": "0bd858681074e1bbdce3227b39f12a284b2cadabafd51a608f6a4b1b5139390e",
+      "dataSha256": "a938998e8404f87dae06f974beb2136b0b9b1cddd1aed79378fb8065c6e9a86b",
+      "publicWarning": "Partial employee cohort: 3 named rows with an undisclosed benefits/other component are held from the 1394-row original; 1391 accepted. Full-original known-cell sums differ from printed subtotals: salary payments $+10, taxable benefits and other $+6, expenses $+18 (known-cell sums minus controls). 118 expense dashes remain missing. Published values are unchanged; residual causes and dash semantics remain unresolved."
+    },
+    {
+      "collection": "sector-government-police",
+      "sourceId": "sector-government-police-metro-vancouver-2023-employees",
+      "employerSlug": "metro-vancouver",
+      "year": "2023",
+      "scope": "employee-remuneration",
+      "rows": 1634,
+      "sourceUrl": "https://metrovancouver.org/about-us/Documents/statement-financial-information-2023.pdf",
+      "sourceSha256": "e46777b9eef15f4fca87f99d7b8ac17e17a290c65fc6d8f48b149df088c6e5ea",
+      "dataSha256": "0e509c53108a3e609065d9a68a0805e9289b3529f33dbf65538df84d803154d7",
+      "publicWarning": "All 1634 named employee rows are transcribed. Full-original known-cell sums differ from printed subtotals: salary payments $+33, taxable benefits and other $-3, expenses $-3 (known-cell sums minus controls). 89 expense dashes remain missing. Published values are unchanged; residual causes and dash semantics remain unresolved."
+    },
+    {
+      "collection": "sector-government-police",
+      "sourceId": "sector-government-police-metro-vancouver-2024-employees",
+      "employerSlug": "metro-vancouver",
+      "year": "2024",
+      "scope": "employee-remuneration",
+      "rows": 1694,
+      "sourceUrl": "https://metrovancouver.org/about-us/Documents/statement-financial-information-2024.pdf",
+      "sourceSha256": "074859ef49fd2a857e3e7f593ad6d3172bce5f418760c54fceb5de70c85faf41",
+      "dataSha256": "026bab83ecc268379b58f44baf33fc00d51c4f09d0af9d4ef4ba489b0105242d",
+      "publicWarning": "Partial employee cohort: 2 named rows with an undisclosed benefits/other component are held from the 1696-row original; 1694 accepted. Full-original known-cell sums differ from printed subtotals: salary payments $+13, taxable benefits and other $+1, expenses $-17 (known-cell sums minus controls). 79 expense dashes remain missing. Published values are unchanged; residual causes and dash semantics remain unresolved."
+    },
+    {
+      "collection": "sector-government-police",
+      "sourceId": "sector-government-police-metro-vancouver-2025-employees",
+      "employerSlug": "metro-vancouver",
+      "year": "2025",
+      "scope": "employee-remuneration",
+      "rows": 1776,
+      "sourceUrl": "https://metrovancouver.org/about-us/Documents/statement-of-financial-information-2025.pdf",
+      "sourceSha256": "4dcc974b93f73fd83e06f52c232e642e9a056686f84463cbc049522003f25543",
+      "dataSha256": "2cfaa177802bb3ad2dd3a1a6582b8868784096483dba50eb28ac886270a41da2",
+      "publicWarning": "Partial employee cohort: 4 named rows with an undisclosed benefits/other component are held from the 1780-row original; 1776 accepted. Full-original known-cell sums differ from printed subtotals: salary payments $+21, taxable benefits and other $+0, expenses $-13 (known-cell sums minus controls). 90 expense dashes remain missing. Published values are unchanged; residual causes and dash semantics remain unresolved."
+    }
+  ],
+  "employers": [
+    {
+      "slug": "abbotsford-police",
+      "records": 741,
+      "officialRecords": 0,
+      "exportSha256": "73072a9133a60839b11e3e3221c8427ec30e1a58ffe54ae5cdf481fd5203b752"
+    },
+    {
+      "slug": "abbotsford-school-district",
+      "records": 2669,
+      "officialRecords": 0,
+      "exportSha256": "d2cda94ab6732a2f7de00baf874dd568b45af3e184522e554553c4a16731e343"
+    },
+    {
+      "slug": "bc-assessment",
+      "records": 1052,
+      "officialRecords": 0,
+      "exportSha256": "112dbdf2327ef971b2a1330df5fddee8f37de735388eff0433b46c8745bd0320"
+    },
+    {
+      "slug": "bc-clinical-and-support-services-society",
+      "records": 652,
+      "officialRecords": 652,
+      "exportSha256": "82701050786aaa6467b273967191e4befd3df881d2ab7666b52b1d8b1f828bfe"
+    },
+    {
+      "slug": "bc-council-for-international-education",
+      "records": 13,
+      "officialRecords": 0,
+      "exportSha256": "9ae7e2f10750ad5117a6cce4232bf46645a3622b4b4441580403ee247ba07893"
+    },
+    {
+      "slug": "bc-energy-regulator",
+      "records": 249,
+      "officialRecords": 0,
+      "exportSha256": "3a27458d59d6faf75db736baba9b2265c0842c03abe2d9b0b743c28e6dadd167"
+    },
+    {
+      "slug": "bc-ferries",
+      "records": 5176,
+      "officialRecords": 0,
+      "exportSha256": "ccdef9dbd1cfc9cc0fc62ce857aec51a527a238fc9c8a2501538b7cacb52607d"
+    },
+    {
+      "slug": "bc-financial-services-authority",
+      "records": 369,
+      "officialRecords": 0,
+      "exportSha256": "acd311fa49e7211ee07e0944ccd0e65aee5fe6f18a9933c92a5069ccef239e31"
+    },
+    {
+      "slug": "bc-housing",
+      "records": 1101,
+      "officialRecords": 0,
+      "exportSha256": "a521d79078df2e33ed9761a6e5fc0d3365f2ef18528329d4ca87060a155697ce"
+    },
+    {
+      "slug": "bc-hydro",
+      "records": 59732,
+      "officialRecords": 59732,
+      "exportSha256": "e8cb45a39161a45d7c0a89d607c9695a0e3b17f8f50da0f7f2f2612744eeb049"
+    },
+    {
+      "slug": "bc-infrastructure-benefits",
+      "records": 833,
+      "officialRecords": 0,
+      "exportSha256": "c7f46d8cdbec3a3fa08d74776c1b4220d4b4f75a8a0126b5372c41a656478195"
+    },
+    {
+      "slug": "bc-investment-management-corporation",
+      "records": 368,
+      "officialRecords": 0,
+      "exportSha256": "ff8dc5d745b449c3855f68132f7d571e4c5ff735a7ad7e6601e1d542d39992e1"
+    },
+    {
+      "slug": "bc-pavilion-corporation",
+      "records": 245,
+      "officialRecords": 0,
+      "exportSha256": "2a7ee3208b207362ccaf9d80de2af762a8a980e5cf081a9f7005eb65e99cdb09"
+    },
+    {
+      "slug": "bc-pension-corporation",
+      "records": 182,
+      "officialRecords": 0,
+      "exportSha256": "3f2d6777da03d18d4414ed2a8fbe34b138aedbfdaf250dcf591f00757cb18734"
+    },
+    {
+      "slug": "bc-securities-commission",
+      "records": 332,
+      "officialRecords": 0,
+      "exportSha256": "3396f0def9c071d1a33d3800cd307ba3465ce6963889c8ae063b024f316ab64a"
+    },
+    {
+      "slug": "bc-transit",
+      "records": 3328,
+      "officialRecords": 2140,
+      "exportSha256": "42ebc09aa38316ce4300dc3a19a80410ab7479b8a2a7f8539e54a1e85c145fbb"
+    },
+    {
+      "slug": "bc-utilities-commission",
+      "records": 46,
+      "officialRecords": 0,
+      "exportSha256": "de599d0fc4794c0b0e15362c8383aa8c2bac1c0466ffda03ee725d94b66ddf7a"
+    },
+    {
+      "slug": "bcit",
+      "records": 10624,
+      "officialRecords": 10624,
+      "exportSha256": "fe8ecf74338ae606a3ad08c09ae754138b3166749fe70dfc8b7c3f23e6f4a1a6"
+    },
+    {
+      "slug": "bclc",
+      "records": 2108,
+      "officialRecords": 0,
+      "exportSha256": "8af3d652772165f2c2325611c76c4e25769bc59e39cbc8b55c8858fa8b61d282"
+    },
+    {
+      "slug": "bowen-island",
+      "records": 100,
+      "officialRecords": 60,
+      "exportSha256": "81e16366cc3d4cf5ab8e05933d293da854120dd6ba5090ae5b14b479e6c952cc"
+    },
+    {
+      "slug": "burnaby-school-district",
+      "records": 3734,
+      "officialRecords": 0,
+      "exportSha256": "81ce163592adb796ee49cb4654111afdb0c3a0e11f4dabca9a09a9d596175c7a"
+    },
+    {
+      "slug": "camosun-college",
+      "records": 1449,
+      "officialRecords": 0,
+      "exportSha256": "5b3bdedca57852dc0c95159958754b26e1f5cec88d49fabf182662932c5e3eff"
+    },
+    {
+      "slug": "capilano-university",
+      "records": 1056,
+      "officialRecords": 0,
+      "exportSha256": "d560f8f19ef0d09255287e04d29ee46161de70fce2279a69c65ac6ab98e5aac9"
+    },
+    {
+      "slug": "central-saanich-police",
+      "records": 29,
+      "officialRecords": 0,
+      "exportSha256": "007e57be7370200fe8821de31006c7ba520d699539157f5fae392c80d444a110"
+    },
+    {
+      "slug": "chilliwack-school-district",
+      "records": 2104,
+      "officialRecords": 0,
+      "exportSha256": "9265141753fbc409a556e23fca3e40c9dd7011054d82b4511e86206ac095562a"
+    },
+    {
+      "slug": "city-of-abbotsford",
+      "records": 660,
+      "officialRecords": 0,
+      "exportSha256": "49d52832b1152b020ef2fe0cabbab1539b8048533e6692e59d9848a8dbafc102"
+    },
+    {
+      "slug": "city-of-burnaby",
+      "records": 9597,
+      "officialRecords": 6457,
+      "exportSha256": "9951710f756f3f4b4e2eb5699b79b371a0a56f4bdbe986a02dac6ddc21ffa932"
+    },
+    {
+      "slug": "city-of-castlegar",
+      "records": 64,
+      "officialRecords": 64,
+      "exportSha256": "4d84d40d294f96ed05482cda88f7a6684f39789117a5c2aef78a5079079494ec"
+    },
+    {
+      "slug": "city-of-chilliwack",
+      "records": 326,
+      "officialRecords": 0,
+      "exportSha256": "9f2e2c60b65217fc584b6cf6bace3beb7bedde4b087ee7b55c6cd1b55c96e2d3"
+    },
+    {
+      "slug": "city-of-coquitlam",
+      "records": 2478,
+      "officialRecords": 816,
+      "exportSha256": "92a88e90e9b8a1df6338760057ca4aa43e715b319d05f00eca369aba0fa20b32"
+    },
+    {
+      "slug": "city-of-cranbrook",
+      "records": 130,
+      "officialRecords": 130,
+      "exportSha256": "52a2ba733ff27ee5df5e3c1868dfd4900762cee71c966cdb5d8045bcc6a4300d"
+    },
+    {
+      "slug": "city-of-delta",
+      "records": 2031,
+      "officialRecords": 608,
+      "exportSha256": "ebb77f707facb05d56c53d9bac6bc1467ec7b131bc60eb768af468cdfc4a068d"
+    },
+    {
+      "slug": "city-of-duncan",
+      "records": 27,
+      "officialRecords": 27,
+      "exportSha256": "d0487f85aec228a4aa940532e93b30726fbc440f3c7f061f9806dc5544dd1e05"
+    },
+    {
+      "slug": "city-of-fort-st-john",
+      "records": 187,
+      "officialRecords": 187,
+      "exportSha256": "191ae74cd2c8e3ec07c6eeb18dde5aee063beebc231dff1f3bb6d57a4c9d86df"
+    },
+    {
+      "slug": "city-of-kamloops",
+      "records": 3857,
+      "officialRecords": 3517,
+      "exportSha256": "f2352f5f235e5c36e82c04eeda5f2d2fa785374b028a62ea9a73deef87fc1251"
+    },
+    {
+      "slug": "city-of-kelowna",
+      "records": 3848,
+      "officialRecords": 3848,
+      "exportSha256": "5f65d77c259f11c55a4175720f9cf17c5bba3e27ca1ad7961f7f5acab25cb27d"
+    },
+    {
+      "slug": "city-of-langley",
+      "records": 315,
+      "officialRecords": 168,
+      "exportSha256": "40d9408411f30da1b0afe738ea91318cb94201d8392ee4684eaf81562cda3c93"
+    },
+    {
+      "slug": "city-of-maple-ridge",
+      "records": 2738,
+      "officialRecords": 2066,
+      "exportSha256": "97dd0500731400b41f57080459669bd5f0555f6638755c03c1c7fde1d2ec4c34"
+    },
+    {
+      "slug": "city-of-mission",
+      "records": 207,
+      "officialRecords": 0,
+      "exportSha256": "2f49bc207d8b003270f523855bcb89a161e3956a541710f5671b314f2ca0845b"
+    },
+    {
+      "slug": "city-of-nanaimo",
+      "records": 2579,
+      "officialRecords": 2579,
+      "exportSha256": "11e865e7ed91221e4a3260409b16d14579c9376f21cfe0d2e38e7a042e026df3"
+    },
+    {
+      "slug": "city-of-nelson",
+      "records": 186,
+      "officialRecords": 135,
+      "exportSha256": "f57d61920e8a02d76d1b6edbff269e70c8b44535251ddb7eed5074c232519beb"
+    },
+    {
+      "slug": "city-of-new-westminster",
+      "records": 2431,
+      "officialRecords": 1841,
+      "exportSha256": "92f31005346a7372dbf21f5c12c0d29919334146b812509c4e470497f9395a47"
+    },
+    {
+      "slug": "city-of-north-vancouver",
+      "records": 1940,
+      "officialRecords": 1336,
+      "exportSha256": "9203acce03133dc55751300da58fb4dcc37cd4ba09b65265e75868e6f28157e0"
+    },
+    {
+      "slug": "city-of-parksville",
+      "records": 79,
+      "officialRecords": 79,
+      "exportSha256": "5c92790c5c608f204ae186b75c1fd1dfbce691257c99b733cee68c48bac20204"
+    },
+    {
+      "slug": "city-of-penticton",
+      "records": 258,
+      "officialRecords": 258,
+      "exportSha256": "91605d859435ba261230833cba9e91cfe7aabf2a3353792fc6a2ab1dcba3ebe2"
+    },
+    {
+      "slug": "city-of-pitt-meadows",
+      "records": 436,
+      "officialRecords": 260,
+      "exportSha256": "82809a6100c1716132b40061abc8d691ea2d5b854ad87c51213a5c64a04a82c9"
+    },
+    {
+      "slug": "city-of-port-coquitlam",
+      "records": 1615,
+      "officialRecords": 1028,
+      "exportSha256": "ccc57b0b4614ff8b13fb49334f92c094f505f1b0c749e052926f4666d828c747"
+    },
+    {
+      "slug": "city-of-port-moody",
+      "records": 412,
+      "officialRecords": 0,
+      "exportSha256": "38aff097b4d4602ab32daaa4193648f9e914da35f0ace141f735bca3b57d1af4"
+    },
+    {
+      "slug": "city-of-prince-george",
+      "records": 2891,
+      "officialRecords": 2891,
+      "exportSha256": "61ae08b0f00e3e7ddc1f968baea38b425a3c897be999074ecb8915b4bfe26303"
+    },
+    {
+      "slug": "city-of-prince-rupert",
+      "records": 133,
+      "officialRecords": 133,
+      "exportSha256": "ee804002248ac060ed096abded32d693be4dda85a1328c11224f8cbaf60d9b40"
+    },
+    {
+      "slug": "city-of-quesnel",
+      "records": 78,
+      "officialRecords": 78,
+      "exportSha256": "a089b4ca8afacf2030f1b89b57aee86872a4cf8e6029f437937ad35ef2e68766"
+    },
+    {
+      "slug": "city-of-revelstoke",
+      "records": 72,
+      "officialRecords": 72,
+      "exportSha256": "fb1a22bf9066cfeb2b346336ffb89f501f936eb7e09432c61a57d1129fac6897"
+    },
+    {
+      "slug": "city-of-richmond",
+      "records": 2808,
+      "officialRecords": 0,
+      "exportSha256": "c000cd5e7bead9fcac2d5f0af6a8fc155270af43ed15d685c459996485dd0086"
+    },
+    {
+      "slug": "city-of-surrey",
+      "records": 10835,
+      "officialRecords": 7088,
+      "exportSha256": "1687df010bfb584e8bc4adee965f42a93b8a2c3928bd8066fbbbd8168d3b2c8a"
+    },
+    {
+      "slug": "city-of-terrace",
+      "records": 504,
+      "officialRecords": 504,
+      "exportSha256": "cc92a782d985b1e055464dd163c5ebbec3322ee082ffe0a2eb34986456a4de22"
+    },
+    {
+      "slug": "city-of-vancouver",
+      "records": 49764,
+      "officialRecords": 49742,
+      "exportSha256": "d6b03d760dca3aacbd04fe4c76ab2730c6b584fb0be371a738a24d62e1ca0f42"
+    },
+    {
+      "slug": "city-of-victoria",
+      "records": 6847,
+      "officialRecords": 5544,
+      "exportSha256": "2947fc00c7afb1ad5b25500944aeed76266f34278156ca33932ddda5d0d66a09"
+    },
+    {
+      "slug": "city-of-white-rock",
+      "records": 480,
+      "officialRecords": 230,
+      "exportSha256": "c29e51b109b753f7719f94ac82e26b447f6d7bfdd527d75a79402d4b7ca3a677"
+    },
+    {
+      "slug": "coast-mountain-college",
+      "records": 213,
+      "officialRecords": 0,
+      "exportSha256": "fd3db96e6dcd58c65b7e8da2d595fca162f2b4752358a120127421181687bcc3"
+    },
+    {
+      "slug": "college-of-new-caledonia",
+      "records": 782,
+      "officialRecords": 0,
+      "exportSha256": "03f207117d8fb4d264b186e555412c817ed256f141923cb5e8d8835f8a053a98"
+    },
+    {
+      "slug": "college-of-the-rockies",
+      "records": 405,
+      "officialRecords": 0,
+      "exportSha256": "d99bb7d74d575a3fd88ab24e9327fe56419bc05fc0b490fc35e5aea3f7494f9a"
+    },
+    {
+      "slug": "columbia-basin-trust",
+      "records": 419,
+      "officialRecords": 0,
+      "exportSha256": "4b9cdbe8eede15273e18c1f98a130d114b21ffea97fffd78c186d015c81747f0"
+    },
+    {
+      "slug": "columbia-power",
+      "records": 8,
+      "officialRecords": 0,
+      "exportSha256": "faaf55fcebace8d1e3b07e4d5251c2a8c5fd706ebcda7ed2995f78ff42b5e11e"
+    },
+    {
+      "slug": "community-living-bc",
+      "records": 909,
+      "officialRecords": 0,
+      "exportSha256": "4d81c5c042564ac785c6e1efcc7d9fec875350c259ca7d570bdcea1962335d59"
+    },
+    {
+      "slug": "coquitlam-school-district",
+      "records": 4545,
+      "officialRecords": 0,
+      "exportSha256": "8ce4784ecdbcdbd5e4f7518a47b70cd14f9935419155c6599c7371a5438a93d5"
+    },
+    {
+      "slug": "delta-police",
+      "records": 661,
+      "officialRecords": 0,
+      "exportSha256": "fd40fcb3fdd7ff82d0ca7f5355ab944c14fd588e80525bd61c19eea9df356429"
+    },
+    {
+      "slug": "delta-school-district",
+      "records": 1904,
+      "officialRecords": 0,
+      "exportSha256": "9af3deeb32c8f70084b839973f9428782c7bce953fd351e7632e2d4ef4afacca"
+    },
+    {
+      "slug": "destination-bc",
+      "records": 109,
+      "officialRecords": 0,
+      "exportSha256": "a7dd8337cbb2b6fd8f4793d988c6d7afd7a06213f804cfa3cfca865cbd322ce3"
+    },
+    {
+      "slug": "district-of-central-saanich",
+      "records": 72,
+      "officialRecords": 72,
+      "exportSha256": "05f9fd26ab3757835b559ca483602c0142298e2d7be5aa2a97dab08d39fb7df9"
+    },
+    {
+      "slug": "district-of-hudson-s-hope",
+      "records": 23,
+      "officialRecords": 23,
+      "exportSha256": "ccb4114104a6e55c633f645515a2871ce75b17469f61bb0ded04dac54b99441e"
+    },
+    {
+      "slug": "district-of-logan-lake",
+      "records": 23,
+      "officialRecords": 23,
+      "exportSha256": "50f52da88a557d260099826b7377e4b101b40864e385b34d6537192ed69e9e7b"
+    },
+    {
+      "slug": "district-of-mackenzie",
+      "records": 42,
+      "officialRecords": 42,
+      "exportSha256": "8814bf32566063c758b7cfff6f8e3131bcade36b80c0eed10207bf1510c4e403"
+    },
+    {
+      "slug": "district-of-north-cowichan",
+      "records": 130,
+      "officialRecords": 130,
+      "exportSha256": "243f6410a0a391a4b510cebaf948de0f2f57b2df527bf3211d2dfe9f8d949c99"
+    },
+    {
+      "slug": "district-of-north-vancouver",
+      "records": 4438,
+      "officialRecords": 3535,
+      "exportSha256": "9a19c3b7bea83a348d2922a76a04b9db397a4ad681a4a1ba9aef2ecb7010a54b"
+    },
+    {
+      "slug": "district-of-oak-bay",
+      "records": 155,
+      "officialRecords": 0,
+      "exportSha256": "3d693254bb4c88fb4987ca36da2244223baca677d6edd5a36fd4fe98601e37f6"
+    },
+    {
+      "slug": "district-of-peachland",
+      "records": 40,
+      "officialRecords": 40,
+      "exportSha256": "236f0cd191b2bdb1a7b4d2d9035828a3373e036347c3d5b4a3dcdbc38fc1036d"
+    },
+    {
+      "slug": "district-of-saanich",
+      "records": 3771,
+      "officialRecords": 2525,
+      "exportSha256": "58eb393e457dde68121ec150c103ee5ce70776e8deb5b89fdf76bd15c6e5b149"
+    },
+    {
+      "slug": "district-of-sechelt",
+      "records": 43,
+      "officialRecords": 43,
+      "exportSha256": "f0b46d056a89b9100aac41fbe3a6f362cce7d7f92907ccb7527ba365b3b27db7"
+    },
+    {
+      "slug": "district-of-squamish",
+      "records": 173,
+      "officialRecords": 173,
+      "exportSha256": "109107722ead58936709376ef95f81f99449aeae6328c939a105f8fec792497c"
+    },
+    {
+      "slug": "district-of-west-vancouver",
+      "records": 3518,
+      "officialRecords": 2279,
+      "exportSha256": "5fccfe5a926506468d2c73a7abc990738729df27360810c77991774bf8d2db07"
+    },
+    {
+      "slug": "douglas-college",
+      "records": 1757,
+      "officialRecords": 0,
+      "exportSha256": "df1edf7a3dc19c2be35db4f9234b60637f1303484bc3110cc0699af61e184b4b"
+    },
+    {
+      "slug": "emily-carr-university",
+      "records": 398,
+      "officialRecords": 0,
+      "exportSha256": "119925e3e331eded02829e8abaad77c12f30040f7feb400b37e642a6a6a389a6"
+    },
+    {
+      "slug": "first-peoples-cultural-council",
+      "records": 38,
+      "officialRecords": 0,
+      "exportSha256": "66d3ca1179896ea9510a6fbbf0d6b785488365b30f7892bf6f3e2950949074b0"
+    },
+    {
+      "slug": "forest-enhancement-society",
+      "records": 9,
+      "officialRecords": 0,
+      "exportSha256": "ff22860451773c376b733f1d5c33acf80af708e2e172f469af154f725338f5ab"
+    },
+    {
+      "slug": "forestry-innovation-investment",
+      "records": 87,
+      "officialRecords": 0,
+      "exportSha256": "4df6d5f8f3bdbbbaabbe876053b1f94bfa39fd72594f60b31e3cd0d3fafbc128"
+    },
+    {
+      "slug": "fraser-health",
+      "records": 111206,
+      "officialRecords": 111206,
+      "exportSha256": "5db9ef0e9b3b17787ce66722f8720f65a5eabcba2fcea51e914093cefaff8fd0"
+    },
+    {
+      "slug": "icbc",
+      "records": 7269,
+      "officialRecords": 0,
+      "exportSha256": "fb9ee0069ea34b3275d8242aa3ea9124540c675a628ad341c55ca0b22c080718"
+    },
+    {
+      "slug": "inbc",
+      "records": 41,
+      "officialRecords": 41,
+      "exportSha256": "3c54d1ae9d8ab894b8fb4a13f3ff90b4a1bfcbcac6110d03f860efad6b3cadb7"
+    },
+    {
+      "slug": "industry-training-authority",
+      "records": 60,
+      "officialRecords": 0,
+      "exportSha256": "05c04909d5ed02cde990fe1889722c20b4508de46a110f7383764f54b46da7d7"
+    },
+    {
+      "slug": "infrastructure-bc",
+      "records": 73,
+      "officialRecords": 0,
+      "exportSha256": "861cb0ef239542fe2a8db22119dece0726504119ce9f9fcc5ade0d60b79274a1"
+    },
+    {
+      "slug": "innovate-bc",
+      "records": 21,
+      "officialRecords": 0,
+      "exportSha256": "2166f7fd59a8af0f87685bae56ae92df211b63f983a45ecc2e58de77f47c4941"
+    },
+    {
+      "slug": "insurance-council-of-bc",
+      "records": 5,
+      "officialRecords": 0,
+      "exportSha256": "8460be34ad6573e286278dd532557808dd734b8b6eb629982acab3f6484a1f42"
+    },
+    {
+      "slug": "interior-health",
+      "records": 65364,
+      "officialRecords": 65364,
+      "exportSha256": "38cf95ffbeaa1f5f2f955c7cebea251f19fc2957393ec0b1906564f5db4e01fd"
+    },
+    {
+      "slug": "island-health",
+      "records": 61015,
+      "officialRecords": 50615,
+      "exportSha256": "51a110d0f56c4e316865aff9efa537871c152caa91d323190c0d202a6ad66270"
+    },
+    {
+      "slug": "justice-institute-of-bc",
+      "records": 392,
+      "officialRecords": 0,
+      "exportSha256": "5e73a5c0f4b1c22af683bb67c90d055c3f9efe920d35ea5b150e828e26924548"
+    },
+    {
+      "slug": "knowledge-network",
+      "records": 52,
+      "officialRecords": 0,
+      "exportSha256": "e8d2554b2dd5c455f819744068ce498939e150055c3ba7ac17d2b2d5c4d16bc1"
+    },
+    {
+      "slug": "kwantlen-polytechnic-university",
+      "records": 2318,
+      "officialRecords": 0,
+      "exportSha256": "c5965ba10205d17708a13c4b9d2b02eaccd1724c1ae274daa86af269d8448f4a"
+    },
+    {
+      "slug": "langara-college",
+      "records": 1997,
+      "officialRecords": 0,
+      "exportSha256": "e84e5d85b0c53e41bfbf83bf6cf8fde970e75b093b34f8f411f57b61e95fa786"
+    },
+    {
+      "slug": "langley-school-district",
+      "records": 3098,
+      "officialRecords": 0,
+      "exportSha256": "613f52dec33dd36e93744d15e946a2637bd1c90a50441527effffcb4447a43a6"
+    },
+    {
+      "slug": "langley-township",
+      "records": 1251,
+      "officialRecords": 0,
+      "exportSha256": "1ff3e0c0e1a41a2b8f0a9dd9c8b4bc86509273d843bfffb4034f47b4200811d8"
+    },
+    {
+      "slug": "legal-aid-bc",
+      "records": 180,
+      "officialRecords": 0,
+      "exportSha256": "6af87ee0a3b3ba5dc5f1000a687fd8d03dff577274972e19d0e2778a30641abe"
+    },
+    {
+      "slug": "liquor-distribution-branch",
+      "records": 987,
+      "officialRecords": 0,
+      "exportSha256": "be3c7e0e003ae8eecd715c6f4765ccb67742965007200126b32ac8a8fae59ffc"
+    },
+    {
+      "slug": "maple-ridge-pitt-meadows-school-district",
+      "records": 10568,
+      "officialRecords": 10568,
+      "exportSha256": "64819de16f3634c76e6472e1ecbc7dcfa2e6a2e4c886f11444aa672aebd90097"
+    },
+    {
+      "slug": "metro-vancouver",
+      "records": 10652,
+      "officialRecords": 6495,
+      "exportSha256": "81a3809376fbca6189c2d12d7383ce1ae6fddc519585acb3c2a08e50bf398487"
+    },
+    {
+      "slug": "metro-vancouver-transit-police",
+      "records": 182,
+      "officialRecords": 0,
+      "exportSha256": "e6063c6ab7bac45dbee67f198ed9b488e362068000a306451504a89fc3d28d93"
+    },
+    {
+      "slug": "mission-school-district",
+      "records": 981,
+      "officialRecords": 0,
+      "exportSha256": "3ce061fab67d8cd7739812fb68787bc9572d283c11b1ac5e364fd9ff760ef662"
+    },
+    {
+      "slug": "nelson-police",
+      "records": 27,
+      "officialRecords": 0,
+      "exportSha256": "90115318527185d0ddb6586f5445f1951a4b09cd71e2310a5dd12886318b162f"
+    },
+    {
+      "slug": "new-west-police",
+      "records": 248,
+      "officialRecords": 0,
+      "exportSha256": "b71f71a99ccba9986e930e5c742c106959018d6968f167af25e8aea0d3a28bce"
+    },
+    {
+      "slug": "new-westminster-school-district",
+      "records": 1076,
+      "officialRecords": 0,
+      "exportSha256": "58e9d47671415e161363c8699a04d5d9b419961c10cf0a82f648156df919f46c"
+    },
+    {
+      "slug": "north-island-college",
+      "records": 460,
+      "officialRecords": 145,
+      "exportSha256": "f63fd4b7d5c87ca60c8027acff393f3313c0ed69dfe130eed24b473b6284540f"
+    },
+    {
+      "slug": "north-vancouver-school-district",
+      "records": 2258,
+      "officialRecords": 0,
+      "exportSha256": "7f067bfd82ffc6f5c3a3de54cf48be81cd7a6da6423829c8b7f1d8c6607c55de"
+    },
+    {
+      "slug": "northern-health",
+      "records": 17842,
+      "officialRecords": 16121,
+      "exportSha256": "e07fe7690c33ab1badb9c278d72018e8881494b313d0a670f5a2267cc2fd1a87"
+    },
+    {
+      "slug": "northern-lights-college",
+      "records": 229,
+      "officialRecords": 0,
+      "exportSha256": "ff08fa0377320a35ea73f682688624ce4eab33f4e9a8bd47b9849f4b74fc858e"
+    },
+    {
+      "slug": "oak-bay-police",
+      "records": 69,
+      "officialRecords": 0,
+      "exportSha256": "e8dcc18c81c446349837b403bcdf7706077dbafab15a86819e34d0731a20afd2"
+    },
+    {
+      "slug": "oil-and-gas-commission",
+      "records": 356,
+      "officialRecords": 0,
+      "exportSha256": "5adc0de260a39bdd378942884a76a989e004f2d75b1bedd509c0b67a0c4a6572"
+    },
+    {
+      "slug": "okanagan-college",
+      "records": 928,
+      "officialRecords": 0,
+      "exportSha256": "94d36d2bb4b69d417aff6e170b5de3f4a664e4a8a3c2c40a4b551ca57f799297"
+    },
+    {
+      "slug": "port-moody-police",
+      "records": 177,
+      "officialRecords": 0,
+      "exportSha256": "aa7020d9a14e1abf6b6d6da4de6a12ba0642dda97c3b6f1f6d3a5b097386e293"
+    },
+    {
+      "slug": "providence-health-care",
+      "records": 7408,
+      "officialRecords": 0,
+      "exportSha256": "53a2dc52bfc68103289fd204910777b187c6edc161cbaf1dd8664ad49d3d952b"
+    },
+    {
+      "slug": "provincial-health-services-authority",
+      "records": 24923,
+      "officialRecords": 0,
+      "exportSha256": "a8754691a4d6af3777dbaf8b826a96a9dd0b6ec52a488cdd0e0162b4d5de49ee"
+    },
+    {
+      "slug": "public-service",
+      "records": 220106,
+      "officialRecords": 220106,
+      "exportSha256": "7aeed05b20b10616b30cd0abdad9c3569aa21f7c7e923dae4e177a18e4df7d10"
+    },
+    {
+      "slug": "resort-municipality-of-whistler",
+      "records": 849,
+      "officialRecords": 849,
+      "exportSha256": "faad3530e11978e702ef3a9fd0b1eacfbf8bfc0531a0d1d727618c3b47f3feab"
+    },
+    {
+      "slug": "richmond-school-district",
+      "records": 3384,
+      "officialRecords": 0,
+      "exportSha256": "549cca5053c4cdc08ecb5d527e0e075c98e6a161f5a76749276e9e60b4a93bbf"
+    },
+    {
+      "slug": "royal-bc-museum",
+      "records": 105,
+      "officialRecords": 0,
+      "exportSha256": "39dde4f15f0adadd0535b7334fed73dbd0c1e472feff4ecddb875855b70b683f"
+    },
+    {
+      "slug": "royal-roads-university",
+      "records": 361,
+      "officialRecords": 0,
+      "exportSha256": "df367826c300b61539b57316694319da5a05c6bdcb22a6358d206f29fe4af2c2"
+    },
+    {
+      "slug": "saanich-police",
+      "records": 548,
+      "officialRecords": 0,
+      "exportSha256": "d1eae360ecdb8e65c6eeec6c41603cfc778e0642d6169b9f328539299fd9237b"
+    },
+    {
+      "slug": "selkirk-college",
+      "records": 592,
+      "officialRecords": 0,
+      "exportSha256": "8d818428bc8183e84172373b7186566279433120b34b06b00bfa04df7ab535e0"
+    },
+    {
+      "slug": "simon-fraser-university",
+      "records": 16358,
+      "officialRecords": 13527,
+      "exportSha256": "c323ffb03f54651078e823d5a726c62baae3622dfbc14df7090b239e727351e0"
+    },
+    {
+      "slug": "skilledtradesbc",
+      "records": 98,
+      "officialRecords": 0,
+      "exportSha256": "c39770bd0bb4d96e0dd2c93b3a5e44f855927ac4d73f3ebdc05eb0f6973a7d75"
+    },
+    {
+      "slug": "sub-columbia-hydro-constructors",
+      "records": 723,
+      "officialRecords": 723,
+      "exportSha256": "cc0e9f965143a985359473ea612a51ed1ec5df948cc019d8b279d522be5283c1"
+    },
+    {
+      "slug": "sub-powerex",
+      "records": 1763,
+      "officialRecords": 1763,
+      "exportSha256": "ee58729ca11737405a93f0146d1efd4a1d001b1434710a42d46ab520e3164f1f"
+    },
+    {
+      "slug": "sub-powertech-labs",
+      "records": 1551,
+      "officialRecords": 1551,
+      "exportSha256": "af8cf9467d42923287292a3f5ff200dfcaac70e5e8af4d831dd0fcbbb9d1ba5a"
+    },
+    {
+      "slug": "surrey-police",
+      "records": 348,
+      "officialRecords": 0,
+      "exportSha256": "b56d57a1ba7a92b2db32f97d5db8c83b587eb4c0d6cc12feaed00bfb0a91c9cb"
+    },
+    {
+      "slug": "surrey-school-district",
+      "records": 10514,
+      "officialRecords": 0,
+      "exportSha256": "b58162c3f2af6a58f171cbd5f55c695b7bc394812f31373a386a5c5a76e63977"
+    },
+    {
+      "slug": "technical-safety-bc",
+      "records": 426,
+      "officialRecords": 0,
+      "exportSha256": "1d21a1f53fac8b911ca05824d2f4ad2c5806eb8a594b4814e88b32a238e69466"
+    },
+    {
+      "slug": "thompson-rivers-university",
+      "records": 1747,
+      "officialRecords": 0,
+      "exportSha256": "b734099b06dc6354d341abfebed7e0149a261f0fc4498d2fcf7a6912f383d8ef"
+    },
+    {
+      "slug": "town-of-comox",
+      "records": 47,
+      "officialRecords": 47,
+      "exportSha256": "cf7d77dbbc340e04c6851b44f09d10df3919208a0509b0029cb89d1778555a3e"
+    },
+    {
+      "slug": "town-of-creston",
+      "records": 7,
+      "officialRecords": 7,
+      "exportSha256": "34963e6e6f10b06581322c326cedf330f4a5ca47672b3e1abb67ea1c903e79a7"
+    },
+    {
+      "slug": "town-of-golden",
+      "records": 34,
+      "officialRecords": 34,
+      "exportSha256": "ad5757e5d94d2be562b35f7f0549097f23d00ba17697307979b6dbbd5862e804"
+    },
+    {
+      "slug": "town-of-smithers",
+      "records": 43,
+      "officialRecords": 43,
+      "exportSha256": "f1b4cf171d2f6830d122d62eb900b2e867f40d10b6264a1eb21acbaa75054d5b"
+    },
+    {
+      "slug": "transit-police",
+      "records": 598,
+      "officialRecords": 0,
+      "exportSha256": "3e815118dd127461941cd6f1a14766c18762a7bd7534d3ba48c64584a7f0004c"
+    },
+    {
+      "slug": "translink",
+      "records": 12464,
+      "officialRecords": 0,
+      "exportSha256": "7c8a823c1c97f83ccc626d32559b45578c953276231996b16360e0bc298275ee"
+    },
+    {
+      "slug": "transportation-investment-corporation",
+      "records": 207,
+      "officialRecords": 0,
+      "exportSha256": "83f7963ba1b517bb065348c63ee17b4171abc0336d50e97f5fe62ef498e72bb0"
+    },
+    {
+      "slug": "university-of-bc",
+      "records": 19973,
+      "officialRecords": 0,
+      "exportSha256": "90dbba9acefae2862fa91abf5df6404117f72fa57331c2be7b6f952f1aa45557"
+    },
+    {
+      "slug": "university-of-northern-bc",
+      "records": 1416,
+      "officialRecords": 457,
+      "exportSha256": "a539dc1e21ce781ad77b3475b51df8474900942502c172b675b9237ed51bf654"
+    },
+    {
+      "slug": "university-of-the-fraser-valley",
+      "records": 1591,
+      "officialRecords": 0,
+      "exportSha256": "d64c0042253e65a88a1240b5e23d15bd8d559dc0f00b1b587e50bbb8969cc05b"
+    },
+    {
+      "slug": "university-of-victoria",
+      "records": 4874,
+      "officialRecords": 0,
+      "exportSha256": "7ea4cbc76c599c57451389a5098f88faf40f78b37703dc06608a1d21ec6d5921"
+    },
+    {
+      "slug": "vancouver-coastal-health",
+      "records": 24206,
+      "officialRecords": 0,
+      "exportSha256": "31ed3aaa732034314b1f63cd24e7d91dccd33acb5e360a31a244832c8fd8ccb7"
+    },
+    {
+      "slug": "vancouver-community-college",
+      "records": 1353,
+      "officialRecords": 0,
+      "exportSha256": "8dfa017b3a69fedf2986a62d9b6e7df3825618b4d3834651a79649aec1c5f43d"
+    },
+    {
+      "slug": "vancouver-island-university",
+      "records": 1795,
+      "officialRecords": 0,
+      "exportSha256": "6567292cfc0d51b96bd4347c38cd9ceb4f61801947450aea7cf7e238d745720d"
+    },
+    {
+      "slug": "vancouver-police",
+      "records": 4808,
+      "officialRecords": 0,
+      "exportSha256": "a596cc27bba5b4261cae9da88d2eb79dca87e5f441133e0f2895c1eca9c2f6b4"
+    },
+    {
+      "slug": "vancouver-school-district",
+      "records": 8128,
+      "officialRecords": 0,
+      "exportSha256": "8065757127c8aa89096b4849d68f87a34b92dff1931ae76a8ea6a8ec6253354b"
+    },
+    {
+      "slug": "victoria-police",
+      "records": 796,
+      "officialRecords": 0,
+      "exportSha256": "e33df8a8b2d475ac6dde1780e4eb05092ceef21b268aec332ed5e7850f00b3aa"
+    },
+    {
+      "slug": "village-of-anmore",
+      "records": 43,
+      "officialRecords": 3,
+      "exportSha256": "b38546f677e614a212d9dbcf65314b7422c6164b114e54a4ead7774f674e82fd"
+    },
+    {
+      "slug": "village-of-belcarra",
+      "records": 25,
+      "officialRecords": 0,
+      "exportSha256": "ceed582e44473a31fbf963cf86e4ec9eec7084bc45983a6d39fd5659f1499eda"
+    },
+    {
+      "slug": "village-of-burns-lake",
+      "records": 14,
+      "officialRecords": 14,
+      "exportSha256": "5fd066857577aabab69308c8d35bcb538008dfcece41b177ca5bdc9a786019f6"
+    },
+    {
+      "slug": "village-of-cache-creek",
+      "records": 11,
+      "officialRecords": 11,
+      "exportSha256": "31ef9c535d67056ea726b5147db9a2f2dd60ae6479c2bad7e614a3530cb8113a"
+    },
+    {
+      "slug": "village-of-clinton",
+      "records": 8,
+      "officialRecords": 8,
+      "exportSha256": "471be6cf6439195f36bcc14f70acb17df4c004d02432528e48380a763e337d84"
+    },
+    {
+      "slug": "village-of-fruitvale",
+      "records": 7,
+      "officialRecords": 7,
+      "exportSha256": "3c057a6b5f84e7e55da1eb3e8218b5b96db28906e05a33fc27e869bc4556ed40"
+    },
+    {
+      "slug": "village-of-lions-bay",
+      "records": 37,
+      "officialRecords": 9,
+      "exportSha256": "19fc618fdfc6dcb14071e5c2f141242a5c9edfd162ed16e41fece6dd6f5c382c"
+    },
+    {
+      "slug": "village-of-montrose",
+      "records": 8,
+      "officialRecords": 8,
+      "exportSha256": "8da2e37abe610189a0627dc36db75cc55dd55c8d139d1018a219784b295177bb"
+    },
+    {
+      "slug": "village-of-nakusp",
+      "records": 12,
+      "officialRecords": 12,
+      "exportSha256": "a458fbf073e0fbd21ab19c9970dd38b773c6159fa2d586356a0a6fd90a4de8ae"
+    },
+    {
+      "slug": "village-of-pemberton",
+      "records": 86,
+      "officialRecords": 86,
+      "exportSha256": "154cc7aa4b21f487fb770dabbce03eaff02a84209a9bda9771a564cf15697518"
+    },
+    {
+      "slug": "village-of-salmo",
+      "records": 7,
+      "officialRecords": 7,
+      "exportSha256": "b1de4afd73a4c7479d55fbf8640e2b0711e48fe0732e7f13f7f8f6d05a16b900"
+    },
+    {
+      "slug": "village-of-telkwa",
+      "records": 10,
+      "officialRecords": 10,
+      "exportSha256": "b37183329d7fcd9c54759fe9c2c41e1b7d08aac92d34a34e351fab80f3feefc2"
+    },
+    {
+      "slug": "village-of-valemount",
+      "records": 11,
+      "officialRecords": 11,
+      "exportSha256": "a59f361f21a29ee15c53e3154c28efc9fd3bacff5109f8fc605b29f77e60cfba"
+    },
+    {
+      "slug": "west-vancouver-school-district",
+      "records": 990,
+      "officialRecords": 0,
+      "exportSha256": "b6d0a6aaa8a12f8b601b040f3347f40beb98b2fe0344355bbb2f5c405fcb84af"
+    },
+    {
+      "slug": "workers-compensation-board",
+      "records": 6848,
+      "officialRecords": 0,
+      "exportSha256": "cc9cd6b3a23cee03f5b9c076fd9327f26aab13e1ca96f06b114d00d216bc6106"
+    }
+  ],
+  "taskInputSha256": {
+    "municipal": "010620f0a1872e63db18d63b61393ff2d1a6fe2ed190e1c30b20afc4e308331c",
+    "health": "2f9423aa82ad84514facd3c060ccb58e5524c51eb1e3e2a4abfac1b4929f8272",
+    "schools": "b81980f65ec4a0773060a7926cd9c7f8ca22a36aac36056f01b9e7e2855c6502",
+    "education": "0559744b98a588ade660575dbd9bfb086dd9e987f329c02d863392dbdf9208c3",
+    "crowns": "dc53f92f9df33a8ac54f5fa835b282a16e39cc69793408803fc37a22d7acd73d",
+    "government-police": "932321eed6a62e45910ddc2c34775ad58d602c247ea8878072572c4fc5918752"
+  },
+  "taskCountsByRoute": {
+    "processing": 254,
+    "ordinary-records-request": 25,
+    "public-archive-research": 151,
+    "clarification-request": 14
+  },
+  "taskCountsByArea": {
+    "crowns": 42,
+    "government-police": 55,
+    "health": 32,
+    "municipal": 53,
+    "schools": 139,
+    "education": 123
+  },
+  "tasks": 444,
+  "requestCandidates": 39,
+  "municipalJurisdictionsWithoutOfficialRecords": 104,
+  "municipalDetailedRequests": 11
+}

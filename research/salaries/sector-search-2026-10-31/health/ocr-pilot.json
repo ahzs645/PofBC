@@ -1,0 +1,48 @@
+{
+  "auditDate": "2026-10-31",
+  "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
+  "sha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+  "pdfPages": 284,
+  "nativeTextChars": 0,
+  "engine": "Tesseract5.5.0 eng",
+  "renderDpi": 144,
+  "physicalPagesRendered": [
+    1,
+    284
+  ],
+  "firstPageConfigurations": [
+    {
+      "psm": 6,
+      "employeeRowCandidates": 49,
+      "strictExpenseFormatFailures": 8,
+      "rawTextFile": "phsa-2025-page-1.txt"
+    },
+    {
+      "psm": 4,
+      "employeeRowCandidates": 49,
+      "strictExpenseFormatFailures": 5,
+      "rawTextFile": "phsa-2025-page-1-psm4.txt"
+    }
+  ],
+  "sharedEngineCaveat": "Both modes share OCR engine/recognition and can agree on wrong cells; agreement is not sufficient acceptance.",
+  "imageGroundedSharedError": {
+    "name": "Abia,Jo-Ann",
+    "remuneration": 122090,
+    "printedExpenses": 771,
+    "bothOcrExpenseTokens": "™m",
+    "physicalPdfPage": 1
+  },
+  "otherObservedIssues": [
+    "Printed missing-expense dashes become colon in either/both modes.",
+    "Commas separating surname and first name are dropped or spaced differently; column consistency does not validate the name.",
+    "Expense1,876 becomes1876 in mode4; strict currency grouping flags the difference rather than silently normalizing every malformed token."
+  ],
+  "visuallyReviewedLastPageControls": {
+    "physicalPdfPage": 284,
+    "remuneration": 1713046476,
+    "expenses": 25171641,
+    "ocrAgreesWithRenderedImage": true
+  },
+  "acceptanceStatus": "Pilot only; no PHSA rows accepted. Full284page transcription, source-scope analysis and row/control verification remain.",
+  "nextAction": "Prefer existing electronic table through the already drafted unsent request. If unavailable, render and OCR every page, guard image-grounded correction contexts, review every row, and compare full sums with the printed controls without forcing agreement."
+}
