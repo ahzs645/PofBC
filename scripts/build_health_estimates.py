@@ -281,7 +281,7 @@ def main():
     (PUBLIC / 'boundary-estimates.md').write_text(markdown)
     (RESEARCH / 'boundary-estimates.md').write_text(markdown)
     with (PUBLIC / 'estimate-catalogue.csv').open('w', newline='') as output:
-        writer = csv.writer(output)
+        writer = csv.writer(output, lineterminator='\n')
         writer.writerow(['area_id', 'name', 'framework', 'method', 'confidence', 'modern_lha_codes', 'legal_definition_heading', 'historical_boundary_verified', 'local_north_shift_metres', 'local_alignment_status'])
         for row in assessments:
             local = row.get('workingAlignment', {})
