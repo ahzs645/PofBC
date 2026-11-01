@@ -1,0 +1,79 @@
+name: Compare salary coverage with a saved reference
+
+on:
+  workflow_dispatch:
+    inputs:
+      snapshot_path:
+        description: 'Authorized JSON snapshot already committed in this branch'
+        required: true
+        default: 'research/salaries/sunshine-lists/observed-snapshot.json'
+        type: string
+      require_complete:
+        description: 'Fail if the supplied employer directory is incomplete'
+        required: false
+        default: false
+        type: boolean
+  pull_request:
+    paths:
+      - 'scripts/*sunshine*.mjs'
+      - 'scripts/lib/sunshine-*.mjs'
+      - 'scripts/lib/salary-employers.mjs'
+      - 'scripts/lib/salary-data.mjs'
+      - 'public/salaries/**'
+      - 'research/salaries/sunshine-lists/**'
+      - 'package.json'
+      - '.github/workflows/sunshine-comparison.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/*sunshine*.mjs'
+      - 'scripts/lib/sunshine-*.mjs'
+      - 'public/salaries/**'
+      - 'research/salaries/sunshine-lists/**'
+      - '.github/workflows/sunshine-comparison.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sunshine-comparison-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Test snapshot import, employer matching and coverage decisions
+        run: npm run test:sunshine
+      - name: Compare the supplied snapshot with every published employer file
+        env:
+          SNAPSHOT_PATH: ${{ inputs.snapshot_path || 'research/salaries/sunshine-lists/observed-snapshot.json' }}
+          REQUIRE_COMPLETE: ${{ inputs.require_complete || false }}
+        run: |
+          args=(--snapshot "$SNAPSHOT_PATH" --out "$RUNNER_TEMP/sunshine-audit")
+          if [ "$REQUIRE_COMPLETE" = "true" ]; then args+=(--require-complete); fi
+          npm run audit:sunshine -- "${args[@]}"
+      - name: Check that committed reports reproduce
+        if: github.event_name != 'workflow_dispatch'
+        run: |
+          for file in comparison.json comparison.md repository-employers.csv work-queue.csv; do
+            cmp "research/salaries/sunshine-lists/$file" "$RUNNER_TEMP/sunshine-audit/$file"
+          done
+      - name: Publish the comparison summary
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/sunshine-audit/comparison.md" ]; then
+            cat "$RUNNER_TEMP/sunshine-audit/comparison.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Retain the complete report and processing queue
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: salary-coverage-comparison
+          path: ${{ runner.temp }}/sunshine-audit/
+          if-no-files-found: ignore
+          retention-days: 30

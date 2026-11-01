@@ -24,8 +24,8 @@ The [salary audit and source recovery report](research/salaries/README.md) expla
 Hydro-group and public-service years, duplicated records, earlier history, remaining source work,
 and the limits of name matching. The [employer coverage inventory](research/salaries/coverage-inventory.md)
 lists every employer; [the source inventory](research/salaries/source-inventory.md) distinguishes
-accepted reports from located sources awaiting extraction or review. The current build has 692,951
-records, including 401,641 with official-source provenance. The
+accepted reports from located sources awaiting extraction or review. The current build has 926,855
+records, including 683,243 with official-source provenance. The
 [23 October follow-up](research/salaries/interface-review-2026-10-23.md) adds Fraser Health history,
 eight BCIT schedules, four BC Transit schedules and salary-interface corrections.
 
@@ -35,6 +35,16 @@ hashes and immutable compiled baseline are committed under `research/salaries/`;
 external CSV directory is no longer required for the default build. Run `npm run preview:salaries`
 for a salary-only development preview without the separate licensed artwork/font build. Use
 `npm run preview:salaries -- --build` to verify its production bundle.
+
+The [repeatable external coverage comparison](research/salaries/sunshine-lists/README.md)
+imports saved or authorized Sunshine Lists snapshots and reconciles them with every published
+employer file: run `npm run audit:sunshine`. It produces an employer inventory and source-processing
+queue, keeping official records, compiled edition labels, reporting periods and disclosure scopes
+distinct. The committed reference contains three employer summaries and explicitly does not
+establish complete Sunshine Lists directory or annual coverage. The GitHub **Compare salary
+coverage with a saved reference** workflow reruns it on demand and checks report freshness on PRs.
+The accompanying [North Island College history](research/salaries/north-island-history/README.md)
+adds five original employee schedules with source controls and a documented replacement review.
 
 ---
 

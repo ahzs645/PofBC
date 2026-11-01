@@ -95,3 +95,16 @@ npm run review:municipal-wave
 npm run review:municipal-history
 npm run preview:salaries -- --build
 ```
+
+### Historical release validation
+
+`npm run review:municipal-history` validates this frozen historical release. It
+checks the six regional handoffs, including the north supplemental and council
+collections, against the released source IDs, normalized hashes, row counts,
+published warnings and aggregate-only evidence. It also verifies the original
+baseline reconciliation and all six queue fingerprints without rewriting
+`release.json` or the historical queues. Later salary additions in other
+collections do not change this pass's 6,273 observations or its released totals.
+Use the current [province-wide coverage](../municipal-audit/coverage.md) and salary
+exports for today's totals. Running the Python script without `--frozen` remains
+an explicit historical-release regeneration operation.

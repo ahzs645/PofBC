@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "notes": [
+    "These mappings establish employer identity only; reporting periods and disclosure scope are compared separately.",
+    "Add a reviewed reason when an external name differs. Do not strip municipality prefixes or merge parent and subsidiary employers."
+  ],
+  "aliases": {
+    "Core Government": {
+      "slug": "public-service",
+      "reason": "Sunshine Lists uses Core Government for the BC provincial public-service disclosure. PofBC publishes the CRF/public-service employee schedules under Provincial government. Political appointee and other payment scopes remain separate."
+    },
+    "Fraser Health Authority": {
+      "slug": "fraser-health",
+      "reason": "The external authority name corresponds to the repository's Fraser Health employer and official Fraser Health financial-information reports."
+    },
+    "Provincial Health Services Authority": {
+      "slug": "provincial-health-services-authority",
+      "reason": "The external full name corresponds to the repository's PHSA / Provincial Health Services Authority (PHSA) employer."
+    }
+  }
+}
