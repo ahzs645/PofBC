@@ -1,5 +1,7 @@
 # Municipal historical disclosure continuation
 
+This document records PR #28 at merge `0f6952b`. Later additions have their own release reviews. `npm run review:municipal-history` now verifies these frozen source inputs and their original reconciliation, preserving this historical snapshot when the live dataset grows.
+
 This pass accepts **6,273 official observations** from **119 original reports**, covering **119 municipality-years**. It replaces **0 proved compiled observations**, for **6,273 net additional records**. The dataset grows from **919,955 to 926,228**.
 
 Official municipal coverage is **101 of 161**, including **100** with employee schedules. **60** current jurisdictions still lack accepted official records. Historical additions extend coverage at previously represented municipalities as well as filling new jurisdictions.

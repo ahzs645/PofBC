@@ -1,0 +1,19 @@
+{
+  "baselineCommit": "68bb4f7905e657338abc5fce192b15c568720710",
+  "otherEmployerExportsByteIdentical": 238,
+  "previousOfficialNICRowsPreserved": 345,
+  "newOfficialRows": 608,
+  "compiledFY2023_24RowsReplaced": 181,
+  "netRowsAdded": 427,
+  "existingFY2024_25RowsPublishedOnce": 200,
+  "allPreviouslyPublishedSourceIdsPreserved": true,
+  "baselineNICExportSha256": "ab6cf4125f4e837a0beeeed2a506ae85473814ddbcbf7291e11f129f8acc7e7b",
+  "newNICExportSha256": "1d876ee1b69eb37bfed5be0c8fdbeea7a1ed4b61d5c8c05baf2d2394fa966c88",
+  "sourceControlsAndLayoutsReviewed": [
+    "2018/19 physical page 11: named controls and all eight final employee rows",
+    "2021/22 physical page 10: touching name/title boundary",
+    "2022/23 physical page 10: touching name/title boundary",
+    "2023/24 physical page 11: touching boundary and both compiled name/title errors"
+  ],
+  "originalBackedReproduction": "All 808 rows reproduced with Poppler and PyMuPDF before integration; four new cohorts retain original source/data bytes. All 200 overlapping rows and the original PDF hash exactly match the current published source."
+}

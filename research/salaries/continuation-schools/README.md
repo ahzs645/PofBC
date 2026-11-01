@@ -1,0 +1,34 @@
+# School district salary continuation
+
+Audit: **November 1, 2026**. The manifest presently contains **73 verified cohorts / 10,664 observations / 20 district employers**, separate from the existing SD42 collection. **One candidate / 340 observations remains held** outside the accepted manifest. Parent integration and independent reviews may promote specific held candidates; raw discovery links are not accepted salary coverage.
+
+Every accepted source has an exact annual fiscal period, original PDF fingerprint, deterministic normalized gzip fingerprint, physical pages, row-level extraction evidence, independent readings and named-cohort controls. Employee and trustee schedules remain separate. None of these district employers has compiled coverage in the prior sector inventory, so **no compiled same-label replacement is proposed**. Identity proposals and explicit overlap review are in [identity-and-compiled-review.json](../continuation-2026-11-01/schools/identity-and-compiled-review.json). No aliases, registry, public application data or compiled rows were changed by this worker.
+
+Accepted coverage includes current FY2024/25 schedules for Southeast Kootenay, Rocky Mountain, Kootenay-Columbia, Sunshine Coast, qathet, Boundary, Prince Rupert, Sea to Sky, Saanich, Okanagan Skaha, Campbell River, Comox Valley, Gold Trail, Vancouver Island North, Stikine, Nechako Lakes, Nisga'a, K̓wsaltktnéws ne Secwepemcúl’ecw (83), and Conseil scolaire francophone. Historical additions include Comox ending 2019–2022 and 2024; Stikine ending 2021, 2023 and 2024; CSF ending 2020, 2021, 2023 and 2024; and Kootenay Lake ending 2019–2023, plus 2026 trustees. Exact categories/counts/years are authoritative in `sources.json` and the sector inventory.
+
+The complete [60-district inventory](../continuation-2026-11-01/schools/inventory.json) distinguishes prior accepted coverage, this accepted collection, held cohorts, located files, failed retrievals and unsearched older periods. The [work queue](../continuation-2026-11-01/schools/work-queue.json) gives a public source and concrete next action for every district. Earlier annual runs have not been established as complete.
+
+## Reproduce and verify
+
+```sh
+python3 scripts/continue_schools.py
+python3 -m unittest discover -s scripts -p test_continue_schools.py -v
+python3 scripts/continue_schools.py --originals
+python3 scripts/continue_schools.py --include-held --originals --rerun-ocr
+```
+
+The default is offline replay using committed row/word evidence; no network or OCR engine is needed. `--originals` verifies pinned original hashes and reruns Poppler and PyMuPDF. Original cache locations are pinned per input in [parser-config.json](../continuation-2026-11-01/schools/parser-config.json): current Ministry reports generally use `/tmp/pofbc-schools/ministry-sdNN-2025.pdf`; district histories use `/tmp/continuation-schools/district-sdNN-HASH.pdf`. SD05 and SD71 current cohorts prefer district originals after verifying every normalized field/page/order/multiplicity and control agrees with the Ministry convenience copy; see [the precedence receipt](../continuation-2026-11-01/schools/district-original-precedence.json).
+
+`--include-held` verifies transcripts without accepting unresolved qualifications. `--rerun-ocr` rerenders the one hybrid scanned page and reruns Tesseract 5 after documented grid-line removal from a derived 144 dpi image. Original PDFs are not modified. Its complete 40-row manual original-image transcript agrees with the retained OCR without corrections. The corresponding complete 209-row employee cohort is accepted after the parent independently read all 40 original-image rows; [the peer review](../continuation-2026-11-01/reviews/school-kootenay-lake-scan.md) pins the final exact agreement. Both employee completeness flags are true, and the source is labelled honestly as a hybrid native/scanned PDF.
+
+The build command is `python3 scripts/continue_schools_build.py`; the inventory command is `python3 scripts/continue_schools_inventory.py`. They only write owned continuation paths. Do not rebuild during parent publication checks without coordinating, because original/evidence hashes are the review contract.
+
+## Fidelity and qualifications
+
+Names, initials, punctuation, literal source anomalies, visibly abbreviated titles, row order and multiplicity are preserved. No position is inferred when its column is absent or blank. Zero is retained only when printed; blanks/dashes remain null. Expenses are separate from remuneration. Under-threshold payroll, suppliers, employer premiums and reconciliation amounts are excluded from individual rows. The nine tests cover scope transitions, repeated rows, unparsed names, extra monetary components, missing/negative values, conflicting periods, hybrid scan evidence, offline replay and the full 60-district queue schema.
+
+Specific original-image coverage is recorded in [rendered-review-receipts.json](../continuation-2026-11-01/schools/rendered-review-receipts.json). Every native row is corroborated by Poppler and independently grouped PyMuPDF columns. Rendered review covers the listed layouts, boundaries, controls, small schedules and every explicit joined-name/title or negative-value exception; a second human transcription of every native row is not claimed. The hybrid page uses one OCR engine and independent full manual image reading, not two configurations of one OCR engine.
+
+Comox 2021 trustees publish dash/blank expenses throughout, including the total. All eight expenses and the expense control remain unknown; the computed known-expense sum of zero has zero reported values and is not a published zero total. CSF 2025 LABBÉ, IZA has a visible trailing-minus expense of−542.93; it remains negative. Literal clipped titles such as Stikine’s “Director of Instruct” are not expanded.
+
+Accepted qualified cohorts and their pinned parent approvals are in [reviewed-acceptances.json](../continuation-2026-11-01/schools/reviewed-acceptances.json). Source/data/evidence hashes are unchanged by promotion. Eleven accepted cohorts retain exact public warnings, false summary-reconciliation flags and unsent issuer-clarification tasks. Material disputes include Sunshine Coast 2025 expenses (row sum319,178.64 vs printed362,378.64) and Prince Rupert 2025 employees (row sums16,901,344.89/161,620.27 vs printed17,009,720.61/182,940.38). Sea to Sky, Saanich, Okanagan Skaha, Campbell River schools 2025 and Kootenay Lake 2022 have explicitly pinned smaller residuals; no cell or inferred cause balances them. The sole [held cohort](../continuation-2026-11-01/schools/held-candidates.json), Kootenay Lake 2026 employees, reconciles but remains held because salary page 52 says 2025 while the cover and surrounding salary pages say 2026. The separate trustee page 51 identifies 2026 and reconciles independently. No employee inference establishes trustee dates.

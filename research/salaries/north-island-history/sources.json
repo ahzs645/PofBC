@@ -425,7 +425,9 @@
         "Fiscal dates come from the actual employee schedule. The public website incorrectly sends its 2020/21 link to the 2019/20 scan; this collection does not reimport the separately accepted 2020/21 source.",
         "The 2024/25 employee section does not publish job titles; titles from earlier years or board rows are not substituted."
       ]
-    },
+    }
+  ],
+  "verificationOnlySources": [
     {
       "id": "north-island-college-sofi-2024-25-employees",
       "employerSlug": "north-island-college",
@@ -523,7 +525,11 @@
         "Published dash expense cells remain missing, distinct from explicit numeric zero. Full names and any disclosed job titles are observations, not verified cross-year identities.",
         "Fiscal dates come from the actual employee schedule. The public website incorrectly sends its 2020/21 link to the 2019/20 scan; this collection does not reimport the separately accepted 2020/21 source.",
         "The 2024/25 employee section does not publish job titles; titles from earlier years or board rows are not substituted."
-      ]
+      ],
+      "publication": "verification-only-already-published",
+      "publishedCollection": "continuation-education/supplemental",
+      "publishedSourceId": "north-island-sofi-2024-25-employees",
+      "publishedDataSha256": "0a379cf616879e1003f3773216717e9c973a6d905f444e8397e32649b39714ca"
     }
   ],
   "unparsedSources": [
@@ -562,7 +568,7 @@
     }
   ],
   "coverageNotes": [
-    "Adds five complete official employee cohorts, 808 observations. FY2023/24 replaces 181 compiled rows; net increase is 627 observations.",
+    "Five complete official employee cohorts (808 observations) independently verified. Four cohorts add 608 official observations; FY2023/24 replaces 181 compiled rows for 427 net additions. The 200 FY2024/25 observations are already published by PR #34 and remain verification-only here, with exact source and row-multiset agreement.",
     "FY2019/20 remains a scanned-source/OCR gap. FY2020/21 is already accepted in the separate north-island collection. This is not a claim of complete college history."
   ]
 }

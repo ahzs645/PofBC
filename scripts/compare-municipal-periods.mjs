@@ -15,7 +15,7 @@ const baselineBytes = readFileSync(join(research, baselineManifest.file))
 if (sha256(baselineBytes) !== baselineManifest.sha256) throw new Error('Baseline fingerprint mismatch')
 const baseline = JSON.parse(gunzipSync(baselineBytes))
 const directories = ['municipal-north', 'municipal-island', 'municipal-lower-mainland', 'municipal-small', 'municipal-ocr', 'sector-municipal', 'sector-government-police',
-  ...json(join(research, 'collections.json')).collections.filter(name => name.startsWith('municipal-wave-') || name.startsWith('municipal-history-'))]
+  ...json(join(research, 'collections.json')).collections.filter(name => name.startsWith('municipal-wave-') || name.startsWith('municipal-history-') || name.startsWith('continuation-municipal') || name.startsWith('continuation-government-police'))]
 const official = new Map()
 const fingerprints = []
 for (const directory of directories) {
@@ -25,6 +25,7 @@ for (const directory of directories) {
   for (const source of manifest.sources) {
     // Mixed-sector collections may contain fiscal or nonmunicipal schedules.
     if (directory === 'sector-government-police' && source.employerSlug !== 'metro-vancouver') continue
+    if (directory.startsWith('continuation-government-police') && (source.sector !== 'Municipalities' || !/^\d{4}$/.test(source.year))) continue
     if (!source.file || (source.status && !['verified', 'accepted', 'imported'].includes(source.status))) continue
     if (!/^\d{4}$/.test(source.year) || !source.employerSlug) throw new Error(`${source.id}: expected one municipality and a calendar year`)
     const bytes = readFileSync(join(research, directory, source.file))

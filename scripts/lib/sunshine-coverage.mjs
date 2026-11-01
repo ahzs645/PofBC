@@ -7,7 +7,9 @@ import { gunzipSync } from 'node:zlib'
 import { canonicalSlug, employerSlug } from './salary-employers.mjs'
 
 export const EMPLOYEE_SCOPES = new Set(['employee-remuneration', 'named-employees-over-threshold'])
-const OFFICIAL_KINDS = new Set(['official', 'official-pdf', 'official-open-data'])
+const OFFICIAL_KINDS = new Set(['official', 'official-pdf', 'official-open-data',
+  'official-statement-of-financial-information', 'official-native-pdf', 'official-scanned-pdf',
+  'official-board-remuneration-disclosure', 'official-pdf-ocr-overlay', 'official-hybrid-pdf'])
 const sum = (values) => values.reduce((total, value) => total + value, 0)
 const unique = (values) => [...new Set(values)].sort()
 const common = (values) => values.length && values.every(value => value === values[0]) ? values[0] : null

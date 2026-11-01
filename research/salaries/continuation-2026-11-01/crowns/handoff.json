@@ -1,0 +1,935 @@
+{
+  "date": "2026-11-01",
+  "candidateSources": 44,
+  "candidateObservations": 39063,
+  "employeeObservations": 39041,
+  "boardObservations": 22,
+  "newEmployers": [
+    "bc-railway-company",
+    "bc-family-maintenance-agency"
+  ],
+  "sourcesByEmployer": {
+    "bclc": 15,
+    "icbc": 12,
+    "royal-bc-museum": 4,
+    "bc-housing": 1,
+    "bc-railway-company": 8,
+    "bc-family-maintenance-agency": 4
+  },
+  "queueTasks": 82,
+  "queueRoutes": {
+    "processing": 26,
+    "ordinary-records-request": 8,
+    "public-archive-research": 30,
+    "clarification-request": 18
+  },
+  "originalAndDataFingerprints": [
+    {
+      "sourceId": "continuation-crowns-bclc-2024-25",
+      "originalSha256": "3dc100c0b424d5cf1644fdbb6bef1884bd03fc3e24398627b50c0cfae981ac9c",
+      "dataSha256": "d33071b2034b88e1f5963c29d18f16fc42fefe7015a1abe718a9c7f67be4dfed",
+      "localPath": "/tmp/continuation-crowns/60ae63f95c5cd084.pdf",
+      "pdfPages": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2023-24",
+      "originalSha256": "1cf9ef54265f47b28e7c233954316fca5378572f61af5fb165415f13315191eb",
+      "dataSha256": "501200ef7a483d3832383a1141d0a5d1efe1401e3010360291a149d2fad1231a",
+      "localPath": "/tmp/continuation-crowns/d193b613d1ef7374.pdf",
+      "pdfPages": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2011-12",
+      "originalSha256": "a9ac0c834d1b580e6f6b615c645bbe153b3406136401bce09b0cbab5bf55d2e0",
+      "dataSha256": "84f7ac7e70d393751fbfff3231ef089f0b88699fb948e3a711fe37c3b6f8d1e5",
+      "localPath": "/tmp/continuation-crowns/a26c023292d22a03.pdf",
+      "pdfPages": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2025-26",
+      "originalSha256": "ec92cf04ec9b513e6767d67276aeccc4c00171b3f6cd8cbb1a844a158ba5990e",
+      "dataSha256": "19c000e2f3e0827417d3a0d90b3c07ff5d9028f1ae64b0bca6c80c9c0a84e4a5",
+      "localPath": "/tmp/continuation-crowns/ebd4f2047c0f9372.pdf",
+      "pdfPages": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2024-25",
+      "originalSha256": "eac7db20783098a79300755cbe86400dd836388a126309fd3ba14d47946455b3",
+      "dataSha256": "508cbffec8744d37467b7c60806f5bbb187456cdf66872cb6886876fe5a524b9",
+      "localPath": "/tmp/continuation-crowns/27dcc4edcf220250.pdf",
+      "pdfPages": [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2022-23",
+      "originalSha256": "a373fc3904bafcc791224164237952c9e754bca60c1b0d7c355d07899c82eefa",
+      "dataSha256": "60e717977d6f20019f56c9bd23fee0efaf6bb4de45826c0622207e28158297f2",
+      "localPath": "/tmp/continuation-crowns/542d3ae686bdde7e.pdf",
+      "pdfPages": [
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2021-22",
+      "originalSha256": "98e9171839a0b7253d10c6710fd2af7cca5d08dbbef35da29ce4ae9b6810cad2",
+      "dataSha256": "f11bc31ec93a263ede15d81a580c93951ea58b3140da621d9d8dea50efbb9be8",
+      "localPath": "/tmp/continuation-crowns/8a6de7b83b1f4ed0.pdf",
+      "pdfPages": [
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2020-21",
+      "originalSha256": "9fdb03cfc53202134ec89373ca44a44f778b12c4f52eba0c995dbf7fda984bd8",
+      "dataSha256": "dc6d50135d4eb0e5f477c80ebe1e04f08f3d035a371f4cee895f19d37d9b489b",
+      "localPath": "/tmp/continuation-crowns/25c8ba6be19dfb7d.pdf",
+      "pdfPages": [
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2019-20",
+      "originalSha256": "f742a162c00463dd492f20d827951e79765b9b888cd36ddfdf782e43843f3a79",
+      "dataSha256": "39c0b1ffae02b86d4e5a5b7c277370703ea2ba419e628644448c81f660604f72",
+      "localPath": "/tmp/continuation-crowns/3733c4d317e53d2e.pdf",
+      "pdfPages": [
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2017-18",
+      "originalSha256": "1c9a4de554aafb422c435c3ba60d4d92b0cbadf3674f213f106a4604070dfffa",
+      "dataSha256": "39780d6f0833aa794a5fc700b9ced6599e67791f3bd62db5d9cfd610a530bd9d",
+      "localPath": "/tmp/continuation-crowns/52409848b2c87fea.pdf",
+      "pdfPages": [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2015",
+      "originalSha256": "cbe78cb8851aa812f63365ad76a38fcf0419f330f28845921a4435270845a8bc",
+      "dataSha256": "86789a1ea52f1408ff1b5db8c944f2261425f1ce6cd6d475ad80a6c6abdc4b00",
+      "localPath": "/tmp/continuation-crowns/b0a1c27b740aefd2.pdf",
+      "pdfPages": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-royal-bc-museum-2024-25",
+      "originalSha256": "4c8e9b724c3bbc1c9ec6f36a2c5dc4abb55d6e6641367d8a1a2e8147431bf19f",
+      "dataSha256": "25ec3f204f3656073858fb022d59a8957467b46784d199d70bc10dc0d6fbb7ee",
+      "localPath": "/tmp/continuation-crowns/50278c107a9bd2d9.pdf",
+      "pdfPages": [
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-royal-bc-museum-2023-24",
+      "originalSha256": "f22b7b618ee989edf3a990b53830ce88bf6853e1589672d05170871f9adc66a2",
+      "dataSha256": "dbf98508f998fa344d53ee11fe0ec62888b6ec3a8612ad2cfdc87bcfb1804e60",
+      "localPath": "/tmp/continuation-crowns/8eb4e645e71f9467.pdf",
+      "pdfPages": [
+        41,
+        42
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-royal-bc-museum-2022-23",
+      "originalSha256": "24c874447dcef23606c91848b61b211b6c72fd7d278e04fa4ac88a9cf2a7fb5d",
+      "dataSha256": "ee71a018b9d7295d2344a1ea7fafc158b81a24cd0a3be598d4d62ab9cbafdcc1",
+      "localPath": "/tmp/continuation-crowns/21e81a0b78792c07.pdf",
+      "pdfPages": [
+        42
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-royal-bc-museum-2021-22",
+      "originalSha256": "86813183138c7c3e1af9c9c9623e98b8c4ba063fb734dd48554609aea46acf7e",
+      "dataSha256": "d044fea7834740428f8dced99307e79525eb3277ca4b886dcc8d56b2979488c5",
+      "localPath": "/tmp/continuation-crowns/f1ad5c7f0083a6e5.pdf",
+      "pdfPages": [
+        40
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-housing-2023-24",
+      "originalSha256": "5d9978aac4393c7604046443ea85ca40cef6b03ba7e425ded447b2a98438f9a2",
+      "dataSha256": "2d9bd6978f68cf082181fa81bbad76f20b74f3904e66232c1cf4b9940c247541",
+      "localPath": "/tmp/continuation-crowns/91ab1dc837da762f.pdf",
+      "pdfPages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-railway-company-2024-25",
+      "originalSha256": "a30d8efe8b28bd0cb079e987c5f78f88b4318c89616c0f4afbd354f252307f42",
+      "dataSha256": "808694c7b0d55ee8e59bf17b928b7e676e1776a0b2e016697ee55bd5eaa9cd8c",
+      "localPath": "/tmp/continuation-crowns/d13441d846ef1a2e.pdf",
+      "pdfPages": [
+        34
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-railway-company-2025-26",
+      "originalSha256": "5c1dbc250a76b1e909cf5ebeb71735da68e7d2f2f03b815855b5e63ec5467b20",
+      "dataSha256": "d69e866eed5b8e3e59ba8cdebe5131b72933940f5ea32fbc22a2c4f51f8f11a9",
+      "localPath": "/tmp/continuation-crowns/df9c77e53412faf0.pdf",
+      "pdfPages": [
+        38
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-railway-company-2022-23",
+      "originalSha256": "0587527f6c5253f6ced09331f8a5908a41bf8af33f09b91e5f23641f2cbc3fa2",
+      "dataSha256": "fe1907d21d92d9d4244a60a92815756275ac05db7111e5cf6cadfcd4bde419a0",
+      "localPath": "/tmp/continuation-crowns/e1f832989084edf5.pdf",
+      "pdfPages": [
+        41
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-railway-company-2021-22",
+      "originalSha256": "2ce74af831837e0d5554a2271449c89c8bacf36f4f4433bcb92fcfd2a1077f15",
+      "dataSha256": "80917f52a41ed833add02294fbaa9c771747de26f998807bb4ee58f33fd15124",
+      "localPath": "/tmp/continuation-crowns/ee2da913efbdd8ba.pdf",
+      "pdfPages": [
+        42
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-railway-company-2020-21",
+      "originalSha256": "6b9d2c6f9f3b13e6cebe891dad176762a3e4cf5846590386525be79800d341ea",
+      "dataSha256": "2303a20dfbf2ebe987b676cab693b7b69baf323c00f5eb1b2ec4e304ff1f9de8",
+      "localPath": "/tmp/continuation-crowns/d7f8b59c57654036.pdf",
+      "pdfPages": [
+        39
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-railway-company-2019-20",
+      "originalSha256": "e5f3ac230923861deeec468494b6ddc1a550641dd152c5e254168b1003612c1b",
+      "dataSha256": "5bc80b3d21c8af9fccb022353a94b8ceeacce5e2821b015290faf92f0f8ad8d0",
+      "localPath": "/tmp/continuation-crowns/d43bd0c1810ddf52.pdf",
+      "pdfPages": [
+        40
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-railway-company-2018-19",
+      "originalSha256": "7df65a19d1412d7ed7d6293feec97293df969a070eb05b4c0fed2bd28e3135fc",
+      "dataSha256": "b81f36c4d5d8435e08b00445ff0cd0f66de863ac5d644ee719892608683f3be8",
+      "localPath": "/tmp/continuation-crowns/3eab647fec3cf45d.pdf",
+      "pdfPages": [
+        35
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-railway-company-2017-18",
+      "originalSha256": "e4c8a2ded4b0715c5adb4cec19e5cd5454fb4884f5d0fa0b588a3ffa688d7f8d",
+      "dataSha256": "1c8f3f587d1021c9df0cc2ebb70bd1bfac5416325c36e450334f0df05cb8ba6a",
+      "localPath": "/tmp/continuation-crowns/45b6cd5daf592f1f.pdf",
+      "pdfPages": [
+        36
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2025-26",
+      "originalSha256": "1eb51fa537d94b6ad7450aa228879f8866d12b9c286e164f1e36d24d6c8677a1",
+      "dataSha256": "b42b641f80e93a94eae4d743499714ca23bc9cd4e31d29242469a77e5149502a",
+      "localPath": "/tmp/continuation-crowns/5ad8fc03206d4b4d.pdf",
+      "pdfPages": [
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2021-22",
+      "originalSha256": "18f4f8cfb2da4fb839ec27cfd7af38160a35297eb515bfdbbc86329d87f20154",
+      "dataSha256": "8ec017f7fd1a315f7b09d231558c55e2a0c62f962e1e02d4dd4562519a12219c",
+      "localPath": "/tmp/continuation-crowns/334cec95155e4f17.pdf",
+      "pdfPages": [
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2018-19",
+      "originalSha256": "0cf9260763a5d79559c2a59f601f3d9bf543a8c13dccc31dfe11a1c37c51942b",
+      "dataSha256": "4080715a04c5c2d1d7971bcedaade3d2e2cc5248159614a70d598ed23380de55",
+      "localPath": "/tmp/continuation-crowns/80459ec4877e7752.pdf",
+      "pdfPages": [
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2017-18",
+      "originalSha256": "f409bcdc948b509cc4af4c9dbd25b14f26701d11a0c40f2bd36da89eac96c29d",
+      "dataSha256": "0ecc6e4ed990ff58dc28959999fe2191ef7fbc65f9fa7be1784c5d9e8260e88d",
+      "localPath": "/tmp/continuation-crowns/a06acc29eec725ca.pdf",
+      "pdfPages": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2016-17",
+      "originalSha256": "1e81f241af18f2fb671e2cbe38ac5a7fb02ba8d2cf6561ff74b893a5ba5e96f4",
+      "dataSha256": "85c7b521fdd355843430402fc12570ff36f64c8b00927fa4248f9ad081113c43",
+      "localPath": "/tmp/continuation-crowns/3382c08c541fd042.pdf",
+      "pdfPages": [
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2015-16",
+      "originalSha256": "fd696adf1d7863539fca56c7959b380ea63aaff772143a610f463c8cc8fefc62",
+      "dataSha256": "581d15af952fe25cc3e6591b9be710511ee86d23bb0470ff374dcff1d79a7cf9",
+      "localPath": "/tmp/continuation-crowns/e607c769f36d88a6.pdf",
+      "pdfPages": [
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2014-15",
+      "originalSha256": "a2e9d6ebad9ca8a35e2a9a63eeb3d6a8fff756dc961b949d8d17607c473a141f",
+      "dataSha256": "49e1d37511cfd2819295587e4704ab54d2c3044b8f0aa67a12ae891bd0ae3cd3",
+      "localPath": "/tmp/continuation-crowns/71abb8d74a322165.pdf",
+      "pdfPages": [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2013-14",
+      "originalSha256": "c8c102f2ffa6a63dfb4bafcedee6d854586ccf9c9df3ead99b0f2304a0f648bb",
+      "dataSha256": "bd402dcc601993f94ba08ce6f1650f660a28590eb950a659b31cb8b6f93bdd30",
+      "localPath": "/tmp/continuation-crowns/329d0914acc5f5ad.pdf",
+      "pdfPages": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2012-13",
+      "originalSha256": "f034d2b63aaa6496ea7cef746dd0b392b6ec770d33d4b9b1d2ef648a3d81627f",
+      "dataSha256": "43d6ae74821fcb1d2f2b39fc6c12f65a4184c4b276f24fe8a9b60a1742ec3728",
+      "localPath": "/tmp/continuation-crowns/4a76947378830672.pdf",
+      "pdfPages": [
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2010-11",
+      "originalSha256": "d5b5225e4afc673825cf89591b66f0689f907b73676096424d1e411f14c4391b",
+      "dataSha256": "284e14a574fdc3cebfbf9c8245473fc3ef46b3097d3110d635b3e0965bd1eb07",
+      "localPath": "/tmp/continuation-crowns/e293e6d2cf3d1b41.pdf",
+      "pdfPages": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2023-24",
+      "originalSha256": "c9e47422f74a7dc07d6eea8749f49627653bb99ac52e20bce49399f826611aee",
+      "dataSha256": "c0bb9b75f0b5dc74c38bf0e49029ba87e868aa288bb5ee2d213b445904ee8118",
+      "localPath": "/tmp/continuation-crowns/ce4d5942a69cf0f4.pdf",
+      "pdfPages": [
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2018-19",
+      "originalSha256": "01298e9e9131105bf14ebe533e8967f38f5664b8a898ffe24710688749e6c60a",
+      "dataSha256": "9600439ac7ced383b403d232576289dd7e0afd135e5dd340ef991b297915ced8",
+      "localPath": "/tmp/continuation-crowns/c28a80d9bee6b609.pdf",
+      "pdfPages": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2014",
+      "originalSha256": "22a27d41ddee94c1d957e018cbd19aa63ab9168ad1617a8839d37391b6f3f144",
+      "dataSha256": "a925e07a476990274216a592e0a021997c67f08d9f2c62cf846da2f7b8de4178",
+      "localPath": "/tmp/continuation-crowns/8a5d2ee96944496c.pdf",
+      "pdfPages": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2020-21",
+      "originalSha256": "0442da6af357d499f254ac7003ac1191884adee36377ee9af6231347b41b8b44",
+      "dataSha256": "906b2235918949f566d8ddfe7b84081b8eec4c07747d19c7d6f0856f446d1f42",
+      "localPath": "/tmp/continuation-crowns/014fc82d1c331a15.pdf",
+      "pdfPages": [
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bclc-2019-20",
+      "originalSha256": "dd51807ea40210e913e5319fcf63c4f239144799f34c59bf9e5efe0ae76261cc",
+      "dataSha256": "7b2079b379039c07ae38364935989f73a203217b4b966fe7f5daccad770accee",
+      "localPath": "/tmp/continuation-crowns/6fbc49c8bc239e83.pdf",
+      "pdfPages": [
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-family-maintenance-agency-2025-26-board",
+      "originalSha256": "af89eac4b813dc0748d7776e30d0567f70564adc8b84e82573e8d294e22defec",
+      "dataSha256": "d3c6661bd03cd0c1ddb101a20389e5516f4d847149770d208ede1a944853ffde",
+      "localPath": "/tmp/continuation-crowns/4136b5f74e4dd982.pdf",
+      "pdfPages": [
+        1
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-family-maintenance-agency-2024-25-board",
+      "originalSha256": "2039e2ffca2dda9c54bbc558a58056453a54fcbf76602db8805fa434d65f0975",
+      "dataSha256": "07df6547cc5e0930cd4535afcfaf31edd347e346f9fb87af356f9bdf413616e3",
+      "localPath": "/tmp/continuation-crowns/669f4e145bb97684.pdf",
+      "pdfPages": [
+        1
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-family-maintenance-agency-2023-24-board",
+      "originalSha256": "e7f3a99a9cf25398dc49c35f4e2e4e9c611a5a8175d4cec37a9c29d6edbd1250",
+      "dataSha256": "ed317d6a241fa9355314e760025ff4042a5d5f43841158adb533540fb097ce24",
+      "localPath": "/tmp/continuation-crowns/d2775c84dd744a1c.pdf",
+      "pdfPages": [
+        1
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-bc-family-maintenance-agency-2022-23-board",
+      "originalSha256": "bea58eb9809efc4515b7ab5a20a4267014e8febc669fdbfb56507b7254c68b29",
+      "dataSha256": "4a1a58e73cb9cdbc95fd8f9052da280ba353357edf3e57db6f30fe16a796ac57",
+      "localPath": "/tmp/continuation-crowns/98a865e89df146d0.pdf",
+      "pdfPages": [
+        1
+      ]
+    },
+    {
+      "sourceId": "continuation-crowns-icbc-2016-17",
+      "originalSha256": "3052c68fffb7173a2b9192cd7f47f4800ee775ef0e13c598fb84751a5dc40365",
+      "dataSha256": "c93f85709e5f15570336c1ad4fb01bccee2485c70cf72a953adb7c5eda95692f",
+      "localPath": "/tmp/continuation-crowns/825bab26314723cb.pdf",
+      "pdfPages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101
+      ]
+    }
+  ],
+  "frozenNormalizedAndEvidencePayloads": true,
+  "tests": "10 parser/source-fidelity tests passed; offline evidence replay reproduces all44 normalized payloads byte exactly; original-backed extraction completed for all44.",
+  "verification": {
+    "sourceManifestSha256": "132350fba31063405fc5336879eb124e63e526520189b919bece68487c3749bb",
+    "originalBackedReproduction": "python scripts/continue_crowns.py --verify: PASS44sources39063rows",
+    "offlineByteExactReplay": "python scripts/continue_crowns.py --offline --verify: PASS44sources39063rows",
+    "regressionTests": "python -m unittest discover -s scripts -p test_continue_crowns.py: PASS10tests",
+    "all88FrozenNormalizedAndEvidenceHashesUnchanged": true,
+    "publicWordingCleanup": "pass;onlypublicnotes/warningschanged;all88data/evidencehashesandretentionreasonsunchanged"
+  },
+  "retainedCompiledPartitionSourceIds": [
+    "continuation-crowns-bclc-2017-18",
+    "continuation-crowns-icbc-2017-18",
+    "continuation-crowns-royal-bc-museum-2023-24"
+  ],
+  "parentDecision": "Three unresolved compiled partitions retained; no period correction this pass. Other complete parent name/pay multiset matches support separate fiscal replacement decisions."
+}

@@ -237,6 +237,7 @@ export function renderSunshineReport(report) {
     ...report.sectors.map(sector => `| ${md(sector.sector)} | ${sector.employers} | ${sector.employersWithOfficial} | ${sector.compiledOnlyEmployers} | ${fmt(sector.officialRows)} | ${fmt(sector.compiledRows)} |`), '',
     '## Processing queue', '',
     `The [work queue](work-queue.csv) contains **${s.repositorySourceTasks} existing official-source tasks** and **${s.externalReferenceTasks} reference-comparison tasks**. Existing leads are linked to their original report or archive and retain the recorded next action. They do not prove that additional records are available or that a report has passed validation.`, '',
+    'This queue covers the published source catalog and supplied reference. The broader [six-sector processing and archive queue](../continuation-2026-11-01/work-queue.csv) remains available separately. The queues can overlap and their totals must not be added.', '',
     'Priority 1 covers missing official employer/period coverage, held partial employee disclosures, or a smaller comparable count. Priority 2 requires scope, period or source review. The priority is an action order, not a count of missing employees.', '',
     '## How coverage is judged', '', ...report.limitations.map(text => `- ${text}`), '',
     '## Files and reproducibility', '',

@@ -1,6 +1,6 @@
 # North Island College official salary history
 
-Reviewed **31 October 2026, America/Vancouver**. This collection fills five official-source coverage gaps using North Island College's original Statements of Financial Information (SOFI), independently of SunshineLists. It adds **808 verified employee observations**. The complete FY2023/24 employee schedule replaces **181 compiled observations** under the existing build rules, so the dataset grows by **627 observations**.
+Original extraction reviewed **31 October 2026, America/Vancouver**; integration with main reviewed **1 November 2026**. Five original SOFI cohorts containing **808 employee observations** are independently verified. Four cohorts add **608 official observations**. Their FY2023/24 schedule replaces **181 compiled observations**, giving **427 net additions**. The **200 FY2024/25 observations** already merged in PR #34 match the same original hash and every row field; they remain published once under `north-island-sofi-2024-25-employees`. This collection keeps that year's independent extraction in `verificationOnlySources`, outside the imported source list.
 
 | Fiscal period | Named employees | Displayed remuneration | Displayed expenses | Difference from printed named subtotals (pay / expenses) | Physical employee pages |
 |---|---:|---:|---:|---:|---|
@@ -64,3 +64,9 @@ After registering this collection in `research/salaries/collections.json`, run `
 FY2020/21 is already accepted in the separate [North Island collection](../north-island/); this pass does not duplicate it. The index currently points both its FY2019/20 and FY2020/21 labels at [the same scanned original](https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2019-20.pdf). That nine-page document's rendered cover explicitly states **year ended March 31, 2020**, confirming FY2019/20 despite the duplicate FY2020/21 link label. Its SHA-256 is `43fd43a1d642fd6ad49efa92b8428d8663a4a410eec74d2d615b30fecb7e661d`, matching the earlier discovery receipt.
 
 The manifest retains this genuine FY2019/20 document in `unparsedSources` with status `requires-ocr`, the exact shared index target, both observed link labels and the cover-period evidence. It contributes **zero imported observations**. Complete OCR, employee-section period/scope review, row verification and printed-control reconciliation remain necessary. Cover review alone cannot establish those checks. The genuine FY2020/21 file was recovered separately in the earlier correction. FY2017/18 remains compiled-only, and this collection does not establish complete earlier history or a new FY2025/26 employee schedule.
+
+## Integration review
+
+[The integration receipt](integration-review.json) verifies all 238 other employer exports are byte-identical to merged PR #34, every previously official NIC observation remains, all old source IDs remain, and the 2024/25 cohort appears once. Four original-backed new cohorts add 608 observations and the independently reviewed 2023/24 original replaces exactly 181 compiled observations. The current dataset totals 1,010,644 observations: 777,862 official and 232,782 compiled, across 239 employers.
+
+The merge review re-ran both PDF readers over all 808 source rows. Additional rendered review covered the 2018/19 final salary/control page, the three touching name/title boundaries, and both FY2023/24 compiled name/title errors. This is separate from the author’s rendered approval and first/final-page review described above.

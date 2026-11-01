@@ -67,6 +67,24 @@ test('published exports retain scope, reporting basis, source thresholds and rec
   assert.deepEqual(data, loadRepositoryCoverage(root))
 })
 
+test('accepted native, scanned and hybrid source kinds preserve employee versus board scope', t => {
+  for (const kind of ['official-statement-of-financial-information', 'official-native-pdf',
+    'official-scanned-pdf', 'official-pdf-ocr-overlay', 'official-hybrid-pdf', 'official-board-remuneration-disclosure']) {
+    const board = kind === 'official-board-remuneration-disclosure'
+    const root = fixture(t, ({ index, coverage }) => {
+      index.sources.employees.sourceKind = kind
+      if (board) {
+        index.sources.employees.scope = 'board-remuneration'
+        coverage.employers[0].coverage[0].scope = 'board-remuneration'
+      }
+    })
+    const data = loadRepositoryCoverage(root)
+    assert.equal(data.totals.officialRows, 3)
+    assert.equal(data.totals.employeeRows, board ? 0 : 2)
+    assert.equal(data.employers[0].periods[0].cohorts[0].verifiedPeriod, true)
+  }
+})
+
 for (const [label, mutate, expected] of [
   ['wrong employer count', ({ coverage }) => { coverage.employers[0].coverage[0].rows++ }, /export counts/],
   ['unknown source', ({ rows }) => { rows[0][5] = 'unregistered' }, /unknown source/],

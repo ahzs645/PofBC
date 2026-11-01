@@ -154,7 +154,6 @@ Its source controls and replacement review are independent of the partial Sunshi
 Lists snapshot. The current numbers are generated in [comparison.md](comparison.md),
 so documentation does not have to duplicate changing dataset totals.
 
-The [release reconciliation](release.json) pins the baseline commit after the
-concurrent municipal-history merge: 808 newly official observations replace 181
-compiled observations, adding 627 net records. The earlier municipal additions
-are already in that baseline and are not counted again here.
+The [release reconciliation](release.json) uses the merged PR #34 dataset as its baseline. Four new NIC cohorts add 608 official observations and replace 181 compiled observations, for 427 net records. The 200 FY2024/25 observations independently verified here are already published by PR #34 and are counted once. The earlier municipal and six-sector additions remain in the baseline.
+
+The comparison's queue covers the published source catalog and supplied reference. The broader [six-sector processing and archive queue](../continuation-2026-11-01/work-queue.csv) remains separate; queues overlap and their totals must not be added.

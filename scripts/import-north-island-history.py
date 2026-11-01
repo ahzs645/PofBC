@@ -327,6 +327,24 @@ def baseline_comparison(rows: list) -> dict:
             "Compiled zero versus official dash is equated only for this overlap comparison; official expenses remain null where disclosed as a dash."]}
 
 
+def existing_publication(rows: list, source: dict) -> dict:
+    """Keep the independently identical 2024/25 cohort published by PR #34 once."""
+    collection = "continuation-education/supplemental"
+    folder = ROOT / "research/salaries" / collection
+    manifest = json.loads((folder / "sources.json").read_text())
+    existing = next(s for s in manifest["sources"] if s["id"] == "north-island-sofi-2024-25-employees")
+    raw = (folder / existing["file"]).read_bytes()
+    if sha256(raw) != existing["dataSha256"] or existing["sha256"] != source["sha256"]:
+        raise ValueError("Previously published NIC source fingerprint changed")
+    payload = json.loads(gzip.decompress(raw))
+    published = payload if isinstance(payload, list) else payload["rows"]
+    if Counter(map(tuple, rows)) != Counter(map(tuple, published)):
+        raise ValueError("Previously published NIC cohort differs; review before adding overlapping rows")
+    return {**source, "publication": "verification-only-already-published",
+            "publishedCollection": collection, "publishedSourceId": existing["id"],
+            "publishedDataSha256": existing["dataSha256"]}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cache-dir", type=Path, default=Path("/tmp/pofbc-nic-history"))
@@ -336,7 +354,7 @@ def main() -> None:
     parser.add_argument("--verified-on", default=date.today().isoformat())
     args = parser.parse_args()
     date.fromisoformat(args.verified_on)
-    sources, files, by_period = [], {}, {}
+    sources, verification_only, files, by_period = [], [], {}, {}
     # Finish every extraction and independent check before writing any output.
     for period, reviewed in REVIEWED.items():
         path = args.cache_dir / f"nic-{period}.pdf"
@@ -357,10 +375,14 @@ def main() -> None:
         rows, validation = parse_layout(text, period)
         independent_coordinate_check(path, rows, period)
         source, compressed = build_source(period, rows, validation, data, args.verified_on)
-        sources.append(source)
+        if period == "2024-25":
+            verification_only.append(existing_publication(rows, source))
+        else:
+            sources.append(source)
         files[source["file"]] = compressed
         by_period[period] = rows
     manifest = {"version": 1, "rowSchema": SCHEMA, "sources": sources,
+        "verificationOnlySources": verification_only,
         "unparsedSources": [{
             "id": "north-island-college-sofi-2019-20-ocr-lead", "employerSlug": EMPLOYER,
             "employerName": "North Island College", "year": "2019/20",
@@ -381,7 +403,7 @@ def main() -> None:
                 "observedTargetUrl": BASE_URL + "2019-20.pdf", "renderedCoverPhysicalPage": 1,
                 "renderedCoverFiscalYearEnd": "2020-03-31", "employeeScheduleAccepted": False},
         }],
-        "coverageNotes": ["Adds five complete official employee cohorts, 808 observations. FY2023/24 replaces 181 compiled rows; net increase is 627 observations.",
+        "coverageNotes": ["Five complete official employee cohorts (808 observations) independently verified. Four cohorts add 608 official observations; FY2023/24 replaces 181 compiled rows for 427 net additions. The 200 FY2024/25 observations are already published by PR #34 and remain verification-only here, with exact source and row-multiset agreement.",
             "FY2019/20 remains a scanned-source/OCR gap. FY2020/21 is already accepted in the separate north-island collection. This is not a claim of complete college history."]}
     files["sources.json"] = (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode()
     files["compiled-period-comparison.json"] = (json.dumps(baseline_comparison(by_period["2023-24"]), ensure_ascii=False, indent=2) + "\n").encode()
@@ -394,7 +416,8 @@ def main() -> None:
         for filename, content in files.items():
             (args.output / filename).write_bytes(content)
     print(json.dumps({"verified": args.verify, "sources": len(sources), "officialRows": sum(s["rowCount"] for s in sources),
-        "replacedCompiledRows": 181, "netAdditionalRows": 627,
+        "alreadyPublishedRowsVerified": sum(s["rowCount"] for s in verification_only),
+        "replacedCompiledRows": 181, "netAdditionalRows": 427,
         "periods": [{"year": s["year"], "rows": s["rowCount"], "payResidual": s["validation"]["remunerationResidual"],
                      "expenseResidual": s["validation"]["expensesResidual"]} for s in sources]}, indent=2))
 

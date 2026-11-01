@@ -1,0 +1,5 @@
+# Parent acceptance of early appointee schedules
+
+Adopt the independent complete8,602-row Poppler comparison and full original heading/control, four negative salary and seven wrapped-name reviews in government-oic-controls.md/json. All seven1999/00–2005/06OIC/appointee schedules agree across independently implemented MuPDF,PDFMiner andPoppler readers. Accept exact observations with unresolved original control warnings:1999/00travel−$13,282,2001/02travel+$6,901,2003/04salary−$106,112. No source rows are altered, no salary/travel join is made and no cause is inferred.
+
+These appointee/non-Public-Service-Act schedules are distinct from the OtherEmployees schedule and do not certify a complete workforce. Literal negative salary recoveries remain negative, not errors made zero. Salary-only2003/04–2005/06expense fields and declared totals remain null; an explicitly labelled known-cell sum0 is not a claim of published zero expense. The author confirmed metadata-only corrections and unchanged normalized/evidence hashes.

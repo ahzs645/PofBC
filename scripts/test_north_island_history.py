@@ -103,9 +103,10 @@ class AcceptedDataTests(unittest.TestCase):
         cls.manifest = json.loads((cls.directory / "sources.json").read_text())
 
     def test_all_five_cohorts_match_hashes_and_controls(self):
-        self.assertEqual(len(self.manifest["sources"]), 5)
+        self.assertEqual(len(self.manifest["sources"]), 4)
+        self.assertEqual(sum(s["rowCount"] for s in self.manifest["sources"]), 608)
         total = 0
-        for source in self.manifest["sources"]:
+        for source in self.manifest["sources"] + self.manifest["verificationOnlySources"]:
             with self.subTest(period=source["year"]):
                 data = (self.directory / source["file"]).read_bytes()
                 raw = gzip.decompress(data)
@@ -121,6 +122,15 @@ class AcceptedDataTests(unittest.TestCase):
                     self.assertTrue(all(r[2] is None for r in rows))
                 total += len(rows)
         self.assertEqual(total, 808)
+
+    def test_existing_2024_cohort_is_verified_once_and_not_reimported(self):
+        source, = self.manifest["verificationOnlySources"]
+        rows = json.loads(gzip.decompress((self.directory / source["file"]).read_bytes()))
+        self.assertEqual(nic.existing_publication(rows, source), source)
+        changed = copy.deepcopy(rows)
+        changed[0][4] = 0 if changed[0][4] is None else changed[0][4] + 1
+        with self.assertRaisesRegex(ValueError, "cohort differs"):
+            nic.existing_publication(changed, source)
 
     def test_source_disagreement_is_disclosed_not_adjusted(self):
         source = next(s for s in self.manifest["sources"] if s["year"] == "2018/19")

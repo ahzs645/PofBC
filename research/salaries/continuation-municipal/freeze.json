@@ -1,0 +1,985 @@
+{
+  "version": 1,
+  "frozenOn": "2026-11-01",
+  "rows": 1216,
+  "cohorts": 37,
+  "originals": 20,
+  "employers": [
+    "city-of-campbell-river",
+    "city-of-grand-forks",
+    "city-of-revelstoke",
+    "city-of-salmon-arm",
+    "district-of-elkford",
+    "district-of-lake-country",
+    "district-of-metchosin",
+    "district-of-port-edward",
+    "district-of-wells",
+    "village-of-fraser-lake"
+  ],
+  "countsAndMonetaryFieldsFrozen": true,
+  "freezeScope": "All accepted source/data/evidence/layout/rendered-review files and core extraction/regression scripts. Research inventory/search receipts remain separate; no accepted file will be changed without notifying the integration parent.",
+  "sourceHashes": [
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2016-elected-officials",
+      "originalSha256": "97a5f68ebda85f21d89681bbc5abb981aa4526ee29d63f5595300b02f952ac7f",
+      "dataSha256": "6734463b5b9b556c3b9e99903bc2af8be1d3b15081038a6722843113434c4372",
+      "evidenceSha256": "9f80d177b5cba12f1e23648a64a30f6317e82ceba2ae73eca73e941e412a78f4",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2016-sofi-reportpdf",
+      "file": "city-of-campbell-river-2016-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2016-elected-officials.json.gzip",
+      "year": "2016",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2016-employee-remuneration",
+      "originalSha256": "97a5f68ebda85f21d89681bbc5abb981aa4526ee29d63f5595300b02f952ac7f",
+      "dataSha256": "1b92f66bbf933a1a3cd21b69e2fee011508d74e26dbeaf2b19b18e9c9179fe60",
+      "evidenceSha256": "adbd677e07e917cb46e5517920ad74cf5b48ff6b552b37c7b1cc28014f5cf5b4",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2016-sofi-reportpdf",
+      "file": "city-of-campbell-river-2016-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2016-employee-remuneration.json.gzip",
+      "year": "2016",
+      "category": "employee-remuneration",
+      "rows": 83
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2017-elected-officials",
+      "originalSha256": "593c188b8f9bd8dc8e58a26c2d19ff7fa60027cb5fdc12689a38aab448ef7f3d",
+      "dataSha256": "0ba8b9b3abf076b137830eada679dd4a0051cfa2603a80e1d4e49eea23d3576e",
+      "evidenceSha256": "20ed1a2a84b5e98d7573e0b8b95b866d250c3991826195c41a1c33a7f2d17e66",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2017-sofi-reportpdf",
+      "file": "city-of-campbell-river-2017-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2017-elected-officials.json.gzip",
+      "year": "2017",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2017-employee-remuneration",
+      "originalSha256": "593c188b8f9bd8dc8e58a26c2d19ff7fa60027cb5fdc12689a38aab448ef7f3d",
+      "dataSha256": "2a3070527a758dbeabf509b633ffe79204dd6a2b1b58d21e27517b9e2d35c8ed",
+      "evidenceSha256": "23844286994fd3ba1f173a5a4ffa0f59fe9193e161d62c7084ae15fd4b068b67",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2017-sofi-reportpdf",
+      "file": "city-of-campbell-river-2017-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2017-employee-remuneration.json.gzip",
+      "year": "2017",
+      "category": "employee-remuneration",
+      "rows": 87
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2018-elected-officials",
+      "originalSha256": "e9f9fca5a32a5e7955690a97a92c05373171f8e27ea702b6fd2e5cb833909283",
+      "dataSha256": "f062e7f4637849139c2cd9f5611da043e69b85b2053f0134c4966ea344fe45bb",
+      "evidenceSha256": "b705b34a657fe47fc1d049eaf21805e93abe7a81831e40df7c8d2f069e21fc50",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2018-sofi-reportpdf",
+      "file": "city-of-campbell-river-2018-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2018-elected-officials.json.gzip",
+      "year": "2018",
+      "category": "elected-officials",
+      "rows": 9
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2018-employee-remuneration",
+      "originalSha256": "e9f9fca5a32a5e7955690a97a92c05373171f8e27ea702b6fd2e5cb833909283",
+      "dataSha256": "f191c2de5e3ce62bc6e359634d22e61edcb9d280616750666176c576a8b5faab",
+      "evidenceSha256": "88e54ecbd53924e12381c855f76f63796f3da12bcdb2d5f91890bed53e7363df",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2018-sofi-reportpdf",
+      "file": "city-of-campbell-river-2018-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2018-employee-remuneration.json.gzip",
+      "year": "2018",
+      "category": "employee-remuneration",
+      "rows": 95
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2019-elected-officials",
+      "originalSha256": "803f7eee508b419fb0cc00748d910a2461b4cff696b242eaab07aafaee326ab2",
+      "dataSha256": "4093c124e1a4b2eb493edbb937af0332d63a08bacd245a9fb042628bd77e1a0e",
+      "evidenceSha256": "02f0842949af2d3f3a558bccc9fced30e96b546e1b500c510a7e867ffc63c45b",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2019-sofi-reportpdf",
+      "file": "city-of-campbell-river-2019-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2019-elected-officials.json.gzip",
+      "year": "2019",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2019-employee-remuneration",
+      "originalSha256": "803f7eee508b419fb0cc00748d910a2461b4cff696b242eaab07aafaee326ab2",
+      "dataSha256": "bdee554e70dc44bb388076907f5fe10a67a66f9152c24245628f6cd7e4949164",
+      "evidenceSha256": "e1bcc257b0896343ab80364f8e483283fdb16a3f69156f3123d9f1698f5565d3",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2019-sofi-reportpdf",
+      "file": "city-of-campbell-river-2019-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2019-employee-remuneration.json.gzip",
+      "year": "2019",
+      "category": "employee-remuneration",
+      "rows": 97
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2020-elected-officials",
+      "originalSha256": "447523033f667c778ed9f88d81886a4e440dd812f03824d8a283ec9dccc1d50e",
+      "dataSha256": "ecbecdd628dd466acdfa7c653a9c63db94355ee17b0783fbea5f34aeeb87cf1d",
+      "evidenceSha256": "45fc480d155b57634d08e9db8e6985c39b5ce121578ebadcb645d33f59666e8d",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2020-sofi-reportpdf",
+      "file": "city-of-campbell-river-2020-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2020-elected-officials.json.gzip",
+      "year": "2020",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2020-employee-remuneration",
+      "originalSha256": "447523033f667c778ed9f88d81886a4e440dd812f03824d8a283ec9dccc1d50e",
+      "dataSha256": "1f969e9d772fb591ebaac2c7b43769e32c2a9f1fa6375b0d8393139636a479c9",
+      "evidenceSha256": "f6ea5f44682a6f7087e8fc483db5f44ebbd0599105617d793a183b465e0e1523",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2020-sofi-reportpdf",
+      "file": "city-of-campbell-river-2020-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2020-employee-remuneration.json.gzip",
+      "year": "2020",
+      "category": "employee-remuneration",
+      "rows": 121
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2021-elected-officials",
+      "originalSha256": "cfeaf09c22c5849143700ade5b089a5933be87781ad1bc91015a2db9401d0abc",
+      "dataSha256": "c71698ff3a21811edb4a5b8e5b2f92dfbcf720870a762448b8e4d0cc695799f0",
+      "evidenceSha256": "da1b60cde5755ee917a94e985f398ffe4bcafb490dfad7688838b4778add216b",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2021-sofi-reportpdf",
+      "file": "city-of-campbell-river-2021-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2021-elected-officials.json.gzip",
+      "year": "2021",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2021-employee-remuneration",
+      "originalSha256": "cfeaf09c22c5849143700ade5b089a5933be87781ad1bc91015a2db9401d0abc",
+      "dataSha256": "1315aef22f996627c616fa13ada9230672543caaef37f115f466727ce0bfe32b",
+      "evidenceSha256": "092763da129a4aa404e7d5cc59a6514ba9d070d5ea8b58400638d23ad5400678",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2021-sofi-reportpdf",
+      "file": "city-of-campbell-river-2021-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2021-employee-remuneration.json.gzip",
+      "year": "2021",
+      "category": "employee-remuneration",
+      "rows": 108
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2022-elected-officials",
+      "originalSha256": "e013974f3bb3a47d5797f5211eb856ca5dffd0fcbe7989b5a2fb5628f5fedd44",
+      "dataSha256": "8c02e0c90ca9bf02dd27edea98b749cb84a24bac2dc7f2391e3803b6a62c0077",
+      "evidenceSha256": "9adf2ef0617b011a9538cc0b8670fdd14d371ce5f285adf195c528ae5f6c45fc",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2022-sofi-reportpdf",
+      "file": "city-of-campbell-river-2022-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2022-elected-officials.json.gzip",
+      "year": "2022",
+      "category": "elected-officials",
+      "rows": 11
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-campbell-river-2022-employee-remuneration",
+      "originalSha256": "e013974f3bb3a47d5797f5211eb856ca5dffd0fcbe7989b5a2fb5628f5fedd44",
+      "dataSha256": "d8dce13f7bd0925ef4beb17d49ed49daed0fd77339aa72f1b7a53beeb4c7e0e4",
+      "evidenceSha256": "211fd6a457737b0e266ebb38a2625e2a1d86d73340f6b28e1126ff92fe5b8fa4",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2022-sofi-reportpdf",
+      "file": "city-of-campbell-river-2022-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-campbell-river-2022-employee-remuneration.json.gzip",
+      "year": "2022",
+      "category": "employee-remuneration",
+      "rows": 119
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-salmon-arm-2022-elected-officials",
+      "originalSha256": "27cfe920cd5ea467c0cb96679d9bb50b4e7f5ce728e98541972fe7eae05d727d",
+      "dataSha256": "3606364ddc22b2c6425890dd1dd580f739fc374648345aa1dc5e887b679711da",
+      "evidenceSha256": "ffeb4f6266c5e9eec88670065811a159c3b1078ccc3c3436289a9cf0ef296398",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1170",
+      "file": "city-of-salmon-arm-2022-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-salmon-arm-2022-elected-officials.json.gzip",
+      "year": "2022",
+      "category": "elected-officials",
+      "rows": 8
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-salmon-arm-2022-employee-remuneration",
+      "originalSha256": "27cfe920cd5ea467c0cb96679d9bb50b4e7f5ce728e98541972fe7eae05d727d",
+      "dataSha256": "7aded7f07c73edd2cb792722129879052744d3fe8197fe1a57941ded37ebf027",
+      "evidenceSha256": "fc5d6eb3b3837e47deac57eb017f2a98dae1412432d7cd49473d1ef65a2ffefb",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1170",
+      "file": "city-of-salmon-arm-2022-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-salmon-arm-2022-employee-remuneration.json.gzip",
+      "year": "2022",
+      "category": "employee-remuneration",
+      "rows": 32
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-salmon-arm-2024-elected-officials",
+      "originalSha256": "b923f41c3434b2ee56b14f0f0240792f1ea735514375d106ade8eabbbc98a466",
+      "dataSha256": "0543ab47f2a072d7ed3f617d3500661731bf4adb2a21e0d266fe544567568868",
+      "evidenceSha256": "1b6cf5801f7fc5741eb485e8747b4186dc6a4115bd29b357baea7f1dcaca6e74",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1275",
+      "file": "city-of-salmon-arm-2024-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-salmon-arm-2024-elected-officials.json.gzip",
+      "year": "2024",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-salmon-arm-2024-employee-remuneration",
+      "originalSha256": "b923f41c3434b2ee56b14f0f0240792f1ea735514375d106ade8eabbbc98a466",
+      "dataSha256": "c1f0c0b8b4029b90485ece74eca12f0862adc9562a84f5eb8cb3a148876c7b6d",
+      "evidenceSha256": "43777888ea3d38e7c10560c5c0af5a497b0484f46b527c40e92cf70e0ebbc29c",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1275",
+      "file": "city-of-salmon-arm-2024-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-salmon-arm-2024-employee-remuneration.json.gzip",
+      "year": "2024",
+      "category": "employee-remuneration",
+      "rows": 44
+    },
+    {
+      "sourceId": "continuation-municipal-district-of-port-edward-2024-elected-officials",
+      "originalSha256": "3684c762671846859493fb4dd41e0cac9754f64714225401aae9f2c0ceec3a50",
+      "dataSha256": "a76d97d8c08246c00646c8b568f3d4d94fb84d44236a0020519a41757943e534",
+      "evidenceSha256": "4c627b27fd8fdc07f42953ed3d3d47ef0a2955107f241f98eafffba065497ef3",
+      "sourceUrl": "https://www.portedward.ca/uploads/_reports/_financial/2024_Statement_of_Financial_Information",
+      "file": "district-of-port-edward-2024-elected-officials.json.gzip",
+      "evidenceFile": "evidence/district-of-port-edward-2024-elected-officials.json.gzip",
+      "year": "2024",
+      "category": "elected-officials",
+      "rows": 5
+    },
+    {
+      "sourceId": "continuation-municipal-district-of-port-edward-2025-elected-officials",
+      "originalSha256": "0312a2efde846cdae064392d694edddcf909ec633a18830cee3a202c435cce2f",
+      "dataSha256": "6d85d2878d869045acddeb721af0fb5cb23987e716b1be364f651a8f214dcad1",
+      "evidenceSha256": "a57e54dd3456e60108ae4df734ba6ee2e3ee32e3ee0166b85957cd6ecef786ad",
+      "sourceUrl": "https://www.portedward.ca/uploads/_reports/_financial/2025_Statement_of_Financial_Information.pdf",
+      "file": "district-of-port-edward-2025-elected-officials.json.gzip",
+      "evidenceFile": "evidence/district-of-port-edward-2025-elected-officials.json.gzip",
+      "year": "2025",
+      "category": "elected-officials",
+      "rows": 5
+    },
+    {
+      "sourceId": "continuation-municipal-district-of-metchosin-2025-elected-officials",
+      "originalSha256": "cde2e7e380edbde9629ede36db0b8cbe29d64c4d9e5681a014638fb7ca49ce84",
+      "dataSha256": "63fc052742020afa22ff26cec842d2bffe0f926416f3fd0eb7317e7fe06de401",
+      "evidenceSha256": "1619d3d4e6f146d4be30e5305aab34b4d328aff10b1c72ca8670432b33abc269",
+      "sourceUrl": "https://www.metchosin.ca/sites/7/files/2026-06/2025%20%20SOFI_Final_signed%2026%206%201_0.pdf",
+      "file": "district-of-metchosin-2025-elected-officials.json.gzip",
+      "evidenceFile": "evidence/district-of-metchosin-2025-elected-officials.json.gzip",
+      "year": "2025",
+      "category": "elected-officials",
+      "rows": 5
+    },
+    {
+      "sourceId": "continuation-municipal-district-of-metchosin-2025-employee-remuneration",
+      "originalSha256": "cde2e7e380edbde9629ede36db0b8cbe29d64c4d9e5681a014638fb7ca49ce84",
+      "dataSha256": "edbe539c8c391b2b15a45059d96c86f5ddbc7374aee6a4f727400222c3048495",
+      "evidenceSha256": "bf7bfc847dd823670b738d6966c2f5ddd2d5ad09d2c38db3ee75f34003c818fb",
+      "sourceUrl": "https://www.metchosin.ca/sites/7/files/2026-06/2025%20%20SOFI_Final_signed%2026%206%201_0.pdf",
+      "file": "district-of-metchosin-2025-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/district-of-metchosin-2025-employee-remuneration.json.gzip",
+      "year": "2025",
+      "category": "employee-remuneration",
+      "rows": 11
+    },
+    {
+      "sourceId": "continuation-municipal-village-of-fraser-lake-2023-employee-remuneration",
+      "originalSha256": "96b17d3209368f08cb025032effca4af0fcdbdbbcd7566bb4b326339935ab13b",
+      "dataSha256": "9913a48e957b2c4b737d99333bf0044c19029539d5ac0263cbc2cd75f94b575b",
+      "evidenceSha256": "8ed6ae49f081c281f2dc2fe7d2600c69876ca9c33d5bcc8e60f3a10997e56925",
+      "sourceUrl": "https://www.fraserlake.ca/sites/26/files/2024-08/SOFI_2023.pdf",
+      "file": "village-of-fraser-lake-2023-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/village-of-fraser-lake-2023-employee-remuneration.json.gzip",
+      "year": "2023",
+      "category": "employee-remuneration",
+      "rows": 8
+    },
+    {
+      "sourceId": "continuation-municipal-village-of-fraser-lake-2023-elected-officials",
+      "originalSha256": "96b17d3209368f08cb025032effca4af0fcdbdbbcd7566bb4b326339935ab13b",
+      "dataSha256": "5cc7a314f7b2d90ecf6159a5417a44a9dfc53495b8b634899f8f27141d944336",
+      "evidenceSha256": "0d8ac3280c3252a448bbafc01e61219c55a538d71f54ae0dc1124dfa127c08c0",
+      "sourceUrl": "https://www.fraserlake.ca/sites/26/files/2024-08/SOFI_2023.pdf",
+      "file": "village-of-fraser-lake-2023-elected-officials.json.gzip",
+      "evidenceFile": "evidence/village-of-fraser-lake-2023-elected-officials.json.gzip",
+      "year": "2023",
+      "category": "elected-officials",
+      "rows": 5
+    },
+    {
+      "sourceId": "continuation-municipal-district-of-wells-2020-elected-officials",
+      "originalSha256": "b52eea68b62eb7243dd60c0532e13c26cde88de8ce5ada53b83f209e5c88c925",
+      "dataSha256": "bdb7743162a36fc4e7c335710a88676f0287d5c28d03b047829b0e7b91162b6a",
+      "evidenceSha256": "40572cee6fa82aff34287fb3578fe9944e6d359c6095de207b7887d6444fcb96",
+      "sourceUrl": "https://www.wells.ca/download_file/view/586/375",
+      "file": "district-of-wells-2020-elected-officials.json.gzip",
+      "evidenceFile": "evidence/district-of-wells-2020-elected-officials.json.gzip",
+      "year": "2020",
+      "category": "elected-officials",
+      "rows": 5
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-grand-forks-2024-elected-officials",
+      "originalSha256": "6855147f7ebc32965d36b0c3290585f1fa02c5736c233cf7d454668ae8631314",
+      "dataSha256": "3cba68fe699d9f3b0098b390a73c2d3b6a37382cca46c823806290dbc88a624f",
+      "evidenceSha256": "0d6543e327af8b4b75ae7f922c3ed57481f2a934d0838b96bab5879733154c93",
+      "sourceUrl": "https://www.grandforks.ca/wp-content/uploads/CGF-2024-Statement-of-Financial-Information-website.pdf",
+      "file": "city-of-grand-forks-2024-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-grand-forks-2024-elected-officials.json.gzip",
+      "year": "2024",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-grand-forks-2024-employee-remuneration",
+      "originalSha256": "6855147f7ebc32965d36b0c3290585f1fa02c5736c233cf7d454668ae8631314",
+      "dataSha256": "4a59bec9172ed2e6860396b0828799b3652b35413068e8e382161d688da94428",
+      "evidenceSha256": "03fbe3d4544f92eb1a6968e030714139ec41a66800bb8d4304ae338f58902516",
+      "sourceUrl": "https://www.grandforks.ca/wp-content/uploads/CGF-2024-Statement-of-Financial-Information-website.pdf",
+      "file": "city-of-grand-forks-2024-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-grand-forks-2024-employee-remuneration.json.gzip",
+      "year": "2024",
+      "category": "employee-remuneration",
+      "rows": 34
+    },
+    {
+      "sourceId": "continuation-municipal-district-of-lake-country-2025-elected-officials",
+      "originalSha256": "4f2dc49a27f4f951ebcec6f7f76f97c2481ec71d6ed22ca54b03467df0f77e38",
+      "dataSha256": "9cf37287448568102ae726bc3e71c8961092825558bf8a4b3eed8fccdb4866f5",
+      "evidenceSha256": "eddd3d7c6c4f55996c76c8beef9c13a2065bfb56ccb02548938f08d2d9c1b76e",
+      "sourceUrl": "https://www.lakecountry.bc.ca/media/file/2025-statements-financial-information-sofi-reportpdf",
+      "file": "district-of-lake-country-2025-elected-officials.json.gzip",
+      "evidenceFile": "evidence/district-of-lake-country-2025-elected-officials.json.gzip",
+      "year": "2025",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-district-of-lake-country-2025-employee-remuneration",
+      "originalSha256": "4f2dc49a27f4f951ebcec6f7f76f97c2481ec71d6ed22ca54b03467df0f77e38",
+      "dataSha256": "049f96d47135e6aecf7d5b505ca1d5c425c0efbd6da6cd8faf20c35160109726",
+      "evidenceSha256": "7450f4fb3b516c5d017f8d5500214b5630cbf2ac7fefa7b7c703fe9a529cdd77",
+      "sourceUrl": "https://www.lakecountry.bc.ca/media/file/2025-statements-financial-information-sofi-reportpdf",
+      "file": "district-of-lake-country-2025-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/district-of-lake-country-2025-employee-remuneration.json.gzip",
+      "year": "2025",
+      "category": "employee-remuneration",
+      "rows": 81
+    },
+    {
+      "sourceId": "continuation-municipal-district-of-elkford-2022-elected-officials",
+      "originalSha256": "3e697dd7066aa03f819b9605d31de91c9ca9866b04149164216ae1d410f12aca",
+      "dataSha256": "13d201a04a27a41e4e97f9c7b0ac9d2f40c0034f3abd580d010f5f947ba3b38b",
+      "evidenceSha256": "6220b9a5c5e7220dc6bfefe58281c7383f2ed628f8768465d27d1000959c2539",
+      "sourceUrl": "https://www.elkford.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+      "file": "district-of-elkford-2022-elected-officials.json.gzip",
+      "evidenceFile": "evidence/district-of-elkford-2022-elected-officials.json.gzip",
+      "year": "2022",
+      "category": "elected-officials",
+      "rows": 11
+    },
+    {
+      "sourceId": "continuation-municipal-district-of-elkford-2022-employee-remuneration",
+      "originalSha256": "3e697dd7066aa03f819b9605d31de91c9ca9866b04149164216ae1d410f12aca",
+      "dataSha256": "9d99208b912855c7c94dddefa26c0e18a9fd0dcb9329011fc77163c0bffcac5a",
+      "evidenceSha256": "a254c654a802a29fbb13dc88225c71a54c2f4d92da3cf7cec40dfd77647a5c41",
+      "sourceUrl": "https://www.elkford.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+      "file": "district-of-elkford-2022-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/district-of-elkford-2022-employee-remuneration.json.gzip",
+      "year": "2022",
+      "category": "employee-remuneration",
+      "rows": 18
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-revelstoke-2021-elected-officials",
+      "originalSha256": "895f800fac68609d2a4bea229be7a2c0941b06c3b075b0f189348885a1ac8c65",
+      "dataSha256": "a4b53df9feafd36ec57babb69f8f7693dcb92a8dc5ac128e35e0f38581915b8d",
+      "evidenceSha256": "3beef75ebf42c091fc998b9078b5bb6933d45b1d6fb099ebde9aaff58a9d4c7a",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16952/2021-SOFI-PDF",
+      "file": "city-of-revelstoke-2021-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-revelstoke-2021-elected-officials.json.gzip",
+      "year": "2021",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-revelstoke-2021-employee-remuneration",
+      "originalSha256": "895f800fac68609d2a4bea229be7a2c0941b06c3b075b0f189348885a1ac8c65",
+      "dataSha256": "2d8ed210910f878b3234883a78dd949b7983c73c223215667c8e3c2fe0f22e6a",
+      "evidenceSha256": "99a1e0a6967077f94e25f746eeac8d120a560a549590cdadb2f16d92f59a7b56",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16952/2021-SOFI-PDF",
+      "file": "city-of-revelstoke-2021-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-revelstoke-2021-employee-remuneration.json.gzip",
+      "year": "2021",
+      "category": "employee-remuneration",
+      "rows": 31
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-revelstoke-2023-elected-officials",
+      "originalSha256": "0cb1508e353a98b073cbe42a9ad01045391c156a34833eed05dc05a098607834",
+      "dataSha256": "4ff63d085d39dd99fa38bcf008994ed8a8399be7d2b6c0e1a943ba9738ec6498",
+      "evidenceSha256": "44bebc09ceb0e823693e5f5d832e0af23cb23550ba32d475fe120b9f3f28bfcf",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16953/2023-SOFI-PDF",
+      "file": "city-of-revelstoke-2023-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-revelstoke-2023-elected-officials.json.gzip",
+      "year": "2023",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-revelstoke-2023-employee-remuneration",
+      "originalSha256": "0cb1508e353a98b073cbe42a9ad01045391c156a34833eed05dc05a098607834",
+      "dataSha256": "d0affcfeae2d410f4ecbba39eeaff60d308676cce9f4f44e2552e8280eef2531",
+      "evidenceSha256": "517baa9719cfa19775d27af5b69519cbe569f36319a95cf79ac1a65e721cf41b",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16953/2023-SOFI-PDF",
+      "file": "city-of-revelstoke-2023-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-revelstoke-2023-employee-remuneration.json.gzip",
+      "year": "2023",
+      "category": "employee-remuneration",
+      "rows": 47
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-revelstoke-2024-elected-officials",
+      "originalSha256": "1fe9ba1403552dab4815ba9a8e111686c9ca60fccbc07529b3152be826a7386d",
+      "dataSha256": "c4e4c33fad66bc68dc855c76fb75809cfd71cb3330d9532a9a1d2ae5119913fe",
+      "evidenceSha256": "a0d0f837d976548ba945b7311685c8185604f440b393437121d49f9df8cf8d16",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16950/2024-SOFI-PDF",
+      "file": "city-of-revelstoke-2024-elected-officials.json.gzip",
+      "evidenceFile": "evidence/city-of-revelstoke-2024-elected-officials.json.gzip",
+      "year": "2024",
+      "category": "elected-officials",
+      "rows": 7
+    },
+    {
+      "sourceId": "continuation-municipal-city-of-revelstoke-2024-employee-remuneration",
+      "originalSha256": "1fe9ba1403552dab4815ba9a8e111686c9ca60fccbc07529b3152be826a7386d",
+      "dataSha256": "bf9d6852ced07507ff172c73cd05360296146517855dec0ba961297fa707a8fb",
+      "evidenceSha256": "a11d55029bd05a5db04c30c184855ec975ac5b39fcacb3819532fd24a99a97ce",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16950/2024-SOFI-PDF",
+      "file": "city-of-revelstoke-2024-employee-remuneration.json.gzip",
+      "evidenceFile": "evidence/city-of-revelstoke-2024-employee-remuneration.json.gzip",
+      "year": "2024",
+      "category": "employee-remuneration",
+      "rows": 59
+    }
+  ],
+  "originalCaches": [
+    {
+      "key": "city-of-campbell-river-2016",
+      "path": "/tmp/continuation-municipal/city-of-campbell-river-2016.pdf",
+      "sha256": "97a5f68ebda85f21d89681bbc5abb981aa4526ee29d63f5595300b02f952ac7f"
+    },
+    {
+      "key": "city-of-campbell-river-2017",
+      "path": "/tmp/continuation-municipal/city-of-campbell-river-2017.pdf",
+      "sha256": "593c188b8f9bd8dc8e58a26c2d19ff7fa60027cb5fdc12689a38aab448ef7f3d"
+    },
+    {
+      "key": "city-of-campbell-river-2018",
+      "path": "/tmp/continuation-municipal/city-of-campbell-river-2018.pdf",
+      "sha256": "e9f9fca5a32a5e7955690a97a92c05373171f8e27ea702b6fd2e5cb833909283"
+    },
+    {
+      "key": "city-of-campbell-river-2019",
+      "path": "/tmp/continuation-municipal/city-of-campbell-river-2019.pdf",
+      "sha256": "803f7eee508b419fb0cc00748d910a2461b4cff696b242eaab07aafaee326ab2"
+    },
+    {
+      "key": "city-of-campbell-river-2020",
+      "path": "/tmp/continuation-municipal/city-of-campbell-river-2020.pdf",
+      "sha256": "447523033f667c778ed9f88d81886a4e440dd812f03824d8a283ec9dccc1d50e"
+    },
+    {
+      "key": "city-of-campbell-river-2021",
+      "path": "/tmp/continuation-municipal/city-of-campbell-river-2021.pdf",
+      "sha256": "cfeaf09c22c5849143700ade5b089a5933be87781ad1bc91015a2db9401d0abc"
+    },
+    {
+      "key": "city-of-campbell-river-2022",
+      "path": "/tmp/continuation-municipal/city-of-campbell-river-2022.pdf",
+      "sha256": "e013974f3bb3a47d5797f5211eb856ca5dffd0fcbe7989b5a2fb5628f5fedd44"
+    },
+    {
+      "key": "city-of-salmon-arm-2022",
+      "path": "/tmp/continuation-municipal/city-of-salmon-arm-2022.pdf",
+      "sha256": "27cfe920cd5ea467c0cb96679d9bb50b4e7f5ce728e98541972fe7eae05d727d"
+    },
+    {
+      "key": "city-of-salmon-arm-2024",
+      "path": "/tmp/continuation-municipal/city-of-salmon-arm-2024.pdf",
+      "sha256": "b923f41c3434b2ee56b14f0f0240792f1ea735514375d106ade8eabbbc98a466"
+    },
+    {
+      "key": "district-of-port-edward-2024",
+      "path": "/tmp/continuation-municipal/district-of-port-edward-2024.pdf",
+      "sha256": "3684c762671846859493fb4dd41e0cac9754f64714225401aae9f2c0ceec3a50"
+    },
+    {
+      "key": "district-of-port-edward-2025",
+      "path": "/tmp/continuation-municipal/district-of-port-edward-2025.pdf",
+      "sha256": "0312a2efde846cdae064392d694edddcf909ec633a18830cee3a202c435cce2f"
+    },
+    {
+      "key": "district-of-metchosin-2025",
+      "path": "/tmp/continuation-municipal/district-of-metchosin-2025.pdf",
+      "sha256": "cde2e7e380edbde9629ede36db0b8cbe29d64c4d9e5681a014638fb7ca49ce84"
+    },
+    {
+      "key": "village-of-fraser-lake-2023",
+      "path": "/tmp/continuation-municipal/village-of-fraser-lake-2023.pdf",
+      "sha256": "96b17d3209368f08cb025032effca4af0fcdbdbbcd7566bb4b326339935ab13b"
+    },
+    {
+      "key": "district-of-wells-2020",
+      "path": "/tmp/continuation-municipal/district-of-wells-2020.pdf",
+      "sha256": "b52eea68b62eb7243dd60c0532e13c26cde88de8ce5ada53b83f209e5c88c925"
+    },
+    {
+      "key": "city-of-grand-forks-2024",
+      "path": "/tmp/continuation-municipal/city-of-grand-forks-2024.pdf",
+      "sha256": "6855147f7ebc32965d36b0c3290585f1fa02c5736c233cf7d454668ae8631314"
+    },
+    {
+      "key": "district-of-lake-country-2025",
+      "path": "/tmp/continuation-municipal/district-of-lake-country-2025.pdf",
+      "sha256": "4f2dc49a27f4f951ebcec6f7f76f97c2481ec71d6ed22ca54b03467df0f77e38"
+    },
+    {
+      "key": "district-of-elkford-2022",
+      "path": "/tmp/continuation-municipal/district-of-elkford-2022.pdf",
+      "sha256": "3e697dd7066aa03f819b9605d31de91c9ca9866b04149164216ae1d410f12aca"
+    },
+    {
+      "key": "city-of-revelstoke-2021",
+      "path": "/tmp/continuation-municipal/city-of-revelstoke-2021.pdf",
+      "sha256": "895f800fac68609d2a4bea229be7a2c0941b06c3b075b0f189348885a1ac8c65"
+    },
+    {
+      "key": "city-of-revelstoke-2023",
+      "path": "/tmp/continuation-municipal/city-of-revelstoke-2023.pdf",
+      "sha256": "0cb1508e353a98b073cbe42a9ad01045391c156a34833eed05dc05a098607834"
+    },
+    {
+      "key": "city-of-revelstoke-2024",
+      "path": "/tmp/continuation-municipal/city-of-revelstoke-2024.pdf",
+      "sha256": "1fe9ba1403552dab4815ba9a8e111686c9ca60fccbc07529b3152be826a7386d"
+    }
+  ],
+  "files": [
+    {
+      "path": "research/salaries/continuation-municipal/README.md",
+      "bytes": 7194,
+      "sha256": "10ef43d8fbbb50ae82b32edb016930449189c8a8649f2c2c158ed16d64561b19"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2016-elected-officials.json.gzip",
+      "bytes": 220,
+      "sha256": "6734463b5b9b556c3b9e99903bc2af8be1d3b15081038a6722843113434c4372"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2016-employee-remuneration.json.gzip",
+      "bytes": 2088,
+      "sha256": "1b92f66bbf933a1a3cd21b69e2fee011508d74e26dbeaf2b19b18e9c9179fe60"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2017-elected-officials.json.gzip",
+      "bytes": 214,
+      "sha256": "0ba8b9b3abf076b137830eada679dd4a0051cfa2603a80e1d4e49eea23d3576e"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2017-employee-remuneration.json.gzip",
+      "bytes": 2189,
+      "sha256": "2a3070527a758dbeabf509b633ffe79204dd6a2b1b58d21e27517b9e2d35c8ed"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2018-elected-officials.json.gzip",
+      "bytes": 262,
+      "sha256": "f062e7f4637849139c2cd9f5611da043e69b85b2053f0134c4966ea344fe45bb"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2018-employee-remuneration.json.gzip",
+      "bytes": 2392,
+      "sha256": "f191c2de5e3ce62bc6e359634d22e61edcb9d280616750666176c576a8b5faab"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2019-elected-officials.json.gzip",
+      "bytes": 223,
+      "sha256": "4093c124e1a4b2eb493edbb937af0332d63a08bacd245a9fb042628bd77e1a0e"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2019-employee-remuneration.json.gzip",
+      "bytes": 2446,
+      "sha256": "bdee554e70dc44bb388076907f5fe10a67a66f9152c24245628f6cd7e4949164"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2020-elected-officials.json.gzip",
+      "bytes": 220,
+      "sha256": "ecbecdd628dd466acdfa7c653a9c63db94355ee17b0783fbea5f34aeeb87cf1d"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2020-employee-remuneration.json.gzip",
+      "bytes": 2993,
+      "sha256": "1f969e9d772fb591ebaac2c7b43769e32c2a9f1fa6375b0d8393139636a479c9"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2021-elected-officials.json.gzip",
+      "bytes": 211,
+      "sha256": "c71698ff3a21811edb4a5b8e5b2f92dfbcf720870a762448b8e4d0cc695799f0"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2021-employee-remuneration.json.gzip",
+      "bytes": 2776,
+      "sha256": "1315aef22f996627c616fa13ada9230672543caaef37f115f466727ce0bfe32b"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2022-elected-officials.json.gzip",
+      "bytes": 291,
+      "sha256": "8c02e0c90ca9bf02dd27edea98b749cb84a24bac2dc7f2391e3803b6a62c0077"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-campbell-river-2022-employee-remuneration.json.gzip",
+      "bytes": 2986,
+      "sha256": "d8dce13f7bd0925ef4beb17d49ed49daed0fd77339aa72f1b7a53beeb4c7e0e4"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-grand-forks-2024-elected-officials.json.gzip",
+      "bytes": 219,
+      "sha256": "3cba68fe699d9f3b0098b390a73c2d3b6a37382cca46c823806290dbc88a624f"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-grand-forks-2024-employee-remuneration.json.gzip",
+      "bytes": 983,
+      "sha256": "4a59bec9172ed2e6860396b0828799b3652b35413068e8e382161d688da94428"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-revelstoke-2021-elected-officials.json.gzip",
+      "bytes": 203,
+      "sha256": "a4b53df9feafd36ec57babb69f8f7693dcb92a8dc5ac128e35e0f38581915b8d"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-revelstoke-2021-employee-remuneration.json.gzip",
+      "bytes": 992,
+      "sha256": "2d8ed210910f878b3234883a78dd949b7983c73c223215667c8e3c2fe0f22e6a"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-revelstoke-2023-elected-officials.json.gzip",
+      "bytes": 208,
+      "sha256": "4ff63d085d39dd99fa38bcf008994ed8a8399be7d2b6c0e1a943ba9738ec6498"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-revelstoke-2023-employee-remuneration.json.gzip",
+      "bytes": 1371,
+      "sha256": "d0affcfeae2d410f4ecbba39eeaff60d308676cce9f4f44e2552e8280eef2531"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-revelstoke-2024-elected-officials.json.gzip",
+      "bytes": 239,
+      "sha256": "c4e4c33fad66bc68dc855c76fb75809cfd71cb3330d9532a9a1d2ae5119913fe"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-revelstoke-2024-employee-remuneration.json.gzip",
+      "bytes": 1725,
+      "sha256": "bf9d6852ced07507ff172c73cd05360296146517855dec0ba961297fa707a8fb"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-salmon-arm-2022-elected-officials.json.gzip",
+      "bytes": 248,
+      "sha256": "3606364ddc22b2c6425890dd1dd580f739fc374648345aa1dc5e887b679711da"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-salmon-arm-2022-employee-remuneration.json.gzip",
+      "bytes": 999,
+      "sha256": "7aded7f07c73edd2cb792722129879052744d3fe8197fe1a57941ded37ebf027"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-salmon-arm-2024-elected-officials.json.gzip",
+      "bytes": 226,
+      "sha256": "0543ab47f2a072d7ed3f617d3500661731bf4adb2a21e0d266fe544567568868"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/city-of-salmon-arm-2024-employee-remuneration.json.gzip",
+      "bytes": 1312,
+      "sha256": "c1f0c0b8b4029b90485ece74eca12f0862adc9562a84f5eb8cb3a148876c7b6d"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/district-of-elkford-2022-elected-officials.json.gzip",
+      "bytes": 267,
+      "sha256": "13d201a04a27a41e4e97f9c7b0ac9d2f40c0034f3abd580d010f5f947ba3b38b"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/district-of-elkford-2022-employee-remuneration.json.gzip",
+      "bytes": 596,
+      "sha256": "9d99208b912855c7c94dddefa26c0e18a9fd0dcb9329011fc77163c0bffcac5a"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/district-of-lake-country-2025-elected-officials.json.gzip",
+      "bytes": 210,
+      "sha256": "9cf37287448568102ae726bc3e71c8961092825558bf8a4b3eed8fccdb4866f5"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/district-of-lake-country-2025-employee-remuneration.json.gzip",
+      "bytes": 2342,
+      "sha256": "049f96d47135e6aecf7d5b505ca1d5c425c0efbd6da6cd8faf20c35160109726"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/district-of-metchosin-2025-elected-officials.json.gzip",
+      "bytes": 169,
+      "sha256": "63fc052742020afa22ff26cec842d2bffe0f926416f3fd0eb7317e7fe06de401"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/district-of-metchosin-2025-employee-remuneration.json.gzip",
+      "bytes": 363,
+      "sha256": "edbe539c8c391b2b15a45059d96c86f5ddbc7374aee6a4f727400222c3048495"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/district-of-port-edward-2024-elected-officials.json.gzip",
+      "bytes": 186,
+      "sha256": "a76d97d8c08246c00646c8b568f3d4d94fb84d44236a0020519a41757943e534"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/district-of-port-edward-2025-elected-officials.json.gzip",
+      "bytes": 190,
+      "sha256": "6d85d2878d869045acddeb721af0fb5cb23987e716b1be364f651a8f214dcad1"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/district-of-wells-2020-elected-officials.json.gzip",
+      "bytes": 166,
+      "sha256": "bdb7743162a36fc4e7c335710a88676f0287d5c28d03b047829b0e7b91162b6a"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2016-elected-officials.json.gzip",
+      "bytes": 9089,
+      "sha256": "9f80d177b5cba12f1e23648a64a30f6317e82ceba2ae73eca73e941e412a78f4"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2016-employee-remuneration.json.gzip",
+      "bytes": 23033,
+      "sha256": "adbd677e07e917cb46e5517920ad74cf5b48ff6b552b37c7b1cc28014f5cf5b4"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2017-elected-officials.json.gzip",
+      "bytes": 3532,
+      "sha256": "20ed1a2a84b5e98d7573e0b8b95b866d250c3991826195c41a1c33a7f2d17e66"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2017-employee-remuneration.json.gzip",
+      "bytes": 27456,
+      "sha256": "23844286994fd3ba1f173a5a4ffa0f59fe9193e161d62c7084ae15fd4b068b67"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2018-elected-officials.json.gzip",
+      "bytes": 4035,
+      "sha256": "b705b34a657fe47fc1d049eaf21805e93abe7a81831e40df7c8d2f069e21fc50"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2018-employee-remuneration.json.gzip",
+      "bytes": 30911,
+      "sha256": "88e54ecbd53924e12381c855f76f63796f3da12bcdb2d5f91890bed53e7363df"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2019-elected-officials.json.gzip",
+      "bytes": 3415,
+      "sha256": "02f0842949af2d3f3a558bccc9fced30e96b546e1b500c510a7e867ffc63c45b"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2019-employee-remuneration.json.gzip",
+      "bytes": 26366,
+      "sha256": "e1bcc257b0896343ab80364f8e483283fdb16a3f69156f3123d9f1698f5565d3"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2020-elected-officials.json.gzip",
+      "bytes": 3391,
+      "sha256": "45fc480d155b57634d08e9db8e6985c39b5ce121578ebadcb645d33f59666e8d"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2020-employee-remuneration.json.gzip",
+      "bytes": 30601,
+      "sha256": "f6ea5f44682a6f7087e8fc483db5f44ebbd0599105617d793a183b465e0e1523"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2021-elected-officials.json.gzip",
+      "bytes": 3711,
+      "sha256": "da1b60cde5755ee917a94e985f398ffe4bcafb490dfad7688838b4778add216b"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2021-employee-remuneration.json.gzip",
+      "bytes": 41473,
+      "sha256": "092763da129a4aa404e7d5cc59a6514ba9d070d5ea8b58400638d23ad5400678"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2022-elected-officials.json.gzip",
+      "bytes": 4078,
+      "sha256": "9adf2ef0617b011a9538cc0b8670fdd14d371ce5f285adf195c528ae5f6c45fc"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-campbell-river-2022-employee-remuneration.json.gzip",
+      "bytes": 32488,
+      "sha256": "211fd6a457737b0e266ebb38a2625e2a1d86d73340f6b28e1126ff92fe5b8fa4"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-grand-forks-2024-elected-officials.json.gzip",
+      "bytes": 4355,
+      "sha256": "0d6543e327af8b4b75ae7f922c3ed57481f2a934d0838b96bab5879733154c93"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-grand-forks-2024-employee-remuneration.json.gzip",
+      "bytes": 11601,
+      "sha256": "03fbe3d4544f92eb1a6968e030714139ec41a66800bb8d4304ae338f58902516"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-revelstoke-2021-elected-officials.json.gzip",
+      "bytes": 2360,
+      "sha256": "3beef75ebf42c091fc998b9078b5bb6933d45b1d6fb099ebde9aaff58a9d4c7a"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-revelstoke-2021-employee-remuneration.json.gzip",
+      "bytes": 7390,
+      "sha256": "99a1e0a6967077f94e25f746eeac8d120a560a549590cdadb2f16d92f59a7b56"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-revelstoke-2023-elected-officials.json.gzip",
+      "bytes": 2241,
+      "sha256": "44bebc09ceb0e823693e5f5d832e0af23cb23550ba32d475fe120b9f3f28bfcf"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-revelstoke-2023-employee-remuneration.json.gzip",
+      "bytes": 13556,
+      "sha256": "517baa9719cfa19775d27af5b69519cbe569f36319a95cf79ac1a65e721cf41b"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-revelstoke-2024-elected-officials.json.gzip",
+      "bytes": 2451,
+      "sha256": "a0d0f837d976548ba945b7311685c8185604f440b393437121d49f9df8cf8d16"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-revelstoke-2024-employee-remuneration.json.gzip",
+      "bytes": 17685,
+      "sha256": "a11d55029bd05a5db04c30c184855ec975ac5b39fcacb3819532fd24a99a97ce"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-salmon-arm-2022-elected-officials.json.gzip",
+      "bytes": 4595,
+      "sha256": "ffeb4f6266c5e9eec88670065811a159c3b1078ccc3c3436289a9cf0ef296398"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-salmon-arm-2022-employee-remuneration.json.gzip",
+      "bytes": 13061,
+      "sha256": "fc5d6eb3b3837e47deac57eb017f2a98dae1412432d7cd49473d1ef65a2ffefb"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-salmon-arm-2024-elected-officials.json.gzip",
+      "bytes": 3815,
+      "sha256": "1b6cf5801f7fc5741eb485e8747b4186dc6a4115bd29b357baea7f1dcaca6e74"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/city-of-salmon-arm-2024-employee-remuneration.json.gzip",
+      "bytes": 15664,
+      "sha256": "43777888ea3d38e7c10560c5c0af5a497b0484f46b527c40e92cf70e0ebbc29c"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/district-of-elkford-2022-elected-officials.json.gzip",
+      "bytes": 9329,
+      "sha256": "6220b9a5c5e7220dc6bfefe58281c7383f2ed628f8768465d27d1000959c2539"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/district-of-elkford-2022-employee-remuneration.json.gzip",
+      "bytes": 9417,
+      "sha256": "a254c654a802a29fbb13dc88225c71a54c2f4d92da3cf7cec40dfd77647a5c41"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/district-of-lake-country-2025-elected-officials.json.gzip",
+      "bytes": 3249,
+      "sha256": "eddd3d7c6c4f55996c76c8beef9c13a2065bfb56ccb02548938f08d2d9c1b76e"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/district-of-lake-country-2025-employee-remuneration.json.gzip",
+      "bytes": 25513,
+      "sha256": "7450f4fb3b516c5d017f8d5500214b5630cbf2ac7fefa7b7c703fe9a529cdd77"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/district-of-metchosin-2025-elected-officials.json.gzip",
+      "bytes": 4318,
+      "sha256": "1619d3d4e6f146d4be30e5305aab34b4d328aff10b1c72ca8670432b33abc269"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/district-of-metchosin-2025-employee-remuneration.json.gzip",
+      "bytes": 4506,
+      "sha256": "bf7bfc847dd823670b738d6966c2f5ddd2d5ad09d2c38db3ee75f34003c818fb"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/district-of-port-edward-2024-elected-officials.json.gzip",
+      "bytes": 3318,
+      "sha256": "4c627b27fd8fdc07f42953ed3d3d47ef0a2955107f241f98eafffba065497ef3"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/district-of-port-edward-2025-elected-officials.json.gzip",
+      "bytes": 3385,
+      "sha256": "a57e54dd3456e60108ae4df734ba6ee2e3ee32e3ee0166b85957cd6ecef786ad"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/district-of-wells-2020-elected-officials.json.gzip",
+      "bytes": 2241,
+      "sha256": "40572cee6fa82aff34287fb3578fe9944e6d359c6095de207b7887d6444fcb96"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/village-of-fraser-lake-2023-elected-officials.json.gzip",
+      "bytes": 1375,
+      "sha256": "0d8ac3280c3252a448bbafc01e61219c55a538d71f54ae0dc1124dfa127c08c0"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/evidence/village-of-fraser-lake-2023-employee-remuneration.json.gzip",
+      "bytes": 2215,
+      "sha256": "8ed6ae49f081c281f2dc2fe7d2600c69876ca9c33d5bcc8e60f3a10997e56925"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/rendered-review.json",
+      "bytes": 34180,
+      "sha256": "81ce6504b86e3168dbfe66679f3737fc7f20e4673d32fa5becd66aaefd621a44"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/reviewed-layouts.json",
+      "bytes": 96008,
+      "sha256": "dc06d7cfde86a7ef88fc17d9fcfcce50365c333f55d038516101f484757d227f"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/sources.json",
+      "bytes": 140046,
+      "sha256": "4e34ebcab4a0d428ef82e4055f97376a298d3dd05b5e45c8dd6696d0a4751fd4"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/supporting/city-of-campbell-river-2020-employee-controls.json.gzip",
+      "bytes": 8705,
+      "sha256": "a584a459c962a9cc38e3cacaa840179709e1977fbeda65a1309f2d73d48087db"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/village-of-fraser-lake-2023-elected-officials.json.gzip",
+      "bytes": 184,
+      "sha256": "5cc7a314f7b2d90ecf6159a5417a44a9dfc53495b8b634899f8f27141d944336"
+    },
+    {
+      "path": "research/salaries/continuation-municipal/village-of-fraser-lake-2023-employee-remuneration.json.gzip",
+      "bytes": 325,
+      "sha256": "9913a48e957b2c4b737d99333bf0044c19029539d5ac0263cbc2cd75f94b575b"
+    },
+    {
+      "path": "scripts/continue_municipal.py",
+      "bytes": 18875,
+      "sha256": "742e012c5c9fc30f9818aad5c14b2d26ee35d8592ccaaaae08a5b1867d28052a"
+    },
+    {
+      "path": "scripts/test_continue_municipal.py",
+      "bytes": 5388,
+      "sha256": "757181416744de5aa7ae59274c6bce0a2be03bc99f882d7e08149a7b30698cd1"
+    }
+  ],
+  "verification": {
+    "originalBackedReplay": "passed20originals/37cohorts/1216rows",
+    "offlineEvidenceReplay": "passed, no PDFs/network/OCR engine required",
+    "parserRegressionTests": 13,
+    "parserRegressionResult": "passed",
+    "duplicateRegisteredEmployerPeriodCategoryGuard": true,
+    "compiledReplacementCandidates": 0,
+    "outreachSent": false
+  }
+}

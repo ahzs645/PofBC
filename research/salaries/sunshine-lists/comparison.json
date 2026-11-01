@@ -27,7 +27,7 @@
   "fingerprints": {
     "snapshotSha256": "5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1",
     "aliasesSha256": "f8fbabcea76dfaab15fcfcea12aac2eee5ba2e56203b89d7cb890ec4eec81b4d",
-    "repositoryInputsSha256": "29d8eb75db2236ecc05bbafd72f7be6e12a986040ead1a8552d82737848a9d7d"
+    "repositoryInputsSha256": "c38edddbde95a7e6e9b9b13964cb985e899a4b0f7724749f7a75372e77d1a4fc"
   },
   "summary": {
     "referenceEmployers": 3,
@@ -41,17 +41,17 @@
     "annualSeriesCompletenessEstablished": false,
     "recordLevelParityChecked": false,
     "repository": {
-      "employers": 206,
-      "rows": 926855,
-      "namedRows": 921524,
-      "officialRows": 683243,
-      "compiledRows": 243612,
-      "employeeRows": 663106,
-      "availableEmployerYears": 790
+      "employers": 239,
+      "rows": 1010644,
+      "namedRows": 1005313,
+      "officialRows": 777862,
+      "compiledRows": 232782,
+      "employeeRows": 748345,
+      "availableEmployerYears": 942
     },
-    "repositoryEmployersWithOfficial": 119,
-    "repositoryCompiledOnlyEmployers": 87,
-    "repositorySourceTasks": 225,
+    "repositoryEmployersWithOfficial": 166,
+    "repositoryCompiledOnlyEmployers": 73,
+    "repositorySourceTasks": 223,
     "externalReferenceTasks": 3
   },
   "employers": [
@@ -82,12 +82,19 @@
           "Provincial government"
         ],
         "sector": "Government",
-        "rows": 220106,
-        "namedRows": 220106,
-        "officialRows": 220106,
+        "rows": 242158,
+        "namedRows": 242158,
+        "officialRows": 242158,
         "compiledRows": 0,
-        "employeeRows": 201486,
+        "employeeRows": 214936,
         "officialPeriods": [
+          "1999/00",
+          "2000/01",
+          "2001/02",
+          "2002/03",
+          "2003/04",
+          "2004/05",
+          "2005/06",
           "2006/07",
           "2007/08",
           "2008/09",
@@ -110,6 +117,13 @@
           "2025/26"
         ],
         "officialEmployeePeriods": [
+          "1999/00",
+          "2000/01",
+          "2001/02",
+          "2002/03",
+          "2003/04",
+          "2004/05",
+          "2005/06",
           "2006/07",
           "2007/08",
           "2008/09",
@@ -132,9 +146,24 @@
           "2025/26"
         ],
         "compiledEditionLabels": [],
-        "acceptedPeriodCount": 20,
+        "acceptedPeriodCount": 27,
         "sourceLeadCount": 2,
-        "partialSources": []
+        "partialSources": [
+          "continuation-government-police-public-service-1999-00-appointees",
+          "continuation-government-police-public-service-1999-00-employees",
+          "continuation-government-police-public-service-2000-01-appointees",
+          "continuation-government-police-public-service-2000-01-employees",
+          "continuation-government-police-public-service-2001-02-appointees",
+          "continuation-government-police-public-service-2001-02-employees",
+          "continuation-government-police-public-service-2002-03-appointees",
+          "continuation-government-police-public-service-2002-03-employees",
+          "continuation-government-police-public-service-2003-04-appointees",
+          "continuation-government-police-public-service-2003-04-employees",
+          "continuation-government-police-public-service-2004-05-appointees",
+          "continuation-government-police-public-service-2004-05-employees",
+          "continuation-government-police-public-service-2005-06-appointees",
+          "continuation-government-police-public-service-2005-06-employees"
+        ]
       },
       "years": []
     },
@@ -220,7 +249,7 @@
         ],
         "reason": "The external full name corresponds to the repository's PHSA / Provincial Health Services Authority (PHSA) employer."
       },
-      "status": "compiled-only-summary",
+      "status": "summary-only",
       "aggregate": {
         "recordCount": 103411,
         "uniqueIndividuals": 23739,
@@ -236,21 +265,27 @@
           "Provincial Health Services Authority (PHSA)"
         ],
         "sector": "Health authorities",
-        "rows": 24923,
-        "namedRows": 24923,
-        "officialRows": 0,
+        "rows": 24950,
+        "namedRows": 24950,
+        "officialRows": 27,
         "compiledRows": 24923,
         "employeeRows": 0,
-        "officialPeriods": [],
+        "officialPeriods": [
+          "2024/25",
+          "2025/26"
+        ],
         "officialEmployeePeriods": [],
         "compiledEditionLabels": [
           "2017/18",
           "2020/21",
           "2023/24"
         ],
-        "acceptedPeriodCount": 0,
+        "acceptedPeriodCount": 2,
         "sourceLeadCount": 10,
-        "partialSources": []
+        "partialSources": [
+          "phsa-board-2024-25",
+          "phsa-board-2025-26"
+        ]
       },
       "years": []
     }
@@ -305,6 +340,43 @@
       "partialSources": []
     },
     {
+      "slug": "alberni-clayoquot-regional-district",
+      "name": "Alberni-Clayoquot Regional District",
+      "names": [
+        "Alberni-Clayoquot Regional District"
+      ],
+      "sector": "Municipalities",
+      "rows": 122,
+      "namedRows": 122,
+      "officialRows": 122,
+      "compiledRows": 0,
+      "employeeRows": 122,
+      "officialPeriods": [
+        "2019",
+        "2020",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2019",
+        "2020",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 5,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-government-police-alberni-clayoquot-2019-employees",
+        "continuation-government-police-alberni-clayoquot-2020-employees",
+        "continuation-government-police-alberni-clayoquot-2023-employees",
+        "continuation-government-police-alberni-clayoquot-2024-employees",
+        "continuation-government-police-alberni-clayoquot-2025-employees"
+      ]
+    },
+    {
       "slug": "bc-assessment",
       "name": "B.C. Assessment",
       "names": [
@@ -334,9 +406,9 @@
         "BC Clinical and Support Services Society"
       ],
       "sector": "Health authorities",
-      "rows": 652,
-      "namedRows": 652,
-      "officialRows": 652,
+      "rows": 675,
+      "namedRows": 675,
+      "officialRows": 675,
       "compiledRows": 0,
       "employeeRows": 652,
       "officialPeriods": [
@@ -350,7 +422,9 @@
       "compiledEditionLabels": [],
       "acceptedPeriodCount": 2,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "bccss-board-2017-18"
+      ]
     },
     {
       "slug": "bc-council-for-international-education",
@@ -394,6 +468,35 @@
       "acceptedPeriodCount": 0,
       "sourceLeadCount": 0,
       "partialSources": []
+    },
+    {
+      "slug": "bc-family-maintenance-agency",
+      "name": "BC Family Maintenance Agency",
+      "names": [
+        "BC Family Maintenance Agency"
+      ],
+      "sector": "Crown corporations",
+      "rows": 22,
+      "namedRows": 22,
+      "officialRows": 22,
+      "compiledRows": 0,
+      "employeeRows": 0,
+      "officialPeriods": [
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "officialEmployeePeriods": [],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 4,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-crowns-bc-family-maintenance-agency-2022-23-board",
+        "continuation-crowns-bc-family-maintenance-agency-2023-24-board",
+        "continuation-crowns-bc-family-maintenance-agency-2024-25-board",
+        "continuation-crowns-bc-family-maintenance-agency-2025-26-board"
+      ]
     },
     {
       "slug": "bc-ferries",
@@ -449,19 +552,24 @@
       "sector": "Crown corporations",
       "rows": 1101,
       "namedRows": 1101,
-      "officialRows": 0,
-      "compiledRows": 1101,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
-        "2017/18",
-        "2020/21",
+      "officialRows": 490,
+      "compiledRows": 611,
+      "employeeRows": 490,
+      "officialPeriods": [
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2023/24"
+      ],
+      "compiledEditionLabels": [
+        "2017/18",
+        "2020/21"
+      ],
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "continuation-crowns-bc-housing-2023-24"
+      ]
     },
     {
       "slug": "bc-hydro",
@@ -599,6 +707,45 @@
       "partialSources": []
     },
     {
+      "slug": "bc-railway-company",
+      "name": "British Columbia Railway Company",
+      "names": [
+        "British Columbia Railway Company"
+      ],
+      "sector": "Crown corporations",
+      "rows": 146,
+      "namedRows": 146,
+      "officialRows": 146,
+      "compiledRows": 0,
+      "employeeRows": 146,
+      "officialPeriods": [
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2024/25",
+        "2025/26"
+      ],
+      "officialEmployeePeriods": [
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2024/25",
+        "2025/26"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 8,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-crowns-bc-railway-company-2021-22"
+      ]
+    },
+    {
       "slug": "bc-securities-commission",
       "name": "B.C. Securities Commission",
       "names": [
@@ -725,21 +872,65 @@
         "B.C. Lottery Corporation (BCLC)"
       ],
       "sector": "Crown corporations",
-      "rows": 2108,
-      "namedRows": 2108,
-      "officialRows": 0,
-      "compiledRows": 2108,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
+      "rows": 9338,
+      "namedRows": 9338,
+      "officialRows": 8857,
+      "compiledRows": 481,
+      "employeeRows": 8857,
+      "officialPeriods": [
+        "2010/11",
+        "2011/12",
+        "2012/13",
+        "2013/14",
+        "2014/15",
+        "2015/16",
+        "2016/17",
         "2017/18",
+        "2018/19",
+        "2019/20",
         "2020/21",
-        "2023/24"
+        "2021/22",
+        "2023/24",
+        "2024/25",
+        "2025/26"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2010/11",
+        "2011/12",
+        "2012/13",
+        "2013/14",
+        "2014/15",
+        "2015/16",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "compiledEditionLabels": [
+        "2017/18"
+      ],
+      "acceptedPeriodCount": 15,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "continuation-crowns-bclc-2010-11",
+        "continuation-crowns-bclc-2012-13",
+        "continuation-crowns-bclc-2013-14",
+        "continuation-crowns-bclc-2014-15",
+        "continuation-crowns-bclc-2015-16",
+        "continuation-crowns-bclc-2016-17",
+        "continuation-crowns-bclc-2017-18",
+        "continuation-crowns-bclc-2018-19",
+        "continuation-crowns-bclc-2019-20",
+        "continuation-crowns-bclc-2020-21",
+        "continuation-crowns-bclc-2021-22",
+        "continuation-crowns-bclc-2024-25",
+        "continuation-crowns-bclc-2025-26"
+      ]
     },
     {
       "slug": "bowen-island",
@@ -803,21 +994,54 @@
         "Camosun College"
       ],
       "sector": "Universities and colleges",
-      "rows": 1449,
-      "namedRows": 1449,
-      "officialRows": 0,
+      "rows": 6383,
+      "namedRows": 6383,
+      "officialRows": 4934,
       "compiledRows": 1449,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 4934,
+      "officialPeriods": [
+        "2015/16",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2024/25",
+        "2025/26"
+      ],
+      "officialEmployeePeriods": [
+        "2015/16",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2024/25",
+        "2025/26"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 10,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "camosun-sofi-2015-16-employees",
+        "camosun-sofi-2016-17-employees",
+        "camosun-sofi-2017-18-employees",
+        "camosun-sofi-2018-19-employees",
+        "camosun-sofi-2019-20-employees",
+        "camosun-sofi-2020-21-employees",
+        "camosun-sofi-2021-22-employees",
+        "camosun-sofi-2022-23-employees",
+        "camosun-sofi-2024-25-employees",
+        "camosun-sofi-2025-26-employees"
+      ]
     },
     {
       "slug": "capilano-university",
@@ -826,21 +1050,40 @@
         "Capilano University"
       ],
       "sector": "Universities and colleges",
-      "rows": 1056,
-      "namedRows": 1056,
-      "officialRows": 0,
-      "compiledRows": 1056,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
-        "2017/18",
+      "rows": 2983,
+      "namedRows": 2983,
+      "officialRows": 2733,
+      "compiledRows": 250,
+      "employeeRows": 2733,
+      "officialPeriods": [
+        "2018/19",
+        "2019/20",
         "2020/21",
-        "2023/24"
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "compiledEditionLabels": [
+        "2017/18"
+      ],
+      "acceptedPeriodCount": 7,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "capilano-sofi-2018-19-employees",
+        "capilano-sofi-2022-23-employees",
+        "capilano-sofi-2023-24-employees",
+        "capilano-sofi-2024-25-employees"
+      ]
     },
     {
       "slug": "central-saanich-police",
@@ -954,6 +1197,53 @@
       "acceptedPeriodCount": 5,
       "sourceLeadCount": 0,
       "partialSources": []
+    },
+    {
+      "slug": "city-of-campbell-river",
+      "name": "City of Campbell River",
+      "names": [
+        "City of Campbell River"
+      ],
+      "sector": "Municipalities",
+      "rows": 765,
+      "namedRows": 765,
+      "officialRows": 765,
+      "compiledRows": 0,
+      "employeeRows": 710,
+      "officialPeriods": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022"
+      ],
+      "officialEmployeePeriods": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 7,
+      "sourceLeadCount": 1,
+      "partialSources": [
+        "continuation-municipal-city-of-campbell-river-2016-elected-officials",
+        "continuation-municipal-city-of-campbell-river-2016-employee-remuneration",
+        "continuation-municipal-city-of-campbell-river-2017-elected-officials",
+        "continuation-municipal-city-of-campbell-river-2017-employee-remuneration",
+        "continuation-municipal-city-of-campbell-river-2018-elected-officials",
+        "continuation-municipal-city-of-campbell-river-2018-employee-remuneration",
+        "continuation-municipal-city-of-campbell-river-2019-employee-remuneration",
+        "continuation-municipal-city-of-campbell-river-2020-employee-remuneration",
+        "continuation-municipal-city-of-campbell-river-2021-elected-officials",
+        "continuation-municipal-city-of-campbell-river-2022-elected-officials",
+        "continuation-municipal-city-of-campbell-river-2022-employee-remuneration"
+      ]
     },
     {
       "slug": "city-of-castlegar",
@@ -1244,6 +1534,31 @@
       "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
       "partialSources": []
+    },
+    {
+      "slug": "city-of-grand-forks",
+      "name": "City of Grand Forks",
+      "names": [
+        "City of Grand Forks"
+      ],
+      "sector": "Municipalities",
+      "rows": 41,
+      "namedRows": 41,
+      "officialRows": 41,
+      "compiledRows": 0,
+      "employeeRows": 34,
+      "officialPeriods": [
+        "2024"
+      ],
+      "officialEmployeePeriods": [
+        "2024"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-municipal-city-of-grand-forks-2024-employee-remuneration"
+      ]
     },
     {
       "slug": "city-of-kamloops",
@@ -1856,19 +2171,25 @@
         "City of Revelstoke"
       ],
       "sector": "Municipalities",
-      "rows": 72,
-      "namedRows": 72,
-      "officialRows": 72,
+      "rows": 230,
+      "namedRows": 230,
+      "officialRows": 230,
       "compiledRows": 0,
-      "employeeRows": 65,
+      "employeeRows": 202,
       "officialPeriods": [
+        "2021",
+        "2023",
+        "2024",
         "2025"
       ],
       "officialEmployeePeriods": [
+        "2021",
+        "2023",
+        "2024",
         "2025"
       ],
       "compiledEditionLabels": [],
-      "acceptedPeriodCount": 1,
+      "acceptedPeriodCount": 4,
       "sourceLeadCount": 0,
       "partialSources": [
         "sector-municipal-city-of-revelstoke-2025-elected-officials",
@@ -1942,6 +2263,34 @@
         "history-interior-city-of-rossland-2024-employee-remuneration",
         "wave-interior-city-of-rossland-2025-elected-officials",
         "wave-interior-city-of-rossland-2025-employee-remuneration"
+      ]
+    },
+    {
+      "slug": "city-of-salmon-arm",
+      "name": "City of Salmon Arm",
+      "names": [
+        "City of Salmon Arm"
+      ],
+      "sector": "Municipalities",
+      "rows": 91,
+      "namedRows": 91,
+      "officialRows": 91,
+      "compiledRows": 0,
+      "employeeRows": 76,
+      "officialPeriods": [
+        "2022",
+        "2024"
+      ],
+      "officialEmployeePeriods": [
+        "2022",
+        "2024"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 2,
+      "sourceLeadCount": 3,
+      "partialSources": [
+        "continuation-municipal-city-of-salmon-arm-2024-elected-officials",
+        "continuation-municipal-city-of-salmon-arm-2024-employee-remuneration"
       ]
     },
     {
@@ -2623,6 +2972,32 @@
       ]
     },
     {
+      "slug": "district-of-elkford",
+      "name": "District of Elkford",
+      "names": [
+        "District of Elkford"
+      ],
+      "sector": "Municipalities",
+      "rows": 29,
+      "namedRows": 29,
+      "officialRows": 29,
+      "compiledRows": 0,
+      "employeeRows": 18,
+      "officialPeriods": [
+        "2022"
+      ],
+      "officialEmployeePeriods": [
+        "2022"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-municipal-district-of-elkford-2022-elected-officials",
+        "continuation-municipal-district-of-elkford-2022-employee-remuneration"
+      ]
+    },
+    {
       "slug": "district-of-highlands",
       "name": "District of Highlands",
       "names": [
@@ -2662,6 +3037,29 @@
       ],
       "officialEmployeePeriods": [
         "2022"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "district-of-lake-country",
+      "name": "District of Lake Country",
+      "names": [
+        "District of Lake Country"
+      ],
+      "sector": "Municipalities",
+      "rows": 88,
+      "namedRows": 88,
+      "officialRows": 88,
+      "compiledRows": 0,
+      "employeeRows": 81,
+      "officialPeriods": [
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2025"
       ],
       "compiledEditionLabels": [],
       "acceptedPeriodCount": 1,
@@ -2744,6 +3142,32 @@
       "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
       "partialSources": []
+    },
+    {
+      "slug": "district-of-metchosin",
+      "name": "District of Metchosin",
+      "names": [
+        "District of Metchosin"
+      ],
+      "sector": "Municipalities",
+      "rows": 16,
+      "namedRows": 16,
+      "officialRows": 16,
+      "compiledRows": 0,
+      "employeeRows": 11,
+      "officialPeriods": [
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2025"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 1,
+      "partialSources": [
+        "continuation-municipal-district-of-metchosin-2025-elected-officials",
+        "continuation-municipal-district-of-metchosin-2025-employee-remuneration"
+      ]
     },
     {
       "slug": "district-of-north-cowichan",
@@ -2888,6 +3312,30 @@
       "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
       "partialSources": []
+    },
+    {
+      "slug": "district-of-port-edward",
+      "name": "District of Port Edward",
+      "names": [
+        "District of Port Edward"
+      ],
+      "sector": "Municipalities",
+      "rows": 10,
+      "namedRows": 10,
+      "officialRows": 10,
+      "compiledRows": 0,
+      "employeeRows": 0,
+      "officialPeriods": [
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 2,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-municipal-district-of-port-edward-2025-elected-officials"
+      ]
     },
     {
       "slug": "district-of-saanich",
@@ -3133,6 +3581,27 @@
       ]
     },
     {
+      "slug": "district-of-wells",
+      "name": "District of Wells",
+      "names": [
+        "District of Wells"
+      ],
+      "sector": "Municipalities",
+      "rows": 5,
+      "namedRows": 5,
+      "officialRows": 5,
+      "compiledRows": 0,
+      "employeeRows": 0,
+      "officialPeriods": [
+        "2020"
+      ],
+      "officialEmployeePeriods": [],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
       "slug": "district-of-west-vancouver",
       "name": "District of West Vancouver",
       "names": [
@@ -3174,21 +3643,35 @@
         "Douglas College"
       ],
       "sector": "Universities and colleges",
-      "rows": 1757,
-      "namedRows": 1757,
-      "officialRows": 0,
+      "rows": 5116,
+      "namedRows": 5116,
+      "officialRows": 3359,
       "compiledRows": 1757,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 3359,
+      "officialPeriods": [
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "officialEmployeePeriods": [
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 5,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "douglas-sofi-2023-24-employees"
+      ]
     },
     {
       "slug": "emily-carr-university",
@@ -3199,21 +3682,29 @@
         "EmilyCarr"
       ],
       "sector": "Universities and colleges",
-      "rows": 398,
-      "namedRows": 398,
-      "officialRows": 0,
+      "rows": 775,
+      "namedRows": 775,
+      "officialRows": 377,
       "compiledRows": 398,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 377,
+      "officialPeriods": [
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2023/24",
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 2,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "ecu-sofi-2023-24-employees"
+      ]
     },
     {
       "slug": "first-peoples-cultural-council",
@@ -3339,21 +3830,52 @@
         "ICBC"
       ],
       "sector": "Crown corporations",
-      "rows": 7269,
-      "namedRows": 7269,
-      "officialRows": 0,
-      "compiledRows": 7269,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
+      "rows": 31057,
+      "namedRows": 31057,
+      "officialRows": 29348,
+      "compiledRows": 1709,
+      "employeeRows": 29348,
+      "officialPeriods": [
+        "2014",
+        "2015",
+        "2016/17",
         "2017/18",
+        "2018/19",
+        "2019/20",
         "2020/21",
-        "2023/24"
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2014",
+        "2015",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "compiledEditionLabels": [
+        "2017/18"
+      ],
+      "acceptedPeriodCount": 12,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "continuation-crowns-icbc-2014",
+        "continuation-crowns-icbc-2016-17",
+        "continuation-crowns-icbc-2017-18",
+        "continuation-crowns-icbc-2018-19",
+        "continuation-crowns-icbc-2019-20",
+        "continuation-crowns-icbc-2020-21"
+      ]
     },
     {
       "slug": "inbc",
@@ -3478,9 +4000,9 @@
         "Interior Health"
       ],
       "sector": "Health authorities",
-      "rows": 65364,
-      "namedRows": 65364,
-      "officialRows": 65364,
+      "rows": 65443,
+      "namedRows": 65443,
+      "officialRows": 65443,
       "compiledRows": 0,
       "employeeRows": 65364,
       "officialPeriods": [
@@ -3494,7 +4016,8 @@
         "2021/22",
         "2022/23",
         "2023/24",
-        "2024/25"
+        "2024/25",
+        "2025/26"
       ],
       "officialEmployeePeriods": [
         "2014/15",
@@ -3510,9 +4033,18 @@
         "2024/25"
       ],
       "compiledEditionLabels": [],
-      "acceptedPeriodCount": 11,
+      "acceptedPeriodCount": 12,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "interior-health-board-2018-19",
+        "interior-health-board-2019-20",
+        "interior-health-board-2020-21",
+        "interior-health-board-2021-22",
+        "interior-health-board-2022-23",
+        "interior-health-board-2023-24",
+        "interior-health-board-2024-25",
+        "interior-health-board-2025-26"
+      ]
     },
     {
       "slug": "island-health",
@@ -4020,9 +4552,9 @@
         "Northern Health"
       ],
       "sector": "Health authorities",
-      "rows": 17842,
-      "namedRows": 17842,
-      "officialRows": 16121,
+      "rows": 17903,
+      "namedRows": 17903,
+      "officialRows": 16182,
       "compiledRows": 1721,
       "employeeRows": 16121,
       "officialPeriods": [
@@ -4030,7 +4562,8 @@
         "2021/22",
         "2022/23",
         "2023/24",
-        "2024/25"
+        "2024/25",
+        "2025/26"
       ],
       "officialEmployeePeriods": [
         "2020/21",
@@ -4042,9 +4575,16 @@
       "compiledEditionLabels": [
         "2017/18"
       ],
-      "acceptedPeriodCount": 5,
+      "acceptedPeriodCount": 6,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "northern-health-board-2020-21",
+        "northern-health-board-2021-22",
+        "northern-health-board-2022-23",
+        "northern-health-board-2023-24",
+        "northern-health-board-2024-25",
+        "northern-health-board-2025-26"
+      ]
     },
     {
       "slug": "northern-lights-college",
@@ -4173,20 +4713,34 @@
         "Okanagan College"
       ],
       "sector": "Universities and colleges",
-      "rows": 928,
-      "namedRows": 928,
-      "officialRows": 0,
-      "compiledRows": 928,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
-        "2017/18",
-        "2023/24"
+      "rows": 2391,
+      "namedRows": 2391,
+      "officialRows": 1999,
+      "compiledRows": 392,
+      "employeeRows": 1999,
+      "officialPeriods": [
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "compiledEditionLabels": [
+        "2017/18"
+      ],
+      "acceptedPeriodCount": 4,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "okanagan-sofi-2021-22-employees",
+        "okanagan-sofi-2022-23-employees",
+        "okanagan-sofi-2023-24-employees",
+        "okanagan-sofi-2024-25-employees"
+      ]
     },
     {
       "slug": "port-moody-police",
@@ -4244,21 +4798,27 @@
         "Provincial Health Services Authority (PHSA)"
       ],
       "sector": "Health authorities",
-      "rows": 24923,
-      "namedRows": 24923,
-      "officialRows": 0,
+      "rows": 24950,
+      "namedRows": 24950,
+      "officialRows": 27,
       "compiledRows": 24923,
       "employeeRows": 0,
-      "officialPeriods": [],
+      "officialPeriods": [
+        "2024/25",
+        "2025/26"
+      ],
       "officialEmployeePeriods": [],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 2,
       "sourceLeadCount": 10,
-      "partialSources": []
+      "partialSources": [
+        "phsa-board-2024-25",
+        "phsa-board-2025-26"
+      ]
     },
     {
       "slug": "public-service",
@@ -4267,12 +4827,19 @@
         "Provincial government"
       ],
       "sector": "Government",
-      "rows": 220106,
-      "namedRows": 220106,
-      "officialRows": 220106,
+      "rows": 242158,
+      "namedRows": 242158,
+      "officialRows": 242158,
       "compiledRows": 0,
-      "employeeRows": 201486,
+      "employeeRows": 214936,
       "officialPeriods": [
+        "1999/00",
+        "2000/01",
+        "2001/02",
+        "2002/03",
+        "2003/04",
+        "2004/05",
+        "2005/06",
         "2006/07",
         "2007/08",
         "2008/09",
@@ -4295,6 +4862,13 @@
         "2025/26"
       ],
       "officialEmployeePeriods": [
+        "1999/00",
+        "2000/01",
+        "2001/02",
+        "2002/03",
+        "2003/04",
+        "2004/05",
+        "2005/06",
         "2006/07",
         "2007/08",
         "2008/09",
@@ -4317,9 +4891,55 @@
         "2025/26"
       ],
       "compiledEditionLabels": [],
-      "acceptedPeriodCount": 20,
+      "acceptedPeriodCount": 27,
       "sourceLeadCount": 2,
-      "partialSources": []
+      "partialSources": [
+        "continuation-government-police-public-service-1999-00-appointees",
+        "continuation-government-police-public-service-1999-00-employees",
+        "continuation-government-police-public-service-2000-01-appointees",
+        "continuation-government-police-public-service-2000-01-employees",
+        "continuation-government-police-public-service-2001-02-appointees",
+        "continuation-government-police-public-service-2001-02-employees",
+        "continuation-government-police-public-service-2002-03-appointees",
+        "continuation-government-police-public-service-2002-03-employees",
+        "continuation-government-police-public-service-2003-04-appointees",
+        "continuation-government-police-public-service-2003-04-employees",
+        "continuation-government-police-public-service-2004-05-appointees",
+        "continuation-government-police-public-service-2004-05-employees",
+        "continuation-government-police-public-service-2005-06-appointees",
+        "continuation-government-police-public-service-2005-06-employees"
+      ]
+    },
+    {
+      "slug": "regional-district-of-east-kootenay",
+      "name": "Regional District of East Kootenay",
+      "names": [
+        "Regional District of East Kootenay"
+      ],
+      "sector": "Municipalities",
+      "rows": 155,
+      "namedRows": 155,
+      "officialRows": 155,
+      "compiledRows": 0,
+      "employeeRows": 155,
+      "officialPeriods": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 3,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-government-police-east-kootenay-2023-employees",
+        "continuation-government-police-east-kootenay-2024-employees",
+        "continuation-government-police-east-kootenay-2025-employees"
+      ]
     },
     {
       "slug": "resort-municipality-of-whistler",
@@ -4381,21 +5001,36 @@
         "Royal B.C. Museum"
       ],
       "sector": "Crown corporations",
-      "rows": 105,
-      "namedRows": 105,
-      "officialRows": 0,
+      "rows": 305,
+      "namedRows": 305,
+      "officialRows": 200,
       "compiledRows": 105,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 200,
+      "officialPeriods": [
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 4,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "continuation-crowns-royal-bc-museum-2021-22",
+        "continuation-crowns-royal-bc-museum-2022-23",
+        "continuation-crowns-royal-bc-museum-2023-24",
+        "continuation-crowns-royal-bc-museum-2024-25"
+      ]
     },
     {
       "slug": "royal-roads-university",
@@ -4440,6 +5075,496 @@
         "2023/24"
       ],
       "acceptedPeriodCount": 0,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-06",
+      "name": "School District No. 6 (Rocky Mountain)",
+      "names": [
+        "School District No. 6 (Rocky Mountain)"
+      ],
+      "sector": "School districts",
+      "rows": 256,
+      "namedRows": 256,
+      "officialRows": 256,
+      "compiledRows": 0,
+      "employeeRows": 247,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-08",
+      "name": "School District No. 8 (Kootenay Lake)",
+      "names": [
+        "School District No. 8 (Kootenay Lake)"
+      ],
+      "sector": "School districts",
+      "rows": 1254,
+      "namedRows": 1254,
+      "officialRows": 1254,
+      "compiledRows": 0,
+      "employeeRows": 1193,
+      "officialPeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2025/26"
+      ],
+      "officialEmployeePeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 6,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-schools-sd08-2022-employees"
+      ]
+    },
+    {
+      "slug": "school-district-20",
+      "name": "School District No. 20 (Kootenay-Columbia)",
+      "names": [
+        "School District No. 20 (Kootenay-Columbia)"
+      ],
+      "sector": "School districts",
+      "rows": 285,
+      "namedRows": 285,
+      "officialRows": 285,
+      "compiledRows": 0,
+      "employeeRows": 276,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-46",
+      "name": "School District No. 46 (Sunshine Coast)",
+      "names": [
+        "School District No. 46 (Sunshine Coast)"
+      ],
+      "sector": "School districts",
+      "rows": 256,
+      "namedRows": 256,
+      "officialRows": 256,
+      "compiledRows": 0,
+      "employeeRows": 249,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-schools-sd46-2025-employees"
+      ]
+    },
+    {
+      "slug": "school-district-47",
+      "name": "School District No. 47 (qathet)",
+      "names": [
+        "School District No. 47 (qathet)"
+      ],
+      "sector": "School districts",
+      "rows": 205,
+      "namedRows": 205,
+      "officialRows": 205,
+      "compiledRows": 0,
+      "employeeRows": 199,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-48",
+      "name": "School District No. 48 (Sea to Sky)",
+      "names": [
+        "School District No. 48 (Sea to Sky)"
+      ],
+      "sector": "School districts",
+      "rows": 368,
+      "namedRows": 368,
+      "officialRows": 368,
+      "compiledRows": 0,
+      "employeeRows": 361,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-schools-sd48-2025-employees",
+        "continuation-schools-sd48-2025-trustees"
+      ]
+    },
+    {
+      "slug": "school-district-51",
+      "name": "School District No. 51 (Boundary)",
+      "names": [
+        "School District No. 51 (Boundary)"
+      ],
+      "sector": "School districts",
+      "rows": 108,
+      "namedRows": 108,
+      "officialRows": 108,
+      "compiledRows": 0,
+      "employeeRows": 101,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-52",
+      "name": "School District No. 52 (Prince Rupert)",
+      "names": [
+        "School District No. 52 (Prince Rupert)"
+      ],
+      "sector": "School districts",
+      "rows": 163,
+      "namedRows": 163,
+      "officialRows": 163,
+      "compiledRows": 0,
+      "employeeRows": 156,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-schools-sd52-2025-employees"
+      ]
+    },
+    {
+      "slug": "school-district-63",
+      "name": "School District No. 63 (Saanich)",
+      "names": [
+        "School District No. 63 (Saanich)"
+      ],
+      "sector": "School districts",
+      "rows": 517,
+      "namedRows": 517,
+      "officialRows": 517,
+      "compiledRows": 0,
+      "employeeRows": 510,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-schools-sd63-2025-employees",
+        "continuation-schools-sd63-2025-trustees"
+      ]
+    },
+    {
+      "slug": "school-district-67",
+      "name": "School District No. 67 (Okanagan Skaha)",
+      "names": [
+        "School District No. 67 (Okanagan Skaha)"
+      ],
+      "sector": "School districts",
+      "rows": 403,
+      "namedRows": 403,
+      "officialRows": 403,
+      "compiledRows": 0,
+      "employeeRows": 396,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-schools-sd67-2025-employees",
+        "continuation-schools-sd67-2025-trustees"
+      ]
+    },
+    {
+      "slug": "school-district-71",
+      "name": "School District No. 71 (Comox Valley)",
+      "names": [
+        "School District No. 71 (Comox Valley)"
+      ],
+      "sector": "School districts",
+      "rows": 2939,
+      "namedRows": 2939,
+      "officialRows": 2939,
+      "compiledRows": 0,
+      "employeeRows": 2892,
+      "officialPeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2023/24",
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 6,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-schools-sd71-2021-trustees"
+      ]
+    },
+    {
+      "slug": "school-district-72",
+      "name": "School District No. 72 (Campbell River)",
+      "names": [
+        "School District No. 72 (Campbell River)"
+      ],
+      "sector": "School districts",
+      "rows": 403,
+      "namedRows": 403,
+      "officialRows": 403,
+      "compiledRows": 0,
+      "employeeRows": 396,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "continuation-schools-sd72-2025-employees",
+        "continuation-schools-sd72-2025-trustees"
+      ]
+    },
+    {
+      "slug": "school-district-74",
+      "name": "School District No. 74 (Gold Trail)",
+      "names": [
+        "School District No. 74 (Gold Trail)"
+      ],
+      "sector": "School districts",
+      "rows": 93,
+      "namedRows": 93,
+      "officialRows": 93,
+      "compiledRows": 0,
+      "employeeRows": 86,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-83",
+      "name": "School District No. 83 (K̓wsaltktnéws ne Secwepemcúl’ecw)",
+      "names": [
+        "School District No. 83 (K̓wsaltktnéws ne Secwepemcúl’ecw)"
+      ],
+      "sector": "School districts",
+      "rows": 465,
+      "namedRows": 465,
+      "officialRows": 465,
+      "compiledRows": 0,
+      "employeeRows": 460,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-85",
+      "name": "School District No. 85 (Vancouver Island North)",
+      "names": [
+        "School District No. 85 (Vancouver Island North)"
+      ],
+      "sector": "School districts",
+      "rows": 111,
+      "namedRows": 111,
+      "officialRows": 111,
+      "compiledRows": 0,
+      "employeeRows": 104,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-87",
+      "name": "School District No. 87 (Stikine)",
+      "names": [
+        "School District No. 87 (Stikine)"
+      ],
+      "sector": "School districts",
+      "rows": 134,
+      "namedRows": 134,
+      "officialRows": 134,
+      "compiledRows": 0,
+      "employeeRows": 113,
+      "officialPeriods": [
+        "2020/21",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2020/21",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 4,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-91",
+      "name": "School District No. 91 (Nechako Lakes)",
+      "names": [
+        "School District No. 91 (Nechako Lakes)"
+      ],
+      "sector": "School districts",
+      "rows": 297,
+      "namedRows": 297,
+      "officialRows": 297,
+      "compiledRows": 0,
+      "employeeRows": 290,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-92",
+      "name": "School District No. 92 (Nisga'a)",
+      "names": [
+        "School District No. 92 (Nisga'a)"
+      ],
+      "sector": "School districts",
+      "rows": 44,
+      "namedRows": 44,
+      "officialRows": 44,
+      "compiledRows": 0,
+      "employeeRows": 39,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "school-district-93",
+      "name": "School District No. 93 (Conseil scolaire francophone)",
+      "names": [
+        "School District No. 93 (Conseil scolaire francophone)"
+      ],
+      "sector": "School districts",
+      "rows": 1933,
+      "namedRows": 1933,
+      "officialRows": 1933,
+      "compiledRows": 0,
+      "employeeRows": 1892,
+      "officialPeriods": [
+        "2019/20",
+        "2020/21",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2019/20",
+        "2020/21",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 5,
       "sourceLeadCount": 0,
       "partialSources": []
     },
@@ -4525,6 +5650,29 @@
         "2023/24"
       ],
       "acceptedPeriodCount": 0,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
+      "slug": "southeast-kootenay-school-district",
+      "name": "School District No. 5 (Southeast Kootenay)",
+      "names": [
+        "School District No. 5 (Southeast Kootenay)"
+      ],
+      "sector": "School districts",
+      "rows": 430,
+      "namedRows": 430,
+      "officialRows": 430,
+      "compiledRows": 0,
+      "employeeRows": 421,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
       "partialSources": []
     },
@@ -4752,21 +5900,30 @@
         "Thompson Rivers University"
       ],
       "sector": "Universities and colleges",
-      "rows": 1747,
-      "namedRows": 1747,
-      "officialRows": 0,
+      "rows": 3248,
+      "namedRows": 3248,
+      "officialRows": 1501,
       "compiledRows": 1747,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 1501,
+      "officialPeriods": [
+        "2022/23",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2022/23",
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 2,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "tru-sofi-2022-23-employees",
+        "tru-sofi-2024-25-employees"
+      ]
     },
     {
       "slug": "town-of-comox",
@@ -5227,21 +6384,43 @@
         "University of the Fraser Valley"
       ],
       "sector": "Universities and colleges",
-      "rows": 1591,
-      "namedRows": 1591,
-      "officialRows": 0,
-      "compiledRows": 1591,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
-        "2017/18",
+      "rows": 4583,
+      "namedRows": 4583,
+      "officialRows": 4176,
+      "compiledRows": 407,
+      "employeeRows": 4176,
+      "officialPeriods": [
+        "2019/20",
         "2020/21",
-        "2023/24"
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "compiledEditionLabels": [
+        "2017/18"
+      ],
+      "acceptedPeriodCount": 7,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "ufv-sofi-2019-20-employees",
+        "ufv-sofi-2020-21-employees",
+        "ufv-sofi-2021-22-employees",
+        "ufv-sofi-2022-23-employees",
+        "ufv-sofi-2023-24-employees",
+        "ufv-sofi-2024-25-employees",
+        "ufv-sofi-2025-26-employees"
+      ]
     },
     {
       "slug": "university-of-victoria",
@@ -5320,19 +6499,26 @@
         "Vancouver Island University"
       ],
       "sector": "Universities and colleges",
-      "rows": 1795,
-      "namedRows": 1795,
-      "officialRows": 0,
-      "compiledRows": 1795,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "rows": 3104,
+      "namedRows": 3104,
+      "officialRows": 1936,
+      "compiledRows": 1168,
+      "employeeRows": 1936,
+      "officialPeriods": [
+        "2020/21",
+        "2021/22",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2020/21",
+        "2021/22",
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
-        "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 3,
       "sourceLeadCount": 0,
       "partialSources": []
     },
@@ -5344,21 +6530,43 @@
         "Vancouver police (VPD)"
       ],
       "sector": "Municipal police",
-      "rows": 4808,
-      "namedRows": 2043,
-      "officialRows": 0,
+      "rows": 4950,
+      "namedRows": 2185,
+      "officialRows": 142,
       "compiledRows": 4808,
       "employeeRows": 0,
-      "officialPeriods": [],
+      "officialPeriods": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
       "officialEmployeePeriods": [],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 10,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "continuation-government-police-vancouver-police-2015-executives",
+        "continuation-government-police-vancouver-police-2016-executives",
+        "continuation-government-police-vancouver-police-2017-executives",
+        "continuation-government-police-vancouver-police-2018-executives",
+        "continuation-government-police-vancouver-police-2019-executives",
+        "continuation-government-police-vancouver-police-2020-executives",
+        "continuation-government-police-vancouver-police-2021-executives",
+        "continuation-government-police-vancouver-police-2022-executives",
+        "continuation-government-police-vancouver-police-2023-executives",
+        "continuation-government-police-vancouver-police-2024-executives"
+      ]
     },
     {
       "slug": "vancouver-school-district",
@@ -5603,6 +6811,29 @@
         "history-island-village-of-cumberland-2024-employees",
         "wave-island-village-of-cumberland-2025-employees"
       ]
+    },
+    {
+      "slug": "village-of-fraser-lake",
+      "name": "Village of Fraser Lake",
+      "names": [
+        "Village of Fraser Lake"
+      ],
+      "sector": "Municipalities",
+      "rows": 13,
+      "namedRows": 13,
+      "officialRows": 13,
+      "compiledRows": 0,
+      "employeeRows": 8,
+      "officialPeriods": [
+        "2023"
+      ],
+      "officialEmployeePeriods": [
+        "2023"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
     },
     {
       "slug": "village-of-fruitvale",
@@ -6080,66 +7311,66 @@
   "sectors": [
     {
       "sector": "Crown corporations",
-      "employers": 41,
-      "employersWithOfficial": 6,
-      "compiledOnlyEmployers": 35,
-      "officialRows": 65950,
-      "compiledRows": 43992,
-      "rows": 109942
+      "employers": 43,
+      "employersWithOfficial": 12,
+      "compiledOnlyEmployers": 31,
+      "officialRows": 105013,
+      "compiledRows": 36315,
+      "rows": 141328
     },
     {
       "sector": "Government",
       "employers": 1,
       "employersWithOfficial": 1,
       "compiledOnlyEmployers": 0,
-      "officialRows": 220106,
+      "officialRows": 242158,
       "compiledRows": 0,
-      "rows": 220106
+      "rows": 242158
     },
     {
       "sector": "Health authorities",
       "employers": 8,
-      "employersWithOfficial": 5,
-      "compiledOnlyEmployers": 3,
-      "officialRows": 243958,
+      "employersWithOfficial": 6,
+      "compiledOnlyEmployers": 2,
+      "officialRows": 244148,
       "compiledRows": 68658,
-      "rows": 312616
+      "rows": 312806
     },
     {
       "sector": "Municipal police",
       "employers": 13,
-      "employersWithOfficial": 0,
-      "compiledOnlyEmployers": 13,
-      "officialRows": 0,
+      "employersWithOfficial": 1,
+      "compiledOnlyEmployers": 12,
+      "officialRows": 142,
       "compiledRows": 9232,
-      "rows": 9232
+      "rows": 9374
     },
     {
       "sector": "Municipalities",
-      "employers": 105,
-      "employersWithOfficial": 102,
+      "employers": 116,
+      "employersWithOfficial": 113,
       "compiledOnlyEmployers": 3,
-      "officialRows": 117100,
+      "officialRows": 118593,
       "compiledRows": 28211,
-      "rows": 145311
+      "rows": 146804
     },
     {
       "sector": "School districts",
-      "employers": 14,
-      "employersWithOfficial": 1,
+      "employers": 34,
+      "employersWithOfficial": 21,
       "compiledOnlyEmployers": 13,
-      "officialRows": 10568,
+      "officialRows": 21232,
       "compiledRows": 45385,
-      "rows": 55953
+      "rows": 66617
     },
     {
       "sector": "Universities and colleges",
       "employers": 24,
-      "employersWithOfficial": 4,
-      "compiledOnlyEmployers": 20,
-      "officialRows": 25561,
-      "compiledRows": 48134,
-      "rows": 73695
+      "employersWithOfficial": 12,
+      "compiledOnlyEmployers": 12,
+      "officialRows": 46576,
+      "compiledRows": 44981,
+      "rows": 91557
     }
   ],
   "queue": [
@@ -6839,6 +8070,23 @@
       "referenceRecords": null,
       "nextAction": "Held: employee extraction has unresolved layout, independent-reader or printed subtotal differences.",
       "reason": "Held: employee extraction has unresolved layout, independent-reader or printed subtotal differences."
+    },
+    {
+      "id": "source-a89a8e24fd28b1f9",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "referenceEmployer": null,
+      "year": "2024",
+      "status": "held-for-review",
+      "sourceUrl": "https://www.campbellriver.ca/media/file/2024-sofi-reportpdf",
+      "sourceId": "campbell-river-2024-held",
+      "scope": null,
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
+      "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 17 physical pages, with 7 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
     },
     {
       "id": "source-46a3176b5b0deeeb",
@@ -8235,6 +9483,57 @@
       "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation."
     },
     {
+      "id": "source-db5bc47d8881fd04",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "referenceEmployer": null,
+      "year": "2021",
+      "status": "source-found-awaiting-extraction",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1131",
+      "sourceId": "salmon-arm-sofi-2021",
+      "scope": null,
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "reason": "Official report link located; original document and named schedules not yet validated."
+    },
+    {
+      "id": "source-70c4b15002afb568",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "referenceEmployer": null,
+      "year": "2023",
+      "status": "source-found-awaiting-extraction",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1219",
+      "sourceId": "salmon-arm-sofi-2023",
+      "scope": null,
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation."
+    },
+    {
+      "id": "source-3b8adff2f12ae222",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "referenceEmployer": null,
+      "year": "2025",
+      "status": "held-for-review",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1286",
+      "sourceId": "salmon-arm-sofi-2025",
+      "scope": null,
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "reason": "Official archive label says 2025 SOFI, but its download is a 38-page Financial Statements document whose contents and final schedules do not contain named remuneration disclosures. Locate the actual 2025 SOFI schedules."
+    },
+    {
       "id": "source-7b13e77c3aa116cd",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -8320,108 +9619,6 @@
       "reason": "Held: employee extraction has unresolved layout, independent-reader or printed subtotal differences."
     },
     {
-      "id": "source-a89a8e24fd28b1f9",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-campbell-river",
-      "employerName": "city-of-campbell-river",
-      "referenceEmployer": null,
-      "year": "2024",
-      "status": "held-for-review",
-      "sourceUrl": "https://www.campbellriver.ca/media/file/2024-sofi-reportpdf",
-      "sourceId": "campbell-river-2024-held",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
-      "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 17 physical pages, with 7 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
-    },
-    {
-      "id": "source-db5bc47d8881fd04",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-salmon-arm",
-      "employerName": "city-of-salmon-arm",
-      "referenceEmployer": null,
-      "year": "2021",
-      "status": "source-found-awaiting-extraction",
-      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1131",
-      "sourceId": "salmon-arm-sofi-2021",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
-      "reason": "Official report link located; original document and named schedules not yet validated."
-    },
-    {
-      "id": "source-9822000fcb05c17f",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-salmon-arm",
-      "employerName": "city-of-salmon-arm",
-      "referenceEmployer": null,
-      "year": "2022",
-      "status": "source-found-awaiting-extraction",
-      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1170",
-      "sourceId": "salmon-arm-sofi-2022",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
-      "reason": "Official report link located; original document and named schedules not yet validated."
-    },
-    {
-      "id": "source-70c4b15002afb568",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-salmon-arm",
-      "employerName": "city-of-salmon-arm",
-      "referenceEmployer": null,
-      "year": "2023",
-      "status": "source-found-awaiting-extraction",
-      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1219",
-      "sourceId": "salmon-arm-sofi-2023",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
-      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation."
-    },
-    {
-      "id": "source-cb0ac16ae75b220a",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-salmon-arm",
-      "employerName": "city-of-salmon-arm",
-      "referenceEmployer": null,
-      "year": "2024",
-      "status": "source-found-awaiting-extraction",
-      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1275",
-      "sourceId": "salmon-arm-sofi-2024",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
-      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation."
-    },
-    {
-      "id": "source-3b8adff2f12ae222",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-salmon-arm",
-      "employerName": "city-of-salmon-arm",
-      "referenceEmployer": null,
-      "year": "2025",
-      "status": "held-for-review",
-      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1286",
-      "sourceId": "salmon-arm-sofi-2025",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
-      "reason": "Official archive label says 2025 SOFI, but its download is a 38-page Financial Statements document whose contents and final schedules do not contain named remuneration disclosures. Locate the actual 2025 SOFI schedules."
-    },
-    {
       "id": "source-0aace8efd5dbbc9c",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -8471,6 +9668,23 @@
       "referenceRecords": null,
       "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
       "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 9 physical pages, with 3 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
+    },
+    {
+      "id": "source-fa4ee84fe0efaea0",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "district-of-metchosin",
+      "employerName": "District of Metchosin",
+      "referenceEmployer": null,
+      "year": "2024",
+      "status": "held-for-review",
+      "sourceUrl": "https://www.metchosin.ca/sites/7/files/2025-06/2024%20SOFI.pdf",
+      "sourceId": "metchosin-2024-held",
+      "scope": null,
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
+      "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 43 physical pages, with 7 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
     },
     {
       "id": "source-0cfdbe1f4d49cb07",
@@ -8949,23 +10163,6 @@
       "reason": "Official report link located; original document and named schedules not yet validated."
     },
     {
-      "id": "source-fa4ee84fe0efaea0",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "district-of-metchosin",
-      "employerName": "district-of-metchosin",
-      "referenceEmployer": null,
-      "year": "2024",
-      "status": "held-for-review",
-      "sourceUrl": "https://www.metchosin.ca/sites/7/files/2025-06/2024%20SOFI.pdf",
-      "sourceId": "metchosin-2024-held",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
-      "reason": "Earlier audit: Downloaded original PDF is scanned; no reliable text-layer salary extraction. Requires positioned OCR and a full monetary control check. Follow-up: OCR discovery is complete on all 43 physical pages, with 7 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
-    },
-    {
       "id": "source-b222a31ba60e7628",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -9032,23 +10229,6 @@
       "referenceRecords": null,
       "nextAction": "OCR the complete original, verify the employee-section period/scope and every row against rendered pages, then reconcile printed controls before accepting any observations.",
       "reason": "The retrieved original has no native text. Its rendered cover confirms year ended March 31, 2020, but no employee rows or controls have been accepted."
-    },
-    {
-      "id": "external-e4af6842583cf431",
-      "origin": "external-reference",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": "Provincial Health Services Authority",
-      "year": null,
-      "status": "compiled-only-summary",
-      "sourceUrl": "https://www.sunshinelists.ca/british-columbia/employers/provincial-health-services-authority",
-      "sourceId": null,
-      "scope": null,
-      "repositoryRows": null,
-      "referenceRecords": null,
-      "nextAction": "Recover the original official history; obtain annual reference counts and reporting dates before claiming a complete comparison.",
-      "reason": null
     },
     {
       "id": "source-a775f17dbb8fb62d",
@@ -9215,7 +10395,7 @@
       "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
       "sourceId": "provincial-health-services-authority-2024-25-employee-source",
       "scope": "employee-remuneration",
-      "repositoryRows": 0,
+      "repositoryRows": 13,
       "referenceRecords": null,
       "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
       "reason": null
@@ -9884,6 +11064,23 @@
       "reason": null
     },
     {
+      "id": "external-e4af6842583cf431",
+      "origin": "external-reference",
+      "priority": 2,
+      "employerSlug": "provincial-health-services-authority",
+      "employerName": "PHSA",
+      "referenceEmployer": "Provincial Health Services Authority",
+      "year": null,
+      "status": "summary-only",
+      "sourceUrl": "https://www.sunshinelists.ca/british-columbia/employers/provincial-health-services-authority",
+      "sourceId": null,
+      "scope": null,
+      "repositoryRows": null,
+      "referenceRecords": null,
+      "nextAction": "Obtain annual reference counts and reporting dates. Employer-wide totals and displayed year ranges cannot prove year-by-year coverage.",
+      "reason": null
+    },
+    {
       "id": "external-cf61d1c00cf04dd0",
       "origin": "external-reference",
       "priority": 2,
@@ -10023,1043 +11220,1208 @@
   "inputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 4730925,
-      "sha256": "7f062c0d06fa4c8cb5cc7f0873e63c6486dd41d9f55087e0cf7cc8323e000489"
+      "bytes": 5962538,
+      "sha256": "566ac7325c704d015ed6a70bdb313cbe63c716624beda61f90a97e7a4dbb7806"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
-      "bytes": 6932,
-      "sha256": "73072a9133a60839b11e3e3221c8427ec30e1a58ffe54ae5cdf481fd5203b752"
+      "bytes": 6942,
+      "sha256": "4a81189382594174ffb6d2cbcd76115d93a0a1c7d8ee5f488948c31efee8a55f"
     },
     {
       "path": "public/salaries/employers/abbotsford-school-district.json.gzip",
-      "bytes": 37754,
-      "sha256": "d2cda94ab6732a2f7de00baf874dd568b45af3e184522e554553c4a16731e343"
+      "bytes": 37761,
+      "sha256": "c202567fa62818b99b54c36fb8dc49a27743d3f03da1c5241df1a29660eb9f85"
+    },
+    {
+      "path": "public/salaries/employers/alberni-clayoquot-regional-district.json.gzip",
+      "bytes": 2370,
+      "sha256": "79c84fd5d808ee62c6b9224e39cfdee6bddad8a299b9bf72d4b3faeece3fc725"
     },
     {
       "path": "public/salaries/employers/bc-assessment.json.gzip",
-      "bytes": 12714,
-      "sha256": "112dbdf2327ef971b2a1330df5fddee8f37de735388eff0433b46c8745bd0320"
+      "bytes": 12682,
+      "sha256": "6943a64da85eb56dfd2dba32fe79b516abe00d461e8afacfcb6c665bf1a0e179"
     },
     {
       "path": "public/salaries/employers/bc-clinical-and-support-services-society.json.gzip",
-      "bytes": 10008,
-      "sha256": "82701050786aaa6467b273967191e4befd3df881d2ab7666b52b1d8b1f828bfe"
+      "bytes": 10503,
+      "sha256": "d3b8db894ea9ef0c235030d073e0c4fd2e22f6b7b81e084f47aacbf7584e80c4"
     },
     {
       "path": "public/salaries/employers/bc-council-for-international-education.json.gzip",
       "bytes": 463,
-      "sha256": "9ae7e2f10750ad5117a6cce4232bf46645a3622b4b4441580403ee247ba07893"
+      "sha256": "814a3ee31053be924564d2756f90e5f80a98401bda10df6b582a5f9037f15f50"
     },
     {
       "path": "public/salaries/employers/bc-energy-regulator.json.gzip",
-      "bytes": 4184,
-      "sha256": "3a27458d59d6faf75db736baba9b2265c0842c03abe2d9b0b743c28e6dadd167"
+      "bytes": 4185,
+      "sha256": "3c12a844c787b5b122e77519d69886b5eac79ecac2e0d8c9bdf0b4de2ac189e4"
+    },
+    {
+      "path": "public/salaries/employers/bc-family-maintenance-agency.json.gzip",
+      "bytes": 406,
+      "sha256": "138774fbb64442329e22acbba1e45c1fdd62d98d16d9da44617835e659d02ac4"
     },
     {
       "path": "public/salaries/employers/bc-ferries.json.gzip",
       "bytes": 78766,
-      "sha256": "ccdef9dbd1cfc9cc0fc62ce857aec51a527a238fc9c8a2501538b7cacb52607d"
+      "sha256": "76751f955c782905ded3bd8ba55d452ffc6ae798f6f3c70b10a6add557f5018a"
     },
     {
       "path": "public/salaries/employers/bc-financial-services-authority.json.gzip",
       "bytes": 5346,
-      "sha256": "acd311fa49e7211ee07e0944ccd0e65aee5fe6f18a9933c92a5069ccef239e31"
+      "sha256": "e05ccac8b0e343b68d291134e081194067061479159afbeaafc5cfcca70a1db5"
     },
     {
       "path": "public/salaries/employers/bc-housing.json.gzip",
-      "bytes": 17787,
-      "sha256": "a521d79078df2e33ed9761a6e5fc0d3365f2ef18528329d4ca87060a155697ce"
+      "bytes": 18546,
+      "sha256": "ea6878c64bf4a9c80dab962ffcbfd111b0395d48d974ac13e6b7a98d30d14337"
     },
     {
       "path": "public/salaries/employers/bc-hydro.json.gzip",
-      "bytes": 867933,
-      "sha256": "e8cb45a39161a45d7c0a89d607c9695a0e3b17f8f50da0f7f2f2612744eeb049"
+      "bytes": 868032,
+      "sha256": "4980f51fa0ef4af9685d5f915559c69796d1164f8a4c5802d0fc1e0ae9ca9606"
     },
     {
       "path": "public/salaries/employers/bc-infrastructure-benefits.json.gzip",
-      "bytes": 10513,
-      "sha256": "c7f46d8cdbec3a3fa08d74776c1b4220d4b4f75a8a0126b5372c41a656478195"
+      "bytes": 10518,
+      "sha256": "94d661946a8c4f04b643cac9f15a24f9ec55c30b3b35e1861305ce25f4761ced"
     },
     {
       "path": "public/salaries/employers/bc-investment-management-corporation.json.gzip",
-      "bytes": 7807,
-      "sha256": "ff8dc5d745b449c3855f68132f7d571e4c5ff735a7ad7e6601e1d542d39992e1"
+      "bytes": 7808,
+      "sha256": "e2142bc72b20c36fd5df79a0ca786b0e1c23db801dac80cf99947b8383f0cd78"
     },
     {
       "path": "public/salaries/employers/bc-pavilion-corporation.json.gzip",
-      "bytes": 5065,
-      "sha256": "2a7ee3208b207362ccaf9d80de2af762a8a980e5cf081a9f7005eb65e99cdb09"
+      "bytes": 5066,
+      "sha256": "a35f7c12c9d5890a48f736b95644cbd030b7415d092c81777009a0d5d11aa910"
     },
     {
       "path": "public/salaries/employers/bc-pension-corporation.json.gzip",
       "bytes": 4499,
-      "sha256": "3f2d6777da03d18d4414ed2a8fbe34b138aedbfdaf250dcf591f00757cb18734"
+      "sha256": "8356c0eb098817e473098194acb6a692b1dbbb23ca2f067067b28e16c5a5875a"
+    },
+    {
+      "path": "public/salaries/employers/bc-railway-company.json.gzip",
+      "bytes": 1634,
+      "sha256": "daae0a15c6b7002c776224a008143d5f4347d6c533a89cb5651d9bb7b0484ba3"
     },
     {
       "path": "public/salaries/employers/bc-securities-commission.json.gzip",
-      "bytes": 6520,
-      "sha256": "3396f0def9c071d1a33d3800cd307ba3465ce6963889c8ae063b024f316ab64a"
+      "bytes": 6518,
+      "sha256": "875cf94aa68a31b229c236860450fd1c777cb5204d1c49832fb6b850615ad539"
     },
     {
       "path": "public/salaries/employers/bc-transit.json.gzip",
-      "bytes": 44933,
-      "sha256": "42ebc09aa38316ce4300dc3a19a80410ab7479b8a2a7f8539e54a1e85c145fbb"
+      "bytes": 44941,
+      "sha256": "da599dd7209bd9233dc12a27a20f2ca0e1f861b173770ca3aac59cd94a71834f"
     },
     {
       "path": "public/salaries/employers/bc-utilities-commission.json.gzip",
-      "bytes": 1302,
-      "sha256": "de599d0fc4794c0b0e15362c8383aa8c2bac1c0466ffda03ee725d94b66ddf7a"
+      "bytes": 1303,
+      "sha256": "dfc55262330021ea84a6626905112473938ccf5ada17073acb7d102f6acb9907"
     },
     {
       "path": "public/salaries/employers/bcit.json.gzip",
-      "bytes": 176984,
-      "sha256": "fe8ecf74338ae606a3ad08c09ae754138b3166749fe70dfc8b7c3f23e6f4a1a6"
+      "bytes": 176993,
+      "sha256": "195f3aa828e9c9e63d2124a3f2bf89c1396e84b7b26e24d71e4fd667c2ad3145"
     },
     {
       "path": "public/salaries/employers/bclc.json.gzip",
-      "bytes": 35496,
-      "sha256": "8af3d652772165f2c2325611c76c4e25769bc59e39cbc8b55c8858fa8b61d282"
+      "bytes": 147261,
+      "sha256": "d50a659013264369c76d3308b8a0a515c24bf6b0dead58c0ebc4f9ca6a687cb3"
     },
     {
       "path": "public/salaries/employers/bowen-island.json.gzip",
-      "bytes": 2247,
-      "sha256": "81e16366cc3d4cf5ab8e05933d293da854120dd6ba5090ae5b14b479e6c952cc"
+      "bytes": 2246,
+      "sha256": "734f7e0a3cf7a23391f310ff4f7f3cb1d602218aaf1da623eca197bf1af3d9ae"
     },
     {
       "path": "public/salaries/employers/burnaby-school-district.json.gzip",
-      "bytes": 56525,
-      "sha256": "81ce163592adb796ee49cb4654111afdb0c3a0e11f4dabca9a09a9d596175c7a"
+      "bytes": 56540,
+      "sha256": "363694ef8858640c3b85016c791001300683afe7901411186970b76602390dd1"
     },
     {
       "path": "public/salaries/employers/camosun-college.json.gzip",
-      "bytes": 19405,
-      "sha256": "5b3bdedca57852dc0c95159958754b26e1f5cec88d49fabf182662932c5e3eff"
+      "bytes": 86674,
+      "sha256": "b9409050e4c1feb3407e98c23aed22b28cfcb6bf4e4dd7888a8a071dcba19f9d"
     },
     {
       "path": "public/salaries/employers/capilano-university.json.gzip",
-      "bytes": 15495,
-      "sha256": "d560f8f19ef0d09255287e04d29ee46161de70fce2279a69c65ac6ab98e5aac9"
+      "bytes": 39105,
+      "sha256": "e69556bfba63617b95bd65317673315928cb64c57b4c9d0416ea4ef5c3277715"
     },
     {
       "path": "public/salaries/employers/central-saanich-police.json.gzip",
       "bytes": 486,
-      "sha256": "007e57be7370200fe8821de31006c7ba520d699539157f5fae392c80d444a110"
+      "sha256": "5ba1892132c1d2aff16de319ca32f0d148f9cd2e7d4dd843d420df2c99da8b14"
     },
     {
       "path": "public/salaries/employers/chilliwack-school-district.json.gzip",
-      "bytes": 29118,
-      "sha256": "9265141753fbc409a556e23fca3e40c9dd7011054d82b4511e86206ac095562a"
+      "bytes": 29107,
+      "sha256": "18fc3fb0736dfbee6041a88f8dfb5b3da4cc37516705a34bcbf797d4c149732e"
     },
     {
       "path": "public/salaries/employers/city-of-abbotsford.json.gzip",
-      "bytes": 35961,
-      "sha256": "e2af0ca9cabadcd7769e59c82f903287031c92199bb5f1e46c9a8a5e0cdf66d3"
+      "bytes": 35964,
+      "sha256": "653b655ba2fbfcc516c8e713ef8e2649e5a9956176d94b323081cbe02a092344"
     },
     {
       "path": "public/salaries/employers/city-of-burnaby.json.gzip",
-      "bytes": 169842,
-      "sha256": "9951710f756f3f4b4e2eb5699b79b371a0a56f4bdbe986a02dac6ddc21ffa932"
+      "bytes": 169861,
+      "sha256": "b8b0db45d60300e4a7048b5e598ab6727f1dc6d4a8acab634bc48fb39716206b"
+    },
+    {
+      "path": "public/salaries/employers/city-of-campbell-river.json.gzip",
+      "bytes": 11590,
+      "sha256": "6da7a0bf7028706cc41b178bb6d71ede278e97869e4d60a003d70856e5c36ff6"
     },
     {
       "path": "public/salaries/employers/city-of-castlegar.json.gzip",
-      "bytes": 1901,
-      "sha256": "4d84d40d294f96ed05482cda88f7a6684f39789117a5c2aef78a5079079494ec"
+      "bytes": 1900,
+      "sha256": "f9c8dcf87f487f028ebe9ef2c22e0cd46d416ac1c29577b45dc63a812c25d74c"
     },
     {
       "path": "public/salaries/employers/city-of-chilliwack.json.gzip",
-      "bytes": 6140,
-      "sha256": "9f2e2c60b65217fc584b6cf6bace3beb7bedde4b087ee7b55c6cd1b55c96e2d3"
+      "bytes": 6143,
+      "sha256": "43031cc8b83b14dd9a803465003d425fb6dd363ea6ad73ee2c9dd67002ed61d6"
     },
     {
       "path": "public/salaries/employers/city-of-colwood.json.gzip",
-      "bytes": 5203,
-      "sha256": "9842c8cfd55e2790ebdd9ae5ae111627d8e9f7fd2bef595d8fc2324def984fda"
+      "bytes": 5206,
+      "sha256": "c5c4f136ccb16667bbfcabf96fa00b523b0d884e7f9644c69b64986ddbe8a1d0"
     },
     {
       "path": "public/salaries/employers/city-of-coquitlam.json.gzip",
-      "bytes": 41441,
-      "sha256": "92a88e90e9b8a1df6338760057ca4aa43e715b319d05f00eca369aba0fa20b32"
+      "bytes": 41447,
+      "sha256": "a18d5553b271f8d5d4352bd7b80267b6c02b1f9804c45b442c09cf90712139c7"
     },
     {
       "path": "public/salaries/employers/city-of-courtenay.json.gzip",
-      "bytes": 8721,
-      "sha256": "4571aec3bfef342af2138f4ff12437b10b6cf7db75303f8f7d0addccd7dc18b9"
+      "bytes": 8722,
+      "sha256": "0a3d80165c7c7b6dcd3826bc8806a69f965b7cc18c801324a3514fdb911b3942"
     },
     {
       "path": "public/salaries/employers/city-of-cranbrook.json.gzip",
-      "bytes": 3295,
-      "sha256": "52a2ba733ff27ee5df5e3c1868dfd4900762cee71c966cdb5d8045bcc6a4300d"
+      "bytes": 3293,
+      "sha256": "7e5426608d0405b0322494f94c0628d7a34fdce50190a1b7c475dd578f0b3e80"
     },
     {
       "path": "public/salaries/employers/city-of-dawson-creek.json.gzip",
-      "bytes": 9556,
-      "sha256": "8118a58089185eb909172a0fbc3ca43a5ad5168bc6ffb4a2d6ec381acc705c7e"
+      "bytes": 9570,
+      "sha256": "816d018917904bacfc749b798ac989c29368d0142241755a75d0022b44223789"
     },
     {
       "path": "public/salaries/employers/city-of-delta.json.gzip",
-      "bytes": 29392,
-      "sha256": "ebb77f707facb05d56c53d9bac6bc1467ec7b131bc60eb768af468cdfc4a068d"
+      "bytes": 29383,
+      "sha256": "0d587c629aaa1f24a5dfb7f80aa333d3fa6366543a4962f017c704dbb114ac91"
     },
     {
       "path": "public/salaries/employers/city-of-duncan.json.gzip",
       "bytes": 989,
-      "sha256": "d0487f85aec228a4aa940532e93b30726fbc440f3c7f061f9806dc5544dd1e05"
+      "sha256": "3b538222efe9755a8f6a986cd3d02199a315ec4d9436071f2d92d39c54d32d85"
     },
     {
       "path": "public/salaries/employers/city-of-fort-st-john.json.gzip",
-      "bytes": 4094,
-      "sha256": "191ae74cd2c8e3ec07c6eeb18dde5aee063beebc231dff1f3bb6d57a4c9d86df"
+      "bytes": 4095,
+      "sha256": "c4a890f4547a15fec12e2871a18eab6a48c0f9a52c0239f7d1d3e73f72bf222d"
+    },
+    {
+      "path": "public/salaries/employers/city-of-grand-forks.json.gzip",
+      "bytes": 1196,
+      "sha256": "830dd867084ef48918b14a906564040725f2dc3062a83ff054b40c0e57ceb2eb"
     },
     {
       "path": "public/salaries/employers/city-of-kamloops.json.gzip",
-      "bytes": 61866,
-      "sha256": "f2352f5f235e5c36e82c04eeda5f2d2fa785374b028a62ea9a73deef87fc1251"
+      "bytes": 61892,
+      "sha256": "3457402158bb52207e53051bc7f1b795c4e965391fbf6e919cc364d4b0c81fed"
     },
     {
       "path": "public/salaries/employers/city-of-kelowna.json.gzip",
-      "bytes": 69390,
-      "sha256": "5f65d77c259f11c55a4175720f9cf17c5bba3e27ca1ad7961f7f5acab25cb27d"
+      "bytes": 69389,
+      "sha256": "f65c28ba1e9e1b51f7ddff9040cc6649ede156f7f51ae7414ec01eebb5b11f43"
     },
     {
       "path": "public/salaries/employers/city-of-langford.json.gzip",
-      "bytes": 5354,
-      "sha256": "a3d28dc825b3d354ff2550713d603b0cc168a4f3a7f96309e4dad7034851a7f8"
+      "bytes": 5356,
+      "sha256": "8fdfcfeb5ba2dc91dc1498bad933348aefeca8340940dc0c72e5c5fb481dd623"
     },
     {
       "path": "public/salaries/employers/city-of-langley.json.gzip",
       "bytes": 5342,
-      "sha256": "40d9408411f30da1b0afe738ea91318cb94201d8392ee4684eaf81562cda3c93"
+      "sha256": "5bd3f36c82619633a9ac2d1c895d2d07610e7c14f1528ca611bce7fe00d1b190"
     },
     {
       "path": "public/salaries/employers/city-of-maple-ridge.json.gzip",
-      "bytes": 46740,
-      "sha256": "97dd0500731400b41f57080459669bd5f0555f6638755c03c1c7fde1d2ec4c34"
+      "bytes": 46765,
+      "sha256": "76b1a7000846f77c9d4e995eb0f9d60a9087bd6a62fa47934a99294b9203a75c"
     },
     {
       "path": "public/salaries/employers/city-of-merritt.json.gzip",
       "bytes": 1547,
-      "sha256": "52db4e123b83120762a12ce8471af1240c427b2b16be30659e13e4b918fa7bc8"
+      "sha256": "d0f402c7702eeec2e211f4348427d73f3e4154ee14aa941e1a1d7f3ca1f25266"
     },
     {
       "path": "public/salaries/employers/city-of-mission.json.gzip",
-      "bytes": 4287,
-      "sha256": "2f49bc207d8b003270f523855bcb89a161e3956a541710f5671b314f2ca0845b"
+      "bytes": 4285,
+      "sha256": "03d4d279967ff902c97750f951d35012c03f132d22a975656f23c9c01a3ce827"
     },
     {
       "path": "public/salaries/employers/city-of-nanaimo.json.gzip",
-      "bytes": 57405,
-      "sha256": "11e865e7ed91221e4a3260409b16d14579c9376f21cfe0d2e38e7a042e026df3"
+      "bytes": 57425,
+      "sha256": "f10958e8589e853a703726c2d20d6c5af39c1978b49217b5a9180fc9788fa6de"
     },
     {
       "path": "public/salaries/employers/city-of-nelson.json.gzip",
       "bytes": 2871,
-      "sha256": "f57d61920e8a02d76d1b6edbff269e70c8b44535251ddb7eed5074c232519beb"
+      "sha256": "f93f9b5af917d75ab4952e4c6b9fd999878627a177ad8313e2745c4af12c02f0"
     },
     {
       "path": "public/salaries/employers/city-of-new-westminster.json.gzip",
-      "bytes": 35988,
-      "sha256": "92f31005346a7372dbf21f5c12c0d29919334146b812509c4e470497f9395a47"
+      "bytes": 35972,
+      "sha256": "e509de584326d2119d37257e21862d9ba896891ad23e1fc9c1959e2eecb5bd75"
     },
     {
       "path": "public/salaries/employers/city-of-north-vancouver.json.gzip",
-      "bytes": 31451,
-      "sha256": "9203acce03133dc55751300da58fb4dcc37cd4ba09b65265e75868e6f28157e0"
+      "bytes": 31455,
+      "sha256": "ec99dd7eb41bbcf824272822680d3abd748b22690a4334ed69be900cf822bdfa"
     },
     {
       "path": "public/salaries/employers/city-of-parksville.json.gzip",
-      "bytes": 2558,
-      "sha256": "5c92790c5c608f204ae186b75c1fd1dfbce691257c99b733cee68c48bac20204"
+      "bytes": 2559,
+      "sha256": "a04f09e4ed3fbac664b9ba32fade31e2b73738c1ff2798ea33a3b1b9e261b644"
     },
     {
       "path": "public/salaries/employers/city-of-penticton.json.gzip",
-      "bytes": 7254,
-      "sha256": "91605d859435ba261230833cba9e91cfe7aabf2a3353792fc6a2ab1dcba3ebe2"
+      "bytes": 7252,
+      "sha256": "0173626de1658c0524b72be9211d03a5a3342e7fe3b6bc3ec075a4a1f9a120da"
     },
     {
       "path": "public/salaries/employers/city-of-pitt-meadows.json.gzip",
-      "bytes": 8633,
-      "sha256": "82809a6100c1716132b40061abc8d691ea2d5b854ad87c51213a5c64a04a82c9"
+      "bytes": 8677,
+      "sha256": "00b4b227f3a222f3912d8495d432ae61123ce2892e2df72649dbc016d58a16b0"
     },
     {
       "path": "public/salaries/employers/city-of-port-coquitlam.json.gzip",
-      "bytes": 25356,
-      "sha256": "ccc57b0b4614ff8b13fb49334f92c094f505f1b0c749e052926f4666d828c747"
+      "bytes": 25364,
+      "sha256": "23b04c42cd9a9281ebdb32883bf24af81d3bb44db4e589a8ce3d4444906745fe"
     },
     {
       "path": "public/salaries/employers/city-of-port-moody.json.gzip",
-      "bytes": 23570,
-      "sha256": "bb0957a959ca4a75ffa04edd7dcd9be1006428f8bc9a8bb65cecb9e0d97f6daa"
+      "bytes": 23572,
+      "sha256": "97020c23b9d72ad4798ff402575121116e8ac2fd4946eeeb03c7a203929320ec"
     },
     {
       "path": "public/salaries/employers/city-of-prince-george.json.gzip",
-      "bytes": 68347,
-      "sha256": "61ae08b0f00e3e7ddc1f968baea38b425a3c897be999074ecb8915b4bfe26303"
+      "bytes": 68353,
+      "sha256": "48436a59cf1726299e80c386b63df3262f1a5cd49e21f82ccb2f2ec558280d4f"
     },
     {
       "path": "public/salaries/employers/city-of-prince-rupert.json.gzip",
       "bytes": 2412,
-      "sha256": "ee804002248ac060ed096abded32d693be4dda85a1328c11224f8cbaf60d9b40"
+      "sha256": "17c2e280aaebfb3d1a12bd2265dff15652986b90607ea44aac462a2c988db8ff"
     },
     {
       "path": "public/salaries/employers/city-of-quesnel.json.gzip",
       "bytes": 2250,
-      "sha256": "a089b4ca8afacf2030f1b89b57aee86872a4cf8e6029f437937ad35ef2e68766"
+      "sha256": "9f24c14afee69919035f4b1e011ca5e1baee0fc4475d8b5f51ee0af7a7649e44"
     },
     {
       "path": "public/salaries/employers/city-of-revelstoke.json.gzip",
-      "bytes": 1940,
-      "sha256": "fb1a22bf9066cfeb2b346336ffb89f501f936eb7e09432c61a57d1129fac6897"
+      "bytes": 4520,
+      "sha256": "78d824a4063e35ebdf5d1f79f5dd2f790f791b0b6b13e071750f272c84dd3876"
     },
     {
       "path": "public/salaries/employers/city-of-richmond.json.gzip",
-      "bytes": 64363,
-      "sha256": "b061cdaf899163fed655a1980ca4e055f17c7442a7018232da96d8b59e9a53f5"
+      "bytes": 64354,
+      "sha256": "c4e10d6df73dd5fb7769c7f506dd62dfb0b2cde5e27b06dd89bf9af80ac059b6"
     },
     {
       "path": "public/salaries/employers/city-of-rossland.json.gzip",
-      "bytes": 2450,
-      "sha256": "2100a6403fa375ab68a961e647102b4c3d1bc04463afc5a298c0635e4734bb3d"
+      "bytes": 2456,
+      "sha256": "2e4f3808391a491c0b03f6706d854f130e0a7318ce9d8a2bfae13e6068f179de"
+    },
+    {
+      "path": "public/salaries/employers/city-of-salmon-arm.json.gzip",
+      "bytes": 2120,
+      "sha256": "aa57bf4a82266b95a6701d7a1c964cb01aed024e1a33f776fde1c4b5834024b7"
     },
     {
       "path": "public/salaries/employers/city-of-surrey.json.gzip",
-      "bytes": 159619,
-      "sha256": "1687df010bfb584e8bc4adee965f42a93b8a2c3928bd8066fbbbd8168d3b2c8a"
+      "bytes": 159645,
+      "sha256": "7c81792ff3efb129d22cd9808c48fc7838e8c68ca21af8a0dc8780a2dd65b3f0"
     },
     {
       "path": "public/salaries/employers/city-of-terrace.json.gzip",
-      "bytes": 9246,
-      "sha256": "cc92a782d985b1e055464dd163c5ebbec3322ee082ffe0a2eb34986456a4de22"
+      "bytes": 9247,
+      "sha256": "dd99131cd8fe506c592bfbd679bfdac5deee2a485dc52ae852ba8f443a8c1f14"
     },
     {
       "path": "public/salaries/employers/city-of-trail.json.gzip",
-      "bytes": 2183,
-      "sha256": "dcde186bdb19243d89f3e3ea15cf001269485763b0f0ab8d280a896aea402511"
+      "bytes": 2184,
+      "sha256": "4cfa1876c8978f29dbe767cfa45aef1821d50fd5f4aa4b35694d74d96b849c96"
     },
     {
       "path": "public/salaries/employers/city-of-vancouver.json.gzip",
-      "bytes": 848828,
-      "sha256": "d6b03d760dca3aacbd04fe4c76ab2730c6b584fb0be371a738a24d62e1ca0f42"
+      "bytes": 848874,
+      "sha256": "3489d3963e7e0a84710f5feaa3a6fb1c3e058921e5f041ff85b0778d94bf5dd2"
     },
     {
       "path": "public/salaries/employers/city-of-victoria.json.gzip",
-      "bytes": 129037,
-      "sha256": "2947fc00c7afb1ad5b25500944aeed76266f34278156ca33932ddda5d0d66a09"
+      "bytes": 129047,
+      "sha256": "fc9e812f232ae70f9fc073149c73ccf0195a7b87f6907c19dd866b1f3a3644c5"
     },
     {
       "path": "public/salaries/employers/city-of-white-rock.json.gzip",
-      "bytes": 8276,
-      "sha256": "c29e51b109b753f7719f94ac82e26b447f6d7bfdd527d75a79402d4b7ca3a677"
+      "bytes": 8292,
+      "sha256": "ee984204b6eef7bfa155b8d3096f8c155566b3871124e1bca79b8071321e4a14"
     },
     {
       "path": "public/salaries/employers/city-of-williams-lake.json.gzip",
-      "bytes": 8715,
-      "sha256": "01dfd61d235fe3076d48fcda7f314cfd091a83eb39961168f4c3ce0ffcc0e080"
+      "bytes": 8718,
+      "sha256": "64df96a7eb3760790eccce83956d43427c01e0705bbe8bfdecadb5f929a50b00"
     },
     {
       "path": "public/salaries/employers/coast-mountain-college.json.gzip",
-      "bytes": 3252,
-      "sha256": "fd3db96e6dcd58c65b7e8da2d595fca162f2b4752358a120127421181687bcc3"
+      "bytes": 3253,
+      "sha256": "5789c6c4c8ffb3230a6d2425264b659d04c2c0d4ce4b97a78db09bcdeb26d870"
     },
     {
       "path": "public/salaries/employers/college-of-new-caledonia.json.gzip",
-      "bytes": 11449,
-      "sha256": "03f207117d8fb4d264b186e555412c817ed256f141923cb5e8d8835f8a053a98"
+      "bytes": 11450,
+      "sha256": "a7c1fee686040fcdd2871655525d3cf656383fdf50684cb92754629805239ba2"
     },
     {
       "path": "public/salaries/employers/college-of-the-rockies.json.gzip",
-      "bytes": 5203,
-      "sha256": "d99bb7d74d575a3fd88ab24e9327fe56419bc05fc0b490fc35e5aea3f7494f9a"
+      "bytes": 5196,
+      "sha256": "7094ec13e582ab2067400046d7c77ad541fce70c589f42357edec20dc9e6496e"
     },
     {
       "path": "public/salaries/employers/columbia-basin-trust.json.gzip",
-      "bytes": 7074,
-      "sha256": "4b9cdbe8eede15273e18c1f98a130d114b21ffea97fffd78c186d015c81747f0"
+      "bytes": 7075,
+      "sha256": "97ff183efa317b1c44a901438b30f0556be732e622613d0b73b81c0066429575"
     },
     {
       "path": "public/salaries/employers/columbia-power.json.gzip",
-      "bytes": 201,
-      "sha256": "faaf55fcebace8d1e3b07e4d5251c2a8c5fd706ebcda7ed2995f78ff42b5e11e"
+      "bytes": 198,
+      "sha256": "58454df32a6edd5d2f477f9447c89cce38e2fc68e841b566f0ee24e0616ad3b0"
     },
     {
       "path": "public/salaries/employers/community-living-bc.json.gzip",
-      "bytes": 14483,
-      "sha256": "4d81c5c042564ac785c6e1efcc7d9fec875350c259ca7d570bdcea1962335d59"
+      "bytes": 14472,
+      "sha256": "ae86e776f44cd37cc5e0bab456ef2ea1f803bacf915c45d1fdf1757eca407dfe"
     },
     {
       "path": "public/salaries/employers/coquitlam-school-district.json.gzip",
-      "bytes": 60125,
-      "sha256": "8ce4784ecdbcdbd5e4f7518a47b70cd14f9935419155c6599c7371a5438a93d5"
+      "bytes": 60123,
+      "sha256": "3060326199920dfa2dd234b5a93b7760e3b5aada8cffe705918650b1e829dcda"
     },
     {
       "path": "public/salaries/employers/delta-police.json.gzip",
-      "bytes": 6547,
-      "sha256": "fd40fcb3fdd7ff82d0ca7f5355ab944c14fd588e80525bd61c19eea9df356429"
+      "bytes": 6541,
+      "sha256": "f3df12130ac1f3427a7d0481fea563f9ed2f67ef20ac327bf97b065f1682c7d2"
     },
     {
       "path": "public/salaries/employers/delta-school-district.json.gzip",
-      "bytes": 28270,
-      "sha256": "9af3deeb32c8f70084b839973f9428782c7bce953fd351e7632e2d4ef4afacca"
+      "bytes": 28266,
+      "sha256": "6e9e08041678e8eb4f87db1cfd917e95c401405a5ed02cb7ad1afd00585ecaa9"
     },
     {
       "path": "public/salaries/employers/destination-bc.json.gzip",
       "bytes": 2476,
-      "sha256": "a7dd8337cbb2b6fd8f4793d988c6d7afd7a06213f804cfa3cfca865cbd322ce3"
+      "sha256": "94867a96477927000bf963a1cd68f30c78f90514042585e422aec2ad4baf0788"
     },
     {
       "path": "public/salaries/employers/district-of-barriere.json.gzip",
       "bytes": 372,
-      "sha256": "8b5d33ff5afdb7d45e4577d861c77acb6b237f2a27bd6348617d21365065e163"
+      "sha256": "c20b1004bd0d764ce4cd611c5383b14f2ffbe0b35852f420e0d4809c8c78340a"
     },
     {
       "path": "public/salaries/employers/district-of-central-saanich.json.gzip",
       "bytes": 1950,
-      "sha256": "05f9fd26ab3757835b559ca483602c0142298e2d7be5aa2a97dab08d39fb7df9"
+      "sha256": "e5841a4ea2b529e32180e4419d50949351a28dfd83165ec187fe203cbe8f2d26"
     },
     {
       "path": "public/salaries/employers/district-of-chetwynd.json.gzip",
-      "bytes": 1941,
-      "sha256": "f35925377b1b62ebe53aacee86d5dd26ffcfa05edf7c70eea8ecdcaa64d3edd8"
+      "bytes": 1940,
+      "sha256": "b7f554d7c796eaba8beba1e9651d5979e4bc9763c09a751d4ecba515a8f2216f"
     },
     {
       "path": "public/salaries/employers/district-of-clearwater.json.gzip",
-      "bytes": 1226,
-      "sha256": "63ff6dde67e5e03a877f9987ac9485aecf823c1bc7cc322b7ceb7946af97548e"
+      "bytes": 1227,
+      "sha256": "02b50c24873b36e12f87cdd94b06399b716ef97829530248350d20c4ac50ae46"
     },
     {
       "path": "public/salaries/employers/district-of-coldstream.json.gzip",
       "bytes": 821,
-      "sha256": "0b7d1e1783617adff370422e6bdcde1a97fa6fc50a31fce62e27f3e587012907"
+      "sha256": "c54fa90d4716393d5be85c7c5c98c49af332a9a4e69f0b3490f43708e00b2715"
+    },
+    {
+      "path": "public/salaries/employers/district-of-elkford.json.gzip",
+      "bytes": 838,
+      "sha256": "b38f41304c9f7236e8a02b17f1d78e7dd7083b66988c45b827808c1653955828"
     },
     {
       "path": "public/salaries/employers/district-of-highlands.json.gzip",
       "bytes": 376,
-      "sha256": "6c2212777fe3a64766390f412ed8acc0b9b9eb28a123e784b90c96a9dc4fbf63"
+      "sha256": "9709af5a9ccd00be06c167594698b4cf47842c20178fa0e9ce6c3a0211ca6d1e"
     },
     {
       "path": "public/salaries/employers/district-of-hudson-s-hope.json.gzip",
-      "bytes": 623,
-      "sha256": "ccb4114104a6e55c633f645515a2871ce75b17469f61bb0ded04dac54b99441e"
+      "bytes": 624,
+      "sha256": "57192741f608763387f5156689be8740baf5beae445a2deed6be54ff83700502"
+    },
+    {
+      "path": "public/salaries/employers/district-of-lake-country.json.gzip",
+      "bytes": 2590,
+      "sha256": "4da6fe1113f801aadb0682ab5bed2d09bfa3510d1d21a0225767df8be601c086"
     },
     {
       "path": "public/salaries/employers/district-of-lantzville.json.gzip",
-      "bytes": 1026,
-      "sha256": "52508a4b585d25720a0015fe8de0aadb27daad4a1f7cc32ae58c59aa607082a6"
+      "bytes": 1025,
+      "sha256": "d893a74d86f9747fc4cf0dc0bf5ddd55d553eb694952601f6ef8f383e87dba47"
     },
     {
       "path": "public/salaries/employers/district-of-logan-lake.json.gzip",
       "bytes": 629,
-      "sha256": "50f52da88a557d260099826b7377e4b101b40864e385b34d6537192ed69e9e7b"
+      "sha256": "d3d03c99d85432aa88a6de6870cec7a8a4a9e507638d29f37437328d8c9a7391"
     },
     {
       "path": "public/salaries/employers/district-of-mackenzie.json.gzip",
       "bytes": 1198,
-      "sha256": "8814bf32566063c758b7cfff6f8e3131bcade36b80c0eed10207bf1510c4e403"
+      "sha256": "4f40833a294f8647dadc613f8e7374ffefd8ce20d4ef225d606853c7ca0cb886"
+    },
+    {
+      "path": "public/salaries/employers/district-of-metchosin.json.gzip",
+      "bytes": 496,
+      "sha256": "e83c63f929ce3a5fa782dd433f47f0cde6df7d0a136a01dd00a9554333443b72"
     },
     {
       "path": "public/salaries/employers/district-of-north-cowichan.json.gzip",
-      "bytes": 3176,
-      "sha256": "243f6410a0a391a4b510cebaf948de0f2f57b2df527bf3211d2dfe9f8d949c99"
+      "bytes": 3178,
+      "sha256": "366a5b5b4df22aad07be17066aa152dc8e6276655a7e077a64c0569751abc75c"
     },
     {
       "path": "public/salaries/employers/district-of-north-saanich.json.gzip",
-      "bytes": 2868,
-      "sha256": "75c9982871671dfc624b176e1bb2a32ed82b1763c167a6a02ef5ccbb7eccb2b9"
+      "bytes": 2865,
+      "sha256": "05993d1785aff2d66387d395f3f1f4f9e90a9c1b735502ddb629d72383c12454"
     },
     {
       "path": "public/salaries/employers/district-of-north-vancouver.json.gzip",
-      "bytes": 74987,
-      "sha256": "9a19c3b7bea83a348d2922a76a04b9db397a4ad681a4a1ba9aef2ecb7010a54b"
+      "bytes": 74998,
+      "sha256": "62f25c0e92fa2c08755be1b4abc6a03c7a9237b421142334940203861698ae4b"
     },
     {
       "path": "public/salaries/employers/district-of-oak-bay.json.gzip",
-      "bytes": 4835,
-      "sha256": "726e4ab4ef9a72fdb92f277c04cccb266ba45f1bdc91dd7f1c3409f894d1697f"
+      "bytes": 4829,
+      "sha256": "48b7d34c3d013328fba6889d1a0af24fc4d0bf1096a8b4b6fe99e44dcec90d7d"
     },
     {
       "path": "public/salaries/employers/district-of-peachland.json.gzip",
       "bytes": 1222,
-      "sha256": "236f0cd191b2bdb1a7b4d2d9035828a3373e036347c3d5b4a3dcdbc38fc1036d"
+      "sha256": "86a141ad6f4b936951a979f2264d2d29dd1007f393a3063c97264ff4a671ba4d"
+    },
+    {
+      "path": "public/salaries/employers/district-of-port-edward.json.gzip",
+      "bytes": 278,
+      "sha256": "e747240ddc84a8c7f79a18cb9750954a489751c5c849dd828c55eaa1d81de8b6"
     },
     {
       "path": "public/salaries/employers/district-of-saanich.json.gzip",
-      "bytes": 70181,
-      "sha256": "58eb393e457dde68121ec150c103ee5ce70776e8deb5b89fdf76bd15c6e5b149"
+      "bytes": 70194,
+      "sha256": "156efdaba02558a3899e5fef4cee34998fdf8d13886f566bcd3d0fd890b8fd35"
     },
     {
       "path": "public/salaries/employers/district-of-sechelt.json.gzip",
-      "bytes": 1257,
-      "sha256": "f0b46d056a89b9100aac41fbe3a6f362cce7d7f92907ccb7527ba365b3b27db7"
+      "bytes": 1256,
+      "sha256": "17e592da08d97187f286f6cfda9b9d966bef63d52024928e5d8d68c60090133e"
     },
     {
       "path": "public/salaries/employers/district-of-sparwood.json.gzip",
-      "bytes": 4690,
-      "sha256": "6273cdc29b44c725aa8dd4081e509f1f9064e7a71fae3aa412b18242fae65c90"
+      "bytes": 4692,
+      "sha256": "ca659c3a80a5f322661bdd4b18321188a32a804f5bff8459efd3a023216a7eb1"
     },
     {
       "path": "public/salaries/employers/district-of-squamish.json.gzip",
-      "bytes": 4655,
-      "sha256": "109107722ead58936709376ef95f81f99449aeae6328c939a105f8fec792497c"
+      "bytes": 4654,
+      "sha256": "fb49bb8b55cd5268a9839fadbb9551fbd66b97106eb3bbb32c13b4bcb25b5d83"
     },
     {
       "path": "public/salaries/employers/district-of-summerland.json.gzip",
-      "bytes": 2149,
-      "sha256": "15995ba17ef22e891fe0853ca9213de6e3d432621a52c7cd0cba402ff0d1b1e9"
+      "bytes": 2150,
+      "sha256": "835fc77c4c8a46195526ec238b77deb761cb4e2b78df2a6a51acfb400d68f799"
     },
     {
       "path": "public/salaries/employers/district-of-taylor.json.gzip",
       "bytes": 431,
-      "sha256": "5b9421624b83c29ade0859d0c90162e560049822ed09b4b5a9d0793c144ebd29"
+      "sha256": "7119c77dd1f53667ef4df688e1debeaee57d6a69146b35305c45a4e7f07b88d7"
     },
     {
       "path": "public/salaries/employers/district-of-tofino.json.gzip",
-      "bytes": 1235,
-      "sha256": "9bec83f3343df5c7b69a6349ce6fc32528d34960c2b64542ca004954a17ee155"
+      "bytes": 1234,
+      "sha256": "19302f0d63ee0bde2ca3f8d612488ed2fb95131c93e96a74eac48abd4725c5d7"
     },
     {
       "path": "public/salaries/employers/district-of-ucluelet.json.gzip",
       "bytes": 1622,
-      "sha256": "ef6ac28c7b7316d4696ceca204f801bbef0e99957e2b020fd117d4b98377596f"
+      "sha256": "3aaf4228d78c613ffc9d4ea11b750c2edb10d027dea55c1e9cb8488766911100"
+    },
+    {
+      "path": "public/salaries/employers/district-of-wells.json.gzip",
+      "bytes": 199,
+      "sha256": "a321ecbbc42d0815d5cc817c2f2919e97bc6932a35b72382efadebcca10fabf3"
     },
     {
       "path": "public/salaries/employers/district-of-west-vancouver.json.gzip",
-      "bytes": 61678,
-      "sha256": "5fccfe5a926506468d2c73a7abc990738729df27360810c77991774bf8d2db07"
+      "bytes": 61694,
+      "sha256": "a734124ecaa79b691c834bff4765f5712e410a9303be04e3b3a5a23331493917"
     },
     {
       "path": "public/salaries/employers/douglas-college.json.gzip",
-      "bytes": 27534,
-      "sha256": "df1edf7a3dc19c2be35db4f9234b60637f1303484bc3110cc0699af61e184b4b"
+      "bytes": 80641,
+      "sha256": "0f8bc9c0a99ba7c2ea11d03c26368da3a43606e838746560495d9ab6b13b550f"
     },
     {
       "path": "public/salaries/employers/emily-carr-university.json.gzip",
-      "bytes": 6266,
-      "sha256": "119925e3e331eded02829e8abaad77c12f30040f7feb400b37e642a6a6a389a6"
+      "bytes": 11038,
+      "sha256": "cc3a7fac8c6838d98e9112923b7390aebd17d25fcb0271d7f45fb4444c5d2f0c"
     },
     {
       "path": "public/salaries/employers/first-peoples-cultural-council.json.gzip",
-      "bytes": 899,
-      "sha256": "66d3ca1179896ea9510a6fbbf0d6b785488365b30f7892bf6f3e2950949074b0"
+      "bytes": 898,
+      "sha256": "5566042b7405855919a47ee89dc5bb6f996c1a4263abd3d00930a79cfbba1934"
     },
     {
       "path": "public/salaries/employers/forest-enhancement-society.json.gzip",
       "bytes": 280,
-      "sha256": "ff22860451773c376b733f1d5c33acf80af708e2e172f469af154f725338f5ab"
+      "sha256": "382a43f25533ddd8ab056ed2b72a716e72b650b1be7b3d75578914bb1f727ba3"
     },
     {
       "path": "public/salaries/employers/forestry-innovation-investment.json.gzip",
-      "bytes": 1264,
-      "sha256": "4df6d5f8f3bdbbbaabbe876053b1f94bfa39fd72594f60b31e3cd0d3fafbc128"
+      "bytes": 1265,
+      "sha256": "e10ad64ff5f1a0b21c90c3832d830abc01a7c083e00c31ddd770f12ec20fede5"
     },
     {
       "path": "public/salaries/employers/fraser-health.json.gzip",
-      "bytes": 1730453,
-      "sha256": "5db9ef0e9b3b17787ce66722f8720f65a5eabcba2fcea51e914093cefaff8fd0"
+      "bytes": 1730552,
+      "sha256": "191df9d48fd0bba4b2c625b260b532111af90bbd0f2c24ca65796508bcd7f379"
     },
     {
       "path": "public/salaries/employers/icbc.json.gzip",
-      "bytes": 96012,
-      "sha256": "fb9ee0069ea34b3275d8242aa3ea9124540c675a628ad341c55ca0b22c080718"
+      "bytes": 395447,
+      "sha256": "c468dc6fe9f9e9d74a6d3a0aad39129ee362bbfb81aca82a6158a907cd02a179"
     },
     {
       "path": "public/salaries/employers/inbc.json.gzip",
-      "bytes": 630,
-      "sha256": "3c54d1ae9d8ab894b8fb4a13f3ff90b4a1bfcbcac6110d03f860efad6b3cadb7"
+      "bytes": 631,
+      "sha256": "01f5512a4262b4f7b4f3861ca0c885bd0c1f7d64a9bd927867269cb53906e80e"
     },
     {
       "path": "public/salaries/employers/industry-training-authority.json.gzip",
-      "bytes": 1060,
-      "sha256": "05c04909d5ed02cde990fe1889722c20b4508de46a110f7383764f54b46da7d7"
+      "bytes": 1061,
+      "sha256": "d34ca81cc8c2381826cfbde691f055d66fcb8aefe1fc0a125da301de98a7b0dc"
     },
     {
       "path": "public/salaries/employers/infrastructure-bc.json.gzip",
       "bytes": 1287,
-      "sha256": "861cb0ef239542fe2a8db22119dece0726504119ce9f9fcc5ade0d60b79274a1"
+      "sha256": "c1fa40bd53c5092921f07bfb058b0388d9a39e0f9d0373d98821934d7879f242"
     },
     {
       "path": "public/salaries/employers/innovate-bc.json.gzip",
-      "bytes": 362,
-      "sha256": "2166f7fd59a8af0f87685bae56ae92df211b63f983a45ecc2e58de77f47c4941"
+      "bytes": 364,
+      "sha256": "72bca1efdbc3cdd6dd1ae9ae0653c9cf2f31455d85f4352c150dee56e2b7941e"
     },
     {
       "path": "public/salaries/employers/insurance-council-of-bc.json.gzip",
       "bytes": 299,
-      "sha256": "8460be34ad6573e286278dd532557808dd734b8b6eb629982acab3f6484a1f42"
+      "sha256": "a74a8cd4b8dba8b74a88d75cec99a61c98ca972d4dfb62d48dd4bc4a32c74470"
     },
     {
       "path": "public/salaries/employers/interior-health.json.gzip",
-      "bytes": 1038779,
-      "sha256": "38cf95ffbeaa1f5f2f955c7cebea251f19fc2957393ec0b1906564f5db4e01fd"
+      "bytes": 1042029,
+      "sha256": "a905ceaba971c8a19900ae5d52e0ff84607300a00ac942db590b5a96dfc8026b"
     },
     {
       "path": "public/salaries/employers/island-health.json.gzip",
-      "bytes": 953737,
-      "sha256": "51a110d0f56c4e316865aff9efa537871c152caa91d323190c0d202a6ad66270"
+      "bytes": 953773,
+      "sha256": "2ead53c96b5fe7cc6d9a091c3371a4d56b9a3481cc74a44f4b042315d42a9fce"
     },
     {
       "path": "public/salaries/employers/justice-institute-of-bc.json.gzip",
-      "bytes": 6451,
-      "sha256": "5e73a5c0f4b1c22af683bb67c90d055c3f9efe920d35ea5b150e828e26924548"
+      "bytes": 6449,
+      "sha256": "90bddbdb67e30c35682e874739f6bda0e67305b79dc7cb3dc63a7056875daa5b"
     },
     {
       "path": "public/salaries/employers/knowledge-network.json.gzip",
       "bytes": 1298,
-      "sha256": "e8d2554b2dd5c455f819744068ce498939e150055c3ba7ac17d2b2d5c4d16bc1"
+      "sha256": "7ae6b9562e87c8c28ec8c3a6be2ded1311e2ad25e3da31faa1dd96b04f4c5e3b"
     },
     {
       "path": "public/salaries/employers/kwantlen-polytechnic-university.json.gzip",
-      "bytes": 41944,
-      "sha256": "c5965ba10205d17708a13c4b9d2b02eaccd1724c1ae274daa86af269d8448f4a"
+      "bytes": 41959,
+      "sha256": "19de94494795038316963ac5dceb44a6731792780babf309749b75ef6a608b45"
     },
     {
       "path": "public/salaries/employers/langara-college.json.gzip",
-      "bytes": 35908,
-      "sha256": "e84e5d85b0c53e41bfbf83bf6cf8fde970e75b093b34f8f411f57b61e95fa786"
+      "bytes": 35924,
+      "sha256": "f777ec139f77f8df7d2738229d8f52556352a8ed991025e741a31597e3f1be7b"
     },
     {
       "path": "public/salaries/employers/langley-school-district.json.gzip",
-      "bytes": 46392,
-      "sha256": "613f52dec33dd36e93744d15e946a2637bd1c90a50441527effffcb4447a43a6"
+      "bytes": 46387,
+      "sha256": "a0bf0675a1f91e9677a16c06517cf689e4dfc0304b7f51031882819dd1924c37"
     },
     {
       "path": "public/salaries/employers/langley-township.json.gzip",
-      "bytes": 18962,
-      "sha256": "1ff3e0c0e1a41a2b8f0a9dd9c8b4bc86509273d843bfffb4034f47b4200811d8"
+      "bytes": 18934,
+      "sha256": "ec65d1d2087ba0202b908eb58aa4e282f69957378183c4b49fa68f46d6299f28"
     },
     {
       "path": "public/salaries/employers/legal-aid-bc.json.gzip",
-      "bytes": 4124,
-      "sha256": "6af87ee0a3b3ba5dc5f1000a687fd8d03dff577274972e19d0e2778a30641abe"
+      "bytes": 4132,
+      "sha256": "b9fef0bce85152ae82b886649375fa7282ad01b562337e370134f68ae7e2538b"
     },
     {
       "path": "public/salaries/employers/liquor-distribution-branch.json.gzip",
       "bytes": 11181,
-      "sha256": "be3c7e0e003ae8eecd715c6f4765ccb67742965007200126b32ac8a8fae59ffc"
+      "sha256": "ecaa1667fdf14e5df7f8449853a004b0f4c2f0a45e97cdeadcf2fc8eb037b171"
     },
     {
       "path": "public/salaries/employers/maple-ridge-pitt-meadows-school-district.json.gzip",
-      "bytes": 180960,
-      "sha256": "64819de16f3634c76e6472e1ecbc7dcfa2e6a2e4c886f11444aa672aebd90097"
+      "bytes": 180969,
+      "sha256": "fdf5f17bcd81f5683e20247ef576414966bc44fb03d4e0dbc89b73eeb044fb8b"
     },
     {
       "path": "public/salaries/employers/metro-vancouver-transit-police.json.gzip",
-      "bytes": 2437,
-      "sha256": "e6063c6ab7bac45dbee67f198ed9b488e362068000a306451504a89fc3d28d93"
+      "bytes": 2436,
+      "sha256": "e4d01c6e96378c4065b535d8310940328173c2af9adeed96128509fee3cea396"
     },
     {
       "path": "public/salaries/employers/metro-vancouver.json.gzip",
-      "bytes": 178787,
-      "sha256": "81a3809376fbca6189c2d12d7383ce1ae6fddc519585acb3c2a08e50bf398487"
+      "bytes": 178791,
+      "sha256": "3b839aed98d456bf9aa4ddf12372af0089379756e45b491b7d843e218a3bdbf3"
     },
     {
       "path": "public/salaries/employers/mission-school-district.json.gzip",
-      "bytes": 12884,
-      "sha256": "3ce061fab67d8cd7739812fb68787bc9572d283c11b1ac5e364fd9ff760ef662"
+      "bytes": 12870,
+      "sha256": "f13420ac7beb1e7c9a6a7742068eaea46ae0e03f6c7c25a9793fc2f7537ac4ee"
     },
     {
       "path": "public/salaries/employers/nelson-police.json.gzip",
-      "bytes": 561,
-      "sha256": "90115318527185d0ddb6586f5445f1951a4b09cd71e2310a5dd12886318b162f"
+      "bytes": 560,
+      "sha256": "516ba0a23ec16d49c2ca0762c59d30294cd06604c592021a02a1bc43c4ba678a"
     },
     {
       "path": "public/salaries/employers/new-west-police.json.gzip",
-      "bytes": 1982,
-      "sha256": "b71f71a99ccba9986e930e5c742c106959018d6968f167af25e8aea0d3a28bce"
+      "bytes": 1986,
+      "sha256": "ad55e8cda85e0bc2ae5ac6787ba56a56fd676246fbcd8149216873ca1b054fc2"
     },
     {
       "path": "public/salaries/employers/new-westminster-school-district.json.gzip",
-      "bytes": 13684,
-      "sha256": "58e9d47671415e161363c8699a04d5d9b419961c10cf0a82f648156df919f46c"
+      "bytes": 13667,
+      "sha256": "fb6b9e56ffb0130fde075ffd41eef61b7496f20f8aa60164bde5dd08a447c889"
     },
     {
       "path": "public/salaries/employers/north-island-college.json.gzip",
-      "bytes": 16796,
-      "sha256": "45345113774b293caf3d9d491b3316e22497d659f76814178824177dd5e0f276"
+      "bytes": 16806,
+      "sha256": "1d876ee1b69eb37bfed5be0c8fdbeea7a1ed4b61d5c8c05baf2d2394fa966c88"
     },
     {
       "path": "public/salaries/employers/north-vancouver-school-district.json.gzip",
-      "bytes": 36838,
-      "sha256": "7f067bfd82ffc6f5c3a3de54cf48be81cd7a6da6423829c8b7f1d8c6607c55de"
+      "bytes": 36850,
+      "sha256": "3b1b4344cc3807062b7349915d94702be117d217745cf278dc48c3e7ed210139"
     },
     {
       "path": "public/salaries/employers/northern-health.json.gzip",
-      "bytes": 297736,
-      "sha256": "e07fe7690c33ab1badb9c278d72018e8881494b313d0a670f5a2267cc2fd1a87"
+      "bytes": 299517,
+      "sha256": "979710abc73793ab8ae2cf9008f7e9e818bceaab10e2c31e1cf8b020691664a6"
     },
     {
       "path": "public/salaries/employers/northern-lights-college.json.gzip",
-      "bytes": 4600,
-      "sha256": "ff08fa0377320a35ea73f682688624ce4eab33f4e9a8bd47b9849f4b74fc858e"
+      "bytes": 4597,
+      "sha256": "7b350db5de20b365af1c5773a18a30c37ac10a30f7ccf41127ed36eeb89800a0"
     },
     {
       "path": "public/salaries/employers/northern-rockies-regional-municipality.json.gzip",
-      "bytes": 5590,
-      "sha256": "a1fa8aae63e0d14de1e01adc0a101272280b14dd423e5f3b93f400e5d27f75de"
+      "bytes": 5585,
+      "sha256": "f044dc6a63ed216a77ae9b2e0f4a68d92d1eb075b1feba928485792d817d39e9"
     },
     {
       "path": "public/salaries/employers/oak-bay-police.json.gzip",
       "bytes": 736,
-      "sha256": "e8dcc18c81c446349837b403bcdf7706077dbafab15a86819e34d0731a20afd2"
+      "sha256": "51eb599e8e6b637201e2003135e56225d329b678c9d7d366550632e709260c7a"
     },
     {
       "path": "public/salaries/employers/oil-and-gas-commission.json.gzip",
       "bytes": 7160,
-      "sha256": "5adc0de260a39bdd378942884a76a989e004f2d75b1bedd509c0b67a0c4a6572"
+      "sha256": "025bfee85e80106d12e6a5aeec67257c73970b2f5524640c051c5f58639027e5"
     },
     {
       "path": "public/salaries/employers/okanagan-college.json.gzip",
-      "bytes": 16204,
-      "sha256": "94d36d2bb4b69d417aff6e170b5de3f4a664e4a8a3c2c40a4b551ca57f799297"
+      "bytes": 37613,
+      "sha256": "93425dae08cca3dbeca49b3b94d3f01650710e5b3338b8f71a3c368e884cb7d7"
     },
     {
       "path": "public/salaries/employers/port-moody-police.json.gzip",
-      "bytes": 2182,
-      "sha256": "aa7020d9a14e1abf6b6d6da4de6a12ba0642dda97c3b6f1f6d3a5b097386e293"
+      "bytes": 2179,
+      "sha256": "dc0796b027290e92e71f2bea13e562d83f95637892005d6afeab9eb43914dedd"
     },
     {
       "path": "public/salaries/employers/providence-health-care.json.gzip",
-      "bytes": 101548,
-      "sha256": "53a2dc52bfc68103289fd204910777b187c6edc161cbaf1dd8664ad49d3d952b"
+      "bytes": 101544,
+      "sha256": "dd43e7db1a67b9f8222023c194ff60a52db9bdbcee07edfbe1a50f388976cb90"
     },
     {
       "path": "public/salaries/employers/provincial-health-services-authority.json.gzip",
-      "bytes": 363157,
-      "sha256": "a8754691a4d6af3777dbaf8b826a96a9dd0b6ec52a488cdd0e0162b4d5de49ee"
+      "bytes": 363822,
+      "sha256": "4f13be8ce5fbb2a2d741ae9a321f623a42444a3c422722d70dce11651b0fb994"
     },
     {
       "path": "public/salaries/employers/public-service.json.gzip",
-      "bytes": 4230147,
-      "sha256": "7aeed05b20b10616b30cd0abdad9c3569aa21f7c7e923dae4e177a18e4df7d10"
+      "bytes": 4518533,
+      "sha256": "71c62e45c12d7a2c1772ce96f56dfe15606dd1236f01dad246c9f6c75cbf6e42"
+    },
+    {
+      "path": "public/salaries/employers/regional-district-of-east-kootenay.json.gzip",
+      "bytes": 2505,
+      "sha256": "d63a423330f7796dbc80e977a566d96a9c86a2f776277026adf61b8fbe3eb5c2"
     },
     {
       "path": "public/salaries/employers/resort-municipality-of-whistler.json.gzip",
-      "bytes": 14068,
-      "sha256": "faad3530e11978e702ef3a9fd0b1eacfbf8bfc0531a0d1d727618c3b47f3feab"
+      "bytes": 14077,
+      "sha256": "fbdcef82faed6bf2507c1abb3e2c837c6a92f64d031c588a354853b3c84097c2"
     },
     {
       "path": "public/salaries/employers/richmond-school-district.json.gzip",
-      "bytes": 37303,
-      "sha256": "549cca5053c4cdc08ecb5d527e0e075c98e6a161f5a76749276e9e60b4a93bbf"
+      "bytes": 37319,
+      "sha256": "131267ea9e46eb37dc587c334c4e266dfe513b6e96cc1efcf040fb37790c90bb"
     },
     {
       "path": "public/salaries/employers/royal-bc-museum.json.gzip",
-      "bytes": 2160,
-      "sha256": "39dde4f15f0adadd0535b7334fed73dbd0c1e472feff4ecddb875855b70b683f"
+      "bytes": 4754,
+      "sha256": "c1ddcb0afc1bf1d4ee25379afc72e4b43d794408a151549538f2c83c42263760"
     },
     {
       "path": "public/salaries/employers/royal-roads-university.json.gzip",
-      "bytes": 6690,
-      "sha256": "df367826c300b61539b57316694319da5a05c6bdcb22a6358d206f29fe4af2c2"
+      "bytes": 6685,
+      "sha256": "f09530031d49d26a34edda18a3e2eaf8eba92ac488e09c5d1c3a94b1ea9c031a"
     },
     {
       "path": "public/salaries/employers/saanich-police.json.gzip",
-      "bytes": 4304,
-      "sha256": "d1eae360ecdb8e65c6eeec6c41603cfc778e0642d6169b9f328539299fd9237b"
+      "bytes": 4306,
+      "sha256": "67d41b217540fafd835f4580a30b159c7a8f6ec638b71f6018fd7180d27259e3"
+    },
+    {
+      "path": "public/salaries/employers/school-district-06.json.gzip",
+      "bytes": 4700,
+      "sha256": "00c813a0974e42cd4d1d8627062389f7baf15287a37d4859db84bc494407b521"
+    },
+    {
+      "path": "public/salaries/employers/school-district-08.json.gzip",
+      "bytes": 15830,
+      "sha256": "fa921ea8eafe3383c1fb397802bb42346b1f06e3a9533130a948345de6deb5f8"
+    },
+    {
+      "path": "public/salaries/employers/school-district-20.json.gzip",
+      "bytes": 5456,
+      "sha256": "8b88f1e5d64a5f9962e59b4c7cd478d81e82210cd759cfefb3f0feae048bd1d8"
+    },
+    {
+      "path": "public/salaries/employers/school-district-46.json.gzip",
+      "bytes": 5054,
+      "sha256": "d95311cb1ac4daa624041feec1bb1b6c406b6528fa5e167acd2ab095957591b2"
+    },
+    {
+      "path": "public/salaries/employers/school-district-47.json.gzip",
+      "bytes": 3636,
+      "sha256": "9187f4761f9df735ec2980e2defd72a4929c16fe8c9b217c955acf94d06718ed"
+    },
+    {
+      "path": "public/salaries/employers/school-district-48.json.gzip",
+      "bytes": 7225,
+      "sha256": "19e50e40f3530e09b0a07b089829540582196c99b3c79ef0d4b686558f5d3b15"
+    },
+    {
+      "path": "public/salaries/employers/school-district-51.json.gzip",
+      "bytes": 2419,
+      "sha256": "fe1b837a78339943c9289b2eea788bdea2bbe36d6c7c4d5fc8641e52b7094327"
+    },
+    {
+      "path": "public/salaries/employers/school-district-52.json.gzip",
+      "bytes": 3447,
+      "sha256": "9017884f4d0c0972be61e35207976c5b112ff08ef2457dc9e6f114894e5a231b"
+    },
+    {
+      "path": "public/salaries/employers/school-district-63.json.gzip",
+      "bytes": 8646,
+      "sha256": "35df160e10a15c24192476af8026aaa7287e74e29c78e96e76d73780e83f64fd"
+    },
+    {
+      "path": "public/salaries/employers/school-district-67.json.gzip",
+      "bytes": 6281,
+      "sha256": "ba1ea95a495eb513284832771423cccfbef4a9d5d9e04150f6986203b5d4dddf"
+    },
+    {
+      "path": "public/salaries/employers/school-district-71.json.gzip",
+      "bytes": 52538,
+      "sha256": "c1c5bf7107f207054a08276b91d079e2f3a676d28c9cd57be281bd54e1177c1f"
+    },
+    {
+      "path": "public/salaries/employers/school-district-72.json.gzip",
+      "bytes": 5889,
+      "sha256": "7408880dddd71f694971116e98f77ea22628be43f6d5e69060f80f58a4742c3d"
+    },
+    {
+      "path": "public/salaries/employers/school-district-74.json.gzip",
+      "bytes": 2122,
+      "sha256": "a7131662f832c6eafb218fff1b0fa4b2f908088b05e64e2f6a80df001f59a61e"
+    },
+    {
+      "path": "public/salaries/employers/school-district-83.json.gzip",
+      "bytes": 9249,
+      "sha256": "64bd53328a0167782b608f944dbf61a821b2622aec2f04e480ff3e37fa04648a"
+    },
+    {
+      "path": "public/salaries/employers/school-district-85.json.gzip",
+      "bytes": 2545,
+      "sha256": "06134adc5365ae3bd1c2cafad101dbd3e8841fef9ba4266c78b274dd840cbec6"
+    },
+    {
+      "path": "public/salaries/employers/school-district-87.json.gzip",
+      "bytes": 2708,
+      "sha256": "0a5b4345a7f3dcb3f754f634b4fec14c8883fef1be472e9eecc300dc0d7faef2"
+    },
+    {
+      "path": "public/salaries/employers/school-district-91.json.gzip",
+      "bytes": 6146,
+      "sha256": "81d6e61d63592ab0e9221c5f3eb96d19cd937de0af97f9333d0efb209d94b22a"
+    },
+    {
+      "path": "public/salaries/employers/school-district-92.json.gzip",
+      "bytes": 1146,
+      "sha256": "c6c861d8138d39a0f3b0518be77fd6d57befdfb9cdaf311fccc0252ba6b4c8bc"
+    },
+    {
+      "path": "public/salaries/employers/school-district-93.json.gzip",
+      "bytes": 32214,
+      "sha256": "58ef1d481bba1b224dadcd47a311414afbf2363f8c48e4295ca402a843c37285"
     },
     {
       "path": "public/salaries/employers/selkirk-college.json.gzip",
-      "bytes": 8210,
-      "sha256": "8d818428bc8183e84172373b7186566279433120b34b06b00bfa04df7ab535e0"
+      "bytes": 8203,
+      "sha256": "516c7d9bc9a782f109610bda99de3a7669f7165bfa7d2d17551b7c10b60ea5f7"
     },
     {
       "path": "public/salaries/employers/simon-fraser-university.json.gzip",
-      "bytes": 275680,
-      "sha256": "c323ffb03f54651078e823d5a726c62baae3622dfbc14df7090b239e727351e0"
+      "bytes": 275729,
+      "sha256": "bd2e46d0a59ab6926416ead40bea3d1f4d385931067f30ca49c228bc9ad2b3b7"
     },
     {
       "path": "public/salaries/employers/skilledtradesbc.json.gzip",
-      "bytes": 1408,
-      "sha256": "c39770bd0bb4d96e0dd2c93b3a5e44f855927ac4d73f3ebdc05eb0f6973a7d75"
+      "bytes": 1409,
+      "sha256": "a5769a877503199c567a8f71772528adff06cee5c1f17c26ea234e0931456462"
+    },
+    {
+      "path": "public/salaries/employers/southeast-kootenay-school-district.json.gzip",
+      "bytes": 8269,
+      "sha256": "f75756572ba6779fbc981467982c721536a24ebd736f03d8f7e015ba128c02a8"
     },
     {
       "path": "public/salaries/employers/sub-columbia-hydro-constructors.json.gzip",
-      "bytes": 9625,
-      "sha256": "cc0e9f965143a985359473ea612a51ed1ec5df948cc019d8b279d522be5283c1"
+      "bytes": 9642,
+      "sha256": "463c0cf959d668f7b4a9b016c2c4c96e3f56c29dee4484140629d8de8001f269"
     },
     {
       "path": "public/salaries/employers/sub-powerex.json.gzip",
       "bytes": 18568,
-      "sha256": "ee58729ca11737405a93f0146d1efd4a1d001b1434710a42d46ab520e3164f1f"
+      "sha256": "671eb17bd6b3f996edde5ecb414e491e5f662824b3eb404a2d92f24fb9674da9"
     },
     {
       "path": "public/salaries/employers/sub-powertech-labs.json.gzip",
-      "bytes": 17336,
-      "sha256": "af8cf9467d42923287292a3f5ff200dfcaac70e5e8af4d831dd0fcbbb9d1ba5a"
+      "bytes": 17335,
+      "sha256": "036c0284a1b5999ae914fe1bfb194b9f591e2a9bf76faa83f6503b22616e6bc4"
     },
     {
       "path": "public/salaries/employers/sun-peaks-mountain-resort-municipality.json.gzip",
       "bytes": 555,
-      "sha256": "91f3d5e11970adce962ccc68e62b56df374bf4c160a445783056cd93291b632f"
+      "sha256": "0377d1fda2cb5f8ffa5bdae0df429ed72474ddbb0a569789628094697eb0a71e"
     },
     {
       "path": "public/salaries/employers/surrey-police.json.gzip",
       "bytes": 3303,
-      "sha256": "b56d57a1ba7a92b2db32f97d5db8c83b587eb4c0d6cc12feaed00bfb0a91c9cb"
+      "sha256": "0a11b7f14317173eba212291d08a22956701e3228dabd89e64e05d933c3e9afa"
     },
     {
       "path": "public/salaries/employers/surrey-school-district.json.gzip",
-      "bytes": 147917,
-      "sha256": "b58162c3f2af6a58f171cbd5f55c695b7bc394812f31373a386a5c5a76e63977"
+      "bytes": 147934,
+      "sha256": "9eff0c0eea985b9bce16aeaf3b4da96e1f8d057f9279c91eb5e5beb30a45f8dc"
     },
     {
       "path": "public/salaries/employers/technical-safety-bc.json.gzip",
       "bytes": 7202,
-      "sha256": "1d21a1f53fac8b911ca05824d2f4ad2c5806eb8a594b4814e88b32a238e69466"
+      "sha256": "21d724b2e57c16f275e5834f115b915f2593949d03cf0d0552c8ba39d2b43151"
     },
     {
       "path": "public/salaries/employers/thompson-rivers-university.json.gzip",
-      "bytes": 26983,
-      "sha256": "b734099b06dc6354d341abfebed7e0149a261f0fc4498d2fcf7a6912f383d8ef"
+      "bytes": 52021,
+      "sha256": "ddf98299186158f6729d2706b754825ede5db8678e0b49e8e4efe8fe84d4502e"
     },
     {
       "path": "public/salaries/employers/town-of-comox.json.gzip",
-      "bytes": 1232,
-      "sha256": "cf7d77dbbc340e04c6851b44f09d10df3919208a0509b0029cb89d1778555a3e"
+      "bytes": 1231,
+      "sha256": "80be7f7996fdb75e8a765eba6ce95778ffd24ddcbb69637bdafe476f65333aaf"
     },
     {
       "path": "public/salaries/employers/town-of-creston.json.gzip",
       "bytes": 252,
-      "sha256": "34963e6e6f10b06581322c326cedf330f4a5ca47672b3e1abb67ea1c903e79a7"
+      "sha256": "b68a6519d45826e33a081dbb8af48e2cd247be9e46c2c2f3c41edcef975244fd"
     },
     {
       "path": "public/salaries/employers/town-of-gibsons.json.gzip",
-      "bytes": 2223,
-      "sha256": "fbeb26fc915711de8eeebe2234aff32b5273628b3a73780fc5e74855d1442d23"
+      "bytes": 2227,
+      "sha256": "7c25faf6b32c6b2e633c5fb79e3f855612779f43db8c800a5efefd27a651a164"
     },
     {
       "path": "public/salaries/employers/town-of-golden.json.gzip",
-      "bytes": 605,
-      "sha256": "ad5757e5d94d2be562b35f7f0549097f23d00ba17697307979b6dbbd5862e804"
+      "bytes": 604,
+      "sha256": "db74db0f51b04f763c9cd4d8161808979018e5d78e10d6fb7d0a7ca50e139e4a"
     },
     {
       "path": "public/salaries/employers/town-of-ladysmith.json.gzip",
-      "bytes": 3092,
-      "sha256": "89333373b9a6695c7998d53861921390208db701962071b15dd91fae1f2bded5"
+      "bytes": 3102,
+      "sha256": "88e6876733c330e7cdbc50afdf6725fe4c41b4597dd99c7da8b2405bdfee258e"
     },
     {
       "path": "public/salaries/employers/town-of-lake-cowichan.json.gzip",
       "bytes": 965,
-      "sha256": "5a86dbed025fe4ddc84441041459f5516dffa3dcf6020c8ee318fca00b050b87"
+      "sha256": "bfa0cf2afb48a55cbe15b8df8c6eecab171624ecc05fcfdf9fe7828e37541eb8"
     },
     {
       "path": "public/salaries/employers/town-of-port-mcneill.json.gzip",
       "bytes": 321,
-      "sha256": "97731660a9935ec0f80fc8397b1e43ce26ff003b448725d753f9544346f616df"
+      "sha256": "80f7f59f8b196d16b150552bbda4f9c6acbc37597810e69e8bfb1111c7684f9e"
     },
     {
       "path": "public/salaries/employers/town-of-princeton.json.gzip",
-      "bytes": 1376,
-      "sha256": "1c8bc465ec7a83fec08e58347d4c67469ce818e461157591e79b389200139b04"
+      "bytes": 1377,
+      "sha256": "ebb4a6976699e2773e2f622b8ace22a149f657e8fd9a2197f10a81061499bcee"
     },
     {
       "path": "public/salaries/employers/town-of-sidney.json.gzip",
-      "bytes": 4117,
-      "sha256": "6913799dd15b8db58a5d0c94dce32094b3e43f4db51f18dc36eb2d605c5591eb"
+      "bytes": 4118,
+      "sha256": "60672cf42134f2b7fc8e4aaffd9dc486e78bcf4c75824f2fa9ad70fda883ff09"
     },
     {
       "path": "public/salaries/employers/town-of-smithers.json.gzip",
       "bytes": 729,
-      "sha256": "f1b4cf171d2f6830d122d62eb900b2e867f40d10b6264a1eb21acbaa75054d5b"
+      "sha256": "9969262c1b306eb18137b13b1350d9d00526e0dbb7764b3b1e173255feb4d11d"
     },
     {
       "path": "public/salaries/employers/town-of-view-royal.json.gzip",
-      "bytes": 1214,
-      "sha256": "9c6f28504799b8b6adcf92537954be1c6a4efce52c2ce650498d55c2773f8426"
+      "bytes": 1213,
+      "sha256": "51356916752ab02b87d4d539639c447e2afea439634c62494e779e29fef42db7"
     },
     {
       "path": "public/salaries/employers/township-of-esquimalt.json.gzip",
       "bytes": 2119,
-      "sha256": "73bae6b02dd28d1097b66e1a84a1a01f4f4733d987dfdbe409fb9b88b2c42f64"
+      "sha256": "204ca99548adcf8580939c32b449a074904f82e3f7de9b7153d97158c6928132"
     },
     {
       "path": "public/salaries/employers/transit-police.json.gzip",
-      "bytes": 6423,
-      "sha256": "3e815118dd127461941cd6f1a14766c18762a7bd7534d3ba48c64584a7f0004c"
+      "bytes": 6422,
+      "sha256": "a7ac61ab1be276eb2f3c8c68d01a7724748d561c7782642205737c9918a4f117"
     },
     {
       "path": "public/salaries/employers/translink.json.gzip",
-      "bytes": 169435,
-      "sha256": "7c8a823c1c97f83ccc626d32559b45578c953276231996b16360e0bc298275ee"
+      "bytes": 169398,
+      "sha256": "f9ed92b99b0d250cfd59a71d3409f4af766f0068edd136f57970a707e1eebadf"
     },
     {
       "path": "public/salaries/employers/transportation-investment-corporation.json.gzip",
-      "bytes": 3532,
-      "sha256": "83f7963ba1b517bb065348c63ee17b4171abc0336d50e97f5fe62ef498e72bb0"
+      "bytes": 3533,
+      "sha256": "d896867e91b294ba2abd007f6a2c81e74ddbddc0cf6238aa74b3783a6e6c70e1"
     },
     {
       "path": "public/salaries/employers/university-of-bc.json.gzip",
-      "bytes": 340450,
-      "sha256": "90dbba9acefae2862fa91abf5df6404117f72fa57331c2be7b6f952f1aa45557"
+      "bytes": 340495,
+      "sha256": "662a7a2d486aef989e7bdb2c33227fd47f46ff2c98706ece32eb9df9a0d4238c"
     },
     {
       "path": "public/salaries/employers/university-of-northern-bc.json.gzip",
-      "bytes": 30796,
-      "sha256": "a539dc1e21ce781ad77b3475b51df8474900942502c172b675b9237ed51bf654"
+      "bytes": 30780,
+      "sha256": "a86fca0f93c10465e56ebd55affb5c6bd0d9367ad13c1f0f2115c92063a3f4aa"
     },
     {
       "path": "public/salaries/employers/university-of-the-fraser-valley.json.gzip",
-      "bytes": 25234,
-      "sha256": "d64c0042253e65a88a1240b5e23d15bd8d559dc0f00b1b587e50bbb8969cc05b"
+      "bytes": 72671,
+      "sha256": "339eb7fa9e7454222f4fb0dcd77804d914d36e3aedaa7c2eaa868638eb53b165"
     },
     {
       "path": "public/salaries/employers/university-of-victoria.json.gzip",
-      "bytes": 82229,
-      "sha256": "7ea4cbc76c599c57451389a5098f88faf40f78b37703dc06608a1d21ec6d5921"
+      "bytes": 82247,
+      "sha256": "f29d130c89af810fb6bebe3689e91d31d6588a9afa352b3e066170da644d0c19"
     },
     {
       "path": "public/salaries/employers/vancouver-coastal-health.json.gzip",
-      "bytes": 393234,
-      "sha256": "31ed3aaa732034314b1f63cd24e7d91dccd33acb5e360a31a244832c8fd8ccb7"
+      "bytes": 393267,
+      "sha256": "386a299967617d797d877f43bba72611c7b489a81d17b6641e54941c5dda8d13"
     },
     {
       "path": "public/salaries/employers/vancouver-community-college.json.gzip",
-      "bytes": 19560,
-      "sha256": "8dfa017b3a69fedf2986a62d9b6e7df3825618b4d3834651a79649aec1c5f43d"
+      "bytes": 19554,
+      "sha256": "febd75b929be6c20b2164f8ac239351b53fdfa32ac3435c0120f21cd470b5517"
     },
     {
       "path": "public/salaries/employers/vancouver-island-university.json.gzip",
-      "bytes": 27891,
-      "sha256": "6567292cfc0d51b96bd4347c38cd9ceb4f61801947450aea7cf7e238d745720d"
+      "bytes": 55581,
+      "sha256": "e8ffd478719a76d0c4855983600b3ed0106be125a9c92858774be54f27771ae9"
     },
     {
       "path": "public/salaries/employers/vancouver-police.json.gzip",
-      "bytes": 35777,
-      "sha256": "a596cc27bba5b4261cae9da88d2eb79dca87e5f441133e0f2895c1eca9c2f6b4"
+      "bytes": 38008,
+      "sha256": "1fe4d04cafd6b0ded5e2d83d2af7ad7504beb20a0aaa5594302ef03149d8d4bc"
     },
     {
       "path": "public/salaries/employers/vancouver-school-district.json.gzip",
-      "bytes": 111502,
-      "sha256": "8065757127c8aa89096b4849d68f87a34b92dff1931ae76a8ea6a8ec6253354b"
+      "bytes": 111514,
+      "sha256": "0c1bdc7619e89994903ab06e3c09c0c4b738ad813ea553d34781c74ec12866b6"
     },
     {
       "path": "public/salaries/employers/victoria-police.json.gzip",
-      "bytes": 6390,
-      "sha256": "e33df8a8b2d475ac6dde1780e4eb05092ceef21b268aec332ed5e7850f00b3aa"
+      "bytes": 6385,
+      "sha256": "77c24043c3324ac493b686a718a05eca9e29c295a7ec70835726910517c514d5"
     },
     {
       "path": "public/salaries/employers/village-of-anmore.json.gzip",
-      "bytes": 991,
-      "sha256": "b38546f677e614a212d9dbcf65314b7422c6164b114e54a4ead7774f674e82fd"
+      "bytes": 992,
+      "sha256": "80a3845a419c99abe31ac7f0ce5ec05e894673fe7aeed4545dc6f0fa24b5af95"
     },
     {
       "path": "public/salaries/employers/village-of-belcarra.json.gzip",
-      "bytes": 1512,
-      "sha256": "4cb2b82a82f34cf082eab7168c9af6c9a3a9e8fe5f8eb9cf4646ea65317c6272"
+      "bytes": 1514,
+      "sha256": "bc8f7b6ec7ac5613fd9792f86090be9011bb947392191417fab32bd6bb799883"
     },
     {
       "path": "public/salaries/employers/village-of-burns-lake.json.gzip",
-      "bytes": 540,
-      "sha256": "5fd066857577aabab69308c8d35bcb538008dfcece41b177ca5bdc9a786019f6"
+      "bytes": 541,
+      "sha256": "7532d35480dc85a45ecb3f0c2fc9152fb45a1f252c40e97c05a07ac5882fa8ab"
     },
     {
       "path": "public/salaries/employers/village-of-cache-creek.json.gzip",
-      "bytes": 403,
-      "sha256": "31ef9c535d67056ea726b5147db9a2f2dd60ae6479c2bad7e614a3530cb8113a"
+      "bytes": 404,
+      "sha256": "557e0d7b344a301dfdcb3fe06cfa00233e777d523708d18cfbefe0df7b45510d"
     },
     {
       "path": "public/salaries/employers/village-of-clinton.json.gzip",
-      "bytes": 342,
-      "sha256": "471be6cf6439195f36bcc14f70acb17df4c004d02432528e48380a763e337d84"
+      "bytes": 341,
+      "sha256": "0a8e1562bf47c161d7f4bd03e7d075a40ce150198ba9203dd21ebbaf8036b69f"
     },
     {
       "path": "public/salaries/employers/village-of-cumberland.json.gzip",
-      "bytes": 3071,
-      "sha256": "a00ff07475d15146ea7203d341317472e85ca892d134bf5af49c0fe586f886e9"
+      "bytes": 3068,
+      "sha256": "9ab5e736037c3a0e69ff20c9309857e74c4547ea57cc81a27bbb72c836a19222"
+    },
+    {
+      "path": "public/salaries/employers/village-of-fraser-lake.json.gzip",
+      "bytes": 487,
+      "sha256": "0db5d20058e282db20cbee208f1e0b2c28e619dd91b5b9d68d7d1b130c55c94d"
     },
     {
       "path": "public/salaries/employers/village-of-fruitvale.json.gzip",
       "bytes": 351,
-      "sha256": "3c057a6b5f84e7e55da1eb3e8218b5b96db28906e05a33fc27e869bc4556ed40"
+      "sha256": "36247b8a3ddabf23ea3ceaf81f8fdda72fb80206ce48a97954ff02adb7052d30"
     },
     {
       "path": "public/salaries/employers/village-of-gold-river.json.gzip",
       "bytes": 359,
-      "sha256": "0a30d5c78630392bb33482a7e9a30679770133f20c5e7fc40568543f99ce0fd7"
+      "sha256": "ed1ad11be2c0284d141e3c622651e28cba22db54f924c97c0c83e28aae0c1fbf"
     },
     {
       "path": "public/salaries/employers/village-of-harrison-hot-springs.json.gzip",
-      "bytes": 721,
-      "sha256": "726b13273e61004463eab2dabd96e3bd972121bce47e7bb08c9eda12c5db117c"
+      "bytes": 722,
+      "sha256": "4a38c26118fab2c3d408f0fd8a322d79f714fbc18b76b59d8c566a9a1f12de6c"
     },
     {
       "path": "public/salaries/employers/village-of-hazelton.json.gzip",
       "bytes": 287,
-      "sha256": "41ce3035a07ef6e6cdd6d7ef19c23beea5b2668ae1dc8ecb2ba5890b273166d0"
+      "sha256": "3191f2e24cc5c6a1a7e52cfaa02f6adc45ebf9c918e8ec13f5a8f25602948c58"
     },
     {
       "path": "public/salaries/employers/village-of-lions-bay.json.gzip",
       "bytes": 921,
-      "sha256": "19fc618fdfc6dcb14071e5c2f141242a5c9edfd162ed16e41fece6dd6f5c382c"
+      "sha256": "33b4ad747b8dbadd74861655d4dd812c5b4133f8cb3d8ab39e092bec7f2999af"
     },
     {
       "path": "public/salaries/employers/village-of-lytton.json.gzip",
       "bytes": 494,
-      "sha256": "1daa7421d8c93000e60c6546c8bb80978c56342bdd77d6e7142f320c0e7f85d9"
+      "sha256": "257ee2c1a97968e89c9072a5ac02562eda819eb82c4566cc7cea8a16ff04f496"
     },
     {
       "path": "public/salaries/employers/village-of-montrose.json.gzip",
       "bytes": 309,
-      "sha256": "8da2e37abe610189a0627dc36db75cc55dd55c8d139d1018a219784b295177bb"
+      "sha256": "4194e6e8bd6c9bc252975f339cc6d0e412569e6054f2c8b7c98c830a7f3eb862"
     },
     {
       "path": "public/salaries/employers/village-of-nakusp.json.gzip",
       "bytes": 462,
-      "sha256": "a458fbf073e0fbd21ab19c9970dd38b773c6159fa2d586356a0a6fd90a4de8ae"
+      "sha256": "ee6accd8c33878e280f79155f8355a23ef16104161eda5f6e8c52b13854a9496"
     },
     {
       "path": "public/salaries/employers/village-of-new-denver.json.gzip",
       "bytes": 233,
-      "sha256": "f0ec27c0b5435331967ae74b89792fac854e3a55224175dab330bb7581fcee1f"
+      "sha256": "ae973d22bd8483bcd53e9dc742ef9bd0a9c0707ef11f0e2bd7e253aeafd823cc"
     },
     {
       "path": "public/salaries/employers/village-of-pemberton.json.gzip",
-      "bytes": 1612,
-      "sha256": "154cc7aa4b21f487fb770dabbce03eaff02a84209a9bda9771a564cf15697518"
+      "bytes": 1613,
+      "sha256": "1568720dea1a6d189e59d9ce267c4da3f2fffd0211f5a2e0719b651f377ee116"
     },
     {
       "path": "public/salaries/employers/village-of-port-clements.json.gzip",
       "bytes": 213,
-      "sha256": "543b5de7217da512f2209658680e2dccc7ed2c4aa92aa6db7a0d4c68f363c53d"
+      "sha256": "a05cf82dfbf3b8712fdaa99365d3341c7fa6e43bade0df45d8d04fb5f1457b89"
     },
     {
       "path": "public/salaries/employers/village-of-salmo.json.gzip",
       "bytes": 264,
-      "sha256": "b1de4afd73a4c7479d55fbf8640e2b0711e48fe0732e7f13f7f8f6d05a16b900"
+      "sha256": "f29990977915ec3730d9c02bc7614bc5b2b281f0475c49aa45f45e4627e2ca50"
     },
     {
       "path": "public/salaries/employers/village-of-sayward.json.gzip",
-      "bytes": 575,
-      "sha256": "bbdd6377efddec1531bf0288ae6d79d840ef6c0f8318d16199d5941636eb777b"
+      "bytes": 576,
+      "sha256": "7cdaf3305eb15a593ae8d83e8562dba2d3de2747668eb591f9312f3e0ac690d1"
     },
     {
       "path": "public/salaries/employers/village-of-tahsis.json.gzip",
-      "bytes": 864,
-      "sha256": "9ac024bc2b4c1a01030cb157c5bc618151057614c7eae988d1f1fbf6efbd8d85"
+      "bytes": 867,
+      "sha256": "b05483c9fc812ea33596bdfacc2ff73e1924d566b91b3c1e7c15c9fc5db2916d"
     },
     {
       "path": "public/salaries/employers/village-of-telkwa.json.gzip",
       "bytes": 408,
-      "sha256": "b37183329d7fcd9c54759fe9c2c41e1b7d08aac92d34a34e351fab80f3feefc2"
+      "sha256": "b0d9dab68ca76299ac07f15c71fa4e4fed8e8a1ae16423ecaf4fd34bc13e59ca"
     },
     {
       "path": "public/salaries/employers/village-of-valemount.json.gzip",
       "bytes": 322,
-      "sha256": "a59f361f21a29ee15c53e3154c28efc9fd3bacff5109f8fc605b29f77e60cfba"
+      "sha256": "2cc7aba4c48e7593a6d7c843246be31ce7ffdd66f66c5aa86ad6311dfe6d433b"
     },
     {
       "path": "public/salaries/employers/west-vancouver-school-district.json.gzip",
-      "bytes": 12657,
-      "sha256": "b6d0a6aaa8a12f8b601b040f3347f40beb98b2fe0344355bbb2f5c405fcb84af"
+      "bytes": 12653,
+      "sha256": "0057846c46a3f736b1f658a74488fc381172eeb980f84f24214fa08be57913ad"
     },
     {
       "path": "public/salaries/employers/workers-compensation-board.json.gzip",
-      "bytes": 107808,
-      "sha256": "cc9cd6b3a23cee03f5b9c076fd9327f26aab13e1ca96f06b114d00d216bc6106"
+      "bytes": 107795,
+      "sha256": "64ba8c0b707bddf97144aeda1860ac2fe1c42a67bce7cdbcffa9e037b7fb5781"
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 3051956,
-      "sha256": "93fb8d2f11dad2b3b94be9f3c953c8c9d7c4528134f9260e1b8dc088a0ff283b"
+      "bytes": 3947498,
+      "sha256": "29b57bed1a7ee69887ebd464d8c0473437a50e96b773c180f7309e5cd6593c19"
     }
   ]
 }

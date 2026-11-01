@@ -1,25 +1,25 @@
 {
   "version": 1,
-  "asOf": "2026-10-31",
+  "asOf": "2026-11-01",
   "timezone": "America/Vancouver",
-  "baselineCommit": "13404c715149de060b754285f1f0720ff910ab79",
+  "baselineCommit": "68bb4f7905e657338abc5fce192b15c568720710",
   "baseline": {
-    "records": 926228,
-    "officialRecords": 682435,
-    "compiledRecords": 243793,
-    "employers": 206,
-    "availableEmployerYears": 786
+    "records": 1010217,
+    "officialRecords": 777254,
+    "compiledRecords": 232963,
+    "employers": 239,
+    "availableEmployerYears": 939
   },
   "proposed": {
-    "records": 926855,
-    "officialRecords": 683243,
-    "compiledRecords": 243612,
-    "employers": 206,
-    "availableEmployerYears": 790
+    "records": 1010644,
+    "officialRecords": 777862,
+    "compiledRecords": 232782,
+    "employers": 239,
+    "availableEmployerYears": 942
   },
-  "officialRowsAdded": 808,
+  "officialRowsAdded": 608,
   "compiledRowsReplaced": 181,
-  "netRowsAdded": 627,
+  "netRowsAdded": 427,
   "importedSources": [
     {
       "sourceId": "north-island-college-sofi-2018-19-employees",
@@ -56,20 +56,25 @@
       "sourceSha256": "598caa417c3963e40a48af17d05ab860c02ae75cc901727ad092fa5ca98e762a",
       "dataSha256": "712d83d053861abcf979430521acb916e2b10844750b61e599ce7849d33c4324",
       "publicWarning": null
-    },
-    {
-      "sourceId": "north-island-college-sofi-2024-25-employees",
-      "year": "2024/25",
-      "rows": 200,
-      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2024-25.pdf",
-      "sourceSha256": "13ba3ce3742b8487ffedb14a945f340eaf09f27d9f94bbe084d9162546445b8e",
-      "dataSha256": "0a379cf616879e1003f3773216717e9c973a6d905f444e8397e32649b39714ca",
-      "publicWarning": null
     }
   ],
   "notes": [
     "North Island College additions are independently verified original-source imports, not copied Sunshine Lists salary rows.",
     "The partial external reference contains three employer summaries and no annual count observations.",
-    "The already merged municipal history additions are in the baseline, not counted as this release."
+    "The PR #34 expansion is already included in the baseline. Its 200 FY2024/25 NIC observations match every source field and remain published once under their existing source ID.",
+    "Four newly published cohorts add 608 official observations and replace 181 compiled FY2023/24 observations, for 427 net additions."
+  ],
+  "alreadyPublishedRowsVerified": 200,
+  "verificationOnlySources": [
+    {
+      "id": "north-island-college-sofi-2024-25-employees",
+      "year": "2024/25",
+      "rowCount": 200,
+      "sha256": "13ba3ce3742b8487ffedb14a945f340eaf09f27d9f94bbe084d9162546445b8e",
+      "dataSha256": "0a379cf616879e1003f3773216717e9c973a6d905f444e8397e32649b39714ca",
+      "publishedCollection": "continuation-education/supplemental",
+      "publishedSourceId": "north-island-sofi-2024-25-employees",
+      "publishedDataSha256": "0a379cf616879e1003f3773216717e9c973a6d905f444e8397e32649b39714ca"
+    }
   ]
 }

@@ -305,10 +305,10 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const filtered = Boolean(range) || sector !== 'all'
   const layout = place.layout === 'table' ? 'table' : 'cards'
   const periodCounts = years.map((_, at) => employersIndex.employers.reduce((sum, entry) => sum + (entry.counts[at] ?? 0), 0))
-  // Records whose employer and period come from the employer's own published report, not the
-  // retained compilation.
+  // Count individual official rows even when the same period also retains compiled records.
+  // Older indexes lack recordCounts and use the previous period-level estimate.
   const compiled = new Set(Object.entries(employersIndex.sources ?? {}).filter(([, source]) => source.scope === 'compiled-unverified' || source.sourceKind === 'compiled').map(([id]) => id))
-  const official = employersIndex.employers.reduce((sum, entry) => sum + entry.coverage.reduce((part, cell, at) => part + (cell?.status === 'available' && !(cell.sourceIds ?? []).some((id) => compiled.has(id)) ? entry.counts[at] : 0), 0), 0)
+  const official = employersIndex.recordCounts?.official ?? employersIndex.employers.reduce((sum, entry) => sum + entry.coverage.reduce((part, cell, at) => part + (cell?.status === 'available' && !(cell.sourceIds ?? []).some((id) => compiled.has(id)) ? entry.counts[at] : 0), 0), 0)
 
   return (
     <div className="salaries">

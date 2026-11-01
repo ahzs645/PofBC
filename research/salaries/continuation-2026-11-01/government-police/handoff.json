@@ -1,0 +1,1472 @@
+{
+  "auditDate": "2026-11-01",
+  "auditTimezone": "America/Vancouver",
+  "collection": "research/salaries/continuation-government-police/sources.json",
+  "verifiedCohorts": 32,
+  "verifiedRows": 22471,
+  "heldCohorts": 0,
+  "heldRows": 0,
+  "allCandidateRows": 22471,
+  "uniqueOriginals": 25,
+  "newEmployerIdentities": [
+    "alberni-clayoquot-regional-district",
+    "regional-district-of-east-kootenay"
+  ],
+  "newEmployerIdentityQualification": "Both new regional-district employer identities have verified employee cohorts; neither replaces compiled data.",
+  "rosterEntries": 45,
+  "regionalDistricts": 27,
+  "compiledPoliceEmployers": 13,
+  "queueTaskCount": 64,
+  "queueRoutes": {
+    "processing": 39,
+    "public-archive-research": 13,
+    "clarification-request": 12
+  },
+  "compiledReplacements": [],
+  "compiledReplacementReason": "Historical public-service fiscal labels do not overlap baseline compiled2017/18,2020/21,2023/24. Calendar executive-only police observations do not establish compiled fiscal workforce equivalence. No board/council/executive rows are deleted.",
+  "frozenPayloadsAndEvidence": true,
+  "sourceMetadataMayChangeOnlyForDocumentedPeerReviewDecision": true,
+  "sourceMetadataFrozen": true,
+  "originalVerification": "python scripts/continue_government_police.py --verify-originals --cache /tmp/continuation-government-police",
+  "offlineReplay": "python scripts/continue_government_police.py --check-data",
+  "regressionTests": "python scripts/test_continue_government_police.py",
+  "sourceReceipts": [
+    {
+      "sourceId": "continuation-government-police-public-service-1999-00-employees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "1999/00",
+      "category": "employee-remuneration",
+      "rowCount": 963,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "8cf063150b697c1fa309964b06ffb76e888dcda15edfd3b0e5140082d7e0bedd",
+      "originalCachePath": "/tmp/continuation-government-police/pa-1999-00.pdf",
+      "file": "continuation-government-police-public-service-1999-00-employees.json.gzip",
+      "dataSha256": "7d5499e67e2f732ddffa657abd9abf4dab5341d0fefdf1be140f5744ec02223f",
+      "evidenceFile": "evidence/continuation-government-police-public-service-1999-00-employees.json.gzip",
+      "evidenceSha256": "718089a5d2baf044a26f81529ef45bfd6add4db4c3419f18fd100315760d28aa",
+      "physicalPages": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 5,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 80048,
+          "publishedDollars": 80048000,
+          "rowSum": 80048214,
+          "residualDollars": 214,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 5,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 5778,
+          "publishedDollars": 5778000,
+          "rowSum": 5777815,
+          "residualDollars": -185,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "publicWarning": "Travel blank cells are not disclosed and remain missing.",
+      "renderedReview": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2000-01-employees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2000/01",
+      "category": "employee-remuneration",
+      "rowCount": 1137,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "ce4e9e971db8db090e71230e2b5ce5472467209f2b737fd05db04b6dbd429fe5",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2000-01.pdf",
+      "file": "continuation-government-police-public-service-2000-01-employees.json.gzip",
+      "dataSha256": "e6d824cfe0e6de37456e919d69543efc5d658c5b84bf977bc8b9bba312f37412",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2000-01-employees.json.gzip",
+      "evidenceSha256": "6b4f82f7582474c9126b506d4a680526d9e54d93bff9c36724c2cb5c71130d41",
+      "physicalPages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 5,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 88864,
+          "publishedDollars": 88864000,
+          "rowSum": 95837081,
+          "residualDollars": 6973081,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 5,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 6767,
+          "publishedDollars": 6767000,
+          "rowSum": 6767042,
+          "residualDollars": 42,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "publicWarning": "Travel blank cells are not disclosed and remain missing. Source-control disagreement: remuneration named-cell sum $95837081 versus printed summary $88864000, residual $6973081. Values are unchanged; cause unresolved.",
+      "renderedReview": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2001-02-employees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2001/02",
+      "category": "employee-remuneration",
+      "rowCount": 1706,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "3815ac29fe378fde536155ec7121013c98a81e06c311537ce255d30f3ee6f4f2",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2001-02.pdf",
+      "file": "continuation-government-police-public-service-2001-02-employees.json.gzip",
+      "dataSha256": "9fe7d90880279dd226babf9c0ca490f697f91c43f6c5e9c81ca826c8c8b760dd",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2001-02-employees.json.gzip",
+      "evidenceSha256": "1dfa21e2c0b9e233f625c375022a4db68caae26cd9f44badf93dedca3099e5dc",
+      "physicalPages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 145459,
+          "publishedDollars": 145459000,
+          "rowSum": 145459401,
+          "residualDollars": 401,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 7815,
+          "publishedDollars": 7815000,
+          "rowSum": 7817360,
+          "residualDollars": 2360,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "publicWarning": "Travel blank cells are not disclosed and remain missing. Source-control disagreement: expenses named-cell sum $7817360 versus printed summary $7815000, residual $2360. Values are unchanged; cause unresolved.",
+      "renderedReview": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2002-03-employees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2002/03",
+      "category": "employee-remuneration",
+      "rowCount": 1957,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "df3d0103ff42c7190ef73455fa69c3ebd9dae92a458f90fd5846579a9daa16a8",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2002-03.pdf",
+      "file": "continuation-government-police-public-service-2002-03-employees.json.gzip",
+      "dataSha256": "1dd69b74b91ea5b35edfbd24249d9d9642100799421f583c4b7378de63e9d4da",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2002-03-employees.json.gzip",
+      "evidenceSha256": "c4f9ef5ccc3d9bd87b1757bf79c93c14d5b457424fa555ecc650593fe9df8fef",
+      "physicalPages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 171648,
+          "publishedDollars": 171648000,
+          "rowSum": 171231079,
+          "residualDollars": -416921,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 10068,
+          "publishedDollars": 10068000,
+          "rowSum": 10049544,
+          "residualDollars": -18456,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "publicWarning": "Travel blank cells are not disclosed and remain missing. Source-control disagreement: remuneration named-cell sum $171231079 versus printed summary $171648000, residual $-416921; expenses named-cell sum $10049544 versus printed summary $10068000, residual $-18456. Values are unchanged; cause unresolved.",
+      "renderedReview": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2003-04-employees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2003/04",
+      "category": "employee-remuneration",
+      "rowCount": 2551,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "0038ca624a5522e5b995ff10f3feff886c2d3d7bc07d2996b22c153896d13a59",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2003-04.pdf",
+      "file": "continuation-government-police-public-service-2003-04-employees.json.gzip",
+      "dataSha256": "540acad63d3e6dee6ff0c088006e2c2961d5298bc8e3eb77486d68d2c69a70ca",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2003-04-employees.json.gzip",
+      "evidenceSha256": "5364663f1ec1ba76a29ae56fe8cc2b034d1aba6ec593ed741c12785850802cf0",
+      "physicalPages": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 224503,
+          "publishedDollars": 224503000,
+          "rowSum": 224503285,
+          "residualDollars": 285,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "publicWarning": "Salary-only employee schedule; separate travel disclosures are not joined. Expenses are unavailable in this cohort.",
+      "renderedReview": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2004-05-employees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2004/05",
+      "category": "employee-remuneration",
+      "rowCount": 2525,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "5ee4fcd4567abc869520acf7f3d2022da9f256a5da6fd398fa1ca88d4d26c7f0",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2004-05.pdf",
+      "file": "continuation-government-police-public-service-2004-05-employees.json.gzip",
+      "dataSha256": "ada16497ee64b00565fee04254d140fe8519aa589270443e312cf3aa2ff86761",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2004-05-employees.json.gzip",
+      "evidenceSha256": "0b97181e23fe2061cfccb58b78b5ef10351d52fd7bfc005e6c0e2e6daf322edb",
+      "physicalPages": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 222222,
+          "publishedDollars": 222222000,
+          "rowSum": 222221766,
+          "residualDollars": -234,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "publicWarning": "Salary-only employee schedule; separate travel disclosures are not joined. Expenses are unavailable in this cohort.",
+      "renderedReview": null
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2005-06-employees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2005/06",
+      "category": "employee-remuneration",
+      "rowCount": 2611,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "2028c0f92d245043fd4b98438b50cbc817993c02e189c9cdd08dec074b5366ca",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2005-06.pdf",
+      "file": "continuation-government-police-public-service-2005-06-employees.json.gzip",
+      "dataSha256": "6ed96196c98e5bb588f5f682c6f876187c6b63f79e74dc776be6e93732d1ec30",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2005-06-employees.json.gzip",
+      "evidenceSha256": "37695ab549f865b0a6a791722f91eff5f36e216c2b8b58de703ca7799e87aa26",
+      "physicalPages": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Other Employees earning $75 thousand or more",
+          "publishedThousands": 231695,
+          "publishedDollars": 231695000,
+          "rowSum": 231695047,
+          "residualDollars": 47,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual row is adjusted."
+        }
+      ],
+      "publicWarning": "Salary-only employee schedule; separate travel disclosures are not joined. Expenses are unavailable in this cohort.",
+      "renderedReview": null
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2024-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2024",
+      "category": "executive-only",
+      "rowCount": 13,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2025/04/foi-2024-vpd-executive-remuneration.pdf",
+      "originalSha256": "03d232767990321cd8b7d7454a94b91493c1c71ba1900f81caa2286a18f5384a",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2024.pdf",
+      "file": "continuation-government-police-vancouver-police-2024-executives.json.gzip",
+      "dataSha256": "807c7665e4570b7be230ed02d1f63b01e364c43bda43740b0bed7df45d5b9cff",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2024-executives.json.gzip",
+      "evidenceSha256": "a600d5351dd56265e1e29d80f275f27c351a5a125c62e07a0c7231ae1787a0c7",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2023-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2023",
+      "category": "executive-only",
+      "rowCount": 13,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2024/04/vancouver-police-executive-remuneration-and-expenses-2023.pdf",
+      "originalSha256": "d1b8acecaee9f742f9eefc31251fca3948d3a022a68709c2836c0572657ccffb",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2023.pdf",
+      "file": "continuation-government-police-vancouver-police-2023-executives.json.gzip",
+      "dataSha256": "2f8acedb3572ebf4f42b5120389596ade6fbd4d78b543ae3a07e79631820cc9a",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2023-executives.json.gzip",
+      "evidenceSha256": "e2697dcb232f16332220bd414c5f247ecf76a534025360b6f2f285878cf1579c",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2022-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2022",
+      "category": "executive-only",
+      "rowCount": 16,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2023/03/vancouver-police-executive-remuneration-and-expenses-2022.pdf",
+      "originalSha256": "330106a327c0e428622eddbe2e6d3a276280bfda5ba5d543aa7147b48ccb2064",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2022.pdf",
+      "file": "continuation-government-police-vancouver-police-2022-executives.json.gzip",
+      "dataSha256": "05a64ede2de9e22aa57a9e3f82e1bdfcf15b7b38c4ede714308a13caaec33daa",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2022-executives.json.gzip",
+      "evidenceSha256": "eba812941612f9176a870e6e2d1d1ab1a3f4ffffc75694607970a53f15c0e05b",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2021-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2021",
+      "category": "executive-only",
+      "rowCount": 19,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2022/03/2021Dec31-VPB-Executive-Remuneration-Expenses.pdf",
+      "originalSha256": "f0cd7b847799818adbaf37af139ef7c313172d6c8660f26ed1c4ae28a220cb93",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2021.pdf",
+      "file": "continuation-government-police-vancouver-police-2021-executives.json.gzip",
+      "dataSha256": "499410c8417c4b9286ed0e07a9c27d144a91211f7db17a366cb297da2b88d0bd",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2021-executives.json.gzip",
+      "evidenceSha256": "467f5dcf3a7babd2dcef37ead0c067389a6ec779e454894a5cf8f43f17c4ee9c",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort. Expense dashes remain missing.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2020-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2020",
+      "category": "executive-only",
+      "rowCount": 15,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/vpd-executive-remuneration-and-expenses-2020.pdf",
+      "originalSha256": "8cfbc85643283534ab17ffe7bf677314a50d50b8b7c8a4d08be95998f36c7a3f",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2020.pdf",
+      "file": "continuation-government-police-vancouver-police-2020-executives.json.gzip",
+      "dataSha256": "45cd08bdcbbf6ecd914fc8dbc5613c8e7cc5bd4093f2e0655960090a6b7a6906",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2020-executives.json.gzip",
+      "evidenceSha256": "17cd22c5ddf9b604225252c5a6d89a6978d269dda501eab3af7466dc70ffd16e",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort. Expense dashes remain missing.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2019-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2019",
+      "category": "executive-only",
+      "rowCount": 13,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2019-executive-remuneration-and-expenses.pdf",
+      "originalSha256": "b4ee1a274e9a3b46ce58142f616ca1c79d3476755a49c3c151c9d001fdfd566d",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2019.pdf",
+      "file": "continuation-government-police-vancouver-police-2019-executives.json.gzip",
+      "dataSha256": "e7ad7ff509ab1a7ad20fe08a19174923c1a289aac90a978225f1581544ac003f",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2019-executives.json.gzip",
+      "evidenceSha256": "77b1636d3fff569f8eac0fd1cc2b81d68080935f66c997285babf5d64cb7fa0e",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort. Expense dashes remain missing.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2018-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2018",
+      "category": "executive-only",
+      "rowCount": 12,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2018-executive-remuneration-and-expenses.pdf",
+      "originalSha256": "7cb812d542ff85b6a2e2c3c6dcbdb4683724359361dc278da3226395ac7c8da3",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2018.pdf",
+      "file": "continuation-government-police-vancouver-police-2018-executives.json.gzip",
+      "dataSha256": "0e84c124e8574064321af55ed05fca9e46214988ed3a81d71cd5af8989eb4bda",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2018-executives.json.gzip",
+      "evidenceSha256": "eaab8288d7c02db61ddedac1bdf3e38609d600992b0f49cbefeaf19f270b9f7f",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2017-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2017",
+      "category": "executive-only",
+      "rowCount": 15,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2017-executive-remuneration-and-expenses.pdf",
+      "originalSha256": "e2da5ef18a15408e796c48afd867df9ffd22524cb1c8d2838009a6bd6bee052b",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2017.pdf",
+      "file": "continuation-government-police-vancouver-police-2017-executives.json.gzip",
+      "dataSha256": "d358fae62b5ee15977499857137abad4ff5887084152ccc9c6e7b1bcf9aa8112",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2017-executives.json.gzip",
+      "evidenceSha256": "0cf82b3d0187889c273b9ca67db0ede0f2f7e6944c4cbe8d0025fdde93577fe0",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2016-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2016",
+      "category": "executive-only",
+      "rowCount": 11,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2016-executive-remuneration.pdf",
+      "originalSha256": "1f0adb7528b6c892166a47f1eba597632a937a601eca0f4556ecea6bc2bc3a10",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2016.pdf",
+      "file": "continuation-government-police-vancouver-police-2016-executives.json.gzip",
+      "dataSha256": "22a3053c63ee2e1edc1ec69daca8aa6976eb85f28c98e97093af0ee37e2276a6",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2016-executives.json.gzip",
+      "evidenceSha256": "200d91fa0e36c3a59b618d17939c2fc160b6bffbc2f5fdae778f82e351bf7560",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-vancouver-police-2015-executives",
+      "status": "verified",
+      "employerSlug": "vancouver-police",
+      "year": "2015",
+      "category": "executive-only",
+      "rowCount": 15,
+      "sourceUrl": "https://vpd.ca/wp-content/uploads/2021/06/2015-vpd-executive-remuneration-1.pdf",
+      "originalSha256": "1e26751d79756a0917527c65a3efbcba7bf30a64eea6570fee7b5352a8412f0d",
+      "originalCachePath": "/tmp/continuation-government-police/vancouver-police-2015.pdf",
+      "file": "continuation-government-police-vancouver-police-2015-executives.json.gzip",
+      "dataSha256": "433e8050d3ca31d2f2bee844adca7054bb70941af45123a53be8a6d34514ea62",
+      "evidenceFile": "evidence/continuation-government-police-vancouver-police-2015-executives.json.gzip",
+      "evidenceSha256": "98dfbcea14422d9d1a65e29db70c7ab88001aeaf72f8b1cc05d6df34ba23dccf",
+      "physicalPages": [
+        1
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [],
+      "publicWarning": "Executive-only disclosure; workforce coverage is unavailable in this cohort. Expense dashes remain missing.",
+      "renderedReview": {
+        "physicalPages": [
+          1
+        ],
+        "coverage": "Complete original one-page schedule, every row and all headers/notes visually reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-alberni-clayoquot-2025-employees",
+      "status": "verified",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "year": "2025",
+      "category": "employee-remuneration",
+      "rowCount": 36,
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/2026/acrd_sofi_2025.pdf",
+      "originalSha256": "97816b7e34fbcfb84f4b73e799f690a9b92ca817102d6b301e07a8a4f241d645",
+      "originalCachePath": "/tmp/continuation-government-police/regional-acrd-0.pdf",
+      "file": "continuation-government-police-alberni-clayoquot-2025-employees.json.gzip",
+      "dataSha256": "0b3a5b39202bdc90ca4e07ed4133db7af183c1e140b1fc54fb578f85ef0901c1",
+      "evidenceFile": "evidence/continuation-government-police-alberni-clayoquot-2025-employees.json.gzip",
+      "evidenceSha256": "0e9d6067016082a8d261a871103a9e0ccbb6387f3270c35d27a4345153f35108",
+      "physicalPages": [
+        35,
+        36
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            36
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 4823083,
+          "publishedUnderThreshold": 984006,
+          "namedRowSum": 3839079,
+          "fullScheduleKnownSum": 4823085,
+          "residualDollars": 2
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            36
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 176442,
+          "publishedUnderThreshold": 28756,
+          "namedRowSum": 147368,
+          "fullScheduleKnownSum": 176124,
+          "residualDollars": -318
+        }
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort. Source-control residuals (named rows + published under-threshold aggregate − published total): remuneration $+2; expenses $-318. Individual cells are unchanged; causes are unresolved.",
+      "renderedReview": {
+        "physicalPages": [
+          35,
+          36
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-alberni-clayoquot-2024-employees",
+      "status": "verified",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "year": "2024",
+      "category": "employee-remuneration",
+      "rowCount": 31,
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/2025/acrd_sofi_2024.pdf",
+      "originalSha256": "abfe338bcfe8853cc111475ea2e5072422bc365525b5491859a7aefb119bf727",
+      "originalCachePath": "/tmp/continuation-government-police/regional-acrd-1.pdf",
+      "file": "continuation-government-police-alberni-clayoquot-2024-employees.json.gzip",
+      "dataSha256": "087cfeb05201884aacb369aa10d722b48c2f4c1e6679fddbdf43ddf59531a246",
+      "evidenceFile": "evidence/continuation-government-police-alberni-clayoquot-2024-employees.json.gzip",
+      "evidenceSha256": "00689c24eb2fdc4fe2d7f18c218634ce0bd1411174356db5a54faf7bac1e998d",
+      "physicalPages": [
+        32
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            32,
+            33
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 4664451,
+          "publishedUnderThreshold": 1265748,
+          "namedRowSum": 3398703,
+          "fullScheduleKnownSum": 4664451,
+          "residualDollars": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            32,
+            33
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 154162,
+          "publishedUnderThreshold": 39646,
+          "namedRowSum": 114516,
+          "fullScheduleKnownSum": 154162,
+          "residualDollars": 0
+        }
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort.",
+      "renderedReview": {
+        "physicalPages": [
+          32,
+          33
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-alberni-clayoquot-2023-employees",
+      "status": "verified",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "year": "2023",
+      "category": "employee-remuneration",
+      "rowCount": 26,
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/2024/acrd_sofi_2023.pdf",
+      "originalSha256": "761edd8bf9605535eab4927930a9ca54c41676802e34372bfedbd9ba497a4b3b",
+      "originalCachePath": "/tmp/continuation-government-police/regional-acrd-2.pdf",
+      "file": "continuation-government-police-alberni-clayoquot-2023-employees.json.gzip",
+      "dataSha256": "fcc5e2b9942df3ea54c03123648bea158b9220646fe16e7395481514e4eb8a59",
+      "evidenceFile": "evidence/continuation-government-police-alberni-clayoquot-2023-employees.json.gzip",
+      "evidenceSha256": "4b05c6b6071bbef29abc207a11ef8d28f33cdf99d3d5b4dc4d1890f7879745f0",
+      "physicalPages": [
+        34
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            34
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 4032396,
+          "publishedUnderThreshold": 1303986,
+          "namedRowSum": 2728410,
+          "fullScheduleKnownSum": 4032396,
+          "residualDollars": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            34
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 127077,
+          "publishedUnderThreshold": 42607,
+          "namedRowSum": 84470,
+          "fullScheduleKnownSum": 127077,
+          "residualDollars": 0
+        }
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort.",
+      "renderedReview": {
+        "physicalPages": [
+          34
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-alberni-clayoquot-2020-employees",
+      "status": "verified",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "year": "2020",
+      "category": "employee-remuneration",
+      "rowCount": 14,
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/sofi2020.pdf",
+      "originalSha256": "e9ac93b3075337814f6fb592116054bac712994362b2673ad762323999046cd7",
+      "originalCachePath": "/tmp/continuation-government-police/regional-acrd-5.pdf",
+      "file": "continuation-government-police-alberni-clayoquot-2020-employees.json.gzip",
+      "dataSha256": "2a3e729f8ff2209a3a1ea71782b59a02e7210649c02bddcba5734d958b6df1ac",
+      "evidenceFile": "evidence/continuation-government-police-alberni-clayoquot-2020-employees.json.gzip",
+      "evidenceSha256": "bbd8ae1227c5b2417010ceede27d916c0d8a43bebd6e3f5247506e327ba1be6b",
+      "physicalPages": [
+        28
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            28
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 2612019,
+          "publishedUnderThreshold": 1156710,
+          "namedRowSum": 1455308,
+          "fullScheduleKnownSum": 2612018,
+          "residualDollars": -1
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            28
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 50596,
+          "publishedUnderThreshold": 19653,
+          "namedRowSum": 31000,
+          "fullScheduleKnownSum": 50653,
+          "residualDollars": 57
+        }
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort. Source-control residuals (named rows + published under-threshold aggregate − published total): remuneration $-1; expenses $+57. Individual cells are unchanged; causes are unresolved.",
+      "renderedReview": {
+        "physicalPages": [
+          28
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-alberni-clayoquot-2019-employees",
+      "status": "verified",
+      "employerSlug": "alberni-clayoquot-regional-district",
+      "year": "2019",
+      "category": "employee-remuneration",
+      "rowCount": 15,
+      "sourceUrl": "https://www.acrd.bc.ca/dms/documents/finance/sofi2019.pdf",
+      "originalSha256": "9265475d5c0fdb30366adb3d4694685170456d736d441bbb199e353d1d91912e",
+      "originalCachePath": "/tmp/continuation-government-police/regional-acrd-6.pdf",
+      "file": "continuation-government-police-alberni-clayoquot-2019-employees.json.gzip",
+      "dataSha256": "5095604687e38fb043a520bcfcdf817ab7146c52570e829947b80cb92c16d24f",
+      "evidenceFile": "evidence/continuation-government-police-alberni-clayoquot-2019-employees.json.gzip",
+      "evidenceSha256": "59f07d0d949c82985a95166a4093d709d2bce0b549487dd875501feb8eb48a23",
+      "physicalPages": [
+        27
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPages": [
+            27
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 2502878,
+          "publishedUnderThreshold": 984621,
+          "namedRowSum": 1518257,
+          "fullScheduleKnownSum": 2502878,
+          "residualDollars": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPages": [
+            27
+          ],
+          "scope": "All Other Employees; named rows plus published consolidated under-threshold aggregate",
+          "publishedTotal": 84730,
+          "publishedUnderThreshold": 20687,
+          "namedRowSum": 64044,
+          "fullScheduleKnownSum": 84731,
+          "residualDollars": 1
+        }
+      ],
+      "publicWarning": "Employee remuneration disclosure above $75,000; governing-board/director payments are outside this cohort. Source-control residuals (named rows + published under-threshold aggregate − published total): expenses $+1. Individual cells are unchanged; causes are unresolved.",
+      "renderedReview": {
+        "physicalPages": [
+          27
+        ],
+        "coverage": "Complete original employee schedule and control/reconciliation pages, every named row and all wrapped names/titles reviewed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-1999-00-appointees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "1999/00",
+      "category": "appointee-remuneration",
+      "rowCount": 1341,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "8cf063150b697c1fa309964b06ffb76e888dcda15edfd3b0e5140082d7e0bedd",
+      "originalCachePath": "/tmp/continuation-government-police/pa-1999-00.pdf",
+      "file": "continuation-government-police-public-service-1999-00-appointees.json.gzip",
+      "dataSha256": "5ed469bef77daa3bb545273925e45ebe0dfba1001c16e5626d33cbf39ef66676",
+      "evidenceFile": "evidence/continuation-government-police-public-service-1999-00-appointees.json.gzip",
+      "evidenceSha256": "c3003393ebb9349a8abae438f4c2fe9c7bf99d596fc895d9a704d514e509f9c3",
+      "physicalPages": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 5,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 74063,
+          "publishedDollars": 74063000,
+          "rowSum": 74063235,
+          "residualDollars": 235,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 5,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 5047,
+          "publishedDollars": 5047000,
+          "rowSum": 5033718,
+          "residualDollars": -13282,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Source-control disagreement: expenses named-cell sum $5033718 versus printed summary $5047000, residual $-13282. Values are unchanged; cause unresolved.",
+      "renderedReview": {
+        "physicalPages": [],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2000-01-appointees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2000/01",
+      "category": "appointee-remuneration",
+      "rowCount": 1318,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "ce4e9e971db8db090e71230e2b5ce5472467209f2b737fd05db04b6dbd429fe5",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2000-01.pdf",
+      "file": "continuation-government-police-public-service-2000-01-appointees.json.gzip",
+      "dataSha256": "b98d8f08a5c7f1e3fa24a1285d14e139dc9cb2d070c558befd5079444975f902",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2000-01-appointees.json.gzip",
+      "evidenceSha256": "80a1390eb0034a965df5f650d3cfb5e1866190509ccac8c52dbd5d228f0d9865",
+      "physicalPages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 5,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 74551,
+          "publishedDollars": 74551000,
+          "rowSum": 74550784,
+          "residualDollars": -216,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 5,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 4846,
+          "publishedDollars": 4846000,
+          "rowSum": 4845746,
+          "residualDollars": -254,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Literal negative salary cells retained: Carroll, P $-984; Davis, B D $-2410. The original provides no explanation; none is inferred.",
+      "renderedReview": {
+        "physicalPages": [
+          11
+        ],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2001-02-appointees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2001/02",
+      "category": "appointee-remuneration",
+      "rowCount": 1351,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "3815ac29fe378fde536155ec7121013c98a81e06c311537ce255d30f3ee6f4f2",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2001-02.pdf",
+      "file": "continuation-government-police-public-service-2001-02-appointees.json.gzip",
+      "dataSha256": "eea94d74d358bf9dd4d04121e56b5c631f34d2b75993567295aa9895543eb723",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2001-02-appointees.json.gzip",
+      "evidenceSha256": "916a7e22b4e2208b09a9fd0ab9e9de091d25efb9d095b1f5ab222c448cbb2de1",
+      "physicalPages": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 76692,
+          "publishedDollars": 76692000,
+          "rowSum": 76691830,
+          "residualDollars": -170,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 3935,
+          "publishedDollars": 3935000,
+          "rowSum": 3941901,
+          "residualDollars": 6901,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Source-control disagreement: expenses named-cell sum $3941901 versus printed summary $3935000, residual $6901. Values are unchanged; cause unresolved. Literal negative salary cells retained: CULLEN, A F $-1334; SONDHEIM, D $-5193. The original provides no explanation; none is inferred.",
+      "renderedReview": {
+        "physicalPages": [
+          13,
+          18
+        ],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2002-03-appointees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2002/03",
+      "category": "appointee-remuneration",
+      "rowCount": 1339,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "df3d0103ff42c7190ef73455fa69c3ebd9dae92a458f90fd5846579a9daa16a8",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2002-03.pdf",
+      "file": "continuation-government-police-public-service-2002-03-appointees.json.gzip",
+      "dataSha256": "09bcc1e0abe8f23236793e63095b7292cab846cb2e60469dfa8b79f7e3585c78",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2002-03-appointees.json.gzip",
+      "evidenceSha256": "d024478ebedd35aea157ed2a23036c045298d2b41cdb865bf90c2db78783ec97",
+      "physicalPages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 81951,
+          "publishedDollars": 81951000,
+          "rowSum": 81951415,
+          "residualDollars": 415,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 4200,
+          "publishedDollars": 4200000,
+          "rowSum": 4200290,
+          "residualDollars": 290,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Physical11 publishes DELAUNAY-BELLEVILLE K A across two lines without a comma; the original punctuation is retained.",
+      "renderedReview": {
+        "physicalPages": [
+          11
+        ],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2003-04-appointees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2003/04",
+      "category": "appointee-remuneration",
+      "rowCount": 1075,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "0038ca624a5522e5b995ff10f3feff886c2d3d7bc07d2996b22c153896d13a59",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2003-04.pdf",
+      "file": "continuation-government-police-public-service-2003-04-appointees.json.gzip",
+      "dataSha256": "3f4205010c2fbe2c4a5f4a5993b33dbec62576539fb93a6b69c9f3fe98443f8b",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2003-04-appointees.json.gzip",
+      "evidenceSha256": "9a2080d4a945e174517e546595a8546c6695a7612eed9087a88a13d5118e4947",
+      "physicalPages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 6,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 75505,
+          "publishedDollars": 75505000,
+          "rowSum": 75398888,
+          "residualDollars": -106112,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing. Source-control disagreement: remuneration named-cell sum $75398888 versus printed summary $75505000, residual $-106112. Values are unchanged; cause unresolved.",
+      "renderedReview": {
+        "physicalPages": [
+          11
+        ],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2004-05-appointees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2004/05",
+      "category": "appointee-remuneration",
+      "rowCount": 1083,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "5ee4fcd4567abc869520acf7f3d2022da9f256a5da6fd398fa1ca88d4d26c7f0",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2004-05.pdf",
+      "file": "continuation-government-police-public-service-2004-05-appointees.json.gzip",
+      "dataSha256": "d6404688235ac98a906bcc10b1a7b81a6b5d75cd22d2349b6e8a2e525bf242e1",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2004-05-appointees.json.gzip",
+      "evidenceSha256": "7bf3540c520ee49b6733a8ffd1e02afcae65561eaf78ba55f5b8628e7aa6fa0b",
+      "physicalPages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 78637,
+          "publishedDollars": 78637000,
+          "rowSum": 78637177,
+          "residualDollars": 177,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing.",
+      "renderedReview": {
+        "physicalPages": [],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-public-service-2005-06-appointees",
+      "status": "verified",
+      "employerSlug": "public-service",
+      "year": "2005/06",
+      "category": "appointee-remuneration",
+      "rowCount": 1095,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-detailed-schedules-of-payments.pdf",
+      "originalSha256": "2028c0f92d245043fd4b98438b50cbc817993c02e189c9cdd08dec074b5366ca",
+      "originalCachePath": "/tmp/continuation-government-police/pa-2005-06.pdf",
+      "file": "continuation-government-police-public-service-2005-06-appointees.json.gzip",
+      "dataSha256": "5ea7b7b48012c386b18fd6ccf1bcdfa99123a0f8bca9202f678c46b293e1061d",
+      "evidenceFile": "evidence/continuation-government-police-public-service-2005-06-appointees.json.gzip",
+      "evidenceSha256": "63f2562f98dc923996a1c7d4a918fea6bd20d4b92863727bff13d47949a069d0",
+      "physicalPages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "completeEmployeeSchedule": false,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Order-in-Council, Other Appointees and Employees not Appointed under the Public Service Act",
+          "publishedThousands": 80374,
+          "publishedDollars": 80374000,
+          "rowSum": 80373799,
+          "residualDollars": -201,
+          "sourceUnit": "thousands of dollars",
+          "comparison": "The source summary is in thousands; no individual cell is adjusted."
+        }
+      ],
+      "publicWarning": "Appointee and non-Public-Service-Act salary disclosure; distinct from the Other Employees workforce table. Travel blanks and unavailable expenses remain missing.",
+      "renderedReview": {
+        "physicalPages": [],
+        "coverage": "All negative-payment cells and wrapped/no-comma surname anomalies visually reviewed; complete native table independently reproduced by PyMuPDF and PDFMiner. No whole-volume visual census claimed.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-east-kootenay-2025-employees",
+      "status": "verified",
+      "employerSlug": "regional-district-of-east-kootenay",
+      "year": "2025",
+      "category": "employee-remuneration",
+      "rowCount": 56,
+      "sourceUrl": "https://www.rdek.bc.ca/web/FinancialPlan/SOFI_2025_-_signed.pdf",
+      "originalSha256": "e09254560935598c3dba90e31cfb6245dab37fed49f7c2e597ed7ef0a34e5260",
+      "originalCachePath": "/tmp/continuation-government-police/regional-east-kootenay-0.pdf",
+      "file": "continuation-government-police-east-kootenay-2025-employees.json.gzip",
+      "dataSha256": "da689aa352c485f3a9ecd6c3d55d93d7d6c12487fb48ff57541b3711dbc8362e",
+      "evidenceFile": "evidence/continuation-government-police-east-kootenay-2025-employees.json.gzip",
+      "evidenceSha256": "7b146638315971e3ad14d1969be37416cf52a0d8779a03ffb0cc2c199c298839",
+      "physicalPages": [
+        6,
+        7
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 5958322,
+          "rowSum": 5958324,
+          "residualDollars": 2,
+          "sourceUnit": "dollars",
+          "missingCells": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 7,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 24942,
+          "rowSum": 25067,
+          "residualDollars": 125,
+          "sourceUnit": "dollars",
+          "missingCells": 18
+        }
+      ],
+      "publicWarning": "Surname-only employee disclosure; original provides no given names. Expense dashes remain unknown. Employer-paid benefit aggregates are excluded from individual earnings. Named known-cell sums differ from published over-threshold employee controls: remuneration $+2; expenses $+125. Values and literal surname spellings are unchanged; causes are unresolved. Expense sums compare known cells only and do not turn dashes into zero.",
+      "renderedReview": {
+        "physicalPages": [
+          6,
+          7
+        ],
+        "coverage": "Complete employee, control, footnote and separate aggregate benefits scope reviewed visually for every named row.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-east-kootenay-2024-employees",
+      "status": "verified",
+      "employerSlug": "regional-district-of-east-kootenay",
+      "year": "2024",
+      "category": "employee-remuneration",
+      "rowCount": 52,
+      "sourceUrl": "https://www.rdek.bc.ca/web/FinancialPlan/2024/2024_SOFI_Report.pdf",
+      "originalSha256": "9b4d20d845619994b8661eccc37e6c2c29c9efe06fd8505393a580c20e48322a",
+      "originalCachePath": "/tmp/continuation-government-police/regional-east-kootenay-1.pdf",
+      "file": "continuation-government-police-east-kootenay-2024-employees.json.gzip",
+      "dataSha256": "ae9d7743d1485b118f3e09cf4b9359c6b99cf3bb1356988337a952132fb6d598",
+      "evidenceFile": "evidence/continuation-government-police-east-kootenay-2024-employees.json.gzip",
+      "evidenceSha256": "248686b3d87f08ee5b93f05c1e62e5c32fdeb78f322933603934bdf3ff1fe936",
+      "physicalPages": [
+        7,
+        8
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 8,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 5606800,
+          "rowSum": 5606802,
+          "residualDollars": 2,
+          "sourceUnit": "dollars",
+          "missingCells": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 8,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 20998,
+          "rowSum": 21374,
+          "residualDollars": 376,
+          "sourceUnit": "dollars",
+          "missingCells": 19
+        }
+      ],
+      "publicWarning": "Surname-only employee disclosure; original provides no given names. Expense dashes remain unknown. Employer-paid benefit aggregates are excluded from individual earnings. Named known-cell sums differ from published over-threshold employee controls: remuneration $+2; expenses $+376. Values and literal surname spellings are unchanged; causes are unresolved. Expense sums compare known cells only and do not turn dashes into zero.",
+      "renderedReview": {
+        "physicalPages": [
+          7,
+          8
+        ],
+        "coverage": "Complete employee, control, footnote and separate aggregate benefits scope reviewed visually for every named row.",
+        "reviewDate": "2026-11-01"
+      }
+    },
+    {
+      "sourceId": "continuation-government-police-east-kootenay-2023-employees",
+      "status": "verified",
+      "employerSlug": "regional-district-of-east-kootenay",
+      "year": "2023",
+      "category": "employee-remuneration",
+      "rowCount": 47,
+      "sourceUrl": "https://www.rdek.bc.ca/web/FinancialPlan/2023_Statement_of_Financial_Information.pdf",
+      "originalSha256": "a425b90193d1ea9a79b48c94922953ea251a40b88d9a42d6cbd208246c521ab2",
+      "originalCachePath": "/tmp/continuation-government-police/regional-east-kootenay-2.pdf",
+      "file": "continuation-government-police-east-kootenay-2023-employees.json.gzip",
+      "dataSha256": "30feefd96c2c964264a36ff59e6cb7cd271c76970089370c72afa02705aaceee",
+      "evidenceFile": "evidence/continuation-government-police-east-kootenay-2023-employees.json.gzip",
+      "evidenceSha256": "443cea9b9529e5842dc42705e9e672feb818c9aa7af0a880d4f45894c2c86271",
+      "physicalPages": [
+        6,
+        7
+      ],
+      "completeEmployeeSchedule": true,
+      "printedControls": [
+        {
+          "field": "remuneration",
+          "pdfPage": 7,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 4940053,
+          "rowSum": 4940051,
+          "residualDollars": -2,
+          "sourceUnit": "dollars",
+          "missingCells": 0
+        },
+        {
+          "field": "expenses",
+          "pdfPage": 7,
+          "scope": "Named Employee Gross Earnings (over$75,000) only; excludes under-threshold and aggregate employer benefits",
+          "publishedDollars": 31988,
+          "rowSum": 35988,
+          "residualDollars": 4000,
+          "sourceUnit": "dollars",
+          "missingCells": 18
+        }
+      ],
+      "publicWarning": "Surname-only employee disclosure; original provides no given names. Expense dashes remain unknown. Employer-paid benefit aggregates are excluded from individual earnings. Named known-cell sums differ from published over-threshold employee controls: remuneration $-2; expenses $+4000. Values and literal surname spellings are unchanged; causes are unresolved. Expense sums compare known cells only and do not turn dashes into zero.",
+      "renderedReview": {
+        "physicalPages": [
+          6,
+          7
+        ],
+        "coverage": "Complete employee, control, footnote and separate aggregate benefits scope reviewed visually for every named row.",
+        "reviewDate": "2026-11-01"
+      }
+    }
+  ]
+}

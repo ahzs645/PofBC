@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { gzipSync, gunzipSync } from 'node:zlib'
 import { spawnSync } from 'node:child_process'
-import { csvRows, money, sumMoney, median, duplicateStats, repeatedCandidates, sha256, validateReplacementScopes, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections } from './lib/salary-data.mjs'
+import { csvRows, money, sumMoney, median, duplicateStats, repeatedCandidates, sha256, validateReplacementScopes, compiledPartitionsToRetain, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 import { employerSector, employerSlug, canonicalSlug } from './lib/salary-employers.mjs'
 
@@ -266,6 +266,43 @@ test('partial executive imports cannot erase an employee disclosure without a re
   assert.doesNotThrow(() => validateReplacementScopes(before, after, { executives: { scope: 'employee-remuneration' } }))
   assert.throws(() => validateReplacementScopes(before, after, { executives: { scope: 'employee-remuneration', completeEmployeeSchedule: false } }), /partial disclosure/)
   assert.doesNotThrow(() => validateReplacementScopes(before, after, { executives: { scope: 'executive-only' } }, [{ kind: 'replace-partition-scope', employer: 'bcit', year: '2020/21', sourceIds: ['executives'], reason: 'Reviewed replacement scope.' }]))
+})
+
+test('partial sources may retain a compiled partition only with both completeness guards and a visible warning', () => {
+  const official = [{ slug: 'college', year: '2023/24', sourceId: 'partial' }]
+  const partial = { retainCompiledPartition: true, completeEmployeeSchedule: false, validation: { completeEmployeeSchedule: false, compiledPartitionRetained: true, compiledPartitionRetentionReason: 'Original excludes employee categories present in the compiled partition.' }, publicWarning: 'Excluded board-member employees and severance; the compiled partition is retained.' }
+  assert.deepEqual([...compiledPartitionsToRetain(official, { partial })], ['college|2023/24'])
+  assert.doesNotThrow(() => validateReplacementScopes([{ slug: 'college', year: '2023/24' }], official, { partial }))
+  for (const source of [{ ...partial, publicWarning: null }, { ...partial, completeEmployeeSchedule: true }, { ...partial, validation: {} }]) {
+    assert.throws(() => compiledPartitionsToRetain(official, { partial: source }), /explicit scope qualification/)
+  }
+  const completeEmployees = { ...partial, completeEmployeeSchedule: true, validation: { ...partial.validation, completeEmployeeSchedule: true, compiledPartitionRetentionReason: 'Complete employees do not establish the scope of compiled board records.' } }
+  assert.doesNotThrow(() => validateReplacementScopes([{ slug: 'college', year: '2023/24' }], official, { partial: completeEmployees }))
+})
+
+test('a partial original and retained compiled rows remain in all views of the same period', () => {
+  const f = fixture()
+  try {
+    const source = f.manifest.sources[0]
+    Object.assign(source, { year: '2017/18', periodStart: '2017-04-01', periodEnd: '2018-03-31', retainCompiledPartition: true, completeEmployeeSchedule: false, validation: { completeEmployeeSchedule: false, compiledPartitionRetained: true, compiledPartitionRetentionReason: 'Original excludes a payment category; compiled scope remains unresolved.' }, publicWarning: 'Partial employee schedule: original excludes a payment category; retained compiled records may overlap.' })
+    writeFileSync(join(f.sourceDir, 'sources.json'), JSON.stringify(f.manifest))
+    const result = f.run()
+    assert.equal(result.status, 0, result.stderr)
+    const employers = JSON.parse(readFileSync(join(f.out, 'employers/index.json')))
+    const year = employers.years.indexOf('2017/18')
+    assert.equal(employers.employers[0].counts[year], 2)
+    assert.deepEqual(employers.recordCounts, { official: 1, compiled: 1 })
+    assert.equal(employers.sources[source.id].retainCompiledPartition, true)
+    assert.equal(employers.sources[source.id].completeEmployeeSchedule, false)
+    assert.equal(employers.sources[source.id].publicWarning, source.publicWarning)
+    const atlas = JSON.parse(readFileSync(join(f.out, '2017-18/bc-hydro.json')))
+    assert.deepEqual(atlas.rows.map((row) => row[2]).sort((a, b) => a - b), [90000, 122528.25])
+    const people = JSON.parse(readFileSync(join(f.out, 'people/index.json')))
+    assert.equal(people.sources[source.id].retainCompiledPartition, true)
+    const audit = JSON.parse(readFileSync(join(f.out, 'coverage.json')))
+    assert.equal(audit.officialRows, 1)
+    assert.equal(audit.legacyRowsRetained, 1)
+  } finally { rmSync(f.dir, { recursive: true, force: true }) }
 })
 
 test('employee and elected cohorts in one report retain distinct source-catalog entries', () => {
