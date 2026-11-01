@@ -42,6 +42,7 @@ test('missing or excluded employer data cannot imply no employment', () => {
 
 test('scope and exact period come from evidence, never the collection label', () => {
   assert.equal(scopeLabel('executive-only'), 'Executive compensation only')
+  assert.equal(scopeLabel('school-trustees'), 'School trustee remuneration')
   assert.match(scopeLabel('mixed-disclosure'), /Combined/)
   assert.equal(scopeLabel('deputy-minister-remuneration'), 'Deputy minister remuneration')
   assert.equal(scopeLabel('appointee-remuneration'), 'Order in Council appointee remuneration')

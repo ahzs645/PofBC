@@ -1,0 +1,774 @@
+[
+  {
+    "id": "crowns-bc-assessment",
+    "employerSlug": "bc-assessment",
+    "employerName": "B.C. Assessment",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2020",
+      "2021-01-01/2022-03-31",
+      "2022/23",
+      "2023/24",
+      "2024/25"
+    ],
+    "sourceUrl": "https://info.bcassessment.ca/about/Publications/Statements%20and%20Schedules%20of%20Financial%20Information%202020.pdf",
+    "sourceIndexUrl": "https://info.bcassessment.ca/about/Pages/Annual-Reports.aspx",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Five originals recovered: calendar2020; a15-month period endedMarch31,2022; and2022/23–2024/25. The15-month schedule needs exact period support; no annualization."
+  },
+  {
+    "id": "crowns-bc-council-for-international-education",
+    "employerSlug": "bc-council-for-international-education",
+    "employerName": "B.C. Council for International Education",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "current and historical years held; exact periods to establish"
+    ],
+    "sourceUrl": "https://bccie.bc.ca/wp-content/uploads/2023/09/Audited-Financial-Statements-2022-2023.pdf",
+    "sourceIndexUrl": "https://bccie.bc.ca/about/corporate-reports/",
+    "status": "named-employee-source-not-located",
+    "route": "ordinary-records-request",
+    "nextAction": "Request existing published SOFI employee remuneration schedules and their native spreadsheets, with reporting dates, for historical years held by the agency.",
+    "reason": "Published corporate/financial statements located, but a named employee SOFI schedule has not been located. The retrieved 2022/23 audited statements are image-only, not a verified salary source."
+  },
+  {
+    "id": "crowns-bc-energy-regulator",
+    "employerSlug": "bc-energy-regulator",
+    "employerName": "B.C. Energy Regulator",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2006/07",
+      "2007/08",
+      "2008/09",
+      "2009/10",
+      "2010/11",
+      "2011/12",
+      "2012/13",
+      "2013/14",
+      "2014/15",
+      "2015/16",
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "sourceUrl": "https://www.bc-er.ca/files/reports/Financial-Information-Act/Fiscal-2025-26-Financial-Information-Act-Report.pdf",
+    "sourceIndexUrl": "https://www.bc-er.ca/data-reports/reports/?topic=42",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official source explains Oil and Gas Commission renamed BCER in2023; shared archive includes both names. Preserve document-period employer identity until central canonicalization review."
+  },
+  {
+    "id": "crowns-bc-ferries",
+    "employerSlug": "bc-ferries",
+    "employerName": "B.C. Ferries",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "current and historical years held; exact periods to establish"
+    ],
+    "sourceUrl": "https://www.bcferries.com",
+    "sourceIndexUrl": "https://www.bcferries.com",
+    "status": "named-employee-source-not-located",
+    "route": "ordinary-records-request",
+    "nextAction": "Ask for an existing publicly releasable named remuneration dataset or historical disclosure schedule; confirm the appropriate records-access route before treating this as an FOI request.",
+    "reason": "Annual reports and executive disclosure routes located; no all-employee schedule located. Provincial guidance explicitly distinguishes BC Ferries from the ordinary FIA requirement. FOI applicability is not established by this audit."
+  },
+  {
+    "id": "crowns-bc-financial-services-authority",
+    "employerSlug": "bc-financial-services-authority",
+    "employerName": "B.C. Financial Services Authority",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "sourceUrl": "https://www.bcfsa.ca/media/4946/download",
+    "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-bc-housing",
+    "employerSlug": "bc-housing",
+    "employerName": "B.C. Housing",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://www.bchousing.org/sites/default/files/media/documents/BC-Housing-Management-Commission-Statement-of-Financial-Information-2025.pdf",
+    "sourceIndexUrl": "https://www.bchousing.org/about/corporate-reports-plans",
+    "status": "first-ocr-reading-staged",
+    "route": "processing",
+    "nextAction": "Complete a second OCR reading and full field-by-field visual review of physical pages10–27 (exclude board physical9); verify cohort boundaries, year and printed pay/expense controls. No staged OCR row is accepted.",
+    "reason": "2024/25 original has42image-only pages. First OCR reading is staged for cover/index/approval and full employee-schedule physical pages10–27 (physical9 is board members); no rows accepted.2023/24 original is native text."
+  },
+  {
+    "id": "crowns-bc-hydro",
+    "employerSlug": "bc-hydro",
+    "employerName": "BC Hydro and Power Authority",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/f2025-financial-information-act-return.pdf",
+    "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+    "status": "existing-official-coverage-with-history-gaps",
+    "route": "public-archive-research",
+    "nextAction": "Compare archive index and exact registered source IDs; retrieve only uncovered reporting periods, then perform source-specific row and control verification.",
+    "reason": "Already accepted original sources exist; current discovery is an archive/history lead only. Avoid duplicate registration of accepted source files."
+  },
+  {
+    "id": "crowns-bc-infrastructure-benefits",
+    "employerSlug": "bc-infrastructure-benefits",
+    "employerName": "B.C. Infrastructure Benefits",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25"
+    ],
+    "sourceUrl": "https://bcib.ca/wp-content/uploads/BCIB-Statement-of-Financial-Information-FY2025.pdf",
+    "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-bc-investment-management-corporation",
+    "employerSlug": "bc-investment-management-corporation",
+    "employerName": "B.C. Investment Management Corporation (BCI)",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "current and historical years held; exact periods to establish"
+    ],
+    "sourceUrl": "https://www.bci.ca/",
+    "sourceIndexUrl": "https://www.bci.ca/",
+    "status": "named-employee-source-not-located",
+    "route": "ordinary-records-request",
+    "nextAction": "Ask for an existing publicly releasable historical named remuneration disclosure; retain executive-only records as a distinct scope and confirm any formal access route before filing.",
+    "reason": "Executive reports exist and some are already staged separately, but no all-employee schedule was located. Provincial guidance distinguishes BCI from ordinary FIA disclosure."
+  },
+  {
+    "id": "crowns-bc-pavilion-corporation",
+    "employerSlug": "bc-pavilion-corporation",
+    "employerName": "B.C. Pavilion Corporation",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://www.bcpavco.com/pdfs/PavCo%20FY25%20FIA%20Report.pdf",
+    "sourceIndexUrl": "https://www.bcpavco.com/resources/reports/",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-bc-pension-corporation",
+    "employerSlug": "bc-pension-corporation",
+    "employerName": "B.C. Pension Corp.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "current and historical years held; exact periods to establish"
+    ],
+    "sourceUrl": "https://www.bcpensioncorp.ca/",
+    "sourceIndexUrl": "https://www.bcpensioncorp.ca/",
+    "status": "named-employee-source-not-located",
+    "route": "ordinary-records-request",
+    "nextAction": "Request the already prepared employee remuneration schedules and original spreadsheets for current and historical years; identify the ordinary publication/archive route first.",
+    "reason": "Annual reports and executive compensation are located, including existing separate executive staging. Named all-employee SOFI schedules were not found in the checked publications routes."
+  },
+  {
+    "id": "crowns-bc-securities-commission",
+    "employerSlug": "bc-securities-commission",
+    "employerName": "B.C. Securities Commission",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://www.bcsc.bc.ca/-/media/PWS/New-Resources/About/What-We-Do/Funding-and-Accountability/Financial-Information-Act-Report-2026.pdf",
+    "sourceIndexUrl": "https://www.bcsc.bc.ca/about/what-we-do/funding-accountability",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-bc-transit",
+    "employerSlug": "bc-transit",
+    "employerName": "B.C. Transit",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2015/16"
+    ],
+    "sourceUrl": "https://www.bctransit.com/wp-content/uploads/2026/09/BC-Transit-Statement-of-Financial-Information-2026-Final-with-Financial-Statements.pdf",
+    "sourceIndexUrl": "https://www.bctransit.com/about/corporate-reports/financial/",
+    "status": "existing-official-coverage-with-history-gaps",
+    "route": "public-archive-research",
+    "nextAction": "Compare archive index and exact registered source IDs; retrieve only uncovered reporting periods, then perform source-specific row and control verification.",
+    "reason": "Already accepted original sources exist; current discovery is an archive/history lead only. Avoid duplicate registration of accepted source files."
+  },
+  {
+    "id": "crowns-bc-utilities-commission",
+    "employerSlug": "bc-utilities-commission",
+    "employerName": "B.C. Utilities Commission",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "current and historical years held; exact periods to establish"
+    ],
+    "sourceUrl": "https://www.bcuc.com/",
+    "sourceIndexUrl": "https://www.bcuc.com/",
+    "status": "named-employee-source-not-located",
+    "route": "public-archive-research",
+    "nextAction": "Recover the official plans/annual report archive and inspect salary/public-accounts overlap; if still unavailable, identify the records custodian and request the existing named disclosure schedule.",
+    "reason": "Direct official website/index requests returned HTTP403; search results found proceedings and annual-report navigation but no verified employee schedule. This is not evidence that no report exists."
+  },
+  {
+    "id": "crowns-bclc",
+    "employerSlug": "bclc",
+    "employerName": "B.C. Lottery Corporation (BCLC)",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2009/10",
+      "2010/11",
+      "2011/12",
+      "2012/13",
+      "2013/14",
+      "2014/15",
+      "2015/16",
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "sourceUrl": "https://corporate.bclc.com/content/dam/bclccorporate/reports/accountability/2026/bclc-financial-information-act-fy2026.pdf",
+    "sourceIndexUrl": "https://corporate.bclc.com/our-business/reports---disclosures/all-reports.html?filter=null",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-columbia-basin-trust",
+    "employerSlug": "columbia-basin-trust",
+    "employerName": "Columbia Basin Trust",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2025/26"
+    ],
+    "sourceUrl": "https://ourtrust.org/wp-content/uploads/2026/09/TRUST_SOFI_2026_FINAL.pdf",
+    "sourceIndexUrl": "https://ourtrust.org/publication/page/2/",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-columbia-power",
+    "employerSlug": "columbia-power",
+    "employerName": "Columbia Power Corporation",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2025/26"
+    ],
+    "sourceUrl": "https://columbiapower.org/wp-content/uploads/2026/09/CPC_SOFI_2026_Province.pdf",
+    "sourceIndexUrl": "https://columbiapower.org/about/company/finance/",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-community-living-bc",
+    "employerSlug": "community-living-bc",
+    "employerName": "Community Living B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://www.communitylivingbc.ca/wp-content/uploads/CLBC-FIA-Report-F25.pdf",
+    "sourceIndexUrl": "https://www.communitylivingbc.ca/about-us/corporate-reports/financial-reports/",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-destination-bc",
+    "employerSlug": "destination-bc",
+    "employerName": "Destination B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "sourceUrl": "https://www.destinationbc.ca/content/uploads/2023/11/SOFIs-Reporting-2022-23-FINAL-signed.pdf",
+    "sourceIndexUrl": "https://www.destinationbc.ca/who-we-are/corporate-document/",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-first-peoples-cultural-council",
+    "employerSlug": "first-peoples-cultural-council",
+    "employerName": "First Peoples’ Heritage, Language and Culture Council",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://fpcc.ca/wp-content/uploads/2026/10/Annual-Statement-of-Financial-Information-2026.pdf",
+    "sourceIndexUrl": "https://www.fpcc.ca",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official archive labels SOFI reports2008–2026. All19 original files retrieved; older financial-statement text does not prove the employee schedule has a usable text layer. Determine each salary table’s OCR needs separately."
+  },
+  {
+    "id": "crowns-forest-enhancement-society",
+    "employerSlug": "forest-enhancement-society",
+    "employerName": "Forest Enhancement Society of B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "current and historical years held; exact periods to establish"
+    ],
+    "sourceUrl": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2024_2025/pdf/agency/fesbc.pdf",
+    "sourceIndexUrl": "https://fesbc.ca/reports/",
+    "status": "named-employee-source-not-located",
+    "route": "ordinary-records-request",
+    "nextAction": "Request existing named employee remuneration schedules and historical native files, separately identifying employees, secondments and contractor payments.",
+    "reason": "The checked 2024/25 financial-statement note publishes aggregate remuneration for employees, secondments and a contractor; it does not identify those individuals. Aggregate payroll must not become salary rows."
+  },
+  {
+    "id": "crowns-forestry-innovation-investment",
+    "employerSlug": "forestry-innovation-investment",
+    "employerName": "Forestry Innovation Investsment",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2024/25"
+    ],
+    "sourceUrl": "https://www.bcfii.ca/wp-content/uploads/2025/11/2024-2025-SOFI-Report.pdf",
+    "sourceIndexUrl": "https://www.bcfii.ca/governance-documents/",
+    "status": "ocr-and-complete-review-needed",
+    "route": "processing",
+    "nextAction": "Use an independent OCR reading and inspect every employee row against original renders; verify all monetary columns and printed subtotals before accepting any observations.",
+    "reason": "2024/25 official original has31pages with no native text layer; OCR, complete row review and printed control verification are required."
+  },
+  {
+    "id": "crowns-icbc",
+    "employerSlug": "icbc",
+    "employerName": "ICBC",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "sourceUrl": "https://www.icbc.com/assets/en/1p81vyTYtD8H8eGxDuivX1/financial-info-2025-2026.pdf",
+    "sourceIndexUrl": "https://www.icbc.com/about-icbc/company-info/Annual-Report#service-locator",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-inbc",
+    "employerSlug": "inbc",
+    "employerName": "InBC Investment Corp.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2022/23",
+      "2023/24",
+      "2024/25"
+    ],
+    "sourceUrl": "https://inbcinvestment.com/wp-content/uploads/2025/10/FIA-Return-March-31-2025_Final_Chair-signed.pdf",
+    "sourceIndexUrl": "https://inbcinvestment.com/faqs/",
+    "status": "reviewed-import-ready-with-remaining-history",
+    "route": "public-archive-research",
+    "nextAction": "Integrate sector-crowns collection with its explicit hash-pinned nine-row compiled2023/24→official2022/23 replacement rule; locate any subsequently published2025/26 schedule. Keep2021/22 aggregate-only evidence outside individual rows.",
+    "reason": "41employee observations in2022/23–2024/25 accepted for central review. Two$1 source residuals retained visibly; blank expense remainsnull.2021/22 explicitly has no employees paid over$75,000 and is recorded as aggregate-only evidence. Exact complete-cohort comparison now proves the nine compiled2023/24 observations belong to2022/23, with every name/pay/expense tuple matching and no board rows present; the correction is pinned explicitly."
+  },
+  {
+    "id": "crowns-industry-training-authority",
+    "employerSlug": "industry-training-authority",
+    "employerName": "Industry Training Authority of B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://skilledtradesbc.ca/media/3010/download",
+    "sourceIndexUrl": "https://skilledtradesbc.ca/financial-reports",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official source says ITA became SkilledTradesBC onDecember1,2022 with an expanded mandate. Shared source PDFs span both names; no duplicate import."
+  },
+  {
+    "id": "crowns-infrastructure-bc",
+    "employerSlug": "infrastructure-bc",
+    "employerName": "Infrastructure B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2005/06",
+      "2006/07",
+      "2007/08",
+      "2008/09",
+      "2009/10",
+      "2010/11",
+      "2011/12",
+      "2012/13",
+      "2013/14",
+      "2014/15",
+      "2015/16",
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25"
+    ],
+    "sourceUrl": "https://www.infrastructurebc.com/wp-content/uploads/2014/08/2016-17-FIA-Report-Final.pdf",
+    "sourceIndexUrl": "https://partnershipsbc.ca/publications/",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Archive indexes Statements of Financial Information2005/06–2024/25 under Partnerships BC and Infrastructure BC names. Indexed periods require original-table review before acceptance."
+  },
+  {
+    "id": "crowns-innovate-bc",
+    "employerSlug": "innovate-bc",
+    "employerName": "Innovate B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://3044422.fs1.hubspotusercontent-na1.net/hubfs/3044422/Corporate%20Reports/2024-2025/FY2025%20SOFI.pdf",
+    "sourceIndexUrl": "https://www.innovatebc.ca/reports",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-insurance-council-of-bc",
+    "employerSlug": "insurance-council-of-bc",
+    "employerName": "Insurance Council of B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "current and historical years held; exact periods to establish"
+    ],
+    "sourceUrl": "https://www.insurancecouncilofbc.com",
+    "sourceIndexUrl": "https://www.insurancecouncilofbc.com",
+    "status": "named-employee-source-not-located",
+    "route": "public-archive-research",
+    "nextAction": "Inspect financial-report attachments and earlier archive routes for an employee SOFI schedule; request existing historical employee disclosures if those routes do not contain it. Keep June1–May31 dates distinct.",
+    "reason": "The official annual-report page lists financial reports and separate board and executive compensation. No all-employee schedule was located in the checked salary links. The agency reporting year ends May31."
+  },
+  {
+    "id": "crowns-knowledge-network",
+    "employerSlug": "knowledge-network",
+    "employerName": "Knowledge Network",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2025/26"
+    ],
+    "sourceUrl": "https://about.knowledge.ca/wp-content/uploads/2026/09/2025-26-KNC-SOFI_Final_SIGNED.pdf",
+    "sourceIndexUrl": "https://about.knowledge.ca/about/reports-policies/",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-legal-aid-bc",
+    "employerSlug": "legal-aid-bc",
+    "employerName": "Legal Services Society",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "sourceUrl": "https://legalaid.bc.ca/sites/default/files/inline-files/Financial%20information%20statements%202024-LABC.pdf",
+    "sourceIndexUrl": "https://legalaid.bc.ca/about/financial-information-statements",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-liquor-distribution-branch",
+    "employerSlug": "liquor-distribution-branch",
+    "employerName": "Liquor Distribution Branch",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2022/23",
+      "2023/24",
+      "2024/25"
+    ],
+    "sourceUrl": "https://www.bcldb.com/sites/default/files/Statements%20of%20Financial%20Information%202025-26.pdf",
+    "sourceIndexUrl": "https://www.bcldb.com/publications/statements-of-financial-information",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-oil-and-gas-commission",
+    "employerSlug": "oil-and-gas-commission",
+    "employerName": "B.C. Oil and Gas Commission",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2006/07",
+      "2007/08",
+      "2008/09",
+      "2009/10",
+      "2010/11",
+      "2011/12",
+      "2012/13",
+      "2013/14",
+      "2014/15",
+      "2015/16",
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "sourceUrl": "https://www.bc-er.ca/files/reports/Financial-Information-Act/Fiscal-2025-26-Financial-Information-Act-Report.pdf",
+    "sourceIndexUrl": "https://www.bc-er.ca/data-reports/reports/?topic=42",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Same organization history as BC Energy Regulator; primary rename evidence retained. Do not count the shared archive as a second acquisition/import."
+  },
+  {
+    "id": "crowns-royal-bc-museum",
+    "employerSlug": "royal-bc-museum",
+    "employerName": "Royal B.C. Museum",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2013/14",
+      "2014/15",
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "sourceUrl": "https://rbcm.ca/wp-content/uploads/2026/08/Statements-of-Financial-Information-2025_26.pdf",
+    "sourceIndexUrl": "https://rbcm.ca/corporate-information/reports-policies/",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-skilledtradesbc",
+    "employerSlug": "skilledtradesbc",
+    "employerName": "Skilled Trades B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://skilledtradesbc.ca/media/3010/download",
+    "sourceIndexUrl": "https://skilledtradesbc.ca/financial-reports",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Successor naming evidence: ITA transitioned to SkilledTradesBC December1,2022. Latest original PDFs were downloaded under the predecessor inventory entry because the archive is shared."
+  },
+  {
+    "id": "crowns-sub-columbia-hydro-constructors",
+    "employerSlug": "sub-columbia-hydro-constructors",
+    "employerName": "Columbia Hydro Constructors Ltd.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/f2025-financial-information-act-return.pdf",
+    "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+    "status": "existing-official-coverage-with-history-gaps",
+    "route": "public-archive-research",
+    "nextAction": "Compare archive index and exact registered source IDs; retrieve only uncovered reporting periods, then perform source-specific row and control verification.",
+    "reason": "Already accepted original sources exist; current discovery is an archive/history lead only. Avoid duplicate registration of accepted source files."
+  },
+  {
+    "id": "crowns-sub-powerex",
+    "employerSlug": "sub-powerex",
+    "employerName": "Powerex Corporation",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/f2025-financial-information-act-return.pdf",
+    "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+    "status": "existing-official-coverage-with-history-gaps",
+    "route": "public-archive-research",
+    "nextAction": "Compare archive index and exact registered source IDs; retrieve only uncovered reporting periods, then perform source-specific row and control verification.",
+    "reason": "Already accepted original sources exist; current discovery is an archive/history lead only. Avoid duplicate registration of accepted source files."
+  },
+  {
+    "id": "crowns-sub-powertech-labs",
+    "employerSlug": "sub-powertech-labs",
+    "employerName": "Powertech Labs. Inc.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/financial-reports/annual-reports/f2025-financial-information-act-return.pdf",
+    "sourceIndexUrl": "https://www.bchydro.com/about/accountability_reports/financial_reports.html",
+    "status": "existing-official-coverage-with-history-gaps",
+    "route": "public-archive-research",
+    "nextAction": "Compare archive index and exact registered source IDs; retrieve only uncovered reporting periods, then perform source-specific row and control verification.",
+    "reason": "Already accepted original sources exist; current discovery is an archive/history lead only. Avoid duplicate registration of accepted source files."
+  },
+  {
+    "id": "crowns-technical-safety-bc",
+    "employerSlug": "technical-safety-bc",
+    "employerName": "Technical Safety B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "current and historical years held; exact periods to establish"
+    ],
+    "sourceUrl": "https://www.technicalsafetybc.ca/",
+    "sourceIndexUrl": "https://www.technicalsafetybc.ca/",
+    "status": "named-employee-source-not-located",
+    "route": "public-archive-research",
+    "nextAction": "Inspect downloadable annual/financial reports and predecessor BC Safety Authority archives, then request any existing named employee schedule if absent.",
+    "reason": "Official annual-report/governance pages located, but no named all-employee schedule found during bounded discovery. Executive and aggregate reporting cannot substitute for it."
+  },
+  {
+    "id": "crowns-translink",
+    "employerSlug": "translink",
+    "employerName": "Translink",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "indexed archive; exact reporting periods to establish"
+    ],
+    "sourceUrl": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf",
+    "sourceIndexUrl": "https://www.translink.ca/about-us/about-translink/corporate-reports",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "2024 and2025 official reports contain separate parent and four operating-company schedules. Police subsidiary pages196–202(2024),214–220(2025) must not be merged into parent or duplicated against either compiled Transit Police alias."
+  },
+  {
+    "id": "crowns-transportation-investment-corporation",
+    "employerSlug": "transportation-investment-corporation",
+    "employerName": "Transportation Investment Corporation",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24",
+      "2024/25",
+      "2025/26"
+    ],
+    "sourceUrl": "https://www.ticorp.ca/app/uploads/sites/601/2026/09/Statement-of-Financial-Information-FY2026.pdf",
+    "sourceIndexUrl": "https://www.ticorp.ca",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Official employee/SOFI disclosure route or original has been located. Full source-specific row, period, scope and control verification is still pending; index labels are not verified salary years."
+  },
+  {
+    "id": "crowns-workers-compensation-board",
+    "employerSlug": "workers-compensation-board",
+    "employerName": "Worksafe B.C.",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "sourceUrl": "https://www.worksafebc.com/en/resources/about-us/statements-of-financial-information/2023-statement-financial-information?lang=en&direct",
+    "sourceIndexUrl": "https://www.worksafebc.com/en/about-us/what-we-do/statement-financial-information",
+    "status": "official-original-processing",
+    "route": "processing",
+    "nextAction": "Retrieve any indexed original not yet hashed, establish exact employee scope and reporting dates, parse each complete employee table, independently check every field and reconcile source monetary controls.",
+    "reason": "Calendar2023–2025 original SOFI PDFs retrieved via official landing URL plus &direct. Predictable2014–2022 URL probes returned404; historical discovery remains incomplete, not proven absence."
+  },
+  {
+    "id": "crowns-workers-compensation-board-history-before2023",
+    "employerSlug": "workers-compensation-board",
+    "employerName": "WorkSafeBC / Workers’ Compensation Board",
+    "sector": "Crown corporations",
+    "reportingPeriods": [
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+    ],
+    "sourceUrl": "https://www.worksafebc.com/en/about-us/what-we-do/statement-financial-information",
+    "sourceIndexUrl": "https://www.worksafebc.com/en/about-us/what-we-do/statement-financial-information",
+    "status": "historical-originals-not-located",
+    "route": "public-archive-research",
+    "nextAction": "Find former official download routes and archived SOFI originals for2014–2022. If unavailable through public archives, request existing historical named employee schedules and native files; assess formal FOI only if ordinary retrieval fails.",
+    "reason": "Current official index links calendar2023–2025 originals, which were retrieved. Predictable2014–2022 URL probes returned404 and targeted search did not recover those reports; this is not proof of nonexistence."
+  }
+]

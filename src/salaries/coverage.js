@@ -12,6 +12,7 @@ export const scopeLabel = (scope) => ({
   'named-employees-over-threshold': 'Employee remuneration disclosure above the reporting threshold',
   'executive-only': 'Executive compensation only',
   'elected-officials': 'Mayor and council remuneration',
+  'school-trustees': 'School trustee remuneration',
   'aggregate-only': 'Aggregate payroll only; no individual records',
   'deputy-ministers': 'Deputy minister remuneration',
   'deputy-minister-remuneration': 'Deputy minister remuneration',

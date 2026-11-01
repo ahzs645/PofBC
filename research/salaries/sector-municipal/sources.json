@@ -1,0 +1,1016 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2013-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2013",
+      "periodType": "calendar",
+      "periodStart": "2013-01-01",
+      "periodEnd": "2013-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2013_statement_of_financial.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "7d38a11f0f44694a100b28522e9222bc8f583df81110e294e6bdd46f76b8f364",
+      "file": "city-of-pitt-meadows-2013-elected-officials.json.gzip",
+      "dataSha256": "301aeac57c0aaced0b7dd59d17e0d9a59c95c506b62c6d24099681e4d1d99c2e",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Pitt Meadows 2013 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 222069,
+      "totalExpenses": 10550,
+      "pages": [
+        23
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Exact component residuals (row sum minus printed/derived control), CAD: salary +2, benefits +1, expenses +1. Published values remain unchanged; rounding is not asserted as the cause.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          23
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 203114,
+            "rowSum": 203116,
+            "residual": 2,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 18952,
+            "rowSum": 18953,
+            "residual": 1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 10549,
+            "rowSum": 10550,
+            "residual": 1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2013-elected-officials.json.gzip",
+        "evidenceSha256": "16531c1718da73750c30db8215198b47b37b13c9747dfd4e40c3016a8c9dd651",
+        "corrections": [
+          {
+            "row": 1,
+            "field": "position",
+            "before": "Counciltor",
+            "after": "Councillor"
+          }
+        ]
+      },
+      "publicWarning": "Pitt Meadows 2013 council: remuneration sums +3 CAD and expenses +1 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2013",
+      "periodType": "calendar",
+      "periodStart": "2013-01-01",
+      "periodEnd": "2013-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2013_statement_of_financial.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "7d38a11f0f44694a100b28522e9222bc8f583df81110e294e6bdd46f76b8f364",
+      "file": "city-of-pitt-meadows-2013-employee-remuneration.json.gzip",
+      "dataSha256": "20426a3b82db3ff0039d16e06b1a3565c23e062684b7f8e029dfef642d415a71",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Pitt Meadows 2013 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 21,
+      "totalRemuneration": 2126141,
+      "totalExpenses": 61387,
+      "pages": [
+        23
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Exact component residuals (row sum minus printed/derived control), CAD: salary +1, benefits +1, expenses -1. Published values remain unchanged; rounding is not asserted as the cause.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          23
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 1972341,
+            "rowSum": 1972342,
+            "residual": 1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 153798,
+            "rowSum": 153799,
+            "residual": 1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 61388,
+            "rowSum": 61387,
+            "residual": -1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2013-employee-remuneration.json.gzip",
+        "evidenceSha256": "16531c1718da73750c30db8215198b47b37b13c9747dfd4e40c3016a8c9dd651",
+        "corrections": [
+          {
+            "row": 8,
+            "field": "position",
+            "before": "Deputy GAO/Director of Ops. & Dev. Services",
+            "after": "Deputy CAO/Director of Ops. & Dev. Services"
+          },
+          {
+            "row": 8,
+            "field": "expenses",
+            "before": "8.589",
+            "after": "8,589"
+          },
+          {
+            "row": 9,
+            "field": "salary",
+            "before": "102,478",
+            "after": "102,476"
+          },
+          {
+            "row": 17,
+            "field": "position",
+            "before": "Business AnalystllT Coordinator",
+            "after": "Business Analyst/IT Coordinator"
+          }
+        ]
+      },
+      "publicWarning": "Pitt Meadows 2013 employees: remuneration sums +2 CAD and expenses -1 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2019-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2019_sofi_report.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "823b4e0904620cc3229317a32c38dbf7d4cfe1c780e8331cf8569907723a3f03",
+      "file": "city-of-pitt-meadows-2019-elected-officials.json.gzip",
+      "dataSha256": "be2e68538d72cfc89a4babafd2fa3df787e2578b438d14cff400bd2f7c3434dc",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Pitt Meadows 2019 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 340360,
+      "totalExpenses": 37313,
+      "pages": [
+        29
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          29
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 331321,
+            "rowSum": 331321,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 9039,
+            "rowSum": 9039,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 37313,
+            "rowSum": 37313,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2019-elected-officials.json.gzip",
+        "evidenceSha256": "65f8a76b7dd07c7a9c897e362ecc6cf49f71ea7680bf67c0d2883ebf3e72a644",
+        "corrections": []
+      }
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2019_sofi_report.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "823b4e0904620cc3229317a32c38dbf7d4cfe1c780e8331cf8569907723a3f03",
+      "file": "city-of-pitt-meadows-2019-employee-remuneration.json.gzip",
+      "dataSha256": "666524b8e45946e58bb2fd50dc552d672f6b08676a201f88557c17c7fae70b68",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Pitt Meadows 2019 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 39,
+      "totalRemuneration": 4018806,
+      "totalExpenses": 97160,
+      "pages": [
+        29
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          29
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 3794824,
+            "rowSum": 3794824,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 223982,
+            "rowSum": 223982,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 97160,
+            "rowSum": 97160,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2019-employee-remuneration.json.gzip",
+        "evidenceSha256": "65f8a76b7dd07c7a9c897e362ecc6cf49f71ea7680bf67c0d2883ebf3e72a644",
+        "corrections": []
+      }
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2020-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2020_sofi.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "66baeadc3d221497268fb088496d954138264b1826b6f284d21b91dbefcef388",
+      "file": "city-of-pitt-meadows-2020-elected-officials.json.gzip",
+      "dataSha256": "23b0fbd70afbf876fbe77241f6339951bd92b6d378e72f5bca7398086275e0ca",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Pitt Meadows 2020 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 353714,
+      "totalExpenses": 7157,
+      "pages": [
+        29
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          29
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 343167,
+            "rowSum": 343167,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 10547,
+            "rowSum": 10547,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 7157,
+            "rowSum": 7157,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2020-elected-officials.json.gzip",
+        "evidenceSha256": "fdf7a6700f0964cd872195f7cc9701a5cf0eac21586ce3ed438b744ecdb27118",
+        "corrections": []
+      }
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2020_sofi.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "66baeadc3d221497268fb088496d954138264b1826b6f284d21b91dbefcef388",
+      "file": "city-of-pitt-meadows-2020-employee-remuneration.json.gzip",
+      "dataSha256": "bf4a446f228ae516e5eeca2445dcbc86530751bbddcb4b96ad18593ce4bb9d9e",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Pitt Meadows 2020 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 45,
+      "totalRemuneration": 4808406,
+      "totalExpenses": 52721,
+      "pages": [
+        29
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          29
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 4477054,
+            "rowSum": 4477054,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 331352,
+            "rowSum": 331352,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 52721,
+            "rowSum": 52721,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2020-employee-remuneration.json.gzip",
+        "evidenceSha256": "fdf7a6700f0964cd872195f7cc9701a5cf0eac21586ce3ed438b744ecdb27118",
+        "corrections": []
+      }
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2021-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/2022-06/2021%20SOFI.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "9ca9ab5a6c3158d066cd33293ab9e2bf2b52518d49940957116b9bc5c669ac4e",
+      "file": "city-of-pitt-meadows-2021-elected-officials.json.gzip",
+      "dataSha256": "41b2a6541e6e4d0f08d8508a9d479676c62758163b32b87013447b377e0c0ce0",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Pitt Meadows 2021 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 354249,
+      "totalExpenses": 11636,
+      "pages": [
+        29
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Exact component residuals (row sum minus printed/derived control), CAD: salary -1, benefits +1, expenses +0. Published values remain unchanged; rounding is not asserted as the cause.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          29
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 343550,
+            "rowSum": 343549,
+            "residual": -1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 10699,
+            "rowSum": 10700,
+            "residual": 1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 11636,
+            "rowSum": 11636,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2021-elected-officials.json.gzip",
+        "evidenceSha256": "a19f5057b79c8695f7f4768e5ab0a26d9eb70830528f6f0213c96f9658bb78fb",
+        "corrections": []
+      }
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/2022-06/2021%20SOFI.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "9ca9ab5a6c3158d066cd33293ab9e2bf2b52518d49940957116b9bc5c669ac4e",
+      "file": "city-of-pitt-meadows-2021-employee-remuneration.json.gzip",
+      "dataSha256": "18ca83d6bbf447b3a8f84c15d9192d6959b4bb78bb7a08a9b3e0f819229cfbdf",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Pitt Meadows 2021 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 56,
+      "totalRemuneration": 6094575,
+      "totalExpenses": 87013,
+      "pages": [
+        29
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Exact component residuals (row sum minus printed/derived control), CAD: salary +0, benefits -2, expenses +1. Published values remain unchanged; rounding is not asserted as the cause.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          29
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 5622386,
+            "rowSum": 5622386,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 472191,
+            "rowSum": 472189,
+            "residual": -2,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 87012,
+            "rowSum": 87013,
+            "residual": 1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2021-employee-remuneration.json.gzip",
+        "evidenceSha256": "a19f5057b79c8695f7f4768e5ab0a26d9eb70830528f6f0213c96f9658bb78fb",
+        "corrections": []
+      },
+      "publicWarning": "Pitt Meadows 2021 employees: remuneration sums -2 CAD and expenses +1 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2022-elected-officials",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "b1bc5be91d9cfe5befefe33029b3d637dfa0562733320c2a6b5bffc7c4466e71",
+      "file": "city-of-pitt-meadows-2022-elected-officials.json.gzip",
+      "dataSha256": "401503bba569d6458f0f59f12ad88e145f9ddbd53512d706d75e4fb1597e3538",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Pitt Meadows 2022 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 9,
+      "totalRemuneration": 365187,
+      "totalExpenses": 28986,
+      "pages": [
+        27
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Exact component residuals (row sum minus printed/derived control), CAD: salary +0, benefits -1, expenses +1. Published values remain unchanged; rounding is not asserted as the cause.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          27
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 354265,
+            "rowSum": 354265,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 10923,
+            "rowSum": 10922,
+            "residual": -1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 28985,
+            "rowSum": 28986,
+            "residual": 1,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2022-elected-officials.json.gzip",
+        "evidenceSha256": "4fd711ea59a0980a794f35732e4376e043dbc54de3f9401e544e35cc7b357f60",
+        "corrections": []
+      },
+      "publicWarning": "Pitt Meadows 2022 council: remuneration sums -1 CAD and expenses +1 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "id": "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration",
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.pittmeadows.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+      "sourceIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "sha256": "b1bc5be91d9cfe5befefe33029b3d637dfa0562733320c2a6b5bffc7c4466e71",
+      "file": "city-of-pitt-meadows-2022-employee-remuneration.json.gzip",
+      "dataSha256": "5cec60f3a7b57b25726f597e4a20dd33d5eeb3ed0ff7f01c899b3b0a63ad2594",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Pitt Meadows 2022 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 62,
+      "totalRemuneration": 6569189,
+      "totalExpenses": 118584,
+      "pages": [
+        27
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The published named employee threshold tests salary plus benefits/other compensation, not base salary alone. Each cohort retains all rows the original names.",
+        "Exact component residuals (row sum minus printed/derived control), CAD: salary -4, benefits +0, expenses +0. Published values remain unchanged; rounding is not asserted as the cause.",
+        "Remuneration is published Salary/Base Salary plus Benefits and Other. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          27
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 6124762,
+            "rowSum": 6124758,
+            "residual": -4,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 444431,
+            "rowSum": 444431,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 118584,
+            "rowSum": 118584,
+            "residual": 0,
+            "basis": "Printed named subtotal, or total employees less the printed under-threshold aggregate"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-pitt-meadows-2022-employee-remuneration.json.gzip",
+        "evidenceSha256": "4fd711ea59a0980a794f35732e4376e043dbc54de3f9401e544e35cc7b357f60",
+        "corrections": []
+      },
+      "publicWarning": "Pitt Meadows 2022 employees: remuneration sums -4 CAD and expenses +0 CAD relative to the printed/derived named controls. Published individual amounts are preserved; the source differences are unresolved."
+    },
+    {
+      "id": "sector-municipal-city-of-revelstoke-2025-elected-officials",
+      "employerSlug": "city-of-revelstoke",
+      "employerName": "City of Revelstoke",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16909/2025-SOFI-PDF",
+      "sourceIndexUrl": "https://revelstoke.ca/86/Financial-Documents",
+      "sha256": "00483f68e05588692d75b85390f0d9801331aab0da195437d4e9a7f10a03e71c",
+      "file": "city-of-revelstoke-2025-elected-officials.json.gzip",
+      "dataSha256": "6af8e79ccff7dea026b4c8ecf1a55405af035d24c22038b3e98038c5fdfb301d",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Revelstoke 2025 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 205249,
+      "totalExpenses": 60476,
+      "pages": [
+        39
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "The named schedule and reconciliation identify the year ended December 31, 2025. The source form describes its named threshold as remuneration and expenses exceeding $75,000; the accompanying reconciliation labels the cohort remuneration over $75,000. All 65 named pay values exceed $75,000.",
+        "Signed SOFI approval on physical page 52 is dated June 23, 2026. The $143,643 payroll-to-financial-statements reconciliation variance is retained as context and is not an adjustment to any person.",
+        "Remuneration is the separate published Remuneration column; no employer benefit expense from the payroll reconciliation is added. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          39
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 205251,
+            "rowSum": 205249,
+            "residual": -2,
+            "basis": "Printed named remuneration and expense subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 60477,
+            "rowSum": 60476,
+            "residual": -1,
+            "basis": "Printed named remuneration and expense subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-revelstoke-2025-elected-officials.json.gzip",
+        "evidenceSha256": "c23390d0420a1fd5814f2d481d39fd67ea8b6fada772538d023efa75e8b24ed4",
+        "corrections": []
+      },
+      "publicWarning": "Revelstoke 2025 elected-officials: individual remuneration sums -2 CAD and expenses -1 CAD relative to the printed named subtotals. Published amounts are preserved; these source differences remain unresolved."
+    },
+    {
+      "id": "sector-municipal-city-of-revelstoke-2025-employee-remuneration",
+      "employerSlug": "city-of-revelstoke",
+      "employerName": "City of Revelstoke",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://revelstoke.ca/DocumentCenter/View/16909/2025-SOFI-PDF",
+      "sourceIndexUrl": "https://revelstoke.ca/86/Financial-Documents",
+      "sha256": "00483f68e05588692d75b85390f0d9801331aab0da195437d4e9a7f10a03e71c",
+      "file": "city-of-revelstoke-2025-employee-remuneration.json.gzip",
+      "dataSha256": "eed02f03e956b96aae468f02581c2132c2db03af42cec75a39c6d31d2c5d2ac8",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Revelstoke 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 65,
+      "totalRemuneration": 6910239,
+      "totalExpenses": 77888,
+      "pages": [
+        40
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The named schedule and reconciliation identify the year ended December 31, 2025. The source form describes its named threshold as remuneration and expenses exceeding $75,000; the accompanying reconciliation labels the cohort remuneration over $75,000. All 65 named pay values exceed $75,000.",
+        "Signed SOFI approval on physical page 52 is dated June 23, 2026. The $143,643 payroll-to-financial-statements reconciliation variance is retained as context and is not an adjustment to any person.",
+        "Remuneration is the separate published Remuneration column; no employer benefit expense from the payroll reconciliation is added. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          40
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 6910240,
+            "rowSum": 6910239,
+            "residual": -1,
+            "basis": "Printed named remuneration and expense subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 77887,
+            "rowSum": 77888,
+            "residual": 1,
+            "basis": "Printed named remuneration and expense subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-revelstoke-2025-employee-remuneration.json.gzip",
+        "evidenceSha256": "e8cf86ba9ac63d692ceff37adf2dd3913abc29b7d3af67a19820cc0cf6601be7",
+        "corrections": []
+      },
+      "publicWarning": "Revelstoke 2025 employee-remuneration: individual remuneration sums -1 CAD and expenses +1 CAD relative to the printed named subtotals. Published amounts are preserved; these source differences remain unresolved."
+    },
+    {
+      "id": "sector-municipal-city-of-parksville-2025-elected-officials",
+      "employerSlug": "city-of-parksville",
+      "employerName": "City of Parksville",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://parksville.civicweb.net/FileStorage/6F0BB1A06E80498CB57F01D450F88675-3f)%202025%20SOFI%20report%20to%20Council_Redacted.pdf",
+      "sourceIndexUrl": "https://parksville.civicweb.net/document/82602/",
+      "sha256": "e5084fdc345e6ca5da2a1275bed1e836880fe3031296e7b09f303e5da883646f",
+      "file": "city-of-parksville-2025-elected-officials.json.gzip",
+      "dataSha256": "20f9602f98ee552e640f75ec97a10f3a9780e6b813813b2fecca85c717252cef",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Parksville 2025 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 280454.16,
+      "totalExpenses": 26610.24,
+      "pages": [
+        7
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "The agenda attachment approval form is unsigned. Official June 15, 2026 Council minutes, resolution 26-129, approve the 2025 SOFI as presented: https://parksville.civicweb.net/document/82769/. This adoption evidence establishes the agenda tables were approved; the blank signature form is not represented as signed.",
+        "Employee disclosures include vacation payouts and supplemental acting pay. The source payroll reconciliation also includes 100% of City-managed joint-venture payments, whereas financial statements include the City share; the source difference is not an individual salary adjustment.",
+        "Employee remuneration is the published Remuneration (including taxable benefits) column. Council remuneration is the separate Remuneration column. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          7
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 280454.16,
+            "rowSum": 280454.16,
+            "residual": 0,
+            "basis": "Printed named remuneration and expense subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 26610.24,
+            "rowSum": 26610.24,
+            "residual": 0,
+            "basis": "Printed named remuneration and expense subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-parksville-2025-elected-officials.json.gzip",
+        "evidenceSha256": "4e348817690eabe452504447cc9b834539e7ee5d987d33baf61320454dc725e2",
+        "corrections": [],
+        "adoptionEvidence": {
+          "sourceUrl": "https://parksville.civicweb.net/document/82769/",
+          "file": "evidence/parksville-2025-sofi-adoption.html.gzip",
+          "sha256": "ba24e9ae3b2d548d39b6ea1494042d930fc78a676ab4da0b18744c688915f986",
+          "decision": "Council June 15, 2026 resolution 26-129 approves 2025 SOFI as presented",
+          "resolution": "26-129"
+        }
+      }
+    },
+    {
+      "id": "sector-municipal-city-of-parksville-2025-employee-remuneration",
+      "employerSlug": "city-of-parksville",
+      "employerName": "City of Parksville",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://parksville.civicweb.net/FileStorage/6F0BB1A06E80498CB57F01D450F88675-3f)%202025%20SOFI%20report%20to%20Council_Redacted.pdf",
+      "sourceIndexUrl": "https://parksville.civicweb.net/document/82602/",
+      "sha256": "e5084fdc345e6ca5da2a1275bed1e836880fe3031296e7b09f303e5da883646f",
+      "file": "city-of-parksville-2025-employee-remuneration.json.gzip",
+      "dataSha256": "0f2db77a829c009ada4508aecde7b45f647cb1b5a3bda44f245d0a0ecb00489d",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Parksville 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 72,
+      "totalRemuneration": 7489244.86,
+      "totalExpenses": 167857.9,
+      "pages": [
+        8,
+        9
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The agenda attachment approval form is unsigned. Official June 15, 2026 Council minutes, resolution 26-129, approve the 2025 SOFI as presented: https://parksville.civicweb.net/document/82769/. This adoption evidence establishes the agenda tables were approved; the blank signature form is not represented as signed.",
+        "Employee disclosures include vacation payouts and supplemental acting pay. The source payroll reconciliation also includes 100% of City-managed joint-venture payments, whereas financial statements include the City share; the source difference is not an individual salary adjustment.",
+        "Employee remuneration is the published Remuneration (including taxable benefits) column. Council remuneration is the separate Remuneration column. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          8,
+          9
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 7489244.86,
+            "rowSum": 7489244.86,
+            "residual": 0,
+            "basis": "Printed named employee subtotal at physical page 9"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 167857.9,
+            "rowSum": 167857.9,
+            "residual": 0,
+            "basis": "Printed named employee subtotal at physical page 9"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-parksville-2025-employee-remuneration.json.gzip",
+        "evidenceSha256": "2d330fac745907e3d458eb275482466a5b8a46e91fffac5dfc9ed743c84b397d",
+        "corrections": [],
+        "adoptionEvidence": {
+          "sourceUrl": "https://parksville.civicweb.net/document/82769/",
+          "file": "evidence/parksville-2025-sofi-adoption.html.gzip",
+          "sha256": "ba24e9ae3b2d548d39b6ea1494042d930fc78a676ab4da0b18744c688915f986",
+          "decision": "Council June 15, 2026 resolution 26-129 approves 2025 SOFI as presented",
+          "resolution": "26-129"
+        }
+      }
+    }
+  ]
+}

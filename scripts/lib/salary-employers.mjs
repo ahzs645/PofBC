@@ -66,7 +66,8 @@ export const EMPLOYER_ALIASES = {
   'township-of-langley': 'langley-township',
   'bowen-island-municipality': 'bowen-island',
   'district-of-delta': 'city-of-delta',
-  'district-of-mission': 'city-of-mission'
+  'district-of-mission': 'city-of-mission',
+  'ridge-meadows-school-district': 'maple-ridge-pitt-meadows-school-district'
 }
 export const canonicalSlug = (slug) => EMPLOYER_ALIASES[slug] ?? slug
 const SAME_EMPLOYER = {

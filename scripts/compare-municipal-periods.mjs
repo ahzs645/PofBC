@@ -14,7 +14,7 @@ const baselineManifest = json(join(research, 'baseline-manifest.json'))
 const baselineBytes = readFileSync(join(research, baselineManifest.file))
 if (sha256(baselineBytes) !== baselineManifest.sha256) throw new Error('Baseline fingerprint mismatch')
 const baseline = JSON.parse(gunzipSync(baselineBytes))
-const directories = ['municipal-north', 'municipal-island', 'municipal-lower-mainland', 'municipal-small', 'municipal-ocr']
+const directories = ['municipal-north', 'municipal-island', 'municipal-lower-mainland', 'municipal-small', 'municipal-ocr', 'sector-municipal', 'sector-government-police']
 const official = new Map()
 const fingerprints = []
 for (const directory of directories) {
@@ -22,6 +22,8 @@ for (const directory of directories) {
   if (!existsSync(path)) throw new Error(`Municipal collection missing: ${directory}`)
   const manifest = json(path)
   for (const source of manifest.sources) {
+    // Mixed-sector collections may contain fiscal or nonmunicipal schedules.
+    if (directory === 'sector-government-police' && source.employerSlug !== 'metro-vancouver') continue
     if (!source.file || (source.status && !['verified', 'accepted', 'imported'].includes(source.status))) continue
     if (!/^\d{4}$/.test(source.year) || !source.employerSlug) throw new Error(`${source.id}: expected one municipality and a calendar year`)
     const bytes = readFileSync(join(research, directory, source.file))
@@ -84,7 +86,7 @@ for (const [slug, employerRows] of baselineBySlug) {
           matchingNamePayRows: same, unmatchedCompiledRows: mode.selected.length - same,
           unmatchedOfficialRows: rows.length - same, sourceIds: selectedSources.map(s => s.id) }
         comparisons.push(result)
-        if (same === mode.selected.length) matches.push(result)
+        if (same === mode.selected.length && selectedSources.every(s => s.completeEmployeeSchedule !== false && s.validation?.completeEmployeeSchedule !== false)) matches.push(result)
       }
       if (matches.length === 1) { chosen = { mode, match: matches[0] }; break }
     }

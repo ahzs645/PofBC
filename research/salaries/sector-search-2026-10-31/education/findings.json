@@ -1,0 +1,3793 @@
+{
+  "auditDate": "2026-10-31",
+  "timezone": "America/Vancouver",
+  "baselineCommit": "96d798e",
+  "scope": "24 post-secondary employers currently represented; discovery is not exhaustive historical coverage.",
+  "summary": {
+    "employersReviewed": 24,
+    "candidateDocuments": 102,
+    "retrievedPdfDocuments": 93,
+    "acceptedNewSFUCohorts": 6,
+    "acceptedNewSFURows": 13527,
+    "heldSFUCohorts": 3,
+    "heldSFURows": 7079
+  },
+  "employers": [
+    {
+      "employerSlug": "bcit",
+      "employerName": "BCIT",
+      "sector": "Universities and colleges",
+      "status": "accepted-with-processing-backlog",
+      "sourceIndexUrls": [
+        "https://www.bcit.ca/financial-services/financial-reports/"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2020/21": 1246,
+          "2023/24": 1435
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [
+        {
+          "year": "2014/15",
+          "id": "bcit-sofi-2014-15-employees",
+          "rows": 861,
+          "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2015.pdf",
+          "collection": "research/salaries/bcit"
+        },
+        {
+          "year": "2016/17",
+          "id": "bcit-sofi-2016-17-employees",
+          "rows": 923,
+          "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2017.pdf",
+          "collection": "research/salaries/bcit"
+        },
+        {
+          "year": "2017/18",
+          "id": "bcit-sofi-2017-18-employees",
+          "rows": 970,
+          "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2018.pdf",
+          "collection": "research/salaries/bcit"
+        },
+        {
+          "year": "2018/19",
+          "id": "bcit-sofi-2018-19-employees",
+          "rows": 1024,
+          "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/financial-information-2019.pdf",
+          "collection": "research/salaries/bcit"
+        },
+        {
+          "year": "2020/21",
+          "id": "bcit-sofi-2020-21-employees",
+          "rows": 1246,
+          "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy21-bcit-fia-report-signed.pdf",
+          "collection": "research/salaries/bcit"
+        },
+        {
+          "year": "2021/22",
+          "id": "bcit-sofi-2021-22-employees",
+          "rows": 1272,
+          "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy22-bcit-fia-report-signed.pdf",
+          "collection": "research/salaries/bcit"
+        },
+        {
+          "year": "2022/23",
+          "id": "bcit-sofi-2022-23-employees",
+          "rows": 1298,
+          "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy23-bcit-fia-report-signed.pdf",
+          "collection": "research/salaries/bcit"
+        },
+        {
+          "year": "2023/24",
+          "id": "bcit-sofi-2023-24-employees",
+          "rows": 1435,
+          "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy24-bcit-fia-report-signed.pdf",
+          "collection": "research/salaries/bcit"
+        },
+        {
+          "year": "2024/25",
+          "id": "bcit-sofi-2024-25-employees",
+          "rows": 1595,
+          "sourceUrl": "https://www.bcit.ca/files/financialservices/pdf/fy25-bcit-fia-report-signed.pdf",
+          "collection": "research/salaries/bcit"
+        }
+      ],
+      "verifiedNativeHeadingPeriods": [],
+      "indexedDocuments": [],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 0,
+        "retrievedPDFs": 0,
+        "nativeTextCandidates": 0,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.bcit.ca/financial-services/financial-reports/",
+          "status": 200,
+          "error": null,
+          "sha256": "d8e90c92f914e6280453836a527c4d8197f2f81fe96675eb0f9964b308644391",
+          "bytes": 58976
+        }
+      ],
+      "findings": "The current index retrieval returned HTTP 200 with a JavaScript bot challenge (bobcmn/TSPD), not financial-report content. Existing nine accepted cohorts remain valid baseline coverage. Earlier 2013/14 source is in the pre-existing scanned backlog; 2015/16 and 2019/20 are fiscal gaps to research, not presumed absent.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "camosun-college",
+      "employerName": "Camosun College",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://camosun.ca/about/initiatives-and-plans/plans-and-reports"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 438,
+          "2020/21": 496,
+          "2023/24": 515
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2015/16",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://camosun.ca/sites/default/files/2026-10/financial-information-act-report-2025-2026.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2026-10/financial-information-act-report-2025-2026.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "6e9b1d017dfe5ece1afbb06aacfb3d1dae9d96348b025e8c9abf4861f0cd3655",
+          "bytes": 450249,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 31,
+          "candidateReportingPeriod": "2025/26",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2025-11/financial-information-act-report-2024-2025.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2025-11/financial-information-act-report-2024-2025.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "c553ba1bbe8dce5b56a82012bd0d12451d6499c09aa66c1dddf244b81cb9086e",
+          "bytes": 457894,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 30,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2025-02/financial-information-act-report-2023-2024.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2025-02/financial-information-act-report-2023-2024.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "46ea98c5c50ce9409302a48c06bfab695609ab6f7864c5b60bef99186fa2d9c1",
+          "bytes": 394442,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 30,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2023-10/financia-information-act-22-23.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2023-10/financia-information-act-22-23.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "106b67139b685eea470e0798490b6f1494e3415e11e26e91ca578d1f96d8f495",
+          "bytes": 372018,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 28,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2022-10/Financial-Information-Act-Report-2021-2022_0.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2022-10/Financial-Information-Act-Report-2021-2022_0.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "9229a5ecfc6936810d8caa882b7f56bf08ff59d845adb1094d0eb45a97b50f17",
+          "bytes": 1940361,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 26,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2021-12/Financial-Information-Act-Report-2020-2021.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2021-12/Financial-Information-Act-Report-2020-2021.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "74b933bb5552ed0ece8633afc92e36d5e106ea3630453ae5478c70337696265f",
+          "bytes": 1889754,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 27,
+          "candidateReportingPeriod": "2020/21",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2021-11/2019-20-camosun-college-financial-information-act-report.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2021-11/2019-20-camosun-college-financial-information-act-report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "acbf8f622fd78f767ba3ec19c34e6d68023ca34c82ca0e3d3622b716a313f998",
+          "bytes": 905966,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 27,
+          "candidateReportingPeriod": "2019/20",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2021-11/2018-19-camosun-college-financial-information-act-report.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2021-11/2018-19-camosun-college-financial-information-act-report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "3ff97f88e3c30fe18a338a2480996d1ebb170941450bf940544d01dce309aee4",
+          "bytes": 387819,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 27,
+          "candidateReportingPeriod": "2018/19",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2021-11/2017-18-camosun-college-financial-information-act-report.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2021-11/2017-18-camosun-college-financial-information-act-report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "2b11b6e38a09ca3059bb7efeb49c1159b286edec0ec4246450abbd8f8a71be31",
+          "bytes": 4116413,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 26,
+          "candidateReportingPeriod": "2017/18",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2021-11/2016-17-camosun-college-financial-information-act-report.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2021-11/2016-17-camosun-college-financial-information-act-report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "fc06288313b52940fbc4efd6fda1422c22c7311348728cfd2468e949f4182189",
+          "bytes": 1200447,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 26,
+          "candidateReportingPeriod": "2016/17",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        },
+        {
+          "url": "https://camosun.ca/sites/default/files/2021-11/2015-16-camosun-college-financial-information-act-report.pdf",
+          "indexedLabel": "Financial Information Act Report",
+          "indexUrl": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "resolvedUrl": "https://camosun.ca/sites/default/files/2021-11/2015-16-camosun-college-financial-information-act-report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "1ba315d700548f5c0d5f0c61401a9edd1e11ba595db41cd58482cac4d7fad7f3",
+          "bytes": 369295,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 26,
+          "candidateReportingPeriod": "2015/16",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 11,
+        "retrievedPDFs": 11,
+        "nativeTextCandidates": 11,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://camosun.ca/about/initiatives-and-plans/plans-and-reports",
+          "status": 200,
+          "error": null,
+          "sha256": "9a2251deb46910c52cae4800cb392a1c615e3c3b66a26d3614ec19628255c7ff",
+          "bytes": 118788
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "capilano-university",
+      "employerName": "Capilano University",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://www.capilanou.ca/about-capu/governance/budget-plans--reports/financial-reports/"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 250,
+          "2020/21": 370,
+          "2023/24": 436
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/CapU-FY2425-SOFI-Report---FINAL---Updated---Signed.pdf",
+          "indexedLabel": "Statement of Financial Information 2024-25",
+          "indexUrl": "https://www.capilanou.ca/about-capu/governance/budget-plans--reports/financial-reports/",
+          "resolvedUrl": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/CapU-FY2425-SOFI-Report---FINAL---Updated---Signed.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "f98579c71160ff8ad86a4d22df45e7be4fe307f409d0b731129bf27b15c85391",
+          "bytes": 4540548,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 60,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            38,
+            39
+          ]
+        },
+        {
+          "url": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/CapU-FY2324-SOFI-Report-Signed.pdf",
+          "indexedLabel": "Statement of Financial Information 2023-24",
+          "indexUrl": "https://www.capilanou.ca/about-capu/governance/budget-plans--reports/financial-reports/",
+          "resolvedUrl": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/CapU-FY2324-SOFI-Report-Signed.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "09a5c0db3eb4bbdaae5f8a1314fde44b5c31c35144df068c1fabd8d020a50347",
+          "bytes": 3405318,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 53,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            37,
+            38
+          ]
+        },
+        {
+          "url": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/Capilano-University---SOFI-FY22-23.pdf",
+          "indexedLabel": "Statement of Financial Information 2022-23",
+          "indexUrl": "https://www.capilanou.ca/about-capu/governance/budget-plans--reports/financial-reports/",
+          "resolvedUrl": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/Capilano-University---SOFI-FY22-23.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "2f4bbe6be1f15f7f7ae8373a91b455ab8df1df19226c598f0a8e4ae82bd8ca99",
+          "bytes": 3250989,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 54,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            37,
+            38
+          ]
+        },
+        {
+          "url": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/Capilano-University---FY21-22-SOFI.pdf",
+          "indexedLabel": "Statement of Financial Information 2021-22",
+          "indexUrl": "https://www.capilanou.ca/about-capu/governance/budget-plans--reports/financial-reports/",
+          "resolvedUrl": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/Capilano-University---FY21-22-SOFI.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "3a241f93089fdc765eddcf29ef41cb328e5f8c34236abf274baf79dea93e90e8",
+          "bytes": 2499285,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 50,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            34,
+            35
+          ]
+        },
+        {
+          "url": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/Capilano-University-SOFI-2020-21.pdf",
+          "indexedLabel": "Statement of Financial Information 2020-21",
+          "indexUrl": "https://www.capilanou.ca/about-capu/governance/budget-plans--reports/financial-reports/",
+          "resolvedUrl": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/Capilano-University-SOFI-2020-21.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "c62e523ca4ff3c66297e560c2bed79105ebb0b2066b0541d93b7ceaec3416942",
+          "bytes": 5218345,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 50,
+          "candidateReportingPeriod": "2020/21",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            15,
+            34,
+            35
+          ]
+        },
+        {
+          "url": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/Capilano-University-FY2020-SOFI-Report-Final.pdf",
+          "indexedLabel": "Statement of Financial Information 2019-20",
+          "indexUrl": "https://www.capilanou.ca/about-capu/governance/budget-plans--reports/financial-reports/",
+          "resolvedUrl": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/Capilano-University-FY2020-SOFI-Report-Final.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "edbfe7f43fc1d3c14a98b78267c6543dd0c9b7796c1fb3195cc0e0155d33ac42",
+          "bytes": 1711544,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 50,
+          "candidateReportingPeriod": "2019/20",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            34,
+            35
+          ]
+        },
+        {
+          "url": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/CapU-SOFI-Fiscal-2018-19---Final-Signed-Copy.pdf",
+          "indexedLabel": "Statement of Financial Information 2018-19",
+          "indexUrl": "https://www.capilanou.ca/about-capu/governance/budget-plans--reports/financial-reports/",
+          "resolvedUrl": "https://www.capilanou.ca/media/capilanouca/about-capu/governance/budget-plans-amp-reports/financial-reports/CapU-SOFI-Fiscal-2018-19---Final-Signed-Copy.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "c523ca42c724f90b3f5889ac98fa9c5aaa1c47fb07177e06672e9ba9058d3aa8",
+          "bytes": 2221640,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 45,
+          "candidateReportingPeriod": "2018/19",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            31,
+            32
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 7,
+        "retrievedPDFs": 7,
+        "nativeTextCandidates": 7,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.capilanou.ca/about-capu/governance/budget-plans--reports/financial-reports/",
+          "status": 200,
+          "error": null,
+          "sha256": "33f0afdd83198627289af694eac2409068509403a9677fc3030eda6b775b838c",
+          "bytes": 191820
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "coast-mountain-college",
+      "employerName": "Coast Mountain College",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://www.coastmountaincollege.ca/about-cmtn/about/cmtn-reports-reviews"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2020/21": 89,
+          "2023/24": 124
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://coastmountaincollege.ca/docs/default-source/cmtn-reports-statements-reviews/statements-of-financial-information/cmtn2025---financial-statements.pdf",
+          "indexedLabel": "2024-2025 Statement of Financial Information",
+          "indexUrl": "https://www.coastmountaincollege.ca/about-cmtn/about/cmtn-reports-reviews",
+          "resolvedUrl": "https://coastmountaincollege.ca/docs/default-source/cmtn-reports-statements-reviews/statements-of-financial-information/cmtn2025---financial-statements.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+          "bytes": 2132607,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 47,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            34,
+            35,
+            36,
+            37,
+            38
+          ]
+        },
+        {
+          "url": "https://coastmountaincollege.ca/docs/default-source/cmtn-reports-statements-reviews/statements-of-financial-information/2023-2024-statement-of-financial-information-pdf.pdf",
+          "indexedLabel": "2023-2024 Statement of Financial Information.pdf",
+          "indexUrl": "https://www.coastmountaincollege.ca/about-cmtn/about/cmtn-reports-reviews",
+          "resolvedUrl": "https://coastmountaincollege.ca/docs/default-source/cmtn-reports-statements-reviews/statements-of-financial-information/2023-2024-statement-of-financial-information-pdf.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+          "bytes": 2319376,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 45,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            33,
+            34,
+            35,
+            36
+          ]
+        },
+        {
+          "url": "https://coastmountaincollege.ca/docs/default-source/cmtn-reports-statements-reviews/statements-of-financial-information/2022-2023-statement-of-financial-information.pdf",
+          "indexedLabel": "2022-2023 Statement of Financial Information",
+          "indexUrl": "https://www.coastmountaincollege.ca/about-cmtn/about/cmtn-reports-reviews",
+          "resolvedUrl": "https://coastmountaincollege.ca/docs/default-source/cmtn-reports-statements-reviews/statements-of-financial-information/2022-2023-statement-of-financial-information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+          "bytes": 2597223,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 45,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            34,
+            35,
+            36
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 3,
+        "retrievedPDFs": 3,
+        "nativeTextCandidates": 3,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.coastmountaincollege.ca/about-cmtn/about/cmtn-reports-reviews",
+          "status": 200,
+          "error": null,
+          "sha256": "dcfed185fad8d59c965fab5cf895e6c6825d3a9a2c1e98277b21b84afae01bf3",
+          "bytes": 361997
+        }
+      ],
+      "findings": "The newest 2024/25 link filename says financial-statements but is a complete SOFI with named employee Salary Plus Benefits and separate Expenses/Total columns (employee pages 33–38). The expense-inclusive Total cannot be used as remuneration.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "college-of-new-caledonia",
+      "employerName": "College of New Caledonia",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://cnc.bc.ca/about/initiatives/budget"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 212,
+          "2020/21": 258,
+          "2023/24": 312
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2020/21"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2025-26.pdf?sfvrsn=781733f6_3",
+          "indexedLabel": "SOFI Report 2025-2026",
+          "indexUrl": "https://cnc.bc.ca/about/initiatives/budget",
+          "resolvedUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2025-26.pdf?sfvrsn=781733f6_3",
+          "status": 200,
+          "error": null,
+          "sha256": "50386dc8e8af6dba82c66e7fbe74786e06b71adb19cc3ddafd00fe19656bbbb9",
+          "bytes": 523443,
+          "contentType": "application/pdf",
+          "pdfStatus": "ocr-required-or-incomplete-text",
+          "physicalPages": 18,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": false,
+          "nativeEmployeeHeadingPages": []
+        },
+        {
+          "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2024-2025.pdf?sfvrsn=629edc16_3",
+          "indexedLabel": "SOFI Report 2024-2025",
+          "indexUrl": "https://cnc.bc.ca/about/initiatives/budget",
+          "resolvedUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2024-2025.pdf?sfvrsn=629edc16_3",
+          "status": 200,
+          "error": null,
+          "sha256": "84a180c78485bc17a7c1696047158348399ce3cadef1b342bbc1a29577e95547",
+          "bytes": 610405,
+          "contentType": "application/pdf",
+          "pdfStatus": "ocr-required-or-incomplete-text",
+          "physicalPages": 19,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": false,
+          "nativeEmployeeHeadingPages": []
+        },
+        {
+          "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_3",
+          "indexedLabel": "SOFI Report 2023-2024",
+          "indexUrl": "https://cnc.bc.ca/about/initiatives/budget",
+          "resolvedUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_3",
+          "status": 200,
+          "error": null,
+          "sha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "bytes": 481968,
+          "contentType": "application/pdf",
+          "pdfStatus": "ocr-required-or-incomplete-text",
+          "physicalPages": 18,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": false,
+          "nativeEmployeeHeadingPages": []
+        },
+        {
+          "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_3",
+          "indexedLabel": "SOFI Report 2022-2023",
+          "indexUrl": "https://cnc.bc.ca/about/initiatives/budget",
+          "resolvedUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_3",
+          "status": 200,
+          "error": null,
+          "sha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "bytes": 524607,
+          "contentType": "application/pdf",
+          "pdfStatus": "ocr-required-or-incomplete-text",
+          "physicalPages": 18,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": false,
+          "nativeEmployeeHeadingPages": []
+        },
+        {
+          "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_3",
+          "indexedLabel": "SOFI Report 2021-2022",
+          "indexUrl": "https://cnc.bc.ca/about/initiatives/budget",
+          "resolvedUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_3",
+          "status": 200,
+          "error": null,
+          "sha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "bytes": 6293669,
+          "contentType": "application/pdf",
+          "pdfStatus": "ocr-required-or-incomplete-text",
+          "physicalPages": 18,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": false,
+          "nativeEmployeeHeadingPages": []
+        },
+        {
+          "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_3",
+          "indexedLabel": "SOFI Report 2020-2021",
+          "indexUrl": "https://cnc.bc.ca/about/initiatives/budget",
+          "resolvedUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_3",
+          "status": 200,
+          "error": null,
+          "sha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "bytes": 768864,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 17,
+          "candidateReportingPeriod": "2020/21",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": []
+        },
+        {
+          "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_3",
+          "indexedLabel": "SOFI Report 2019-2020",
+          "indexUrl": "https://cnc.bc.ca/about/initiatives/budget",
+          "resolvedUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_3",
+          "status": 200,
+          "error": null,
+          "sha256": "6f8c6ad394df7df9dd58c7370a28fb367cdf5a12ad4a8e907606f1c1e6166129",
+          "bytes": 496896,
+          "contentType": "application/pdf",
+          "pdfStatus": "ocr-required-or-incomplete-text",
+          "physicalPages": 17,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": false,
+          "nativeEmployeeHeadingPages": []
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 7,
+        "retrievedPDFs": 7,
+        "nativeTextCandidates": 1,
+        "imageDominantCandidates": 6,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://cnc.bc.ca/about/initiatives/budget",
+          "status": 200,
+          "error": null,
+          "sha256": "7820c831fbc308441dc4f11de34d4cffacc4dcc6bb2fe3d0904ead5f697a35b5",
+          "bytes": 68065
+        }
+      ],
+      "findings": "All seven indexed SOFI PDFs downloaded and fingerprinted; six are image-dominant and require OCR with full row/control verification; the 2020/21 PDF exposes native text. Indexed years remain distinct from confirmed internal headings.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "college-of-the-rockies",
+      "employerName": "College of the Rockies",
+      "sector": "Universities and colleges",
+      "status": "employee-sofi-not-located",
+      "sourceIndexUrls": [
+        "https://cotr.bc.ca/about-us/board/board-financial-reports/",
+        "https://cotr.bc.ca/about-us/leadership-and-governance/reports-and-plans/"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 122,
+          "2020/21": 129,
+          "2023/24": 154
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [],
+      "indexedDocuments": [],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 0,
+        "retrievedPDFs": 0,
+        "nativeTextCandidates": 0,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://cotr.bc.ca/about-us/board/board-financial-reports/",
+          "status": 200,
+          "error": null,
+          "sha256": "3f572c17afffbc94ebb36a0ee66f93ce34003f6b459381013594a84ff0e95112",
+          "bytes": 140501
+        },
+        {
+          "url": "https://cotr.bc.ca/about-us/leadership-and-governance/reports-and-plans/",
+          "status": 200,
+          "error": null,
+          "sha256": "f588a0a6bacaf350a69208d73d97dbb95017e0bcefd073ae54ea8def956b2cd1",
+          "bytes": 136494
+        }
+      ],
+      "findings": "Current official board financial page publishes 2025/26 audited statements, a SharePoint board-remuneration disclosure and executive compensation. A full employee SOFI was not located in these checked pages. Audited statements/board/executive payments are separate scopes.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "douglas-college",
+      "employerName": "Douglas College",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://www.douglascollege.ca/about-douglas/campus-information/finance-and-procurement/finance/publications-and-reports"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 508,
+          "2020/21": 571,
+          "2023/24": 678
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.douglascollege.ca/sites/default/files/docs/finance/financial-information-report-march-31-2026.pdf",
+          "indexedLabel": "Financial Information Report - March 31, 2026",
+          "indexUrl": "https://www.douglascollege.ca/about-douglas/campus-information/finance-and-procurement/finance/publications-and-reports",
+          "resolvedUrl": "https://www.douglascollege.ca/sites/default/files/docs/finance/financial-information-report-march-31-2026.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "8306ab95562ffa8ca8137d6c89fd9986205a95f8ab67b2addb784824b3c7f296",
+          "bytes": 525985,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 34,
+          "candidateReportingPeriod": "2025/26",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            34
+          ]
+        },
+        {
+          "url": "https://www.douglascollege.ca/sites/default/files/docs/finance/financial-information-report-march-31-2025.pdf",
+          "indexedLabel": "Financial Information Report - March 31, 2025",
+          "indexUrl": "https://www.douglascollege.ca/about-douglas/campus-information/finance-and-procurement/finance/publications-and-reports",
+          "resolvedUrl": "https://www.douglascollege.ca/sites/default/files/docs/finance/financial-information-report-march-31-2025.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "c05a2a4e202bd7c5c5fc1c87d8dc0f69195f99b742b52ef41867970687d95b16",
+          "bytes": 330322,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 33,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            33
+          ]
+        },
+        {
+          "url": "https://www.douglascollege.ca/sites/default/files/docs/finance/financial-information-report-march-31-2024.pdf",
+          "indexedLabel": "Financial Information Report - March 31, 2024",
+          "indexUrl": "https://www.douglascollege.ca/about-douglas/campus-information/finance-and-procurement/finance/publications-and-reports",
+          "resolvedUrl": "https://www.douglascollege.ca/sites/default/files/docs/finance/financial-information-report-march-31-2024.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "4e4b0cd250e9a7dcbf47118bde1a708e96b71a1f3371ecd136a1487cec2dd105",
+          "bytes": 380399,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 32,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            32
+          ]
+        },
+        {
+          "url": "https://www.douglascollege.ca/sites/default/files/docs/finance/Financial%20Information%20Report%20-%20March%2031%2C%202023.pdf",
+          "indexedLabel": "Financial Information Report - March 31, 2023",
+          "indexUrl": "https://www.douglascollege.ca/about-douglas/campus-information/finance-and-procurement/finance/publications-and-reports",
+          "resolvedUrl": "https://www.douglascollege.ca/sites/default/files/docs/finance/Financial%20Information%20Report%20-%20March%2031%2C%202023.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "d7c81e10af6af7acfec1258cb5341a11da0b00523b02e8db1e7acde643ad6e9b",
+          "bytes": 428734,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 31,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            31
+          ]
+        },
+        {
+          "url": "https://www.douglascollege.ca/sites/default/files/docs/finance/Financial%20Information%20Report%20-%20March%2031%2C%202022.pdf",
+          "indexedLabel": "Financial Information Report - March 31, 2022",
+          "indexUrl": "https://www.douglascollege.ca/about-douglas/campus-information/finance-and-procurement/finance/publications-and-reports",
+          "resolvedUrl": "https://www.douglascollege.ca/sites/default/files/docs/finance/Financial%20Information%20Report%20-%20March%2031%2C%202022.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "28581d71cc5bbb8c641972dbe8ea3b698fac3edb3f30a7e12213c7179c42e413",
+          "bytes": 357672,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 29,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            29
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 5,
+        "retrievedPDFs": 5,
+        "nativeTextCandidates": 5,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.douglascollege.ca/about-douglas/campus-information/finance-and-procurement/finance/publications-and-reports",
+          "status": 200,
+          "error": null,
+          "sha256": "aa9317f57780bb3f91d5fda359f04f4073538234a9e66ec8d54df68c82568f6f",
+          "bytes": 518937
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "emily-carr-university",
+      "employerName": "Emily Carr",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://ecuad.ca/reports/"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 108,
+          "2020/21": 120,
+          "2023/24": 170
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2023/24",
+        "2025/26"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://ecuad.ca/wp-content/uploads/2026/10/2026-Board-Report-signed.pdf",
+          "indexedLabel": "View ECU’s SOFI Report",
+          "indexUrl": "https://ecuad.ca/reports/",
+          "resolvedUrl": "https://ecuad.ca/wp-content/uploads/2026/10/2026-Board-Report-signed.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "1da31055ff847aca0672bea2de820ee6e45eab3b0b7287e73ec801ba1253d3fe",
+          "bytes": 455767,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 16,
+          "candidateReportingPeriod": "2025/26",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": []
+        },
+        {
+          "url": "https://ecuad.ca/wp-content/uploads/2025/10/2024-SOFI_signed.pdf",
+          "indexedLabel": "Search-located SOFI 2024",
+          "indexUrl": null,
+          "resolvedUrl": "https://ecuad.ca/wp-content/uploads/2025/10/2024-SOFI_signed.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "a5d1e078065c4c0b9a7f84e030de750087298aab54120ed86a4dc412e3328c7a",
+          "bytes": 426449,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 12,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": []
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 2,
+        "retrievedPDFs": 2,
+        "nativeTextCandidates": 2,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://ecuad.ca/reports/",
+          "status": 200,
+          "error": null,
+          "sha256": "8aceb9d844912a80fd166a7927a8c6d088d1d5bb4eae9e2650ceb0cb651a1fad",
+          "bytes": 252692
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "justice-institute-of-bc",
+      "employerName": "Justice Institute of B.C.",
+      "sector": "Universities and colleges",
+      "status": "employee-sofi-not-located",
+      "sourceIndexUrls": [
+        "https://www.jibc.ca/about-us/strategic-plans-reports"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 113,
+          "2020/21": 127,
+          "2023/24": 152
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [],
+      "indexedDocuments": [],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 0,
+        "retrievedPDFs": 0,
+        "nativeTextCandidates": 0,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.jibc.ca/about-us/strategic-plans-reports",
+          "status": 200,
+          "error": null,
+          "sha256": "2a3a2a68bcdfff73a79e4c475cf213e78b90fa82e467a84e27f58f003b578192",
+          "bytes": 47280
+        }
+      ],
+      "findings": "Checked official reports page lists audited statements 2023–2025, board honoraria 2020/21–2025/26 and executive disclosures 2023/24–2025/26, but no complete employee SOFI link was located. Request the complete employee schedule, not only executive disclosure.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "kwantlen-polytechnic-university",
+      "employerName": "Kwantlen Polytechnic University",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://www.kpu.ca/finance/reports"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 656,
+          "2020/21": 748,
+          "2023/24": 914
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.kpu.ca/sites/default/files/Finance/Statement%20of%20Financial%20Information%202024-2025_2.pdf",
+          "indexedLabel": "Statement of Financial Information 2024-25",
+          "indexUrl": "https://www.kpu.ca/finance/reports",
+          "resolvedUrl": "https://www.kpu.ca/sites/default/files/Finance/Statement%20of%20Financial%20Information%202024-2025_2.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "2ebccf1a266ba2cfe4ae6e34bbfa21f8ec79d72327df45786cf8d5b0cf164367",
+          "bytes": 2128119,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 81,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            37,
+            38,
+            65,
+            81
+          ]
+        },
+        {
+          "url": "https://www.kpu.ca/sites/default/files/KPU%20Statement%20of%20Financial%20Information%20%28SOFI%29%20Report%202024%20-%20Final.pdf",
+          "indexedLabel": "Statement of Financial Information 2023-24",
+          "indexUrl": "https://www.kpu.ca/finance/reports",
+          "resolvedUrl": "https://www.kpu.ca/sites/default/files/KPU%20Statement%20of%20Financial%20Information%20%28SOFI%29%20Report%202024%20-%20Final.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "fa5a71bce9ba320e483927acd26ccaba87da05b6126d79d58d536f7d25fffa04",
+          "bytes": 2359416,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 76,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            37,
+            38,
+            61,
+            76
+          ]
+        },
+        {
+          "url": "https://www.kpu.ca/sites/default/files/Statement%20of%20Financial%20Information%20%28SOFI%29%20as%20at%20March%2031%2C%202023_FINAL_signed.pdf",
+          "indexedLabel": "Statement of Financial Information 2022-23",
+          "indexUrl": "https://www.kpu.ca/finance/reports",
+          "resolvedUrl": "https://www.kpu.ca/sites/default/files/Statement%20of%20Financial%20Information%20%28SOFI%29%20as%20at%20March%2031%2C%202023_FINAL_signed.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "9a8a3315818530fa9d99ee202665597afdd6828e52cf4722761cdf684abae814",
+          "bytes": 1639856,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 70,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            34,
+            35,
+            56,
+            70
+          ]
+        },
+        {
+          "url": "https://www.kpu.ca/sites/default/files/Statement%20of%20Financial%20Information%20%28SOFI%29%20at%20March%2031%2C%202022%20-%20Final_0.pdf",
+          "indexedLabel": "Statement of Financial Information 2021-22",
+          "indexUrl": "https://www.kpu.ca/finance/reports",
+          "resolvedUrl": "https://www.kpu.ca/sites/default/files/Statement%20of%20Financial%20Information%20%28SOFI%29%20at%20March%2031%2C%202022%20-%20Final_0.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "7d5ee466d98172444de88d769c6ebd6ebebbb919f6ce69e56d177cc27911537c",
+          "bytes": 1569903,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 55,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            55
+          ]
+        },
+        {
+          "url": "https://www.kpu.ca/sites/default/files/FY21%20SOFI%20Report%20-%20Final_SIGNED%20BY%20THE%20CHAIR%20-%20signed%20Sept%2029.pdf",
+          "indexedLabel": "Statement of Financial Information 2020-21",
+          "indexUrl": "https://www.kpu.ca/finance/reports",
+          "resolvedUrl": "https://www.kpu.ca/sites/default/files/FY21%20SOFI%20Report%20-%20Final_SIGNED%20BY%20THE%20CHAIR%20-%20signed%20Sept%2029.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "633c71ac0c259c99aff192b258c65786730f99855f98bdaeb159cb85a26bcb63",
+          "bytes": 1656225,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 55,
+          "candidateReportingPeriod": "2020/21",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            55
+          ]
+        },
+        {
+          "url": "https://www.kpu.ca/sites/default/files/FY20%20SOFI%20Report%20-%20Final.PDF",
+          "indexedLabel": "Statement of Financial Information 2019-20",
+          "indexUrl": "https://www.kpu.ca/finance/reports",
+          "resolvedUrl": "https://www.kpu.ca/sites/default/files/FY20%20SOFI%20Report%20-%20Final.PDF",
+          "status": 200,
+          "error": null,
+          "sha256": "f434d48180bb052f835c762c509874236b974e895a8a7c33631949cfd29efb49",
+          "bytes": 18046645,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 53,
+          "candidateReportingPeriod": "2019/20",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            53
+          ]
+        },
+        {
+          "url": "https://www.kpu.ca/sites/default/files/Finance/FY19%20KPU%20SOFI%20SIGNED.pdf",
+          "indexedLabel": "Statement of Financial Information 2018-19",
+          "indexUrl": "https://www.kpu.ca/finance/reports",
+          "resolvedUrl": "https://www.kpu.ca/sites/default/files/Finance/FY19%20KPU%20SOFI%20SIGNED.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "e702b106864e266e903c5438b89f17e9ede71b957c6b8396bb20b3be2f0105a8",
+          "bytes": 9850815,
+          "contentType": "application/pdf",
+          "pdfStatus": "ocr-required-or-incomplete-text",
+          "physicalPages": 61,
+          "candidateReportingPeriod": "2018/19",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            55,
+            57,
+            59,
+            60
+          ]
+        },
+        {
+          "url": "https://www.kpu.ca/sites/default/files/Finance/2018%20Statement%20of%20Financial%20Information%20%28Final%20Signed%29.pdf",
+          "indexedLabel": "Statement of Financial Information 2017-18",
+          "indexUrl": "https://www.kpu.ca/finance/reports",
+          "resolvedUrl": "https://www.kpu.ca/sites/default/files/Finance/2018%20Statement%20of%20Financial%20Information%20%28Final%20Signed%29.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "f50c960ea01dd87e43e002dba9930deefc34b4d0456b4d66565dbf64694d5f0d",
+          "bytes": 4484099,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 61,
+          "candidateReportingPeriod": "2017/18",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            53
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 8,
+        "retrievedPDFs": 8,
+        "nativeTextCandidates": 7,
+        "imageDominantCandidates": 1,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.kpu.ca/finance/reports",
+          "status": 200,
+          "error": null,
+          "sha256": "77786f84ebbfbb45ce88b4663b2489ef3ab3f0c17f80f99502f4d6df092303ea",
+          "bytes": 42085
+        }
+      ],
+      "findings": "Eight indexed SOFIs found. 2018/19 is image-dominant and requires OCR; remaining retrieved documents expose native table candidates. Board agenda packages are leads; the standalone signed source is preferred.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "langara-college",
+      "employerName": "Langara College",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://langara.ca/administration/financial-services/annual-reports"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 476,
+          "2020/21": 630,
+          "2023/24": 891
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://langara.ca/media/15595/download?inline",
+          "indexedLabel": "Statement of Financial Information 2025",
+          "indexUrl": "https://langara.ca/administration/financial-services/annual-reports",
+          "resolvedUrl": "https://langara.ca/media/15595/download?inline",
+          "status": 200,
+          "error": null,
+          "sha256": "e0236a17bfa8f78ea28dba4a88d461a987eba8ad05bc56cc8ab41fe70763c325",
+          "bytes": 4871955,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 49,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42
+          ]
+        },
+        {
+          "url": "https://langara.ca/sites/default/files/migrated/files/LC_FY24_SOFI.pdf",
+          "indexedLabel": "Statement of Financial Information 2024",
+          "indexUrl": "https://langara.ca/administration/financial-services/annual-reports",
+          "resolvedUrl": "https://langara.ca/sites/default/files/migrated/files/LC_FY24_SOFI.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "74693accc765b5feb0a7e0985c9d8beb39d84bdac24d5bb92c3f78a4536e78c8",
+          "bytes": 11728579,
+          "contentType": "application/pdf",
+          "pdfStatus": "ocr-required-or-incomplete-text",
+          "physicalPages": 48,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": []
+        },
+        {
+          "url": "https://langara.ca/sites/default/files/migrated/files/LC_FY23_SOFI.pdf",
+          "indexedLabel": "Statement of Financial Information 2023",
+          "indexUrl": "https://langara.ca/administration/financial-services/annual-reports",
+          "resolvedUrl": "https://langara.ca/sites/default/files/migrated/files/LC_FY23_SOFI.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "820da0516b04dd8d1cc36d1f04e3c91376b7d157b82e6c977216732625a048d6",
+          "bytes": 5364431,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 47,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            31,
+            41
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 3,
+        "retrievedPDFs": 3,
+        "nativeTextCandidates": 2,
+        "imageDominantCandidates": 1,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://langara.ca/administration/financial-services/annual-reports",
+          "status": 200,
+          "error": null,
+          "sha256": "77041bb0422c1b6191cd9e61896e27092ec37d58ee2d024ac139ea7f1c31143b",
+          "bytes": 202605
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "sector": "Universities and colleges",
+      "status": "accepted-with-processing-backlog",
+      "sourceIndexUrls": [
+        "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 134,
+          "2020/21": 290,
+          "2023/24": 181
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [
+        {
+          "year": "2020/21",
+          "id": "north-island-college-sofi-2021",
+          "rows": 145,
+          "sourceUrl": "https://nic.bc.ca/_resources/pdf/statement-of-financial-information-2020-21.pdf",
+          "collection": "research/salaries/north-island"
+        }
+      ],
+      "verifiedNativeHeadingPeriods": [
+        "2018/19",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2024-25.pdf",
+          "indexedLabel": "2024-25 Statement of Financial Information",
+          "indexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+          "resolvedUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2024-25.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "13ba3ce3742b8487ffedb14a945f340eaf09f27d9f94bbe084d9162546445b8e",
+          "bytes": 153537,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 17,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            17
+          ]
+        },
+        {
+          "url": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2023-24.pdf",
+          "indexedLabel": "2023-24 Statement of Financial Information",
+          "indexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+          "resolvedUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2023-24.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "598caa417c3963e40a48af17d05ab860c02ae75cc901727ad092fa5ca98e762a",
+          "bytes": 414719,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 20,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            20
+          ]
+        },
+        {
+          "url": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2022-23.pdf",
+          "indexedLabel": "2022-23 Statement of Financial Information",
+          "indexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+          "resolvedUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2022-23.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "08b65aa51ae42b99125ffcbd5d59d27331ab775d989795051032197ea12bbcff",
+          "bytes": 3137286,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 41,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            17
+          ]
+        },
+        {
+          "url": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2021-22.pdf",
+          "indexedLabel": "2021-22 Statement of Financial Information",
+          "indexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+          "resolvedUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2021-22.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "90fedb56a99c010064a67db18370578ecd6e33326bac04998b2d5458a3740afd",
+          "bytes": 322539,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 17,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            17
+          ]
+        },
+        {
+          "url": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2019-20.pdf",
+          "indexedLabel": "2019-20 Statement of Financial Information",
+          "indexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+          "resolvedUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2019-20.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "43fd43a1d642fd6ad49efa92b8428d8663a4a410eec74d2d615b30fecb7e661d",
+          "bytes": 562354,
+          "contentType": "application/pdf",
+          "pdfStatus": "ocr-required-or-incomplete-text",
+          "physicalPages": 9,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": false,
+          "nativeEmployeeHeadingPages": []
+        },
+        {
+          "url": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2018-19.pdf",
+          "indexedLabel": "2018-19 Statement of Financial Information",
+          "indexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+          "resolvedUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2018-19.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "8042d90554896de2c310d93bde9f4247757f092213b6038398e1a365257711b0",
+          "bytes": 2130917,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 42,
+          "candidateReportingPeriod": "2018/19",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 6,
+        "retrievedPDFs": 6,
+        "nativeTextCandidates": 5,
+        "imageDominantCandidates": 1,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+          "status": 200,
+          "error": null,
+          "sha256": "98b5440bba2ae4493d18ecbf470b440540ee3e1e7b7e5d96ade5e59f23ae4b73",
+          "bytes": 79558
+        }
+      ],
+      "findings": "Six current archive links include 2018/19 and 2020/21–2024/25. The archive omits 2019/20 in the retrieved links. Existing accepted 2020/21 source overlaps a rediscovered official PDF; compare hashes before considering it new.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "northern-lights-college",
+      "employerName": "Northern Lights College",
+      "sector": "Universities and colleges",
+      "status": "employee-sofi-not-located",
+      "sourceIndexUrls": [
+        "https://www.nlc.bc.ca/reports/"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 103,
+          "2023/24": 126
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [],
+      "indexedDocuments": [],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 0,
+        "retrievedPDFs": 0,
+        "nativeTextCandidates": 0,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.nlc.bc.ca/reports/",
+          "status": 200,
+          "error": null,
+          "sha256": "1b2d14f1377c9201d26dbca6e08683b4067984e655e2fb38256ead08304f80cc",
+          "bytes": 291491
+        }
+      ],
+      "findings": "Checked reports page has financial statements through March 2026 and archives to 2018/19, plus separate board/executive reports. No ordinary employee SOFI found on this index.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "okanagan-college",
+      "employerName": "Oakanagan College",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://www.okanagancollege.ca/financial-services",
+        "https://www.okanagancollege.ca/board-of-governors/okanagan-college-reports"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 392,
+          "2023/24": 536
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.okanagancollege.ca/sites/default/files/2025-10/2024-25%20Statement%20of%20Financial%20Information%20-signed.pdf",
+          "indexedLabel": "2025 Statement of Financial Information",
+          "indexUrl": "https://www.okanagan.bc.ca/financial-services",
+          "resolvedUrl": "https://www.okanagancollege.ca/sites/default/files/2025-10/2024-25%20Statement%20of%20Financial%20Information%20-signed.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "a08d4bf3a8938dc92b27d51d2035d13af14ae34909d448fc74a9fa91133c2299",
+          "bytes": 8900426,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 56,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            26,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            56
+          ]
+        },
+        {
+          "url": "https://www.okanagancollege.ca/sites/default/files/2024-10/okanagan_college_2024_statement_of_financial_information.pdf",
+          "indexedLabel": "2024 Statement of Financial Information",
+          "indexUrl": "https://www.okanagan.bc.ca/financial-services",
+          "resolvedUrl": "https://www.okanagancollege.ca/sites/default/files/2024-10/okanagan_college_2024_statement_of_financial_information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "bca1227aec7196426c472240c497b3de791230e0eb148f05e46f206d97914c40",
+          "bytes": 9913834,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 55,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            27,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            55
+          ]
+        },
+        {
+          "url": "https://www.okanagancollege.ca/sites/default/files/2023-11/okanagan_college_2023_statement_of_financial_information.pdf",
+          "indexedLabel": "2023 Statement of Financial Information",
+          "indexUrl": "https://www.okanagan.bc.ca/financial-services",
+          "resolvedUrl": "https://www.okanagancollege.ca/sites/default/files/2023-11/okanagan_college_2023_statement_of_financial_information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "e0d3777c72875d82bda0de5ec00e8ddf4232c3cf18ebdc50a5753d0692613287",
+          "bytes": 4316917,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 48,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            23,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42
+          ]
+        },
+        {
+          "url": "https://www.okanagancollege.ca/sites/default/files/2023-11/okanagan_college_2022_statement_of_financial_information.pdf",
+          "indexedLabel": "2022 Statement of Financial Information",
+          "indexUrl": "https://www.okanagan.bc.ca/financial-services",
+          "resolvedUrl": "https://www.okanagancollege.ca/sites/default/files/2023-11/okanagan_college_2022_statement_of_financial_information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "fa88a201fc7d2ca6865c07a6e4feb158e7bf6e2ed2101e64da7ea974c0499e4c",
+          "bytes": 7063065,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 47,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            23,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            47
+          ]
+        },
+        {
+          "url": "https://www.okanagancollege.ca/sites/default/files/2023-11/okanagan_college_2021_statement_of_financial_information.pdf",
+          "indexedLabel": "2021 Statement of Financial Information",
+          "indexUrl": "https://www.okanagan.bc.ca/financial-services",
+          "resolvedUrl": "https://www.okanagancollege.ca/sites/default/files/2023-11/okanagan_college_2021_statement_of_financial_information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "95b10fa0127c260c4d650edc9ef5fb14c20eb1518fac0ef6c33e69c2d6756705",
+          "bytes": 2494591,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 46,
+          "candidateReportingPeriod": "2020/21",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            21,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 5,
+        "retrievedPDFs": 5,
+        "nativeTextCandidates": 5,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.okanagancollege.ca/board-of-governors/okanagan-college-reports",
+          "status": 200,
+          "error": null,
+          "sha256": "1c9519a1877a2877877f4e3a646344c1872432ed5ba6c708257be1d72c49b013",
+          "bytes": 290556
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "royal-roads-university",
+      "employerName": "Royal Roads University",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://www.royalroads.ca/contact/finance"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21"
+        ],
+        "counts": {
+          "2017/18": 138,
+          "2020/21": 223
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2022/23"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.royalroads.ca/sites/default/files/2023-09/2023-03-31_RRU-SOFI-FullySigned.pdf",
+          "indexedLabel": "Search-located SOFI 2023",
+          "indexUrl": null,
+          "resolvedUrl": "https://www.royalroads.ca/sites/default/files/2023-09/2023-03-31_RRU-SOFI-FullySigned.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "8aaa5e7d38ab9f0333b4c3a7f5b3e6996da5518e8f731f3f600e736027997fd5",
+          "bytes": 4103461,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 34,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            25,
+            26,
+            27,
+            28
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 1,
+        "retrievedPDFs": 1,
+        "nativeTextCandidates": 1,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.royalroads.ca/contact/finance",
+          "status": 200,
+          "error": null,
+          "sha256": "f15c4a77e4780647905ade09cbdd362554fe4fddef8b82d0cd9580aa537120a4",
+          "bytes": 64646
+        }
+      ],
+      "findings": "Exact official March 2023 fully signed SOFI retrieved with named employees and positions on pages 25–28; generic finance page does not expose a comprehensive SOFI archive in its links. Search snippets and third-party coverage are leads only; later/earlier SOFIs require archive discovery.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "selkirk-college",
+      "employerName": "Selkirk College",
+      "sector": "Universities and colleges",
+      "status": "employee-sofi-not-located",
+      "sourceIndexUrls": [
+        "https://selkirk.ca/about-selkirk/leadership-governance/plans-reporting/financial-statements"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 140,
+          "2020/21": 198,
+          "2023/24": 254
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [],
+      "indexedDocuments": [],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 0,
+        "retrievedPDFs": 0,
+        "nativeTextCandidates": 0,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://selkirk.ca/about-selkirk/leadership-governance/plans-reporting/financial-statements",
+          "status": 200,
+          "error": null,
+          "sha256": "263a8bfe0a16a9b9a174c620a2a6ee2b3a8f54f0a7301d796d4aa56606d20ea0",
+          "bytes": 210221
+        }
+      ],
+      "findings": "Checked financial-statements index has audited statements 2018/19–2025/26 and a 2026 executive disclosure. No full employee SOFI located. Earlier archive research and an ordinary report request are appropriate before FOI.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "simon-fraser-university",
+      "employerName": "Simon Fraser University",
+      "sector": "Universities and colleges",
+      "status": "accepted-with-processing-backlog",
+      "sourceIndexUrls": [
+        "https://www.sfu.ca/finance/publications/annual-reports.html"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 1617,
+          "2020/21": 2072,
+          "2023/24": 2831
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [
+        {
+          "year": "2017/18",
+          "id": "sfu-sofi-2017-18-employees",
+          "rows": 1617,
+          "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2018%20SFU%20SOFI%20Report.pdf",
+          "collection": "research/salaries/sector-education"
+        },
+        {
+          "year": "2018/19",
+          "id": "sfu-sofi-2018-19-employees",
+          "rows": 1723,
+          "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2019%20SFU%20SOFI%20Report.pdf",
+          "collection": "research/salaries/sector-education"
+        },
+        {
+          "year": "2020/21",
+          "id": "sfu-sofi-2020-21-employees",
+          "rows": 1980,
+          "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2021%20SFU%20SOFI%20Report.pdf",
+          "collection": "research/salaries/sector-education"
+        },
+        {
+          "year": "2021/22",
+          "id": "sfu-sofi-2021-22-employees",
+          "rows": 2366,
+          "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2022%20SFU%20SOFI%20Report.pdf",
+          "collection": "research/salaries/sector-education"
+        },
+        {
+          "year": "2024/25",
+          "id": "sfu-sofi-2024-25-employees",
+          "rows": 2874,
+          "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2025-SOFI-report.pdf",
+          "collection": "research/salaries/sector-education"
+        },
+        {
+          "year": "2025/26",
+          "id": "sfu-sofi-2025-26-employees",
+          "rows": 2967,
+          "sourceUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2026-SOFI-report.pdf",
+          "collection": "research/salaries/sector-education"
+        }
+      ],
+      "verifiedNativeHeadingPeriods": [
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2026-SOFI-report.pdf",
+          "indexedLabel": "Statement of Financial Information 2026",
+          "indexUrl": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "resolvedUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2026-SOFI-report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "d25179f9977b0abab61ad6a8ba5b9c97572a7839f86acb940f51f382ab512c09",
+          "bytes": 2777603,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 91,
+          "candidateReportingPeriod": "2025/26",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            90
+          ]
+        },
+        {
+          "url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2025-SOFI-report.pdf",
+          "indexedLabel": "2025",
+          "indexUrl": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "resolvedUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2025-SOFI-report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "a8d64b51ca33986c9dea586213fbac2213029156eaabd13cf1b250871ed5080c",
+          "bytes": 1501670,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 91,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            3,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            91
+          ]
+        },
+        {
+          "url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2024-SOFI-Report.pdf",
+          "indexedLabel": "2024",
+          "indexUrl": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "resolvedUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2024-SOFI-Report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "bc321cef3e1dc4d77eeba29516e2f016dc794a9ff8fac3d121e82f62235beedb",
+          "bytes": 1032871,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 88,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            3,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            87
+          ]
+        },
+        {
+          "url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2023%20SFU%20SOFI%20Report.pdf",
+          "indexedLabel": "2023",
+          "indexUrl": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "resolvedUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2023%20SFU%20SOFI%20Report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "f60a80f4d41e1984e0a08ee13045598db384baff8b7a94306d58eade665588a1",
+          "bytes": 795136,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 80,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            3,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            78
+          ]
+        },
+        {
+          "url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2022%20SFU%20SOFI%20Report.pdf",
+          "indexedLabel": "2022",
+          "indexUrl": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "resolvedUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2022%20SFU%20SOFI%20Report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "5c8540fc551d2471541a0e318d047114a8a1f7f1400640824767c493195118ad",
+          "bytes": 2712477,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 80,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            3,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            78
+          ]
+        },
+        {
+          "url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2021%20SFU%20SOFI%20Report.pdf",
+          "indexedLabel": "2021",
+          "indexUrl": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "resolvedUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2021%20SFU%20SOFI%20Report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "448494f7185048c7301f52ad6e4f4739e888cf017df15283e289e947354e542c",
+          "bytes": 3271060,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 77,
+          "candidateReportingPeriod": "2020/21",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            3,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            75
+          ]
+        },
+        {
+          "url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2020%20SFU%20SOFI%20Report.pdf",
+          "indexedLabel": "2020",
+          "indexUrl": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "resolvedUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2020%20SFU%20SOFI%20Report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "41233e352cd5d1c2225d4233890913511bc88ad2b1a192fcae6a45d50c3137e2",
+          "bytes": 724197,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 76,
+          "candidateReportingPeriod": "2019/20",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            3,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            74
+          ]
+        },
+        {
+          "url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2019%20SFU%20SOFI%20Report.pdf",
+          "indexedLabel": "2019",
+          "indexUrl": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "resolvedUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2019%20SFU%20SOFI%20Report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "ca60f55e020d207241bb04cae31bb66b4f9030bbdeedcf222e9b126ac5b3f99a",
+          "bytes": 2458931,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 72,
+          "candidateReportingPeriod": "2018/19",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            3,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            71
+          ]
+        },
+        {
+          "url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2018%20SFU%20SOFI%20Report.pdf",
+          "indexedLabel": "2018",
+          "indexUrl": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "resolvedUrl": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/SOFI/2018%20SFU%20SOFI%20Report.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "a7839bdf254de1141e4a4f6e11ee9a530093b0eacb85dd94646fb2db8f237437",
+          "bytes": 1545862,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 70,
+          "candidateReportingPeriod": "2017/18",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            3,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            69
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 9,
+        "retrievedPDFs": 9,
+        "nativeTextCandidates": 9,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.sfu.ca/finance/publications/annual-reports.html",
+          "status": 200,
+          "error": null,
+          "sha256": "53df3b4ab0dd58b224e8d882869d4104d636c5327bebb3ab26b4f9c025da7bef",
+          "bytes": 73367
+        }
+      ],
+      "findings": "Nine official native SOFIs retrieved. Six complete employee cohorts accepted separately; three materially discrepant cohorts remain held. Complete compiled same-label authority replacement evidence and explicit Schmidt name-conflict warning are in sector-education. Separate board schedule says no board remuneration; employee board-member pay is within employee schedule.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "thompson-rivers-university",
+      "employerName": "Thompson Rivers University",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://www.tru.ca/finance.html"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 281,
+          "2020/21": 671,
+          "2023/24": 795
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2024/25"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.tru.ca/__shared/assets/SOFI_Report64094.pdf",
+          "indexedLabel": "Search-located SOFI 2025",
+          "indexUrl": null,
+          "resolvedUrl": "https://www.tru.ca/__shared/assets/SOFI_Report64094.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "3a7941a194797bfa0e0d11764d3018f2794aea68902bf780241a83377a877568",
+          "bytes": 2250623,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 75,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            41,
+            59
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 1,
+        "retrievedPDFs": 1,
+        "nativeTextCandidates": 1,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.tru.ca/finance.html",
+          "status": 200,
+          "error": null,
+          "sha256": "00001594a2f1d601ebe32d6f666679965191899bb1cfe897eb3f928b7029bb70",
+          "bytes": 52281
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "university-of-bc",
+      "employerName": "University of B.C. (UBC)",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://finance.ubc.ca/ubcs-finances/reporting/"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 5157,
+          "2020/21": 6955,
+          "2023/24": 7861
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2025/26"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://vpfo-finance-2024.sites.olt.ubc.ca/files/2026/10/FY26-UBC-Statement-of-Financial-Information.pdf",
+          "indexedLabel": "2026 Statement of Financial Information",
+          "indexUrl": "https://finance.ubc.ca/ubcs-finances/reporting/",
+          "resolvedUrl": "https://vpfo-finance-2024.sites.olt.ubc.ca/files/2026/10/FY26-UBC-Statement-of-Financial-Information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+          "bytes": 4481619,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 239,
+          "candidateReportingPeriod": "2025/26",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            40,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154,
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 1,
+        "retrievedPDFs": 1,
+        "nativeTextCandidates": 1,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://finance.ubc.ca/ubcs-finances/reporting/",
+          "status": 200,
+          "error": null,
+          "sha256": "2a9eb54e36806ca76cefd02d071b1132744d9bed4c700e7f339448d5f283d0f6",
+          "bytes": 72858
+        }
+      ],
+      "findings": "Current reporting index exposes only the newest SOFI (year ended March 2026), retrieved as a native PDF. Employee and supplier schedules are separate; historical SOFI sources still require older media/archive discovery.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "university-of-northern-bc",
+      "employerName": "University of Northern B.C.",
+      "sector": "Universities and colleges",
+      "status": "accepted-with-processing-backlog",
+      "sourceIndexUrls": [
+        "https://www.unbc.ca/finance/financial-statements"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 258,
+          "2020/21": 281,
+          "2023/24": 420
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [
+        {
+          "year": "2024/25",
+          "id": "unbc-sofi-2024-25-employees",
+          "rows": 457,
+          "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/finance/unbc-sofi-2025-final-submission-be-uploaded-website.pdf",
+          "collection": "research/salaries/unbc"
+        }
+      ],
+      "verifiedNativeHeadingPeriods": [
+        "2024/25"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.unbc.ca/sites/default/files/sections/finance/unbc-sofi-2025-final-submission-be-uploaded-website.pdf",
+          "indexedLabel": "UNBC Statement of Financial information 2024/2025",
+          "indexUrl": "https://www.unbc.ca/finance/financial-statements",
+          "resolvedUrl": "https://www.unbc.ca/sites/default/files/sections/finance/unbc-sofi-2025-final-submission-be-uploaded-website.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "9f51790f023f8f817af5574e92eccc87dd84b4c9a0bca5a72e66967931c702de",
+          "bytes": 3582346,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 45,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            44
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 1,
+        "retrievedPDFs": 1,
+        "nativeTextCandidates": 1,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.unbc.ca/finance/financial-statements",
+          "status": 200,
+          "error": null,
+          "sha256": "f0d3a720622e9f64f47ed454b040ce4e36a4e2ecb5473c020084ad670b253079",
+          "bytes": 61627
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "university-of-the-fraser-valley",
+      "employerName": "University of the Fraser Valley",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://www.ufv.ca/finance/reporting/statement-of-financial-information-sofi/"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 407,
+          "2020/21": 511,
+          "2023/24": 673
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2026.pdf",
+          "indexedLabel": "Statement of Financial Information-Year Ended March 2026",
+          "indexUrl": "https://www.ufv.ca/finance/reporting/statement-of-financial-information-sofi/",
+          "resolvedUrl": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2026.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "f9ceccdf208e8925104bdf0a91e0634b6ed9ca1df59eebfb2bb024718d9e8667",
+          "bytes": 1417215,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 37,
+          "candidateReportingPeriod": "2025/26",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            23,
+            24
+          ]
+        },
+        {
+          "url": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2025.pdf",
+          "indexedLabel": "Statement of Financial Information-Year Ended March 2025",
+          "indexUrl": "https://www.ufv.ca/finance/reporting/statement-of-financial-information-sofi/",
+          "resolvedUrl": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2025.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "e99e1cec592aca1d2daafcc098a69fd6b3370de27071f601c1681695f052b6d7",
+          "bytes": 2044932,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 34,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            20,
+            21
+          ]
+        },
+        {
+          "url": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2024.pdf",
+          "indexedLabel": "Statement of Financial Information-Year Ended March 2024",
+          "indexUrl": "https://www.ufv.ca/finance/reporting/statement-of-financial-information-sofi/",
+          "resolvedUrl": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2024.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "2ddeb95a0f80b259fda0535728780c45526a96b00b2e63653a3c6e5f0ab78c77",
+          "bytes": 1002522,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 32,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            19
+          ]
+        },
+        {
+          "url": "https://www.ufv.ca/media/assets/finance/UFV-SOFI-Final-22_23.pdf",
+          "indexedLabel": "Statement of Financial Information-Year Ended March 2023",
+          "indexUrl": "https://www.ufv.ca/finance/reporting/statement-of-financial-information-sofi/",
+          "resolvedUrl": "https://www.ufv.ca/media/assets/finance/UFV-SOFI-Final-22_23.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "165fb58be27404a298435050b7722679f918694e776ae6ab4f217d2d0da67f53",
+          "bytes": 1143252,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 27,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            16
+          ]
+        },
+        {
+          "url": "https://www.ufv.ca/media/assets/finance/UFV-SOFI-Report-21_22-Ministry.pdf",
+          "indexedLabel": "Statement of Financial Information-Year Ended March 2022",
+          "indexUrl": "https://www.ufv.ca/finance/reporting/statement-of-financial-information-sofi/",
+          "resolvedUrl": "https://www.ufv.ca/media/assets/finance/UFV-SOFI-Report-21_22-Ministry.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "d8dc9ef65d1ff60eea94c87b525049bed77bc22e103d9f5de502d233c95a5ec5",
+          "bytes": 1290802,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 27,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            15
+          ]
+        },
+        {
+          "url": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2021.pdf",
+          "indexedLabel": "Statement of Financial Information-Year Ended March 2021",
+          "indexUrl": "https://www.ufv.ca/finance/reporting/statement-of-financial-information-sofi/",
+          "resolvedUrl": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2021.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "34ee3235143c4709db9859734cb3cca9ff32face0ed14a31a6ff5eddafd7e977",
+          "bytes": 964292,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 25,
+          "candidateReportingPeriod": "2020/21",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            14
+          ]
+        },
+        {
+          "url": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2020.pdf",
+          "indexedLabel": "Statement of Financial Information-Year Ended March 2020",
+          "indexUrl": "https://www.ufv.ca/finance/reporting/statement-of-financial-information-sofi/",
+          "resolvedUrl": "https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2020.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "7ec506693f364cf577f3518c8047c034e04f797a93bc5a6b6cbaa5ced96ecaa0",
+          "bytes": 1255836,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 27,
+          "candidateReportingPeriod": "2019/20",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            14
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 7,
+        "retrievedPDFs": 7,
+        "nativeTextCandidates": 7,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.ufv.ca/finance/reporting/statement-of-financial-information-sofi/",
+          "status": 200,
+          "error": null,
+          "sha256": "da7291544cc9c5d95b657665475e19ce07ac5cc252108946238c1cec315f5048",
+          "bytes": 32450
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "university-of-victoria",
+      "employerName": "University of Victoria",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 1265,
+          "2020/21": 1537,
+          "2023/24": 2072
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2012/13",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/2025-26-statement-of-financial-information.pdf",
+          "indexedLabel": "Statement of Financial Information",
+          "indexUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "resolvedUrl": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/2025-26-statement-of-financial-information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "87a8faa371ff8a05018cb85e092be4d2b59b549c297c5c1f036a86287df79502",
+          "bytes": 1906664,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 81,
+          "candidateReportingPeriod": "2025/26",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            72
+          ]
+        },
+        {
+          "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/statement-of-financial-information-2024-25.pdf",
+          "indexedLabel": "Year ended 2024/25 Statement of Financial Information",
+          "indexUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "resolvedUrl": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/statement-of-financial-information-2024-25.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "da1da55ae56230621b5a4ac1e012439e01db5e98294a4d42f3111b6fea7ff21a",
+          "bytes": 958788,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 80,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            71
+          ]
+        },
+        {
+          "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/university-of-victoria-financial-information-act-year-ended-202324-statement-of-financial-information.pdf",
+          "indexedLabel": "Year ended 2023/24 Statement of Financial Information",
+          "indexUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "resolvedUrl": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/university-of-victoria-financial-information-act-year-ended-202324-statement-of-financial-information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "8b31ea1f3e7947ffc56bf2f9173fbf641174f81e87bbf742298db70f99ee1afa",
+          "bytes": 1295892,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 79,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            71
+          ]
+        },
+        {
+          "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/university-of-victoria-financial-information-act-2022-23-statement-of-financial-information.pdf",
+          "indexedLabel": "Year ended 2022/23 Statement of Financial Information",
+          "indexUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "resolvedUrl": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/university-of-victoria-financial-information-act-2022-23-statement-of-financial-information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "2426ea1d72238d7d3ec3889d0678bd49575bc02737575b989fb3b5c3b8ab5402",
+          "bytes": 1433138,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 77,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            69
+          ]
+        },
+        {
+          "url": "https://www.uvic.ca/financialplanning/financial-reporting/reports/financial-information-act---year-ended-2021-22---sofi---.pdf",
+          "indexedLabel": "Year ended 2021/22 Statement of Financial Information",
+          "indexUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "resolvedUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/financial-information-act---year-ended-2021-22---sofi---.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "4d5111fdb0b1f7c54aa0acf15a6c92303b302537aeb30ca8017445ea0f04d4fc",
+          "bytes": 1498217,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 71,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            47,
+            64
+          ]
+        },
+        {
+          "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/fia-2020-21-final---for-website.pdf",
+          "indexedLabel": "Year ended 2020/21 Statement of Financial Information",
+          "indexUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "resolvedUrl": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/fia-2020-21-final---for-website.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "de31f53051aa59127a600084d30cdc50733944b92f35a04908bf5eef804e8217",
+          "bytes": 1442084,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 69,
+          "candidateReportingPeriod": "2020/21",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            46,
+            62
+          ]
+        },
+        {
+          "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/FIA-2019-20.pdf",
+          "indexedLabel": "Year ended 2019/20 Statement of Financial Information",
+          "indexUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "resolvedUrl": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/FIA-2019-20.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "f3fb502f822cb0e03d66140973e0f260a85af8914bc5707f571bf1264c0c8d14",
+          "bytes": 1651533,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 69,
+          "candidateReportingPeriod": "2019/20",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            46,
+            61
+          ]
+        },
+        {
+          "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/FIA-2018-19.pdf",
+          "indexedLabel": "Year ended 2018/19 Statement of Financial Information",
+          "indexUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "resolvedUrl": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/FIA-2018-19.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "987e352c6583750eda57f980b06108db76772ad3d108c02dc72789e30268fbbf",
+          "bytes": 1625278,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 71,
+          "candidateReportingPeriod": "2018/19",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            49,
+            63
+          ]
+        },
+        {
+          "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/statement-financial-information-2012-13.pdf",
+          "indexedLabel": "",
+          "indexUrl": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "resolvedUrl": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/statement-financial-information-2012-13.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "1dcd6119b6ff67ebc24b32c4124df615e591eecc0ee3a1a6ba4687f829975331",
+          "bytes": 1146170,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 65,
+          "candidateReportingPeriod": "2012/13",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            1,
+            45,
+            57
+          ]
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 9,
+        "retrievedPDFs": 9,
+        "nativeTextCandidates": 9,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 0
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.uvic.ca/financialplanning/financial-reporting/reports/index.php",
+          "status": 200,
+          "error": null,
+          "sha256": "e4e568e0b2aae26f111a14e024e60b7f9b4a6837df928993e3842699815713e5",
+          "bytes": 29805
+        }
+      ],
+      "findings": "Official archive and exact SOFI documents located. Candidate headings and text were checked; full extraction, names, scope, controls, approval and duplicate comparisons remain before acceptance.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "vancouver-community-college",
+      "employerName": "Vancouver Community College",
+      "sector": "Universities and colleges",
+      "status": "source-retrieval-needed",
+      "sourceIndexUrls": [
+        "https://www.vcc.ca/about/college-information/reports-and-publications/"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 364,
+          "2020/21": 449,
+          "2023/24": 540
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [],
+      "indexedDocuments": [
+        {
+          "url": "https://www.vcc.ca/media/vancouver-community-college/content-assets/documents/reports-publications/statement-financial-information-2015.pdf",
+          "indexedLabel": "Search-located SOFI 2015",
+          "indexUrl": null,
+          "resolvedUrl": "https://www.vcc.ca/media/vancouver-community-college/content-assets/documents/reports-publications/statement-financial-information-2015.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "8cf059d8132c002b0f9f04816054122a0869f2cfbd10cbb0b21dd1e2fdb3e5c5",
+          "bytes": 39667,
+          "contentType": "text/html; charset=UTF-8",
+          "pdfStatus": "not-pdf",
+          "physicalPages": null,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": null,
+          "nativeEmployeeHeadingPages": null
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 1,
+        "retrievedPDFs": 0,
+        "nativeTextCandidates": 0,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 1
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://www.vcc.ca/about/college-information/reports-and-publications/",
+          "status": 200,
+          "error": null,
+          "sha256": "5772f052d1677cf1513faa341d21cd42875f76fa6509dcc2d502d64d9f9841f2",
+          "bytes": 62303
+        }
+      ],
+      "findings": "Current reports page has salary grids, audited financial statements 2017/18–2025/26 and executive disclosures, not a full employee SOFI index. A search-indexed 2015 SOFI URL returned HTTP 200 HTML rather than a PDF. Board-package search leads need direct retrieval and adoption verification. Salary grids are not individual annual payments.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    },
+    {
+      "employerSlug": "vancouver-island-university",
+      "employerName": "Vancouver Island University",
+      "sector": "Universities and colleges",
+      "status": "native-sources-located",
+      "sourceIndexUrls": [
+        "https://gov.viu.ca/financial-planning/statement-financial-information"
+      ],
+      "existingCompiled": {
+        "years": [
+          "2017/18",
+          "2020/21",
+          "2023/24"
+        ],
+        "counts": {
+          "2017/18": 501,
+          "2020/21": 627,
+          "2023/24": 667
+        },
+        "scope": "compiled-unverified; labels are not independently verified reporting periods"
+      },
+      "acceptedOfficialSources": [],
+      "verifiedNativeHeadingPeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "indexedDocuments": [
+        {
+          "url": "https://gov.viu.ca/sites/default/files/documents/Statement-of-Financial-Information-2024-25.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2024-25",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": "https://gov.viu.ca/sites/default/files/documents/Statement-of-Financial-Information-2024-25.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "ceb15c8f3764bd3a06a4725323421b4c11da9390cdd17a3b5eca2097556ae45a",
+          "bytes": 2329401,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 67,
+          "candidateReportingPeriod": "2024/25",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            37
+          ]
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/2023-2024-viu-sofi.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2023-24",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": "https://gov.viu.ca/sites/default/files/2023-2024-viu-sofi.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "ccb56191eef4ec5692748758f90469003bfc25243e262105b82564f05fcc19de",
+          "bytes": 1392960,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 66,
+          "candidateReportingPeriod": "2023/24",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            36
+          ]
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/2022-2023-viu-sofi.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2022-23",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": "https://gov.viu.ca/sites/default/files/2022-2023-viu-sofi.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "9e0fa45cc6dda3be3cec2a4bc4f0d0033e7a624127e1cf9619742dba1c607c21",
+          "bytes": 971133,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 67,
+          "candidateReportingPeriod": "2022/23",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            37
+          ]
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/2021-2022-viu-statement-of-financial-information.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2021-22",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": "https://gov.viu.ca/sites/default/files/2021-2022-viu-statement-of-financial-information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "51b7a53725f809542046bd7fc1ad6304e6e0e97c08aeb4b2e45ed88f2cd59d11",
+          "bytes": 1216789,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 64,
+          "candidateReportingPeriod": "2021/22",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            36
+          ]
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/2020-2021-viu-statement-of-financial-information.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2020-21",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": "https://gov.viu.ca/sites/default/files/2020-2021-viu-statement-of-financial-information.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "2d7fbd085d881e9fbc36497462098a1f428a0e05b6d52fb64cf13790786e6162",
+          "bytes": 690104,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 65,
+          "candidateReportingPeriod": "2020/21",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            11,
+            36
+          ]
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/viu-statement-of-financial-information-2019-20.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2019/20",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": "https://gov.viu.ca/sites/default/files/viu-statement-of-financial-information-2019-20.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "3dc9553ffa0e2241bf33121ced461fd3fce202748b33d73b4f6177f6054b3997",
+          "bytes": 380155,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 65,
+          "candidateReportingPeriod": "2019/20",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            11,
+            36,
+            57
+          ]
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/viu-statement-of-financial-information-2018-19.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2018-19",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": "https://gov.viu.ca/sites/default/files/viu-statement-of-financial-information-2018-19.pdf",
+          "status": 200,
+          "error": null,
+          "sha256": "c1e9662849da67a71cfcb12931b7f2c9a4db5a8d8b9b65429c5bb75493724e99",
+          "bytes": 2026754,
+          "contentType": "application/pdf",
+          "pdfStatus": "native-text-candidate",
+          "physicalPages": 65,
+          "candidateReportingPeriod": "2018/19",
+          "actualPeriodVerifiedFromNativeHeading": true,
+          "nativeEmployeeHeadingPages": [
+            2,
+            11,
+            34,
+            55
+          ]
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/17-18FINALStatementofFinancialInformationReport.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2017-18",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": null,
+          "status": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "sha256": null,
+          "bytes": null,
+          "contentType": null,
+          "pdfStatus": null,
+          "physicalPages": null,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": null,
+          "nativeEmployeeHeadingPages": null
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/16-17FINALStatementofFinancialInformationReport.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2016-17",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": null,
+          "status": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "sha256": null,
+          "bytes": null,
+          "contentType": null,
+          "pdfStatus": null,
+          "physicalPages": null,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": null,
+          "nativeEmployeeHeadingPages": null
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/VIU15-16SOFIREPORT.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2015-16",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": null,
+          "status": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "sha256": null,
+          "bytes": null,
+          "contentType": null,
+          "pdfStatus": null,
+          "physicalPages": null,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": null,
+          "nativeEmployeeHeadingPages": null
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/14-15StatementofFinancialInformation.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2014-15",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": null,
+          "status": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "sha256": null,
+          "bytes": null,
+          "contentType": null,
+          "pdfStatus": null,
+          "physicalPages": null,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": null,
+          "nativeEmployeeHeadingPages": null
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/SOFIFinaltotheWeb.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2013-14",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": null,
+          "status": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "sha256": null,
+          "bytes": null,
+          "contentType": null,
+          "pdfStatus": null,
+          "physicalPages": null,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": null,
+          "nativeEmployeeHeadingPages": null
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/SOFI_FinaltoWeb.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2012-13",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": null,
+          "status": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "sha256": null,
+          "bytes": null,
+          "contentType": null,
+          "pdfStatus": null,
+          "physicalPages": null,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": null,
+          "nativeEmployeeHeadingPages": null
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/March2012FinalSOFIDocument.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2011-12",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": null,
+          "status": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "sha256": null,
+          "bytes": null,
+          "contentType": null,
+          "pdfStatus": null,
+          "physicalPages": null,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": null,
+          "nativeEmployeeHeadingPages": null
+        },
+        {
+          "url": "https://gov.viu.ca/sites/default/files/PublicBodiesReport2010-11-signed.pdf",
+          "indexedLabel": "Statement of Financial Information (SOFI) 2010-11",
+          "indexUrl": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "resolvedUrl": null,
+          "status": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "sha256": null,
+          "bytes": null,
+          "contentType": null,
+          "pdfStatus": null,
+          "physicalPages": null,
+          "candidateReportingPeriod": null,
+          "actualPeriodVerifiedFromNativeHeading": null,
+          "nativeEmployeeHeadingPages": null
+        }
+      ],
+      "documentDiscoveryCounts": {
+        "indexedOrSearchLocated": 15,
+        "retrievedPDFs": 7,
+        "nativeTextCandidates": 7,
+        "imageDominantCandidates": 0,
+        "retrievalFailuresOrNonPDFs": 8
+      },
+      "checkedIndexReceipts": [
+        {
+          "url": "https://gov.viu.ca/financial-planning/statement-financial-information",
+          "status": 200,
+          "error": null,
+          "sha256": "d4863c2ae5b8d5517a97cfa08892a8137805d84c654e852276e3c85d1e771d98",
+          "bytes": 58911
+        }
+      ],
+      "findings": "Fifteen official SOFI links indexed, 2010/11–2024/25. Eight older link retrievals returned 503 and remain unverified documents; seven PDFs downloaded. Do not count indexed-but-failed years as verified named schedules.",
+      "acquisitionPrinciple": "Use publicly downloadable original schedules first. For missing ordinary employee schedules, seek ordinary release/original spreadsheet; use FOI only if that route fails. No request or message was sent."
+    }
+  ]
+}

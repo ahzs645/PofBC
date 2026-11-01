@@ -15,6 +15,7 @@ test('municipalities and Metro Vancouver are local government, not the provincia
   assert.equal(canonicalSlug('district-of-delta'), 'city-of-delta')
   assert.equal(canonicalSlug('township-of-langley'), 'langley-township')
   assert.equal(canonicalSlug('bowen-island-municipality'), 'bowen-island')
+  assert.equal(canonicalSlug('ridge-meadows-school-district'), 'maple-ridge-pitt-meadows-school-district')
   for (const slug of ['city-of-vancouver', 'city-of-prince-george', 'district-of-saanich', 'village-of-anmore', 'bowen-island',
     'langley-township', 'langley-city', 'metro-vancouver', employerSlug('District of Delta'), employerSlug('Township of Langley')]) {
     assert.equal(employerSector(slug, 'Government'), 'Municipalities', slug)
@@ -56,6 +57,7 @@ test('a pinned calendar correction preserves council and fails closed when sourc
   assert.throws(() => applyCompiledReplacements([{ ...employee, pay: 100001 }, mayor], official, sources(), [rule]), /evidence no longer matches/)
   assert.throws(() => applyCompiledReplacements(original, official, sources(), [{ ...rule, retainPositions: [] }]), /evidence no longer matches/)
   assert.throws(() => applyCompiledReplacements(original, official, { ...sources(), official: { scope: 'executive-only', dataSha256: officialHash } }, [rule]), /partial disclosure/)
+  assert.throws(() => applyCompiledReplacements(original, official, { ...sources(), official: { scope: 'employee-remuneration', completeEmployeeSchedule: false, dataSha256: officialHash } }, [rule]), /partial disclosure/)
   assert.throws(() => applyCompiledReplacements(original, official, { ...sources(), official: { scope: 'employee-remuneration', dataSha256: sha256('changed source') } }, [rule]), /source fingerprint changed/)
   assert.throws(() => applyCompiledReplacements(original, official, sources(), [{ ...rule, sourceDataSha256: {} }]), /source fingerprint changed/)
 })
@@ -262,6 +264,7 @@ test('partial executive imports cannot erase an employee disclosure without a re
   const after = [{ slug: 'bcit', year: '2020/21', sourceId: 'executives' }]
   assert.throws(() => validateReplacementScopes(before, after, { executives: { scope: 'executive-only' } }), /partial disclosure/)
   assert.doesNotThrow(() => validateReplacementScopes(before, after, { executives: { scope: 'employee-remuneration' } }))
+  assert.throws(() => validateReplacementScopes(before, after, { executives: { scope: 'employee-remuneration', completeEmployeeSchedule: false } }), /partial disclosure/)
   assert.doesNotThrow(() => validateReplacementScopes(before, after, { executives: { scope: 'executive-only' } }, [{ kind: 'replace-partition-scope', employer: 'bcit', year: '2020/21', sourceIds: ['executives'], reason: 'Reviewed replacement scope.' }]))
 })
 
