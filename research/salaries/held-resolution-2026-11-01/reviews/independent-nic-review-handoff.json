@@ -1,0 +1,979 @@
+{
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS qualified complete named employee schedule and complete separate board table; truncated original package remains incomplete",
+  "employeeRows": 136,
+  "boardRows": 15,
+  "totalNamedRows": 151,
+  "all151SixFieldRowsExactAfterOnePeerTypingCorrection": true,
+  "authorPayloadCorrections": [],
+  "employeeCandidate": {
+    "file": "research/salaries/held-resolution-education/held-resolution-nic-sofi-2019-20-employees.json.gzip",
+    "sha256": "d3c5fce88fb8b14de1d15e3097d3eefc25516ffc1a487c3c20ca23ac8c3d1ac3",
+    "knownPay": 13045792,
+    "knownExpenses": 543386,
+    "nullPositions": 136,
+    "nullExpenses": 17,
+    "explicitExpenseZeros": 0
+  },
+  "boardCandidate": {
+    "file": "/tmp/nic-held-resolution/board-candidate.json.gzip",
+    "sha256": "21827514f86092ba4f182dd47fc680a1c82e8eb8acfb54ec795eef4572cca3c7",
+    "knownPay": 16375,
+    "knownExpenses": 12727,
+    "nullPositions": 15,
+    "nullExpenses": 1,
+    "explicitExpenseZeros": 0,
+    "signedScanBoardRows": 0
+  },
+  "originalArchive": {
+    "cacheFile": "/tmp/nic-held-resolution/96885489bda14c25.body",
+    "sha256": "d96d0241e6d16b7383161079dfb90e44f29db6c4a72d3a35ccd50646da00eef0",
+    "originalOfficialUrl": "https://www.nic.bc.ca/pdf/bog/agenda/2020-2021/20201022_BOG_agenda.pdf",
+    "snapshotUrl": "https://web.archive.org/web/20211205173843id_/https://www.nic.bc.ca/pdf/bog/agenda/2020-2021/20201022_BOG_agenda.pdf",
+    "receivedBytes": 1048576,
+    "archiveReportedCrawlerLength": 3739511,
+    "archiveWarning": "299 wayback content truncated by \"length\"",
+    "rawTrailerMissing": true,
+    "sourcePackageComplete": false,
+    "recoveredMuPDFPages": 44
+  },
+  "completeness": {
+    "employeeScheduleComplete": true,
+    "boardTableComplete": true,
+    "physicalSalaryPages": [
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "printedPages": [
+      "1 of 5",
+      "2 of 5",
+      "3 of 5",
+      "4 of 5",
+      "5 of 5"
+    ],
+    "employeeRowsByPackagePage": {
+      "26": 14,
+      "27": 36,
+      "28": 36,
+      "29": 36,
+      "30": 14
+    },
+    "scopeBoundaries": "Page26 explicitly separates A.Board of Governors15rows from B.Other Employees >$75,00014rows. Pages27–30 continueB; page30 ends named subtotal, then separateC.below-threshold aggregate and overall controls. Adjacent page25 is severance; page31 begins suppliers.",
+    "missingEmployeePagesRecovered": [
+      1,
+      3,
+      5
+    ],
+    "missingSignedPackagePagesNotClaimedRecovered": "The current signed9pagePDF visibly has salary2/4 and supplier1/3 only. Its full package remains incomplete; this review does not reconstruct missing supplier/other-package pages.",
+    "method": "Full names/pay/expense image transcription and exact row-by-row comparison; financial totals are supporting controls, not a substitute for row verification."
+  },
+  "controls": {
+    "employeeNamedPrinted": [
+      13045792,
+      543386
+    ],
+    "employeeKnownRowSums": [
+      13045792,
+      543386
+    ],
+    "employeeResidual": [
+      0,
+      0
+    ],
+    "boardPrinted": [
+      16375,
+      12727
+    ],
+    "boardKnownRowSums": [
+      16375,
+      12727
+    ],
+    "boardResidual": [
+      0,
+      0
+    ],
+    "belowThresholdPrinted": [
+      15484088,
+      454520
+    ],
+    "overallPrinted": [
+      28546255,
+      1010633
+    ],
+    "allPrintedScopeComponentsReconcile": true
+  },
+  "period": {
+    "printed": "For the year ended March31,2020",
+    "acceptedLabel": "2019/20",
+    "evidence": "All five salary page headers, signed SOFI cover/management/salary/reconciliation pages and October22,2020 minutes item4.2.1 explicitly identify year endedMarch31,2020."
+  },
+  "positionPolicy": "Only Name, Remuneration and Expenses are painted salary columns. All151 positions remain null. Native PDF white/unpainted role/title strings are not disclosed fields and were not imported.",
+  "independentlyObservedWhiteSpanCountsByPackagePage": {
+    "26": 30,
+    "27": 36,
+    "28": 36,
+    "29": 36,
+    "30": 14
+  },
+  "imageFirstIndependence": {
+    "employeeTranscript": {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-nic-image-transcription.json",
+      "sha256": "395f20ac9afcb8134267454ad73fd06f1396e3333d76bebd36d58bb152952dbd",
+      "frozenBeforeCandidateRowsOpened": true
+    },
+    "transparentPeerCorrection": {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-nic-corrected-image-transcription.json",
+      "sha256": "3041469b95efe3c276520d5d7723d188db6b839fe2be78d87608ff747e7b7c53",
+      "correction": "My initial typed Gingras,Jeanette omitted one n; original enlarged glyphs and signed scan show Jeannette. Candidate was correct; no author cell was changed."
+    },
+    "boardTranscript": {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-nic-board-image-transcription.json",
+      "sha256": "5aea534ad6df38aa407cd6b6f08281857e71dd4674d1c8a9421d02c35d24d5b6",
+      "frozenBeforeAuthorBoardEvidenceOpened": true,
+      "timing": "After employee candidate comparison, before any Board candidate/evidence rows opened."
+    },
+    "repairs": "I independently ran Ghostscript directly on raw truncatedbytes to raster pages26–30 and to pdfwrite a five-page salary repair, and independently opened/rendered raw bytes with MuPDF. Author repaired PDFs, native row readers and OCR outputs were not my transcription inputs.",
+    "qualification": "Ghostscript and MuPDF are repair/render engines, not independent OCR engines. My independent row method is manual original-image transcription. No independent OCR claim is made.",
+    "initialImageReadingConcern": "An initial apparent missing-glyph concern was withdrawn: repeated Ghostscript rasters are byte/pixel-identical and subsequent views expose complete cells. No source cell was inferred from controls."
+  },
+  "signedScan": {
+    "cacheFile": "/tmp/nic-held-resolution/50bb24515f0ff2a3.body",
+    "sha256": "43fd43a1d642fd6ad49efa92b8428d8663a4a410eec74d2d615b30fecb7e661d",
+    "physicalPages": 9,
+    "all9PagesVisuallyReviewed": true,
+    "inventory": [
+      "cover",
+      "signed management1of1",
+      "guarantees1of2",
+      "severance1of1",
+      "salary2of5",
+      "salary4of5",
+      "suppliers1of4",
+      "suppliers3of4",
+      "reconciliation1of1"
+    ],
+    "salaryRowsVisuallyCrossmatched": 72,
+    "all72NamesPayExpensesExact": true,
+    "correspondences": [
+      {
+        "sourcePhysicalPage": 5,
+        "sourcePrintedPage": 2,
+        "recoveredPackagePage": 27,
+        "rows": [
+          [
+            "north-island-college",
+            "Blacquiere, Ashley",
+            null,
+            80436,
+            63,
+            27
+          ],
+          [
+            "north-island-college",
+            "Blaiklock, Felicity",
+            null,
+            105530,
+            15558,
+            27
+          ],
+          [
+            "north-island-college",
+            "Bowman, John",
+            null,
+            192322,
+            19402,
+            27
+          ],
+          [
+            "north-island-college",
+            "Budisa-Bonneau, Anita",
+            null,
+            94472,
+            6359,
+            27
+          ],
+          [
+            "north-island-college",
+            "Burton, Pamela",
+            null,
+            94356,
+            1185,
+            27
+          ],
+          [
+            "north-island-college",
+            "Cameron, Debra",
+            null,
+            94397,
+            null,
+            27
+          ],
+          [
+            "north-island-college",
+            "Caraballo Acosta, Pedro",
+            null,
+            85932,
+            3488,
+            27
+          ],
+          [
+            "north-island-college",
+            "Carrel, Alix",
+            null,
+            95782,
+            2560,
+            27
+          ],
+          [
+            "north-island-college",
+            "Catchpole, Michael",
+            null,
+            94138,
+            1949,
+            27
+          ],
+          [
+            "north-island-college",
+            "Chapelle, Alan",
+            null,
+            85664,
+            null,
+            27
+          ],
+          [
+            "north-island-college",
+            "Charette, Nick",
+            null,
+            95022,
+            1054,
+            27
+          ],
+          [
+            "north-island-college",
+            "Chow, Yiling",
+            null,
+            94667,
+            3737,
+            27
+          ],
+          [
+            "north-island-college",
+            "Connell, Katrina",
+            null,
+            83083,
+            234,
+            27
+          ],
+          [
+            "north-island-college",
+            "Crewe, Ken",
+            null,
+            127754,
+            6690,
+            27
+          ],
+          [
+            "north-island-college",
+            "Cruickshank, Neil",
+            null,
+            126537,
+            10666,
+            27
+          ],
+          [
+            "north-island-college",
+            "Cumming, Anne",
+            null,
+            93575,
+            1273,
+            27
+          ],
+          [
+            "north-island-college",
+            "Dack, Richard",
+            null,
+            89845,
+            null,
+            27
+          ],
+          [
+            "north-island-college",
+            "Davis, Ronald",
+            null,
+            94100,
+            200,
+            27
+          ],
+          [
+            "north-island-college",
+            "Deagle, Heidi",
+            null,
+            87771,
+            3090,
+            27
+          ],
+          [
+            "north-island-college",
+            "Diemer, Jason",
+            null,
+            94356,
+            null,
+            27
+          ],
+          [
+            "north-island-college",
+            "Domae, Lisa",
+            null,
+            151777,
+            20583,
+            27
+          ],
+          [
+            "north-island-college",
+            "Elias, Harley",
+            null,
+            98507,
+            300,
+            27
+          ],
+          [
+            "north-island-college",
+            "Erickson, Murray",
+            null,
+            98334,
+            1372,
+            27
+          ],
+          [
+            "north-island-college",
+            "Fallis Starhunter, Jennifer",
+            null,
+            80959,
+            3121,
+            27
+          ],
+          [
+            "north-island-college",
+            "Faust, Sandra",
+            null,
+            94356,
+            2744,
+            27
+          ],
+          [
+            "north-island-college",
+            "Finnerty, Jolean",
+            null,
+            75940,
+            1167,
+            27
+          ],
+          [
+            "north-island-college",
+            "Fleck, Susan",
+            null,
+            100594,
+            1000,
+            27
+          ],
+          [
+            "north-island-college",
+            "Fowler, Colin",
+            null,
+            148771,
+            9763,
+            27
+          ],
+          [
+            "north-island-college",
+            "Fraser, Joanna",
+            null,
+            94356,
+            19702,
+            27
+          ],
+          [
+            "north-island-college",
+            "Gaetz, Roslyn",
+            null,
+            94356,
+            4475,
+            27
+          ],
+          [
+            "north-island-college",
+            "Gallant, Lynette",
+            null,
+            93756,
+            3207,
+            27
+          ],
+          [
+            "north-island-college",
+            "Gardiner-Hynds, Richelle",
+            null,
+            91850,
+            481,
+            27
+          ],
+          [
+            "north-island-college",
+            "George, Darren",
+            null,
+            94356,
+            null,
+            27
+          ],
+          [
+            "north-island-college",
+            "Gereluk, Theresa",
+            null,
+            94356,
+            4729,
+            27
+          ],
+          [
+            "north-island-college",
+            "Gibson, Kimberley",
+            null,
+            94356,
+            null,
+            27
+          ],
+          [
+            "north-island-college",
+            "Gingras, Jeannette",
+            null,
+            94138,
+            2500,
+            27
+          ]
+        ]
+      },
+      {
+        "sourcePhysicalPage": 6,
+        "sourcePrintedPage": 4,
+        "recoveredPackagePage": 29,
+        "rows": [
+          [
+            "north-island-college",
+            "McKay, Elizabeth",
+            null,
+            81456,
+            null,
+            29
+          ],
+          [
+            "north-island-college",
+            "McPherson, Barbara",
+            null,
+            86186,
+            3446,
+            29
+          ],
+          [
+            "north-island-college",
+            "Meiers, Janice",
+            null,
+            116687,
+            1861,
+            29
+          ],
+          [
+            "north-island-college",
+            "Melgaard, Matthew",
+            null,
+            83768,
+            233,
+            29
+          ],
+          [
+            "north-island-college",
+            "Michaud, Laurie",
+            null,
+            102666,
+            6226,
+            29
+          ],
+          [
+            "north-island-college",
+            "Milligan, Sandra",
+            null,
+            94356,
+            3184,
+            29
+          ],
+          [
+            "north-island-college",
+            "Morrison, William",
+            null,
+            94356,
+            230,
+            29
+          ],
+          [
+            "north-island-college",
+            "Naugler, Diane",
+            null,
+            122192,
+            2484,
+            29
+          ],
+          [
+            "north-island-college",
+            "Nelson, Peggy",
+            null,
+            78296,
+            46,
+            29
+          ],
+          [
+            "north-island-college",
+            "Newton, Sean",
+            null,
+            94356,
+            2500,
+            29
+          ],
+          [
+            "north-island-college",
+            "Nilson, David",
+            null,
+            85516,
+            265,
+            29
+          ],
+          [
+            "north-island-college",
+            "Oberik, Lynne",
+            null,
+            94356,
+            209,
+            29
+          ],
+          [
+            "north-island-college",
+            "O'Connell, Cheryl",
+            null,
+            122192,
+            10490,
+            29
+          ],
+          [
+            "north-island-college",
+            "O'Donnell, Kathleen",
+            null,
+            94356,
+            3577,
+            29
+          ],
+          [
+            "north-island-college",
+            "Parkinson, William",
+            null,
+            111301,
+            328,
+            29
+          ],
+          [
+            "north-island-college",
+            "Pelletier, Norma",
+            null,
+            94356,
+            300,
+            29
+          ],
+          [
+            "north-island-college",
+            "Perron, Linda",
+            null,
+            94356,
+            5867,
+            29
+          ],
+          [
+            "north-island-college",
+            "Peterson, Ivan",
+            null,
+            80584,
+            782,
+            29
+          ],
+          [
+            "north-island-college",
+            "Petr, Trevor",
+            null,
+            94356,
+            341,
+            29
+          ],
+          [
+            "north-island-college",
+            "Pinel, David",
+            null,
+            95008,
+            7205,
+            29
+          ],
+          [
+            "north-island-college",
+            "Pollack, Walter",
+            null,
+            79744,
+            null,
+            29
+          ],
+          [
+            "north-island-college",
+            "Posner, Christopher",
+            null,
+            79417,
+            542,
+            29
+          ],
+          [
+            "north-island-college",
+            "Ronquillo, Jesse",
+            null,
+            80335,
+            575,
+            29
+          ],
+          [
+            "north-island-college",
+            "Rowes, Amy",
+            null,
+            79098,
+            6976,
+            29
+          ],
+          [
+            "north-island-college",
+            "Russell, Elizabeth",
+            null,
+            94056,
+            2500,
+            29
+          ],
+          [
+            "north-island-college",
+            "Schiller, Suzanne",
+            null,
+            87858,
+            508,
+            29
+          ],
+          [
+            "north-island-college",
+            "Schmidt, Danita",
+            null,
+            82963,
+            244,
+            29
+          ],
+          [
+            "north-island-college",
+            "Scholtz, Antonie",
+            null,
+            82888,
+            1712,
+            29
+          ],
+          [
+            "north-island-college",
+            "Shantz, Susan",
+            null,
+            84637,
+            2914,
+            29
+          ],
+          [
+            "north-island-college",
+            "Shopland, Kelly",
+            null,
+            96520,
+            5357,
+            29
+          ],
+          [
+            "north-island-college",
+            "Simpson, Nadine",
+            null,
+            95475,
+            2530,
+            29
+          ],
+          [
+            "north-island-college",
+            "Skulmoski, Wes",
+            null,
+            82673,
+            null,
+            29
+          ],
+          [
+            "north-island-college",
+            "Stuart, Leslie",
+            null,
+            96088,
+            2532,
+            29
+          ],
+          [
+            "north-island-college",
+            "Tabata, Naomi",
+            null,
+            87878,
+            4290,
+            29
+          ],
+          [
+            "north-island-college",
+            "Taylor, Jason",
+            null,
+            94356,
+            null,
+            29
+          ],
+          [
+            "north-island-college",
+            "Trudel, Anthony",
+            null,
+            84365,
+            2500,
+            29
+          ]
+        ]
+      }
+    ],
+    "managementSignatures": "Physical2 carries Colin Fowler and Eric Mosley signatures datedOctober27,2020. These corroborate the fiscal-year package but do not supply the missing salary pages.",
+    "reconciliationCorroboration": "Physical9 prints28,546,255 remuneration and1,010,633 expenses, agreeing with recovered printed overall controls."
+  },
+  "adoption": {
+    "url": "https://web.archive.org/web/20221001112128id_/https://www.nic.bc.ca/pdf/bog/minutes/20201022_BOG_regular_minutes.pdf",
+    "cacheFile": "/tmp/nic-held-resolution/efefa9daac3c0e3b.body",
+    "sha256": "4f6655723d597ccd08e684e42feaa9be018b5511590c4b0c3bc3b378d1698196",
+    "pdfPages": 5,
+    "repaired": false,
+    "physicalPage": 4,
+    "item": "4.2.1",
+    "meetingDate": "2020-10-22",
+    "motionMoved": "J. Murphy",
+    "motionSeconded": "A. McCubbin",
+    "result": "Motion carried",
+    "observation": "Original page4 visibly approves information prepared for year endedMarch31,2020 as required under Financial Information Act."
+  },
+  "visualCoverage": {
+    "rawRecoveredSalaryPages": [
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "completeEmployeeRows": 136,
+    "completeBoardRows": 15,
+    "signedScanAllPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "approvalMinutesPages": [
+      4
+    ],
+    "adjacentArchivePages": [
+      25,
+      31
+    ],
+    "archivePage1ObservedBlank": true,
+    "renderedFiles": [
+      {
+        "path": "/tmp/independent-nic-review/agenda-boundary-p1.png",
+        "sha256": "5272caa98dd0a9765f43f76b5a739894a58c9fed851f9293e0bad09413ae0b11"
+      },
+      {
+        "path": "/tmp/independent-nic-review/agenda-boundary-p25.png",
+        "sha256": "2a66149246646e817ad3b9dfcef6d00e835786af82d427f5e9785cb77c548710"
+      },
+      {
+        "path": "/tmp/independent-nic-review/agenda-boundary-p31.png",
+        "sha256": "08315a760ae5c01c49c76ab162e6488c16093d45c47c782ca00002104c695c33"
+      },
+      {
+        "path": "/tmp/independent-nic-review/approval-minutes-p4.png",
+        "sha256": "c5b6cf421a46b5d41e0e2615f1d0672c3950a13a1f8173d30d9444d4c5beeff9"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-gs-page-26.png",
+        "sha256": "f69923ef37c328619f929806c33f43432280851f0e6c1e14ffbbdae942302f81"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-gs-page-27.png",
+        "sha256": "e6e462529d8bd9bd2af67c64a078ee272d6f81cc74776271b5106119ec528f61"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-gs-page-28.png",
+        "sha256": "27e2e6665e2de6a31a5340b25e1c737947e1220bc6c8edf3c1c4bdd41aae6869"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-gs-page-29.png",
+        "sha256": "9694f28b24335103c8ba601f6e234b8ebc8d53dac77a904a4184b95252462833"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-gs-page-30.png",
+        "sha256": "800b5e162a4dfb59908fd93a1c46fdfad4e444bfb22d2631446c2a265e0fac3f"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-mupdf-page-26.png",
+        "sha256": "3a03b619f256e42d10eebebc620f19d578aff6b9d1a1140743801a1a60d4cc77"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-mupdf-page-27.png",
+        "sha256": "031bef9c7e28476388b9029e7c4e3b114f55a76992e0b21718f668b790b825e9"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-mupdf-page-28.png",
+        "sha256": "ca670de21ea82502d79c01c90ab189e2392793bd6c4e4bc2f55886b6efd6b933"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-mupdf-page-29.png",
+        "sha256": "8c0c248643e2df454094c356fad22f37e7974db20dd41293c778fc5ee7665248"
+      },
+      {
+        "path": "/tmp/independent-nic-review/fresh-mupdf-page-30.png",
+        "sha256": "32c534c9f993357beb43abf5ec69fa7c5cffcafd58d845e61e9ede762b564f54"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-page-01.png",
+        "sha256": "f69923ef37c328619f929806c33f43432280851f0e6c1e14ffbbdae942302f81"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-page-02.png",
+        "sha256": "e6e462529d8bd9bd2af67c64a078ee272d6f81cc74776271b5106119ec528f61"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-page-03.png",
+        "sha256": "27e2e6665e2de6a31a5340b25e1c737947e1220bc6c8edf3c1c4bdd41aae6869"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-page-04.png",
+        "sha256": "9694f28b24335103c8ba601f6e234b8ebc8d53dac77a904a4184b95252462833"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-page-05.png",
+        "sha256": "800b5e162a4dfb59908fd93a1c46fdfad4e444bfb22d2631446c2a265e0fac3f"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-pdfwrite-mupdf-page-1.png",
+        "sha256": "324deb1ab55a7cfb0c36acbbdc7b0ed31d5dd7ad3701d17b03c57963f1a13745"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-pdfwrite-mupdf-page-2.png",
+        "sha256": "52c77fea665bea2b7e9531cc96991687fbe27af75ae292a342ff503f455e2b0c"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-pdfwrite-mupdf-page-3.png",
+        "sha256": "80347415ba8d4e21df2ed36fce5ef108d3aa34146ce886d2f585a9558787b83a"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-pdfwrite-mupdf-page-4.png",
+        "sha256": "dbfc42bbdb00db5f6fc10580eae19d993b8fc1962091495770e45bf1125aaec3"
+      },
+      {
+        "path": "/tmp/independent-nic-review/ghostscript-pdfwrite-mupdf-page-5.png",
+        "sha256": "ae6226fab057ae2e07f365668dadd53e80946071d573f97cc5f351891463f571"
+      },
+      {
+        "path": "/tmp/independent-nic-review/gingras-name-detail.png",
+        "sha256": "858fd456df19dd197d19805a202339266a99a34bb18cfc7fa66eb8089ab64065"
+      },
+      {
+        "path": "/tmp/independent-nic-review/mupdf-original-physical-26.png",
+        "sha256": "3a03b619f256e42d10eebebc620f19d578aff6b9d1a1140743801a1a60d4cc77"
+      },
+      {
+        "path": "/tmp/independent-nic-review/mupdf-original-physical-27.png",
+        "sha256": "031bef9c7e28476388b9029e7c4e3b114f55a76992e0b21718f668b790b825e9"
+      },
+      {
+        "path": "/tmp/independent-nic-review/mupdf-original-physical-28.png",
+        "sha256": "ca670de21ea82502d79c01c90ab189e2392793bd6c4e4bc2f55886b6efd6b933"
+      },
+      {
+        "path": "/tmp/independent-nic-review/mupdf-original-physical-29.png",
+        "sha256": "8c0c248643e2df454094c356fad22f37e7974db20dd41293c778fc5ee7665248"
+      },
+      {
+        "path": "/tmp/independent-nic-review/mupdf-original-physical-30.png",
+        "sha256": "32c534c9f993357beb43abf5ec69fa7c5cffcafd58d845e61e9ede762b564f54"
+      },
+      {
+        "path": "/tmp/independent-nic-review/name-detail-hearnden.png",
+        "sha256": "377e04e62eb64f5d540ee882bab7125a4392325cee50b531dbba40f67ebc2bf9"
+      },
+      {
+        "path": "/tmp/independent-nic-review/signed-original-p1.png",
+        "sha256": "c2597ea2be1c00a4f1f9a33c1d29b64ff5447d5871d0a2ed66e0f3005b5d2d51"
+      },
+      {
+        "path": "/tmp/independent-nic-review/signed-original-p2.png",
+        "sha256": "fa75f1824b7d46d2ee29e294d6970d2b661acae225c2c735e1da060a43ba86a9"
+      },
+      {
+        "path": "/tmp/independent-nic-review/signed-original-p3.png",
+        "sha256": "5ebac6046dd28e0cdfa911c572f02804e0876acdceeb64a1c20bb05862d1c4d6"
+      },
+      {
+        "path": "/tmp/independent-nic-review/signed-original-p4.png",
+        "sha256": "cd9afb9ebf2f949758c157793b0af88e820e7d7f8b4b1e4b026b8d0bd8087618"
+      },
+      {
+        "path": "/tmp/independent-nic-review/signed-original-p5.png",
+        "sha256": "c04c3ed1a55b7020bf74177ba9e74ccb9ef905981f4d59f45e31397b3d10742d"
+      },
+      {
+        "path": "/tmp/independent-nic-review/signed-original-p6.png",
+        "sha256": "a3493081ec5538bdfc7337596f09fe85cd029a26082ba9322c81a0e27ae5d6ea"
+      },
+      {
+        "path": "/tmp/independent-nic-review/signed-original-p7.png",
+        "sha256": "920f838f759cc933adc2d0051f00cf2114be6ba168eb6e81ba48273aa7776e5b"
+      },
+      {
+        "path": "/tmp/independent-nic-review/signed-original-p8.png",
+        "sha256": "000d66156a10c659b235ae14650311f5e748d413ac8745d80b21ab4bf33eee47"
+      },
+      {
+        "path": "/tmp/independent-nic-review/signed-original-p9.png",
+        "sha256": "1c03b40d1c48ddbc966377382574e3a65e67cbd3e820286c99de8628edb34c4a"
+      }
+    ],
+    "limitation": "Not all44recovered agenda pages or original full source bytes were available/reviewed. Complete salary/table coverage is independent of complete-package status."
+  },
+  "comparisons": [
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-nic-candidate-comparison.json",
+      "sha256": "68b2200a2334bcc443b4c14465a9590b5980f63f211ddba0f95e4b716457e4b0",
+      "status": "Initial comparison records my single typing omission; superseded by corrected-image transcript/full exact comparison."
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-nic-board-candidate-comparison.json",
+      "sha256": "1eb30a2b71891063a699f9e65ed97db25c18e0ef41f7a868ba2b846501c3ea06",
+      "status": "All15Board rows exact"
+    }
+  ],
+  "recommendation": "Accept the136employee cohort and separate15board cohort with explicit archived/truncated-package warning, completeEmployeeSchedule:true for employees, sourcePackageComplete:false, and null positions. Retain an unsent complete-original-copy follow-up. Do not call this a complete recovered SOFI/board-agenda package.",
+  "noWorkerFrozenFileEdits": true,
+  "noGlobalEdits": true,
+  "noContacts": true
+}

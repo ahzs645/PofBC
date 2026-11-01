@@ -1,0 +1,216 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "held_health_review",
+  "status": "pass-complete-original-employee-scope",
+  "sourceId": "held-resolution-phsa-2024-25-employees",
+  "sourceSha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+  "recommendation": "Eligible for root acceptance of exactly13,906 FY2024/25 named employee observations from this complete official schedule. No compiled partition, earlier official observation, board cohort or actual period is replaced or inferred.",
+  "reviewedCandidateManifest": {
+    "path": "research/salaries/held-resolution-2026-11-01/health/pre-acceptance-candidate-manifest.json",
+    "sha256": "01870b29feeeaf37149ee2e04e3ee182060c6fce019b4c2fb10bb5a7e0f7d81c",
+    "status": "held-for-peer-review"
+  },
+  "permittedPostReviewPromotion": {
+    "field": "sources[0].status",
+    "before": "held-for-peer-review",
+    "after": "verified",
+    "onlyThisMetadataFieldMayChange": true,
+    "dataProvenanceEvidenceNotesQualificationsAndAllOtherSourceMetadataUnchanged": true
+  },
+  "acceptedScope": {
+    "year": "2024/25",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "scope": "employee-remuneration",
+    "threshold": 75000,
+    "thresholdComparison": ">",
+    "minimumPublishedPay": 75001,
+    "currency": "CAD",
+    "positionsAllNullBecauseNoTitleColumn": true,
+    "physicalPdfPages": 284,
+    "namedRows": 13906,
+    "sourceRowBoundaryCounts": {
+      "49rows": 283,
+      "39rows": 1
+    },
+    "printedNamedRowCount": null,
+    "computedRowCountIsNotClaimedAsPrintedHeadcount": true,
+    "totalRowNotImported": true
+  },
+  "sourceDataSha256": "bc7db053d30ce206ecce66b02b87dae30fb431858c4b4bf438908282eb8168a8",
+  "sourceRowProvenanceSha256": "4875d97a73829f7007208709a6a60ca2486a64fb161a355f9eb81cf665e68fe2",
+  "completeRawPageManifestSha256": "31715799499dcf838e3e4d0470d20efbea682d5691950069c7b303b494654080",
+  "independentlyReproducedPayloadGzipBytesExactly": true,
+  "all13906RowProvenanceEntriesEqualReconstructedSource": true,
+  "all284CommittedRawPagesEqualReviewedSourceEvidence": true,
+  "completeTwoEngineSemanticReplay": {
+    "allFieldsIndependentlyReplayedRows": 13906,
+    "exactSourceDashRows": 5810,
+    "rapid-name-confidence-below-0.98": 1506,
+    "name-disagreement": 378,
+    "tesseract-name-confidence-below-85": 1665,
+    "rapid-pay-confidence-below-0.98": 38,
+    "rapid-expense-confidence-below-0.98": 52,
+    "expense-disagreement-unparsed-or-unreviewed-glyph": 11,
+    "tesseract-pay-confidence-below-90": 25,
+    "tesseract-expense-confidence-below-90": 25,
+    "remuneration-disagreement-or-unparsed": 13
+  },
+  "originalConflictCoverage": {
+    "flaggedRows": 3157,
+    "coveredExactlyOnce": 3157,
+    "unresolvedRows": 0,
+    "overlappingOrdinaryReviewRows": 0,
+    "everyRequestedFieldEqualsFrozenImageResolution": true,
+    "unrequestedFieldsNotChangedByOrdinaryOverlays": true,
+    "ordinaryChangedFields": {
+      "name": 142,
+      "expenses": 9,
+      "remuneration": 10
+    }
+  },
+  "supplementalNameAudit": {
+    "actualSourceCases": 47,
+    "rootAdoptedExactNameChanges": 44,
+    "muirAppliedExactlyOnce": true,
+    "additionalNonMuirChanges": 43,
+    "confirmedLiteralLowercaseNamesPreserved": 3,
+    "allOtherFieldsAndMultiplicityPreserved": true,
+    "ledger": {
+      "path": "research/salaries/held-resolution-2026-11-01/health/supplemental-name-amendment-ledger.json",
+      "sha256": "135a3e7017d88a305d41fa9b59160715ec33c5753a9865e02b88486198ede2d3",
+      "changedNameFields": 44,
+      "confirmedUnchanged": 3
+    },
+    "sourceReadersAgreeOnAll46NonMuirNames": true,
+    "noGeneralCasingRule": true
+  },
+  "totalChangedRowsFromRawCandidate": 205,
+  "finalSourceControlReconciliation": {
+    "printedRemuneration": 1713046476,
+    "printedExpenses": 25171641,
+    "literalPayResidual": 0,
+    "literalExpenseResidual": 0
+  },
+  "expenses": {
+    "literalNullDashes": 5810,
+    "independentlyRecheckedOriginalDashGlyphBoxes": 5810,
+    "eachDashGlyphIs9By2SolidOriginalInk": true,
+    "nullNeverInferredFromDetectorAbsenceOrConvertedToZero": true,
+    "explicitZeroExpenseRows": 0,
+    "negativeExpenseRows": 0,
+    "knownExpensesTotal": 25171641,
+    "unknownCellsNotClaimedAsZero": true
+  },
+  "priorPhsaHistoryPreserved": {
+    "sourcePeriodGroups": 5,
+    "officialRows": 27,
+    "compiledRows": 24923,
+    "allLiteralRowsAndSourceMetadataUnchanged": true
+  },
+  "regressionChecks": [
+    {
+      "physicalPage": 104,
+      "sourceRowOnPage": 2,
+      "name": "Henry,Laura",
+      "field": "remuneration",
+      "value": 95479
+    },
+    {
+      "physicalPage": 67,
+      "sourceRowOnPage": 3,
+      "name": "Dizon,Karen",
+      "field": "remuneration",
+      "value": 99210
+    },
+    {
+      "physicalPage": 71,
+      "sourceRowOnPage": 1,
+      "name": "Durant,Spencer",
+      "field": "remuneration",
+      "value": 99953
+    },
+    {
+      "physicalPage": 51,
+      "sourceRowOnPage": 39,
+      "name": "Conklin,James",
+      "field": "expenses",
+      "value": 7487
+    },
+    {
+      "physicalPage": 58,
+      "sourceRowOnPage": 9,
+      "name": "Dao,Le Nguyen",
+      "field": "expenses",
+      "value": 2717
+    },
+    {
+      "physicalPage": 95,
+      "sourceRowOnPage": 37,
+      "name": "Guest,Daniel",
+      "field": "expenses",
+      "value": 2777
+    }
+  ],
+  "priorIndependent49RowFirstPageFixtureExactlyMatches": true,
+  "actualHenryLauraRegressionContext": {
+    "path": "/tmp/independent-phsa-render-fidelity/actual-henry-laura-regression.png",
+    "sha256": "654cc3867221d3689a69ad340302220929cbc263b8dec8b1d9fd8421bfafb6c6",
+    "personallyViewedPay": 95479
+  },
+  "metadataReview": {
+    "sourceQualificationsAccurate": true,
+    "sourcePublicWarning": null,
+    "sourceControlResidualWarningNeeded": false,
+    "scopeQualificationsRetainedInNotes": [
+      "Threshold payment disclosure, not workforce census or annual base salary rates",
+      "Expense amounts may include direct reimbursement and third-party payments; dashes unknown",
+      "No published titles, unit reassignment or inferred cross-year person identity",
+      "Unsigned official standalone schedule does not separately establish board adoption",
+      "Actual source-row count computed from all284pages, not printed headcount or money totals",
+      "Complete independent OCR, explicit image-review corrections, exact name-only supplemental ledgers and actual-PDF source-view limits"
+    ]
+  },
+  "testsRun": [
+    {
+      "command": "python3 -m unittest discover -s scripts -p test_resolve_held_health.py",
+      "tests": 7,
+      "result": "pass"
+    },
+    {
+      "command": "python3 scripts/resolve_held_health_finalize.py --check",
+      "result": "pass",
+      "status": "held-for-peer-review",
+      "dataSha256": "bc7db053d30ce206ecce66b02b87dae30fb431858c4b4bf438908282eb8168a8",
+      "provenanceSha256": "4875d97a73829f7007208709a6a60ca2486a64fb161a355f9eb81cf665e68fe2"
+    },
+    {
+      "command": "python3 /tmp/independent-phsa-closure-replay.py",
+      "result": "pass",
+      "independentHelperArchivedAs": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-final-source-replay.py"
+    },
+    {
+      "check": "Independently inspect original-native ink boxes for all5810literal source dashes",
+      "result": "pass"
+    }
+  ],
+  "detailedReplayFile": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-final-source-replay.json.gzip",
+  "detailedReplaySha256": "5c23698cd4c7e61345dd57f964d9d7c1cb49e8bcc63762a922163408a980af55",
+  "independentReplayHelper": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-final-source-replay.py",
+  "independentReplayHelperSha256": "e9061a5e69f8c3338d315a360618a253c1b3202fdb91f36083da1215d0abc062",
+  "supportingReviewReceiptSha256": {
+    "independent-phsa-render-source-fidelity.json": "e69e88ba02b685b298c8c44b028008eb7d880477d9bdf3ce2f8a97ce9d655eb8",
+    "independent-phsa-muir-rendered-name-confirmation.json": "841832b05cd047c83a6279c1879f648de49765258cda0f35ef8b6a63e60a8502",
+    "independent-phsa-supplemental-case-proposals.json": "647b68298b35017d822332aa307f2b478528c561010032918ffa131973630b8b",
+    "independent-phsa-supplemental-name-education-confirmations.json": "4fee514b22aa3b6df19b4e41d0b5985e79b11e051dd3161b42232b0a9cee519d",
+    "root-phsa-muir-name-adoption.json": "3fff2c70fddd00b056bae6c9ee343746b87c8a35aace1634243f1a28e93aa1e6",
+    "root-phsa-supplemental-name-adoption.json": "4cd76e4422ef03a1c0454c7295cadb68d3bb80ea544ae0f9685ce76c88bc7455"
+  },
+  "reviewLimits": [
+    "Both independent engines and raw field/confidence logic were replayed for every row, and every flagged target was tied to its immutable image-resolution receipt. I did not personally manually transcribe all13,906 otherwise-agreeing source rows.",
+    "Personal primary image reviews cover batches002/003/009 (1,100target rows), the47supplemental actual-PDF name cases, actual header/final-control contexts and the Henry pay regression. Other original flagged fields rely on the separately hash-pinned team image-review receipts.",
+    "The actual-PDF raster fidelity and row-band check covers every page/field region, with explicit1pixel ink tolerance; it is not exact antialiasing PNG equality or an independent reading of every letter.",
+    "Source acceptance and held→verified status promotion belong to root. Final app rebuild, all-dataset reconciliation, CI, merge and deployment remain separate publication checks."
+  ],
+  "noSourceRawBatchOverlayOrPriorPublishedFileMutatedByReviewer": true
+}

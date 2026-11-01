@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-01",
+  "command": "python -m unittest discover -s scripts -p 'test_resolve_held_health.py' -v",
+  "exitCode": 0,
+  "testsRun": 7,
+  "testsPassed": 7,
+  "coverage": [
+    "Actual 49-row original fixture and two independent raw readers",
+    "All 18 original fixture dash masks",
+    "Unknown versus explicit zero and negative money values",
+    "Names preserve letters/diacritics/word boundaries; benign comma whitespace only",
+    "Source-verified Henry money repair and null-candidate expense repairs remain separate from raw",
+    "Incomplete/wrong-field/boolean-money review rejected",
+    "Actual shared-engine Muir escape, separate 44-case amendments and 3 preserved legitimate lowercase names"
+  ],
+  "codeInputs": [
+    {
+      "path": "scripts/resolve_held_health_audit.py",
+      "sha256": "8cff6672c34eaf24e7d5a5b8966b31bd8643d30f84ea0460818503d1e03108f1"
+    },
+    {
+      "path": "scripts/resolve_held_health_finalize.py",
+      "sha256": "6d442c4b592bb0a9fb914663b1bf47cfd8c98b6a7a4b32e633cd8451a99bfb91"
+    },
+    {
+      "path": "scripts/resolve_held_health_name_amendments.py",
+      "sha256": "9b2099b8908d0327eeaf1c3fb49663c06df0a3a1892b80a8114f2e4f6708ed1d"
+    },
+    {
+      "path": "scripts/resolve_held_health_ocr.py",
+      "sha256": "cfb100335076c39d16d5129ff25814438c465069fb758ef4d54f15446110ef63"
+    },
+    {
+      "path": "scripts/resolve_held_health_overlays.py",
+      "sha256": "cca5cefaedd9fabfa17327a87586d820f4749ed8df98c8442fb8e61540c06fb3"
+    },
+    {
+      "path": "scripts/resolve_held_health_review_batches.py",
+      "sha256": "59001f932d152c66290aa75bcd1d0cf5e9877c64aadd5161d1af19ce45bf463a"
+    },
+    {
+      "path": "scripts/test_resolve_held_health.py",
+      "sha256": "b77a8fb371e662896043a57a077bd79e791482882577fa67dcc0e6f471849677"
+    }
+  ],
+  "testEvidence": "Frozen real source page outputs, verified-original repair fixture, independently reviewed supplemental source names and root-adopted amendment ledgers; no synthetic salary replacements."
+}

@@ -1,0 +1,78 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS additive final provenance fingerprint snapshot: all 398 previously reviewed school rows unchanged and current proof row arrays remain exact",
+  "priorReceiptsUnchanged": [
+    {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-comparison.json",
+      "sha256": "e0d7aaf9f23b29c4f9db4fb414018f3c5cdb15192ca529b8a461500fa5fb7aab"
+    },
+    {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd8-comparison.json",
+      "sha256": "62e907b8d4356bdaf24c331bab1e5ef777af20d3ff42dd1a507d46be5245e793"
+    }
+  ],
+  "sourceManifestObserved": {
+    "path": "research/salaries/held-resolution-schools/sources.json",
+    "sha256AtReview": "d5be1835d64870182852d5301a7c63853ebb50b808e7801e5b971d63b8113738",
+    "note": "Subsequent peer metadata links may change the manifest; per-source data/proof hashes remain independently pinned."
+  },
+  "sources": [
+    {
+      "sourceId": "held-resolution-schools-sd10-2025-trustees",
+      "dataFile": "research/salaries/held-resolution-schools/sd10-2025-trustees.json.gzip",
+      "dataSha256": "7ca97934454cbb3606d95f60438d0f024071da339b7538e228d598861f7b70b7",
+      "reviewedDataUnchanged": true,
+      "proofFile": "research/salaries/held-resolution-schools/sd10-2025-trustees-evidence.json.gzip",
+      "newProofSha256": "26277957461a14e2bec5c30c3c104eee0b5448af7d67d5daa9b7d03b8234cc84",
+      "priorProofSha256": "54b2db8d88fd6b016c51b1bc07e089d59711d398dfff36ba1233b890a7c5f46d",
+      "proofRowsComparedAgainstIndependentReviewedData": [
+        "rows",
+        "tesseractRows",
+        "rapidRows"
+      ],
+      "rows": 5,
+      "allReviewedLiteralFieldsRemainExact": true,
+      "publicWarning": "The remuneration schedules on physical pages 47–48 explicitly state the fiscal year ended June 30, 2025; these observations are assigned to 2024/25 on that basis. The same package's declaration on page 3 certifies the year ended June 30, 2024 despite a 2024–2025 year field and signatures dated December 18, 2025. The management report on page 5 prints December 18, 2024 beneath a June 30, 2025 header. These contradictions remain unresolved; approval/adoption of the 2025 SOFI is not established by these pages. No cause or typo is inferred.",
+      "sourceOriginalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a"
+    },
+    {
+      "sourceId": "held-resolution-schools-sd10-2025-employees",
+      "dataFile": "research/salaries/held-resolution-schools/sd10-2025-employees.json.gzip",
+      "dataSha256": "872021ab70e8c70e3cf5ba730350dc32ad711dc9555ee0c9cee10ec48beb9f64",
+      "reviewedDataUnchanged": true,
+      "proofFile": "research/salaries/held-resolution-schools/sd10-2025-employees-evidence.json.gzip",
+      "newProofSha256": "11df8def824d7c9c81da4fdbc8e229d976208099eb80f9051c71eb6e71c5560e",
+      "priorProofSha256": "96eeb4c09b5c676384e26f758e5aafb7dc59472e3bac073e2f343c92b98e8622",
+      "proofRowsComparedAgainstIndependentReviewedData": [
+        "rows",
+        "tesseractRows",
+        "rapidRows"
+      ],
+      "rows": 53,
+      "allReviewedLiteralFieldsRemainExact": true,
+      "publicWarning": "The remuneration schedules on physical pages 47–48 explicitly state the fiscal year ended June 30, 2025; these observations are assigned to 2024/25 on that basis. The same package's declaration on page 3 certifies the year ended June 30, 2024 despite a 2024–2025 year field and signatures dated December 18, 2025. The management report on page 5 prints December 18, 2024 beneath a June 30, 2025 header. These contradictions remain unresolved; approval/adoption of the 2025 SOFI is not established by these pages. No cause or typo is inferred.",
+      "sourceOriginalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a"
+    },
+    {
+      "sourceId": "held-resolution-schools-sd08-2026-employees",
+      "dataFile": "research/salaries/held-resolution-schools/sd08-2026-employees.json.gzip",
+      "dataSha256": "d88fecc9e02f2f9c3942796ec2d01e9a4e5025cbe9fbf58b417deda317d4e2c3",
+      "reviewedDataUnchanged": true,
+      "proofFile": "research/salaries/held-resolution-schools/sd08-2026-employees-evidence.json.gzip",
+      "newProofSha256": "f448631c285f3bb8d5b9e6729be4805f80d246b00525134cab7495aeaf3245cf",
+      "priorProofSha256": "f448631c285f3bb8d5b9e6729be4805f80d246b00525134cab7495aeaf3245cf",
+      "proofRowsComparedAgainstIndependentReviewedData": [
+        "rows",
+        "independentRows"
+      ],
+      "rows": 340,
+      "allReviewedLiteralFieldsRemainExact": true,
+      "publicWarning": "The posted SOFI employee schedule has conflicting years: physical page 52 prints June 30, 2025, while its other employee pages print June 30, 2026. The assigned 2025/26 period is supported by all 340 matching employee rows in the separately published September 8, 2026 board agenda, whose complete salary schedule on pages 185–193 consistently prints June 30, 2026 and is introduced by a dated memorandum. Names, remuneration, expenses, order and multiplicity agree across both originals under page mapping +134. The conflicting finance heading remains literal; no typo or cause is asserted. The agenda financial-statement subsection contains DRAFT/Not Finalized marks, while its remuneration pages are unmarked. The agenda is period corroboration, not the payment-source original or proof of final adoption. Posted SOFI signature areas are redacted; its declaration date fields read September 8, 2026. The minutes record SOFI presentation, not an explicit adoption motion. The named employee controls reconcile exactly. Elsewhere, posted SOFI reconciliation page 64 prints $56,431,182 remuneration and $594,827 expenses, while schedule page 59 prints $56,431,196 and $594,437 respectively: reconciliation minus schedule is −$14 remuneration and +$390 expenses. Both sets remain literal; their cause is unresolved.",
+      "sourceOriginalSha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f"
+    }
+  ],
+  "rowsChecked": 398,
+  "scopeQualification": "This is an additive snapshot for the author-revised new evidence files. It verifies every current normalized and corrected-reader row against the independent previously reviewed salary fields. It does not rewrite old receipts or claim new independent visual examination of added January 2026 SD10 board-context evidence. Reporting-period/approval conclusions remain the previously qualified ones.",
+  "candidateRowCorrections": []
+}

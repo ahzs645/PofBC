@@ -1,0 +1,856 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS complete independent 58-row manual/image and normalized comparison; qualified literal FY2024/25 salary period accepted with unresolved approval/management contradictions",
+  "original": {
+    "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2026/01/SD10-2024-2025-SOFI-sv-1.pdf",
+    "sourceIndexUrl": "https://sd10.bc.ca/board-of-education/financial-information-budgets/",
+    "localPath": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+    "sha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a"
+  },
+  "independentRawTranscript": {
+    "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-original-transcription.tsv",
+    "sha256": "42081cb9559e5410221c7ec8e0ca2268409dc482d25059718aa545a97e9aa225",
+    "writtenBeforeAuthorCandidateOpened": true,
+    "unchangedAfterComparison": true
+  },
+  "precomparisonOriginalNotes": {
+    "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-original-review-notes.json",
+    "sha256": "3fbeec4eac857541de76fd4a7c8e3460c4e37a833aa558b1711f06413e983993",
+    "writtenBeforeAuthorCandidateOpened": true
+  },
+  "candidateTranscript": {
+    "path": "research/salaries/held-resolution-2026-11-01/schools/sd10-2025-manual.tsv",
+    "sha256": "389af426c61df6549513cf626ff6dd9e8c626961e2b2a0a0cbc55a9c81e543a0"
+  },
+  "candidateManifestObserved": {
+    "path": "research/salaries/held-resolution-schools/sources.json",
+    "sha256AtReview": "22b63f962c42db1fd4bd0a8697d87a25fb71a53ba12af963e4b0e3ba98f01c90",
+    "note": "Author may add peer metadata links afterward; original and data/provenance hashes are independently pinned per source."
+  },
+  "rowsCompared": 58,
+  "rowFieldsCompared": [
+    "physicalPdfPage",
+    "scope",
+    "literalName",
+    "literalPositionIncludingVisibleClippedFragments",
+    "remuneration",
+    "expensesIncludingExplicitZero"
+  ],
+  "candidateRowCorrections": [],
+  "reviewerRawTranscriptCorrections": [
+    {
+      "sequence": 6,
+      "physicalPage": 48,
+      "employeeRow": 1,
+      "name": "Alstad, Jenna",
+      "field": "remuneration",
+      "initialIndependentReading": "101576.58",
+      "verifiedLiteralOriginal": "105776.58",
+      "verifiedBeforeAuthorCandidateOpened": true,
+      "verificationReceipt": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-original-review-notes.json"
+    },
+    {
+      "sequence": 44,
+      "physicalPage": 48,
+      "employeeRow": 39,
+      "field": "name",
+      "initialIndependentReading": "Pollon, Trasha",
+      "verifiedLiteralOriginal": "Pollon, Tasha",
+      "verifiedBeforeAuthorCandidateOpened": false,
+      "verification": "After the field comparison exposed the difference, a fresh 5x original image crop visibly shows Tasha. Candidate was already correct.",
+      "image": "/tmp/held-resolution-schools/independent-sd10-review-pollon-smedbol-crop.png",
+      "imageSha256": "9dad8d9c45338ef60db98b07befd32aa3f51bf085068cb75bb05999398461629"
+    },
+    {
+      "sequence": 48,
+      "physicalPage": 48,
+      "employeeRow": 43,
+      "name": "Smedbol, Naomi",
+      "field": "position",
+      "initialIndependentReading": "TEACHERS",
+      "verifiedLiteralOriginal": "TEACHERS, TEACHER ON",
+      "verifiedBeforeAuthorCandidateOpened": false,
+      "verification": "After the field comparison exposed the omitted fragment, a fresh 5x original image crop confirms the full visible cell. Candidate was already correct.",
+      "image": "/tmp/held-resolution-schools/independent-sd10-review-pollon-smedbol-crop.png",
+      "imageSha256": "9dad8d9c45338ef60db98b07befd32aa3f51bf085068cb75bb05999398461629"
+    }
+  ],
+  "rowComparisons": [
+    {
+      "sequence": 1,
+      "physicalPage": 47,
+      "scope": "school-trustees",
+      "name": "Dixon, Christine",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 2,
+      "physicalPage": 47,
+      "scope": "school-trustees",
+      "name": "Farrell, Rhonda",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 3,
+      "physicalPage": 47,
+      "scope": "school-trustees",
+      "name": "Gascon, Stephen",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 4,
+      "physicalPage": 47,
+      "scope": "school-trustees",
+      "name": "Murphy, Amanda",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 5,
+      "physicalPage": 47,
+      "scope": "school-trustees",
+      "name": "Simon, Danyea",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 6,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Alstad, Jenna",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 7,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Bardati, Richard",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 8,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Barisoff, Christina",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 9,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Barisoff, Ken",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 10,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Bisson, Justin",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 11,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Bjarnason, Lisa",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 12,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Chapman, Veronika",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 13,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Cook, Brent",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 14,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Delong, Sheena",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 15,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Dubinsky, Debbie",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 16,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Dubinsky, Peter",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 17,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Flesaker, Julia",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 18,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Foster, Cody",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 19,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Fox, Tim J.",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 20,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Gajda, Peter",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 21,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Gehrels, Ben",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 22,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Gerber, Riley",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 23,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Gilham, Sarah",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 24,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Greenhalf, Keith",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 25,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Hempel, Brandon",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 26,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Hemphill, Mitchell",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 27,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Hibberson, Michael",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 28,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Hicks, Donna",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 29,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Hood, Kimberly",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 30,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Jackson, Michele",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 31,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Kipkie, Scott",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 32,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Knecht, Tracy",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 33,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Kopp, Tyler",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 34,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Martin, Megan",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 35,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Martin, Patrick",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 36,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "McLellan, Michael",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 37,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Mervyn, Stephanie",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 38,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Momeyer, Erika C.",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 39,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Montani, Carolina",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 40,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Oakes, Katie",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 41,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Orr, Lowell",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 42,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Paterson, Susan",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 43,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Peterson, James",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 44,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Pollon, Tasha",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 45,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Roberts, Marsha",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 46,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Roger, Stephanie",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 47,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Sing, Jaime",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 48,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Smedbol, Naomi",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 49,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Snyder, David",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 50,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Tupper, Elizabeth",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 51,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Van Brummelen, Timothy",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 52,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Vibe, Anita R.",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 53,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Volansky, Andrea",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 54,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Volansky, Crystal",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 55,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Walmsley, Rachel",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 56,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Whitehouse, Elizabeth Vera",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 57,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Wiseman, Tessa",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    },
+    {
+      "sequence": 58,
+      "physicalPage": 48,
+      "scope": "employee-remuneration",
+      "name": "Zeleznik, Patricia",
+      "allFieldsExactAfterExplicitReviewerRechecks": true
+    }
+  ],
+  "normalizedComparisons": [
+    {
+      "sourceId": "held-resolution-schools-sd10-2025-trustees",
+      "file": "research/salaries/held-resolution-schools/sd10-2025-trustees.json.gzip",
+      "dataSha256": "7ca97934454cbb3606d95f60438d0f024071da339b7538e228d598861f7b70b7",
+      "normalizedSha256": "848b051b6e7c68db270591c23275fa18ed760fec93ecd575266e772e08c0a45a",
+      "provenanceFile": "research/salaries/held-resolution-schools/sd10-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "54b2db8d88fd6b016c51b1bc07e089d59711d398dfff36ba1233b890a7c5f46d",
+      "rowsCompared": 5,
+      "allSixFieldsExact": true,
+      "rowCountAndDecimalTotalsMatchManifest": true,
+      "physicalPages": [
+        47
+      ],
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "publicWarning": "The remuneration schedules on physical pages 47–48 explicitly state the fiscal year ended June 30, 2025; these observations are assigned to 2024/25 on that basis. The same package's declaration on page 3 certifies the year ended June 30, 2024 despite a 2024–2025 year field and signatures dated December 18, 2025. The management report on page 5 prints December 18, 2024 beneath a June 30, 2025 header. These contradictions remain unresolved; approval/adoption of the 2025 SOFI is not established by these pages. No cause or typo is inferred.",
+      "candidateCorrections": []
+    },
+    {
+      "sourceId": "held-resolution-schools-sd10-2025-employees",
+      "file": "research/salaries/held-resolution-schools/sd10-2025-employees.json.gzip",
+      "dataSha256": "872021ab70e8c70e3cf5ba730350dc32ad711dc9555ee0c9cee10ec48beb9f64",
+      "normalizedSha256": "8829230db7075cf5ac5c8cf92dd93822401bf316e852534824dc17601a5ef850",
+      "provenanceFile": "research/salaries/held-resolution-schools/sd10-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "96eeb4c09b5c676384e26f758e5aafb7dc59472e3bac073e2f343c92b98e8622",
+      "rowsCompared": 53,
+      "allSixFieldsExact": true,
+      "rowCountAndDecimalTotalsMatchManifest": true,
+      "physicalPages": [
+        48
+      ],
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "publicWarning": "The remuneration schedules on physical pages 47–48 explicitly state the fiscal year ended June 30, 2025; these observations are assigned to 2024/25 on that basis. The same package's declaration on page 3 certifies the year ended June 30, 2024 despite a 2024–2025 year field and signatures dated December 18, 2025. The management report on page 5 prints December 18, 2024 beneath a June 30, 2025 header. These contradictions remain unresolved; approval/adoption of the 2025 SOFI is not established by these pages. No cause or typo is inferred.",
+      "candidateCorrections": []
+    }
+  ],
+  "controlVerification": {
+    "trustees": {
+      "rows": 5,
+      "computed": [
+        69248.51,
+        12525.55
+      ],
+      "printed": [
+        69248.51,
+        12525.55
+      ],
+      "exact": true
+    },
+    "employeesOver75000": {
+      "rows": 53,
+      "computed": [
+        6036402.68,
+        89295.97
+      ],
+      "printed": [
+        6036402.68,
+        89295.97
+      ],
+      "exact": true
+    },
+    "employeesBelow75000Aggregate": {
+      "printed": [
+        3987867.79,
+        46286.43
+      ],
+      "personRowsImported": 0
+    },
+    "totalAllEmployees": {
+      "printed": [
+        10024270.47,
+        135582.4
+      ],
+      "sumOfNamedAndAggregateEmployeeControls": [
+        10024270.47,
+        135582.4
+      ],
+      "trusteesExcludedFromThisPrintedControl": true
+    },
+    "employerCppEiPremium": {
+      "printed": 830304.23,
+      "personRowsImported": 0
+    },
+    "nullExpenseRows": 0,
+    "explicitZeroExpenseRows": 1,
+    "explicitZeroExpenseName": "Kipkie, Scott"
+  },
+  "criticalVisibleGlyphChecks": {
+    "beforeAuthorComparison": true,
+    "names": [
+      "McLellan, Michael",
+      "Momeyer, Erika C."
+    ],
+    "literalNonstandardPosition": {
+      "name": "Mervyn, Stephanie",
+      "position": "TEACHERS, TEACH ON"
+    },
+    "image": "/tmp/held-resolution-schools/independent-sd10-review-names-titles-crop.png",
+    "comment": "Names and punctuation were read from the visible original, without inferring aliases, extra glyphs or completed titles."
+  },
+  "periodAndApprovalEvidence": {
+    "salarySchedulePhysicalPages": [
+      47,
+      48
+    ],
+    "bothSalaryHeadings": "For the fiscal year ended June 30, 2025",
+    "coverPhysicalPage1": "For the fiscal year ended June 30, 2025",
+    "declarationPhysicalPage3": {
+      "pageHeaderPeriodEnd": "June 30, 2025",
+      "yearField": "2024-2025",
+      "declarationBodyPeriodEnd": "June 30, 2024",
+      "visibleSignatureRoles": [
+        "Chairperson of the Board of Education",
+        "Superintendent",
+        "Secretary-Treasurer"
+      ],
+      "allThreeVisibleDates": "December 18, 2025",
+      "allThreeActualSignaturesVisible": true
+    },
+    "sofiManagementPhysicalPage5": {
+      "pageHeaderPeriodEnd": "June 30, 2025",
+      "visibleSignedNames": [
+        "Peter Dubinsky",
+        "Michael McLellan"
+      ],
+      "bothPrintedSignoffDates": "December 18, 2024"
+    },
+    "embeddedFinancialStatements": {
+      "physicalPage7CoverPeriod": "June 30, 2025",
+      "physicalPage9ManagementVisibleSignoffDates": "September 29, 2025",
+      "physicalPage10AuditorOpinionPeriod": "as at and for the year ended June 30, 2025",
+      "physicalPage12AuditorSignatureDate": "September 29, 2025",
+      "physicalPage13StatementOfFinancialPosition": "As at June 30, 2025 with 2025 Actual and 2024 Actual columns; financial-statement approval signatures dated September 29, 2025",
+      "scopeQualification": "These financial-statement signatures support the embedded financial statement period; they do not establish approval/adoption of the separate SOFI remuneration schedules."
+    },
+    "qualifiedPeriodConclusion": "Retain literal salary-table FY2024/25 because both complete salary tables explicitly identify June 30, 2025 and the cover/embedded financial statements coherently identify 2025. Declaration body and management signoff contradictions remain unresolved; 2025 SOFI approval/adoption is not established by these pages. No issuer typo, cause or year repair is asserted.",
+    "draftMarkVisibleOnReviewedPages": false
+  },
+  "actual2024Comparison": {
+    "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2024/12/2023-2024-SOFI-Report_v1.1-sv.pdf",
+    "localPath": "/tmp/held-resolution-schools/sd10-district-sofi-2024.pdf",
+    "sha256": "b75cc018bd7570caab0e4054ece1dbc619077f2752db03b88adf4a0f130289e2",
+    "salaryPhysicalPages": [
+      46,
+      47
+    ],
+    "bothPrintedSalaryHeadingPeriod": "For the fiscal year ended June 30, 2024",
+    "literalSelectedDifferentRows": [
+      {
+        "name": "Dixon, Christine",
+        "source2024": [
+          14220.42,
+          1879.01
+        ],
+        "source2025": [
+          14323.83,
+          375.33
+        ]
+      },
+      {
+        "name": "Alstad, Jenna",
+        "source2024": [
+          102890.55,
+          2484.94
+        ],
+        "source2025": [
+          105776.58,
+          1417.7
+        ]
+      },
+      {
+        "name": "McLellan, Michael",
+        "source2024": [
+          192047.05,
+          21416.64
+        ],
+        "source2025": [
+          195967.83,
+          6849.03
+        ]
+      }
+    ],
+    "coverageQualification": "2024 comparison verifies headings, table layout and selected clearly different literal rows. It is not a complete independent 2024 row extraction or compiled-overlap comparison."
+  },
+  "scopeAndDefinitionChecks": [
+    "Both complete 2025 salary tables were independently transcribed in full: 5 trustees and 53 employees, all names/titles/pay/expenses/page/row boundaries. All candidate fields match after explicit reviewer-only rechecks.",
+    "Visible clipped/short position strings remain literal; no invisible completion is invented. All expenses are explicitly numeric; the sole 0.00 remains zero.",
+    "Physical page 49 starts the supplier schedule and is excluded. Below-threshold aggregates, all-employee totals and CPP/EI employer premiums are excluded from person rows.",
+    "Physical page 50 explicitly states remuneration/expense schedule uses cash basis while audited financial-statement salaries and benefits use accrual basis. Separate expense amounts are not added to remuneration.",
+    "The no-severance-agreement note covers the fiscal year ended June 30, 2025 and creates no extra person rows."
+  ],
+  "originalImagePhysicalPageChecks": [
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 1,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-p1.png",
+      "imageSha256": "443614c417036f565e38cf51863ca68d922b08754b89fd14428e3f584c360fd0",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 3,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-p3.png",
+      "imageSha256": "5741662d8a81bbc99fbd379267f43c5b3e2c2d18ebaf4b06c8bc8f690bd060ab",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 5,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-p5.png",
+      "imageSha256": "b5fe3b474275c075710c93d19637e33bd2fe9ddbc4ed2f2e3c31a34181886931",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 13,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-p13.png",
+      "imageSha256": "b54927d6fa945e91a66a95252b7956407f3856943298b5f8b993dcc6a0fbd2af",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 47,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-p47.png",
+      "imageSha256": "bd9d4c53de97f3e05fc50bc11c007dac268a30310d08dbd5ed54b4ab25fa09f6",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 48,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-p48.png",
+      "imageSha256": "2879d6a854b3214adaf3d145f7c7c9701a75d2e73f1c3205a14c26f875d95b14",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 49,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-p49.png",
+      "imageSha256": "9c8b26d3ccaad6d04a2bef82eca2b8e931e562a151bc1cb95786a92c8c153ce3",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 50,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-p50.png",
+      "imageSha256": "cd7a90aa3bae9ce10fdd08486ebf5db869797ed807167a885ee0edee2cd762ab",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 7,
+      "renderScale": 1.5,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-review-p7.png",
+      "imageSha256": "e0d4d2824ccad1a736ee62e3d96a00aa96f54b4361adcc7673cc2bb8523860ea",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 9,
+      "renderScale": 1.5,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-review-p9.png",
+      "imageSha256": "8a4ba4f22792b29d8bbc3e6bfc0234c0399381db15420db9e88aa75ffe5bdcc2",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 10,
+      "renderScale": 1.5,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-review-p10.png",
+      "imageSha256": "5646e2d877421ef81580b9d89fd173d8d28100d172b103120b9ba11f0d7d7e50",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 12,
+      "renderScale": 1.5,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2025-review-p12.png",
+      "imageSha256": "73cdb794fff42cef7886ed3ed503ed2284ca82c3c48a45363d06b704dc1af1db",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2024.pdf",
+      "originalSha256": "b75cc018bd7570caab0e4054ece1dbc619077f2752db03b88adf4a0f130289e2",
+      "physicalPage": 46,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2024-p46.png",
+      "imageSha256": "938b5ed5d8cc985449f6086d912f2757c19cd1322a908a5446598d2a2d692b04",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2024.pdf",
+      "originalSha256": "b75cc018bd7570caab0e4054ece1dbc619077f2752db03b88adf4a0f130289e2",
+      "physicalPage": 47,
+      "renderScale": 2,
+      "image": "/tmp/held-resolution-schools/sd10-district-sofi-2024-p47.png",
+      "imageSha256": "44bb76b102a506437874849554cdbf84dc48cff1a3a6e43c85802b9756217139",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 48,
+      "clipPdfCoordinates": [
+        94,
+        413,
+        328,
+        466
+      ],
+      "renderScale": 5,
+      "image": "/tmp/held-resolution-schools/independent-sd10-review-names-titles-crop.png",
+      "imageSha256": "35375411eb4027048f3c85d16aa949081881ace08efbadd95c6fd6a9fe31081c",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 48,
+      "clipPdfCoordinates": [
+        390,
+        133,
+        525,
+        323
+      ],
+      "renderScale": 5,
+      "image": "/tmp/held-resolution-schools/independent-sd10-review-first-money-crop.png",
+      "imageSha256": "59784be3198e8c42b6d03b8dd85f70cf477aad2e94f8ac315793f10c1d76d222",
+      "independentRenderedPixelMatch": true
+    },
+    {
+      "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "physicalPage": 48,
+      "clipPdfCoordinates": [
+        95,
+        495,
+        337,
+        565
+      ],
+      "renderScale": 5,
+      "image": "/tmp/held-resolution-schools/independent-sd10-review-pollon-smedbol-crop.png",
+      "imageSha256": "9dad8d9c45338ef60db98b07befd32aa3f51bf085068cb75bb05999398461629",
+      "independentRenderedPixelMatch": true
+    }
+  ],
+  "ownershipAndLimitations": [
+    "Only NEW independent-sd10-* receipts were written for this task. Existing source datasets/manifests and all old frozen reviews remain unchanged.",
+    "No claim of report-wide visual review or issuer confirmation. Reviewed full images are individually listed; 2024 source review is limited to period/table distinction examples.",
+    "This review verifies complete manual original-image agreement and normalized rows; it does not independently rerun author Tesseract/Paddle OCR pipelines or re-download official URLs."
+  ]
+}

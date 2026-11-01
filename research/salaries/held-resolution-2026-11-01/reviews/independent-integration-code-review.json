@@ -1,0 +1,73 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "held_health_review",
+  "status": "pass-after-review-gate-fix",
+  "reviewedFileSha256": {
+    "scripts/review-salary-held-resolution.py": "41ad66a0a225c8404845f061a09b79d9be29684b113af208813f45381d1fde68",
+    "scripts/review-salary-recovery.py": "8efb1d18754f32154de2e8cdaab40fc1b695522a856bd6d5ca317bb19139e544",
+    "scripts/salary_release_audit.py": "386415db12a7f433804ed5498c9f4bbeebc0cccbc41bda46d2e57b9da5c9950b",
+    "scripts/test_salary_held_resolution.py": "cc05edf5c55f00274eeabc6731594966981317c03affad154db7e5eb0bd41909",
+    "scripts/test_salary_recovery_release.py": "b79665694071ae368f44ad0bae0d07bff16bb520f05371f865c80e1479e8552a"
+  },
+  "scope": "Read-only review of new held-resolution baseline/review gate, prior recovery frozen mode, gzip baseline fallback and related regression tests. No code, source data, generated output or earlier frozen file changed by reviewer.",
+  "resolvedFindings": [
+    {
+      "severity": "medium",
+      "file": "scripts/review-salary-held-resolution.py",
+      "problem": "The initial implementation iterated only the hashes supplied in parent-acceptance. Empty/incomplete worker-freeze and peer-receipt maps could disable intended proof gates. A temporary complete one-added-source fixture passed with both maps empty.",
+      "fixReviewed": "Requires exactly all four worker-area freezes, nonempty pinned receipts, a pinned baseline-row-fingerprint hash, every accepted source manifest/payload/evidence/provenance path in its corresponding freeze, and an exact mapping from new accepted source IDs to nonempty distinct pinned reviews/independent-* files.",
+      "verification": "Four added regression tests pass. In-memory calls to corrected main reject empty worker freezes and empty peer receipts before any output writes."
+    }
+  ],
+  "testsRun": [
+    {
+      "command": "python3 -m unittest discover -s scripts -p test_salary_held_resolution.py",
+      "tests": 9,
+      "result": "pass"
+    },
+    {
+      "command": "python3 -m unittest discover -s scripts -p test_salary_recovery_release.py",
+      "tests": 5,
+      "result": "pass"
+    },
+    {
+      "command": "python3 scripts/review-salary-recovery.py --frozen",
+      "result": "pass",
+      "historicalRecords": 1022585,
+      "historicalSourceInputs": 35
+    }
+  ],
+  "additionalInMemoryChecks": {
+    "publishedDriftsRejected": [
+      "scope",
+      "originalSHA256",
+      "dataSHA256",
+      "year",
+      "notes"
+    ],
+    "rowDriftsRejected": [
+      "remove one frozen source row",
+      "increase pay by one cent",
+      "change physical page",
+      "duplicate a frozen source row"
+    ],
+    "correctedMainRejects": [
+      "empty candidateFreezeSha256 map",
+      "empty reviewReceiptSha256 map"
+    ],
+    "repositoryBytesMutated": false
+  },
+  "reasoning": [
+    "Literal name/title, integer cents, null-versus-zero expenses, physical page and repeated-row multiplicity enter the multiset fingerprints. Group keys retain employer, actual period and source identity. All baseline groups must match exactly.",
+    "All earlier source metadata objects are checked before additions. New public source period/type/dates/warning/notes/validation/hashes/scope/URL and rows must match reviewed source inputs.",
+    "Global arithmetic requires exactly the accepted new official additions and preserves compiled rows. Unknown extra published rows cannot be hidden by arbitrary total changes.",
+    "Prior recovery frozen mode validates the historical35-source set, exact source manifests and proof receipts, new/published metadata and normalized row multisets, and continued absence of four reviewed compiled replacement groups. It ignores unrelated later global counts, so historical snapshots stay unchanged as separate collections grow.",
+    "The shared baseline loader preserves existing plainJSON behavior and supports historical gzip baselines. Wrong baseline totals still fail."
+  ],
+  "limits": [
+    "The full new release generator cannot yet be run with a final real parent-acceptance and all four completed worker freezes while health processing continues. Root must run it after the final acceptance ledger is frozen.",
+    "This code review does not replace complete source/period/image peer review of any new NIC, school or health cohort, or final full rebuild/reconciliation and deployment checks.",
+    "Review hashes identify the exact versions inspected; later changes need a review addendum.",
+    "Ordinary CI assertions rely on normal Python execution without optimization, consistent with the workflow commands."
+  ]
+}

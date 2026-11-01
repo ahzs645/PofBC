@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "decision": "Propose qualified FY2024/25 observations from explicitly printed salary schedule year; approval/adoption of2025SOFI remains unestablished.",
+  "reportingPeriodBasis": {
+    "primary": "Both complete remuneration table headings, physical pages 47–48, say For the fiscal year ended June 30, 2025. Employee severance note on page 48 also identifies fiscal year ending June 30, 2025.",
+    "literalSalaryPeriodEnd": "2025-06-30",
+    "fiscalStartConvention": "Annual district fiscal period July 1–June 30",
+    "inferredFromFilename": false,
+    "approvalFor2025Established": false
+  },
+  "conflicts": [
+    {
+      "pdfPage": 3,
+      "kind": "Declaration body period",
+      "literalText": "Information for the year ended June 30, 2024",
+      "otherPrintedFields": "Page header says June 30, 2025; year field 2024-2025; three visible signatures dated December 18, 2025.",
+      "causeEstablished": false
+    },
+    {
+      "pdfPage": 5,
+      "kind": "Management report signoff dates",
+      "literalText": "Date: December 18, 2024",
+      "otherPrintedFields": "Header says For the fiscal year ended June 30, 2025; visible superintendent and secretary-treasurer signatures.",
+      "causeEstablished": false,
+      "occurrences": 2
+    }
+  ],
+  "wholePackageInspection": {
+    "pages": 50,
+    "method": "Contextual Tesseract keyword/header extraction across every physical page, followed by rendered original-image inspection of salary tables, declaration/management conflict, financial-statement cover/management/auditor and reconciliation. OCR-only contexts are not individual-row acceptance.",
+    "fullContextOCRFile": "research/salaries/held-resolution-2026-11-01/schools/sd10-context-ocr.json.gzip",
+    "fullContextOCRSha256": "81171041b7790bd12aabe7b8acfca1d65290aa468e8c497bc3461448874f6567",
+    "workerActualRenderedOriginalPages": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      10,
+      12,
+      47,
+      48,
+      49,
+      50
+    ],
+    "limitations": "No complete manual transcription or financial audit of all50report pages is claimed."
+  },
+  "financialStatements": {
+    "embeddedCoverPhysicalPage": 7,
+    "printedYearEnded": "2025-06-30",
+    "embeddedFinancialStatementManagementPhysicalPage": 9,
+    "visibleManagementSignatureDates": "September29,2025",
+    "auditorsOpinionPhysicalPage": 10,
+    "auditorsReportDatePhysicalPage": 12,
+    "visibleAuditorReportDate": "September29,2025",
+    "separate2025Original": {
+      "inputKey": "sd10-financials-2025",
+      "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2025/12/2024-2025-SD10-FSs-sv.pdf",
+      "cachePath": "/tmp/held-resolution-schools/sd10-financials-2025.pdf",
+      "sha256": "82783ffe20e3b7e2da1eb8afb0b2c5e093e19bbc2cf1372d69182bc9b9d01c81",
+      "bytes": 11300111,
+      "httpStatus": 200,
+      "nativeOrOCRTextChars": 38
+    },
+    "boardFinancialApproval": {
+      "source": {
+        "inputKey": "sd10-sep2025-minutes",
+        "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2025/12/2025.09.23-Open-Board-Meeting-Minutessv.pdf",
+        "cachePath": "/tmp/held-resolution-schools/sd10-sep2025-minutes.pdf",
+        "sha256": "9b70639c40b58e6797f02c29d81eacd6b2aea4f4e1f8f542be8c02a40522d297",
+        "bytes": 580854,
+        "httpStatus": 200,
+        "nativeOrOCRTextChars": 2
+      },
+      "pdfPage": 2,
+      "literalMotion": "THAT the Board of Education hereby APPROVES the Audited Financial Statements for the year ended June 30, 2025, subject to completion of the audit report.",
+      "doesNotEstablishSOFIApproval": true
+    },
+    "salarySchedulesAudited": false
+  },
+  "sourceDefinitions": {
+    "pdfPage": 50,
+    "literalBasis": "The Schedule of Remuneration and Expenses is prepared on a cash basis, whereas the salaries and benefits in the Audited Financial Statements are recorded on an accrual basis.",
+    "remunerationPlusExpensesCombined": false,
+    "employerCppEiImported": false
+  },
+  "actual2024Comparison": {
+    "source": {
+      "inputKey": "sd10-district-sofi-2024",
+      "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2024/12/2023-2024-SOFI-Report_v1.1-sv.pdf",
+      "cachePath": "/tmp/held-resolution-schools/sd10-district-sofi-2024.pdf",
+      "sha256": "b75cc018bd7570caab0e4054ece1dbc619077f2752db03b88adf4a0f130289e2",
+      "bytes": 14062671,
+      "httpStatus": 200,
+      "nativeOrOCRTextChars": 49
+    },
+    "declarationPhysicalPage": 3,
+    "printedYearEnded": "2024-06-30",
+    "visibleDeclarationSignatureDates": "November19,2024",
+    "employeePhysicalPage": 47,
+    "trusteePhysicalPage": 46,
+    "separatelyReadImageExamples": [
+      {
+        "name": "Alstad, Jenna",
+        "remuneration2024": "102890.55",
+        "remuneration2025": "105776.58"
+      },
+      {
+        "name": "Bardati, Richard",
+        "remuneration2024": "104385.78",
+        "remuneration2025": "119236.88"
+      },
+      {
+        "name": "Dubinsky, Peter",
+        "remuneration2024": "241127.46",
+        "remuneration2025": "251021.29"
+      },
+      {
+        "name": "McLellan, Michael",
+        "remuneration2024": "192047.05",
+        "remuneration2025": "195967.83"
+      }
+    ],
+    "conclusion": "Actual2024table has its own explicitly2024header and distinct row values. This corroborates that current2025salary tables are not merely the exact2024table reissued with a different upload label; it does not identify the cause of declaration/management conflicts.",
+    "rowsImportedFrom2024Original": 0
+  },
+  "districtAndMinistryComparison": "research/salaries/held-resolution-2026-11-01/schools/sd10-version-comparison.json",
+  "boardAdoptionChecks": [
+    {
+      "source": {
+        "inputKey": "sd10-dec2025-agenda",
+        "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2025/11/2025.12.02-Open-Board-Meeting-Agenda_v2.pdf",
+        "cachePath": "/tmp/held-resolution-schools/sd10-dec2025-agenda.pdf",
+        "sha256": "e217cf413909bfd45a4aec2cfe8f865a4cbb91d06c0dee107bc3dddbf15726e5",
+        "bytes": 179610,
+        "httpStatus": 200,
+        "nativeOrOCRTextChars": 4212
+      },
+      "finding": "No SOFI adoption item in the complete two-page agenda."
+    },
+    {
+      "source": {
+        "inputKey": "sd10-dec2025-minutes",
+        "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2026/01/2025.12.02-Open-Board-Meeting-Minutessv.pdf",
+        "cachePath": "/tmp/held-resolution-schools/sd10-dec2025-minutes.pdf",
+        "sha256": "b87c3e7619bfb8c75f6d112e11a303367dd896cda3fb7700371028555ecfbc5c",
+        "bytes": 861456,
+        "httpStatus": 200,
+        "nativeOrOCRTextChars": 3
+      },
+      "finding": "Complete adopted three-page minutes OCR reviewed; no SOFI approval/adoption item."
+    },
+    {
+      "source": {
+        "inputKey": "sd10-nov2024-minutes",
+        "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2025/01/2024.11.19-Open-Board-Meeting-Minutes-Signed_v1.pdf",
+        "cachePath": "/tmp/held-resolution-schools/sd10-nov2024-minutes.pdf",
+        "sha256": "9fc2a6dd44af7456010b1f0f3e9f10b27ff3e9c914d9f85e6e4f706833c11354",
+        "bytes": 821823,
+        "httpStatus": 200,
+        "nativeOrOCRTextChars": 3
+      },
+      "pdfPage": 2,
+      "finding": "Prior-year2023-2024SOFI is explicitly reported submitted and published. This is historical context, not2025approval."
+    },
+    {
+      "source": {
+        "inputKey": "sd10-jan2026-agenda",
+        "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2026/01/2026.01.20-Open-Board-Meeting-Agenda_v2.pdf",
+        "cachePath": "/tmp/held-resolution-schools/sd10-jan2026-agenda.pdf",
+        "sha256": "25c2bf6f81c2e68d95ab04aa07350b70d27de92c13074d04d77bbb6189a0b828",
+        "pdfPages": 2,
+        "httpStatus": 200,
+        "textReviewMethod": "native text"
+      },
+      "finding": "Complete January 20, 2026 agenda/minutes checked; no SOFI adoption motion or item found. This bounded check does not establish that an adoption record exists nowhere."
+    },
+    {
+      "source": {
+        "inputKey": "sd10-jan2026-minutes",
+        "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2026/02/2026.01.20-Open-Board-Meeting-Minutes-sv.pdf",
+        "cachePath": "/tmp/held-resolution-schools/sd10-jan2026-minutes.pdf",
+        "sha256": "cc2de0faa6f976b75b18574324450d0253c7e093218cc6f7a13ba96af7d33245",
+        "pdfPages": 3,
+        "httpStatus": 200,
+        "textReviewMethod": "Tesseract PSM6 discovery"
+      },
+      "finding": "Complete January 20, 2026 agenda/minutes checked; no SOFI adoption motion or item found. This bounded check does not establish that an adoption record exists nowhere."
+    }
+  ],
+  "publicWarning": "The remuneration schedules on physical pages 47–48 explicitly state the fiscal year ended June 30, 2025; these observations are assigned to 2024/25 on that basis. The same package's declaration on page 3 certifies the year ended June 30, 2024 despite a 2024–2025 year field and signatures dated December 18, 2025. The management report on page 5 prints December 18, 2024 beneath a June 30, 2025 header. These contradictions remain unresolved; approval/adoption of the 2025 SOFI is not established by these pages. No cause or typo is inferred.",
+  "assumptions": [
+    "The observation period follows the salary table own explicit year even though approval text conflicts. This is a qualified period decision authorized for root review, not a silent correction.",
+    "Visible signatures and dates do not resolve a declaration that literally certifies a different reporting year. No template typo, intent or cause is asserted."
+  ]
+}

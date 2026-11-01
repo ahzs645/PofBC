@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "date": "2026-11-01",
+  "kind": "new supplemental verification receipt after frozen school handoff",
+  "command": "python3 scripts/resolve_held_schools.py --originals --rerun-rapid",
+  "exitCode": 0,
+  "stdout": "Verified 3 qualified school cohorts / 398 rows against original OCR inputs",
+  "result": "PASS",
+  "freshExecution": {
+    "SD10": "Original rendered pages47–48 were read again by fresh Tesseract PSM6 and fresh independent RapidOCR/Paddle inference. Complete58row fields equal the frozen manual transcript after the same explicit image-verified text corrections. No monetary correction or data change.",
+    "SD8": "Both independent native readers re-extracted all340employee rows from the final posted SOFI and separately dated agenda; all compared fields, order, multiplicity and page mapping equal frozen evidence."
+  },
+  "engineReceipt": {
+    "file": "research/salaries/held-resolution-2026-11-01/schools/independent-ocr-engine-receipt.json",
+    "sha256": "be926011e5ec245cfdfe5f481a88c920a7b1c9346c1d4633ced605882fc66e69"
+  },
+  "frozenManifest": {
+    "file": "research/salaries/held-resolution-2026-11-01/schools/freeze-manifest.json",
+    "sha256": "c90f0ca658a22a0fbf4fb8c9436955d79c3a6991863f491505e0b9f2b0179c6c"
+  },
+  "sourceFingerprints": [
+    {
+      "id": "held-resolution-schools-sd10-2025-trustees",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "dataSha256": "7ca97934454cbb3606d95f60438d0f024071da339b7538e228d598861f7b70b7",
+      "provenanceSha256": "26277957461a14e2bec5c30c3c104eee0b5448af7d67d5daa9b7d03b8234cc84",
+      "rowCount": 5
+    },
+    {
+      "id": "held-resolution-schools-sd10-2025-employees",
+      "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "dataSha256": "872021ab70e8c70e3cf5ba730350dc32ad711dc9555ee0c9cee10ec48beb9f64",
+      "provenanceSha256": "11df8def824d7c9c81da4fdbc8e229d976208099eb80f9051c71eb6e71c5560e",
+      "rowCount": 53
+    },
+    {
+      "id": "held-resolution-schools-sd08-2026-employees",
+      "originalSha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+      "dataSha256": "d88fecc9e02f2f9c3942796ec2d01e9a4e5025cbe9fbf58b417deda317d4e2c3",
+      "provenanceSha256": "f448631c285f3bb8d5b9e6729be4805f80d246b00525134cab7495aeaf3245cf",
+      "rowCount": 340
+    }
+  ],
+  "frozenFilesChanged": false,
+  "limitations": [
+    "This is an additional replay receipt. It does not expand the independently rendered manual review coverage recorded in the handoff.",
+    "Initial raw OCR text/boxes/confidence remain in the frozen provenance; the fresh rerun was compared in memory and is not claimed as a separate committed raw OCR archive."
+  ]
+}

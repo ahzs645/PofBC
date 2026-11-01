@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-01",
+  "registryFile": "research/salaries/collections.json",
+  "registrySha256": "0b8c44e8862045fb1f45122722afdbebd9dcf6ced7954dd944d94196ff6f6bd6",
+  "sourceScopeAudit": [
+    {
+      "sourceId": "held-resolution-schools-sd10-2025-trustees",
+      "samePeriodScopeRegisteredSources": [],
+      "otherRegisteredSameEmployerPeriodScopes": [],
+      "newEmployeeScopeDoesNotReplaceTrustees": true,
+      "compiledPartitionDeletionProposed": false,
+      "aliasOrPeriodCorrectionToAcceptedSourcesProposed": false
+    },
+    {
+      "sourceId": "held-resolution-schools-sd10-2025-employees",
+      "samePeriodScopeRegisteredSources": [],
+      "otherRegisteredSameEmployerPeriodScopes": [],
+      "newEmployeeScopeDoesNotReplaceTrustees": true,
+      "compiledPartitionDeletionProposed": false,
+      "aliasOrPeriodCorrectionToAcceptedSourcesProposed": false
+    },
+    {
+      "sourceId": "held-resolution-schools-sd08-2026-employees",
+      "samePeriodScopeRegisteredSources": [],
+      "otherRegisteredSameEmployerPeriodScopes": [
+        {
+          "id": "continuation-schools-sd08-2026-trustees",
+          "year": "2025/26",
+          "category": "school-trustees"
+        }
+      ],
+      "newEmployeeScopeDoesNotReplaceTrustees": true,
+      "compiledPartitionDeletionProposed": false,
+      "aliasOrPeriodCorrectionToAcceptedSourcesProposed": false
+    }
+  ],
+  "oldHeldAndSourceCollectionsChanged": false,
+  "SD8HeldPayloadLiteralValuesAndPhysicalPagesPreserved": true
+}

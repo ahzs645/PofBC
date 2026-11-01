@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "held-resolution-nic-sofi-2019-20-employees",
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "sector": "Universities and colleges",
+      "year": "2019/20",
+      "slug": "2019-20",
+      "periodType": "fiscal",
+      "periodStart": "2019-04-01",
+      "periodEnd": "2020-03-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "sourceKind": "official",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "file": "held-resolution-nic-sofi-2019-20-employees.json.gzip",
+      "title": "North Island College FY2019/20 employee remuneration and expenses, recovered from archived October 22, 2020 Board agenda",
+      "sourceUrl": "https://web.archive.org/web/20211205173843id_/https://www.nic.bc.ca/pdf/bog/agenda/2020-2021/20201022_BOG_agenda.pdf",
+      "sourceIndexUrl": "https://web.archive.org/web/20210123014602id_/https://www.nic.bc.ca/about-us/board-of-governors/meeting-schedule/",
+      "originalSourceUrl": "https://www.nic.bc.ca/pdf/bog/agenda/2020-2021/20201022_BOG_agenda.pdf",
+      "sha256": "d96d0241e6d16b7383161079dfb90e44f29db6c4a72d3a35ccd50646da00eef0",
+      "dataSha256": "d3c5fce88fb8b14de1d15e3097d3eefc25516ffc1a487c3c20ca23ac8c3d1ac3",
+      "normalizedSha256": "f1413db406397a02c92d0c3ec919bf164ff1c214b95102fbe3027ba4e28c568d",
+      "rowCount": 136,
+      "totalRemuneration": 13045792,
+      "totalExpenses": 543386,
+      "pages": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "completeEmployeeSchedule": true,
+      "sourcePackageComplete": false,
+      "positionDisclosure": "not visibly published; white job-title text excluded",
+      "notes": [
+        "Complete five-page published named employee schedule above $75,000; separate Board amounts and below-threshold aggregates are excluded. Missing/dash expenses remain null, explicit zeros would remain zero; no negative amounts occur. Remuneration is the source amount, not base salary or an expense-inclusive total.",
+        "Job-title strings embedded as white text are invisible in the published pages and are not used; every exported position is null.",
+        "Raw archived bytes are incomplete; the complete employee schedule is recovered by independent MuPDF and Ghostscript PDF repair paths. Original package completeness is not claimed.",
+        "Two surviving employee pages and all overall totals agree with the separate signed official SOFI scan dated October 27, 2020. That scan itself omits employee pages 1, 3 and 5.",
+        "Archived official minutes of October 22, 2020 record a carried motion approving the Financial Information Act information for the year ended March 31, 2020 (physical/printed page4, item4.2.1); the agenda attachment itself has unsigned approval lines."
+      ],
+      "publicWarning": "The archived official Board package is truncated at 1,048,576 bytes; its archival header reports an original length of 3,739,511 bytes and Warning 299: content truncated by \"length\". Its complete five-page employee salary schedule has been recovered and independently verified. The currently hosted nine-page SOFI omits salary pages 1, 3 and 5; its two surviving salary pages and overall totals match. Separate official minutes record Board approval on October 22, 2020. A request for a complete original source copy is prepared but unsent. Invisible job-title text is excluded.",
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "sourcePackageComplete": false,
+        "sourceFingerprintLocked": true,
+        "allNamesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "MuPDF repair/read of raw archived bytes versus independent Ghostscript repair of five source pages followed by Poppler physical-layout reader. Exact ordered visible name/pay/expense/page equality; hidden white titles excluded.",
+        "rowCountsByPdfPage": {
+          "26": 14,
+          "27": 36,
+          "28": 36,
+          "29": 36,
+          "30": 14
+        },
+        "printedNamedControl": [
+          13045792,
+          543386
+        ],
+        "namedControlResidualRowSumMinusPrinted": [
+          0,
+          0
+        ],
+        "printedBoardControl": [
+          16375,
+          12727
+        ],
+        "printedBelowThresholdControl": [
+          15484088,
+          454520
+        ],
+        "printedOverallControl": [
+          28546255,
+          1010633
+        ],
+        "expenseDashesOrBlankRetainedAsMissing": 17,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/held-resolution-nic-sofi-2019-20-employees.json.gzip",
+        "evidenceSha256": "27ff5f892ec15d8d0a31cd2ed5e09b915ac979735d8c090cce076fc086277d4f",
+        "signedScanSha256": "43fd43a1d642fd6ad49efa92b8428d8663a4a410eec74d2d615b30fecb7e661d",
+        "signedScanMatchingRowCount": 72,
+        "approvalEvidence": {
+          "sourceUrl": "https://web.archive.org/web/20221001112128id_/https://www.nic.bc.ca/pdf/bog/minutes/20201022_BOG_regular_minutes.pdf",
+          "originalSourceUrl": "https://www.nic.bc.ca/pdf/bog/minutes/20201022_BOG_regular_minutes.pdf",
+          "sha256": "4f6655723d597ccd08e684e42feaa9be018b5511590c4b0c3bc3b378d1698196",
+          "physicalPage": 4,
+          "item": "4.2.1",
+          "cacheFile": "/tmp/nic-held-resolution/efefa9daac3c0e3b.body"
+        }
+      },
+      "cacheFile": "/tmp/nic-held-resolution/96885489bda14c25.body"
+    },
+    {
+      "id": "held-resolution-nic-sofi-2019-20-board",
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "sector": "Universities and colleges",
+      "year": "2019/20",
+      "slug": "2019-20",
+      "periodType": "fiscal",
+      "periodStart": "2019-04-01",
+      "periodEnd": "2020-03-31",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "currency": "CAD",
+      "sourceKind": "official",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "file": "held-resolution-nic-sofi-2019-20-board.json.gzip",
+      "title": "North Island College FY2019/20 Board remuneration and expenses, recovered from archived October 22, 2020 Board agenda",
+      "sourceUrl": "https://web.archive.org/web/20211205173843id_/https://www.nic.bc.ca/pdf/bog/agenda/2020-2021/20201022_BOG_agenda.pdf",
+      "sourceIndexUrl": "https://web.archive.org/web/20210123014602id_/https://www.nic.bc.ca/about-us/board-of-governors/meeting-schedule/",
+      "originalSourceUrl": "https://www.nic.bc.ca/pdf/bog/agenda/2020-2021/20201022_BOG_agenda.pdf",
+      "sha256": "d96d0241e6d16b7383161079dfb90e44f29db6c4a72d3a35ccd50646da00eef0",
+      "dataSha256": "21827514f86092ba4f182dd47fc680a1c82e8eb8acfb54ec795eef4572cca3c7",
+      "normalizedSha256": "c4cb638db8a8409b160a083e289a91a01365e7b5a46b18a22db41bc0288ebb3e",
+      "rowCount": 15,
+      "totalRemuneration": 16375,
+      "totalExpenses": 12727,
+      "pages": [
+        26
+      ],
+      "completeEmployeeSchedule": false,
+      "sourcePackageComplete": false,
+      "positionDisclosure": "not visibly published; white job-title text excluded",
+      "notes": [
+        "Complete 15-person Board of Governors table on printed salary schedule page1, recovered package physical26. Separate named employees and below-threshold employee aggregates are excluded. Remuneration and expenses are the source columns, without salary annualization or inferred components.",
+        "Job/role strings embedded as invisible white text are excluded; every position is null. Jain, Vikas expense dash remains null.",
+        "The overall archived official package is truncated; the complete Board table is recovered. Separate official minutes record approval of Financial Information Act information for year ended March 31, 2020. The current signed nine-page scan lacks the Board page, so its individual Board rows are not independently corroborated there."
+      ],
+      "publicWarning": "The archived official Board package is truncated at 1,048,576 bytes; its archival header reports an original length of 3,739,511 bytes and Warning 299: content truncated by \"length\". Its complete 15-person Board table has been recovered and independently verified. The Board table is absent from the separately signed nine-page scan. The currently hosted nine-page SOFI omits salary pages 1, 3 and 5; its two surviving salary pages and overall totals match. Separate official minutes record Board approval on October 22, 2020. A request for a complete original source copy is prepared but unsent. Invisible job-title text is excluded.",
+      "validation": {
+        "completeEmployeeSchedule": false,
+        "completeBoardSchedule": true,
+        "sourcePackageComplete": false,
+        "sourceFingerprintLocked": true,
+        "allNamesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "MuPDF repair/read of raw archived bytes versus independent Ghostscript repair of five source pages followed by Poppler physical-layout reader. Exact ordered visible name/pay/expense/page equality; hidden white titles excluded.",
+        "rowCountsByPdfPage": {
+          "26": 15
+        },
+        "printedBoardControl": [
+          16375,
+          12727
+        ],
+        "boardControlResidualRowSumMinusPrinted": [
+          0,
+          0
+        ],
+        "expenseDashesOrBlankRetainedAsMissing": 1,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/held-resolution-nic-sofi-2019-20-employees.json.gzip",
+        "evidenceSha256": "27ff5f892ec15d8d0a31cd2ed5e09b915ac979735d8c090cce076fc086277d4f",
+        "evidenceRowPath": "pages[0].boardControlEvidence.rows",
+        "approvalEvidence": {
+          "sourceUrl": "https://web.archive.org/web/20221001112128id_/https://www.nic.bc.ca/pdf/bog/minutes/20201022_BOG_regular_minutes.pdf",
+          "originalSourceUrl": "https://www.nic.bc.ca/pdf/bog/minutes/20201022_BOG_regular_minutes.pdf",
+          "sha256": "4f6655723d597ccd08e684e42feaa9be018b5511590c4b0c3bc3b378d1698196",
+          "physicalPage": 4,
+          "item": "4.2.1",
+          "cacheFile": "/tmp/nic-held-resolution/efefa9daac3c0e3b.body"
+        }
+      },
+      "cacheFile": "/tmp/nic-held-resolution/96885489bda14c25.body",
+      "completeBoardSchedule": true
+    }
+  ]
+}

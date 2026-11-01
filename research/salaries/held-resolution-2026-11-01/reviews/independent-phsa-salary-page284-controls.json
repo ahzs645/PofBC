@@ -1,0 +1,53 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "/root/recovery_review",
+  "sourcePath": "/tmp/sector-health/phsa-2025.pdf",
+  "sourceSha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+  "officialUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
+  "physicalPage": 284,
+  "printedPage": 284,
+  "reviewScope": "Boundary, literal period, scope heading and printed aggregate Total only. This receipt does not adjudicate individual names or money conflicts on this page and does not reconcile all 284 pages.",
+  "sourcePageCount": 284,
+  "heading": "Provincial Health Services Authority",
+  "periodHeading": "31 MARCH 2025",
+  "scopeText": "Alphabetical list of employees who received remuneration exceeding $75,000 for the year ended March 31, 2025 and their expenses paid during this period. These expenses may have been reimbursed directly to those employees and/or paid to a third party supplier.",
+  "columnHeadings": [
+    "Name",
+    "Remuneration",
+    "Expenses"
+  ],
+  "namedRowLineCount": 39,
+  "terminalBoundary": "After the 39th named row, a ruled Total row contains the two aggregate values. No further named row or continuation follows; only the preparation statement and page number appear beneath.",
+  "totalRow": {
+    "literalLabel": "Total",
+    "remuneration": 1713046476,
+    "expenses": 25171641,
+    "personRow": false
+  },
+  "footer": "This statement is prepared pursuant to the Financial Information Regulation, Schedule 1, Section 6",
+  "renderMethod": "Independent PyMuPDF Page.get_pixmap(dpi=144,alpha=False) full physical page; Page.get_pixmap(dpi=300,alpha=False,clip=Rect(0,625,612,645)) for the ruled Total. Also read the author-stitched original-tile native page. These image methods need not be pixel-identical because of PDF placement and renderer resampling; their visible boundary/control readings agree.",
+  "artifacts": [
+    {
+      "path": "/tmp/held-health-ocr/final-page-audit/physical-page-284-native.png",
+      "sha256": "9d7ffc2bbb09cdd4628721758ffc68cb0ebe9cff7b9387c7e2b0588998cf9015",
+      "readForThisReceipt": true
+    },
+    {
+      "path": "/tmp/independent-phsa-salary-page284-mupdf.png",
+      "sha256": "aa44381bec6972d5676715c45bc64f84623a8993ed9ac1cba0121ff4e7b75369",
+      "readForThisReceipt": true
+    },
+    {
+      "path": "/tmp/independent-phsa-salary-page284-mupdf-total.png",
+      "sha256": "d845b6ea9025dd9ff53025e2636f4a324cb2169bf13ea8c9b073c4d579305980",
+      "readForThisReceipt": true
+    },
+    {
+      "path": "/tmp/held-health-ocr/full/pages/p284.json.gzip",
+      "sha256": "dd3887d47d469f71a6fe5ea0bcc75c93bf0efdea34c9442de08f35e9fed96f22",
+      "readForThisReceipt": false
+    }
+  ],
+  "acceptedEmployeeRows": 0,
+  "fullCohortControlsReconciled": false
+}

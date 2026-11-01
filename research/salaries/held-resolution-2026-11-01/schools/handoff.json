@@ -1,0 +1,516 @@
+{
+  "version": 1,
+  "date": "2026-11-01",
+  "state": "fully-extracted-and-independently-peer-reviewed; frozen for root integration",
+  "collection": "held-resolution-schools",
+  "counts": {
+    "qualifiedCohorts": 3,
+    "qualifiedRows": 398,
+    "employeeRows": 393,
+    "trusteeRows": 5,
+    "paymentSourceOriginals": 2,
+    "datedCorroboratingAgendaOriginals": 1,
+    "assignedDistrictPeriodHoldsResolved": 2,
+    "remainingAssignedDataPeriodHolds": 0,
+    "rootRegistrationOrPublicationByWorker": 0
+  },
+  "manifest": {
+    "file": "research/salaries/held-resolution-schools/sources.json",
+    "sha256": "d5be1835d64870182852d5301a7c63853ebb50b808e7801e5b971d63b8113738"
+  },
+  "sources": [
+    {
+      "id": "held-resolution-schools-sd10-2025-trustees",
+      "employerSlug": "school-district-10",
+      "employerName": "School District No. 10 (Arrow Lakes)",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "category": "school-trustees",
+      "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2026/01/SD10-2024-2025-SOFI-sv-1.pdf",
+      "sourceIndexUrl": "https://sd10.bc.ca/board-of-education/financial-information-budgets/",
+      "sha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "rowCount": 5,
+      "pages": [
+        47
+      ],
+      "file": "sd10-2025-trustees.json.gzip",
+      "dataSha256": "7ca97934454cbb3606d95f60438d0f024071da339b7538e228d598861f7b70b7",
+      "normalizedSha256": "848b051b6e7c68db270591c23275fa18ed760fec93ecd575266e772e08c0a45a",
+      "provenanceFile": "sd10-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "26277957461a14e2bec5c30c3c104eee0b5448af7d67d5daa9b7d03b8234cc84",
+      "totalRemuneration": 69248.51,
+      "totalExpenses": 12525.55,
+      "publicWarning": "The remuneration schedules on physical pages 47–48 explicitly state the fiscal year ended June 30, 2025; these observations are assigned to 2024/25 on that basis. The same package's declaration on page 3 certifies the year ended June 30, 2024 despite a 2024–2025 year field and signatures dated December 18, 2025. The management report on page 5 prints December 18, 2024 beneath a June 30, 2025 header. These contradictions remain unresolved; approval/adoption of the 2025 SOFI is not established by these pages. No cause or typo is inferred."
+    },
+    {
+      "id": "held-resolution-schools-sd10-2025-employees",
+      "employerSlug": "school-district-10",
+      "employerName": "School District No. 10 (Arrow Lakes)",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "category": "employee-remuneration",
+      "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2026/01/SD10-2024-2025-SOFI-sv-1.pdf",
+      "sourceIndexUrl": "https://sd10.bc.ca/board-of-education/financial-information-budgets/",
+      "sha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "rowCount": 53,
+      "pages": [
+        48
+      ],
+      "file": "sd10-2025-employees.json.gzip",
+      "dataSha256": "872021ab70e8c70e3cf5ba730350dc32ad711dc9555ee0c9cee10ec48beb9f64",
+      "normalizedSha256": "8829230db7075cf5ac5c8cf92dd93822401bf316e852534824dc17601a5ef850",
+      "provenanceFile": "sd10-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "11df8def824d7c9c81da4fdbc8e229d976208099eb80f9051c71eb6e71c5560e",
+      "totalRemuneration": 6036402.68,
+      "totalExpenses": 89295.97,
+      "publicWarning": "The remuneration schedules on physical pages 47–48 explicitly state the fiscal year ended June 30, 2025; these observations are assigned to 2024/25 on that basis. The same package's declaration on page 3 certifies the year ended June 30, 2024 despite a 2024–2025 year field and signatures dated December 18, 2025. The management report on page 5 prints December 18, 2024 beneath a June 30, 2025 header. These contradictions remain unresolved; approval/adoption of the 2025 SOFI is not established by these pages. No cause or typo is inferred."
+    },
+    {
+      "id": "held-resolution-schools-sd08-2026-employees",
+      "employerSlug": "school-district-08",
+      "employerName": "School District No. 8 (Kootenay Lake)",
+      "year": "2025/26",
+      "periodType": "fiscal",
+      "periodStart": "2025-07-01",
+      "periodEnd": "2026-06-30",
+      "category": "employee-remuneration",
+      "sourceUrl": "https://sd8.bc.ca/sites/default/files/documents/2026-09/2025-2026%20SOFI%20Report_Final_Redacted_0.pdf",
+      "sourceIndexUrl": "https://sd8.bc.ca/finance",
+      "sha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+      "rowCount": 340,
+      "pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "file": "sd08-2026-employees.json.gzip",
+      "dataSha256": "d88fecc9e02f2f9c3942796ec2d01e9a4e5025cbe9fbf58b417deda317d4e2c3",
+      "normalizedSha256": "94df405ae58b55d98ed64a31e4195381b030de090a82a290ed3bb2e6ade4d0d2",
+      "provenanceFile": "sd08-2026-employees-evidence.json.gzip",
+      "provenanceSha256": "f448631c285f3bb8d5b9e6729be4805f80d246b00525134cab7495aeaf3245cf",
+      "totalRemuneration": 37683809.0,
+      "totalExpenses": 414506.0,
+      "publicWarning": "The posted SOFI employee schedule has conflicting years: physical page 52 prints June 30, 2025, while its other employee pages print June 30, 2026. The assigned 2025/26 period is supported by all 340 matching employee rows in the separately published September 8, 2026 board agenda, whose complete salary schedule on pages 185–193 consistently prints June 30, 2026 and is introduced by a dated memorandum. Names, remuneration, expenses, order and multiplicity agree across both originals under page mapping +134. The conflicting finance heading remains literal; no typo or cause is asserted. The agenda financial-statement subsection contains DRAFT/Not Finalized marks, while its remuneration pages are unmarked. The agenda is period corroboration, not the payment-source original or proof of final adoption. Posted SOFI signature areas are redacted; its declaration date fields read September 8, 2026. The minutes record SOFI presentation, not an explicit adoption motion. The named employee controls reconcile exactly. Elsewhere, posted SOFI reconciliation page 64 prints $56,431,182 remuneration and $594,827 expenses, while schedule page 59 prints $56,431,196 and $594,437 respectively: reconciliation minus schedule is −$14 remuneration and +$390 expenses. Both sets remain literal; their cause is unresolved."
+    }
+  ],
+  "originalCachePaths": [
+    {
+      "role": "SD10 payment source",
+      "path": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+      "sha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a"
+    },
+    {
+      "role": "SD8 payment source",
+      "path": "/tmp/held-resolution-schools/sd08-current-sofi-2026.pdf",
+      "sha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f"
+    },
+    {
+      "role": "SD8 specifically dated full-row period corroboration; financial subsection marked draft",
+      "path": "/tmp/held-resolution-schools/sd08-sep2026-agenda.pdf",
+      "sha256": "aed4f0e7026a198429707247d6cccf49c18c72bdfaefc62e0bb7bd65dafbf8b4"
+    }
+  ],
+  "periodResolutionAssumptions": {
+    "SD10": "Observed payment period follows the complete remuneration schedules own explicitly printed June30,2025 year. This does not repair the2024declaration or management dates, establish2025approval, or assert a typo. Actual2024salary table has distinct headings/amounts.",
+    "SD8": "Period resolution uses all340matching rows in an independently published, specifically dated agenda salary schedule whose nine pages all say2026. The payment-source original remains the final posted finance SOFI, whose p52literal2025heading is retained and qualified. The whole draft-marked agenda financial subsection is not promoted tofinal."
+  },
+  "actualWorkerCoverage": {
+    "SD10": {
+      "completeOriginalImageManualRowTranscriptionPages": [
+        47,
+        48
+      ],
+      "additionalRenderedOriginalPages": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        10,
+        12,
+        49,
+        50
+      ],
+      "completePackageContextualOCRPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "notClaimed": "No complete manual transcription or financial audit of all50report pages."
+    },
+    "SD8": {
+      "completeIndependentNativeReaderFinancePages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "completeIndependentNativeReaderAgendaPages": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193
+      ],
+      "renderedFinancePages": [
+        3,
+        5,
+        52,
+        64
+      ],
+      "renderedAgendaPages": [
+        134,
+        137,
+        139,
+        185,
+        186,
+        193,
+        198
+      ],
+      "notClaimed": "No complete worker manual image transcription of all340rows."
+    }
+  },
+  "independentPeerCoverage": {
+    "SD10": {
+      "completeImageTranscriptRows": 58,
+      "completeSixFieldNormalizedComparisonRows": 58,
+      "correctionsToCandidate": 0,
+      "receipt": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-comparison.json"
+    },
+    "SD8": {
+      "independentPDFMinerFinanceRows": 340,
+      "independentPDFMinerAgendaRows": 340,
+      "completeSixFieldNormalizedComparisonRows": 340,
+      "completeOrderedAndMultisetCrossOriginalComparison": true,
+      "allNineSalaryTableBodiesPixelIdentical": true,
+      "fullAgendaSalaryImagePagesReviewed": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193
+      ],
+      "correctionsToCandidate": 0,
+      "receipt": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd8-comparison.json"
+    },
+    "finalSnapshot": {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-final-provenance-snapshot.json",
+      "sha256": "1db3a52f824fbde1c75f1c10e0aa591a0df8b5ec21994dbacfc3c165f07a6f99",
+      "rowsChecked": 398,
+      "allCurrentDataAndProvenanceHashesPinned": true
+    }
+  },
+  "qualificationDecisions": [
+    {
+      "district": "SD10",
+      "namedControlsExact": true,
+      "unresolved": "DeclarationbodyJune2024 and management signoffDecember2024 contradict own2025salary headings. Approval/adoption for2025unestablished; actualsignaturedatesDecember18,2025 do not resolve literal declaration scope."
+    },
+    {
+      "district": "SD8",
+      "namedControlsExact": true,
+      "unresolved": "Payment source p52prints2025, dated agenda correspondingp186prints2026 and all340literal row fields match. Reconciliation minus schedule consolidated controls is−14remuneration/+390expenses. Final signature areas redacted; no explicit SOFI adoption motion claimed."
+    }
+  ],
+  "peerReviewReceipts": [
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-comparison.json",
+      "sha256": "e0d7aaf9f23b29c4f9db4fb414018f3c5cdb15192ca529b8a461500fa5fb7aab",
+      "bytes": 32019
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-final-provenance-snapshot.json",
+      "sha256": "1db3a52f824fbde1c75f1c10e0aa591a0df8b5ec21994dbacfc3c165f07a6f99",
+      "bytes": 6593
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-original-review-notes.json",
+      "sha256": "3fbeec4eac857541de76fd4a7c8e3460c4e37a833aa558b1711f06413e983993",
+      "bytes": 4121
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-original-transcription.tsv",
+      "sha256": "42081cb9559e5410221c7ec8e0ca2268409dc482d25059718aa545a97e9aa225",
+      "bytes": 4172
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd8-comparison.json",
+      "sha256": "62e907b8d4356bdaf24c331bab1e5ef777af20d3ff42dd1a507d46be5245e793",
+      "bytes": 95908
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd8-finance-pdfminer-extraction.json",
+      "sha256": "a05f683b52d6473f594c6078b4e8beef4f6fd640fe6baf73b6a7ca9b35240c30",
+      "bytes": 576631
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd8-original-pdfminer-extraction.json",
+      "sha256": "10602b3fd94df03420a184e680be5a60028d8013616df079fce5efeece44e360",
+      "bytes": 582572
+    }
+  ],
+  "precedenceAudit": "research/salaries/held-resolution-2026-11-01/schools/identity-and-precedence-audit.json",
+  "changedTaskQueue": "research/salaries/held-resolution-2026-11-01/schools/work-queue.json",
+  "queueSummary": {
+    "actions": 4,
+    "routes": {
+      "processing": 2,
+      "clarification-request": 2
+    },
+    "elevenKeySchemaVerified": true,
+    "predecessorTaskIdsLinked": true
+  },
+  "verification": [
+    {
+      "command": "python3 scripts/resolve_held_schools.py",
+      "result": "PASS: 3 cohorts / 398 rows by committed offline evidence replay"
+    },
+    {
+      "command": "python3 scripts/resolve_held_schools.py --originals",
+      "result": "PASS: fresh Tesseract plus pinned Paddle OCR inputs; both native readers against both SD8 originals; all398rows exact"
+    },
+    {
+      "command": "python3 -m unittest discover -s scripts -p 'test_resolve_held_schools.py'",
+      "result": "PASS: 9 focused regression tests"
+    },
+    {
+      "command": "python3 -m py_compile scripts/resolve_held_schools.py scripts/resolve_held_schools_sd08.py scripts/test_resolve_held_schools.py",
+      "result": "PASS"
+    }
+  ],
+  "rapidRerunStatus": "Fresh independent Paddle replay is running; outcome will be recorded in a new supplemental receipt after this freeze, without changing pinned source/data/evidence.",
+  "noEditsOrActions": [
+    "No global registry or generated outputs",
+    "No previous source collection, payload, review or queue edits",
+    "No alias or period changes to already accepted records",
+    "No existing SD8 trustee source replacement or duplication",
+    "No branch changes, commit, push, contact, FOI, fees or publication"
+  ],
+  "rootNextActions": [
+    "Register held-resolution-schools and integrate the3qualified scopes with exact publicWarnings.",
+    "Reconcile old SD10 and SD8 hold tasks as resolved for payment observations; keep new issuer approval/heading/control clarification tasks open.",
+    "Retain all earlier frozen hold evidence and both original versions; do not silently repair finance p52 or remove existing trustee observations."
+  ],
+  "files": [
+    {
+      "file": "research/salaries/held-resolution-schools/README.md",
+      "sha256": "172cd6dd0089b4898803f7d43752a66943bcffb1eb1c0e221358a720a973a876",
+      "bytes": 5533
+    },
+    {
+      "file": "research/salaries/held-resolution-schools/sd08-2026-employees-evidence.json.gzip",
+      "sha256": "f448631c285f3bb8d5b9e6729be4805f80d246b00525134cab7495aeaf3245cf",
+      "bytes": 85239
+    },
+    {
+      "file": "research/salaries/held-resolution-schools/sd08-2026-employees.json.gzip",
+      "sha256": "d88fecc9e02f2f9c3942796ec2d01e9a4e5025cbe9fbf58b417deda317d4e2c3",
+      "bytes": 5194
+    },
+    {
+      "file": "research/salaries/held-resolution-schools/sd10-2025-employees-evidence.json.gzip",
+      "sha256": "11df8def824d7c9c81da4fdbc8e229d976208099eb80f9051c71eb6e71c5560e",
+      "bytes": 21560
+    },
+    {
+      "file": "research/salaries/held-resolution-schools/sd10-2025-employees.json.gzip",
+      "sha256": "872021ab70e8c70e3cf5ba730350dc32ad711dc9555ee0c9cee10ec48beb9f64",
+      "bytes": 1299
+    },
+    {
+      "file": "research/salaries/held-resolution-schools/sd10-2025-trustees-evidence.json.gzip",
+      "sha256": "26277957461a14e2bec5c30c3c104eee0b5448af7d67d5daa9b7d03b8234cc84",
+      "bytes": 14543
+    },
+    {
+      "file": "research/salaries/held-resolution-schools/sd10-2025-trustees.json.gzip",
+      "sha256": "7ca97934454cbb3606d95f60438d0f024071da339b7538e228d598861f7b70b7",
+      "bytes": 187
+    },
+    {
+      "file": "research/salaries/held-resolution-schools/sources.json",
+      "sha256": "d5be1835d64870182852d5301a7c63853ebb50b808e7801e5b971d63b8113738",
+      "bytes": 19707
+    },
+    {
+      "file": "scripts/resolve_held_schools.py",
+      "sha256": "5a217392af906cd78d2973e1d9c3404061c425e6b23c5e95c4a9a063192d7002",
+      "bytes": 18156
+    },
+    {
+      "file": "scripts/resolve_held_schools_sd08.py",
+      "sha256": "2d7ea7b54a0bb9a8111c30a06cde500096b1556197980b05eb459a3789123092",
+      "bytes": 16153
+    },
+    {
+      "file": "scripts/test_resolve_held_schools.py",
+      "sha256": "f1064d075e561fd3fc819fc664b92951dba618cc9c77f15d8ef217951b6af84d",
+      "bytes": 5360
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/README.md",
+      "sha256": "b678db40e5fa1f2bd8c8ad9a7ececf35f4ec417a308a8f3dafb65a9757c6e35e",
+      "bytes": 2128
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/context-ocr-receipts.json",
+      "sha256": "c3db3a19014763f368adfacf7206d815ab61a6a9b16420582f599810f58f577b",
+      "bytes": 36725
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/download-receipts.json",
+      "sha256": "735c52c0cce921f9075cbe50567ce8f701a65ebb6fc8804f91412f68e98d77dc",
+      "bytes": 3086
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/identity-and-precedence-audit.json",
+      "sha256": "6edb4fe07d4bc156f7c8689925e447d4ff13a81c20499fd7ba1999cf084f3441",
+      "bytes": 1499
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/independent-ocr-engine-receipt.json",
+      "sha256": "be926011e5ec245cfdfe5f481a88c920a7b1c9346c1d4633ced605882fc66e69",
+      "bytes": 4661
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/index-receipts.json",
+      "sha256": "9ee0b70903f4ee26da09d99fabc42e757fb9e3c339142f9d8ff73e727fd50d8f",
+      "bytes": 14489
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd08-board-highlights-receipt.json",
+      "sha256": "8c790151e98315d897caceeaa3f279c820ee81093fd328e01ecac69566d800e3",
+      "bytes": 452
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd08-board-package-receipts.json",
+      "sha256": "dde94320683c3c5482a32afeac95d96b2edd7622dd5e4d42ed61173897a2d113",
+      "bytes": 762
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd08-comparator-2025-receipt.json",
+      "sha256": "a55476c3c9c093d56f34bc03d37eb54c592d43e15064f12a90b515ab2635ed3c",
+      "bytes": 345
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd08-current-retrieval.json",
+      "sha256": "c51cabe9eeef1ec2b618bab4288fa080d5d9fcab7db6c4dc25b835ecef0a6ed9",
+      "bytes": 521
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd08-finance-receipt.json",
+      "sha256": "a599931f5524e62026a58f5fd23287df086ba01ce669830d7324fb33276cf3f2",
+      "bytes": 5343
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd08-period-and-version-evidence.json",
+      "sha256": "47a6530088e4ef540eaa2bd06e6b3bacf9096d98c6ccc2dfd0ef2fffe2c3d75a",
+      "bytes": 11380
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd10-2025-manual.tsv",
+      "sha256": "389af426c61df6549513cf626ff6dd9e8c626961e2b2a0a0cbc55a9c81e543a0",
+      "bytes": 4186
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd10-2025-ocr-corrections.json",
+      "sha256": "0d73e36b011d7b09f3b8e8270cf5c085b80435baa2fb969c2182bcfb7ecd9dc2",
+      "bytes": 19494
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd10-context-ocr.json.gzip",
+      "sha256": "81171041b7790bd12aabe7b8acfca1d65290aa468e8c497bc3461448874f6567",
+      "bytes": 32035
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd10-jan2026-board-receipts.json",
+      "sha256": "09cdb596151663ec4ee541143a0c309c732b3e61e42bb9aa451d323053d66b1d",
+      "bytes": 805
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd10-period-and-approval-evidence.json",
+      "sha256": "7f2e60dcf2063f06b27fd99f61b9b02d069865dc4efcbc2e160175752dd47a3b",
+      "bytes": 9586
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/sd10-version-comparison.json",
+      "sha256": "aaf2c9c5d097aa1e8d5b3a220888fce72daafebec9a47ad2a0d23e3653290798",
+      "bytes": 2989
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/schools/work-queue.json",
+      "sha256": "14f08cc5b5f46f8ca1af42909c63c85b9b52febd02742df82ea1c94baf743758",
+      "bytes": 5589
+    }
+  ]
+}

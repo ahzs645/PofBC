@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Validate exact baseline preservation, reviewed replacements and original-backed recovery."""
-import csv,gzip,hashlib,json
+import argparse,csv,gzip,hashlib,json
 from collections import Counter,defaultdict
 from decimal import Decimal
 from pathlib import Path
+from salary_release_audit import verify_frozen_release
 ROOT=Path(__file__).resolve().parents[1]
 RESEARCH=ROOT/'research/salaries'
 OUT=RESEARCH/'recovery-wave-2026-11-01'
@@ -20,7 +21,47 @@ def fingerprint(rows):
  keys=[json.dumps([r[0],r[1],int(Decimal(str(r[2]))*100),None if r[3] is None else int(Decimal(str(r[3]))*100),r[4]],ensure_ascii=False,separators=(',',':')) for r in rows]
  return sha('\n'.join(sorted(keys,key=lambda x:x.encode())).encode())
 def md(value):return str(value or '').replace('|','\\|').replace('\n',' ')
-def main():
+def validate_frozen_recovery(root=ROOT):
+ """Verify PR35's exact accepted inputs without absorbing unrelated later sources."""
+ root=Path(root);research=root/'research/salaries';folder=research/'recovery-wave-2026-11-01'
+ result=verify_frozen_release(folder,research);release=read(folder/'release.json')
+ index=read(root/'public/salaries/employers/index.json');registered=read(research/'collections.json')['collections']
+ acceptance=read(folder/'parent-acceptance.json');assert acceptance['accepted'] is True
+ for relative,expected in acceptance['reviewReceiptSha256'].items():
+  path=(folder/relative).resolve();assert path.is_relative_to(folder.resolve()) and sha(path.read_bytes())==expected,relative
+ for relative,expected in release['manifestSha256'].items():
+  path=(root/relative).resolve();assert path.is_relative_to(research.resolve()) and sha(path.read_bytes())==expected,relative
+ sources={}
+ for area in AREAS:
+  collection='recovery-'+area;assert collection in registered
+  for source in read(research/collection/'sources.json')['sources']:
+   if source.get('status','verified') in ACCEPTED:sources[source['id']]=(collection,source)
+ needed={entry['employerSlug'] for entry in release['imports']};groups=defaultdict(list)
+ for employer in index['employers']:
+  if employer['slug'] not in needed:continue
+  for row in decode((root/'public/salaries/employers'/(employer['slug']+'.json.gzip')).read_bytes()):
+   groups[(employer['slug'],index['years'][row[4]],row[5])].append([row[0],row[1],row[2],row[3],row[6]])
+ for expected in release['imports']:
+  collection,source=sources[expected['sourceId']];published=index['sources'][source['id']]
+  for key in ['year','periodType','periodStart','periodEnd','notes','validation','publicWarning','sha256','dataSha256','completeEmployeeSchedule']:
+   assert published.get(key)==source.get(key),(source['id'],key)
+  assert published['scope']==(source.get('category') or source['scope']) and published['url']==source['sourceUrl'],source['id']
+  for key,hkey in [('evidenceFile','evidenceSha256'),('provenanceFile','provenanceSha256')]:
+   if source.get(key):assert sha((research/collection/source[key]).read_bytes())==source[hkey],source['id']
+  rows=decode((research/collection/source['file']).read_bytes())
+  for slug in {r[0] for r in rows}:
+   before=[[r[1],r[2],r[3],r[4],r[5]] for r in rows if r[0]==slug];after=groups[(slug,source['year'],source['id'])]
+   assert len(before)==len(after) and fingerprint(before)==fingerprint(after),source['id']
+ for decision in release['compiledReplacementDecisions']:
+  assert not groups.get((decision['employerSlug'],decision['compiledYear'],decision['compiledSourceId'])),decision['employerSlug']
+  source=index['sources'][decision['sourceId']]
+  assert source['sha256']==decision['sourceSha256'] and source['dataSha256']==decision['sourceDataSha256']
+ return result
+
+def main(argv=None):
+ parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--frozen',action='store_true',help='Check historical release inputs and arithmetic without rewriting released outputs');args=parser.parse_args(argv)
+ if args.frozen:
+  print(json.dumps(validate_frozen_recovery()));return
  baseline_raw=(OUT/'baseline.json.gzip').read_bytes();baseline=json.loads(gzip.decompress(baseline_raw))
  before=read(OUT/'baseline-row-fingerprints.json');index=read(ROOT/'public/salaries/employers/index.json');audit=read(ROOT/'public/salaries/coverage.json')
  acceptance=read(OUT/'parent-acceptance.json');assert acceptance['accepted'] is True

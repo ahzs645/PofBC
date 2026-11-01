@@ -1,0 +1,3277 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS complete independent third-reader comparison of all 340 employee rows; qualified FY2025/26 period corroboration with explicit source-year and financial-draft caveats",
+  "independentOriginalExtractions": [
+    {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd8-original-pdfminer-extraction.json",
+      "sha256": "10602b3fd94df03420a184e680be5a60028d8013616df079fce5efeece44e360",
+      "originalSha256": "aed4f0e7026a198429707247d6cccf49c18c72bdfaefc62e0bb7bd65dafbf8b4",
+      "rows": 340,
+      "candidatePayloadOpenedBeforeExtraction": false
+    },
+    {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd8-finance-pdfminer-extraction.json",
+      "sha256": "a05f683b52d6473f594c6078b4e8beef4f6fd640fe6baf73b6a7ca9b35240c30",
+      "originalSha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+      "rows": 340,
+      "candidatePayloadOpenedBeforeExtraction": false
+    }
+  ],
+  "method": "Both official originals independently downloaded and SHA256 verified. Separately implemented PDFMiner 20251230 native extraction used all_texts=True to include salary cells in Form XObjects. No author parser, rows or provenance cells were used to derive independent row data. Complete original native fields and cell coordinates are retained with executable extraction code. After freezing both extractions, candidate and cross-original order/multiset were compared.",
+  "sourceId": "held-resolution-schools-sd08-2026-employees",
+  "paymentOriginal": {
+    "url": "https://sd8.bc.ca/sites/default/files/documents/2026-09/2025-2026%20SOFI%20Report_Final_Redacted_0.pdf",
+    "index": "https://sd8.bc.ca/finance",
+    "localPath": "/tmp/held-resolution-schools/independent-sd8-finance-final-2026.pdf",
+    "sha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+    "physicalPages": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ]
+  },
+  "periodCorroborationOriginal": {
+    "url": "https://www.sd8.bc.ca/sites/default/files/documents/2026-09/2026.09.08%20-%204%20Public%20Agenda_FINAL_2.pdf",
+    "index": "https://sd8.bc.ca/board/meetings",
+    "localPath": "/tmp/held-resolution-schools/independent-sd8-public-agenda-2026-09-08.pdf",
+    "sha256": "aed4f0e7026a198429707247d6cccf49c18c72bdfaefc62e0bb7bd65dafbf8b4",
+    "physicalPages": [
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193
+    ]
+  },
+  "candidate": {
+    "file": "research/salaries/held-resolution-schools/sd08-2026-employees.json.gzip",
+    "dataSha256": "d88fecc9e02f2f9c3942796ec2d01e9a4e5025cbe9fbf58b417deda317d4e2c3",
+    "normalizedSha256": "94df405ae58b55d98ed64a31e4195381b030de090a82a290ed3bb2e6ade4d0d2",
+    "provenanceFile": "research/salaries/held-resolution-schools/sd08-2026-employees-evidence.json.gzip",
+    "provenanceSha256": "f448631c285f3bb8d5b9e6729be4805f80d246b00525134cab7495aeaf3245cf",
+    "sourceManifest": "research/salaries/held-resolution-schools/sources.json",
+    "sourceManifestSha256AtReview": "c7fbd1024d5854cf008bdf59e4ad1d4d4c2fece93aa550e1f628b2777b24e176",
+    "rowCount": 340,
+    "allSixFieldsExact": true,
+    "orderExact": true,
+    "multiplicityAndFullMultisetExact": true,
+    "nullPositionRows": 340,
+    "nullExpenseRows": 198,
+    "explicitZeroExpenseRows": 0,
+    "knownExpenseRows": 142
+  },
+  "candidateCorrections": [],
+  "independentExtractionCorrections": [],
+  "rowComparisons": [
+    {
+      "sequence": 1,
+      "name": "Adam, Jessie",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 2,
+      "name": "Adams, Darryl",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 3,
+      "name": "Adams, Jennifer",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 4,
+      "name": "Allard, Alaina",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 5,
+      "name": "Anast, Jesse",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 6,
+      "name": "Anast, Kelly Anne",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 7,
+      "name": "Anderson, Shelby",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 8,
+      "name": "Angus, Keira",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 9,
+      "name": "Arabia, Jacqueline M.",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 10,
+      "name": "Asbell, Laurryn",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 11,
+      "name": "Auger, Danielle",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 12,
+      "name": "Auringer, Cole",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 13,
+      "name": "Avis, Martina",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 14,
+      "name": "Bailey, Jennifer",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 15,
+      "name": "Bala, Nadine",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 16,
+      "name": "Ball, Baylie",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 17,
+      "name": "Banman, Jeff",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 18,
+      "name": "Barre, Adrian",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 19,
+      "name": "Benoit-Labelle, Etienne",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 20,
+      "name": "Berk, Casey",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 21,
+      "name": "Berk, Lisa",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 22,
+      "name": "Berridge, Stefan",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 23,
+      "name": "Betker, Amanda",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 24,
+      "name": "Bidwell, Steve",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 25,
+      "name": "Birch, Nashira",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 26,
+      "name": "Blick, Matt",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 27,
+      "name": "Bonikowsky, Jodi",
+      "financePhysicalPage": 51,
+      "agendaPhysicalPage": 185,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 28,
+      "name": "Bonikowsky, Mark",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 29,
+      "name": "Boomer, Hannah",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 30,
+      "name": "Bouliane, Nadine",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 31,
+      "name": "Boyer, Lucas",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 32,
+      "name": "Boyes, Christine",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 33,
+      "name": "Brady, Christine",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 34,
+      "name": "Brooks, James",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 35,
+      "name": "Brooks, Jonathan",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 36,
+      "name": "Browning, Emily",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 37,
+      "name": "Bruskowski, Simon",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 38,
+      "name": "Bysouth, Darci",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 39,
+      "name": "Cabunoc-Boettcher, Robyn",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 40,
+      "name": "Carpendale, Phillip",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 41,
+      "name": "Carriere, Laury",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 42,
+      "name": "Carter, Rae Ellen",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 43,
+      "name": "Caulford, Edward",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 44,
+      "name": "Chambers, Christopher",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 45,
+      "name": "Chirico, Les",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 46,
+      "name": "Chouinard, Serena",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 47,
+      "name": "Christenson, Tanya",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 48,
+      "name": "Christie, Susan",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 49,
+      "name": "Christy, Carly",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 50,
+      "name": "Comfort, Brooke",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 51,
+      "name": "Connoly, William",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 52,
+      "name": "Cooper, Andrea",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 53,
+      "name": "Cooper, Gillian",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 54,
+      "name": "Cooper, Ian",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 55,
+      "name": "Cote, Linda",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 56,
+      "name": "Crevier, Calina",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 57,
+      "name": "Cucek, Natasha",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 58,
+      "name": "Dando, David",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 59,
+      "name": "Danforth, Dawn",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 60,
+      "name": "Davina, Hans",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 61,
+      "name": "Davina, Stephanie",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 62,
+      "name": "De Sousa, Jen",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 63,
+      "name": "DeBiasio, Carla",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 64,
+      "name": "DeBoon, Jessica",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 65,
+      "name": "DeBoon, Matthew",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 66,
+      "name": "Dehnel, Jennifer",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 67,
+      "name": "Delcaro, Blakeny",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 68,
+      "name": "Delport, Sarah",
+      "financePhysicalPage": 52,
+      "agendaPhysicalPage": 186,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 69,
+      "name": "Derow, Sandra",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 70,
+      "name": "Deuling, Brittany",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 71,
+      "name": "Devji, Sofeya",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 72,
+      "name": "Dexter, Jaclyn",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 73,
+      "name": "Dimopoulos, Shannon",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 74,
+      "name": "Douglas, Leanne",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 75,
+      "name": "Draper, Lara",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 76,
+      "name": "Dryden, Charlotte",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 77,
+      "name": "Duffy, Bianca",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 78,
+      "name": "Dunham, Clayton",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 79,
+      "name": "Durocher, Mark",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 80,
+      "name": "Eaton, Benjamin",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 81,
+      "name": "Eaton, Meredith",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 82,
+      "name": "Edwards, Kathleen",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 83,
+      "name": "Ellert, Kelly",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 84,
+      "name": "Ellis, Koan",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 85,
+      "name": "Ellis, Shannon",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 86,
+      "name": "Epp, Holly",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 87,
+      "name": "Evans, Elizabeth",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 88,
+      "name": "Ewashen, Brian",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 89,
+      "name": "Falck, Annette",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 90,
+      "name": "Fauteux-Goulet, Loic",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 91,
+      "name": "Feragotti, Melissa",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 92,
+      "name": "Fertey, Philippe",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 93,
+      "name": "Fiess, Daniela",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 94,
+      "name": "Fischer, Michael",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 95,
+      "name": "Fisher, Jason",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 96,
+      "name": "Foster, Jessica",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 97,
+      "name": "Francis, Jon",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 98,
+      "name": "Fredrickson, Signy",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 99,
+      "name": "Gagnon, Marie-Michele",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 100,
+      "name": "Gamache, Amber",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 101,
+      "name": "Gardner, Jennifer",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 102,
+      "name": "Gardner, Raina",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 103,
+      "name": "Geddis, Elias",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 104,
+      "name": "Gerritsen, Theresa",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 105,
+      "name": "Giles, Rod",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 106,
+      "name": "Gingras, Matthew",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 107,
+      "name": "Goggins, Sarah",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 108,
+      "name": "Goldie, Leah",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 109,
+      "name": "Gonzalez Montoya, Ivan",
+      "financePhysicalPage": 53,
+      "agendaPhysicalPage": 187,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 110,
+      "name": "Gow, Raeanne",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 111,
+      "name": "Gozna, Alison",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 112,
+      "name": "Graham, James",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 113,
+      "name": "Graves, Nicholas",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 114,
+      "name": "Gresley-Jones, Kelsey",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 115,
+      "name": "Griffiths, Robyn",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 116,
+      "name": "Halton, Jesse",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 117,
+      "name": "Hamm, Brian",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 118,
+      "name": "Hamm, Kyla",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 119,
+      "name": "Hammerich, Kim",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 120,
+      "name": "Hammerich, Ryan",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 121,
+      "name": "Hammond, David",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 122,
+      "name": "Hargreaves, Barbara",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 123,
+      "name": "Hatt, Kari-Lynn",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 124,
+      "name": "Haughian, Holly",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 125,
+      "name": "Hawkins, Karin",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 126,
+      "name": "Hearn, David",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 127,
+      "name": "Hedges, Emily",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 128,
+      "name": "Hodgson, Margaret",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 129,
+      "name": "Hodgson, Patrick",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 130,
+      "name": "Holitzki, Deanna",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 131,
+      "name": "Holt, Tara",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 132,
+      "name": "Houshmandishoja, Amir",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 133,
+      "name": "Inkpen, Sharon",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 134,
+      "name": "Ius, Alix",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 135,
+      "name": "Ivanco, Candace",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 136,
+      "name": "Jackson, Karie",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 137,
+      "name": "Jamin, Fresia",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 138,
+      "name": "Johnson, Emelia",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 139,
+      "name": "Johnson, Kirsten",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 140,
+      "name": "Johnson, Tamara",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 141,
+      "name": "Jones, Andrew",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 142,
+      "name": "Jones, Brooke",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 143,
+      "name": "Jordan, Victoria",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 144,
+      "name": "Julien, Caroline",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 145,
+      "name": "Kalabis, Alexander",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 146,
+      "name": "Kalabis, Leanne",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 147,
+      "name": "Keenan, Teresa",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 148,
+      "name": "Kelly, Renee",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 149,
+      "name": "Kennedy, Heather J.",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 150,
+      "name": "Keraiff, Alison",
+      "financePhysicalPage": 54,
+      "agendaPhysicalPage": 188,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 151,
+      "name": "Kerr, Christopher",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 152,
+      "name": "King, Jessica",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 153,
+      "name": "Kitch, Julie",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 154,
+      "name": "Klan, Mark",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 155,
+      "name": "Klassen, Danielle",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 156,
+      "name": "Klassen, William",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 157,
+      "name": "Konken, Jordon",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 158,
+      "name": "Koorbatoff, Erin",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 159,
+      "name": "Kooznetsoff, Jennifer",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 160,
+      "name": "Korbacher, Aaron",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 161,
+      "name": "Kosheiff, Lindsay",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 162,
+      "name": "Kroker, Kari",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 163,
+      "name": "Kunzelman, Doug",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 164,
+      "name": "Lacroix, Rachel",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 165,
+      "name": "Laframboise, Ashley",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 166,
+      "name": "Lakeman, Tyler",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 167,
+      "name": "Lavallee, Noelle",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 168,
+      "name": "Lavallee, Stephanie",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 169,
+      "name": "Lawrence, Ailis",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 170,
+      "name": "Leeming, Daniel",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 171,
+      "name": "Leeming, Nicole",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 172,
+      "name": "Legg, Naomi",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 173,
+      "name": "Lehnert, Julia",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 174,
+      "name": "Letourneau, Michelle",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 175,
+      "name": "Liddell, Simon",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 176,
+      "name": "Lidstone, Kristina",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 177,
+      "name": "Lippert, Tony",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 178,
+      "name": "Lunn, Hannah",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 179,
+      "name": "Lynch, Krista",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 180,
+      "name": "MacArthur, Catherine",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 181,
+      "name": "MacDonald, Sherry",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 182,
+      "name": "MacInnis, Shellene",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 183,
+      "name": "MacKay, Lindsay",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 184,
+      "name": "MacKinnon, Ryan",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 185,
+      "name": "MacMillan, Jennifer",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 186,
+      "name": "MacPhee, Alison",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 187,
+      "name": "Machado, Wanda",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 188,
+      "name": "Maida, Melissa",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 189,
+      "name": "Maika, Frances",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 190,
+      "name": "Makeiv, Cheryl-Ann",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 191,
+      "name": "Malloff, Tamara",
+      "financePhysicalPage": 55,
+      "agendaPhysicalPage": 189,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 192,
+      "name": "Maloff-Farynuk, Shellie",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 193,
+      "name": "Mann, Andrea",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 194,
+      "name": "Marechal, Sean",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 195,
+      "name": "Marken, Therese",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 196,
+      "name": "Marsh, Darren",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 197,
+      "name": "Marshall, Graeme",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 198,
+      "name": "Martin, Tamara Lynn",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 199,
+      "name": "Marzke, Trevor",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 200,
+      "name": "Maslechko, Wendy Lynn",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 201,
+      "name": "Mather, Emily",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 202,
+      "name": "Matosevic, Jennifer",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 203,
+      "name": "McAllister, Victoria",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 204,
+      "name": "McCarthy, Madeleine",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 205,
+      "name": "McComb, Jeremy",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 206,
+      "name": "McCool, Helen",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 207,
+      "name": "McCowan, Daniel",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 208,
+      "name": "McDowell, Andre",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 209,
+      "name": "McEwen, Megan",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 210,
+      "name": "McGregor, Sherry Lynn",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 211,
+      "name": "McIntyre, Tiernan",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 212,
+      "name": "McKay, Alastair",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 213,
+      "name": "McRann, Justin",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 214,
+      "name": "McTague, Angela",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 215,
+      "name": "Mercer, Troy",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 216,
+      "name": "Messinger, Charles",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 217,
+      "name": "Methuen, Tawny",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 218,
+      "name": "Meyer, Erich",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 219,
+      "name": "Meyer, Jessie",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 220,
+      "name": "Middleditch, S. Jake",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 221,
+      "name": "Mieske, Christopher",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 222,
+      "name": "Miller, Lindsay",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 223,
+      "name": "Milne, Joanne",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 224,
+      "name": "Mobbs, Melanie",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 225,
+      "name": "Montgomery, Steve",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 226,
+      "name": "Moon, Chandra",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 227,
+      "name": "Moreira, Jose",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 228,
+      "name": "Morton, Caleb",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 229,
+      "name": "Morton, Carol",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 230,
+      "name": "Munby, Gregory",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 231,
+      "name": "Murphy, Carmen",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 232,
+      "name": "Mushumanski, Janet",
+      "financePhysicalPage": 56,
+      "agendaPhysicalPage": 190,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 233,
+      "name": "Mushumanski, Tim",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 234,
+      "name": "Nadler, Karen",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 235,
+      "name": "Nansel, Talon",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 236,
+      "name": "Nazaroff, Patricia",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 237,
+      "name": "Nelson, Michael",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 238,
+      "name": "Nicholson, Hayley",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 239,
+      "name": "Nicol, Joshua",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 240,
+      "name": "Nowoselski, Devin",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 241,
+      "name": "Nugent-Smith, Trevor",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 242,
+      "name": "Okros, Kathleen",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 243,
+      "name": "Out, Linda",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 244,
+      "name": "Page, Lisa",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 245,
+      "name": "Palmer, Aloha",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 246,
+      "name": "Palmer, Chance",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 247,
+      "name": "Parks, Andrew",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 248,
+      "name": "Parnell, Dawson",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 249,
+      "name": "Peel, Susan",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 250,
+      "name": "Percival, Max",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 251,
+      "name": "Phillips, Lisa",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 252,
+      "name": "Pierson, Stephen",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 253,
+      "name": "Pietowski, Julie",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 254,
+      "name": "Pinette, Zachary",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 255,
+      "name": "Piro, Marcello",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 256,
+      "name": "Placsko, Shaun",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 257,
+      "name": "Podovelnikoff, Jessica",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 258,
+      "name": "Poohachoff, Stacey",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 259,
+      "name": "Porteous, Benjamin",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 260,
+      "name": "Portman, Sarah",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 261,
+      "name": "Poznikoff, Tesse",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 262,
+      "name": "Proctor, Staci",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 263,
+      "name": "Radridge, Laura",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 264,
+      "name": "Ratzburg, Justin",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 265,
+      "name": "Redden, Carl",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 266,
+      "name": "Rennick, Josee",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 267,
+      "name": "Rexin, Kathryn M.",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 268,
+      "name": "Richards, Devon",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 269,
+      "name": "Riehl, Laurie",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 270,
+      "name": "Robertson, Nathan",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 271,
+      "name": "Robinson, Crystal",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 272,
+      "name": "Rosendale, Chris",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 273,
+      "name": "Rothermel, Scott",
+      "financePhysicalPage": 57,
+      "agendaPhysicalPage": 191,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 274,
+      "name": "Ryan, Sheila",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 275,
+      "name": "Salisbury-Rowswell, David",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 276,
+      "name": "Sandquist, Shelley",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 277,
+      "name": "Scotton, Walter",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 278,
+      "name": "Shaji, Ancilin",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 279,
+      "name": "Sherman, Ronald",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 280,
+      "name": "Sherstobitoff, Travis",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 281,
+      "name": "Shippit, Heather",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 282,
+      "name": "Shukin, Betsy-Jean",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 283,
+      "name": "Shunter, Trestan",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 284,
+      "name": "Silzer, Terry",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 285,
+      "name": "Simard, Robyn",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 286,
+      "name": "Singh, Chandra",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 287,
+      "name": "Skopac, Robyn",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 288,
+      "name": "Smillie, Patricia",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 289,
+      "name": "Smith, Kristin",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 290,
+      "name": "Smith, Lauren",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 291,
+      "name": "Smith, Nathaniel",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 292,
+      "name": "Snell, Dawn",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 293,
+      "name": "Solomon, Stacey",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 294,
+      "name": "Sonntag, Danielle",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 295,
+      "name": "Sparks, Kimberly",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 296,
+      "name": "St. Pierre, Michel",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 297,
+      "name": "Stainer, Brian",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 298,
+      "name": "Stang, Allen",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 299,
+      "name": "Stapleton, Korleen",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 300,
+      "name": "Staten, Chad",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 301,
+      "name": "Takeda, Kathleen",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 302,
+      "name": "Tamblyn, Kent",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 303,
+      "name": "Terlingen, Meleana",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 304,
+      "name": "Terlingen, Miranda",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 305,
+      "name": "Thayer, Tanya",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 306,
+      "name": "Thomas, Marin",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 307,
+      "name": "Tremblay, Lisa",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 308,
+      "name": "Turner, Brandy",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 309,
+      "name": "Ustianov, Stephanie",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 310,
+      "name": "Van Dishoeck, Sarah",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 311,
+      "name": "Vandenberghe, Caroline",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 312,
+      "name": "Vanlerberg, Amanda",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 313,
+      "name": "Vanlerberg, Martin",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 314,
+      "name": "Vardy, Heather",
+      "financePhysicalPage": 58,
+      "agendaPhysicalPage": 192,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 315,
+      "name": "Verigin, Lindsay D",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 316,
+      "name": "Vigna, Heather",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 317,
+      "name": "Vissers, Michael",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 318,
+      "name": "Vogel, Rachelle",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 319,
+      "name": "Walker, Amy",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 320,
+      "name": "Walker, Tracy",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 321,
+      "name": "Weber, Matt",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 322,
+      "name": "Webster, Aaron",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 323,
+      "name": "Wheeler, Fay",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 324,
+      "name": "Wheeler, James",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 325,
+      "name": "White, Emma",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 326,
+      "name": "Wiens, Kenneth",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 327,
+      "name": "Wierenga, Erna",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 328,
+      "name": "Wilkin, Arran",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 329,
+      "name": "Wilson, Carla",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 330,
+      "name": "Winger, Matthew",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 331,
+      "name": "Wood, Sarah",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 332,
+      "name": "Wooldridge, Timothy",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 333,
+      "name": "Wraith, Phoenix",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 334,
+      "name": "Wyllie, Roman",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 335,
+      "name": "Yasinchuk, Jeffery",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 336,
+      "name": "Young, Heather",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 337,
+      "name": "Ziefflie, Carolyn",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 338,
+      "name": "Zimmer, Sonya",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 339,
+      "name": "Ziprick, D'Arcy",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    },
+    {
+      "sequence": 340,
+      "name": "Zuk, Cameron",
+      "financePhysicalPage": 59,
+      "agendaPhysicalPage": 193,
+      "allCandidateFieldsExact": true,
+      "allCrossOriginalFieldsExact": true
+    }
+  ],
+  "crossOriginalMapping": {
+    "pageOffset": 134,
+    "all340RowsExactAfterPageMapping": true,
+    "fullFiveFieldMultisetExcludingPageExact": true,
+    "tableBodyPixelChecks": [
+      {
+        "financePhysicalPage": 51,
+        "agendaPhysicalPage": 185,
+        "employeeRows": 27,
+        "bodyClipPdfCoordinates": [
+          70,
+          95,
+          545,
+          752
+        ],
+        "renderScale": 1.5,
+        "rgbPixelsExact": true,
+        "bodyPixelsSha256": "e2092db60bd9bdcc89dc8c82b60a6b79a7d1d1832f15fec2e9f4d9fb660de53e"
+      },
+      {
+        "financePhysicalPage": 52,
+        "agendaPhysicalPage": 186,
+        "employeeRows": 41,
+        "bodyClipPdfCoordinates": [
+          70,
+          95,
+          545,
+          752
+        ],
+        "renderScale": 1.5,
+        "rgbPixelsExact": true,
+        "bodyPixelsSha256": "cd64d6a565f4dd8135134a572d9760d4883d19e2dc7a2a8e0e53a802c9dc71d4"
+      },
+      {
+        "financePhysicalPage": 53,
+        "agendaPhysicalPage": 187,
+        "employeeRows": 41,
+        "bodyClipPdfCoordinates": [
+          70,
+          95,
+          545,
+          752
+        ],
+        "renderScale": 1.5,
+        "rgbPixelsExact": true,
+        "bodyPixelsSha256": "778256952f4941701e9acbeef34aa94ec828b67cf55a724e3fee8376eb8e5364"
+      },
+      {
+        "financePhysicalPage": 54,
+        "agendaPhysicalPage": 188,
+        "employeeRows": 41,
+        "bodyClipPdfCoordinates": [
+          70,
+          95,
+          545,
+          752
+        ],
+        "renderScale": 1.5,
+        "rgbPixelsExact": true,
+        "bodyPixelsSha256": "ec19983c1abc13d664cde07023a748982b2c3aefcc51ce2d75b0c697c280ba62"
+      },
+      {
+        "financePhysicalPage": 55,
+        "agendaPhysicalPage": 189,
+        "employeeRows": 41,
+        "bodyClipPdfCoordinates": [
+          70,
+          95,
+          545,
+          752
+        ],
+        "renderScale": 1.5,
+        "rgbPixelsExact": true,
+        "bodyPixelsSha256": "cb6cb5acdb626bdfe0690e3811e68b9e12d57e4bab4cb5c95bb7e177be557377"
+      },
+      {
+        "financePhysicalPage": 56,
+        "agendaPhysicalPage": 190,
+        "employeeRows": 41,
+        "bodyClipPdfCoordinates": [
+          70,
+          95,
+          545,
+          752
+        ],
+        "renderScale": 1.5,
+        "rgbPixelsExact": true,
+        "bodyPixelsSha256": "69dbb2845a191011cbdb25da5c24964d5c492f19658fd9d3cd430ede80cf31c6"
+      },
+      {
+        "financePhysicalPage": 57,
+        "agendaPhysicalPage": 191,
+        "employeeRows": 41,
+        "bodyClipPdfCoordinates": [
+          70,
+          95,
+          545,
+          752
+        ],
+        "renderScale": 1.5,
+        "rgbPixelsExact": true,
+        "bodyPixelsSha256": "6caf1cc9968ebaaf4c7ca2c1ddcdb6d1bfe3d36655d893cbdff3efbbdc1369e0"
+      },
+      {
+        "financePhysicalPage": 58,
+        "agendaPhysicalPage": 192,
+        "employeeRows": 41,
+        "bodyClipPdfCoordinates": [
+          70,
+          95,
+          545,
+          752
+        ],
+        "renderScale": 1.5,
+        "rgbPixelsExact": true,
+        "bodyPixelsSha256": "3c4a95245b08e0cd70735248bf2cd4b728fa31aa91e7841a59b0a3fc051d6c84"
+      },
+      {
+        "financePhysicalPage": 59,
+        "agendaPhysicalPage": 193,
+        "employeeRows": 26,
+        "bodyClipPdfCoordinates": [
+          70,
+          95,
+          545,
+          752
+        ],
+        "renderScale": 1.5,
+        "rgbPixelsExact": true,
+        "bodyPixelsSha256": "a9f79dd9095456f7b2e74d749b5613c0467558c91d30cb1a6c52c90d2f02176a"
+      }
+    ]
+  },
+  "critical41RowYearConflict": {
+    "financePhysicalPage": 52,
+    "literalFinanceHeader": "For the Fiscal Year Ended June 30, 2025",
+    "agendaPhysicalPage": 186,
+    "literalAgendaHeader": "the Fiscal Year Ended June 30, 2026",
+    "rowsCompared": 41,
+    "range": [
+      "Bonikowsky, Mark",
+      "Delport, Sarah"
+    ],
+    "allNamesTitlesPayExpensesOrderMultiplicityExact": true,
+    "salaryTableBodyPixelsExact": true,
+    "conclusion": "The explicit conflicting finance heading remains literal. Period assignment is qualified by the complete separately dated agenda salary rows, not silently inferred from a filename or cover."
+  },
+  "controls": {
+    "namedEmployees": {
+      "printed": [
+        37683809,
+        414506
+      ],
+      "computed": [
+        37683809,
+        414506
+      ],
+      "exact": true
+    },
+    "belowThresholdAggregate": {
+      "printed": [
+        18547303,
+        122426
+      ],
+      "personRowsImported": 0
+    },
+    "allEmployees": {
+      "printed": [
+        56231112,
+        536932
+      ]
+    },
+    "trusteesAlreadyAcceptedElsewhere": {
+      "printed": [
+        200084,
+        57505
+      ],
+      "personRowsImportedByThisCohort": 0
+    },
+    "consolidatedSchedulePhysicalPage59": {
+      "printed": [
+        56431196,
+        594437
+      ]
+    },
+    "employerCppEiPremium": {
+      "printed": 3360839,
+      "personRowsImported": 0
+    },
+    "reconciliationPhysicalPage64": {
+      "printed": [
+        56431182,
+        594827
+      ],
+      "reconciliationMinusConsolidatedSchedule": [
+        -14,
+        390
+      ],
+      "resolution": "Both control sets remain literal; no cause, adjustment or imputed balancing value."
+    }
+  },
+  "datedContext": {
+    "memoAgendaPhysicalPage134": {
+      "author": "Cathy MacArthur, Secretary-Treasurer",
+      "date": "September 8, 2026",
+      "subject": "2025-2026 Statement of Financial Information",
+      "explicitFiscalYearEnd": "June 30, 2026",
+      "status": "For Information",
+      "literalConclusion": "This update is for the Board’s information and requires no further action at this time."
+    },
+    "minutes": {
+      "url": "https://www.sd8.bc.ca/sites/default/files/documents/2026-10/2026.09.08%20-%204%20Public%20Minutes_sv_Redacted.pdf",
+      "localPath": "/tmp/held-resolution-schools/independent-sd8-minutes-2026-09-08.pdf",
+      "sha256": "d07023856f66a41782861cbd5ac383ad7c16b73d84d7f705907b169eb4e20186",
+      "meetingDatePhysicalPage1": "September 8, 2026",
+      "physicalPage3": {
+        "sectionA": "2025-2026 Audited Financial Statements",
+        "motion26/27-004": "THAT the Audited Financial Statements and Financial Discussion & Analysis for the year ended June 30, 2026, BE APPROVED.",
+        "sectionB": "2025-2026 Statement of Financial Information",
+        "SOFIRecord": "Secretary-Treasurer MacArthur presented the 2025–2026 Statement of Financial Information (SOFI) to the Board and confirmed the report will be posted to the SD8 website.",
+        "separateSOFIAdoptionMotionVisible": false
+      },
+      "physicalPage6Signatures": "Board Chair and Secretary-Treasurer signature areas redacted",
+      "conclusion": "Minutes corroborate SOFI presentation. The nearby approval motion concerns audited financial statements; no SOFI adoption claim is made."
+    }
+  },
+  "draftAndApprovalScope": {
+    "agendaFinancialSubsection": {
+      "explicitDraftMarksVisuallyVerifiedOnPhysicalPages": [
+        141,
+        143,
+        144,
+        146
+      ],
+      "visibleLabels": [
+        "DRAFT - Not Finalized",
+        "DRAFT"
+      ],
+      "qualification": "Only inspected financial-statement pages are claimed here; no assertion that every financial page was visually examined."
+    },
+    "agendaSalaryPhysicalPages": {
+      "pages": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193
+      ],
+      "allNineFullPagesVisuallyInspected": true,
+      "draftLabelsVisible": false
+    },
+    "agendaApprovalPhysicalPage137": "Signature and date fields visibly blank",
+    "agendaManagementPhysicalPage139": "Signature lines blank; printed management dates August 28, 2026",
+    "postedFinance": {
+      "nativeDraftKeywordSearchAcrossWholeOriginal": [],
+      "draftMarksVisibleOnInspectedPages": false,
+      "declarationPhysicalPage3": "Signature areas redacted; all three adjacent dates read September 8, 2026. Declaration expressly says year ended June 30, 2026.",
+      "managementPhysicalPage5": "Signature areas redacted; printed dates August 28, 2026.",
+      "embeddedFinancialManagementPhysicalPage9": "Signature areas redacted; adjacent dates September 8, 2026."
+    },
+    "conclusion": "The separately posted final finance SOFI is the payment source. The agenda is specifically dated full-row period corroboration, not proof that the whole board package was final or the SOFI was adopted."
+  },
+  "sourcePublicWarning": "The posted SOFI employee schedule has conflicting years: physical page 52 prints June 30, 2025, while its other employee pages print June 30, 2026. The assigned 2025/26 period is supported by all 340 matching employee rows in the separately published September 8, 2026 board agenda, whose complete salary schedule on pages 185–193 consistently prints June 30, 2026 and is introduced by a dated memorandum. Names, remuneration, expenses, order and multiplicity agree across both originals under page mapping +134. The conflicting finance heading remains literal; no typo or cause is asserted. The agenda financial-statement subsection contains DRAFT/Not Finalized marks, while its remuneration pages are unmarked. The agenda is period corroboration, not the payment-source original or proof of final adoption. Posted SOFI signature areas are redacted; its declaration date fields read September 8, 2026. The minutes record SOFI presentation, not an explicit adoption motion. The named employee controls reconcile exactly. Elsewhere, posted SOFI reconciliation page 64 prints $56,431,182 remuneration and $594,827 expenses, while schedule page 59 prints $56,431,196 and $594,437 respectively: reconciliation minus schedule is −$14 remuneration and +$390 expenses. Both sets remain literal; their cause is unresolved.",
+  "scopeAndDefinitions": [
+    "Complete published named employee schedule over $75,000: 340 rows over nine physical pages. Existing trustee cohort on the top of finance51/agenda185 is excluded; no duplicate import.",
+    "Source publishes names, remuneration and expenses only; no positions are inferred. All 198 expense dashes remain null; source has no explicit zero personal expense cells.",
+    "Asterisk footnotes identify international-program travel and travel to schools. Markers remain in raw row evidence and are not names, titles or added money.",
+    "Under-threshold aggregate, all-employee totals, trustee totals, employer CPP/EI premiums and supplier payments are excluded from person observations.",
+    "Reconciliation page64 states cash-basis SOFI remuneration/expenses versus accrual financial statements, and salary recovered from third parties remains in remuneration for SOFI. No recovery adjustment or annualization is made."
+  ],
+  "visualCoverage": {
+    "agendaFullSalaryPages": [
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193
+    ],
+    "financeFullSalaryPage52": true,
+    "otherContextPages": [
+      {
+        "source": "agenda",
+        "physicalPage": 134,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p134.png",
+        "sha256": "671ca878503997644fb2df80977adc57653088aec46e2a8b69c663a629276a2c",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 137,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p137.png",
+        "sha256": "fe86383664725d9c944f0ef10600d573c726e9f8a64ea3c953486a0445afe19a",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 139,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p139.png",
+        "sha256": "d395d0ab1ed9ae6909dbaded9ba815c0caa9dc65be0f07cac98c82d9c92094e0",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 141,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p141.png",
+        "sha256": "8a2100581b2a476d9efa5d713e336b45279353e0cbb7c4a2bc0cb8ee0a2c6080",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 143,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p143.png",
+        "sha256": "e26f02400d4979953e195b8dc3dfbea03563c3259c1657963f3bad46afb92962",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 144,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p144.png",
+        "sha256": "e5cac73627976c3f67e07324c5499a2c36c9a241282ed7ee596c7673fdd5592d",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 146,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p146.png",
+        "sha256": "0fb50d4105b5299f7b561858a723d3c2780a73150fa72aa7f71351bafc2d5a56",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 185,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p185.png",
+        "sha256": "62750bc2048648b893159d9444892fd01987d573872636e66d4e3d2cb2a9fb47",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 186,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p186.png",
+        "sha256": "531ce201acd9274861b2f1750daf37c5d83effb4680ffbcfc63212cb1fcae7cb",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 187,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p187.png",
+        "sha256": "182e9f1feb5342c70ef349a03d69b958750e86bc63624a04316d351ba0288f0e",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 188,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p188.png",
+        "sha256": "9b9edb1d0249b938c3cfe5d15151763ae9f35bfbe9643d6b2ee7baa81d9785e9",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 189,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p189.png",
+        "sha256": "cd2c508c50086d25878d13755dc7cb5f354a11a9233d61db1d9e63a85c174d50",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 190,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p190.png",
+        "sha256": "777c4a8fe579457283e820973f216008d6d7de888150fae8917a541191084dae",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 191,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p191.png",
+        "sha256": "aabbde2c858b98501533a7e472847e46235ad2e9c719b108c778185b2578717d",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 192,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p192.png",
+        "sha256": "ebd40bafbf5ff9d031d084a08428fc97c77a131ab53c9d6cf223b713706634d2",
+        "renderScale": 1.5
+      },
+      {
+        "source": "agenda",
+        "physicalPage": 193,
+        "image": "/tmp/held-resolution-schools/independent-sd8-agenda-p193.png",
+        "sha256": "94cb9db214b042e6716bffeeb52a89ac472e9d3b5657fe060b65d7398d3d52b4",
+        "renderScale": 1.5
+      },
+      {
+        "source": "finance",
+        "physicalPage": 3,
+        "image": "/tmp/held-resolution-schools/independent-sd8-finance-p3.png",
+        "sha256": "e39e4c27fd401fbedf475a831becd3ad8e3028de938bee56d026692e0b001b22",
+        "renderScale": 1.5
+      },
+      {
+        "source": "finance",
+        "physicalPage": 5,
+        "image": "/tmp/held-resolution-schools/independent-sd8-finance-p5.png",
+        "sha256": "52fd609574324a7d7f235b930a2daba7e7fd5d2ae93730d2883342c867a67405",
+        "renderScale": 1.5
+      },
+      {
+        "source": "finance",
+        "physicalPage": 7,
+        "image": "/tmp/held-resolution-schools/independent-sd8-finance-p7.png",
+        "sha256": "8398fa457b2f1cce9a97e0e5596b246884b1f37cacfe7d2f511b119ff207031a",
+        "renderScale": 1.5
+      },
+      {
+        "source": "finance",
+        "physicalPage": 9,
+        "image": "/tmp/held-resolution-schools/independent-sd8-finance-p9.png",
+        "sha256": "b0b9c89f7de6c6c18b3af636cb0a7d1e2510676a0fc141908411c976e375ced7",
+        "renderScale": 1.5
+      },
+      {
+        "source": "finance",
+        "physicalPage": 52,
+        "image": "/tmp/held-resolution-schools/independent-sd8-finance-p52.png",
+        "sha256": "df0e5bfb494a193b9067f7d1db7fa7a52a50a6491b24c92bd8da24fe38556d81",
+        "renderScale": 1.5
+      },
+      {
+        "source": "finance",
+        "physicalPage": 64,
+        "image": "/tmp/held-resolution-schools/independent-sd8-finance-p64.png",
+        "sha256": "726697d8924da0f2ea8d7fb2437a3584721a69a1f99a9cc1a7483855e4a2cfb8",
+        "renderScale": 1.5
+      },
+      {
+        "source": "finance",
+        "physicalPage": 65,
+        "image": "/tmp/held-resolution-schools/independent-sd8-finance-p65.png",
+        "sha256": "a92388fd2b5a14fc93a9c024a6fa2a72c9eec1abe899fa6e126e786068c1e144",
+        "renderScale": 1.5
+      },
+      {
+        "source": "minutes",
+        "physicalPage": 1,
+        "image": "/tmp/held-resolution-schools/independent-sd8-minutes-p1.png",
+        "sha256": "244357979d651ffe3338cc3fe68801196739a0d41f524b377d7d50e4fe7e87c3",
+        "renderScale": 1.5
+      },
+      {
+        "source": "minutes",
+        "physicalPage": 3,
+        "image": "/tmp/held-resolution-schools/independent-sd8-minutes-p3.png",
+        "sha256": "a35710c963cadd0071f341a323002d12c5c2426b88bbd543982ada07e33a4211",
+        "renderScale": 1.5
+      },
+      {
+        "source": "minutes",
+        "physicalPage": 6,
+        "image": "/tmp/held-resolution-schools/independent-sd8-minutes-p6.png",
+        "sha256": "f7c6b04a6bffbe164fb889fcf0117025ba68e5a50d34170ee9d2ff28fd949e72",
+        "renderScale": 1.5
+      }
+    ],
+    "methodQualification": "All 340 field comparisons are native third-reader comparisons. Full salary images were inspected for visible names/cells, column and page boundaries, date headings, markers and controls; this is not represented as a separately typed 340-row manual transcript."
+  },
+  "reproduction": "Both frozen extraction receipts contain complete extractorCode. Run each code with a NEW temporary output path and compare rows, cell evidence and totals. Payment rows must equal agenda rows after +134 page mapping and the pinned finance-page normalized gzip exactly.",
+  "ownershipAndLimitations": [
+    "Only NEW independent-sd8-* review receipts were written for this assignment. Prior reviews and author datasets/manifests were not edited.",
+    "Source reporting period and payment-source choice are qualified explicitly; no issuer typo or cause is asserted.",
+    "No report-wide visual examination or actual verification of redacted signatures is claimed."
+  ]
+}

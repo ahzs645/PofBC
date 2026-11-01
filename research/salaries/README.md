@@ -1,23 +1,27 @@
 # Salary audit, source recovery and remaining gaps
 
-For the latest municipal work, start with [import assumptions and the acquisition
-list](municipal-audit/follow-up.md), including a spreadsheet of all remaining
-source tasks and uncovered jurisdictions. The app exports now contain **881,002
-records**, including [566 verified OCR observations](municipal-ocr/README.md).
-Three further municipal employee cohorts retain their published amounts with
-visible source-subtotal warnings. No records requests have been sent.
+For the latest work, start with the [held-source resolutions](held-resolution-2026-11-01/README.md),
+the [current release reconciliation](held-resolution-2026-11-01/release.md), and
+the [unsent source-copy and clarification list](held-resolution-2026-11-01/acquisition-list.md).
+Current employer/period coverage is generated in the [coverage inventory](coverage-inventory.md)
+and the [source-catalog comparison](sunshine-lists/comparison.md).
 
-Updated **31 October 2026**. Original audit baseline: commit
+The municipal [import assumptions and acquisition list](municipal-audit/follow-up.md)
+cover remaining source tasks and uncovered jurisdictions. The 31 October OCR follow-up
+reached **881,002 records**, including [566 verified OCR observations](municipal-ocr/README.md);
+those are historical counts. Source qualifications remain visible. No records requests have been sent.
+
+Updated **1 November 2026**. Original audit baseline: commit
 [`eabe55708952f945cf2b0733230db31d48146d88`](https://github.com/ahzs645/PofBC/commit/eabe55708952f945cf2b0733230db31d48146d88).
 
 The original salary setup contained three compiled editions, not a continuous annual history.
 This recovery replaces demonstrably incorrect employer/years with official schedules, adds earlier
 and intervening years, and makes the remaining uncertainty visible in the search, employer and
 government-atlas views. **A populated year is a set of disclosed payment records, not a verified
-workforce census.** The catalog contains 20 fiscal period labels and 24 calendar labels. Six early calendar
-labels (2002–2007) currently contain source leads only; imported calendar records begin in 2008.
-These overlapping labels are not elapsed years of complete coverage. Coverage differs
-substantially by employer.
+workforce census.** The catalog contains overlapping fiscal-period and calendar-year labels.
+Some early labels contain source leads without imported observations; accepted histories appear
+in the [current coverage inventory](coverage-inventory.md). These labels do not establish elapsed
+years of complete coverage. Coverage differs substantially by employer.
 
 ## Where to inspect the results
 

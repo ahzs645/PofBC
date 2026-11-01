@@ -27,7 +27,7 @@
   "fingerprints": {
     "snapshotSha256": "5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1",
     "aliasesSha256": "f8fbabcea76dfaab15fcfcea12aac2eee5ba2e56203b89d7cb890ec4eec81b4d",
-    "repositoryInputsSha256": "05416874223fefd1d9c5c38984ff073b2e512982322d3a1002a563e78c5e9011"
+    "repositoryInputsSha256": "f11664b82bd8632758da6f24f3d800ecd7bf6c479caa82b38e39653d39f15ebb"
   },
   "summary": {
     "referenceEmployers": 3,
@@ -41,17 +41,17 @@
     "annualSeriesCompletenessEstablished": false,
     "recordLevelParityChecked": false,
     "repository": {
-      "employers": 245,
-      "rows": 1022585,
-      "namedRows": 1017254,
-      "officialRows": 790932,
+      "employers": 246,
+      "rows": 1037040,
+      "namedRows": 1031709,
+      "officialRows": 805387,
       "compiledRows": 231653,
-      "employeeRows": 761319,
-      "availableEmployerYears": 960
+      "employeeRows": 775754,
+      "availableEmployerYears": 962
     },
-    "repositoryEmployersWithOfficial": 176,
+    "repositoryEmployersWithOfficial": 177,
     "repositoryCompiledOnlyEmployers": 69,
-    "repositorySourceTasks": 223,
+    "repositorySourceTasks": 222,
     "externalReferenceTasks": 3
   },
   "employers": [
@@ -265,23 +265,25 @@
           "Provincial Health Services Authority (PHSA)"
         ],
         "sector": "Health authorities",
-        "rows": 24950,
-        "namedRows": 24950,
-        "officialRows": 27,
+        "rows": 38856,
+        "namedRows": 38856,
+        "officialRows": 13933,
         "compiledRows": 24923,
-        "employeeRows": 0,
+        "employeeRows": 13906,
         "officialPeriods": [
           "2024/25",
           "2025/26"
         ],
-        "officialEmployeePeriods": [],
+        "officialEmployeePeriods": [
+          "2024/25"
+        ],
         "compiledEditionLabels": [
           "2017/18",
           "2020/21",
           "2023/24"
         ],
         "acceptedPeriodCount": 2,
-        "sourceLeadCount": 10,
+        "sourceLeadCount": 9,
         "partialSources": [
           "phsa-board-2024-25",
           "phsa-board-2025-26"
@@ -4580,13 +4582,14 @@
         "North Island College"
       ],
       "sector": "Universities and colleges",
-      "rows": 1087,
-      "namedRows": 1087,
-      "officialRows": 953,
+      "rows": 1238,
+      "namedRows": 1238,
+      "officialRows": 1104,
       "compiledRows": 134,
-      "employeeRows": 953,
+      "employeeRows": 1089,
       "officialPeriods": [
         "2018/19",
+        "2019/20",
         "2020/21",
         "2021/22",
         "2022/23",
@@ -4595,6 +4598,7 @@
       ],
       "officialEmployeePeriods": [
         "2018/19",
+        "2019/20",
         "2020/21",
         "2021/22",
         "2022/23",
@@ -4604,9 +4608,11 @@
       "compiledEditionLabels": [
         "2017/18"
       ],
-      "acceptedPeriodCount": 6,
+      "acceptedPeriodCount": 7,
       "sourceLeadCount": 1,
       "partialSources": [
+        "held-resolution-nic-sofi-2019-20-board",
+        "held-resolution-nic-sofi-2019-20-employees",
         "north-island-college-sofi-2018-19-employees"
       ]
     },
@@ -4887,23 +4893,25 @@
         "Provincial Health Services Authority (PHSA)"
       ],
       "sector": "Health authorities",
-      "rows": 24950,
-      "namedRows": 24950,
-      "officialRows": 27,
+      "rows": 38856,
+      "namedRows": 38856,
+      "officialRows": 13933,
       "compiledRows": 24923,
-      "employeeRows": 0,
+      "employeeRows": 13906,
       "officialPeriods": [
         "2024/25",
         "2025/26"
       ],
-      "officialEmployeePeriods": [],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
       "acceptedPeriodCount": 2,
-      "sourceLeadCount": 10,
+      "sourceLeadCount": 9,
       "partialSources": [
         "phsa-board-2024-25",
         "phsa-board-2025-26"
@@ -5197,11 +5205,11 @@
         "School District No. 8 (Kootenay Lake)"
       ],
       "sector": "School districts",
-      "rows": 1254,
-      "namedRows": 1254,
-      "officialRows": 1254,
+      "rows": 1594,
+      "namedRows": 1594,
+      "officialRows": 1594,
       "compiledRows": 0,
-      "employeeRows": 1193,
+      "employeeRows": 1533,
       "officialPeriods": [
         "2018/19",
         "2019/20",
@@ -5215,13 +5223,41 @@
         "2019/20",
         "2020/21",
         "2021/22",
-        "2022/23"
+        "2022/23",
+        "2025/26"
       ],
       "compiledEditionLabels": [],
       "acceptedPeriodCount": 6,
       "sourceLeadCount": 0,
       "partialSources": [
-        "continuation-schools-sd08-2022-employees"
+        "continuation-schools-sd08-2022-employees",
+        "held-resolution-schools-sd08-2026-employees"
+      ]
+    },
+    {
+      "slug": "school-district-10",
+      "name": "School District No. 10 (Arrow Lakes)",
+      "names": [
+        "School District No. 10 (Arrow Lakes)"
+      ],
+      "sector": "School districts",
+      "rows": 58,
+      "namedRows": 58,
+      "officialRows": 58,
+      "compiledRows": 0,
+      "employeeRows": 53,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "held-resolution-schools-sd10-2025-employees",
+        "held-resolution-schools-sd10-2025-trustees"
       ]
     },
     {
@@ -7533,9 +7569,9 @@
       "employers": 8,
       "employersWithOfficial": 6,
       "compiledOnlyEmployers": 2,
-      "officialRows": 244191,
+      "officialRows": 258097,
       "compiledRows": 68658,
-      "rows": 312849
+      "rows": 326755
     },
     {
       "sector": "Municipal police",
@@ -7557,21 +7593,21 @@
     },
     {
       "sector": "School districts",
-      "employers": 37,
-      "employersWithOfficial": 24,
+      "employers": 38,
+      "employersWithOfficial": 25,
       "compiledOnlyEmployers": 13,
-      "officialRows": 21466,
+      "officialRows": 21864,
       "compiledRows": 45385,
-      "rows": 66851
+      "rows": 67249
     },
     {
       "sector": "Universities and colleges",
       "employers": 24,
       "employersWithOfficial": 14,
       "compiledOnlyEmployers": 10,
-      "officialRows": 56563,
+      "officialRows": 56714,
       "compiledRows": 44857,
-      "rows": 101420
+      "rows": 101571
     }
   ],
   "queue": [
@@ -10415,23 +10451,6 @@
       "reason": "Both PDF engines confirm 10,884 employee rows, matching the declared count, but displayed expenses sum $14,592,431 versus printed named subtotal $14,638,203 (shortfall $45,772), beyond whole-dollar rounding. Obtain corrected source or issuer reconciliation before acceptance; do not alter individual amounts to fit the total."
     },
     {
-      "id": "source-6e6daeee6f3e79dc",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "north-island-college",
-      "employerName": "North Island College",
-      "referenceEmployer": null,
-      "year": "2019/20",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2019-20.pdf",
-      "sourceId": "north-island-college-sofi-2019-20-ocr-lead",
-      "scope": "employee-remuneration",
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "OCR the complete original, verify the employee-section period/scope and every row against rendered pages, then reconcile printed controls before accepting any observations.",
-      "reason": "The retrieved original has no native text. Its rendered cover confirms year ended March 31, 2020, but no employee rows or controls have been accepted."
-    },
-    {
       "id": "source-a775f17dbb8fb62d",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -10580,23 +10599,6 @@
       "sourceId": "provincial-health-services-authority-2023-24-employee-source",
       "scope": "employee-remuneration",
       "repositoryRows": 11908,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
-      "id": "source-cae7b0da9d893d58",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2024/25",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
-      "sourceId": "provincial-health-services-authority-2024-25-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 13,
       "referenceRecords": null,
       "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
       "reason": null
@@ -11265,6 +11267,23 @@
       "reason": null
     },
     {
+      "id": "source-6e6daeee6f3e79dc",
+      "origin": "repository-source-catalog",
+      "priority": 2,
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "referenceEmployer": null,
+      "year": "2019/20",
+      "status": "requires-ocr",
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2019-20.pdf",
+      "sourceId": "north-island-college-sofi-2019-20-ocr-lead",
+      "scope": "employee-remuneration",
+      "repositoryRows": 151,
+      "referenceRecords": null,
+      "nextAction": "OCR the complete original, verify the employee-section period/scope and every row against rendered pages, then reconcile printed controls before accepting any observations.",
+      "reason": "The retrieved original has no native text. Its rendered cover confirms year ended March 31, 2020, but no employee rows or controls have been accepted."
+    },
+    {
       "id": "external-e4af6842583cf431",
       "origin": "external-reference",
       "priority": 2,
@@ -11421,8 +11440,8 @@
   "inputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 6122434,
-      "sha256": "af155c7cbc52c92a22f7735c627518df4c6e2ef05e6a533a9cc1c5d1e0e40a1b"
+      "bytes": 6155477,
+      "sha256": "fabf13a9ea3406b9dacc38889cd50f4d2d9d1f769e95e53e6ea576819cd47c97"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -12136,8 +12155,8 @@
     },
     {
       "path": "public/salaries/employers/north-island-college.json.gzip",
-      "bytes": 16806,
-      "sha256": "1d876ee1b69eb37bfed5be0c8fdbeea7a1ed4b61d5c8c05baf2d2394fa966c88"
+      "bytes": 18686,
+      "sha256": "5e812f31f852b3f8e730ab39aa9a6ba4a5fc893dffcef9d49bfa715b9ef0ea82"
     },
     {
       "path": "public/salaries/employers/north-vancouver-school-district.json.gzip",
@@ -12186,8 +12205,8 @@
     },
     {
       "path": "public/salaries/employers/provincial-health-services-authority.json.gzip",
-      "bytes": 363822,
-      "sha256": "4f13be8ce5fbb2a2d741ae9a321f623a42444a3c422722d70dce11651b0fb994"
+      "bytes": 605168,
+      "sha256": "9f3b07250c0994dd97910bc65abf14b57d5c8a397996f1ff2f1d8ee9a3869534"
     },
     {
       "path": "public/salaries/employers/public-service.json.gzip",
@@ -12231,8 +12250,13 @@
     },
     {
       "path": "public/salaries/employers/school-district-08.json.gzip",
-      "bytes": 15830,
-      "sha256": "fa921ea8eafe3383c1fb397802bb42346b1f06e3a9533130a948345de6deb5f8"
+      "bytes": 19779,
+      "sha256": "c14f214d187c9bbdf764f5ee5e46970363ccd290daa8bf21ab4e21d95d336bb5"
+    },
+    {
+      "path": "public/salaries/employers/school-district-10.json.gzip",
+      "bytes": 1444,
+      "sha256": "2dc68075b0055c6b43d505b3abd742665116bf6cd7ab519b18f15ff907373561"
     },
     {
       "path": "public/salaries/employers/school-district-19.json.gzip",
@@ -12651,8 +12675,8 @@
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 4092756,
-      "sha256": "4367a6e823fdacf825982e06f11163233504a90df9e958df0514831166259005"
+      "bytes": 4130495,
+      "sha256": "aaabb438ec5827f003dd08f7c17da3291e05c2d7fe16fc255cb57272405b1f59"
     }
   ]
 }

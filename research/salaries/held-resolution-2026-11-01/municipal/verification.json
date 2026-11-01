@@ -1,0 +1,14 @@
+{
+  "verifiedOn": "2026-11-01",
+  "commands": [
+    {
+      "command": "python scripts/resolve_held_municipal.py --build --verify",
+      "result": "pass: 0 accepted rows; 5 held rows; both native annual readers agree; old accepted council hashes unchanged; HTML snapshots intact"
+    },
+    {
+      "command": "python -m unittest discover -s scripts -p 'test_resolve_held_municipal.py'",
+      "result": "6 tests passed"
+    }
+  ],
+  "interpretation": "Package adoption resolved; specific council reporting period remains held. No inferred-year import, replacement or outreach."
+}

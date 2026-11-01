@@ -1,0 +1,106 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "held_health_review",
+  "status": "source-view-fidelity-and-complete-row-boundaries-pass",
+  "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
+  "sourceSha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+  "physicalPdfPages": 284,
+  "actualPdfRendersChecked": 284,
+  "namedRowsCompared": 13906,
+  "fieldRegionsCompared": 41718,
+  "unmatchedFieldRegions": 0,
+  "independentRasterRowBoundaryExceptions": 0,
+  "rowsByActualBitmapBands": {
+    "49": 283,
+    "39": 1
+  },
+  "maxActualInkBandToEitherOcrCenterDeltaPixels": 3.2379150390625,
+  "comparisonMethod": "Every actual PDF page rendered at300dpi using PyMuPDF page.get_pixmap(dpi=300,alpha=False); compare against original native tile image at2550x3300. Binary ink means grayscale<128. Every name/pay/expense ink pixel must have an opposite-view ink counterpart within1pixel using a3x3maxfilter. Exact binary differences are also counted, without pretending antialiasing images are identical.",
+  "rowBoundaryMethod": "Independently project actual source ink in fixed name-column ROI x190:1600,y685:3070; merge vertical ink gaps at most8pixels. Final page uses y685:2600, excluding the separately identified ruled Total row. Compare band count and each band center to both independent OCR geometries, tolerance10pixels (row spacing about48pixels). No assumption that earlier pages have49rows.",
+  "fieldMetrics": {
+    "name": {
+      "regions": 13906,
+      "exactBinaryDifferencePixels": 2480865,
+      "actualOnlyInkOutside1Pixel": 0,
+      "nativeOnlyInkOutside1Pixel": 0
+    },
+    "remuneration": {
+      "regions": 13906,
+      "exactBinaryDifferencePixels": 1366538,
+      "actualOnlyInkOutside1Pixel": 0,
+      "nativeOnlyInkOutside1Pixel": 0
+    },
+    "expenses": {
+      "regions": 13906,
+      "exactBinaryDifferencePixels": 529534,
+      "actualOnlyInkOutside1Pixel": 0,
+      "nativeOnlyInkOutside1Pixel": 0
+    }
+  },
+  "detailedEvidenceFile": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-render-fidelity-results.json.gzip",
+  "detailedEvidenceSha256": "faa5ad9b0d7491b56878e041ca71a99cb8010a16ad5bef716b38c9ff8d2f1ff8",
+  "reproductionScript": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-render-fidelity-check.py",
+  "reproductionScriptSha256": "6e43d61ea0f82da94404a12bc1ea56377f672fecb2d5f638ede95a32808b6739",
+  "runtime": {
+    "PyMuPDF": "1.26.6",
+    "Pillow": "12.3.0"
+  },
+  "personallyViewedActualPdfContexts": [
+    {
+      "path": "/tmp/independent-phsa-render-fidelity/actual-p001-header.png",
+      "sha256": "6d35bcd85657395cd5dc409ea66b65405532b8a2aca4547f1c47ef69aee07493"
+    },
+    {
+      "path": "/tmp/independent-phsa-render-fidelity/actual-p284-header.png",
+      "sha256": "6d35bcd85657395cd5dc409ea66b65405532b8a2aca4547f1c47ef69aee07493"
+    },
+    {
+      "path": "/tmp/independent-phsa-render-fidelity/actual-p284-footer-and-control.png",
+      "sha256": "c31270dd034180ac85d0dcded8bf745bac3cff87d2554df935e9017ad11e1398"
+    },
+    {
+      "path": "/tmp/independent-phsa-render-fidelity/actual-p100-r08.png",
+      "sha256": "d6ff58fca9c82909af22becfa2e358c1902eb9643408dd37a026ff25d032c218"
+    },
+    {
+      "path": "/tmp/independent-phsa-render-fidelity/native-p100-r08.png",
+      "sha256": "d6ff58fca9c82909af22becfa2e358c1902eb9643408dd37a026ff25d032c218"
+    }
+  ],
+  "actualPdfHeaderTranscript": {
+    "institution": "Provincial Health Services Authority",
+    "yearEnd": "2025-03-31",
+    "scope": "Alphabetical list of employees who received remuneration exceeding$75,000 for the year endedMarch31,2025; expenses paid in the period may be reimbursed directly and/or paid to a third-party supplier.",
+    "visibleColumns": [
+      "Name",
+      "Remuneration",
+      "Expenses"
+    ],
+    "jobTitleColumnPresent": false
+  },
+  "actualPdfFinalBoundaryTranscript": {
+    "penultimateNamedRow": [
+      "Zwick,Sharlene",
+      111163,
+      null
+    ],
+    "lastNamedRow": [
+      "Zylstra,Arianna",
+      102016,
+      null
+    ],
+    "printedRemunerationTotal": 1713046476,
+    "printedExpenseTotal": 25171641,
+    "totalRowRuledAndSeparate": true,
+    "printedNamedRowCount": null,
+    "belowThresholdAggregateOnFinalPage": false
+  },
+  "sourceFidelityAlertDisposition": "The initial extraCarol/clipped-name alert was corrected by its reviewer as a first-pass image-reading error. Actual page100 Harder,Catherine matches the native crop. This complete geometric comparison provides independent source-view assurance; no source rows were altered in response to an unconfirmed alert.",
+  "interpretation": "Every named field region has the same ink shape within one raster pixel in both directions, with no letter-sized added/omitted regions. Exact antialiasing/resampling pixels differ, as quantified. Native-crop image readings may be reused with this source-view qualification; original source text and raw evidence remain unchanged.",
+  "limits": [
+    "The1pixel geometric tolerance is explicitly not exact PNG identity and does not independently identify every letter. It supplements independent OCR agreement and individual original-image conflict review.",
+    "I did not personally transcribe every employee name or amount; personal image review is separately documented in batches002/003/009 and the stated actual-PDF contexts.",
+    "This confirms source-view geometry and row boundaries only. Complete conflict coverage, overlay replay, control reconciliation, qualification and root acceptance remain separate source-closure gates."
+  ],
+  "acceptedEmployeeRows": 0
+}
