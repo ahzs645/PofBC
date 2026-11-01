@@ -51,6 +51,9 @@
     "build:collecting": "node scripts/build-collecting.mjs",
     "build:collected-marks": "node scripts/build-collected-marks.mjs",
     "build:salaries": "node scripts/build-salaries.mjs",
+    "import:sunshine": "node scripts/import-sunshine-snapshot.mjs",
+    "audit:sunshine": "node scripts/audit-sunshine-lists.mjs",
+    "test:sunshine": "node --test scripts/sunshine-lists.test.mjs scripts/sunshine-coverage.test.mjs scripts/sunshine-compare.test.mjs",
     "preview:salaries": "node scripts/preview-salaries.mjs",
     "check:salaries": "node scripts/check-salary-exports.mjs --write-inventory",
     "build:crest": "python3 scripts/build_crest.py",
@@ -77,7 +80,7 @@
     "audit:municipal-salaries": "node scripts/audit-municipal-salaries.mjs",
     "compare:municipal-periods": "node scripts/compare-municipal-periods.mjs",
     "review:municipal-history": "python3 scripts/build-municipal-history-review.py --frozen",
-    "review:salary-continuation": "python3 scripts/build-salary-continuation-review.py"
+    "review:salary-continuation": "python3 scripts/build-salary-continuation-review.py --frozen"
   },
   "peerDependencies": {
     "react": ">=18",

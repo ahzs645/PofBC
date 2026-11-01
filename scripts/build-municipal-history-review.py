@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """Reconcile the historical municipal continuation against its deployed baseline."""
+import argparse
 import csv
 import gzip
 import hashlib
 import json
-import sys
 from collections import Counter
 from pathlib import Path
-from salary_release_audit import verify_frozen_release
 
 ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT / 'research/salaries'
@@ -29,9 +28,120 @@ def cell(value):
     return str(value or '').replace('|', '\\|').replace('\n', ' ')
 
 
-def main():
-    if '--frozen' in sys.argv:
-        print(json.dumps(verify_frozen_release(OUT, RESEARCH)))
+def validate_frozen_release(root=ROOT):
+    """Verify the released inputs without absorbing later, unrelated salary work."""
+    research = Path(root) / 'research/salaries'
+    out = research / 'municipal-history-pass'
+    baseline = read(out / 'baseline.json')
+    release = read(out / 'release.json')
+    before = {row['employerSlug']: row for row in baseline['municipalities']}
+    index = read(Path(root) / 'public/salaries/employers/index.json')
+    registered = read(research / 'collections.json')['collections']
+    required = ['municipal-history-' + area for area in AREAS]
+    assert all(name in registered for name in required), 'All six historical handoffs must remain registered'
+    # The six handoffs include north supplemental/council collections. New
+    # collections may be registered later, but do not join this released pass.
+    released_sources = release['imports'] + release['aggregateOnlySources']
+    collections = list(dict.fromkeys(source['collection'] for source in released_sources))
+    assert all(name in collections for name in required), 'Released regional collection list changed'
+    assert all(name in registered and any(name == area or name.startswith(area + '/') for area in required)
+               for name in collections), 'Released historical collection is unregistered or outside the six handoffs'
+    actual = []
+    aggregate_only = []
+    seen_ids = set()
+    for collection in collections:
+        manifest = read(research / collection / 'sources.json')
+        for aggregate, source in ([(False, entry) for entry in manifest.get('sources', [])]
+                                  + [(True, entry) for entry in manifest.get('aggregateOnlySources', [])]):
+            if aggregate:
+                if source.get('status') != 'verified-aggregate-only':
+                    continue
+            elif not source.get('file') or source.get('status', 'verified') not in {'verified', 'accepted', 'imported'}:
+                continue
+            identifier = source['id']
+            assert identifier not in seen_ids, f'Duplicate historical source ID: {identifier}'
+            seen_ids.add(identifier)
+            slug = source['employerSlug']
+            assert slug in before and before[slug]['status'] == 'current', identifier
+            assert source['year'].isdigit() and source['periodType'] == 'calendar', identifier
+            assert source['periodStart'] == source['year'] + '-01-01' and source['periodEnd'] == source['year'] + '-12-31', identifier
+            published = index['sources'][identifier]
+            for key in ['id', 'year', 'periodType', 'periodStart', 'periodEnd', 'sha256', 'threshold', 'thresholdComparison']:
+                assert published.get(key) == source.get(key), f'{identifier}: published {key} differs'
+            assert published['url'] == source['sourceUrl'], identifier
+            assert published.get('sourceKind') in {'official', 'official-pdf', 'official-open-data'}, identifier
+            assert published.get('publicWarning') == source.get('publicWarning'), f'{identifier}: published warning differs'
+            assert published.get('notes', []) == source.get('notes', []), f'{identifier}: published notes differ'
+            assert published.get('validation') == source.get('validation'), f'{identifier}: published validation differs'
+            if aggregate:
+                assert source['rowCount'] == 0 and published['scope'] == 'aggregate-only', identifier
+                if source.get('provenanceFile'):
+                    evidence = (research / collection / source['provenanceFile']).read_bytes()
+                    assert hashlib.sha256(evidence).hexdigest() == source['provenanceSha256'], identifier
+                aggregate_only.append(dict(collection=collection, sourceId=identifier, employerSlug=slug,
+                                           year=source['year'], sourceUrl=source['sourceUrl'], sourceSha256=source['sha256'], rows=0))
+                continue
+            raw = (research / collection / source['file']).read_bytes()
+            assert hashlib.sha256(raw).hexdigest() == source['dataSha256'], f'{identifier}: normalized hash differs'
+            payload = json.loads(gzip.decompress(raw))
+            rows = payload if isinstance(payload, list) else payload['rows']
+            assert len(rows) == source['rowCount'], identifier
+            assert published['dataSha256'] == source['dataSha256'] and published['scope'] == source['category'], identifier
+            if 'completeEmployeeSchedule' in source:
+                assert published.get('completeEmployeeSchedule') == source['completeEmployeeSchedule'], identifier
+            if source.get('completeEmployeeSchedule') is False:
+                assert source['validation'].get('completeEmployeeSchedule') is False, identifier
+            anonymous = sum(row[1] is None for row in rows)
+            if anonymous:
+                assert source.get('nameDisclosure') == 'not-published', identifier
+            actual.append(dict(collection=collection, sourceId=identifier, employerSlug=slug, year=source['year'],
+                               category=source['category'], rows=len(rows), unnamedRows=anonymous,
+                               sourceUrl=source['sourceUrl'], sourceSha256=source['sha256'], dataSha256=source['dataSha256'],
+                               publicWarning=source.get('publicWarning')))
+    assert actual == release['imports'], 'Historical release inputs changed; review the original release explicitly'
+    assert aggregate_only == release['aggregateOnlySources'], 'Historical aggregate-only inputs changed'
+    assert release['baseline'] == baseline['overall'] and release['baselineCommit'] == baseline['repositoryCommit'], 'Historical baseline changed'
+    assert release['municipalCoverageBefore'] == baseline['municipalSummary'], 'Historical municipal baseline changed'
+    for totals in [release['baseline'], release['proposed']]:
+        assert totals['records'] == totals['officialRecords'] + totals['compiledRecords'], 'Historical total does not reconcile'
+    added = sum(source['rows'] for source in actual)
+    assert added == release['officialRowsAdded']
+    assert release['proposed']['officialRecords'] - release['baseline']['officialRecords'] == added
+    assert release['baseline']['compiledRecords'] - release['proposed']['compiledRecords'] == release['compiledRowsReplaced']
+    assert release['proposed']['records'] - release['baseline']['records'] == added - release['compiledRowsReplaced'] == release['netRowsAdded']
+    assert release['proposed']['acceptedSourceFiles'] - release['baseline']['acceptedSourceFiles'] == len(actual)
+    assert sum(source['rows'] for source in actual if source['category'] == 'employee-remuneration') == release['employeeRowsAdded']
+    assert sum(source['rows'] for source in actual if source['category'] == 'elected-officials') == release['councilRowsAdded']
+    assert sum(source['unnamedRows'] for source in actual) == release['unnamedRowsAdded']
+    assert len({source['sourceSha256'] for source in actual + aggregate_only}) == release['originalReports']
+    assert len({(source['employerSlug'], source['year']) for source in actual + aggregate_only}) == release['municipalityYears']
+    assert set(release['taskInputSha256']) == set(AREAS), 'Historical queue input list changed'
+    tasks = []
+    for area in AREAS:
+        path = out / area / 'work-queue.json'
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == release['taskInputSha256'][area], f'{area}: historical queue input changed'
+        for task in read(path):
+            assert all(key in task for key in FIELDS), (area, task.get('id'))
+            assert task['route'] in ROUTES and isinstance(task['reportingPeriods'], list), task['id']
+            tasks.append({**{key: task[key] for key in FIELDS}, 'area': area, 'requestStatus': 'not-sent'})
+    assert len({task['id'] for task in tasks}) == len(tasks), 'Historical queue IDs must be unique'
+    tasks.sort(key=lambda task: (task['employerName'], task['route'], task['id']))
+    requests = [task for task in tasks if task['route'] in {'ordinary-records-request', 'clarification-request', 'foi-fallback'}]
+    assert tasks == read(out / 'work-queue.json')['tasks'], 'Historical combined queue differs from its handoffs'
+    assert requests == read(out / 'acquisition-list.json')['candidates'], 'Historical acquisition list differs from its handoffs'
+    assert len(tasks) == release['tasks'] and len(requests) == release['requestCandidates']
+    assert dict(Counter(task['route'] for task in tasks)) == release['taskCountsByRoute']
+    return dict(historicalRelease='municipal-history-pass', records=release['proposed']['records'],
+                sourceInputsVerified=len(actual), aggregateOnlySourcesVerified=len(aggregate_only),
+                officialRowsAdded=added, queueInputsVerified=len(AREAS))
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--frozen', action='store_true', help='Verify the historical release without rewriting it or counting later imports')
+    args = parser.parse_args(argv)
+    if args.frozen:
+        print(json.dumps(validate_frozen_release()))
         return
     baseline = read(OUT / 'baseline.json')
     before = {row['employerSlug']: row for row in baseline['municipalities']}

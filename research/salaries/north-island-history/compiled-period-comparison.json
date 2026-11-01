@@ -1,0 +1,130 @@
+{
+  "baselineFile": "research/salaries/compiled-baseline.json.gzip",
+  "baselineSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+  "employerSlug": "north-island-college",
+  "compiledLabel": "2023/24",
+  "officialPeriod": "2023/24",
+  "compiledRows": 181,
+  "officialRows": 181,
+  "exactNormalizedNamePayExpenseMatches": 179,
+  "paymentMultisetMatches": true,
+  "unmatchedCompiledNameRows": [
+    {
+      "compiledName": "Lawrence, Jeffrey Instructor",
+      "compiledPosition": "Humanities",
+      "remuneration": 113873,
+      "compiledExpenses": 0,
+      "samePaymentSourceCandidates": [
+        {
+          "name": "Carrel, Alix",
+          "position": "Instructor, Humanities",
+          "expenses": null,
+          "pdfPage": 9
+        },
+        {
+          "name": "George, Darren",
+          "position": "Inst, Math/Sciences",
+          "expenses": null,
+          "pdfPage": 10
+        },
+        {
+          "name": "Hinman-Smith, Daniel",
+          "position": "Instructor, Humanities",
+          "expenses": null,
+          "pdfPage": 10
+        },
+        {
+          "name": "Lawrence, Jeffrey",
+          "position": "Instructor, Humanities",
+          "expenses": null,
+          "pdfPage": 11
+        },
+        {
+          "name": "Lowey Mackenzie, Kerri",
+          "position": "Inst, Human Services",
+          "expenses": null,
+          "pdfPage": 11
+        },
+        {
+          "name": "McKay, Elizabeth",
+          "position": "Inst, Nursing",
+          "expenses": null,
+          "pdfPage": 11
+        },
+        {
+          "name": "Parkinson, William",
+          "position": "Inst, Bus Admin",
+          "expenses": null,
+          "pdfPage": 11
+        },
+        {
+          "name": "Willers, Michael",
+          "position": "Inst, Math/Sciences",
+          "expenses": null,
+          "pdfPage": 13
+        }
+      ]
+    },
+    {
+      "compiledName": "Lowey Mackenzie, Kerri Inst",
+      "compiledPosition": "Human Services",
+      "remuneration": 113873,
+      "compiledExpenses": 0,
+      "samePaymentSourceCandidates": [
+        {
+          "name": "Carrel, Alix",
+          "position": "Instructor, Humanities",
+          "expenses": null,
+          "pdfPage": 9
+        },
+        {
+          "name": "George, Darren",
+          "position": "Inst, Math/Sciences",
+          "expenses": null,
+          "pdfPage": 10
+        },
+        {
+          "name": "Hinman-Smith, Daniel",
+          "position": "Instructor, Humanities",
+          "expenses": null,
+          "pdfPage": 10
+        },
+        {
+          "name": "Lawrence, Jeffrey",
+          "position": "Instructor, Humanities",
+          "expenses": null,
+          "pdfPage": 11
+        },
+        {
+          "name": "Lowey Mackenzie, Kerri",
+          "position": "Inst, Human Services",
+          "expenses": null,
+          "pdfPage": 11
+        },
+        {
+          "name": "McKay, Elizabeth",
+          "position": "Inst, Nursing",
+          "expenses": null,
+          "pdfPage": 11
+        },
+        {
+          "name": "Parkinson, William",
+          "position": "Inst, Bus Admin",
+          "expenses": null,
+          "pdfPage": 11
+        },
+        {
+          "name": "Willers, Michael",
+          "position": "Inst, Math/Sciences",
+          "expenses": null,
+          "pdfPage": 13
+        }
+      ]
+    }
+  ],
+  "decision": "Replace the complete same-period compiled employee partition with the complete verified official schedule under the existing builder rules. No cross-period or approximate person matching is used.",
+  "comparisonLimitations": [
+    "Payment-only equality does not establish person identity. Names/title boundaries are taken from the official source.",
+    "Compiled zero versus official dash is equated only for this overlap comparison; official expenses remain null where disclosed as a dash."
+  ]
+}

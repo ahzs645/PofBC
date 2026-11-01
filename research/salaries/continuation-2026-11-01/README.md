@@ -1,5 +1,7 @@
 # Salary source continuation — 1 November 2026
 
+This is the historical PR #34 release as merged. Its source inputs and arithmetic are verified with `npm run review:salary-continuation` without rewriting the released totals when later records are added. See the [current coverage comparison](../sunshine-lists/comparison.md) for the latest dataset and the [NIC integration](../north-island-history/README.md) for the subsequent additions.
+
 This pass accepts **94,819 official observations** from **184 original reports**, covering **184 employer-years**. After **10,830 reviewed compiled replacements**, the dataset grows from **926,228 to 1,010,217** (**83,989 net records**).
 
 ## Collections

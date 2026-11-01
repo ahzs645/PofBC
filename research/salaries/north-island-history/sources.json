@@ -1,0 +1,574 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "north-island-college-sofi-2018-19-employees",
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "sector": "Colleges",
+      "year": "2018/19",
+      "slug": "2018-19",
+      "file": "2018-19.json.gzip",
+      "title": "North Island College Statement of Financial Information 2018/19: employee remuneration and expenses",
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2018-19.pdf",
+      "sourceIndexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+      "sourceKind": "official-pdf",
+      "periodType": "fiscal",
+      "sha256": "8042d90554896de2c310d93bde9f4247757f092213b6038398e1a365257711b0",
+      "dataSha256": "e1dde4a039eb9e156d4c03416212711d3df5f2c4254c87288ca8bd8b83fd8817",
+      "normalizedSha256": "5ca97698738ec67f2113a729554f8a1b55583724a6ab8533087887733b76b9f3",
+      "periodStart": "2018-04-01",
+      "periodEnd": "2019-03-31",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Complete named employee schedule above $75,000; board, supplier and aggregate schedules excluded.",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 133,
+      "totalRemuneration": 12415381,
+      "totalExpenses": 578000,
+      "totalDisclosedExpenses": 578000,
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "internalFiscalYearEnd": 2019,
+        "rowCountsByPdfPage": {
+          "7": 18,
+          "8": 37,
+          "9": 36,
+          "10": 34,
+          "11": 8
+        },
+        "physicalPdfPages": [
+          7,
+          11
+        ],
+        "namedRemunerationSum": 12415381,
+        "namedExpensesSum": 578000,
+        "publishedNamedRemuneration": 12415391,
+        "publishedNamedExpenses": 577995,
+        "remunerationResidual": -10,
+        "expensesResidual": 5,
+        "summaryTotalReconciled": false,
+        "residualCause": null,
+        "printedSubtotalsReconcileToGrandTotal": true,
+        "expenseDashesRetainedAsMissing": 14,
+        "explicitZeroExpenseRows": 0,
+        "layoutCorrections": [],
+        "unparsedEmployeeLines": 0,
+        "allNamesTitlesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "Poppler pdftotext -layout rows compared with every PyMuPDF positioned name/title/remuneration/expense cell and the named subtotal. Three touching-column boundaries were separately rendered and reviewed.",
+        "approvalPdfPages": [
+          2
+        ],
+        "signedApprovalDate": "2019-09-27",
+        "approvalVisuallyVerified": true,
+        "visualReviewPdfPages": [
+          2,
+          3,
+          7,
+          11
+        ],
+        "visualReview": "Rendered approval, first/final employee pages and the three touching-column cases reviewed. All employee cells checked independently by two PDF engines."
+      },
+      "excludedAggregates": {
+        "boardRemuneration": 20355,
+        "boardExpenses": 18576,
+        "belowThresholdRemuneration": 14923244,
+        "belowThresholdExpenses": 436452,
+        "grandTotalRemuneration": 27358990,
+        "grandTotalExpenses": 1033023
+      },
+      "notes": [
+        "Only the complete section B named-employee schedule is imported. Board, suppliers and below-threshold aggregates do not become employee observations.",
+        "Published dash expense cells remain missing, distinct from explicit numeric zero. Full names and any disclosed job titles are observations, not verified cross-year identities.",
+        "Fiscal dates come from the actual employee schedule. The public website incorrectly sends its 2020/21 link to the 2019/20 scan; this collection does not reimport the separately accepted 2020/21 source.",
+        "The 2024/25 employee section does not publish job titles; titles from earlier years or board rows are not substituted.",
+        "The published 133 employee rows total $12,415,381 remuneration and $578,000 expenses: $10 below and $5 above the printed named subtotals, respectively. Both PDF readers agree on every displayed cell. The cause is unconfirmed; no amount has been adjusted to force agreement."
+      ],
+      "publicWarning": "The published 133 employee rows total $12,415,381 remuneration and $578,000 expenses: $10 below and $5 above the printed named subtotals, respectively. Both PDF readers agree on every displayed cell. The cause is unconfirmed; no amount has been adjusted to force agreement."
+    },
+    {
+      "id": "north-island-college-sofi-2021-22-employees",
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "sector": "Colleges",
+      "year": "2021/22",
+      "slug": "2021-22",
+      "file": "2021-22.json.gzip",
+      "title": "North Island College Statement of Financial Information 2021/22: employee remuneration and expenses",
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2021-22.pdf",
+      "sourceIndexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+      "sourceKind": "official-pdf",
+      "periodType": "fiscal",
+      "sha256": "90fedb56a99c010064a67db18370578ecd6e33326bac04998b2d5458a3740afd",
+      "dataSha256": "0e7a691747aac5470755246b2268c9d3df012bd7008a68197db9d8f2a1fbb57a",
+      "normalizedSha256": "7373e3070f1f4c53d3b2d0a0124a72f8f6bbad1792839e1e57d573b1a3850a2e",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Complete named employee schedule above $75,000; board, supplier and aggregate schedules excluded.",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 138,
+      "totalRemuneration": 13907610,
+      "totalExpenses": 154386,
+      "totalDisclosedExpenses": 154386,
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "internalFiscalYearEnd": 2022,
+        "rowCountsByPdfPage": {
+          "7": 19,
+          "8": 38,
+          "9": 38,
+          "10": 38,
+          "11": 5
+        },
+        "physicalPdfPages": [
+          7,
+          11
+        ],
+        "namedRemunerationSum": 13907610,
+        "namedExpensesSum": 154386,
+        "publishedNamedRemuneration": 13907610,
+        "publishedNamedExpenses": 154386,
+        "remunerationResidual": 0,
+        "expensesResidual": 0,
+        "summaryTotalReconciled": true,
+        "residualCause": null,
+        "printedSubtotalsReconcileToGrandTotal": true,
+        "expenseDashesRetainedAsMissing": 65,
+        "explicitZeroExpenseRows": 0,
+        "layoutCorrections": [
+          {
+            "pdfPage": 10,
+            "name": "Paquet-Combe, Marie-France",
+            "position": "Inst, Health Care Assistant",
+            "reason": "Rendered source shows the adjacent name/title columns touching. Only the column boundary is restored; no source letters or amounts changed."
+          }
+        ],
+        "unparsedEmployeeLines": 0,
+        "allNamesTitlesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "Poppler pdftotext -layout rows compared with every PyMuPDF positioned name/title/remuneration/expense cell and the named subtotal. Three touching-column boundaries were separately rendered and reviewed.",
+        "approvalPdfPages": [
+          3
+        ],
+        "signedApprovalDate": "2022-10-06",
+        "approvalVisuallyVerified": true,
+        "visualReviewPdfPages": [
+          3,
+          7,
+          10,
+          11
+        ],
+        "visualReview": "Rendered approval, first/final employee pages and the three touching-column cases reviewed. All employee cells checked independently by two PDF engines."
+      },
+      "excludedAggregates": {
+        "boardRemuneration": 16748,
+        "boardExpenses": 5655,
+        "belowThresholdRemuneration": 15358062,
+        "belowThresholdExpenses": 370499,
+        "grandTotalRemuneration": 29282420,
+        "grandTotalExpenses": 530540
+      },
+      "notes": [
+        "Only the complete section B named-employee schedule is imported. Board, suppliers and below-threshold aggregates do not become employee observations.",
+        "Published dash expense cells remain missing, distinct from explicit numeric zero. Full names and any disclosed job titles are observations, not verified cross-year identities.",
+        "Fiscal dates come from the actual employee schedule. The public website incorrectly sends its 2020/21 link to the 2019/20 scan; this collection does not reimport the separately accepted 2020/21 source.",
+        "The 2024/25 employee section does not publish job titles; titles from earlier years or board rows are not substituted."
+      ]
+    },
+    {
+      "id": "north-island-college-sofi-2022-23-employees",
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "sector": "Colleges",
+      "year": "2022/23",
+      "slug": "2022-23",
+      "file": "2022-23.json.gzip",
+      "title": "North Island College Statement of Financial Information 2022/23: employee remuneration and expenses",
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2022-23.pdf",
+      "sourceIndexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+      "sourceKind": "official-pdf",
+      "periodType": "fiscal",
+      "sha256": "08b65aa51ae42b99125ffcbd5d59d27331ab775d989795051032197ea12bbcff",
+      "dataSha256": "85e6976d41e13aed708ca31d574539987890b03eeca40cf0b3a81db6a375f764",
+      "normalizedSha256": "af56920c7000493e2ea7a54a086a82c4ca7da9c7a05d6263b32b85d5c610ff79",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Complete named employee schedule above $75,000; board, supplier and aggregate schedules excluded.",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 156,
+      "totalRemuneration": 16201622,
+      "totalExpenses": 567333,
+      "totalDisclosedExpenses": 567333,
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "internalFiscalYearEnd": 2023,
+        "rowCountsByPdfPage": {
+          "7": 20,
+          "8": 39,
+          "9": 38,
+          "10": 39,
+          "11": 20
+        },
+        "physicalPdfPages": [
+          7,
+          11
+        ],
+        "namedRemunerationSum": 16201622,
+        "namedExpensesSum": 567333,
+        "publishedNamedRemuneration": 16201622,
+        "publishedNamedExpenses": 567333,
+        "remunerationResidual": 0,
+        "expensesResidual": 0,
+        "summaryTotalReconciled": true,
+        "residualCause": null,
+        "printedSubtotalsReconcileToGrandTotal": true,
+        "expenseDashesRetainedAsMissing": 36,
+        "explicitZeroExpenseRows": 0,
+        "layoutCorrections": [
+          {
+            "pdfPage": 10,
+            "name": "Paquet-Combe, Marie-France",
+            "position": "Inst, Health Care Assistant",
+            "reason": "Rendered source shows the adjacent name/title columns touching. Only the column boundary is restored; no source letters or amounts changed."
+          }
+        ],
+        "unparsedEmployeeLines": 0,
+        "allNamesTitlesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "Poppler pdftotext -layout rows compared with every PyMuPDF positioned name/title/remuneration/expense cell and the named subtotal. Three touching-column boundaries were separately rendered and reviewed.",
+        "approvalPdfPages": [
+          3
+        ],
+        "signedApprovalDate": "2023-09-28",
+        "approvalVisuallyVerified": true,
+        "visualReviewPdfPages": [
+          3,
+          7,
+          10,
+          11
+        ],
+        "visualReview": "Rendered approval, first/final employee pages and the three touching-column cases reviewed. All employee cells checked independently by two PDF engines."
+      },
+      "excludedAggregates": {
+        "boardRemuneration": 24625,
+        "boardExpenses": 10414,
+        "belowThresholdRemuneration": 16331780,
+        "belowThresholdExpenses": 376056,
+        "grandTotalRemuneration": 32558027,
+        "grandTotalExpenses": 953803
+      },
+      "notes": [
+        "Only the complete section B named-employee schedule is imported. Board, suppliers and below-threshold aggregates do not become employee observations.",
+        "Published dash expense cells remain missing, distinct from explicit numeric zero. Full names and any disclosed job titles are observations, not verified cross-year identities.",
+        "Fiscal dates come from the actual employee schedule. The public website incorrectly sends its 2020/21 link to the 2019/20 scan; this collection does not reimport the separately accepted 2020/21 source.",
+        "The 2024/25 employee section does not publish job titles; titles from earlier years or board rows are not substituted."
+      ]
+    },
+    {
+      "id": "north-island-college-sofi-2023-24-employees",
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "sector": "Colleges",
+      "year": "2023/24",
+      "slug": "2023-24",
+      "file": "2023-24.json.gzip",
+      "title": "North Island College Statement of Financial Information 2023/24: employee remuneration and expenses",
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2023-24.pdf",
+      "sourceIndexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+      "sourceKind": "official-pdf",
+      "periodType": "fiscal",
+      "sha256": "598caa417c3963e40a48af17d05ab860c02ae75cc901727ad092fa5ca98e762a",
+      "dataSha256": "712d83d053861abcf979430521acb916e2b10844750b61e599ce7849d33c4324",
+      "normalizedSha256": "a5144811150ca0c33a3e5c2bb5dacc17ee7ba0387aa3067b27996b9d7f39e5b5",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Complete named employee schedule above $75,000; board, supplier and aggregate schedules excluded.",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 181,
+      "totalRemuneration": 20146497,
+      "totalExpenses": 760596,
+      "totalDisclosedExpenses": 760596,
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "internalFiscalYearEnd": 2024,
+        "rowCountsByPdfPage": {
+          "8": 18,
+          "9": 37,
+          "10": 36,
+          "11": 37,
+          "12": 37,
+          "13": 16
+        },
+        "physicalPdfPages": [
+          8,
+          13
+        ],
+        "namedRemunerationSum": 20146497,
+        "namedExpensesSum": 760596,
+        "publishedNamedRemuneration": 20146497,
+        "publishedNamedExpenses": 760596,
+        "remunerationResidual": 0,
+        "expensesResidual": 0,
+        "summaryTotalReconciled": true,
+        "residualCause": null,
+        "printedSubtotalsReconcileToGrandTotal": true,
+        "expenseDashesRetainedAsMissing": 44,
+        "explicitZeroExpenseRows": 0,
+        "layoutCorrections": [
+          {
+            "pdfPage": 11,
+            "name": "Paquet-Combe, Marie-France",
+            "position": "Inst, Health Care Assistant",
+            "reason": "Rendered source shows the adjacent name/title columns touching. Only the column boundary is restored; no source letters or amounts changed."
+          }
+        ],
+        "unparsedEmployeeLines": 0,
+        "allNamesTitlesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "Poppler pdftotext -layout rows compared with every PyMuPDF positioned name/title/remuneration/expense cell and the named subtotal. Three touching-column boundaries were separately rendered and reviewed.",
+        "approvalPdfPages": [
+          3
+        ],
+        "signedApprovalDate": "2024-10-03",
+        "approvalVisuallyVerified": true,
+        "visualReviewPdfPages": [
+          3,
+          8,
+          11,
+          13
+        ],
+        "visualReview": "Rendered approval, first/final employee pages and the three touching-column cases reviewed. All employee cells checked independently by two PDF engines."
+      },
+      "excludedAggregates": {
+        "boardRemuneration": 21691,
+        "boardExpenses": 30135,
+        "belowThresholdRemuneration": 16696027,
+        "belowThresholdExpenses": 607319,
+        "grandTotalRemuneration": 36864215,
+        "grandTotalExpenses": 1398050
+      },
+      "notes": [
+        "Only the complete section B named-employee schedule is imported. Board, suppliers and below-threshold aggregates do not become employee observations.",
+        "Published dash expense cells remain missing, distinct from explicit numeric zero. Full names and any disclosed job titles are observations, not verified cross-year identities.",
+        "Fiscal dates come from the actual employee schedule. The public website incorrectly sends its 2020/21 link to the 2019/20 scan; this collection does not reimport the separately accepted 2020/21 source.",
+        "The 2024/25 employee section does not publish job titles; titles from earlier years or board rows are not substituted."
+      ]
+    }
+  ],
+  "verificationOnlySources": [
+    {
+      "id": "north-island-college-sofi-2024-25-employees",
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "sector": "Colleges",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "file": "2024-25.json.gzip",
+      "title": "North Island College Statement of Financial Information 2024/25: employee remuneration and expenses",
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2024-25.pdf",
+      "sourceIndexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+      "sourceKind": "official-pdf",
+      "periodType": "fiscal",
+      "sha256": "13ba3ce3742b8487ffedb14a945f340eaf09f27d9f94bbe084d9162546445b8e",
+      "dataSha256": "0a379cf616879e1003f3773216717e9c973a6d905f444e8397e32649b39714ca",
+      "normalizedSha256": "08f48e7654c16c0b6971f1b8f9fdcfa9a3ebe2234e0a261512d0a2b3358962d8",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Complete named employee schedule above $75,000; board, supplier and aggregate schedules excluded.",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "rowCount": 200,
+      "totalRemuneration": 22139569,
+      "totalExpenses": 923737,
+      "totalDisclosedExpenses": 923737,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "internalFiscalYearEnd": 2025,
+        "rowCountsByPdfPage": {
+          "6": 22,
+          "7": 40,
+          "8": 40,
+          "9": 40,
+          "10": 40,
+          "11": 18
+        },
+        "physicalPdfPages": [
+          6,
+          11
+        ],
+        "namedRemunerationSum": 22139569,
+        "namedExpensesSum": 923737,
+        "publishedNamedRemuneration": 22139569,
+        "publishedNamedExpenses": 923737,
+        "remunerationResidual": 0,
+        "expensesResidual": 0,
+        "summaryTotalReconciled": true,
+        "residualCause": null,
+        "printedSubtotalsReconcileToGrandTotal": true,
+        "expenseDashesRetainedAsMissing": 31,
+        "explicitZeroExpenseRows": 0,
+        "layoutCorrections": [],
+        "unparsedEmployeeLines": 0,
+        "allNamesTitlesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "Poppler pdftotext -layout rows compared with every PyMuPDF positioned name/title/remuneration/expense cell and the named subtotal. Three touching-column boundaries were separately rendered and reviewed.",
+        "approvalPdfPages": [
+          3
+        ],
+        "signedApprovalDate": "2025-10-02",
+        "approvalVisuallyVerified": true,
+        "visualReviewPdfPages": [
+          3,
+          6,
+          11
+        ],
+        "visualReview": "Rendered approval, first/final employee pages and the three touching-column cases reviewed. All employee cells checked independently by two PDF engines."
+      },
+      "excludedAggregates": {
+        "boardRemuneration": 22500,
+        "boardExpenses": 13072,
+        "belowThresholdRemuneration": 16716932,
+        "belowThresholdExpenses": 607319,
+        "grandTotalRemuneration": 38879001,
+        "grandTotalExpenses": 1544128
+      },
+      "notes": [
+        "Only the complete section B named-employee schedule is imported. Board, suppliers and below-threshold aggregates do not become employee observations.",
+        "Published dash expense cells remain missing, distinct from explicit numeric zero. Full names and any disclosed job titles are observations, not verified cross-year identities.",
+        "Fiscal dates come from the actual employee schedule. The public website incorrectly sends its 2020/21 link to the 2019/20 scan; this collection does not reimport the separately accepted 2020/21 source.",
+        "The 2024/25 employee section does not publish job titles; titles from earlier years or board rows are not substituted."
+      ],
+      "publication": "verification-only-already-published",
+      "publishedCollection": "continuation-education/supplemental",
+      "publishedSourceId": "north-island-sofi-2024-25-employees",
+      "publishedDataSha256": "0a379cf616879e1003f3773216717e9c973a6d905f444e8397e32649b39714ca"
+    }
+  ],
+  "unparsedSources": [
+    {
+      "id": "north-island-college-sofi-2019-20-ocr-lead",
+      "employerSlug": "north-island-college",
+      "employerName": "North Island College",
+      "year": "2019/20",
+      "title": "North Island College Statement of Financial Information, year ended March 31, 2020: scanned original awaiting extraction",
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2019-20.pdf",
+      "sourceIndexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+      "indexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+      "status": "requires-ocr",
+      "scope": "employee-remuneration",
+      "sha256": "43fd43a1d642fd6ad49efa92b8428d8663a4a410eec74d2d615b30fecb7e661d",
+      "physicalPdfPageCount": 9,
+      "checkedOn": "2026-10-31",
+      "reason": "The retrieved original has no native text. Its rendered cover confirms year ended March 31, 2020, but no employee rows or controls have been accepted.",
+      "nextAction": "OCR the complete original, verify the employee-section period/scope and every row against rendered pages, then reconcile printed controls before accepting any observations.",
+      "notes": [
+        "The official archive's 2019-20 and 2020-21 labels both target https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2019-20.pdf. The rendered cover confirms this target is FY2019/20; do not reclassify it as FY2020/21 from the second link label.",
+        "The genuine FY2020/21 report is independently accepted in the separate north-island collection. This unparsed lead contributes zero salary observations.",
+        "Cover-period verification is not complete employee-schedule, row or subtotal verification."
+      ],
+      "discoveryEvidence": {
+        "indexUrl": "https://www.nic.bc.ca/about/leadership-and-governance/institutional-reporting.html",
+        "indexLabels": [
+          "2019-20 Statement of Financial Information",
+          "2020-21 Statement of Financial Information"
+        ],
+        "observedTargetUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2019-20.pdf",
+        "renderedCoverPhysicalPage": 1,
+        "renderedCoverFiscalYearEnd": "2020-03-31",
+        "employeeScheduleAccepted": false
+      }
+    }
+  ],
+  "coverageNotes": [
+    "Five complete official employee cohorts (808 observations) independently verified. Four cohorts add 608 official observations; FY2023/24 replaces 181 compiled rows for 427 net additions. The 200 FY2024/25 observations are already published by PR #34 and remain verification-only here, with exact source and row-multiset agreement.",
+    "FY2019/20 remains a scanned-source/OCR gap. FY2020/21 is already accepted in the separate north-island collection. This is not a claim of complete college history."
+  ]
+}

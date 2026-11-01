@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Reconcile the November source continuation, its scopes and remaining acquisition work."""
+import argparse
 import csv
 import gzip
 import hashlib
@@ -8,6 +9,7 @@ from collections import Counter, defaultdict
 from datetime import date
 from decimal import Decimal
 from pathlib import Path
+from salary_release_audit import verify_frozen_release
 
 ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT / 'research/salaries'
@@ -46,7 +48,81 @@ def compiled_fingerprint(rows):
     return digest('\n'.join(sorted(keys, key=lambda key: key.encode('utf-8'))).encode('utf-8'))
 
 
-def main():
+def validate_frozen_release(root=ROOT):
+    """Keep PR #34's reviewed release fixed while unrelated sources grow."""
+    research = Path(root) / 'research/salaries'
+    folder = research / 'continuation-2026-11-01'
+    result = verify_frozen_release(folder, research)
+    release = read(folder / 'release.json')
+    index = read(Path(root) / 'public/salaries/employers/index.json')
+    registered = read(research / 'collections.json')['collections']
+    assert all('continuation-' + area in registered for area in AREAS)
+    released = {entry['sourceId']: entry for entry in release['imports']}
+    for collection in {entry['collection'] for entry in release['imports']}:
+        assert collection in registered, collection
+        for source in read(research / collection / 'sources.json')['sources']:
+            if not source.get('file') or source.get('status', 'verified') not in ACCEPTED:
+                continue
+            expected = released[source['id']]
+            assert source['periodStart'] == expected['periodStart'] and source['periodEnd'] == expected['periodEnd'], source['id']
+            assert bool(source.get('retainCompiledPartition')) == expected['retainCompiledPartition'], source['id']
+            published = index['sources'][source['id']]
+            for key in ['year', 'periodStart', 'periodEnd', 'sha256', 'dataSha256', 'notes', 'validation',
+                        'publicWarning', 'completeEmployeeSchedule', 'retainCompiledPartition']:
+                assert published.get(key) == source.get(key), (source['id'], key)
+            assert published['scope'] == (source.get('category') or source['scope']), source['id']
+            assert published['url'] == source['sourceUrl'], source['id']
+            if source.get('retainCompiledPartition'):
+                assert source['publicWarning'] and source['validation']['compiledPartitionRetained'] is True
+                assert source['validation']['compiledPartitionRetentionReason']
+                if source.get('completeEmployeeSchedule') is False or source['validation'].get('completeEmployeeSchedule') is False:
+                    assert source.get('completeEmployeeSchedule') is False and source['validation'].get('completeEmployeeSchedule') is False
+            for file_key, hash_key in [('provenanceFile', 'provenanceSha256'), ('evidenceFile', 'evidenceSha256')]:
+                if source.get(file_key):
+                    assert digest((research / collection / source[file_key]).read_bytes()) == source[hash_key], source['id']
+    for expected in release.get('aggregateOnlySources', []):
+        manifest = read(research / expected['collection'] / 'sources.json')
+        source = next(s for s in manifest['aggregateOnlySources'] if s['id'] == expected['sourceId'])
+        assert source['status'] == 'verified-aggregate-only' and source['rowCount'] == 0
+        assert source['sha256'] == expected['sourceSha256'] and index['sources'][source['id']]['scope'] == 'aggregate-only'
+    review = read(folder / 'replacement-review.json')
+    snapshot_manifest = read(research / 'baseline-manifest.json')
+    raw = (research / snapshot_manifest['file']).read_bytes()
+    assert digest(raw) == snapshot_manifest['sha256'], 'Compiled snapshot changed'
+    snapshot = json.loads(gzip.decompress(raw))
+    original = defaultdict(list)
+    for employer in snapshot['employers']:
+        slug = index['aliases'].get(employer['slug'], employer['slug'])
+        for row in employer['rows']:
+            original[(slug, snapshot['years'][row[4]])].append(row)
+    partition_counts = Counter()
+    for slug in {entry['employerSlug'] for entry in review['decisions'] + review['retainedPartitions']}:
+        rows = json.loads(gzip.decompress((Path(root) / 'public/salaries/employers' / (slug + '.json.gzip')).read_bytes()))
+        partition_counts.update((slug, index['years'][row[4]]) for row in rows if compiled(index['sources'][row[5]]))
+    assert sum(entry['replacedRows'] for entry in review['decisions']) == release['compiledRowsReplaced']
+    for decision in review['decisions']:
+        key = (decision['employerSlug'], decision['year'])
+        assert decision['status'] == 'reviewed' and decision['reason']
+        assert decision['baselineCommit'] == release['baselineCommit'] == review['baselineCommit']
+        assert len(original[key]) == decision['compiledRowsBefore']
+        assert compiled_fingerprint(original[key]) == decision['compiledRowsSha256'], key
+        assert partition_counts[key] == decision['compiledRowsAfter'], key
+        for identifier in decision['sourceIds']:
+            assert index['sources'][identifier]['sha256'] == decision['sourceSha256'][identifier]
+            assert index['sources'][identifier]['dataSha256'] == decision['sourceDataSha256'][identifier]
+    for retained in review['retainedPartitions']:
+        key = (retained['employerSlug'], retained['year'])
+        assert partition_counts[key] == retained['compiledRows'], key
+    return result
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--frozen', action='store_true', help='Validate the published release without adding unrelated later imports')
+    args = parser.parse_args(argv)
+    if args.frozen:
+        print(json.dumps(validate_frozen_release()))
+        return
     baseline = read(OUT / 'baseline.json')
     index = read(ROOT / 'public/salaries/employers/index.json')
     audit = read(ROOT / 'public/salaries/coverage.json')

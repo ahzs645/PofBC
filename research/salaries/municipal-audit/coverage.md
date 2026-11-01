@@ -4,7 +4,7 @@ Coverage verified through **2026-11-01**; legal roster as of **2026-10-31**. Gen
 
 The roster covers **161 current jurisdictions** and **1 pending incorporation**. Every entry was checked for public official-site source links. Accepted official salary coverage grew from **2 to 110 municipalities**. **51 current jurisdictions still lack accepted official records**; finding a link is not a completed import.
 
-This pass adds **59,601 official observations** from **546 employee/council cohorts** covering **336 municipality-years**. It replaces **1,028 proved duplicate compiled observations**, for a net increase of **177,353 records** across the entire salary dataset.
+This pass adds **59,601 official observations** from **546 employee/council cohorts** covering **336 municipality-years**. It replaces **1,028 proved duplicate compiled observations**, for a net increase of **177,780 records** across the entire salary dataset.
 
 ## Added collections
 

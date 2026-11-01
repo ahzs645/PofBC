@@ -8,11 +8,11 @@ Generated from accepted source manifests and the source backlog by `npm run buil
 | employee-schedule-not-yet-located | 1 |
 | held-for-review | 98 |
 | held-unparsed | 26 |
-| imported | 982 |
+| imported | 986 |
 | official-archive-found-awaiting-document-selection | 1 |
 | official-archive-found-awaiting-extraction | 1 |
 | official-source-indexed-awaiting-validation | 3 |
-| requires-ocr | 24 |
+| requires-ocr | 25 |
 | scope-review-required | 4 |
 | source-found-awaiting-extraction | 64 |
 
@@ -783,7 +783,12 @@ Generated from accepted source manifests and the source backlog by `npm run buil
 | Metro Vancouver | 2023 | imported | 1,634 | [Metro Vancouver 2023 SOFI: Schedule 2, employees](https://metrovancouver.org/about-us/Documents/statement-financial-information-2023.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | Metro Vancouver | 2024 | imported | 1,694 | [Metro Vancouver 2024 SOFI: Schedule 2, employees](https://metrovancouver.org/about-us/Documents/statement-financial-information-2024.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | Metro Vancouver | 2025 | imported | 1,776 | [Metro Vancouver 2025 SOFI: Schedule 2, employees](https://metrovancouver.org/about-us/Documents/statement-of-financial-information-2025.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
+| North Island College | 2018/19 | imported | 133 | [North Island College Statement of Financial Information 2018/19: employee remuneration and expenses](https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2018-19.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
+| North Island College | 2019/20 | requires-ocr | — | [North Island College Statement of Financial Information, year ended March 31, 2020: scanned original awaiting extraction](https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2019-20.pdf) | OCR the complete original, verify the employee-section period/scope and every row against rendered pages, then reconcile printed controls before accepting any observations. |
 | North Island College | 2020/21 | imported | 145 | [North Island College Statement of Financial Information, year ended March 31, 2021](https://nic.bc.ca/_resources/pdf/statement-of-financial-information-2020-21.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
+| North Island College | 2021/22 | imported | 138 | [North Island College Statement of Financial Information 2021/22: employee remuneration and expenses](https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2021-22.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
+| North Island College | 2022/23 | imported | 156 | [North Island College Statement of Financial Information 2022/23: employee remuneration and expenses](https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2022-23.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
+| North Island College | 2023/24 | imported | 181 | [North Island College Statement of Financial Information 2023/24: employee remuneration and expenses](https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2023-24.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | North Island College | 2024/25 | imported | 200 | [North Island College Statement of Financial Information 2024/25: employee remuneration and expenses](https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2024-25.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | Northern Health | 2020/21 | imported | 10 | [Northern Health board remuneration and expenses 2020/21](https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/board-remuneration-2020-21.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | Northern Health | 2020/21 | imported | 2,500 | [Northern Health Statement of Financial Information 2020/21: employee remuneration and expenses](https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/financial-accountability/documents/schedule-remuneration-expenses-2020-21.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |

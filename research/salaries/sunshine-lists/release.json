@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "asOf": "2026-11-01",
+  "timezone": "America/Vancouver",
+  "baselineCommit": "68bb4f7905e657338abc5fce192b15c568720710",
+  "baseline": {
+    "records": 1010217,
+    "officialRecords": 777254,
+    "compiledRecords": 232963,
+    "employers": 239,
+    "availableEmployerYears": 939
+  },
+  "proposed": {
+    "records": 1010644,
+    "officialRecords": 777862,
+    "compiledRecords": 232782,
+    "employers": 239,
+    "availableEmployerYears": 942
+  },
+  "officialRowsAdded": 608,
+  "compiledRowsReplaced": 181,
+  "netRowsAdded": 427,
+  "importedSources": [
+    {
+      "sourceId": "north-island-college-sofi-2018-19-employees",
+      "year": "2018/19",
+      "rows": 133,
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2018-19.pdf",
+      "sourceSha256": "8042d90554896de2c310d93bde9f4247757f092213b6038398e1a365257711b0",
+      "dataSha256": "e1dde4a039eb9e156d4c03416212711d3df5f2c4254c87288ca8bd8b83fd8817",
+      "publicWarning": "The published 133 employee rows total $12,415,381 remuneration and $578,000 expenses: $10 below and $5 above the printed named subtotals, respectively. Both PDF readers agree on every displayed cell. The cause is unconfirmed; no amount has been adjusted to force agreement."
+    },
+    {
+      "sourceId": "north-island-college-sofi-2021-22-employees",
+      "year": "2021/22",
+      "rows": 138,
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2021-22.pdf",
+      "sourceSha256": "90fedb56a99c010064a67db18370578ecd6e33326bac04998b2d5458a3740afd",
+      "dataSha256": "0e7a691747aac5470755246b2268c9d3df012bd7008a68197db9d8f2a1fbb57a",
+      "publicWarning": null
+    },
+    {
+      "sourceId": "north-island-college-sofi-2022-23-employees",
+      "year": "2022/23",
+      "rows": 156,
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2022-23.pdf",
+      "sourceSha256": "08b65aa51ae42b99125ffcbd5d59d27331ab775d989795051032197ea12bbcff",
+      "dataSha256": "85e6976d41e13aed708ca31d574539987890b03eeca40cf0b3a81db6a375f764",
+      "publicWarning": null
+    },
+    {
+      "sourceId": "north-island-college-sofi-2023-24-employees",
+      "year": "2023/24",
+      "rows": 181,
+      "sourceUrl": "https://www.nic.bc.ca/_resources/pdf/statement-of-financial-information-2023-24.pdf",
+      "sourceSha256": "598caa417c3963e40a48af17d05ab860c02ae75cc901727ad092fa5ca98e762a",
+      "dataSha256": "712d83d053861abcf979430521acb916e2b10844750b61e599ce7849d33c4324",
+      "publicWarning": null
+    }
+  ],
+  "notes": [
+    "North Island College additions are independently verified original-source imports, not copied Sunshine Lists salary rows.",
+    "The partial external reference contains three employer summaries and no annual count observations.",
+    "The PR #34 expansion is already included in the baseline. Its 200 FY2024/25 NIC observations match every source field and remain published once under their existing source ID.",
+    "Four newly published cohorts add 608 official observations and replace 181 compiled FY2023/24 observations, for 427 net additions."
+  ],
+  "alreadyPublishedRowsVerified": 200,
+  "verificationOnlySources": [
+    {
+      "id": "north-island-college-sofi-2024-25-employees",
+      "year": "2024/25",
+      "rowCount": 200,
+      "sha256": "13ba3ce3742b8487ffedb14a945f340eaf09f27d9f94bbe084d9162546445b8e",
+      "dataSha256": "0a379cf616879e1003f3773216717e9c973a6d905f444e8397e32649b39714ca",
+      "publishedCollection": "continuation-education/supplemental",
+      "publishedSourceId": "north-island-sofi-2024-25-employees",
+      "publishedDataSha256": "0a379cf616879e1003f3773216717e9c973a6d905f444e8397e32649b39714ca"
+    }
+  ]
+}
