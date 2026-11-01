@@ -27,7 +27,7 @@
   "fingerprints": {
     "snapshotSha256": "5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1",
     "aliasesSha256": "f8fbabcea76dfaab15fcfcea12aac2eee5ba2e56203b89d7cb890ec4eec81b4d",
-    "repositoryInputsSha256": "c38edddbde95a7e6e9b9b13964cb985e899a4b0f7724749f7a75372e77d1a4fc"
+    "repositoryInputsSha256": "05416874223fefd1d9c5c38984ff073b2e512982322d3a1002a563e78c5e9011"
   },
   "summary": {
     "referenceEmployers": 3,
@@ -41,16 +41,16 @@
     "annualSeriesCompletenessEstablished": false,
     "recordLevelParityChecked": false,
     "repository": {
-      "employers": 239,
-      "rows": 1010644,
-      "namedRows": 1005313,
-      "officialRows": 777862,
-      "compiledRows": 232782,
-      "employeeRows": 748345,
-      "availableEmployerYears": 942
+      "employers": 245,
+      "rows": 1022585,
+      "namedRows": 1017254,
+      "officialRows": 790932,
+      "compiledRows": 231653,
+      "employeeRows": 761319,
+      "availableEmployerYears": 960
     },
-    "repositoryEmployersWithOfficial": 166,
-    "repositoryCompiledOnlyEmployers": 73,
+    "repositoryEmployersWithOfficial": 176,
+    "repositoryCompiledOnlyEmployers": 69,
     "repositorySourceTasks": 223,
     "externalReferenceTasks": 3
   },
@@ -383,21 +383,36 @@
         "B.C. Assessment"
       ],
       "sector": "Crown corporations",
-      "rows": 1052,
-      "namedRows": 1052,
-      "officialRows": 0,
-      "compiledRows": 1052,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
-        "2017/18",
-        "2020/21",
-        "2023/24"
+      "rows": 2204,
+      "namedRows": 2204,
+      "officialRows": 1908,
+      "compiledRows": 296,
+      "employeeRows": 1908,
+      "officialPeriods": [
+        "2020",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2020",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "compiledEditionLabels": [
+        "2017/18"
+      ],
+      "acceptedPeriodCount": 5,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "recovery-crowns-bc-assessment-2021-22-employees",
+        "recovery-crowns-bc-assessment-2022-23-employees",
+        "recovery-crowns-bc-assessment-2023-24-employees",
+        "recovery-crowns-bc-assessment-2024-25-employees"
+      ]
     },
     {
       "slug": "bc-clinical-and-support-services-society",
@@ -455,19 +470,27 @@
         "B.C. Energy Regulator"
       ],
       "sector": "Crown corporations",
-      "rows": 249,
-      "namedRows": 249,
-      "officialRows": 0,
-      "compiledRows": 249,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
-        "2023/24"
+      "rows": 783,
+      "namedRows": 783,
+      "officialRows": 783,
+      "compiledRows": 0,
+      "employeeRows": 783,
+      "officialPeriods": [
+        "2023/24",
+        "2024/25",
+        "2025/26"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 3,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "recovery-crowns-bc-energy-regulator-2024-25-employees"
+      ]
     },
     {
       "slug": "bc-family-maintenance-agency",
@@ -2622,20 +2645,31 @@
         "Coast Mountain College"
       ],
       "sector": "Universities and colleges",
-      "rows": 213,
-      "namedRows": 213,
-      "officialRows": 0,
-      "compiledRows": 213,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
-        "2020/21",
-        "2023/24"
+      "rows": 443,
+      "namedRows": 443,
+      "officialRows": 354,
+      "compiledRows": 89,
+      "employeeRows": 354,
+      "officialPeriods": [
+        "2022/23",
+        "2023/24",
+        "2024/25"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "compiledEditionLabels": [
+        "2020/21"
+      ],
+      "acceptedPeriodCount": 3,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "recovery-coast-mountain-sofi-2022-23-employees",
+        "recovery-coast-mountain-sofi-2023-24-employees",
+        "recovery-coast-mountain-sofi-2024-25-employees"
+      ]
     },
     {
       "slug": "college-of-new-caledonia",
@@ -3396,6 +3430,32 @@
       "partialSources": []
     },
     {
+      "slug": "district-of-sooke",
+      "name": "District of Sooke",
+      "names": [
+        "District of Sooke"
+      ],
+      "sector": "Municipalities",
+      "rows": 62,
+      "namedRows": 62,
+      "officialRows": 62,
+      "compiledRows": 0,
+      "employeeRows": 55,
+      "officialPeriods": [
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2025"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "recovery-municipal-sooke-2025-elected-officials",
+        "recovery-municipal-sooke-2025-employee-remuneration"
+      ]
+    },
+    {
       "slug": "district-of-sparwood",
       "name": "District of Sparwood",
       "names": [
@@ -3824,6 +3884,31 @@
       ]
     },
     {
+      "slug": "gulf-islands-school-district",
+      "name": "School District No. 64 (Gulf Islands)",
+      "names": [
+        "School District No. 64 (Gulf Islands)"
+      ],
+      "sector": "School districts",
+      "rows": 117,
+      "namedRows": 117,
+      "officialRows": 117,
+      "compiledRows": 0,
+      "employeeRows": 110,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "recovery-schools-sd64-2025-trustees"
+      ]
+    },
+    {
       "slug": "icbc",
       "name": "ICBC",
       "names": [
@@ -4000,9 +4085,9 @@
         "Interior Health"
       ],
       "sector": "Health authorities",
-      "rows": 65443,
-      "namedRows": 65443,
-      "officialRows": 65443,
+      "rows": 65486,
+      "namedRows": 65486,
+      "officialRows": 65486,
       "compiledRows": 0,
       "employeeRows": 65364,
       "officialPeriods": [
@@ -4043,7 +4128,11 @@
         "interior-health-board-2022-23",
         "interior-health-board-2023-24",
         "interior-health-board-2024-25",
-        "interior-health-board-2025-26"
+        "interior-health-board-2025-26",
+        "recovery-health-interior-board-2014-15",
+        "recovery-health-interior-board-2015-16",
+        "recovery-health-interior-board-2016-17",
+        "recovery-health-interior-board-2017-18"
       ]
     },
     {
@@ -5136,6 +5225,31 @@
       ]
     },
     {
+      "slug": "school-district-19",
+      "name": "School District No. 19 (Revelstoke)",
+      "names": [
+        "School District No. 19 (Revelstoke)"
+      ],
+      "sector": "School districts",
+      "rows": 82,
+      "namedRows": 82,
+      "officialRows": 82,
+      "compiledRows": 0,
+      "employeeRows": 77,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "recovery-schools-sd19-2025-employees"
+      ]
+    },
+    {
       "slug": "school-district-20",
       "name": "School District No. 20 (Kootenay-Columbia)",
       "names": [
@@ -5230,6 +5344,31 @@
       "partialSources": [
         "continuation-schools-sd48-2025-employees",
         "continuation-schools-sd48-2025-trustees"
+      ]
+    },
+    {
+      "slug": "school-district-49",
+      "name": "School District No. 49 (Central Coast)",
+      "names": [
+        "School District No. 49 (Central Coast)"
+      ],
+      "sector": "School districts",
+      "rows": 35,
+      "namedRows": 35,
+      "officialRows": 35,
+      "compiledRows": 0,
+      "employeeRows": 30,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "recovery-schools-sd49-2025-trustees"
       ]
     },
     {
@@ -6333,19 +6472,23 @@
         "University of British Columbia (UBC)"
       ],
       "sector": "Universities and colleges",
-      "rows": 19973,
-      "namedRows": 19973,
-      "officialRows": 0,
+      "rows": 29606,
+      "namedRows": 29606,
+      "officialRows": 9633,
       "compiledRows": 19973,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 9633,
+      "officialPeriods": [
+        "2025/26"
+      ],
+      "officialEmployeePeriods": [
+        "2025/26"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
       "partialSources": []
     },
@@ -6992,6 +7135,64 @@
       "partialSources": []
     },
     {
+      "slug": "village-of-mcbride",
+      "name": "Village of McBride",
+      "names": [
+        "Village of McBride"
+      ],
+      "sector": "Municipalities",
+      "rows": 35,
+      "namedRows": 35,
+      "officialRows": 35,
+      "compiledRows": 0,
+      "employeeRows": 16,
+      "officialPeriods": [
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 4,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "recovery-municipal-mcbride-2022-elected-officials",
+        "recovery-municipal-mcbride-2022-employee-remuneration",
+        "recovery-municipal-mcbride-2025-employee-remuneration"
+      ]
+    },
+    {
+      "slug": "village-of-midway",
+      "name": "Village of Midway",
+      "names": [
+        "Village of Midway"
+      ],
+      "sector": "Municipalities",
+      "rows": 18,
+      "namedRows": 18,
+      "officialRows": 18,
+      "compiledRows": 0,
+      "employeeRows": 8,
+      "officialPeriods": [
+        "2023",
+        "2024"
+      ],
+      "officialEmployeePeriods": [
+        "2023",
+        "2024"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 2,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
       "slug": "village-of-montrose",
       "name": "Village of Montrose",
       "names": [
@@ -7312,11 +7513,11 @@
     {
       "sector": "Crown corporations",
       "employers": 43,
-      "employersWithOfficial": 12,
-      "compiledOnlyEmployers": 31,
-      "officialRows": 105013,
-      "compiledRows": 36315,
-      "rows": 141328
+      "employersWithOfficial": 14,
+      "compiledOnlyEmployers": 29,
+      "officialRows": 107704,
+      "compiledRows": 35310,
+      "rows": 143014
     },
     {
       "sector": "Government",
@@ -7332,9 +7533,9 @@
       "employers": 8,
       "employersWithOfficial": 6,
       "compiledOnlyEmployers": 2,
-      "officialRows": 244148,
+      "officialRows": 244191,
       "compiledRows": 68658,
-      "rows": 312806
+      "rows": 312849
     },
     {
       "sector": "Municipal police",
@@ -7347,30 +7548,30 @@
     },
     {
       "sector": "Municipalities",
-      "employers": 116,
-      "employersWithOfficial": 113,
+      "employers": 119,
+      "employersWithOfficial": 116,
       "compiledOnlyEmployers": 3,
-      "officialRows": 118593,
+      "officialRows": 118708,
       "compiledRows": 28211,
-      "rows": 146804
+      "rows": 146919
     },
     {
       "sector": "School districts",
-      "employers": 34,
-      "employersWithOfficial": 21,
+      "employers": 37,
+      "employersWithOfficial": 24,
       "compiledOnlyEmployers": 13,
-      "officialRows": 21232,
+      "officialRows": 21466,
       "compiledRows": 45385,
-      "rows": 66617
+      "rows": 66851
     },
     {
       "sector": "Universities and colleges",
       "employers": 24,
-      "employersWithOfficial": 12,
-      "compiledOnlyEmployers": 12,
-      "officialRows": 46576,
-      "compiledRows": 44981,
-      "rows": 91557
+      "employersWithOfficial": 14,
+      "compiledOnlyEmployers": 10,
+      "officialRows": 56563,
+      "compiledRows": 44857,
+      "rows": 101420
     }
   ],
   "queue": [
@@ -11220,8 +11421,8 @@
   "inputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 5962538,
-      "sha256": "566ac7325c704d015ed6a70bdb313cbe63c716624beda61f90a97e7a4dbb7806"
+      "bytes": 6122434,
+      "sha256": "af155c7cbc52c92a22f7735c627518df4c6e2ef05e6a533a9cc1c5d1e0e40a1b"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -11240,8 +11441,8 @@
     },
     {
       "path": "public/salaries/employers/bc-assessment.json.gzip",
-      "bytes": 12682,
-      "sha256": "6943a64da85eb56dfd2dba32fe79b516abe00d461e8afacfcb6c665bf1a0e179"
+      "bytes": 31529,
+      "sha256": "19526e9d6ae355d9728958df60c89d9b3b7f4004c7d9cce713c697de15e65b91"
     },
     {
       "path": "public/salaries/employers/bc-clinical-and-support-services-society.json.gzip",
@@ -11255,8 +11456,8 @@
     },
     {
       "path": "public/salaries/employers/bc-energy-regulator.json.gzip",
-      "bytes": 4185,
-      "sha256": "3c12a844c787b5b122e77519d69886b5eac79ecac2e0d8c9bdf0b4de2ac189e4"
+      "bytes": 10812,
+      "sha256": "40dcdc7875befa64b806cf874985f88e6dc6cfaff073db763cf9be154d15b6a6"
     },
     {
       "path": "public/salaries/employers/bc-family-maintenance-agency.json.gzip",
@@ -11585,8 +11786,8 @@
     },
     {
       "path": "public/salaries/employers/coast-mountain-college.json.gzip",
-      "bytes": 3253,
-      "sha256": "5789c6c4c8ffb3230a6d2425264b659d04c2c0d4ce4b97a78db09bcdeb26d870"
+      "bytes": 6103,
+      "sha256": "8f49c4e788167274884c5a168c5f466bd331e51959215c57913090ff57d3a909"
     },
     {
       "path": "public/salaries/employers/college-of-new-caledonia.json.gzip",
@@ -11739,6 +11940,11 @@
       "sha256": "17e592da08d97187f286f6cfda9b9d966bef63d52024928e5d8d68c60090133e"
     },
     {
+      "path": "public/salaries/employers/district-of-sooke.json.gzip",
+      "bytes": 1850,
+      "sha256": "921581546c794f403d59ebc41e66613d064568de2f5cc339e33ed7b2294b4425"
+    },
+    {
       "path": "public/salaries/employers/district-of-sparwood.json.gzip",
       "bytes": 4692,
       "sha256": "ca659c3a80a5f322661bdd4b18321188a32a804f5bff8459efd3a023216a7eb1"
@@ -11809,6 +12015,11 @@
       "sha256": "191df9d48fd0bba4b2c625b260b532111af90bbd0f2c24ca65796508bcd7f379"
     },
     {
+      "path": "public/salaries/employers/gulf-islands-school-district.json.gzip",
+      "bytes": 2317,
+      "sha256": "0175a934fe27436396bbc42520f416e7f81fb7f8f8e41f7bf99336c3e0f028e1"
+    },
+    {
       "path": "public/salaries/employers/icbc.json.gzip",
       "bytes": 395447,
       "sha256": "c468dc6fe9f9e9d74a6d3a0aad39129ee362bbfb81aca82a6158a907cd02a179"
@@ -11840,8 +12051,8 @@
     },
     {
       "path": "public/salaries/employers/interior-health.json.gzip",
-      "bytes": 1042029,
-      "sha256": "a905ceaba971c8a19900ae5d52e0ff84607300a00ac942db590b5a96dfc8026b"
+      "bytes": 1043839,
+      "sha256": "78312ea1951874e57081a010289dceac1a503322416054d1d2a1aba34c1dcea6"
     },
     {
       "path": "public/salaries/employers/island-health.json.gzip",
@@ -12024,6 +12235,11 @@
       "sha256": "fa921ea8eafe3383c1fb397802bb42346b1f06e3a9533130a948345de6deb5f8"
     },
     {
+      "path": "public/salaries/employers/school-district-19.json.gzip",
+      "bytes": 1600,
+      "sha256": "6e78c56bcc6dc2ef348927a8e3409af2d016047d72747df582e581612c7e8c30"
+    },
+    {
       "path": "public/salaries/employers/school-district-20.json.gzip",
       "bytes": 5456,
       "sha256": "8b88f1e5d64a5f9962e59b4c7cd478d81e82210cd759cfefb3f0feae048bd1d8"
@@ -12042,6 +12258,11 @@
       "path": "public/salaries/employers/school-district-48.json.gzip",
       "bytes": 7225,
       "sha256": "19e50e40f3530e09b0a07b089829540582196c99b3c79ef0d4b686558f5d3b15"
+    },
+    {
+      "path": "public/salaries/employers/school-district-49.json.gzip",
+      "bytes": 700,
+      "sha256": "ee4891cc58f0bc52fc34cb36def1a0d9990e320f605d44db7be8b9da1035b72b"
     },
     {
       "path": "public/salaries/employers/school-district-51.json.gzip",
@@ -12245,8 +12466,8 @@
     },
     {
       "path": "public/salaries/employers/university-of-bc.json.gzip",
-      "bytes": 340495,
-      "sha256": "662a7a2d486aef989e7bdb2c33227fd47f46ff2c98706ece32eb9df9a0d4238c"
+      "bytes": 513968,
+      "sha256": "9bc7f700a2816e0a5e3f50f4c3e4f4ce0e4ac8c85dc547dfaf2b0c35b33b5ad0"
     },
     {
       "path": "public/salaries/employers/university-of-northern-bc.json.gzip",
@@ -12359,6 +12580,16 @@
       "sha256": "257ee2c1a97968e89c9072a5ac02562eda819eb82c4566cc7cea8a16ff04f496"
     },
     {
+      "path": "public/salaries/employers/village-of-mcbride.json.gzip",
+      "bytes": 785,
+      "sha256": "8ab5e183bdb2f9593202e753f45e7f1bd59d22eeb0e73caae1a22bb094a81bee"
+    },
+    {
+      "path": "public/salaries/employers/village-of-midway.json.gzip",
+      "bytes": 477,
+      "sha256": "502609f931468fd099bd7ea0e5ff7e4df857889b855911765056bc35a2d542b1"
+    },
+    {
       "path": "public/salaries/employers/village-of-montrose.json.gzip",
       "bytes": 309,
       "sha256": "4194e6e8bd6c9bc252975f339cc6d0e412569e6054f2c8b7c98c830a7f3eb862"
@@ -12420,8 +12651,8 @@
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 3947498,
-      "sha256": "29b57bed1a7ee69887ebd464d8c0473437a50e96b773c180f7309e5cd6593c19"
+      "bytes": 4092756,
+      "sha256": "4367a6e823fdacf825982e06f11163233504a90df9e958df0514831166259005"
     }
   ]
 }

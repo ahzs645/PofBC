@@ -1,0 +1,68 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS all seven normalized trustee rows with source remuneration-control caveat",
+  "independentRawTranscript": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd64-2025-trustees-original-transcription.tsv",
+    "sha256": "1f7a1e4ccee47eb35ac53502c4ac07fdf1c270a8bac4d5b07f3e699a39edb2a0",
+    "writtenBeforeCandidatePayloadOpened": true
+  },
+  "sourceId": "recovery-schools-sd64-2025-trustees",
+  "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd64-sofi-2025.pdf",
+  "originalPdf": "/tmp/pofbc-schools/ministry-sd64-2025.pdf",
+  "originalSha256": "38f70c4948dae2b68c560e2c4cbc0c95610b68c9448392f0c142798a954bad17",
+  "file": "research/salaries/recovery-schools/sd64-2025-trustees.json.gzip",
+  "dataSha256": "c9c056d8dc8a709a6663d218e5d3d34f1c3f31e5a0faa911ef18204b8c7d283a",
+  "rowsCompared": 7,
+  "allSixFieldsExact": true,
+  "candidateCorrections": [],
+  "reviewerRawTranscriptCorrections": [],
+  "originalImageChecks": [
+    {
+      "pdfPage": 52,
+      "image": "/tmp/recovery-schools/sd64-p52.png",
+      "imageSha256": "d7d3731551d09930efeb4eee4cadf9d387871e03ff56098a38e7b42212bb68f3",
+      "independent2xRenderedPixelMatch": true
+    },
+    {
+      "pdfPage": 3,
+      "image": "/tmp/recovery-schools/sd64-p3.png",
+      "imageSha256": "7617a5909f4028e5e331122d7fb84bf2cdc5172341aec35cb99b051bb3831b7a",
+      "independent2xRenderedPixelMatch": true
+    }
+  ],
+  "controls": {
+    "trustees": {
+      "printed": [
+        126054,
+        25345
+      ],
+      "computed": [
+        126052,
+        25345
+      ],
+      "computedMinusPrinted": [
+        -2,
+        0
+      ]
+    }
+  },
+  "sourcePublicWarning": "The seven published trustee rows total $126,052 remuneration and $25,345 expenses. The schedule prints $126,054 and $25,345, so the row remuneration sum is $2 lower than the printed trustee remuneration total. The published rows and control are retained literally; the reason is unresolved.",
+  "periodAndApproval": {
+    "salaryHeading": "SD. 64 (Gulf Islands) / SCHEDULE OF REMUNERATION AND EXPENSE / YEAR ENDED JUNE 30, 2025",
+    "declarationYear": "2024-2025",
+    "declarationPeriodEnd": "June 30, 2025",
+    "signatureArea": "redacted black in original",
+    "adjacentDateFields": "blank",
+    "approvalConclusion": "No signature or adoption date is visually verifiable.",
+    "draftMarkVisibleOnReviewedPages": false
+  },
+  "scopeDecisions": [
+    "Complete seven-row ELECTED OFFICIALS table independently transcribed and compared, including literal uppercase titles and name punctuation.",
+    "The detailed employee table begins below trustees on page 52. Its rows and continuation pages are outside this receipt; no independent employee extraction acceptance is claimed here.",
+    "Printed trustee remuneration 126,054 differs from literal row sum 126,052 by 2. Expenses agree at 25,345. Preserve literal rows and publicWarning/clarification with no inferred cause."
+  ],
+  "limitations": [
+    "Full independent visual/field review is trustees only, plus period and declaration controls. SD64 native employee reader comparison remains author/root review scope."
+  ]
+}

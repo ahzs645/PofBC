@@ -1,0 +1,28 @@
+{
+  "checkedOn": "2026-11-01",
+  "regressionTests": {
+    "command": "python -m unittest discover -s scripts -p 'test_recover_wave_health*.py'",
+    "passed": 6,
+    "failed": 0
+  },
+  "originalBackedReplay": {
+    "command": "python scripts/recover_wave_health.py --originals --check",
+    "cohorts": 4,
+    "rows": 43,
+    "result": "passed"
+  },
+  "offlineReplay": {
+    "command": "python scripts/recover_wave_health.py --check",
+    "result": "passed"
+  },
+  "employeeStagedEvidenceReplay": {
+    "commands": [
+      "python scripts/recover_wave_health_employee_staging.py --originals --check",
+      "python scripts/recover_wave_health_employee_staging.py --check"
+    ],
+    "result": "passed",
+    "acceptedRows": 0,
+    "stagedRows": 49
+  },
+  "diffWhitespaceCheck": "passed on owned paths"
+}

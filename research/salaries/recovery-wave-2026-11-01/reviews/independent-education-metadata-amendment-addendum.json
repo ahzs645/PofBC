@@ -1,0 +1,44 @@
+{
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS metadata-only amendment; previous full numeric audit remains applicable",
+  "previousReview": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-education-review-handoff.json",
+    "sha256": "8d7077c84e20c543396cf838f2d858eb2181e310c10d12c4e28a215898fe5e4c"
+  },
+  "newManifestSha256": "da83ca60abcb1d110b3683886609207c3fecfbcf515d018581e2de161d79a834",
+  "newHandoffSha256": "9493c1ab23ff466048bebf038bc76a62c4d7695e6994b0f858e2c3e7480de11e",
+  "checks": [
+    {
+      "sourceId": "recovery-ubc-sofi-2025-26-employees",
+      "dataSha256": "09f38dba19bd1921bce787c370106d71907b7555dc6091011d0fd803723bb52a",
+      "evidenceSha256": "27fbe0036dd9601fb036de786844a65e4869d10c233ff3c26342a285ded5aead",
+      "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+      "rowPayloadAndEvidenceUnchanged": true
+    },
+    {
+      "sourceId": "recovery-coast-mountain-sofi-2024-25-employees",
+      "dataSha256": "fed569971001de119044b07315b91863e8ef441afc1d2ebca611b11e5a662966",
+      "evidenceSha256": "847501f77d17d949e937f20476286b01ad635b017a1d43cd88b94f5c93a59cc0",
+      "originalSha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+      "rowPayloadAndEvidenceUnchanged": true
+    },
+    {
+      "sourceId": "recovery-coast-mountain-sofi-2023-24-employees",
+      "dataSha256": "c1c1ccca47aad2654a9b9a7fb7fcd45d9b37f54b143a0995e5e9f9966f2dcfc8",
+      "evidenceSha256": "873cdf4833eb67a3c1d0f0cc63aa7ea069ee90502444bb5fcb3b849b939a534f",
+      "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+      "rowPayloadAndEvidenceUnchanged": true
+    },
+    {
+      "sourceId": "recovery-coast-mountain-sofi-2022-23-employees",
+      "dataSha256": "3069b8e9656be3c37539a0a4717dbdd740b42dd4cb85453a07d600633f9f4087",
+      "evidenceSha256": "dc07ba2c8556cb13baf42ac499f9abc8a11d5fbe6192b187b4c5459da46ff298",
+      "originalSha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+      "rowPayloadAndEvidenceUnchanged": true
+    }
+  ],
+  "wording": "Generic notes now describe negative expense amounts without assigning a recovery cause.",
+  "compiledReplacement": "Root approval is reported in updated author handoff; independent full124row comparison evidence remains unchanged.",
+  "limitations": "This addendum checks original/data/evidence fingerprints and revised note wording, not a second full original parse."
+}

@@ -80,7 +80,8 @@
     "audit:municipal-salaries": "node scripts/audit-municipal-salaries.mjs",
     "compare:municipal-periods": "node scripts/compare-municipal-periods.mjs",
     "review:municipal-history": "python3 scripts/build-municipal-history-review.py --frozen",
-    "review:salary-continuation": "python3 scripts/build-salary-continuation-review.py --frozen"
+    "review:salary-continuation": "python3 scripts/build-salary-continuation-review.py --frozen",
+    "review:salary-recovery": "python3 scripts/review-salary-recovery.py"
   },
   "peerDependencies": {
     "react": ">=18",

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "baselineCommit": "8a25875903ae787f048fdc3ec2705d45d06dab54",
+  "decisions": [
+    {
+      "employerSlug": "bc-assessment",
+      "compiledYear": "2023/24",
+      "compiledSourceId": "pssdb-2026-10-22",
+      "removedRows": 394,
+      "compiledRowMultisetSha256": "99067802cb197f61211661ba09f65cdd9de8988a61ea40c419f5b4010081d4c5",
+      "sourceId": "recovery-crowns-bc-assessment-2023-24-employees",
+      "replacementYear": "2023/24",
+      "sourceSha256": "062f9f329e16e5a95f034a2045f4bbfa7bc925ccf1c790f17150b99178626de5",
+      "sourceDataSha256": "e5abd5ad22c00610df04aa7bc556d19b48c90f08c275754faf87475c5b6e3bbd",
+      "status": "reviewed",
+      "decision": "replace-complete-employee-cohort",
+      "reason": "Complete original employee scope and actual source reporting period reviewed. Full name/remuneration multiset agrees; only case/punctuation and documented compiled-zero/source-null presentation are set aside for comparison. Actual source null expenses, names and positions replace compiler values; no identity inference or source zero imputation.",
+      "sourceCollection": "recovery-crowns"
+    },
+    {
+      "employerSlug": "bc-energy-regulator",
+      "compiledYear": "2023/24",
+      "compiledSourceId": "pssdb-2026-10-22",
+      "removedRows": 249,
+      "compiledRowMultisetSha256": "11188657fb12c9e8806cfd65e31ace00f5f6c945a7101422c763ccdf22ea1755",
+      "sourceId": "recovery-crowns-bc-energy-regulator-2023-24-employees",
+      "replacementYear": "2023/24",
+      "sourceSha256": "0c1bf2b553a1c7871c45ff71543afd2d5a29f94c22d0681028f5d2257ba4d21e",
+      "sourceDataSha256": "037f7422f6e9d4cd994f3a8e9bf27240765e575e10cc511ac5f678444251a36e",
+      "status": "reviewed",
+      "decision": "replace-complete-employee-cohort",
+      "reason": "Complete original employee scope and actual source reporting period reviewed. Full name/remuneration multiset agrees; only case/punctuation and documented compiled-zero/source-null presentation are set aside for comparison. Actual source null expenses, names and positions replace compiler values; no identity inference or source zero imputation.",
+      "sourceCollection": "recovery-crowns"
+    },
+    {
+      "employerSlug": "coast-mountain-college",
+      "compiledYear": "2023/24",
+      "compiledSourceId": "pssdb-2026-10-22",
+      "removedRows": 124,
+      "compiledRowMultisetSha256": "b61f0e5bc023b44d7be0f81e9e522025d1655bc06981c691ce1f03d771527659",
+      "sourceId": "recovery-coast-mountain-sofi-2023-24-employees",
+      "replacementYear": "2023/24",
+      "sourceSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+      "sourceDataSha256": "c1c1ccca47aad2654a9b9a7fb7fcd45d9b37f54b143a0995e5e9f9966f2dcfc8",
+      "status": "reviewed",
+      "decision": "replace-complete-employee-cohort",
+      "reason": "Complete original employee scope and actual source reporting period reviewed. Full name/remuneration multiset agrees; only case/punctuation and documented compiled-zero/source-null presentation are set aside for comparison. Actual source null expenses, names and positions replace compiler values; no identity inference or source zero imputation.",
+      "sourceCollection": "recovery-education"
+    },
+    {
+      "employerSlug": "bc-assessment",
+      "compiledYear": "2020/21",
+      "compiledSourceId": "pssdb-2026-10-22",
+      "removedRows": 362,
+      "compiledRowMultisetSha256": "7d0f851673a4075f0d4e02f8791e89e9f3e895addef5dbf497c70ea080fe3e8d",
+      "sourceId": "recovery-crowns-bc-assessment-2020-employees",
+      "replacementYear": "2020",
+      "sourceSha256": "bee373465b9105553304c6761afbcd36b23a4d332abfb05c0fad996fed5a9f07",
+      "sourceDataSha256": "edc5c7adb367db7e96913cdc5d6dbb1dcaadaa985967cc4a55a4f71ff72cb7c3",
+      "status": "reviewed",
+      "decision": "replace-complete-employee-cohort",
+      "reason": "Complete original employee scope and actual source reporting period reviewed. Full name/remuneration multiset agrees; only case/punctuation and documented compiled-zero/source-null presentation are set aside for comparison. Actual source null expenses, names and positions replace compiler values; no identity inference or source zero imputation.",
+      "sourceCollection": "recovery-crowns"
+    }
+  ],
+  "evidence": [
+    "crowns/compiled-comparison.json",
+    "crowns/calendar-replacement.json",
+    "reviews/independent-education-compiled-partition-review.json"
+  ]
+}

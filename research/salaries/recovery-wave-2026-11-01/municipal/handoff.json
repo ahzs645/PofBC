@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "verifiedOn": "2026-11-01",
+  "collection": "recovery-municipal",
+  "acceptedOriginals": 6,
+  "acceptedCohorts": 13,
+  "acceptedRows": 115,
+  "acceptedEmployeeCohorts": 7,
+  "acceptedEmployeeRows": 79,
+  "acceptedCouncilCohorts": 6,
+  "acceptedCouncilRows": 36,
+  "newlyCoveredOfficialJurisdictions": 3,
+  "newlyCoveredEmployeeJurisdictions": 3,
+  "councilOnlyNewJurisdictions": 0,
+  "heldCohorts": 1,
+  "heldRows": 5,
+  "heldReason": "McBride 2025-package council page 42 says 2024 and conflicts with separate 2024 original.",
+  "sources": [
+    {
+      "id": "recovery-municipal-mcbride-2022-elected-officials",
+      "year": "2022",
+      "scope": "elected-officials",
+      "rows": 8,
+      "file": "mcbride-2022-elected-officials.json.gzip",
+      "dataSha256": "cc5ed6c0b0ddb60a36f3f101ee631c0c806386100cb0c3c3aa6932392ae569e0",
+      "originalSha256": "c07190fb089fe01b1b92776480b4e63fcf199fd02c70754acafa4a5c27d3af0e",
+      "evidenceFile": "evidence/mcbride-2022.json.gzip",
+      "evidenceSha256": "fcb40c2f1e863602194412ab6487b791d289c75330ce3a9adbf46157beff3aec"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2022-employee-remuneration",
+      "year": "2022",
+      "scope": "employee-remuneration",
+      "rows": 3,
+      "file": "mcbride-2022-employee-remuneration.json.gzip",
+      "dataSha256": "6ab79dbd43307a337e64582350183c770ed7e6ec39fe3ab83326541639e3104d",
+      "originalSha256": "c07190fb089fe01b1b92776480b4e63fcf199fd02c70754acafa4a5c27d3af0e",
+      "evidenceFile": "evidence/mcbride-2022.json.gzip",
+      "evidenceSha256": "fcb40c2f1e863602194412ab6487b791d289c75330ce3a9adbf46157beff3aec"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2023-elected-officials",
+      "year": "2023",
+      "scope": "elected-officials",
+      "rows": 6,
+      "file": "mcbride-2023-elected-officials.json.gzip",
+      "dataSha256": "eb7cc7c3c3ff4484d68518780018813dd1a2364083e9dc4c122a615bfe523496",
+      "originalSha256": "afadbdc30c4bcd5e49f92a1305b8c7d4e5047c728e60e01867082bfea200868d",
+      "evidenceFile": "evidence/mcbride-2023.json.gzip",
+      "evidenceSha256": "e3c0aa9314c55893e5056887be177e5361de307cc5b557d2fc949d2ff8089a26"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2023-employee-remuneration",
+      "year": "2023",
+      "scope": "employee-remuneration",
+      "rows": 3,
+      "file": "mcbride-2023-employee-remuneration.json.gzip",
+      "dataSha256": "bfdce37c03514522db6f5fc85d5d067d4222cde2a01d57e028cf1d66b6362055",
+      "originalSha256": "afadbdc30c4bcd5e49f92a1305b8c7d4e5047c728e60e01867082bfea200868d",
+      "evidenceFile": "evidence/mcbride-2023.json.gzip",
+      "evidenceSha256": "e3c0aa9314c55893e5056887be177e5361de307cc5b557d2fc949d2ff8089a26"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2024-elected-officials",
+      "year": "2024",
+      "scope": "elected-officials",
+      "rows": 5,
+      "file": "mcbride-2024-elected-officials.json.gzip",
+      "dataSha256": "f1bd57ee9bd0f6a7816af06965415ac63bfcaf83450196fe1532f7fb3927bf96",
+      "originalSha256": "ab3285b9156ba179775263f5d730d24cbd96af3f51fbd7595ac9852c311044f1",
+      "evidenceFile": "evidence/mcbride-2024.json.gzip",
+      "evidenceSha256": "b2e4c02d6565e8b42b8d3c49e83edec4d35bf82079144ae33f0c4b8865b38208"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2024-employee-remuneration",
+      "year": "2024",
+      "scope": "employee-remuneration",
+      "rows": 5,
+      "file": "mcbride-2024-employee-remuneration.json.gzip",
+      "dataSha256": "5523c92b9385e8698b50248386170aa9eee46d4d3f95783c32a467bd775e673a",
+      "originalSha256": "ab3285b9156ba179775263f5d730d24cbd96af3f51fbd7595ac9852c311044f1",
+      "evidenceFile": "evidence/mcbride-2024.json.gzip",
+      "evidenceSha256": "b2e4c02d6565e8b42b8d3c49e83edec4d35bf82079144ae33f0c4b8865b38208"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2025-employee-remuneration",
+      "year": "2025",
+      "scope": "employee-remuneration",
+      "rows": 5,
+      "file": "mcbride-2025-employee-remuneration.json.gzip",
+      "dataSha256": "0c12cd8929b655ef4f918dff59c2d0b20d9b585380b564b01acff7e118b7844b",
+      "originalSha256": "11733872fa678d7af449e391271581ca65602df4b35898661f903043a0b7e214",
+      "evidenceFile": "evidence/mcbride-2025.json.gzip",
+      "evidenceSha256": "58708f2ac5a97428c2d35a46c17301d14a42213380ee64347b14fbf724c4e7a8"
+    },
+    {
+      "id": "recovery-municipal-midway-2023-elected-officials",
+      "year": "2023",
+      "scope": "elected-officials",
+      "rows": 5,
+      "file": "midway-2023-elected-officials.json.gzip",
+      "dataSha256": "013ed833a1955c173e90816ed382c0c2f1a50d68d83db2c25b4d5406bdae4d06",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "evidenceFile": "evidence/midway-2023-2024.json.gzip",
+      "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc"
+    },
+    {
+      "id": "recovery-municipal-midway-2023-employee-remuneration",
+      "year": "2023",
+      "scope": "employee-remuneration",
+      "rows": 4,
+      "file": "midway-2023-employee-remuneration.json.gzip",
+      "dataSha256": "217c20017f14efe1fdde645992feced72629502fdfce4e8ded86f7e28bc7f57b",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "evidenceFile": "evidence/midway-2023-2024.json.gzip",
+      "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc"
+    },
+    {
+      "id": "recovery-municipal-midway-2024-elected-officials",
+      "year": "2024",
+      "scope": "elected-officials",
+      "rows": 5,
+      "file": "midway-2024-elected-officials.json.gzip",
+      "dataSha256": "6e7650ee38684c91a488a9f2e96c162233ed61aff4310afc82b10f136126e9e0",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "evidenceFile": "evidence/midway-2023-2024.json.gzip",
+      "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc"
+    },
+    {
+      "id": "recovery-municipal-midway-2024-employee-remuneration",
+      "year": "2024",
+      "scope": "employee-remuneration",
+      "rows": 4,
+      "file": "midway-2024-employee-remuneration.json.gzip",
+      "dataSha256": "9a279a61dff0e759fee4eab455b9c5631643a18f15aa5505997aa9668c0fc514",
+      "originalSha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "evidenceFile": "evidence/midway-2023-2024.json.gzip",
+      "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc"
+    },
+    {
+      "id": "recovery-municipal-sooke-2025-elected-officials",
+      "year": "2025",
+      "scope": "elected-officials",
+      "rows": 7,
+      "file": "sooke-2025-elected-officials.json.gzip",
+      "dataSha256": "f3d97ddb1a1d8b5b1551058d87db941bc2c687568c9320fa2478701c7602ea0a",
+      "originalSha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "evidenceFile": "evidence/sooke-2025.json.gzip",
+      "evidenceSha256": "139c880e580b0e0898235d8e97e4cd5af99444f9ed8a41c569a86e1e5e99f3a1"
+    },
+    {
+      "id": "recovery-municipal-sooke-2025-employee-remuneration",
+      "year": "2025",
+      "scope": "employee-remuneration",
+      "rows": 55,
+      "file": "sooke-2025-employee-remuneration.json.gzip",
+      "dataSha256": "3196e2b9a7acc4042bbedca2761ae3a6237cfeb8434e6d5511afb7aec2175a27",
+      "originalSha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "evidenceFile": "evidence/sooke-2025.json.gzip",
+      "evidenceSha256": "139c880e580b0e0898235d8e97e4cd5af99444f9ed8a41c569a86e1e5e99f3a1"
+    }
+  ],
+  "originals": [
+    {
+      "key": "mcbride-2022",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "year": "2022",
+      "sourceUrl": "https://mcbride.civicweb.net/document/18711",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "c07190fb089fe01b1b92776480b4e63fcf199fd02c70754acafa4a5c27d3af0e",
+      "cachePath": "/tmp/continuation-municipal/village-of-mcbride-c07190fb089fe0.pdf",
+      "pages": [
+        39,
+        40
+      ],
+      "approvalPage": 45,
+      "approval": "Officially linked original; approval page 45 is unsigned with blank dates. Adoption is not established by this original.",
+      "method": "manual",
+      "evidenceFile": "evidence/mcbride-2022.json.gzip",
+      "evidenceSha256": "fcb40c2f1e863602194412ab6487b791d289c75330ce3a9adbf46157beff3aec"
+    },
+    {
+      "key": "mcbride-2023",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "year": "2023",
+      "sourceUrl": "https://mcbride.civicweb.net/document/29458",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "afadbdc30c4bcd5e49f92a1305b8c7d4e5047c728e60e01867082bfea200868d",
+      "cachePath": "/tmp/continuation-municipal/village-of-mcbride-afadbdc30c4bcd.pdf",
+      "pages": [
+        44,
+        45
+      ],
+      "approvalPage": 50,
+      "approval": "Approval page 50 carries signatures of Jeanette McDougall and Eugene Runtz and handwritten June 19, 2024 dates.",
+      "method": "manual",
+      "evidenceFile": "evidence/mcbride-2023.json.gzip",
+      "evidenceSha256": "e3c0aa9314c55893e5056887be177e5361de307cc5b557d2fc949d2ff8089a26"
+    },
+    {
+      "key": "mcbride-2024",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "year": "2024",
+      "sourceUrl": "https://mcbride.civicweb.net/document/39757",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "ab3285b9156ba179775263f5d730d24cbd96af3f51fbd7595ac9852c311044f1",
+      "cachePath": "/tmp/continuation-municipal/village-of-mcbride-ab3285b9156ba1.pdf",
+      "pages": [
+        45,
+        46
+      ],
+      "approvalPage": 51,
+      "approval": "Approval page 51 carries signatures of Jeanette McDougall and Eugene Runtz and handwritten June 24, 2025 dates.",
+      "method": "manual",
+      "evidenceFile": "evidence/mcbride-2024.json.gzip",
+      "evidenceSha256": "b2e4c02d6565e8b42b8d3c49e83edec4d35bf82079144ae33f0c4b8865b38208"
+    },
+    {
+      "key": "mcbride-2025",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "year": "2025",
+      "sourceUrl": "https://mcbride.civicweb.net/document/45990",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "11733872fa678d7af449e391271581ca65602df4b35898661f903043a0b7e214",
+      "cachePath": "/tmp/continuation-municipal/village-of-mcbride-11733872fa678d.pdf",
+      "pages": [
+        43
+      ],
+      "approvalPage": 48,
+      "approval": "Approval page 48 carries signatures of Jeanette McDougall and Eugene Runtz and handwritten 2026 dates. Council page 42 is held separately for its contradictory 2024 heading.",
+      "method": "manual",
+      "evidenceFile": "evidence/mcbride-2025.json.gzip",
+      "evidenceSha256": "58708f2ac5a97428c2d35a46c17301d14a42213380ee64347b14fbf724c4e7a8"
+    },
+    {
+      "key": "midway-2023-2024",
+      "employerSlug": "village-of-midway",
+      "employerName": "Village of Midway",
+      "year": null,
+      "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/06/13-Agenda-JUN-9-2025.pdf",
+      "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+      "sha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "cachePath": "/tmp/continuation-municipal/village-of-midway-04bb08ea2b2fc4.pdf",
+      "pages": [
+        9,
+        11
+      ],
+      "approvalPage": 8,
+      "approval": "Revised 2023 and 2024 schedules in the June 9, 2025 agenda; signed official minutes page 2 (printed 6952), motions 025-2025 and 026-2025, approve both revised schedules. Minutes SHA256 930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d.",
+      "method": "native",
+      "evidenceFile": "evidence/midway-2023-2024.json.gzip",
+      "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc"
+    },
+    {
+      "key": "sooke-2025",
+      "employerSlug": "district-of-sooke",
+      "employerName": "District of Sooke",
+      "year": "2025",
+      "sourceUrl": "https://www.sooke.ca/media/emqbjnxm/2025-statement-of-financial-information.pdf",
+      "sourceIndexUrl": "https://www.sooke.ca/media-manager/media-pages/plans-and-reports/2025-statement-of-financial-information-sofi/",
+      "sha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "cachePath": "/tmp/continuation-municipal/district-of-sooke-f7c218a6018043.pdf",
+      "pages": [
+        37,
+        38
+      ],
+      "approvalPage": 2,
+      "approval": "Approval page 2 carries Director of Financial Services and Mayor signatures with June 2026 dates.",
+      "method": "native",
+      "evidenceFile": "evidence/sooke-2025.json.gzip",
+      "evidenceSha256": "139c880e580b0e0898235d8e97e4cd5af99444f9ed8a41c569a86e1e5e99f3a1"
+    }
+  ],
+  "independentManualPeerReview": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-comparison.json",
+    "sha256": "61951a9c796edcda23f204f2eaa4dae2f1ef668e1557b0b5ccf1a52fc602f956",
+    "independentTranscript": {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-original-transcription.json",
+      "sha256": "e681f4dba45605e2c17418e8d38028d5befdaf6bbec8d34970fda20a9b2e8cf5",
+      "writtenBeforeCandidateOpened": true
+    },
+    "allRowFieldsExact": true,
+    "reviewer": "/root/recovery_review"
+  },
+  "nativeReaderRows": 80,
+  "manualPeerComparedRows": 35,
+  "overlapReview": {
+    "registeredCollections": 49,
+    "acceptedSourcesChecked": 964,
+    "sourcePeriodScopeCollisions": [],
+    "registeredEmployerSourceCounts": {
+      "district-of-sooke": 0,
+      "village-of-mcbride": 0,
+      "village-of-midway": 0
+    },
+    "compiledBaselineCounts": {
+      "district-of-sooke": 0,
+      "village-of-mcbride": 0,
+      "village-of-midway": 0
+    },
+    "employersWithCompiledBaselineRows": []
+  },
+  "adoptionEvidence": {
+    "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/07/13-Regular-Meeting-June-9-2025.pdf",
+    "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+    "cachePath": "/tmp/recovery-municipal-review/midway-june9-2025-minutes.pdf",
+    "sha256": "930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d",
+    "physicalPage": 2,
+    "printedPage": 6952,
+    "signedMinutesPage": 3,
+    "motions": [
+      {
+        "id": "025-2025",
+        "text": "THAT Council approves revised 2023 Statement of Financial Information (SOFI) Schedules.",
+        "result": "Carried"
+      },
+      {
+        "id": "026-2025",
+        "text": "THAT Council approves revised 2024 Statement of Financial Information (SOFI) Schedules",
+        "result": "Carried"
+      }
+    ],
+    "review": "All three original-image minutes pages reviewed by recovery_municipal; signatures visible on page 3."
+  },
+  "publicWarnings": {
+    "recovery-municipal-mcbride-2022-elected-officials": "The printed council combined total is 55,812.83 CAD, while its remuneration control 34,965.00 plus expense control 24,087.83 equals 59,052.83 CAD. Individual remuneration and known expenses agree with their separate printed controls. Combined totals are not used as remuneration; the published discrepancy remains unresolved. The officially linked 2022 original has an unsigned approval page with blank dates; adoption is not established by this original.",
+    "recovery-municipal-mcbride-2022-employee-remuneration": "The officially linked 2022 original has an unsigned approval page with blank dates; adoption is not established by this original.",
+    "recovery-municipal-mcbride-2025-employee-remuneration": "Only the complete employee schedule on physical page 43 is included: its heading and the report cover explicitly identify 2025. The adjacent council schedule on page 42 explicitly says 2024 and conflicts with the separate 2024 report; that council schedule is held for clarification and has not been relabelled or imported.",
+    "recovery-municipal-sooke-2025-elected-officials": "Sooke 2025 prints council remuneration of 172,062 and council expenses of 26,266 on page 37, but carries 172,064 in both council remuneration and council expenses columns on page 38. Page 38 prints total remuneration 8,634,739 and expenses 282,537. These published controls are retained literally; the differences remain unresolved and no cells have been adjusted.",
+    "recovery-municipal-sooke-2025-employee-remuneration": "Sooke 2025 prints council remuneration of 172,062 and council expenses of 26,266 on page 37, but carries 172,064 in both council remuneration and council expenses columns on page 38. Page 38 prints total remuneration 8,634,739 and expenses 282,537. These published controls are retained literally; the differences remain unresolved and no cells have been adjusted. Known individual sums differ from printed named controls: remuneration 6,874,288.00 CAD versus 6,874,287.00 CAD (residual +1.00); expenses 110,428.00 CAD versus 110,474.00 CAD (residual -46.00). Original row values remain literal; cause unresolved."
+  },
+  "visualReviewCoverage": [
+    {
+      "key": "mcbride-2022",
+      "salaryPages": [
+        39,
+        40
+      ],
+      "coverPages": [
+        1
+      ],
+      "approvalPages": [
+        45
+      ],
+      "alsoReviewedHeldCouncilPage": null,
+      "completeSalaryRowsReviewed": true,
+      "reviewer": "recovery_municipal",
+      "scope": "Specified salary/cover/approval pages only; not every page of the report."
+    },
+    {
+      "key": "mcbride-2023",
+      "salaryPages": [
+        44,
+        45
+      ],
+      "coverPages": [
+        1
+      ],
+      "approvalPages": [
+        50
+      ],
+      "alsoReviewedHeldCouncilPage": null,
+      "completeSalaryRowsReviewed": true,
+      "reviewer": "recovery_municipal",
+      "scope": "Specified salary/cover/approval pages only; not every page of the report."
+    },
+    {
+      "key": "mcbride-2024",
+      "salaryPages": [
+        45,
+        46
+      ],
+      "coverPages": [
+        1
+      ],
+      "approvalPages": [
+        51
+      ],
+      "alsoReviewedHeldCouncilPage": null,
+      "completeSalaryRowsReviewed": true,
+      "reviewer": "recovery_municipal",
+      "scope": "Specified salary/cover/approval pages only; not every page of the report."
+    },
+    {
+      "key": "mcbride-2025",
+      "salaryPages": [
+        43
+      ],
+      "coverPages": [
+        1
+      ],
+      "approvalPages": [
+        48
+      ],
+      "alsoReviewedHeldCouncilPage": 42,
+      "completeSalaryRowsReviewed": true,
+      "reviewer": "recovery_municipal",
+      "scope": "Specified salary/cover/approval pages only; not every page of the report."
+    },
+    {
+      "key": "midway-2023-2024",
+      "salaryPages": [
+        9,
+        11
+      ],
+      "coverPages": [],
+      "approvalPages": [
+        8
+      ],
+      "alsoReviewedHeldCouncilPage": null,
+      "completeSalaryRowsReviewed": true,
+      "reviewer": "recovery_municipal",
+      "scope": "Specified salary/cover/approval pages only; not every page of the report."
+    },
+    {
+      "key": "sooke-2025",
+      "salaryPages": [
+        37,
+        38
+      ],
+      "coverPages": [
+        1
+      ],
+      "approvalPages": [
+        2
+      ],
+      "alsoReviewedHeldCouncilPage": null,
+      "completeSalaryRowsReviewed": true,
+      "reviewer": "recovery_municipal",
+      "scope": "Specified salary/cover/approval pages only; not every page of the report."
+    }
+  ],
+  "reproduction": [
+    "python scripts/recover_wave_municipal.py --verify",
+    "python -m unittest discover -s scripts -p test_recover_wave_municipal*.py"
+  ],
+  "noGlobalOrExistingCollectionEdits": true,
+  "noContactsOrRequestsSent": true
+}

@@ -1,0 +1,15 @@
+{
+  "verifiedOn": "2026-11-01",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s scripts -p 'test_recover_wave_education.py'",
+      "result": "5 tests passed"
+    },
+    {
+      "command": "python scripts/recover_wave_education.py --originals",
+      "result": "Verified4 sources /9987 rows with originals"
+    }
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scope": "Independent extraction and literal original components/printed controls; no global registry or generated files changed."
+}

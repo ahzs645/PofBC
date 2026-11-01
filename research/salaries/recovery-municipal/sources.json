@@ -1,0 +1,1022 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "recovery-municipal-mcbride-2022-elected-officials",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://mcbride.civicweb.net/document/18711",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "c07190fb089fe01b1b92776480b4e63fcf199fd02c70754acafa4a5c27d3af0e",
+      "file": "mcbride-2022-elected-officials.json.gzip",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of McBride 2022 SOFI: elected-officials",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 8,
+      "totalRemuneration": 34965.0,
+      "totalExpenses": 24087.83,
+      "pages": [
+        39
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Officially linked original; approval page 45 is unsigned with blank dates. Adoption is not established by this original.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration.",
+        "Wages/indemnity/remuneration are the separate published pay column; the combined Total column includes expenses and is not imported as pay."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": null,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 34965,
+            "knownRowSum": 34965.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 24087.83,
+            "knownRowSum": 24087.83,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/mcbride-2022.json.gzip",
+        "evidenceSha256": "fcb40c2f1e863602194412ab6487b791d289c75330ce3a9adbf46157beff3aec",
+        "physicalPagesVisuallyReviewed": [
+          39
+        ],
+        "periodEvidence": [
+          {
+            "page": 39,
+            "text": "2022 FINANCIAL INFORMATION"
+          }
+        ],
+        "extractionMethod": "Complete original-image manual transcription, independently transcribed and compared by peer; OCR overlay is discovery only.",
+        "independentPeerReview": {
+          "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-comparison.json",
+          "sha256": "61951a9c796edcda23f204f2eaa4dae2f1ef668e1557b0b5ccf1a52fc602f956",
+          "independentTranscript": {
+            "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-original-transcription.json",
+            "sha256": "e681f4dba45605e2c17418e8d38028d5befdaf6bbec8d34970fda20a9b2e8cf5",
+            "writtenBeforeCandidateOpened": true
+          },
+          "allRowFieldsExact": true,
+          "reviewer": "/root/recovery_review"
+        }
+      },
+      "dataSha256": "cc5ed6c0b0ddb60a36f3f101ee631c0c806386100cb0c3c3aa6932392ae569e0",
+      "publicWarning": "The printed council combined total is 55,812.83 CAD, while its remuneration control 34,965.00 plus expense control 24,087.83 equals 59,052.83 CAD. Individual remuneration and known expenses agree with their separate printed controls. Combined totals are not used as remuneration; the published discrepancy remains unresolved. The officially linked 2022 original has an unsigned approval page with blank dates; adoption is not established by this original."
+    },
+    {
+      "id": "recovery-municipal-mcbride-2022-employee-remuneration",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://mcbride.civicweb.net/document/18711",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "c07190fb089fe01b1b92776480b4e63fcf199fd02c70754acafa4a5c27d3af0e",
+      "file": "mcbride-2022-employee-remuneration.json.gzip",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of McBride 2022 SOFI: employee-remuneration",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 3,
+      "totalRemuneration": 279769.77,
+      "totalExpenses": 9722.54,
+      "pages": [
+        40
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": "greater-than",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Officially linked original; approval page 45 is unsigned with blank dates. Adoption is not established by this original.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration.",
+        "Wages/indemnity/remuneration are the separate published pay column; the combined Total column includes expenses and is not imported as pay."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 279769.77,
+            "knownRowSum": 279769.77,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 9722.54,
+            "knownRowSum": 9722.54,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/mcbride-2022.json.gzip",
+        "evidenceSha256": "fcb40c2f1e863602194412ab6487b791d289c75330ce3a9adbf46157beff3aec",
+        "physicalPagesVisuallyReviewed": [
+          40
+        ],
+        "periodEvidence": [
+          {
+            "page": 40,
+            "text": "2022 FINANCIAL INFORMATION"
+          }
+        ],
+        "extractionMethod": "Complete original-image manual transcription, independently transcribed and compared by peer; OCR overlay is discovery only.",
+        "independentPeerReview": {
+          "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-comparison.json",
+          "sha256": "61951a9c796edcda23f204f2eaa4dae2f1ef668e1557b0b5ccf1a52fc602f956",
+          "independentTranscript": {
+            "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-original-transcription.json",
+            "sha256": "e681f4dba45605e2c17418e8d38028d5befdaf6bbec8d34970fda20a9b2e8cf5",
+            "writtenBeforeCandidateOpened": true
+          },
+          "allRowFieldsExact": true,
+          "reviewer": "/root/recovery_review"
+        }
+      },
+      "dataSha256": "6ab79dbd43307a337e64582350183c770ed7e6ec39fe3ab83326541639e3104d",
+      "publicWarning": "The officially linked 2022 original has an unsigned approval page with blank dates; adoption is not established by this original."
+    },
+    {
+      "id": "recovery-municipal-mcbride-2023-elected-officials",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://mcbride.civicweb.net/document/29458",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "afadbdc30c4bcd5e49f92a1305b8c7d4e5047c728e60e01867082bfea200868d",
+      "file": "mcbride-2023-elected-officials.json.gzip",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of McBride 2023 SOFI: elected-officials",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 6,
+      "totalRemuneration": 39534.75,
+      "totalExpenses": 39047.31,
+      "pages": [
+        44
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Approval page 50 carries signatures of Jeanette McDougall and Eugene Runtz and handwritten June 19, 2024 dates.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration.",
+        "Wages/indemnity/remuneration are the separate published pay column; the combined Total column includes expenses and is not imported as pay."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": null,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 39534.75,
+            "knownRowSum": 39534.75,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 39047.31,
+            "knownRowSum": 39047.31,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/mcbride-2023.json.gzip",
+        "evidenceSha256": "e3c0aa9314c55893e5056887be177e5361de307cc5b557d2fc949d2ff8089a26",
+        "physicalPagesVisuallyReviewed": [
+          44
+        ],
+        "periodEvidence": [
+          {
+            "page": 44,
+            "text": "2023 FINANCIAL INFORMATION"
+          }
+        ],
+        "extractionMethod": "Complete original-image manual transcription, independently transcribed and compared by peer; OCR overlay is discovery only.",
+        "independentPeerReview": {
+          "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-comparison.json",
+          "sha256": "61951a9c796edcda23f204f2eaa4dae2f1ef668e1557b0b5ccf1a52fc602f956",
+          "independentTranscript": {
+            "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-original-transcription.json",
+            "sha256": "e681f4dba45605e2c17418e8d38028d5befdaf6bbec8d34970fda20a9b2e8cf5",
+            "writtenBeforeCandidateOpened": true
+          },
+          "allRowFieldsExact": true,
+          "reviewer": "/root/recovery_review"
+        }
+      },
+      "dataSha256": "eb7cc7c3c3ff4484d68518780018813dd1a2364083e9dc4c122a615bfe523496"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2023-employee-remuneration",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://mcbride.civicweb.net/document/29458",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "afadbdc30c4bcd5e49f92a1305b8c7d4e5047c728e60e01867082bfea200868d",
+      "file": "mcbride-2023-employee-remuneration.json.gzip",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of McBride 2023 SOFI: employee-remuneration",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 3,
+      "totalRemuneration": 312795.64,
+      "totalExpenses": 8158.39,
+      "pages": [
+        45
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": "greater-than",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Approval page 50 carries signatures of Jeanette McDougall and Eugene Runtz and handwritten June 19, 2024 dates.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration.",
+        "Wages/indemnity/remuneration are the separate published pay column; the combined Total column includes expenses and is not imported as pay."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 312795.64,
+            "knownRowSum": 312795.64,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 8158.39,
+            "knownRowSum": 8158.39,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/mcbride-2023.json.gzip",
+        "evidenceSha256": "e3c0aa9314c55893e5056887be177e5361de307cc5b557d2fc949d2ff8089a26",
+        "physicalPagesVisuallyReviewed": [
+          45
+        ],
+        "periodEvidence": [
+          {
+            "page": 45,
+            "text": "2023 FINANCIAL INFORMATION"
+          }
+        ],
+        "extractionMethod": "Complete original-image manual transcription, independently transcribed and compared by peer; OCR overlay is discovery only.",
+        "independentPeerReview": {
+          "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-comparison.json",
+          "sha256": "61951a9c796edcda23f204f2eaa4dae2f1ef668e1557b0b5ccf1a52fc602f956",
+          "independentTranscript": {
+            "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-original-transcription.json",
+            "sha256": "e681f4dba45605e2c17418e8d38028d5befdaf6bbec8d34970fda20a9b2e8cf5",
+            "writtenBeforeCandidateOpened": true
+          },
+          "allRowFieldsExact": true,
+          "reviewer": "/root/recovery_review"
+        }
+      },
+      "dataSha256": "bfdce37c03514522db6f5fc85d5d067d4222cde2a01d57e028cf1d66b6362055"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2024-elected-officials",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://mcbride.civicweb.net/document/39757",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "ab3285b9156ba179775263f5d730d24cbd96af3f51fbd7595ac9852c311044f1",
+      "file": "mcbride-2024-elected-officials.json.gzip",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of McBride 2024 SOFI: elected-officials",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 5,
+      "totalRemuneration": 45600.0,
+      "totalExpenses": 60151.87,
+      "pages": [
+        45
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Approval page 51 carries signatures of Jeanette McDougall and Eugene Runtz and handwritten June 24, 2025 dates.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration.",
+        "Wages/indemnity/remuneration are the separate published pay column; the combined Total column includes expenses and is not imported as pay."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": null,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 45600,
+            "knownRowSum": 45600.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 60151.87,
+            "knownRowSum": 60151.87,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/mcbride-2024.json.gzip",
+        "evidenceSha256": "b2e4c02d6565e8b42b8d3c49e83edec4d35bf82079144ae33f0c4b8865b38208",
+        "physicalPagesVisuallyReviewed": [
+          45
+        ],
+        "periodEvidence": [
+          {
+            "page": 45,
+            "text": "2024 FINANCIAL INFORMATION"
+          }
+        ],
+        "extractionMethod": "Complete original-image manual transcription, independently transcribed and compared by peer; OCR overlay is discovery only.",
+        "independentPeerReview": {
+          "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-comparison.json",
+          "sha256": "61951a9c796edcda23f204f2eaa4dae2f1ef668e1557b0b5ccf1a52fc602f956",
+          "independentTranscript": {
+            "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-original-transcription.json",
+            "sha256": "e681f4dba45605e2c17418e8d38028d5befdaf6bbec8d34970fda20a9b2e8cf5",
+            "writtenBeforeCandidateOpened": true
+          },
+          "allRowFieldsExact": true,
+          "reviewer": "/root/recovery_review"
+        }
+      },
+      "dataSha256": "f1bd57ee9bd0f6a7816af06965415ac63bfcaf83450196fe1532f7fb3927bf96"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2024-employee-remuneration",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://mcbride.civicweb.net/document/39757",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "ab3285b9156ba179775263f5d730d24cbd96af3f51fbd7595ac9852c311044f1",
+      "file": "mcbride-2024-employee-remuneration.json.gzip",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of McBride 2024 SOFI: employee-remuneration",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 5,
+      "totalRemuneration": 488692.67,
+      "totalExpenses": 16790.86,
+      "pages": [
+        46
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": "greater-than",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Approval page 51 carries signatures of Jeanette McDougall and Eugene Runtz and handwritten June 24, 2025 dates.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration.",
+        "Wages/indemnity/remuneration are the separate published pay column; the combined Total column includes expenses and is not imported as pay.",
+        "Employee schedule heading and cover explicitly say 2024; the reconciliation explanatory paragraph refers to 2023 financial statements. This explanatory-note date is preserved as a caveat, not used to relabel the named 2024 schedule."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 488692.67,
+            "knownRowSum": 488692.67,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 16790.86,
+            "knownRowSum": 16790.86,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/mcbride-2024.json.gzip",
+        "evidenceSha256": "b2e4c02d6565e8b42b8d3c49e83edec4d35bf82079144ae33f0c4b8865b38208",
+        "physicalPagesVisuallyReviewed": [
+          46
+        ],
+        "periodEvidence": [
+          {
+            "page": 46,
+            "text": "2024 FINANCIAL INFORMATION"
+          }
+        ],
+        "extractionMethod": "Complete original-image manual transcription, independently transcribed and compared by peer; OCR overlay is discovery only.",
+        "independentPeerReview": {
+          "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-comparison.json",
+          "sha256": "61951a9c796edcda23f204f2eaa4dae2f1ef668e1557b0b5ccf1a52fc602f956",
+          "independentTranscript": {
+            "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-original-transcription.json",
+            "sha256": "e681f4dba45605e2c17418e8d38028d5befdaf6bbec8d34970fda20a9b2e8cf5",
+            "writtenBeforeCandidateOpened": true
+          },
+          "allRowFieldsExact": true,
+          "reviewer": "/root/recovery_review"
+        }
+      },
+      "dataSha256": "5523c92b9385e8698b50248386170aa9eee46d4d3f95783c32a467bd775e673a"
+    },
+    {
+      "id": "recovery-municipal-mcbride-2025-employee-remuneration",
+      "employerSlug": "village-of-mcbride",
+      "employerName": "Village of McBride",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://mcbride.civicweb.net/document/45990",
+      "sourceIndexUrl": "https://www.mcbride.ca/government-bylaws/finance",
+      "sha256": "11733872fa678d7af449e391271581ca65602df4b35898661f903043a0b7e214",
+      "file": "mcbride-2025-employee-remuneration.json.gzip",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of McBride 2025 SOFI: employee-remuneration",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 5,
+      "totalRemuneration": 525904.09,
+      "totalExpenses": 29312.73,
+      "pages": [
+        43
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": "greater-than",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Approval page 48 carries signatures of Jeanette McDougall and Eugene Runtz and handwritten 2026 dates. Council page 42 is held separately for its contradictory 2024 heading.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration.",
+        "Wages/indemnity/remuneration are the separate published pay column; the combined Total column includes expenses and is not imported as pay."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 525904.09,
+            "knownRowSum": 525904.09,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 29312.73,
+            "knownRowSum": 29312.73,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/mcbride-2025.json.gzip",
+        "evidenceSha256": "58708f2ac5a97428c2d35a46c17301d14a42213380ee64347b14fbf724c4e7a8",
+        "physicalPagesVisuallyReviewed": [
+          43
+        ],
+        "periodEvidence": [
+          {
+            "page": 43,
+            "text": "2025 FINANCIAL INFORMATION"
+          }
+        ],
+        "extractionMethod": "Complete original-image manual transcription, independently transcribed and compared by peer; OCR overlay is discovery only.",
+        "independentPeerReview": {
+          "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-comparison.json",
+          "sha256": "61951a9c796edcda23f204f2eaa4dae2f1ef668e1557b0b5ccf1a52fc602f956",
+          "independentTranscript": {
+            "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-original-transcription.json",
+            "sha256": "e681f4dba45605e2c17418e8d38028d5befdaf6bbec8d34970fda20a9b2e8cf5",
+            "writtenBeforeCandidateOpened": true
+          },
+          "allRowFieldsExact": true,
+          "reviewer": "/root/recovery_review"
+        }
+      },
+      "dataSha256": "0c12cd8929b655ef4f918dff59c2d0b20d9b585380b564b01acff7e118b7844b",
+      "publicWarning": "Only the complete employee schedule on physical page 43 is included: its heading and the report cover explicitly identify 2025. The adjacent council schedule on page 42 explicitly says 2024 and conflicts with the separate 2024 report; that council schedule is held for clarification and has not been relabelled or imported."
+    },
+    {
+      "id": "recovery-municipal-midway-2023-elected-officials",
+      "employerSlug": "village-of-midway",
+      "employerName": "Village of Midway",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/06/13-Agenda-JUN-9-2025.pdf",
+      "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+      "sha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "file": "midway-2023-elected-officials.json.gzip",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of Midway 2023 SOFI: elected-officials",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 5,
+      "totalRemuneration": 46270.0,
+      "totalExpenses": 22608.0,
+      "pages": [
+        9
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Revised 2023 and 2024 schedules in the June 9, 2025 agenda; signed official minutes page 2 (printed 6952), motions 025-2025 and 026-2025, approve both revised schedules. Minutes SHA256 930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": null,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 46270,
+            "knownRowSum": 46270.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 22608,
+            "knownRowSum": 22608.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/midway-2023-2024.json.gzip",
+        "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc",
+        "physicalPagesVisuallyReviewed": [
+          9
+        ],
+        "periodEvidence": [
+          {
+            "page": 9,
+            "text": "For the year ended December 31, 2023"
+          }
+        ],
+        "independentPdfReaders": [
+          "Poppler fixed-width text line state machine",
+          "PyMuPDF positioned-word name anchors and cell bands"
+        ]
+      },
+      "dataSha256": "013ed833a1955c173e90816ed382c0c2f1a50d68d83db2c25b4d5406bdae4d06"
+    },
+    {
+      "id": "recovery-municipal-midway-2023-employee-remuneration",
+      "employerSlug": "village-of-midway",
+      "employerName": "Village of Midway",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/06/13-Agenda-JUN-9-2025.pdf",
+      "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+      "sha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "file": "midway-2023-employee-remuneration.json.gzip",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Midway 2023 SOFI: employee-remuneration",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 4,
+      "totalRemuneration": 357899.0,
+      "totalExpenses": 19816.0,
+      "pages": [
+        9
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": "greater-than",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Revised 2023 and 2024 schedules in the June 9, 2025 agenda; signed official minutes page 2 (printed 6952), motions 025-2025 and 026-2025, approve both revised schedules. Minutes SHA256 930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 357899,
+            "knownRowSum": 357899.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 19816,
+            "knownRowSum": 19816.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/midway-2023-2024.json.gzip",
+        "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc",
+        "physicalPagesVisuallyReviewed": [
+          9
+        ],
+        "periodEvidence": [
+          {
+            "page": 9,
+            "text": "For the year ended December 31, 2023"
+          }
+        ],
+        "independentPdfReaders": [
+          "Poppler fixed-width text line state machine",
+          "PyMuPDF positioned-word name anchors and cell bands"
+        ]
+      },
+      "dataSha256": "217c20017f14efe1fdde645992feced72629502fdfce4e8ded86f7e28bc7f57b"
+    },
+    {
+      "id": "recovery-municipal-midway-2024-elected-officials",
+      "employerSlug": "village-of-midway",
+      "employerName": "Village of Midway",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/06/13-Agenda-JUN-9-2025.pdf",
+      "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+      "sha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "file": "midway-2024-elected-officials.json.gzip",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of Midway 2024 SOFI: elected-officials",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 5,
+      "totalRemuneration": 48077.0,
+      "totalExpenses": 23919.0,
+      "pages": [
+        11
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Revised 2023 and 2024 schedules in the June 9, 2025 agenda; signed official minutes page 2 (printed 6952), motions 025-2025 and 026-2025, approve both revised schedules. Minutes SHA256 930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": null,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 48077,
+            "knownRowSum": 48077.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 23919,
+            "knownRowSum": 23919.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/midway-2023-2024.json.gzip",
+        "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc",
+        "physicalPagesVisuallyReviewed": [
+          11
+        ],
+        "periodEvidence": [
+          {
+            "page": 11,
+            "text": "For the year ended December 31, 2024"
+          }
+        ],
+        "independentPdfReaders": [
+          "Poppler fixed-width text line state machine",
+          "PyMuPDF positioned-word name anchors and cell bands"
+        ]
+      },
+      "dataSha256": "6e7650ee38684c91a488a9f2e96c162233ed61aff4310afc82b10f136126e9e0"
+    },
+    {
+      "id": "recovery-municipal-midway-2024-employee-remuneration",
+      "employerSlug": "village-of-midway",
+      "employerName": "Village of Midway",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://midwaybc.ca/wp-content/uploads/2025/06/13-Agenda-JUN-9-2025.pdf",
+      "sourceIndexUrl": "https://midwaybc.ca/2025-newsletters-meeting-minutes-agenda/",
+      "sha256": "04bb08ea2b2fc40cce7972a28ff7ccc00a373dd9341f8587286d572d97954331",
+      "file": "midway-2024-employee-remuneration.json.gzip",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Midway 2024 SOFI: employee-remuneration",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 4,
+      "totalRemuneration": 362652.0,
+      "totalExpenses": 2866.0,
+      "pages": [
+        11
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": "greater-than",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Revised 2023 and 2024 schedules in the June 9, 2025 agenda; signed official minutes page 2 (printed 6952), motions 025-2025 and 026-2025, approve both revised schedules. Minutes SHA256 930ed8bb23cd786c97a7d16dd59d62678ec892fab5476f51c5603b4a8f1ce33d.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 362652,
+            "knownRowSum": 362652.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 2866,
+            "knownRowSum": 2866.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/midway-2023-2024.json.gzip",
+        "evidenceSha256": "1712e76835271ae1998c89b1b90a5b600ad4ccd483f2568f9b1d3553304edcfc",
+        "physicalPagesVisuallyReviewed": [
+          11
+        ],
+        "periodEvidence": [
+          {
+            "page": 11,
+            "text": "For the year ended December 31, 2024"
+          }
+        ],
+        "independentPdfReaders": [
+          "Poppler fixed-width text line state machine",
+          "PyMuPDF positioned-word name anchors and cell bands"
+        ]
+      },
+      "dataSha256": "9a279a61dff0e759fee4eab455b9c5631643a18f15aa5505997aa9668c0fc514"
+    },
+    {
+      "id": "recovery-municipal-sooke-2025-elected-officials",
+      "employerSlug": "district-of-sooke",
+      "employerName": "District of Sooke",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://www.sooke.ca/media/emqbjnxm/2025-statement-of-financial-information.pdf",
+      "sourceIndexUrl": "https://www.sooke.ca/media-manager/media-pages/plans-and-reports/2025-statement-of-financial-information-sofi/",
+      "sha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "file": "sooke-2025-elected-officials.json.gzip",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "District of Sooke 2025 SOFI: elected-officials",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 7,
+      "totalRemuneration": 172062.0,
+      "totalExpenses": 26266.0,
+      "pages": [
+        37
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "completeEmployeeSchedule": null,
+      "notes": [
+        "Approval page 2 carries Director of Financial Services and Mayor signatures with June 2026 dates.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration.",
+        "Remuneration includes salary, wages and taxable benefits paid during the year (cash basis). Expenses include travel, memberships, tuition, relocation, vehicle leases, extraordinary hiring expenses, registration fees and similar amounts outside remuneration."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": null,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 172062,
+            "knownRowSum": 172062.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 26266,
+            "knownRowSum": 26266.0,
+            "residual": 0.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/sooke-2025.json.gzip",
+        "evidenceSha256": "139c880e580b0e0898235d8e97e4cd5af99444f9ed8a41c569a86e1e5e99f3a1",
+        "physicalPagesVisuallyReviewed": [
+          37
+        ],
+        "periodEvidence": [
+          {
+            "page": 37,
+            "text": "For the year ended December 31, 2025"
+          }
+        ],
+        "independentPdfReaders": [
+          "Poppler fixed-width text line state machine",
+          "PyMuPDF positioned-word name anchors and cell bands"
+        ]
+      },
+      "dataSha256": "f3d97ddb1a1d8b5b1551058d87db941bc2c687568c9320fa2478701c7602ea0a",
+      "publicWarning": "Sooke 2025 prints council remuneration of 172,062 and council expenses of 26,266 on page 37, but carries 172,064 in both council remuneration and council expenses columns on page 38. Page 38 prints total remuneration 8,634,739 and expenses 282,537. These published controls are retained literally; the differences remain unresolved and no cells have been adjusted."
+    },
+    {
+      "id": "recovery-municipal-sooke-2025-employee-remuneration",
+      "employerSlug": "district-of-sooke",
+      "employerName": "District of Sooke",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://www.sooke.ca/media/emqbjnxm/2025-statement-of-financial-information.pdf",
+      "sourceIndexUrl": "https://www.sooke.ca/media-manager/media-pages/plans-and-reports/2025-statement-of-financial-information-sofi/",
+      "sha256": "f7c218a601804343d7d4ae4f480d7b9b34cb4dcaa9c6115be8d5602992cb1e13",
+      "file": "sooke-2025-employee-remuneration.json.gzip",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "District of Sooke 2025 SOFI: employee-remuneration",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "sourceKind": "official",
+      "rowCount": 55,
+      "totalRemuneration": 6874288.0,
+      "totalExpenses": 110428.0,
+      "pages": [
+        37,
+        38
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": "greater-than",
+      "completeEmployeeSchedule": true,
+      "notes": [
+        "Approval page 2 carries Director of Financial Services and Mayor signatures with June 2026 dates.",
+        "Only individually named persons are imported. Below-threshold aggregates, expense-inclusive combined totals and financial-statement employer costs are retained as evidence and are not personal remuneration.",
+        "Published names, initials and titles are preserved without enrichment. Missing titles and blank/dash expenses remain null; explicit zeros would remain zero. Expenses are separate from remuneration.",
+        "Remuneration includes salary, wages and taxable benefits paid during the year (cash basis). Expenses include travel, memberships, tuition, relocation, vehicle leases, extraordinary hiring expenses, registration fees and similar amounts outside remuneration."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "allRowFieldsAgree": true,
+        "controls": [
+          {
+            "field": "remuneration",
+            "printedNamedControl": 6874287,
+            "knownRowSum": 6874288.0,
+            "residual": 1.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          },
+          {
+            "field": "expenses",
+            "printedNamedControl": 110474,
+            "knownRowSum": 110428.0,
+            "residual": -46.0,
+            "basis": "Complete named cohort. Null expenses excluded from known sum and not imputed."
+          }
+        ],
+        "evidenceFile": "evidence/sooke-2025.json.gzip",
+        "evidenceSha256": "139c880e580b0e0898235d8e97e4cd5af99444f9ed8a41c569a86e1e5e99f3a1",
+        "physicalPagesVisuallyReviewed": [
+          37,
+          38
+        ],
+        "periodEvidence": [
+          {
+            "page": 37,
+            "text": "For the year ended December 31, 2025"
+          }
+        ],
+        "independentPdfReaders": [
+          "Poppler fixed-width text line state machine",
+          "PyMuPDF positioned-word name anchors and cell bands"
+        ]
+      },
+      "dataSha256": "3196e2b9a7acc4042bbedca2761ae3a6237cfeb8434e6d5511afb7aec2175a27",
+      "publicWarning": "Sooke 2025 prints council remuneration of 172,062 and council expenses of 26,266 on page 37, but carries 172,064 in both council remuneration and council expenses columns on page 38. Page 38 prints total remuneration 8,634,739 and expenses 282,537. These published controls are retained literally; the differences remain unresolved and no cells have been adjusted. Known individual sums differ from printed named controls: remuneration 6,874,288.00 CAD versus 6,874,287.00 CAD (residual +1.00); expenses 110,428.00 CAD versus 110,474.00 CAD (residual -46.00). Original row values remain literal; cause unresolved."
+    }
+  ]
+}

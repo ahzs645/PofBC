@@ -1,0 +1,329 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "result": "All assigned image-review scopes pass complete field comparison. Published source caveats remain literal; no author payload row corrections required.",
+  "acceptedCohorts": 16,
+  "acceptedNamedRows": 202,
+  "acceptedSourceIds": [
+    "recovery-municipal-mcbride-2022-elected-officials",
+    "recovery-municipal-mcbride-2022-employee-remuneration",
+    "recovery-municipal-mcbride-2023-elected-officials",
+    "recovery-municipal-mcbride-2023-employee-remuneration",
+    "recovery-municipal-mcbride-2024-elected-officials",
+    "recovery-municipal-mcbride-2024-employee-remuneration",
+    "recovery-municipal-mcbride-2025-employee-remuneration",
+    "recovery-schools-sd19-2025-trustees",
+    "recovery-schools-sd19-2025-employees",
+    "recovery-schools-sd49-2025-trustees",
+    "recovery-schools-sd49-2025-employees",
+    "recovery-schools-sd64-2025-trustees",
+    "recovery-health-interior-board-2014-15",
+    "recovery-health-interior-board-2015-16",
+    "recovery-health-interior-board-2016-17",
+    "recovery-health-interior-board-2017-18"
+  ],
+  "heldNamedRows": 5,
+  "heldScopes": [
+    {
+      "employerSlug": "village-of-mcbride",
+      "packageYear": 2025,
+      "physicalPage": 42,
+      "literalScheduleYear": 2024,
+      "namedRows": 5,
+      "reason": "Contradictory printed period and conflict with separate 2024 original; do not infer corrected period."
+    }
+  ],
+  "completeVisualFieldReviewCoverage": [
+    {
+      "employer": "McBride",
+      "packageYear": 2022,
+      "physicalPages": [
+        39,
+        40
+      ],
+      "namedRows": 11
+    },
+    {
+      "employer": "McBride",
+      "packageYear": 2023,
+      "physicalPages": [
+        44,
+        45
+      ],
+      "namedRows": 9
+    },
+    {
+      "employer": "McBride",
+      "packageYear": 2024,
+      "physicalPages": [
+        45,
+        46
+      ],
+      "namedRows": 10
+    },
+    {
+      "employer": "McBride",
+      "packageYear": 2025,
+      "physicalPages": [
+        43
+      ],
+      "namedRows": 5
+    },
+    {
+      "employer": "McBride held council",
+      "packageYear": 2025,
+      "physicalPages": [
+        42
+      ],
+      "namedRows": 5,
+      "held": true
+    },
+    {
+      "employer": "SD19 Revelstoke",
+      "period": "2024/25",
+      "physicalPages": [
+        50,
+        51
+      ],
+      "namedRows": 82
+    },
+    {
+      "employer": "SD49 Central Coast",
+      "period": "2024/25",
+      "physicalPages": [
+        53
+      ],
+      "namedRows": 35
+    },
+    {
+      "employer": "SD64 Gulf Islands trustees only",
+      "period": "2024/25",
+      "physicalPages": [
+        52
+      ],
+      "namedRows": 7
+    },
+    {
+      "employer": "Interior Health board",
+      "period": "2014/15",
+      "physicalPages": [
+        2
+      ],
+      "namedRows": 11
+    },
+    {
+      "employer": "Interior Health board",
+      "period": "2015/16",
+      "physicalPages": [
+        2
+      ],
+      "namedRows": 9
+    },
+    {
+      "employer": "Interior Health board",
+      "period": "2016/17",
+      "physicalPages": [
+        1
+      ],
+      "namedRows": 10
+    },
+    {
+      "employer": "Interior Health board",
+      "period": "2017/18",
+      "physicalPages": [
+        1
+      ],
+      "namedRows": 13
+    }
+  ],
+  "additionalVisualCoverApprovalPages": [
+    {
+      "employer": "McBride",
+      "packageYear": 2022,
+      "physicalPages": [
+        1,
+        45
+      ]
+    },
+    {
+      "employer": "McBride",
+      "packageYear": 2023,
+      "physicalPages": [
+        1,
+        50
+      ]
+    },
+    {
+      "employer": "McBride",
+      "packageYear": 2024,
+      "physicalPages": [
+        1,
+        51
+      ]
+    },
+    {
+      "employer": "McBride",
+      "packageYear": 2025,
+      "physicalPages": [
+        1,
+        48
+      ]
+    },
+    {
+      "employer": "SD19",
+      "physicalPages": [
+        2
+      ]
+    },
+    {
+      "employer": "SD49",
+      "physicalPages": [
+        3
+      ]
+    },
+    {
+      "employer": "SD64",
+      "physicalPages": [
+        3
+      ]
+    }
+  ],
+  "sourceControlCaveats": [
+    {
+      "scope": "McBride 2022 council",
+      "literalPrinted": [
+        34965,
+        24087.83,
+        55812.83
+      ],
+      "issue": "Separate pay plus expense controls = 59052.83; printed combined total differs by 3240. No cause inferred."
+    },
+    {
+      "scope": "SD19 2024/25 employees",
+      "knownRowExpenseSum": 150762,
+      "printedExpenseTotal": 148744,
+      "difference": 2018,
+      "alsoAffectsConsolidatedExpenseControl": true
+    },
+    {
+      "scope": "SD49 2024/25 trustees",
+      "literalRowPaySum": 63095,
+      "printedPayTotal": 63096,
+      "difference": -1
+    },
+    {
+      "scope": "SD64 2024/25 trustees",
+      "literalRowPaySum": 126052,
+      "printedPayTotal": 126054,
+      "difference": -2
+    },
+    {
+      "scope": "Interior Health board 2017/18",
+      "literalRowPaySum": 169627,
+      "printedPayTotal": 169625,
+      "difference": 2
+    }
+  ],
+  "approvalCaveats": [
+    "McBride 2022 approval page unsigned with blank dates; later three originals visibly signed.",
+    "School declarations have redacted signature areas. SD19/SD49 show dates December 19, 2025 / November 19, 2025 respectively; SD64 date fields are blank. No actual school signature verification claimed.",
+    "Interior salary summary pages are unsigned original schedules; approval/attendance pages not reviewed here."
+  ],
+  "candidateRowCorrections": [],
+  "reviewerRawTranscriptionCorrections": [
+    {
+      "scope": "SD19 Monica Penner position",
+      "initial": "Speech language Pathologist",
+      "literal": "Speech language Patholoigist"
+    },
+    {
+      "scope": "SD49 Beverly Fairful name",
+      "initial": "FAIRFU, BEVERLY",
+      "literal": "FAIRFUL, BEVERLY"
+    },
+    {
+      "scope": "Interior board 2017/18 Joyce Beddow name",
+      "initial": "Bedlow, Joyce",
+      "literal": "Beddow, Joyce"
+    }
+  ],
+  "methodIntegrity": [
+    "Raw manual transcripts were written and hashed before opening corresponding author payloads/TSVs. Each reviewer-only correction was subsequently checked against a newly rendered higher-resolution original cell and explicitly recorded without rewriting the frozen initial transcript.",
+    "Every normalized record in accepted scopes was compared across all six fields; original local PDF hashes and physical-page render mapping were independently checked.",
+    "Full literal financial controls were independently read; totals alone were not used to accept rows. Blank/dash expenses remain null, explicit zeros remain zero, unpublished health expenses remain null."
+  ],
+  "excludedOrUnreviewedScopes": [
+    "SD64 employees: native dual-reader acceptance belongs to author/root; only trustees independently transcribed here.",
+    "Midway/Sooke native schedules outside this manual-review assignment.",
+    "No PHSA employee rows accepted or reviewed; a partial PHSA page cannot establish complete employee schedule coverage.",
+    "Employer index, compiled-partition precedence, external authenticity re-download and publication integration remain root tasks."
+  ],
+  "ownership": "Only new independent-manual-* receipts and scripts/recover_wave_review_manual.py were written by this reviewer. No author datasets/manifests, frozen prior files, globals, branches, commits or external messages modified.",
+  "receipts": [
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-interior-board-comparison.json",
+      "sha256": "6225123ad274f52e85e772c449fe68da9b2ddffbe3cbad996f44432873295253",
+      "bytes": 8697
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-interior-board-original-transcription.json",
+      "sha256": "96cb999578395386f2a0e1fdfd1fffdd5610580effe8d50335f7f6b8c03724dc",
+      "bytes": 7236
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-comparison.json",
+      "sha256": "61951a9c796edcda23f204f2eaa4dae2f1ef668e1557b0b5ccf1a52fc602f956",
+      "bytes": 14524
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-normalized-payloads.json",
+      "sha256": "1182a99f49f3f8b4a73e8bdbf3b8c221eddb9e9f50763cd523c23f027c06534c",
+      "bytes": 8033
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-mcbride-original-transcription.json",
+      "sha256": "e681f4dba45605e2c17418e8d38028d5befdaf6bbec8d34970fda20a9b2e8cf5",
+      "bytes": 10022
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-schools-normalized-payloads.json",
+      "sha256": "3b790d418fab916c22f1a3f90e36c8ee3bffcb913025dcc4b560cd6dc08b745b",
+      "bytes": 8233
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd19-2025-comparison.json",
+      "sha256": "61a1295c0784a653725cb5c59bd328d04e6a002056737612a27bc59df029e36a",
+      "bytes": 26940
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd19-2025-original-transcription.tsv",
+      "sha256": "1642193eb6909e1c5bd51534834ed015fcf44f0faf5f7b03e394b4574bb4710a",
+      "bytes": 4917
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd49-2025-comparison.json",
+      "sha256": "529db236c50d5a17cefa93e2eff349342b80aaa6ff055375dbcfb43d62513e28",
+      "bytes": 6153
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd49-2025-original-transcription.tsv",
+      "sha256": "cccee377b78ddf7e78ae106fdd643d7e791fc1b708a6eca84ee79dabd59965d6",
+      "bytes": 1830
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd64-2025-trustees-comparison.json",
+      "sha256": "99f5247cc23b6150c02d3c5ff2864e7f544715f2f08a7f07c3ceb3103b47c117",
+      "bytes": 3327
+    },
+    {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd64-2025-trustees-original-transcription.tsv",
+      "sha256": "1f7a1e4ccee47eb35ac53502c4ac07fdf1c270a8bac4d5b07f3e699a39edb2a0",
+      "bytes": 439
+    }
+  ],
+  "replay": {
+    "path": "scripts/recover_wave_review_manual.py",
+    "sha256": "c32f9b349eb0718d2df66005bb121741b3c1fff1d8bf87c260d37fff6103b188",
+    "command": "python scripts/recover_wave_review_manual.py"
+  }
+}

@@ -1,0 +1,681 @@
+{
+  "version": 1,
+  "date": "2026-11-01",
+  "scope": "Bounded BC school original salary recovery; new collection recovery-schools only",
+  "state": "worker-complete-and-peer-reviewed-frozen-for-root-integration",
+  "counts": {
+    "workerVerifiedOriginals": 3,
+    "workerVerifiedCohorts": 6,
+    "workerVerifiedRows": 234,
+    "employeeRows": 217,
+    "trusteeRows": 17,
+    "completeImagePeerReviewedCohorts": 5,
+    "completeImagePeerReviewedRows": 124,
+    "independentNativeReaderEmployeeRowsWithoutFullManualPeerImageReview": 110,
+    "remainingScanImageReviewPages": 0,
+    "heldOriginals": 1,
+    "heldImportedRows": 0,
+    "deferredOriginalDiscoveryLeads": 1,
+    "registeredOrPublishedByWorker": 0
+  },
+  "collection": {
+    "file": "research/salaries/recovery-schools/sources.json",
+    "sha256": "c0f008794c198c8166da6293da5798e6186236911f131f7324ca4854b720f5ac"
+  },
+  "sources": [
+    {
+      "id": "recovery-schools-sd19-2025-trustees",
+      "employerSlug": "school-district-19",
+      "employerName": "School District No. 19 (Revelstoke)",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "category": "school-trustees",
+      "rowCount": 5,
+      "pages": [
+        50
+      ],
+      "sha256": "e9986f7cbe9443f0593ae1b88f2014575a33aab5582510c8088a8fbb162870c0",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd19-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "file": "sd19-2025-trustees.json.gzip",
+      "dataSha256": "c1de2d3c16cbf6b7d09572d1e387b708f0f1fa9915a9b79525f02aa6fc4fd762",
+      "provenanceFile": "sd19-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "7267c7a6673ecb9a2af9cc9973cf32db557cb840adac021f635cb0b76bb804e4",
+      "totalRemuneration": 72982.0,
+      "totalExpenses": 21665.0,
+      "publicWarning": null
+    },
+    {
+      "id": "recovery-schools-sd19-2025-employees",
+      "employerSlug": "school-district-19",
+      "employerName": "School District No. 19 (Revelstoke)",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "category": "employee-remuneration",
+      "rowCount": 77,
+      "pages": [
+        50,
+        51
+      ],
+      "sha256": "e9986f7cbe9443f0593ae1b88f2014575a33aab5582510c8088a8fbb162870c0",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd19-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "file": "sd19-2025-employees.json.gzip",
+      "dataSha256": "d5b4a86e21f5c7d6b4def2a619788bd50b239abb557a9be3e60e1355ab8dc2d3",
+      "provenanceFile": "sd19-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "60cdf55dcaa74cab90e457bce056a5cb30cb3e86c34980c84f409da699fdbdc4",
+      "totalRemuneration": 8210710.0,
+      "totalExpenses": 150762.0,
+      "publicWarning": "The 77 published employee rows total $8,210,710 remuneration and $150,762 expenses. The schedule prints $8,210,710 and $148,744, so the row expense sum is $2,018 higher than the printed employee expense total. The published rows and control are retained literally; the reason is unresolved."
+    },
+    {
+      "id": "recovery-schools-sd49-2025-trustees",
+      "employerSlug": "school-district-49",
+      "employerName": "School District No. 49 (Central Coast)",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "category": "school-trustees",
+      "rowCount": 5,
+      "pages": [
+        53
+      ],
+      "sha256": "f3e643ccba15d44118d411f83ee956ce166b9fe51dc97378024659c7b6bb34f3",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd49-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "file": "sd49-2025-trustees.json.gzip",
+      "dataSha256": "0b92a0bacdacab6d876e1f79dc144275a2cae6b02e9a243675d680324d301142",
+      "provenanceFile": "sd49-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "49ca4f41fa5c1107171babf11d349d10aac51656cf2eed9ade8c3c4dbe0cac98",
+      "totalRemuneration": 63095.0,
+      "totalExpenses": 14225.0,
+      "publicWarning": "The five published trustee rows total $63,095 remuneration and $14,225 expenses. The schedule prints $63,096 and $14,225, so the row remuneration sum is $1 lower than the printed trustee remuneration total. The published rows and control are retained literally; the reason is unresolved."
+    },
+    {
+      "id": "recovery-schools-sd49-2025-employees",
+      "employerSlug": "school-district-49",
+      "employerName": "School District No. 49 (Central Coast)",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "category": "employee-remuneration",
+      "rowCount": 30,
+      "pages": [
+        53
+      ],
+      "sha256": "f3e643ccba15d44118d411f83ee956ce166b9fe51dc97378024659c7b6bb34f3",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd49-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "file": "sd49-2025-employees.json.gzip",
+      "dataSha256": "7db6985438dd0fe6c8b2317713434cfd9ebfa6e302175e4fef8b6ee751a5292c",
+      "provenanceFile": "sd49-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "90d5379e0056f6cc68c870a9a2157c9fa4185b94813839c0c537ca6460140c4a",
+      "totalRemuneration": 3601790.0,
+      "totalExpenses": 32532.0,
+      "publicWarning": null
+    },
+    {
+      "id": "recovery-schools-sd64-2025-trustees",
+      "employerSlug": "gulf-islands-school-district",
+      "employerName": "School District No. 64 (Gulf Islands)",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "category": "school-trustees",
+      "rowCount": 7,
+      "pages": [
+        52
+      ],
+      "sha256": "38f70c4948dae2b68c560e2c4cbc0c95610b68c9448392f0c142798a954bad17",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd64-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "file": "sd64-2025-trustees.json.gzip",
+      "dataSha256": "c9c056d8dc8a709a6663d218e5d3d34f1c3f31e5a0faa911ef18204b8c7d283a",
+      "provenanceFile": "sd64-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "aec29049082a198b989c9f864de3980ff2008481bca8f66fc1dfcdc63b3c3914",
+      "totalRemuneration": 126052.0,
+      "totalExpenses": 25345.0,
+      "publicWarning": "The seven published trustee rows total $126,052 remuneration and $25,345 expenses. The schedule prints $126,054 and $25,345, so the row remuneration sum is $2 lower than the printed trustee remuneration total. The published rows and control are retained literally; the reason is unresolved."
+    },
+    {
+      "id": "recovery-schools-sd64-2025-employees",
+      "employerSlug": "gulf-islands-school-district",
+      "employerName": "School District No. 64 (Gulf Islands)",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "category": "employee-remuneration",
+      "rowCount": 110,
+      "pages": [
+        52,
+        53,
+        54
+      ],
+      "sha256": "38f70c4948dae2b68c560e2c4cbc0c95610b68c9448392f0c142798a954bad17",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd64-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "file": "sd64-2025-employees.json.gzip",
+      "dataSha256": "d67d946aedc1345ea79a0cb1e451471dd433d247510d90ba682c2ffcc1a75eb1",
+      "provenanceFile": "sd64-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "e4e97f04e3c3367984f95bd3a5b56379f82f4e9f13440d4672d3ea63f05b573f",
+      "totalRemuneration": 12228711.0,
+      "totalExpenses": 223125.0,
+      "publicWarning": null
+    }
+  ],
+  "originals": [
+    {
+      "inputKey": "sd19-2025",
+      "cachePath": "/tmp/pofbc-schools/ministry-sd19-2025.pdf",
+      "sha256": "e9986f7cbe9443f0593ae1b88f2014575a33aab5582510c8088a8fbb162870c0",
+      "sourceIds": [
+        "recovery-schools-sd19-2025-trustees",
+        "recovery-schools-sd19-2025-employees"
+      ],
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd19-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "mode": "scan-overlay",
+      "actualWorkerVisualReviewPages": [
+        2,
+        50,
+        51
+      ],
+      "fullWorkerRowImageTranscriptionPages": [
+        50,
+        51
+      ],
+      "independentPeerImageReviewRequiredPages": [
+        50,
+        51
+      ],
+      "independentPeerImageReviewCompletedPages": [
+        50,
+        51
+      ],
+      "approvalImage": {
+        "pdfPage": 2,
+        "path": "/tmp/recovery-schools/sd19-p2.png",
+        "sha256": "f7f8bdf8c68a53fb54f13041e3e1bc1cc88cb21b5ebe3d554c83e04497ea2e46",
+        "renderScale": 2
+      },
+      "renderedPages": [
+        {
+          "pdfPage": 50,
+          "path": "/tmp/recovery-schools/sd19-p50.png",
+          "sha256": "b474a4a1c02f120a2098d5da41f7565a3567637923ca008cbce9372719c06ab9",
+          "renderScale": 2
+        },
+        {
+          "pdfPage": 51,
+          "path": "/tmp/recovery-schools/sd19-p51.png",
+          "sha256": "7371b4440322776f3331ad265f6835a68bf00fcdf152536c7a51b316d418b07e",
+          "renderScale": 2
+        }
+      ]
+    },
+    {
+      "inputKey": "sd49-2025",
+      "cachePath": "/tmp/pofbc-schools/ministry-sd49-2025.pdf",
+      "sha256": "f3e643ccba15d44118d411f83ee956ce166b9fe51dc97378024659c7b6bb34f3",
+      "sourceIds": [
+        "recovery-schools-sd49-2025-trustees",
+        "recovery-schools-sd49-2025-employees"
+      ],
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd49-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "mode": "scan-tesseract",
+      "actualWorkerVisualReviewPages": [
+        3,
+        53
+      ],
+      "fullWorkerRowImageTranscriptionPages": [
+        53
+      ],
+      "independentPeerImageReviewRequiredPages": [
+        53
+      ],
+      "independentPeerImageReviewCompletedPages": [
+        53
+      ],
+      "approvalImage": {
+        "pdfPage": 3,
+        "path": "/tmp/recovery-schools/sd49-p3.png",
+        "sha256": "a1b5cd33d75588c6a7a024b344bf08700f4f5c66e7d0872c64a3d717132dfa0a",
+        "renderScale": 2
+      },
+      "renderedPages": [
+        {
+          "pdfPage": 53,
+          "path": "/tmp/recovery-schools/sd49-p53.png",
+          "sha256": "2004bf8a077dd956b89df626e76b6f895cfe992f49cb6935033e004cf763315c",
+          "renderScale": 2
+        }
+      ]
+    },
+    {
+      "inputKey": "sd64-2025",
+      "cachePath": "/tmp/pofbc-schools/ministry-sd64-2025.pdf",
+      "sha256": "38f70c4948dae2b68c560e2c4cbc0c95610b68c9448392f0c142798a954bad17",
+      "sourceIds": [
+        "recovery-schools-sd64-2025-trustees",
+        "recovery-schools-sd64-2025-employees"
+      ],
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd64-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "mode": "native",
+      "actualWorkerVisualReviewPages": [
+        3,
+        52,
+        53,
+        54
+      ],
+      "fullWorkerRowImageTranscriptionPages": [],
+      "independentPeerImageReviewRequiredPages": [],
+      "independentPeerImageReviewCompletedPages": [
+        52
+      ],
+      "approvalImage": {
+        "pdfPage": 3,
+        "path": "/tmp/recovery-schools/sd64-p3.png",
+        "sha256": "7617a5909f4028e5e331122d7fb84bf2cdc5172341aec35cb99b051bb3831b7a",
+        "renderScale": 2
+      },
+      "renderedPages": [
+        {
+          "pdfPage": 52,
+          "path": "/tmp/recovery-schools/sd64-p52.png",
+          "sha256": "d7d3731551d09930efeb4eee4cadf9d387871e03ff56098a38e7b42212bb68f3",
+          "renderScale": 2
+        },
+        {
+          "pdfPage": 53,
+          "path": "/tmp/recovery-schools/sd64-p53.png",
+          "sha256": "11297340bf607ce27b998fe3b1b431f752013846352a39d1d4ac24498a088f46",
+          "renderScale": 2
+        },
+        {
+          "pdfPage": 54,
+          "path": "/tmp/recovery-schools/sd64-p54.png",
+          "sha256": "a5d3cc733b1aa54ee8f28e6b0d709ef754232ca2fcd0a798a72b2b0feea9787e",
+          "renderScale": 2
+        }
+      ]
+    }
+  ],
+  "heldOriginals": [
+    {
+      "inputKey": "sd10-2025",
+      "employerSlug": "school-district-10",
+      "employerName": "School District No. 10 (Arrow Lakes)",
+      "status": "held-conflicting-original-declaration-period",
+      "cachePath": "/tmp/pofbc-schools/ministry-sd10-2025.pdf",
+      "sha256": "f0029c4db8be4330e92324ca4d72544719d2391b47bdc9a697f9e7e54cc758c7",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd10-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "periodConflict": {
+        "pdfPage": 3,
+        "literalDeclaration": "We, the undersigned, certify that the attached is a correct and true copy of the Statement of Financial Information for the year ended June 30, 2024, for School District No. 10 (Arrow Lakes) as required under Section 2 of the Financial Information Act.",
+        "contradictoryHeadings": [
+          {
+            "pdfPage": 3,
+            "literalText": "For the fiscal year ended June 30, 2025; Year: 2024-2025"
+          },
+          {
+            "pdfPage": 47,
+            "literalText": "For the fiscal year ended June 30, 2025"
+          },
+          {
+            "pdfPage": 48,
+            "literalText": "For the fiscal year ended June 30, 2025"
+          }
+        ],
+        "visibleSignatureDate": "December 18, 2025"
+      },
+      "actualWorkerVisualReviewPages": [
+        2,
+        3,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "rowCountImported": 0,
+      "scopeDiscovery": "Trustees on physical p47 and employee schedule over $75,000 on physical p48. No salary rows accepted or reporting year assigned.",
+      "nextAction": "Find an existing corrected official original or source-specific published explanation resolving the June 30, 2024 declaration against June 30, 2025 headers. Draft a clarification request if no public explanation is located; do not infer a template typo.",
+      "renderedPages": [
+        {
+          "pdfPage": 3,
+          "path": "/tmp/recovery-schools/sd10-p3.png",
+          "sha256": "d66aee23d30e9f77a98d88977afb24c32acc08fc8165abd49e0c696a86e8776f"
+        },
+        {
+          "pdfPage": 47,
+          "path": "/tmp/recovery-schools/sd10-p47.png",
+          "sha256": "bd9d4c53de97f3e05fc50bc11c007dac268a30310d08dbd5ed54b4ab25fa09f6"
+        },
+        {
+          "pdfPage": 48,
+          "path": "/tmp/recovery-schools/sd10-p48.png",
+          "sha256": "2879d6a854b3214adaf3d145f7c7c9701a75d2e73f1c3205a14c26f875d95b14"
+        }
+      ]
+    }
+  ],
+  "sourceControlQualifications": [
+    {
+      "id": "recovery-schools-sd19-2025-employees",
+      "computedTotals": [
+        "8210710",
+        "150762"
+      ],
+      "printedTotals": [
+        "8210710",
+        "148744"
+      ],
+      "computedMinusPrinted": [
+        "0",
+        "2018"
+      ],
+      "publicWarning": "The 77 published employee rows total $8,210,710 remuneration and $150,762 expenses. The schedule prints $8,210,710 and $148,744, so the row expense sum is $2,018 higher than the printed employee expense total. The published rows and control are retained literally; the reason is unresolved.",
+      "peerConfirmedLiteralFields": true
+    },
+    {
+      "id": "recovery-schools-sd49-2025-trustees",
+      "computedTotals": [
+        "63095",
+        "14225"
+      ],
+      "printedTotals": [
+        "63096",
+        "14225"
+      ],
+      "computedMinusPrinted": [
+        "-1",
+        "0"
+      ],
+      "publicWarning": "The five published trustee rows total $63,095 remuneration and $14,225 expenses. The schedule prints $63,096 and $14,225, so the row remuneration sum is $1 lower than the printed trustee remuneration total. The published rows and control are retained literally; the reason is unresolved.",
+      "peerConfirmedLiteralFields": true
+    },
+    {
+      "id": "recovery-schools-sd64-2025-trustees",
+      "computedTotals": [
+        "126052",
+        "25345.00"
+      ],
+      "printedTotals": [
+        "126054",
+        "25345"
+      ],
+      "computedMinusPrinted": [
+        "-2",
+        "0.00"
+      ],
+      "publicWarning": "The seven published trustee rows total $126,052 remuneration and $25,345 expenses. The schedule prints $126,054 and $25,345, so the row remuneration sum is $2 lower than the printed trustee remuneration total. The published rows and control are retained literally; the reason is unresolved.",
+      "peerConfirmedLiteralFields": true
+    }
+  ],
+  "peerReviewReceipts": [
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd19-2025-original-transcription.tsv",
+      "sha256": "1642193eb6909e1c5bd51534834ed015fcf44f0faf5f7b03e394b4574bb4710a"
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd19-2025-comparison.json",
+      "sha256": "61a1295c0784a653725cb5c59bd328d04e6a002056737612a27bc59df029e36a"
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd49-2025-original-transcription.tsv",
+      "sha256": "cccee377b78ddf7e78ae106fdd643d7e791fc1b708a6eca84ee79dabd59965d6"
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd49-2025-comparison.json",
+      "sha256": "529db236c50d5a17cefa93e2eff349342b80aaa6ff055375dbcfb43d62513e28"
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd64-2025-trustees-original-transcription.tsv",
+      "sha256": "1f7a1e4ccee47eb35ac53502c4ac07fdf1c270a8bac4d5b07f3e699a39edb2a0"
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-sd64-2025-trustees-comparison.json",
+      "sha256": "99f5247cc23b6150c02d3c5ff2864e7f544715f2f08a7f07c3ceb3103b47c117"
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/reviews/independent-manual-schools-normalized-payloads.json",
+      "sha256": "3b790d418fab916c22f1a3f90e36c8ee3bffcb913025dcc4b560cd6dc08b745b"
+    }
+  ],
+  "actualReviewCoverage": {
+    "SD19": {
+      "workerFullManualScanPages": [
+        50,
+        51
+      ],
+      "workerApprovalPage": 2,
+      "independentPeerFullManualPages": [
+        50,
+        51
+      ],
+      "peerTrusteeRows": 5,
+      "peerEmployeeRows": 77
+    },
+    "SD49": {
+      "workerFullManualScanPages": [
+        53
+      ],
+      "workerApprovalPage": 3,
+      "independentPeerFullManualPages": [
+        53
+      ],
+      "peerTrusteeRows": 5,
+      "peerEmployeeRows": 30
+    },
+    "SD64": {
+      "workerRenderedScopeHeadingColumnAndControlPages": [
+        52,
+        53,
+        54
+      ],
+      "workerApprovalPage": 3,
+      "allRowsIndependentPopplerAndMuPDFComparison": 117,
+      "independentPeerFullManualTrusteePages": [
+        52
+      ],
+      "peerTrusteeRows": 7,
+      "independentPeerFullManualEmployeeRows": 0
+    },
+    "SD10": {
+      "workerOriginalImagePagesRead": [
+        2,
+        3,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "periodConflictDeclarationPage": 3,
+      "rowAcceptance": false
+    },
+    "SD50": {
+      "keywordOCRDiscoveryOnlyPages": [
+        8,
+        9
+      ],
+      "fullManualImageRowReview": false,
+      "rowAcceptance": false
+    }
+  },
+  "verification": [
+    {
+      "command": "python3 scripts/recover_wave_schools.py",
+      "result": "PASS:6cohorts234rows by offline evidence replay"
+    },
+    {
+      "command": "python3 scripts/recover_wave_schools.py --originals --rerun-ocr",
+      "result": "PASS:6cohorts234rows against pinned originals, independent native readers or scan/OCR evidence; Central Coast Tesseract rerun"
+    },
+    {
+      "command": "python3 -m unittest discover -s scripts -p 'test_recover_wave_schools.py'",
+      "result": "PASS:8tests"
+    },
+    {
+      "command": "python3 -m py_compile scripts/recover_wave_schools.py scripts/test_recover_wave_schools.py",
+      "result": "PASS"
+    }
+  ],
+  "precedenceAndIdentityAudit": "research/salaries/recovery-wave-2026-11-01/schools/identity-and-precedence-audit.json",
+  "queue": {
+    "file": "research/salaries/recovery-wave-2026-11-01/schools/work-queue.json",
+    "actions": 8,
+    "routeCounts": {
+      "processing": 4,
+      "clarification-request": 4
+    },
+    "elevenKeysExact": true,
+    "oldTaskReconciliation": "Exact continuation-schools-sdNN-2025-processing predecessor IDs are linked in each relevant reason; frozen predecessor files were not changed."
+  },
+  "rootNextActions": [
+    "Accept or reject the faithful control qualifications for SD19 employee expenses +2018, SD49 trustee remuneration −1 and SD64 trustee remuneration −2. Complete manual independent field review is attached for all three affected scopes.",
+    "Register recovery-schools only after root integration review, rebuild generated salary assets, and run integration/release checks. This worker did not edit registry or generated files.",
+    "Preserve SD10 declaration-period hold and existing SD8 ending2026 employee hold. No hypothetical template correction or unreviewed scan import."
+  ],
+  "limits": [
+    "Three complete newly recovered original reports; no exhaustive current or historical district archive claim.",
+    "Approval signatures are redacted. Dates are only the visible adjacent date fields; SD64 date fields are blank.",
+    "Native employee comparison covers every SD64 row, but no complete independent manual peer image review of those110employees is claimed.",
+    "No globals, generated files, old-source collections, frozen prior reports, branch changes, commits, pushes or outreach were performed."
+  ],
+  "files": [
+    {
+      "file": "research/salaries/recovery-schools/README.md",
+      "sha256": "8665cab1ffbff8a057ba2771b63f701d2681fb6b136e019b72d4bb95aad7fbc6",
+      "bytes": 5170
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd19-2025-employees-evidence.json.gzip",
+      "sha256": "60cdf55dcaa74cab90e457bce056a5cb30cb3e86c34980c84f409da699fdbdc4",
+      "bytes": 4695
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd19-2025-employees.json.gzip",
+      "sha256": "d5b4a86e21f5c7d6b4def2a619788bd50b239abb557a9be3e60e1355ab8dc2d3",
+      "bytes": 1478
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd19-2025-trustees-evidence.json.gzip",
+      "sha256": "7267c7a6673ecb9a2af9cc9973cf32db557cb840adac021f635cb0b76bb804e4",
+      "bytes": 2870
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd19-2025-trustees.json.gzip",
+      "sha256": "c1de2d3c16cbf6b7d09572d1e387b708f0f1fa9915a9b79525f02aa6fc4fd762",
+      "bytes": 188
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd49-2025-employees-evidence.json.gzip",
+      "sha256": "90d5379e0056f6cc68c870a9a2157c9fa4185b94813839c0c537ca6460140c4a",
+      "bytes": 2198
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd49-2025-employees.json.gzip",
+      "sha256": "7db6985438dd0fe6c8b2317713434cfd9ebfa6e302175e4fef8b6ee751a5292c",
+      "bytes": 589
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd49-2025-trustees-evidence.json.gzip",
+      "sha256": "49ca4f41fa5c1107171babf11d349d10aac51656cf2eed9ade8c3c4dbe0cac98",
+      "bytes": 1595
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd49-2025-trustees.json.gzip",
+      "sha256": "0b92a0bacdacab6d876e1f79dc144275a2cae6b02e9a243675d680324d301142",
+      "bytes": 180
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd64-2025-employees-evidence.json.gzip",
+      "sha256": "e4e97f04e3c3367984f95bd3a5b56379f82f4e9f13440d4672d3ea63f05b573f",
+      "bytes": 16114
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd64-2025-employees.json.gzip",
+      "sha256": "d67d946aedc1345ea79a0cb1e451471dd433d247510d90ba682c2ffcc1a75eb1",
+      "bytes": 2154
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd64-2025-trustees-evidence.json.gzip",
+      "sha256": "aec29049082a198b989c9f864de3980ff2008481bca8f66fc1dfcdc63b3c3914",
+      "bytes": 1518
+    },
+    {
+      "file": "research/salaries/recovery-schools/sd64-2025-trustees.json.gzip",
+      "sha256": "c9c056d8dc8a709a6663d218e5d3d34f1c3f31e5a0faa911ef18204b8c7d283a",
+      "bytes": 252
+    },
+    {
+      "file": "research/salaries/recovery-schools/sources.json",
+      "sha256": "c0f008794c198c8166da6293da5798e6186236911f131f7324ca4854b720f5ac",
+      "bytes": 29475
+    },
+    {
+      "file": "scripts/recover_wave_schools.py",
+      "sha256": "73627de4877751f2a853256661cc4a6ddafcf3f1588bcee846de86bd3c02208c",
+      "bytes": 29042
+    },
+    {
+      "file": "scripts/test_recover_wave_schools.py",
+      "sha256": "3e336e175dc65b4fbb9f6fbc6ac599cd7cd543a5d96332d50d52cbf5dd65fa5e",
+      "bytes": 5409
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/schools/README.md",
+      "sha256": "93032f5bb97e31657f26192673e84e804dbe00558a51553d09ead01c91ab5f8c",
+      "bytes": 3365
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/schools/deferred-located-originals.json",
+      "sha256": "fb0c222af9c43cb8cf23509290054b92278fccce4101d66f1e2a46aa55396f88",
+      "bytes": 1314
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/schools/held-originals.json",
+      "sha256": "e707ce45461e2c50caadb7ab001510fa9ba1b4c299902a8eb09489b9b057c8cc",
+      "bytes": 2639
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/schools/identity-and-precedence-audit.json",
+      "sha256": "6b8e0f57df87ff3f6f1531778bf068f2ae469b74d85ec6d74d3a37770d9073df",
+      "bytes": 2355
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/schools/original-receipts.json",
+      "sha256": "367c0fd53b8091183ad6885346b66379e5f1f56f54aee05c3a90780e0f795d6a",
+      "bytes": 4819
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/schools/sd19-2025-manual.tsv",
+      "sha256": "92c1b728b644423aec725947c56c23378002dbd2b85a25f9a0acf0d82e53e904",
+      "bytes": 4862
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/schools/sd49-2025-manual.tsv",
+      "sha256": "e7de04b7b851e72d19debd795a0ed4a00d311acfe41d2bdf5fa123191a3312e2",
+      "bytes": 1834
+    },
+    {
+      "file": "research/salaries/recovery-wave-2026-11-01/schools/work-queue.json",
+      "sha256": "0155b28c37c9f4e35f9d0121cbef01e142681aed62cee17609591ad0d8af26c9",
+      "bytes": 10664
+    }
+  ]
+}

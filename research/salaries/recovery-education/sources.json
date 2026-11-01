@@ -1,0 +1,1547 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "recovery-ubc-sofi-2025-26-employees",
+      "employerSlug": "university-of-bc",
+      "employerName": "University of B.C. (UBC)",
+      "sector": "Universities and colleges",
+      "year": "2025/26",
+      "slug": "2025-26",
+      "file": "recovery-ubc-sofi-2025-26-employees.json.gzip",
+      "title": "university-of-bc Statement of Financial Information 2025/26: employee remuneration and expenses",
+      "sourceUrl": "https://vpfo-finance-2024.sites.olt.ubc.ca/files/2026/10/FY26-UBC-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://finance.ubc.ca/ubcs-finances/reporting/",
+      "sha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+      "dataSha256": "09f38dba19bd1921bce787c370106d71907b7555dc6091011d0fd803723bb52a",
+      "normalizedSha256": "87b5b9e269cafab65c1e01f396d0d4003b13b2c46b97a116b4a5ec4393878c6e",
+      "periodType": "fiscal",
+      "periodStart": "2025-04-01",
+      "periodEnd": "2026-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "sourceKind": "official",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "nameDisclosure": "as-published; separate surname/given columns joined with comma where applicable",
+      "positionDisclosure": "not-published",
+      "completeEmployeeSchedule": true,
+      "rowCount": 9633,
+      "pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189
+      ],
+      "totalRemuneration": 1401982434,
+      "totalExpenses": 35281528,
+      "notes": [
+        "Complete named employee schedule; below-threshold aggregates, board honorariums, suppliers and employer contributions are excluded. Names with identical spelling retain separate source rows. Blank/dash expenses remain null; literal negative expense amounts are retained. Annual remuneration as published, not base annual salary.",
+        "Schedule states cash fiscal-year payments. Expenses are gross, unadjusted for external cost recoveries. Board schedule says employment remuneration/expenses of President/faculty/staff/students who are board members are included in employee schedule.",
+        "Employee schedule is expressly unaudited. The consolidated management statement has literal [signed] labels dated June 24, 2026, rather than autograph images; no separate signed employee-schedule approval was identified."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "allNamesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "PyMuPDF geometric numeric anchors and name-region reader versus independently implemented Poppler physical-layout column and continuation-state reader; exact ordered row/name/amount/page/multiplicity equality.",
+        "rowCountsByPdfPage": {
+          "42": 43,
+          "43": 66,
+          "44": 65,
+          "45": 61,
+          "46": 65,
+          "47": 64,
+          "48": 65,
+          "49": 64,
+          "50": 66,
+          "51": 64,
+          "52": 67,
+          "53": 65,
+          "54": 65,
+          "55": 66,
+          "56": 64,
+          "57": 65,
+          "58": 66,
+          "59": 67,
+          "60": 64,
+          "61": 62,
+          "62": 67,
+          "63": 63,
+          "64": 68,
+          "65": 66,
+          "66": 67,
+          "67": 66,
+          "68": 64,
+          "69": 63,
+          "70": 66,
+          "71": 66,
+          "72": 64,
+          "73": 63,
+          "74": 67,
+          "75": 66,
+          "76": 65,
+          "77": 66,
+          "78": 68,
+          "79": 63,
+          "80": 66,
+          "81": 66,
+          "82": 66,
+          "83": 65,
+          "84": 66,
+          "85": 67,
+          "86": 66,
+          "87": 66,
+          "88": 65,
+          "89": 66,
+          "90": 64,
+          "91": 66,
+          "92": 67,
+          "93": 67,
+          "94": 65,
+          "95": 68,
+          "96": 65,
+          "97": 66,
+          "98": 65,
+          "99": 68,
+          "100": 65,
+          "101": 63,
+          "102": 66,
+          "103": 65,
+          "104": 65,
+          "105": 67,
+          "106": 67,
+          "107": 68,
+          "108": 66,
+          "109": 66,
+          "110": 67,
+          "111": 68,
+          "112": 67,
+          "113": 67,
+          "114": 67,
+          "115": 68,
+          "116": 66,
+          "117": 68,
+          "118": 67,
+          "119": 68,
+          "120": 67,
+          "121": 66,
+          "122": 64,
+          "123": 61,
+          "124": 63,
+          "125": 64,
+          "126": 66,
+          "127": 65,
+          "128": 62,
+          "129": 63,
+          "130": 66,
+          "131": 66,
+          "132": 62,
+          "133": 65,
+          "134": 64,
+          "135": 68,
+          "136": 64,
+          "137": 67,
+          "138": 66,
+          "139": 66,
+          "140": 63,
+          "141": 63,
+          "142": 68,
+          "143": 64,
+          "144": 66,
+          "145": 65,
+          "146": 64,
+          "147": 66,
+          "148": 66,
+          "149": 62,
+          "150": 64,
+          "151": 64,
+          "152": 61,
+          "153": 66,
+          "154": 65,
+          "155": 62,
+          "156": 61,
+          "157": 64,
+          "158": 64,
+          "159": 66,
+          "160": 67,
+          "161": 67,
+          "162": 66,
+          "163": 67,
+          "164": 66,
+          "165": 64,
+          "166": 67,
+          "167": 63,
+          "168": 68,
+          "169": 67,
+          "170": 62,
+          "171": 68,
+          "172": 64,
+          "173": 68,
+          "174": 66,
+          "175": 63,
+          "176": 64,
+          "177": 67,
+          "178": 65,
+          "179": 65,
+          "180": 65,
+          "181": 65,
+          "182": 65,
+          "183": 67,
+          "184": 66,
+          "185": 68,
+          "186": 68,
+          "187": 66,
+          "188": 68,
+          "189": 39
+        },
+        "expenseDashesOrBlankRetainedAsMissing": 1752,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 11,
+        "evidenceFile": "evidence/recovery-ubc-sofi-2025-26-employees.json.gzip",
+        "evidenceSha256": "27fbe0036dd9601fb036de786844a65e4869d10c233ff3c26342a285ded5aead",
+        "publishedControls": [
+          {
+            "physicalPage": 189,
+            "label": "Remuneration exceeding $75,000",
+            "values": [
+              1401982434,
+              35281528
+            ]
+          },
+          {
+            "physicalPage": 189,
+            "label": "Remuneration of $75,000 or less",
+            "values": [
+              654488610,
+              14796730
+            ]
+          },
+          {
+            "physicalPage": 189,
+            "label": "Total",
+            "values": [
+              2056471044,
+              50078258
+            ]
+          }
+        ],
+        "namedControlResidualRowSumMinusPrinted": [
+          0,
+          0
+        ],
+        "namedControlExactlyReconciled": true,
+        "printedNamedPlusBelowMinusGrandTotal": [
+          0,
+          0
+        ],
+        "approvalReview": "Official university-hosted SOFI; consolidated statement displays [signed] labels, June 24, 2026. Employee schedule unaudited; no separate autograph approval identified."
+      },
+      "cacheFile": "/tmp/pofbc-sector-education/0b9387de913e9302.body"
+    },
+    {
+      "id": "recovery-coast-mountain-sofi-2024-25-employees",
+      "employerSlug": "coast-mountain-college",
+      "employerName": "Coast Mountain College",
+      "sector": "Universities and colleges",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "file": "recovery-coast-mountain-sofi-2024-25-employees.json.gzip",
+      "title": "coast-mountain-college Statement of Financial Information 2024/25: employee remuneration and expenses",
+      "sourceUrl": "https://coastmountaincollege.ca/docs/default-source/cmtn-reports-statements-reviews/statements-of-financial-information/cmtn2025---financial-statements.pdf",
+      "sourceIndexUrl": "https://www.coastmountaincollege.ca/about-cmtn/about/cmtn-reports-reviews",
+      "sha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+      "dataSha256": "fed569971001de119044b07315b91863e8ef441afc1d2ebca611b11e5a662966",
+      "normalizedSha256": "4efd5fd93590096ed4471b783dba5c6c5f0c9bd629328e127363ff13304ca517",
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "sourceKind": "official",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "nameDisclosure": "as-published; separate surname/given columns joined with comma where applicable",
+      "positionDisclosure": "not-published",
+      "completeEmployeeSchedule": true,
+      "rowCount": 139,
+      "pages": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "totalRemuneration": 15195816,
+      "totalExpenses": 546451,
+      "notes": [
+        "Complete named employee schedule; below-threshold aggregates, board honorariums, suppliers and employer contributions are excluded. Names with identical spelling retain separate source rows. Blank/dash expenses remain null; literal negative expense amounts are retained. Annual remuneration as published, not base annual salary.",
+        "Remuneration is the published Salary Plus Benefits column. The separate Total column includes expenses and is not used as remuneration. Reconciliation separately lists employer portion of benefits; it is not added to individual remuneration.",
+        "Some published expense-inclusive row totals differ from the sum of the two published component cells by one dollar. All three source cells are independently compared and retained in evidence; no adjustment or explanation is inferred."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "allNamesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "PyMuPDF geometric numeric anchors and name-region reader versus independently implemented Poppler physical-layout column and continuation-state reader; exact ordered row/name/amount/page/multiplicity equality.",
+        "rowCountsByPdfPage": {
+          "34": 30,
+          "35": 34,
+          "36": 34,
+          "37": 34,
+          "38": 7
+        },
+        "expenseDashesOrBlankRetainedAsMissing": 14,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/recovery-coast-mountain-sofi-2024-25-employees.json.gzip",
+        "evidenceSha256": "847501f77d17d949e937f20476286b01ad635b017a1d43cd88b94f5c93a59cc0",
+        "publishedControls": [
+          {
+            "physicalPage": 34,
+            "label": "Carry Forward Total",
+            "values": [
+              3235457,
+              104377,
+              3339834
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Brought Forward Total",
+            "values": [
+              3235457,
+              104377,
+              3339834
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Carry Forward Total",
+            "values": [
+              6794550,
+              235580,
+              7030130
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Brought Forward Total",
+            "values": [
+              6794550,
+              235580,
+              7030130
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Carry Forward Total",
+            "values": [
+              10619803,
+              377686,
+              10997489
+            ]
+          },
+          {
+            "physicalPage": 37,
+            "label": "Brought Forward Total",
+            "values": [
+              10619803,
+              377686,
+              10997489
+            ]
+          },
+          {
+            "physicalPage": 37,
+            "label": "Carry Forward Total",
+            "values": [
+              14452548,
+              515724,
+              14968271
+            ]
+          },
+          {
+            "physicalPage": 38,
+            "label": "Brought Forward Total",
+            "values": [
+              14452548,
+              515724,
+              14968271
+            ]
+          },
+          {
+            "physicalPage": 38,
+            "label": "Total - earnings over $75,000",
+            "values": [
+              15195814,
+              546452,
+              15742266
+            ]
+          },
+          {
+            "physicalPage": 38,
+            "label": "Total - earnings under $75,000",
+            "values": [
+              7667482,
+              198734,
+              7866216
+            ]
+          },
+          {
+            "physicalPage": 38,
+            "label": "Grand Total",
+            "values": [
+              22863296,
+              745186,
+              23608482
+            ]
+          }
+        ],
+        "namedControlResidualRowSumMinusPrinted": [
+          2,
+          -1
+        ],
+        "namedControlExactlyReconciled": false,
+        "printedNamedPlusBelowMinusGrandTotal": [
+          0,
+          0,
+          0
+        ],
+        "approvalReview": "Autograph signature of Adelle Cober, Chair, on physical page 3; September 2025",
+        "expenseInclusiveTotalComponentResiduals": [
+          {
+            "physicalPage": 34,
+            "name": "Allen, Edward",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Bajwa, Anuraj",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Bastin, Heather",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Blake, Robyn",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Bulleid, Lisa",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Douglas, Vasiliki",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Doyle, Michael",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Elnar, Ryan",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Fuentes, Rafael Adolfo",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 35,
+            "name": "George, Edgar",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Hamel, Helen",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Hoffos, Tracey",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Koerner, Yvonne",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Loy, Kara",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Neid, Bruce",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Paulitschke, Roland",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Reefat, Reefat",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 37,
+            "name": "Riesen, Yuriko",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 37,
+            "name": "Sibbald, Regan",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 37,
+            "name": "Suderman, Emily",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 37,
+            "name": "Thickett, Kristopher",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 37,
+            "name": "Thompson, Simon",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          }
+        ],
+        "carryControlComparisons": [
+          {
+            "physicalPage": 34,
+            "label": "Carry Forward Total",
+            "rowSumRemunerationExpenses": [
+              3235457,
+              104375
+            ],
+            "publishedValues": [
+              3235457,
+              104377,
+              3339834
+            ],
+            "rowSumMinusPublished": [
+              0,
+              -2
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Brought Forward Total",
+            "rowSumRemunerationExpenses": [
+              3235457,
+              104375
+            ],
+            "publishedValues": [
+              3235457,
+              104377,
+              3339834
+            ],
+            "rowSumMinusPublished": [
+              0,
+              -2
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Carry Forward Total",
+            "rowSumRemunerationExpenses": [
+              6794552,
+              235579
+            ],
+            "publishedValues": [
+              6794550,
+              235580,
+              7030130
+            ],
+            "rowSumMinusPublished": [
+              2,
+              -1
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Brought Forward Total",
+            "rowSumRemunerationExpenses": [
+              6794552,
+              235579
+            ],
+            "publishedValues": [
+              6794550,
+              235580,
+              7030130
+            ],
+            "rowSumMinusPublished": [
+              2,
+              -1
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Carry Forward Total",
+            "rowSumRemunerationExpenses": [
+              10619805,
+              377686
+            ],
+            "publishedValues": [
+              10619803,
+              377686,
+              10997489
+            ],
+            "rowSumMinusPublished": [
+              2,
+              0
+            ]
+          },
+          {
+            "physicalPage": 37,
+            "label": "Brought Forward Total",
+            "rowSumRemunerationExpenses": [
+              10619805,
+              377686
+            ],
+            "publishedValues": [
+              10619803,
+              377686,
+              10997489
+            ],
+            "rowSumMinusPublished": [
+              2,
+              0
+            ]
+          },
+          {
+            "physicalPage": 37,
+            "label": "Carry Forward Total",
+            "rowSumRemunerationExpenses": [
+              14452549,
+              515723
+            ],
+            "publishedValues": [
+              14452548,
+              515724,
+              14968271
+            ],
+            "rowSumMinusPublished": [
+              1,
+              -1
+            ]
+          },
+          {
+            "physicalPage": 38,
+            "label": "Brought Forward Total",
+            "rowSumRemunerationExpenses": [
+              14452549,
+              515723
+            ],
+            "publishedValues": [
+              14452548,
+              515724,
+              14968271
+            ],
+            "rowSumMinusPublished": [
+              1,
+              -1
+            ]
+          }
+        ]
+      },
+      "cacheFile": "/tmp/pofbc-sector-education/d5af412fa1d197a9.body",
+      "publicWarning": "The published named employee rows sum to $15,195,816 remuneration and $546,451 expenses; the printed named subtotal is $15,195,814 and $546,452. Row sums minus printed subtotals are $+2 and $-1. Published amounts are retained; the cause is unresolved."
+    },
+    {
+      "id": "recovery-coast-mountain-sofi-2023-24-employees",
+      "employerSlug": "coast-mountain-college",
+      "employerName": "Coast Mountain College",
+      "sector": "Universities and colleges",
+      "year": "2023/24",
+      "slug": "2023-24",
+      "file": "recovery-coast-mountain-sofi-2023-24-employees.json.gzip",
+      "title": "coast-mountain-college Statement of Financial Information 2023/24: employee remuneration and expenses",
+      "sourceUrl": "https://coastmountaincollege.ca/docs/default-source/cmtn-reports-statements-reviews/statements-of-financial-information/2023-2024-statement-of-financial-information-pdf.pdf",
+      "sourceIndexUrl": "https://www.coastmountaincollege.ca/about-cmtn/about/cmtn-reports-reviews",
+      "sha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+      "dataSha256": "c1c1ccca47aad2654a9b9a7fb7fcd45d9b37f54b143a0995e5e9f9966f2dcfc8",
+      "normalizedSha256": "4ad114bcc605b1f346fe67c6c181f807902c1599cf9fd7d173b8981d8669903c",
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "sourceKind": "official",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "nameDisclosure": "as-published; separate surname/given columns joined with comma where applicable",
+      "positionDisclosure": "not-published",
+      "completeEmployeeSchedule": true,
+      "rowCount": 124,
+      "pages": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "totalRemuneration": 13225819,
+      "totalExpenses": 468420,
+      "notes": [
+        "Complete named employee schedule; below-threshold aggregates, board honorariums, suppliers and employer contributions are excluded. Names with identical spelling retain separate source rows. Blank/dash expenses remain null; literal negative expense amounts are retained. Annual remuneration as published, not base annual salary.",
+        "Remuneration is the published Salary Plus Benefits column. The separate Total column includes expenses and is not used as remuneration. Reconciliation separately lists employer portion of benefits; it is not added to individual remuneration.",
+        "Some published expense-inclusive row totals differ from the sum of the two published component cells by one dollar. All three source cells are independently compared and retained in evidence; no adjustment or explanation is inferred."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "allNamesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "PyMuPDF geometric numeric anchors and name-region reader versus independently implemented Poppler physical-layout column and continuation-state reader; exact ordered row/name/amount/page/multiplicity equality.",
+        "rowCountsByPdfPage": {
+          "33": 30,
+          "34": 34,
+          "35": 34,
+          "36": 26
+        },
+        "expenseDashesOrBlankRetainedAsMissing": 12,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/recovery-coast-mountain-sofi-2023-24-employees.json.gzip",
+        "evidenceSha256": "873cdf4833eb67a3c1d0f0cc63aa7ea069ee90502444bb5fcb3b849b939a534f",
+        "publishedControls": [
+          {
+            "physicalPage": 33,
+            "label": "Carry Forward Total",
+            "values": [
+              3129051,
+              110464,
+              3239515
+            ]
+          },
+          {
+            "physicalPage": 34,
+            "label": "Brought Forward Total",
+            "values": [
+              3129051,
+              110464,
+              3239515
+            ]
+          },
+          {
+            "physicalPage": 34,
+            "label": "Carry Forward Total",
+            "values": [
+              6814165,
+              236937,
+              7051102
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Brought Forward Total",
+            "values": [
+              6814165,
+              236937,
+              7051102
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Carry Forward Total",
+            "values": [
+              10441695,
+              333340,
+              10775035
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Brought Forward Total",
+            "values": [
+              10441695,
+              333340,
+              10775035
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Total - earnings over $75,000",
+            "values": [
+              13225820,
+              468414,
+              13694234
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Total - earnings under $75,000",
+            "values": [
+              8097807,
+              233027,
+              8330834
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Grand Total",
+            "values": [
+              21323626,
+              701441,
+              22025068
+            ]
+          }
+        ],
+        "namedControlResidualRowSumMinusPrinted": [
+          -1,
+          6
+        ],
+        "namedControlExactlyReconciled": false,
+        "printedNamedPlusBelowMinusGrandTotal": [
+          1,
+          0,
+          0
+        ],
+        "approvalReview": "Autograph signature of Adelle Cober, Chair, on physical page 3; September 2024",
+        "expenseInclusiveTotalComponentResiduals": [
+          {
+            "physicalPage": 33,
+            "name": "Carr, Christane",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 33,
+            "name": "Colago, Prince Anjo",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 33,
+            "name": "De Rooy, Richard",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "George, Edgar",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Geronazzo, David",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Godfrey, Darlene",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Hidber, Ruth",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Kallio, Laurie-Lynn",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Kang, Hyeyoung",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Khurana, Paras",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Kirwin, Sarah",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Kunkel, Titilope",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Lim, Jieni",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Linteris, Jordan",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "MacKenzie-Denis, Vicki",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Marshall, Leah",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Nash, Adam",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Nelson, Joanne",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Riesen, Reto",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Sorensen, Annette",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Stephen, Trevor",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Thickett, Haley",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Thickett, Kristopher",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Try, Christopher",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Van Dyk, Evan",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Weary, Gordon",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 36,
+            "name": "White, Catharine",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Williamson, Callan",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          }
+        ],
+        "carryControlComparisons": [
+          {
+            "physicalPage": 33,
+            "label": "Carry Forward Total",
+            "rowSumRemunerationExpenses": [
+              3129053,
+              110465
+            ],
+            "publishedValues": [
+              3129051,
+              110464,
+              3239515
+            ],
+            "rowSumMinusPublished": [
+              2,
+              1
+            ]
+          },
+          {
+            "physicalPage": 34,
+            "label": "Brought Forward Total",
+            "rowSumRemunerationExpenses": [
+              3129053,
+              110465
+            ],
+            "publishedValues": [
+              3129051,
+              110464,
+              3239515
+            ],
+            "rowSumMinusPublished": [
+              2,
+              1
+            ]
+          },
+          {
+            "physicalPage": 34,
+            "label": "Carry Forward Total",
+            "rowSumRemunerationExpenses": [
+              6814166,
+              236941
+            ],
+            "publishedValues": [
+              6814165,
+              236937,
+              7051102
+            ],
+            "rowSumMinusPublished": [
+              1,
+              4
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Brought Forward Total",
+            "rowSumRemunerationExpenses": [
+              6814166,
+              236941
+            ],
+            "publishedValues": [
+              6814165,
+              236937,
+              7051102
+            ],
+            "rowSumMinusPublished": [
+              1,
+              4
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Carry Forward Total",
+            "rowSumRemunerationExpenses": [
+              10441695,
+              333343
+            ],
+            "publishedValues": [
+              10441695,
+              333340,
+              10775035
+            ],
+            "rowSumMinusPublished": [
+              0,
+              3
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Brought Forward Total",
+            "rowSumRemunerationExpenses": [
+              10441695,
+              333343
+            ],
+            "publishedValues": [
+              10441695,
+              333340,
+              10775035
+            ],
+            "rowSumMinusPublished": [
+              0,
+              3
+            ]
+          }
+        ]
+      },
+      "cacheFile": "/tmp/pofbc-sector-education/b3961b373f16740e.body",
+      "publicWarning": "The published named employee rows sum to $13,225,819 remuneration and $468,420 expenses; the printed named subtotal is $13,225,820 and $468,414. Row sums minus printed subtotals are $-1 and $+6. Published amounts are retained; the cause is unresolved. Printed named-plus-below-threshold remuneration also differs from the printed grand total by $+1; it is retained literally."
+    },
+    {
+      "id": "recovery-coast-mountain-sofi-2022-23-employees",
+      "employerSlug": "coast-mountain-college",
+      "employerName": "Coast Mountain College",
+      "sector": "Universities and colleges",
+      "year": "2022/23",
+      "slug": "2022-23",
+      "file": "recovery-coast-mountain-sofi-2022-23-employees.json.gzip",
+      "title": "coast-mountain-college Statement of Financial Information 2022/23: employee remuneration and expenses",
+      "sourceUrl": "https://coastmountaincollege.ca/docs/default-source/cmtn-reports-statements-reviews/statements-of-financial-information/2022-2023-statement-of-financial-information.pdf",
+      "sourceIndexUrl": "https://www.coastmountaincollege.ca/about-cmtn/about/cmtn-reports-reviews",
+      "sha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+      "dataSha256": "3069b8e9656be3c37539a0a4717dbdd740b42dd4cb85453a07d600633f9f4087",
+      "normalizedSha256": "a066c2fd36874192db24528ea333ee4938547b60fedac91ba2fddc7e607a70aa",
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "currency": "CAD",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "sourceKind": "official",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "nameDisclosure": "as-published; separate surname/given columns joined with comma where applicable",
+      "positionDisclosure": "not-published",
+      "completeEmployeeSchedule": true,
+      "rowCount": 91,
+      "pages": [
+        34,
+        35,
+        36
+      ],
+      "totalRemuneration": 9399254,
+      "totalExpenses": 338937,
+      "notes": [
+        "Complete named employee schedule; below-threshold aggregates, board honorariums, suppliers and employer contributions are excluded. Names with identical spelling retain separate source rows. Blank/dash expenses remain null; literal negative expense amounts are retained. Annual remuneration as published, not base annual salary.",
+        "Remuneration is the published Salary Plus Benefits column. The separate Total column includes expenses and is not used as remuneration. Reconciliation separately lists employer portion of benefits; it is not added to individual remuneration.",
+        "Some published expense-inclusive row totals differ from the sum of the two published component cells by one dollar. All three source cells are independently compared and retained in evidence; no adjustment or explanation is inferred.",
+        "Approval page is unsigned (typed Acting Chair and September 2023 date). The surname field of Helfensteller dos, Vito on physical page 34 is visibly clipped; the common native-reader text is retained literally, without completing a surname."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeEmployeeSchedule": true,
+        "allNamesAndMonetaryCellsIndependentlyVerified": true,
+        "independentMethod": "PyMuPDF geometric numeric anchors and name-region reader versus independently implemented Poppler physical-layout column and continuation-state reader; exact ordered row/name/amount/page/multiplicity equality.",
+        "rowCountsByPdfPage": {
+          "34": 31,
+          "35": 36,
+          "36": 24
+        },
+        "expenseDashesOrBlankRetainedAsMissing": 8,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/recovery-coast-mountain-sofi-2022-23-employees.json.gzip",
+        "evidenceSha256": "dc07ba2c8556cb13baf42ac499f9abc8a11d5fbe6192b187b4c5459da46ff298",
+        "publishedControls": [
+          {
+            "physicalPage": 34,
+            "label": "Carry Forward Total",
+            "values": [
+              3326193,
+              110307,
+              3436500
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Brought Forward Total",
+            "values": [
+              3326193,
+              110307,
+              3436500
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Carry Forward Total",
+            "values": [
+              6902134,
+              217339,
+              7119473
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Brought Forward Total",
+            "values": [
+              6902134,
+              217339,
+              7119473
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Total - earnings over $75,000",
+            "values": [
+              9399257,
+              338936,
+              9738193
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Total - earnings under $75,000",
+            "values": [
+              8640373,
+              224689,
+              8865062
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Grand Total",
+            "values": [
+              18039630,
+              563625,
+              18603255
+            ]
+          }
+        ],
+        "namedControlResidualRowSumMinusPrinted": [
+          -3,
+          1
+        ],
+        "namedControlExactlyReconciled": false,
+        "printedNamedPlusBelowMinusGrandTotal": [
+          0,
+          0,
+          0
+        ],
+        "approvalReview": "Physical page 3 contains Board approval wording, typed Shannon McPhail, Acting Chair, September 2023, with a blank signature line. Genuine official original is unsigned; adoption is not independently established.",
+        "expenseInclusiveTotalComponentResiduals": [
+          {
+            "physicalPage": 34,
+            "name": "Beedle, Matthew",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Bonia, Brian",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Carr, Christane",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Downs, Seth",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Doyle, Michael",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Farrell, Kristi",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Godfrey, Darlene",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 34,
+            "name": "Helfensteller dos, Vito",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Linteris, Jordan",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 35,
+            "name": "McIntyre, Kimberly",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Nelligan, Michael",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Norton, Sue-Ann",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 35,
+            "name": "O'Brien, Bridie",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Reinhardt, David",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Riesen, Reto",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Ronaasen, Sheree",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 35,
+            "name": "Siemens, Corwin",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Snelling, Marc",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Stach, Shauna",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Suderman, Emily",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Swain, Kelly",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Urban, Gordon",
+            "remunerationPlusExpensesMinusPublishedTotal": 1
+          },
+          {
+            "physicalPage": 36,
+            "name": "Van Dyk, Scott",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          },
+          {
+            "physicalPage": 36,
+            "name": "White, Catharine",
+            "remunerationPlusExpensesMinusPublishedTotal": -1
+          }
+        ],
+        "carryControlComparisons": [
+          {
+            "physicalPage": 34,
+            "label": "Carry Forward Total",
+            "rowSumRemunerationExpenses": [
+              3326191,
+              110306
+            ],
+            "publishedValues": [
+              3326193,
+              110307,
+              3436500
+            ],
+            "rowSumMinusPublished": [
+              -2,
+              -1
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Brought Forward Total",
+            "rowSumRemunerationExpenses": [
+              3326191,
+              110306
+            ],
+            "publishedValues": [
+              3326193,
+              110307,
+              3436500
+            ],
+            "rowSumMinusPublished": [
+              -2,
+              -1
+            ]
+          },
+          {
+            "physicalPage": 35,
+            "label": "Carry Forward Total",
+            "rowSumRemunerationExpenses": [
+              6902131,
+              217340
+            ],
+            "publishedValues": [
+              6902134,
+              217339,
+              7119473
+            ],
+            "rowSumMinusPublished": [
+              -3,
+              1
+            ]
+          },
+          {
+            "physicalPage": 36,
+            "label": "Brought Forward Total",
+            "rowSumRemunerationExpenses": [
+              6902131,
+              217340
+            ],
+            "publishedValues": [
+              6902134,
+              217339,
+              7119473
+            ],
+            "rowSumMinusPublished": [
+              -3,
+              1
+            ]
+          }
+        ]
+      },
+      "cacheFile": "/tmp/pofbc-sector-education/61caf40621b659ee.body",
+      "publicWarning": "The published named employee rows sum to $9,399,254 remuneration and $338,937 expenses; the printed named subtotal is $9,399,257 and $338,936. Row sums minus printed subtotals are $-3 and $+1. Published amounts are retained; the cause is unresolved. The original approval page has a blank signature line. One surname field (Helfensteller dos, Vito) is visibly clipped and is retained as exposed by both text readers."
+    }
+  ]
+}

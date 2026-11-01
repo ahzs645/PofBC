@@ -1,0 +1,912 @@
+{
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS all 9,987 normalized records; source caveats retained",
+  "candidateManifest": {
+    "path": "research/salaries/recovery-education/sources.json",
+    "sha256": "256c1ee6aac4fdea895f8d10b34acefd2f5b0a02f00bd006e67c0a9f2b004730"
+  },
+  "candidateHandoff": {
+    "path": "research/salaries/recovery-wave-2026-11-01/education/handoff.json",
+    "sha256": "3c2a8b3f75803a6bd87edef9578b7dfd09854e5546cd74dc48a94d4871272a21"
+  },
+  "independentReader": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-education-pdfminer-reader.py",
+    "sha256": "c48451828d4cdee54be9c74b0ad22fabcd0e29e0c77e5020df9a3740821766c6"
+  },
+  "independentOriginalRows": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-education-pdfminer-original-rows-v2.json.gzip",
+    "sha256": "decdc8fec9e257d667761391e14628989d556ba9503259bacbf7db46bb64c2f0"
+  },
+  "completeComparison": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-education-pdfminer-comparison-v2.json",
+    "sha256": "5b6877b5955c30c6195c3122a96dd03e2b79fec0d2897458a687956e6d7f4a18"
+  },
+  "componentControls": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-education-component-controls.json",
+    "sha256": "2b71b2ff4e64e66932ac84d656237deb454328209ab231afecc3dce318a6aecc"
+  },
+  "compiledPartition": {
+    "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-education-compiled-partition-review.json",
+    "sha256": "9ebe81deb65a2b7e848dbba9cd2b3bbfa8144bd15c7d189a417f3cb35e9d9558"
+  },
+  "initialDiagnostics": {
+    "status": "superseded reader diagnostics, not acceptance evidence",
+    "originalRows": {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-education-pdfminer-original-rows.json.gzip",
+      "sha256": "7749aeb8ef5285a4d75a395c03cd378b81c13ca836cb94e339048a8a93045b07"
+    },
+    "comparison": {
+      "path": "research/salaries/recovery-wave-2026-11-01/reviews/independent-education-pdfminer-comparison.json",
+      "sha256": "57d1a03d674fe76ae51dd4502838d74e04a81d51ea503ea9111e156c6dbcbf59"
+    },
+    "details": [
+      "Initial UBC reader incorrectly admitted two visibly labelled aggregate controls because $75,000 contains a comma; the final reader explicitly excludes Remuneration/Total control labels.",
+      "Initial Coast Mountain reader used a fixed first-page y cutoff and omitted continuation-top rows; final reader uses the Expenses header printed on each original page.",
+      "The initial native rows were frozen before author payloads were opened. Final reader corrections were checked against original PDFMiner geometry/text; author rows were never extraction inputs. No author payload was changed."
+    ]
+  },
+  "independence": {
+    "engine": "PDFMiner.six",
+    "inputs": "Only the four hash-pinned original PDFs",
+    "authorParserImported": false,
+    "authorRowsOrEvidenceUsedAsExtractionInput": false,
+    "allRowsCompared": "Exact ordered equality on employer, literal name, missing title, remuneration, expense/null/sign, physical PDF page. Multiplicity preserved.",
+    "thirdColumns": "All 354 Coast Mountain expense-inclusive Total cells independently extracted and compared to author component evidence; every value agrees. They are not personal remuneration."
+  },
+  "sources": [
+    {
+      "sourceId": "recovery-ubc-sofi-2025-26-employees",
+      "period": "2025/26",
+      "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+      "nativePages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189
+      ],
+      "rows": 9633,
+      "allSixFieldsExact": true,
+      "namedRemuneration": 1401982434,
+      "knownExpenses": 35281528,
+      "negativeExpenses": 11,
+      "duplicateNameSpellings": 27,
+      "wrappedNameRows": 817,
+      "missingExpenses": 1752,
+      "explicitZeroExpenses": 0
+    },
+    {
+      "sourceId": "recovery-coast-mountain-sofi-2024-25-employees",
+      "period": "2024/25",
+      "originalSha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+      "nativePages": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "rows": 139,
+      "allSixFieldsExact": true,
+      "namedRemuneration": 15195816,
+      "knownExpenses": 546451,
+      "negativeExpenses": 0,
+      "duplicateNameSpellings": 0,
+      "wrappedNameRows": 0,
+      "missingExpenses": 14,
+      "explicitZeroExpenses": 0
+    },
+    {
+      "sourceId": "recovery-coast-mountain-sofi-2023-24-employees",
+      "period": "2023/24",
+      "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+      "nativePages": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "rows": 124,
+      "allSixFieldsExact": true,
+      "namedRemuneration": 13225819,
+      "knownExpenses": 468420,
+      "negativeExpenses": 0,
+      "duplicateNameSpellings": 0,
+      "wrappedNameRows": 0,
+      "missingExpenses": 12,
+      "explicitZeroExpenses": 0
+    },
+    {
+      "sourceId": "recovery-coast-mountain-sofi-2022-23-employees",
+      "period": "2022/23",
+      "originalSha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+      "nativePages": [
+        34,
+        35,
+        36
+      ],
+      "rows": 91,
+      "allSixFieldsExact": true,
+      "namedRemuneration": 9399254,
+      "knownExpenses": 338937,
+      "negativeExpenses": 0,
+      "duplicateNameSpellings": 0,
+      "wrappedNameRows": 0,
+      "missingExpenses": 8,
+      "explicitZeroExpenses": 0
+    }
+  ],
+  "rowsCompared": 9987,
+  "nativeOriginalPagesCompared": 160,
+  "visualCoverage": {
+    "fullPages": [
+      {
+        "sourceKey": "ubc",
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "physicalPage": 1,
+        "renderPath": "/tmp/independent-education-review/ubc-p1.png",
+        "renderSha256": "f55991e248d847eea42df681fb3437da14219e8f5b640776bc96866b56a9e2c8",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "ubc",
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "physicalPage": 3,
+        "renderPath": "/tmp/independent-education-review/ubc-p3.png",
+        "renderSha256": "a8be60a2fd8332973ce502f4763f454dbc222a3fdf431b0e1908b0b8b57a5f1d",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "ubc",
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "physicalPage": 40,
+        "renderPath": "/tmp/independent-education-review/ubc-p40.png",
+        "renderSha256": "edf16f8ce0445868617a1fb5677f035c023dfa12a1cf9967d6fd01847030d0ad",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "ubc",
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "physicalPage": 41,
+        "renderPath": "/tmp/independent-education-review/ubc-p41.png",
+        "renderSha256": "066d1f7b1f43b57a48c8dffb31e5935edb1cee062bd40522875caa78da75022f",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "ubc",
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "physicalPage": 42,
+        "renderPath": "/tmp/independent-education-review/ubc-p42.png",
+        "renderSha256": "d82c0c83ba27da056cd689dd67f45707c4897f10d95bdb153c4e9f48bb1d82ac",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "ubc",
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "physicalPage": 189,
+        "renderPath": "/tmp/independent-education-review/ubc-p189.png",
+        "renderSha256": "d9294be5ff5a9a8ce3a60c2a9cb7fb518f83a286aa61339c195b217708ee204d",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "ubc",
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "physicalPage": 190,
+        "renderPath": "/tmp/independent-education-review/ubc-p190.png",
+        "renderSha256": "0ec957afb6ade33b47c6a5bea6230b97b0dfa8ccfbe21cfb317daa81c2d76e97",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm25",
+        "originalSha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+        "physicalPage": 1,
+        "renderPath": "/tmp/independent-education-review/cm25-p1.png",
+        "renderSha256": "ef43b9b608ef2eff4b8f4613447039b6668bc4361759ebca2cd98a2823b519d7",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm25",
+        "originalSha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+        "physicalPage": 3,
+        "renderPath": "/tmp/independent-education-review/cm25-p3.png",
+        "renderSha256": "ccc6f435622379dfac4498dffee8167cc1ce621f758b6bf655daaf7abda87a31",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm25",
+        "originalSha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+        "physicalPage": 34,
+        "renderPath": "/tmp/independent-education-review/cm25-p34.png",
+        "renderSha256": "dcc5827bbe7e5e0a6bb8d017138ea808ccd6670f8e3226fd667ca7940af6b34d",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm25",
+        "originalSha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+        "physicalPage": 38,
+        "renderPath": "/tmp/independent-education-review/cm25-p38.png",
+        "renderSha256": "dcc4eca2a5158bb23e04f2107d69a1295af1e0ec18a34908a542ece3b20818f2",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm25",
+        "originalSha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+        "physicalPage": 39,
+        "renderPath": "/tmp/independent-education-review/cm25-p39.png",
+        "renderSha256": "5d425ab5b1174aec4d08814005137de2077c2ef912952f8b6df9c9a7e9d4d886",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm25",
+        "originalSha256": "13d16deca4cdaa6723b10f844b2927b30451246eb034ca48fae7206e3c656b3f",
+        "physicalPage": 40,
+        "renderPath": "/tmp/independent-education-review/cm25-p40.png",
+        "renderSha256": "ba72384e4f968f180e7af778aa7b599b36670274160841a776097f49453ec207",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm24",
+        "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+        "physicalPage": 1,
+        "renderPath": "/tmp/independent-education-review/cm24-p1.png",
+        "renderSha256": "af2de9892b26e5c621c9aa63a073394332e82ce46dcfcebdf3565c8679845a6b",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm24",
+        "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+        "physicalPage": 3,
+        "renderPath": "/tmp/independent-education-review/cm24-p3.png",
+        "renderSha256": "4bd31db6cebcd7817c501eb7e657224df7d2581f9da6b4ddb5ccd7e2e288e4a6",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm24",
+        "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+        "physicalPage": 33,
+        "renderPath": "/tmp/independent-education-review/cm24-p33.png",
+        "renderSha256": "f503da9753e8d80351955c79dfc1feef809b9171519a79f1365fa3f85a676841",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm24",
+        "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+        "physicalPage": 36,
+        "renderPath": "/tmp/independent-education-review/cm24-p36.png",
+        "renderSha256": "b998470fea4a530138f248d50839d02a6cc1e61f54c38cfc21f88dbed5d08fd6",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm24",
+        "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+        "physicalPage": 37,
+        "renderPath": "/tmp/independent-education-review/cm24-p37.png",
+        "renderSha256": "aef5099af667b343e0a40303bc3818810b161ac7ee7129092901856a13023938",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm24",
+        "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+        "physicalPage": 38,
+        "renderPath": "/tmp/independent-education-review/cm24-p38.png",
+        "renderSha256": "3bf8e954b122b2aa7465483b28825e2d0a8e80f09b77b4ce8b1dea1a65a05bf1",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm23",
+        "originalSha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+        "physicalPage": 1,
+        "renderPath": "/tmp/independent-education-review/cm23-p1.png",
+        "renderSha256": "8c771c86164194d66cb8fa9129d308a5782ab8d3d0353bfcebfb4b860c2bac79",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm23",
+        "originalSha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+        "physicalPage": 3,
+        "renderPath": "/tmp/independent-education-review/cm23-p3.png",
+        "renderSha256": "162be02a40fd226fb758c4d8810afdd909ad78741fd7557bfb239e123a0aa3c8",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm23",
+        "originalSha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+        "physicalPage": 34,
+        "renderPath": "/tmp/independent-education-review/cm23-p34.png",
+        "renderSha256": "f687ad3d0383481c381d92c12cdffa5d4eaa049d71050514d21e76ca21e33dd2",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm23",
+        "originalSha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+        "physicalPage": 36,
+        "renderPath": "/tmp/independent-education-review/cm23-p36.png",
+        "renderSha256": "8becd644f77605a70aa706c81e9add890f89f404cfb10959dba8670a2d27084e",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm23",
+        "originalSha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+        "physicalPage": 37,
+        "renderPath": "/tmp/independent-education-review/cm23-p37.png",
+        "renderSha256": "7cf82177c581d6ddb940a6aeeceefaf436a2443d7a1440c7b2dc747332d827f6",
+        "scale": 1.7
+      },
+      {
+        "sourceKey": "cm23",
+        "originalSha256": "273fbc9428a2639f875573e8051957702ea9822068cd57ac03fa8a610968c422",
+        "physicalPage": 38,
+        "renderPath": "/tmp/independent-education-review/cm23-p38.png",
+        "renderSha256": "47d13f11817865d0e4ce97f801029e8fa3bcd5ef334206e41ac5959f233b3325",
+        "scale": 1.7
+      }
+    ],
+    "fullPageViewCount": 25,
+    "fullSalaryPageViews": {
+      "ubc": [
+        42,
+        189
+      ],
+      "cm25": [
+        34,
+        38
+      ],
+      "cm24": [
+        33,
+        36
+      ],
+      "cm23": [
+        34,
+        36
+      ]
+    },
+    "allNegativeExpenseCrops": [
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Babel, Molly Elizabeth",
+          null,
+          226492,
+          -245,
+          49
+        ],
+        "physicalPage": 49,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          50.0,
+          292.765,
+          302.0,
+          329.765
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-1-p49.png",
+        "renderSha256": "2f7aee9da4ee64417a75dc70629b8dc8a413331cb273744bec24a83c76b90f47"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Burchill, Michelle",
+          null,
+          120447,
+          -1462,
+          58
+        ],
+        "physicalPage": 58,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          318.0,
+          157.64499999999998,
+          569.0,
+          194.64499999999998
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-2-p58.png",
+        "renderSha256": "3d998fa145e323cfc579c521e891d37d848c954a77115a0edbaeb4bf1684c80e"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Feighan, Denise",
+          null,
+          143622,
+          -1673,
+          80
+        ],
+        "physicalPage": 80,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          318.0,
+          591.445,
+          569.0,
+          628.445
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-3-p80.png",
+        "renderSha256": "a42391f7d7c2f98a4206d90321208a3e5e638bf3c2d8effcf07f9413bf41a699"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Fowler, Stephanie",
+          null,
+          77006,
+          -193,
+          83
+        ],
+        "physicalPage": 83,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          50.0,
+          249.80499999999995,
+          302.0,
+          286.80499999999995
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-4-p83.png",
+        "renderSha256": "aeda5189808ba61dfd084b2790c1d5c1911eeb5bf3ae97a43b3257fef6bdb289"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Goncalves da Silva, Fabia",
+          null,
+          94493,
+          -1926,
+          87
+        ],
+        "physicalPage": 87,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          318.0,
+          646.525,
+          569.0,
+          683.525
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-5-p87.png",
+        "renderSha256": "883db935c613402da5e3cf55a9035e984f1e36394ed30b68dc3e1a535581773b"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Ironside, Louise",
+          null,
+          107451,
+          -1479,
+          100
+        ],
+        "physicalPage": 100,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          50.0,
+          141.32499999999993,
+          302.0,
+          178.32499999999993
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-6-p100.png",
+        "renderSha256": "1746e3ff9a774d0e4841e248d9dda4d4f47d51debc4025d53a0e29d2c342ab08"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Kupecz, Richard Garry",
+          null,
+          239124,
+          -36,
+          110
+        ],
+        "physicalPage": 110,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          318.0,
+          560.365,
+          569.0,
+          597.365
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-7-p110.png",
+        "renderSha256": "720d396f9c31d64fa708aa53b221961009e3c93c9769a0eb85ef548137f19f48"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "McLean, Larissa",
+          null,
+          87867,
+          -4268,
+          129
+        ],
+        "physicalPage": 129,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          50.0,
+          125.005,
+          302.0,
+          162.005
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-8-p129.png",
+        "renderSha256": "1d75c2d8312703fd059f845fc216c6ccb58b9bb9c1ec2a80571cbe75b8ac7d6a"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Parker, David",
+          null,
+          139935,
+          -3899,
+          142
+        ],
+        "physicalPage": 142,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          318.0,
+          223.04499999999996,
+          569.0,
+          260.04499999999996
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-9-p142.png",
+        "renderSha256": "9b106c76e9ff36ab760e6452205d39f0aeb7dab003b05c052c05a86373d80b30"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Rogers, Michael",
+          null,
+          95579,
+          -188,
+          152
+        ],
+        "physicalPage": 152,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          318.0,
+          141.32499999999993,
+          569.0,
+          178.32499999999993
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-10-p152.png",
+        "renderSha256": "0b4b04f5ee1dc863630d84d0a74f3916fbf70a721d7bb2f43fc84913851cfb54"
+      },
+      {
+        "kind": "negative",
+        "row": [
+          "university-of-bc",
+          "Thompson, Laurel",
+          null,
+          86049,
+          -122,
+          170
+        ],
+        "physicalPage": 170,
+        "originalSha256": "2df95ed199e8e566d670534c8d4e65baacf7f97f19362707933c60723768ebfc",
+        "clip": [
+          318.0,
+          466.64500000000004,
+          569.0,
+          503.64500000000004
+        ],
+        "renderPath": "/tmp/independent-education-review/negative-11-p170.png",
+        "renderSha256": "7ac007aa6685ebcb5b86538be04a5a31e820967e1866a29ce4a707dfc2cc09ec"
+      }
+    ],
+    "hyphenCrops": [
+      {
+        "kind": "hyphen",
+        "row": [
+          "coast-mountain-college",
+          "Kallio, Laurie-Lynn",
+          null,
+          80169,
+          2717,
+          34
+        ],
+        "physicalPage": 34,
+        "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+        "clip": [
+          60.0,
+          417.1643200000003,
+          500.0,
+          456.2043200000003
+        ],
+        "renderPath": "/tmp/independent-education-review/hyphen-12-p34.png",
+        "renderSha256": "b3ddc79bdebdd9cfb671b4dfd69aab23ac9d3a8f92ece547b56d2417e3c27258"
+      },
+      {
+        "kind": "hyphen",
+        "row": [
+          "coast-mountain-college",
+          "MacKenzie-Denis, Vicki",
+          null,
+          113341,
+          2810,
+          34
+        ],
+        "physicalPage": 34,
+        "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+        "clip": [
+          60.0,
+          649.49344,
+          500.0,
+          688.5334399999999
+        ],
+        "renderPath": "/tmp/independent-education-review/hyphen-13-p34.png",
+        "renderSha256": "78ddfa671f72923e404cc959fa875ded4da7bed3d993d84cea0a209f0dcc311c"
+      },
+      {
+        "kind": "hyphen",
+        "row": [
+          "coast-mountain-college",
+          "Norton, Sue-Ann",
+          null,
+          96947,
+          5097,
+          35
+        ],
+        "physicalPage": 35,
+        "originalSha256": "47ad6017a6b4d354493a99321eea1be2cd70c6b378c287e1f1ac89b0c98e422b",
+        "clip": [
+          60.0,
+          375.7753600000002,
+          500.0,
+          414.81536000000017
+        ],
+        "renderPath": "/tmp/independent-education-review/hyphen-14-p35.png",
+        "renderSha256": "d41c2d0547d77b96288c969509d3e0abb2ca5fea3baa66dc1e9a3fe7f71c34c5"
+      }
+    ],
+    "qualification": "Complete native extraction covers all 160 employee pages and every normalized row. Visual inspection covers exactly these 25 full cover/scope/approval/salary/control/reconciliation pages, all 11 negative expense rows, and all 3 hyphen presentation rows. It is not a full rendered review of all 9,987 cells or all report pages; no OCR was used."
+  },
+  "sourceObservations": [
+    {
+      "source": "UBC FY2025/26",
+      "periodEvidence": "Original cover and every employee heading: year ended March 31, 2026.",
+      "scope": "Complete named employee remuneration exceeding $75,000, physical42–189. Physical40–41 separate board-governor expenses excluded. Physical190 employer CPP/EI/severance aggregates excluded.",
+      "definition": "Physical42: cash payments in fiscal year; consolidated operating statement uses accrual/different consolidation bases. Expenses reported gross and not adjusted for external cost recoveries.",
+      "approval": "Physical3 consolidated-management statement has typed [signed] labels and June24,2026; no autograph signature or separately signed employee schedule asserted. Employee schedule explicitly unaudited.",
+      "controls": {
+        "printedNamed": [
+          1401982434,
+          35281528
+        ],
+        "independentNamed": [
+          1401982434,
+          35281528
+        ],
+        "residual": [
+          0,
+          0
+        ],
+        "printedBelowThreshold": [
+          654488610,
+          14796730
+        ],
+        "printedOverall": [
+          2056471044,
+          50078258
+        ]
+      },
+      "duplicates": "27 repeated name spellings, two disclosed records each, remain separate. All817wrapped-name rows independently reconstructed.",
+      "negativeAmounts": "All11parenthesized original expense amounts visually checked and retained as literal negatives; no cause is inferred."
+    },
+    {
+      "source": "Coast Mountain FY2024/25",
+      "periodEvidence": "Cover and schedule physical34: year ended March31,2025.",
+      "approval": "Physical3 autograph signature Adelle Cober, Chair, September2025.",
+      "controls": {
+        "printedNamed": [
+          15195814,
+          546452
+        ],
+        "independentNamed": [
+          15195816,
+          546451
+        ],
+        "residual": [
+          2,
+          -1
+        ]
+      },
+      "scope": "Complete139named employee Salary Plus Benefits records; expenses and combined Total separate; board physical39 and employer benefits/reconciliation physical40 excluded."
+    },
+    {
+      "source": "Coast Mountain FY2023/24",
+      "periodEvidence": "Cover and schedule physical33: year ended March31,2024.",
+      "approval": "Physical3 autograph signature Adelle Cober, Chair, September2024.",
+      "controls": {
+        "printedNamed": [
+          13225820,
+          468414
+        ],
+        "independentNamed": [
+          13225819,
+          468420
+        ],
+        "residual": [
+          -1,
+          6
+        ],
+        "printedNamedPlusBelowMinusGrandPay": 1
+      },
+      "scope": "Complete124named employee Salary Plus Benefits records; separate board physical37 and employer benefits/reconciliation physical38 excluded."
+    },
+    {
+      "source": "Coast Mountain FY2022/23",
+      "periodEvidence": "Cover and schedule physical34: year ended March31,2023.",
+      "approval": "Physical3 has a blank signature line with typed Shannon McPhail, Acting Chair, September2023. Adoption is not established independently.",
+      "controls": {
+        "printedNamed": [
+          9399257,
+          338936
+        ],
+        "independentNamed": [
+          9399254,
+          338937
+        ],
+        "residual": [
+          -3,
+          1
+        ]
+      },
+      "scope": "Complete91named employee Salary Plus Benefits records; separate board physical37 and employer benefits/reconciliation physical38 excluded.",
+      "clippedName": "Physical34 exposed surname fragment Helfensteller dos, given Vito, is visibly clipped. All three native engines agree on this exposed fragment; accepted payload retains that fragment with precise publicWarning. No full surname was inferred."
+    }
+  ],
+  "compiledDecision": "All124compiled2023/24rows independently mapped:109literal name/pay/expense exact,12source-null vs compiled0 comparison-only links,3literal hyphen presentation differences. No unmatched broader compiled scope. Root decides replacement; this audit deletes nothing.",
+  "publicWarningReview": "All CM named-control residuals and FY2023/24 aggregate1difference remain literal publicWarnings; FY2022/23 unsigned approval and clipped name are disclosed. No balancing adjustment or residual cause asserted.",
+  "metadataRecommendation": "Replace generic note wording literal negative recoveries with literal negative expense amounts; original UBC cells do not establish cause. Numeric payload has no correction.",
+  "limitations": [
+    "Only four accepted originals reviewed; the separate held NIC/CNC originals were not independently re-extracted in this audit.",
+    "No claims of exhaustive historical coverage or contact with institutions."
+  ],
+  "authorPayloadCorrections": [],
+  "globalEdits": false,
+  "contacts": false
+}
