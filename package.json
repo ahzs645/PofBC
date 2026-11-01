@@ -2,7 +2,7 @@
   "name": "pofbc-logo",
   "private": true,
   "version": "0.1.0",
-  "description": "Province of British Columbia logo generator — four lockups, colour variants, and SVG/PDF/PNG/WebP/JPEG export.",
+  "description": "Province of British Columbia logo generator \u2014 four lockups, colour variants, and SVG/PDF/PNG/WebP/JPEG export.",
   "type": "module",
   "license": "UNLICENSED",
   "engines": {
@@ -57,6 +57,8 @@
     "build:ministry-history": "node scripts/build-ministry-history.mjs",
     "build:government-history": "node scripts/build-government-history.mjs",
     "build:health-map": "node scripts/build-health-map-catalogue.mjs",
+    "preview:health-map": "node scripts/preview-health-map.mjs",
+    "build:health-geolibre": "python3 scripts/build_health_geolibre.py",
     "build:government-events": "node scripts/build-government-events.mjs",
     "build:government-atlas": "node scripts/build-government-atlas.mjs",
     "build:research-brief": "node scripts/build-research-brief.mjs",
@@ -66,7 +68,9 @@
     "build:government": "npm run build:government-history && npm run build:government-events && npm run build:government-atlas && npm run build:government-research && npm run build:research-brief && npm run build:research-queue",
     "check:government": "node scripts/check-government-drift.mjs",
     "build:research-queue": "node scripts/build-research-queue.mjs",
-    "research:merge": "node scripts/merge-research.mjs"
+    "research:merge": "node scripts/merge-research.mjs",
+    "build:health-estimates": "python3 scripts/build_health_estimates.py",
+    "build:health-comparisons": "node scripts/build-health-comparisons.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

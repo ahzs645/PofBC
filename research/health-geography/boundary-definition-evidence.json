@@ -1,0 +1,1495 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "scope": "Written legal definitions, not reconstructed legal GIS. The 2001 schedule is later than the 1997/98 map.",
+  "sources": [
+    {
+      "file": "reg293-2001.html",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "bytes": 255210,
+      "sha256": "292aee1a63f1067cda50155d2302329b0cc756aa5e0d3c6f23d0f475bb9d803c"
+    },
+    {
+      "file": "m0087_1997.pdf",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0087_1997",
+      "bytes": 7370860,
+      "sha256": "4213cf5d834a2ca88bc2bf9225c60023fe24f46d1b4cb3f720ae08e884d8d91c"
+    },
+    {
+      "file": "m0444_1996.pdf",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0444_1996",
+      "bytes": 2399263,
+      "sha256": "9c3df6a299aa9946b5effa24e0a81ccfb920df878d34a4bc0a6ca007ad48944f"
+    },
+    {
+      "file": "m0432_1996.pdf",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0432_1996",
+      "bytes": 1291658,
+      "sha256": "9e83c13a793f32bca87cff342ad5d2385c1b6f3646773147b965aa97ba956a50"
+    },
+    {
+      "file": "m0441_1996.pdf",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0441_1996",
+      "bytes": 4614064,
+      "sha256": "bc46655c7a2e023a48df463ab34f9a2602b8e280e052027854f4badadf7b48a3"
+    },
+    {
+      "file": "lha-metadata.json",
+      "url": "https://catalogue.data.gov.bc.ca/api/3/action/package_show?id=local-health-area-boundaries",
+      "bytes": 22625,
+      "sha256": "67cdf03a8425985793791e6fe1c1c1f2836d411d7c0f7fac27583a6f7a405c11"
+    },
+    {
+      "file": "pgmaps-boundaries.json",
+      "url": "https://pgmaps.ahmadjalil.com/data/boundaries/BCMoH/index.json",
+      "bytes": 103811,
+      "sha256": "e8b59c71eaa92911733f1af092b89ad1cf693bc6707199eebe4fe03925f377de"
+    },
+    {
+      "file": "pgmaps-regional-districts.geojson",
+      "url": "https://pgmaps.ahmadjalil.com/data/boundaries/BC/regional_districts.geojson",
+      "bytes": 2316778,
+      "sha256": "44b547119c52740e99737c50abfa78169a0ca41cdec57cc5876cdaac2d6f19bb"
+    },
+    {
+      "file": "pgmaps-municipalities.geojson",
+      "url": "https://pgmaps.ahmadjalil.com/data/boundaries/BC/municipalities.geojson",
+      "bytes": 905961,
+      "sha256": "18ac00efe80a2d9614575a13600771038278cc890205fb7300da096ce0457e2d"
+    },
+    {
+      "file": "m0191_1997.pdf",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0191_1997",
+      "bytes": 563124,
+      "sha256": "b517fbcbb59325b138b475b05f479d42d01ac6907a1dcd6a42ef181edf43eb19"
+    },
+    {
+      "file": "m0052_1997.pdf",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0052_1997",
+      "bytes": 2779587,
+      "sha256": "883de638b418fb25f170818abc5045f444a75d3487585d85ae70f8efa6eb876d"
+    },
+    {
+      "file": "m0062_1997.pdf",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0062_1997",
+      "bytes": 2569621,
+      "sha256": "60e9060da5b9530a972242bc7b94c4b5a21ff020dfbfee00b7040d5f6dc0b561"
+    },
+    {
+      "file": "m0072_1997.pdf",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0072_1997",
+      "bytes": 613845,
+      "sha256": "5bc44f3c48926d768f500929f17fe2efaa390f2d11138252c27701c8c0aa2f71"
+    },
+    {
+      "file": "official-school-districts.geojson",
+      "url": "https://openmaps.gov.bc.ca/geo/pub/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=pub%3AWHSE_TANTALIS.TA_SCHOOL_DISTRICTS_SVW&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+      "sha256": "8f407ef2c7e3d82864e72fe73095f6e82a453b44066e46fab351dae9a4a2e991",
+      "bytes": 22845545
+    }
+  ],
+  "extraLayers": [
+    {
+      "id": "regionalDistricts",
+      "title": "Current regional districts",
+      "url": "https://pgmaps.ahmadjalil.com/data/boundaries/BC/regional_districts.geojson",
+      "file": "display-regional-districts.geojson",
+      "featureCount": 28,
+      "sha256": "c6c675899aa1795ccc80ab70283e9542ba95a60f2e1cc78741afbfb78e463482",
+      "originalSha256": "44b547119c52740e99737c50abfa78169a0ca41cdec57cc5876cdaac2d6f19bb",
+      "dateCaveat": "Modern snapshot; boundaries at the historical legal instrument date have not been reconstructed."
+    },
+    {
+      "id": "municipalities",
+      "title": "Current municipalities",
+      "url": "https://pgmaps.ahmadjalil.com/data/boundaries/BC/municipalities.geojson",
+      "file": "display-municipalities.geojson",
+      "featureCount": 160,
+      "sha256": "c5af148e209892b9ddfde9a7281f7cc7f05b2993499a3ce5d5a4904b7cdbdb69",
+      "originalSha256": "18ac00efe80a2d9614575a13600771038278cc890205fb7300da096ce0457e2d",
+      "dateCaveat": "Modern snapshot; boundaries at the historical legal instrument date have not been reconstructed."
+    },
+    {
+      "id": "schoolDistricts",
+      "title": "Current school districts",
+      "url": "https://openmaps.gov.bc.ca/geo/pub/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=pub%3AWHSE_TANTALIS.TA_SCHOOL_DISTRICTS_SVW&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+      "file": "display-school-districts.geojson",
+      "featureCount": 59,
+      "sha256": "599068a7634aeed69fd0b4a8d11453c1cf8a067fa00083004c6a4f6132054de9",
+      "originalSha256": "8f407ef2c7e3d82864e72fe73095f6e82a453b44066e46fab351dae9a4a2e991",
+      "dateCaveat": "Modern snapshot; boundaries at the historical legal instrument date have not been reconstructed."
+    }
+  ],
+  "records": [
+    {
+      "areaId": "north-okanagan-health-region",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "North Okanagan Health Region",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Upper Arrow Lake",
+        "Pingston Creek",
+        "Whatshan River",
+        "Wauchope Creek",
+        "Lower Arrow Lake",
+        "Kettle River",
+        "Harris Creek",
+        "Duteau Creek",
+        "Kalamalka Lake",
+        "Okanagan Lake"
+      ],
+      "surveyedLines": [
+        "6th meridian"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "db756b69f0bfb7596774e6a3cbf0716d9bce249d6519f124b9a9d4bbd00707e4",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "okanagan-similkameen-health-region",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Okanagan Similkameen Health Region",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Kettle River",
+        "Harris Creek",
+        "Duteau Creek",
+        "Kalamalka Lake",
+        "Okanagan Lake",
+        "Trout Creek",
+        "Siwash Creek",
+        "Dillard Creek",
+        "Similkameen River"
+      ],
+      "surveyedLines": [
+        "6th meridian"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "c967d248878c98f6db38c75e38850907155333b81b8b54d101fe312827a8aa9c",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "thompson-health-region",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Thompson Health Region",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Columbia River",
+        "Perry River",
+        "Craigellachie Creek",
+        "Anstey Arm",
+        "Shuswap Lake",
+        "Okanagan Lake",
+        "Trout Creek",
+        "Siwash Creek",
+        "Dillard Creek",
+        "Coldwater River"
+      ],
+      "surveyedLines": [
+        "6th meridian"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "6f9273188ed07bc7fe9ca2fecbf3683f91d81df08cc367d58977a6734cfa40f3",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "fraser-valley-health-region",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Fraser Valley Health Region",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid",
+        "surveyed latitude/longitude",
+        "dated municipal limits"
+      ],
+      "namedWaterFeatures": [
+        "Similkameen River",
+        "Coldwater River",
+        "Anderson River",
+        "Ainslie Creek",
+        "Fraser River",
+        "Nahatlatch River",
+        "Lillooet River",
+        "Billygoat Creek",
+        "Stave River"
+      ],
+      "surveyedLines": [
+        "6th meridian"
+      ],
+      "municipalReferences": [
+        "Mission",
+        "Abbotsford/Matsqui"
+      ],
+      "sourceTextSha256": "5c950a1583948d8afdea86a62eddcd491bfb980196c8f33b9a747fc4bd5997c5",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid, surveyed latitude/longitude, dated municipal limits. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "south-fraser-health-region",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "South Fraser Health Region",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "rivers, lakes and shorelines",
+        "dated municipal limits"
+      ],
+      "namedWaterFeatures": [
+        "Fraser River"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [
+        "Abbotsford/Matsqui",
+        "Delta"
+      ],
+      "sourceTextSha256": "18272dd5ce74abd196597f4fdf9665bcbcfac91e895422843e66815ba387dc41",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through rivers, lakes and shorelines, dated municipal limits. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "simon-fraser-health-region",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Simon Fraser Health Region",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "dated municipal limits"
+      ],
+      "namedWaterFeatures": [
+        "Fraser River",
+        "Stave River",
+        "Pitt River",
+        "Indian River",
+        "Burrard Inlet"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [
+        "Mission",
+        "Burnaby",
+        "New Westminster",
+        "Delta"
+      ],
+      "sourceTextSha256": "48a72622ffede54eb9bb61308b2a6f27fe57cd1fba828d878800173c756d2281",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, dated municipal limits. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "central-vancouver-island-health-region",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Central Vancouver Island Health Region",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Finlayson Arm",
+        "Juan de Fuca Strait",
+        "Muchalat Inlet",
+        "Moyeha River",
+        "Ash River",
+        "Cruickshank River",
+        "Deep Bay",
+        "Baynes Sound",
+        "Sabine Channel",
+        "Malaspina Strait"
+      ],
+      "surveyedLines": [
+        "49th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "40e881e8c72159eba094a0c7f071173a3ef9f1b6433d9ce03c3b8038af537fc6",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "northern-interior-regional-health-board",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Northern Interior Regional Health Board Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Fraser River",
+        "Euchiniko River",
+        "Sakumtha River",
+        "Tahtsa Lake",
+        "Nanika River",
+        "Morice River",
+        "Buck Creek",
+        "McKilligan Creek",
+        "Bulkley River",
+        "Babine River"
+      ],
+      "surveyedLines": [
+        "124th meridian",
+        "125th meridian",
+        "53rd parallel",
+        "56th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "fd9f4e49720545a9fb82b5e681f09a89d9939c45155215d839ff3561022db2f5",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "vancouver-richmond-health-board",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Vancouver/Richmond Health Board Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "township/section survey grid",
+        "dated municipal limits"
+      ],
+      "namedWaterFeatures": [],
+      "surveyedLines": [],
+      "municipalReferences": [
+        "Vancouver",
+        "Richmond"
+      ],
+      "sourceTextSha256": "523b9728cd80d35f276edf25785f1f62a7e90a191cb3ab7c7d5a4ad6916d5b46",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through township/section survey grid, dated municipal limits. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "north-shore-health-region",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "North Shore Health Region",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "dated municipal limits"
+      ],
+      "namedWaterFeatures": [
+        "Queen Charlotte Channel",
+        "Indian River",
+        "Burrard Inlet",
+        "Collingwood Channel"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [
+        "Burnaby",
+        "Vancouver"
+      ],
+      "sourceTextSha256": "7c5c24c41215da68396a4e7078b557242c2ea127f24a1d7cba46d64535fca20d",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through rivers, lakes and shorelines, cadastral district lots, dated municipal limits. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "capital-health-region",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Capital Health Region",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Finlayson Arm",
+        "Juan de Fuca Strait",
+        "Houstoun Passage",
+        "Stuart Channel",
+        "Saanich Inlet"
+      ],
+      "surveyedLines": [
+        "49th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "db1ccbee945b3c95d8c8d5bee6c3d12bbbc131abe05162e12ea968423bfb19f2",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "elk-valley-and-south-country-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Elk Valley and South Country Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Gold Creek",
+        "Little Sand Creek",
+        "Elk River"
+      ],
+      "surveyedLines": [
+        "49th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "f3edd704097d2685c2911452dc02d9e578b3ff0bed1079367ddd6dcb85251c97",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "cranbrook-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Cranbrook Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Gold Creek",
+        "Little Sand Creek",
+        "Bull River",
+        "Wild Horse River",
+        "Kootenay River",
+        "Perry Creek",
+        "Moyie River"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "d1c7dbbd7f77a04eab8862fa111d5b1e4241fb50878b3de88967167d31e64538",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "kimberley-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Kimberley Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Kootenay River",
+        "Wild Horse River",
+        "Bull River",
+        "White River",
+        "Lussier River",
+        "Sandown Creek",
+        "Findlay Creek",
+        "Perry Creek"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "f287b9af308cd4295d76a3f8a978ddaeb069a5212c769277aefe9644e0825e12",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "columbia-valley-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Columbia Valley Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid",
+        "surveyed latitude/longitude",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Kootenay River",
+        "Bugaboo Creek",
+        "Duncan River",
+        "Findlay Creek",
+        "Sandown Creek",
+        "Lussier River",
+        "White River"
+      ],
+      "surveyedLines": [
+        "5th meridian"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "737a881ab297e763492549d5eea006bbaa0872f9569a4fda56b2835df92041fc",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid, surveyed latitude/longitude, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "creston-and-district-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Creston and District Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Kootenay Lake",
+        "La France Creek",
+        "Moyie River"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "bec26e14aca600adeb50318215b447511ebe48f50ea8ea0368f45780158c5228",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "nelson-and-area-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Nelson and Area Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Kootenay Lake",
+        "La France Creek",
+        "Duncan River",
+        "Healy Creek",
+        "Trout Lake",
+        "Mobbs Creek",
+        "Lardeau River",
+        "Slocan Lake",
+        "Enterprise Creek",
+        "Brahms Creek"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "be6d09d26f4517c70b23d053e0395b9a8edd7f366b33a34bb9acd7492527e688",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "castlegar-and-district-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Castlegar and District Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Lower Arrow Lake",
+        "Johnston Creek",
+        "Worthington Creek",
+        "Octopus Creek",
+        "Norns Creek",
+        "Slocan River",
+        "Kootenay River",
+        "Columbia River"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "9d18bcb280c91fbfdb7a511e267b389d68c0001adf01eecfb5f4dcd5c1df1fcb",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "arrow-lakes-upper-slocan-valley-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Arrow Lakes/Upper Slocan Valley Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Upper Arrow Lake",
+        "Pingston Creek",
+        "Whatshan River",
+        "Wauchope Creek",
+        "Lower Arrow Lake",
+        "Johnston Creek",
+        "Worthington Creek",
+        "Octopus Creek",
+        "Beatrice Creek",
+        "Slocan Lake"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "2cbc86e8e51ece0a42bf5ce6355d80b2edd117f2c1f9933a65b25264cae22bf1",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "greater-trail-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Greater Trail Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Pend d'Oreille River",
+        "Columbia River",
+        "Big Sheep Creek"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "6e75d5468165c07354224720555ef39ca44d194e24c5a1b34631c3a046e0445c",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "boundary-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Boundary Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid",
+        "land-title survey plans"
+      ],
+      "namedWaterFeatures": [
+        "Big Sheep Creek",
+        "Lower Arrow Lake",
+        "Kettle River",
+        "Big Sheep River"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "84dc9e330d111d08b025c49a5ae23d4b4a6e52402bad37a259d9e6b83e9de735",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid, land-title survey plans. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "golden-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Golden Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Kootenay River",
+        "Bugaboo Creek",
+        "Duncan River",
+        "Beaver River",
+        "Baker Creek",
+        "Hugh Allen Creek"
+      ],
+      "surveyedLines": [
+        "5th meridian"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "e247317c52fd140e53c01900b941b6da91b79369ef2910c8b79e63b2ca132073",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "south-cariboo-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "South Cariboo Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid"
+      ],
+      "namedWaterFeatures": [
+        "Fraser River",
+        "Bonaparte River",
+        "Young Lake",
+        "Scott Creek",
+        "Canimred Creek",
+        "Mahood Lake",
+        "Clearwater River",
+        "Chimney Lake"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "5f9a2e90059d17d78660d297e8ed52e0198309ee9a86472c9bc7110290cd34d2",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "central-cariboo-chilcotin-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Central Cariboo Chilcotin Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Clearwater Lake",
+        "Klinaklini Lake",
+        "Colwell Creek",
+        "Mosley Creek",
+        "Homathko River",
+        "Doran Creek",
+        "Chilko Lake",
+        "Lord River",
+        "Churn Creek",
+        "Fraser River"
+      ],
+      "surveyedLines": [
+        "125th meridian",
+        "53rd parallel",
+        "124th meridian"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "27f599d01adaa4f99dc204c0b06fab20ebdf47904762296af2d91cb4848e0eab",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "quesnel-and-district-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Quesnel and District Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Fraser River",
+        "Euchiniko River",
+        "Tautri Creek",
+        "Chilcotin River",
+        "Tingley Creek",
+        "Sheridan Creek",
+        "Beaver Creek",
+        "Victoria Creek",
+        "Cunningham Creek",
+        "Cariboo River"
+      ],
+      "surveyedLines": [
+        "124th meridian",
+        "125th meridian",
+        "53rd parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "329f296745c2b333a67313d47714f7384a721c17392f7b5f4d5948cfefd2fa5d",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "bella-coola-and-district-transitional-health-authority",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Bella Coola and District Transitional Health Authority Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Sakumtha River",
+        "Kimsquit River",
+        "Kitlope River",
+        "Nascall River",
+        "Cascade Inlet",
+        "Dean Channel",
+        "Fisher Channel",
+        "Burke Channel",
+        "Nootum River",
+        "Koeye River"
+      ],
+      "surveyedLines": [
+        "125th meridian",
+        "53rd parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "230cab002a51654616d1ba344f03b2607eb80d2cc45275fccc05fd52e2530715",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "sunshine-coast-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Sunshine Coast Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots"
+      ],
+      "namedWaterFeatures": [
+        "Howe Sound",
+        "Collingwood Channel",
+        "First Narrows of Burrard Inlet",
+        "Malaspina Strait",
+        "Jervis Inlet",
+        "Hotham Sound",
+        "Baker Bay",
+        "Squamish River",
+        "Potlatch Creek"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "0de6514f127665f60b7a20ac85e54249a43af53c6923f708c06d91c8dfefec36",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "powell-river-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Powell River Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots"
+      ],
+      "namedWaterFeatures": [
+        "Baker Bay",
+        "Jervis Inlet",
+        "Toba River",
+        "Orford River",
+        "Brem River",
+        "Toba Inlet",
+        "Pryce Channel",
+        "Homfray Channel",
+        "Desolation Sound",
+        "Lewis Channel"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "ebdea30aec8d6d581bd3b91a55ec255b685092068d89d24c06ac04fbddd2597f",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "sea-to-sky-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Sea to Sky Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots"
+      ],
+      "namedWaterFeatures": [
+        "Queen Charlotte Channel",
+        "Indian River",
+        "Pitt River",
+        "Lillooet River",
+        "Billygoat Creek",
+        "Cayoosh Creek",
+        "Haylmore Creek",
+        "Wade Creek",
+        "Anderson Lake",
+        "Blackwater Creek"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "bf913c9c9f519fb3cf14b75c12ce21af029e16075978ebeb09263ccb8b73b583",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "comox-valley-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Comox Valley Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "rivers, lakes and shorelines",
+        "cadastral district lots"
+      ],
+      "namedWaterFeatures": [
+        "Deep Bay",
+        "Woodhus Creek",
+        "Oyster River",
+        "Baynes Sound"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "3df4e11f57badfdfb947b5d311ac6e599ac2d773c83805e062df5911a7ca6dbf",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through rivers, lakes and shorelines, cadastral district lots. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "campbell-river-nootka-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Campbell River/Nootka Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "township/section survey grid"
+      ],
+      "namedWaterFeatures": [
+        "Oyster River",
+        "Georgia Strait",
+        "Baker Passage",
+        "Lewis Channel",
+        "Desolation Sound",
+        "Homfray Channel",
+        "Pryce Channel",
+        "Toba Inlet",
+        "Brem River",
+        "Southgate River"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [
+        "Zeballos"
+      ],
+      "sourceTextSha256": "005a10af06c697637f8816f2e2e7f70d31279fcc649867fd675d0cf30fe2e96f",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, township/section survey grid. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "mount-waddington-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Mount Waddington Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Queen Charlotte Sound",
+        "Silvester Bay",
+        "Takush River",
+        "Smokehouse Creek",
+        "Machmell River",
+        "Klinaklini River",
+        "Jobin Creek",
+        "Klinaklini Lake",
+        "Colwell Creek",
+        "Homathko River"
+      ],
+      "surveyedLines": [
+        "51st parallel",
+        "128th meridian"
+      ],
+      "municipalReferences": [
+        "Zeballos"
+      ],
+      "sourceTextSha256": "f3250007f4f6677b19cef912d41f8eae1913790edc54e9ee5ca7c7b5e83be207",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "central-coast-transitional-health-authority",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Central Coast Transitional Health Authority Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Hecate Strait",
+        "Caamano Sound",
+        "Campania Sound",
+        "Whale Channel",
+        "Oscar Passage",
+        "Salmon Bay",
+        "Kynoch Inlet",
+        "Nascall River",
+        "Cascade Inlet",
+        "Dean Channel"
+      ],
+      "surveyedLines": [
+        "51st parallel",
+        "128th meridian"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "3b332033b7dad3dcc6c469711a11c61677e54eba3c89b7118ad2f4d870211a16",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "south-peace-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "South Peace Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "dated municipal limits"
+      ],
+      "namedWaterFeatures": [
+        "Peace River",
+        "McGregor River",
+        "Upper Blue Lake",
+        "Murray River",
+        "Pine River"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [
+        "Hudson",
+        "Tumbler Ridge"
+      ],
+      "sourceTextSha256": "7e2361e719faf56314e3f2392c7336560bb601526d6cc9381c316b6c5f1dc913",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, dated municipal limits. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "north-peace-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "North Peace Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "surveyed latitude/longitude",
+        "dated municipal limits"
+      ],
+      "namedWaterFeatures": [
+        "Peace River",
+        "Kechika River",
+        "Fox River",
+        "Collins Bay",
+        "Graham River",
+        "Halfway River",
+        "Williston Lake",
+        "Canty Creek",
+        "Parsnip River"
+      ],
+      "surveyedLines": [
+        "58th parallel"
+      ],
+      "municipalReferences": [
+        "Hudson"
+      ],
+      "sourceTextSha256": "c0238adf474fb0cbae766cfc118ba289da198ff3d39760349d6fc7c48040f4ce",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, surveyed latitude/longitude, dated municipal limits. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "fort-nelson-liard-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Fort Nelson-Liard Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Little Rancheria River",
+        "South Albert Creek",
+        "Cormier Creek",
+        "Sambo Creek",
+        "Dease River",
+        "Trepanier Creek",
+        "Black Angus Creek",
+        "Kechika River",
+        "Wadin Creek"
+      ],
+      "surveyedLines": [
+        "58th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "dd2d60274dae1c2b1d55488f0e676b25583fad14fe0638ab044b158df211b3da",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "bulkley-valley-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Bulkley Valley Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Buck Creek",
+        "McKilligan Creek",
+        "Skeena River",
+        "Tahtsa Lake",
+        "Nanika River",
+        "Morice River",
+        "Bulkley River"
+      ],
+      "surveyedLines": [
+        "55th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "14e8b906e9caf6106db7b9d7bb0cdbe695109eded705c77bab39e9e32e89e2a4",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "upper-skeena-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Upper Skeena Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Bulkley River",
+        "Babine River",
+        "Shegisic Creek",
+        "Cranberry River",
+        "Moonlit Creek",
+        "Burdick Creek",
+        "Skeena River"
+      ],
+      "surveyedLines": [
+        "55th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "b9f16fc46213d4c1c54181c459d665cb5588dad89582c05d5968ffac6a7ebde1",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "terrace-and-area-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Terrace and Area Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "North Seaskinnish Creek",
+        "Ksedin Creek",
+        "Ishkheenickh River",
+        "Kateen River",
+        "Exchamsiks River",
+        "Skeena River",
+        "Serb Creek",
+        "Burdick Creek",
+        "Moonlit Creek",
+        "Cranberry River"
+      ],
+      "surveyedLines": [
+        "55th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "04f1f6530318b490596c906885f46449a1d0fbff38a25a527ef9feec85723946",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "kitimat-and-area-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Kitimat and Area Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots"
+      ],
+      "namedWaterFeatures": [
+        "Finlayson Channel",
+        "Oscar Passage",
+        "Salmon Bay",
+        "Kynoch Inlet",
+        "Nascall River",
+        "Kitlope River",
+        "Williams Creek",
+        "Skeena River",
+        "Ecstall River",
+        "Telegraph Passage"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "ae1ed9743fb501018baba5f462b9744034db29adfd59fbe7e162fbd7868821ed",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "north-coast-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "North Coast Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots"
+      ],
+      "namedWaterFeatures": [
+        "Ecstall River",
+        "Telegraph Passage",
+        "Ogden Channel",
+        "Kitkatla Channel",
+        "Freeman Passage",
+        "Hecate Strait",
+        "Steamer Passage",
+        "Khutzeymateen Inlet",
+        "Khutzeymateen River",
+        "Exchamsiks River"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "241238c0a82ddf0bbf02970d969b8882b8bc88ad71d797077f3a0e51822302d0",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "queen-charlotte-islands-haida-gwaii-community-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Queen Charlotte Islands/Haida Gwaii Community Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "rivers, lakes and shorelines"
+      ],
+      "namedWaterFeatures": [
+        "Hecate Strait"
+      ],
+      "surveyedLines": [],
+      "municipalReferences": [],
+      "sourceTextSha256": "cce75f41a16850ab9dc1866f6de9df904e8ba34226d5c40fa50d351bc46018f1",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through rivers, lakes and shorelines. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "nisgaa-source-area",
+      "kind": "related-council-definition",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0191_1997#page=3",
+      "heading": "Nisga’a Community Health Council Area",
+      "dateContext": "1997 related council; identity with the map’s authority label remains unresolved",
+      "referenceKinds": [
+        "district lots",
+        "watershed divides",
+        "rivers and inlets",
+        "surveyed parallels"
+      ],
+      "boundaryVerified": false,
+      "relatedEntityOnly": true,
+      "summary": "M191/1997 supplies a written boundary for the separately recorded council. It cannot establish that the map’s authority label is the same legal body."
+    },
+    {
+      "areaId": "snow-country-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Snow Country Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "cadastral district lots",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Cranberry River",
+        "Kispiox River",
+        "Nass River",
+        "Steamer Passage",
+        "Khutzeymateen Inlet",
+        "Khutzeymateen River",
+        "Ishkheenickh River",
+        "Kwinamass River",
+        "Portland Inlet",
+        "Observatory Inlet"
+      ],
+      "surveyedLines": [
+        "57th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "79d3f7fb7369b93b50107431a0bcf1ad4ce6265da0b715ae771e364bbc2d0db2",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, cadastral district lots, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    },
+    {
+      "areaId": "stikine-health-council",
+      "kind": "written-territory",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Stikine Health Council Area",
+      "dateContext": "Original B.C. Reg. 293/2001, Schedule B, deposited 12 December 2001",
+      "referenceKinds": [
+        "watershed divides",
+        "rivers, lakes and shorelines",
+        "surveyed latitude/longitude"
+      ],
+      "namedWaterFeatures": [
+        "Kispiox River",
+        "Omineca River",
+        "Omineca Arm",
+        "Meslinka River",
+        "Ingenika River",
+        "Finlay River",
+        "Kechika River",
+        "Wadin Creek",
+        "Black Angus Creek",
+        "Trepanier Creek"
+      ],
+      "surveyedLines": [
+        "56th parallel",
+        "57th parallel"
+      ],
+      "municipalReferences": [],
+      "sourceTextSha256": "ba04296d96c6302cd98b10ed00cf8813d5e6c9f2e409f0f1c36cad65d0206724",
+      "boundaryVerified": false,
+      "relatedEntityOnly": false,
+      "summary": "The operative 2001 schedule defines this territory through watershed divides, rivers, lakes and shorelines, surveyed latitude/longitude. Its relation to the 1997/98 map and modern polygons still requires an amendment and edge review."
+    }
+  ],
+  "findings": [
+    {
+      "areaId": "snow-country-health-council",
+      "finding": "The Snow Country description reaches the 57th parallel and uses Nass/Kispiox watershed limits and the Alaska boundary. A same-named present LHA, or its name alone, cannot settle that extent.",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0087_1997#page=29",
+      "pdfPages": [
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "areaId": "stikine-health-council",
+      "finding": "Stikine’s legal perimeter uses the 56th parallel as one starting reference and a sequence of river watershed divides, continuing to the provincial boundary. It is not a rectangular latitude band.",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0052_1997#page=10",
+      "pdfPages": [
+        10
+      ]
+    },
+    {
+      "areaId": "vancouver-richmond-health-board",
+      "finding": "The 2001 description includes dated Vancouver/Richmond municipal boundaries plus Greater Vancouver Electoral Areas A and B. A union of today’s municipal polygons alone is incomplete evidence.",
+      "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+      "heading": "Vancouver/Richmond Health Board Area"
+    }
+  ]
+}

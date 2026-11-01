@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { assetUrl } from './healthStoryData.js'
 
 const BASE = import.meta.env?.BASE_URL || '/'
-const INITIAL = { phase: 'idle', comparison: null, collections: {}, error: null }
+const INITIAL = { phase: 'idle', comparison: null, rectification: null, estimates: null, collections: {}, error: null }
 
 export function useBoundaryData(enabled) {
   const [state, setState] = useState(INITIAL)
@@ -16,8 +16,8 @@ export function useBoundaryData(enabled) {
       return response.json()
     }
     setState((previous) => ({ ...previous, phase: 'loading', error: null }))
-    load('boundary-comparison.json').then(async (comparison) => {
-      const datasets = Object.entries(comparison.datasets ?? {}).filter(([, dataset]) => dataset.file)
+    Promise.all([load('boundary-comparison.json'), load('rectification.json'), load('estimates-index.json')]).then(async ([comparison, rectification, estimates]) => {
+      const datasets = Object.entries({ ...comparison.datasets, ...rectification.datasets, ...estimates.datasets }).filter(([, dataset]) => dataset.file)
       const collections = Object.fromEntries(await Promise.all(datasets.map(async ([id, dataset]) => {
         const collection = await load(dataset.file)
         if (collection.type !== 'FeatureCollection' || !Array.isArray(collection.features)) {
@@ -25,7 +25,7 @@ export function useBoundaryData(enabled) {
         }
         return [id, collection]
       })))
-      if (!controller.signal.aborted) setState({ phase: 'ready', comparison, collections, error: null })
+      if (!controller.signal.aborted) setState({ phase: 'ready', comparison, rectification, estimates, collections, error: null })
     }).catch((error) => {
       if (!controller.signal.aborted) setState({ ...INITIAL, phase: 'error', error: error.message })
     })

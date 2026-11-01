@@ -4,6 +4,8 @@ Prepared 31 October 2026 for the PofBC health-history story. This package makes 
 
 ## Files and locations
 
+The follow-up [registration experiment](rectification-README.md) adds aligned source-drawing overlays and exploratory cartographic scores in separate files. The original candidate flags and modern-data audit below retain their original meaning; derived publication-drawing overlap is not legal historical-boundary verification.
+
 | File | Purpose | Coverage |
 | --- | --- | --- |
 | `public/health-geography/boundary-comparison.json` | Source records, dataset manifest, candidate selections, limitations, and current-data audit summary | 52 map labels: 11 boards, 34 council/related labels, 7 societies |

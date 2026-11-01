@@ -1,6 +1,10 @@
 import { useCallback, useMemo, useState } from 'react'
 import StoryFrame from './StoryFrame.jsx'
+import { AreaResearchNotes, HealthResearchPanel } from './HealthResearchPanel.jsx'
+import { RectificationEvidence } from './RectificationEvidence.jsx'
 import { BoundaryMap } from './BoundaryMap.jsx'
+import { BoundaryEstimateEvidence, comparisonLayerNames, estimateFor } from './BoundaryEstimateEvidence.jsx'
+import { AlignmentMap } from './AlignmentMap.jsx'
 import { useBoundaryData } from './useBoundaryData.js'
 import {
   AREAS, CATALOGUE, CHAPTERS, DEFAULT_AREA_ID, PUBLIC_SOURCES, SOURCE_REPORT,
@@ -62,6 +66,7 @@ function AreaEvidence({ area, match, onCompare, compact = false }) {
       <SourceLink href={area.sourceUrl}>Source map</SourceLink>
     </div>
     {!compact && <details className="health-details"><summary>Names and evidence notes</summary><ul>{area.notes.map((note, index) => <li key={index}>{note}</li>)}</ul></details>}
+    <AreaResearchNotes areaId={area.id} />
   </section>
 }
 
@@ -75,21 +80,43 @@ function BoundaryLoading({ data }) {
 function ComparisonMedia({ data, area, layer, setLayer, onFeatureSelect }) {
   const [view, setView] = useState('boundaries')
   const match = comparisonFor(data.comparison, area.id)
-  const selectedCodes = useMemo(() => candidateCodes(match, layer), [match, layer])
+  const assessment = estimateFor(data.estimates, area.id)
+  const review = data.estimates?.alignmentReviews?.[area.id]
+  const localAlignment = review?.workingAlignment?.enabled
+  const displayedLayer = localAlignment && !Object.hasOwn(comparisonLayerNames, layer) ? 'lha' : layer
+  const selectedCodes = useMemo(() => ['estimates', 'drawn'].includes(displayedLayer) ? new Set([area.id])
+    : ['municipalities', 'regionalDistricts', 'schoolDistricts'].includes(displayedLayer) ? new Set(assessment?.currentBoundaryScreening[displayedLayer].slice(0, 1).map((entry) => String(entry.code)))
+      : candidateCodes(match, displayedLayer), [area.id, match, displayedLayer, assessment])
   return <div className="health-comparison-media">
     <div className="health-media-tabs" role="group" aria-label="Comparison display">
-      {[['boundaries', 'Existing boundaries'], ['archive', 'Original map'], ['both', 'Side by side']].map(([id, label]) => <button type="button" key={id} aria-pressed={view === id} onClick={() => setView(id)}>{label}</button>)}
+      {[['boundaries', 'Estimates and boundaries'], ['archive', 'Original map'], ['both', 'Side by side']].map(([id, label]) => <button type="button" key={id} aria-pressed={view === id} onClick={() => setView(id)}>{label}</button>)}
     </div>
     <div className={`health-comparison-panes${view === 'both' ? ' is-split' : ''}`}>
       {view !== 'archive' && <section className="health-current-pane" aria-label="Existing PGMaps boundary comparison">
-        <div className="health-media-heading"><div><span className="health-kicker">PGMaps comparison layer</span><h3>{area.sourceLabel}</h3></div>
-          <select aria-label="Existing boundary layer" value={layer} onChange={(event) => setLayer(event.target.value)}><option value="lha">Local health areas</option><option value="hsda">Service delivery areas</option><option value="ha">Health authorities</option></select>
+        <div className="health-media-heading"><div><span className="health-kicker">Historical estimates and current references</span><h3>{area.sourceLabel}</h3></div>
+          <select aria-label="Boundary or estimate layer" value={displayedLayer} onChange={(event) => setLayer(event.target.value)}>{localAlignment ? Object.entries(comparisonLayerNames).map(([id, name]) => <option key={id} value={id}>Current {name.toLowerCase()}</option>) : <><option value="estimates">Best working estimate</option><option value="drawn">Source-drawn estimate</option><option value="lha">Current local health areas</option><option value="hsda">Current service delivery areas</option><option value="ha">Current health authorities</option><option value="municipalities">Current municipalities</option><option value="regionalDistricts">Current regional districts</option><option value="schoolDistricts">Current school districts</option><option value="historical">20 statistical illustrations</option></>}</select>
         </div>
-        {data.phase !== 'ready' ? <BoundaryLoading data={data} /> : <BoundaryMap collections={data.collections} layer={layer} selectedCodes={selectedCodes} selectedName={area.sourceLabel} onFeatureSelect={onFeatureSelect} />}
-        <p className="health-map-credit">Modern PGMaps geography. A highlighted candidate does not establish the historical legal boundary.</p>
+        {data.phase !== 'ready' ? <BoundaryLoading data={data} /> : localAlignment ? <AlignmentMap key={area.id} collections={data.collections} referenceLayer={displayedLayer} referenceCodes={selectedCodes} areaId={area.id} review={review} /> : <BoundaryMap collections={data.collections} layer={displayedLayer} selectedCodes={selectedCodes} selectedName={area.sourceLabel} onFeatureSelect={onFeatureSelect} sourceMapId={area.mapId} sourceAreaId={area.id} />}
+        <p className="health-map-credit">{localAlignment ? 'Reference: current PGMaps geography and coastal coverage. Magenta: original trace. Orange: provisional local adjustment, 5 km north. Place labels provide orientation. Original cartography: Ministry of Health, published by the BC Auditor General, March 1998.' : 'Estimates are provisional. Current reference layers are dated modern geography; extra layers highlight the closest individual feature by drawing overlap. Magenta: registered Ministry map, published by the BC Auditor General, March 1998.'} No historical legal boundary is verified.</p>
       </section>}
       {view !== 'boundaries' && <ArchiveMap key={area.mapId} map={mapById(area.mapId)} area={area} />}
     </div>
+  </div>
+}
+
+function StatisticalRegionMedia({ data, onEnable }) {
+  const [view, setView] = useState('archive')
+  const [selected, setSelected] = useState(null)
+  const codes = useMemo(() => new Set(selected ? [String(selected.properties.code)] : []), [selected])
+  return <div className="health-comparison-media">
+    <div className="health-media-tabs" role="group" aria-label="Statistical region display">
+      <button type="button" aria-pressed={view === 'archive'} onClick={() => setView('archive')}>Original statistical map</button>
+      <button type="button" aria-pressed={view === 'estimate'} onClick={() => { setView('estimate'); onEnable() }}>20 working illustrations</button>
+    </div>
+    {view === 'archive' ? <ArchiveMap map={mapById('regions-2000')} /> : <section className="health-current-pane">
+      <div className="health-media-heading"><div><span className="health-kicker">Statistical geography · provisional</span><h3>Twenty regional illustrations</h3></div></div>
+      {data.phase !== 'ready' ? <BoundaryLoading data={data} /> : <><BoundaryMap collections={data.collections} layer="historical" selectedCodes={codes} selectedName={selected?.properties.name} onFeatureSelect={setSelected} contextOnly /><p className="health-notice">{data.estimates.statisticalCaveat}</p></>}
+    </section>}
   </div>
 }
 
@@ -109,7 +136,7 @@ export function HealthStoryView() {
   const [requestedChapter, setRequestedChapter] = useState(initial.chapter)
   const [navigationRequestKey, setNavigationRequestKey] = useState(0)
   const [selectedId, setSelectedId] = useState(initial.area)
-  const [layer, setLayer] = useState('lha')
+  const [layer, setLayer] = useState('estimates')
   const [query, setQuery] = useState('')
   const [group, setGroup] = useState('all')
   const [copied, setCopied] = useState(false)
@@ -151,13 +178,18 @@ export function HealthStoryView() {
     if (id === 'compare-boundaries' || id === 'consolidation') setLoadComparison(true)
     writePlace(id, selectedId)
   }, [selectedId, writePlace])
-  const onFeatureSelect = useCallback((feature, featureLayer) => setClickedFeature({ code: String(feature.properties.code), name: feature.properties.name, layer: featureLayer }), [])
+  const onFeatureSelect = useCallback((feature, featureLayer) => {
+    if (['estimates', 'drawn'].includes(featureLayer)) chooseArea(String(feature.properties.code))
+    else setClickedFeature({ code: String(feature.properties.code), name: feature.properties.name, layer: featureLayer })
+  }, [chooseArea])
   const copyLink = async () => {
     try { await navigator.clipboard.writeText(globalThis.location.href); setCopied(true); setCopyFailed(false) }
     catch { setCopied(false); setCopyFailed(true) }
   }
   const matchSources = (match?.sourceIds ?? []).map((id) => data.comparison?.sources?.find((source) => source.id === id)).filter(Boolean)
-  const relatedToClick = clickedFeature ? AREAS.filter((area) => candidateCodes(comparisonFor(data.comparison, area.id), clickedFeature.layer).has(clickedFeature.code)) : []
+  const relatedToClick = clickedFeature ? AREAS.filter((area) => ['municipalities', 'regionalDistricts', 'schoolDistricts'].includes(clickedFeature.layer)
+    ? estimateFor(data.estimates, area.id)?.currentBoundaryScreening[clickedFeature.layer].some((entry) => String(entry.code) === clickedFeature.code)
+    : candidateCodes(comparisonFor(data.comparison, area.id), clickedFeature.layer).has(clickedFeature.code)) : []
   const selectedFor = (mapId) => selected.mapId === mapId ? selected : areasIn(mapId)[0]
   const chapterTitle = (number, title, date) => <><p className="health-chapter-date">Chapter {number} · {date}</p><h2>{title}</h2></>
   const choose = (mapId) => <AreaPicker mapId={mapId} selected={selected} onSelect={chooseArea} id={`choose-${mapId}`} />
@@ -172,7 +204,7 @@ export function HealthStoryView() {
       <div className="health-story-facts"><span><b>20</b> earlier boards</span><span><b>1997</b> reorganization</span><span><b>2001</b> consolidation</span></div>
       <p><SourceLink href="https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0597_1995#page=2">1995 designation and boundary schedule</SourceLink></p>
       <details className="health-details"><summary>Written boundaries for the twenty boards</summary><ul className="health-source-list">{CATALOGUE.earlierBoards.map((row) => <li key={row.name}><SourceLink href={row.link}>{row.name}</SourceLink><small>PDF pages {row.pdf_pages.join('–')}</small></li>)}</ul></details>
-    </>, media: <ArchiveMap key="regions-2000" map={mapById('regions-2000')} /> },
+    </>, media: <StatisticalRegionMedia data={data} onEnable={() => setLoadComparison(true)} /> },
     { ...CHAPTERS[1], imageUrl: asset(mapById('boards').asset), content: <>
       {chapterTitle('02', 'Eleven regional boards', '1997 restructuring')}
       <p className="health-lead">The regional boards covered these eleven areas. The rest of the province had a different arrangement.</p>
@@ -204,14 +236,16 @@ export function HealthStoryView() {
     </>, media: <CurrentAuthorityMap data={data} /> },
     { ...CHAPTERS[5], content: <>
       {chapterTitle('06', 'Which boundaries still align?', 'Compare existing geography')}
-      <p className="health-lead">Use the PGMaps layers to investigate a historical area.</p>
+      <p className="health-lead">Inspect a working estimate for every historical area, its written definition and its closest current boundary matches.</p>
       <label className="health-field" htmlFor="compare-area"><span>Historical area</span><select id="compare-area" value={selected.id} onChange={(event) => chooseArea(event.target.value)}>{Object.entries(groupLabels).map(([mapId, label]) => <optgroup key={mapId} label={label}>{areasIn(mapId).map((area) => <option key={area.id} value={area.id}>{area.number}. {area.sourceLabel}</option>)}</optgroup>)}</select></label>
       <AreaEvidence area={selected} match={match} compact />
+      {data.estimates && <BoundaryEstimateEvidence report={data.estimates} area={selected} />}
+      {data.rectification && <RectificationEvidence report={data.rectification} area={selected} />}
       {data.phase === 'ready' && <><dl className="health-match-facts"><div><dt>Candidate local health areas</dt><dd>{formatCodes([...candidateCodes(match, 'lha')])}</dd></div><div><dt>Candidate delivery areas</dt><dd>{formatCodes([...candidateCodes(match, 'hsda')])}</dd></div></dl>
         {matchSources.length > 0 && <details className="health-details"><summary>Why this comparison was proposed</summary><ul>{matchSources.map((source) => <li key={source.id}><SourceLink href={source.url}>{source.title}</SourceLink>{source.note && <p>{source.note}</p>}</li>)}</ul></details>}
       </>}
       <p className="health-notice">A shared name, a documented code correspondence and matching polygons answer different questions. The original legal boundaries remain the standard for historical territorial claims.</p>
-      {clickedFeature && <section className="health-clicked-area"><h3>{clickedFeature.name} · {clickedFeature.code}</h3><p>Historical areas with this modern candidate:</p>{relatedToClick.length ? <div className="health-chip-list">{relatedToClick.map((area) => <button type="button" key={area.id} onClick={() => chooseArea(area.id)}>{area.sourceLabel}</button>)}</div> : <p>No historical relationship is proposed in this catalogue.</p>}</section>}
+      {clickedFeature && <section className="health-clicked-area"><h3>{clickedFeature.name} · {clickedFeature.code}</h3><p>Historical areas with this comparison candidate or a top-three drawing similarity:</p>{relatedToClick.length ? <div className="health-chip-list">{relatedToClick.map((area) => <button type="button" key={area.id} onClick={() => chooseArea(area.id)}>{area.sourceLabel}</button>)}</div> : <p>No relationship is proposed in this catalogue.</p>}</section>}
     </>, media: <ComparisonMedia data={data} area={selected} layer={layer} setLayer={setLayer} onFeatureSelect={onFeatureSelect} /> },
   ]
 
@@ -221,6 +255,7 @@ export function HealthStoryView() {
     </header>
     <p className="health-intro-note"><strong>Historical sources, dated comparisons.</strong> Original maps retain their published labels. Modern polygons are comparison candidates until a historical boundary is verified.</p>
     <div id="health-story-frame"><StoryFrame id="health-geography" title="The changing health map" slides={slides} initialChapterId={initial.chapter} requestedChapterId={requestedChapter} navigationRequestKey={navigationRequestKey} onChapterChange={onChapterChange} /></div>
+    <HealthResearchPanel selectedAreaId={selected.id} estimates={data.estimates} />
     <section className="health-area-index" aria-labelledby="health-area-index-title">
       <div className="health-section-heading"><div><p className="health-kicker">Explore every source area</p><h2 id="health-area-index-title">Find a board, council or society</h2></div><span className="health-count">{filteredAreas.length} of {AREAS.length}</span></div>
       <div className="health-index-filters"><label className="health-field" htmlFor="health-area-search"><span>Search historical areas</span><input id="health-area-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Northern Interior, Cariboo, North Shore…" /></label><label className="health-field" htmlFor="health-area-type"><span>Type</span><select id="health-area-type" value={group} onChange={(event) => setGroup(event.target.value)}><option value="all">All source areas</option>{Object.entries(groupLabels).map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label></div>
@@ -230,7 +265,7 @@ export function HealthStoryView() {
     <section className="health-source-section" aria-labelledby="health-source-title">
       <div className="health-section-heading"><div><p className="health-kicker">Evidence and reuse</p><h2 id="health-source-title">Sources behind the story</h2></div><a href={asset('catalogue.json')} download>Download the area index ↓</a></div>
       <ul className="health-source-grid">{PUBLIC_SOURCES.map((source) => <li key={source.id}><SourceLink href={source.url}>{source.title}</SourceLink><p>{source.detail}</p></li>)}</ul>
-      <details className="health-details"><summary>Boundary comparison method and limits</summary><p>The source-map index matches historical institutional names. Existing PGMaps polygons are shown as modern candidates, with the proposed code combinations and source evidence retained for each area. A statistical-region correspondence is not proof of a legal board boundary.</p><p>The original maps are vector page artwork, without geographic coordinates. No exact overlap percentage between those page graphics and modern polygons is claimed. Where present, geometry audit statistics compare PGMaps with the current provincial datasets only.</p><p>Later renamings, the separate Nisga’a source label, the two South Cariboo lineages, and the 2002 coastal transfers are retained as explicit evidence notes.</p>{data.phase === 'ready' && <a href={asset('boundary-comparison.json')} download>Download comparison evidence and candidate codes ↓</a>}</details>
+      <details className="health-details"><summary>Boundary comparison method and limits</summary><p>Every administrative label has both a source-drawing approximation and a chosen working estimate, using predefined modern areas where justified. The twenty statistical illustrations remain separate from the legal board territories.</p><p>The three main-map pages are registered through three physical controls per page in BC Albers. Drawing overlap percentages measure approximate cartographic similarity. Three controls provide no independent registration accuracy, and the southern insets remain unregistered. Current municipalities, regional districts and school districts are screening references; their historical versions may differ.</p><p>Later renamings, the separate Nisga’a source label, the two South Cariboo lineages, and the 2002 coastal transfers remain explicit evidence notes.</p>{data.phase === 'ready' && <a href={asset('estimates-index.json')} download>Download estimate decisions, definitions and screening results ↓</a>}</details>
       <p className="health-small health-muted">Story presentation uses the same <SourceLink href="https://github.com/ahzs645/geo-toolkit">geo-toolkit</SourceLink> components as <SourceLink href="https://github.com/ahzs645/PGMaps">PGMaps</SourceLink>. Source artwork and data retain their original attribution.</p>
     </section>
   </main>

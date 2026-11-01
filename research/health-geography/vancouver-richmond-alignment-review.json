@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "areaId": "vancouver-richmond-health-board",
+  "status": "local-alignment-unverified",
+  "supersededComparison": {
+    "reason": "Incomplete main-map trace: drawing 76 (Richmond) was omitted from Vancouver/Richmond and incorrectly included in South Fraser. Modern-land clipping also hid positional mismatch. The previous score is withdrawn.",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.202227,
+            49.241039
+          ],
+          [
+            -123.178334,
+            49.249002
+          ],
+          [
+            -123.142519,
+            49.225719
+          ],
+          [
+            -123.04687,
+            49.234094
+          ],
+          [
+            -123.047151,
+            49.163581
+          ],
+          [
+            -123.11872,
+            49.17104
+          ],
+          [
+            -123.178433,
+            49.162832
+          ],
+          [
+            -123.199454,
+            49.167296
+          ],
+          [
+            -123.200418,
+            49.173557
+          ],
+          [
+            -123.193578,
+            49.175486
+          ],
+          [
+            -123.193616,
+            49.178381
+          ],
+          [
+            -123.212957,
+            49.183232
+          ],
+          [
+            -123.193204,
+            49.181351
+          ],
+          [
+            -123.193353,
+            49.18476
+          ],
+          [
+            -123.220335,
+            49.191494
+          ],
+          [
+            -123.209323,
+            49.190553
+          ],
+          [
+            -123.201549,
+            49.215861
+          ],
+          [
+            -123.211755,
+            49.216769
+          ],
+          [
+            -123.221617,
+            49.214098
+          ],
+          [
+            -123.263053,
+            49.205591
+          ],
+          [
+            -123.263846,
+            49.204904
+          ],
+          [
+            -123.263686,
+            49.20585
+          ],
+          [
+            -123.214664,
+            49.216002
+          ],
+          [
+            -123.214624,
+            49.217454
+          ],
+          [
+            -123.17837,
+            49.217689
+          ],
+          [
+            -123.202227,
+            49.241039
+          ]
+        ]
+      ]
+    },
+    "metrics": {
+      "iou": 0.2902,
+      "sourceCovered": 0.9987,
+      "candidateCovered": 0.2903
+    }
+  },
+  "correctedDrawingIndices": [
+    76,
+    193
+  ],
+  "sourceEvidence": {
+    "pdfPage": 1,
+    "insetDrawingIndices": [
+      26,
+      27,
+      30
+    ],
+    "note": "Both Vancouver and Richmond are labelled 9 in the published inset; Richmond must not be assigned to South Fraser (5)."
+  },
+  "northShiftMetres": [
+    0,
+    1000,
+    2000,
+    3000,
+    4000,
+    5000,
+    6000,
+    7000,
+    8000,
+    9000,
+    10000
+  ],
+  "diagnosticCaveat": "The workingAlignment entry records the applied provisional local display adjustment. Other northward translations remain sensitivity scenarios. Original global registration controls are unchanged; no translation establishes legal identity or independent registration accuracy.",
+  "workingAlignment": {
+    "enabled": true,
+    "northShiftMetres": 5000,
+    "eastShiftMetres": 0,
+    "status": "provisional-local-display",
+    "scope": "Vancouver/Richmond source trace only",
+    "decisionBasis": "User requested implementation of the reviewed 5 km northward adjustment, with the current reference map and both traces retained.",
+    "downloadFile": "vancouver-richmond-reference-and-traces.geojson"
+  }
+}

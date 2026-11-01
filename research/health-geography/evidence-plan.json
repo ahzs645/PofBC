@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "scope": "Historical health geography and the linked boards, councils and societies. This register reviews the repository evidence; it does not report newly acquired records or new legal-boundary findings.",
+  "requestStatus": "All request wording is draft. No requests have been sent. Proposed custodians and record existence must be confirmed.",
+  "sources": [
+    {
+      "id": "orcs-health",
+      "title": "Health Authority Performance Management ORCS 122352",
+      "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/records-management/orcs/health-authority-performance.pdf",
+      "note": "Prior repository review: PDF pp.51, 56–57; secondary 25440-40 describes society-amalgamation binders. Executive Records 102906 is a separate possible correspondence route, not a confirmed accession."
+    },
+    {
+      "id": "prior-health-requests",
+      "title": "Earlier health institutional records targets (21 October 2026)",
+      "url": "https://github.com/ahzs645/PofBC/blob/main/research/reviews/round-4-2026-10-21/health/records_request_targets.md",
+      "note": "Existing retrieval specifications, not proof of current custody or completed transactions."
+    },
+    {
+      "id": "nisgaa-designation",
+      "title": "M191/1997: Nisga’a council designation reference",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0191_1997",
+      "note": "The statutory council is separately recorded; this does not resolve equivalence to the map label."
+    },
+    {
+      "id": "north-okanagan-rename",
+      "title": "M315/1997: North Okanagan rename",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0315_1997",
+      "note": "Repository records made date 3 September 1997; OAG footnote gives 12 September. Deposit/effectiveness remains to be established."
+    }
+  ],
+  "usableNow": [
+    {
+      "title": "Original published maps and labels",
+      "statement": "Display four original map pages and all 52 administrative-map labels with their dates, legend numbers, credits and source links.",
+      "limit": "Publication artwork has no geographic coordinates. The 1997/98 maps are not certified as the final boundaries immediately before December 2001.",
+      "sourceIds": [
+        "oag-1998",
+        "pho-1998"
+      ]
+    },
+    {
+      "title": "Institutional name links",
+      "statement": "Link 51 labels to confirmed institution records. Preserve the Nisga’a source label separately.",
+      "limit": "Institutional identity does not establish territorial identity or the legal date of every merger.",
+      "sourceIds": [
+        "oag-1998",
+        "m225-1997",
+        "nisgaa-designation"
+      ]
+    },
+    {
+      "title": "Written legal boundaries",
+      "statement": "Expose the indexed 1995 twenty-board definitions, 1996 board schedules and the published 1997 council schedules as research inputs.",
+      "limit": "These descriptions have not been reconstructed and checked against all intervening amendments. A link to a schedule is not a completed boundary audit.",
+      "sourceIds": [
+        "m432-1996",
+        "m441-1996",
+        "m444-1996",
+        "m87-1997"
+      ]
+    },
+    {
+      "title": "Modern comparison maps",
+      "statement": "Show 89 LHA, 16 HSDA and five geographic-authority polygons offline, with the proposed candidate for each source area.",
+      "limit": "All 52 candidates remain unverified historically. Current-data audit scores compare modern datasets only; the PGMaps snapshot date is undeclared.",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "bc-hsda",
+        "bc-ha"
+      ]
+    },
+    {
+      "title": "Dated statistical and code correspondences",
+      "statement": "Use the published statistical correspondence and 89-row old/new LHA crosswalk to explain candidate choices.",
+      "limit": "A statistical-region relationship or code translation does not prove an unchanged administrative boundary.",
+      "sourceIds": [
+        "statcan-2002",
+        "lha-crosswalk",
+        "pho-1998"
+      ]
+    },
+    {
+      "title": "Registered original drawings",
+      "statement": "Overlay the vector linework from all three administrative main maps on the modern layers. Compare 18 regional area drawings with modern LHA combinations and the best individual LHA, HSDA and HA features.",
+      "limit": "This is an exploratory three-control affine fit. Southern insets, the separate twenty-region statistical map, and all 34 council polygon scores remain unregistered or unscored as documented. Source-path assignments require independent review.",
+      "sourceIds": [
+        "oag-1998",
+        "pgmaps"
+      ]
+    }
+  ],
+  "assumptions": [
+    {
+      "title": "Modern areas are a comparison canvas",
+      "statement": "A highlighted modern area is a working candidate selected from place names, constituent descriptions and dated correspondences. The new registered-drawing overlap is a cartographic comparison, not a verified legal-boundary overlap score.",
+      "resolution": "Reconstruct the dated legal territory or acquire authenticated historical GIS, then validate it independently.",
+      "sourceIds": [
+        "oag-1998",
+        "pgmaps",
+        "pho-1998"
+      ]
+    },
+    {
+      "title": "A name match does not settle scope",
+      "statement": "South Cariboo council follows the documented 100 Mile House rename. North West excludes Nisga’a in the source map. Northern Interior excludes the separately recorded Quesnel council in the proposed comparison. These findings constrain candidates without validating their edges.",
+      "resolution": "Retain these constraints while checking complete legal schedules and amendments.",
+      "sourceIds": [
+        "m225-1997",
+        "oag-1998",
+        "m444-1996"
+      ]
+    },
+    {
+      "title": "Dates must retain their meaning",
+      "statement": "Order-made, deposited, effective, publication and completed-transfer dates remain separate. The North Okanagan 3/12 September 1997 discrepancy and later coastal changes must stay visible.",
+      "resolution": "Locate the operative instruments and Gazette/deposit records; record each date with its meaning.",
+      "sourceIds": [
+        "north-okanagan-rename",
+        "oag-1998",
+        "reg293-2001"
+      ]
+    },
+    {
+      "title": "Service territories can overlap",
+      "statement": "Council, board and society service geography must remain separate. A society’s service transfer is not established by its registry dissolution date or by a board consolidation schedule.",
+      "resolution": "Obtain the operative service-area schedules and completed transfer records before assigning dates or exclusive territories.",
+      "sourceIds": [
+        "oag-1998",
+        "orcs-health",
+        "prior-health-requests"
+      ]
+    },
+    {
+      "title": "Nisga’a identity remains open",
+      "statement": "The map’s Nisga’a Health Authority label is related geography, not a confirmed match to the statutory Nisga’a Community Health Council. Modern LHA 518 cannot settle the legal identity.",
+      "resolution": "Confirm the contemporaneous governing entity and service agreement with the relevant Nisga’a institutions and provincial records.",
+      "sourceIds": [
+        "oag-1998",
+        "nisgaa-designation"
+      ]
+    },
+    {
+      "title": "Drawing alignment has local error",
+      "statement": "Three provincial corner controls per administrative main map determine an affine transform exactly. The held-out board-map Vancouver Island coastline has about 4.9 km median and 14.2 km 95th-percentile separation from the modern reference. That check includes coastline depiction differences and does not calibrate every page.",
+      "resolution": "Add independently identified physical control points and held-out checkpoints across each page. Review path-to-area assignments, offshore components and inset registration before treating a display candidate as a reconstructed territory.",
+      "sourceIds": [
+        "oag-1998",
+        "pgmaps"
+      ]
+    }
+  ],
+  "workItems": [
+    {
+      "id": "legal-boards",
+      "title": "Reconstruct the written board territories",
+      "kind": "analysis",
+      "priority": 1,
+      "areaIds": [
+        "north-okanagan-health-region",
+        "okanagan-similkameen-health-region",
+        "thompson-health-region",
+        "fraser-valley-health-region",
+        "south-fraser-health-region",
+        "simon-fraser-health-region",
+        "central-vancouver-island-health-region",
+        "northern-interior-regional-health-board",
+        "vancouver-richmond-health-board",
+        "north-shore-health-region",
+        "capital-health-region"
+      ],
+      "status": "in-progress",
+      "question": "Which modern candidate edges agree with the actual board descriptions?",
+      "recordsNeeded": "The indexed M432/1996, M441/1996 and M444/1996 schedules, their referenced geographic units and dated base maps.",
+      "route": "Original B.C. Reg. 293/2001 Schedule B now provides 44 written territories (11 boards and 33 councils). Reconcile these later descriptions with the original 1996/97 orders and amendments, then trace their dated survey, watershed and municipal references. M191/1997 supplies a related Nisga’a council definition, without settling the map identity.",
+      "likelyCustodian": "Existing public legal sources; historical base-map custodians to be identified",
+      "custodyConfirmed": false,
+      "dateRange": "1995–1997 baseline; amendments through 12 December 2001",
+      "sourceIds": [
+        "m432-1996",
+        "m441-1996",
+        "m444-1996"
+      ],
+      "completionEvidence": "Clause-by-clause source table, dated geographic inputs, reproducible geometry and an independent review. Until then keep all modern candidates unverified.",
+      "requestText": ""
+    },
+    {
+      "id": "legal-councils",
+      "title": "Index and check the council boundary schedules",
+      "kind": "analysis",
+      "priority": 1,
+      "areaIds": [
+        "elk-valley-and-south-country-health-council",
+        "cranbrook-health-council",
+        "kimberley-community-health-council",
+        "columbia-valley-health-council",
+        "creston-and-district-health-council",
+        "nelson-and-area-health-council",
+        "castlegar-and-district-health-council",
+        "arrow-lakes-upper-slocan-valley-health-council",
+        "greater-trail-community-health-council",
+        "boundary-health-council",
+        "golden-health-council",
+        "south-cariboo-community-health-council",
+        "central-cariboo-chilcotin-health-council",
+        "quesnel-and-district-community-health-council",
+        "bella-coola-and-district-transitional-health-authority",
+        "sunshine-coast-community-health-council",
+        "powell-river-community-health-council",
+        "sea-to-sky-community-health-council",
+        "comox-valley-community-health-council",
+        "campbell-river-nootka-community-health-council",
+        "mount-waddington-health-council",
+        "central-coast-transitional-health-authority",
+        "south-peace-health-council",
+        "north-peace-health-council",
+        "fort-nelson-liard-health-council",
+        "bulkley-valley-health-council",
+        "upper-skeena-community-health-council",
+        "terrace-and-area-health-council",
+        "kitimat-and-area-health-council",
+        "north-coast-community-health-council",
+        "queen-charlotte-islands-haida-gwaii-community-health-council",
+        "nisgaa-source-area",
+        "snow-country-health-council",
+        "stikine-health-council"
+      ],
+      "status": "in-progress",
+      "question": "What territories do the council schedules actually describe?",
+      "recordsNeeded": "M87/1997 appendices and relevant separate/amending instruments, including the Nisga’a council reference.",
+      "route": "Original B.C. Reg. 293/2001 Schedule B now provides 44 written territories (11 boards and 33 councils). Reconcile these later descriptions with the original 1996/97 orders and amendments, then trace their dated survey, watershed and municipal references. M191/1997 supplies a related Nisga’a council definition, without settling the map identity.",
+      "likelyCustodian": "Existing BC Laws publications",
+      "custodyConfirmed": false,
+      "dateRange": "1997 framework; amendments through 2001",
+      "sourceIds": [
+        "m87-1997",
+        "nisgaa-designation",
+        "m225-1997"
+      ],
+      "completionEvidence": "A sourced definition and dated amendment trail for every council/related label, or a specific missing-record entry.",
+      "requestText": ""
+    },
+    {
+      "id": "scope-checks",
+      "title": "Resolve the seven flagged candidate extents",
+      "kind": "analysis",
+      "priority": 1,
+      "areaIds": [
+        "nelson-and-area-health-council",
+        "arrow-lakes-upper-slocan-valley-health-council",
+        "bulkley-valley-health-council",
+        "terrace-and-area-health-council",
+        "snow-country-health-council",
+        "stikine-health-council",
+        "north-west-community-health-services-society"
+      ],
+      "status": "not-started",
+      "question": "Do the proposed aggregates include the complete historic territory and exclude neighbouring territory?",
+      "recordsNeeded": "Schedules and contemporary local maps for Nelson/Area, Arrow Lakes/Upper Slocan, Bulkley Valley, Terrace/Area, Snow Country, Stikine and the North West society.",
+      "route": "Start with published schedules and source-map notes. For each of the seven, document inclusion/exclusion of disputed subareas. Use the historical-map and society-territory requests for gaps.",
+      "likelyCustodian": "Public legal sources first; Ministry, archives and successor-authority records as leads",
+      "custodyConfirmed": false,
+      "dateRange": "1997/98 source map and relevant earlier/later amendments",
+      "sourceIds": [
+        "m87-1997",
+        "oag-1998"
+      ],
+      "completionEvidence": "Individual decisions for all seven, with citations and unresolved clauses retained. Modern names alone cannot close an item.",
+      "requestText": ""
+    },
+    {
+      "id": "amendment-chronology",
+      "title": "Build a dated amendment and transfer chronology",
+      "kind": "analysis",
+      "priority": 1,
+      "areaIds": [
+        "*"
+      ],
+      "status": "not-started",
+      "question": "Which source-map territories changed before or after consolidation?",
+      "recordsNeeded": "Original amending orders, Gazette/deposit entries, the 2001 consolidation and 2002 coastal-transfer instruments; distinguish authorizations from completion.",
+      "route": "Search BC Laws/Gazette and the existing health review first. Record made, deposit and operative dates separately; turn unrecovered instruments into precise requests.",
+      "likelyCustodian": "Public legal publications; Ministry records staff for missing originals",
+      "custodyConfirmed": false,
+      "dateRange": "6 December 1995–31 December 2002",
+      "sourceIds": [
+        "reg293-2001",
+        "north-okanagan-rename",
+        "prior-health-requests"
+      ],
+      "completionEvidence": "Per-area change log with exact operative wording and dates; preserve the North Okanagan discrepancy until deposit/effectiveness is resolved.",
+      "requestText": ""
+    },
+    {
+      "id": "registration-review",
+      "title": "Improve and independently check the drawing registration",
+      "kind": "analysis",
+      "priority": 1,
+      "areaIds": [
+        "*"
+      ],
+      "status": "not-started",
+      "question": "How much local distortion remains on each registered map?",
+      "recordsNeeded": "Additional well-distributed physical control points, independently held-out checkpoints and reviewed coastal/area path assignments.",
+      "route": "Review rectification-controls.json and the derived overlays. Use geographic landmarks, never the candidate administrative edges being tested. Refit with redundant controls and report residuals plus held-out error by page.",
+      "likelyCustodian": "Existing original publication vectors and modern reference layers; obtain historical reference maps if needed",
+      "custodyConfirmed": false,
+      "dateRange": "1997/98 administrative maps; April 2001 statistical publication",
+      "sourceIds": [
+        "oag-1998",
+        "pgmaps",
+        "pho-1998"
+      ],
+      "completionEvidence": "Independent checkpoint errors by page, a documented transform/model comparison and reviewed source-path assignments; keep legal verification separate.",
+      "requestText": ""
+    },
+    {
+      "id": "council-polygon-extraction",
+      "title": "Review the 34 recovered council approximations",
+      "kind": "analysis",
+      "priority": 1,
+      "areaIds": [
+        "elk-valley-and-south-country-health-council",
+        "cranbrook-health-council",
+        "kimberley-community-health-council",
+        "columbia-valley-health-council",
+        "creston-and-district-health-council",
+        "nelson-and-area-health-council",
+        "castlegar-and-district-health-council",
+        "arrow-lakes-upper-slocan-valley-health-council",
+        "greater-trail-community-health-council",
+        "boundary-health-council",
+        "golden-health-council",
+        "south-cariboo-community-health-council",
+        "central-cariboo-chilcotin-health-council",
+        "quesnel-and-district-community-health-council",
+        "bella-coola-and-district-transitional-health-authority",
+        "sunshine-coast-community-health-council",
+        "powell-river-community-health-council",
+        "sea-to-sky-community-health-council",
+        "comox-valley-community-health-council",
+        "campbell-river-nootka-community-health-council",
+        "mount-waddington-health-council",
+        "central-coast-transitional-health-authority",
+        "south-peace-health-council",
+        "north-peace-health-council",
+        "fort-nelson-liard-health-council",
+        "bulkley-valley-health-council",
+        "upper-skeena-community-health-council",
+        "terrace-and-area-health-council",
+        "kitimat-and-area-health-council",
+        "north-coast-community-health-council",
+        "queen-charlotte-islands-haida-gwaii-community-health-council",
+        "nisgaa-source-area",
+        "snow-country-health-council",
+        "stikine-health-council"
+      ],
+      "status": "completed-estimate",
+      "question": "Can the registered council linework yield complete separately labelled polygons?",
+      "recordsNeeded": "Original vector fill/stroke paths, printed legend numbers and explicit islands/holes/territory assignments.",
+      "route": "All 34 source labels now have separate source-drawn working polygons, extracted without modern internal edges. Review the explicit seeds, local gap closure and offshore components in council-tracing.json; refine registration and check legal edges before certification.",
+      "likelyCustodian": "Existing original publication vectors and modern reference layers; obtain historical reference maps if needed",
+      "custodyConfirmed": false,
+      "dateRange": "1997/98 administrative maps; April 2001 statistical publication",
+      "sourceIds": [
+        "oag-1998",
+        "pgmaps",
+        "pho-1998"
+      ],
+      "completionEvidence": "A reviewed path/seed crosswalk for all 34 labels, topology checks and extraction uncertainty; then run the same cartographic comparison.",
+      "requestText": ""
+    },
+    {
+      "id": "inset-registration",
+      "title": "Register the southern insets and twenty-region map",
+      "kind": "analysis",
+      "priority": 1,
+      "areaIds": [
+        "*"
+      ],
+      "status": "not-started",
+      "question": "Can source detail support better comparisons in the Lower Mainland and southern Vancouver Island?",
+      "recordsNeeded": "Separate control sets for each enlarged inset and the Statistics Canada twenty-region map; original page vectors and printed labels.",
+      "route": "Treat each inset as a separate map with its own transform and geographic extent. Retain its provenance and reconcile it with the main map before using it for small regions. Independently register the statistical map without equating its regions to legal boards.",
+      "likelyCustodian": "Existing original publication vectors and modern reference layers; obtain historical reference maps if needed",
+      "custodyConfirmed": false,
+      "dateRange": "1997/98 administrative maps; April 2001 statistical publication",
+      "sourceIds": [
+        "oag-1998",
+        "pgmaps",
+        "pho-1998"
+      ],
+      "completionEvidence": "Reviewed inset/statistical-map controls, independent checkpoints and explicit region identities; no mixed-scale coordinates in a single transform.",
+      "requestText": ""
+    },
+    {
+      "id": "historical-geography",
+      "title": "Obtain dated historical GIS or original cartography",
+      "kind": "records",
+      "priority": 1,
+      "areaIds": [
+        "*"
+      ],
+      "status": "not-requested",
+      "question": "Can actual historical administrative geometry and its provenance be recovered?",
+      "recordsNeeded": "Existing 1995 twenty-board, 1997 board/council/society and pre/post-December 2001 boundary files; original cartographic source files, legends, metadata, version logs and historical reference-unit maps.",
+      "route": "Ask Ministry of Health geography/data staff for existing releases and file inventories. Ask BC Archives about transferred cartographic records. If unpublished provincial records remain, scope an FOI to identified series, dates and file types.",
+      "likelyCustodian": "Ministry of Health and BC Archives are proposed leads; no current custody or surviving GIS is confirmed",
+      "custodyConfirmed": false,
+      "dateRange": "1995–2002; snapshots around 1997/98 and 12 December 2001",
+      "sourceIds": [
+        "oag-1998",
+        "bc-lha",
+        "m432-1996",
+        "m87-1997"
+      ],
+      "completionEvidence": "Dated, attributed files with CRS/datum, valid-from/to, lineage and reuse terms; authenticate against legal schedules. An inventory or no-records reply does not verify boundaries.",
+      "requestText": "Please identify existing electronic boundary datasets and original cartographic source files for BC regional health boards, community health councils and community health services societies, 1995–2002, especially the maps published as Exhibits 3–5 of the March 1998 Auditor General regionalization report and versions immediately before and after 12 December 2001. Please first provide a file/version inventory and identify any transferred archival accessions. For available files, seek native GIS/cartographic formats, associated legends, code tables, CRS/datum, effective dates, revision logs, source legal instruments and reuse conditions. This request seeks existing records, not creation of a new historical dataset."
+    },
+    {
+      "id": "society-territories",
+      "title": "Obtain society service-area schedules",
+      "kind": "records",
+      "priority": 1,
+      "areaIds": [
+        "east-kootenay-community-health-services-society",
+        "kootenay-boundary-community-health-services-society",
+        "coast-garibaldi-community-health-services-society",
+        "upper-island-central-coast-community-health-services-society",
+        "cariboo-community-health-services-society",
+        "north-west-community-health-services-society",
+        "peace-liard-community-health-services-society"
+      ],
+      "status": "not-requested",
+      "question": "What did each society’s jurisdiction/service territory include at the relevant date?",
+      "recordsNeeded": "Executed service agreements, territorial schedules/maps and amendments for all seven societies, including Central Kootenay/Kootenay Boundary aliases, North West’s Nisga’a exclusion, Bella Coola and the mainland Central Coast.",
+      "route": "Ask the Ministry and successor-authority records offices for public schedules and finding aids first. Investigate ORCS 122352 / 25440-40 for relevant agreements; its described amalgamation binders are a lead, not proof that service-area maps are held there. FOI only after identifying the provincial custodian and remaining records.",
+      "likelyCustodian": "Ministry of Health, successor authorities and archival custodians; holdings unconfirmed",
+      "custodyConfirmed": false,
+      "dateRange": "1996–2002",
+      "sourceIds": [
+        "oag-1998",
+        "orcs-health",
+        "prior-health-requests"
+      ],
+      "completionEvidence": "Executed and dated territorial schedules for each society, with exclusions and amendments. A modern HSDA match or society name is insufficient.",
+      "requestText": "Please identify existing service-area agreements, executed territorial schedules, maps and amendments for the seven community health services societies shown in Exhibit 5 of the March 1998 Auditor General report: East Kootenay, Central Kootenay (later Kootenay Boundary), Coast Garibaldi, Upper Island/Central Coast, Cariboo, North West and Peace Liard. The period is 1996–2002. Please include records explaining North West’s express Nisga’a exclusion and the Bella Coola/mainland Central Coast allocation. Please provide the file inventory/accession first, then the complete applicable schedules. ORCS 122352 / 25440-40 may be a relevant lead; please confirm applicability rather than assuming custody."
+    },
+    {
+      "id": "nisgaa-identity",
+      "title": "Confirm the Nisga’a map entity and territorial relationship",
+      "kind": "records",
+      "priority": 1,
+      "areaIds": [
+        "nisgaa-source-area",
+        "north-west-community-health-services-society",
+        "terrace-and-area-health-council"
+      ],
+      "status": "not-requested",
+      "question": "Which entity did the original map label identify, and what agreement defined its service area?",
+      "recordsNeeded": "Contemporaneous governance/designation documents and service agreements linking or distinguishing the map label, statutory council and Nisga’a Valley Health Board; dated maps and transition records.",
+      "route": "Review public Nisga’a institutional histories and provincial designation instruments. Request clarification and releasable records directly from the relevant Nisga’a institutions. Use provincial records access/FOI only for records held by a covered provincial body; do not presume Nisga’a institutions are subject to that process.",
+      "likelyCustodian": "Relevant Nisga’a health/government institutions and Ministry of Health as proposed record holders; custody unconfirmed",
+      "custodyConfirmed": false,
+      "dateRange": "1995–2001, including 1999 designation removal and 2000 governance transition",
+      "sourceIds": [
+        "nisgaa-designation",
+        "oag-1998",
+        "prior-health-requests"
+      ],
+      "completionEvidence": "A primary document explicitly connecting or distinguishing the named entities, with dated territorial terms. Preserve bodyId=null until identity is established.",
+      "requestText": "We are researching the label “Nisga’a Health Authority”, number 32 in Exhibit 4 of the March 1998 Auditor General regionalization report, and its exclusion from North West in Exhibit 5. Could you identify publicly available or releasable 1995–2001 governance instruments, designation documents, service agreements and maps that explain its relationship to the Nisga’a Community Health Council and Nisga’a Valley Health Board? We seek the named legal/service entity and applicable dates and territory, especially around the 1999 designation change and 2000 governance transition. Please advise the appropriate records contact and any access or reuse conditions."
+    },
+    {
+      "id": "coastal-transfers",
+      "title": "Recover the operative 2002 coastal-transfer record",
+      "kind": "records",
+      "priority": 1,
+      "areaIds": [
+        "bella-coola-and-district-transitional-health-authority",
+        "central-coast-transitional-health-authority",
+        "cariboo-community-health-services-society",
+        "upper-island-central-coast-community-health-services-society",
+        "coast-garibaldi-community-health-services-society"
+      ],
+      "status": "not-requested",
+      "question": "Exactly which territory and services transferred, and on what effective date?",
+      "recordsNeeded": "The operative legal/administrative transfer instruments, executed agreements, territorial annexes and maps for Bella Coola and Central Coast.",
+      "route": "Search the public Gazette/orders and authority reports before requesting records. If the operative annexes remain missing, ask the Ministry and Interior, Vancouver Island/Island and Vancouver Coastal authority records offices; use FOI for identified unpublished provincial records.",
+      "likelyCustodian": "Ministry of Health and the relevant successor health authorities; custody unconfirmed",
+      "custodyConfirmed": false,
+      "dateRange": "December 2001–December 2002",
+      "sourceIds": [
+        "reg293-2001",
+        "central-coast-lrmp",
+        "prior-health-requests"
+      ],
+      "completionEvidence": "Operative effective date plus the actual territory/services described; today’s Vancouver Coastal polygon cannot serve as a December 2001 snapshot.",
+      "requestText": "Please identify existing instruments, executed transfer agreements and territorial annexes/maps for the 2002 transfer of Bella Coola and Central Coast services/territory to Vancouver Coastal Health. The requested period is December 2001–December 2002. Please distinguish the decision/authorization date, operative transfer date and any staged service transfers, identify predecessor and receiving bodies, and provide complete geographic schedules and amendments. Please provide public references or file/accession identifiers first."
+    },
+    {
+      "id": "statistical-crosswalk",
+      "title": "Keep statistical regions separate from administration",
+      "kind": "analysis",
+      "priority": 2,
+      "areaIds": [
+        "*"
+      ],
+      "status": "not-started",
+      "question": "Which statistical relationships can be used without claiming legal equivalence?",
+      "recordsNeeded": "PHO Appendix G, Statistics Canada January 2000/June 2002 correspondence and the published LHA code crosswalk.",
+      "route": "Review the public tables; attach each correspondence to its stated vintage and evidence type. Use the statistical-data request only if downloadable historical geometry/metadata is needed.",
+      "likelyCustodian": "Existing public PHO, Statistics Canada and Ministry publications",
+      "custodyConfirmed": false,
+      "dateRange": "1998 report; January 2000/June 2002 statistical vintages; 2019 code crosswalk",
+      "sourceIds": [
+        "pho-1998",
+        "statcan-2002",
+        "lha-crosswalk"
+      ],
+      "completionEvidence": "A source-backed statistical correspondence table whose fields and labels cannot be mistaken for historical legal boundary verification.",
+      "requestText": ""
+    },
+    {
+      "id": "completed-transfers",
+      "title": "Obtain completed society and council/board transaction records",
+      "kind": "records",
+      "priority": 2,
+      "areaIds": [
+        "*"
+      ],
+      "status": "not-requested",
+      "question": "When were authorized amalgamations and society service transfers actually carried out?",
+      "recordsNeeded": "Society executed asset/staff transfer and closing records; council/board completion resolutions, certificates and agreements. Use the existing named 43-council and seven-rural-board target index for predecessor work outside the 52 map labels.",
+      "route": "Reuse the earlier request targets. For societies seek the ORCS 122352 / 25440-40 inventory and applicable registry filings. For council/board execution investigate separate ministry/executive correspondence (schedule 102906 is a lead). Request archives/direct access first, FOI for identified withheld/unpublished provincial files if needed.",
+      "likelyCustodian": "Ministry records custodian, BC Archives, successor authorities and corporate registry; no accession confirmed",
+      "custodyConfirmed": false,
+      "dateRange": "1996–February 2002; focus society closings December 2001–February 2002",
+      "sourceIds": [
+        "orcs-health",
+        "reg293-2001",
+        "prior-health-requests"
+      ],
+      "completionEvidence": "Executed documents naming parties, transaction scope and effective/completion dates. Registry dissolution or conditional authority alone cannot date transfer of geography or services.",
+      "requestText": "Please identify accessions and file indexes for Health Authority Performance Management ORCS 122352 / secondary 25440-40, “Society amalgamations with health authorities files”. For the seven rural community health services societies, seek complete executed asset/staff transfer agreements, schedules, consents and closing certificates, especially December 2001–February 2002. Separately, for council-to-board amalgamations authorized under the 1996 framework, identify completion resolutions, certificates and ministerial confirmation; Executive Records schedule 102906 is a possible lead, not a confirmed accession. Please keep society and council/board record searches distinct and identify the record custodian before expanding scope."
+    },
+    {
+      "id": "statistical-data",
+      "title": "Locate historical statistical GIS and metadata",
+      "kind": "records",
+      "priority": 2,
+      "areaIds": [
+        "*"
+      ],
+      "status": "not-requested",
+      "question": "Are distributable January 2000/June 2002 statistical-region files available?",
+      "recordsNeeded": "Original digital statistical-region boundaries, metadata, code lists and correspondence documentation for the two dated vintages.",
+      "route": "Check Statistics Canada public historical downloads/archive and library holdings first. If unavailable, ask its geography/data service about existing files and access/reuse conditions. This is a data/library request before considering any formal access process.",
+      "likelyCustodian": "Statistics Canada geography/data services and library/archive leads; availability unconfirmed",
+      "custodyConfirmed": false,
+      "dateRange": "January 2000 and June 2002 statistical vintages",
+      "sourceIds": [
+        "statcan-2002",
+        "pho-1998"
+      ],
+      "completionEvidence": "Authentic dated statistical geometry with metadata and licence. It remains statistical geography even after acquisition.",
+      "requestText": "Please advise whether existing BC health-region digital boundary files and accompanying code lists/metadata for January 2000 and June 2002 are publicly available or retrievable from archived holdings. The relevant published correspondence is Health Indicators table 4061979. Please provide original vintage definitions, coordinate system, correspondence notes and reuse conditions. We are keeping statistical regions distinct from administrative legal territories and do not request a newly reconstructed dataset."
+    },
+    {
+      "id": "snapshot-provenance",
+      "title": "Recover the PGMaps boundary snapshot provenance",
+      "kind": "records",
+      "priority": 3,
+      "areaIds": [
+        "*"
+      ],
+      "status": "not-requested",
+      "question": "What was the original snapshot’s download date and source revision?",
+      "recordsNeeded": "Existing PGMaps export/download logs, source WFS/catalogue revision identifiers and original metadata sidecars.",
+      "route": "Inspect PGMaps repository history and original file metadata first; ask its maintainer only if existing records do not settle provenance. FOI is not the first route for repository export history.",
+      "likelyCustodian": "PGMaps repository/maintainer as a proposed source of export records",
+      "custodyConfirmed": false,
+      "dateRange": "Original snapshot creation period is unknown",
+      "sourceIds": [
+        "pgmaps",
+        "bc-lha",
+        "bc-hsda",
+        "bc-ha"
+      ],
+      "completionEvidence": "A documented acquisition/revision date or an explicit unresolved finding. The current-data audit cannot supply the missing historical snapshot date.",
+      "requestText": "Please identify existing provenance records for the BCMoH LHA/HSDA/HA boundary snapshots served by PGMaps: original retrieval/export date, source dataset or WFS revision, transformation/simplification steps and metadata sidecars. A commit/upload date alone will be recorded as such, not automatically as the source boundary vintage."
+    }
+  ]
+}

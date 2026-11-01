@@ -1,0 +1,1353 @@
+{
+  "schemaVersion": 1,
+  "preparedOn": "2026-10-31",
+  "method": "Three-point affine registration of each main map; no administrative candidate edges used as controls. Enlarged southern insets and legends excluded.",
+  "sourceSha256": "6f55df69890dd1ce89a516fc25325aa142eee26618911179a8a52e703bf31d04",
+  "referenceSha256": "ebc9d930be4d7c5ef9d21924867989584e0ee73df4d517766c96c79abe4ce556",
+  "projectedCrs": "EPSG:3005",
+  "controlLimitation": "Three non-collinear controls determine six affine coefficients exactly, leaving no redundant control for an independent registration RMSE. Zero fit residual is not an accuracy estimate. Target corners come from the simplified modern PGMaps authority layer, not a cadastral survey.",
+  "limitations": [
+    "This initial 18-area registration experiment omits council polygon scores; the extended estimates review adds all 34 council approximations separately. All southern insets and the twenty-region statistical map still require separate registrations.",
+    "All path-to-area assignments are preliminary and require independent review, especially islands and metropolitan detail.",
+    "Overlap measures registered publication artwork against simplified modern comparison polygons, not recovered historical legal GIS.",
+    "All source maps retain their 1997/98 publication context. Alignment does not establish an unchanged territory through 2001.",
+    "Only the three OAG administrative main maps are registered. The separate twenty-region Statistics Canada map and all enlarged insets are not registered.",
+    "15 km translation sensitivity omits rotation, scale, local distortion, source-generalization and path-assignment errors; high IoU can conceal important local differences."
+  ],
+  "classificationRule": "Under 2,000 km²: detail-limited. Otherwise close if all 15 km translation scenarios have IoU >= 0.80; partial if nominal IoU >= 0.65; poor otherwise. These are exploratory display triage rules, not legal acceptance thresholds.",
+  "datasets": {
+    "registeredLines": {
+      "file": "registered-source-lines.geojson",
+      "featureCount": 3,
+      "sha256": "11287d649cf667cd40ccb363ed988c15d83f3fb9d2e3ee08cd4f8a66d32abe31"
+    },
+    "registeredAreas": {
+      "file": "registered-source-areas.geojson",
+      "featureCount": 18,
+      "sha256": "1b1d7d51f1ebdd772edc5014c46fd89a68e2ac3adc5ef5d9f6608d128f319d4e"
+    }
+  },
+  "registrations": [
+    {
+      "mapId": "boards",
+      "pdfPage": 1,
+      "mainMapBounds": [
+        100,
+        115,
+        520,
+        480
+      ],
+      "controls": [
+        {
+          "name": "Northwest provincial corner on 60th parallel",
+          "pagePoint": [
+            125.285004,
+            119.679016
+          ],
+          "longitudeLatitude": [
+            -139.052201,
+            60.000041
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Northeast provincial corner at 120W / 60N",
+          "pagePoint": [
+            387.359985,
+            145.778015
+          ],
+          "longitudeLatitude": [
+            -120,
+            60
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Southeast provincial corner near 49N",
+          "pagePoint": [
+            508.368011,
+            441.071991
+          ],
+          "longitudeLatitude": [
+            -114.068332,
+            48.99885
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        }
+      ],
+      "areaDrawings": [
+        {
+          "areaId": "north-okanagan-health-region",
+          "legendNumber": 1,
+          "drawingIndices": [
+            42
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "okanagan-similkameen-health-region",
+          "legendNumber": 2,
+          "drawingIndices": [
+            59
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "thompson-health-region",
+          "legendNumber": 3,
+          "drawingIndices": [
+            45
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "fraser-valley-health-region",
+          "legendNumber": 4,
+          "drawingIndices": [
+            93
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "south-fraser-health-region",
+          "legendNumber": 5,
+          "drawingIndices": [
+            198
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Removed drawing 76, which is Richmond (legend 9), not South Fraser (legend 5). Main-map South Fraser is drawing 198."
+        },
+        {
+          "areaId": "simon-fraser-health-region",
+          "legendNumber": 6,
+          "drawingIndices": [
+            197
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "central-vancouver-island-health-region",
+          "legendNumber": 7,
+          "drawingIndices": [
+            55
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "northern-interior-regional-health-board",
+          "legendNumber": 8,
+          "drawingIndices": [
+            7
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "vancouver-richmond-health-board",
+          "legendNumber": 9,
+          "drawingIndices": [
+            76,
+            193
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Corrected against both legend-9 components in the published inset: main-map 193 is Vancouver and 76 is Richmond. Local registration and offshore components remain unverified."
+        },
+        {
+          "areaId": "north-shore-health-region",
+          "legendNumber": 10,
+          "drawingIndices": [
+            79,
+            195
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Included main-map Bowen Island drawing 79 with mainland 195; the corresponding island is shaded with legend-10 geography in the inset."
+        },
+        {
+          "areaId": "capital-health-region",
+          "legendNumber": 11,
+          "drawingIndices": [
+            52
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        }
+      ],
+      "affineToEpsg3005": [
+        4034.331846,
+        157.789798,
+        199.714533,
+        -4032.989022,
+        -250449.731061,
+        2193313.824193
+      ],
+      "controlFitResidualMetres": [
+        0.000114,
+        0.000259,
+        0.00044
+      ],
+      "independentRegistrationRmse": null,
+      "vancouverIslandCoastCheck": {
+        "medianMetres": 4924,
+        "p95Metres": 14174,
+        "maxMetres": 32052,
+        "sampleCount": 500
+      }
+    },
+    {
+      "mapId": "councils",
+      "pdfPage": 2,
+      "mainMapBounds": [
+        100,
+        115,
+        520,
+        480
+      ],
+      "controls": [
+        {
+          "name": "Northwest provincial corner on 60th parallel",
+          "pagePoint": [
+            106.226997,
+            119.799011
+          ],
+          "longitudeLatitude": [
+            -139.052201,
+            60.000041
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Northeast provincial corner at 120W / 60N",
+          "pagePoint": [
+            368.368988,
+            145.922974
+          ],
+          "longitudeLatitude": [
+            -120,
+            60
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Southeast provincial corner near 49N",
+          "pagePoint": [
+            488.778015,
+            441.274994
+          ],
+          "longitudeLatitude": [
+            -114.068332,
+            48.99885
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        }
+      ],
+      "areaDrawings": [],
+      "affineToEpsg3005": [
+        4032.394546,
+        166.730555,
+        199.937244,
+        -4031.882197,
+        -174447.640692,
+        2197447.669105
+      ],
+      "controlFitResidualMetres": [
+        6.4e-05,
+        0.000112,
+        0.000248
+      ],
+      "independentRegistrationRmse": null
+    },
+    {
+      "mapId": "societies",
+      "pdfPage": 3,
+      "mainMapBounds": [
+        100,
+        115,
+        520,
+        480
+      ],
+      "controls": [
+        {
+          "name": "Northwest provincial corner on 60th parallel",
+          "pagePoint": [
+            113.169998,
+            120.018005
+          ],
+          "longitudeLatitude": [
+            -139.052201,
+            60.000041
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Northeast provincial corner at 120W / 60N",
+          "pagePoint": [
+            375.002991,
+            146.117981
+          ],
+          "longitudeLatitude": [
+            -120,
+            60
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        },
+        {
+          "name": "Southeast provincial corner near 49N",
+          "pagePoint": [
+            495.683014,
+            441.411011
+          ],
+          "longitudeLatitude": [
+            -114.068332,
+            48.99885
+          ],
+          "targetBasis": "Identified northwest/northeast/southeast provincial corner in display-ha.geojson; geographic feature, not a health-region edge."
+        }
+      ],
+      "areaDrawings": [
+        {
+          "areaId": "east-kootenay-community-health-services-society",
+          "legendNumber": 1,
+          "drawingIndices": [
+            272
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "kootenay-boundary-community-health-services-society",
+          "legendNumber": 2,
+          "drawingIndices": [
+            211
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "coast-garibaldi-community-health-services-society",
+          "legendNumber": 3,
+          "drawingIndices": [
+            214,
+            227,
+            229,
+            230,
+            231,
+            232,
+            233,
+            235,
+            237,
+            238,
+            240,
+            241,
+            247
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "upper-island-central-coast-community-health-services-society",
+          "legendNumber": 4,
+          "drawingIndices": [
+            19,
+            25,
+            217,
+            251,
+            252,
+            253,
+            255,
+            257,
+            258,
+            260,
+            261,
+            262,
+            264,
+            266,
+            268,
+            269,
+            270,
+            271
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "cariboo-community-health-services-society",
+          "legendNumber": 5,
+          "drawingIndices": [
+            7
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "north-west-community-health-services-society",
+          "legendNumber": 6,
+          "drawingIndices": [
+            12,
+            218,
+            221,
+            224,
+            225,
+            226,
+            249,
+            250
+          ],
+          "subtractDrawingIndices": [
+            376
+          ],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        },
+        {
+          "areaId": "peace-liard-community-health-services-society",
+          "legendNumber": 7,
+          "drawingIndices": [
+            32
+          ],
+          "subtractDrawingIndices": [],
+          "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review."
+        }
+      ],
+      "affineToEpsg3005": [
+        4037.752417,
+        160.873609,
+        199.900927,
+        -4032.856281,
+        -202384.484306,
+        2197063.480231
+      ],
+      "controlFitResidualMetres": [
+        8.3e-05,
+        0.00016,
+        0.000324
+      ],
+      "independentRegistrationRmse": null
+    }
+  ],
+  "comparisons": [
+    {
+      "areaId": "north-okanagan-health-region",
+      "legendNumber": 1,
+      "drawingIndices": [
+        42
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.8929,
+        "sourceCovered": 0.9304,
+        "candidateCovered": 0.9568
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.6167,
+        "maxIou": 0.8929,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "141",
+          "name": "Revelstoke",
+          "iou": 0.4056
+        },
+        "hsda": {
+          "code": "13",
+          "name": "Okanagan",
+          "iou": 0.2271
+        },
+        "ha": {
+          "code": "1",
+          "name": "Interior",
+          "iou": 0.0962
+        }
+      },
+      "candidateLhaCodes": [
+        "135",
+        "136",
+        "139",
+        "141",
+        "142"
+      ],
+      "sourceDrawingAreaKm2": 20754,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "okanagan-similkameen-health-region",
+      "legendNumber": 2,
+      "drawingIndices": [
+        59
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.9308,
+        "sourceCovered": 0.956,
+        "candidateCovered": 0.9724
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.6436,
+        "maxIou": 0.9308,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "134",
+          "name": "Princeton",
+          "iou": 0.3341
+        },
+        "hsda": {
+          "code": "13",
+          "name": "Okanagan",
+          "iou": 0.6052
+        },
+        "ha": {
+          "code": "1",
+          "name": "Interior",
+          "iou": 0.0622
+        }
+      },
+      "candidateLhaCodes": [
+        "131",
+        "132",
+        "133",
+        "134",
+        "137",
+        "138"
+      ],
+      "sourceDrawingAreaKm2": 13930,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "thompson-health-region",
+      "legendNumber": 3,
+      "drawingIndices": [
+        45
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.931,
+        "sourceCovered": 0.9637,
+        "candidateCovered": 0.9648
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.7519,
+        "maxIou": 0.931,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "143",
+          "name": "Kamloops",
+          "iou": 0.2968
+        },
+        "hsda": {
+          "code": "14",
+          "name": "Thompson Cariboo Shuswap",
+          "iou": 0.4228
+        },
+        "ha": {
+          "code": "1",
+          "name": "Interior",
+          "iou": 0.238
+        }
+      },
+      "candidateLhaCodes": [
+        "143",
+        "145",
+        "147",
+        "148",
+        "149"
+      ],
+      "sourceDrawingAreaKm2": 52388,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "fraser-valley-health-region",
+      "legendNumber": 4,
+      "drawingIndices": [
+        93
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.8783,
+        "sourceCovered": 0.9407,
+        "candidateCovered": 0.9297
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.5828,
+        "maxIou": 0.8783,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "211",
+          "name": "Hope",
+          "iou": 0.3649
+        },
+        "hsda": {
+          "code": "21",
+          "name": "Fraser East",
+          "iou": 0.8782
+        },
+        "ha": {
+          "code": "2",
+          "name": "Fraser",
+          "iou": 0.7313
+        }
+      },
+      "candidateLhaCodes": [
+        "211",
+        "212",
+        "213",
+        "214",
+        "215"
+      ],
+      "sourceDrawingAreaKm2": 12427,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "south-fraser-health-region",
+      "legendNumber": 5,
+      "drawingIndices": [
+        198
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Removed drawing 76, which is Richmond (legend 9), not South Fraser (legend 5). Main-map South Fraser is drawing 198.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.4609,
+        "sourceCovered": 0.6695,
+        "candidateCovered": 0.5966
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.0064,
+        "maxIou": 0.4609,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "231",
+          "name": "Langley",
+          "iou": 0.2085
+        },
+        "hsda": {
+          "code": "23",
+          "name": "Fraser South",
+          "iou": 0.461
+        },
+        "ha": {
+          "code": "2",
+          "name": "Fraser",
+          "iou": 0.0324
+        }
+      },
+      "candidateLhaCodes": [
+        "231",
+        "232",
+        "233",
+        "234"
+      ],
+      "sourceDrawingAreaKm2": 773,
+      "verdict": "detail-limited",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "simon-fraser-health-region",
+      "legendNumber": 6,
+      "drawingIndices": [
+        197
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.7511,
+        "sourceCovered": 0.8406,
+        "candidateCovered": 0.8759
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.2491,
+        "maxIou": 0.7511,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "223",
+          "name": "Maple Ridge/Pitt Meadows",
+          "iou": 0.4557
+        },
+        "hsda": {
+          "code": "22",
+          "name": "Fraser North",
+          "iou": 0.7516
+        },
+        "ha": {
+          "code": "2",
+          "name": "Fraser",
+          "iou": 0.1371
+        }
+      },
+      "candidateLhaCodes": [
+        "221",
+        "222",
+        "223",
+        "224"
+      ],
+      "sourceDrawingAreaKm2": 2413,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "central-vancouver-island-health-region",
+      "legendNumber": 7,
+      "drawingIndices": [
+        55
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.7072,
+        "sourceCovered": 0.8442,
+        "candidateCovered": 0.8133
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.4263,
+        "maxIou": 0.741,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "426",
+          "name": "Alberni/Clayoquot",
+          "iou": 0.4146
+        },
+        "hsda": {
+          "code": "42",
+          "name": "Central Vancouver Island",
+          "iou": 0.7072
+        },
+        "ha": {
+          "code": "4",
+          "name": "Vancouver Island",
+          "iou": 0.1874
+        }
+      },
+      "candidateLhaCodes": [
+        "421",
+        "422",
+        "423",
+        "424",
+        "425",
+        "426"
+      ],
+      "sourceDrawingAreaKm2": 12120,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "northern-interior-regional-health-board",
+      "legendNumber": 8,
+      "drawingIndices": [
+        7
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.9241,
+        "sourceCovered": 0.9618,
+        "candidateCovered": 0.9593
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.7521,
+        "maxIou": 0.9241,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "524",
+          "name": "Prince George",
+          "iou": 0.485
+        },
+        "hsda": {
+          "code": "52",
+          "name": "Northern Interior",
+          "iou": 0.8089
+        },
+        "ha": {
+          "code": "5",
+          "name": "Northern",
+          "iou": 0.2354
+        }
+      },
+      "candidateLhaCodes": [
+        "522",
+        "523",
+        "524"
+      ],
+      "sourceDrawingAreaKm2": 144099,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "vancouver-richmond-health-board",
+      "legendNumber": 9,
+      "drawingIndices": [
+        76,
+        193
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Corrected against both legend-9 components in the published inset: main-map 193 is Vancouver and 76 is Richmond. Local registration and offshore components remain unverified.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.4063,
+        "sourceCovered": 0.6876,
+        "candidateCovered": 0.4983
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.0,
+        "maxIou": 0.4063,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "311",
+          "name": "Richmond",
+          "iou": 0.45
+        },
+        "hsda": {
+          "code": "31",
+          "name": "Richmond",
+          "iou": 0.4499
+        },
+        "ha": {
+          "code": "3",
+          "name": "Vancouver Coastal",
+          "iou": 0.0026
+        }
+      },
+      "candidateLhaCodes": [
+        "311",
+        "321",
+        "322",
+        "323",
+        "324",
+        "325",
+        "326"
+      ],
+      "sourceDrawingAreaKm2": 206,
+      "verdict": "detail-limited",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "north-shore-health-region",
+      "legendNumber": 10,
+      "drawingIndices": [
+        79,
+        195
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Included main-map Bowen Island drawing 79 with mainland 195; the corresponding island is shaded with legend-10 geography in the inset.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.4992,
+        "sourceCovered": 0.6607,
+        "candidateCovered": 0.6713
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.0751,
+        "maxIou": 0.4992,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "331",
+          "name": "North Vancouver",
+          "iou": 0.3894
+        },
+        "hsda": {
+          "code": "32",
+          "name": "Vancouver",
+          "iou": 0.0596
+        },
+        "ha": {
+          "code": "3",
+          "name": "Vancouver Coastal",
+          "iou": 0.0087
+        }
+      },
+      "candidateLhaCodes": [
+        "331",
+        "332"
+      ],
+      "sourceDrawingAreaKm2": 648,
+      "verdict": "detail-limited",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "capital-health-region",
+      "legendNumber": 11,
+      "drawingIndices": [
+        52
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "boards",
+      "metrics": {
+        "iou": 0.4262,
+        "sourceCovered": 0.6562,
+        "candidateCovered": 0.5488
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.0545,
+        "maxIou": 0.4896,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "412",
+          "name": "Western Communities",
+          "iou": 0.4831
+        },
+        "hsda": {
+          "code": "41",
+          "name": "South Vancouver Island",
+          "iou": 0.4262
+        },
+        "ha": {
+          "code": "4",
+          "name": "Vancouver Island",
+          "iou": 0.0231
+        }
+      },
+      "candidateLhaCodes": [
+        "411",
+        "412",
+        "413",
+        "414"
+      ],
+      "sourceDrawingAreaKm2": 1982,
+      "verdict": "detail-limited",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "east-kootenay-community-health-services-society",
+      "legendNumber": 1,
+      "drawingIndices": [
+        272
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "societies",
+      "metrics": {
+        "iou": 0.958,
+        "sourceCovered": 0.9706,
+        "candidateCovered": 0.9866
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.711,
+        "maxIou": 0.958,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "116",
+          "name": "Golden",
+          "iou": 0.2841
+        },
+        "hsda": {
+          "code": "11",
+          "name": "East Kootenay",
+          "iou": 0.9579
+        },
+        "ha": {
+          "code": "1",
+          "name": "Interior",
+          "iou": 0.2078
+        }
+      },
+      "candidateLhaCodes": [
+        "111",
+        "112",
+        "113",
+        "114",
+        "115",
+        "116"
+      ],
+      "sourceDrawingAreaKm2": 45725,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "kootenay-boundary-community-health-services-society",
+      "legendNumber": 2,
+      "drawingIndices": [
+        211
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "societies",
+      "metrics": {
+        "iou": 0.9596,
+        "sourceCovered": 0.9813,
+        "candidateCovered": 0.9775
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.7525,
+        "maxIou": 0.9596,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "124",
+          "name": "Arrow Lakes",
+          "iou": 0.2535
+        },
+        "hsda": {
+          "code": "12",
+          "name": "Kootenay Boundary",
+          "iou": 0.9594
+        },
+        "ha": {
+          "code": "1",
+          "name": "Interior",
+          "iou": 0.1322
+        }
+      },
+      "candidateLhaCodes": [
+        "121",
+        "122",
+        "123",
+        "124",
+        "125",
+        "126",
+        "127"
+      ],
+      "sourceDrawingAreaKm2": 28740,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "coast-garibaldi-community-health-services-society",
+      "legendNumber": 3,
+      "drawingIndices": [
+        214,
+        227,
+        229,
+        230,
+        231,
+        232,
+        233,
+        235,
+        237,
+        238,
+        240,
+        241,
+        247
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "societies",
+      "metrics": {
+        "iou": 0.7633,
+        "sourceCovered": 0.8359,
+        "candidateCovered": 0.8978
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.6,
+        "maxIou": 0.7633,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "335",
+          "name": "Howe Sound",
+          "iou": 0.421
+        },
+        "hsda": {
+          "code": "33",
+          "name": "North Shore/Coast Garibaldi",
+          "iou": 0.2853
+        },
+        "ha": {
+          "code": "3",
+          "name": "Vancouver Coastal",
+          "iou": 0.2839
+        }
+      },
+      "candidateLhaCodes": [
+        "333",
+        "334",
+        "335"
+      ],
+      "sourceDrawingAreaKm2": 19589,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "upper-island-central-coast-community-health-services-society",
+      "legendNumber": 4,
+      "drawingIndices": [
+        19,
+        25,
+        217,
+        251,
+        252,
+        253,
+        255,
+        257,
+        258,
+        260,
+        261,
+        262,
+        264,
+        266,
+        268,
+        269,
+        270,
+        271
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "societies",
+      "metrics": {
+        "iou": 0.6205,
+        "sourceCovered": 0.787,
+        "candidateCovered": 0.7457
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.4655,
+        "maxIou": 0.6205,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "434",
+          "name": "Vancouver Island North",
+          "iou": 0.3178
+        },
+        "hsda": {
+          "code": "43",
+          "name": "North Vancouver Island",
+          "iou": 0.5909
+        },
+        "ha": {
+          "code": "4",
+          "name": "Vancouver Island",
+          "iou": 0.4856
+        }
+      },
+      "candidateLhaCodes": [
+        "431",
+        "432",
+        "433",
+        "434",
+        "337"
+      ],
+      "sourceDrawingAreaKm2": 48872,
+      "verdict": "poor-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "cariboo-community-health-services-society",
+      "legendNumber": 5,
+      "drawingIndices": [
+        7
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "societies",
+      "metrics": {
+        "iou": 0.9131,
+        "sourceCovered": 0.9433,
+        "candidateCovered": 0.9661
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.7925,
+        "maxIou": 0.9131,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "146",
+          "name": "Cariboo/Chilcotin",
+          "iou": 0.4125
+        },
+        "hsda": {
+          "code": "14",
+          "name": "Thompson Cariboo Shuswap",
+          "iou": 0.3203
+        },
+        "ha": {
+          "code": "1",
+          "name": "Interior",
+          "iou": 0.2061
+        }
+      },
+      "candidateLhaCodes": [
+        "144",
+        "146",
+        "521",
+        "336"
+      ],
+      "sourceDrawingAreaKm2": 106819,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "north-west-community-health-services-society",
+      "legendNumber": 6,
+      "drawingIndices": [
+        12,
+        218,
+        221,
+        224,
+        225,
+        226,
+        249,
+        250
+      ],
+      "subtractDrawingIndices": [
+        376
+      ],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "societies",
+      "metrics": {
+        "iou": 0.8955,
+        "sourceCovered": 0.9495,
+        "candidateCovered": 0.9403
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.7561,
+        "maxIou": 0.8955,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "516",
+          "name": "Stikine",
+          "iou": 0.5172
+        },
+        "hsda": {
+          "code": "51",
+          "name": "Northwest",
+          "iou": 0.8874
+        },
+        "ha": {
+          "code": "5",
+          "name": "Northern",
+          "iou": 0.3854
+        }
+      },
+      "candidateLhaCodes": [
+        "510",
+        "511",
+        "512",
+        "513",
+        "514",
+        "515",
+        "516",
+        "517",
+        "519"
+      ],
+      "sourceDrawingAreaKm2": 244733,
+      "verdict": "partial-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    },
+    {
+      "areaId": "peace-liard-community-health-services-society",
+      "legendNumber": 7,
+      "drawingIndices": [
+        32
+      ],
+      "subtractDrawingIndices": [],
+      "reviewStatus": "Initial manual assignment of main-map filled paths from the printed legend. Coastal/island membership and metropolitan detail need independent review.",
+      "mapId": "societies",
+      "metrics": {
+        "iou": 0.9685,
+        "sourceCovered": 0.9784,
+        "candidateCovered": 0.9897
+      },
+      "translationSensitivity": {
+        "radiusMetres": 15000,
+        "minIou": 0.8453,
+        "maxIou": 0.9685,
+        "interpretation": "Eight fixed translation scenarios, not a statistical confidence interval or a complete error model."
+      },
+      "bestIndividualModernFeature": {
+        "lha": {
+          "code": "533",
+          "name": "Fort Nelson",
+          "iou": 0.469
+        },
+        "hsda": {
+          "code": "53",
+          "name": "Northeast",
+          "iou": 0.9685
+        },
+        "ha": {
+          "code": "5",
+          "name": "Northern",
+          "iou": 0.3093
+        }
+      },
+      "candidateLhaCodes": [
+        "531",
+        "532",
+        "533"
+      ],
+      "sourceDrawingAreaKm2": 187310,
+      "verdict": "close-cartographic-fit",
+      "boundaryIdentityVerified": false,
+      "reuse": "Use predefined modern polygons only as an explicitly approximate display candidate; retain the registered drawing and legal-source caveats."
+    }
+  ]
+}
