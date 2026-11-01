@@ -1,6 +1,6 @@
 // The salaries across every employer, before anything is searched: the employers, the highest-paid
 // people, and every position title, each as cards in pages or as one table to sort and filter.
-// All of them follow the period range and sector chosen above them.
+// All follow the period range; employers and people also follow the chosen sector.
 //
 // People are each period's highest-paid named records (people/top.json.gzip, written by the build):
 // the full name index is hundreds of files, loaded a surname at a time by the search instead.

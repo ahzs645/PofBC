@@ -44,14 +44,14 @@ const focusable = (dialog) => [...dialog.querySelectorAll('button:not(:disabled)
   .filter((node) => node.getClientRects().length && !node.closest('[hidden], [inert]'))
 
 /** Mobile filters share the page's live values; closing never resets a filter or its URL. */
-export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onRange, sectors, employers, sector, onSector }) => {
+export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onRange, sectors, employers, sector, onSector, showSector = true }) => {
   const [open, setOpen] = useState(false)
   const id = useId()
   const dialog = useRef(null)
   const title = useRef(null)
   const trigger = useRef(null)
-  const active = Number(Boolean(query.trim())) + Number(Boolean(range)) + Number(sector !== 'all')
-  const summary = [query.trim() && `“${query.trim()}”`, rangeLabel(years, range), sector === 'all' ? 'All sectors' : sector].filter(Boolean).join(' · ')
+  const active = Number(Boolean(query.trim())) + Number(Boolean(range)) + Number(showSector && sector !== 'all')
+  const summary = [query.trim() && `“${query.trim()}”`, rangeLabel(years, range), showSector && (sector === 'all' ? 'All sectors' : sector)].filter(Boolean).join(' · ')
 
   useEffect(() => {
     if (!open) return undefined
@@ -165,13 +165,13 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
               <h3 className="salaries__filter-label">Period</h3>
               <PeriodRange inline years={years} counts={counts} value={range} onChange={onRange} />
             </section>
-            <section aria-label="Filter by sector" className="salaries__filter-field">
+            {showSector && <section aria-label="Filter by sector" className="salaries__filter-field">
               <h3 className="salaries__filter-label">Sector</h3>
               <SalarySectorChips sectors={sectors} employers={employers} value={sector} onChange={onSector} />
-            </section>
+            </section>}
           </div>
           <div className="salaries-filter-sheet__actions">
-            <button type="button" className="salaries__link" disabled={!active} onClick={() => { onSearch(''); onRange(null); onSector('all') }}>Clear filters</button>
+            <button type="button" className="salaries__link" disabled={!active} onClick={() => { onSearch(''); onRange(null); if (showSector) onSector('all') }}>Clear filters</button>
             <button type="button" className="salaries__more" onClick={() => setOpen(false)}>Done</button>
           </div>
         </>}

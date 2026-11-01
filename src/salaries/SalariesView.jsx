@@ -73,6 +73,11 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const [reading, setReading] = useState(null)
   const query = place.q
   const sector = place.sector
+  const typed = query.trim()
+  const browse = ['employers', 'people', 'positions'].includes(place.browse) ? place.browse : 'employers'
+  // The cross-employer position index has no sector breakdown. Keep the sector choice for
+  // Employers/People, but omit it from controls and active counts while browsing positions.
+  const showSector = Boolean(typed) || browse !== 'positions'
   const setSector = (value) => setPlace((current) => ({ ...current, sector: value }))
 
   useEffect(() => {
@@ -209,7 +214,11 @@ export const SalariesView = ({ onOpenGovernment }) => {
   // name's records are one click away.
   const openPersonAt = (name, slug) => go({ q: name, person: personKey(name), personAt: slug })
   const openPersonKey = (key) => go({ person: key })
-  const openTitle = (key) => go({ title: key, employerYear: yearFromFilter })
+  const openTitle = (key) => go({
+    title: key,
+    employerYear: yearFromFilter,
+    ...(!place.employer && !place.title && !typed && browse === 'positions' ? { sector: 'all' } : {})
+  })
   const openRole = (slug, key, at) => go({ employer: slug, role: key, employerYear: at !== undefined && at !== null && at >= 0 ? years[at] : place.employerYear })
   const search = (text) => {
     setPlace((current) => ({ ...current, q: text, person: null, personAt: null }))
@@ -292,10 +301,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
   // Every record, named or not: the people index holds only the named ones.
   const total = employersIndex.employers.reduce((sum, entry) => sum + entry.counts.reduce((a, b) => a + b, 0), 0)
   const sectors = [...new Set(employersIndex.employers.map((entry) => entry.sector))].filter(Boolean).sort()
-  const typed = query.trim()
   const peopleSettled = result && !result.loading
   const filtered = Boolean(range) || sector !== 'all'
-  const browse = ['employers', 'people', 'positions'].includes(place.browse) ? place.browse : 'employers'
   const layout = place.layout === 'table' ? 'table' : 'cards'
   const periodCounts = years.map((_, at) => employersIndex.employers.reduce((sum, entry) => sum + (entry.counts[at] ?? 0), 0))
   // Records whose employer and period come from the employer's own published report, not the
@@ -320,9 +327,26 @@ export const SalariesView = ({ onOpenGovernment }) => {
           <SalarySearchField value={query} onChange={search} />
           <PeriodRange years={years} counts={periodCounts} value={range} onChange={setRange} />
         </div>
-        <SalarySectorChips sectors={sectors} employers={employersIndex.employers} value={sector} onChange={setSector} />
       </div>
-      <MobileSalaryFilters query={query} onSearch={search} years={years} counts={periodCounts} range={range} onRange={setRange} sectors={sectors} employers={employersIndex.employers} sector={sector} onSector={setSector} />
+
+      {!typed && (
+        <div className="salaries__browse-bar">
+          <Segmented
+            ariaLabel="Browse"
+            value={browse}
+            onChange={(next) => setPlace((current) => ({ ...current, browse: next }))}
+            options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }]}
+          />
+          <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
+        </div>
+      )}
+
+      {showSector && (
+        <div className="salaries__desktop-filters">
+          <SalarySectorChips sectors={sectors} employers={employersIndex.employers} value={sector} onChange={setSector} />
+        </div>
+      )}
+      <MobileSalaryFilters query={query} onSearch={search} years={years} counts={periodCounts} range={range} onRange={setRange} sectors={sectors} employers={employersIndex.employers} sector={sector} onSector={setSector} showSector={showSector} />
 
       {typed && (
         <>
@@ -401,15 +425,6 @@ export const SalariesView = ({ onOpenGovernment }) => {
 
       {!typed && (
         <section aria-label="Browse" className="salaries__records">
-          <div className="salaries__browse-bar">
-            <Segmented
-              ariaLabel="Browse"
-              value={browse}
-              onChange={(next) => setPlace((current) => ({ ...current, browse: next }))}
-              options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }]}
-            />
-            <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
-          </div>
           {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); toTop() }} />}
           {browse === 'people' && <PeopleBrowse index={index} sector={sector} range={range} layout={layout} onPerson={openPerson} onEmployer={openEmployer} />}
           {browse === 'positions' && <PositionBrowse titlesIndex={titlesIndex} years={years} range={range} layout={layout} onTitle={openTitle} />}
