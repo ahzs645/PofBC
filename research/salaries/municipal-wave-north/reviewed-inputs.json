@@ -123,7 +123,7 @@
         "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
         "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
         "Remuneration includes salary, wages, overtime, vacation payouts and taxable benefits, including incremental Emergency Operations Center pay. Expenses include travel, memberships, tuition, cell phone allowances, hiring expenses and boot/tool allowances.",
-        "The remuneration control is derived from printed Total Other Employees minus the printed below-threshold remuneration aggregate. The expense control is printed directly; missing individual cells remain missing."
+        "The remuneration control is printed total employee remuneration minus the numeric below-threshold remuneration aggregate. The expense control is printed for all employees and the below-threshold expense cell is blank, not zero. No named-only expense control is available; the retained known named-expense sum is compared with the broader all-employee control without claiming equivalent scope. Metadata scope was explicitly amended with an archived PR27 snapshot; individual records are unchanged."
       ],
       "columns": {
         "name": [
@@ -154,7 +154,8 @@
           160,
           461
         ]
-      ]
+      ],
+      "expenseControlScope": "all-employees-under-threshold-unknown"
     },
     {
       "id": "city-of-williams-lake-2025",
@@ -197,7 +198,7 @@
         "Published remuneration is a payment disclosure and is not an annual base salary rate. Published expense dashes remain missing; explicit zero values remain zero.",
         "Only the complete named schedule for this category is imported. Below-threshold aggregates, supplier payments and severance aggregates are excluded; no compiled rows are removed.",
         "Remuneration includes salary, wages, overtime, vacation payouts and taxable benefits, including incremental Emergency Operations Center pay. Expenses include travel, memberships, tuition, cell phone allowances, hiring expenses and boot/tool allowances.",
-        "The remuneration control is derived from printed Total Other Employees minus the printed below-threshold remuneration aggregate. The expense control is printed directly; missing individual cells remain missing."
+        "The remuneration control is printed total employee remuneration minus the numeric below-threshold remuneration aggregate. The expense control is printed for all employees and the below-threshold expense cell is blank, not zero. No named-only expense control is available; the retained known named-expense sum is compared with the broader all-employee control without claiming equivalent scope. Metadata scope was explicitly amended with an archived PR27 snapshot; individual records are unchanged."
       ],
       "columns": {
         "name": [
@@ -228,7 +229,8 @@
           149,
           535
         ]
-      ]
+      ],
+      "expenseControlScope": "all-employees-under-threshold-unknown"
     },
     {
       "id": "district-of-chetwynd-2024",

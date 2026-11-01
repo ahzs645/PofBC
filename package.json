@@ -73,9 +73,10 @@
     "build:health-comparisons": "node scripts/build-health-comparisons.mjs",
     "follow-up:municipal-salaries": "node scripts/build-municipal-follow-up.mjs",
     "review:sector-salaries": "python3 scripts/build-sector-salary-review.py --frozen",
-    "review:municipal-wave": "python3 scripts/build-municipal-wave-review.py",
+    "review:municipal-wave": "python3 scripts/build-municipal-wave-review.py --frozen",
     "audit:municipal-salaries": "node scripts/audit-municipal-salaries.mjs",
-    "compare:municipal-periods": "node scripts/compare-municipal-periods.mjs"
+    "compare:municipal-periods": "node scripts/compare-municipal-periods.mjs",
+    "review:municipal-history": "python3 scripts/build-municipal-history-review.py"
   },
   "peerDependencies": {
     "react": ">=18",

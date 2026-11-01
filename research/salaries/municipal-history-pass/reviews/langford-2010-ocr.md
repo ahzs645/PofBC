@@ -1,0 +1,34 @@
+# Independent full-image OCR review: Langford 2010
+
+**Pass for the 31 source observations: 24 employees and seven council members.** Both complete rendered salary pages, enlarged name glyphs and disputed monetary cells were independently reviewed. Every accepted name, published job title and monetary field agrees with the author's manual rows. The independent literal rows, supplementary Total/Budget cells and adjudications are recorded in [langford-2010-ocr.json](langford-2010-ocr.json). No colleague collection or parser was edited.
+
+Original: [official 2010 SOFI](https://langford.ca/wp-content/uploads/2020/11/Statement-of-Financial-Information-2010.pdf), [official document library](https://langford.ca/city-hall/document-libraries/document-library/). The original independently hashes to `02f847011c5a6e643136ccb38cc279216dbbbea66a054dc95ad664e0551a6f9d` and contains 39 physical pages. Employee and council schedules are physical pages 6 and 7. Both visibly state 2010; the enclosed financial statements on pages 12 and 18 confirm year ended December 31, 2010. The November 2020 upload path is not the reporting year.
+
+Physical page 3 visibly bears the Finance Director and Matt Sahlstrom's signatures approving all statements and schedules; no signature date is printed. The schedules are explicitly **unaudited**, which is retained as a source designation rather than a claim that the salary data was independently audited or that the document is draft.
+
+## Source columns, scope and controls
+
+Employee **Remuneration** is the actual published payment column. Expenses are separate, and **Total** includes expenses. The source notes cash-basis reporting and says remuneration may include extraordinary unused-vacation payouts or retroactive pay. It explicitly does not reconcile cash-basis salary schedules with accrual-basis financial statements. No annual base salary rate or additional benefit component is invented.
+
+All 24 employee remuneration cells sum to **$2,447,411.63** and known expense cells to **$45,866.48**, exactly their printed named controls. The expense-inclusive total is **$2,493,278.11**, also exact. Remuneration under $75,000 is **$4,054,015.10**; adding it to the named remuneration gives printed all-employee remuneration **$6,501,426.73**. The under-threshold group is aggregate evidence, not individual observations. Its wording does not explicitly establish the equality boundary for the named subsection.
+
+Aubrey, Chris and Bell, Brian have printed expense dashes. Those remain **null**, even though their published expense-inclusive Total equals remuneration. No zero is inferred from that arithmetic. All 22 employee rows with numeric expenses have exact remuneration-plus-expense agreement with their own published Total. Decimal precision, including Leskiw's $1,543.98 and Spriggs's $4,990.50 expenses, is preserved. There are no explicit numeric-zero or negative individual expense cells in these schedules.
+
+Council's **Indemnity** is the remuneration column. All seven indemnities sum to **$140,588.40**, expenses to **$35,259.00**, expense-inclusive Total to **$175,847.40** and Budget to **$193,000.00**, exactly all four printed subtotals. Every council row's indemnity plus expenses equals its Total. Budget is not pay. Individual offices are not printed on page 7 and must remain missing; the Mayor or councillor title is not imported from another page. Source names are given-first without inserted commas.
+
+## OCR and name adjudications
+
+The salary pages are scanned images with a pre-existing searchable layer. Fresh Tesseract and the city's existing OCR layer are supporting readings; the original image determines the accepted cells. The complete pages, including all 31 names and all row boundaries, were inspected rather than accepting OCR because financial totals matched.
+
+- **Caven, Lance:** the original visibly prints expense **$170.00**. Fresh OCR's `170,00` is a separator error.
+- **Mahovlich, Michelle:** the original visibly prints remuneration **$104,148.46** and Total **$105,795.46**, not fresh OCR's $404,148.46/$405,795.46.
+- **Palmer, Mike:** the enlarged original visibly prints expense **$1,399.00** and Total **$105,252.13**, not fresh OCR's $4,399.00/$105,262.13. These are image-based OCR adjudications, not adjustments made to balance a subtotal.
+- **Barber, Jennfier:** the original spelling is retained literally. No correction to Jennifer is introduced.
+- **Fletcher, Lorne:** the enlarged original supports the manual `rn` reading. Both fresh OCR and the retained original searchable layer read **`Lome`**. The author's initial explanation that the city-provided text independently corroborates `Lorne` is therefore inaccurate; it should instead describe the enlarged-image adjudication and preserve both raw OCR readings. The author was notified.
+- **Tement, Steve:** the salary scan and both OCR readings are retained as `Tement, Steve`. The same document's approval page prints `Steve Ternent`. Preserve and disclose that source-name variant rather than silently substituting the approval spelling into the salary schedule or claiming a confirmed identity normalization. The author was notified to document the distinction.
+
+All other names, employee titles and monetary cells match the complete independent transcription, including Kryklywyj, Audrey; Henshall's `PW and Operations Co-ordinator`; Molnar's full `Land Development and Subdivision Co-ordinator`; and the final employee Zado, Kerry. No department label is imported as a job title, and the table stops before subtotal/aggregate lines.
+
+Evidence inspected: `/tmp/history-capital/city-of-langford-2010-02f847011c.pdf`, full renders `city-of-langford-2010-p6-review.png` and `city-of-langford-2010-p7-review.png`, 300dpi source renders, enlarged name crop and independently regenerated glyph/monetary clips. Raw OCR and city text are retained under the author's `municipal-history-capital/evidence/ocr/`. **The complete independent field/control review passes; remove the unsupported Fletcher city-text corroboration claim and document the Tement/Ternent source variant. No monetary cell change is needed.**
+
+Final follow-up: the author corrected the Fletcher reason to state explicitly that both OCR readings are `Lome` and the adjudication uses the enlarged image. Employee notes and a visible warning now preserve the `Tement` salary spelling and disclose the `Ternent` approval-page variant, with no alias substitution. All 31 normalized observations were independently compared in all six published fields with this review's complete transcription and match exactly. No data changed. Final collection manifest SHA-256: `fcfe885e8b0c89961ca53d5fc9aa0bc7417d26f4e3851244ebe4199a162304e3`; layouts SHA-256: `5471cce77ab529e7907afdfa9268c690672aed47be7e80bda1c04228b24c49f5`. **Documentation corrections and final normalized-row checks pass; the review is complete.**

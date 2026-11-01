@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "history-north-hazelton-2024",
+      "employerSlug": "village-of-hazelton",
+      "employerName": "Village of Hazelton",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "hazelton-2024.json.gzip",
+      "dataSha256": "16e0319979d423bc7bf8bc6890da4919cdfaef4dbb17b318254295d79fe32eb2",
+      "sha256": "7606528880e8c76f6422df9895e4dd411fb3011790a72e68e412c515dac4fcfe",
+      "sourceUrl": "https://hazelton.ca/?mdocs-file=2659",
+      "sourceIndexUrl": "https://hazelton.ca/?mdocs-file=2659",
+      "title": "Village of Hazelton 2024 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 2,
+      "totalRemuneration": 162683.7,
+      "totalExpenses": 1224.35,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published two-person employee table is retained; employee remuneration and expenses reconcile exactly to all-employee totals minus the numeric under-$75,000 aggregates.",
+        "Published name accents are preserved. Remuneration excludes the separately reported expenses. Council and aggregate benefit/reconciliation adjustments are outside this employee cohort.",
+        "The report’s broader reconciliation contains a printed $3,318.41 variance and its employee remuneration-plus-expense line differs by $199 from the component totals; these broader lines are not treated as named-employee controls. No source figures are adjusted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "year ended December 31, 2024"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 162683.7,
+            "knownCellSum": 162683.7,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 1224.35,
+            "knownCellSum": 1224.35,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 3,
+          "basis": "All-employee remuneration and expense totals minus the numeric under-threshold aggregates."
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allRowsAndScope": true,
+          "pages": [
+            {
+              "pdfPage": 3,
+              "dpi": 110,
+              "renderedSha256": "cc96d8c24c0a33168ff19750798bceb7f55784bb13cf52f1bd1f44bcc30ee500"
+            }
+          ]
+        },
+        "evidenceFile": "evidence/hazelton-2024.json.gzip",
+        "evidenceSha256": "b3724c53d4908eeb2b57016dd17009b912a3fcd0157717d46d1a017a2bb4f533",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "publicWarning": "Named employee remuneration and expenses reconcile exactly. The report separately prints a $3,318.41 broader accounting reconciliation variance; its employee remuneration-plus-expenses reconciliation line is $199 above the printed component totals. Those broader lines are not used to change the published individual amounts.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-port-clements-2025",
+      "employerSlug": "village-of-port-clements",
+      "employerName": "Village of Port Clements",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "port-clements-2025.json.gzip",
+      "dataSha256": "cb33b84195811b8f261f1a5e8698019130a34fb5f9c5c9440f327fd8b732f385",
+      "sha256": "551076f5ce05f53ebaf8175a22581ae45f7b52914849efa9d8d8e5f61f6f6a82",
+      "sourceUrl": "https://portclements.ca/wp-content/uploads/2026/06/2025-SOFI-Report-Final.pdf",
+      "sourceIndexUrl": "https://portclements.ca/document/2025-sofi-report-final/",
+      "title": "Village of Port Clements 2025 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 1,
+      "totalRemuneration": 95500.1,
+      "totalExpenses": 774.96,
+      "pages": [
+        35
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published one-person employee table is retained; name is published and no employee position column is published, so position remains missing.",
+        "The source explicitly says remuneration includes taxable benefits. Expenses and the expense-inclusive Total are separate; Total is supporting evidence and is not used as pay.",
+        "Named remuneration and expenses reconcile exactly to all-employee totals minus numeric under-$75,000 aggregates. Council and under-threshold aggregates are excluded; no compiled records are removed."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 7,
+            "text": "For the year ended December 31, 2025"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 95500.1,
+            "knownCellSum": 95500.1,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 774.96,
+            "knownCellSum": 774.96,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "printedTotal",
+            "printedOrDerivedControl": 96275.06,
+            "knownCellSum": 96275.06,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 35,
+          "basis": "All-employee totals minus numeric under-threshold aggregates; expense-inclusive row Total is supporting evidence only."
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allRowsAndScope": true,
+          "pages": [
+            {
+              "pdfPage": 35,
+              "dpi": 110,
+              "renderedSha256": "9c79a47358c0b3401e300a14eed17db395fd9802092144d8dbc95f41309bca82"
+            }
+          ]
+        },
+        "evidenceFile": "evidence/port-clements-2025.json.gzip",
+        "evidenceSha256": "6c586ed48add17e6def72269d6c4f7998f3e1d479f6715cbbfe39951c29b6e39",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    }
+  ]
+}

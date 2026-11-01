@@ -1,0 +1,886 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-01",
+  "reviewer": "Independent Capital history agent",
+  "status": "pass-with-source-qualifications",
+  "blockingFindings": [],
+  "manifests": [
+    {
+      "path": "research/salaries/municipal-history-north/sources.json",
+      "sha256": "51dacbabf69316b39e47486762fdb5a7bc35f69485846b176b40b0a43a8f088a",
+      "cohorts": 28,
+      "records": 1121,
+      "allOriginalFingerprintsAndPeriodProofsReproduced": true,
+      "isolatedGeneratedFileCount": 57,
+      "isolatedOriginalReproductionByteIdentical": true,
+      "offlineEvidenceReplayPassed": true
+    },
+    {
+      "path": "research/salaries/municipal-history-north/supplemental/sources.json",
+      "sha256": "48273436338be0ab2a299a68193abf2fdfe61567839ded2fda8ed15f7d90cc92",
+      "cohorts": 2,
+      "records": 3,
+      "allOriginalFingerprintsAndPeriodProofsReproduced": true,
+      "isolatedGeneratedFileCount": 5,
+      "isolatedOriginalReproductionByteIdentical": true,
+      "offlineEvidenceReplayPassed": true
+    },
+    {
+      "path": "research/salaries/municipal-history-north/council/sources.json",
+      "sha256": "3067b9cff2e6e0af4cce5c2808f0cffae0eb2ae097814e41eaaef42bd8570c2e",
+      "cohorts": 30,
+      "records": 225,
+      "allOriginalFingerprintsAndPeriodProofsReproduced": true,
+      "isolatedGeneratedFileCount": 61,
+      "isolatedOriginalReproductionByteIdentical": true,
+      "offlineEvidenceReplayPassed": true
+    }
+  ],
+  "regressionTestsPassed": 14,
+  "authorCollectionFilesEdited": false,
+  "scope": "Full original/evidence reproduction of all three manifests and bounded rendered-source cross-review. This is not a claim that a second human visually reviewed all1121 employee or225 council rows. All71 unnamed employee rows,25 scanned2015 employee rows,21 unnamed council rows and3 small-supplement employee rows have independent complete literal transcriptions here. Other listed pages receive representative field/edge/control review.",
+  "pageCoverage": [
+    {
+      "renderedPath": "/tmp/north-independent-review/chetwynd-2018-p3.png",
+      "sha256": "0a61cda3170d7e6576ec32ac5fda7d5007fa5e9852381b1b85a86bd05c8600b8",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/chetwynd-2019-p4.png",
+      "sha256": "108137af60e37df101980c100d08b51f89a6bb7b862eb6f59c3562cb300f695a",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/dawson-creek-2017-p5.png",
+      "sha256": "03df8737e69cffba1fd7d6b1f03ef5034d0eb02f6a29b042ed41915bbed9d47d",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/dawson-creek-2017-p6.png",
+      "sha256": "472591b1ccad1c29893bade1092ee7b81c2d2cbe4a4f116dfd4b8593a865bee0",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/dawson-creek-2022-p35.png",
+      "sha256": "4243871bac6d7fcd2c91387a9bd440ca33ed20ad7686334d156bd3cb1e52dc4c",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/dawson-creek-2022-p36.png",
+      "sha256": "452dccf2fa3b694ff5d3db622d69a714492a62149d2d8b01034584f4ac13b3d1",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/dawson-creek-2023-p38.png",
+      "sha256": "c1e3b7e337dbb002e544d38e2b16e8d8b9aa8c4d50aaab862f26db1f72322778",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/dawson-creek-2023-p39.png",
+      "sha256": "c8dbe7893adeb98b7274d4da275d3dfd30482525c1451c10e45eb8dce3ae6755",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/hazelton-2024-p3.png",
+      "sha256": "09eeaa018cfd069f19879404e3f823ac969c32997ed912ec2a09e997ebf6e6cf",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/nrrm-2015-p4.png",
+      "sha256": "4e12c439f371c39becf5e4ed131bb95b0cacedf25cf1e666c6a21314d95c4eda",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/nrrm-2015-p5.png",
+      "sha256": "0495b0196e903b9b27ce3e866148d1900562a3d26920b4a9ea3c2a89a496b55e",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/nrrm-2023-p4.png",
+      "sha256": "e87fda8cb3f16255b7fd4ff81839d35a74e2dc3d020ec96005bb3f06de62cb0c",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/nrrm-2023-p5.png",
+      "sha256": "c38505a3d3aa788536a24328b5d8d3e130b8d9d96e7bc9f847c3460a3369245e",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/port-clements-2025-p35.png",
+      "sha256": "82ad23f7c384e4aae2cdda5f44c83f61521ceef64f4ff91e21104e68d38c6535",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/williams-lake-2012-p54.png",
+      "sha256": "7c90a082b6d1dbcf5257f42b772e8348a19c7d4587e26be3c90557d6c307e9f2",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/williams-lake-2013-p57.png",
+      "sha256": "f1e4b46de8a0f457b153d1ec4de8f07cf1d327cd97c7126fbec661de128497ca",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/williams-lake-2014-p11.png",
+      "sha256": "26e9f335ed2934a5e96a95e042ce39ad65b90ffabe890488737da74036bbc03c",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/williams-lake-2019-p32.png",
+      "sha256": "ac06037bfd4f23f8eb8dc102f3e1ce94915ea4d89ab2f9194972d3d746b48672",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-independent-review/williams-lake-2019-p33.png",
+      "sha256": "f6ffdf5f8c04be742401c58824146680798b83157087171e0f20d2ad70460613",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    },
+    {
+      "renderedPath": "/tmp/north-review-wl2015.png",
+      "sha256": "1bc2841bd344e9a15d407faf62a25bfea468ff60683156a4c57d656dcf5b2e79",
+      "reviewScope": "Full rendered page inspected for disclosure scope, labels, controls and row edges; full independent row transcriptions are identified separately."
+    }
+  ],
+  "fullIndependentTranscriptions": {
+    "unnamedPositionTables": {
+      "williams-lake-2012": [
+        [
+          "Chief Administrative Officer",
+          150499.35,
+          10881.77
+        ],
+        [
+          "Manager of Water/Sewer Division",
+          95849,
+          238
+        ],
+        [
+          "Director of Municipal Services",
+          107764.92,
+          75
+        ],
+        [
+          "General Manager of Planning and Operations",
+          132051.49,
+          1536.7
+        ],
+        [
+          "Director of Protective Services",
+          105805.12,
+          2029.95
+        ],
+        [
+          "Director of Finance",
+          108418.64,
+          5114.37
+        ],
+        [
+          "Manager of Economic Development",
+          92500.22,
+          4358.16
+        ],
+        [
+          "Fire Prevention Training Officer",
+          105548.88,
+          2366.2
+        ],
+        [
+          "Fire Prevention Inspector",
+          102108.55,
+          7660.57
+        ],
+        [
+          "Corporate Manager/Manager of Leg Services",
+          91723.32,
+          2036.23
+        ],
+        [
+          "Director of Recreation/Community Services",
+          103816.46,
+          4858.26
+        ],
+        [
+          "Manager of Finance",
+          86734.72,
+          2212.34
+        ],
+        [
+          "Manager of Information Technology",
+          87787.24,
+          900
+        ],
+        [
+          "Manager of Social Development",
+          79657.43,
+          900
+        ],
+        [
+          "Manager of Active Living",
+          78039.2,
+          2136.23
+        ],
+        [
+          "Manager of Transportation & Buildings",
+          93388.49,
+          2269.55
+        ],
+        [
+          "Chief Water/Sewer Treatment Plant Operator",
+          76254.98,
+          null
+        ],
+        [
+          "Facility Maintenance Coordinator",
+          82691.65,
+          1213.51
+        ],
+        [
+          "Facility Maintenance IV",
+          76879.06,
+          1169.79
+        ],
+        [
+          "Aiport Operations Coodinator",
+          82130.01,
+          null
+        ],
+        [
+          "Manager of HR Relief/Executive Assistant",
+          93255.26,
+          null
+        ],
+        [
+          "Equipment Operator III",
+          75074.33,
+          null
+        ],
+        [
+          "Safety Community Coordinator",
+          78370.52,
+          5455.02
+        ]
+      ],
+      "williams-lake-2013": [
+        [
+          "Manager of Water/Sewer Division",
+          97956.58,
+          1650.84
+        ],
+        [
+          "Director of Municipal Services",
+          107563.41,
+          1761.45
+        ],
+        [
+          "General Manager of Planning and Operations",
+          129243.62,
+          2739.09
+        ],
+        [
+          "Director of Protective Services",
+          78815.83,
+          null
+        ],
+        [
+          "Director of Finance",
+          113459.92,
+          1779.8
+        ],
+        [
+          "Manager of Economic Development",
+          87593.72,
+          1846.37
+        ],
+        [
+          "Fire Prevention Training Officer",
+          108444.81,
+          4468.19
+        ],
+        [
+          "Fire Prevention Inspector",
+          99236.47,
+          2454.44
+        ],
+        [
+          "Corporate Manager/Manager of Leg Services",
+          94542.91,
+          2399.62
+        ],
+        [
+          "Director of Recreation/Community Services",
+          104979.86,
+          1948.33
+        ],
+        [
+          "Manager of Finance",
+          92111.93,
+          2064.9
+        ],
+        [
+          "Manager of Information Technology",
+          86143.46,
+          null
+        ],
+        [
+          "Manager of Social Development",
+          76895.06,
+          3518.05
+        ],
+        [
+          "Manager of Active Living",
+          86521.05,
+          438.15
+        ],
+        [
+          "Manager of Transportation & Buildings",
+          93908.16,
+          893.2
+        ],
+        [
+          "Chief Water/Sewer Treatment Plant Operator",
+          81149.47,
+          130
+        ],
+        [
+          "Facility Maintenance Coordinator",
+          85435,
+          1505
+        ],
+        [
+          "Facility Maintenance IV",
+          78427.08,
+          31.15
+        ],
+        [
+          "Airport Operations Coodinator",
+          84929.5,
+          null
+        ],
+        [
+          "Manager of HR Relief/Executive Assistant",
+          96942.7,
+          3164.45
+        ],
+        [
+          "Water/Sewer Foreman",
+          77087.43,
+          3746.1
+        ],
+        [
+          "Certified Mechanical Works Foreman",
+          79456.1,
+          912.21
+        ],
+        [
+          "Safety Community Coordinator",
+          85440.18,
+          2029.99
+        ]
+      ],
+      "williams-lake-2014": [
+        [
+          "Chief Administrative Officer",
+          145752.02,
+          null
+        ],
+        [
+          "Director of Protective Services",
+          106896.81,
+          4471.21
+        ],
+        [
+          "Fire Prevention Training Officer",
+          105900.79,
+          815
+        ],
+        [
+          "Director of Finance",
+          104130.03,
+          1146.79
+        ],
+        [
+          "Director of Recreation/Community Services",
+          101782.03,
+          348.5
+        ],
+        [
+          "Manager of Information Technology",
+          94862.25,
+          3075.4
+        ],
+        [
+          "Manager of Water/Sewer Division",
+          97017.05,
+          699
+        ],
+        [
+          "Corporate Manager/Manager of Leg Services",
+          92442.05,
+          3120
+        ],
+        [
+          "Manager of Transportation and Buildings",
+          93492.05,
+          540
+        ],
+        [
+          "Manager of HR Relief/Executive Assistant",
+          91878.53,
+          1437.57
+        ],
+        [
+          "Safety Community Coordinator",
+          86390.31,
+          4256.7
+        ],
+        [
+          "Manager of Social Development",
+          83101.03,
+          6265.62
+        ],
+        [
+          "Manager of Economic Development",
+          88711.05,
+          null
+        ],
+        [
+          "Director of Municipal Services",
+          87574.64,
+          null
+        ],
+        [
+          "Facility Maintenance Coordinator",
+          85029.47,
+          1259.49
+        ],
+        [
+          "Fire Prevention Inspector",
+          85942.57,
+          null
+        ],
+        [
+          "Manager of Active Living",
+          83101.03,
+          110
+        ],
+        [
+          "Building Inspector",
+          82127.71,
+          null
+        ],
+        [
+          "Airport Operations Coordinator",
+          81961.84,
+          229.39
+        ],
+        [
+          "Certified Mechanical Works Foreman",
+          80106.23,
+          455
+        ],
+        [
+          "General Manager of Planning and Operations",
+          78585.77,
+          370.46
+        ],
+        [
+          "Facility Maintenance IV",
+          77948.44,
+          188.95
+        ],
+        [
+          "Chief Water/Sewer Treatment Plant Operator",
+          76560.45,
+          1566.8
+        ],
+        [
+          "Certified Mechanic",
+          77273.36,
+          170.09
+        ],
+        [
+          "Purchasing Agent",
+          75904.09,
+          248
+        ]
+      ]
+    },
+    "scannedWilliamsLake2015": [
+      [
+        "Bouchard, C.",
+        "Manager of Legislative Services",
+        92465,
+        5273
+      ],
+      [
+        "Bernardy, J.",
+        "Engineering Technologist",
+        96558,
+        2795
+      ],
+      [
+        "Breck, D.",
+        "Certified Electrician",
+        75022,
+        331
+      ],
+      [
+        "Breck, G.",
+        "Facility Maintenance Coordinator",
+        86152,
+        3240
+      ],
+      [
+        "Crosina, T.",
+        "Facility Maintenance IV",
+        80756,
+        239
+      ],
+      [
+        "Deane, G.",
+        "Building Inspector",
+        83693,
+        3338
+      ],
+      [
+        "Dickson, D.",
+        "Manager of Community Safety",
+        86835,
+        2324
+      ],
+      [
+        "Engelberts, J.",
+        "Manager of Water/Sewer Division",
+        95835,
+        1734
+      ],
+      [
+        "Felker, J.",
+        "Purchasing Agent",
+        79094,
+        740
+      ],
+      [
+        "Garceau, D.",
+        "Chief Administrative Officer",
+        150096,
+        5118
+      ],
+      [
+        "Flaspohler, J.",
+        "Fire Prevention Inspector",
+        93085,
+        2055
+      ],
+      [
+        "Hutton, C.",
+        "Planner 1",
+        74077,
+        5889
+      ],
+      [
+        "Lemky, D.",
+        "Certified Mechanic",
+        76492,
+        null
+      ],
+      [
+        "Lussier, T.",
+        "Airport Operator III",
+        76726,
+        212
+      ],
+      [
+        "Mahood, P.",
+        "Water/Sewer Foreman",
+        82819,
+        489
+      ],
+      [
+        "Miranda, S.",
+        "Manager of Active Living",
+        78240,
+        220
+      ],
+      [
+        "Muraca, G.",
+        "Director of Municipal Services",
+        97963,
+        2274
+      ],
+      [
+        "Olson, J.",
+        "Chief Water/Sewer Treatment Plant Operator",
+        82400,
+        490
+      ],
+      [
+        "Paynton, G.",
+        "Director of Community Services",
+        101805,
+        2192
+      ],
+      [
+        "Philpot, C.",
+        "Airport Operator II",
+        74805,
+        199
+      ],
+      [
+        "Skarra, D.",
+        "Certified Mechanical Works Foreman",
+        79752,
+        734
+      ],
+      [
+        "Sutherland, M.",
+        "Streets Foreman",
+        79122,
+        487
+      ],
+      [
+        "Warnock, R.",
+        "Deputy Chief Fire",
+        102021,
+        2861
+      ],
+      [
+        "Webster, D.",
+        "Director of Protective Services",
+        110645,
+        3007
+      ],
+      [
+        "Williston, A.",
+        "Manager of Human Resources",
+        97539,
+        2211
+      ]
+    ],
+    "unnamedCouncilPositionTables": {
+      "2012": [
+        [
+          "Mayor",
+          43687.92,
+          9650.64
+        ],
+        [
+          "Councillor Bonnell",
+          15240,
+          5021.49
+        ],
+        [
+          "Councillor Bourdon",
+          15240,
+          3761.62
+        ],
+        [
+          "Councillor Hughes",
+          15240,
+          5692.15
+        ],
+        [
+          "Councillor Rathor",
+          15240,
+          3259.6
+        ],
+        [
+          "Councillor Walters",
+          15240,
+          6449.61
+        ],
+        [
+          "Councillor Zacharias",
+          15240,
+          4774.54
+        ]
+      ],
+      "2013": [
+        [
+          "Mayor",
+          43687.92,
+          11701.23
+        ],
+        [
+          "Councillor Bonnell",
+          15240,
+          816.6
+        ],
+        [
+          "Councillor Bourdon",
+          15240,
+          5151.25
+        ],
+        [
+          "Councillor Hughes",
+          15240,
+          1379.65
+        ],
+        [
+          "Councillor Rathor",
+          15240,
+          4607.18
+        ],
+        [
+          "Councillor Walters",
+          15240,
+          5260.02
+        ],
+        [
+          "Councillor Zacharias",
+          15240,
+          3330.68
+        ]
+      ],
+      "2014": [
+        [
+          "Mayor",
+          43687.92,
+          7366.18
+        ],
+        [
+          "Councillor Bonnell",
+          15240,
+          780
+        ],
+        [
+          "Councillor Bourdon",
+          15240,
+          1927.5
+        ],
+        [
+          "Councillor Hughes",
+          15240,
+          3462.79
+        ],
+        [
+          "Councillor Rathor",
+          15240,
+          4482.81
+        ],
+        [
+          "Councillor Walters",
+          15240,
+          2816.65
+        ],
+        [
+          "Councillor Zacharias",
+          15240,
+          2674.85
+        ]
+      ]
+    }
+  },
+  "smallSupplementFullFieldReview": [
+    {
+      "key": "hazelton-2024",
+      "page": 3,
+      "rows": [
+        [
+          "Robyn Carlé",
+          "CAO",
+          79320.57,
+          554.6
+        ],
+        [
+          "Bryan Hilbach",
+          "Public Works Foreman",
+          83363.13,
+          669.75
+        ]
+      ],
+      "allEmployeeControls": [
+        397165.03,
+        5947.25
+      ],
+      "underThresholdControls": [
+        234481.33,
+        4722.9
+      ],
+      "namedControls": [
+        162683.7,
+        1224.35
+      ],
+      "broaderEmployeeReconciliationLine": 403311.28,
+      "componentSumAllEmployee": 403112.28,
+      "broaderDifference": 199,
+      "printedOverallVariance": -3318.41
+    },
+    {
+      "key": "port-clements-2025",
+      "page": 35,
+      "rows": [
+        [
+          "Dobson, Marjorie",
+          null,
+          95500.1,
+          774.96
+        ]
+      ],
+      "printedExpenseInclusiveTotal": 96275.06,
+      "allEmployeeControls": [
+        360930.35,
+        4428.43
+      ],
+      "underThresholdControls": [
+        265430.25,
+        3653.47
+      ],
+      "namedControls": [
+        95500.1,
+        774.96
+      ],
+      "definition": "Remuneration explicitly includes taxable benefits; Total includes expenses and is not pay."
+    }
+  ],
+  "nameDisclosure": {
+    "unnamedEmployeeRows": 71,
+    "unnamedCouncilRows": 21,
+    "sourceColumns": "Originals publish positions/complete council labels only, with no employee-name column; names remain null. No reason for omission or identity from another year is inferred.",
+    "sourceTyposPreserved": [
+      "2012 Aiport Operations Coodinator",
+      "2013 Airport Operations Coodinator"
+    ]
+  },
+  "williamsLake2019": {
+    "publishedRows": 33,
+    "firstPublishedEmployee": [
+      "Bernardy, J.",
+      "Senior Engineer Technologist",
+      83235,
+      5650
+    ],
+    "knownPublishedPay": 3153276,
+    "derivedPayControl": 3070041,
+    "qualifiedPayResidual": 83235,
+    "knownPublishedExpenses": 100858,
+    "printedAllEmployeeExpenses": 100855,
+    "differenceOfDifferentScopes": 3,
+    "underThresholdExpenseCell": null,
+    "namedOnlyExpenseControlAvailable": false,
+    "allRowsRetained": true,
+    "publicWarning": "All 33 published employee rows are retained. Their remuneration sum exceeds the printed all-employee total minus the printed under-threshold remuneration by $83,235, equal to the first published employee remuneration value. The cause remains unknown; no row or monetary cell is adjusted. Known printed employee cells minus source controls: pay +83235 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing. Named employee expenses have no issuer subtotal: known disclosed cells total $100,858.00; the printed all-employee expense control is $100,855.00 (difference +3 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred."
+  },
+  "departmentSemantics": {
+    "employer": "Northern Rockies Regional Municipality",
+    "all339NormalizedPositionsNull": true,
+    "publishedDepartmentsRetainedInEvidence": true,
+    "numericExpenseZeroVerifiedOnRendered2015And2023Pages": true
+  },
+  "wrappedBoundaryChecks": [
+    "Dawson2017 Henderson two-line title belongs to Henderson, not preceding Gower.",
+    "Dawson2017 Reynard, Fisher, Oliver and last Darnbrough boundary verified.",
+    "Dawson2022/2023 final Yerbury title stops before consolidated summary.",
+    "Chetwynd2018/2019 wrapped Ennis, Franson, McAvany and Adams titles remain with own row."
+  ],
+  "resolvedMetadataFinding": {
+    "collection": "supplemental Hazelton2024",
+    "issue": "Template basis incorrectly referred to an individual expense-inclusive Total column that Hazelton does not print.",
+    "resolution": "Author removed the Hazelton-only clause; data/evidence unchanged. Current supplement hash is pinned above."
+  },
+  "additionalCouncilReview": {
+    "nameCorrection": "Author fixed2015 BonneII,I. OCR fusion to rendered Bonnell,I. with a single guarded correction, not a global I/l substitution.",
+    "scopeMetadata": "All30 council cohorts have elected-officials scope, null threshold and completeCouncilSchedule; no employee-completeness claim.",
+    "qualifiedExample": "Hazelton2024 council expense rows1439.60 versus printed1439.50 (+0.10); original fields retained."
+  }
+}

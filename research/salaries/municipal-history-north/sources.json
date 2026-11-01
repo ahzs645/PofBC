@@ -1,0 +1,2857 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "history-north-williams-lake-2011",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2011",
+      "periodType": "calendar",
+      "periodStart": "2011-01-01",
+      "periodEnd": "2011-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2011.json.gzip",
+      "dataSha256": "189d02bcab2791fa6eed5889caad6e5b8248f7362f92d2c158dd8344a6da1414",
+      "sha256": "3caaf17987c4d8fadebeeec44e83a6d2f6e5f614bb75b3a896b650ce9f4bf3e1",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=216",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2011 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 15,
+      "totalRemuneration": 1445536.88,
+      "totalExpenses": 71899.12,
+      "pages": [
+        50
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 10,
+            "dpi": 100,
+            "renderedSha256": "e9791a7bf7b4ec8e29d1715df41a9aed99627bf18ab5c9c3957a16af08acba34",
+            "visualText": "FOR THE YEAR ENDED DECEMBER 31, 2011"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 1445536.88,
+            "knownCellSum": 1445536.88,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 71899.12,
+            "knownCellSum": 71899.12,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 679652364,
+          "underThresholdPay": 535098676,
+          "allEmployeesExpenses": 10421808,
+          "underThresholdExpenses": 3231896,
+          "page": 50,
+          "cellText": {
+            "allPay": "6,796,523.64",
+            "underPay": "5,350,986.76",
+            "allExpenses": "104,218.08",
+            "underExpenses": "32,318.96"
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 50,
+              "dpi": 100,
+              "renderedSha256": "5bc0f446e0a86f767c900e29c78ff30959165e88d8df4ba128f0f5f0dbb75ba8",
+              "imageFile": "williams-lake-2011-p50.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2011.json.gzip",
+        "evidenceSha256": "6c9eb84d901bcee5d40d70c106e6426520ce470e875cb26cb3f574f2ca2fc07e",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-williams-lake-2012",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2012",
+      "periodType": "calendar",
+      "periodStart": "2012-01-01",
+      "periodEnd": "2012-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2012.json.gzip",
+      "dataSha256": "0cd4d314a9e97f0c7e93517375c0edc4f6390465f18e8225c0cfd0fa9cdee619",
+      "sha256": "2a677cbb00af53ee4ec766a27d23f94a7645fa2134ee33b231bbcc7858a25e55",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=217",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2012 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 23,
+      "totalRemuneration": 2186348.84,
+      "totalExpenses": 57411.65,
+      "pages": [
+        54
+      ],
+      "nameDisclosure": "not-published",
+      "sourceScopeDescription": "Complete published employee positions and remuneration table. The source does not publish employee names; name is null and positions are retained exactly as printed.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "The complete positions-only original has no employee-name column. All employee names are null; no reason for this omission is inferred."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 10,
+            "text": "ENDED DECEMBER 31, 2012"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 2186348.84,
+            "knownCellSum": 2186348.84,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 57411.65,
+            "knownCellSum": 57411.65,
+            "residual": 0,
+            "missingCells": 4
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 716635879,
+          "underThresholdPay": 498000995,
+          "allEmployeesExpenses": 7624489,
+          "underThresholdExpenses": 1883324,
+          "page": 54,
+          "cellText": {
+            "allPay": "7,166,358.79",
+            "underPay": "4,980,009.95",
+            "allExpenses": "76,244.89",
+            "underExpenses": "18,833.24"
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 54,
+              "dpi": 100,
+              "renderedSha256": "3b3d9d7767d704e8ad4824e8b335b4daf46686013a89b0860dcb42fe722a697f",
+              "imageFile": "williams-lake-2012-p54.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2012.json.gzip",
+        "evidenceSha256": "ee6cc7ee2e34a779964ad614d33466345df8f2c29332f729435f2f91d1730a0f",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "publicWarning": "The original employee schedule publishes positions and payment amounts without employee names. Names remain missing; identities are not inferred from other years.",
+      "scopeDescription": "Complete published employee positions and remuneration table. The source does not publish employee names; name is null and positions are retained exactly as printed."
+    },
+    {
+      "id": "history-north-williams-lake-2013",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2013",
+      "periodType": "calendar",
+      "periodStart": "2013-01-01",
+      "periodEnd": "2013-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2013.json.gzip",
+      "dataSha256": "d27d2394a5c9fa2d214025de8b6d88b6a0edaa9d24d4b397b89f7317e10266b0",
+      "sha256": "7a44c7c7c11c05090db32a4290a3d1e79ae760e096b9991485bb7a5174486eed",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=265",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2013 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 23,
+      "totalRemuneration": 2126284.25,
+      "totalExpenses": 39481.33,
+      "pages": [
+        57
+      ],
+      "nameDisclosure": "not-published",
+      "sourceScopeDescription": "Complete published employee positions and remuneration table. The source does not publish employee names; name is null and positions are retained exactly as printed.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "The complete positions-only original has no employee-name column. All employee names are null; no reason for this omission is inferred."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 10,
+            "text": "ENDED DECEMBER 31, 2013"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 2126284.25,
+            "knownCellSum": 2126284.25,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 39481.33,
+            "knownCellSum": 39481.33,
+            "residual": 0,
+            "missingCells": 3
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 721703177,
+          "underThresholdPay": 509074752,
+          "allEmployeesExpenses": 9031011,
+          "underThresholdExpenses": 5082878,
+          "page": 57,
+          "cellText": {
+            "allPay": "7,217,031.77",
+            "underPay": "5,090,747.52",
+            "allExpenses": "90,310.11",
+            "underExpenses": "50,828.78"
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 57,
+              "dpi": 100,
+              "renderedSha256": "65914ada4964c95ee97b27f1c2bc94589b4b22fd3ef0a017ee8e5520d36ec578",
+              "imageFile": "williams-lake-2013-p57.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2013.json.gzip",
+        "evidenceSha256": "45a7601c9745e779566c50fd6a130dcd0ec3c07d88dce42a040970f67336855f",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "publicWarning": "The original employee schedule publishes positions and payment amounts without employee names. Names remain missing; identities are not inferred from other years.",
+      "scopeDescription": "Complete published employee positions and remuneration table. The source does not publish employee names; name is null and positions are retained exactly as printed."
+    },
+    {
+      "id": "history-north-williams-lake-2014",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2014",
+      "periodType": "calendar",
+      "periodStart": "2014-01-01",
+      "periodEnd": "2014-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2014.json.gzip",
+      "dataSha256": "82db4afdd9c5c78ac18859ecc93c4695b29307e7c05c3278785509b759932eda",
+      "sha256": "612ccdfced254d36203b52a3edbf6c2ebddf4612eafd07fee82b5b0ff2d98087",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=314",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2014 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 25,
+      "totalRemuneration": 2264471.6,
+      "totalExpenses": 30773.97,
+      "pages": [
+        11
+      ],
+      "nameDisclosure": "not-published",
+      "sourceScopeDescription": "Complete published employee positions and remuneration table. The source does not publish employee names; name is null and positions are retained exactly as printed.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "The complete positions-only original has no employee-name column. All employee names are null; no reason for this omission is inferred."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 15,
+            "text": "ENDED DECEMBER 31, 2014"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 2264471.6,
+            "knownCellSum": 2264471.6,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 30773.97,
+            "knownCellSum": 30773.97,
+            "residual": 0,
+            "missingCells": 5
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 766246763,
+          "underThresholdPay": 539799603,
+          "allEmployeesExpenses": 6598810,
+          "underThresholdExpenses": 3521413,
+          "page": 11,
+          "cellText": {
+            "allPay": "7,662,467.63",
+            "underPay": "5,397,996.03",
+            "allExpenses": "65,988.10",
+            "underExpenses": "35,214.13"
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 11,
+              "dpi": 100,
+              "renderedSha256": "eb97e64b7f86c2ba1f9d6020220c52c9a39e0c0bdf4ddeade6ea283978c45aa1",
+              "imageFile": "williams-lake-2014-p11.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2014.json.gzip",
+        "evidenceSha256": "f7165ea7183782630a7e71354e22f4a2566a8d3f0e17429c7e560c7fbc3377c5",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "publicWarning": "The original employee schedule publishes positions and payment amounts without employee names. Names remain missing; identities are not inferred from other years.",
+      "scopeDescription": "Complete published employee positions and remuneration table. The source does not publish employee names; name is null and positions are retained exactly as printed."
+    },
+    {
+      "id": "history-north-williams-lake-2015",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2015",
+      "periodType": "calendar",
+      "periodStart": "2015-01-01",
+      "periodEnd": "2015-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2015.json.gzip",
+      "dataSha256": "3fbb5b2f39b5b439eabface58f4736bbc530e102732513a17699b12cd1124129",
+      "sha256": "6933a9b61a0d8e3f913a7513910f6925e90f141eac6deef38f7519634f5aaee7",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=363",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2015 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 25,
+      "totalRemuneration": 2233997,
+      "totalExpenses": 48452,
+      "pages": [
+        29
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "Total Other Employees expense control covers all employees. The under-threshold expense cell is blank, so a named-only expense control cannot be derived. The broader comparison is recorded without treating the blank as zero.",
+        "A reviewed embedded-OCR ink artifact after Hutton’s Planner 1 title is excluded through a single exact before/after cell correction pinned in the reviewed layout; no global character filtering is used."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2015"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 2233999,
+            "knownCellSum": 2233997,
+            "residual": -2,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 738824600,
+          "underThresholdPay": 515424700,
+          "allEmployeesExpenses": 4845300,
+          "underThresholdExpenses": null,
+          "page": 29,
+          "cellText": {
+            "allPay": "7,388,246",
+            "underPay": "5,154,247",
+            "allExpenses": "48,453",
+            "underExpenses": null
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 29,
+              "dpi": 100,
+              "renderedSha256": "a88fcb26458a765a9f9c6a559a62fc36984bd8ce19166c6cf2bbb1609f0e4955",
+              "imageFile": "williams-lake-2015-p29.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2015.json.gzip",
+        "evidenceSha256": "5638c5b661e1b9ec4d440d9fbc85312a6bdf8121bc985c16a813600a233be75c",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "scope": "All employees including under-threshold aggregate; compared with known published named-position cohort only",
+            "printedAllEmployeeControl": 48453,
+            "knownDisclosedCohortSum": 48452,
+            "difference": -1,
+            "underThresholdComponent": null,
+            "namedOnlyControlAvailable": false
+          }
+        ]
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay -2 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing. Named employee expenses have no issuer subtotal: known disclosed cells total $48,452.00; the printed all-employee expense control is $48,453.00 (difference -1 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-williams-lake-2016",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2016",
+      "periodType": "calendar",
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2016.json.gzip",
+      "dataSha256": "e2ee19a831da57a4165078c1d191124e23b48c34cc10c550b0be9259312b2db9",
+      "sha256": "44edb38b8d51be9a6e8f42a3aeae56802e82250b7c0fca6f70c9094b1c3cf33c",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=424",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2016 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 27,
+      "totalRemuneration": 2478297,
+      "totalExpenses": 28743,
+      "pages": [
+        57
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "Total Other Employees expense control covers all employees. The under-threshold expense cell is blank, so a named-only expense control cannot be derived. The broader comparison is recorded without treating the blank as zero."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2016"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 2478293,
+            "knownCellSum": 2478297,
+            "residual": 4,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 752632000,
+          "underThresholdPay": 504802700,
+          "allEmployeesExpenses": 2874500,
+          "underThresholdExpenses": null,
+          "page": 57,
+          "cellText": {
+            "allPay": "7,526,320",
+            "underPay": "5,048,027",
+            "allExpenses": "28,745",
+            "underExpenses": null
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 57,
+              "dpi": 100,
+              "renderedSha256": "c7ae16d544ff47bb4e4f9a67635e3e8fe86c652cac88c210050f273ae4576f68",
+              "imageFile": "williams-lake-2016-p57.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2016.json.gzip",
+        "evidenceSha256": "e0eed8c68f0bd5103f2b63a3ab65deb2998c4a1207b70c81f1d6fb881a6e8d4b",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "scope": "All employees including under-threshold aggregate; compared with known published named-position cohort only",
+            "printedAllEmployeeControl": 28745,
+            "knownDisclosedCohortSum": 28743,
+            "difference": -2,
+            "underThresholdComponent": null,
+            "namedOnlyControlAvailable": false
+          }
+        ]
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay +4 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing. Named employee expenses have no issuer subtotal: known disclosed cells total $28,743.00; the printed all-employee expense control is $28,745.00 (difference -2 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-williams-lake-2017",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2017.json.gzip",
+      "dataSha256": "f5acc4717ef5708d5ff6ad378befaabf68979fa2f408d3b6344169cfbb9a42a7",
+      "sha256": "c9875e96df75f0e6f10b9c0e26df05584772c193f8093979a8c267cdb10906aa",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=473",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2017 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 34,
+      "totalRemuneration": 3342621,
+      "totalExpenses": 88727,
+      "pages": [
+        59
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "Total Other Employees expense control covers all employees. The under-threshold expense cell is blank, so a named-only expense control cannot be derived. The broader comparison is recorded without treating the blank as zero."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2017"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 3342621,
+            "knownCellSum": 3342621,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 811102400,
+          "underThresholdPay": 476840300,
+          "allEmployeesExpenses": 8872600,
+          "underThresholdExpenses": null,
+          "page": 59,
+          "cellText": {
+            "allPay": "8,111,024",
+            "underPay": "4,768,403",
+            "allExpenses": "88,726",
+            "underExpenses": null
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 59,
+              "dpi": 100,
+              "renderedSha256": "7b47d5637933a46c7e058801718cd62ddab1754ddf7bcc97fb1a9c1404568dd8",
+              "imageFile": "williams-lake-2017-p59.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2017.json.gzip",
+        "evidenceSha256": "921c873f9abf6f72d17ded35c34d604b96ff7f10acff241d43205ca8403ab523",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "scope": "All employees including under-threshold aggregate; compared with known published named-position cohort only",
+            "printedAllEmployeeControl": 88726,
+            "knownDisclosedCohortSum": 88727,
+            "difference": 1,
+            "underThresholdComponent": null,
+            "namedOnlyControlAvailable": false
+          }
+        ]
+      },
+      "publicWarning": "Named employee expenses have no issuer subtotal: known disclosed cells total $88,727.00; the printed all-employee expense control is $88,726.00 (difference +1 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-williams-lake-2018",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2018.json.gzip",
+      "dataSha256": "2495f5001a7c93d012b73061ee61f26b43b992c55c2c2ac11d041330a14f8710",
+      "sha256": "1ef62c79d3977fe0913cf4fe49b558e251818cbb06bfd094fe5db8c9ad39257b",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=502",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2018 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 29,
+      "totalRemuneration": 2785841,
+      "totalExpenses": 99118,
+      "pages": [
+        57
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "Total Other Employees expense control covers all employees. The under-threshold expense cell is blank, so a named-only expense control cannot be derived. The broader comparison is recorded without treating the blank as zero."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2018"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 2785837,
+            "knownCellSum": 2785841,
+            "residual": 4,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 792006500,
+          "underThresholdPay": 513422800,
+          "allEmployeesExpenses": 9912000,
+          "underThresholdExpenses": null,
+          "page": 57,
+          "cellText": {
+            "allPay": "7,920,065",
+            "underPay": "5,134,228",
+            "allExpenses": "99,120",
+            "underExpenses": null
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 57,
+              "dpi": 100,
+              "renderedSha256": "a704bbc2e5f299df437b824ec58894c05b232d6d3030f9610e877274d0a192d1",
+              "imageFile": "williams-lake-2018-p57.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2018.json.gzip",
+        "evidenceSha256": "754a2ab3d3072396939f6b2261bdd7f9281959e90a48facf6bbd7e77a129a638",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "scope": "All employees including under-threshold aggregate; compared with known published named-position cohort only",
+            "printedAllEmployeeControl": 99120,
+            "knownDisclosedCohortSum": 99118,
+            "difference": -2,
+            "underThresholdComponent": null,
+            "namedOnlyControlAvailable": false
+          }
+        ]
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay +4 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing. Named employee expenses have no issuer subtotal: known disclosed cells total $99,118.00; the printed all-employee expense control is $99,120.00 (difference -2 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-williams-lake-2019",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2019.json.gzip",
+      "dataSha256": "98a8fc13acc5e46b6cb58a841694779f2f9436223b328a23e281561fcf92a239",
+      "sha256": "3e732f27273e29de5de4c4cc45b5d86e0235cbf1255e50f9709793370f92cdf9",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=537",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2019 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 33,
+      "totalRemuneration": 3153276,
+      "totalExpenses": 100858,
+      "pages": [
+        32,
+        33
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "Total Other Employees expense control covers all employees. The under-threshold expense cell is blank, so a named-only expense control cannot be derived. The broader comparison is recorded without treating the blank as zero."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "Ended December 31, 2019"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 3070041,
+            "knownCellSum": 3153276,
+            "residual": 83235,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 830512200,
+          "underThresholdPay": 523508100,
+          "allEmployeesExpenses": 10085500,
+          "underThresholdExpenses": null,
+          "page": 33,
+          "cellText": {
+            "allPay": "8,305,122",
+            "underPay": "5,235,081",
+            "allExpenses": "100,855",
+            "underExpenses": null
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 32,
+              "dpi": 100,
+              "renderedSha256": "e897492be9d757d6d8c676b81f39b88e0ca525c9ea56583b6eebc349a335a342",
+              "imageFile": "williams-lake-2019-p32.png"
+            },
+            {
+              "pdfPage": 33,
+              "dpi": 100,
+              "renderedSha256": "dccd13f3813b956c9a9343eafe6b1efc6d2dcb601c232db279db251e59d80537",
+              "imageFile": "williams-lake-2019-p33.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2019.json.gzip",
+        "evidenceSha256": "8e4c960633e77695d971cfe3de416583c66f0fe9337140e116a7764dfe5329a0",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "scope": "All employees including under-threshold aggregate; compared with known published named-position cohort only",
+            "printedAllEmployeeControl": 100855,
+            "knownDisclosedCohortSum": 100858,
+            "difference": 3,
+            "underThresholdComponent": null,
+            "namedOnlyControlAvailable": false
+          }
+        ]
+      },
+      "publicWarning": "All 33 published employee rows are retained. Their remuneration sum exceeds the printed all-employee total minus the printed under-threshold remuneration by $83,235, equal to the first published employee remuneration value. The cause remains unknown; no row or monetary cell is adjusted. Known printed employee cells minus source controls: pay +83235 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing. Named employee expenses have no issuer subtotal: known disclosed cells total $100,858.00; the printed all-employee expense control is $100,855.00 (difference +3 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-williams-lake-2020",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2020.json.gzip",
+      "dataSha256": "252a609b4a5bf0053206023db2c0e81d4a3f645daefc3a270c82bcf1b7a672a0",
+      "sha256": "e0d235dc99806cbed2f3404b38f857e32c6ab03f4b8e082d433e95592f31efe9",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=552",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2020 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 36,
+      "totalRemuneration": 3385959,
+      "totalExpenses": 43117,
+      "pages": [
+        26,
+        27
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "Total Other Employees expense control covers all employees. The under-threshold expense cell is blank, so a named-only expense control cannot be derived. The broader comparison is recorded without treating the blank as zero."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2020"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 3385960,
+            "knownCellSum": 3385959,
+            "residual": -1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 823168400,
+          "underThresholdPay": 484572400,
+          "allEmployeesExpenses": 4311700,
+          "underThresholdExpenses": null,
+          "page": 27,
+          "cellText": {
+            "allPay": "8,231,684",
+            "underPay": "4,845,724",
+            "allExpenses": "43,117",
+            "underExpenses": null
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 26,
+              "dpi": 100,
+              "renderedSha256": "cc549cee3dd6096d0b0d0d6f0b7381cb9a6d6c1eb3b9d532a9c4067a679183a3",
+              "imageFile": "williams-lake-2020-p26.png"
+            },
+            {
+              "pdfPage": 27,
+              "dpi": 100,
+              "renderedSha256": "c3e1863841f3c471f31fa6d6924b920401c02118836066fe112175e7312bb735",
+              "imageFile": "williams-lake-2020-p27.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2020.json.gzip",
+        "evidenceSha256": "3763b980c16d914f7a8cc47fc0d9d4f1e43c603b30144cc2bab3c5cd40ecfc28",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "scope": "All employees including under-threshold aggregate; compared with known published named-position cohort only",
+            "printedAllEmployeeControl": 43117,
+            "knownDisclosedCohortSum": 43117,
+            "difference": 0,
+            "underThresholdComponent": null,
+            "namedOnlyControlAvailable": false
+          }
+        ]
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay -1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing. Named employee expenses have no issuer subtotal: known disclosed cells total $43,117.00; the printed all-employee expense control is $43,117.00 (difference +0 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-williams-lake-2021",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2021.json.gzip",
+      "dataSha256": "5ddb602ac43b8b5cb4eeefda67f47e5ab989c52321b87f6ded46ed14f582d1ab",
+      "sha256": "fc1fe9d6c91b1c9af860455fef54452dfabd29e1e150047003c34717e16850d6",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=577",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2021 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 37,
+      "totalRemuneration": 3489071,
+      "totalExpenses": 38493,
+      "pages": [
+        26,
+        27
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "Total Other Employees expense control covers all employees. The under-threshold expense cell is blank, so a named-only expense control cannot be derived. The broader comparison is recorded without treating the blank as zero."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2021"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 3489072,
+            "knownCellSum": 3489071,
+            "residual": -1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 850720200,
+          "underThresholdPay": 501813000,
+          "allEmployeesExpenses": 3849300,
+          "underThresholdExpenses": null,
+          "page": 27,
+          "cellText": {
+            "allPay": "8,507,202",
+            "underPay": "5,018,130",
+            "allExpenses": "38,493",
+            "underExpenses": null
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 26,
+              "dpi": 100,
+              "renderedSha256": "bb56781a51ad503d5afcaefb4f460332f15f7667f8e492a45271a899f3636ead",
+              "imageFile": "williams-lake-2021-p26.png"
+            },
+            {
+              "pdfPage": 27,
+              "dpi": 100,
+              "renderedSha256": "38fe1bc1aff351fe91d2d6fbcb8f4225743ea575d9a3f8a81dfafcd2c36e2c01",
+              "imageFile": "williams-lake-2021-p27.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2021.json.gzip",
+        "evidenceSha256": "0acfb0cd8811c2fa55b5942f4ccf73f55bc42d8fa058b621a99a0b1e8a58878e",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "scope": "All employees including under-threshold aggregate; compared with known published named-position cohort only",
+            "printedAllEmployeeControl": 38493,
+            "knownDisclosedCohortSum": 38493,
+            "difference": 0,
+            "underThresholdComponent": null,
+            "namedOnlyControlAvailable": false
+          }
+        ]
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay -1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing. Named employee expenses have no issuer subtotal: known disclosed cells total $38,493.00; the printed all-employee expense control is $38,493.00 (difference +0 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-williams-lake-2022",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2022.json.gzip",
+      "dataSha256": "761c9d4fc6442b3543a706beb71878b2ae6d0b43c3744e50aa9802a6c5468ccd",
+      "sha256": "2eac911cad3bdb0ceabf7bb1ef28ab879beebeefddbe62161c97f3faeac34b6f",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=607",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2022 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 41,
+      "totalRemuneration": 3820065,
+      "totalExpenses": 85057,
+      "pages": [
+        27,
+        28
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "Total Other Employees expense control covers all employees. The under-threshold expense cell is blank, so a named-only expense control cannot be derived. The broader comparison is recorded without treating the blank as zero."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2022"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 3820066,
+            "knownCellSum": 3820065,
+            "residual": -1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 867162300,
+          "underThresholdPay": 485155700,
+          "allEmployeesExpenses": 8505700,
+          "underThresholdExpenses": null,
+          "page": 28,
+          "cellText": {
+            "allPay": "8,671,623",
+            "underPay": "4,851,557",
+            "allExpenses": "85,057",
+            "underExpenses": null
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 27,
+              "dpi": 100,
+              "renderedSha256": "550acc5f8927e888bf40002c5249fffcc69cd2b831960065378a3338e53cd0fb",
+              "imageFile": "williams-lake-2022-p27.png"
+            },
+            {
+              "pdfPage": 28,
+              "dpi": 100,
+              "renderedSha256": "b0d756d55dd2fb066d7815c05e1ca33ab3921bd2ff43f6fec2aeba8426889be7",
+              "imageFile": "williams-lake-2022-p28.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2022.json.gzip",
+        "evidenceSha256": "940e0144027cae73921534c39c5d9ac9437ee972f31d45c269d82afe076dc5c9",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "scope": "All employees including under-threshold aggregate; compared with known published named-position cohort only",
+            "printedAllEmployeeControl": 85057,
+            "knownDisclosedCohortSum": 85057,
+            "difference": 0,
+            "underThresholdComponent": null,
+            "namedOnlyControlAvailable": false
+          }
+        ]
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay -1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing. Named employee expenses have no issuer subtotal: known disclosed cells total $85,057.00; the printed all-employee expense control is $85,057.00 (difference +0 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-williams-lake-2023",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "williams-lake-2023.json.gzip",
+      "dataSha256": "fcac1befca874f83d2c2dcf5ec05166af13f64f889be9819d1bb3fbc3f4d88f4",
+      "sha256": "11029c674b2a9eadb99155d0df53e86a255371ef5e00905fd1abf49476667f2f",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=630",
+      "sourceIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "title": "City of Williams Lake 2023 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 46,
+      "totalRemuneration": 4572642,
+      "totalExpenses": 107140,
+      "pages": [
+        28,
+        29
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published Other Employees table is retained. Remuneration uses its published pay column and expenses remain separate; this disclosure is not an employee roster or an annual base-salary table.",
+        "Names and positions remain as printed; no identity or title is inferred from another year. Expense dashes and blanks stay missing; explicit zero stays zero. Council and under-threshold aggregates are outside this employee cohort. No compiled rows are deleted.",
+        "The source control label varies between remuneration and remuneration-plus-expenses; no stricter equality comparator is inferred. Published named remuneration below $75,000, where present, is retained as a source exception.",
+        "Total Other Employees expense control covers all employees. The under-threshold expense cell is blank, so a named-only expense control cannot be derived. The broader comparison is recorded without treating the blank as zero."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 4572644,
+            "knownCellSum": 4572642,
+            "residual": -2,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "allEmployeesPay": 922142900,
+          "underThresholdPay": 464878500,
+          "allEmployeesExpenses": 10713900,
+          "underThresholdExpenses": null,
+          "page": 29,
+          "cellText": {
+            "allPay": "9,221,429",
+            "underPay": "4,648,785",
+            "allExpenses": "107,139",
+            "underExpenses": null
+          }
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 28,
+              "dpi": 100,
+              "renderedSha256": "c9be3413361dc3271141dff0153f31354b483c5bda294e676f87008dcc09c44a",
+              "imageFile": "williams-lake-2023-p28.png"
+            },
+            {
+              "pdfPage": 29,
+              "dpi": 100,
+              "renderedSha256": "6e8709cbf66f16d20f29d5c08dc02de0e31eba3c3983db4b0fd69c3049034ae4",
+              "imageFile": "williams-lake-2023-p29.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/williams-lake-2023.json.gzip",
+        "evidenceSha256": "e73ed7f6d1015a7d5792f103e974b464a20634cf6be327c149bd5cec292fac17",
+        "namedExpenseControlAvailable": false,
+        "broaderControlComparisons": [
+          {
+            "field": "expenses",
+            "scope": "All employees including under-threshold aggregate; compared with known published named-position cohort only",
+            "printedAllEmployeeControl": 107139,
+            "knownDisclosedCohortSum": 107140,
+            "difference": 1,
+            "underThresholdComponent": null,
+            "namedOnlyControlAvailable": false
+          }
+        ]
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay -2 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing. Named employee expenses have no issuer subtotal: known disclosed cells total $107,140.00; the printed all-employee expense control is $107,139.00 (difference +1 CAD). The under-threshold expense cell is blank, so the scope differs and no named-only reconciliation or zero under-threshold amount is inferred.",
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-nrrm-2015",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2015",
+      "periodType": "calendar",
+      "periodStart": "2015-01-01",
+      "periodEnd": "2015-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "nrrm-2015.json.gzip",
+      "dataSha256": "54375e6387b6e81fa7b21279de8d57d0383a8324a7af22123038529fce471dfe",
+      "sha256": "b65136ff68e97b392bfd3cd8dc5720a3dd9fa009a24330aa9e7b5f49275ffcc7",
+      "sourceUrl": "https://nr.civicweb.net/document/112816",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2015 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 47,
+      "totalRemuneration": 5295563,
+      "totalExpenses": 140547,
+      "pages": [
+        4,
+        5
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The source second column is Department, not position. Normalized position remains null; published departments remain in supporting evidence.",
+        "Remuneration is the actual published payment disclosure, not an annual salary rate. Expenses remain separate. Printed expense blanks/dashes stay missing; numeric zero remains zero.",
+        "Council, supplier and under-threshold aggregate rows are outside this employee cohort. No compiled labels are changed or records deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2015"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 5295563,
+            "knownCellSum": 5295563,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 140547,
+            "knownCellSum": 140547,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 5,
+          "basis": "Printed SUB TOTAL of named employees, excluding council and under-threshold aggregates"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "0f646d6168622fa69d23c90f798cdfc466dd3fc1e73160f7f81da35e128ed173",
+              "imageFile": "nrrm-2015-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "db4deb094ae3db4386024553ffaeb319d703b2739870917679203f4dd214bcbe",
+              "imageFile": "nrrm-2015-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/nrrm-2015.json.gzip",
+        "evidenceSha256": "cf98c6df6933256c43cb57fb6189154edad64127c931d1286a41f69e955d18b5",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing."
+    },
+    {
+      "id": "history-north-nrrm-2017",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "nrrm-2017.json.gzip",
+      "dataSha256": "4b90b024c106f63ddf7c76649d589213104f5e03a50a83d12e43a8a2307639ca",
+      "sha256": "c830093e95ddb0d52abbad83b2c5db016e399ca9ddd65016289726bf90dad6ac",
+      "sourceUrl": "https://nr.civicweb.net/document/137274",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2017 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 46,
+      "totalRemuneration": 4925167,
+      "totalExpenses": 76057,
+      "pages": [
+        4,
+        5
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The source second column is Department, not position. Normalized position remains null; published departments remain in supporting evidence.",
+        "Remuneration is the actual published payment disclosure, not an annual salary rate. Expenses remain separate. Printed expense blanks/dashes stay missing; numeric zero remains zero.",
+        "Council, supplier and under-threshold aggregate rows are outside this employee cohort. No compiled labels are changed or records deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2017"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 4925167,
+            "knownCellSum": 4925167,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 76057,
+            "knownCellSum": 76057,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 5,
+          "basis": "Printed SUB TOTAL of named employees, excluding council and under-threshold aggregates"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "3c25764c4f35c4c8a2dd4aad7b8b1a609bc7f448d23c66a6bfe39ff411943a07",
+              "imageFile": "nrrm-2017-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "8d38dd3c5e8ca8f5e0b2cec6ab16ed0b5ec6eec1c09ceca0f1c69a71b91c283d",
+              "imageFile": "nrrm-2017-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/nrrm-2017.json.gzip",
+        "evidenceSha256": "32a8ef888a3c95bf592868c1c4ab5e5e97bb89b7045964b9e46ec4c8b15635c0",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing."
+    },
+    {
+      "id": "history-north-nrrm-2019",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "nrrm-2019.json.gzip",
+      "dataSha256": "f042fafded19847fa7fc7fe0a0941458a659a3bba16b22f5daba0ea1509175b8",
+      "sha256": "fe4d3b6b6ef45f60f6c9af52efd628926f7dfcbf50f2dc639ed18a453f2a02e5",
+      "sourceUrl": "https://nr.civicweb.net/document/166813",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2019 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 45,
+      "totalRemuneration": 5029165,
+      "totalExpenses": 102278,
+      "pages": [
+        4,
+        5
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The source second column is Department, not position. Normalized position remains null; published departments remain in supporting evidence.",
+        "Remuneration is the actual published payment disclosure, not an annual salary rate. Expenses remain separate. Printed expense blanks/dashes stay missing; numeric zero remains zero.",
+        "Council, supplier and under-threshold aggregate rows are outside this employee cohort. No compiled labels are changed or records deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2019"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 5029166,
+            "knownCellSum": 5029165,
+            "residual": -1,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 102278,
+            "knownCellSum": 102278,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 5,
+          "basis": "Printed SUB TOTAL of named employees, excluding council and under-threshold aggregates"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "0c994348b7be93cc030b16260ed1027e9cd22c16a7fb596c7e1f7af4f6bcd883",
+              "imageFile": "nrrm-2019-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "3047cc7f95a0ae5a06662576a2e5af5fda12f002346286ac05e28d5534faf9cc",
+              "imageFile": "nrrm-2019-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/nrrm-2019.json.gzip",
+        "evidenceSha256": "6402bb7710f984b84835dc362a951311d3c9c76f27733b3fa6bd526960fc3711",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay -1 CAD; expenses +0 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing."
+    },
+    {
+      "id": "history-north-nrrm-2020",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "nrrm-2020.json.gzip",
+      "dataSha256": "e4177a3d5c230476537a1e79af6ded7b428145d97139e0f893a44ae3c9f475b0",
+      "sha256": "f915eeace78ce6ef3c1d2443d30424d94a483b0132fcbbdd54873e27dae25d01",
+      "sourceUrl": "https://nr.civicweb.net/document/178261",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2020 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 49,
+      "totalRemuneration": 5278107,
+      "totalExpenses": 6022,
+      "pages": [
+        4,
+        5
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The source second column is Department, not position. Normalized position remains null; published departments remain in supporting evidence.",
+        "Remuneration is the actual published payment disclosure, not an annual salary rate. Expenses remain separate. Printed expense blanks/dashes stay missing; numeric zero remains zero.",
+        "Council, supplier and under-threshold aggregate rows are outside this employee cohort. No compiled labels are changed or records deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2020"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 5278108,
+            "knownCellSum": 5278107,
+            "residual": -1,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 6022,
+            "knownCellSum": 6022,
+            "residual": 0,
+            "missingCells": 40
+          }
+        ],
+        "printedControlCells": {
+          "page": 5,
+          "basis": "Printed SUB TOTAL of named employees, excluding council and under-threshold aggregates"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "f8aaac08997659253ad763b649edf42fadccc35bbfd6703bdada4c59b368fa22",
+              "imageFile": "nrrm-2020-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "7f5af261ea0f35ef4163606ba6cbb7b57e5ae1762d86c0e6ec1bce4e6024057d",
+              "imageFile": "nrrm-2020-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/nrrm-2020.json.gzip",
+        "evidenceSha256": "d31c3bbc8e80977c300f28912ee3b76914e27d0d7b5d886ed842bd6421ab2a4c",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay -1 CAD; expenses +0 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing."
+    },
+    {
+      "id": "history-north-nrrm-2021",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "nrrm-2021.json.gzip",
+      "dataSha256": "be0be7812d4d8a37d6e041e3fcbdf661ead6452aa4930fee7d7cb027de10c414",
+      "sha256": "91751d274e4ecdc01893550a810c9a41592ff68d89770c23d1d08aa02e619a0a",
+      "sourceUrl": "https://nr.civicweb.net/document/191213",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2021 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 51,
+      "totalRemuneration": 5405341,
+      "totalExpenses": 5747,
+      "pages": [
+        4,
+        5
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The source second column is Department, not position. Normalized position remains null; published departments remain in supporting evidence.",
+        "Remuneration is the actual published payment disclosure, not an annual salary rate. Expenses remain separate. Printed expense blanks/dashes stay missing; numeric zero remains zero.",
+        "Council, supplier and under-threshold aggregate rows are outside this employee cohort. No compiled labels are changed or records deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2021"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 5405339,
+            "knownCellSum": 5405341,
+            "residual": 2,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 5747,
+            "knownCellSum": 5747,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 5,
+          "basis": "Printed SUB TOTAL of named employees, excluding council and under-threshold aggregates"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "a69fb80f673d0882ecdb75af1a43a5137d471e58a558df3505b82d5bf17e90fe",
+              "imageFile": "nrrm-2021-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "ae716d584a142cdb6eb187519083347c82841e3a53bf5aad28dc31f7c2666331",
+              "imageFile": "nrrm-2021-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/nrrm-2021.json.gzip",
+        "evidenceSha256": "9c3f17e16139fb0aed7033c993982bfca3cae378d9aa6bcc279c12c82574f940",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay +2 CAD; expenses +0 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing."
+    },
+    {
+      "id": "history-north-nrrm-2022",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "nrrm-2022.json.gzip",
+      "dataSha256": "9c9037992c4484309dded08f5090249d17bb24b1ddb80698271a08d42f0f918a",
+      "sha256": "4339fd6868ee8daadfe3c012c1a9a96a04adb6284e91041a0312f9e9f2b35c5e",
+      "sourceUrl": "https://nr.civicweb.net/document/207831",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2022 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 50,
+      "totalRemuneration": 5655809,
+      "totalExpenses": 90179,
+      "pages": [
+        4,
+        5
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The source second column is Department, not position. Normalized position remains null; published departments remain in supporting evidence.",
+        "Remuneration is the actual published payment disclosure, not an annual salary rate. Expenses remain separate. Printed expense blanks/dashes stay missing; numeric zero remains zero.",
+        "Council, supplier and under-threshold aggregate rows are outside this employee cohort. No compiled labels are changed or records deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2022"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 5655811,
+            "knownCellSum": 5655809,
+            "residual": -2,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 90180,
+            "knownCellSum": 90179,
+            "residual": -1,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 5,
+          "basis": "Printed SUB TOTAL of named employees, excluding council and under-threshold aggregates"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "68c62d4c48904d45230902f5547958594043130d365c97cdbce4ba75d81643e5",
+              "imageFile": "nrrm-2022-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "4b05eadc96bbf64059b4f34c3fbd4700e2449886566c74693bebe73ac2a0973d",
+              "imageFile": "nrrm-2022-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/nrrm-2022.json.gzip",
+        "evidenceSha256": "9871551ca9261326918cd7807d5c7129aa281b0b04d33a01bdf22cc6cc4284c7",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay -2 CAD; expenses -1 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing."
+    },
+    {
+      "id": "history-north-nrrm-2023",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "employerName": "Northern Rockies Regional Municipality",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "nrrm-2023.json.gzip",
+      "dataSha256": "f5730564625a74c92cf92e899cebff4add35582b5d7f94c7e62c10f74acb1ccd",
+      "sha256": "b759fd2bc1ef42b550b6639d237a6a3312921b9e7869f7abef44cde18a114d95",
+      "sourceUrl": "https://nr.civicweb.net/document/215666",
+      "sourceIndexUrl": "https://nr.civicweb.net/filepro/documents/84000/",
+      "title": "Northern Rockies Regional Municipality 2023 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 51,
+      "totalRemuneration": 6119918,
+      "totalExpenses": 74773,
+      "pages": [
+        4,
+        5
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The source second column is Department, not position. Normalized position remains null; published departments remain in supporting evidence.",
+        "Remuneration is the actual published payment disclosure, not an annual salary rate. Expenses remain separate. Printed expense blanks/dashes stay missing; numeric zero remains zero.",
+        "Council, supplier and under-threshold aggregate rows are outside this employee cohort. No compiled labels are changed or records deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 6119919,
+            "knownCellSum": 6119918,
+            "residual": -1,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 74775,
+            "knownCellSum": 74773,
+            "residual": -2,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 5,
+          "basis": "Printed SUB TOTAL of named employees, excluding council and under-threshold aggregates"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "3d27efb64b40d7133fb3d1fbfb2fc39f4568b3f475ecadfd5c0bd714fff42ef0",
+              "imageFile": "nrrm-2023-p4.png"
+            },
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "d9d6190188e387efce926b8310e691d96029c7e8207a84f5e042bd11a330f565",
+              "imageFile": "nrrm-2023-p5.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/nrrm-2023.json.gzip",
+        "evidenceSha256": "57f71577bc36317459a541aa8fac22b666316bb93cc1e04c12bf6e4d70eed8a3",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "publicWarning": "Known printed employee cells minus source controls: pay -1 CAD; expenses -2 CAD. Published values are unchanged and the cause remains unconfirmed. Expense dashes stay missing.",
+      "scopeDescription": "Complete named employee remuneration schedule above the printed $75,000 threshold. The second text column is Department; departments are retained as evidence and position remains missing."
+    },
+    {
+      "id": "history-north-dawson-creek-2017",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "dawson-creek-2017.json.gzip",
+      "dataSha256": "8084ae8e769d6e052f11fe176c4ec144088f9ae65dbf932174f3c95ea252299b",
+      "sha256": "45e6a3bd5b7a4d0d4ff159a713b7f0c461dc55e6d52f5a5d235bd34b6c27d99f",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135365",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2017 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 54,
+      "totalRemuneration": 5723190.83,
+      "totalExpenses": 92628.18,
+      "pages": [
+        5,
+        6
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published named employee schedule is retained as printed; surname/given-name fields are joined in their source order without inserting punctuation. Positions are published titles, not copied from other years.",
+        "The printed control describes employees with remuneration and expenses exceeding $75,000; it is not silently restated as a remuneration-only selection rule. All below-threshold named exceptions remain as published.",
+        "Remuneration uses the published pay column; expenses and any expense-inclusive totals remain separate. Dashes and blanks stay missing; explicit zero stays zero. No compiled records are deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "Ended December 31, 2017"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 5723190.83,
+            "knownCellSum": 5723190.83,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 92628.18,
+            "knownCellSum": 92628.18,
+            "residual": 0,
+            "missingCells": 23
+          }
+        ],
+        "printedControlCells": {
+          "page": 6,
+          "basis": "Direct published named employee subtotal"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 5,
+              "dpi": 100,
+              "renderedSha256": "d2c835611c54d0f9cf326daaf799ef60159d5bbd72ff4a43f1ff240a8077a0ef",
+              "imageFile": "dawson-creek-2017-p5.png"
+            },
+            {
+              "pdfPage": 6,
+              "dpi": 100,
+              "renderedSha256": "28dc3c925600dc71e0dfee1348bd8610e5dcdee9b0214e45f9e90ec9c190528a",
+              "imageFile": "dawson-creek-2017-p6.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/dawson-creek-2017.json.gzip",
+        "evidenceSha256": "107f30e6303a35d56635fe9904786f6a1197453fd102126800308997e20effab",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-dawson-creek-2019",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "dawson-creek-2019.json.gzip",
+      "dataSha256": "4e08311db7a7279c4b584e308cdfac00817b54df9b7fd92af617f2895bb7e33c",
+      "sha256": "54ecac47ca549498c48654538b486658f632ef252f28c5f0037a76ce3b5e4b61",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135367",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2019 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 69,
+      "totalRemuneration": 7375445.18,
+      "totalExpenses": 120851.02,
+      "pages": [
+        38,
+        39
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published named employee schedule is retained as printed; surname/given-name fields are joined in their source order without inserting punctuation. Positions are published titles, not copied from other years.",
+        "The printed control describes employees with remuneration and expenses exceeding $75,000; it is not silently restated as a remuneration-only selection rule. All below-threshold named exceptions remain as published.",
+        "Remuneration uses the published pay column; expenses and any expense-inclusive totals remain separate. Dashes and blanks stay missing; explicit zero stays zero. No compiled records are deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2019"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 7375445.18,
+            "knownCellSum": 7375445.18,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 120851.02,
+            "knownCellSum": 120851.02,
+            "residual": 0,
+            "missingCells": 25
+          }
+        ],
+        "printedControlCells": {
+          "page": 39,
+          "basis": "Direct published named employee subtotal"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 38,
+              "dpi": 100,
+              "renderedSha256": "365825e673cb36315db2fcf108b15d1848aeabb8337fc8323d6b13faced2d123",
+              "imageFile": "dawson-creek-2019-p38.png"
+            },
+            {
+              "pdfPage": 39,
+              "dpi": 100,
+              "renderedSha256": "b8cf7051301065e84defe5e3b230795dcf83261adb4ee8f2a2871a9effd89a9d",
+              "imageFile": "dawson-creek-2019-p39.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/dawson-creek-2019.json.gzip",
+        "evidenceSha256": "96e3d3c6f55ff08d0048eb3dca288dbe0622717955f18960e9da194b5c4cb18f",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-dawson-creek-2020",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "dawson-creek-2020.json.gzip",
+      "dataSha256": "2f4714781a0cc7509dfb5caa4db8cd8d74aa9032cdfc3118f7b072a78680e51d",
+      "sha256": "a39b3dfbb0814c73ad873dabdc2844de8837132c5ff9fee905ad2491c42c9720",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135368",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2020 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 55,
+      "totalRemuneration": 6052716.21,
+      "totalExpenses": 44969.73,
+      "pages": [
+        39,
+        40
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published named employee schedule is retained as printed; surname/given-name fields are joined in their source order without inserting punctuation. Positions are published titles, not copied from other years.",
+        "The printed control describes employees with remuneration and expenses exceeding $75,000; it is not silently restated as a remuneration-only selection rule. All below-threshold named exceptions remain as published.",
+        "Remuneration uses the published pay column; expenses and any expense-inclusive totals remain separate. Dashes and blanks stay missing; explicit zero stays zero. No compiled records are deleted.",
+        "The employee schedule expressly says Fiscal Year Ended December 31, 2020. A stale 2019 heading on the later reconciliation is not used to relabel this actual 2020 schedule."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2020"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 6052716.21,
+            "knownCellSum": 6052716.21,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 44969.73,
+            "knownCellSum": 44969.73,
+            "residual": 0,
+            "missingCells": 28
+          }
+        ],
+        "printedControlCells": {
+          "page": 40,
+          "basis": "Direct published named employee subtotal"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 39,
+              "dpi": 100,
+              "renderedSha256": "bf09f562829f518b15f5b8c03a194e4e8e4fbf19d7c65f3cfb07cc1f3775058b",
+              "imageFile": "dawson-creek-2020-p39.png"
+            },
+            {
+              "pdfPage": 40,
+              "dpi": 100,
+              "renderedSha256": "656a3bf380ab4d6f9dda12b7395e9d03dd1800747e02083deed7cab92f681af3",
+              "imageFile": "dawson-creek-2020-p40.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/dawson-creek-2020.json.gzip",
+        "evidenceSha256": "336c8383a85557a82739fc36bac2ae236284b7d8306677a185efc30818b13a47",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-dawson-creek-2021",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "dawson-creek-2021.json.gzip",
+      "dataSha256": "7e27bb96023f0c66f12ce852326af73cc6f32b21faa32882886a9a03a59b5823",
+      "sha256": "1e1427d8283e9f0c6aed1ff33ea497418029b5de58648ee60f8bd3f97a04d05a",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135369",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2021 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 44,
+      "totalRemuneration": 4990446.34,
+      "totalExpenses": 34279.28,
+      "pages": [
+        37
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published named employee schedule is retained as printed; surname/given-name fields are joined in their source order without inserting punctuation. Positions are published titles, not copied from other years.",
+        "The printed control describes employees with remuneration and expenses exceeding $75,000; it is not silently restated as a remuneration-only selection rule. All below-threshold named exceptions remain as published.",
+        "Remuneration uses the published pay column; expenses and any expense-inclusive totals remain separate. Dashes and blanks stay missing; explicit zero stays zero. No compiled records are deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2021"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 4990446.34,
+            "knownCellSum": 4990446.34,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 34279.28,
+            "knownCellSum": 34279.28,
+            "residual": 0,
+            "missingCells": 7
+          }
+        ],
+        "printedControlCells": {
+          "page": 37,
+          "basis": "Direct published named employee subtotal"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 37,
+              "dpi": 100,
+              "renderedSha256": "0889f8d22f4845c7c5c0bd755c2e0d19fd78db32ec3173c866759f4ee78a1ae1",
+              "imageFile": "dawson-creek-2021-p37.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/dawson-creek-2021.json.gzip",
+        "evidenceSha256": "c2226c9cb9f334118d928d06dd68bb6694a66145f4f210ae3a9ad42e8076388e",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-dawson-creek-2022",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "dawson-creek-2022.json.gzip",
+      "dataSha256": "25c3f48dded49f549a0038b568dabd63f40d959200659610912adcbb0e524631",
+      "sha256": "ad5af65948a7be0ee4bc103be085ec1d8b97248f2d1a8fbf5223c0829ae00417",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135370",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2022 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 68,
+      "totalRemuneration": 7453472.36,
+      "totalExpenses": 79838.82,
+      "pages": [
+        35,
+        36
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published named employee schedule is retained as printed; surname/given-name fields are joined in their source order without inserting punctuation. Positions are published titles, not copied from other years.",
+        "The printed control describes employees with remuneration and expenses exceeding $75,000; it is not silently restated as a remuneration-only selection rule. All below-threshold named exceptions remain as published.",
+        "Remuneration uses the published pay column; expenses and any expense-inclusive totals remain separate. Dashes and blanks stay missing; explicit zero stays zero. No compiled records are deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2022"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 7453472.36,
+            "knownCellSum": 7453472.36,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 79838.82,
+            "knownCellSum": 79838.82,
+            "residual": 0,
+            "missingCells": 9
+          }
+        ],
+        "printedControlCells": {
+          "page": 36,
+          "basis": "Direct published named employee subtotal"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 35,
+              "dpi": 100,
+              "renderedSha256": "375f51cc60d40518a6db4e1dfe5ad875ec22dfb235f5abd604551800c67df487",
+              "imageFile": "dawson-creek-2022-p35.png"
+            },
+            {
+              "pdfPage": 36,
+              "dpi": 100,
+              "renderedSha256": "e95951a4cd2be277a3e1254882cca4e31a598684911611478054487a942552d4",
+              "imageFile": "dawson-creek-2022-p36.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/dawson-creek-2022.json.gzip",
+        "evidenceSha256": "5b2f367696112e76198962d34cffad83b6fe65e6b12df1f9768f26ddca7309dc",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-dawson-creek-2023",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "dawson-creek-2023.json.gzip",
+      "dataSha256": "e80855521e1002142a13a80a328eaf790e53572bc2146b50c0e4d6d4aa73bd97",
+      "sha256": "d293908dfee2c32639612b8da246e29c274377e6dd345cb4b92d44e3529f6ef8",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/144371",
+      "sourceIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "title": "City of Dawson Creek 2023 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 72,
+      "totalRemuneration": 7896219.73,
+      "totalExpenses": 149788.25,
+      "pages": [
+        38,
+        39
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The complete published named employee schedule is retained as printed; surname/given-name fields are joined in their source order without inserting punctuation. Positions are published titles, not copied from other years.",
+        "The printed control describes employees with remuneration and expenses exceeding $75,000; it is not silently restated as a remuneration-only selection rule. All below-threshold named exceptions remain as published.",
+        "Remuneration uses the published pay column; expenses and any expense-inclusive totals remain separate. Dashes and blanks stay missing; explicit zero stays zero. No compiled records are deleted."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "ended December 31, 2023"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 7896219.73,
+            "knownCellSum": 7896219.73,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 149788.25,
+            "knownCellSum": 149788.25,
+            "residual": 0,
+            "missingCells": 16
+          }
+        ],
+        "printedControlCells": {
+          "page": 39,
+          "basis": "Direct published named employee subtotal"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 38,
+              "dpi": 100,
+              "renderedSha256": "69196b36ff24e77599700d72385cbb0ed838695f8c8175d0773d29cb59e293aa",
+              "imageFile": "dawson-creek-2023-p38.png"
+            },
+            {
+              "pdfPage": 39,
+              "dpi": 100,
+              "renderedSha256": "d57bdea9b1e0f7a804b7798a0935d73eaa5ac43f5b25b243b5deacf4d18994ae",
+              "imageFile": "dawson-creek-2023-p39.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/dawson-creek-2023.json.gzip",
+        "evidenceSha256": "b28b02c2caf40d3c05baa27744cefa5f6f6c313c00063c7dde02a466370abda9",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-chetwynd-2018",
+      "employerSlug": "district-of-chetwynd",
+      "employerName": "District of Chetwynd",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "chetwynd-2018.json.gzip",
+      "dataSha256": "99c3120a0c725fa15c875b42fd7659b7cde89ff4f32abd2014291eb8261a2a1c",
+      "sha256": "a54286a71a534a8da8844719cace04426720c3669ef939328eddce65a8b52d2f",
+      "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2019/06/SOFI-December-31-2018.pdf",
+      "sourceIndexUrl": "https://www.gochetwynd.com/municipal-office/documents-and-publications/",
+      "title": "District of Chetwynd 2018 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 11,
+      "totalRemuneration": 1091169,
+      "totalExpenses": 52231,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The employee subsection of the council/employee SOFI page is separate from elected officials. Wrapped job titles stay with their printed employee.",
+        "Named heading Other Employees and aggregate Employees less than $75,000 do not specify the equality boundary. The original published named schedule is retained without inferring that boundary.",
+        "Remuneration and expenses remain separate. All published text is preserved; dashes remain missing, explicit zeros remain zero and no compiled rows are removed."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "For the Year Ended December 31, 2018"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 1091169,
+            "knownCellSum": 1091169,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 52231,
+            "knownCellSum": 52231,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 3,
+          "basis": "Direct named employee component subtotal"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 3,
+              "dpi": 100,
+              "renderedSha256": "1e2cf9ec64addacad48ed0d12cfe8771ce9a82483ddb84df34f00e0295bc7018",
+              "imageFile": "chetwynd-2018-p3.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/chetwynd-2018.json.gzip",
+        "evidenceSha256": "d1bff7f4b5f8c16d7c8d9e3ff62b2ea2a9e58206de925508627e8d02d91ccbc4",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    },
+    {
+      "id": "history-north-chetwynd-2019",
+      "employerSlug": "district-of-chetwynd",
+      "employerName": "District of Chetwynd",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "file": "chetwynd-2019.json.gzip",
+      "dataSha256": "30ac3129d2b74a2aef671fa6658912142c0e2420ea4482675494182ea61eb297",
+      "sha256": "515611997178cda7554e0a8f99756ff7a6ba0f4a55db7630f1fb25103768d636",
+      "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2020/06/SOFI-December-31-2019.pdf",
+      "sourceIndexUrl": "https://www.gochetwynd.com/municipal-office/documents-and-publications/",
+      "title": "District of Chetwynd 2019 SOFI employee schedule",
+      "status": "accepted",
+      "rowCount": 15,
+      "totalRemuneration": 1455077,
+      "totalExpenses": 61019,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "sourceScopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table.",
+      "completeEmployeeSchedule": true,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "verifiedOn": "2026-10-31",
+      "notes": [
+        "The employee subsection of the council/employee SOFI page is separate from elected officials. Wrapped job titles stay with their printed employee.",
+        "Named heading Other Employees and aggregate Employees less than $75,000 do not specify the equality boundary. The original published named schedule is retained without inferring that boundary.",
+        "Remuneration and expenses remain separate. All published text is preserved; dashes remain missing, explicit zeros remain zero and no compiled rows are removed."
+      ],
+      "validation": {
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "everyRowFieldAgreement": true,
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "For the Year Ended December 31, 2019"
+          }
+        ],
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 1455077,
+            "knownCellSum": 1455077,
+            "residual": 0,
+            "missingCells": 0
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 61019,
+            "knownCellSum": 61019,
+            "residual": 0,
+            "missingCells": 0
+          }
+        ],
+        "printedControlCells": {
+          "page": 4,
+          "basis": "Direct named employee component subtotal"
+        },
+        "renderedEdgesAndControlsReviewed": {
+          "reviewed": true,
+          "allTablePagesRendered": true,
+          "pages": [
+            {
+              "pdfPage": 4,
+              "dpi": 100,
+              "renderedSha256": "772a93149a009cf49c922ede5cef73c3b323a3c9d3f7b2943aa92c34829cad6f",
+              "imageFile": "chetwynd-2019-p4.png"
+            }
+          ],
+          "reviewFile": "../municipal-history-pass/north/rendered-review.json",
+          "focus": "Actual calendar heading, scope boundary, every published row, first/last rows, wrapped titles, printed controls, source column definitions and blank versus numeric expense cells."
+        },
+        "evidenceFile": "evidence/chetwynd-2019.json.gzip",
+        "evidenceSha256": "b074c09d7ade2553490ca475b63ee47864558af1ec83f329abad167669889bd7",
+        "namedExpenseControlAvailable": true,
+        "broaderControlComparisons": []
+      },
+      "scopeDescription": "Complete published employee schedule; this threshold disclosure is not a workforce roster or an annual salary-rate table."
+    }
+  ]
+}
