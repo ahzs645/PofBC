@@ -20,6 +20,7 @@ import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } fro
 import { keyedTitles, titleMatcher } from './positions.js'
 import { formatMoney as money } from './money.js'
 import { PeriodRange, YearStrip } from './parts.jsx'
+import { MobileSalaryFilters, SalarySearchField, SalarySectorChips } from './MobileFilters.jsx'
 import { salaryYearRange, salaryYearValue } from './viewState.js'
 import { Segmented } from '../site/Segmented.jsx'
 import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Browse.jsx'
@@ -314,34 +315,14 @@ export const SalariesView = ({ onOpenGovernment }) => {
         </dl>
       </section>
 
-      <div className="salaries__search">
-        <span className="salaries__field">
-          <input
-            type="search"
-            value={query}
-            placeholder="A name, an employer or a position, like “Smith, J”, “Transit” or “Nurse”"
-            aria-label="Search a name, an employer or a position"
-            aria-describedby="salaries-name-help"
-            onChange={(event) => search(event.target.value)}
-          />
-          <span className="salaries__tip">
-            <button type="button" className="salaries__tip-button" aria-label="How names are searched" aria-describedby="salaries-name-help">i</button>
-            <span role="tooltip" id="salaries-name-help" className="salaries__tip-text">
-              A name is read surname first, then the other way round. A comma fixes where given names begin, as in “Van der Meer, J”.
-            </span>
-          </span>
-        </span>
-        <PeriodRange years={years} counts={periodCounts} value={range} onChange={setRange} />
+      <div className="salaries__desktop-filters">
+        <div className="salaries__search">
+          <SalarySearchField value={query} onChange={search} />
+          <PeriodRange years={years} counts={periodCounts} value={range} onChange={setRange} />
+        </div>
+        <SalarySectorChips sectors={sectors} employers={employersIndex.employers} value={sector} onChange={setSector} />
       </div>
-
-      <div className="salaries__chips" role="group" aria-label="Sector">
-        <button type="button" aria-pressed={sector === 'all'} onClick={() => setSector('all')}>All sectors</button>
-        {sectors.map((name) => (
-          <button key={name} type="button" aria-pressed={sector === name} onClick={() => setSector(sector === name ? 'all' : name)}>
-            {name} <span>{employersIndex.employers.filter((entry) => entry.sector === name).length}</span>
-          </button>
-        ))}
-      </div>
+      <MobileSalaryFilters query={query} onSearch={search} years={years} counts={periodCounts} range={range} onRange={setRange} sectors={sectors} employers={employersIndex.employers} sector={sector} onSector={setSector} />
 
       {typed && (
         <>
