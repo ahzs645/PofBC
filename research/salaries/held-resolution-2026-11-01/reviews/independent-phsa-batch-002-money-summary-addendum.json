@@ -1,0 +1,21 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reason": "The frozen resolution receipt correctly resolves all target fields, but its informational candidateMoneyCorrections empty array was not populated from the actual candidate comparison. This addendum corrects that summary only. No original transcript, resolution value, OCR evidence or source payload is changed.",
+  "supersedesInformationalField": "independent-phsa-batch-002-resolutions.json:candidateMoneyCorrections",
+  "candidateMoneyCorrections": [
+    {
+      "physicalPage": 51,
+      "sourceRowOnPage": 39,
+      "field": "expenses",
+      "before": null,
+      "after": 7487
+    },
+    {
+      "physicalPage": 58,
+      "sourceRowOnPage": 9,
+      "field": "expenses",
+      "before": null,
+      "after": 2717
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "reviewed": "2026-11-01",
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "held-resolution-schools-sd10-2025-trustees",
+      "employerSlug": "school-district-10",
+      "employerName": "School District No. 10 (Arrow Lakes)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 10 (Arrow Lakes), salary schedule year ended June 30, 2025: trustees",
+      "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2026/01/SD10-2024-2025-SOFI-sv-1.pdf",
+      "sourceIndexUrl": "https://sd10.bc.ca/board-of-education/financial-information-budgets/",
+      "sha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "file": "sd10-2025-trustees.json.gzip",
+      "dataSha256": "7ca97934454cbb3606d95f60438d0f024071da339b7538e228d598861f7b70b7",
+      "normalizedSha256": "848b051b6e7c68db270591c23275fa18ed760fec93ecd575266e772e08c0a45a",
+      "provenanceFile": "sd10-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "26277957461a14e2bec5c30c3c104eee0b5448af7d67d5daa9b7d03b8234cc84",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "scopeDescription": "Complete published elected trustee table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        47
+      ],
+      "rowCount": 5,
+      "totalRemuneration": 69248.51,
+      "totalExpenses": 12525.55,
+      "status": "verified",
+      "sourceKind": "official",
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The remuneration schedules on physical pages 47–48 explicitly state the fiscal year ended June 30, 2025; these observations are assigned to 2024/25 on that basis. The same package's declaration on page 3 certifies the year ended June 30, 2024 despite a 2024–2025 year field and signatures dated December 18, 2025. The management report on page 5 prints December 18, 2024 beneath a June 30, 2025 header. These contradictions remain unresolved; approval/adoption of the 2025 SOFI is not established by these pages. No cause or typo is inferred.",
+      "notes": [
+        "The salary tables explicitly print fiscal year ended June 30, 2025. The observation period uses those table headings; conflicting declaration/management signoff years remain literal and do not establish 2025 approval.",
+        "The original says remuneration/expense schedules are on a cash basis while financial-statement salaries and benefits use accrual accounting. These are reported payments, not annual base salary rates; remuneration and expenses remain separate.",
+        "Published names, initials, punctuation and visibly clipped position fragments are preserved. No invisible completion or inferred full title is added. Explicit expense zero remains zero; blank/dash values would remain null.",
+        "Only named employee or trustee payments are imported. Under-threshold aggregates, CPP/EI employer premiums, suppliers and financial-statement totals are excluded.",
+        "Complete original-image transcription is compared with independent Tesseract LSTM and Paddle PP-OCR neural engines. Every disagreement is retained as an explicit image-verified correction; raw OCR text, boxes and confidence remain in evidence.",
+        "The district-hosted original and Ministry copy have pixel-identical salary pages. Actual 2024 salary rows/amounts are distinct. Neither comparison is treated as proof that the conflicting declaration is a typo."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Tesseract 5.5.0 PSM6",
+          "RapidOCR 1.4.4 Paddle PP-OCR ONNX"
+        ],
+        "completeOriginalImageTranscript": true,
+        "rowsIndependentlyChecked": 5,
+        "completeRowTextAmountsOrderAndMultiplicityAgreeAfterExplicitImageCorrections": true,
+        "rowsByPhysicalPage": {
+          "47": 5
+        },
+        "printedControlTotals": [
+          "69248.51",
+          "12525.55"
+        ],
+        "computedComponentTotals": [
+          "69248.51",
+          "12525.55"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "allPublishedNamedControlsExact": true,
+        "allPrintedComponentControlsExact": true,
+        "knownExpenseValueCount": 5,
+        "reportingPeriodBasis": "Explicit remuneration schedule headings on physical pages47–48, with qualified conflicting approval documents",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "conflictingDeclarationPeriodEnd": "2024-06-30",
+        "approvalFor2025Established": false,
+        "declarationSignatureDatesPrinted": "2025-12-18",
+        "managementReportSignoffDatesPrinted": "2024-12-18",
+        "periodEvidenceFile": "research/salaries/held-resolution-2026-11-01/schools/sd10-period-and-approval-evidence.json",
+        "periodEvidenceSha256": "7f2e60dcf2063f06b27fd99f61b9b02d069865dc4efcbc2e160175752dd47a3b",
+        "completeIndependentPeerImageReviewPending": false,
+        "independentOriginalImagePeerReview": {
+          "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-comparison.json",
+          "sha256": "e0d7aaf9f23b29c4f9db4fb414018f3c5cdb15192ca529b8a461500fa5fb7aab"
+        }
+      }
+    },
+    {
+      "id": "held-resolution-schools-sd10-2025-employees",
+      "employerSlug": "school-district-10",
+      "employerName": "School District No. 10 (Arrow Lakes)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 10 (Arrow Lakes), salary schedule year ended June 30, 2025: employees",
+      "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2026/01/SD10-2024-2025-SOFI-sv-1.pdf",
+      "sourceIndexUrl": "https://sd10.bc.ca/board-of-education/financial-information-budgets/",
+      "sha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+      "file": "sd10-2025-employees.json.gzip",
+      "dataSha256": "872021ab70e8c70e3cf5ba730350dc32ad711dc9555ee0c9cee10ec48beb9f64",
+      "normalizedSha256": "8829230db7075cf5ac5c8cf92dd93822401bf316e852534824dc17601a5ef850",
+      "provenanceFile": "sd10-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "11df8def824d7c9c81da4fdbc8e229d976208099eb80f9051c71eb6e71c5560e",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "scopeDescription": "Complete published employee remuneration table over $75,000; below-threshold aggregates excluded",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        48
+      ],
+      "rowCount": 53,
+      "totalRemuneration": 6036402.68,
+      "totalExpenses": 89295.97,
+      "status": "verified",
+      "sourceKind": "official",
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The remuneration schedules on physical pages 47–48 explicitly state the fiscal year ended June 30, 2025; these observations are assigned to 2024/25 on that basis. The same package's declaration on page 3 certifies the year ended June 30, 2024 despite a 2024–2025 year field and signatures dated December 18, 2025. The management report on page 5 prints December 18, 2024 beneath a June 30, 2025 header. These contradictions remain unresolved; approval/adoption of the 2025 SOFI is not established by these pages. No cause or typo is inferred.",
+      "notes": [
+        "The salary tables explicitly print fiscal year ended June 30, 2025. The observation period uses those table headings; conflicting declaration/management signoff years remain literal and do not establish 2025 approval.",
+        "The original says remuneration/expense schedules are on a cash basis while financial-statement salaries and benefits use accrual accounting. These are reported payments, not annual base salary rates; remuneration and expenses remain separate.",
+        "Published names, initials, punctuation and visibly clipped position fragments are preserved. No invisible completion or inferred full title is added. Explicit expense zero remains zero; blank/dash values would remain null.",
+        "Only named employee or trustee payments are imported. Under-threshold aggregates, CPP/EI employer premiums, suppliers and financial-statement totals are excluded.",
+        "Complete original-image transcription is compared with independent Tesseract LSTM and Paddle PP-OCR neural engines. Every disagreement is retained as an explicit image-verified correction; raw OCR text, boxes and confidence remain in evidence.",
+        "The district-hosted original and Ministry copy have pixel-identical salary pages. Actual 2024 salary rows/amounts are distinct. Neither comparison is treated as proof that the conflicting declaration is a typo."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Tesseract 5.5.0 PSM6",
+          "RapidOCR 1.4.4 Paddle PP-OCR ONNX"
+        ],
+        "completeOriginalImageTranscript": true,
+        "rowsIndependentlyChecked": 53,
+        "completeRowTextAmountsOrderAndMultiplicityAgreeAfterExplicitImageCorrections": true,
+        "rowsByPhysicalPage": {
+          "48": 53
+        },
+        "printedControlTotals": [
+          "6036402.68",
+          "89295.97"
+        ],
+        "computedComponentTotals": [
+          "6036402.68",
+          "89295.97"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "allPublishedNamedControlsExact": true,
+        "allPrintedComponentControlsExact": true,
+        "knownExpenseValueCount": 53,
+        "reportingPeriodBasis": "Explicit remuneration schedule headings on physical pages47–48, with qualified conflicting approval documents",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "conflictingDeclarationPeriodEnd": "2024-06-30",
+        "approvalFor2025Established": false,
+        "declarationSignatureDatesPrinted": "2025-12-18",
+        "managementReportSignoffDatesPrinted": "2024-12-18",
+        "periodEvidenceFile": "research/salaries/held-resolution-2026-11-01/schools/sd10-period-and-approval-evidence.json",
+        "periodEvidenceSha256": "7f2e60dcf2063f06b27fd99f61b9b02d069865dc4efcbc2e160175752dd47a3b",
+        "completeIndependentPeerImageReviewPending": false,
+        "independentOriginalImagePeerReview": {
+          "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-comparison.json",
+          "sha256": "e0d7aaf9f23b29c4f9db4fb414018f3c5cdb15192ca529b8a461500fa5fb7aab"
+        },
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "held-resolution-schools-sd08-2026-employees",
+      "employerSlug": "school-district-08",
+      "employerName": "School District No. 8 (Kootenay Lake)",
+      "sector": "School districts",
+      "year": "2025/26",
+      "slug": "2025-26",
+      "periodType": "fiscal",
+      "periodStart": "2025-07-01",
+      "periodEnd": "2026-06-30",
+      "title": "School District No. 8 (Kootenay Lake), year ended June 30, 2026: employees with dated board-agenda corroboration",
+      "sourceUrl": "https://sd8.bc.ca/sites/default/files/documents/2026-09/2025-2026%20SOFI%20Report_Final_Redacted_0.pdf",
+      "sourceIndexUrl": "https://sd8.bc.ca/finance",
+      "sha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+      "file": "sd08-2026-employees.json.gzip",
+      "dataSha256": "d88fecc9e02f2f9c3942796ec2d01e9a4e5025cbe9fbf58b417deda317d4e2c3",
+      "normalizedSha256": "94df405ae58b55d98ed64a31e4195381b030de090a82a290ed3bb2e6ade4d0d2",
+      "provenanceFile": "sd08-2026-employees-evidence.json.gzip",
+      "provenanceSha256": "f448631c285f3bb8d5b9e6729be4805f80d246b00525134cab7495aeaf3245cf",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "scopeDescription": "Complete published employee remuneration schedule over $75,000; trustees and all aggregates excluded",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "not-published",
+      "rowCount": 340,
+      "totalRemuneration": 37683809.0,
+      "totalExpenses": 414506.0,
+      "pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "verifiedOn": "2026-11-01",
+      "completeEmployeeSchedule": true,
+      "publicWarning": "The posted SOFI employee schedule has conflicting years: physical page 52 prints June 30, 2025, while its other employee pages print June 30, 2026. The assigned 2025/26 period is supported by all 340 matching employee rows in the separately published September 8, 2026 board agenda, whose complete salary schedule on pages 185–193 consistently prints June 30, 2026 and is introduced by a dated memorandum. Names, remuneration, expenses, order and multiplicity agree across both originals under page mapping +134. The conflicting finance heading remains literal; no typo or cause is asserted. The agenda financial-statement subsection contains DRAFT/Not Finalized marks, while its remuneration pages are unmarked. The agenda is period corroboration, not the payment-source original or proof of final adoption. Posted SOFI signature areas are redacted; its declaration date fields read September 8, 2026. The minutes record SOFI presentation, not an explicit adoption motion. The named employee controls reconcile exactly. Elsewhere, posted SOFI reconciliation page 64 prints $56,431,182 remuneration and $594,827 expenses, while schedule page 59 prints $56,431,196 and $594,437 respectively: reconciliation minus schedule is −$14 remuneration and +$390 expenses. Both sets remain literal; their cause is unresolved.",
+      "notes": [
+        "Payment-source rows come from the separately posted SOFI. A dated September 8, 2026 official agenda memorandum and its complete matching employee schedule establish period corroboration: all nine agenda salary pages explicitly print June 30, 2026.",
+        "All 340 employee rows agree between independent Poppler lexical lines and PyMuPDF geometric columns, including null dash expenses, exact names, page boundaries, order and multiplicity. No positions are inferred.",
+        "Every literal name and monetary component agrees with the previously held finance-copy table and both independent agenda readers. The agenda page186 and finance-copy page52 have different year headings; the printed2025heading remains in source evidence and is not silently repaired.",
+        "Remuneration and expenses are separate cash-basis reported payments, not annual base salary. Source reconciliation says salary amounts recovered from third parties remain in SOFI remuneration; no recovery adjustment is made.",
+        "Trustees already accepted from another original are not reimported. Below-threshold aggregates, supplier payments, CPP/EI employer premiums and financial-statement totals are excluded from person rows.",
+        "Expense footnote markers remain in row evidence: source identifies international-program travel and travel to schools. Asterisk annotations are not extra monetary components."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler lexical native rows",
+          "PyMuPDF independent geometric columns"
+        ],
+        "rowsIndependentlyChecked": 340,
+        "completeRowTextAmountsOrderAndMultiplicityAgree": true,
+        "completeEmployeeSchedule": true,
+        "rowsByPhysicalPage": {
+          "51": 27,
+          "52": 41,
+          "53": 41,
+          "54": 41,
+          "55": 41,
+          "56": 41,
+          "57": 41,
+          "58": 41,
+          "59": 26
+        },
+        "componentColumns": [
+          "remuneration",
+          "expenses"
+        ],
+        "printedControlTotals": [
+          "37683809",
+          "414506"
+        ],
+        "computedComponentTotals": [
+          "37683809",
+          "414506"
+        ],
+        "controlResiduals": [
+          "0",
+          "0"
+        ],
+        "summaryReconciles": true,
+        "allPublishedNamedControlsExact": true,
+        "allPrintedComponentControlsExact": false,
+        "knownExpenseValueCount": 142,
+        "aggregateReconciliationPrintedMinusScheduleControls": [
+          "-14",
+          "390"
+        ],
+        "periodEvidenceFile": "research/salaries/held-resolution-2026-11-01/schools/sd08-period-and-version-evidence.json",
+        "periodEvidenceSha256": "47a6530088e4ef540eaa2bd06e6b3bacf9096d98c6ccc2dfd0ef2fffe2c3d75a",
+        "periodHeadingConflictInChosenSource": true,
+        "periodResolvedByCompleteDatedRowCorroboration": true,
+        "corroborationSourceUrl": "https://www.sd8.bc.ca/sites/default/files/documents/2026-09/2026.09.08%20-%204%20Public%20Agenda_FINAL_2.pdf",
+        "corroborationOriginalSha256": "aed4f0e7026a198429707247d6cccf49c18c72bdfaefc62e0bb7bd65dafbf8b4",
+        "corroborationPhysicalPages": [
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193
+        ],
+        "agendaFinancialStatementSubsectionMarkedDraft": true,
+        "agendaSalaryPagesMarkedDraft": false,
+        "chosenPaymentSourceMarkedDraft": false,
+        "chosenPaymentSourceSignatureAreasRedacted": true,
+        "chosenPaymentSourceDeclarationDates": "September 8, 2026",
+        "independentNativePeerReview": {
+          "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd8-comparison.json",
+          "sha256": "62e907b8d4356bdaf24c331bab1e5ef777af20d3ff42dd1a507d46be5245e793"
+        },
+        "independentThirdReader": "PDFMiner nested Form-XObject cell grouping",
+        "completeIndependentPeerReviewPending": false,
+        "SOFIAdoptionMotionEstablished": false,
+        "heldVersionFullRowComparison": {
+          "heldSourceId": "continuation-schools-sd08-2026-employees",
+          "heldOriginalSha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+          "heldDataSha256": "d88fecc9e02f2f9c3942796ec2d01e9a4e5025cbe9fbf58b417deda317d4e2c3",
+          "heldProvenanceSha256": "f41fa75c658bc3642aee2c5459f3a73c3ae842b0a2ae0ef8467c146450af47e1",
+          "fieldsCompared": [
+            "name",
+            "position",
+            "remuneration",
+            "expenses"
+          ],
+          "rowsCompared": 340,
+          "orderMultiplicityAndAllLiteralFieldsExact": true,
+          "physicalPageMapping": "same finance-copy physical pages",
+          "conflict": "finance copy physical52 prints2025; agenda physical186 prints2026 over the same41rows",
+          "newObservationPeriodBasis": "Independent agenda source own explicit2026table headings and dated September8,2026 memorandum; no filename inference"
+        }
+      }
+    }
+  ]
+}

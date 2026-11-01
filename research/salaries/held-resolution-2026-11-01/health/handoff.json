@@ -1,0 +1,172 @@
+{
+  "date": "2026-11-01",
+  "area": "health",
+  "status": "complete-source-verified-awaiting-root-registration-and-publication",
+  "sourceIds": [
+    "held-resolution-phsa-2024-25-employees"
+  ],
+  "acceptedCandidateRows": 13906,
+  "newEmployerCount": 0,
+  "remuneration": 1713046476,
+  "knownDisclosedExpenses": 25171641,
+  "printedControlResiduals": [
+    0,
+    0
+  ],
+  "sourceOriginal": {
+    "url": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
+    "indexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+    "cachePath": "/tmp/sector-health/phsa-2025.pdf",
+    "sha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+    "bytes": 54160556,
+    "physicalPages": 284,
+    "nativeText": false
+  },
+  "actualPeriod": {
+    "year": "2024/25",
+    "start": "2024-04-01",
+    "end": "2025-03-31",
+    "type": "fiscal",
+    "approval": "Official published unsigned standalone schedule; no board adoption inferred"
+  },
+  "scope": {
+    "kind": "employee-remuneration",
+    "threshold": 75000,
+    "comparison": ">",
+    "employeeRowCount": 13906,
+    "sourceRowsPerPage": {
+      "49Rows": 283,
+      "39Rows": 1
+    },
+    "printedNamedRowCount": null,
+    "totalRowExcluded": true,
+    "positionsAllNull": true,
+    "expenseNulls": 5810,
+    "explicitExpenseZeros": 0,
+    "negativeExpenses": 0,
+    "duplicateRowsPreserved": 0,
+    "noAnnualizationNoMissingComponentZeroNoIdentityInference": true
+  },
+  "reviewCoverage": {
+    "independentEngines": [
+      "Tesseract 5.5.0 eng/PSM6",
+      "RapidOCR 1.4.4 PaddleOCR PP-OCRv4 / ONNX Runtime 1.31.1 CPU"
+    ],
+    "twoEngineComparedRows": 13906,
+    "ordinaryFlagRows": 3157,
+    "ordinaryCoveredExactlyOnce": 3157,
+    "ordinaryRequestedFields": {
+      "name": 3041,
+      "remuneration": 65,
+      "expenses": 88
+    },
+    "ordinaryChangedFields": {
+      "name": 142,
+      "remuneration": 10,
+      "expenses": 9
+    },
+    "supplementalSourceNameAuditCases": 47,
+    "supplementalExactNameChanges": 44,
+    "supplementalLiteralLowercaseNamesPreserved": 3,
+    "muirAppliedOnce": true,
+    "distinctRowsWithHumanImageReview": 3203,
+    "allOtherwiseAgreeingRowsNotClaimedAsPersonallyManuallyTranscribed": true,
+    "actualPdfPagesGeometricallyCompared": 284,
+    "actualPdfFieldRegionsCompared": 41718,
+    "fieldRegionExceptions": 0,
+    "independentActualPdfRasterRowBandExceptions": 0,
+    "explicitOriginalDashBoxesIndependentlyVerified": 5810,
+    "unresolvedRows": 0,
+    "totalRowsChangedFromRawCandidate": 205
+  },
+  "files": {
+    "manifest": {
+      "path": "research/salaries/held-resolution-health/sources.json",
+      "sha256": "52fc22377fe336acfc78ebf5d7a5c52e84fbf93f3d325b2e377941e49c7b5d93"
+    },
+    "payload": {
+      "path": "research/salaries/held-resolution-health/phsa-2024-25-employees.json.gzip",
+      "sha256": "bc7db053d30ce206ecce66b02b87dae30fb431858c4b4bf438908282eb8168a8"
+    },
+    "completeRowProvenance": {
+      "path": "research/salaries/held-resolution-health/evidence/phsa-2024-25-complete-row-provenance.json.gzip",
+      "sha256": "4875d97a73829f7007208709a6a60ca2486a64fb161a355f9eb81cf665e68fe2"
+    },
+    "rawPageManifest": {
+      "path": "research/salaries/held-resolution-2026-11-01/health/complete-raw-page-manifest.json",
+      "sha256": "31715799499dcf838e3e4d0470d20efbea682d5691950069c7b303b494654080"
+    },
+    "supplementalNameLedger": {
+      "path": "research/salaries/held-resolution-2026-11-01/health/supplemental-name-amendment-ledger.json",
+      "sha256": "135a3e7017d88a305d41fa9b59160715ec33c5753a9865e02b88486198ede2d3"
+    },
+    "independentSourceClosure": {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-final-source-closure.json",
+      "sha256": "1d5c9f1a6dca799f79777fe3368da1c6e830f3e60d9facc5a845a3341eff7cfc"
+    },
+    "sourceFidelityReceipt": {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-render-source-fidelity.json",
+      "sha256": "e69e88ba02b685b298c8c44b028008eb7d880477d9bdf3ce2f8a97ce9d655eb8"
+    },
+    "statusPromotion": {
+      "path": "research/salaries/held-resolution-2026-11-01/health/status-promotion-receipt.json",
+      "sha256": "744f23e2d1fef752c2ac26d1f4dc6d51ce79b2e06332b1b4d95306b9973a2cb9"
+    },
+    "offlineRegressions": {
+      "path": "research/salaries/held-resolution-2026-11-01/health/offline-regression-receipt.json",
+      "sha256": "9e6b39dfc1731def7c0c7f778335dc287bdb94e846617d72715c9ac11e104d2b"
+    },
+    "finalOfflineReplay": {
+      "path": "research/salaries/held-resolution-2026-11-01/health/final-offline-replay-receipt.json",
+      "sha256": "ec82dd3da47ed811c8ea438467d11c4e8e119043b14484622fae8acb943c80f5"
+    },
+    "engineModelsAndLicenses": {
+      "path": "research/salaries/held-resolution-2026-11-01/health/independent-ocr-engine-receipt.json",
+      "sha256": "ef6bedb7bdfe504e960ba0871fac812531a1e35eba3fa47a78a70da6df5ba389"
+    },
+    "tesseractRuntime": {
+      "path": "research/salaries/held-resolution-2026-11-01/health/tesseract-runtime-receipt.json",
+      "sha256": "bd1f9301052c889aebce908ca9734baa3a823b65c3dec9d34ecefd4fe3bf7d70"
+    },
+    "queue": {
+      "path": "research/salaries/held-resolution-2026-11-01/health/work-queue.json",
+      "sha256": "7685846d7786bf57fbb697ec67531e980f35703b480e258c327a65455f7cac4c"
+    }
+  },
+  "baselinePreservation": {
+    "previousOfficialPhsaRows": 27,
+    "previousCompiledPhsaRows": 24923,
+    "compiledRowsRemoved": 0,
+    "priorBoardScopesUntouched": true,
+    "priorSourceCollectionsAndGlobalRegistryNotEditedByThisWorker": true,
+    "newSourceHasNoSamePeriodEmployeeOverlap": true
+  },
+  "tests": {
+    "offlineRegressionCount": 7,
+    "result": "pass",
+    "deterministicVerifiedFinalizerCheck": "pass",
+    "independentFullRawFieldOverlayAndPayloadReplay": "pass"
+  },
+  "remainingWork": {
+    "root": "Register and build this exact verified source, preserve earlier frozen releases, run publication checks and handle CI/merge/deployment.",
+    "nineEarlierPhsaEmployeePeriods": [
+      "2015/16",
+      "2016/17",
+      "2017/18",
+      "2018/19",
+      "2019/20",
+      "2020/21",
+      "2021/22",
+      "2022/23",
+      "2023/24"
+    ],
+    "blockedOfficialOriginals": [
+      "Vancouver Coastal Health known employee originals remain unavailable through tested routes",
+      "Providence Health Care known employee originals retain the earlier 403 blocker"
+    ],
+    "noOutreachSent": true,
+    "noBoardOnlyTrancheAdded": true
+  },
+  "reviewArtifactRetention": "Root explicitly approved keeping bounded already-frozen actual-render PHSA review crops as repository evidence. Full original PDFs, models and working caches remain in /tmp; review evidence is not application assets.",
+  "freezeContract": "candidate-freeze.json pins repository-relative files and SHA256 values, including this handoff, full collection, all raw evidence, code/tests and PHSA review artifacts; the freeze excludes itself."
+}

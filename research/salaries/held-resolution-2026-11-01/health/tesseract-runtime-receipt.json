@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-01",
+  "observation": "Final local runtime inventory; raw original OCR outputs remain unchanged. Preinstalled engine, no environment installation claimed.",
+  "engine": "Tesseract",
+  "version": "5.5.0",
+  "leptonica": "1.84.1",
+  "invocation": "tesseract original300dpi.png output-prefix -l eng --psm 6 txt tsv",
+  "license": "Apache-2.0 upstream Tesseract project; preinstalled binary/model acquisition provenance is not reconstructed",
+  "upstreamLicenseReference": "https://github.com/tesseract-ocr/tesseract/blob/main/LICENSE",
+  "files": [
+    {
+      "path": "/usr/bin/tesseract",
+      "bytes": 51536,
+      "sha256": "74b76a5b994adcc18be362bf64ed5118082b2401d5d9a35242e92fc4c62e2b4b"
+    },
+    {
+      "path": "/usr/share/tesseract-ocr/5/tessdata/eng.traineddata",
+      "bytes": 4113088,
+      "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+    }
+  ]
+}

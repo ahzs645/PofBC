@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-01",
+  "environmentPath": "/tmp/held-health-ocr/venv",
+  "interpreter": "/tmp/held-health-ocr/venv/bin/python",
+  "engine": "rapidocr_onnxruntime",
+  "engineVersion": "1.4.4",
+  "runtime": "onnxruntime 1.31.1 CPU",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "wheelUrl": "https://files.pythonhosted.org/packages/ba/12/1e5497183bdbe782dbb91bad1d0d2297dba4d2831b2652657f7517bfc6df/rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+  "wheelSha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf",
+  "models": [
+    {
+      "name": "ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "path": "/tmp/held-health-ocr/venv/lib/python3.12/site-packages/rapidocr_onnxruntime/models/ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "bytes": 585532,
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+      "acquisitionUrl": "https://files.pythonhosted.org/packages/ba/12/1e5497183bdbe782dbb91bad1d0d2297dba4d2831b2652657f7517bfc6df/rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+      "archiveMember": "rapidocr_onnxruntime/models/ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "archiveSha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf",
+      "license": "Apache-2.0 (RapidOCR release package and upstream PaddleOCR license)",
+      "modelFamily": "PaddleOCR PP-OCR neural ONNX model; independent of Tesseract LSTM engine"
+    },
+    {
+      "name": "ch_PP-OCRv4_rec_infer.onnx",
+      "path": "/tmp/held-health-ocr/venv/lib/python3.12/site-packages/rapidocr_onnxruntime/models/ch_PP-OCRv4_rec_infer.onnx",
+      "bytes": 10857958,
+      "sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+      "acquisitionUrl": "https://files.pythonhosted.org/packages/ba/12/1e5497183bdbe782dbb91bad1d0d2297dba4d2831b2652657f7517bfc6df/rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+      "archiveMember": "rapidocr_onnxruntime/models/ch_PP-OCRv4_rec_infer.onnx",
+      "archiveSha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf",
+      "license": "Apache-2.0 (RapidOCR release package and upstream PaddleOCR license)",
+      "modelFamily": "PaddleOCR PP-OCR neural ONNX model; independent of Tesseract LSTM engine"
+    },
+    {
+      "name": "ch_PP-OCRv4_det_infer.onnx",
+      "path": "/tmp/held-health-ocr/venv/lib/python3.12/site-packages/rapidocr_onnxruntime/models/ch_PP-OCRv4_det_infer.onnx",
+      "bytes": 4745517,
+      "sha256": "d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9",
+      "acquisitionUrl": "https://files.pythonhosted.org/packages/ba/12/1e5497183bdbe782dbb91bad1d0d2297dba4d2831b2652657f7517bfc6df/rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+      "archiveMember": "rapidocr_onnxruntime/models/ch_PP-OCRv4_det_infer.onnx",
+      "archiveSha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf",
+      "license": "Apache-2.0 (RapidOCR release package and upstream PaddleOCR license)",
+      "modelFamily": "PaddleOCR PP-OCR neural ONNX model; independent of Tesseract LSTM engine"
+    }
+  ],
+  "licenses": [
+    {
+      "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/main/LICENSE",
+      "cachedPath": "/tmp/held-health-ocr/licenses/1f9ed3bdaafdc785.txt",
+      "sha256": "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e",
+      "license": "Apache-2.0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/RapidAI/RapidOCR/main/LICENSE",
+      "cachedPath": "/tmp/held-health-ocr/licenses/2320b6be42d1a7d9.txt",
+      "sha256": "3e0af25fdd06aa9586ae97adb00ea927ebe5a3805ac77d2d3a81ce5f55693333",
+      "license": "Apache-2.0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/RapidAI/RapidOCR/v1.4.4/LICENSE",
+      "cachedPath": "/tmp/held-health-ocr/licenses/86b859a95d1095ee.txt",
+      "sha256": "3e0af25fdd06aa9586ae97adb00ea927ebe5a3805ac77d2d3a81ce5f55693333",
+      "license": "Apache-2.0"
+    }
+  ],
+  "independence": "RapidOCR uses PaddleOCR detection/recognition ONNX networks and ONNX Runtime; Tesseract 5.5.0 is a separate OCR engine. Multiple RapidOCR configurations remain a single engine. Raw confidence is retained and is not treated as certainty.",
+  "isolation": "Research-only /tmp venv inherits existing runtime packages; no app, CI, package.json or global dependency edits. School worker may reuse this environment read-only.",
+  "defaultInvocation": "from rapidocr_onnxruntime import RapidOCR; engine=RapidOCR(intra_op_num_threads=1, inter_op_num_threads=1); result, elapsed=engine(image_path)",
+  "originalResolutionInvocation": "RapidOCR(intra_op_num_threads=1, inter_op_num_threads=1, max_side_len=4096)",
+  "cellRecognitionInvocation": "engine.text_rec([BGR_cell_image_1, BGR_cell_image_2, ...]); returns raw text/confidence for each supplied crop",
+  "pythonExecutable": "/tmp/held-health-ocr/venv/bin/python"
+}

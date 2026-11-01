@@ -1,0 +1,71 @@
+{
+  "environmentPath": "/tmp/held-health-ocr/venv",
+  "installation": "python venv --system-site-packages; pip install rapidocr_onnxruntime==1.4.4",
+  "python": "3.12",
+  "newPackages": [
+    {
+      "name": "rapidocr-onnxruntime",
+      "version": "1.4.4",
+      "downloadUrl": "https://files.pythonhosted.org/packages/ba/12/1e5497183bdbe782dbb91bad1d0d2297dba4d2831b2652657f7517bfc6df/rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+      "archiveSha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf",
+      "license": "Apache-2.0",
+      "licenseExpression": null
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.31.1",
+      "downloadUrl": "https://files.pythonhosted.org/packages/eb/27/c6a823bac55b2977bea2027c3ec9393a2c1002cb9a09eb40354563e02730/onnxruntime-1.31.1-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "archiveSha256": "1f3dea47f2f0e5117c2404cea7d21fd253ae7836a3bf167a501cdfbb2600d536",
+      "license": "MIT License",
+      "licenseExpression": null
+    },
+    {
+      "name": "opencv-python",
+      "version": "5.0.0.93",
+      "downloadUrl": "https://files.pythonhosted.org/packages/cf/4c/c73f828fdbcd37eaf21d08fa852544a3ca7c2dbb3ea76873d64f2ea413d1/opencv_python-5.0.0.93-cp37-abi3-manylinux_2_28_x86_64.whl",
+      "archiveSha256": "c8de2dec111122a02e8beb28e16c31904992dfd6186560b142a92c71403c1039",
+      "license": "Apache 2.0",
+      "licenseExpression": null
+    },
+    {
+      "name": "pyclipper",
+      "version": "1.4.0",
+      "downloadUrl": "https://files.pythonhosted.org/packages/7a/06/6e3e241882bf7d6ab23d9c69ba4e85f1ec47397cbbeee948a16cf75e21ed/pyclipper-1.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "archiveSha256": "d1f807e2b4760a8e5c6d6b4e8c1d71ef52b7fe1946ff088f4fa41e16a881a5ca",
+      "license": "MIT",
+      "licenseExpression": null
+    },
+    {
+      "name": "shapely",
+      "version": "2.2.0",
+      "downloadUrl": "https://files.pythonhosted.org/packages/ad/87/6842e4c996914a47b6bfd3ef14a543e67e993f86a9ea5679c34efc9314ab/shapely-2.2.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "archiveSha256": "650a5f4d8a8e3c96982079d8c99b6ddbe6602bbd1e34c75c2b95dbc0d28ac997",
+      "license": null,
+      "licenseExpression": "BSD-3-Clause"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "downloadUrl": "https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl",
+      "archiveSha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73",
+      "license": "MPL-2.0 AND MIT",
+      "licenseExpression": null
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "downloadUrl": "https://files.pythonhosted.org/packages/db/f3/3996583dd2906297a637af12114deddf7658af6e683fedb83be061983fb5/protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl",
+      "archiveSha256": "89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2",
+      "license": "3-Clause BSD License",
+      "licenseExpression": null
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "downloadUrl": "https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "archiveSha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "license": "Apache 2.0",
+      "licenseExpression": null
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Salary recovery wave — 1 November 2026
 
+This is the historical PR35 recovery release. `npm run review:salary-recovery` verifies its accepted rows, source qualifications, evidence and arithmetic without rewriting its totals when later records are added. See the [current coverage comparison](../sunshine-lists/comparison.md) and [held-source resolution](../held-resolution-2026-11-01/README.md) for subsequent work.
+
 This wave accepts **13,070 official observations** from **25 original reports** and **35 separate cohorts**. **1,129 reviewed compiled observations** are replaced; the dataset grows by **11,941 net records** to **1,022,585**. All **777,862 previously official observations** remain exactly unchanged.
 
 | Collection | Added observations | Cohorts |

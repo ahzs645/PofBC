@@ -1,0 +1,78 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "method": "Complete manual original-image transcription before opening author TSV, normalized payloads or OCR outputs. Author/root briefing supplied period contradictions and critical-name targets but no row monetary values. Original fields independently read from physical salary pages 47–48 and difficult cells freshly rendered from local original at 5x.",
+  "writtenBeforeAuthorTranscriptOpened": true,
+  "originalPdf": "/tmp/held-resolution-schools/sd10-district-sofi-2025.pdf",
+  "originalSha256": "193808051072d321077d9f2dd0fc57af454ffccf8010a2690ad04b6fff1a767a",
+  "rawTranscript": {
+    "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-sd10-original-transcription.tsv",
+    "sha256": "42081cb9559e5410221c7ec8e0ca2268409dc482d25059718aa545a97e9aa225",
+    "rows": 58
+  },
+  "reviewerRawTranscriptCorrectionsBeforeComparison": [
+    {
+      "rowSequence": 6,
+      "physicalPage": 48,
+      "employeeRow": 1,
+      "name": "Alstad, Jenna",
+      "field": "remuneration",
+      "initialReading": "101576.58",
+      "literalOriginal": "105776.58",
+      "verifiedBeforeAuthorTranscriptOpened": true,
+      "verification": "Independent literal-row sum initially differed from the printed control by 4,200.00. A freshly rendered 5x crop of the first 19 original monetary rows visibly shows 105,776.58 for Alstad. This is a source-image reading correction, not a balancing adjustment or author-guided edit. Frozen initial TSV remains unchanged.",
+      "image": "/tmp/held-resolution-schools/independent-sd10-review-first-money-crop.png",
+      "imageSha256": "59784be3198e8c42b6d03b8dd85f70cf477aad2e94f8ac315793f10c1d76d222"
+    }
+  ],
+  "criticalOriginalNameAndTitleCheck": {
+    "image": "/tmp/held-resolution-schools/independent-sd10-review-names-titles-crop.png",
+    "imageSha256": "35375411eb4027048f3c85d16aa949081881ace08efbadd95c6fd6a9fe31081c",
+    "rowsRead": [
+      [
+        "McLellan, Michael",
+        "EXCLUDED STAFF 12 MO"
+      ],
+      [
+        "Mervyn, Stephanie",
+        "TEACHERS, TEACH ON"
+      ],
+      [
+        "Momeyer, Erika C.",
+        "TEACHERS"
+      ]
+    ],
+    "result": "Literal visible text confirmed at 5x before author comparison; no inferred longer title or name substitution."
+  },
+  "salaryHeadings": {
+    "bothPhysicalPages": "School District No. 10 (Arrow Lakes) / Statement of Financial Information (SOFI) / For the fiscal year ended June 30, 2025",
+    "physicalPage47": "SCHEDULE OF REMUNERATION AND EXPENSES / Elected Officials",
+    "physicalPage48": "SCHEDULE OF REMUNERATION AND EXPENSES (CONTINUED) / Employees with salary/wages greater than $75,000 per annum"
+  },
+  "literalControls": {
+    "trusteesPhysicalPage47": [
+      69248.51,
+      12525.55
+    ],
+    "employeesGreaterThan75000PhysicalPage48": [
+      6036402.68,
+      89295.97
+    ],
+    "employeesLessThan75000PhysicalPage48": [
+      3987867.79,
+      46286.43
+    ],
+    "totalAllEmployeesPhysicalPage48": [
+      10024270.47,
+      135582.4
+    ],
+    "employerPremiumsCppEmploymentInsurance": 830304.23
+  },
+  "scopeDecisions": [
+    "Physical page 47 contains all five elected trustee rows and says schedule continues on next page. Physical page 48 contains all 53 named employee rows followed by controls, below-threshold aggregate, employer CPP/EI premiums and severance note.",
+    "All 58 expense values are explicitly numeric; Kipkie, Scott expense is explicitly 0.00 and must remain zero. No blank or dash personal expense cell is visible in either table.",
+    "Only named person rows belong in normalized payloads. Below-threshold aggregate, all-employee controls and employer premiums are excluded. Trustee amounts are separate from the all-employee controls.",
+    "Mervyn title visibly says TEACHERS, TEACH ON; preserve exactly rather than expanding it to the more common adjacent title TEACHERS, TEACHER ON.",
+    "Printed note says no severance agreements were made during the fiscal year ended June 30, 2025; it creates no additional zero person-payment observations."
+  ]
+}

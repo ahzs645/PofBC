@@ -4,7 +4,7 @@
 
 The supplied snapshot contains **3 employers** and **0 annual observations**. **It is not a complete Sunshine Lists employer inventory.** 3 employer entries contain summary evidence only.
 
-All **1,022,585 published PofBC observations** across **245 employers** were reconciled against the actual employer files: **790,932 official-source observations** and **231,653 retained compiled observations**. 176 employers have some official records; 69 have compiled records only.
+All **1,037,040 published PofBC observations** across **246 employers** were reconciled against the actual employer files: **805,387 official-source observations** and **231,653 retained compiled observations**. 177 employers have some official records; 69 have compiled records only.
 
 ## Observed reference employers
 
@@ -12,7 +12,7 @@ All **1,022,585 published PofBC observations** across **245 employers** were rec
 | --- | --- | --- | ---: | ---: | --- |
 | [Core Government](https://www.sunshinelists.ca/british-columbia/employers/core-government) | public-service | 179,103 records; 2007-2025 | 242,158 | 0 | summary-only |
 | [Fraser Health Authority](https://www.sunshinelists.ca/british-columbia/employers/fraser-health-authority) | fraser-health | 111,202 records; 2014-2025 | 111,206 | 0 | summary-only |
-| [Provincial Health Services Authority](https://www.sunshinelists.ca/british-columbia/employers/provincial-health-services-authority) | provincial-health-services-authority | 103,411 records; 2005-2025 | 27 | 24,923 | summary-only |
+| [Provincial Health Services Authority](https://www.sunshinelists.ca/british-columbia/employers/provincial-health-services-authority) | provincial-health-services-authority | 103,411 records; 2005-2025 | 13,933 | 24,923 | summary-only |
 
 Reference totals span the source’s own reported years and definitions. The table deliberately does not subtract employer-wide totals: PofBC can include different years and disclosure categories. A range is not an annual series.
 
@@ -22,15 +22,15 @@ Reference totals span the source’s own reported years and definitions. The tab
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Crown corporations | 43 | 14 | 29 | 107,704 | 35,310 |
 | Government | 1 | 1 | 0 | 242,158 | 0 |
-| Health authorities | 8 | 6 | 2 | 244,191 | 68,658 |
+| Health authorities | 8 | 6 | 2 | 258,097 | 68,658 |
 | Municipal police | 13 | 1 | 12 | 142 | 9,232 |
 | Municipalities | 119 | 116 | 3 | 118,708 | 28,211 |
-| School districts | 37 | 24 | 13 | 21,466 | 45,385 |
-| Universities and colleges | 24 | 14 | 10 | 56,563 | 44,857 |
+| School districts | 38 | 25 | 13 | 21,864 | 45,385 |
+| Universities and colleges | 24 | 14 | 10 | 56,714 | 44,857 |
 
 ## Processing queue
 
-The [work queue](work-queue.csv) contains **223 existing official-source tasks** and **3 reference-comparison tasks**. Existing leads are linked to their original report or archive and retain the recorded next action. They do not prove that additional records are available or that a report has passed validation.
+The [work queue](work-queue.csv) contains **222 existing official-source tasks** and **3 reference-comparison tasks**. Existing leads are linked to their original report or archive and retain the recorded next action. They do not prove that additional records are available or that a report has passed validation.
 
 This queue covers the published source catalog and supplied reference. The broader [six-sector processing and archive queue](../continuation-2026-11-01/work-queue.csv) remains available separately. The queues can overlap and their totals must not be added.
 
@@ -52,5 +52,5 @@ Priority 1 covers missing official employer/period coverage, held partial employ
 - [Work queue](work-queue.csv) is suitable for filtering by employer, period, source status and priority.
 - [Usage and snapshot format](README.md) explains importing a saved snapshot and rerunning the audit.
 
-Repository input fingerprint: `05416874223fefd1d9c5c38984ff073b2e512982322d3a1002a563e78c5e9011`.
+Repository input fingerprint: `f11664b82bd8632758da6f24f3d800ecd7bf6c479caa82b38e39653d39f15ebb`.
 Reference snapshot fingerprint: `5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1`.

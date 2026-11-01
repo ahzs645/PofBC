@@ -26,7 +26,8 @@ def inside(root, relative):
 
 def verify_frozen_release(folder, research):
     release = read(folder / 'release.json')
-    baseline = read(folder / 'baseline.json')
+    baseline_path = folder / 'baseline.json'
+    baseline = read(baseline_path) if baseline_path.exists() else json.loads(gzip.decompress((folder / 'baseline.json.gzip').read_bytes()))
     assert release['baseline'] == baseline['overall']
     ledger_path = research / 'release-amendments.json'
     ledger = read(ledger_path) if ledger_path.exists() else {}

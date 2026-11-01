@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-01",
+  "command": "python scripts/resolve_held_health_finalize.py --status verified --check",
+  "exitCode": 0,
+  "result": "All normalized payload, complete row provenance and verified manifest bytes replay exactly from immutable evidence.",
+  "sourceId": "held-resolution-phsa-2024-25-employees",
+  "dataSha256": "bc7db053d30ce206ecce66b02b87dae30fb431858c4b4bf438908282eb8168a8",
+  "provenanceSha256": "4875d97a73829f7007208709a6a60ca2486a64fb161a355f9eb81cf665e68fe2",
+  "verifiedManifest": {
+    "path": "research/salaries/held-resolution-health/sources.json",
+    "sha256": "52fc22377fe336acfc78ebf5d7a5c52e84fbf93f3d325b2e377941e49c7b5d93"
+  },
+  "sourceClosure": {
+    "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-final-source-closure.json",
+    "sha256": "1d5c9f1a6dca799f79777fe3368da1c6e830f3e60d9facc5a845a3341eff7cfc"
+  }
+}

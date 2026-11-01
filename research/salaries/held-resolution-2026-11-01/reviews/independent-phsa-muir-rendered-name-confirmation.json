@@ -1,0 +1,55 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "held_health_review",
+  "kind": "supplemental-name-only-source-image-correction",
+  "status": "confirmed-source-image-correction-pending-root-adoption",
+  "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
+  "sourceSha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+  "physicalPage": 180,
+  "sourceRowOnPage": 8,
+  "personallyViewedActualPdf300DpiRow": true,
+  "literalRenderedName": "Muir,Ian",
+  "literalRenderedRemuneration": 98770,
+  "literalRenderedExpenseToken": "-",
+  "actualPdfPageRenderSha256": "68a9a697dca0312e99fd18c682ebbf90d88fa61e160b42e7768127b147094243",
+  "actualPdfContextImages": [
+    {
+      "path": "/tmp/independent-phsa-render-fidelity/actual-p180-r08-supplement.png",
+      "sha256": "449c2874b56ba598ac7a32fef1dfb1a601bf27d778d041b6cb894745b0564383"
+    },
+    {
+      "path": "/tmp/independent-phsa-render-fidelity/actual-p180-r08-name.png",
+      "sha256": "60cde5f5457e5ba605e254ee292df7c8658236cd184ebd2e44a62d58c1ece13f"
+    }
+  ],
+  "rawPageEvidenceSha256": "73114929a0ec05db314117b2680145684e96a7a3dad6de6f99fa248e67ac1d79",
+  "unchangedOriginalRowCropSha256": "449c2874b56ba598ac7a32fef1dfb1a601bf27d778d041b6cb894745b0564383",
+  "rawCandidateRow": [
+    "provincial-health-services-authority",
+    "Muir,lan",
+    null,
+    98770,
+    null,
+    180
+  ],
+  "proposedSourceCorrectedRow": [
+    "provincial-health-services-authority",
+    "Muir,Ian",
+    null,
+    98770,
+    null,
+    180
+  ],
+  "allowedChangedFields": [
+    "name"
+  ],
+  "allowedChangedColumns": [
+    1
+  ],
+  "allOtherRowFieldsPreservedExactly": true,
+  "reason": "Actual PDF-painted source name is Muir,Ian. Both engines read leading capitalI as lowercase l. This name was seen incidentally during a pay-only review and is separately confirmed here from the actual original row and enlarged source-name crop, rather than being silently added to the earlier requested fields.",
+  "priorReviewScope": "Frozen batch008 requested remuneration only for this row, because its original flag was rapid-pay-confidence-below-0.98. This receipt does not rewrite or broaden that batch; the already reviewed98770pay is unchanged.",
+  "priorIndependentReviewSha256": "a30194007142ace0badd9b40865170de9802352e76ccb658be42cb06d915f5e3",
+  "applicationRequirement": "Apply only through a new explicit source-derived name-only amendment/ledger after ordinary flagged-field overlays; pin source, raw page, crop and this confirmation hash. Do not change money, null expense, position, employer, page or row multiplicity. Root adoption remains separate.",
+  "acceptedEmployeeRows": 0
+}

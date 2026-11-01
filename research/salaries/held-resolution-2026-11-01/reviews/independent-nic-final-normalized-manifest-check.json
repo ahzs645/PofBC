@@ -1,0 +1,30 @@
+{
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "result": "PASS all151final normalized rows; employee136 + board15",
+  "manifestFile": "research/salaries/held-resolution-education/sources.json",
+  "manifestSha256": "39e5bcae1879639e8c5ca0128fdbf4d435eac129a56ef51815dc3588dfb404d6",
+  "authorHandoffSha256": "7c02b31654a9a064a8fda5d714e461139d881808b4b8d30b239aaab03b436523",
+  "reviewHandoffFile": "research/salaries/held-resolution-2026-11-01/reviews/independent-nic-review-handoff.json",
+  "reviewHandoffSha256": "7f28eb35f0f5aa51289edb3c1cda44b6a78d8bada909ed3c693ee4a6317f26de",
+  "sources": [
+    {
+      "sourceId": "held-resolution-nic-sofi-2019-20-employees",
+      "dataSha256": "d3c5fce88fb8b14de1d15e3097d3eefc25516ffc1a487c3c20ca23ac8c3d1ac3",
+      "evidenceSha256": "27ff5f892ec15d8d0a31cd2ed5e09b915ac979735d8c090cce076fc086277d4f",
+      "rows": 136,
+      "allSixFieldsExact": true,
+      "sourcePackageComplete": false,
+      "publicWarning": "The archived official Board package is truncated at 1,048,576 bytes; its archival header reports an original length of 3,739,511 bytes and Warning 299: content truncated by \"length\". Its complete five-page employee salary schedule has been recovered and independently verified. The currently hosted nine-page SOFI omits salary pages 1, 3 and 5; its two surviving salary pages and overall totals match. Separate official minutes record Board approval on October 22, 2020. A request for a complete original source copy is prepared but unsent. Invisible job-title text is excluded."
+    },
+    {
+      "sourceId": "held-resolution-nic-sofi-2019-20-board",
+      "dataSha256": "21827514f86092ba4f182dd47fc680a1c82e8eb8acfb54ec795eef4572cca3c7",
+      "evidenceSha256": "27ff5f892ec15d8d0a31cd2ed5e09b915ac979735d8c090cce076fc086277d4f",
+      "rows": 15,
+      "allSixFieldsExact": true,
+      "sourcePackageComplete": false,
+      "publicWarning": "The archived official Board package is truncated at 1,048,576 bytes; its archival header reports an original length of 3,739,511 bytes and Warning 299: content truncated by \"length\". Its complete 15-person Board table has been recovered and independently verified. The Board table is absent from the separately signed nine-page scan. The currently hosted nine-page SOFI omits salary pages 1, 3 and 5; its two surviving salary pages and overall totals match. Separate official minutes record Board approval on October 22, 2020. A request for a complete original source copy is prepared but unsent. Invisible job-title text is excluded."
+    }
+  ]
+}

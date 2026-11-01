@@ -1,0 +1,107 @@
+{
+  "verifiedOn": "2026-11-01",
+  "timezone": "America/Vancouver",
+  "status": "local-validation-passed",
+  "baselineCommit": "52864e2f743d90650d23436943bd9fb5207cda04",
+  "baselineRowsPreservedExactly": 1022585,
+  "publishedRowsReconciled": 1037040,
+  "officialRowsAdded": 14455,
+  "compiledRowsRemoved": 0,
+  "pythonRegressionTests": {
+    "passed": 481,
+    "failed": 0,
+    "selection": "Same salary workflow selection; GIS fixtures run separately in historical-health-map CI."
+  },
+  "nodeSalaryAndComparisonTests": {
+    "passed": 124,
+    "failed": 0
+  },
+  "allFiveHistoricalReleaseGates": "passed",
+  "currentReleaseGate": "passed",
+  "deterministicRebuild": {
+    "identicalCheckedFiles": 2575,
+    "scope": "All salary exports, generated salary index/inventories, municipal audit/corrections, source comparison and held-release files; includes immutable source/review inputs."
+  },
+  "salaryInterfaceProductionBuild": "passed",
+  "browser": {
+    "status": "passed",
+    "base": "http://127.0.0.1:4196/",
+    "overviewReconciles": true,
+    "checks": [
+      {
+        "sourceId": "held-resolution-nic-sofi-2019-20-employees",
+        "rows": 136,
+        "category": "employee-remuneration",
+        "warningAndSourceLinkVerified": true,
+        "mobileOverflow": false
+      },
+      {
+        "sourceId": "held-resolution-nic-sofi-2019-20-board",
+        "rows": 15,
+        "category": "board-remuneration",
+        "warningAndSourceLinkVerified": true,
+        "mobileOverflow": false
+      },
+      {
+        "sourceId": "held-resolution-schools-sd10-2025-trustees",
+        "rows": 5,
+        "category": "school-trustees",
+        "warningAndSourceLinkVerified": true,
+        "mobileOverflow": false
+      },
+      {
+        "sourceId": "held-resolution-schools-sd10-2025-employees",
+        "rows": 53,
+        "category": "employee-remuneration",
+        "warningAndSourceLinkVerified": true,
+        "mobileOverflow": false
+      },
+      {
+        "sourceId": "held-resolution-schools-sd08-2026-employees",
+        "rows": 340,
+        "category": "employee-remuneration",
+        "warningAndSourceLinkVerified": true,
+        "mobileOverflow": false
+      },
+      {
+        "sourceId": "held-resolution-phsa-2024-25-employees",
+        "rows": 13906,
+        "category": "employee-remuneration",
+        "warningAndSourceLinkVerified": true,
+        "mobileOverflow": false
+      }
+    ],
+    "pageErrors": []
+  },
+  "parentAcceptanceSha256": "172eb8e635e514212d5f8caaf48b248100a1222e7bb429b8bd983b15b6262ae4",
+  "releaseReconciliationSha256": "73e7ba2cd42fc5da1e19fe663b38af9b64c97e8ab0022ffc5e9ffce0cc5c424d",
+  "publication": "Merge and deployment are verified separately through GitHub workflows and deployed exports.",
+  "noRequestsOrMessagesSentToPublicBodies": true,
+  "frozenEvidenceFormattingExceptions": [
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-nic-reviewer-006-compare.py",
+      "sha256": "15106c5a5a2c32dddb6d0547717bcfafba3bc3719a92180d9f2ca1c89e62f6ef",
+      "reason": "Immutable peer review input retains its original blank line at EOF; bytes are hash-pinned and deliberately unchanged."
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-nic-reviewer-006-painted-fidelity.py",
+      "sha256": "17d82e07c8e1b431a5fe391946a9d5568e14952ed1ae0fb20f185aaf0a462d5a",
+      "reason": "Immutable peer review input retains its original blank line at EOF; bytes are hash-pinned and deliberately unchanged."
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-nic-reviewer-010-compare.py",
+      "sha256": "305036856a494a81ab98affb9b06147cb13a324ada841b894102a8d608b96259",
+      "reason": "Immutable peer review input retains its original blank line at EOF; bytes are hash-pinned and deliberately unchanged."
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-nic-reviewer-010-painted-fidelity.py",
+      "sha256": "90cd61ea462aac3736fb15a803ab726bbc3f7032c4bc9b65c5264ab3ac53755c",
+      "reason": "Immutable peer review input retains its original blank line at EOF; bytes are hash-pinned and deliberately unchanged."
+    },
+    {
+      "file": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-salary-batch005-original-transcript.json",
+      "sha256": "2c00aa27c2992672cf406d97701f0450cfec02cbaa223a93f48de1689952fa75",
+      "reason": "Immutable peer review input retains its original blank line at EOF; bytes are hash-pinned and deliberately unchanged."
+    }
+  ]
+}

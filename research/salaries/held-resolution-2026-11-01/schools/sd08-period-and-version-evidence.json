@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "decision": "Accept posted final SOFI as payment-source original with complete matching and explicitly dated board-agenda remuneration rows as period corroboration; preserve finance heading conflict and all control residuals.",
+  "sourceUrl": "https://sd8.bc.ca/sites/default/files/documents/2026-09/2025-2026%20SOFI%20Report_Final_Redacted_0.pdf",
+  "sourceSha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+  "sourceIndexUrl": "https://sd8.bc.ca/finance",
+  "sourcePdfPages": 65,
+  "datedMemorandum": {
+    "pdfPage": 134,
+    "date": "September 8, 2026",
+    "subject": "2025-2026 Statement of Financial Information",
+    "literalPeriodText": "year ended June 30, 2026",
+    "literalScopeText": "Schedule of Remuneration and Expenses which includes a listing of salaries and expenditures paid to trustees as well as employees earning in excess of $75,000",
+    "literalDecisionText": "This update is for the Board’s information and requires no further action at this time."
+  },
+  "chosenSourcePeriodHeadingConflict": true,
+  "adoptedMinutes": {
+    "sourceUrl": "https://www.sd8.bc.ca/sites/default/files/documents/2026-10/2026.09.08%20-%204%20Public%20Minutes_sv_Redacted.pdf",
+    "sha256": "d07023856f66a41782861cbd5ac383ad7c16b73d84d7f705907b169eb4e20186",
+    "cachePath": "/tmp/held-resolution-schools/sd08-sep2026-minutes.pdf",
+    "pdfPage": 3,
+    "literalHeading": "2025-2026 Statement of Financial Information",
+    "finding": "Secretary-Treasurer presented SOFI; report will be posted to website. Explicit approval motions relate to audited financial statements and surplus appropriation, not the SOFI."
+  },
+  "heldVersionFullComparison": {
+    "heldSourceId": "continuation-schools-sd08-2026-employees",
+    "heldOriginalSha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+    "heldDataSha256": "d88fecc9e02f2f9c3942796ec2d01e9a4e5025cbe9fbf58b417deda317d4e2c3",
+    "heldProvenanceSha256": "f41fa75c658bc3642aee2c5459f3a73c3ae842b0a2ae0ef8467c146450af47e1",
+    "fieldsCompared": [
+      "name",
+      "position",
+      "remuneration",
+      "expenses"
+    ],
+    "rowsCompared": 340,
+    "orderMultiplicityAndAllLiteralFieldsExact": true,
+    "physicalPageMapping": "agenda page = finance-copy page + 134",
+    "conflict": "finance copy physical52 prints2025; agenda physical186 prints2026 over the same41rows",
+    "newObservationPeriodBasis": "Independent agenda source own explicit2026table headings and dated September8,2026 memorandum; no filename inference"
+  },
+  "otherOfficialVersionConflict": {
+    "sourceUrl": "https://sd8.bc.ca/sites/default/files/documents/2026-09/2025-2026%20SOFI%20Report_Final_Redacted_0.pdf",
+    "sha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+    "financePhysicalPage": 52,
+    "financeLiteralHeading": "For the Fiscal Year Ended June 30, 2025",
+    "agendaPhysicalPage": 186,
+    "agendaLiteralHeading": "the Fiscal Year Ended June 30, 2026",
+    "sameNamedRows": 41,
+    "sourceNotSilentlyChanged": true
+  },
+  "actual2025Comparison": {
+    "sourceUrl": "https://sd8.bc.ca/sites/default/files/documents/2025-09/2024-2025%20SOFI%20Report_Final_Redacted.pdf",
+    "sha256": "88762edb43edb53ba27910a183c3eee938ad9715712e8d0be42d8d6cb87f7675",
+    "method": "Contextual Tesseract discovery on physical pages 50–54; not a complete manual row acceptance or source import.",
+    "examplesForFurtherImageReview": [
+      {
+        "name": "Carriere, Laury",
+        "actual2025OCRRemuneration": "181607",
+        "agenda2026NativeRemuneration": "185379"
+      },
+      {
+        "name": "Cooper, Andrea",
+        "actual2025OCRRemuneration": "108699",
+        "agenda2026NativeRemuneration": "135634"
+      }
+    ],
+    "periodDecisionDoesNotDependOnOCRComparators": true
+  },
+  "controls": {
+    "namedEmployeePrintedAndComputed": [
+      "37683809",
+      "414506"
+    ],
+    "belowThresholdPrinted": [
+      "18547303",
+      "122426"
+    ],
+    "allEmployeesPrinted": [
+      "56231112",
+      "536932"
+    ],
+    "trusteesPrintedNotReimported": [
+      "200084",
+      "57505"
+    ],
+    "scheduleConsolidatedPrinted": [
+      "56431196",
+      "594437"
+    ],
+    "reconciliationPrintedPhysicalPage": 64,
+    "reconciliationComponentsPrinted": [
+      "56431182",
+      "594827"
+    ],
+    "reconciliationMinusSchedule": [
+      "-14",
+      "390"
+    ],
+    "employerCppEiPrintedNotImported": "3360839",
+    "allNamedControlsExact": true,
+    "allSourceComponentControlsExact": false,
+    "noCauseInferredOrBalancingAdjustment": true,
+    "paymentSourceSchedulePhysicalPage": 59,
+    "paymentSourceReconciliationPhysicalPage": 64,
+    "agendaReconciliationPrintedPhysicalPage": 198
+  },
+  "workerFullManualTranscriptionOf340Rows": false,
+  "peerReviewTargets": [
+    134,
+    137,
+    139,
+    185,
+    186,
+    193,
+    198
+  ],
+  "publicWarning": "The posted SOFI employee schedule has conflicting years: physical page 52 prints June 30, 2025, while its other employee pages print June 30, 2026. The assigned 2025/26 period is supported by all 340 matching employee rows in the separately published September 8, 2026 board agenda, whose complete salary schedule on pages 185–193 consistently prints June 30, 2026 and is introduced by a dated memorandum. Names, remuneration, expenses, order and multiplicity agree across both originals under page mapping +134. The conflicting finance heading remains literal; no typo or cause is asserted. The agenda financial-statement subsection contains DRAFT/Not Finalized marks, while its remuneration pages are unmarked. The agenda is period corroboration, not the payment-source original or proof of final adoption. Posted SOFI signature areas are redacted; its declaration date fields read September 8, 2026. The minutes record SOFI presentation, not an explicit adoption motion. The named employee controls reconcile exactly. Elsewhere, posted SOFI reconciliation page 64 prints $56,431,182 remuneration and $594,827 expenses, while schedule page 59 prints $56,431,196 and $594,437 respectively: reconciliation minus schedule is −$14 remuneration and +$390 expenses. Both sets remain literal; their cause is unresolved.",
+  "paymentSource": {
+    "sourceUrl": "https://sd8.bc.ca/sites/default/files/documents/2026-09/2025-2026%20SOFI%20Report_Final_Redacted_0.pdf",
+    "sha256": "b9a2483c8a81e0414c1e55d620cfe234fcba6af1f4e2d8388ed59e492cc2d47f",
+    "cachePath": "/tmp/held-resolution-schools/sd08-current-sofi-2026.pdf",
+    "physicalSalaryPages": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "pdfPages": 65,
+    "approvalPhysicalPage": 3,
+    "approvalYearField": "2025-2026",
+    "declarationPeriodEnd": "June 30, 2026",
+    "declarationDateFields": "September 8, 2026",
+    "signatureAreas": "redacted; signatures not independently visually verifiable",
+    "managementPhysicalPage": 5,
+    "managementDatePrinted": "August 28, 2026",
+    "nativeDraftMarksFound": false
+  },
+  "agendaCorroborationSource": {
+    "sourceUrl": "https://www.sd8.bc.ca/sites/default/files/documents/2026-09/2026.09.08%20-%204%20Public%20Agenda_FINAL_2.pdf",
+    "sha256": "aed4f0e7026a198429707247d6cccf49c18c72bdfaefc62e0bb7bd65dafbf8b4",
+    "physicalSalaryPages": [
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193
+    ],
+    "physicalPageMapping": "agenda page = finance page + 134",
+    "all340RowsFieldsOrderMultiplicityExact": true,
+    "paymentSourceOriginal": false
+  },
+  "workerActualRenderedReviewPagesFinalSOFI": [
+    3,
+    5,
+    52,
+    64
+  ],
+  "workerNativeCompleteFieldComparisonPagesFinalSOFI": [
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "agendaSOFIAttachmentPhysicalPages": [
+    135,
+    199
+  ],
+  "agendaEmployeePageHeadings": {
+    "185": "Statement of Financial Information For                                                                   the Fiscal Year Ended June 30, 2026",
+    "186": "Statement of Financial Information For                                                               the Fiscal Year Ended June 30, 2026",
+    "187": "Statement of Financial Information For                                                               the Fiscal Year Ended June 30, 2026",
+    "188": "Statement of Financial Information For                                                               the Fiscal Year Ended June 30, 2026",
+    "189": "Statement of Financial Information For                                                               the Fiscal Year Ended June 30, 2026",
+    "190": "Statement of Financial Information For                                                               the Fiscal Year Ended June 30, 2026",
+    "191": "Statement of Financial Information For                                                               the Fiscal Year Ended June 30, 2026",
+    "192": "Statement of Financial Information For                                                               the Fiscal Year Ended June 30, 2026",
+    "193": "Statement of Financial Information For                                                                        the Fiscal Year Ended June 30, 2026"
+  },
+  "periodResolvedByCompleteDatedCorroboration": true,
+  "agendaApprovalContext": {
+    "physicalPage": 137,
+    "printedYearField": "2025-2026",
+    "declarationPeriodEnd": "June 30, 2026",
+    "signatureAndDateFields": "blank; unsigned form",
+    "managementPhysicalPage": 139,
+    "managementDatePrinted": "August 28, 2026",
+    "managementSignatureLines": "blank; unsigned",
+    "explicitDraftMarkInSOFIAttachmentNativeText": true,
+    "signedOrAdoptedStatusClaimed": false,
+    "draftMarkScope": "Embedded financial-statement subsection has DRAFT / Not Finalized marks on pages141–143,147–151,170–183; salary pages185–193 are unmarked. No whole-agenda finality is claimed."
+  },
+  "workerActualRenderedReviewPagesAgenda": [
+    134,
+    137,
+    139,
+    185,
+    186,
+    193,
+    198
+  ],
+  "workerNativeCompleteFieldComparisonPagesAgenda": [
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193
+  ],
+  "paymentSourceEmployeePageHeadings": {
+    "51": "Statement of Financial Information For                                                        the Fiscal Year Ended June 30, 2026",
+    "52": "Statement of Financial Information                             For the Fiscal Year Ended June 30, 2025",
+    "53": "Statement of Financial Information For                              the Fiscal Year Ended June 30, 2026",
+    "54": "Statement of Financial Information For                             the Fiscal Year Ended June 30, 2026",
+    "55": "Statement of Financial Information For                             the Fiscal Year Ended June 30, 2026",
+    "56": "Statement of Financial Information For                               the Fiscal Year Ended June 30, 2026",
+    "57": "Statement of Financial Information For                              the Fiscal Year Ended June 30, 2026",
+    "58": "Statement of Financial Information For                                 the Fiscal Year Ended June 30, 2026",
+    "59": "Statement of Financial Information For                                                                       the Fiscal Year Ended June 30, 2026"
+  }
+}

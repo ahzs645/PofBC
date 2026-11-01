@@ -1,0 +1,175 @@
+{
+  "frozen": true,
+  "date": "2026-11-01",
+  "originalSourceSha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+  "physicalPdfPage": 284,
+  "originalPageImagePath": "/tmp/held-health-ocr/final-page-audit/physical-page-284-native.png",
+  "originalPageImageSha256": "9d7ffc2bbb09cdd4628721758ffc68cb0ebe9cff7b9387c7e2b0588998cf9015",
+  "rawTwoEngineEvidencePath": "/tmp/held-health-ocr/full/pages/p284.json.gzip",
+  "rawTwoEngineEvidenceSha256": "dd3887d47d469f71a6fe5ea0bcc75c93bf0efdea34c9442de08f35e9fed96f22",
+  "printedYearEnd": "2025-03-31",
+  "printedThreshold": {
+    "value": 75000,
+    "comparison": ">"
+  },
+  "scope": "Named employees whose remuneration exceeds the printed threshold; employee expenses paid in the period, including direct reimbursement or third-party supplier payment. No title column is published.",
+  "completeFinalPageVisuallyInspected": true,
+  "visualReviewScope": "Final original page layout and all named-row boundaries counted; printed period/scope, first and last boundary rows, distinct ruled grand-total row and footer checked. This is not a claim of complete manual transcription of all final-page name fields.",
+  "namedRowLinesOnFinalPage": 39,
+  "printedNamedRowCount": null,
+  "firstNamedRow": [
+    "Zhu,Huan Yu",
+    117342,
+    924
+  ],
+  "lastNamedRow": [
+    "Zylstra,Arianna",
+    102016,
+    null
+  ],
+  "lastExpenseVisibleToken": "-",
+  "printedRemunerationControl": 1713046476,
+  "printedExpensesControl": 25171641,
+  "controlScope": "Schedule total below the complete alphabetical named employee listing; no below-threshold aggregate appears on the final page.",
+  "belowThresholdAggregateOnFinalPage": false,
+  "controlRowSeparatedByRules": true,
+  "controlRowImportedAsPerson": false,
+  "rawTesseractControl": {
+    "y": 2651.0,
+    "fields": [
+      {
+        "raw": "Total",
+        "confidence": 96.98494,
+        "words": [
+          {
+            "level": "5",
+            "page_num": "1",
+            "block_num": "1",
+            "par_num": "1",
+            "line_num": "46",
+            "word_num": "1",
+            "left": "222",
+            "top": "2631",
+            "width": "72",
+            "height": "40",
+            "conf": "96.984940",
+            "text": "Total"
+          }
+        ]
+      },
+      {
+        "raw": "1,713,046,476",
+        "confidence": 92.685547,
+        "words": [
+          {
+            "level": "5",
+            "page_num": "1",
+            "block_num": "1",
+            "par_num": "1",
+            "line_num": "46",
+            "word_num": "2",
+            "left": "1661",
+            "top": "2637",
+            "width": "207",
+            "height": "28",
+            "conf": "92.685547",
+            "text": "1,713,046,476"
+          }
+        ]
+      },
+      {
+        "raw": "25,171,641",
+        "confidence": 96.729149,
+        "words": [
+          {
+            "level": "5",
+            "page_num": "1",
+            "block_num": "1",
+            "par_num": "1",
+            "line_num": "46",
+            "word_num": "3",
+            "left": "1991",
+            "top": "2637",
+            "width": "162",
+            "height": "28",
+            "conf": "96.729149",
+            "text": "25,171,641"
+          }
+        ]
+      }
+    ]
+  },
+  "rawRapidControlNodes": [
+    [
+      [
+        [
+          214.16015625,
+          2628.024169921875
+        ],
+        [
+          303.80859375,
+          2628.024169921875
+        ],
+        [
+          303.80859375,
+          2669.60693359375
+        ],
+        [
+          214.16015625,
+          2669.60693359375
+        ]
+      ],
+      "Total",
+      0.999739408493042
+    ],
+    [
+      [
+        [
+          1655.17578125,
+          2631.350830078125
+        ],
+        [
+          1874.31640625,
+          2631.350830078125
+        ],
+        [
+          1874.31640625,
+          2669.60693359375
+        ],
+        [
+          1655.17578125,
+          2669.60693359375
+        ]
+      ],
+      "1,713,046,476",
+      0.9990412501188425
+    ],
+    [
+      [
+        [
+          1985.546875,
+          2629.6875
+        ],
+        [
+          2158.203125,
+          2629.6875
+        ],
+        [
+          2158.203125,
+          2669.60693359375
+        ],
+        [
+          1985.546875,
+          2669.60693359375
+        ]
+      ],
+      "25,171,641",
+      0.9998790740966796
+    ]
+  ],
+  "provisionalExpectedRowsIfEveryPrecedingPageHas49": 13906,
+  "provisionalCountAssumption": "283 preceding pages ×49 +39 final-page named lines. Not yet a complete verified count; full-page machine run must confirm every page.",
+  "fullSourceReconciliationEstablished": false,
+  "reasonReconciliationPending": "The entire original must finish independent extraction, and all field conflicts/uncertainties must resolve before any full-cohort acceptance or control reconciliation claim. No balancing adjustments are permitted.",
+  "acceptedEmployeeRows": 0
+}

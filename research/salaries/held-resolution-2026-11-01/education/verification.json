@@ -1,0 +1,19 @@
+{
+  "verifiedOn": "2026-11-01",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s scripts -p 'test_resolve_held_education.py'",
+      "result": "7 tests passed"
+    },
+    {
+      "command": "python scripts/resolve_held_education.py",
+      "result": "Verified employee136 + Board15 by offline evidence replay"
+    },
+    {
+      "command": "python scripts/resolve_held_education.py --originals",
+      "result": "Verified employee136 + Board15 with independent original repair paths"
+    }
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scope": "Complete visible salary scopes only; no complete overall archived package claim. All prior sources and generated/global outputs untouched."
+}

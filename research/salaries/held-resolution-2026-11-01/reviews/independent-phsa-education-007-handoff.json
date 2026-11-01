@@ -1,0 +1,90 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "recovery_education",
+  "batch": "007",
+  "status": "completed independent review; staged correction overlay only",
+  "sourcePath": "/tmp/sector-health/phsa-2025.pdf",
+  "sourceSha256": "809817f42c9e75c0ba13155cb7543e1ef5d7dea8422a51dce2ac2fe71bf7fb6c",
+  "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf",
+  "frozenImageManifestPath": "research/salaries/held-resolution-2026-11-01/health/review-batch-007-images.json",
+  "frozenImageManifestSha256": "345c4cd4a5e285df25596e5ba44e7ec49f9991354f17bc4826abde4704cd8c55",
+  "frozenCandidateBatchPath": "research/salaries/held-resolution-2026-11-01/health/review-batch-007.json",
+  "frozenCandidateBatchSha256": "40fdafbd38c8180788c8696647763f210a0e490da1080612a44f63c984d18604",
+  "artifacts": [
+    {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-education-007-actual-pdf-render-manifest.json",
+      "sha256": "778dd86a055db819a211a15a7d47d6895667cba50e934bcf455ae3f422117150",
+      "bytes": 341298
+    },
+    {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-education-007-first-pass-notes.json",
+      "sha256": "5bdf9cfd2b99d2a46f72ce0c4de1b9eb13d253cee40b628dda70d312a11f9938",
+      "bytes": 4587
+    },
+    {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-education-007-image-transcript.json",
+      "sha256": "887df51376c8a62f8961a95b8eec4a27fbbd2343adb9e99fd4050dbbe95e06f8",
+      "bytes": 11441
+    },
+    {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-education-007-resolutions.json",
+      "sha256": "09f1fa8dd0b4892589b0a5fe464d9832b6179f5134ce04089b65fea0235cde1f",
+      "bytes": 121794
+    },
+    {
+      "path": "research/salaries/held-resolution-2026-11-01/reviews/independent-phsa-education-007-validation.json",
+      "sha256": "04f99984c191660677d0068a74040cb6e19b4f8b0d0501193c9d078dcc8bf632",
+      "bytes": 1622
+    }
+  ],
+  "visualCoverage": {
+    "actualPdfRenderer": "PyMuPDF 1.26.6 page.get_pixmap(dpi=300,alpha=False); PDF painting including masks/clipping",
+    "sourcePagesRendered": 35,
+    "assignedOriginalRowCropsPersonallyRead": 300,
+    "actualPdfContactSheetsPersonallyRead": 30,
+    "namesTranscribedBeforeCandidateOpen": 300,
+    "requestedMoneyFieldsTranscribedBeforeCandidateOpen": 9,
+    "allInitialNameDifferencesIndividuallyReread": 23,
+    "allRequestedMoneyFieldsIndividuallyReread": 9,
+    "completePhysicalPagesPersonallyReviewed": false,
+    "scope": "All assigned row crops only. The 35 pages were rendered to obtain these rows; this is not a claim of full-page visual review or review of all 284 source pages. No native/PDF field discrepancy was confirmed."
+  },
+  "reviewerCorrections": {
+    "preFreezeFirstPassNotes": 3,
+    "postFreezeImageTranscript": 2,
+    "rawImageTranscriptUnchanged": true,
+    "firstPassNotesRetained": true,
+    "postFreezeDetails": [
+      "p167 row42: reviewer Alana corrected to visible Alanna; candidate already correct.",
+      "p151 row39: reviewer added unprinted Carson; individual actual-PDF crop ends after Angus; candidate already correct."
+    ]
+  },
+  "result": {
+    "reviewedRows": 300,
+    "resolvedRows": 300,
+    "unresolvedRows": 0,
+    "requestedNameFields": 293,
+    "requestedMoneyFields": 9,
+    "candidateNameCorrections": 21,
+    "candidateMoneyCorrections": 1,
+    "changedRows": 22,
+    "acceptedEmployeeRows": 0
+  },
+  "verification": {
+    "originalAndRenderFileHashChecks": 708,
+    "nativeContactSheetHashesChecked": 30,
+    "actualPdfContactSheetHashesChecked": 30,
+    "root004TopLevelAndResolutionKeySchema": "exact match",
+    "readOnlyProducerOverlayReplay": {
+      "script": "scripts/resolve_held_health_overlays.py",
+      "scriptSha256": "6cdc1d262e91960367d3ef9f9b3a5ef3a931329b298abed6d196418975d604ad",
+      "method": "Imported build([(receipt_path, receipt_sha256)]) read-only; no output writer invoked.",
+      "resolvedRows": 300,
+      "changedRows": 22,
+      "acceptedEmployeeRows": 0,
+      "status": "pass"
+    },
+    "originalNativeBatchOrNicFrozenFilesChanged": false
+  },
+  "remainingSourceAcceptanceBlocker": "Author/root must close all 284 physical pages, remaining conflict batches, source-painted fidelity validation, reporting-period/scope review and source controls before any PHSA source acceptance."
+}
